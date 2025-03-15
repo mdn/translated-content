@@ -17,7 +17,7 @@ l10n:
 
 HTML の場合、ホワイトスペースはほとんど無視されます。単語間のホワイトスペースは 1 文字として扱われ、要素の開始と終了、要素外のホワイトスペースは無視されます。以下の最小限の例を見てみましょう。
 
-```html-nolint
+```html-nolint live-sample___html_largely_ignores_whitespace
 <!doctype html>
 
   <h1>      Hello      World!     </h1>
@@ -70,7 +70,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 例を示します。
 
-```html-nolint
+```html-nolint live-sample___example
 <h1>   Hello
         <span> World!</span>   </h1>
 
@@ -151,7 +151,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 ここにはホワイトスペースのみを含む 3 つのテキストノードがあります。 `<div>` の前に 1 つ、 2 つの `<div>` の間に 1 つ、 2 つ目の `<div>` の後に 1 つです。
 
-```html-nolint
+```html-nolint live-sample___example_2
 <body>
   <div>  Hello  </div>
 
@@ -221,7 +221,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 この例を見てみてください（こちらも HTML のコメントの中で HTML のホワイトスペース文字を示しています）。
 
-```css
+```css live-sample___example_3
 .people-list {
   list-style-type: none;
   margin: 0;
@@ -237,7 +237,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 }
 ```
 
-```html
+```html live-sample___example_3
 <ul class="people-list">
   <li></li>
 
