@@ -2,12 +2,12 @@
 title: 412 Precondition Failed
 slug: Web/HTTP/Reference/Status/412
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`412 Precondition Failed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示拒絕訪問目標資源。這發生在[條件請求](/zh-TW/docs/Web/HTTP/Conditional_requests)上的方法不是 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}}，並且由 {{HTTPHeader("If-Unmodified-Since")}} 或 {{HTTPHeader("If-Match")}} 標頭定義的條件未得到滿足時。在這種情況下，請求（通常是上傳或修改資源）無法執行，並會返回此錯誤回應。
+HTTP **`412 Precondition Failed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示拒絕訪問目標資源。這發生在[條件請求](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)上的方法不是 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}}，並且由 {{HTTPHeader("If-Unmodified-Since")}} 或 {{HTTPHeader("If-Match")}} 標頭定義的條件未得到滿足時。在這種情況下，請求（通常是上傳或修改資源）無法執行，並會返回此錯誤回應。
 
 ## 狀態
 
@@ -46,8 +46,8 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
-- [條件請求](/zh-TW/docs/Web/HTTP/Conditional_requests)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
+- [條件請求](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)
 - {{HTTPStatus("304")}}
 - {{HTTPHeader("If-Unmodified-Since")}}、{{HTTPHeader("If-Match")}}
 - {{HTTPStatus("428")}}
