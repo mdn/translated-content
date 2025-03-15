@@ -2,7 +2,7 @@
 title: XMLHttpRequest：setRequestHeader() 方法
 slug: Web/API/XMLHttpRequest/setRequestHeader
 l10n:
-  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}

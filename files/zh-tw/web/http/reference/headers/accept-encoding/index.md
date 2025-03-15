@@ -2,7 +2,7 @@
 title: Accept-Encoding
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 l10n:
-  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
