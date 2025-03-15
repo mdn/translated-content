@@ -1,7 +1,6 @@
 ---
 title: Express 教程 3：使用数据库  (Mongoose)
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
-original_slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

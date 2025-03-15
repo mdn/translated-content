@@ -1,7 +1,6 @@
 ---
 title: 如何存储你需要的信息——变量
 slug: Learn_web_development/Core/Scripting/Variables
-original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

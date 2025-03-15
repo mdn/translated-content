@@ -1,7 +1,6 @@
 ---
 title: 文字樣式
 slug: Learn_web_development/Core/Text_styling
-original_slug: Learn/CSS/Styling_text
 ---
 
 {{LearnSidebar}}

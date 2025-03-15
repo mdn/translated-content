@@ -1,7 +1,6 @@
 ---
 title: 什么是超链接？
 slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-original_slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---

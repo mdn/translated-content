@@ -19,7 +19,7 @@ l10n:
 
 ## 无障碍考虑
 
-`<search>` 元素定义了 [`search`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role) 地标。这样就不需要在 {{HTMLElement('form')}} 元素中添加 `role=search` 了。
+`<search>` 元素定义了 [`search`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) 地标。这样就不需要在 {{HTMLElement('form')}} 元素中添加 `role=search` 了。
 
 ## 示例
 
@@ -136,13 +136,13 @@ l10n:
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/form_role"><code>form</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/form_role"><code>form</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>
@@ -163,4 +163,4 @@ l10n:
 ## 参见
 
 - 其他搜索相关元素：{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}}、{{HTMLElement("form")}}
-- [ARIA：Search 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA：Search 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

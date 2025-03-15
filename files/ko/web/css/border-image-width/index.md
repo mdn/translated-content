@@ -7,7 +7,46 @@ slug: Web/CSS/border-image-width
 
 **`border-image-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소 [테두리 이미지](/ko/docs/Web/CSS/border-image)의 너비를 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-image-width.html")}}
+{{InteractiveExample("CSS Demo: border-image-width")}}
+
+```css interactive-example-choice
+border-image-width: 30px;
+```
+
+```css interactive-example-choice
+border-image-width: 15px 40px;
+```
+
+```css interactive-example-choice
+border-image-width: 2.6rem;
+```
+
+```css interactive-example-choice
+border-image-width: 20% 8%;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 속성의 값이 {{cssxref("border-width")}}보다 크다면 테두리 이미지는 안쪽 여백(과 콘텐츠) 영역을 침범하여 그려집니다.
 

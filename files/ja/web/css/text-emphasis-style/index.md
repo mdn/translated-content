@@ -9,7 +9,39 @@ l10n:
 
 **`text-emphasis-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の表示を設定します。設定やリセットに一括指定の {{cssxref("text-emphasis")}} を使用することもできます。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-style.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis-style")}}
+
+```css interactive-example-choice
+text-emphasis-style: none;
+```
+
+```css interactive-example-choice
+text-emphasis-style: triangle;
+```
+
+```css interactive-example-choice
+text-emphasis-style: "x";
+```
+
+```css interactive-example-choice
+text-emphasis-style: filled double-circle;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 ## 構文
 

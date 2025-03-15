@@ -1,7 +1,6 @@
 ---
 title: Vue 入門
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}

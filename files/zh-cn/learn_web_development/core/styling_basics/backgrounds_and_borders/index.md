@@ -1,7 +1,6 @@
 ---
 title: 背景与边框
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
-original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}

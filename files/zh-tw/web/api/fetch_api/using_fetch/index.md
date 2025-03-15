@@ -38,7 +38,7 @@ fetch("http://example.com/movies.json")
 > [!NOTE]
 > 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
 
-Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Web/HTTP/Headers/Content-Security-Policy)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
+Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
 
 ### Request 可用的設定值
 
@@ -364,7 +364,7 @@ if (self.fetch) {
 ## 參見
 
 - [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/JakeChampion/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

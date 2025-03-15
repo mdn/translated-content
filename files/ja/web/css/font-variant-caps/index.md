@@ -9,7 +9,44 @@ l10n:
 
 **`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スモールキャップやタイトルに使われる代替グリフの使用を制御します。
 
-{{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
+{{InteractiveExample("CSS Demo: font-variant-caps")}}
+
+```css interactive-example-choice
+font-variant-caps: normal;
+```
+
+```css interactive-example-choice
+font-variant-caps: small-caps;
+```
+
+```css interactive-example-choice
+font-variant-caps: all-small-caps;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 指定されたフォントに複数の異なる大きさで大文字の字形が含まれている場合、このプロパティは最適なものを選択します。 petite capital (小さなの大文字) の字形が利用できない場合は、スモールキャピタル (小ぶりの大文字) の字形を使用して表示します。これらが存在しない場合、ブラウザーは大文字の字形から合成します。
 

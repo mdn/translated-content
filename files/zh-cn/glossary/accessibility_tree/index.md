@@ -17,9 +17,9 @@ l10n:
   - : 我们可以怎样描述这个东西？例如，一个包含“继续阅读”文本的链接会将“继续阅读”作为其名称（参见[无障碍名称及描述计算规范](https://www.w3.org/TR/accname-1.1/)）。
 - **描述**
   - : 除了无障碍名称，我们还可以如何描述这个东西？一个表格的描述可以解释这个表格包含了什么样的信息。
-- [**角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- [**角色**](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : 这个是什么？例如，这是按钮、导航栏，还是列表？
-- [**状态**](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
+- [**状态**](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)
   - : 它有状态吗？例如，复选框被选中与否、[`<summary>`](/zh-CN/docs/Web/HTML/Element/summary) 元素被展开与否。
 
 除此之外，无障碍树经常包含可以对这个元素进行操作的行为：一个链接可以被*访问*，一个文本输入框可以被*输入*，等等。

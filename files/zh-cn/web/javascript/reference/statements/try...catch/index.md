@@ -69,7 +69,7 @@ catch (e) console.log(e);
 
 当 `try` 块中抛出异常时，`exceptionVar`（即 `catch (e)`）保存了异常的值。你可以使用这个{{Glossary("binding", "绑定")}}获取有关抛出的异常的信息。这个{{Glossary("binding", "绑定")}}只能在 `catch` 块的{{Glossary("Scope", "作用域")}}中使用。
 
-它不需要是单个标识符。你可以使用[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来一次性为多个标识符赋值。
+它不需要是单个标识符。你可以使用[解构模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)来一次性为多个标识符赋值。
 
 ```js
 try {

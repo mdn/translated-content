@@ -1,7 +1,6 @@
 ---
 title: 原生表单部件
 slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
-original_slug: Learn/Forms/Basic_native_form_controls
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}

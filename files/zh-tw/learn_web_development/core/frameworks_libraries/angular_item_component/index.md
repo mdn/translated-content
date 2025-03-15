@@ -1,7 +1,6 @@
 ---
 title: 建立一個 item 元件
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}

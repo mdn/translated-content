@@ -1,7 +1,6 @@
 ---
 title: CSS 和 JavaScript 无障碍最佳实践
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
-original_slug: Learn/Accessibility/CSS_and_JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}

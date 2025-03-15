@@ -9,7 +9,51 @@ l10n:
 
 **`text-wrap-style`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
-{{EmbedInteractiveExample("pages/css/text-wrap-style.html")}}
+{{InteractiveExample("CSS Demo: text-wrap-style")}}
+
+```css interactive-example-choice
+text-wrap-style: auto;
+```
+
+```css interactive-example-choice
+text-wrap-style: balance;
+```
+
+```css interactive-example-choice
+text-wrap-style: pretty;
+```
+
+```css interactive-example-choice
+text-wrap-style: stable;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## 構文
 

@@ -124,7 +124,7 @@ label {
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#结构角色与_HTML_的对应关系">meter</a
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#结构角色与_HTML_的对应关系">meter</a
           ></code
         >
       </td>

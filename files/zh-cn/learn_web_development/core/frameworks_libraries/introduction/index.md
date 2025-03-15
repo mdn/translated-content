@@ -1,7 +1,6 @@
 ---
 title: 客户端框架介绍
 slug: Learn_web_development/Core/Frameworks_libraries/Introduction
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
@@ -228,7 +227,7 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 
 ## 框架驱动页面的无障碍
 
-让我们在上一节中所说的基础上继续，并更多地谈谈无障碍。使用户界面无障碍总是需要一些思考和努力，而框架可能会使这个过程复杂化。你通常必须使用高级框架 API 来访问本地浏览器的功能，如 ARIA [live regions](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 或专注于对它们的管理。
+让我们在上一节中所说的基础上继续，并更多地谈谈无障碍。使用户界面无障碍总是需要一些思考和努力，而框架可能会使这个过程复杂化。你通常必须使用高级框架 API 来访问本地浏览器的功能，如 ARIA [live regions](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions) 或专注于对它们的管理。
 
 在某些情况下，框架应用程序会造成传统网站不存在的无障碍问题。这方面的典型例子是前面提到的客户端路由。
 

@@ -7,7 +7,43 @@ slug: Web/CSS/text-decoration
 
 [CSS](/ko/docs/Web/CSS) **`text-decoration`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 텍스트에 장식용 선을 추가합니다. 이 속성은 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, {{cssxref("text-decoration-thickness")}}의 단축 속성입니다.
 
-{{EmbedInteractiveExample("pages/css/text-decoration.html")}}
+{{InteractiveExample("CSS Demo: text-decoration")}}
+
+```css interactive-example-choice
+text-decoration: underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted red;
+```
+
+```css interactive-example-choice
+text-decoration: green wavy underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline overline #ff3028;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 텍스트 장식은 모든 자손 텍스트 요소에 걸쳐서 적용됩니다. 달리 말하면, 자식 요소에서는 부모가 적용한 텍스트 장식을 제거할 수 없습니다. 예를 들어 `<p>이 문단에 <em>강조 표시</em>가 있어요.</p>` 마크업에 `p { text-decoration: underline; }` 스타일을 적용하면 전체 문단에 밑줄이 추가됩니다. 그다음 `em { text-decoration: none; }` 스타일 규칙을 추가해도 밑줄은 계속 보입니다. 다만 `em { text-decoration: overline; }` 스타일은 "강조 표시" 텍스트가 윗줄과 밑줄을 모두 갖게 합니다.
 

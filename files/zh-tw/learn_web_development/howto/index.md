@@ -1,7 +1,6 @@
 ---
 title: 常見問題
 slug: Learn_web_development/Howto
-original_slug: Learn/Common_questions
 ---
 
 {{LearnSidebar}}

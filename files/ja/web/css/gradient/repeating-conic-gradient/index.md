@@ -9,7 +9,32 @@ l10n:
 
 **`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
 
-{{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-conic-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-conic-gradient(red 0%, yellow 15%, red 33%);
+```
+
+```css interactive-example-choice
+background: repeating-conic-gradient(
+  from 45deg at 10% 50%,
+  brown 0deg 10deg,
+  darkgoldenrod 10deg 20deg,
+  chocolate 20deg 30deg
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## 構文
 

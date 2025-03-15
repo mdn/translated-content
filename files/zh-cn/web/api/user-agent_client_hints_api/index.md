@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
-**用户代理客户端提示 API**（User-Agent Client Hints API）扩展了[客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)，以提供一种通过用户代理响应和请求标头以及 JavaScript API 公开浏览器和平台信息的方法。
+**用户代理客户端提示 API**（User-Agent Client Hints API）扩展了[客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)，以提供一种通过用户代理响应和请求标头以及 JavaScript API 公开浏览器和平台信息的方法。
 
 ## 概念和用法
 

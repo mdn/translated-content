@@ -44,7 +44,7 @@ globalThis
 
 ## 示例
 
-在 `globalThis` 之前，获取某个全局对象的唯一方式就是 `Function('return this')()`，但是这在某些情况下会违反 [CSP](/zh-CN/docs/Web/HTTP/CSP) 规则，所以，[es6-shim](https://github.com/paulmillr/es6-shim) 使用了类似如下的方式：
+在 `globalThis` 之前，获取某个全局对象的唯一方式就是 `Function('return this')()`，但是这在某些情况下会违反 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 规则，所以，[es6-shim](https://github.com/paulmillr/es6-shim) 使用了类似如下的方式：
 
 ```js
 var getGlobal = function () {

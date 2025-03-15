@@ -59,4 +59,4 @@ function dropHandler(ev) {
 ## 参见
 
 - {{domxref("DataTransfer.types()")}}
-- [常见 MIME 类型列表](/zh-CN/docs/Web/HTTP/MIME_types/Common_types)
+- [常见 MIME 类型列表](/zh-CN/docs/Web/HTTP/Guides/MIME_types/Common_types)

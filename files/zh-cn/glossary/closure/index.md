@@ -12,4 +12,4 @@ l10n:
 ## 参见
 
 - 维基百科上的[闭包](<https://zh.wikipedia.org/wiki/闭包_(计算机科学)>)
-- MDN 上的[闭包](/zh-CN/docs/Web/JavaScript/Closures)
+- MDN 上的[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)
