@@ -42,7 +42,6 @@ button {
 
 我们获取元素的样式表。然后，我们从样式表中获取景图片，并对其进行字符串化：
 
-
 ```js
 // 获得元素
 const button = document.querySelector("button");
@@ -72,4 +71,3 @@ console.log(allComputedStyles.get("background-image").toString());
 - {{domxref('CSSPositionValue')}}
 - {{domxref('CSSTransformValue')}}
 - {{domxref('CSSUnparsedValue')}}
-
