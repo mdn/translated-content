@@ -11,7 +11,7 @@ l10n:
 
 ## 访问被选择的文件
 
-考虑这段 HTML 代码:
+考虑这段 HTML 代码：
 
 ```html
 <input type="file" id="input" multiple />
