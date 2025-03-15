@@ -5,7 +5,7 @@ slug: Web/CSS/line-height
 
 {{CSSRef}}
 
-**`line-height`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非[替代](/zh-CN/docs/Web/CSS/Replaced_element)的 inline 元素，它用于计算行盒（line box）的高度。
+**`line-height`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置多行元素的空间量，如多行文本的间距。对于块级元素，它指定元素行盒（line boxes）的最小高度。对于非[可替换](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)的 inline 元素，它用于计算行盒（line box）的高度。
 
 {{InteractiveExample("CSS Demo: line-height")}}
 

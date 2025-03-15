@@ -24319,6 +24319,17 @@
       "Wenbin"
     ]
   },
+  "Web/CSS/CSS_images/Replaced_element_properties": {
+    "modified": "2019-04-23T06:58:57.516Z",
+    "contributors": [
+      "Lulu-Xue",
+      "pujiaxun",
+      "RainSlide",
+      "kevinfszu",
+      "peanut_tao",
+      "yaway"
+    ]
+  },
   "Web/CSS/CSS_images/Using_CSS_gradients": {
     "modified": "2020-08-08T22:22:01.317Z",
     "contributors": [
@@ -24896,17 +24907,6 @@
       "TigerSoldier",
       "Emcc",
       "Mickeyboy"
-    ]
-  },
-  "Web/CSS/Replaced_element": {
-    "modified": "2019-04-23T06:58:57.516Z",
-    "contributors": [
-      "Lulu-Xue",
-      "pujiaxun",
-      "RainSlide",
-      "kevinfszu",
-      "peanut_tao",
-      "yaway"
     ]
   },
   "Web/CSS/Selector_list": {

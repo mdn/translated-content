@@ -68,7 +68,7 @@ slug: Web/CSS/CSS_display/Containing_block
 
 下面的示例，只有 CSS 不同。
 
-### Example 1
+### 示例 1
 
 这个示例中，P 标签设置为静态定位，所以它的包含块为 `<section>` ，因为距离最近的父节点即是她的包含块。
 
@@ -101,9 +101,9 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_1','100%','300')}}
+{{EmbedLiveSample('示例 1','100%','300')}}
 
-### Example 2
+### 示例 2
 
 在这个示例中，P 标签的包含块为 `<body>` 元素，因为 `<section>` 不再是一个块容器，所以并没有形成一个格式上下文。
 
@@ -132,11 +132,11 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_2','100%','300')}}
+{{EmbedLiveSample('示例 2','100%','300')}}
 
-### Example 3
+### 示例 3
 
-这个示例中，P 元素的包含块是 `<section`>，因为 `<section>` 的 `position` 为 `absolute` 。P 元素的百分值会受其包含块的 `padding` 所影响。不过，如果包含块的 {{cssxref("box-sizing")}} 值设置为 `border-box` ，就没有这个问题。
+这个示例中，P 元素的包含块是 `<section>`，因为 `<section>` 的 `position` 为 `absolute` 。P 元素的百分值会受其包含块的 `padding` 所影响。不过，如果包含块的 {{cssxref("box-sizing")}} 值设置为 `border-box` ，就没有这个问题。
 
 ```html hidden
 <body>
@@ -171,9 +171,9 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_3','100%','300')}}
+{{EmbedLiveSample('示例 3','100%','300')}}
 
-### Example 4
+### 示例 4
 
 这个示例中，P 元素的 `position` 为 `fixed`，所以它的包含块就是初始包含块（在屏幕上，也就是 viewport）。这样的话，P 元素的尺寸大小，将会随着浏览器窗框大小的变化，而变化。
 
@@ -208,9 +208,9 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_4','100%','300')}}
+{{EmbedLiveSample('示例 4','100%','300')}}
 
-### Example 5
+### 示例 5
 
 这个示例中，P 元素的 `position` 为 `absolute`，所以它的包含块是 `<section>`，也就是距离它最近的一个 `transform` 值不为 none 的父元素。
 
@@ -246,7 +246,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample('Example_5','100%','300')}}
+{{EmbedLiveSample('示例 5','100%','300')}}
 
 ## 参见
 
@@ -272,6 +272,6 @@ p {
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+  - {{glossary("Replaced elements", "可替换元素")}}
 
 - {{cssxref("all")}} 属性可将所有 CSS 声明重置为它所指定的状态

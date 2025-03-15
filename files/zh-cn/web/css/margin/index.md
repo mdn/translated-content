@@ -63,7 +63,7 @@ margin: 0;
 }
 ```
 
-上、下外边框的设置对*不[可替换](/zh-CN/docs/Web/CSS/Replaced_element)*内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。
+上、下外边框的设置对*不[可替换](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)*内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。
 
 > [!NOTE]
 > 外边距控制的是元素外部空出的空间。相反，{{cssxref("padding")}} 操作元素*内部*空出的空间。
@@ -192,5 +192,5 @@ margin: auto; /* 上边和下边：无外边距 */
 
 - [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
-- 逻辑相关的属性：{{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}，和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
+- 逻辑相关的属性：{{cssxref("margin-block-start")}}、{{cssxref("margin-block-end")}}、{{cssxref("margin-inline-start")}} 和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}

@@ -33,7 +33,7 @@ CSS 2.0 只定义了[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)�
 
 ## 参见
 
-- [CSS 参考](/zh-CN/docs/Web/CSS/Reference)
+- {{domxref("window.getComputedStyle")}}
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
@@ -55,6 +55,4 @@ CSS 2.0 只定义了[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)�
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
-
-- [window.getComputedStyle](/zh-CN/docs/Web/API/Window/getComputedStyle)
+  - {{glossary("Replaced elements", "可替换元素")}}

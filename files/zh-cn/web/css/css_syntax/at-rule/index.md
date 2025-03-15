@@ -67,7 +67,6 @@ slug: Web/CSS/CSS_syntax/At-rule
 - {{cssxref("@color-profile")}}
 - {{cssxref("@container")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("@document")}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
 - {{cssxref("@font-feature-values")}}
 - {{cssxref("@font-palette-values")}}
@@ -77,8 +76,12 @@ slug: Web/CSS/CSS_syntax/At-rule
 - {{cssxref("@media")}}
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
-- {{cssxref("@property")}} {{experimental_inline}}
+- {{cssxref("@position-try")}}
+- {{cssxref("@property")}}
+- {{cssxref("@scope")}}
+- {{cssxref("@starting-style")}}
 - {{cssxref("@supports")}}
+- {{cssxref("@view-transition")}}
 
 ## 规范
 
@@ -102,5 +105,4 @@ slug: Web/CSS/CSS_syntax/At-rule
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
   - [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
   - [CSS 嵌套模块](/zh-CN/docs/Web/CSS/CSS_nesting)
