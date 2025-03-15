@@ -42,4 +42,4 @@ let redirectURL = browser.identity.getRedirectURL();
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。
+> 此 API 基于 Chromium 的 [`identity`](https://developer.chrome.google.cn/docs/extensions/reference/api/identity) API。

@@ -9,7 +9,7 @@ l10n:
 
 如果插件可以访问“file://”方案则返回 `true`，否则返回 `false`。
 
-这是返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
