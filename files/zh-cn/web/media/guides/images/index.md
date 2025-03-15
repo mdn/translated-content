@@ -21,9 +21,9 @@ l10n:
 ### CSS
 
 - {{cssxref("object-fit")}}
-  - : **`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了如何调整[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的内容大小以适应其容器，例如 [`<img>`](/zh-CN/docs/Web/HTML/Element/img) 或 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)。
+  - : **`object-fit`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了如何调整[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)的内容大小以适应其容器，例如 [`<img>`](/zh-CN/docs/Web/HTML/Element/img) 或 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)。
 - {{cssxref("object-position")}}
-  - : **`object-position`** [CSS](/zh-CN/docs/Web/CSS) 属性指定所选[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中的内容在元素框内的对齐方式。替换元素对象未覆盖的框内区域将显示该元素的背景。
+  - : **`object-position`** [CSS](/zh-CN/docs/Web/CSS) 属性指定所选[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)中的内容在元素框内的对齐方式。替换元素对象未覆盖的框内区域将显示该元素的背景。
 - {{cssxref("background-image")}}
   - : **`background-image`** [CSS](/zh-CN/docs/Web/CSS) 属性为元素设置一个或多个背景图像。
 

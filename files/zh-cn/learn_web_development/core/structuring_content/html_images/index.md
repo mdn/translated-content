@@ -80,7 +80,7 @@ l10n:
 ![一个嵌入到浏览器中的恐龙基本图像，上面写着“Images in HTML”](basic-image.png)
 
 > [!NOTE]
-> 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中了解更多相关信息。
+> 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**可替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在{{glossary("Replaced elements", "可替换元素")}}中了解更多相关信息。
 
 > [!NOTE]
 > 你也可以在 [GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 仓库中找到本节的完整示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。

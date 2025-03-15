@@ -2,7 +2,7 @@
 title: ::after
 slug: Web/CSS/::after
 l10n:
-  sourceCommit: bf02c31b6f160b0df7bef4045929033dfad1961c
+  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
 {{CSSRef}}
@@ -44,7 +44,7 @@ a::after {
 </p>
 ```
 
-> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
+> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于_{{glossary("Replaced elements", "可替换元素")}}_（如 {{htmlelement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
 
 ## 语法
 
@@ -166,11 +166,7 @@ span[data-descr]:focus::after {
 
 #### 结果
 
-{{ EmbedLiveSample('提示用法', 450, 160) }}
-
-## 无障碍考虑
-
-不鼓励使用 `::after` 伪元素来添加内容，因为屏幕阅读器无法可靠地访问它。
+{{ EmbedLiveSample('工具提示', 450, 120) }}
 
 ## 规范
 

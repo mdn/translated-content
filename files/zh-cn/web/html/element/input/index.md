@@ -876,7 +876,7 @@ input.custom {
 
 ### object-position 和 object-fit
 
-在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个[被替换的元素](/zh-CN/docs/Web/CSS/Replaced_element)。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
+在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
 
 ### 赋予样式
 
