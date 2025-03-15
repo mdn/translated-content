@@ -235,7 +235,7 @@ Web 最常用的图像格式是：
 
 ## 使用 CSS 添加样式
 
-`<img>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等 CSS 属性。
+`<img>` 是一个{{glossary("Replaced elements", "可替换元素")}}。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等 CSS 属性。
 
 `<img>` 没有基线（baseline），这意味着，当在一个内联格式化上下文（inline formatting context）中使用 {{cssxref("vertical-align")}}`: baseline` 时，图像的底部将会与容器的文字基线对齐。
 

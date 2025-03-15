@@ -199,7 +199,7 @@ iframe {
 
 ## 定位和缩放
 
-作为一个[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)，可以使用 {{cssxref("object-position")}} 来调整 `<iframe>` 元素内嵌入的文档的位置。
+作为一个{{glossary("Replaced elements", "可替换元素")}}，可以使用 {{cssxref("object-position")}} 来调整 `<iframe>` 元素内嵌入的文档的位置。
 
 > **备注：** {{cssxref("object-fit")}} 属性对 `<iframe>` 元素没有影响。
 
