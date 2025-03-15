@@ -5,7 +5,7 @@ slug: Web/CSS/content
 
 {{CSSRef}}
 
-CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用 `content` 属性插入的内容都是匿名的_{{glossary("Replaced elements", "可替换元素")}}_。
+CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用 `content` 属性插入的内容都是匿名的*{{glossary("Replaced elements", "可替换元素")}}*。
 
 ## 语法
 
