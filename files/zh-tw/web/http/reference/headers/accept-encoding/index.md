@@ -50,15 +50,15 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 ## 指令
 
 - `gzip`
-  - : 使用 [Lempel-Ziv 編碼](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77)（LZ77）和 32 位元的 CRC 的壓縮格式。
+  - : 使用 [Lempel-Ziv 編碼](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）和 32 位元的 CRC 的壓縮格式。
 - `compress`
-  - : 使用 [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/LZW)（LZW）演算法的壓縮格式。
+  - : 使用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）演算法的壓縮格式。
 - `deflate`
-  - : 使用具有 [_deflate_](https://en.wikipedia.org/wiki/DEFLATE) 壓縮演算法的 [zlib](https://en.wikipedia.org/wiki/Zlib) 結構的壓縮格式。
+  - : 使用具有 [_deflate_](https://zh.wikipedia.org/wiki/Deflate) 壓縮演算法的 [zlib](https://en.wikipedia.org/wiki/Zlib) 結構的壓縮格式。
 - `br`
-  - : 使用 [Brotli](https://en.wikipedia.org/wiki/Brotli) 演算法的壓縮格式。
+  - : 使用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 演算法的壓縮格式。
 - `zstd`
-  - : 使用 [Zstandard](https://en.wikipedia.org/wiki/Zstd) 演算法的壓縮格式。
+  - : 使用 [Zstandard](https://zh.wikipedia.org/wiki/Zstandard) 演算法的壓縮格式。
 - `identity`
   - : 表示恆等函數（即無修改或壓縮）。即使省略，此值始終被視為可接受的。
 - `*`（萬用字元）
