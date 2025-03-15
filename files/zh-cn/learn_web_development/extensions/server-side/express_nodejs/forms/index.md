@@ -1,7 +1,6 @@
 ---
 title: "Express 教程 6: 使用表单"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
-original_slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

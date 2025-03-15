@@ -11,7 +11,68 @@ l10n:
 
 形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
 
-{{EmbedInteractiveExample("pages/css/display.html")}}
+{{InteractiveExample("CSS Demo: display")}}
+
+```css interactive-example-choice
+display: block;
+```
+
+```css interactive-example-choice
+display: inline-block;
+```
+
+```css interactive-example-choice
+display: none;
+```
+
+```css interactive-example-choice
+display: flex;
+```
+
+```css interactive-example-choice
+display: grid;
+```
+
+```html interactive-example
+<p>
+  Apply different <code>display</code> values on the dashed orange-bordered
+  <code>div</code>, which contains three child elements.
+</p>
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Some text A.
+    <div id="example-element">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+    </div>
+    Some text B.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  background: #8888;
+}
+
+#example-element {
+  border: 3px dashed orange;
+}
+
+.child {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #ccccff;
+  border: 1px solid #ababab;
+  color: black;
+}
+```
 
 ## 语法
 
@@ -308,7 +369,7 @@ display: unset;
 
 - [关于 CSS display 属性对表格语义的影响的简短说明——The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [隐藏内容以获得更好的无障碍 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN 理解 WCAG，指南 1.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#指南_1.3：创建可以以不同方式呈现的内容)
+- [MDN 理解 WCAG，指南 1.3 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#指南_1.3：创建可以以不同方式呈现的内容)
 - [了解成功标准 1.3.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 形式定义

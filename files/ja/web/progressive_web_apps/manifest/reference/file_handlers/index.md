@@ -58,7 +58,7 @@ l10n:
 
 ### ファイルの処理
 
-実際に PWA でファイル処理を実装するには、ウェブ開発者は {{domxref("window.launchQueue")}} を使用して、アプリケーションの JavaScript コードで受信したファイルを処理する必要があります。
+実際に PWA でファイル処理を実装するには、ウェブ開発者は {{domxref("Window.launchQueue")}} を使用して、アプリケーションの JavaScript コードで受信したファイルを処理する必要があります。
 
 ファイルの処理は、{{Glossary("Main thread", "メインスレッド")}}で動作するアプリケーションコードで行われ、アプリケーションの[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)では行われません。
 

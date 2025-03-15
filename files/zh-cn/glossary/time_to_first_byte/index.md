@@ -17,6 +17,6 @@ TTFB = responseStart - requestStart
 
 ## 参见
 
-- [典型的 HTTP 会话](/zh-CN/docs/Web/HTTP/Session)
+- [典型的 HTTP 会话](/zh-CN/docs/Web/HTTP/Guides/Session)
 - [PerformanceResourceTiming](/zh-CN/docs/Web/API/PerformanceResourceTiming)
 - [PerformanceTiming](/zh-CN/docs/Web/API/PerformanceTiming)

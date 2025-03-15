@@ -1,7 +1,6 @@
 ---
 title: web 性能的商业案例
 slug: Learn_web_development/Extensions/Performance/business_case_for_performance
-original_slug: Learn/Performance/business_case_for_performance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance/Web_Performance_Basics", "Learn_web_development/Extensions/Performance")}}

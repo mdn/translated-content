@@ -1,7 +1,6 @@
 ---
 title: 與各式各樣檔案打交道
 slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
-original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}

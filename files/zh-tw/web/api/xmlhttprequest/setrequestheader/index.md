@@ -15,7 +15,7 @@ l10n:
 
 出於安全原因，有幾個由使用者代理管控的{{Glossary("Forbidden request header", "禁止的請求標頭")}}。任何嘗試從前端 JavaScript 程式碼中設置這些標頭的值之行為都會被忽略，且不會發出警告或錯誤。
 
-此外，可以在請求中添加 [`Authorization`](/zh-TW/docs/Web/HTTP/Headers/Authorization) HTTP 標頭，但如果請求被跨域重定向，這個標頭將會被移除。
+此外，可以在請求中添加 [`Authorization`](/zh-TW/docs/Web/HTTP/Reference/Headers/Authorization) HTTP 標頭，但如果請求被跨域重定向，這個標頭將會被移除。
 
 > [!NOTE]
 > 對於你的自訂字段，跨域發送請求時可能會遇到「**not allowed by Access-Control-Allow-Headers in preflight response**」的例外狀況。在這種情況下，你需要在伺服器端的回應標頭中設定 {{HTTPHeader("Access-Control-Allow-Headers")}}。

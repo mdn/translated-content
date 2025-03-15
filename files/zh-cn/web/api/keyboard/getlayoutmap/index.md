@@ -26,7 +26,7 @@ getLayoutMap()
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止，则抛出此异常。
+  - : 如果调用被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止，则抛出此异常。
 
 ## 示例
 

@@ -1,7 +1,6 @@
 ---
 title: 客户端存储
 slug: Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
-original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
@@ -50,9 +49,9 @@ l10n:
 
 ### 老做派：cookie
 
-客户端存储的概念已经存在很长一段时间了。从 Web 的早期时代开始，网站就使用 [cookie](/zh-CN/docs/Web/HTTP/Cookies) 来存储信息，以在网站上提供个性化的用户体验。它们是 Web 中最早、最常用的客户端存储形式。
+客户端存储的概念已经存在很长一段时间了。从 Web 的早期时代开始，网站就使用 [cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies) 来存储信息，以在网站上提供个性化的用户体验。它们是 Web 中最早、最常用的客户端存储形式。
 
-如今，有更简单的机制可用于存储客户端数据，因此我们在本文中不会教授如何使用 cookie。然而，这并不意味着 cookie 在现代 Web 上完全没有用处——它们仍然被广泛用于存储与用户个性化和状态相关的数据，例如会话 ID 和访问令牌。有关 cookie 的更多信息，请参见我们的[使用 HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 文章。
+如今，有更简单的机制可用于存储客户端数据，因此我们在本文中不会教授如何使用 cookie。然而，这并不意味着 cookie 在现代 Web 上完全没有用处——它们仍然被广泛用于存储与用户个性化和状态相关的数据，例如会话 ID 和访问令牌。有关 cookie 的更多信息，请参见我们的[使用 HTTP cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies) 文章。
 
 ### 新流派：Web 存储和 IndexedDB
 
@@ -756,7 +755,7 @@ self.addEventListener("fetch", (e) => {
 
 - [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)
-- [Cookie](/zh-CN/docs/Web/HTTP/Cookies)
+- [Cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

@@ -1,7 +1,6 @@
 ---
 title: 创建我的第一个表单
 slug: Learn_web_development/Extensions/Forms/Your_first_form
-original_slug: Learn/Forms/Your_first_form
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
@@ -269,7 +268,7 @@ button {
 </form>
 ```
 
-在我们的示例中，表单会发送三个已命名的数据块“`user_name`”、“`user_email`”和“`user_message`”。这些数据将用使用 [HTTP `POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 方法，把信息发送到 URL 为“`/my-handling-form-page`”的目录下。
+在我们的示例中，表单会发送三个已命名的数据块“`user_name`”、“`user_email`”和“`user_message`”。这些数据将用使用 [HTTP `POST`](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 方法，把信息发送到 URL 为“`/my-handling-form-page`”的目录下。
 
 在服务器端，位于 URL“`/my-handling-form-page`”上的脚本将接收的数据作为 HTTP 请求中包含的 3 个键/值项的列表。这个脚本处理这些数据的方式取决于你。每个服务器端语言（PHP、Python、Ruby、Java、c 等等）都有自己的表单数据处理机制。深入到这个主题已经超出了本指南的范围，但是如果你想了解更多，我们已经在[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)文章中提供了一些示例。
 

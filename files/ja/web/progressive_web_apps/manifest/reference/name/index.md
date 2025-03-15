@@ -1,40 +1,63 @@
 ---
 title: name
 slug: Web/Progressive_web_apps/Manifest/Reference/name
-original_slug: Web/Manifest/Reference/name
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
-      <td>はい</td>
-    </tr>
-  </tbody>
-</table>
+`name` はマニフェストのメンバーで、ウェブアプリケーションのフルネームを指定するために使用します。これは通常、アプリケーションの一覧に掲載されている場合や、アプリケーションのアイコンのラベルとして表示される場合など、ユーザーに表示されます。
 
-`name` メンバーは文字列で、ウェブアプリケーションの名前を通常ユーザーに表示される形 (例えば、他のアプリケーションとのリストの中や、アイコンのラベルなど) で表します。 `name` は書字方向に対応しており、 [`dir`](/ja/docs/Web/Manifest) および [`lang`](/ja/docs/Web/Manifest) の各マニフェストメンバーの値に基づいて左書きで表示されたり右書きで表示されたりします。
+## 構文
+
+```json-nolint
+/* ウェブアプリのフルネーム */
+"name": "Daily Task Planner"
+"name": "Recipe and Pantry Tracker"
+```
+
+### 値
+
+- `name`
+  - : ウェブアプリのフルネームを指定する文字列です。
+
+## 解説
+
+`name` マニフェストメンバーは、インストールされたアプリケーションの{{Glossary("Accessible_name", "アクセシブル名")}}として使用されます。この名前は、他にもインストールされているウェブアプリケーションのリスト、アプリケーションアイコンのラベル付け、アプリケーションスイッチャーやタスクマネージャーなど、さまざまな場面でユーザーに表示されます。
+
+端末のホーム画面やアプリケーションスイッチャーなど、フルネームが収まらないスペース制約のあるコンテキストでは、 [`short_name`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/short_name) プロパティの値が（定義されている場合は）代わりに使用されることがあります。
+
+### ウェブアプリの名前付けについての最善の手法
+
+ウェブアプリの名前を選択する際には、次の要素を考慮してください。
+
+- 名前の長さ、特に個別に `short_name` を指定していない場合
+- アプリの目的や性質をどれだけよく示しているか
+- 明快で理解しやすく、覚えやすいかどうか
+- アプリのリストやホーム画面など、さまざまな場面でどのように現れるか
+- 他の類似したアプリと簡単に区別できること
+- ターゲットとする利用者層に対する文化的感受性と適切性
+- グローバルなユーザーを対象とするアプリの場合、さまざまな言語にどれだけうまく対応させられるか、または認識されるか
+- 商標の侵害の可能性
 
 ## 例
 
-単純な `name` を左書き言語で:
+### ウェブアプリに名前を追加する
+
+ユーザーがトレイルをナビゲートしたり、ハイキングの計画を立てたりするのに役立つウェブアプリの場合、次の名前付きマニフェストをアプリに追加するとよいでしょう。
 
 ```json
-"name": "Awesome application"
+"name": "Trail Navigator"
 ```
 
-アラビア語で右書きの `name`:
+アプリの名前 `Trail Navigator` は、アプリの目的を効果的に説明しており、読みやすく覚えやすいので、幅広いユーザーに理解される可能性が高いです。このアプリは、アウトドア愛好家がすぐに理解できるような馴染みのある用語を使用しています。
+
+必要に応じて、 `short_name` を追加することもできます。
 
 ```json
-"dir": "rtl",
-"lang": "ar",
-"name": "!أنا من التطبيق"
+"name": "Trail Navigator",
+"short_name": "TrailNav"
 ```
 
 ## 仕様書
@@ -44,3 +67,8 @@ original_slug: Web/Manifest/Reference/name
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [`short_name`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/short_name) マニフェストメンバー
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)で、ウェブアプリをインストール可能にする

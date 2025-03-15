@@ -18,4 +18,4 @@ l10n:
 ## 参见
 
 - [渲染页面：浏览器的工作原理](/zh-CN/docs/Web/Performance/Guides/How_browsers_work)
-- [HTTP 概览](/zh-CN/docs/Web/HTTP/Overview)
+- [HTTP 概览](/zh-CN/docs/Web/HTTP/Guides/Overview)

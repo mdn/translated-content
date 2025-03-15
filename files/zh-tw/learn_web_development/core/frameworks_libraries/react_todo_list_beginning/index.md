@@ -1,7 +1,6 @@
 ---
 title: Beginning our React todo list
 slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}

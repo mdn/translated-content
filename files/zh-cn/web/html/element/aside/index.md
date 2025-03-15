@@ -61,7 +61,7 @@ aside > p {
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a></td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/note_role"><code>note</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>

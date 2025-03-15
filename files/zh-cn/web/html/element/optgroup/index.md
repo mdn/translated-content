@@ -52,7 +52,7 @@ label {
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>

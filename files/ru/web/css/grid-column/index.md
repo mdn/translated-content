@@ -7,7 +7,54 @@ slug: Web/CSS/grid-column
 
 [Сокращённое CSS-свойство](/ru/docs/Web/CSS/Shorthand_properties) **`grid-column`** задаёт размер и положение элемента, находящегося внутри {{glossary("grid column", "грид-колонки")}}, путём размещения его по грид-линии, расширяя его при необходимости, тем самым определяя начальную и конечную границу {{glossary("grid areas", "грид-области")}}, в пределах которой он должен находиться.
 
-{{EmbedInteractiveExample("pages/css/grid-column.html")}}
+{{InteractiveExample("CSS Demo: grid-column")}}
+
+```css interactive-example-choice
+grid-column: 1;
+```
+
+```css interactive-example-choice
+grid-column: 1 / 3;
+```
+
+```css interactive-example-choice
+grid-column: 2 / -1;
+```
+
+```css interactive-example-choice
+grid-column: 1 / span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## Связанные свойства
 

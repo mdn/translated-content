@@ -29,7 +29,7 @@ setSinkId(sinkId)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果使用 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)来阻止使用音频输出，则会返回此错误。
+  - : 如果使用 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)来阻止使用音频输出，则会返回此错误。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果 `deviceId` 不匹配任何音频输出设备，则会返回此错误。
 - `AbortError` {{domxref("DOMException")}}
@@ -40,7 +40,7 @@ setSinkId(sinkId)
 对此 API 的访问受以下约束：
 
 - 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
-- 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的控制。
+- 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的控制。
 - 需要用户的授权才能访问非默认设备。用户通过在 {{domxref("MediaDevices.selectAudioOutput()")}} 显示的提示中选择与 ID 相关联的设备来授予权限。
 
 ## 示例

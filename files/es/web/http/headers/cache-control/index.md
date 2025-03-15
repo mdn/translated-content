@@ -24,8 +24,7 @@ El encabezado HTTP **`Cache-Control`** contiene _directivas_ (instrucciones) —
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("CORS-safelisted response header", "Respuesta del encabezado
-        CORS-safelisted")}}
+        {{Glossary("CORS-safelisted response header", "Respuesta del encabezado CORS-safelisted")}}
       </th>
       <td>sí</td>
     </tr>

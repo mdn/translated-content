@@ -1,7 +1,6 @@
 ---
 title: 面向对象编程基本概念
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
-original_slug: Learn/JavaScript/Objects/Object-oriented_programming
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

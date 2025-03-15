@@ -188,7 +188,7 @@ color(display-p3 0.7 0.5 none)
 
 ## 无障碍考虑
 
-一些人分辨颜色可能会存在困难。[WCAG 2.2](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 强烈建议不要将颜色作为传递特定消息、活动或结果的唯一方式。参见[颜色和颜色对比度](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)以了解更多信息。
+一些人分辨颜色可能会存在困难。[WCAG 2.2](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Use_of_color) 强烈建议不要将颜色作为传递特定消息、活动或结果的唯一方式。参见[颜色和颜色对比度](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)以了解更多信息。
 
 ## 形式语法
 

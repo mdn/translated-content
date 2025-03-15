@@ -9,7 +9,44 @@ l10n:
 
 **`outline-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線の色を設定します。
 
-{{EmbedInteractiveExample("pages/css/outline-color.html")}}
+{{InteractiveExample("CSS Demo: outline-color")}}
+
+```css interactive-example-choice
+outline-color: red;
+```
+
+```css interactive-example-choice
+outline-color: #32a1ce;
+```
+
+```css interactive-example-choice
+outline-color: rgba(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+outline-color: hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+outline-color: currentcolor;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構文
 

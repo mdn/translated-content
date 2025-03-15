@@ -1,7 +1,6 @@
 ---
 title: 使用 JSON
 slug: Learn_web_development/Core/Scripting/JSON
-original_slug: Learn/JavaScript/Objects/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
@@ -340,7 +339,7 @@ myString;
 - [JSON 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
-- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
 - [JSON 官网（含 ECMA 标准链接）](https://www.json.org/json-zh.html)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}

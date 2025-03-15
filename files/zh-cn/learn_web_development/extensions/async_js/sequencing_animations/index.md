@@ -1,7 +1,6 @@
 ---
 title: 序列动画
 slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
-original_slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

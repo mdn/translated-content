@@ -1,7 +1,6 @@
 ---
 title: 函數 - 可重複使用的程式碼區塊
 slug: Learn_web_development/Core/Scripting/Functions
-original_slug: Learn/JavaScript/Building_blocks/Functions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

@@ -1,7 +1,6 @@
 ---
 title: CSS 性能优化
 slug: Learn_web_development/Extensions/Performance/CSS
-original_slug: Learn/Performance/CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}

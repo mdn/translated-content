@@ -1,7 +1,6 @@
 ---
 title: 技能测试：图片和表格元素
 slug: Learn_web_development/Core/Styling_basics/Images_tasks
-original_slug: Learn/CSS/Building_blocks/Images_tasks
 ---
 
 {{LearnSidebar}}

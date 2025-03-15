@@ -37,7 +37,7 @@ audioElement.play();
 - 音频被静音或其音量设置为 0
 - 用户和网页已有交互行为（包括点击、触摸、按下某个键等等）
 - 网站已被列入白名单；如果浏览器确定用户经常与媒体互动，这可能会自动发生，也可能通过首选项或其他用户界面功能手动发生
-- 自动播放[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)被应用于 {{HTMLElement("iframe")}} 或者其文档上，从而获得了自动播放的权限。
+- 自动播放[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)被应用于 {{HTMLElement("iframe")}} 或者其文档上，从而获得了自动播放的权限。
 
 否则，播放可能会被阻止。导致播放被阻塞的确切情况以及将网站列入白名单的具体方法因浏览器而异，但最好是遵循以上的原则。
 
@@ -156,7 +156,7 @@ if (startPlayPromise !== undefined) {
 
 ## 自动播放功能策略
 
-除了上述的浏览器端管理和对自动播放功能的控制之外，web 服务器也可以表示愿意让自动播放功能发挥作用。{{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} 标头的 [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) 指令用于控制哪些域（如果有）可用于自动播放媒体。默认情况下， `autoplay` 功能策略设置为 `'self'`（_包括单引号字符_），表示允许自动播放，因为它们与文档托管在同一域中。
+除了上述的浏览器端管理和对自动播放功能的控制之外，web 服务器也可以表示愿意让自动播放功能发挥作用。{{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} 标头的 [`autoplay`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay) 指令用于控制哪些域（如果有）可用于自动播放媒体。默认情况下， `autoplay` 功能策略设置为 `'self'`（_包括单引号字符_），表示允许自动播放，因为它们与文档托管在同一域中。
 
 你还可以指定 `'none'` 以完全禁用自动播放，`'*'` 以允许来自所有域的自动播放，或指定一个或多个可以自动播放媒体的特定来源。这些来源由空格字符分隔。
 

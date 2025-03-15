@@ -143,7 +143,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 相同的算法转换数字。
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 相同的算法转换 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 对于对象，首先，通过依次调用其 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
+- 对于对象，首先，通过依次调用其 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
 
 有几种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -270,8 +270,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
     对于大多数语言，这将返回与 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 相同的结果。
 
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
 
   - : 字符串中的字符将转换为大写，同时尊重当前语言环境。
 

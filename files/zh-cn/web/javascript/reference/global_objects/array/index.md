@@ -13,14 +13,14 @@ l10n:
 
 在 JavaScript 中，数组不是[原始类型](/zh-CN/docs/Glossary/Primitive)，而是具有以下核心特征的 `Array` 对象：
 
-- **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)。）
+- **JavaScript 数组是可调整大小的，并且可以包含不同的[数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)**。（当不需要这些特征时，可以使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)。）
 - **JavaScript 数组不是关联数组**，因此，不能使用任意字符串作为索引访问数组元素，但必须使用非负整数（或它们各自的字符串形式）作为索引访问。
 - **JavaScript 数组的[索引从 0 开始](https://zh.wikipedia.org/zh-cn/從零開始的編號)**：数组的第一个元素在索引 `0` 处，第二个在索引 `1` 处，以此类推，最后一个元素是数组的 {{jsxref("Array/length", "length")}} 属性减去 `1` 的值。
 - **JavaScript [数组复制操作](#复制数组)创建[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)**。（_所有_ JavaScript 对象的标准内置复制操作都会创建浅拷贝，而不是[深拷贝](/zh-CN/docs/Glossary/Deep_copy)）。
 
 ### 数组索引
 
-`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素，但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组方法)不能应用于这些具名属性。
+`Array` 对象不能使用任意字符串作为元素索引（如[关联数组](https://zh.wikipedia.org/wiki/关联数组)），必须使用非负整数（或它们的字符串形式）。通过非整数设置或访问不会设置或从数组列表本身检索元素，但会设置或访问与该数组的[对象属性集合](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#属性)相关的变量。数组的对象属性和数组元素列表是分开的，数组的[遍历和修改操作](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#数组方法)不能应用于这些具名属性。
 
 数组元素是对象属性，就像 `toString` 是属性一样（具体来说，`toString()` 是一种方法）。然而，尝试按以下方式访问数组的元素会抛出语法错误，因为属性名无效：
 
@@ -679,7 +679,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 你还可以使用 {{DOMxRef("Window.structuredClone", "structuredClone()")}} 方法创建深拷贝，该方法的优点是允许源代码中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)被*转移*到新的副本，而不仅仅是克隆。
 
-最后，重要的是要理解，将现有数组赋值给新变量并不会创建数组或其元素的副本。相反，新变量只是对原数组的引用或别名；也就是说，原来的数组名和新的变量名只是同一个对象的两个名称（因此总是被计算为[严格相等](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#严格相等)）。因此，如果你对原数组的值或新变量的值做了任何改变，另一个也会改变：
+最后，重要的是要理解，将现有数组赋值给新变量并不会创建数组或其元素的副本。相反，新变量只是对原数组的引用或别名；也就是说，原来的数组名和新的变量名只是同一个对象的两个名称（因此总是被计算为[严格相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#严格相等)）。因此，如果你对原数组的值或新变量的值做了任何改变，另一个也会改变：
 
 ```js
 const fruits = ["Strawberry", "Mango"];
