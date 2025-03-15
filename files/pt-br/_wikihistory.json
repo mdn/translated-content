@@ -6011,59 +6011,59 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Guides": {
+  "Web/Accessibility/ARIA/Guides": {
     "modified": "2019-03-23T22:05:06.841Z",
     "contributors": [
       "mak213k"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide": {
+  "Web/Accessibility/ARIA/Guides/Multipart_labels": {
+    "modified": "2019-03-23T22:27:34.088Z",
+    "contributors": [
+      "Aschlla"
+    ]
+  },
+  "Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors": {
     "modified": "2019-03-23T22:29:38.626Z",
     "contributors": [
       "caio.rrs"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques": {
+  "Web/Accessibility/ARIA/Guides/Techniques": {
     "modified": "2020-08-05T20:31:43.497Z",
     "contributors": [
       "alisson-suzigan",
       "Sheppy"
     ]
   },
-  "Web/Accessibility/ARIA/Multipart_labels": {
-    "modified": "2019-03-23T22:27:34.088Z",
-    "contributors": [
-      "Aschlla"
-    ]
-  },
-  "Web/Accessibility/ARIA/Roles": {
+  "Web/Accessibility/ARIA/Reference/Roles": {
     "modified": "2020-09-18T19:22:52.644Z",
     "contributors": [
       "Painatalman",
       "rafaelcavalcante"
     ]
   },
-  "Web/Accessibility/ARIA/Roles/alert_role": {
+  "Web/Accessibility/ARIA/Reference/Roles/alert_role": {
     "modified": "2019-03-23T22:50:52.511Z",
     "contributors": [
       "Aschlla",
       "iCynthia"
     ]
   },
-  "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
+  "Web/Accessibility/Guides/Accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T22:27:46.873Z",
     "contributors": [
       "Aschlla"
     ]
   },
-  "Web/Accessibility/Mobile_accessibility_checklist": {
+  "Web/Accessibility/Guides/Mobile_accessibility_checklist": {
     "modified": "2019-03-18T21:15:58.279Z",
     "contributors": [
       "nathaliabruno",
       "takahan"
     ]
   },
-  "Web/Accessibility/Understanding_WCAG": {
+  "Web/Accessibility/Guides/Understanding_WCAG": {
     "modified": "2019-06-04T11:18:03.017Z",
     "contributors": [
       "Rondinelly"
@@ -6490,6 +6490,12 @@
       "fcard"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2019-03-23T22:15:16.832Z",
+    "contributors": [
+      "rubenmarcus"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2019-12-19T17:59:37.262Z",
     "contributors": [
@@ -6813,12 +6819,6 @@
       "teoli",
       "ethertank",
       "rodrigopadula"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2019-03-23T22:15:16.832Z",
-    "contributors": [
-      "rubenmarcus"
     ]
   },
   "Web/CSS/Subsequent-sibling_combinator": {
@@ -8743,13 +8743,13 @@
       "Anonymous"
     ]
   },
-  "Web/HTTP/Authentication": {
+  "Web/HTTP/Guides/Authentication": {
     "modified": "2019-03-18T20:54:05.177Z",
     "contributors": [
       "ViniciusMatias"
     ]
   },
-  "Web/HTTP/CORS": {
+  "Web/HTTP/Guides/CORS": {
     "modified": "2020-10-15T21:51:46.835Z",
     "contributors": [
       "kenchen12",
@@ -8767,33 +8767,33 @@
       "andrekutianski"
     ]
   },
-  "Web/HTTP/CORS/Errors/CORSDidNotSucceed": {
+  "Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed": {
     "modified": "2020-07-16T19:35:30.072Z",
     "contributors": [
       "uilmo.carneiro",
       "giovana-morais"
     ]
   },
-  "Web/HTTP/CORS/Errors/CORSMissingAllowOrigin": {
+  "Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin": {
     "modified": "2019-08-15T10:13:47.925Z",
     "contributors": [
       "tinogomes"
     ]
   },
-  "Web/HTTP/CORS/Errors/CORSNotSupportingCredentials": {
+  "Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials": {
     "modified": "2020-11-04T12:36:34.140Z",
     "contributors": [
       "matruskan"
     ]
   },
-  "Web/HTTP/CORS/Errors/CORSRequestNotHttp": {
+  "Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp": {
     "modified": "2020-07-24T12:02:11.941Z",
     "contributors": [
       "aguiar02",
       "gabrielalves96"
     ]
   },
-  "Web/HTTP/CSP": {
+  "Web/HTTP/Guides/CSP": {
     "modified": "2020-10-20T08:49:00.342Z",
     "contributors": [
       "lucasrenod",
@@ -8806,7 +8806,7 @@
       "meldenne"
     ]
   },
-  "Web/HTTP/Caching": {
+  "Web/HTTP/Guides/Caching": {
     "modified": "2020-01-20T16:42:39.746Z",
     "contributors": [
       "Neiva07",
@@ -8815,33 +8815,33 @@
       "coloringa"
     ]
   },
-  "Web/HTTP/Compression": {
+  "Web/HTTP/Guides/Compression": {
     "modified": "2019-03-18T21:19:41.947Z",
     "contributors": [
       "krisfertig"
     ]
   },
-  "Web/HTTP/Connection_management_in_HTTP_1.x": {
+  "Web/HTTP/Guides/Connection_management_in_HTTP_1.x": {
     "modified": "2019-03-23T22:25:52.431Z",
     "contributors": [
       "Fernandolrs",
       "DiegoTelles"
     ]
   },
-  "Web/HTTP/Content_negotiation": {
+  "Web/HTTP/Guides/Content_negotiation": {
     "modified": "2019-10-26T16:55:23.137Z",
     "contributors": [
       "felipelube",
       "Jürgen Jeka"
     ]
   },
-  "Web/HTTP/Content_negotiation/List_of_default_Accept_values": {
+  "Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values": {
     "modified": "2019-06-29T15:45:26.059Z",
     "contributors": [
       "rafaelff"
     ]
   },
-  "Web/HTTP/Cookies": {
+  "Web/HTTP/Guides/Cookies": {
     "modified": "2020-05-19T15:14:13.958Z",
     "contributors": [
       "eestein",
@@ -8850,7 +8850,59 @@
       "gabcs07"
     ]
   },
-  "Web/HTTP/Headers": {
+  "Web/HTTP/Guides/MIME_types": {
+    "modified": "2019-12-16T17:35:45.160Z",
+    "contributors": [
+      "JpOnline",
+      "hugojunior",
+      "marcusedu"
+    ]
+  },
+  "Web/HTTP/Guides/MIME_types/Common_types": {
+    "modified": "2019-03-23T22:04:21.860Z",
+    "contributors": [
+      "khalid_ait",
+      "berbare",
+      "lpdouglas"
+    ]
+  },
+  "Web/HTTP/Guides/Messages": {
+    "modified": "2020-04-19T17:43:58.667Z",
+    "contributors": [
+      "satoLG",
+      "jamrocha"
+    ]
+  },
+  "Web/HTTP/Guides/Overview": {
+    "modified": "2020-09-23T20:02:12.544Z",
+    "contributors": [
+      "viniciusfinger",
+      "K4mek",
+      "gustavoluchi",
+      "bruno_scatena",
+      "viniciusbds",
+      "julio-elipse",
+      "GPrimola",
+      "SubaruSama",
+      "CarlosAlbertoSzygalski",
+      "renatodantas",
+      "holdonmax"
+    ]
+  },
+  "Web/HTTP/Guides/Redirections": {
+    "modified": "2019-03-18T21:39:38.468Z",
+    "contributors": [
+      "FelipeBergmann"
+    ]
+  },
+  "Web/HTTP/Guides/Session": {
+    "modified": "2019-03-18T21:38:28.348Z",
+    "contributors": [
+      "krisfertig",
+      "zscaiosi"
+    ]
+  },
+  "Web/HTTP/Reference/Headers": {
     "modified": "2020-08-02T21:34:50.722Z",
     "contributors": [
       "gutoribeiro",
@@ -8867,129 +8919,129 @@
       "andrekutianski"
     ]
   },
-  "Web/HTTP/Headers/Accept": {
+  "Web/HTTP/Reference/Headers/Accept": {
     "modified": "2020-10-15T22:26:07.441Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Accept-CH": {
+  "Web/HTTP/Reference/Headers/Accept-CH": {
     "modified": "2020-10-15T22:26:08.419Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Accept-Encoding": {
+  "Web/HTTP/Reference/Headers/Accept-Encoding": {
     "modified": "2020-10-15T22:26:26.705Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Accept-Language": {
+  "Web/HTTP/Reference/Headers/Accept-Language": {
     "modified": "2020-10-15T22:21:08.686Z",
     "contributors": [
       "kibutzzz"
     ]
   },
-  "Web/HTTP/Headers/Accept-Patch": {
+  "Web/HTTP/Reference/Headers/Accept-Patch": {
     "modified": "2020-10-15T22:26:27.309Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Accept-Ranges": {
+  "Web/HTTP/Reference/Headers/Accept-Ranges": {
     "modified": "2020-10-15T22:26:36.739Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Allow-Credentials": {
+  "Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials": {
     "modified": "2020-10-15T22:26:50.350Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Allow-Headers": {
+  "Web/HTTP/Reference/Headers/Access-Control-Allow-Headers": {
     "modified": "2020-10-15T22:26:53.489Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Allow-Methods": {
+  "Web/HTTP/Reference/Headers/Access-Control-Allow-Methods": {
     "modified": "2020-10-15T22:26:56.233Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Allow-Origin": {
+  "Web/HTTP/Reference/Headers/Access-Control-Allow-Origin": {
     "modified": "2020-10-15T22:02:18.454Z",
     "contributors": [
       "francinysalles",
       "jkdrangel"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Expose-Headers": {
+  "Web/HTTP/Reference/Headers/Access-Control-Expose-Headers": {
     "modified": "2020-10-15T22:27:11.135Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Max-Age": {
+  "Web/HTTP/Reference/Headers/Access-Control-Max-Age": {
     "modified": "2020-10-15T22:27:11.158Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Request-Headers": {
+  "Web/HTTP/Reference/Headers/Access-Control-Request-Headers": {
     "modified": "2020-10-15T22:07:42.625Z",
     "contributors": [
       "EversonRRMoura"
     ]
   },
-  "Web/HTTP/Headers/Access-Control-Request-Method": {
+  "Web/HTTP/Reference/Headers/Access-Control-Request-Method": {
     "modified": "2020-10-15T22:27:11.209Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Age": {
+  "Web/HTTP/Reference/Headers/Age": {
     "modified": "2020-10-15T22:07:25.015Z",
     "contributors": [
       "jamrocha"
     ]
   },
-  "Web/HTTP/Headers/Allow": {
+  "Web/HTTP/Reference/Headers/Allow": {
     "modified": "2020-02-11T10:36:24.890Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Alt-Svc": {
+  "Web/HTTP/Reference/Headers/Alt-Svc": {
     "modified": "2020-10-15T22:27:23.038Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Authorization": {
+  "Web/HTTP/Reference/Headers/Authorization": {
     "modified": "2020-02-15T01:32:30.446Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Cache-Control": {
+  "Web/HTTP/Reference/Headers/Cache-Control": {
     "modified": "2020-10-22T20:01:06.178Z",
     "contributors": [
       "rogeriodegoiania",
       "jamrocha"
     ]
   },
-  "Web/HTTP/Headers/Clear-Site-Data": {
+  "Web/HTTP/Reference/Headers/Clear-Site-Data": {
     "modified": "2020-10-15T22:27:31.884Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Connection": {
+  "Web/HTTP/Reference/Headers/Connection": {
     "modified": "2020-10-15T22:08:10.001Z",
     "contributors": [
       "FernandoKGA",
@@ -8997,104 +9049,104 @@
       "mrseoliveira"
     ]
   },
-  "Web/HTTP/Headers/Content-Digest": {
+  "Web/HTTP/Reference/Headers/Content-Digest": {
     "modified": "2020-10-15T22:31:16.637Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Content-Disposition": {
+  "Web/HTTP/Reference/Headers/Content-Disposition": {
     "modified": "2020-10-15T22:27:55.693Z",
     "contributors": [
       "eduardocruz",
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Content-Encoding": {
+  "Web/HTTP/Reference/Headers/Content-Encoding": {
     "modified": "2020-10-15T22:27:52.523Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Content-Language": {
+  "Web/HTTP/Reference/Headers/Content-Language": {
     "modified": "2020-10-15T22:14:20.024Z",
     "contributors": [
       "coloringa"
     ]
   },
-  "Web/HTTP/Headers/Content-Length": {
+  "Web/HTTP/Reference/Headers/Content-Length": {
     "modified": "2020-10-15T22:09:26.720Z",
     "contributors": [
       "jamrocha"
     ]
   },
-  "Web/HTTP/Headers/Content-Location": {
+  "Web/HTTP/Reference/Headers/Content-Location": {
     "modified": "2020-10-15T22:25:41.262Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Content-Range": {
+  "Web/HTTP/Reference/Headers/Content-Range": {
     "modified": "2020-10-15T22:29:25.800Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Content-Security-Policy": {
+  "Web/HTTP/Reference/Headers/Content-Security-Policy": {
     "modified": "2020-10-15T22:29:29.169Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Content-Security-Policy-Report-Only": {
+  "Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only": {
     "modified": "2020-10-15T22:31:19.501Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Content-Type": {
+  "Web/HTTP/Reference/Headers/Content-Type": {
     "modified": "2020-10-15T21:55:31.773Z",
     "contributors": [
       "khaosdoctor"
     ]
   },
-  "Web/HTTP/Headers/Cookie": {
+  "Web/HTTP/Reference/Headers/Cookie": {
     "modified": "2020-10-15T22:29:26.513Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Cross-Origin-Resource-Policy": {
+  "Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy": {
     "modified": "2020-10-15T22:29:30.347Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/DNT": {
+  "Web/HTTP/Reference/Headers/DNT": {
     "modified": "2020-10-15T22:29:39.511Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/DPR": {
+  "Web/HTTP/Reference/Headers/DPR": {
     "modified": "2020-10-15T22:29:39.224Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Date": {
+  "Web/HTTP/Reference/Headers/Date": {
     "modified": "2020-10-15T22:31:16.510Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Device-Memory": {
+  "Web/HTTP/Reference/Headers/Device-Memory": {
     "modified": "2020-10-15T22:31:19.616Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/ETag": {
+  "Web/HTTP/Reference/Headers/ETag": {
     "modified": "2020-10-15T22:31:10.148Z",
     "contributors": [
       "deniscapeto",
@@ -9102,185 +9154,185 @@
       "MoraisG"
     ]
   },
-  "Web/HTTP/Headers/Early-Data": {
+  "Web/HTTP/Reference/Headers/Early-Data": {
     "modified": "2020-10-15T22:31:17.142Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Expect": {
+  "Web/HTTP/Reference/Headers/Expect": {
     "modified": "2020-10-15T22:31:20.718Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Expect-CT": {
+  "Web/HTTP/Reference/Headers/Expect-CT": {
     "modified": "2020-10-15T22:31:22.739Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Expires": {
+  "Web/HTTP/Reference/Headers/Expires": {
     "modified": "2020-10-15T22:07:21.086Z",
     "contributors": [
       "SphinxKnight",
       "jamrocha"
     ]
   },
-  "Web/HTTP/Headers/Forwarded": {
+  "Web/HTTP/Reference/Headers/Forwarded": {
     "modified": "2020-10-15T22:31:19.681Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/From": {
+  "Web/HTTP/Reference/Headers/From": {
     "modified": "2020-10-15T22:31:17.738Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Host": {
+  "Web/HTTP/Reference/Headers/Host": {
     "modified": "2020-10-15T21:56:25.368Z",
     "contributors": [
       "cesarvn2010"
     ]
   },
-  "Web/HTTP/Headers/If-Match": {
+  "Web/HTTP/Reference/Headers/If-Match": {
     "modified": "2020-10-15T22:31:31.434Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/If-Modified-Since": {
+  "Web/HTTP/Reference/Headers/If-Modified-Since": {
     "modified": "2020-10-15T21:56:17.428Z",
     "contributors": [
       "WaGjUb"
     ]
   },
-  "Web/HTTP/Headers/If-None-Match": {
+  "Web/HTTP/Reference/Headers/If-None-Match": {
     "modified": "2020-10-15T22:31:32.703Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/If-Range": {
+  "Web/HTTP/Reference/Headers/If-Range": {
     "modified": "2020-10-15T22:31:33.474Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/If-Unmodified-Since": {
+  "Web/HTTP/Reference/Headers/If-Unmodified-Since": {
     "modified": "2020-10-15T22:05:25.445Z",
     "contributors": [
       "gnuns",
       "francinysalles"
     ]
   },
-  "Web/HTTP/Headers/Keep-Alive": {
+  "Web/HTTP/Reference/Headers/Keep-Alive": {
     "modified": "2020-10-15T22:18:39.285Z",
     "contributors": [
       "pedrochaves",
       "luan0ap"
     ]
   },
-  "Web/HTTP/Headers/Last-Modified": {
+  "Web/HTTP/Reference/Headers/Last-Modified": {
     "modified": "2020-10-15T21:56:35.716Z",
     "contributors": [
       "cesarvn2010"
     ]
   },
-  "Web/HTTP/Headers/Link": {
+  "Web/HTTP/Reference/Headers/Link": {
     "modified": "2020-10-15T22:31:34.762Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Location": {
+  "Web/HTTP/Reference/Headers/Location": {
     "modified": "2020-10-15T22:25:31.903Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/NEL": {
+  "Web/HTTP/Reference/Headers/NEL": {
     "modified": "2020-07-08T20:29:31.709Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Origin": {
+  "Web/HTTP/Reference/Headers/Origin": {
     "modified": "2020-10-15T22:31:35.312Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Permissions-Policy": {
+  "Web/HTTP/Reference/Headers/Permissions-Policy": {
     "modified": "2020-10-15T22:32:03.095Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Pragma": {
+  "Web/HTTP/Reference/Headers/Pragma": {
     "modified": "2020-10-15T22:31:35.228Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Proxy-Authenticate": {
+  "Web/HTTP/Reference/Headers/Proxy-Authenticate": {
     "modified": "2020-10-15T22:31:36.533Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Proxy-Authorization": {
+  "Web/HTTP/Reference/Headers/Proxy-Authorization": {
     "modified": "2020-07-09T11:07:07.810Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Range": {
+  "Web/HTTP/Reference/Headers/Range": {
     "modified": "2020-10-15T22:31:38.126Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Referer": {
+  "Web/HTTP/Reference/Headers/Referer": {
     "modified": "2020-10-15T22:26:06.843Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Referrer-Policy": {
+  "Web/HTTP/Reference/Headers/Referrer-Policy": {
     "modified": "2020-10-15T22:31:38.598Z",
     "contributors": [
       "kenchen12",
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Retry-After": {
+  "Web/HTTP/Reference/Headers/Retry-After": {
     "modified": "2020-10-15T21:58:41.599Z",
     "contributors": [
       "dgadelha"
     ]
   },
-  "Web/HTTP/Headers/Save-Data": {
+  "Web/HTTP/Reference/Headers/Save-Data": {
     "modified": "2020-10-15T22:31:38.329Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Server": {
+  "Web/HTTP/Reference/Headers/Server": {
     "modified": "2020-10-15T22:07:06.159Z",
     "contributors": [
       "francinysalles"
     ]
   },
-  "Web/HTTP/Headers/Server-Timing": {
+  "Web/HTTP/Reference/Headers/Server-Timing": {
     "modified": "2020-10-15T22:31:38.528Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Set-Cookie": {
+  "Web/HTTP/Reference/Headers/Set-Cookie": {
     "modified": "2020-10-15T21:56:19.509Z",
     "contributors": [
       "claudiombsilva",
@@ -9288,151 +9340,128 @@
       "WaGjUb"
     ]
   },
-  "Web/HTTP/Headers/Strict-Transport-Security": {
+  "Web/HTTP/Reference/Headers/Strict-Transport-Security": {
     "modified": "2020-10-15T22:09:01.413Z",
     "contributors": [
       "darleizillmer"
     ]
   },
-  "Web/HTTP/Headers/TE": {
+  "Web/HTTP/Reference/Headers/TE": {
     "modified": "2020-10-15T22:31:39.430Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Timing-Allow-Origin": {
+  "Web/HTTP/Reference/Headers/Timing-Allow-Origin": {
     "modified": "2020-10-15T22:31:39.349Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Tk": {
+  "Web/HTTP/Reference/Headers/Tk": {
     "modified": "2020-10-15T22:31:39.173Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Trailer": {
+  "Web/HTTP/Reference/Headers/Trailer": {
     "modified": "2020-10-15T22:31:40.917Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Transfer-Encoding": {
+  "Web/HTTP/Reference/Headers/Transfer-Encoding": {
     "modified": "2020-10-15T22:31:41.759Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Upgrade-Insecure-Requests": {
+  "Web/HTTP/Reference/Headers/Upgrade-Insecure-Requests": {
     "modified": "2020-10-15T22:05:25.350Z",
     "contributors": [
       "francinysalles"
     ]
   },
-  "Web/HTTP/Headers/User-Agent": {
+  "Web/HTTP/Reference/Headers/User-Agent": {
     "modified": "2020-10-15T22:31:39.984Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Vary": {
+  "Web/HTTP/Reference/Headers/Vary": {
     "modified": "2020-10-15T22:31:40.954Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Via": {
+  "Web/HTTP/Reference/Headers/Via": {
     "modified": "2020-10-15T22:31:40.512Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/WWW-Authenticate": {
+  "Web/HTTP/Reference/Headers/WWW-Authenticate": {
     "modified": "2020-10-15T22:07:55.835Z",
     "contributors": [
       "FernandoKGA",
       "bmansur"
     ]
   },
-  "Web/HTTP/Headers/Want-Content-Digest": {
+  "Web/HTTP/Reference/Headers/Want-Content-Digest": {
     "modified": "2020-10-15T22:31:40.550Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Warning": {
+  "Web/HTTP/Reference/Headers/Warning": {
     "modified": "2020-10-15T22:31:39.879Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/X-Content-Type-Options": {
+  "Web/HTTP/Reference/Headers/X-Content-Type-Options": {
     "modified": "2020-10-15T21:55:34.398Z",
     "contributors": [
       "khaosdoctor"
     ]
   },
-  "Web/HTTP/Headers/X-DNS-Prefetch-Control": {
+  "Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control": {
     "modified": "2020-10-15T22:11:22.598Z",
     "contributors": [
       "LucasKluge"
     ]
   },
-  "Web/HTTP/Headers/X-Forwarded-For": {
+  "Web/HTTP/Reference/Headers/X-Forwarded-For": {
     "modified": "2020-10-15T22:31:44.027Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/X-Forwarded-Host": {
+  "Web/HTTP/Reference/Headers/X-Forwarded-Host": {
     "modified": "2020-10-15T22:31:44.446Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/X-Forwarded-Proto": {
+  "Web/HTTP/Reference/Headers/X-Forwarded-Proto": {
     "modified": "2020-10-15T22:31:43.726Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/X-Frame-Options": {
+  "Web/HTTP/Reference/Headers/X-Frame-Options": {
     "modified": "2020-10-15T22:31:47.974Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/X-XSS-Protection": {
+  "Web/HTTP/Reference/Headers/X-XSS-Protection": {
     "modified": "2020-10-15T22:31:47.343Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/MIME_types": {
-    "modified": "2019-12-16T17:35:45.160Z",
-    "contributors": [
-      "JpOnline",
-      "hugojunior",
-      "marcusedu"
-    ]
-  },
-  "Web/HTTP/MIME_types/Common_types": {
-    "modified": "2019-03-23T22:04:21.860Z",
-    "contributors": [
-      "khalid_ait",
-      "berbare",
-      "lpdouglas"
-    ]
-  },
-  "Web/HTTP/Messages": {
-    "modified": "2020-04-19T17:43:58.667Z",
-    "contributors": [
-      "satoLG",
-      "jamrocha"
-    ]
-  },
-  "Web/HTTP/Methods": {
+  "Web/HTTP/Reference/Methods": {
     "modified": "2020-10-15T21:51:11.621Z",
     "contributors": [
       "julio-elipse",
@@ -9443,13 +9472,13 @@
       "helcorin"
     ]
   },
-  "Web/HTTP/Methods/CONNECT": {
+  "Web/HTTP/Reference/Methods/CONNECT": {
     "modified": "2020-10-15T21:58:22.687Z",
     "contributors": [
       "marciioluucas"
     ]
   },
-  "Web/HTTP/Methods/DELETE": {
+  "Web/HTTP/Reference/Methods/DELETE": {
     "modified": "2020-10-15T21:58:32.285Z",
     "contributors": [
       "calexandrepcjr",
@@ -9458,7 +9487,7 @@
       "marciioluucas"
     ]
   },
-  "Web/HTTP/Methods/GET": {
+  "Web/HTTP/Reference/Methods/GET": {
     "modified": "2020-10-15T21:51:45.627Z",
     "contributors": [
       "krisfertig",
@@ -9466,27 +9495,27 @@
       "andrekutianski"
     ]
   },
-  "Web/HTTP/Methods/HEAD": {
+  "Web/HTTP/Reference/Methods/HEAD": {
     "modified": "2020-10-15T22:14:53.554Z",
     "contributors": [
       "ViniciusMatias"
     ]
   },
-  "Web/HTTP/Methods/OPTIONS": {
+  "Web/HTTP/Reference/Methods/OPTIONS": {
     "modified": "2020-10-15T21:56:04.830Z",
     "contributors": [
       "impadalko",
       "Mega85"
     ]
   },
-  "Web/HTTP/Methods/PATCH": {
+  "Web/HTTP/Reference/Methods/PATCH": {
     "modified": "2020-03-26T15:24:48.895Z",
     "contributors": [
       "joão.ramires",
       "GustavoOS"
     ]
   },
-  "Web/HTTP/Methods/POST": {
+  "Web/HTTP/Reference/Methods/POST": {
     "modified": "2020-10-15T22:12:56.254Z",
     "contributors": [
       "caukazama",
@@ -9494,49 +9523,20 @@
       "krisfertig"
     ]
   },
-  "Web/HTTP/Methods/PUT": {
+  "Web/HTTP/Reference/Methods/PUT": {
     "modified": "2020-10-15T22:14:53.561Z",
     "contributors": [
       "ViniciusMatias"
     ]
   },
-  "Web/HTTP/Methods/TRACE": {
+  "Web/HTTP/Reference/Methods/TRACE": {
     "modified": "2020-10-15T22:04:21.753Z",
     "contributors": [
       "solfier",
       "fabio-r-souza"
     ]
   },
-  "Web/HTTP/Overview": {
-    "modified": "2020-09-23T20:02:12.544Z",
-    "contributors": [
-      "viniciusfinger",
-      "K4mek",
-      "gustavoluchi",
-      "bruno_scatena",
-      "viniciusbds",
-      "julio-elipse",
-      "GPrimola",
-      "SubaruSama",
-      "CarlosAlbertoSzygalski",
-      "renatodantas",
-      "holdonmax"
-    ]
-  },
-  "Web/HTTP/Redirections": {
-    "modified": "2019-03-18T21:39:38.468Z",
-    "contributors": [
-      "FelipeBergmann"
-    ]
-  },
-  "Web/HTTP/Session": {
-    "modified": "2019-03-18T21:38:28.348Z",
-    "contributors": [
-      "krisfertig",
-      "zscaiosi"
-    ]
-  },
-  "Web/HTTP/Status": {
+  "Web/HTTP/Reference/Status": {
     "modified": "2020-09-30T05:44:50.985Z",
     "contributors": [
       "nunezgarcia548",
@@ -9557,25 +9557,25 @@
       "Jens.B"
     ]
   },
-  "Web/HTTP/Status/100": {
+  "Web/HTTP/Reference/Status/100": {
     "modified": "2020-10-15T22:08:25.420Z",
     "contributors": [
       "ferfabricio"
     ]
   },
-  "Web/HTTP/Status/101": {
+  "Web/HTTP/Reference/Status/101": {
     "modified": "2019-08-30T14:26:22.601Z",
     "contributors": [
       "GMBarragam"
     ]
   },
-  "Web/HTTP/Status/103": {
+  "Web/HTTP/Reference/Status/103": {
     "modified": "2020-10-15T22:26:01.901Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/200": {
+  "Web/HTTP/Reference/Status/200": {
     "modified": "2020-10-15T21:55:04.602Z",
     "contributors": [
       "macalha",
@@ -9583,7 +9583,7 @@
       "jackiecard"
     ]
   },
-  "Web/HTTP/Status/201": {
+  "Web/HTTP/Reference/Status/201": {
     "modified": "2020-10-15T21:59:06.317Z",
     "contributors": [
       "raduq",
@@ -9591,20 +9591,20 @@
       "tchaguitos"
     ]
   },
-  "Web/HTTP/Status/202": {
+  "Web/HTTP/Reference/Status/202": {
     "modified": "2019-12-24T03:35:51.332Z",
     "contributors": [
       "euvanribeiro",
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/203": {
+  "Web/HTTP/Reference/Status/203": {
     "modified": "2019-03-18T21:27:54.664Z",
     "contributors": [
       "ferfabricio"
     ]
   },
-  "Web/HTTP/Status/204": {
+  "Web/HTTP/Reference/Status/204": {
     "modified": "2020-10-15T21:58:52.674Z",
     "contributors": [
       "macalha",
@@ -9612,7 +9612,7 @@
       "salomaosnff"
     ]
   },
-  "Web/HTTP/Status/205": {
+  "Web/HTTP/Reference/Status/205": {
     "modified": "2019-12-23T21:44:23.232Z",
     "contributors": [
       "doougui",
@@ -9620,25 +9620,25 @@
       "navarro"
     ]
   },
-  "Web/HTTP/Status/206": {
+  "Web/HTTP/Reference/Status/206": {
     "modified": "2020-10-15T22:25:54.629Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/300": {
+  "Web/HTTP/Reference/Status/300": {
     "modified": "2019-12-27T11:18:36.624Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/301": {
+  "Web/HTTP/Reference/Status/301": {
     "modified": "2020-10-15T22:24:18.785Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/302": {
+  "Web/HTTP/Reference/Status/302": {
     "modified": "2020-10-15T22:10:28.043Z",
     "contributors": [
       "FernandoKGA",
@@ -9646,33 +9646,33 @@
       "CGReinhold"
     ]
   },
-  "Web/HTTP/Status/303": {
+  "Web/HTTP/Reference/Status/303": {
     "modified": "2020-10-15T22:04:22.978Z",
     "contributors": [
       "marcelobonatto"
     ]
   },
-  "Web/HTTP/Status/304": {
+  "Web/HTTP/Reference/Status/304": {
     "modified": "2020-10-15T22:00:19.115Z",
     "contributors": [
       "macalha",
       "bartolomeu.gusella"
     ]
   },
-  "Web/HTTP/Status/307": {
+  "Web/HTTP/Reference/Status/307": {
     "modified": "2020-10-15T22:11:27.802Z",
     "contributors": [
       "dancamboim",
       "CGReinhold"
     ]
   },
-  "Web/HTTP/Status/308": {
+  "Web/HTTP/Reference/Status/308": {
     "modified": "2020-10-15T22:25:15.141Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/400": {
+  "Web/HTTP/Reference/Status/400": {
     "modified": "2020-10-01T08:48:37.177Z",
     "contributors": [
       "kendalbaba8",
@@ -9681,7 +9681,7 @@
       "sergioflores-j"
     ]
   },
-  "Web/HTTP/Status/401": {
+  "Web/HTTP/Reference/Status/401": {
     "modified": "2020-12-01T19:39:24.191Z",
     "contributors": [
       "caio-gi25-me",
@@ -9691,45 +9691,45 @@
       "carlosmarx"
     ]
   },
-  "Web/HTTP/Status/402": {
+  "Web/HTTP/Reference/Status/402": {
     "modified": "2020-10-15T22:25:28.519Z",
     "contributors": [
       "FernandoKGA",
       "RaulDeMelo"
     ]
   },
-  "Web/HTTP/Status/403": {
+  "Web/HTTP/Reference/Status/403": {
     "modified": "2020-10-15T21:56:18.319Z",
     "contributors": [
       "macalha",
       "carlosmarx"
     ]
   },
-  "Web/HTTP/Status/404": {
+  "Web/HTTP/Reference/Status/404": {
     "modified": "2020-10-15T21:57:08.819Z",
     "contributors": [
       "pedropaulosuzuki"
     ]
   },
-  "Web/HTTP/Status/405": {
+  "Web/HTTP/Reference/Status/405": {
     "modified": "2019-03-18T21:09:45.460Z",
     "contributors": [
       "dathin67"
     ]
   },
-  "Web/HTTP/Status/406": {
+  "Web/HTTP/Reference/Status/406": {
     "modified": "2020-10-15T22:25:54.038Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/407": {
+  "Web/HTTP/Reference/Status/407": {
     "modified": "2020-10-15T22:14:55.526Z",
     "contributors": [
       "ViniciusMatias"
     ]
   },
-  "Web/HTTP/Status/408": {
+  "Web/HTTP/Reference/Status/408": {
     "modified": "2019-08-20T21:08:30.185Z",
     "contributors": [
       "macalha",
@@ -9739,7 +9739,7 @@
       "alanlucian"
     ]
   },
-  "Web/HTTP/Status/409": {
+  "Web/HTTP/Reference/Status/409": {
     "modified": "2020-10-12T18:38:04.385Z",
     "contributors": [
       "enriquerenebr",
@@ -9748,170 +9748,170 @@
       "wilsonferro"
     ]
   },
-  "Web/HTTP/Status/410": {
+  "Web/HTTP/Reference/Status/410": {
     "modified": "2020-10-15T22:09:41.751Z",
     "contributors": [
       "macalha"
     ]
   },
-  "Web/HTTP/Status/411": {
+  "Web/HTTP/Reference/Status/411": {
     "modified": "2019-03-18T21:25:46.143Z",
     "contributors": [
       "jamrocha"
     ]
   },
-  "Web/HTTP/Status/412": {
+  "Web/HTTP/Reference/Status/412": {
     "modified": "2020-10-15T22:26:08.284Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/413": {
+  "Web/HTTP/Reference/Status/413": {
     "modified": "2019-08-30T13:19:23.971Z",
     "contributors": [
       "GMBarragam"
     ]
   },
-  "Web/HTTP/Status/414": {
+  "Web/HTTP/Reference/Status/414": {
     "modified": "2019-03-23T22:05:49.854Z",
     "contributors": [
       "pedropaulosuzuki"
     ]
   },
-  "Web/HTTP/Status/415": {
+  "Web/HTTP/Reference/Status/415": {
     "modified": "2019-03-23T22:08:19.304Z",
     "contributors": [
       "VitorHFLopes"
     ]
   },
-  "Web/HTTP/Status/416": {
+  "Web/HTTP/Reference/Status/416": {
     "modified": "2020-10-15T22:26:05.801Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/417": {
+  "Web/HTTP/Reference/Status/417": {
     "modified": "2019-09-11T14:11:12.818Z",
     "contributors": [
       "Rogerio-Viana",
       "raduq"
     ]
   },
-  "Web/HTTP/Status/418": {
+  "Web/HTTP/Reference/Status/418": {
     "modified": "2020-10-15T22:09:34.458Z",
     "contributors": [
       "raduq",
       "macalha"
     ]
   },
-  "Web/HTTP/Status/422": {
+  "Web/HTTP/Reference/Status/422": {
     "modified": "2019-05-17T09:52:53.330Z",
     "contributors": [
       "raduq"
     ]
   },
-  "Web/HTTP/Status/425": {
+  "Web/HTTP/Reference/Status/425": {
     "modified": "2020-10-15T22:18:43.120Z",
     "contributors": [
       "raduq"
     ]
   },
-  "Web/HTTP/Status/426": {
+  "Web/HTTP/Reference/Status/426": {
     "modified": "2019-05-17T09:28:05.733Z",
     "contributors": [
       "raduq"
     ]
   },
-  "Web/HTTP/Status/428": {
+  "Web/HTTP/Reference/Status/428": {
     "modified": "2019-05-17T09:48:01.976Z",
     "contributors": [
       "raduq"
     ]
   },
-  "Web/HTTP/Status/429": {
+  "Web/HTTP/Reference/Status/429": {
     "modified": "2019-03-23T22:11:06.523Z",
     "contributors": [
       "matheuscorreia",
       "MilesGitGud"
     ]
   },
-  "Web/HTTP/Status/431": {
+  "Web/HTTP/Reference/Status/431": {
     "modified": "2020-01-05T14:49:44.248Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/451": {
+  "Web/HTTP/Reference/Status/451": {
     "modified": "2020-10-15T22:09:34.570Z",
     "contributors": [
       "macalha"
     ]
   },
-  "Web/HTTP/Status/500": {
+  "Web/HTTP/Reference/Status/500": {
     "modified": "2020-10-15T22:06:42.031Z",
     "contributors": [
       "omauriciomaciel",
       "francinysalles"
     ]
   },
-  "Web/HTTP/Status/501": {
+  "Web/HTTP/Reference/Status/501": {
     "modified": "2020-10-15T22:17:52.081Z",
     "contributors": [
       "lucianoac",
       "raduq"
     ]
   },
-  "Web/HTTP/Status/502": {
+  "Web/HTTP/Reference/Status/502": {
     "modified": "2020-10-15T22:20:07.323Z",
     "contributors": [
       "moraesdam"
     ]
   },
-  "Web/HTTP/Status/503": {
+  "Web/HTTP/Reference/Status/503": {
     "modified": "2020-10-15T22:09:37.984Z",
     "contributors": [
       "nunezgarcia548",
       "macalha"
     ]
   },
-  "Web/HTTP/Status/504": {
+  "Web/HTTP/Reference/Status/504": {
     "modified": "2020-10-15T21:58:42.777Z",
     "contributors": [
       "Rogerio-Viana",
       "caiobrentano"
     ]
   },
-  "Web/HTTP/Status/505": {
+  "Web/HTTP/Reference/Status/505": {
     "modified": "2019-03-18T21:25:04.554Z",
     "contributors": [
       "macalha"
     ]
   },
-  "Web/HTTP/Status/506": {
+  "Web/HTTP/Reference/Status/506": {
     "modified": "2020-01-05T13:08:39.666Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/507": {
+  "Web/HTTP/Reference/Status/507": {
     "modified": "2019-12-27T11:31:39.081Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/508": {
+  "Web/HTTP/Reference/Status/508": {
     "modified": "2019-09-10T09:19:50.989Z",
     "contributors": [
       "lucianoac"
     ]
   },
-  "Web/HTTP/Status/510": {
+  "Web/HTTP/Reference/Status/510": {
     "modified": "2020-01-05T13:00:04.462Z",
     "contributors": [
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Status/511": {
+  "Web/HTTP/Reference/Status/511": {
     "modified": "2019-10-29T08:55:24.737Z",
     "contributors": [
       "niknicius"
@@ -9948,7 +9948,22 @@
       "tauame"
     ]
   },
-  "Web/JavaScript/Closures": {
+  "Web/JavaScript/Guide": {
+    "modified": "2020-03-12T19:37:56.671Z",
+    "contributors": [
+      "SphinxKnight",
+      "Franck_Moreira",
+      "Danilson_Veloso",
+      "MarceloBRN",
+      "felipetesc",
+      "evertonmss",
+      "carlospereira9372",
+      "teoli",
+      "regisdiogo",
+      "ethertank"
+    ]
+  },
+  "Web/JavaScript/Guide/Closures": {
     "modified": "2020-04-07T04:11:27.586Z",
     "contributors": [
       "henriquegeremia",
@@ -9969,7 +9984,20 @@
       "Machado"
     ]
   },
-  "Web/JavaScript/Data_structures": {
+  "Web/JavaScript/Guide/Control_flow_and_error_handling": {
+    "modified": "2020-03-12T19:39:22.758Z",
+    "contributors": [
+      "igormmatos",
+      "TheMrHetch",
+      "viniciusdacal",
+      "mahenrique",
+      "Franck_Moreira",
+      "DiegoGrande",
+      "MarceloBRN",
+      "pkelbert"
+    ]
+  },
+  "Web/JavaScript/Guide/Data_structures": {
     "modified": "2020-08-07T10:04:07.537Z",
     "contributors": [
       "rafhaelfitzpatrick",
@@ -9990,14 +10018,14 @@
       "jagascript"
     ]
   },
-  "Web/JavaScript/Enumerability_and_ownership_of_properties": {
+  "Web/JavaScript/Guide/Enumerability_and_ownership_of_properties": {
     "modified": "2020-03-12T19:44:27.885Z",
     "contributors": [
       "jaimemaretoli",
       "cantoniazzi"
     ]
   },
-  "Web/JavaScript/Equality_comparisons_and_sameness": {
+  "Web/JavaScript/Guide/Equality_comparisons_and_sameness": {
     "modified": "2020-03-12T19:41:26.724Z",
     "contributors": [
       "babieste",
@@ -10005,45 +10033,6 @@
       "phillipnunes",
       "alinedmelo",
       "alexandresn"
-    ]
-  },
-  "Web/JavaScript/Event_loop": {
-    "modified": "2020-03-12T19:41:03.578Z",
-    "contributors": [
-      "GuilhermePiovesan",
-      "Rondinelly",
-      "oirodolfo",
-      "ruda",
-      "jaimeschettini",
-      "Felipe_Baravieira"
-    ]
-  },
-  "Web/JavaScript/Guide": {
-    "modified": "2020-03-12T19:37:56.671Z",
-    "contributors": [
-      "SphinxKnight",
-      "Franck_Moreira",
-      "Danilson_Veloso",
-      "MarceloBRN",
-      "felipetesc",
-      "evertonmss",
-      "carlospereira9372",
-      "teoli",
-      "regisdiogo",
-      "ethertank"
-    ]
-  },
-  "Web/JavaScript/Guide/Control_flow_and_error_handling": {
-    "modified": "2020-03-12T19:39:22.758Z",
-    "contributors": [
-      "igormmatos",
-      "TheMrHetch",
-      "viniciusdacal",
-      "mahenrique",
-      "Franck_Moreira",
-      "DiegoGrande",
-      "MarceloBRN",
-      "pkelbert"
     ]
   },
   "Web/JavaScript/Guide/Expressions_and_operators": {
@@ -10115,6 +10104,25 @@
       "felipetesc"
     ]
   },
+  "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:39:21.410Z",
+    "contributors": [
+      "deadkff01",
+      "duduindo",
+      "lms7",
+      "lucgauer",
+      "Timer00",
+      "melostbr",
+      "VinicioSantos",
+      "everton3x",
+      "hudsontavares",
+      "ericcristhiano",
+      "Felipe_Baravieira",
+      "luisfmsouza",
+      "LucasCaixeta",
+      "antoniomquadrosfilho"
+    ]
+  },
   "Web/JavaScript/Guide/Introduction": {
     "modified": "2020-03-12T19:41:02.913Z",
     "contributors": [
@@ -10152,6 +10160,31 @@
       "raphaellima8"
     ]
   },
+  "Web/JavaScript/Guide/Language_overview": {
+    "modified": "2020-05-27T17:14:30.277Z",
+    "contributors": [
+      "ruanpetterson",
+      "nailtonvieira",
+      "michaelycus",
+      "mateus.mlo",
+      "jhbalestrin",
+      "Sheppy",
+      "TiagoWinehouse",
+      "victorwpbastos",
+      "ruda",
+      "ti.marcosdias",
+      "fredericksilva",
+      "Scr1pt3r",
+      "trestini",
+      "ThiagoMatos",
+      "angelorubin",
+      "jlcarvalho",
+      "TheBorba",
+      "teoli",
+      "gtcarlos",
+      "arthur.luiz"
+    ]
+  },
   "Web/JavaScript/Guide/Loops_and_iteration": {
     "modified": "2020-03-12T19:41:00.064Z",
     "contributors": [
@@ -10163,6 +10196,15 @@
       "odisseumau",
       "alinehx",
       "Felipe_Baravieira"
+    ]
+  },
+  "Web/JavaScript/Guide/Memory_management": {
+    "modified": "2020-03-12T19:40:29.251Z",
+    "contributors": [
+      "silvaw",
+      "LincePotiguara",
+      "gcacars",
+      "AlanCezarAraujo"
     ]
   },
   "Web/JavaScript/Guide/Meta_programming": {
@@ -10264,73 +10306,6 @@
       "LucasRamos",
       "teoli",
       "fernando.karpinski"
-    ]
-  },
-  "Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-03-12T19:39:21.410Z",
-    "contributors": [
-      "deadkff01",
-      "duduindo",
-      "lms7",
-      "lucgauer",
-      "Timer00",
-      "melostbr",
-      "VinicioSantos",
-      "everton3x",
-      "hudsontavares",
-      "ericcristhiano",
-      "Felipe_Baravieira",
-      "luisfmsouza",
-      "LucasCaixeta",
-      "antoniomquadrosfilho"
-    ]
-  },
-  "Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2019-05-10T14:34:34.570Z",
-    "contributors": [
-      "SaggitariusA",
-      "jessicamorim42",
-      "angelorubin",
-      "caioabe",
-      "marcio-ti",
-      "IanRamosC",
-      "teoli",
-      "cleitongalvao",
-      "treax"
-    ]
-  },
-  "Web/JavaScript/Language_overview": {
-    "modified": "2020-05-27T17:14:30.277Z",
-    "contributors": [
-      "ruanpetterson",
-      "nailtonvieira",
-      "michaelycus",
-      "mateus.mlo",
-      "jhbalestrin",
-      "Sheppy",
-      "TiagoWinehouse",
-      "victorwpbastos",
-      "ruda",
-      "ti.marcosdias",
-      "fredericksilva",
-      "Scr1pt3r",
-      "trestini",
-      "ThiagoMatos",
-      "angelorubin",
-      "jlcarvalho",
-      "TheBorba",
-      "teoli",
-      "gtcarlos",
-      "arthur.luiz"
-    ]
-  },
-  "Web/JavaScript/Memory_management": {
-    "modified": "2020-03-12T19:40:29.251Z",
-    "contributors": [
-      "silvaw",
-      "LincePotiguara",
-      "gcacars",
-      "AlanCezarAraujo"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -10597,6 +10572,17 @@
     "contributors": [
       "LucianoCalsolari",
       "re-andrade1987"
+    ]
+  },
+  "Web/JavaScript/Reference/Execution_model": {
+    "modified": "2020-03-12T19:41:03.578Z",
+    "contributors": [
+      "GuilhermePiovesan",
+      "Rondinelly",
+      "oirodolfo",
+      "ruda",
+      "jaimeschettini",
+      "Felipe_Baravieira"
     ]
   },
   "Web/JavaScript/Reference/Functions": {
@@ -13281,6 +13267,20 @@
       "danilosetubal"
     ]
   },
+  "Web/JavaScript/Reference/JavaScript_technologies_overview": {
+    "modified": "2019-05-10T14:34:34.570Z",
+    "contributors": [
+      "SaggitariusA",
+      "jessicamorim42",
+      "angelorubin",
+      "caioabe",
+      "marcio-ti",
+      "IanRamosC",
+      "teoli",
+      "cleitongalvao",
+      "treax"
+    ]
+  },
   "Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2020-03-12T19:46:38.568Z",
     "contributors": [
@@ -13324,7 +13324,7 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Destructuring_assignment": {
+  "Web/JavaScript/Reference/Operators/Destructuring": {
     "modified": "2020-11-23T07:49:53.825Z",
     "contributors": [
       "filipetorres",
@@ -13814,17 +13814,17 @@
       "Dyvik"
     ]
   },
-  "Web/MathML/Element": {
+  "Web/MathML/Guides": {
+    "modified": "2019-03-23T23:19:30.922Z",
+    "contributors": [
+      "raniere"
+    ]
+  },
+  "Web/MathML/Reference/Element": {
     "modified": "2019-03-23T23:15:05.305Z",
     "contributors": [
       "non",
       "splewako"
-    ]
-  },
-  "Web/MathML/Examples": {
-    "modified": "2019-03-23T23:19:30.922Z",
-    "contributors": [
-      "raniere"
     ]
   },
   "Web/Media/Guides/Formats": {
