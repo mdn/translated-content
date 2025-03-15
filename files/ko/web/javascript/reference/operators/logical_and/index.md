@@ -163,7 +163,7 @@ bCondition1 || (bCondition2 && bCondition3);
 
 언제나 다음과 같습니다.
 
-```js
+```js-nolint
 bCondition1 || bCondition2 && bCondition3;
 ```
 
