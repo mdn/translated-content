@@ -2,7 +2,7 @@
 title: Window：showDirectoryPicker() 方法
 slug: Web/API/Window/showDirectoryPicker
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: 8f93582ca9008d55db258a017552be486e372382
 ---
 
 {{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
@@ -13,6 +13,7 @@ l10n:
 
 ```js-nolint
 showDirectoryPicker()
+showDirectoryPicker(options)
 ```
 
 ### 参数
@@ -26,11 +27,11 @@ showDirectoryPicker()
     - `mode` {{optional_inline}}
       - : 字符串，默认为 `"read"`，用于只读访问，或 `"readwrite"` 用于读写访问。
     - `startIn` {{optional_inline}}
-      - : 一个 `FileSystemHandle` 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`），用于指定选择器的起始目录。
+      - : 一个 {{domxref("FileSystemHandle")}} 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`），用于指定选择器的起始目录。
 
 ### 返回值
 
-一个 {{jsxref("Promise")}} 对象，会兑现一个 {{domxref('FileSystemDirectoryHandle')}} 对象。
+一个 {{jsxref("Promise")}} 对象，其兑现一个 {{domxref('FileSystemDirectoryHandle')}} 对象。
 
 ### 异常
 
