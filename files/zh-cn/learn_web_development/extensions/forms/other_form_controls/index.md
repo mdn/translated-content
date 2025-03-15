@@ -1,7 +1,6 @@
 ---
 title: 其他表单控件
 slug: Learn_web_development/Extensions/Forms/Other_form_controls
-original_slug: Learn/Forms/Other_form_controls
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}

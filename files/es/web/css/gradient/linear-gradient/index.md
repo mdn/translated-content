@@ -9,7 +9,38 @@ l10n:
 
 La [función](/es/docs/Web/CSS/CSS_Functions) [CSS](/es/docs/Web/CSS) **`linear-gradient()`** crea una imagen que consiste en una transición progresiva entre dos o más colores a lo largo de una línea recta. Su resultado es un objeto del tipo de datos {{CSSxRef("&lt;gradient&gt;")}}, que es un tipo especial de {{CSSxRef("&lt;image&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: linear-gradient()")}}
+
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## Sintaxis
 

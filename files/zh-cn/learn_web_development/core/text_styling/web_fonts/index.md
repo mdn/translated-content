@@ -1,7 +1,6 @@
 ---
 title: Web 字体
 slug: Learn_web_development/Core/Text_styling/Web_fonts
-original_slug: Learn/CSS/Styling_text/Web_fonts
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

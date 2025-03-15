@@ -170,7 +170,7 @@ CSS Device Adaptation 規範定義了以下的後設資料名稱：
   >
   > 將 `user-scalable` 設為 `no` 以禁用縮放功能，會使視障人士無法閱讀或理解頁面內容。
   >
-  > - [MDN 理解 WCAG 指南 1.4 的解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+  > - [MDN 理解 WCAG 指南 1.4 的解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
   > - [理解成功標準 1.4.4 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ### 其他後設資料名稱

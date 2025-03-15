@@ -12,5 +12,5 @@ l10n:
 ## 参见
 
 - 维基百科上的[数值范围](https://zh.wikipedia.org/wiki/資料類型#数值范围)
-- JavaScript 类型：[`BigInt`](/zh-CN/docs/Web/JavaScript/Data_structures#bigint_类型)
+- JavaScript 类型：[`BigInt`](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#bigint_类型)
 - JavaScript 全局对象 {{jsxref("BigInt")}}

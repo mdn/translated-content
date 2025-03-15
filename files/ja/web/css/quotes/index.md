@@ -7,7 +7,42 @@ slug: Web/CSS/quotes
 
 **`quotes`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` や `close-quotes` を使用して追加された引用符をどのように表示するかを設定します。
 
-{{EmbedInteractiveExample("pages/css/quotes.html")}}
+{{InteractiveExample("CSS Demo: quotes")}}
+
+```css interactive-example-choice
+quotes: none;
+```
+
+```css interactive-example-choice
+quotes: initial;
+```
+
+```css interactive-example-choice
+quotes: "'" "'";
+```
+
+```css interactive-example-choice
+quotes: "„" "“" "‚" "‘";
+```
+
+```css interactive-example-choice
+quotes: "«" "»" "‹" "›";
+```
+
+```html interactive-example
+<section id="default-example">
+  <q id="example-element"
+    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
+    we will believe in them!</q
+  >
+</section>
+```
+
+```css interactive-example
+q {
+  font-size: 1.2rem;
+}
+```
 
 ## 構文
 

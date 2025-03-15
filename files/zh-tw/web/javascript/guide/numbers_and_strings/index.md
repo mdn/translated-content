@@ -1,7 +1,6 @@
 ---
 title: 數字與日期
 slug: Web/JavaScript/Guide/Numbers_and_strings
-original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
@@ -16,7 +15,7 @@ original_slug: Web/JavaScript/Guide/Numbers_and_dates
 
 {{jsxref("BigInt")}} 是 Javascript 最新的功能，它可以表示一個很大的整數。使用 `BigInt需要注意一點`，`BigInt` 和{{jsxref("Number")}}不能在同一個 operation 混用還有當用 {{jsxref("Math")}} 物件時不能使用`BigInt`。
 
-請參照 [JavaScript data types and structures](/zh-TW/docs/Web/JavaScript/Data_structures) 來取得更多詳細資料。
+請參照 [JavaScript data types and structures](/zh-TW/docs/Web/JavaScript/Guide/Data_structures) 來取得更多詳細資料。
 
 你可以用四種進制表示數字：十進制 (decimal)，二進制 (binary)，八進制 (octal) 以及十六進制 (hexadecimal)。
 

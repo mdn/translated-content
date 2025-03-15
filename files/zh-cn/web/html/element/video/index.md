@@ -467,7 +467,7 @@ AddType video/webm .webm
 
 - [Web 视频文本轨格式（WebVTT）](/zh-CN/docs/Web/API/WebVTT_API)
 - [WebAIM：字幕、脚本和音频描述](https://webaim.org/techniques/captions/)
-- [MDN 理解 WCAG，指南 1.2 说明](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [MDN 理解 WCAG，指南 1.2 说明](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [了解成功标准 1.2.1 | W3C 对 WCAG 2.0 的理解](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [了解成功标准 1.2.2 | W3C 对 WCAG 2.0 的理解](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -516,7 +516,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>

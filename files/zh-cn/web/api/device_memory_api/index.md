@@ -23,7 +23,7 @@ const RAM = navigator.deviceMemory;
 
 ### 客户端提示
 
-你也可以使用[客户端提示](/zh-CN/docs/Web/HTTP/Client_hints) HTTP 标头与 `Device-Memory` 指令来检索设备的近似 RAM 大小。
+你也可以使用[客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints) HTTP 标头与 `Device-Memory` 指令来检索设备的近似 RAM 大小。
 
 ## 接口
 

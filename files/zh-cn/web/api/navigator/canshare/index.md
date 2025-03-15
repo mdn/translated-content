@@ -16,7 +16,7 @@ l10n:
 - 指定了要分享的文件但用户代理实现不支持文件共享。
 - 共享了将被用户代理视为“恶意共享”的指定数据。
 
-[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予，则 `canShare()` 方法将返回 `false`。
+[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予，则 `canShare()` 方法将返回 `false`。
 
 ## 语法
 

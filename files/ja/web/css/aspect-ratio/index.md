@@ -11,7 +11,41 @@ l10n:
 
 `aspect-ratio` が何らかの効果を持つためには、ボックスのサイズの少なくとも 1 つが自動である必要があります。幅も高さも自動サイズでない場合、指定されたアスペクト比はボックスの推奨サイズに何の影響も持ちません。
 
-{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+{{InteractiveExample("CSS Demo: aspect-ratio")}}
+
+```css interactive-example-choice
+aspect-ratio: auto;
+```
+
+```css interactive-example-choice
+aspect-ratio: 1 / 1;
+```
+
+```css interactive-example-choice
+aspect-ratio: 16 / 9;
+```
+
+```css interactive-example-choice
+aspect-ratio: 0.5;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    height="640"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria.jpg"
+    width="466" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: auto;
+}
+```
 
 ## 構文
 

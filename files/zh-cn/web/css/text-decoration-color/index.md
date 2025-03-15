@@ -9,7 +9,47 @@ slug: Web/CSS/text-decoration-color
 
 修饰线包括下划线、上划线、删除线和波浪线，波浪线的典型用途是标明内容拼写错误（仅举例）。被指定的颜色会作用到该属性值有效范围内的所有修饰线上。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-color.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-color")}}
+
+```css interactive-example-choice
+text-decoration-color: red;
+```
+
+```css interactive-example-choice
+text-decoration-color: #21ff21;
+```
+
+```css interactive-example-choice
+text-decoration-color: rgb(255, 90, 255);
+```
+
+```css interactive-example-choice
+text-decoration-color: hsl(70, 100%, 40%);
+```
+
+```css interactive-example-choice
+text-decoration-color: currentColor;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 CSS 没有直接的机制为每种线型指定唯一的颜色，不过可以通过嵌套元素的方法来实现这种效果：用 {{cssxref("text-decoration-line")}} 属性为每个元素应用一种线型，再用 `text-decoration-color` 指定线的颜色。
 
@@ -69,7 +109,7 @@ It is important to ensure that the contrast ratio between the color of the text,
 Color alone should not be used to convey meaning. For example, change of text and text-decoration-color alone is not enouch to indicate a link has focus.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## 规范

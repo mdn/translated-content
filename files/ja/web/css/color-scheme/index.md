@@ -11,7 +11,32 @@ l10n:
 
 オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェースを調整します。これには、[フォームコントロール](/ja/docs/Learn/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/CSS_colors)の使用値が含まれます。
 
-{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
+{{InteractiveExample("CSS Demo: color-scheme")}}
+
+```css interactive-example-choice
+color-scheme: normal;
+```
+
+```css interactive-example-choice
+color-scheme: dark;
+```
+
+```css interactive-example-choice
+color-scheme: light;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <textarea id="example-element">Text Area</textarea>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 50%;
+}
+```
 
 ## 構文
 

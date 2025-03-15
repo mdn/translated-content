@@ -176,7 +176,7 @@ div {
 - `size`
   - : 以字节数为单位的文件大小。
 - `type`
-  - : 文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+  - : 文件的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
 - `webkitRelativePath` {{non-standard_inline}}
   - : 一个字符串，指定了相对于在目录选择器中选择的基本目录的文件路径（即，一个设置了 [`webkitdirectory`](#webkitdirectory) 属性的 `file` 选择器）。_这是非标准的，应该谨慎使用。_
 

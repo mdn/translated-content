@@ -68,7 +68,7 @@ article {
 - {{cssxref("float")}} 布局将在指定元素内独立执行。
 - 外边距不会跨越布局局限边界折叠。
 - 布局容器是 `absolute` 和 `fixed` 定位子元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
-- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
+- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
 
 > [!NOTE]
 > 当使用 {{cssxref("container-type")}} 和 {{cssxref("container-name")}} 属性时，`contain` 的 `style` 和 `layout` 值会自动应用。

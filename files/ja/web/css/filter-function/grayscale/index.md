@@ -9,7 +9,33 @@ l10n:
 
 **`grayscale()`** は [CSS](/ja/docs/Web/CSS) の関数は、入力画像をグレースケールに変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}
+{{InteractiveExample("CSS Demo: grayscale()")}}
+
+```css interactive-example-choice
+filter: grayscale(0);
+```
+
+```css interactive-example-choice
+filter: grayscale(0.2);
+```
+
+```css interactive-example-choice
+filter: grayscale(60%);
+```
+
+```css interactive-example-choice
+filter: grayscale(1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## 構文
 

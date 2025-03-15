@@ -48,7 +48,7 @@ l10n:
   （[Firefox bug 1823757](https://bugzil.la/1823757)、[Firefox bug 1866993](https://bugzil.la/1866993)）。
 
 - 现已支持 {{domxref("RTCIceTransport")}} 的 {{domxref("RTCIceTransport/state","state")}} 和 {{domxref("RTCIceTransport/gatheringState","gatheringState")}} 属性及与之关联的 {{domxref("RTCIceTransport/statechange_event","statechange")}} 和 {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}} 事件，以及 {{domxref("RTCDtlsTransport.iceTransport")}} 属性（返回 {{domxref("RTCDtlsTransport")}} 的底层 `RTCIceTransport`）。这些特性提供了比 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} 和 {{domxref("RTCPeerConnection.connectionState","connectionState")}} 属性更细粒度的监控。（[Firefox bug 1811912](https://bugzil.la/1811912)）。
-- 现已支持 {{domxref("Element.ariaBrailleLabel")}} 和 {{domxref("Element.ariaBrailleRoleDescription")}}，它们分别反映了全局 ARIA HTML 属性 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) 和 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)。（[Firefox bug 1861201](https://bugzil.la/1861201)）。
+- 现已支持 {{domxref("Element.ariaBrailleLabel")}} 和 {{domxref("Element.ariaBrailleRoleDescription")}}，它们分别反映了全局 ARIA HTML 属性 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) 和 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription)。（[Firefox bug 1861201](https://bugzil.la/1861201)）。
 
 - 添加了允许 Web 应用程序在画布临时丢失其 2D 上下文时进行优雅恢复的支持。这可能发生在画布使用 GPU 进行硬件加速而出现驱动程序崩溃的情况下。（[Firefox bug 1887729](https://bugzil.la/1887729)）。以下是有关丢失和恢复画布上下文的事件的一些额外细节：
 
@@ -88,7 +88,7 @@ l10n:
 
 ## 为附加组件开发者带来的变化
 
-- {{WebExtAPIRef("proxy.ProxyInfo")}} 的 `proxyAuthorization` 属性的内容现在会作为 [CONNECT](/zh-CN/docs/Web/HTTP/Methods/CONNECT) 请求的 {{httpheader("Proxy-Authorization")}} 请求标头的值传递给 HTTP 代理（除了现有的对 HTTPS 代理的支持）（[Firefox bug 1794464](https://bugzil.la/1794464)）。
+- {{WebExtAPIRef("proxy.ProxyInfo")}} 的 `proxyAuthorization` 属性的内容现在会作为 [CONNECT](/zh-CN/docs/Web/HTTP/Reference/Methods/CONNECT) 请求的 {{httpheader("Proxy-Authorization")}} 请求标头的值传递给 HTTP 代理（除了现有的对 HTTPS 代理的支持）（[Firefox bug 1794464](https://bugzil.la/1794464)）。
 
 ## 实验性 Web 特性
 

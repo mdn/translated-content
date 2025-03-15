@@ -55,7 +55,7 @@ TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切�
 
 ## 响应
 
-一旦我们建立了和 web 服务器的连接，浏览器就会代表用户发送一个初始的 [HTTP `GET` 请求](/zh-CN/docs/Web/HTTP/Methods)，对于网站来说，这个请求通常是一个 HTML 文件。一旦服务器收到请求，它将使用相关的响应头和 HTML 的内容进行回复。
+一旦我们建立了和 web 服务器的连接，浏览器就会代表用户发送一个初始的 [HTTP `GET` 请求](/zh-CN/docs/Web/HTTP/Reference/Methods)，对于网站来说，这个请求通常是一个 HTML 文件。一旦服务器收到请求，它将使用相关的响应头和 HTML 的内容进行回复。
 
 ```html
 <!doctype html>
@@ -150,7 +150,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 浏览器还构建辅助设备用于分析和解释内容的[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)树。无障碍对象模型（AOM）类似于 DOM 的语义版本。当 DOM 更新时，浏览器会更新辅助功能树。辅助技术本身无法修改无障碍树。
 
-在构建 AOM 之前，[屏幕阅读器](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)无法访问内容。
+在构建 AOM 之前，[屏幕阅读器](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors)无法访问内容。
 
 ## 渲染
 

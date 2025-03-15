@@ -1,21 +1,21 @@
 ---
-title: CSS 拘束の使用
+title: CSS コンテナーの使用
 slug: Web/CSS/CSS_containment/Using_CSS_containment
 l10n:
-  sourceCommit: 4bf03c104b1bca2068dbff927020e7f802c4af7e
+  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
 {{CSSRef}}
 
-CSS 拘束 (CSS Containment) は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができます。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。
+CSS コンテナー (CSS containment) は、ウェブページの表示性能を向上させるために、開発者がページの任意のサブツリーをページのそれ以外の部分から独立させることができます。もしページの一部が独立していることをブラウザーが知っていれば、レンダリングを最適化し、表示性能を向上させることができます。
 
 {{cssxref("contain")}} と {{cssxref("content-visibility")}} プロパティを使うことで、開発者はユーザーエージェントに、要素がコンテンツをすべて表示すべきかどうか、また画面外にあるときにコンテンツを表示すべきかどうかを知らせることができます。ユーザーエージェントは、必要に応じて要素に拘束を適用し、必要なときまでレイアウトやレンダリングを延期することができます。
 
-このガイドでは、 CSS 拘束の基本的な目的と、 `contain` と `content-visibility` を活用してユーザー体験を向上させる方法について記述しています。
+このガイドでは、 CSS コンテナーの基本的な目的と、 `contain` と `content-visibility` を活用してユーザー体験を向上させる方法について記述しています。
 
 ## 基本的な例
 
-ウェブページには、論理的には互いに独立した複数の節が含まれていることがよくあります。 CSS 拘束により、レンダリング時に他のセクションを本当に独立して扱うことができます。
+ウェブページには、論理的には互いに独立した複数の節が含まれていることがよくあります。 CSS コンテナーにより、レンダリング時に他のセクションを本当に独立して扱うことができます。
 
 例えば、ブログは通常複数の記事を含み、それぞれが下記のマークアップのように見出しとコンテンツを含みます。
 
@@ -63,14 +63,14 @@ article {
 }
 ```
 
-レイアウトは通常、文書全体がスコープになっています。つまり、文書全体の中から 1 つの要素を動かしただけで、すべてが動かされたかのように扱われます。 `contain: layout` を使うことで、ブラウザーに対して必要な要素のみを伝えることができます。要素の中にあるものはすべてその要素にスコープされ、ページの他の部分には影響せず、包含ボックスは独立した[整形コンテキスト](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)を確立します。
+レイアウトは通常、文書全体がスコープになっています。つまり、文書全体の中から 1 つの要素を動かしただけで、すべてが動かされたかのように扱われます。 `contain: layout` を使うことで、ブラウザーに対して必要な要素のみを伝えることができます。要素の中にあるものはすべてその要素にスコープされ、ページの他の部分には影響せず、包含ボックスは独立した[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)を確立します。
 
 加えて以下のことが言えます。
 
 - {{cssxref("float")}} レイアウトは指定した要素の内部で独立して行われます。
 - レイアウト拘束の境界でマージンが相殺されることはありません。
-- レイアウトのコンテナーは `absolute`/`fixed` で位置指定された子孫要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)になります。
-- この包含ボックスは[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を作ります。従って {{cssxref("z-index")}} を使用することができます。
+- レイアウトのコンテナーは `absolute`/`fixed` で位置指定された子孫要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)になります。
+- この包含ボックスは[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作ります。従って {{cssxref("z-index")}} を使用することができます。
 
 > **メモ:** `contain` の `style` および `layout` の値は、 {{cssxref("container-type")}} および {{cssxref("container-name")}} プロパティを使用すると自動的に適用されます。
 
@@ -167,7 +167,7 @@ article {
 - 要素がビューポートまたはビューポートの周りのユーザーエージェントが定義したマージン（ビューポート寸法の 50%、要素の可視性が変更されたときにアプリが準備をする時間を与えるため）に現れたとき。
 - 要素またはそのコンテンツがフォーカスを受け取ったとき。
 - 要素またはそのコンテンツが選択されたとき。例えば、マウスカーソルでテキスト上をドラッグしたり、他にも何らかのハイライト処理によって選択されたりしたとき。
-- 要素やそのコンテンツが{{glossary("top layer", "最上位レイヤー")}}に配置されたとき。
+- 要素やそのコンテンツが{{glossary("Top layer", "最上位レイヤー")}}に配置されたとき。
 
 `content-visibility: auto` が設定されていて、コンテンツがユーザーに関連するとブラウザーが判断した場合、ブラウザーはそのコンテンツをレンダリングします。
 
@@ -189,8 +189,8 @@ article {
 
 ## 関連情報
 
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
-- [学習: CSS のパフォーマンス最適化](/ja/docs/Learn/Performance/CSS)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
+- [学習: CSS のパフォーマンス最適化](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) (Igalia.com, 2019)
-- {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
+- {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベント
