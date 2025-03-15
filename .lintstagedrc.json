@@ -1,9 +1,9 @@
 {
-  "!*.md": "prettier --ignore-unknown --write",
+  "!*.md": "prettier --ignore-unknown --write --cache",
   "*.md": [
     "markdownlint-cli2 --fix",
     "node ./scripts/check-url-locale.js --fix",
     "autocorrect --fix",
-    "prettier --write"
+    "prettier --write --cache"
   ]
 }
