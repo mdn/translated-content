@@ -1,6 +1,7 @@
 ---
 title: 可替换元素
-slug: Web/CSS/Replaced_element
+slug: Web/CSS/CSS_images/Replaced_element_properties
+original_slug: Web/CSS/Replaced_element
 ---
 
 {{CSSRef}}
