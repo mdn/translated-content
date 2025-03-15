@@ -10,7 +10,47 @@ La propriété **`text-decoration-style`** définit le style appliqué sur les l
 > [!NOTE]
 > Il n'existe pas de méthode permettant de mettre en forme les lignes décorées différemment les unes des autres.
 
-{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-style")}}
+
+```css interactive-example-choice
+text-decoration-style: solid;
+```
+
+```css interactive-example-choice
+text-decoration-style: double;
+```
+
+```css interactive-example-choice
+text-decoration-style: dotted;
+```
+
+```css interactive-example-choice
+text-decoration-style: dashed;
+```
+
+```css interactive-example-choice
+text-decoration-style: wavy;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 Si la mise en forme appliquée possède une sémantique forte (par exemple barrer le texte pour indiquer qu'il a été supprimé), on recommande aux auteurs d'utiliser les balises HTML associées si elles existent (par exemple {{HTMLElement("del")}} ou {{HTMLElement("s")}}). Les navigateurs peuvent parfois désactiver la mise en forme et ces éléments permettent de conserver la sémantique du contenu quoi qu'il arrive.
 

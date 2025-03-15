@@ -10,7 +10,68 @@ La propriété **`font`** est :
 - une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
 - ou une propriété permettant d'utiliser une police système pour la police de caractères d'un élément grâce à certains mots-clés spécifiques.
 
-{{EmbedInteractiveExample("pages/css/font.html")}}
+{{InteractiveExample("CSS Demo: font")}}
+
+```css interactive-example-choice
+font:
+  1.2rem "Fira Sans",
+  sans-serif;
+```
+
+```css interactive-example-choice
+font:
+  italic 1.2rem "Fira Sans",
+  serif;
+```
+
+```css interactive-example-choice
+font: italic small-caps bold 16px/2 cursive;
+```
+
+```css interactive-example-choice
+font: small-caps bold 24px/1 sans-serif;
+```
+
+```css interactive-example-choice
+font: caption;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Italic"),
+    url("/shared-assets/fonts/FiraSans-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+section {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+```
 
 Comme pour les autres propriétés CSS, les valeurs qui ne sont pas définies avec la propriété raccourcie sont définies avec leur valeur initiale, ce qui peut surcharger les valeurs définies précédemment avec les propriétés « détaillées ». Bien qu'elles ne puissent pas directement être paramétrées avec `font`, les propriétés détaillées, {{cssxref("font-size-adjust")}}, et {{cssxref("font-kerning")}} sont également réinitialisées avec leurs valeurs initiales.
 

@@ -7,7 +7,82 @@ slug: Web/CSS/list-style
 
 La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/list-style-position).
 
-{{EmbedInteractiveExample("pages/css/list-style.html")}}
+{{InteractiveExample("CSS Demo: list-style")}}
+
+```css interactive-example-choice
+list-style: square;
+```
+
+```css interactive-example-choice
+list-style: inside;
+```
+
+```css interactive-example-choice
+list-style: url("/shared-assets/images/examples/rocket.svg");
+```
+
+```css interactive-example-choice
+list-style: none;
+```
+
+```css interactive-example-choice
+list-style: georgian inside url("/shared-assets/images/examples/rocket.svg");
+```
+
+```css interactive-example-choice
+list-style: georgian outside url("/non-existent.svg");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>NASA Notable Missions</p>
+    <ul class="transition-all" id="example-element">
+      <li>Apollo</li>
+      <li>Hubble</li>
+      <li>Chandra</li>
+      <li>Cassini-Huygens</li>
+      <li>Spitzer</li>
+    </ul>
+  </div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  font-size: 1.2rem;
+}
+
+#example-element {
+  width: 100%;
+  background: #be094b;
+  color: white;
+}
+
+section {
+  text-align: left;
+  flex-direction: column;
+}
+
+hr {
+  width: 50%;
+  color: lightgray;
+  margin: 0.5em;
+}
+
+.note {
+  font-size: 0.8rem;
+}
+
+.note a {
+  color: #009e5f;
+}
+
+@counter-style space-counter {
+  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+  suffix: " ";
+}
+```
 
 > [!NOTE]
 > Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/display) vaut `list-item`). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Element/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Element/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Element/ul)).

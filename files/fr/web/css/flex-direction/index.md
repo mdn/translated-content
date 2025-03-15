@@ -7,7 +7,48 @@ slug: Web/CSS/flex-direction
 
 La propriété **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).
 
-{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
+{{InteractiveExample("CSS Demo: flex-direction")}}
+
+```css interactive-example-choice
+flex-direction: row;
+```
+
+```css interactive-example-choice
+flex-direction: row-reverse;
+```
+
+```css interactive-example-choice
+flex-direction: column;
+```
+
+```css interactive-example-choice
+flex-direction: column-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
 
 On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si [`dir`](/fr/docs/Web/HTML/Global_attributes#dir) vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
 

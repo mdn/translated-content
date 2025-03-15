@@ -7,7 +7,44 @@ slug: Web/CSS/outline-color
 
 La propriété **`outline-color`** permet de définir la couleur avec laquelle on trace le contour de l'élément. Ce contour est tracé autour de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et peut être utilisé pour faire ressortir l'élément.
 
-{{EmbedInteractiveExample("pages/css/outline-color.html")}}
+{{InteractiveExample("CSS Demo: outline-color")}}
+
+```css interactive-example-choice
+outline-color: red;
+```
+
+```css interactive-example-choice
+outline-color: #32a1ce;
+```
+
+```css interactive-example-choice
+outline-color: rgba(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+outline-color: hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+outline-color: currentcolor;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 À la différence de la bordure, le contour est tracé en dehors du cadre de l'élément et peut donc chevaucher d'autres contenus. La bordure, en revanche, modifiera la disposition de la page afin de s'assurer qu'aucun chevauchement involontaire ne se produit.La propriété `outline-color` est également synthétisée avec la propriété raccourcie {{cssxref("outline")}}.
 

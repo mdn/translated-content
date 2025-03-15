@@ -7,7 +7,42 @@ slug: Web/CSS/overflow-wrap
 
 La propriété **`overflow-wrap`** s'applique aux éléments en ligne (_inline_) et est utilisée afin de définir si le navigateur peut ou non faire la césure à l'intérieur d'un mot pour éviter le dépassement d'une chaîne qui serait trop longue afin qu'elle ne dépasse pas de la boîte.
 
-{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
+{{InteractiveExample("CSS Demo: overflow-wrap")}}
+
+```css interactive-example-choice
+overflow-wrap: normal;
+```
+
+```css interactive-example-choice
+overflow-wrap: anywhere;
+```
+
+```css interactive-example-choice
+overflow-wrap: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Most words are short &amp; don't need to break. But
+    <strong class="transition-all" id="example-element"
+      >Antidisestablishmentarianism</strong
+    >
+    is long. The width is set to min-content, with a max-width of 11em.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid #663399;
+  padding: 0.75em;
+  width: min-content;
+  max-width: 11em;
+  height: 200px;
+}
+```
 
 > [!NOTE]
 > À la différence de {{cssxref("word-break")}}, `overflow-wrap` créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.

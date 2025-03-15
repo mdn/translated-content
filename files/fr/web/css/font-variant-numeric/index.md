@@ -7,7 +7,67 @@ slug: Web/CSS/font-variant-numeric
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-numeric`** permet de contrôler l'utilisation de glyphes alternatifs pour les nombres, fractions et les marqueurs ordinaux.
 
-{{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
+{{InteractiveExample("CSS Demo: font-variant-numeric")}}
+
+```css interactive-example-choice
+font-variant-numeric: normal;
+```
+
+```css interactive-example-choice
+font-variant-numeric: slashed-zero;
+```
+
+```css interactive-example-choice
+font-variant-numeric: tabular-nums;
+```
+
+```css interactive-example-choice
+font-variant-numeric: oldstyle-nums;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <table>
+      <tr>
+        <td><span class="tabular">0</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 ## Syntaxe
 

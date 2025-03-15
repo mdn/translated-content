@@ -7,7 +7,49 @@ slug: Web/CSS/transform-function/translateY
 
 La fonction **`translateY()`** permet de déplacer un élement verticalement sur le plan. Cette transformation est caractérisée par une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) qui définit l'amplitude du déplacement. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-{{EmbedInteractiveExample("pages/css/function-translateY.html")}}
+{{InteractiveExample("CSS Demo: translateY()")}}
+
+```css interactive-example-choice
+transform: translateY(0);
+```
+
+```css interactive-example-choice
+transform: translateY(42px);
+```
+
+```css interactive-example-choice
+transform: translateY(-2.1rem);
+```
+
+```css interactive-example-choice
+transform: translateY(3ch);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
 
 > **Note :** `translateY(ty)` est équivalent à `translate(0, ty)` ou `translate3d(0, ty, 0)`.
 

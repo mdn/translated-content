@@ -7,7 +7,42 @@ slug: Web/CSS/transform-style
 
 La propriété **`transform-style`** définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément.
 
-{{EmbedInteractiveExample("pages/css/transform-style.html")}}
+{{InteractiveExample("CSS Demo: transform-style")}}
+
+```css interactive-example-choice
+transform-style: flat;
+```
+
+```css interactive-example-choice
+transform-style: preserve-3d;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all layer" id="example-element">
+    <p>Parent</p>
+    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.layer {
+  background: #623e3f;
+  border-radius: 0.75rem;
+  color: white;
+  transform: perspective(200px) rotateY(30deg);
+}
+
+.numeral {
+  background-color: #ffba08;
+  border-radius: 0.2rem;
+  color: #000;
+  margin: 1rem;
+  padding: 0.2rem;
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+```
 
 S'ils sont aplanis, les éléments-fils n'auront pas d'espace tridimensionnel propre.
 

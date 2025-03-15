@@ -7,7 +7,49 @@ slug: Web/CSS/font-family
 
 La propriété **`font-family`** permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé.
 
-{{EmbedInteractiveExample("pages/css/font-family.html")}}
+{{InteractiveExample("CSS Demo: font-family")}}
+
+```css interactive-example-choice
+font-family: Georgia, serif;
+```
+
+```css interactive-example-choice
+font-family: "Gill Sans", sans-serif;
+```
+
+```css interactive-example-choice
+font-family: sans-serif;
+```
+
+```css interactive-example-choice
+font-family: serif;
+```
+
+```css interactive-example-choice
+font-family: cursive;
+```
+
+```css interactive-example-choice
+font-family: system-ui;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisira la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée via la règle @ {{cssxref("@font-face")}} définie.
 

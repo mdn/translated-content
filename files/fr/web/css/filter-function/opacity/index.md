@@ -7,7 +7,37 @@ slug: Web/CSS/filter-function/opacity
 
 La fonction CSS **`opacity()`** permet de modifier la transparence de l'image. Le résultat obtenu par cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
-{{EmbedInteractiveExample("pages/css/function-opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity()")}}
+
+```css interactive-example-choice
+filter: opacity(1);
+```
+
+```css interactive-example-choice
+filter: opacity(80%);
+```
+
+```css interactive-example-choice
+filter: opacity(50%);
+```
+
+```css interactive-example-choice
+filter: opacity(0.2);
+```
+
+```css interactive-example-choice
+filter: opacity(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 > [!NOTE]
 > Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity) mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.

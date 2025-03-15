@@ -7,7 +7,48 @@ slug: Web/CSS/font-style
 
 La propriété **`font-style`** permet de sélectionner une fonte italique (`italic`) ou oblique (`oblique`) parmi celles listées par [`font-family`](/fr/docs/Web/CSS/font-family).
 
-{{EmbedInteractiveExample("pages/css/font-style.html")}}
+{{InteractiveExample("CSS Demo: font-style")}}
+
+```css interactive-example-choice
+font-style: normal;
+```
+
+```css interactive-example-choice
+font-style: italic;
+```
+
+```css interactive-example-choice
+font-style: oblique;
+```
+
+```css interactive-example-choice
+font-style: oblique 40deg;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 La forme **italique** est généralement une forme cursive qui utilise moins d'espace horizontal que les autres formes classiques. La forme **oblique** quant à elle est simplement une version penchée de la forme normale. Les formes italique et oblique peuvent être synthétisées par le navigateur si elles sont absentes (le moteur penche alors les glyphes de la forme normale) — pour plus d'informations sur l'activation de cette synthèse, voir la propriété [`font-synthesis`](/fr/docs/Web/CSS/font-synthesis).
 

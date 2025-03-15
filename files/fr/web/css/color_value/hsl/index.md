@@ -9,7 +9,37 @@ l10n:
 
 La notation fonctionnelle **`hsl()`** exprime une couleur [sRGB](/fr/docs/Glossary/RGB) selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
 
-{{EmbedInteractiveExample("pages/css/function-hsl.html")}}
+{{InteractiveExample("CSS Demo: hsl()")}}
+
+```css interactive-example-choice
+background: hsl(50 80% 40%);
+```
+
+```css interactive-example-choice
+background: hsl(150deg 30% 60%);
+```
+
+```css interactive-example-choice
+background: hsl(0.3turn 60% 45% / 0.7);
+```
+
+```css interactive-example-choice
+background: hsl(0 80% 50% / 25%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 Il est facile d'utiliser des _couleurs complémentaires_ avec `hsl()`, car celles-ci sont positionnées à l'opposé du cercle de couleur utilisé par la teinte. Ainsi, si `theta` est l'angle de la teinte d'une couleur, on pourra obtenir la couleur complémentaire avec l'angle `180deg-theta`.
 

@@ -7,7 +7,44 @@ slug: Web/CSS/object-fit
 
 La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) ([`<img>`](/fr/docs/Web/HTML/Element/img) ou [`<video>`](/fr/docs/Web/HTML/Element/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
 
-{{EmbedInteractiveExample("pages/css/object-fit.html")}}
+{{InteractiveExample("CSS Demo: object-fit")}}
+
+```css interactive-example-choice
+object-fit: fill;
+```
+
+```css interactive-example-choice
+object-fit: contain;
+```
+
+```css interactive-example-choice
+object-fit: cover;
+```
+
+```css interactive-example-choice
+object-fit: none;
+```
+
+```css interactive-example-choice
+object-fit: scale-down;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria-146x200.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: 100%;
+  border: 2px dotted #888;
+}
+```
 
 Selon la valeur utilisée pour `object-fit`, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient.
 

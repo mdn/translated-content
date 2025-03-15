@@ -7,7 +7,57 @@ slug: Web/CSS/transition
 
 La propriété **`transition`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour les propriétés {{cssxref("transition-property")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-timing-function")}} et {{cssxref("transition-delay")}}.
 
-{{EmbedInteractiveExample("pages/css/transition.html")}}
+{{InteractiveExample("CSS Demo: transition")}}
+
+```css interactive-example-choice
+transition: margin-right 2s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s 0.5s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out 0.5s;
+```
+
+```css interactive-example-choice
+transition:
+  margin-right 2s,
+  color 1s;
+```
+
+```css interactive-example-choice
+transition: all 1s ease-out;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 Elle permet de définir la transition entre deux états d'un élément. Les différents états peuvent être définis à l'aide [de pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) telles que {{cssxref(":hover")}} ou {{cssxref(":active")}} ou être définis dynamiquement avec JavaScript.
 

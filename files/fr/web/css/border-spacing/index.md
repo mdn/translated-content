@@ -7,7 +7,51 @@ slug: Web/CSS/border-spacing
 
 La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié [`cellspacing`](/fr/docs/Web/HTML/Element/table#cellspacing) mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
 
-{{EmbedInteractiveExample("pages/css/border-spacing.html")}}
+{{InteractiveExample("CSS Demo: border-spacing")}}
+
+```css interactive-example-choice
+border-spacing: 0;
+```
+
+```css interactive-example-choice
+border-spacing: 5px;
+```
+
+```css interactive-example-choice
+border-spacing: 5px 1rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue;
+  padding: 0.75rem;
+}
+```
 
 La valeur de `border-spacing` est également utilisée le long du bord extérieur du tableau, où la distance entre la bordure du tableau et les cellules dans la première/dernière colonne ou ligne est la somme du `border-spacing` approprié (horizontal ou vertical) et du {{cssxref("padding")}} correspondant (top, right, bottom ou left).
 

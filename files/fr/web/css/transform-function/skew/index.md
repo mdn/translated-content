@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/skew
 
 La fonction **`skew()`** permet d'opérer une distorsion en étirant chaque point de l'élément d'un certain angle dans une direction du plan. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine, plus le décalage obtenu sera important.
 
-{{EmbedInteractiveExample("pages/css/function-skew.html")}}
+{{InteractiveExample("CSS Demo: skew()")}}
+
+```css interactive-example-choice
+transform: skew(0);
+```
+
+```css interactive-example-choice
+transform: skew(15deg, 15deg);
+```
+
+```css interactive-example-choice
+transform: skew(-0.06turn, 18deg);
+```
+
+```css interactive-example-choice
+transform: skew(0.312rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 

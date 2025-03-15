@@ -9,7 +9,56 @@ l10n:
 
 La propriété CSS **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (_inline_) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/position#positionnement_absolu)).
 
-{{EmbedInteractiveExample("pages/css/float.html")}}
+{{InteractiveExample("CSS Demo: float")}}
+
+```css interactive-example-choice
+float: none;
+```
+
+```css interactive-example-choice
+float: left;
+```
+
+```css interactive-example-choice
+float: right;
+```
+
+```css interactive-example-choice
+float: inline-start;
+```
+
+```css interactive-example-choice
+float: inline-end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Float me</div>
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  width: 80%;
+  line-height: normal;
+}
+
+#example-element {
+  border: solid 10px #efac09;
+  background-color: #040d46;
+  color: white;
+  padding: 1em;
+  width: 40%;
+}
+```
 
 Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/computed_value) de `float` est différente de `none`.
 

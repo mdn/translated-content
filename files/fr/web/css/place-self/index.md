@@ -7,7 +7,49 @@ slug: Web/CSS/place-self
 
 La propriété **`place-self`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de paramétrer les valeurs des propriétés {{cssxref("align-self")}} et {{cssxref("justify-self")}}. La première valeur sera utilisée pour `align-self` et la seconde pour `justify-self`. S'il n'y a pas de seconde valeur, la première sera également utilisée pour `justify-self`.
 
-{{EmbedInteractiveExample("pages/css/place-self.html")}}
+{{InteractiveExample("CSS Demo: place-self")}}
+
+```css interactive-example-choice
+place-self: stretch center;
+```
+
+```css interactive-example-choice
+place-self: center start;
+```
+
+```css interactive-example-choice
+place-self: start end;
+```
+
+```css interactive-example-choice
+place-self: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+<div class="example-container">
+<div class="transition-all" id="example-element">One</div>
+<div>Two</div>
+<div>Three</div>
+</div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Syntaxe
 

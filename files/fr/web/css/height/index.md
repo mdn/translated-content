@@ -7,7 +7,41 @@ slug: Web/CSS/height
 
 La propriété **`height`** définit la hauteur de la boîte de contenu d'un élément. [La boîte de contenu](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content) est à l'intérieur de la boîte de remplissage (_padding_) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété {{cssxref("box-sizing")}} vaut `border-box`, cette propriété détermine la hauteur de [la boîte de marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propriétés_des_boîtes).
 
-{{EmbedInteractiveExample("pages/css/height.html")}}
+{{InteractiveExample("CSS Demo: height")}}
+
+```css interactive-example-choice
+height: 150px;
+```
+
+```css interactive-example-choice
+height: 6em;
+```
+
+```css interactive-example-choice
+height: 75%;
+```
+
+```css interactive-example-choice
+height: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Les propriétés {{cssxref("min-height")}} et {{cssxref("max-height")}} surchargent la propriété `height`.
 

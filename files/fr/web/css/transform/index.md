@@ -7,7 +7,41 @@ slug: Web/CSS/transform
 
 La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la mise en forme visuelle. Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
+
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
 
