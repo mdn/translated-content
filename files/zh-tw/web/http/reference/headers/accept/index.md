@@ -2,7 +2,7 @@
 title: Accept
 slug: Web/HTTP/Reference/Headers/Accept
 l10n:
-  sourceCommit: f341bd4728d3448faf6b9fc3b45980c35c067f25
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -17,7 +17,7 @@ HTTP **`Accept`** {{Glossary("request header", "請求標頭")}}和{{Glossary("r
       <th scope="row">標頭類型</th>
       <td>{{Glossary("Request header", "請求標頭")}}、{{Glossary("Response header", "回應標頭")}}</tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
     <tr>
