@@ -2,7 +2,7 @@
 title: Robots.txt
 slug: Glossary/Robots.txt
 l10n:
-  sourceCommit: 24d8a34da576f86b10923e426f66df48ab6201b9
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{GlossarySidebar}}

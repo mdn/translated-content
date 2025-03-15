@@ -2,7 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 l10n:
-  sourceCommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

@@ -2,7 +2,7 @@
 title: 426 Upgrade Required
 slug: Web/HTTP/Reference/Status/426
 l10n:
-  sourceCommit: 585f0ff3393eec16f00cf3adcf4e59250c1fe315
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

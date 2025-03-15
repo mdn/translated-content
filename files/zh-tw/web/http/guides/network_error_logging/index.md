@@ -2,7 +2,7 @@
 title: 網路錯誤記錄
 slug: Web/HTTP/Guides/Network_Error_Logging
 l10n:
-  sourceCommit: ab1bf2c5955c1bfa4d96d779f701ab22f3870d43
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

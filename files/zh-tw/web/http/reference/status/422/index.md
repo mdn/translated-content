@@ -2,7 +2,7 @@
 title: 422 Unprocessable Content
 slug: Web/HTTP/Reference/Status/422
 l10n:
-  sourceCommit: 6d4fc564c9428eb242470b2bdf4f7db22d91612f
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
