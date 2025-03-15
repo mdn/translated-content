@@ -25,7 +25,7 @@ l10n:
 - {{WebExtAPIRef("windows.WINDOW_ID_NONE")}}
   - : 表示不存在浏览器窗口的 `windowId` 值。
 - {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}
-  - : 可以在部分 API 中用作 `windowId` 参数用以表示当前窗口的值。
+  - : 一个值，可以在部分 API 中作为 `windowId` 参数来表示当前窗口。
 
 ## 函数
 
