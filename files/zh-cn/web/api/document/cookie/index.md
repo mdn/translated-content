@@ -5,7 +5,7 @@ slug: Web/API/Document/cookie
 
 {{APIRef("DOM")}}
 
-获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Cookies)。可以把它当成一个 `getter and setter`。
+获取并设置与当前文档相关联的 [cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)。可以把它当成一个 `getter and setter`。
 
 ## 语法
 
@@ -339,5 +339,5 @@ new Image().src =
 
 ## 参见
 
-- [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/zh-CN/docs/Web/HTTP/Guides/Cookies)
 - [Cookies](/zh-CN/docs/Code_snippets/Cookies) (Code snippets)

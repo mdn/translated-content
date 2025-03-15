@@ -9,5 +9,5 @@ slug: Glossary/Dynamic_typing
 
 ## 参见
 
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - 维基百科上的[类型系统](https://zh.wikipedia.org/wiki/類型系統#實踐中的靜態和動態型別檢查)词条

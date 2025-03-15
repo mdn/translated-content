@@ -1,7 +1,6 @@
 ---
 title: 處理文字 - JavaScript中的字串
 slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}

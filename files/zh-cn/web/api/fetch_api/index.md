@@ -63,6 +63,6 @@ Fetch 提供了对 {{domxref("Request")}} 和 {{domxref("Response")}}（以及�
 
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)

@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`const`** 声明用于声明块作用域的局部变量。常量的值不能通过使用[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)重新赋值来更改，但是如果常量是一个[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)，它的属性可以被添加、更新或删除。
+**`const`** 声明用于声明块作用域的局部变量。常量的值不能通过使用[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)重新赋值来更改，但是如果常量是一个[对象](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#objects)，它的属性可以被添加、更新或删除。
 
 {{InteractiveExample("JavaScript Demo: Statement - Const")}}
 
@@ -35,7 +35,7 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : 要声明的变量的名称。每个变量名称必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+  - : 要声明的变量的名称。每个变量名称必须是合法的 JavaScript [标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)或[解构绑定模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 - `valueN`
   - : 变量的初始值。它可以是任何合法的表达式。
 
@@ -137,7 +137,7 @@ MY_ARRAY = ["B"];
 MY_ARRAY.push("A"); // ["A"]
 ```
 
-### 带解构赋值的声明
+### 带解构的声明
 
 每个 `=` 后面的左侧也可以是绑定模式。这允许一次创建多个变量。
 
@@ -147,7 +147,7 @@ const [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-有关更多信息，请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+有关更多信息，请参阅[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ## 规范
 

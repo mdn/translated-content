@@ -1,7 +1,6 @@
 ---
 title: 调试 CSS
 slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
-original_slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}

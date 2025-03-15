@@ -7,7 +7,45 @@ slug: Web/CSS/background-repeat
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`background-repeat`** define como se repiten los fondos del documento. Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido.
 
-{{EmbedInteractiveExample("pages/css/background-repeat.html")}}
+{{InteractiveExample("CSS Demo: background-repeat")}}
+
+```css interactive-example-choice
+background-repeat: repeat-x;
+```
+
+```css interactive-example-choice
+background-repeat: repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space;
+```
+
+```css interactive-example-choice
+background-repeat: round;
+```
+
+```css interactive-example-choice
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: #ccc url("/shared-assets/images/examples/moon.jpg") center / 120px;
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 La fuente de este ejemplo interactivo es de GitHub. Si estás interesado en contribuir a los ejemplos interactivos, por favor accee a <https://github.com/mdn/interactive-examples> y envíanos una solicitud para colaborar.
 

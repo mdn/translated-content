@@ -22,7 +22,7 @@ open(method, url, async, user, password)
 ### 參數
 
 - `method`
-  - : 要使用的 [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)，例如 `"GET"`、`"POST"`、`"PUT"`、`"DELETE"` 等。對於非 HTTP(S) 之 URL 將被忽略。
+  - : 要使用的 [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)，例如 `"GET"`、`"POST"`、`"PUT"`、`"DELETE"` 等。對於非 HTTP(S) 之 URL 將被忽略。
 - `url`
   - : 字串或任何其他帶有 {{Glossary("stringifier")}} 的物件──包括 {{domxref("URL")}} 物件──提供要向其發送請求的資源的 URL。
 - `async` {{optional_inline}}

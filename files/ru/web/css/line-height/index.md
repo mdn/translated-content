@@ -7,7 +7,43 @@ slug: Web/CSS/line-height
 
 Свойство [CSS](/ru/docs/Web/CSS) **`line-height`** устанавливает величину пространства между строками, например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. В [незамещаемых](/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82) внутристрочных элементах —указывает высоту, которая используется для вычисления высоты блоков строк.
 
-{{EmbedInteractiveExample("pages/css/line-height.html")}}
+{{InteractiveExample("CSS Demo: line-height")}}
+
+```css interactive-example-choice
+line-height: normal;
+```
+
+```css interactive-example-choice
+line-height: 2.5;
+```
+
+```css interactive-example-choice
+line-height: 3em;
+```
+
+```css interactive-example-choice
+line-height: 150%;
+```
+
+```css interactive-example-choice
+line-height: 32px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy lies a small unregarded yellow sun.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-family: Georgia, sans-serif;
+  max-width: 200px;
+}
+```
 
 ## Синтаксис
 

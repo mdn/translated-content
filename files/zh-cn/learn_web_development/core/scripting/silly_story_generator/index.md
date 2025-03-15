@@ -1,7 +1,6 @@
 ---
 title: 笑话生成器
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
-original_slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}

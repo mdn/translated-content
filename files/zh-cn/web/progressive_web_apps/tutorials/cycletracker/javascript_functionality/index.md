@@ -109,7 +109,7 @@ function checkDatesInvalid(startDate, endDate) {
 }
 ```
 
-在这个应用程序的一个更健壮的版本中，我们至少要包含错误消息来通知用户存在错误。一个好的应用程序会通知用户错误是什么，将焦点放在有问题的表单控件上，并使用 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)来通知无障碍技术用户错误信息。
+在这个应用程序的一个更健壮的版本中，我们至少要包含错误消息来通知用户存在错误。一个好的应用程序会通知用户错误是什么，将焦点放在有问题的表单控件上，并使用 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)来通知无障碍技术用户错误信息。
 
 ## Local storage
 

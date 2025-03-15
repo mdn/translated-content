@@ -9,7 +9,50 @@ l10n:
 
 **`border-image-source`** [CSS](/zh-CN/docs/Web/CSS) 属性设置用以创建元素[边框图像](/zh-CN/docs/Web/CSS/border-image)的源图像。
 
-{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
+{{InteractiveExample("CSS Demo: border-image-source")}}
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-diamonds.png");
+```
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-stars.png");
+```
+
+```css interactive-example-choice
+border-image-source: repeating-linear-gradient(
+  45deg,
+  transparent,
+  #4d9f0c 20px
+);
+```
+
+```css interactive-example-choice
+border-image-source: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 {{cssxref("border-image-slice")}} 属性用于将源图像分割为多个区域，然后动态地应用到最终的边框图像。
 

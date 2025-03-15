@@ -133,7 +133,7 @@ p {
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#具有_html_等效元素的结构角色">superscript</a
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#具有_html_等效元素的结构角色">superscript</a
           ></code
         >
       </td>
@@ -160,5 +160,5 @@ p {
 ## 参见
 
 - HTML {{HTMLElement("sub")}} 元素会产生下标。注意，你不能同时使用它们，你需要使用 [MathML](/zh-CN/docs/Web/MathML) 来同时产生化学符号旁边的下标和上标，代表它的序号和核子数。
-- MathML 元素：[`<msub>`](/zh-CN/docs/Web/MathML/Element/msub)、[`<msup>`](/zh-CN/docs/Web/MathML/Element/msup) 和 [`<msubsup>`](/zh-CN/docs/Web/MathML/Element/msubsup)。
+- MathML 元素：[`<msub>`](/zh-CN/docs/Web/MathML/Reference/Element/msub)、[`<msup>`](/zh-CN/docs/Web/MathML/Reference/Element/msup) 和 [`<msubsup>`](/zh-CN/docs/Web/MathML/Reference/Element/msubsup)。
 - CSS {{cssxref("vertical-align")}} 属性。

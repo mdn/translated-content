@@ -304,4 +304,4 @@ span {
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)

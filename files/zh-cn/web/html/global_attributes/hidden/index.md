@@ -31,4 +31,4 @@ slug: Web/HTML/Global_attributes/hidden
 ## 参见
 
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
-- [aria-hidden](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)属性
+- [aria-hidden](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)属性

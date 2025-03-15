@@ -25,7 +25,7 @@ Local Font Access API 的创建就是为了解决这些问题。
 
 - 本地字体访问 API 旨在仅提供对解决上述问题所需的数据的访问。它既不要求浏览器提供可用本地字体的完整列表，也不要求按照磁盘上出现的顺序提供数据。
 - 当调用 {{domxref("Window.queryLocalFonts()")}} 时，系统会请求用户授予访问其本地字体的权限。此权限的状态可以通过[权限 API](/zh-CN/docs/Web/API/Permissions_API)（`local-fonts` 权限）查询。
-- 你可以使用 {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)控制对此特性的访问。
+- 你可以使用 {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)控制对此特性的访问。
 
 ## 接口
 
@@ -117,4 +117,4 @@ async function computeOutlineFormat() {
 
 - [使用带有本地字体的高级排版](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
-- {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)指令
+- {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)指令

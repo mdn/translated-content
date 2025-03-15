@@ -1,7 +1,6 @@
 ---
 title: Django Web 框架 (python)
 slug: Learn_web_development/Extensions/Server-side/Django
-original_slug: Learn/Server-side/Django
 ---
 
 {{LearnSidebar}}

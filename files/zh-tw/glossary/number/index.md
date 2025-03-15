@@ -10,5 +10,5 @@ slug: Glossary/Number
 ## 參見
 
 - 維基百科上的[數字類型](https://zh.wikipedia.org/wiki/資料類型#數值範圍)
-- JavaScript 數據結構：[Number](/zh-TW/docs/Web/JavaScript/Data_structures#數字型別)
+- JavaScript 數據結構：[Number](/zh-TW/docs/Web/JavaScript/Guide/Data_structures#數字型別)
 - JavaScript 全域物件 {{jsxref("Number")}}

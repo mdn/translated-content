@@ -226,5 +226,5 @@ var array = [...obj]; // TypeError: obj is not iterable
 ## 参见
 
 - [剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [剩余属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#剩余属性)
+- [剩余属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#剩余属性)
 - {{jsxref("Function.prototype.apply()")}}

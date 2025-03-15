@@ -42,7 +42,7 @@ doc.nodeName # 文档对象的 DOM 属性
 p_list = doc.getElementsByTagName("para")
 ```
 
-要获取更多在网页上使用 JavaScript 的信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
+要获取更多在网页上使用 JavaScript 的信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)。
 
 ## 访问 DOM
 

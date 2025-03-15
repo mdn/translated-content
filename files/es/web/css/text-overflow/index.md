@@ -7,7 +7,48 @@ slug: Web/CSS/text-overflow
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`text-overflow`** determina como el contenido que se desborda y que no es mostrado, va a hacérsele notar a los usuarios. Puede ser cortado, mostrar una elipsis ('`…`', `U+2026 Horizontal Ellipsis`), o mostrar una cadena de texto personalizada.
 
-{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
+{{InteractiveExample("CSS Demo: text-overflow")}}
+
+```css interactive-example-choice
+text-overflow: clip;
+```
+
+```css interactive-example-choice
+text-overflow: ellipsis;
+```
+
+```css interactive-example-choice
+text-overflow: "-";
+```
+
+```css interactive-example-choice
+text-overflow: "";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-container">
+    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-container {
+  width: 100%;
+  max-width: 18em;
+}
+
+#example-element {
+  line-height: 50px;
+  border: 1px solid #c5c5c5;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  padding: 0 0.5em;
+  text-align: left;
+}
+```
 
 La propiedad `text-overflow` no fuerza a que ocurra un desbordamiento. Para hacer que un texto desborde a su contenedor debes poner algunas otras propiedades de CSS. Por ejemplo:
 

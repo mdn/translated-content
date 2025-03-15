@@ -1,7 +1,6 @@
 ---
 title: HTML表格的基礎
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables/Basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}

@@ -1,180 +1,119 @@
 ---
 title: Publicar tu sitio web
 slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
-original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
+l10n:
+  sourceCommit: 12c76ea107c3caacd28c39e33b9ab2dd879f0855
 ---
 
-{{LearnSidebar()}}
+{{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works","Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 
-Una vez que termines de escribir tu código y organizar los archivos que forman parte de tu sitio, debes ponerlo en línea para que la gente pueda consultarlo. Este artículo muestra cómo conseguir de manera sencilla que tu código esté en línea.
+Una vez que termines de escribir el código y organizar los archivos que componen tu sitio web, necesitas ponerlo todo en línea para que la gente pueda encontrarlo. Este artículo explica cómo poner en línea tu sitio web de ejemplo con poco esfuerzo.
+
+> [!NOTE]
+> Necesitarás un sitio web de ejemplo disponible en tu ordenador local para seguir este artículo. Debería contener al menos un archivo `index.html` válido. Si aún no lo has hecho, te aconsejamos que construyas uno trabajando con los artículos anteriores de este módulo, empezando por [¿Cómo será tu sitio web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like).
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Requisitos previos:</th>
+      <td>
+        Familiaridad básica con el sistema operativo de tu ordenador, el software básico que utilizarás para construir un sitio web y los sistemas de archivos.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Resultados del aprendizaje:</th>
+      <td>
+        <ul>
+          <li>Las herramientas y conceptos básicos involucrados en la publicación de un sitio web: alojamiento, dominios, programas FTP.</li>
+          <li>Qué opciones alternativas de alojamiento están disponibles, por ejemplo, Google App Engine, GitHub y CodePen.</li>
+          <li>Publicar un sitio web utilizando GitHub Pages.</li>
+          <li>Alojamiento, cómo comprarlo y cómo poner un sitio web en línea.</li>
+          <li>Cómo registrar un dominio.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## ¿Cuáles son las opciones?
 
-Publicar un sitio no es un tema sencillo, principalmente porque hay muchas maneras diferentes de hacerlo. En este artículo no se trata de ver todos los modos posibles. En su lugar, discutiremos los pros y contras de tres amplias estrategias desde el punto de vista de un principiante, y luego debes seleccionar qué método usarás.
+Publicar un sitio web es un tema complejo porque hay muchas maneras de hacerlo. Este artículo no pretende documentar todos los métodos posibles. En cambio, explica las ventajas y desventajas de tres enfoques que son prácticos para los principiantes. Luego, describe un método que puede funcionar de inmediato para muchos lectores.
 
 ### Obtener alojamiento y un nombre de dominio
 
-Si deseas un control total sobre tu sitio web publicado, probablemente necesitarás gastar dinero para comprar:
+Para tener más control sobre el contenido y la apariencia del sitio web, la mayoría de los profesionales/empresas optan por comprar alojamiento web y un nombre de dominio:
 
-- _Alojamiento_ (_Hosting_) — espacio de almacenamiento alquilado en el [servidor web](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) de una compañia de alojamientos. Pones los archivos de tu sitio web en este espacio, y el servidor web suministra el contenido a los usuarios que lo solicitan.
-- Un [nombre de dominio](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) — dirección única mediante la cual la gente puede encontrar tu sitio web, como `https://www.mozilla.org`, o `https://es.wikipedia.org/`. Puedes tomar en alquiler el nombre de tu dominio durante algunos años en un **registrador de dominio**.
+- El alojamiento web es el espacio de archivo alquilado en el [servidor web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) de una empresa de alojamiento. Colocas los archivos del sitio web en el servidor web. El servidor web proporciona el contenido del sitio web a los visitantes del sitio web.
+- Un [nombre de dominio](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name) es la dirección web única donde la gente encuentra tu sitio web, como `https://www.mozilla.org` o `https://www.bbc.co.uk`. Puedes alquilar tu nombre de dominio por tantos años como quieras de un **registrador de dominios**.
 
-Muchos sitios web profesionales toman esta opción.
+Si obtienes tu alojamiento web _y_ tu nombre de dominio de la misma empresa, tienden a estar configurados automáticamente para comunicarse entre sí. Sin embargo, si los obtienes de empresas separadas, o quieres cambiar tu alojamiento a una empresa diferente, necesitas hacer un poco de configuración para apuntar el nombre de dominio al servidor correcto. Esto es para que la gente vea tu sitio web cuando navegue a esa dirección web. Esto se hace normalmente accediendo al sitio web de tu registrador de dominios y configurando los [servidores de nombres](https://kinsta.com/knowledgebase/what-is-a-nameserver/) de tu dominio a los proporcionados por tu empresa de alojamiento.
 
-Además, necesitarás un programa de [protocolo de transferencia de archivo](/es/docs/Glossary/FTP) (_File Transfer Protocol_, FTP) para transferir los archivos que conforman tu sitio web al servidor (mira más detalles de [cuánto puede costar: software](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software)). Los programas FTP varían ampliamente, pero en general tienes que conectarte a tu servidor web contratado mediante detalles proporcionados por tu empresa de alojamiento (por ejemplo: nombre de usuario, contraseña, nombre del _host_). Una vez conectado con el servidor web el programa te mostrará tus archivos locales y los archivos del servidor web en dos ventanas y te proporcionará una forma de transferir los archivos de un lado a otro.
+Las empresas utilizan varios mecanismos para transferir archivos a sus servidores web. Muchas tendrán más de una opción; las opciones típicas incluyen:
 
-![](ftp.jpg)
+- Una interfaz de arrastrar y soltar (verás un ejemplo de esto en [Publicar a través de GitHub](#publishing_via_github), más adelante).
+- Un programa de {{Glossary("FTP", "Protocolo de Transferencia de Archivos (FTP)")}}. Los programas FTP varían mucho, pero generalmente, tienes que conectarte a tu servidor web utilizando los detalles proporcionados por tu empresa de alojamiento (típicamente nombre de usuario, contraseña, nombre de dominio). Entonces el programa te muestra tus archivos locales y los archivos del servidor web en dos ventanas, y te proporciona una forma de transferir archivos de un lado a otro.
+- Mantener el código fuente del sitio web en un repositorio de GitHub (véase más abajo) y conceder acceso a la empresa de alojamiento para que pueda obtener el código fuente, construirlo si es necesario y publicarlo.
+- Algunas empresas proporcionarán [herramientas de línea de comandos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) para que las uses para transferir tus archivos.
 
-#### Consejos para elegir alojamienoto y dominio
+#### Consejos para encontrar alojamiento y dominios
 
-- En MDN no promovemos empresas comerciales de alojamiento o resgistradoras de nombre de dominio específicas. Para encontrarlas basta con buscar «alojamiento web» o «_hosting_ web» y «nombres de dominio». A veces las empresas proporcionan ambos en un paquete único. Los registradores acostumbran a facilitar la manera de comprobar si el nombre de dominio que deseas para tu sitio está disponible.
-- El [proveedor de servicio de Internet](/es/docs/Glossary/ISP) (ISP) de tu casa u oficina puede proporcionar algún alojamiento limitado para un pequeño sitio web. El conjunto de características disponibles será limitado, pero podría ser perfecto para tus primeros experimentos; ¡ponte en contacto con ellos y pregunta!
+- MDN no promueve ninguna empresa comercial de alojamiento o registrador de nombres de dominio específicos. Para encontrar empresas de alojamiento y registradores, simplemente busca "alojamiento web" y "nombres de dominio". Todos los registradores tendrán una función para permitirte comprobar si el nombre de dominio que quieres está disponible.
+- Tu {{Glossary("ISP", "proveedor de servicios de Internet")}} doméstico o de la oficina puede proporcionar algún alojamiento limitado para un sitio web pequeño. El conjunto de características disponibles será limitado, pero podría ser perfecto para tus primeros experimentos.
+- También hay servicios gratuitos disponibles como [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/) y [WordPress](https://wordpress.com/). Estos servicios pueden ser limitados en su alcance, pero son lo suficientemente buenos para los experimentos iniciales.
 
-- Hay servicios gratiuitos disponibles como [Neocities](https://neocities.org/), [Blogspot](https://www.blogger.com), y [Wordpress](https://es.wordpress.com/). Una vez más, obtienes lo que pagas, pero son ideales para tus experimentos iniciales. Los servicios gratuitos en su mayoría no requieren software de FTP para transferencias de archivos pues permiten arrastrar y soltar archivos justo dentro de su interfaz web.
-- Muchas compañías proporcionan alojamiento y dominio simultáneamente.
+### Usar una herramienta en línea como GitHub o Google App Engine
 
-### Utilizar una herramienta en línea como GitHub o Dropbox
+Algunas herramientas te permiten publicar tu sitio web en línea:
 
-Algunas herramientas te permiten publicar tu sitio en línea:
+- [GitHub](https://github.com/) es un sitio de "codificación social". Te permite subir repositorios de código para su almacenamiento en el **sistema de control de versiones** [Git](https://git-scm.com/). Puedes entonces colaborar en proyectos de código, y el sistema es de código abierto por defecto, lo que significa que cualquiera en el mundo puede encontrar tu código de GitHub, usarlo, aprender de él y mejorarlo. GitHub tiene una característica muy útil llamada [GitHub Pages](https://pages.github.com/), que te permite exponer el código de tu sitio web en vivo en la web.
+- [Google App Engine](https://cloud.google.com/appengine/) es una potente plataforma que te permite construir y ejecutar aplicaciones en la infraestructura de Google, ya sea que necesites construir una aplicación web de múltiples niveles desde cero o alojar un sitio web estático. Véase [¿Cómo alojar tu sitio web en Google App Engine?](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) para más información.
 
-- [GitHub](https://github.com/) es un sitio de «codificación social». Te permite cargar repositorios de código para almacenarlos en el **sistema de control de versiónes** de [Git](http://git-scm.com/). De esta manera puedes colaborar en proyectos de código pues por defecto el sistema es de código abierto, lo que significa que cualquier persona en el mundo puede encontrar tu código en GitHub, usarlo, aprender de él y mejorarlo. ¡Puedes hacer esto con el código de otra persona también! Git es un [sistema de control de versiones](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones) muy popular y GitHub es una comunidad muy importante y útil por lo que la mayor parte de empresas de tecnología ahora lo usan en su proceso laboral. GitHub tiene una característica muy útil llamada [GitHub Pages](https://pages.github.com), que te permite exponer el código de tu sitio web en vivo en la web.
-- [Dropbox](https://www.dropbox.com/) es un sistema de almacenamiento de archivos que te permite guardar los archivos en la web y tenerlos disponibles desde cualquier ordenador. Cualquier persona con una conexión a Internet puede acceder a cualquier carpeta de Dropbox que esté accesible al público. Si esa carpeta contiene los archivos del sitio web, estos serán visualizados como un sitio web de forma automática.
-- [Google App Engine](https://cloud.google.com/appengine/) es una poderosa plataforma que permite construir y ejecutar aplicaciones en la infraestructura de Google, ya sea que necesites construir una aplicación web de varios niveles desde cero o alojar un sitio web estático. Para obtener más información consulta [¿Cómo se aloja un sitio web en Google App Engine?](/es/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) (en inglés).
+Estas opciones son generalmente gratuitas, con un conjunto de características limitado.
 
-A diferencia de la mayoría de alojamientos (servicios de _hosting_), tales herramientas son por lo general libres de utilizar, pero solo permiten un conjunto de funciones limitadas.
+### Usar un IDE basado en la web como CodePen
 
-### Utilizar un entorno basado en web como CodePen
+Hay una serie de aplicaciones web que emulan un entorno de desarrollo de sitios web, permitiéndote escribir HTML, CSS y JavaScript, que luego se renderiza y se muestra en un panel de salida. En términos generales, estas herramientas son fáciles de usar, geniales para el aprendizaje, buenas para compartir código (por ejemplo, si quieres compartir una técnica o pedir ayuda para la depuración a colegas en una oficina diferente) y gratuitas (para las características básicas). Alojan tu página renderizada en una dirección web única. Sin embargo, las características son limitadas, y estas aplicaciones a menudo no proporcionan espacio de alojamiento para activos (como imágenes).
 
-Existe un número de aplicaciones web que emulan un entorno de desarrollo de sitios web, permitiendo que ingreses tu código HTML, CSS y Javascript y luego muestran los resultados de dicho código como un sitio web, ¡todo en una pestaña del navegador! En términos generales, estas herramientas son bastante sencillas, geniales para aprender, buenas para compartir código (por ejemplo, si quieres compartir con alguien una técnica o pedir ayuda en la depuración del código) y gratuitas para las funciones básicas. Además, mantienen tu página renderizada en una única dirección web. Sin embargo, las características básicas son muy limitadas y estas aplicaciones usualmente no proveen espacio de almacenamiento para recursos (como imágenes).
-
-Prueba con algunos de estos ejemplos y observa cuál es el que mejor se adapta a tu gusto:
+Intenta jugar con algunos de estos ejemplos para averiguar cuál funciona mejor para ti:
 
 - [JSFiddle](https://jsfiddle.net/)
 - [Glitch](https://glitch.com/)
 - [JS Bin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
-![](jsbin-screen.png)
-
 ## Publicar a través de GitHub
 
-Explicados estos tres métodos veamos ahora cómo publicar fácilmente, de forma muy visual e intuitiva, o bien por medio de comandos, tu sitio a través de [GitHub Pages](https://pages.github.com/) (en inglés).
+Ahora vamos a examinar cómo publicar tu sitio a través de GitHub Pages.
 
-### De manera visual y sin necesidad de más herramientas
-
-Esta no es la única manera, pero sí la que te permite poner manos a la obra inmediatamente.
-
-1. Si aún no lo has hecho [da de alta una cuenta en GitHub](https://github.com/join). Es simple y sencillo, solo debes verificar tu dirección de correo electrónico.
-2. Una vez registrado, ingresa a tu cuenta en GitHub.com con tu usuario y contraseña suministrados al crear tu cuenta.
-3. A continuación, necesitas crear un nuevo repositorio para tus archivos. Haz clic en el signo más (+) en la parte superior derecha de la página inicial de GitHub y selecciona _New Repository_ (Nuevo repositorio).
-4. En esta página, en la casilla _Repository name_ (Nombre del repositorio), ingresa <kbd><em>usuario</em>.github.io</kbd>, donde _usuario_ es tu nombre de usuario. Así por ejemplo, nuestro amigo Bob Smith ingresaría _<kbd>bobsmith.github.io</kbd>_. ![](github-create-repo.png)
-
-5. Opcionalmente escribe una corta descripción de tu sitio web en el campo _Description_ para que recuerdes cuál es la temática que tratarás en él y selecciona la casilla de verificación _Public_ (Público) si quieres que cualquier persona pueda ver los resultados de las ediciones que haces al sitio web que estás creando.
-6. Marca la casilla de verificación _Initialize this repository with a README_ (Inicializar este repositorio con un README (LÉAME)). Esto te permitirá clonar inmediatamente el repositorio a tu equipo. ¡Si vas a transferir tus archivos desde tu equipo al servidor de GitHub a través de un cliente de FTP (como se explica en la sección _[Subir tus archivos a GitHub a través de la línea de comandos](#subir_tus_archivos_a_github_a_través_de_la_línea_de_comandos)_, a continuación), **no debes realizar este paso**!
-
-7. Da clic en _Create repository_ (Crear repositorio).
-8. Arrastra y suelta el contenido de la carpeta de tu sitio web en tu repositorio. Cuando termines de pasar el contenido haz clic en _Commit changes_ (Confirmar cambios).
-
-   > [!NOTE]
-   > Cerciórate que tu carpeta tiene un archivo de nombre <kbd>index.html</kbd>
-
-9. En tu navegador desplázate a <kbd>username.github.io</kbd> para ver tu sitio web en línea. Por ejemplo, para el nombre de usuario Bob Smith, escribe <kbd>bobsmith.github.io</kbd>.
+1. En primer lugar, [regístrate en GitHub](https://github.com/) y verifica tu dirección de correo electrónico.
+2. A continuación, necesitas [crear un repositorio](https://github.com/new) para almacenar los archivos. En esta página:
+   1. en el cuadro _Repository name_, introduce _username_.github.io, donde _username_ es tu nombre de usuario. Por ejemplo, nuestro amigo Bob Smith introduciría _bobsmith.github.io_.
+   2. Haz clic en el botón _Create repository_ en la parte inferior de la página.
+3. En la página siguiente, encuentra el enlace _uploading an existing file_, y haz clic en él. Esto debería llevarte a la página de carga de archivos.
+4. En este punto, deberías poder arrastrar y soltar archivos desde tu sistema de archivos local a la página web para subirlos al repositorio de GitHub. Para ello:
+   1. Abre una ventana del explorador de archivos/finder en tu ordenador.
+   2. Asegúrate de que puedes ver la ventana del explorador de archivos _y_ la del navegador web: colócalas una al lado de la otra en tu pantalla.
+   3. Navega por la ventana del explorador de archivos hasta la carpeta que contiene tu sitio web de ejemplo.
+      > [!NOTE]
+      > Asegúrate de que tu carpeta tiene un archivo `index.html`.
+   4. Selecciona todos los archivos de tu sitio web de ejemplo (por ejemplo, utilizando el atajo de teclado <kbd>Ctrl</kbd> + <kbd>A</kbd>, o <kbd>Cmd</kbd> + <kbd>A</kbd> en macOS).
+   5. Arrastra los archivos desde tu explorador de archivos a la sección "Arrastra los archivos aquí para añadirlos a tu repositorio" de la página de GitHub.
+   6. El borde y el texto de la sección cambian para indicar que se puede soltar. Suelta los archivos en este punto.
+   7. Haz clic en el botón _Commit changes_ en la parte inferior de la página.
+5. Navega con tu navegador a _username_.github.io para ver tu sitio web en línea. Por ejemplo, para el nombre de usuario _chrisdavidmills_, ve a [_chrisdavidmills_.github.io](https://chrisdavidmills.github.io/).
 
    > [!NOTE]
-   > Puede que tu página web tarde unos minutos en entrar en funcionamiento. Si tu sitio web no se muestra inmediatamente, espera unos minutos e inténtalo de nuevo.
+   > Puede tardar unos minutos en que tu sitio web se active. Si tu sitio web no se muestra inmediatamente, espera unos minutos y vuelve a intentarlo.
 
-### Subir tus archivos a GitHub a través de la línea de comandos
+Para obtener más información, véase [Ayuda de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages).
 
-No estamos diciendo que esta es la única manera, o la mejor, de publicar tu sitio, pero es gratis, decentemente simple y abarca algunas nuevas habilidades que encontrarás útiles en adelante.
+## Lecturas adicionales
 
-Antes que nada, [descarga e instala Git](http://git-scm.com/downloads) en tu equipo. Este paso es necesario si vas a trabajar con los archivos de tu página web en él y luego los transferirás al servidor de GitHub.
+- [¿Qué es un servidor web?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- [Comprensión de los nombres de dominio](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
+- [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- [Despliega un sitio web](https://www.codecademy.com/learn/deploy-a-website): Un buen tutorial de Codecademy que va un poco más allá y muestra algunas técnicas adicionales.
 
-Sigue los pasos **1 a 5** y el **7** (recuerda omitir el 6) detallados en la anterior sección _[De manera visual y sin necesidad de más herramientas](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website#De_manera_visual_y_sin_necesidad_de_m%C3%A1s_herramientas)_. Una vez hayas dado clic en _Create repository_ (Crear repositorio) verás la siguiente ventana (¡no la cierres, más adelante necesitarás copiar información de allí!):
-
-![](github-populate-repo.png)
-
-En este punto ya estarás listo para poder utilizar la línea de comandos para subir los archivos de tu repositorio a GitHub. Una _línea de órdenes o de comandos_ es una ventana donde escribes comandos que realizarán tareas como crear archivos y ejecutar programas, en lugar de utiizar la interfaz gráfica de usuario. Se debe parecer a algo como esto:
-
-![](command-line.png)
-
-> [!NOTE]
-> Si no te sientes cómodo utilizando la línea de comandos, podrías considerar usar [Git graphical user interface](http://git-scm.com/downloads/guis) para realizar la misma tarea.
-
-Todos los sistemas operativos vienen con una herramienta de línea de comandos:
-
-- **Windows**: se puede acceder al **Intérprete de comandos** desde el menú que se presenta al pulsar _Win + X_ (o abre el menú pulsando el botón secundario del ratón sobre el botón Inicio de Windows en la parte inferior izquierda del escritorio). Advierte que Windows tiene sus propias sintaxis de comandos diferente a las de Linux y MacOS X, así que los siguientes comandos pueden variar para tu máquina.
-- **MacOS X**: **Terminal** puede ser hallada en Aplicaciones _> Utilidades_.
-- **Linux**: usualmente puedes abrir una terminal con _Ctrl + Alt + T_. Si esto no funciona, busca **Terminal** en la barra de aplicaciones o en el menú.
-
-Aunque este procedimiento pueda parecer un poco aterrador al principio no te preocupes, pronto te darás cuenta de lo básico. Darás órdenes al equipo en el terminal escribiendo un comando y presionando <kbd>Intro</kbd>.
-
-1. Apunta la línea de comandos a tu directorio `sitio-prueba` (o como quiera que hayas llamado al directorio que contiene tu sitio web). Para esto utiliza el comando `cd` (es decir, _«change directory»_, _«cambiar de directorio»_). Aquí viene lo que deberías teclear si has ubicado tu sitio web en un directorio llamado `sitio-prueba` en tu escritorio:
-
-   ```bash
-   cd Desktop/sitio-prueba
-   ```
-
-   En Windows sería:
-
-   ```bash
-   cd %USERPROFILE%\Desktop\sitio-prueba
-   ```
-
-2. Cuando la línea de comandos esté apuntando dentro del directorio de tu sitio web, teclea el siguiente comando, que indica a la herramienta de `git` que transforme el directorio en un repositorio de Git:
-
-   ```bash
-   git init
-   ```
-
-3. A continuación, regresa a la ventana del sitio de GitHub que dejaste abierta. En esa página, la sección que interesa es _…or push an existing repository from the command line_. Deberías ver dos líneas de código listadas en esa sección. Copia toda la primera línea, pégala en la línea de comandos y presiona <kbd>Intro</kbd>. El comando debería verse similar a:
-
-   ```bash
-   git remote add origin https://github.com/bobsmith/bobsmith.github.io.gi
-   ```
-
-4. A continuación, ingresa los siguientes dos comandos, presionando <kbd>Intro</kbd> después de cada uno. Estos preparan el código para cargar a GitHub y pedir a Git administrar estos archivos.
-
-   ```bash
-   git add --all
-   git commit -m 'agregando archivos a mi repositorio'
-   ```
-
-5. Finalmente, envía el codigo a GitHub tomando de la página web de GitHub en la que estás el segundo de los dos comandos del paso 3 e introdúcelo en el terminal:
-
-   ```bash
-   git push -u origin master
-   ```
-
-6. Ahora cuando vayas a la direccion de red de tu página GitHub (_usuario.github.io_) en una nueva pestaña del navegador ¡deberías ver tu sitio en línea! Envíala por correo-e a tus amigos y presume de tu maestría.
-
-> [!NOTE]
-> Has tocado apenas la superficie de Git. Si te quedas atascado la [ayuda de GitHub en español](https://help.github.com/es/github/working-with-github-pages/getting-started-with-github-pages) te será de gran apoyo.
-
-### Conocer más de GitHub
-
-Si deseas hacer más cambios a tu sitio y enviarlos a GitHub, luego de modificar los archivos, debes ingresar los siguientes comandos (presionando <kbd>Intro</kbd> después de cada uno) para enviar esos cambios a GitHub:
-
-```bash
-git add --all
-git commit -m 'otro commit'
-git push
-```
-
-Puedes reemplazar el texto _otro commit_ con un mensaje más descriptivo respecto a los cambios que hiciste.
-
-## Conclusión
-
-En este punto, deberías tener tu página web de ejemplo disponible en una dirección web única. ¡Bien hecho!
-
-![](hosted-final-site.png)
-
-### Ver también
-
-- [¿Qué es un servidor web?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [¿Qué es un nombre de dominio?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
-- [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- [Cheap or free static web hosting](http://alignedleft.com/resources/cheap-web-hosting) (Alojamiento web estático barato o gratuito) _de Scott Murray_ tiene algunas ideas útiles sobre servicios disponibles aunque el sitio ya está algo desactualizado (en inglés).
-
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works","Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

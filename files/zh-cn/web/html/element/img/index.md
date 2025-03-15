@@ -29,7 +29,7 @@ slug: Web/HTML/Element/img
 
 还有很多其他属性，可以实现各种不同的目的：
 
-- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
+- [Referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
 - 使用 [`width`](#width) 和 [`height`](#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
 - 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程）。
 
@@ -321,12 +321,12 @@ Web 最常用的图像格式是：
 - [alt 决策树 • 图像 • WAI Web 无障碍教程](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - [备用文本：终极指南——Axess Lab](https://axesslab.com/alt-texts/)
 - [如何设计出色的替代文本：教程 | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN 理解 WCAG——指南 1.1 解析](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN 理解 WCAG——指南 1.1 解析](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [了解成功的标准 1.1.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### 将 SVG 识别为图像
 
-由于 [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364)，VoiceOver 无法正确地将 SVG 图像渲染为图像。在所有使用 SVG 资源文件的 `<img>` 元素中包含 [`role="img"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role) 以保证无障碍技术正确地将 SVG 声明为图像内容。
+由于 [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364)，VoiceOver 无法正确地将 SVG 图像渲染为图像。在所有使用 SVG 资源文件的 `<img>` 元素中包含 [`role="img"`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) 以保证无障碍技术正确地将 SVG 声明为图像内容。
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />
@@ -383,13 +383,13 @@ Web 最常用的图像格式是：
           <li>
             具有非空 <code>alt</code> 属性或没有
             <code>alt</code> 属性：<code
-              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"
+              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"
                 ><code>img</code></a
               ></code
             >
           </li>
           <li>
-            具有空 <code>alt</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+            具有空 <code>alt</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
               ><code>presentation</code></a
             >
           </li>
@@ -406,7 +406,7 @@ Web 最常用的图像格式是：
               <li>
                 <code
                   ><a
-                    href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role"
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
                     >button</a
                   ></code
                 >
@@ -414,20 +414,20 @@ Web 最常用的图像格式是：
               <li>
                 <code
                   ><a
-                    href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role"
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"
                     >checkbox</a
                   ></code
                 >
               </li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
@@ -443,12 +443,12 @@ Web 最常用的图像格式是：
                   ></code
                 >
               </li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            具有空 <code>alt</code> 属性、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-            或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+            具有空 <code>alt</code> 属性、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+            或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             没有 <code>alt</code> 属性，或没有允许的角色（<code>role</code>）

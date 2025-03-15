@@ -164,7 +164,7 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 ### 用户代理客户端提示
 
-一些媒体查询有相应的[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)。这是请求特定媒体要求的预优化内容的 HTTP 标头，其包括 {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} 和 {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}。
+一些媒体查询有相应的[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)。这是请求特定媒体要求的预优化内容的 HTTP 标头，其包括 {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} 和 {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}。
 
 ## 无障碍考虑
 

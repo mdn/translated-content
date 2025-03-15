@@ -55,4 +55,4 @@ if (window.isSecureContext) {
 - [仅在安全上下文中可用的平台特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)——只在安全上下文中可用的特性列表
 - {{domxref("Window.isSecureContext")}} 和 {{domxref("WorkerGlobalScope.isSecureContext")}}
 - <https://permission.site>——一个允许你检查你的浏览器在 HTTP 和 HTTPS 上采用何种 API 权限检查的网站
-- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP 标头
+- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP 标头

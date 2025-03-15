@@ -62,7 +62,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 
 一旦连接建立了（也就是说 `readyState` 是 `OPEN`） `exampleSocket.protocol` 就会告诉你服务器选择了哪个协议。
 
-上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
+上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
 
 ## 向服务器发送数据
 
@@ -72,7 +72,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/JavaScript_typed_arrays/ArrayBuffer)来发送。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)来发送。
 
 因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 `send()` 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 `onopen` 事件处理器解决：
 
@@ -171,7 +171,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 

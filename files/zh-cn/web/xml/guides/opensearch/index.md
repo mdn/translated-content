@@ -1,7 +1,6 @@
 ---
 title: OpenSearch 描述格式
 slug: Web/XML/Guides/OpenSearch
-original_slug: Web/OpenSearch
 l10n:
   sourceCommit: 5309f49a300166809b098f1b7604d563f3332af2
 ---

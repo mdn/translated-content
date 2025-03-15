@@ -75,7 +75,7 @@ figure {
     > - 浏览器并不被强制遵循该属性的规范，该属性只是一个建议与提示。
 
 - `src`
-  - : 嵌入的音频的 URL。该 URL 应遵从 [HTTP access controls](/zh-CN/docs/Web/HTTP/CORS). 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。
+  - : 嵌入的音频的 URL。该 URL 应遵从 [HTTP access controls](/zh-CN/docs/Web/HTTP/Guides/CORS). 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。
 
 ## 事件
 
@@ -250,7 +250,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 - [MDN Subtitles and closed caption — Plugins](/zh-CN/docs/Glossary/Plugin)
 - [Web Video Text Tracks Format (WebVTT)](/zh-CN/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN Understanding WCAG, Guideline 1.2 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.2_%E2%80%94_Providing_text_alternatives_for_time-based_media)
+- [MDN Understanding WCAG, Guideline 1.2 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.2_%E2%80%94_Providing_text_alternatives_for_time-based_media)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -285,7 +285,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>

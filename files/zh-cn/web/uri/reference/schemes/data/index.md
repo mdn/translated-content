@@ -16,11 +16,11 @@ Data URL 由四个部分组成：前缀（`data:`）、指示数据类型的 MIM
 data:[<mediatype>][;base64],<data>
 ```
 
-`mediatype` 是个 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)的字符串，例如 `'image/jpeg'` 表示 JPEG 图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII`。
+`mediatype` 是个 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)的字符串，例如 `'image/jpeg'` 表示 JPEG 图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII`。
 
 如果数据包含 [RFC 3986 中定义为保留字符](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)的字符或包含空格符、换行符或者其他非打印字符，这些字符必须进行[百分号编码](/zh-CN/docs/Glossary/Percent-encoding)（又名“URL 编码”）。
 
-如果数据是文本类型，你可以直接将文本嵌入（根据文档类型，使用合适的实体字符或转义字符）。否则，你可以指定 `base64` 来嵌入 base64 编码的二进制数据。你可以在[这里](/zh-CN/docs/Web/HTTP/MIME_types)和[这里](/zh-CN/docs/Web/HTTP/MIME_types/Common_types)找到更多关于 MIME 类型的信息。
+如果数据是文本类型，你可以直接将文本嵌入（根据文档类型，使用合适的实体字符或转义字符）。否则，你可以指定 `base64` 来嵌入 base64 编码的二进制数据。你可以在[这里](/zh-CN/docs/Web/HTTP/Guides/MIME_types)和[这里](/zh-CN/docs/Web/HTTP/Guides/MIME_types/Common_types)找到更多关于 MIME 类型的信息。
 
 下面是一些示例：
 
