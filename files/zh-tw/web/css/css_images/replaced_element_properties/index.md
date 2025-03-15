@@ -1,6 +1,7 @@
 ---
 title: 置換元素 (Replaced element)
-slug: Web/CSS/Replaced_element
+slug: Web/CSS/CSS_images/Replaced_element_properties
+original_slug: Web/CSS/Replaced_element
 ---
 
 {{CSSRef}}
