@@ -16,7 +16,7 @@ l10n:
 _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 
 - {{domxref("HTMLDivElement.align")}} {{deprecated_inline}}
-  - : 一个字符串，表示指示元素内容相对于周围上下文对齐方式的枚举属性。可能的值为 `"left"`、`"right"`、`"justify"` 和 `"center"`。
+  - : 一个表示指示元素内容相对于周围上下文对齐方式的枚举属性的字符串。可能的值为 `"left"`、`"right"`、`"justify"` 和 `"center"`。
 
 ## 实例方法
 
