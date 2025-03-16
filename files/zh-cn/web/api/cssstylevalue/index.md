@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model#css_typed_object_model) 的 **`CSSStyleValue`** 接口是通过类型对象模型 API 访问的所有 CSS 值的基类。该类的实例可在任何需要字符串的地方使用。
+[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model#css_类型对象模型) 的 **`CSSStyleValue`** 接口是通过类型对象模型 API 访问的所有 CSS 值的基类。该类的实例可在任何需要字符串的地方使用。
 
 ## 基于 CSSStyleValue 的接口
 
@@ -34,4 +34,3 @@ l10n:
 ## 浏览器兼容性
 
 {{Compat}}
-

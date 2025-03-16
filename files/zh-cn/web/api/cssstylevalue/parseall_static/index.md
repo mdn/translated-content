@@ -1,5 +1,5 @@
 ---
-title: CSSStyleValue: parseAll() static method
+title: CSSStyleValue：parseAll() 静态方法
 slug: Web/API/CSSStyleValue/parseAll_static
 l10n:
   sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
