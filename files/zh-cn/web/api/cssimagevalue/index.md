@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model#css_typed_object_model)的 **`CSSImageValue`** 接口表示取用图像的属性值，例如 {{cssxref('background-image')}}，{{cssxref('list-style-image')}}，或 {{cssxref('border-image-source')}}。
+[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model#css_类型对象模型)的 **`CSSImageValue`** 接口表示取用图像的属性（例如 {{cssxref('background-image')}}、{{cssxref('list-style-image')}} 或 {{cssxref('border-image-source')}}）的值。
 
-CSSImageValue 对象表示 [`<image>`](/zh-CN/docs/Web/CSS/image) 涉及的 URL，如 [`url()`](/zh-CN/docs/Web/CSS/url_function) 或 [`image()`](/zh-CN/docs/Web/CSS/image)，但不包括 [`linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/linear-gradient) 或 [`element()`](/zh-CN/docs/Web/CSS/element)。
+CSSImageValue 对象表示涉及 URL（如 [`url()`](/zh-CN/docs/Web/CSS/url_function) 或 [`image()`](/zh-CN/docs/Web/CSS/image)，但不包括 [`linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/linear-gradient) 或 [`element()`](/zh-CN/docs/Web/CSS/element)）的 [`<image>`](/zh-CN/docs/Web/CSS/image)。
 
 {{InheritanceDiagram}}
 
@@ -19,7 +19,7 @@ CSSImageValue 对象表示 [`<image>`](/zh-CN/docs/Web/CSS/image) 涉及的 URL�
 
 ## 实例方法
 
-_继承 {{domxref('CSSStyleValue')}} 方法。_
+_继承 {{domxref('CSSStyleValue')}} 的方法。_
 
 ## 示例
 
@@ -40,7 +40,7 @@ button {
 }
 ```
 
-我们获取元素的样式表。然后，我们从样式表中获取景图片，并对其进行字符串化：
+我们获取元素的样式映射。然后，我们从样式映射中获取（get()）背景图片（background-image），并将其字符串化：
 
 ```js
 // 获得元素
@@ -54,7 +54,7 @@ console.log(allComputedStyles.get("background-image"));
 console.log(allComputedStyles.get("background-image").toString());
 ```
 
-{{EmbedLiveSample("Examples", 120, 300)}}
+{{EmbedLiveSample("示例", 120, 300)}}
 
 ## 规范
 
