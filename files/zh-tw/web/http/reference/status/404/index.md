@@ -66,7 +66,7 @@ ErrorDocument 404 /notfound.html
 
 ## 規範
 
-{{Compat}}
+{{Specifications}}
 
 ## 參見
 
