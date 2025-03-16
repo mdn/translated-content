@@ -2,14 +2,18 @@
 title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`404 Not Found`** 回應狀態碼表示伺服器找不到所請求的資源。導致 404 頁面的連結通常稱為無效或死連結，可能會受到[失效連結](https://zh.wikipedia.org/zh-tw/%E5%A4%B1%E6%95%88%E9%80%A3%E7%B5%90)的影響。
+HTTP **`404 Not Found`** [用戶端錯誤回應](/en-US/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器找不到所請求的資源。導致 404 頁面的連結通常稱為無效或死連結，可能會受到[失效連結](https://zh.wikipedia.org/zh-tw/%E5%A4%B1%E6%95%88%E9%80%A3%E7%B5%90)的影響。
 
-404 狀態碼僅表示資源不存在，而不表示缺席是暫時的還是永久的。如果資源永久刪除，請改用 {{HTTPStatus("410")}}（Gone）狀態。
+404 狀態碼僅表示資源遺失，但不指明這是暫時的還是永久的。如果資源永久刪除，伺服器應傳送 {{HTTPStatus("410", "410 Gone")}} 狀態。
+
+{+404 errors on a website can lead to a poor user experience for your visitors, so the number of broken links (internal and external) should be minimized to prevent frustration for readers.+}
+{+Common causes of 404 responses are mistyped URLs or pages that are moved or deleted without redirection.+}
+{+For more information, see the [Redirections in HTTP](/en-US/docs/Web/HTTP/Guides/Redirections) guide.+}
 
 ## 狀態
 
@@ -17,28 +21,59 @@ HTTP **`404 Not Found`** 回應狀態碼表示伺服器找不到所請求的資�
 404 Not Found
 ```
 
-## 自訂錯誤頁面
+## Examples
 
-你可以顯示一個自訂的 404 頁面，以對使用者提供更多幫助並提供下一步的指引。例如，對於 Apache 伺服器，你可以在 `.htaccess` 檔案中指定一個自訂 404 頁面的路徑：
+### Page not found
+
+Fetching a non-existent page may look like the following request:
+
+```http
+GET /my-deleted-blog-post HTTP/1.1
+Host: example.com
+```
+
+The server returns a response similar to this:
+
+```http
+HTTP/1.1 404 Not Found
+Age: 249970
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 28 Jun 2024 11:40:58 GMT
+Expires: Fri, 05 Jul 2024 11:40:58 GMT
+Last-Modified: Tue, 25 Jun 2024 14:14:48 GMT
+Server: ECAcc (nyd/D13E)
+Vary: Accept-Encoding
+X-Cache: 404-HIT
+Content-Length: 1256
+
+<!doctype html>
+<head>
+    <title>404 not found</title>
+    ...
+```
+
+### Custom error page in Apache
+
+For the Apache server, you can specify a path to a custom 404 page in a `.htaccess` file.
+The example below uses `notfound.html` as a page to show visitors on 404s, although a common approach is to name the file `404.html` or `404.php` (depending on the server-side technology) at the top-level of the server:
 
 ```apacheconf
 ErrorDocument 404 /notfound.html
 ```
 
-有關自訂 404 頁面的範例，請參見此 [404 頁面](https://konmari.com/404)。
-
 > [!NOTE]
-> 適度地自訂設計是一個好事情。可以使你的 404 頁面幽默和人性化，但不要讓你的用戶感到困惑。
+> Custom 404 page design is a good thing in moderation.
+> Feel free to make your 404 page humorous and human, but don't confuse your visitors as to why they are seeing something unexpected.
+>
+> For an example of a custom 404 page, see the [KonMari 404 page](https://konmari.com/404).
 
 ## 規範
-
-{{Specifications}}
-
-## 瀏覽器相容性
 
 {{Compat}}
 
 ## 參見
 
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("410")}}
 - [維基百科: HTTP 404](https://zh.wikipedia.org/zh-tw/HTTP_404)
