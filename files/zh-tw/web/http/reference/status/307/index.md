@@ -2,16 +2,18 @@
 title: 307 Temporary Redirect
 slug: Web/HTTP/Reference/Status/307
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-{{Glossary("HTTP")}} **`307 Temporary Redirect`** 重新導向狀態碼表示所請求的資源已暫時移至由 {{HTTPHeader("Location")}} 標頭指定的 URL。
+HTTP **`307 Temporary Redirect`** [重新導向回應](/en-US/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示所請求的資源已暫時移至由 {{HTTPHeader("Location")}} 標頭指定的 URL。
 
-原始請求的方法和主體將被重用以執行重新導向的請求。在希望使用的方法更改為 {{HTTPMethod("GET")}} 的情況下，請改用 {{HTTPStatus("303", "303 See Other")}}。這在你希望對不是上傳的資源（如「你成功上傳了 XYZ」之類的確認消息）給出回答時很有用。
+當瀏覽器收到此狀態碼時，會自動向 `Location` 標頭所提供的 URL 發送新的請求，將使用者重新導向到新的頁面。搜尋引擎在收到此回應時，不會將指向原始 URL 的連結歸屬於新資源，這表示 SEO 價值不會轉移到新的 URL。
 
-`307` 和 {{HTTPStatus("302")}} 之間唯一的區別是，`307` 保證在執行重新導向的請求時不會更改方法和主體。對於 `302`，一些舊的用戶端錯誤地將方法更改為 {{HTTPMethod("GET")}}：因此在 Web 上，非 `GET` 方法和 `302` 的行為是不可預測的，而使用 `307` 則是可預測的。對於 `GET` 請求，它們的行為是相同的。
+原始請求的方法和主體將被重用以執行重新導向的請求。在希望請求方法更改為 {{HTTPMethod("GET")}} 的情況下，請改用 {{HTTPStatus("303", "303 See Other")}}。這在你希望對成功的 {{HTTPMethod("PUT")}} 請求提供回應（如狀態監控或確認訊息「你成功上傳了 XYZ」）時很有用。
+
+`307` 和 {{HTTPStatus("302")}} 之間的區別在於，`307` 保證**用戶端不會更改**重新導向請求的方法與主體。而 `302` 則存在舊版用戶端將方法錯誤地更改為 {{HTTPMethod("GET")}} 的問題，因此 `302` 在處理非 `GET` 方法時行為可能是不可預測的，而 `307` 則提供可預測的行為。
 
 ## 狀態
 
@@ -19,16 +21,34 @@ l10n:
 307 Temporary Redirect
 ```
 
+## 範例
+
+### 307 回應至已移動的資源
+
+以下是對具有 `307` 重新導向的資源發送 {{HTTPMethod("GET")}} 請求的範例。`Location` 標頭提供了新的 URL。
+
+```http
+GET /zh-TW/docs/AJAX HTTP/2
+Host: developer.mozilla.org
+User-Agent: curl/8.6.0
+Accept: */*
+```
+
+```http
+HTTP/2 307
+location: /zh-TW/docs/Learn_web_development/Core/Scripting/Network_requests
+content-type: text/plain; charset=utf-8
+date: Fri, 19 Jul 2024 12:57:17 GMT
+```
+
 ## 規格
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
-- {{HTTPStatus("302", "302 Found")}}，這個狀態碼的等效碼，但在不是 {{HTTPMethod("GET")}} 時可能會更改所使用的方法。
-- {{HTTPStatus("303", "303 See Other")}}，將使用的方法更改為 {{HTTPMethod("GET")}} 的臨時重新導向。
+- [HTTP 重新導向](/zh-TW/docs/Web/HTTP/Guides/Redirections)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
+- {{HTTPStatus("302", "302 Found")}}，等效於 `307`，但可能會修改非 {{HTTPMethod("GET")}} 方法。
+- {{HTTPStatus("303", "303 See Other")}}，將請求方法修改為 {{HTTPMethod("GET")}} 的臨時重新導向。
 - {{HTTPStatus("301", "301 Moved Permanently")}}，永久重新導向。
