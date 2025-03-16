@@ -23,7 +23,7 @@ HTTP **`404 Not Found`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/
 
 ### 頁面未找到
 
-請求不存在的頁面可能會產生如下的請求：
+獲取不存在的頁面可能會產生如下的請求：
 
 ```http
 GET /my-deleted-blog-post HTTP/1.1
