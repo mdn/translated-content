@@ -5362,7 +5362,7 @@
 /ja/docs/Web/MathML/Element/mtr	/ja/docs/Web/MathML/Reference/Element/mtr
 /ja/docs/Web/MathML/Element/munder	/ja/docs/Web/MathML/Reference/Element/munder
 /ja/docs/Web/MathML/Element/semantics	/ja/docs/Web/MathML/Reference/Element/semantics
-/ja/docs/Web/MathML/Examples	/ja/docs/conflicting/Web/MathML/Guides
+/ja/docs/Web/MathML/Examples	/ja/docs/Web/MathML/Guides
 /ja/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula	/ja/docs/Web/MathML/Guides/Deriving_the_quadratic_formula
 /ja/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem	/ja/docs/Web/MathML/Guides/Proving_the_Pythagorean_theorem
 /ja/docs/Web/MathML/Fonts	/ja/docs/Web/MathML/Guides/Fonts
