@@ -75,7 +75,7 @@ Authorization: Digest username=<username>,
 - `<response>`
   - : 一串十六進位數字，用於證明用戶知道密碼。該演算法編碼用戶名和密碼、realm、cnonce、qop、nc 等。規範中有詳細描述。
 - `username`
-  - : 一個包含用戶名的帶引號字串，用於指定的 `realm`，可以是純文本或十六進位表示的雜湊碼。如果名稱包含在字段中不允許的字符，則可以使用 `username*`（而不是「以及」）。
+  - : 一個包含用戶名的帶引號字串，用於指定的 `realm`，可以是純文本或十六進位表示的雜湊碼。如果名稱包含在字段中不允許的字符，則可以使用 `username*`（不是「還可以」）。
 - `username*`
   - : 使用 RFC5987 定義的擴展表示法格式化的用戶名。僅當名稱無法在 `username` 中編碼並且 `userhash` 設置為 `"false"` 時應使用此選項。
 - `uri`
@@ -125,4 +125,4 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}
-- {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}
+- {{HTTPStatus("401")}}、{{HTTPStatus("403")}}、{{HTTPStatus("407")}}
