@@ -7,7 +7,48 @@ slug: Web/CSS/flex-direction
 
 La propiedad CSS **`flex-direction`** especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).
 
-{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
+{{InteractiveExample("CSS Demo: flex-direction")}}
+
+```css interactive-example-choice
+flex-direction: row;
+```
+
+```css interactive-example-choice
+flex-direction: row-reverse;
+```
+
+```css interactive-example-choice
+flex-direction: column;
+```
+
+```css interactive-example-choice
+flex-direction: column-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
 
 Tenga en cuenta que el valor de `row` y `row-reverse` se verán afectados por la direccionalidad del contenedor flexible. Si su atributo `dir` es `ltr`, `row` representa el eje horizontal orientado de izquierda a derecha, y `row-reverse` desde la derecha hacia la izquierda; si el atributo `dir` es `rtl`, `row` representa el eje orientado de derecha a izquierda, y `row-reverse` de izquierda a derecha.
 

@@ -7,7 +7,42 @@ slug: Web/CSS/border-inline-end
 
 **`border-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の末尾側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/border-inline-end.html")}}
+{{InteractiveExample("CSS Demo: border-inline-end")}}
+
+```css interactive-example-choice
+border-inline-end: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-end: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-end: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構成要素のプロパティ
 

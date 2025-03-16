@@ -1,7 +1,6 @@
 ---
 title: 非同步的 JavaScript 介紹
 slug: Learn_web_development/Extensions/Async_JS/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

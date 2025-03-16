@@ -9,7 +9,47 @@ l10n:
 
 **`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
 
-{{EmbedInteractiveExample("pages/css/padding-inline.html")}}
+{{InteractiveExample("CSS Demo: padding-inline")}}
+
+```css interactive-example-choice
+padding-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline: 15px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline: 5% 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構成要素のプロパティ
 

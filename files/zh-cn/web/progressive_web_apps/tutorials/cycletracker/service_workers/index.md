@@ -196,7 +196,7 @@ self.addEventListener("activate", (event) => {
 
 鉴于我们的 PWA 只由单一的页面构成，对于页面导航请求，我们返回至 `index.html` 主页面，因为没有其他页面，我们也不想请求总是发送到服务器。如果 Fetch API 的 [`Request`](/zh-CN/docs/Web/API/Request) 的只读属性 [`mode`](/zh-CN/docs/Web/API/Request/mode) 值为 `navigate`，意味着它在查找一个 Web 页面，我们使用 FetchEvent 的 [`respondWith()`](/zh-CN/docs/Web/API/FetchEvent/respondWith) 方法来阻止浏览器默认的 fetch 处理，使用 [`caches.match()`](/zh-CN/docs/Web/API/CacheStorage/match) 方法来提供我们自己的响应 Promise。
 
-对于其他所有的请求模式，我们则按照在 [install 事件响应](#在_pwa_安装过程中保存缓存)里的那样打开缓存，向同样的 `match()` 方法传递事件请求。它会检查请求是否是已存储的 {{domxref("Response")}} 的键。如果是，我们返回缓存的响应，如果不是，我们返回一个 [404 状态码](/zh-CN/docs/Web/HTTP/Status/404)作为响应。
+对于其他所有的请求模式，我们则按照在 [install 事件响应](#在_pwa_安装过程中保存缓存)里的那样打开缓存，向同样的 `match()` 方法传递事件请求。它会检查请求是否是已存储的 {{domxref("Response")}} 的键。如果是，我们返回缓存的响应，如果不是，我们返回一个 [404 状态码](/zh-CN/docs/Web/HTTP/Reference/Status/404)作为响应。
 
 使用 [`Response()`](/zh-CN/docs/Web/API/Response/Response) 构造器，传递为 `null` 的主体以及一个 `404` 的状态码作为选项，并不意味着我们的 PWA 出错了。相反，我们需要的所有东西应该都已经在缓存里了，如果没有，我们也不用去服务器解决这个小问题。
 

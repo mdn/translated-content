@@ -7,7 +7,41 @@ slug: Web/CSS/var
 
 [Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`var()`** используется для вставки значения [кастомного свойства](/ru/docs/Web/CSS/--*) (также известного как "CSS-переменная") в другое свойство.
 
-{{EmbedInteractiveExample("pages/css/var.html")}}
+{{InteractiveExample("CSS Demo: var()")}}
+
+```css interactive-example-choice
+border-color: var(--color-a);
+```
+
+```css interactive-example-choice
+border-color: var(--color-b);
+```
+
+```css interactive-example-choice
+border-color: var(--color-c);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    Three color options have been set on the :root use these to change the
+    border color.
+  </div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --color-a: pink;
+  --color-b: green;
+  --color-c: rebeccapurple;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 Функцию `var()` нельзя использовать в именах свойств, селекторах или где-либо ещё, кроме как в качестве значений для свойств.
 

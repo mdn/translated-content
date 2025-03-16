@@ -1,12 +1,11 @@
 ---
 title: scope
 slug: Web/Progressive_web_apps/Manifest/Reference/scope
-original_slug: Web/Manifest/Reference/scope
 l10n:
-  sourceCommit: 1e660f71a4741c5fdf36bb7ac8dc7acfbc9cfb49
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `scope` はマニフェストメンバーで、ウェブアプリケーションのページとサブディレクトリーを格納する最上位の URL パスを指定するために使用します。
 ユーザーがウェブアプリをインストールして使用すると、スコープ内のページがアプリのようなインターフェイスを提供します。
@@ -162,5 +161,5 @@ web-app/
 
 ## 関連情報
 
-- [`start_url`](/ja/docs/Web/Manifest/start_url) マニフェストメンバー
+- [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) マニフェストメンバー
 - {{Glossary("Application_context", "アプリケーションコンテキスト")}}

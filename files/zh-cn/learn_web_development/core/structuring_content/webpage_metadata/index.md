@@ -239,7 +239,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 不用担心现在实现所有这些类型的图标——这是一个相当先进的特性，不要求你有这方面的知识来通过课程的进展。这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。如果你确实想了解更多关于所有这些值以及如何选择它们，请阅读 {{HTMLElement("link")}} 元素的参考页面。
 
 > [!NOTE]
-> 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在 favicon 图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) 没有阻止访问图标。
+> 如果你的网站使用了内容安全策略（Content Security Policy，CSP）来增加安全性，这个策略会应用在 favicon 图标上。如果你遇到了图标没有被加载的问题，你需要确认 {{HTTPHeader("Content-Security-Policy")}} 响应头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src) 没有阻止访问图标。
 
 ## 在 HTML 中应用 CSS 和 JavaScript
 

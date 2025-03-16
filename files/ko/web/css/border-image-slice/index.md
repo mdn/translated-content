@@ -7,7 +7,48 @@ slug: Web/CSS/border-image-slice
 
 **`border-image-slice`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("border-image-source")}}로 설정한 이미지를 여러 개의 영역으로 나눕니다. 이렇게 나눠진 영역이 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image)를 이룹니다.
 
-{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
+{{InteractiveExample("CSS Demo: border-image-slice")}}
+
+```css interactive-example-choice
+border-image-slice: 30;
+```
+
+```css interactive-example-choice
+border-image-slice: 30 fill;
+```
+
+```css interactive-example-choice
+border-image-slice: 44;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-florid.svg") round;
+border-image-slice: calc(50 / 184 * 100%) calc(80 / 284 * 100%) fill;
+border-image-width: 30px 48px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 이미지는 네 개의 꼭지점, 네 개의 모서리, 한 개의 중앙 총 9개의 영역으로 나눠집니다. 상하좌우 각각의 모서리에서 주어진 거리만큼 떨어진 네 개의 분할선이 영역의 크기를 결정합니다.
 

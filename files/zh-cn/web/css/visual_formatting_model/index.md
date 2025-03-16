@@ -2,7 +2,7 @@
 title: 视觉格式化模型
 slug: Web/CSS/Visual_formatting_model
 l10n:
-  sourceCommit: 96157fa574bc2cd9f55ff1205198f24addc00104
+  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
 {{CSSRef}}
@@ -258,6 +258,6 @@ body {
 - [盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
 - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+- {{glossary("Replaced elements", "可替换元素")}}
 - {{DOMxRef("VisualViewport")}} 接口
 - {{glossary("Scroll container", "滚动容器")}}

@@ -55,7 +55,7 @@ TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切�
 
 ## 响应
 
-一旦我们建立了和 web 服务器的连接，浏览器就会代表用户发送一个初始的 [HTTP `GET` 请求](/zh-CN/docs/Web/HTTP/Methods)，对于网站来说，这个请求通常是一个 HTML 文件。一旦服务器收到请求，它将使用相关的响应头和 HTML 的内容进行回复。
+一旦我们建立了和 web 服务器的连接，浏览器就会代表用户发送一个初始的 [HTTP `GET` 请求](/zh-CN/docs/Web/HTTP/Reference/Methods)，对于网站来说，这个请求通常是一个 HTML 文件。一旦服务器收到请求，它将使用相关的响应头和 HTML 的内容进行回复。
 
 ```html
 <!doctype html>

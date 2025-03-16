@@ -9,7 +9,56 @@ l10n:
 
 **`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid", "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の端を指定します。
 
-{{EmbedInteractiveExample("pages/css/grid-area.html")}}
+{{InteractiveExample("CSS Demo: grid-area")}}
+
+```css interactive-example-choice
+grid-area: a;
+```
+
+```css interactive-example-choice
+grid-area: b;
+```
+
+```css interactive-example-choice
+grid-area: c;
+```
+
+```css interactive-example-choice
+grid-area: 2 / 1 / 2 / 4;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Example</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-template-areas:
+    "a a a"
+    "b c c"
+    "b c c";
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 4 つの `<grid-line>` が指定された場合、 `grid-row-start` が最初の値に設定され、 `grid-column-start` が 2 つ目の値に設定され、 `grid-row-end` が 3 つ目の値に設定され、 `grid-column-end` が 4 つ目の値に設定されます。
 

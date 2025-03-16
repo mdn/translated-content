@@ -54,7 +54,7 @@ l10n:
 
 ### HTTP
 
-- 已启用 [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Status#信息响应)状态码，以便[预连接](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)到特定的源（页面可能需要来自该源的资源）。有关更详细的信息，请参阅 [Firefox bug 1858712](https://bugzil.la/1858712)。
+- 已启用 [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Reference/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)状态码，以便[预连接](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)到特定的源（页面可能需要来自该源的资源）。有关更详细的信息，请参阅 [Firefox bug 1858712](https://bugzil.la/1858712)。
 - Firefox 支持 [Global Privacy Control](https://globalprivacycontrol.org/) {{HTTPHeader("Sec-GPC")}} 请求标头，该请求标头可用于指示用户不同意网站或服务将其个人信息出售或与第三方共享。用户可以通过将首选项 `privacy.globalprivacycontrol.enabled` 设置为 `true`（在 `about:config` 中）以在正常浏览和隐私浏览模式下启用该标头。{{domxref("Navigator.globalPrivacyControl")}} 和 {{domxref("WorkerNavigator.globalPrivacyControl")}} 属性允许 JavaScript 检查用户同意首选项（[Firefox bug 1856029](https://bugzil.la/1856029)）。
 
 ### 安全

@@ -1,7 +1,6 @@
 ---
 title: 初次接觸Javascript
 slug: Learn_web_development/Core/Scripting/A_first_splash
-original_slug: Learn/JavaScript/First_steps/A_first_splash
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}

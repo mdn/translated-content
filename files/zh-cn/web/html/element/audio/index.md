@@ -75,7 +75,7 @@ figure {
     > - 浏览器并不被强制遵循该属性的规范，该属性只是一个建议与提示。
 
 - `src`
-  - : 嵌入的音频的 URL。该 URL 应遵从 [HTTP access controls](/zh-CN/docs/Web/HTTP/CORS). 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。
+  - : 嵌入的音频的 URL。该 URL 应遵从 [HTTP access controls](/zh-CN/docs/Web/HTTP/Guides/CORS). 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。
 
 ## 事件
 

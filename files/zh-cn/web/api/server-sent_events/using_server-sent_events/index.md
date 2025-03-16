@@ -101,7 +101,7 @@ while (true) {
 
 ## 错误处理
 
-当发生错误时（例如网络超时或与[访问控制](/zh-CN/docs/Web/HTTP/CORS)有关的问题），会生成一个错误事件。可以通过在 `EventSource` 对象上实现 `onerror` 回调来编程地处理它：
+当发生错误时（例如网络超时或与[访问控制](/zh-CN/docs/Web/HTTP/Guides/CORS)有关的问题），会生成一个错误事件。可以通过在 `EventSource` 对象上实现 `onerror` 回调来编程地处理它：
 
 ```js
 evtSource.onerror = (err) => {

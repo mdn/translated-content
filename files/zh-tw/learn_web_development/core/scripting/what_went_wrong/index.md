@@ -1,7 +1,6 @@
 ---
 title: 出了什麼問題？JavaScript 疑難排解
 slug: Learn_web_development/Core/Scripting/What_went_wrong
-original_slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}

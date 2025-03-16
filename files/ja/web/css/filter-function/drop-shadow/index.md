@@ -9,7 +9,29 @@ l10n:
 
 **`drop-shadow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像にドロップシャドウ効果を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
+{{InteractiveExample("CSS Demo: drop-shadow()")}}
+
+```css interactive-example-choice
+filter: drop-shadow(30px 10px 4px #4444dd);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 -6mm 4mm rgb(160, 0, 210));
+```
+
+```css interactive-example-choice
+filter: drop-shadow(0 0 0.75rem crimson);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ドロップシャドウは効果的にぼけ、入力画像のアルファマスクのバージョンからずれ、特定の色で描かれて画像の下に混合されます。
 

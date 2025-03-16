@@ -1,28 +1,37 @@
 ---
 title: CSS コンテナークエリー
 slug: Web/CSS/CSS_containment/Container_queries
+l10n:
+  sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
 {{CSSRef}}
 
-コンテナークエリーによって、要素のコンテナーのサイズに基づいて要素にスタイル設定を適用することができます。例えば、コンテナーが周囲の文脈で利用できる空間が少ない場合、特定の要素を非表示にしたり、小さなフォントを使用したりすることができます。
+コンテナークエリーを使用すると、特定の要素について、そのコンテナーの次のような属性に基づいてスタイルを設定することができます。
+
+- コンテナーのサイズ
+- コンテナーに適用されているスタイル
+- コンテナーのスクロール状態、またはそのスクロール祖先のスクロール状態
+
 コンテナークエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の代替となるもので、ビューポートサイズや他の端末の特性に基づいて要素にスタイルを適用します。
 
-![ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](container-query.svg)
+この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)や[スクロール状態コンテナー](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)クエリーについて詳しく解説しているガイドもあります。
+
+![2 つの異なる種類のクエリー。ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](container-query.svg)
 
 ## コンテナークエリーの使用
 
 コンテナークエリーを使用するには、要素で**コンテナーコンテキスト**を宣言し、後でこのコンテナーの寸法をクエリーしたいとブラウザーが認識できるようにする必要があります。
-これを行うには、 {{Cssxref("container-type")}} プロパティに `size`、`inline-size`、`normal` の値を指定して使用します。
+これを行うには、 {{cssxref("container-type")}} プロパティに `size`、`inline-size`、`normal` の値を指定して使用します。
 
 これらの値は以下のような効果があります。
 
 - `size`
   - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    コンテナーにレイアウト、スタイル設定、サイズ格納を適用します。
+    レイアウト、スタイル設定、[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)をコンテナーに適用します。
 - `inline-size`
   - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    その要素にレイアウト、スタイル設定、インラインサイズ格納を適用します。
+    その要素にレイアウト、スタイル設定、インラインサイズ拘束を適用します。
 - `normal`
   - : 要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、コンテナースタイルクエリーのクエリーコンテナーであることに変わりはありません。
 
@@ -162,6 +171,8 @@ slug: Web/CSS/CSS_containment/Container_queries
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-name")}} プロパティ
 - CSS {{cssxref("content-visibility")}} プロパティ
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 - [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) (Ahmad Shadeed)
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

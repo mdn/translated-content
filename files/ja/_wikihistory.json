@@ -15862,6 +15862,14 @@
       "Wind1808"
     ]
   },
+  "Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming": {
+    "modified": "2020-11-09T07:34:36.710Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "niusounds"
+    ]
+  },
   "Web/API/Media_Source_Extensions_API/Transcoding_assets_for_MSE": {
     "modified": "2019-11-17T11:59:42.790Z",
     "contributors": [
@@ -25174,15 +25182,7 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
-    "modified": "2020-08-24T12:47:38.380Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context": {
     "modified": "2020-08-24T11:52:52.765Z",
     "contributors": [
       "mfuji09",
@@ -25193,7 +25193,7 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
     "modified": "2020-08-24T12:18:00.574Z",
     "contributors": [
       "mfuji09",
@@ -25202,7 +25202,7 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2": {
     "modified": "2020-08-24T12:38:48.152Z",
     "contributors": [
       "mfuji09",
@@ -25210,7 +25210,7 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3": {
     "modified": "2020-08-24T12:39:08.086Z",
     "contributors": [
       "mfuji09",
@@ -25219,7 +25219,7 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements": {
+  "Web/CSS/CSS_positioned_layout/Stacking_floating_elements": {
     "modified": "2020-09-10T08:51:02.935Z",
     "contributors": [
       "hata6502",
@@ -25228,7 +25228,7 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index": {
+  "Web/CSS/CSS_positioned_layout/Stacking_without_z-index": {
     "modified": "2020-08-24T11:22:24.066Z",
     "contributors": [
       "mfuji09",
@@ -25236,7 +25236,15 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
+  "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
+    "modified": "2020-08-24T12:47:38.380Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
+  "Web/CSS/CSS_positioned_layout/Using_z-index": {
     "modified": "2020-08-24T11:43:15.292Z",
     "contributors": [
       "mfuji09",
@@ -41638,14 +41646,6 @@
     "modified": "2019-04-28T02:00:15.544Z",
     "contributors": [
       "Wind1808"
-    ]
-  },
-  "Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video": {
-    "modified": "2020-11-09T07:34:36.710Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "niusounds"
     ]
   },
   "Web/Media/Guides/Formats": {

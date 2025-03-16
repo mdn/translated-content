@@ -17,4 +17,4 @@ slug: Glossary/CSP
 
 ### 技術資訊
 
-- [MDN 上的内容安全策略文檔](/zh-TW/docs/Web/HTTP/CSP)
+- [MDN 上的内容安全策略文檔](/zh-TW/docs/Web/HTTP/Guides/CSP)

@@ -7,7 +7,53 @@ slug: Web/CSS/color
 
 **`color`** [CSS](/ko/docs/Web/API/CSS) 속성은 요소의 글씨 및 [글씨 장식](/ko/docs/Web/CSS/text-decoration)의 전경색과 {{cssxref("currentcolor")}}의 값을 설정합니다. `currentcolor`는 다른 속성에서 사용할 수 있는 간접적인 값이며, {{cssxref("border-color")}} 등 일부 속성의 기본값입니다.
 
-{{EmbedInteractiveExample("pages/css/color.html")}}
+{{InteractiveExample("CSS Demo: color")}}
+
+```css interactive-example-choice
+color: rebeccapurple;
+```
+
+```css interactive-example-choice
+color: #00a400;
+```
+
+```css interactive-example-choice
+color: rgb(214, 122, 127);
+```
+
+```css interactive-example-choice
+color: hsl(30deg 82% 43%);
+```
+
+```css interactive-example-choice
+color: hsla(237deg 74% 33% / 61%);
+```
+
+```css interactive-example-choice
+color: hwb(152deg 0% 58% / 70%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <p id="example-element">
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall. Implacable November weather.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5em;
+}
+
+.example-container {
+  background-color: white;
+  padding: 10px;
+}
+```
 
 HTML에서 색을 사용하는 법은 [CSS로 HTML 요소에 색입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color) 문서에서 정리한 내용으로 읽을 수 있습니다.
 

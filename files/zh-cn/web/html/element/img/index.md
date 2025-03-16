@@ -29,7 +29,7 @@ slug: Web/HTML/Element/img
 
 还有很多其他属性，可以实现各种不同的目的：
 
-- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
+- [Referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
 - 使用 [`width`](#width) 和 [`height`](#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
 - 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程）。
 
@@ -235,7 +235,7 @@ Web 最常用的图像格式是：
 
 ## 使用 CSS 添加样式
 
-`<img>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等 CSS 属性。
+`<img>` 是一个{{glossary("Replaced elements", "可替换元素")}}。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等 CSS 属性。
 
 `<img>` 没有基线（baseline），这意味着，当在一个内联格式化上下文（inline formatting context）中使用 {{cssxref("vertical-align")}}`: baseline` 时，图像的底部将会与容器的文字基线对齐。
 

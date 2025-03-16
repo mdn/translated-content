@@ -7,7 +7,51 @@ slug: Web/CSS/visibility
 
 Свойство **`visibility`** скрывает или показывает элемент без изменения разметки документа. Также скрывает строки и столбцы {{HTMLElement("table")}}.
 
-{{EmbedInteractiveExample("pages/css/visibility.html")}}
+{{InteractiveExample("CSS Demo: visibility")}}
+
+```css interactive-example-choice
+visibility: visible;
+```
+
+```css interactive-example-choice
+visibility: hidden;
+```
+
+```css interactive-example-choice
+visibility: collapse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Hide me</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 Чтобы скрыть и удалить элемент из разметки, установите свойству {{cssxref("display")}} значение `none`, вместо использования `visibility`.
 
