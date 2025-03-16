@@ -44,7 +44,7 @@ concat(value1, value2, /* …, */ valueN)
 
 `concat()` 方法是[複製方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#複製方法與變異方法)。它不會改變 `this` 或任何作為引數傳入的陣列，而是返回一個[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，該複製包含與原始陣列相同的元素。
 
-`concat()` 方法會保留空槽，如果任一個來源陣列是[稀疏陣列](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#稀疏矩陣)。
+`concat()` 方法會保留空槽，如果任一個來源陣列是[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏矩陣)。
 
 `concat()` 方法是[通用方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)。`this` 值的處理方式與其他引數相同（除了它會先被轉換為物件），意味著普通物件會被直接加到結果陣列的最前端，而具有真值 `[Symbol.isConcatSpreadable]` 的類陣列物件則會被展開並加入結果陣列。
 
