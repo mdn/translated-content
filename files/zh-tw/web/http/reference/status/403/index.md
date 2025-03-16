@@ -7,10 +7,9 @@ l10n:
 
 {{HTTPSidebar}}
 
-The HTTP **`403 Forbidden`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server understood the request but refused to process it.This status is similar to {{HTTPStatus("401")}}, except that for **`403 Forbidden`** responses, authenticating or re-authenticating makes no difference.
-The request failure is tied to application logic, such as insufficient permissions to a resource or action.
+HTTP **`403 Forbidden`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器理解請求，但拒絕處理。這個狀態與 {{HTTPStatus("401")}} 類似，但不同之處在於，即使進行驗證或重新驗證，**`403 Forbidden`** 依然無法獲得存取權限。請求失敗通常與應用程式邏輯有關，例如用戶對某個資源或操作的權限不足。
 
-Clients that receive a `403` response should expect that repeating the request without modification will fail with the same error.Server owners may decide to send a {{HTTPStatus("404")}} response instead of a 403 if acknowledging the existence of a resource to clients with insufficient privileges is not desired.
+收到 **`403`** 回應的用戶端應預期即使重複發送相同請求，也會遭遇相同錯誤。伺服器擁有者可能會回應 {{HTTPStatus("404")}} 而非 403，以避免向權限不足的用戶端透露該資源的存在。
 
 ## 狀態
 
@@ -18,12 +17,11 @@ Clients that receive a `403` response should expect that repeating the request w
 403 Forbidden
 ```
 
-## Examples
+## 範例
 
-### Request failed due to insufficient permissions
+### 因權限不足導致請求失敗
 
-The following example request is made to an API for user management.
-The request contains an {{HTTPHeader("Authorization")}} header using `Bearer` [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) containing an access token:
+以下範例為向用戶管理 API 發送的請求。請求包含使用 `Bearer` [驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#驗證方案)的 {{HTTPHeader("Authorization")}} 標頭，其中帶有存取權杖：
 
 ```http
 DELETE /users/123 HTTP/1.1
@@ -31,7 +29,7 @@ Host: example.com
 Authorization: Bearer abcd123
 ```
 
-The server has authenticated the request, but the action fails due to insufficient rights and the response body contains a reason for the failure:
+伺服器已驗證該請求，但由於權限不足，請求仍然失敗，回應主體包含錯誤訊息：
 
 ```http
 HTTP/1.1 403 Forbidden
@@ -41,7 +39,7 @@ Content-Length: 88
 
 {
   "error": "InsufficientPermissions",
-  "message": "Deleting users requires the 'admin' role."
+  "message": "刪除用戶需要 'admin' 角色權限。"
 }
 ```
 
