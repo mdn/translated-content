@@ -22,10 +22,10 @@ function calcAngle(adjacent, hypotenuse) {
 }
 
 console.log(calcAngle(8, 10));
-// 預期輸出: 0.6435011087932843
+// 預期輸出：0.6435011087932843
 
 console.log(calcAngle(5, 3));
-// 預期輸出: NaN
+// 預期輸出：NaN
 ```
 
 ## 語法

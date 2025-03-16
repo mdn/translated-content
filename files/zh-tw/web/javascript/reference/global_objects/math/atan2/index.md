@@ -17,13 +17,13 @@ function calcAngleDegrees(x, y) {
 }
 
 console.log(calcAngleDegrees(5, 5));
-// 預期輸出: 45
+// 預期輸出：45
 
 console.log(calcAngleDegrees(10, 10));
-// 預期輸出: 45
+// 預期輸出：45
 
 console.log(calcAngleDegrees(0, 10));
-// 預期輸出: 90
+// 預期輸出：90
 ```
 
 ## 語法

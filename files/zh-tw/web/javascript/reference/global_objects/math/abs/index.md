@@ -17,13 +17,13 @@ function difference(a, b) {
 }
 
 console.log(difference(3, 5));
-// 預期輸出: 2
+// 預期輸出：2
 
 console.log(difference(5, 3));
-// 預期輸出: 2
+// 預期輸出：2
 
 console.log(difference(1.23456, 7.89012));
-// 預期輸出: 6.6555599999999995
+// 預期輸出：6.6555599999999995
 ```
 
 ## 語法

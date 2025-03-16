@@ -17,13 +17,13 @@ function compoundOneYear(interestRate, currentVal) {
 }
 
 console.log(Math.E);
-// 預期輸出: 2.718281828459045
+// 預期輸出：2.718281828459045
 
 console.log((1 + 1 / 1000000) ** 1000000);
-// 預期輸出: 2.718280469 (approximately)
+// 預期輸出：2.718280469 (approximately)
 
 console.log(compoundOneYear(0.05, 100));
-// 預期輸出: 105.12710963760242
+// 預期輸出：105.12710963760242
 ```
 
 ## 值

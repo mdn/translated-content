@@ -22,10 +22,10 @@ function calcAngle(opposite, adjacent) {
 }
 
 console.log(calcAngle(8, 10));
-// 預期輸出: 0.6747409422235527
+// 預期輸出：0.6747409422235527
 
 console.log(calcAngle(5, 3));
-// 預期輸出: 1.0303768265243125
+// 預期輸出：1.0303768265243125
 ```
 
 ## 語法

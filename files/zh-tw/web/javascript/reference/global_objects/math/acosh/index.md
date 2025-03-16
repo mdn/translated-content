@@ -17,16 +17,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.acosh(0.999999999999));
-// 預期輸出: NaN
+// 預期輸出：NaN
 
 console.log(Math.acosh(1));
-// 預期輸出: 0
+// 預期輸出：0
 
 console.log(Math.acosh(2));
-// 預期輸出: 1.3169578969248166
+// 預期輸出：1.3169578969248166
 
 console.log(Math.acosh(2.5));
-// 預期輸出: 1.566799236972411
+// 預期輸出：1.566799236972411
 ```
 
 ## 語法

@@ -19,16 +19,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.atanh(-1));
-// 預期輸出: -Infinity
+// 預期輸出：-Infinity
 
 console.log(Math.atanh(0));
-// 預期輸出: 0
+// 預期輸出：0
 
 console.log(Math.atanh(0.5));
-// 預期輸出: 0.549306144334055 (approximately)
+// 預期輸出：0.549306144334055 (approximately)
 
 console.log(Math.atanh(1));
-// 預期輸出: Infinity
+// 預期輸出：Infinity
 ```
 
 ## 語法
