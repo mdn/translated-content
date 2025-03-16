@@ -7,10 +7,9 @@ l10n:
 
 {{HTTPSidebar}}
 
-The HTTP **`400 Bad Request`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server would not process the request due to something the server considered to be a client error.
-The reason for a `400` response is typically due to malformed request syntax, invalid request message framing, or deceptive request routing.
+HTTP **`400 Bad Request`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器因為認為存在用戶端錯誤而無法處理請求。`400` 回應的原因通常是由於請求語法格式錯誤、無效的請求訊息框架，或是請求路由錯誤。
 
-Clients that receive a `400` response should expect that repeating the request without modification will fail with the same error.
+收到 `400` 回應的用戶端應該預期，若不對請求進行修改，重試請求將會以相同的錯誤失敗。
 
 ## 狀態
 
@@ -18,11 +17,11 @@ Clients that receive a `400` response should expect that repeating the request w
 400 Bad Request
 ```
 
-## Examples
+## 範例
 
-### Malformed request syntax
+### 錯誤的請求語法
 
-Assuming a {{Glossary("REST")}} API exists with an endpoint to manage users at `http://example.com/users` and a `POST` request with the following body attempts to create a user, but uses invalid JSON with unescaped line breaks:
+假設存在一個 {{Glossary("REST")}} API，該 API 有一個端點用於管理 `http://example.com/users` 的使用者，並且一個 `POST` 請求的請求主體如下，試圖創建一個使用者，但使用了無效的 JSON 格式，並且換行符號未被轉義：
 
 ```http
 POST /users HTTP/1.1
@@ -37,7 +36,7 @@ Content-Length: 38
 }
 ```
 
-If the {{Glossary("HTTP Content", "content")}} is in a valid format, we would expect a {{HTTPStatus("201", "201 Created")}} response or another success message, but instead the server responds with a `400` and the response body includes a `message` field with some context so the client can retry the action with a properly-formed request:
+如果{{Glossary("HTTP Content", "內容")}}是有效格式，我們預期會收到 {{HTTPStatus("201", "201 Created")}} 回應或其他成功訊息，但伺服器卻回應 `400`，並且回應主體中包含 `message` 欄位，提供一些上下文資訊，讓用戶端能夠重新發送格式正確的請求：
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -46,7 +45,7 @@ Content-Length: 71
 
 {
   "error": "Bad request",
-  "message": "Request body could not be read properly.",
+  "message": "請求主體無法正確讀取。",
 }
 ```
 
@@ -56,5 +55,5 @@ Content-Length: 71
 
 ## 參見
 
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Reference/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - [HTTP 狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.400)
