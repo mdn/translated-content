@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model#css_类型对象模型)的 **`CSSImageValue`** 接口表示取用图像的属性（例如 {{cssxref('background-image')}}、{{cssxref('list-style-image')}} 或 {{cssxref('border-image-source')}}）的值。
+[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model#css_类型对象模型) 的 **`CSSImageValue`** 接口表示取用图像的属性（例如 {{cssxref('background-image')}}、{{cssxref('list-style-image')}} 或 {{cssxref('border-image-source')}}）的值。
 
 CSSImageValue 对象表示涉及 URL（如 [`url()`](/zh-CN/docs/Web/CSS/url_function) 或 [`image()`](/zh-CN/docs/Web/CSS/image)，但不包括 [`linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/linear-gradient) 或 [`element()`](/zh-CN/docs/Web/CSS/element)）的 [`<image>`](/zh-CN/docs/Web/CSS/image)。
 
