@@ -2,7 +2,7 @@
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: e8320dfbed49d37589d0fe759ef6506885f340f7
 ---
 
 {{JSRef}}
@@ -19,16 +19,16 @@ l10n:
 
 ```js interactive-example
 console.log(Math.atanh(-1));
-// Expected output: -Infinity
+// 預期輸出: -Infinity
 
 console.log(Math.atanh(0));
-// Expected output: 0
+// 預期輸出: 0
 
 console.log(Math.atanh(0.5));
-// Expected output: 0.549306144334055 (approximately)
+// 預期輸出: 0.549306144334055 (approximately)
 
 console.log(Math.atanh(1));
-// Expected output: Infinity
+// 預期輸出: Infinity
 ```
 
 ## 語法
@@ -75,6 +75,7 @@ Math.atanh(2); // NaN
 ## 參見
 
 - [`core-js` 中 `Math.atanh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- [`Math.atanh` 的 es-shims polyfill](https://www.npmjs.com/package/math.atanh)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.cosh()")}}

@@ -2,7 +2,7 @@
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
@@ -17,13 +17,13 @@ function calcAngleDegrees(x, y) {
 }
 
 console.log(calcAngleDegrees(5, 5));
-// Expected output: 45
+// 預期輸出: 45
 
 console.log(calcAngleDegrees(10, 10));
-// Expected output: 45
+// 預期輸出: 45
 
 console.log(calcAngleDegrees(0, 10));
-// Expected output: 90
+// 預期輸出: 90
 ```
 
 ## 語法

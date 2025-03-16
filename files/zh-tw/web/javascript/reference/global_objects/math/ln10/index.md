@@ -2,7 +2,7 @@
 title: Math.LN10
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
 l10n:
-  sourceCommit: 2ec170b6264d51a15be498ac99b8a30b3dadec15
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
@@ -17,7 +17,7 @@ function getNatLog10() {
 }
 
 console.log(getNatLog10());
-// Expected output: 2.302585092994046
+// 預期輸出: 2.302585092994046
 ```
 
 ## 值

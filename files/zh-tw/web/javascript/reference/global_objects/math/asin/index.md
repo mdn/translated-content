@@ -2,7 +2,7 @@
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
@@ -16,16 +16,16 @@ l10n:
 {{InteractiveExample("JavaScript Demo: Math.asin()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// 計算直角三角形的角度（以弧度表示）
 function calcAngle(opposite, hypotenuse) {
   return Math.asin(opposite / hypotenuse);
 }
 
 console.log(calcAngle(6, 10));
-// Expected output: 0.6435011087932844
+// 預期輸出: 0.6435011087932844
 
 console.log(calcAngle(5, 3));
-// Expected output: NaN
+// 預期輸出: NaN
 ```
 
 ## 語法
