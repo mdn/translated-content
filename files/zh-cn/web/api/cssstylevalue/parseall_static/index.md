@@ -39,4 +39,3 @@ CSSStyleValue.parseAll(property, value)
 - [`CSSStyleValue.parse()`](/zh-CN/docs/Web/API/CSSStyleValue/parse_static)
 - [使用 CSS 类型对象模型](/zh-CN/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API)
-
