@@ -2,14 +2,14 @@
 title: 401 Unauthorized
 slug: Web/HTTP/Reference/Status/401
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`401 Unauthorized`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that a request was not successful because it lacks valid authentication credentials for the requested resource.This status code is sent with an HTTP {{HTTPHeader("WWW-Authenticate")}} response header that contains information on the [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) the server expects the client to include to make the request successfully.
+HTTP **`401 Unauthorized`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#client_error_responses)狀態碼表示請求未成功，因為缺乏有效的驗證憑證來訪問請求的資源。此狀態碼會與 HTTP {{HTTPHeader("WWW-Authenticate")}} 回應標頭一起發送，該標頭包含有關伺服器期望用戶端提供的[驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#authentication_schemes)的資訊，以便成功執行請求。
 
-A `401 Unauthorized` is similar to the {{HTTPStatus("403", "403 Forbidden")}} response, except that a 403 is returned when a request contains valid credentials, but the client does not have permissions to perform a certain action.
+`401 Unauthorized` 類似於 {{HTTPStatus("403", "403 Forbidden")}} 回應，不過當請求包含有效憑證但用戶端沒有執行特定操作的權限時，會返回 403。
 
 ## 狀態
 
@@ -19,16 +19,16 @@ A `401 Unauthorized` is similar to the {{HTTPStatus("403", "403 Forbidden")}} re
 
 ## 範例
 
-### Unauthorized request to a protected API
+### 向受保護的 API 發送未驗證的請求
 
-The following GET request is made to a URL `www.example.com/admin` that expects credentials in an {{HTTPHeader("Authorization")}} header:
+以下是對 URL `www.example.com/admin` 發出的 GET 請求，該 URL 預期在 {{HTTPHeader("Authorization")}} 標頭中包含憑證：
 
 ```http
 GET /admin HTTP/1.1
 Host: example.com
 ```
 
-The server responds with a 401 message and a {{HTTPHeader("WWW-Authenticate")}} header indicating that the request must be authenticated and that `Bearer` auth (an access token) is the permitted [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes):
+伺服器回應 401 訊息並帶有 {{HTTPHeader("WWW-Authenticate")}} 標頭，表示該請求必須經過驗證，且允許使用 `Bearer` 認證（即存取令牌）來進行驗證：
 
 ```http
 HTTP/1.1 401 Unauthorized
@@ -42,8 +42,8 @@ WWW-Authenticate: Bearer
 
 ## 參見
 
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Reference/Status)
-- [HTTP 驗證](/en-US/docs/Web/HTTP/Guides/Authentication)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
+- [HTTP 驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)
 - {{Glossary("Challenge")}}
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
