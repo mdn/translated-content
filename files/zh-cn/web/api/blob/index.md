@@ -97,12 +97,10 @@ if (!showViewLiveResultButton()) {
   }
 
   const url = typedArrayToURL(bytes, "text/plain");
-
   const link = document.createElement("a");
 
   link.href = url;
   link.innerText = "打开这个数组的 URL";
-
   document.body.appendChild(link);
 }
 ```
