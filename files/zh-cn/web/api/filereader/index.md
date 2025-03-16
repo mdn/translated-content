@@ -26,7 +26,7 @@ l10n:
   - : 一个表示在读取文件时发生的错误的 {{domxref("DOMException")}}。
 - {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
 
-  - : 表示`FileReader`状态的数字。取值如下：
+  - : 表示 `FileReader` 状态的数字。以下值之一：
 
     | 常量名    | 值  | 描述                   |
     | --------- | --- | ---------------------- |
