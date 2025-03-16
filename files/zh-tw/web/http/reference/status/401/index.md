@@ -7,11 +7,9 @@ l10n:
 
 {{HTTPSidebar}}
 
-超文本傳輸協定（HTTP）**`401 Unauthorized`** 回應狀態碼表示用戶端請求未完成，因為它缺少對所請求資源的有效驗證憑證。
+The HTTP **`401 Unauthorized`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that a request was not successful because it lacks valid authentication credentials for the requested resource.This status code is sent with an HTTP {{HTTPHeader("WWW-Authenticate")}} response header that contains information on the [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes) the server expects the client to include to make the request successfully.
 
-這個狀態碼隨著一個含有相關資訊的 HTTP {{HTTPHeader("WWW-Authenticate")}} 回應標頭一同發送給用戶端，該標頭包含了關於如何在提示用戶輸入驗證憑證後再次請求資源的資訊。
-
-這個狀態碼與 {{HTTPStatus("403", "403 Forbidden")}} 狀態碼類似，唯一的區別是在導致這個狀態碼的情況下，用戶驗證可以允許訪問該資源。
+A `401 Unauthorized` is similar to the {{HTTPStatus("403", "403 Forbidden")}} response, except that a 403 is returned when a request contains valid credentials, but the client does not have permissions to perform a certain action.
 
 ## 狀態
 
@@ -21,23 +19,32 @@ l10n:
 
 ## 範例
 
+### Unauthorized request to a protected API
+
+The following GET request is made to a URL `www.example.com/admin` that expects credentials in an {{HTTPHeader("Authorization")}} header:
+
+```http
+GET /admin HTTP/1.1
+Host: example.com
+```
+
+The server responds with a 401 message and a {{HTTPHeader("WWW-Authenticate")}} header indicating that the request must be authenticated and that `Bearer` auth (an access token) is the permitted [authentication scheme](/en-US/docs/Web/HTTP/Guides/Authentication#authentication_schemes):
+
 ```http
 HTTP/1.1 401 Unauthorized
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"
+Date: Tue, 02 Jul 2024 12:18:47 GMT
+WWW-Authenticate: Bearer
 ```
 
 ## 規範
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
-- [HTTP 驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)
+- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Reference/Status)
+- [HTTP 驗證](/en-US/docs/Web/HTTP/Guides/Authentication)
+- {{Glossary("Challenge")}}
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
