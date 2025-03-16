@@ -7,8 +7,6 @@ slug: Learn_web_development/Core/Styling_basics/Values_and_units
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
-CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上的任何属性页将帮助你理解对任何特定属性有效的值。在本节课中，我们将学习一些最常用的值和单位。
-
 CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_%E5%A3%B0%E6%98%8E)，而声明又由属性和值组成。在 CSS 中使用的每个属性都有一个**值类型**，用于描述该属性允许拥有何种类型的值。
 在本课中，我们将了解一些最常用的值类型、它们是什么以及如何起作用。
 
@@ -744,7 +742,7 @@ HSL 使用**色相**，以及**饱和度**和**亮度**：
 
 ## 位置
 
-[`<position>`](/zh-CN/docs/Web/CSS/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/en-US/docs/Web/CSS/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
+[`<position>`](/zh-CN/docs/Web/CSS/position_value) 值类型表示一组二维坐标，用于定位背景图像等元素（通过 [`background-position`](/zh-CN/docs/Web/CSS/background-position)）。它可以接受诸如 `top`、`left`、`bottom`、`right` 和 `center` 等关键字，将元素与二维盒子的特定边界对齐，同时还可以使用长度值来表示从盒子顶部和左侧边缘的偏移量。
 
 一个典型的位置值由两个值组成。第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 `center`。
 
