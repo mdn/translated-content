@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`308 Permanent Redirect`** [重新導向回應](/en-US/docs/Web/HTTP/Reference/Status#重新導向回應)狀態碼表示所請求的資源已被永久性地移至由 {{HTTPHeader("Location")}} 標頭。
+HTTP **`308 Permanent Redirect`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向回應)狀態碼表示所請求的資源已被永久性地移至由 {{HTTPHeader("Location")}} 標頭。
 
 當瀏覽器收到此狀態碼時，會自動請求 `Location` 標頭中指定的 URL，將使用者重新導向到新頁面。搜尋引擎接收到此回應時，會將指向原始 URL 的連結歸屬於重新導向後的資源，並將 {{Glossary("SEO")}} 排名傳遞給新 URL。
 
@@ -47,7 +47,7 @@ Content-Length: 0
 
 ## 參見
 
-- [HTTP 重新導向](/en-US/docs/Web/HTTP/Guides/Redirections)
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Reference/Status)
+- [HTTP 重新導向](/zh-TW/docs/Web/HTTP/Guides/Redirections)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("301", "301 Moved Permanently")}}，此狀態碼的等效狀態碼，可能會在請求方法不是 {{HTTPMethod("GET")}} 時修改請求方法。
 - {{HTTPStatus("302", "302 Found")}}，臨時重新導向
