@@ -19,7 +19,7 @@ HTTP **`405 Method Not Allowed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/R
 
 ## 範例
 
-### 禁用 `TRACE` 方法
+### 禁用 TRACE 方法
 
 由於安全性考量，伺服器擁有者通常會禁止使用 `TRACE` 方法。以下範例顯示了一個典型回應，其中伺服器不允許使用 `TRACE` 方法：
 
