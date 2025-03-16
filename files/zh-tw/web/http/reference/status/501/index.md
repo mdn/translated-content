@@ -2,7 +2,7 @@
 title: 501 Not Implemented
 slug: Web/HTTP/Reference/Status/501
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
