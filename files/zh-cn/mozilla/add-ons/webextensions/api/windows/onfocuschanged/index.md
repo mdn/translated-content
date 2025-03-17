@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当当前聚焦的窗口发生变化时触发。如果所有浏览器窗口都失去焦点，则会是 {{WebExtAPIRef('windows.WINDOW_ID_NONE')}}。
+在当前聚焦的窗口发生变化时触发。如果所有浏览器窗口都失去焦点，则会是 {{WebExtAPIRef('windows.WINDOW_ID_NONE')}}。
 
 > [!NOTE]
 > 在 Windows 和部分 Linux 窗口管理器中，将始终在从一个浏览器窗口切换到另一个浏览器窗口之前立即发送 `WINDOW_ID_NONE`。
