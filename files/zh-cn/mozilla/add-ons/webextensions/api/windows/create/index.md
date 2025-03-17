@@ -41,17 +41,17 @@ let creating = browser.windows.create(
         - 如果 `url` 中给出的 URL 指向[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)（即，它们是包含在此扩展中并使用“moz-extension:”协议加载的页面），则脚本将*被*默认允许关闭这些标签页。
 
     - `cookieStoreId` {{optional_inline}}
-      - : `integer`。如果指定该参数，则将为打开的所有标签页指定 `CookieStoreId`。有关使用 `cookieStoreId` 的更多信息，请参见[使用上下文标识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+      - : `integer`。如果指定该参数，则将为打开的所有标签页指定 `CookieStoreId`。有关使用 `cookieStoreId` 的更多信息，请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
     - `focused` {{optional_inline}}
       - : `boolean`。如果为 `true`，新窗口将获得焦点。如果为 `false`，新窗口将在后台打开，当前获得焦点的窗口将保持焦点。默认为 `true`。
     - `height` {{optional_inline}}
-      - : `integer`。新窗口的像素高度，包含框架。如果未指定，则窗口将被设为默认高度。
+      - : `integer`。新窗口的像素高度，包含框架。如果未指定，则默认使用自然高度。
     - `incognito` {{optional_inline}}
       - : `boolean`。设置新窗口是否应为隐私窗口。请注意，如果指定了 `incognito` 和 `tabId`，则指定的标签页 ID 必须指向是隐私标签——你不能将非隐私标签页移动到隐私窗口中。
     - `left` {{optional_inline}}
       - : `integer`。新窗口从屏幕左边缘的像素位置。如果未指定，新窗口将按照上一个获得焦点的窗口自然偏移。（在 Firefox 108 或更早版本中，对于 `panel` 或 `popup` 窗口类型，该值不起作用；作为代替，你可以使用 {{WebExtAPIRef("windows.update()")}} 来定位窗口。）
     - `state` {{optional_inline}}
-      - : {{WebExtAPIRef('windows.WindowState')}}，用于指定窗口的初始状态。你不能同时使用 `minimized`、`maximized`、`fullscreen` 状态与 `left`、`top`、`width`、`height` 属性。
+      - : {{WebExtAPIRef('windows.WindowState')}} 值。窗口的初始状态。`minimized`、`maximized`、`fullscreen` 状态不能与 `left`、`top`、`width`、`height` 属性一起使用。
     - `tabId` {{optional_inline}}
       - : `integer`。如果给定，则将指定 ID 的标签页从现有窗口移动到新窗口中。
     - `titlePreface` {{optional_inline}}
@@ -59,15 +59,15 @@ let creating = browser.windows.create(
     - `top` {{optional_inline}}
       - : `integer`。新窗口从屏幕上边缘的像素位置。如果未指定，新窗口将按照上一个获得焦点的窗口自然偏移。（在 Firefox 108 或更早版本中，对于 `panel` 或 `popup` 窗口类型，该值不起作用；作为代替，你可以使用 {{WebExtAPIRef("windows.update()")}} 来定位窗口。）
     - `type` {{optional_inline}}
-      - : {{WebExtAPIRef('windows.CreateType')}}，用于指定要创建的窗口的类型。在这里指定 `panel` 或 `popup` 样式将打开一个没有任何默认浏览器 UI（地址栏，工具栏等）的窗口。
+      - : {{WebExtAPIRef('windows.CreateType')}} 值。要创建的浏览器窗口类型。在这里指定 `panel` 或 `popup` 样式将打开一个没有任何默认浏览器 UI（地址栏，工具栏等）的窗口。
     - `url` {{optional_inline}}
-      - : `string` 或其数组（`array`）。要在窗口中打开的 URL 或 URL 数组。完全限定的 URL 必须包括一个方案（即 `http://www.google.com`，而不是 `www.google.com`）。相对 URL 将相对于扩展中的当前页面。默认为新标签页。
+      - : `string` 或其数组（`array`）。要在窗口中打开的 URL 或 URL 数组。完全限定 URL 必须包含方案（即 `http://www.google.com`，而不是 `www.google.com`）。相对 URL 将相对于扩展中的当前页面。默认为新标签页。
     - `width` {{optional_inline}}
-      - : `integer`。新窗口的宽度，包含框架。如果未指定，则使用默认宽度。
+      - : `integer`。新窗口的宽度，包含框架。如果未指定，则默认使用自然宽度。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。该 {{WebExtAPIRef('windows.Window')}} 将总是包含其 `tabs` 属性集，而不像 {{WebExtAPIRef("windows.get()")}} 和相似的 API 返回的窗口对象那样只在传递了 `populate` 参数时才会包含标签。如果发生了错误则该 Promise 将以错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现包含新窗口细节的 {{WebExtAPIRef('windows.Window')}} 对象。该 `Window` 兑现将总是包含其 `tabs` 属性集，而不像 {{WebExtAPIRef("windows.get()")}} 和类似的 API 返回的窗口对象那样只在传递了 `populate` 选项时才会包含 `tabs`。如果发生了错误则该 promise 将以错误消息拒绝。
 
 ## 示例
 
@@ -141,6 +141,10 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 > [!NOTE]
 > 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#method-create) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+
+## 参见
+
+- {{domxref("Window.open()","window.open")}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
