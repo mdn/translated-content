@@ -16,7 +16,7 @@ l10n:
 - `alwaysOnTop`
   - : `boolean`。窗口是否设置为始终置顶。
 - `focused`
-  - : `boolean`。窗口当前是否是焦点窗口。
+  - : `boolean`。窗口当前是否被聚焦。
 - `height` {{optional_inline}}
   - : `integer`。窗口的高度，包括框架，以像素为单位。
 - `id` {{optional_inline}}
@@ -32,7 +32,7 @@ l10n:
 - `tabs` {{optional_inline}}
   - : 包含窗口中当前标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象数组。
 - `title` {{optional_inline}}
-  - : 浏览器窗口的标题。需要“tabs”权限或[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)以访问活动标签页的 URL。只读属性。
+  - : 浏览器窗口的标题。访问该属性需要活动标签页 URL 的“tabs”权限或[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。只读属性。
 - `top` {{optional_inline}}
   - : `integer`。窗口距离屏幕顶部的偏移量（以像素为单位）。
 - `type` {{optional_inline}}
