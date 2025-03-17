@@ -2,7 +2,7 @@
 title: Window：showDirectoryPicker() 方法
 slug: Web/API/Window/showDirectoryPicker
 l10n:
-  sourceCommit: 8f93582ca9008d55db258a017552be486e372382
+  sourceCommit: b58a5b506fdc086f442104ccdee547b9df0cb6a7
 ---
 
 {{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}

@@ -2,7 +2,7 @@
 title: Window：showSaveFilePicker() 方法
 slug: Web/API/Window/showSaveFilePicker
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: b58a5b506fdc086f442104ccdee547b9df0cb6a7
 ---
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
