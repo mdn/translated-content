@@ -2,7 +2,7 @@
 title: 文件系统 API
 slug: Web/API/File_System_API
 l10n:
-  sourceCommit: 328a7843ffd9e0afb4d21822d058bb08b17d3445
+  sourceCommit: 59d87e8756161420f3f40dc554562858f4427e72
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -97,7 +97,7 @@ l10n:
 - {{domxref("Window.showSaveFilePicker()")}}
   - : 显示允许用户保存文件的文件选择器。
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
-  - : 如果拖动的项目是文件，则返回 {{domxref('FileSystemFileHandle')}}；如果拖动的项目是目录，则返回 {{domxref('FileSystemDirectoryHandle')}}。
+  - : 返回 {{jsxref('Promise')}}，如果拖动的项目是文件，则兑现 {{domxref('FileSystemFileHandle')}}；如果拖动的项目是目录，则兑现 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref("StorageManager.getDirectory()")}}
   - : 用于获取对 {{domxref("FileSystemDirectoryHandle")}} 对象的引用，该对象允许访问存储在[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的目录及其内容。返回一个兑现 {{domxref("FileSystemDirectoryHandle")}} 对象的 {{jsxref('Promise')}}。
 
