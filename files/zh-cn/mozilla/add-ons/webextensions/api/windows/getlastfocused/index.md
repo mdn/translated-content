@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-获取最近获得焦点的窗口 —— 通常是“最上层”的窗口。
+获取最近获得焦点的窗口——通常是“最上层”的窗口。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-## Syntax
+## 语法
 
 ```js-nolint
 let gettingWindow = browser.windows.getLastFocused(
