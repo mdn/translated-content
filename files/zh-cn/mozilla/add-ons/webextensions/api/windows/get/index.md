@@ -29,16 +29,16 @@ let getting = browser.windows.get(
   - : `object`。包含用于筛选窗口类型的选项。
 
     - `populate` {{optional_inline}}
-      - : `boolean`。若为真，则 {{WebExtAPIRef('windows.Window')}} 对象将包含一个 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。只有在扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时 `Tab` 对象才会包含 `url`、`title` 和 `favIconUrl` 属性。
+      - : `boolean`。若为 `true`，则 {{WebExtAPIRef('windows.Window')}} 对象将包含 `tabs` 属性，其中包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。只有在扩展的清单文件包含 `"tabs"` 权限或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时 `Tab` 对象才会包含 `url`、`title` 和 `favIconUrl` 属性。
     - `windowTypes` {{optional_inline}}
-      - : {{WebExtAPIRef('windows.WindowType')}} 对象的数组（`array`）。如果给出该参数，则将基于该参数对窗口类型进行筛选返回的 {{WebExtAPIRef('windows.Window')}} 对象。如果未设置，则默认筛选器取 `['normal', 'panel', 'popup']` 且 `'panel'` 窗口类型将局限于扩展自己的窗口。
+      - : {{WebExtAPIRef('windows.WindowType')}} 对象的数组（`array`）。如果设置了该参数，则将基于该参数对窗口类型进行筛选返回的 {{WebExtAPIRef('windows.Window')}} 对象。如果未设置，则默认筛选器将被设为 `['normal', 'panel', 'popup']` 且 `'panel'` 窗口类型将局限于扩展自己的窗口。
 
 > [!NOTE]
-> 传递参数中 `getInfo` 中的 `windowTypes` 属性将被忽略：自 Firefox 62 起，已弃用 `windowTypes` 的使用。
+> 如果提供，`getInfo` 中的 `windowTypes` 属性将被忽略。自 Firefox 62 起，已弃用 `windowTypes` 的使用。
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为一个包含窗口详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。如果发生任何错误则该 Promise 将以错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为一个包含窗口详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。如果发生任何错误则该 promise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
@@ -46,7 +46,7 @@ let getting = browser.windows.get(
 
 ## 示例
 
-下述示例获取当前窗口并记录其包含的标签页的 URL。请注意，你需要 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)才能访问标签页的 URL。
+此示例获取当前窗口并记录其包含的标签页的 URL。请注意，你需要 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)才能访问标签页的 URL。
 
 > [!NOTE]
 > 该示例有点不切实际：在这种情况下，你更可能会使用 {{WebExtAPIRef("windows.getCurrent()")}}。
