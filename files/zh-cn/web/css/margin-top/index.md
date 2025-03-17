@@ -59,7 +59,7 @@ margin-top: 0;
 }
 ```
 
-此属性对于*不*[_可替换_](/zh-CN/docs/Web/CSS/Replaced_element)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
+此属性对于*不*[_可替换_](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
 
 ## 语法
 
