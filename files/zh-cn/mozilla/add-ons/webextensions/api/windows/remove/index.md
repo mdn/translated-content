@@ -11,7 +11,7 @@ l10n:
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-## Syntax
+## 语法
 
 ```js-nolint
 let removing = browser.windows.remove(
@@ -26,7 +26,7 @@ let removing = browser.windows.remove(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当窗口已关闭时将不带参数地兑现。如果发生任何错误，则该 Promise 将以错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当窗口已关闭时将不带参数地兑现。如果发生任何错误，则该 promise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
