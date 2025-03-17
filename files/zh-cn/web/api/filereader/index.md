@@ -9,7 +9,7 @@ l10n:
 
 **`FileReader`** 接口允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。
 
-文件对象可以从用户使用 {{HTMLElement("input")}} 元素选择文件而返回的 {{domxref("FileList")}} 对象中获取，或者从拖放操作的 {{ domxref("DataTransfer")}} 对象中获取。`FileReader` 只能访问用户明确选择的文件内容，它不能用于从用户的文件系统中按路径名读取文件。要按路径名读取客户端文件系统上的文件，请使用[文件系统访问 API](/zh-CN/docs/Web/API/File_System_API)。要读取服务器端文件，请使用 {{domxref("Window/fetch", "fetch()")}}，如果跨源读取，则需要 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 权限。
+文件对象可以从用户使用 `<input type="file">` 元素选择文件而返回的 {{domxref("FileList")}} 对象中获取，或者从拖放操作的 {{ domxref("DataTransfer")}} 对象中获取。`FileReader` 只能访问用户明确选择的文件内容，它不能用于从用户的文件系统中按路径名读取文件。要按路径名读取客户端文件系统上的文件，请使用[文件系统访问 API](/zh-CN/docs/Web/API/File_System_API)。要读取服务器端文件，请使用 {{domxref("Window/fetch", "fetch()")}}，如果跨源读取，则需要 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 权限。
 
 {{InheritanceDiagram}}
 
