@@ -2,8 +2,6 @@
 title: Cómo crear, editar, mover o eliminar páginas
 short-title: Crear, editar, mover o eliminar páginas
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
-page-type: mdn-writing-guide
-sidebar: mdnsidebar
 ---
 
 Este artículo describe cómo crear, mover, eliminar o editar una página.
@@ -67,8 +65,8 @@ Por ejemplo, supongamos que desea mover todo el `/en-US/Web/HTTP/Authentication`
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Ejecutar "yarn" nuevamente para asegurarse de 
-   # que se han instalado las dependencias más 
+   # Ejecutar "yarn" nuevamente para asegurarse de
+   # que se han instalado las dependencias más
    # recientes de Yari.
    yarn
    git checkout -b my-move
@@ -97,7 +95,7 @@ Por ejemplo, supongamos que desea mover todo el `/en-US/Web/HTTP/Authentication`
 5. Cree su pull request.
 
 > [!NOTE]
-> El comando `yarn content move` añade los redireccionamientos necesarios en el archivo `_redirects.txt` para que la antigua ubicación redirija a la nueva. ¡No edites manualmente el archivo `_redirects.txt`! Pueden introducirse errores fácilmente si lo hace. Si necesita agregar un redireccionamiento sin mover un archivo, hable con el equipo de MDN Web Docs en los [canales de comunicación de MDN Web Docs](/es/docs/MDN/Community/Communication_channels) al respecto. 
+> El comando `yarn content move` añade los redireccionamientos necesarios en el archivo `_redirects.txt` para que la antigua ubicación redirija a la nueva. ¡No edites manualmente el archivo `_redirects.txt`! Pueden introducirse errores fácilmente si lo hace. Si necesita agregar un redireccionamiento sin mover un archivo, hable con el equipo de MDN Web Docs en los [canales de comunicación de MDN Web Docs](/es/docs/MDN/Community/Communication_channels) al respecto.
 
 ## Eliminar páginas
 
@@ -124,8 +122,8 @@ Por ejemplo, si desea eliminar todo el árbol `/en-US/Web/HTTP/Authentication`, 
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
-   # Ejecutar "yarn" nuevamente solo para 
-   # asegurarse de que ha instalado la 
+   # Ejecutar "yarn" nuevamente solo para
+   # asegurarse de que ha instalado la
    # última dependencia Yari.
    yarn
    git checkout -b my-delete
