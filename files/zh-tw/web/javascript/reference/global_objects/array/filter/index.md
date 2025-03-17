@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.Array.filter
+l10n:
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
