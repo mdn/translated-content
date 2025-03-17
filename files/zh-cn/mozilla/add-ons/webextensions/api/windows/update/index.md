@@ -11,7 +11,7 @@ l10n:
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-## Syntax
+## 语法
 
 ```js-nolint
 let updating = browser.windows.update(
@@ -29,15 +29,15 @@ let updating = browser.windows.update(
   - : `object`。包含要更新的属性值。
 
     - `drawAttention` {{optional_inline}}
-      - : `boolean`。如果为 `true`，则以一种方式显示窗口，以吸引用户的注意力，而不更改焦点窗口。效果持续到用户将焦点切换到窗口为止。如果窗口已经有焦点，则此选项无效。设置为 `false` 可以取消之前的 `drawAttention` 请求。
+      - : `boolean`。若为 `true`，则以一种吸引用户的注意力而不改变当前聚焦的窗口的方式显示这一窗口。效果持续到用户将焦点切换到窗口为止。如果窗口是被聚焦的窗口则此选项无效。设置为 `false` 可以取消之前的 `drawAttention` 请求。
     - `focused` {{optional_inline}}
-      - : `boolean`。如果为 `true`，将窗口置于前端。如果为 `false`，将 z 轴顺序中的下一个窗口置于前端。
+      - : `boolean`。若为 `true`，将窗口置于前端。如果为 `false`，将 z 轴顺序中的下一个窗口置于前端。
     - `height` {{optional_inline}}
       - : `integer`。要调整窗口大小的高度（以像素为单位）。对于面板，此值将被忽略。
     - `left` {{optional_inline}}
       - : `integer`。要将窗口移动到的屏幕左边缘的偏移量（以像素为单位）。对于面板，此值将被忽略。
     - `state` {{optional_inline}}
-      - : {{WebExtAPIRef('windows.WindowState')}}。窗口的新状态。`minimized`、`maximized` 和 `fullscreen` 状态不能与 `left`、`top`、`width` 或 `height` 结合使用。
+      - : {{WebExtAPIRef('windows.WindowState')}} 值。窗口的新状态。`minimized`、`maximized` 和 `fullscreen` 状态不能与 `left`、`top`、`width` 或 `height` 结合使用。
     - `titlePreface` {{optional_inline}}
       - : `string`。使用此选项将字符串添加到浏览器窗口的标题开头。根据底层操作系统的不同，这可能无法在没有标题的浏览器窗口上工作（例如 Firefox 中的 about:blank）。
     - `top` {{optional_inline}}
@@ -47,7 +47,7 @@ let updating = browser.windows.update(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为包含更新窗口详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。如果发生任何错误则该 Promise 将以错误消息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为包含更新窗口详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。如果发生任何错误则该 promise 将以错误消息拒绝。
 
 ## 浏览器兼容性
 
