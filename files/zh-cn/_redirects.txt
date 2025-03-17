@@ -2527,6 +2527,7 @@
 /zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
+/zh-CN/docs/Web/CSS/Replaced_element	/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties
 /zh-CN/docs/Web/CSS/Scaling_of_SVG_backgrounds	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds
 /zh-CN/docs/Web/CSS/Shorthand_properties	/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties
 /zh-CN/docs/Web/CSS/Specificity	/zh-CN/docs/Web/CSS/CSS_cascade/Specificity

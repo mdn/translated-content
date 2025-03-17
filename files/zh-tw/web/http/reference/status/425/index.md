@@ -2,7 +2,7 @@
 title: 425 Too Early
 slug: Web/HTTP/Reference/Status/425
 l10n:
-  sourceCommit: a4ae225903c2784a3d74b43f311e05f208e42c91
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

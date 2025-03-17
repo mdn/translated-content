@@ -58,7 +58,7 @@ l10n:
 
 ## 定位和縮放
 
-作為[替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
+作為{{glossary("replaced elements", "可置換元素")}}，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
 
 > **備註：** {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
 

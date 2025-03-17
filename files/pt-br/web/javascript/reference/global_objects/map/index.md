@@ -107,8 +107,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
             numerateObjectProperties
           </a>
           operações de especificações abstraídas. Mas note que nenhum mecanismo itera <strong>todas</strong> as propriedades do objeto; cada um dos vários mecanismos incluem diferentes subconjuntos de propriedades.
-          ({{jsxref("Statements/for...in",
-          "for-in")}}
+          ({{jsxref("Statements/for...in", "for-in")}}
           incluí apenas propriedades enumeráveis com chaves do tipo string
           {{jsxref("Object.keys")}} inclui apenas chaves próprias e enumeráveis do tipo string;
           {{jsxref("Object.getOwnPropertyNames")}} incluí o próprio, e propriedades com chaves do tipo string, mesmo que não enumeráveis
@@ -275,8 +274,7 @@ console.log(contacts.size); // 1
 - {{jsxref("Map.prototype.entries()")}}
   - : Retorna um novo objeto iterador que contèm **um array de `[chave, valor]`**
     para cada elemento no objeto `Map` na ordem em que foram inseridos.
-- {{jsxref("Map.forEach", "Map.prototype.forEach(<var>callbackFn</var>[,
-    <var>thisArg</var>])")}}
+- {{jsxref("Map.forEach", "Map.prototype.forEach(<var>callbackFn</var>[, <var>thisArg</var>])")}}
   - : Invoca o `callbackFn` uma vez para cada par chave-valor presente no objeto `Map`, na ordem em que foram inseridos. Se um parâmetro `thisArg` é provido para o `forEach`, será usado o valor de `this` para cada callback.
 
 ## Exemplos
