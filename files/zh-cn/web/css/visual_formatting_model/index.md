@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-在 CSS 中，**视觉格式化模型**（visual formatting model）描述了用户代理如何获取文档树，并将其处理后显示在视觉媒体上。这包括{{glossary("continuous media", "连续媒体")}}（例如电脑屏幕，以及书籍或浏览器打印功能打印的文档等[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)）。大部分信息同样适用于连续媒体和分页媒体。
+在 CSS 中，**视觉格式化模型**（visual formatting model）描述了用户代理如何获取文档树，并将其处理后显示在视觉媒体上。这包括{{glossary("continuous media", "连续媒体")}}（例如电脑屏幕）和[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)（例如书籍或浏览器打印功能打印的文档）。大部分信息同样适用于连续媒体和分页媒体。
 
 在视觉格式化模型中，文档树中的每个元素都会根据盒子模型生成一个个盒子。这些盒子的布局由以下因素决定：
 
