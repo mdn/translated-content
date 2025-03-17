@@ -13,7 +13,7 @@ l10n:
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-## Syntax
+## 语法
 
 ```js-nolint
 let gettingCurrent = browser.windows.getCurrent(
