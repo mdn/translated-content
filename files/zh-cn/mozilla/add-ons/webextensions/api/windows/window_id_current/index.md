@@ -1,30 +1,13 @@
 ---
-title: windows.WindowState
-slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
+title: windows.WINDOW_ID_CURRENT
+slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
 l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
 
-浏览器窗口的状态。
-
-## 类型
-
-该类型的取值是 `string`，可能取值包括：
-
-- `"normal"`
-  - : 窗口处于默认大小或用户选择的大小。
-- `"minimized"`
-  - : 窗口只显示为任务栏中的图标。
-- `"maximized"`
-  - : 窗口充满显示它的屏幕（但不包括操作系统保留的任何屏幕区域）。
-- `"fullscreen"`
-  - : 窗口正在作为全屏应用程序运行，或者标签页中的内容正在使用[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)。
-- `"docked"`
-  - : 靠边窗口占据了相对于同一应用程序拥有的其他窗口的固定位置。
-
-macOS 兼容性：自 macOS 10.10 起，窗口的默认最大化行为已变为将应用程序作为全屏应用程序运行而非“缩放”窗口。`fullscreen` 既指浏览器作为全屏应用程序运行，也指标签中的内容使用了全屏 API。
+`browser.windows.WINDOW_ID_CURRENT` 是可以在部分 API 中用作 `windowId` 参数来表示当前窗口的值。
 
 ## 浏览器兼容性
 
@@ -33,7 +16,7 @@ macOS 兼容性：自 macOS 10.10 起，窗口的默认最大化行为已变为�
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#type-WindowState) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
+> 此 API 基于 Chromium 的 [`chrome.windows`](https://developer.chrome.google.cn/docs/extensions/reference/api/windows#property-WINDOW_ID_CURRENT) API。该文档衍生自 Chromium 代码中的 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
