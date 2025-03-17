@@ -9,7 +9,7 @@ l10n:
 
 **文件系统 API**（File System API）——以及通过[**文件系统访问 API**（File System Access API）](https://wicg.github.io/file-system-access/)提供的扩展来访问设备文件系统中的文件——允许使用文件读写以及文件管理功能。
 
-请参阅[与其他文件相关 API 的关系](/zh-CN/docs/Web/API/File_API#relationship_to_other_file-related_apis)，以了解此 API、[文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 和[文件 API](/zh-CN/docs/Web/API/File_API) 之间的比较。
+请参阅[与其他文件相关 API 的关系](/zh-CN/docs/Web/API/File_API#relationship_to_other_file-related_apis)，以了解此 API、[文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 和[文件 API](/zh-CN/docs/Web/API/File_API) 之间的区别。
 
 ## 概念与用法
 
@@ -46,7 +46,7 @@ l10n:
 
 - 具有大量媒体静态资源的视频游戏或其他应用
 
-  - 应用下载一个或多个大型 tarball 并将其本地展开为目录结构。
+  - 应用下载一个或多个大型 tar 包并将其本地展开为目录结构。
 
   - 应用在后台预先获取静态资源，因此用户无需等待下载即可进入下一个任务或游戏级别。
 
