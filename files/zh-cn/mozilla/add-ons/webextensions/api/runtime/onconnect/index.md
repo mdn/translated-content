@@ -15,14 +15,14 @@ browser.runtime.onConnect.removeListener(listener);
 browser.runtime.onConnect.hasListener(listener);
 ```
 
-事件有三个函数：
+事件包含三个函数：
 
 - `addListener(callback)`
-  - : 为此事件添加监听方法。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
   - : 停止监听此事件。`listener` 参数为需要移除的监听器。
 - `hasListener(listener)`
-  - : 检测是否有 `listener` 被注册在事件上。如有则返回 `true`，否则返回`false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
