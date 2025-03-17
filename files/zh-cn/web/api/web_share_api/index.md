@@ -23,7 +23,7 @@ l10n:
 
 {{domxref("navigator.share()")}} 方法调用底层操作系统的本机共享机制并传递指定的数据。它需要{{Glossary("transient activation", "瞬态激活")}}状态，因此必须由 UI 事件（如按钮单击）触发。此外，该方法必须指定本机实现支持共享的有效数据。
 
-Web 共享 API 由 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略控制。如果策略受支持但尚未授予，两种方法都会指示数据不可共享。
+Web 共享 API 由 [web-share](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 权限策略控制。如果策略受支持但尚未授予，两种方法都会指示数据不可共享。
 
 ## 接口
 

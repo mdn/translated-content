@@ -1,7 +1,6 @@
 ---
 title: Writing forward-compatible websites
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
 
 {{LearnSidebar}}

@@ -31,7 +31,7 @@ write(message, options)
     - `lang` {{optional_inline}}
       - : 根据 {{RFC(5646, "用于标识语言的标记（又称 BCP 47）")}}规定的有效语言标签。
     - `mediaType` {{optional_inline}}
-      - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+      - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
     - `recordType`
 
       - : 指示存储在 `data` 中的数据类型的字符串。必须是以下值之一：
@@ -41,7 +41,7 @@ write(message, options)
         - `"empty"`
           - : 一个空的 {{domxref("NDEFRecord")}}。
         - `"mime"`
-          - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+          - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。
         - `"smart-poster"`
           - : 一个由 [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) 规范定义的智能海报。
         - `"text"`

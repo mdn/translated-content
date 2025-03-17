@@ -1,7 +1,6 @@
 ---
 title: 伺服器端程式設計起步走
 slug: Learn_web_development/Extensions/Server-side/First_steps
-original_slug: Learn/Server-side/First_steps
 ---
 
 {{LearnSidebar}}

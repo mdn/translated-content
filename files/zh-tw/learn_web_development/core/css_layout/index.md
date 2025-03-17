@@ -1,7 +1,6 @@
 ---
 title: CSS 排版
 slug: Learn_web_development/Core/CSS_layout
-original_slug: Learn/CSS/CSS_layout
 ---
 
 {{LearnSidebar}}

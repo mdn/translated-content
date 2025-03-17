@@ -33,4 +33,4 @@ console.log(el.type); // 输出：“video/webp”
 - {{domxref("HTMLObjectElement.type")}}
 - {{domxref("HTMLSourceElement.type")}}
 - [Web 上的媒体类型](/zh-CN/docs/Web/Media/Guides/Formats)
-- [对 Web 开发者至关重要的 MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types#对_web_开发者至关重要的_mime_类型)
+- [对 Web 开发者至关重要的 MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types#对_web_开发者至关重要的_mime_类型)

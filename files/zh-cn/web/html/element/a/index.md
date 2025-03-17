@@ -69,7 +69,7 @@ li {
   - : 包含一个以空格分隔的 URL 列表，当跟随超链接时，浏览器会发送带有正文 `PING` 的 {{HTTPMethod("POST")}} 请求。通常用于跟踪。
 - `referrerpolicy`
 
-  - : 在跟随链接时，[referrer](/zh-CN/docs/Web/HTTP/Headers/Referer) 需要发送多少内容：
+  - : 在跟随链接时，[referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 需要发送多少内容：
 
     - `no-referrer`：{{HTTPHeader("Referer")}} 标头将不会被发送。
     - `no-referrer-when-downgrade`：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}），{{HTTPHeader("Referer")}} 头将不会被发送到{{Glossary("origin","源")}}上。

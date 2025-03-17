@@ -68,7 +68,7 @@ open(url, target, windowFeatures)
         使用 `noopener` 时，在决定是否打开新的浏览上下文时，除 `_top`、`_self` 和 `_parent` 以外的非空目标名称会像 `_blank` 一样处理。
 
     - `noreferrer`
-      - : 如果设置了此特性，浏览器将省略 [`Referer`](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头，并将 `noopener` 设为 true。更多信息请参阅 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 。
+      - : 如果设置了此特性，浏览器将省略 [`Referer`](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 标头，并将 `noopener` 设为 true。更多信息请参阅 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 。
 
 > **备注：** `windowFeatures` 中要求的位置（`top`、`left`）和尺寸（`width`、`height`）值，如果其中任何一个值不允许在用户操作系统应用程序的工作区内呈现整个浏览器弹出窗口，**则将被更正**。换句话说，新弹出窗口的任何部分最初都不能置于屏幕之外。
 
