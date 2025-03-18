@@ -113,7 +113,7 @@ h1 {
    ```css
    html {
      font-size: 10px; /* px 은 'pixels' 를 의미합니다: 기본 글자 크기는 현재 10 pixels 높이입니다. */
-     font-family: placeholder; /* 구글 폰트로부터 여러분이 얻은 마지막 결과가 있어야 합니다. */
+     font-family: "Open Sans", sans-serif; /* 구글 폰트로부터 여러분이 얻은 마지막 결과가 있어야 합니다. */
    }
    ```
 
