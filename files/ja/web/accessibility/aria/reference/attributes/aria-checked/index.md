@@ -62,12 +62,12 @@ l10n:
 - [`radio`](/ja/docs/Web/Accessibility/ARIA/Roles/radio_role)
 - [`switch`](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role)
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaChecked")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaChecked`](/ja/docs/Web/API/Element/ariaChecked) プロパティは、`aria-checked` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaChecked`](/ja/docs/Web/API/Element/ariaChecked) プロパティは、`aria-checked` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaChecked")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaChecked`](/ja/docs/Web/API/Element/ariaChecked) プロパティは、`aria-checked` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaChecked`](/ja/docs/Web/API/Element/ariaChecked) プロパティは、`aria-checked` 属性の値を反映します。
 
 ```js
 myHTMLElement.ariaChecked = true;

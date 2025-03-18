@@ -44,12 +44,12 @@ ARIA では、表示されることがトリガーされたときに他のコン
 - `dialog`
   - : ポップアップはダイアログです。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaHasPopup")}}
   - : {{domxref("Element")}} インターフェイスの一部である [`ariaHasPopup`](/ja/docs/Web/API/Element/ariaHasPopup) プロパティは、要素によってトリガーできるメニューやダイアログなどの対話可能なポップアップ要素の可用性とタイプを示す `aria-haspop` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaHasPopup")}}
-  - : {{domxref("ElementInternals")}} インターフェースのプロパティは [`ariaHasPopup`](/ja/docs/Web/API/ElementInternals/ariaHasPopup) 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスのプロパティは [`ariaHasPopup`](/ja/docs/Web/API/ElementInternals/ariaHasPopup) 属性の値を反映します。
 
 ## 関連付けられたロール
 

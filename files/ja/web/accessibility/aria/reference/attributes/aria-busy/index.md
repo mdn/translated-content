@@ -42,7 +42,7 @@ ariaLiveElement.ariaBusy = "false";
 ## 関連インターフェイス
 
 - {{domxref("Element.ariaBusy")}}
-  - : 各要素のインターフェースの一部である [`ariaBusy`](/ja/docs/Web/API/Element/ariaBusy) プロパティは、要素が変更されているかどうかを示す属性 `aria-busy` の値を反映します。
+  - : 各要素のインターフェイスの一部である [`ariaBusy`](/ja/docs/Web/API/Element/ariaBusy) プロパティは、要素が変更されているかどうかを示す属性 `aria-busy` の値を反映します。
 
 ```html
 <div
