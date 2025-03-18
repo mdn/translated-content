@@ -22,7 +22,7 @@ let removing = browser.windows.remove(
 ### 参数
 
 - `windowId`
-  - : `integer`。要关闭的窗口 ID。
+  - : `integer`。要关闭的窗口的 ID。
 
 ### 返回值
 
