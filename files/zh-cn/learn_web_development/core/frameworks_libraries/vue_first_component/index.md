@@ -55,10 +55,10 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 
 你的文件现在应该是这样的：
 
-```html
-<template> </template>
+```vue
+<template></template>
 <script>
-  export default {};
+export default {};
 </script>
 ```
 
@@ -67,10 +67,10 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 1. 现在在你的组件模板中添加一个空的`<div>`。
 2. 在那个 `<div>` 里面，让我们添加一个 `checkbox` 和一个对应的 `label`。给复选框添加一个 `id`，并添加一个 `for` 属性，将复选框映射到标签上，如下所示：
 
-   ```html
+   ```vue
    <template>
      <div>
-       <input type="checkbox" id="todo-item" checked="false" />
+       <input type="checkbox" id="todo-item" />
        <label for="todo-item">My Todo Item</label>
      </div>
    </template>
@@ -111,7 +111,7 @@ export default {
 
 你的`App.vue`的`<template>`内容现在应该是这样的：
 
-```html
+```vue
 <div id="app">
   <h1>To-Do List</h1>
   <ul>
@@ -160,14 +160,12 @@ export default {
 你的组件对象现在看起来应该像是这样：
 
 ```js
-<script>
-  export default {
-    props: {
-      label: { required: true, type: String },
-      done: { default: false, type: Boolean }
-    }
-  };
-</script>
+export default {
+  props: {
+    label: { required: true, type: String },
+    done: { default: false, type: Boolean },
+  },
+};
 ```
 
 ### 使用已注册的 props
@@ -180,11 +178,11 @@ export default {
 
 现在，你组件的 template 部分应该是像这样：
 
-```html
+```vue
 <template>
   <div>
-    <input type="checkbox" id="todo-item" checked="false" />
-    <label for="todo-item">\{{label}}</label>
+    <input type="checkbox" id="todo-item" />
+    <label for="todo-item">\{{ label }}</label>
   </div>
 </template>
 ```
@@ -205,7 +203,7 @@ found in
 
 在我们的 `App.vue` 文件中，像常规 HTML 属性那样，在 `<to-do-item></to-do-item>` 里添加一个 `label` 属性：
 
-```html
+```vue
 <to-do-item label="My ToDo Item"></to-do-item>
 ```
 
@@ -266,7 +264,7 @@ v-bind:attribute="expression"
 
 因此，对于 `ToDoItem` 组件中的复选框，我们可以使用 `v-bind` 将 `isDone` 属性映射到 `<input>` 元素上的 `checked` 属性。以下两项是等效的：
 
-```html
+```vue
 <input type="checkbox" id="todo-item" v-bind:checked="isDone" />
 
 <input type="checkbox" id="todo-item" :checked="isDone" />
@@ -278,7 +276,7 @@ v-bind:attribute="expression"
 
 通过将 `:done="true"` 传递给 `App.vue` 中的 `ToDoItem` 调用来测试你的组件。请注意，你需要使用 `v-bind` 语法，否则 `true` 将作为字符串传递。显示的复选框应该被选中。
 
-```js
+```vue
 <template>
   <div id="app">
     <h1>My To-Do List</h1>
@@ -335,11 +333,11 @@ export default {
 
 接下来，将 `id` 绑定到复选框的 `id` 属性和标签的 `for` 属性，更新现有 `id` 和 `for` 属性，如下所示：
 
-```html
+```vue
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />
-    <label :for="id">\{{label}}</label>
+    <label :for="id">\{{ label }}</label>
   </div>
 </template>
 ```

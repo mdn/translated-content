@@ -141,18 +141,13 @@ yarn global add @vue/cli
 
 `<script>` 包含组件中所有的非显示逻辑，最重要的是，`<script>` 标签需要默认导出一个 JS 对象。该对象是你在本地注册组件、定义属性、处理本地状态、定义方法等的地方。在构建阶段这个包含 template 模板的对象会被处理和转换成为一个有 `render()` 函数的 Vue 组件。
 
-对于 `App.vue`，我们的默认导出将组件的名称设置为 `App` ，并通过将 `HelloWorld` 组件添加到 `components` 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此你需要将其导入并注册到使用它们的每个组件文件中。这对于拆包/摇树优化（tree shaking）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。
+在 `App.vue` 中，两个组件 `TheWelcome` 和 `HelloWorld` 是通过导入注册的。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件中使用，因此需要在每个使用它们的组件文件中导入并注册它们。这对于 {{Glossary("Tree shaking", "摇树优化")}}（不加载未使用的代码）和 bundle 拆分（只在需要时加载代码）非常有用，因为并非应用程序中的每个页面都一定需要每个组件。
 
-```js
+```vue
+<script setup>
 import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    // 可以在这里本地注册组件。
-    HelloWorld,
-  },
-};
+import TheWelcome from "./components/TheWelcome.vue";
+</script>
 ```
 
 > [!NOTE]
@@ -191,16 +186,21 @@ INFO  Starting development server...
 
 对应用作出第一步改动——删除 Vue logo。打开 `App.vue` 文件，在 template 部分删除 `<img>` 元素。
 
-```html
-<img alt="Vue logo" src="./assets/logo.png" />
+```vue
+<img
+  alt="Vue logo"
+  class="logo"
+  src="./assets/logo.svg"
+  width="125"
+  height="125" />
 ```
 
 如果你的服务器还在正常运行，应该可以看到 logo 几乎即时从之前渲染出来的页面中消失。我们再把 `HelloWorld` 组件也删掉。
 
 首先删除下面这一整行：
 
-```html
-<HelloWorld msg="Welcome to Your Vue.js App" />
+```vue
+<HelloWorld msg="You did it!" />
 ```
 
 如果你在这个时候保存 `App.vue` 文件，渲染好的应用会因为我们注册了组件但没有使用而抛出一个错误。我们还需要在 `<script>` 中将引入和注册组件的那几行删掉：
@@ -211,17 +211,11 @@ INFO  Starting development server...
 import HelloWorld from "./components/HelloWorld.vue";
 ```
 
-```js
-components: {
-  HelloWorld;
-}
-```
-
 渲染好的应用这时候将不再显示错误了，只有一个空页面，因为我们的 `<template>` 里没有一个可见的内容。
 
 我们接下来要创建一个任务清单的应用，在 `<div id="app">` 中新增一个 `<h1>` 标签，并将标题文案设为 "To-Do List"，像这样：
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>To-Do List</h1>
