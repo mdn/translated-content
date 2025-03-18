@@ -36,10 +36,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
     <tr>
       <th scope="row">目标：</th>
       <td>
-        学习如何创建一个 Vue 组件，将其渲染到另一个组件中，使用<a
-          href="https://vuejs.org/v2/api/#props"
-          >props</a
-        >将数据传递到组件中，并保存其状态。
+        学习如何创建一个 Vue 组件，将其渲染到另一个组件中，使用 props 将数据传递到组件中，并保存其状态。
       </td>
     </tr>
   </tbody>
@@ -49,9 +46,9 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 
 让我们创建第一个组件，它将显示一个单一的待办事项。我们将用它来建立我们的待办事项列表。
 
-1. 在你的`moz-todo-vue/src/components`目录下，创建一个`ToDoItem.vue`的新文件。在你的代码编辑器中打开该文件。
-2. 通过在文件顶部添加`<template></template>`来创建组件的模板部分。
-3. 在你的模板部分下面创建一个`<script></script>`部分。在`<script>`标签内，添加一个默认导出对象`export default {}`，这是你的组件对象。
+1. 在你的 `moz-todo-vue/src/components` 目录下，创建一个 `ToDoItem.vue` 的新文件。在你的代码编辑器中打开该文件。
+2. 通过在文件顶部添加 `<template></template>` 来创建组件的模板部分。
+3. 在你的模板部分下面创建一个 `<script></script>` 部分。在 `<script>` 标签内，添加一个默认导出对象 `export default {}`，这是你的组件对象。
 
 你的文件现在应该是这样的：
 
@@ -62,9 +59,9 @@ export default {};
 </script>
 ```
 
-现在我们可以开始为`ToDoItem`添加实际内容了。Vue 模板目前只允许一个根元素--一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个[`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
+现在我们可以开始为 `ToDoItem` 添加实际内容了。Vue 模板目前只允许一个根元素——一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个 [`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
 
-1. 现在在你的组件模板中添加一个空的`<div>`。
+1. 现在在你的组件模板中添加一个空的 `<div>`。
 2. 在那个 `<div>` 里面，让我们添加一个 `checkbox` 和一个对应的 `label`。给复选框添加一个 `id`，并添加一个 `for` 属性，将复选框映射到标签上，如下所示：
 
    ```vue
@@ -89,7 +86,7 @@ export default {};
 
 3. 在你的组件对象里面，添加 `components` 属性，然后在它里面添加你的 ToDoItem 组件进行注册。
 
-你的`<script>`内容现在应该是这样的：
+你的 `<script>` 内容现在应该是这样的：
 
 ```js
 import ToDoItem from "./components/ToDoItem.vue";
@@ -102,14 +99,14 @@ export default {
 };
 ```
 
-这和之前 Vue CLI 注册`HelloWorld`组件的方式是一样的。
+这和之前 Vue CLI 注册 `HelloWorld` 组件的方式是一样的。
 
-要在应用程序中实际展示 `ToDoItem` 组件，你需要在 `<template>` 模板内添加一个 `<to-do-item></to-do-item>` 元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用大写驼色（例如 `ToDoList`），而等价的自定义元素总是用连字符小写（例如 `<to-do-list>`）。
+要在应用程序中实际展示 `ToDoItem` 组件，你需要在 `<template>` 模板内添加一个 `<to-do-item></to-do-item>` 元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用帕斯卡形式（例如 `ToDoList`），而等价的自定义元素总是用{{Glossary("kebab_case", "烤串命名法")}}（例如 `<to-do-list>`）。如果[直接在 DOM 中](https://cn.vuejs.org/guide/essentials/component-basics.html#dom-template-parsing-caveats)编写 Vue 模板，则有必要使用这种大小写样式。
 
-1. 在`<h1>`下面，创建一个无序列表 (`<ul>`)，其中包含一个列表项 (`<li>`)。
-2. 在列表项 (\<li>) 里面添加`<to-do-item></to-do-item>`.
+1. 在 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 下面，创建一个无序列表（[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)），其中包含一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Element/li)）。
+2. 在列表项里面添加 `<to-do-item></to-do-item>`。
 
-你的`App.vue`的`<template>`内容现在应该是这样的：
+你的 `App.vue` 的 `<template> `内容现在应该是这样的：
 
 ```vue
 <div id="app">
@@ -122,9 +119,9 @@ export default {
 </div>
 ```
 
-如果你再次查看你的应用程序的渲染情况，你现在应该看的到渲染的`ToDoItem`组件，由一个复选框和一个标签组成。
+如果你再次查看你的应用程序的渲染情况，你现在应该看的到渲染的 `ToDoItem` 组件，由一个复选框和一个标签组成。
 
-![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](rendered-todoitem.png)
+![应用程序的当前渲染状态，包括“待办事项列表”标题、单个复选框和标签](rendered-todoitem.png)
 
 ## 使用 props 让组件动态化
 
@@ -140,21 +137,21 @@ export default {
 - 第二种方法是将 props 定义为一个对象，每个 key 对应于 prop 名称。将 props 列为对象允许你指定默认值，将 props 标记为 required，执行基本的对象类型 (特别是 JavaScript 基本类型) ，并执行简单的 prop 校验。
 
 > [!NOTE]
-> 注意：prop 验证只能在 development 模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态 (或其他 props)。
+> 注意：prop 验证只能在开发模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态（或其他 props）。
 
 针对 ToDoItem 组件，我们将使用对象注册法。
 
 1. 回到 `ToDoItem.vue` 文件。
 2. 在默认导出的 `default {}` 对象中添加一个 `props` 属性，该 props 属性含有一个空对象。
 3. 在这个对象里，添加两个 key 为 `label` 和 `done` 属性。
-4. `label` 的值应该是一个带有两个属性的对象（或者是 **props**，因为它们被调用在可找到的组件的 context）
+4. `label` 的值应该是一个带有两个属性的对象（或者是 **prop**，因为它们被调用在可找到的组件的 context）
 
    1. 第一个 `required` 属性，它的值是 `true`. 这将会告诉 Vue 说，我们希望每个该组件的实例都必须有个 label 字段。如果 `ToDoItem` 组件没有 label 字段的话，Vue 会提示警告。
    2. 第二是添加一个 `type` 属性。这个属性的值设为 JavaScript 的 `String` 类型。这等于告诉 Vue，我们希望 type 属性的值是 String 类型的。
 
-5. 现在转向 `done` prop.
+5. 现在转向 `done` prop。
 
-   1. 首先添加一个 `default` 属性，它的值是 `false`。这意味着当没有 `done` prop 被传递给 `ToDoItem` 组件时， `done` prop 的值会是 false（注意 default 属性不是必需的————我们只在非 required props 里才需要 `default` ）
+   1. 首先添加一个 `default` 属性，它的值是 `false`。这意味着当没有 `done` prop 被传递给 `ToDoItem` 组件时， `done` prop 的值会是 false（注意 default 属性不是必需的————我们只在非必需的 prop 里才需要 `default` ）
    2. 接着，添加一个 `type` 属性，值为 `Boolean`。这将告诉 Vue，我们希望这个 prop 的值是 JavaScript 的 Boolean 类型。
 
 你的组件对象现在看起来应该像是这样：
@@ -199,7 +196,7 @@ found in
          <Root>
 ```
 
-这是因为我们将 `label` prop 标记为 required, 但我们从未给组件这个 prop————我们已经在 template 内定义了希望使用这个 prop 值的位置，但在调用时我们没有把它传递进组件。让我们修复这个问题。
+这是因为我们将 `label` prop 标记为 required, 但我们从未给组件传递这个 prop————我们已经在 template 内定义了希望使用这个 prop 值的位置，但在调用时我们没有把它传递进组件。让我们修复这个问题。
 
 在我们的 `App.vue` 文件中，像常规 HTML 属性那样，在 `<to-do-item></to-do-item>` 里添加一个 `label` 属性：
 
@@ -209,7 +206,7 @@ found in
 
 现在你会在页面上看到 label 了，并且 console 里不会再出现警告提示。
 
-这就是一个简单的 props。接下来我们将讨论 Vue 如何持久化数据状态
+这就是一个简单的 props。接下来我们将讨论 Vue 如何持久化数据状态。
 
 ## Vue 的数据对象
 
@@ -291,32 +288,15 @@ v-bind:attribute="expression"
 
 尝试将 `true` 更改为 `false`，然后再返回，在两者之间重新加载应用以查看状态如何更改。
 
-## 给 Todos 一个唯一的 ID
+## 给 Todo 一个唯一的 ID
 
 很好！我们现在有一个工作着的复选框，我们可以在其中以编程方式设置状态。但是，我们目前只能向页面添加一个 `ToDoList` 组件，因为 `id` 是硬编码的。这将导致辅助技术出错，因为需要 `id` 才能将标签正确映射到其复选框。为了解决这个问题，我们可以以编程方式在组件数据中设置 `id`。
 
-我们可以使用 [lodash](https://www.npmjs.com/package/lodash) 包的 `uniqueid()` 方法来帮助保持索引的唯一性。此包导出一个函数，该函数接收字符串并将唯一整数追加到前缀的末尾。这足以保持组件 `id` 的唯一性。
+我们可以使用 {{domxref("Crypto.randomUUID()")}} 方法生成一个唯一字符串，以保持组件 `id` 的唯一性。`randomUUID()` 内置于现代浏览器中，提供了一种无需依赖外部库即可确保唯一性的直接方法。
 
-让我们使用 npm 将包添加到我们的项目中;停止服务器并在终端中输入以下命令：
-
-```bash
-npm install --save lodash.uniqueid
-```
-
-> [!NOTE]
-> 如果你更喜欢 yarn，则可以改用 `yarn add lodash.uniqueid`。
-
-现在，我们可以将此包导入我们的 `ToDoItem` 组件中。在 `ToDoItem.vue` 的 `<script>` 元素的顶部添加以下行：
+接下来，将字段 `id` 添加到我们的 `data` 属性中，该字段使用 `crypto.randomUUID()` 返回一个唯一字符串，我们在这个字符串前加上 `todo-` 前缀：
 
 ```js
-import uniqueId from "lodash.uniqueid";
-```
-
-接下来，将字段 `id` 添加到我们的数据属性中，这样组件对象最终看起来就是这样（`uniqueId()` 返回指定的前缀——`todo`——并附加一个唯一的字符串）：
-
-```js
-import uniqueId from "lodash.uniqueid";
-
 export default {
   props: {
     label: { required: true, type: String },
@@ -325,7 +305,7 @@ export default {
   data() {
     return {
       isDone: this.done,
-      id: uniqueId("todo-"),
+      id: "todo-" + crypto.randomUUID(),
     };
   },
 };
