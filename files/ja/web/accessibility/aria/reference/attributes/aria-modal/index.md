@@ -70,12 +70,12 @@ l10n:
 - `true`
   - : 要素はモーダルです。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaModal")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaModal`](/ja/docs/Web/API/Element/ariaModal) プロパティは、`aria-modal` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaModal`](/ja/docs/Web/API/Element/ariaModal) プロパティは、`aria-modal` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaModal")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaModal`](/ja/docs/Web/API/ElementInternals/ariaModal) プロパティは、`aria-modal` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaModal`](/ja/docs/Web/API/ElementInternals/ariaModal) プロパティは、`aria-modal` 属性の値を反映します。
 
 ## 関連付けられたロール
 
