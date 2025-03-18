@@ -44,12 +44,12 @@ ARIA は支援技術がユーザーにコンテンツを提示する方法のみ
 - `vertical`
   - : 要素は垂直方向に配置されます。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaOrientation")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaOrientation`](/ja/docs/Web/API/Element/ariaOrientation) プロパティは、`aria-orientation` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaOrientation`](/ja/docs/Web/API/Element/ariaOrientation) プロパティは、`aria-orientation` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaOrientation")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaOrientation`](/ja/docs/Web/API/ElementInternals/ariaOrientation) プロパティは、`aria-orientation` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaOrientation`](/ja/docs/Web/API/ElementInternals/ariaOrientation) プロパティは、`aria-orientation` 属性の値を反映します。
 
 ## 関連付けられたロール
 
