@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 
 {{JSRef}}
 
-Le constructeur **`Floa64Array`** permet de représenter un tableau typé dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond à la représentation du type `double` en C) dans l'ordre des octets utilisé par la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_), on pourra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois construit, il est possible de faire référence aux éléments du tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle pour l'accès aux éléments du tableau (les crochets).
+Le constructeur **`Float64Array`** permet de représenter un tableau typé dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond à la représentation du type `double` en C) dans l'ordre des octets utilisé par la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_), on pourra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois construit, il est possible de faire référence aux éléments du tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle pour l'accès aux éléments du tableau (les crochets).
 
 ## Syntaxe
 
