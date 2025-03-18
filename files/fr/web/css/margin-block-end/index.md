@@ -7,7 +7,64 @@ slug: Web/CSS/margin-block-end
 
 La propriété **`margin-block-end`** définit la marge logique appliquée à la fin des éléments de bloc, selon le mode d'écriture, la directionnalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
 
-{{EmbedInteractiveExample("pages/css/margin-block-end.html")}}Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-inline-end")}} et de {{cssxref("margin-inline-start")}} qui définissent les autres marges appliquées à l'élément.
+{{InteractiveExample("CSS Demo: margin-block-end")}}
+
+```css interactive-example-choice
+margin-block-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-block-end: 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-end: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row">One</div>
+    <div class="row transition-all" id="example-element">Two</div>
+    <div class="row">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
+
+Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-inline-end")}} et de {{cssxref("margin-inline-start")}} qui définissent les autres marges appliquées à l'élément.
 
 ## Syntaxe
 
