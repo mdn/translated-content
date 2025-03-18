@@ -131,12 +131,12 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 - `false`
   - : 選択できる項目は1つだけです
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaMultiSelectable`](/ja/docs/Web/API/Element/ariaMultiSelectable) プロパティは、`aria-multiselectable` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaMultiSelectable`](/ja/docs/Web/API/Element/ariaMultiSelectable) プロパティは、`aria-multiselectable` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaMultiSelectable")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaMultiSelectable`](/ja/docs/Web/API/ElementInternals/ariaMultiSelectable) プロパティは、`aria-multiselectable` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaMultiSelectable`](/ja/docs/Web/API/ElementInternals/ariaMultiSelectable) プロパティは、`aria-multiselectable` 属性の値を反映します。
 
 ## 関連付けられたロール
 
