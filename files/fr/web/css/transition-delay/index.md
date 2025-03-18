@@ -7,7 +7,51 @@ slug: Web/CSS/transition-delay
 
 La propriété CSS **`transition-delay`** indique la durée à attendre avant de débuter [la transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) qui s'applique pour un changement de propriété.
 
-{{EmbedInteractiveExample("pages/css/transition-delay.html")}}
+{{InteractiveExample("CSS Demo: transition-delay")}}
+
+```css interactive-example-choice
+transition-delay: 250ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-delay: 1s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-delay: 1s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-delay: 1s, 250ms;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 Cette durée peut être nulle, positive ou négative&nbsp;:
 

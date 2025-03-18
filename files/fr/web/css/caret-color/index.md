@@ -7,7 +7,34 @@ slug: Web/CSS/caret-color
 
 La propriété CSS **`caret-color`** définit la couleur du curseur visible à l'endroit où l'utilisateur peut ajouter du texte ou un autre contenu dans l'élément lorsqu'il saisit au clavier ou qu'il édite les informations.
 
-{{EmbedInteractiveExample("pages/css/caret-color.html")}}
+{{InteractiveExample("CSS Demo: caret-color")}}
+
+```css interactive-example-choice
+caret-color: red;
+```
+
+```css interactive-example-choice
+caret-color: auto;
+```
+
+```css interactive-example-choice
+caret-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <p>Enter text in the field to see the caret:</p>
+    <p><input id="example-element" type="text" /></p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2rem;
+}
+```
 
 > [!NOTE]
 > Les agents utilisateurs peuvent considérer que d'autres objets doivent être impactés par cette propriété : par exemple le curseur de navigation, qui ressemble au curseur de saisie et qui peut être déplacé sur un texte non-éditable. En revanche, bien que l'icône du curseur de la souris puisse ressembler à un curseur de saisie lorsque {{cssxref("cursor")}} vaut `auto` ou `text` ou `vertical-text`, celle-ci n'est pas modifiée par cette propriété. Pour certains navigateurs qui ne prennent pas en charge cette propriété, la couleur du curseur de saisie n'est pas associée à la couleur de la police.

@@ -7,7 +7,44 @@ slug: Web/CSS/quotes
 
 La propriété **`quotes`** indique la façon dont les marques de citation sont affichées.
 
-{{EmbedInteractiveExample("pages/css/quotes.html")}}Syntaxe
+{{InteractiveExample("CSS Demo: quotes")}}
+
+```css interactive-example-choice
+quotes: none;
+```
+
+```css interactive-example-choice
+quotes: initial;
+```
+
+```css interactive-example-choice
+quotes: "'" "'";
+```
+
+```css interactive-example-choice
+quotes: "„" "“" "‚" "‘";
+```
+
+```css interactive-example-choice
+quotes: "«" "»" "‹" "›";
+```
+
+```html interactive-example
+<section id="default-example">
+  <q id="example-element"
+    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
+    we will believe in them!</q
+  >
+</section>
+```
+
+```css interactive-example
+q {
+  font-size: 1.2rem;
+}
+```
+
+Syntaxe
 
 ```css
 /* Valeur avec un mot-clé */
