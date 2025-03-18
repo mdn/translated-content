@@ -146,7 +146,7 @@ Done. Now run:
 
 另外，使用 Vue CLI 创建的项目被配置为在开箱即用的情况下借助 Webpack 使用 `.vue` 文件。实际上，如果你查看我们使用 CLI 创建的项目中的 `src` 文件夹，你会看到第一个`.vue` 文件：`App.vue`。
 
-让我们查看用 CLI 创建的项目中的 `src` 文件夹，检查第一个 `.vue` 文件： App.vue`。
+让我们查看用 CLI 创建的项目中的 `src` 文件夹，检查第一个 `.vue` 文件：`App.vue`。
 
 ### App.vue
 
