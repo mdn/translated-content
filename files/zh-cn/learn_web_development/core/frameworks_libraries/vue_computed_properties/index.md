@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
