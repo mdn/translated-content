@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
-{{domxref("FileSystemFileHandle")}} 接口的 **`createSyncAccessHandle()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个用于同步读写文件的 {{domxref('FileSystemSyncAccessHandle')}} 对象。此方法的同步特性带来了性能优势，但是只能在专属 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件。
+{{domxref("FileSystemFileHandle")}} 接口的 **`createSyncAccessHandle()`** 方法返回一个 {{jsxref('Promise')}} 对象，可兑现一个用于同步读写文件的 {{domxref('FileSystemSyncAccessHandle')}} 对象。此方法的同步特性带来了性能优势，但是只能在专用 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)上的文件。
 
 创建 {{domxref('FileSystemSyncAccessHandle')}} 会对与文件句柄关联的文件进行独占锁定。这用于在文件已有的访问句柄被关闭前，阻止对文件创建更多的 {{domxref('FileSystemSyncAccessHandle')}} 或 {{domxref('FileSystemWritableFileStream')}}。
 
@@ -132,7 +132,7 @@ emptyBtn.addEventListener("click", emptyOPFS);
 
 worker JavaScript 如下所示。
 
-首先，我们运行一个名为 `initOPFS()` 的函数，该函数使用 {{domxref("StorageManager.getDirectory()")}} 获取对 OPFS 根句柄的引用，使用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 创建文件并返回其句柄，然后使用 `createSyncAccessHandle()` 返回 {{domxref("FileSystemSyncAccessHandle")}}。此调用包括 `mode: "readwrite-unsafe"` 属性，允许多个句柄同时访问同一文件。
+首先，我们运行一个名为 `initOPFS()` 的函数，该函数使用 {{domxref("StorageManager.getDirectory()")}} 获取对 OPFS 根目录的引用，使用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 创建文件并返回其句柄，然后使用 `createSyncAccessHandle()` 返回 {{domxref("FileSystemSyncAccessHandle")}}。此调用包括 `mode: "readwrite-unsafe"` 属性，允许多个句柄同时访问同一文件。
 
 ```js
 let accessHandle;
