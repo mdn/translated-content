@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed Object Model API")}}
 
-{{domxref("CSSStyleValue")}} 接口的 **`parse()`** 静态方法将特定 CSS 属性设置为指定值，并将第一个值作为 {{domxref('CSSStyleValue')}} 对象返回。
+{{domxref("CSSStyleValue")}} 接口的 **`parse()`** 静态方法将特定 CSS 属性设置为指定值，并将第一个值以 {{domxref('CSSStyleValue')}} 对象返回。
 
 ## 语法
 
@@ -28,7 +28,7 @@ CSSStyleValue.parse(property, cssText)
 
 ## 示例
 
-下面的代码解析了一组 `transform` 属性的声明。第二个代码块显示了返回对象在开发工具控制台中的结构。
+下面的代码解析了一组 `transform` 属性的声明。第二个代码块显示了返回对象的结构，就像它在开发人员工具控制台中呈现的那样。
 
 ```js
 const css = CSSStyleValue.parse(

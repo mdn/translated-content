@@ -23,7 +23,7 @@ l10n:
 ## 静态方法
 
 - [`CSSStyleValue.parse()`](/zh-CN/docs/Web/API/CSSStyleValue/parse_static)
-  - : 将特定 CSS 属性设置为指定值，并将第一个值作为 `CSSStyleValue` 对象返回。
+  - : 将特定 CSS 属性设置为指定值，并将第一个值以 `CSSStyleValue` 对象返回。
 - [`CSSStyleValue.parseAll()`](/zh-CN/docs/Web/API/CSSStyleValue/parseAll_static)
   - : 将特定 CSS 属性的所有值设置为指定值，并返回一个 `CSSStyleValue` 对象数组，每个对象包含一个提供的值。
 
