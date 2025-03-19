@@ -70,8 +70,7 @@ body {
 
 さらに、スクロールボックス内の任意の場所で {{cssxref("position")}} を変更した場合もスクロール固定が無効になります。
 
-> [!NOTE]
-> [Firefox バグ 1584285](https://bugzil.la/1584285) で、Firefox Nightly に `layout.css.scroll-anchoring.suppressions.enabled` フラグが追加され、これらのトリガーを無効化できるようになりました。
+> **バグ:** [Firefox バグ 1584285](https://bugzil.la/1584285) で、Firefox Nightly に `layout.css.scroll-anchoring.suppressions.enabled` フラグが追加され、これらのトリガーを無効化できるようになりました。
 
 ## その他の解説
 
