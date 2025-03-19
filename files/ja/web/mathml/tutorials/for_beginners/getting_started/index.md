@@ -42,7 +42,7 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 {{ EmbedLiveSample('Inserting_formulas_in_HTML', 700, 100, "", "") }}
 
 > [!WARNING]
-> 分数の代わりに "1 3" と表示される場合は、ブラウザーが MathML に対応していない可能性があります。詳しくは[ブラウザー互換性表](/ja/docs/Web/MathML/Element/math#browser_compatibility)を調べてください。
+> 分数の代わりに "1 3" と表示される場合は、ブラウザーが MathML に対応していない可能性があります。詳しくは[ブラウザー互換性表](/ja/docs/Web/MathML/Reference/Element/math#browser_compatibility)を調べてください。
 
 ### display 属性
 
@@ -171,14 +171,14 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 
 ## まとめ
 
-この記事では、 HTML 文書内に数式を挿入するために `<math>` 要素を使用する方法を見ていきました。 `display="block"` を使用する場合としない場合の `<math>` 要素のレンダリングの違いについて学びました。さらに、他にもいくつかの MathML 要素に出会いました。分数を表す `<mfrac>`、グループ化を表す `<mrow>`、そして最後にいくつかのテキスト要素です。これらの[テキストコンテナー](/ja/docs/Web/MathML/Guides/Text_containers)については次の記事で詳しく分析します。
+この記事では、 HTML 文書内に数式を挿入するために `<math>` 要素を使用する方法を見ていきました。 `display="block"` を使用する場合としない場合の `<math>` 要素のレンダリングの違いについて学びました。さらに、他にもいくつかの MathML 要素に出会いました。分数を表す `<mfrac>`、グループ化を表す `<mrow>`、そして最後にいくつかのテキスト要素です。これらの[テキストコンテナー](/ja/docs/Web/MathML/Tutorials/For_beginners/Text_containers)については次の記事で詳しく分析します。
 
 ## 関連情報
 
 - [MathML の使用](/ja/docs/Web/MathML/Authoring#using_mathml)
-- [`<math>` 要素](/ja/docs/Web/MathML/Element/math)
-- [`<mfrac>` 要素](/ja/docs/Web/MathML/Element/mfrac)
-- [`<mrow>` 要素](/ja/docs/Web/MathML/Element/mrow)
+- [`<math>` 要素](/ja/docs/Web/MathML/Reference/Element/math)
+- [`<mfrac>` 要素](/ja/docs/Web/MathML/Reference/Element/mfrac)
+- [`<mrow>` 要素](/ja/docs/Web/MathML/Reference/Element/mrow)
 - [`math-style` プロパティ](/ja/docs/Web/CSS/math-style)
 - [`math-depth` プロパティ](/ja/docs/Web/CSS/math-depth)
 
