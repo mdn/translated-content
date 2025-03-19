@@ -35,7 +35,7 @@ l10n:
 ### SVG
 
 - `<marker>` 要素内で `context-stroke` および `context-fill` の値をサポートしました。
-  これらの値を `fill` および `stroke` プロパティとともに使用する方法について、詳しくは [`<marker>`](/ja/docs/Web/SVG/Element/marker) の文書をご覧ください ([Firefox bug 752638](https://bugzil.la/752638))。
+  これらの値を `fill` および `stroke` プロパティとともに使用する方法について、詳しくは [`<marker>`](/ja/docs/Web/SVG/Reference/Element/marker) の文書をご覧ください ([Firefox bug 752638](https://bugzil.la/752638))。
 
 #### 廃止
 

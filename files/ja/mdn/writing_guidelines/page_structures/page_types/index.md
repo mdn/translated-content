@@ -142,7 +142,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [\<g> 要素](/ja/docs/Web/SVG/Element/g)
+- [\<g> 要素](/ja/docs/Web/SVG/Reference/Element/g)
 
 #### テンプレート
 

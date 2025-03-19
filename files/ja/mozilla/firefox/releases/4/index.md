@@ -131,7 +131,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : Firefox 4 でグラフィックとビデオのパフォーマンスを最大限引き出すための Tips & Tricks。
 - [WebM ビデオのサポート](/ja/docs/Web/Media/Formats#webm)
   - : 新しいオープンな [WebM](http://www.webmproject.org/) ビデオフォーマットが Gecko2.0 でサポートされます。このサポートは 6 月 9 日以降のナイトリーに含まれています。
-- [SMIL による SVG アニメーション](/ja/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SMIL による SVG アニメーション](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : SVG の SMIL アニメーションのサポートが利用できるようになりました。[バグ 482402](https://bugzilla.mozilla.org/show_bug.cgi?id=482402 'FIXED: Enable "svg.smil.enabled" pref by default') を参照してください。
 - 画像と CSS 背景としての SVG の利用
   - : SVG を [`<img>`](/ja/docs/Web/HTML/Element/img) 要素とともに、また、CSS の [`background-image`](/ja/docs/Web/CSS/background-image) で利用することができるようになりました。
@@ -140,7 +140,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - メディア要素での `preload` 属性
   - : HTML5 仕様から `preload` 属性が実装されました。これは以前実装された（そしてもうサポートされない）`autobuffer` 属性を置き換えものです。これは [`<video>`](/ja/docs/Web/HTML/Element/video) および [`<audio>`](/ja/docs/Web/HTML/Element/audio) 要素、同様に[`nsIDOMHTMLMediaElement`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMHTMLMediaElement) インターフェイスを実装した要素で利用できます。
 - SVG text 位置指定の改善
-  - : SVG [`<text>`](/ja/docs/Web/SVG/Element/text) and [`<tspan>`](/ja/docs/Web/SVG/Element/tspan) 要素で `x`、`y`、`dx`、および `dy` プロパティの値のためのリストを指定できるようになりました。これを用いることで、文字列中の各文字の位置を個別に制御できます。
+  - : SVG [`<text>`](/ja/docs/Web/SVG/Reference/Element/text) and [`<tspan>`](/ja/docs/Web/SVG/Reference/Element/tspan) 要素で `x`、`y`、`dx`、および `dy` プロパティの値のためのリストを指定できるようになりました。これを用いることで、文字列中の各文字の位置を個別に制御できます。
 
 ### DOM
 

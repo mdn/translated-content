@@ -128,7 +128,7 @@ iframe 文書内の幅ベースのメディアクエリーは、 iframe のビ�
 
 この例では、ビューポートの{{glossary("Aspect ratio", "アスペクト比")}}は 3:4 で、既定では 400×300 単位で存在し、単位は一般的に CSS ピクセルです。
 
-また、 SVG には内部[座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)が存在し、 [viewBox](/ja/docs/Web/SVG/Attribute/viewBox) 属性で定義されますが、これはこのビューポートの話題とは関係ありません。
+また、 SVG には内部[座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)が存在し、 [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性で定義されますが、これはこのビューポートの話題とは関係ありません。
 
 HTML に SVG ファイルを記載すると、 SVG のビューポートは初期包含ブロック、または SVG コンテナーの幅と高さが初期包含ブロックとなります。 SVG の CSS で {{CSSxRef("@media")}} クエリーを使用すると、ブラウザーではなく、そのコンテナーに対する相対値で適用されます。
 

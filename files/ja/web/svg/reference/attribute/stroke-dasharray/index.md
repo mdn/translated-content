@@ -87,7 +87,7 @@ svg {
 
 - \<dasharray>
 
-  - : カンマまたは空白で区切られた [`<length>`](/ja/docs/Web/SVG/Content_type#length) と [`<percentage>`](/ja/docs/Web/SVG/Content_type#percentage) のリストで、ダッシュとギャップの長さを指定します。
+  - : カンマまたは空白で区切られた [`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length) と [`<percentage>`](/ja/docs/Web/SVG/Guides/Content_type#percentage) のリストで、ダッシュとギャップの長さを指定します。
 
     もし奇数の値が指定された場合は、偶数の値になるように値のリストが繰り返されます。従って、 `5,3,2` は `5,3,2,5,3,2`と等価です。
 

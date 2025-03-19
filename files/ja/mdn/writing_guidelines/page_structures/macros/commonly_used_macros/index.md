@@ -92,7 +92,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/SVG/Attribute">SVG の属性リファレンス</a> (/Web/SVG/Attribute)
+        <a href="/ja/docs/Web/SVG/Reference/Attribute">SVG の属性リファレンス</a> (/Web/SVG/Attribute)
       </td>
       <td>
         <code>\{{SVGAttr("d")}}</code> は {{SVGAttr("d")}} になります。
@@ -104,7 +104,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
           href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/SVG/Attribute">SVG 要素リファレンス</a> (/Web/SVG/Element)
+        <a href="/ja/docs/Web/SVG/Reference/Attribute">SVG 要素リファレンス</a> (/Web/SVG/Element)
       </td>
       <td>
         <code>\{{SVGElement("view")}}</code> は {{SVGElement("view")}} になります。

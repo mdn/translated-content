@@ -317,4 +317,4 @@ SVG を書くとき、新しいファイルを作成するときに、一般的�
 
 ### 完全な例
 
-完全な例は [SVG: Namespaces Crash Course: Example](/ja/docs/Web/SVG/Namespaces_Crash_Course/Example) を参照してください。
+完全な例は [SVG: Namespaces Crash Course: Example](/ja/docs/Web/SVG/Guides/Namespaces_crash_course/Example) を参照してください。

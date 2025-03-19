@@ -40,7 +40,7 @@ svg {
     _値の型_: **\<string>** ; _既定値_: `''`; _アニメーション_: **可**
 - {{SVGAttr("pathLength")}}
   - : この属性は、ユーザー単位系でのパスの全長を指定することを可能にします。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
 
 ## 使用可能な場所
 
@@ -57,4 +57,4 @@ svg {
 ## 関連情報
 
 - SVG 基本図形: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, {{ SVGElement('polygon') }}, {{ SVGElement('polyline') }}, {{ SVGElement('rect') }}
-- [The MDN SVG "Getting Started" チュートリアル : Path](/ja/docs/Web/SVG/Tutorial/Paths)
+- [The MDN SVG "Getting Started" チュートリアル : Path](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

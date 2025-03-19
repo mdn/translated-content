@@ -994,7 +994,7 @@ SVG ファイルはテキストファイルで、解釈されると希望する�
 
 SVG はウェブコンテンツで 2 通りの使い方ができます。
 
-1. {{SVGElement("svg")}} 要素を HTML に直接書き、その中に [SVG 要素](/ja/docs/Web/SVG/Element)を入れて画像を描く。
+1. {{SVGElement("svg")}} 要素を HTML に直接書き、その中に [SVG 要素](/ja/docs/Web/SVG/Reference/Element)を入れて画像を描く。
 2. 他のいずれかの画像種別で使用することができるあらゆる場所で表示する。 {{HTMLElement("img")}} や {{HTMLElement("picture")}} 要素、 CSS の {{cssxref("background-image")}} プロパティなどです。
 
 SVG は、一連の描画コマンドで表現できる画像に最適です。特に、画像が描画されるサイズが不明であったり、変動する可能性がある場合、 SVG は希望するサイズに滑らかに拡大縮小するので、最適な選択と言えます。

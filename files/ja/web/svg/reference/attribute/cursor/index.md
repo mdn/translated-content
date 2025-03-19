@@ -8,11 +8,11 @@ l10n:
 
 {{SVGRef}}
 
-[SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
+[SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Reference/Attribute)
 
 `cursor` 属性は、マウスポインタが要素の上にあるときに表示されるマウスカーソルを指定します。
 
-この属性は CSS の {{cssxref("cursor")}} プロパティと全く同じ動作をしますが、 {{ SVGElement("cursor") }} 要素に対応しているブラウザーであれば [\<FuncIRI>](/ja/docs/Web/SVG/Content_type#funciri) 記法を使用して使用することができます。
+この属性は CSS の {{cssxref("cursor")}} プロパティと全く同じ動作をしますが、 {{ SVGElement("cursor") }} 要素に対応しているブラウザーであれば [\<FuncIRI>](/ja/docs/Web/SVG/Guides/Content_type#funciri) 記法を使用して使用することができます。
 
 プレゼンテーション属性として、 CSS スタイルシート内で直接プロパティとして使用することもできます。詳しくは CSS の {{cssxref("cursor")}} を参照してください。
 
@@ -27,7 +27,7 @@ l10n:
     <tr>
       <th scope="row">値</th>
       <td>
-        [[<a href="/ja/docs/Web/SVG/Content_type#funciri">&#x3C;FuncIRI></a
+        [[<a href="/ja/docs/Web/SVG/Guides/Content_type#funciri">&#x3C;FuncIRI></a
         >,]* [ <strong>auto</strong> | crosshair | default | pointer | move |
         e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize |
         s-resize | w-resize| text | wait | help ]] | inherit
@@ -52,8 +52,8 @@ l10n:
 
 以下の要素で `cursor` 属性を使用することができます。
 
-- [コンテナー要素](/ja/docs/Web/SVG/Element#コンテナー要素)
-- [グラフィック要素](/ja/docs/Web/SVG/Element#グラフィック要素)
+- [コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)
+- [グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)
 
 ## 仕様書
 

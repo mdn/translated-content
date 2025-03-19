@@ -60,7 +60,7 @@ svg|a {
 
 また、 `@namespace` ルールで**名前空間の接頭辞**が定義できます。全称セレクター、要素型セレクター、属性セレクターに名前空間の接頭辞を付加すると、これらのセレクターは名前空間*および*要素または属性に一致する場合のみ一致します。
 
-[HTML5](/ja/docs/Glossary/HTML5) では、既知の[外来要素](https://html.spec.whatwg.org/#foreign-elements)へ自動的に名前空間が割り当てられます。すなわち、 HTML 要素は文書内に `xmlns` 属性が存在しなくても XHTML 名前空間 (`http://www.w3.org/1999/xhtml`) に含まれているかのように動作します。また [\<svg>](/ja/docs/Web/SVG/Element/svg) および [\<math>](/ja/docs/Web/MathML/Element/math) 要素は、適切な名前空間（`http://www.w3.org/2000/svg` および `http://www.w3.org/1998/Math/MathML`）が割り当てられます。
+[HTML5](/ja/docs/Glossary/HTML5) では、既知の[外来要素](https://html.spec.whatwg.org/#foreign-elements)へ自動的に名前空間が割り当てられます。すなわち、 HTML 要素は文書内に `xmlns` 属性が存在しなくても XHTML 名前空間 (`http://www.w3.org/1999/xhtml`) に含まれているかのように動作します。また [\<svg>](/ja/docs/Web/SVG/Reference/Element/svg) および [\<math>](/ja/docs/Web/MathML/Element/math) 要素は、適切な名前空間（`http://www.w3.org/2000/svg` および `http://www.w3.org/1998/Math/MathML`）が割り当てられます。
 
 > [!NOTE]
 > XML では、属性に直接接頭辞を定義しない限り（_例_: `xlink:href`）、属性は名前空間を持ちません。言い換えると、属性は所属する要素から名前空間を継承しません。この動作に合わせるため、 CSS の既定の名前空間は属性セレクターに適用しません。
@@ -100,4 +100,4 @@ svg|a {
 
 ## 関連情報
 
-- [名前空間の集中講座](/ja/docs/Web/SVG/Namespaces_Crash_Course)
+- [名前空間の集中講座](/ja/docs/Web/SVG/Guides/Namespaces_crash_course)

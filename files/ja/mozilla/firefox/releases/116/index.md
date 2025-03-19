@@ -33,7 +33,7 @@ l10n:
 
 ### SVG
 
-- [長さの単位](/ja/docs/Web/SVG/Content_type#length) `q` (`1q = 1cm の 40 分の 1`) をサポートしました ([Firefox bug 1836995](https://bugzil.la/1836995))。
+- [長さの単位](/ja/docs/Web/SVG/Guides/Content_type#length) `q` (`1q = 1cm の 40 分の 1`) をサポートしました ([Firefox bug 1836995](https://bugzil.la/1836995))。
 
 ### HTTP
 
