@@ -1,6 +1,7 @@
 ---
 title: 入門
-slug: Web/SVG/Tutorial/Getting_Started
+slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
+original_slug: Web/SVG/Tutorial/Getting_Started
 ---
 
 {{SVGRef}}

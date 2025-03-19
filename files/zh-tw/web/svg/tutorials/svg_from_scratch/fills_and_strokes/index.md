@@ -1,6 +1,7 @@
 ---
 title: 填充与边框
-slug: Web/SVG/Tutorial/Fills_and_Strokes
+slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
+original_slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
 {{SVGRef}}

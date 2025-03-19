@@ -1,6 +1,7 @@
 ---
 title: 路徑
-slug: Web/SVG/Tutorial/Paths
+slug: Web/SVG/Tutorials/SVG_from_scratch/Paths
+original_slug: Web/SVG/Tutorial/Paths
 ---
 
 {{SVGRef}}

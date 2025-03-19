@@ -1,6 +1,7 @@
 ---
 title: 漸層
-slug: Web/SVG/Tutorial/Gradients
+slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
+original_slug: Web/SVG/Tutorial/Gradients
 ---
 
 {{SVGRef}}

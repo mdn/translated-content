@@ -1,6 +1,7 @@
 ---
 title: 座標定位
-slug: Web/SVG/Tutorial/Positions
+slug: Web/SVG/Tutorials/SVG_from_scratch/Positions
+original_slug: Web/SVG/Tutorial/Positions
 ---
 
 {{SVGRef}}

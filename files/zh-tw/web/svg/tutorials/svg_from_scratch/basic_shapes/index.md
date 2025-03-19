@@ -1,6 +1,7 @@
 ---
 title: 基本形状
-slug: Web/SVG/Tutorial/Basic_Shapes
+slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
+original_slug: Web/SVG/Tutorial/Basic_Shapes
 ---
 
 {{SVGRef}}

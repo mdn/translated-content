@@ -1,6 +1,7 @@
 ---
 title: 引言
-slug: Web/SVG/Tutorial/Introduction
+slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
+original_slug: Web/SVG/Tutorial/Introduction
 ---
 
 {{SVGRef}}

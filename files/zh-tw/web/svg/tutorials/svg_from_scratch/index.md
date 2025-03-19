@@ -1,6 +1,7 @@
 ---
 title: SVG教學
-slug: Web/SVG/Tutorial
+slug: Web/SVG/Tutorials/SVG_from_scratch
+original_slug: Web/SVG/Tutorial
 ---
 
 {{SVGRef}}
