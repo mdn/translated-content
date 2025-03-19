@@ -1,12 +1,9 @@
 ---
 title: in
 slug: Web/SVG/Reference/Attribute/in
-original_slug: Web/SVG/Attribute/in
 l10n:
   sourceCommit: 32d1c9ff83019f8efae3e7987a55e83035e4b926
 ---
-
-{{SVGRef}}
 
 **`in`** 属性标识滤镜原语的输入。
 
@@ -74,7 +71,7 @@ l10n:
 
 ## BackgroundImage 的解决方案
 
-在现代浏览器中，`BackgroundImage` 不支持作为滤镜源（请参见 [feComposite 兼容性表](/zh-CN/docs/Web/SVG/Element/feComposite#浏览器兼容性)）。因此，我们需要在滤镜内部使用 `<feImage>` 元素导入一个图像进行混合。
+在现代浏览器中，`BackgroundImage` 不支持作为滤镜源（请参见 [feComposite 兼容性表](/zh-CN/docs/Web/SVG/Reference/Element/feComposite#浏览器兼容性)）。因此，我们需要在滤镜内部使用 `<feImage>` 元素导入一个图像进行混合。
 
 > [!NOTE]
 > Firefox [Bug 455986](https://bugzil.la/455986) 表明了 `feImage` 无法加载图像的一部分（包括在文档中定义的圆圈、矩形、路径或其他片段）。因此，为了使此示例在更多浏览器上工作，我们加载了完整的外部标志图像。

@@ -1,12 +1,9 @@
 ---
 title: <use>
 slug: Web/SVG/Reference/Element/use
-original_slug: Web/SVG/Element/use
 l10n:
   sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---
-
-{{SVGRef}}
 
 **`<use>`** 元素从 SVG 文档中获取节点，并将它们复制到其他地方。其效果与将这些节点深度克隆到一个不可导出的 DOM 中，然后粘贴到 `use` 元素所在的位置相同，这与克隆的[模版元素](/zh-CN/docs/Web/HTML/Element/template)类似。
 
@@ -35,20 +32,20 @@ svg {
 ## 属性
 
 - {{SVGAttr("href")}}
-  - : 需要被复制的元素或片段的 URL。有关常见陷阱的详细信息，请参阅[使用说明](#使用说明)。<br/> _值类型_：[**`<URL>`**](/zh-CN/docs/Web/SVG/Content_type#url)；_默认值_：无；_动画性_：**是**
+  - : 需要被复制的元素或片段的 URL。有关常见陷阱的详细信息，请参阅[使用说明](#使用说明)。<br/> _值类型_：[**`<URL>`**](/zh-CN/docs/Web/SVG/Guides/Content_type#url)；_默认值_：无；_动画性_：**是**
 - {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
-  - : 需要被复制的元素或片段的 [`<IRI>`](/zh-CN/docs/Web/SVG/Content_type#iri) 引用。如果同时存在 {{SVGAttr("href")}} 和 {{SVGAttr("xlink:href")}} ，则使用 {{SVGAttr("href")}} 所给的值。<br/> _值类型_：[**`<IRI>`**](/zh-CN/docs/Web/SVG/Content_type#iri)；_默认值_：无；_动画性_：**是**
+  - : 需要被复制的元素或片段的 [`<IRI>`](/zh-CN/docs/Web/SVG/Guides/Content_type#iri) 引用。如果同时存在 {{SVGAttr("href")}} 和 {{SVGAttr("xlink:href")}} ，则使用 {{SVGAttr("href")}} 所给的值。<br/> _值类型_：[**`<IRI>`**](/zh-CN/docs/Web/SVG/Guides/Content_type#iri)；_默认值_：无；_动画性_：**是**
 - {{SVGAttr("x")}}
-  - : 应用于 `<use>` 元素的额外最终偏移变换的 x 坐标。<br/> _值类型_：[**`<coordinate>`**](/zh-CN/docs/Web/SVG/Content_type#坐标)；_默认值_：`0`；_动画性_：**是**
+  - : 应用于 `<use>` 元素的额外最终偏移变换的 x 坐标。<br/> _值类型_：[**`<coordinate>`**](/zh-CN/docs/Web/SVG/Guides/Content_type#坐标)；_默认值_：`0`；_动画性_：**是**
 - {{SVGAttr("y")}}
-  - : 应用于 `<use>` 元素的额外最终偏移变换的 y 坐标。<br/> _值类型_：[**`<coordinate>`**](/zh-CN/docs/Web/SVG/Content_type#坐标)；_默认值_：`0`；_动画性_：**是**
+  - : 应用于 `<use>` 元素的额外最终偏移变换的 y 坐标。<br/> _值类型_：[**`<coordinate>`**](/zh-CN/docs/Web/SVG/Guides/Content_type#坐标)；_默认值_：`0`；_动画性_：**是**
 - {{SVGAttr("width")}}
-  - : use 元素的宽度。<br/> _值类型_：[**`<length>`**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`0`；_动画性_：**是**
+  - : use 元素的宽度。<br/> _值类型_：[**`<length>`**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度)；_默认值_：`0`；_动画性_：**是**
 - {{SVGAttr("height")}}
-  - : use 元素的高度。<br/> _值类型_：[**`<length>`**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`0`；_动画性_：**是**
+  - : use 元素的高度。<br/> _值类型_：[**`<length>`**](/zh-CN/docs/Web/SVG/Guides/Content_type#长度)；_默认值_：`0`；_动画性_：**是**
 
 > [!NOTE]
-> 除非引用的元素具有 [viewBox](/zh-CN/docs/Web/SVG/Attribute/viewBox)，否则 `width` 和 `height` 对 `use` 元素没有任何影响。仅在 `use` 指向 `svg` 或 `symbol` 元素时才有效。
+> 除非引用的元素具有 [viewBox](/zh-CN/docs/Web/SVG/Reference/Attribute/viewBox)，否则 `width` 和 `height` 对 `use` 元素没有任何影响。仅在 `use` 指向 `svg` 或 `symbol` 元素时才有效。
 
 > [!NOTE]
 > 从 SVG2 开始，`x`、`y`、`width` 和 `height` 是*几何属性*，这意味着这些属性也可以作为该元素的 CSS 属性使用。
@@ -62,7 +59,7 @@ svg {
 出于安全原因，浏览器可能会对 `use` 元素应用[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)，并可能拒绝加载 {{SVGAttr("href")}} 属性中的跨源 URL。目前没有定义的方式为 `use` 元素设置跨源策略。
 
 > [!WARNING]
-> 出于安全原因，在 `href` 属性中使用数据 URI 加载资源已被弃用。这适用于 `<use href="data:...`，以及使用 [`set`](/zh-CN/docs/Web/SVG/Element/set) 或 [`setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute) 方法设置 `href` 的情况。请参阅[浏览器兼容性](#浏览器兼容性)表中的“Load from data: URI”部分，以检查不同浏览器版本的支持情况。
+> 出于安全原因，在 `href` 属性中使用数据 URI 加载资源已被弃用。这适用于 `<use href="data:...`，以及使用 [`set`](/zh-CN/docs/Web/SVG/Reference/Element/set) 或 [`setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute) 方法设置 `href` 的情况。请参阅[浏览器兼容性](#浏览器兼容性)表中的“Load from data: URI”部分，以检查不同浏览器版本的支持情况。
 
 > [!WARNING]
 > 从 SVG 2 开始，{{SVGAttr("xlink:href")}} 属性已被弃用，建议改用 {{SVGAttr("href")}}。有关更多信息，请参阅 {{SVGAttr("xlink:href")}} 页面。

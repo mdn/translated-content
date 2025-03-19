@@ -1,10 +1,7 @@
 ---
 title: font-family
 slug: Web/SVG/Reference/Attribute/font-family
-original_slug: Web/SVG/Attribute/font-family
 ---
-
-{{SVGRef}}
 
 `font-family` 属性指出哪个字体集将被用来渲染文字，在带优先级的字体集名称列表被指定，还有或没有泛指的字符集名称。
 
@@ -16,7 +13,6 @@ original_slug: Web/SVG/Attribute/font-family
 | ----------------- | ------------------------------------------------------------------------------------------- |
 | 值                | [[\<family-name> \| \<generic-family>],]\* [\<family-name> \| \<generic-family>] \| inherit |
 | 可动画 Animatable | Yes                                                                                         |
-| 规范文档          | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#FontFamilyProperty)           |
 
 ## 例子
 
@@ -38,7 +34,7 @@ p.class2{font-family:Arial,Helvetica;}
 
 以下元素可以使用`font-family` 属性 (attribute)
 
-- [Text content elements](/zh-CN/docs/Web/SVG/Element#text_content_elements) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Reference/Element#text_content_elements) »
 
 ## 规范
 

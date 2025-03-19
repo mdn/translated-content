@@ -1,10 +1,7 @@
 ---
 title: stop
 slug: Web/SVG/Reference/Element/stop
-original_slug: Web/SVG/Element/stop
 ---
-
-{{SVGRef}}
 
 一个渐变上的颜色坡度，是用`stop`元素定义的。`stop`元素可以是{{SVGElement("linearGradient")}}元素或者{{SVGElement("radialGradient")}}元素的子元素。
 
@@ -50,8 +47,8 @@ original_slug: Web/SVG/Element/stop
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 

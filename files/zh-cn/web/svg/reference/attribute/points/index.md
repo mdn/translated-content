@@ -1,10 +1,7 @@
 ---
 title: points
 slug: Web/SVG/Reference/Attribute/points
-original_slug: Web/SVG/Attribute/points
 ---
-
-{{SVGRef}}
 
 `points` 属性定义了用来画一个 {{ SVGElement("polyline") }} 元素或画一个 {{SVGElement("polygon") }} 元素的点的数列。
 

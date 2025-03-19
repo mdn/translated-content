@@ -1,20 +1,16 @@
 ---
 title: attributeType
 slug: Web/SVG/Reference/Attribute/attributeType
-original_slug: Web/SVG/Attribute/attributeType
 ---
-
-{{SVGRef}}
 
 该属性指定目标属性和它相对应的值处于哪个命名空间里。
 
 ## 使用说明
 
-| 类别     | 动画属性目标属性                                                                       |
-| -------- | -------------------------------------------------------------------------------------- |
-| 值       | CSS \| XML \| **auto**                                                                 |
-| 可变性   | No                                                                                     |
-| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
+| 类别   | 动画属性目标属性       |
+| ------ | ---------------------- |
+| 值     | CSS \| XML \| **auto** |
+| 可变性 | No                     |
 
 这个属性可取下列值之一：
 

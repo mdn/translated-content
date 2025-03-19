@@ -1,10 +1,7 @@
 ---
 title: seed
 slug: Web/SVG/Reference/Attribute/seed
-original_slug: Web/SVG/Attribute/seed
 ---
-
-{{SVGRef}}
 
 `seed`属性代表了 {{SVGElement("feTurbulence")}} 元素生成的伪随机数的开始数字。
 
@@ -12,10 +9,10 @@ original_slug: Web/SVG/Attribute/seed
 
 ## 使用说明
 
-| 类别   | _None_                                  |
-| ------ | --------------------------------------- |
-| 值     | [\<number>](/zh-CN/docs/Web/SVG#number) |
-| 可变性 | Yes                                     |
+| 类别   | _None_                                                    |
+| ------ | --------------------------------------------------------- |
+| 值     | [\<number>](/zh-CN/docs/Web/SVG/Guides/Content_type#数字) |
+| 可变性 | Yes                                                       |
 
 ## 示例
 

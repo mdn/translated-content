@@ -1,10 +1,7 @@
 ---
 title: end
 slug: Web/SVG/Reference/Attribute/end
-original_slug: Web/SVG/Attribute/end
 ---
-
-{{SVGRef}}
 
 这个属性定义了一个动画的结束值，可以约束激活持续时间。
 
@@ -12,11 +9,10 @@ original_slug: Web/SVG/Attribute/end
 
 ## 使用说明
 
-| 类别     | 动画定时属性                                                                 |
-| -------- | ---------------------------------------------------------------------------- |
-| 值       | \<End-value-list>                                                            |
-| 可变性   | No                                                                           |
-| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#EndAttribute) |
+| 类别   | 动画定时属性      |
+| ------ | ----------------- |
+| 值     | \<End-value-list> |
+| 可变性 | No                |
 
 欲知在`<end-value-list>`中允许用哪些值，请阅读{{ SVGAttr("begin") }}属性。
 
@@ -26,7 +22,7 @@ original_slug: Web/SVG/Attribute/end
 
 下列元素可以使用`end`属性：
 
-- [Animation elements](/zh-CN/docs/Web/SVG/Element#animation) »
+- [Animation elements](/zh-CN/docs/Web/SVG/Reference/Element#animation) »
 
 ## 规范
 

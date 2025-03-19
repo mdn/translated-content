@@ -1,10 +1,7 @@
 ---
 title: a
 slug: Web/SVG/Reference/Element/a
-original_slug: Web/SVG/Element/a
 ---
-
-{{SVGRef}}
 
 使用 SVG 的锚元素 (\<a>) 定义一个超链接。
 
@@ -37,11 +34,11 @@ original_slug: Web/SVG/Element/a
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#xlink) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

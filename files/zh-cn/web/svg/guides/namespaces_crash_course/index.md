@@ -1,12 +1,9 @@
 ---
 title: 命名空间速成
 slug: Web/SVG/Guides/Namespaces_crash_course
-original_slug: Web/SVG/Namespaces_Crash_Course
 l10n:
   sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
 ---
-
-{{SVGRef}}
 
 作为 [XML](/zh-CN/docs/Glossary/XML) 的一个方言，[SVG](/zh-CN/docs/Web/SVG) 具有命名空间。当你打算制作 SVG 内容时，理解命名空间的概念，以及命名空间如何使用，是很重要的。命名空间对于支持多种 XML 方言来说是必要的；浏览器必须非常严格。现在花一点时间来理解命名空间，这会让你避免以后的各种麻烦。
 
@@ -319,4 +316,4 @@ image.setAttributeNS(XLink_NS, "xlink:href", "flower.png");
 
 ### 完整的示例
 
-完整的示例参见 [SVG：名称空间速成：示例](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course/Example)。
+完整的示例参见 [SVG：名称空间速成：示例](/zh-CN/docs/Web/SVG/Guides/Namespaces_crash_course/Example)。

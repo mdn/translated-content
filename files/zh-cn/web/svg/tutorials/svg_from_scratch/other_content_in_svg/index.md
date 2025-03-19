@@ -1,12 +1,9 @@
 ---
 title: 其他 SVG 内容
 slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
-original_slug: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}
 
 除了图形化原件，如矩形和圆形之外，SVG 还提供了一些元素用来在图片中嵌入别的类型的内容。
 
@@ -46,4 +43,4 @@ foreignObject 元素是一个好办法，用来在 SVG 中嵌入 XHTML。如果�
 
 因为`foreignObject`是一个 SVG 元素，所以你可以像用图像那样，使用任何 SVG 的精华，它将被应用到它的内容。
 
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}

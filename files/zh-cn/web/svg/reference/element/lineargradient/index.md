@@ -1,10 +1,7 @@
 ---
 title: linearGradient
 slug: Web/SVG/Reference/Element/linearGradient
-original_slug: Web/SVG/Element/linearGradient
 ---
-
-{{SVGRef}}
 
 `linearGradient`元素用来定义线性渐变，用于图形元素的填充或描边。
 
@@ -45,9 +42,9 @@ svg {
 
 ### Global 属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
-- [Xlink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

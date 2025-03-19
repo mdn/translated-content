@@ -1,10 +1,7 @@
 ---
 title: repeatDur
 slug: Web/SVG/Reference/Attribute/repeatDur
-original_slug: Web/SVG/Attribute/repeatDur
 ---
-
-{{SVGRef}}
 
 **`repeatDur`** 属性指定重复动画的总持续时间。
 
@@ -59,7 +56,7 @@ svg {
       <th scope="row">值</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#clock-value"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#clock-value"
             >&#x3C;clock-value></a
           ></code
         >

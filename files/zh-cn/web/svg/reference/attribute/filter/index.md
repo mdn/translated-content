@@ -1,10 +1,7 @@
 ---
 title: filter
 slug: Web/SVG/Reference/Attribute/filter
-original_slug: Web/SVG/Attribute/filter
 ---
-
-{{SVGRef}}
 
 属性 `filter` 定义了由 {{ SVGElement("filter") }} 元素定义滤镜效果，该滤镜效果将应用到该元素上。
 
@@ -12,13 +9,12 @@ original_slug: Web/SVG/Attribute/filter
 
 ## 使用说明
 
-| 类别     | 外观属性                                                                         |
-| -------- | -------------------------------------------------------------------------------- |
-| 值       | [\<funciri>](/zh-CN/docs/SVG/Content_type#funciri) \| **none** \| inherit        |
-| 可变性   | Yes                                                                              |
-| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/filters.html#FilterProperty) |
+| 类别   | 外观属性                                                                             |
+| ------ | ------------------------------------------------------------------------------------ |
+| 值     | [\<funciri>](/zh-CN/docs/Web/SVG/Guides/Content_type#funciri) \| **none** \| inherit |
+| 可变性 | Yes                                                                                  |
 
-- [\<funciri>](/zh-CN/docs/SVG/Content_type#funciri)
+- [\<funciri>](/zh-CN/docs/Web/SVG/Guides/Content_type#funciri)
   - : 元素的引用，它定义了将要应用到该元素的滤镜效果。
 - none
   - : 不对该元素应用任何滤镜效果。
@@ -27,7 +23,7 @@ original_slug: Web/SVG/Attribute/filter
 
 下列元素可以使用`filter`属性：
 
-- [图形元素](/zh-CN/docs/Web/SVG/Element#graphics_elements) »
+- [图形元素](/zh-CN/docs/Web/SVG/Reference/Element#graphics_elements) »
 - {{ SVGElement("a") }}
 - {{ SVGElement("defs") }}
 - {{ SVGElement("glyph") }}

@@ -1,10 +1,7 @@
 ---
 title: circle
 slug: Web/SVG/Reference/Element/circle
-original_slug: Web/SVG/Element/circle
 ---
-
-{{SVGRef}}
 
 **`<circle>`** [SVG](/zh-CN/docs/Web/SVG) 元素是一个 SVG 的基本形状，用来创建圆，基于一个圆心和一个半径。
 
@@ -34,10 +31,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
-- [展现属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [展现属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

@@ -1,12 +1,9 @@
 ---
 title: 滤镜效果
 slug: Web/SVG/Tutorials/SVG_from_scratch/Filter_effects
-original_slug: Web/SVG/Tutorial/Filter_effects
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG", "Web/SVG/Tutorials/SVG_from_scratch/Using_fonts") }}
 
 在某些情况下，一些基本的 SVG 图形并不能提供某种想要达到的效果。比如常见的阴影效果，就不能合理地与渐变类元素（`<linearGradient>`, `<radialGradient>`）一起被创建。滤镜（Filter）就是 SVG 中用于创建复杂效果的一种机制。
 
@@ -177,4 +174,4 @@ original_slug: Web/SVG/Tutorial/Filter_effects
 
 图元 6
 
-{{ PreviousNext("Web/SVG/Tutorial/Other_content_in_SVG", "Web/SVG/Tutorial/SVG_Fonts") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG", "Web/SVG/Tutorials/SVG_from_scratch/Using_fonts") }}

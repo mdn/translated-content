@@ -1,12 +1,11 @@
 ---
 title: <missing-glyph>
 slug: Web/SVG/Reference/Element/missing-glyph
-original_slug: Web/SVG/Element/missing-glyph
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<missing-glyph>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于在字体中没有为给定的字符定义适当的 {{SVGElement("glyph")}} 时渲染内容。
 
@@ -38,4 +37,4 @@ l10n:
 
 - {{SVGElement("font")}}
 - {{SVGElement("glyph")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)

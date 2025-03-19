@@ -1,10 +1,7 @@
 ---
 title: viewBox
 slug: Web/SVG/Reference/Attribute/viewBox
-original_slug: Web/SVG/Attribute/viewBox
 ---
-
-{{SVGRef}}
 
 viewBox 属性允许指定一个给定的一组图形伸展以适应特定的容器元素。
 
@@ -106,4 +103,4 @@ svg:not(:root) {
 
 ## 参见
 
-- [SVG Getting Started: Positions](/zh-CN/docs/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions)

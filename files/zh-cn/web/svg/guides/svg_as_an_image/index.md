@@ -1,12 +1,9 @@
 ---
 title: 作为图片的 SVG
 slug: Web/SVG/Guides/SVG_as_an_image
-original_slug: Web/SVG/SVG_as_an_Image
 l10n:
   sourceCommit: bd6d98893c48e00bfcbdafd60c684bf30e0fa406
 ---
-
-{{SVGRef}}
 
 SVG 图像可以在多种场景中用作一种图像格式。浏览器在以下情况下支持 SVG 图像：
 

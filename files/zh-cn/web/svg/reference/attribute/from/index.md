@@ -1,12 +1,9 @@
 ---
 title: from
 slug: Web/SVG/Reference/Attribute/From
-original_slug: Web/SVG/Attribute/From
 ---
 
-{{SVGRef}}
-
-这个属性是在 svg 动画发生过程中被修改的属性的初始值。当同时使用了这个属性和 [to](/zh-CN/docs/Web/SVG/Attribute/To) 属性，animation 将会修改这个这个设定的动画属性的值从 from 属性的值到 to 属性的值。
+这个属性是在 svg 动画发生过程中被修改的属性的初始值。当同时使用了这个属性和 [to](/zh-CN/docs/Web/SVG/Reference/Attribute/To) 属性，animation 将会修改这个这个设定的动画属性的值从 from 属性的值到 to 属性的值。
 
 ## 使用说明
 

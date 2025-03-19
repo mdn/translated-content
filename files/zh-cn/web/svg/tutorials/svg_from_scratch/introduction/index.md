@@ -1,12 +1,9 @@
 ---
 title: 引言
 slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
-original_slug: Web/SVG/Tutorial/Introduction
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}
 
 [SVG](/zh-CN/docs/Web/SVG) 是一种 [XML](/zh-CN/docs/Web/XML) 语言，类似 [XHTML](/zh-CN/docs/Glossary/XHTML)，可以用来绘制矢量图形，例如下面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以形变（be transformed）、合成、或者通过滤镜完全改变外观。
 
@@ -31,7 +28,7 @@ HTML 提供了定义标题、段落、表格等等内容的元素。与此类似
 - SVG 的元素和属性必须按标准格式书写，因为 XML 是区分大小写的（这一点和 HTML 不同）
 - SVG 里的属性值必须用引号引起来，就算是数值也必须这样做。
 
-SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用[元素参考](/zh-CN/docs/Web/SVG/Element)和[接口参考](/zh-CN/docs/Web/API/Document_Object_Model#svg_接口)，学习其他你需要知道的内容。
+SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这些内容之后，你就有能力使用[元素参考](/zh-CN/docs/Web/SVG/Reference/Element)和[接口参考](/zh-CN/docs/Web/API/Document_Object_Model#svg_接口)，学习其他你需要知道的内容。
 
 ## SVG 的种类
 
@@ -41,4 +38,4 @@ SVG 是一个庞大的规范，本教程主要涵盖基础内容。掌握了这�
 
 另外还有一些关于 SVG 打印规格的项目，增加对多页面和颜色管理的支持，但是这项工作已经终止。
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}

@@ -1,10 +1,7 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Reference/Attribute/shape-rendering
-original_slug: Web/SVG/Attribute/shape-rendering
 ---
-
-{{SVGRef}}
 
 指定 SVG 元素 {{SVGElement("path")}} 的渲染模式。
 
@@ -47,7 +44,7 @@ original_slug: Web/SVG/Attribute/shape-rendering
 
 下面的元素可以使用这个属性
 
-- [Shape elements](/zh-CN/docs/Web/SVG/Element#shape) »
+- [Shape elements](/zh-CN/docs/Web/SVG/Reference/Element#shape) »
 
 ## 规范
 

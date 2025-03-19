@@ -1,10 +1,7 @@
 ---
 title: <marker>
 slug: Web/SVG/Reference/Element/marker
-original_slug: Web/SVG/Element/marker
 ---
-
-{{SVGRef}}
 
 **`<marker>`** 元素定义了在给定 {{SVGElement("path")}}、{{SVGElement("line")}}、{{SVGElement("polyline")}} 或 {{SVGElement("polygon")}} 元素上绘制箭头或者多边标记所使用的图形。
 
@@ -165,24 +162,24 @@ svg {
 ## 属性
 
 - {{SVGAttr("markerHeight")}}
-  - : 该属性定义了 marker 视口的高度。_值的类型_：**[\<length>](/zh-CN/docs/Web/SVG/Content_type#长度)**；_默认值_：`3`；_动画性_：**有**
+  - : 该属性定义了 marker 视口的高度。_值的类型_：**[\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#长度)**；_默认值_：`3`；_动画性_：**有**
 - {{SVGAttr("markerUnits")}}
   - : 该属性为 `markerWidth`、`markerHeight` 和 `<marker>` 的内容定义了坐标系。_值的类型_：`userSpaceOnUse`|`strokeWidth` ；_默认值_：`strokeWidth`；_动画性_：**有**
 - {{SVGAttr("markerWidth")}}
-  - : 该属性定义了 marker 视图的宽度。_值的类型_：**[\<length>](/zh-CN/docs/Web/SVG/Content_type#长度)** ；_默认值_：`3`；_动画性_：**有**
+  - : 该属性定义了 marker 视图的宽度。_值的类型_：**[\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#长度)** ；_默认值_：`3`；_动画性_：**有**
 - {{SVGAttr("orient")}}
-  - : 该属性定义了 marker 相对于它所附着到形状的方向。_值的类型_：`auto`|`auto-start-reverse`|**[\<angle>](/zh-CN/docs/Web/SVG/Content_type#角度)** ；_默认值_：`0`；_动画性_：**有**
+  - : 该属性定义了 marker 相对于它所附着到形状的方向。_值的类型_：`auto`|`auto-start-reverse`|**[\<angle>](/zh-CN/docs/Web/SVG/Guides/Content_type#角度)** ；_默认值_：`0`；_动画性_：**有**
 - {{SVGAttr("preserveAspectRatio")}}
   - : 该属性定义了 svg 片段在嵌入具有不同宽高比例的容器中应该如何变形。_值的类型_：(`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ；_默认值_：`xMidYMid meet`；_动画性_：**有**
 - {{SVGAttr("refX")}}
   - : 该属性定义了标记参考点的 x 的坐标。
-    _值的类型_：`left`|`center`|`right`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Content_type#坐标)** ；_默认值_：`0`；_动画性_：**有**
+    _值的类型_：`left`|`center`|`right`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Guides/Content_type#坐标)** ；_默认值_：`0`；_动画性_：**有**
 - {{SVGAttr("refY")}}
   - : 该属性定义了标记参考点的 y 的坐标。
-    _值的类型_：`top`|`center`|`bottom`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Content_type#坐标)** ；_默认值_：`0`；_动画性_：**有**
+    _值的类型_：`top`|`center`|`bottom`|**[\<coordinate>](/zh-CN/docs/Web/SVG/Guides/Content_type#坐标)** ；_默认值_：`0`；_动画性_：**有**
 - {{SVGAttr("viewBox")}}
   - : 该属性定义了当前 SVG 片段的 SVG 视口边界。
-    _值的类型_：**[\<list-of-numbers>](/zh-CN/docs/Web/SVG/Content_type#t值数列)** ；_默认值_：none；_动画性_：**有**
+    _值的类型_：**[\<list-of-numbers>](/zh-CN/docs/Web/SVG/Guides/Content_type#t值数列)** ；_默认值_：none；_动画性_：**有**
 
 ## 使用上下文
 

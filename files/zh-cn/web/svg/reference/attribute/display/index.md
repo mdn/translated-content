@@ -1,10 +1,7 @@
 ---
 title: display
 slug: Web/SVG/Reference/Attribute/display
-original_slug: Web/SVG/Attribute/display
 ---
-
-{{SVGRef}}
 
 **`display`** 属性让你可以控制图形元素或容器元素的渲染。
 
@@ -16,7 +13,7 @@ original_slug: Web/SVG/Attribute/display
 
 - 如果在 {{SVGElement("tspan")}} 或 {{SVGElement("tref")}} 元素中 `display` 的属性值被设为 `none`，则为了文字布局，文字字符串会被忽视掉。
 - 至于事件，如果 `display` 被设为 `none` 则该元素不接受任何事件。
-- [图形元素](/zh-CN/docs/Web/SVG/Element#图形元素)的 `display` 属性被设为 `none` 则不会被盒边界和路径剪裁计算中包含进去。
+- [图形元素](/zh-CN/docs/Web/SVG/Reference/Element#图形元素)的 `display` 属性被设为 `none` 则不会被盒边界和路径剪裁计算中包含进去。
 
 `display`属性只影响能被直接渲染的元素，尽管它不能防止该元素被其他元素参考。例如：将 {{SVGElement("path")}} 元素设为 `none`，会使得该元素不会被直接渲染到 canvas 上，但是 {{SVGElement("textPath")}} 元素依旧会参考 {{SVGElement("path")}}。此外，即便 {{SVGElement("path")}} 的 `display` 为 `none`，它的形状在处理路径上的文本时仍然会被用到。
 

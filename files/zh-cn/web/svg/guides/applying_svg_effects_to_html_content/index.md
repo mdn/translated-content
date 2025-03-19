@@ -1,10 +1,7 @@
 ---
 title: 在 HTML 内容中应用 SVG 效果
 slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
-original_slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
-
-{{SVGRef}}
 
 现代浏览器支持在 [CSS](/zh-CN/docs/Web/CSS) 样式中使用 [SVG](/zh-CN/docs/Web/SVG) 来对 HTML 内容应用图像效果。
 
@@ -25,7 +22,7 @@ original_slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 </style>
 ```
 
-在上面的例子中，所有段落会被 [ID](/zh-CN/docs/Web/HTML/Global_attributes/id) 为 `my-mask` 的 [SVG `<mask>`](/zh-CN/docs/Web/SVG/Element/mask) 遮罩。
+在上面的例子中，所有段落会被 [ID](/zh-CN/docs/Web/HTML/Global_attributes/id) 为 `my-mask` 的 [SVG `<mask>`](/zh-CN/docs/Web/SVG/Reference/Element/mask) 遮罩。
 
 ### 示例：Masking
 

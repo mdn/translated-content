@@ -1,12 +1,9 @@
 ---
 title: SVG 属性参考
 slug: Web/SVG/Reference/Attribute
-original_slug: Web/SVG/Attribute
 l10n:
   sourceCommit: 7f67f81c799f3afcff118661faec6cd391308a17
 ---
-
-{{SVGRef}}
 
 SVG 元素可以通过属性来修改，这些属性指定有关如何处理或渲染元素的详细信息。
 
@@ -529,6 +526,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ## 参见
 
-- [SVG 元素参考](/zh-CN/docs/Web/SVG/Element)
-- [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial)
+- [SVG 元素参考](/zh-CN/docs/Web/SVG/Reference/Element)
+- [SVG 教程](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG 接口参考](/zh-CN/docs/Web/API/SVG_API#接口)

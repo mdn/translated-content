@@ -1,10 +1,7 @@
 ---
 title: preserveAlpha
 slug: Web/SVG/Reference/Attribute/preserveAlpha
-original_slug: Web/SVG/Attribute/preserveAlpha
 ---
-
-{{SVGRef}}
 
 `preserveAlpha` 属性表示{{ SVGElement("feConvolveMatrix") }} 元素怎样处透明度。
 

@@ -1,10 +1,7 @@
 ---
 title: clip-path
 slug: Web/SVG/Reference/Attribute/clip-path
-original_slug: Web/SVG/Attribute/clip-path
 ---
-
-{{SVGRef}}
 
 元素的表现属性 **`clip-path`** 为其定义或关联一条剪切路径。
 

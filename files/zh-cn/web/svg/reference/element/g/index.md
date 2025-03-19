@@ -1,12 +1,9 @@
 ---
 title: <g>
 slug: Web/SVG/Reference/Element/g
-original_slug: Web/SVG/Element/g
 l10n:
   sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
-
-{{SVGRef}}
 
 **`<g>`** [SVG](/zh-CN/docs/Web/SVG) 元素是一个容器，用于将其他 SVG 元素进行分组。
 

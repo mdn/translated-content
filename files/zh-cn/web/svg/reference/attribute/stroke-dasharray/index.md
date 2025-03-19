@@ -1,10 +1,7 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Reference/Attribute/stroke-dasharray
-original_slug: Web/SVG/Attribute/stroke-dasharray
 ---
-
-{{SVGRef}}
 
 **`stroke-dasharray`** 表现属性定义了用于绘制形状轮廓的虚线段和间隙的排列形式。
 
@@ -85,7 +82,7 @@ svg {
 
 - \<dasharray>
 
-  - : 以逗号或空格分隔的 [`<length>`](/zh-CN/docs/Web/SVG/Content_type#长度) 和 [`<percentage>`](/zh-CN/docs/Web/SVG/Content_type#百分数) 列表，用于定义交替的虚线段和间隙的长度。
+  - : 以逗号或空格分隔的 [`<length>`](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) 和 [`<percentage>`](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数) 列表，用于定义交替的虚线段和间隙的长度。
 
     如果提供了奇数个值，则重复该列表以产生偶数个值，因此 `5,3,2` 等价于 `5,3,2,5,3,2`。
 

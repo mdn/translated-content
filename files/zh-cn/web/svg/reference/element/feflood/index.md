@@ -1,12 +1,9 @@
 ---
 title: <feFlood>
 slug: Web/SVG/Reference/Element/feFlood
-original_slug: Web/SVG/Element/feFlood
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
-
-{{SVGRef}}
 
 **`<feFlood>`** SVG 滤镜原语使用由 {{SVGAttr("flood-color")}} 和 {{SVGAttr("flood-opacity")}} 定义的颜色和透明度填充滤镜子区域。
 
@@ -59,7 +56,7 @@ l10n:
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜属性)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
@@ -78,4 +75,4 @@ l10n:
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

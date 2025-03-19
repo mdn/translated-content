@@ -1,10 +1,7 @@
 ---
 title: primitiveUnits
 slug: Web/SVG/Reference/Attribute/primitiveUnits
-original_slug: Web/SVG/Attribute/primitiveUnits
 ---
-
-{{SVGRef}}
 
 `primitiveUnits` 属性为过滤器原语和定义过滤器原语子域中的各种各样的长度单位指定坐标系统。
 

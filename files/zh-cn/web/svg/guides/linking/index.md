@@ -1,10 +1,7 @@
 ---
 title: Linking
 slug: Web/SVG/Guides/Linking
-original_slug: Web/SVG/Linking
 ---
-
-{{SVGRef}}
 
 SVG 标签内的 "a" 元素上的“target”属性在 Mozilla Firefox 1.5 中不起作用。使用标记将 SVG 文档嵌入父 HTML 文档时：
 

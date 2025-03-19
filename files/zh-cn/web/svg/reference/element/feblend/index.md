@@ -1,12 +1,9 @@
 ---
 title: <feBlend>
 slug: Web/SVG/Reference/Element/feBlend
-original_slug: Web/SVG/Element/feBlend
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
-
-{{SVGRef}}
 
 **`<feBlend>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语根据特定的混合模式将两个对象组合在一起。这类似于图像编辑软件中混合两个图层。该模式由 {{SVGAttr("mode")}} 属性定义。
 
@@ -72,7 +69,7 @@ l10n:
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜原语属性)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜原语属性)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
@@ -91,4 +88,4 @@ l10n:
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

@@ -1,12 +1,9 @@
 ---
 title: <feMorphology>
 slug: Web/SVG/Reference/Element/feMorphology
-original_slug: Web/SVG/Element/feMorphology
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
-
-{{SVGRef}}
 
 **`<feMorphology>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语用于对输入图像进行腐蚀或膨胀。它的用途尤其体现在加粗或变细效果上。
 
@@ -130,4 +127,4 @@ p {
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

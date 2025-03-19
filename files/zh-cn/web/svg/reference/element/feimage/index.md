@@ -1,12 +1,9 @@
 ---
 title: <feImage>
 slug: Web/SVG/Reference/Element/feImage
-original_slug: Web/SVG/Element/feImage
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
-
-{{SVGRef}}
 
 **`<feImage>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语从外部来源获取图像数据，并提供像素数据作为输出（这意味着如果外部来源是 SVG 图像，那么它将被栅格化）。
 
@@ -59,7 +56,7 @@ l10n:
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜属性)
 - {{SVGAttr("flood-color")}} 属性
 - {{SVGAttr("flood-opacity")}} 属性
 - {{SVGElement("filter")}}
@@ -81,4 +78,4 @@ l10n:
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

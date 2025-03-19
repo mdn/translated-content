@@ -1,10 +1,7 @@
 ---
 title: feDiffuseLighting
 slug: Web/SVG/Reference/Element/feDiffuseLighting
-original_slug: Web/SVG/Element/feDiffuseLighting
 ---
-
-{{SVGRef}}
 
 滤镜光照一个图像，使用 alpha 通道作为隆起映射。结果图像，是一个 RGBA 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。
 
@@ -98,9 +95,9 @@ original_slug: Web/SVG/Element/feDiffuseLighting
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -136,4 +133,4 @@ original_slug: Web/SVG/Element/feDiffuseLighting
 - {{ SVGElement("feSpotLight") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

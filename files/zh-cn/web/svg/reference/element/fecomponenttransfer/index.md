@@ -1,12 +1,9 @@
 ---
 title: <feComponentTransfer>
 slug: Web/SVG/Reference/Element/feComponentTransfer
-original_slug: Web/SVG/Element/feComponentTransfer
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
-
-{{SVGRef}}
 
 **`<feComponentTransfer>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语对每个像素的数据进行颜色分量级别的重新映射。它允许执行亮度调整、对比度调整、颜色平衡或阈值处理等操作。
 
@@ -146,7 +143,7 @@ rect {
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜原语属性)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜原语属性)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
@@ -167,4 +164,4 @@ rect {
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

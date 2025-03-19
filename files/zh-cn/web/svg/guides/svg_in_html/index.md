@@ -1,10 +1,7 @@
 ---
 title: SVG In HTML Introduction
 slug: Web/SVG/Guides/SVG_in_HTML
-original_slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
-
-{{SVGRef}}
 
 本文及其相关示例展示了如何使用内联的 [SVG](/zh-CN/docs/Web/SVG) 给一个表单提供背景图片，它展示了如何按照编写常规 XHTML 代码相同的方式来通过 [JavaScript](/zh-CN/docs/Web/JavaScript) 和 [CSS](/zh-CN/docs/Web/CSS) 操作图片。注意，该示例仅在支持 XHTML（非 HTML）并集成了 SVG 的浏览器中正常工作。
 
@@ -87,5 +84,5 @@ viewBox 属性创建了一个与 SVG 图片坐标系相关联的逻辑坐标系�
 
 ## 参见
 
-- Another SVG in XHTML example: [A swarm of motes](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course/Example)
+- Another SVG in XHTML example: [A swarm of motes](/zh-CN/docs/Web/SVG/Guides/Namespaces_crash_course/Example)
 - [Working example](https://jwatt.org/svg/demos/xhtml-with-inline-svg.xhtml) 可以同时工作在安装有 Adobe SVG Viwer 的 Mozilla 和 IE 浏览器中。 （对于同时工作在 Firefox 和 IE 浏览器中得内联 SVG，需要为每个浏览器的服务文档设置不同的 Cotent-type。因为当你基于一个代理服务器获取页面的时候，如果在第二个浏览器中加载该案例将会失败，因其会获取错误的 Content-Type）

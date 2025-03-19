@@ -1,10 +1,7 @@
 ---
 title: text
 slug: Web/SVG/Reference/Element/text
-original_slug: Web/SVG/Element/text
 ---
-
-{{SVGRef}}
 
 `text`元素定义了一个由文字组成的图形。注意：我们可以将渐变、图案、剪切路径、遮罩或者滤镜应用到 text 上。
 
@@ -68,10 +65,10 @@ SVG 文本还可以应用样式。
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

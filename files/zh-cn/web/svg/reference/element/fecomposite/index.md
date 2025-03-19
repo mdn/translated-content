@@ -1,10 +1,7 @@
 ---
 title: feComposite
 slug: Web/SVG/Reference/Element/feComposite
-original_slug: Web/SVG/Element/feComposite
 ---
-
-{{SVGRef}}
 
 该滤镜执行两个输入图像的智能像素组合，在图像空间中使用以下 Porter-Duff 合成操作之一：over、in、atop、xor。另外，还可以应用一个智能组件`arithmetic` 操作（结果被压到 `[0,1]` 范围内）。
 
@@ -29,9 +26,9 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -69,4 +66,4 @@ result = k1*i1*i2 + k2*i1 + k3*i2 + k4
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

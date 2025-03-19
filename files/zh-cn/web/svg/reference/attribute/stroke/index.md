@@ -1,12 +1,9 @@
 ---
 title: stroke
 slug: Web/SVG/Reference/Attribute/stroke
-original_slug: Web/SVG/Attribute/stroke
 l10n:
   sourceCommit: 47996becf4d78c721f29a3004ac613bd51c11ab8
 ---
-
-{{SVGRef}}
 
 **`stroke`** 是一个表现属性，它定义了图形的外轮廓的颜色（_或者是任何 SVG 绘画方式，如渐变或图案_）。
 
@@ -62,7 +59,7 @@ svg {
 
 ### `context-stroke` 示例
 
-在这个示例中，我们使用 {{SVGElement('path')}} 元素定义了三个形状的图形，每个图形都设置了不同的 `stroke` 和 [`fill`](/zh-CN/docs/Web/SVG/Attribute/fill) 颜色。我们还通过 {{SVGElement('marker')}} 元素将 {{SVGElement('circle')}} 元素定义为标记。每个图形都通过 [`marker`](/zh-CN/docs/Web/CSS/marker) CSS 属性应用了标记。
+在这个示例中，我们使用 {{SVGElement('path')}} 元素定义了三个形状的图形，每个图形都设置了不同的 `stroke` 和 [`fill`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill) 颜色。我们还通过 {{SVGElement('marker')}} 元素将 {{SVGElement('circle')}} 元素定义为标记。每个图形都通过 [`marker`](/zh-CN/docs/Web/CSS/marker) CSS 属性应用了标记。
 
 {{SVGElement('circle')}} 元素上设置了 `stroke="context-stroke"` 和 `fill="context-fill"`。因为它被设置为图形的上下文标记，所以这些属性会导致它在各种情况下都会继承设置在 {{SVGElement('path')}} 元素上的 `fill` 和 `stroke`。
 
@@ -103,7 +100,7 @@ svg {
       <th scope="row">值</th>
       <td>
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#涂色"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#涂色"
             >&#x3C;paint></a
           ></strong
         >

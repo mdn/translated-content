@@ -1,18 +1,15 @@
 ---
 title: 文本
 slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
-original_slug: Web/SVG/Tutorial/Texts
 ---
 
-{{SVGRef}}
-
-{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations") }}
 
 在 SVG 中有两种截然不同的文本模式。一种是写在图像中的文本，另一种是 SVG 字体。关于后者我们将在教程的后面进行讲解，现在我们主要集中前者：写在图像中的文本。
 
 ## 基础
 
-我们已经在之前[入门示例](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started)中看到了，在一个 SVG 文档中，`text` 元素内部可以放任何的文字。
+我们已经在之前[入门示例](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)中看到了，在一个 SVG 文档中，`text` 元素内部可以放任何的文字。
 
 ```xml
 <text x="10" y="10">Hello World!</text>
@@ -79,4 +76,4 @@ original_slug: Web/SVG/Tutorial/Texts
 </text>
 ```
 
-{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations") }}

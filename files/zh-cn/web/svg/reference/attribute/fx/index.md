@@ -1,20 +1,16 @@
 ---
 title: fx
 slug: Web/SVG/Reference/Attribute/fx
-original_slug: Web/SVG/Attribute/fx
 ---
-
-{{SVGRef}}
 
 对于 {{ SVGElement("radialGradient") }} 元素，此属性用来定义径向渐变的焦点的 x 轴坐标。如果该属性没有被定义，就假定它与中心点是同一位置。
 
 ## 使用说明
 
-| 类别     | 无                                                                                                                            |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 值       | [\<coordinate>](/zh-CN/docs/SVG/Content_type#coordinate)                                                                      |
-| 可变性   | 非                                                                                                                            |
-| 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](https://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
+| 类别   | 无                                                            |
+| ------ | ------------------------------------------------------------- |
+| 值     | [\<coordinate>](/zh-CN/docs/Web/SVG/Guides/Content_type#坐标) |
+| 可变性 | 非                                                            |
 
 ## 示例
 

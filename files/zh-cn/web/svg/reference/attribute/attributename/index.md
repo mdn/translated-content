@@ -1,12 +1,9 @@
 ---
 title: attributeName
 slug: Web/SVG/Reference/Attribute/attributeName
-original_slug: Web/SVG/Attribute/attributeName
 l10n:
   sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
-
-{{SVGRef}}
 
 **`attributeName`** 属性表示动画期间将要更改的目标元素的 CSS 属性或属性的名称。
 

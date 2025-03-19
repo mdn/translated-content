@@ -1,10 +1,7 @@
 ---
 title: polyline
 slug: Web/SVG/Reference/Element/polyline
-original_slug: Web/SVG/Element/polyline
 ---
-
-{{SVGRef}}
 
 `polyline`元素是 SVG 的一个基本形状，用来创建一系列直线连接多个点。典型的一个`polyline`是用来创建一个开放的形状，最后一点不与第一点相连。欲了解闭合形状，请看{{SVGElement("polygon")}} 元素。
 
@@ -38,10 +35,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

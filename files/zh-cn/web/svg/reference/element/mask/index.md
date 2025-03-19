@@ -1,10 +1,7 @@
 ---
 title: mask
 slug: Web/SVG/Reference/Element/mask
-original_slug: Web/SVG/Element/mask
 ---
-
-{{SVGRef}}
 
 在 SVG 中，你可以指一个透明的遮罩层和当前对象合成，形成背景。透明遮罩层可以是任何其他图形对象或者{{ SVGElement("g") }}元素。`mask`元素用于定义这样的遮罩元素。属性{{ SVGAttr("mask") }}用来引用一个遮罩元素。
 
@@ -47,9 +44,9 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

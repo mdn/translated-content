@@ -1,10 +1,9 @@
 ---
 title: cursor
 slug: Web/SVG/Reference/Element/cursor
-original_slug: Web/SVG/Element/cursor
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > 尽量使用 CSS 中的 {{cssxref("cursor")}} 属性来替换该属性。
@@ -21,9 +20,9 @@ original_slug: Web/SVG/Element/cursor
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#xlink) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### 专有属性

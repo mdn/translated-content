@@ -1,10 +1,7 @@
 ---
 title: stdDeviation
 slug: Web/SVG/Reference/Attribute/stdDeviation
-original_slug: Web/SVG/Attribute/stdDeviation
 ---
-
-{{SVGRef}}
 
 **`stdDeviation`** 属性定义了模糊操作的标准差。
 
@@ -58,7 +55,7 @@ svg {
       <th scope="row">值</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#number-optional-number"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#number-optional-number"
             >&#x3C;number-optional-number></a
           ></code
         >

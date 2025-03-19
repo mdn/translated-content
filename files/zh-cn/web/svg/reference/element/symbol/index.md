@@ -1,10 +1,7 @@
 ---
 title: symbol
 slug: Web/SVG/Reference/Element/symbol
-original_slug: Web/SVG/Element/symbol
 ---
-
-{{SVGRef}}
 
 `symbol`元素用来定义一个图形模板对象，它可以用一个{{ SVGElement("use") }}元素实例化。`symbol`元素对图形的作用是在同一文档中多次使用，添加结构和语义。结构丰富的文档可以更生动地呈现出来，类似讲演稿或盲文，从而提升了无障碍。注意，一个`symbol`元素本身是不呈现的。只有`symbol`元素的实例（亦即，一个引用了`symbol`的 {{ SVGElement("use") }}元素）才能呈现。
 
@@ -41,9 +38,9 @@ original_slug: Web/SVG/Element/symbol
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

@@ -1,10 +1,7 @@
 ---
 title: fePointLight
 slug: Web/SVG/Reference/Element/fePointLight
-original_slug: Web/SVG/Element/fePointLight
 ---
-
-{{SVGRef}}
 
 ## 使用上下文
 
@@ -16,7 +13,7 @@ original_slug: Web/SVG/Element/fePointLight
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
 
 ### 专有属性
 
@@ -37,4 +34,4 @@ original_slug: Web/SVG/Element/fePointLight
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feDistantLight") }}
 - {{ SVGElement("feSpotLight") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

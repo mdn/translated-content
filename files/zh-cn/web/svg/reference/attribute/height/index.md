@@ -1,10 +1,7 @@
 ---
 title: height
 slug: Web/SVG/Reference/Attribute/height
-original_slug: Web/SVG/Attribute/height
 ---
-
-{{SVGRef}}
 
 该属性在用户坐标系统中标识了一个垂直长度。该坐标的确切效果依赖于每个元素。大多数时候，它体现引用元素的矩形区域的高度（请阅读每个元素的文档以了解例外情况）。
 
@@ -27,7 +24,7 @@ original_slug: Web/SVG/Attribute/height
 
 下列元素可以使用 `height` 属性：
 
-- [滤镜元素](/zh-CN/docs/Web/SVG/Element#filterprimitive) »
+- [滤镜元素](/zh-CN/docs/Web/SVG/Reference/Element#filterprimitive) »
 - {{ SVGElement("filter") }}
 - {{ SVGElement("foreignObject") }}
 - {{ SVGElement("image") }}

@@ -1,10 +1,7 @@
 ---
 title: animateTransform
 slug: Web/SVG/Reference/Element/animateTransform
-original_slug: Web/SVG/Element/animateTransform
 ---
-
-{{SVGRef}}
 
 `animateTransform`元素变动了目标元素上的一个变形属性，从而允许动画控制转换、缩放、旋转或斜切。
 
@@ -42,14 +39,14 @@ original_slug: Web/SVG/Element/animateTransform
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#条件处理属性)
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#核心属性)
-- [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#动画事件属性)
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#xlink_属性)
-- [动画属性目标属性](/zh-CN/docs/Web/SVG/Attribute#动画属性目标属性)
-- [动画定时属性](/zh-CN/docs/Web/SVG/Attribute#动画时间属性)
-- [动画值属性](/zh-CN/docs/Web/SVG/Attribute#动画取值属性)
-- [动画累加属性](/zh-CN/docs/Web/SVG/Attribute#动画累加属性)
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#条件处理属性)
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#核心属性)
+- [动画事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画事件属性)
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink_属性)
+- [动画属性目标属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画属性目标属性)
+- [动画定时属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画时间属性)
+- [动画值属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画取值属性)
+- [动画累加属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画累加属性)
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 专有属性

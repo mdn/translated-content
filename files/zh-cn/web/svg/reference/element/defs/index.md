@@ -1,10 +1,7 @@
 ---
 title: defs
 slug: Web/SVG/Reference/Element/defs
-original_slug: Web/SVG/Element/defs
 ---
-
-{{SVGRef}}
 
 SVG 允许我们定义以后需要重复使用的图形元素。建议把所有需要再次使用的引用元素定义在`defs`元素里面。这样做可以增加 SVG 内容的易读性和无障碍。在`defs`元素中定义的图形元素不会直接呈现。你可以在你的视口的任意地方利用 {{ SVGElement("use") }}元素呈现这些元素。
 
@@ -34,10 +31,10 @@ SVG 允许我们定义以后需要重复使用的图形元素。建议把所有�
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

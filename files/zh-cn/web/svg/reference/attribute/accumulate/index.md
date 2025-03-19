@@ -1,12 +1,9 @@
 ---
 title: accumulate
 slug: Web/SVG/Reference/Attribute/accumulate
-original_slug: Web/SVG/Attribute/accumulate
 l10n:
   sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
-
-{{SVGRef}}
 
 该属性控制了动画是否是累加的。
 

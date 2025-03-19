@@ -1,12 +1,9 @@
 ---
 title: <mpath>
 slug: Web/SVG/Reference/Element/mpath
-original_slug: Web/SVG/Element/mpath
 l10n:
   sourceCommit: da99ca19ae62059f81dbee3f7b4919de784f3510
 ---
-
-{{SVGRef}}
 
 **`<mpath>`** [SVG](/zh-CN/docs/Web/SVG) 子元素用于 {{SVGElement("animateMotion")}} 元素，它提供了引用外部 {{SVGElement("path")}} 元素作为运动路径定义的能力。
 

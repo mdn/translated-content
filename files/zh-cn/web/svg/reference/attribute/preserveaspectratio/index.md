@@ -1,10 +1,7 @@
 ---
 title: preserveAspectRatio
 slug: Web/SVG/Reference/Attribute/preserveAspectRatio
-original_slug: Web/SVG/Attribute/preserveAspectRatio
 ---
-
-{{SVGRef}}
 
 有时候，通常我们使用 {{ SVGAttr("viewBox") }} 属性时，希望图形拉伸占据整个视口。在其他情况下，为了保持图形的长宽比，必须使用统一的缩放比例。
 

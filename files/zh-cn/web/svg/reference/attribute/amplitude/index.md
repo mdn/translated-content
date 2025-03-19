@@ -1,12 +1,9 @@
 ---
 title: amplitude
 slug: Web/SVG/Reference/Attribute/amplitude
-original_slug: Web/SVG/Attribute/amplitude
 l10n:
   sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
-
-{{SVGRef}}
 
 **`amplitude`** 属性用于在 {{SVGAttr("type")}} 属性为 `gamma` 时，控制组件转换元素的伽马函数的幅值。
 

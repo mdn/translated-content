@@ -1,10 +1,7 @@
 ---
 title: stroke-miterlimit
 slug: Web/SVG/Reference/Attribute/stroke-miterlimit
-original_slug: Web/SVG/Attribute/stroke-miterlimit
 ---
-
-{{SVGRef}}
 
 如果两条线交汇在一起形成一个尖角，而且属性 {{ SVGAttr("stroke-linejoin") }} 指定了 `miter`，斜接有可能扩展到远远超过出路径轮廓线的线宽。属性 `stroke-miterlimit` 对斜接长度和 {{ SVGAttr("stroke-width") }} 的比率强加了一个极限。当极限到达时，交汇处由斜接变成倒角。
 
@@ -25,7 +22,7 @@ miterLength / stroke-width = 1 / sin ( theta / 2 )
 | 可动性 | Yes                      |
 
 - \<miterlimit>
-  - : 对斜角长度与{{ SVGAttr("stroke-width") }}的比率的限制。\<miterlimit>的值必须是一个大于或等于 1 的[\<number>](/zh-CN/docs/SVG/Content_type#number)。
+  - : 对斜角长度与{{ SVGAttr("stroke-width") }}的比率的限制。\<miterlimit>的值必须是一个大于或等于 1 的[\<number>](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)。
 
 ## 示例
 
@@ -33,8 +30,8 @@ miterLength / stroke-width = 1 / sin ( theta / 2 )
 
 下列元素可以使用`stroke-miterlimit`属性：
 
-- [形状元素](/zh-CN/docs/Web/SVG/Element#shape) »
-- [文本内容元素](/zh-CN/docs/Web/SVG/Element#textcontent) »
+- [形状元素](/zh-CN/docs/Web/SVG/Reference/Element#shape) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Reference/Element#textcontent) »
 
 ## 规范
 

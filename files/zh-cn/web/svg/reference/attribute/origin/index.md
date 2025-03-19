@@ -1,10 +1,7 @@
 ---
 title: origin
 slug: Web/SVG/Reference/Attribute/origin
-original_slug: Web/SVG/Attribute/origin
 ---
-
-{{SVGRef}}
 
 该 **`origin`** 属性指定动画的运动原点。在 SVG 中无效。
 

@@ -1,10 +1,7 @@
 ---
 title: fy
 slug: Web/SVG/Reference/Attribute/fy
-original_slug: Web/SVG/Attribute/fy
 ---
-
-{{SVGRef}}
 
 **`fy`** 属性用来定义径向渐变的焦点的 y 轴坐标。
 

@@ -1,12 +1,9 @@
 ---
 title: image-rendering
 slug: Web/SVG/Reference/Attribute/image-rendering
-original_slug: Web/SVG/Attribute/image-rendering
 l10n:
   sourceCommit: cd840e78b6027a391fe1f11b745564cf3ebfb8e7
 ---
-
-{{SVGRef}}
 
 **`image-rendering`** 属性向浏览器提供了一个在图片处理时应如何权衡速度和质量的提示。
 

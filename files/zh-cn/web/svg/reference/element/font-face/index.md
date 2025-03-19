@@ -1,12 +1,11 @@
 ---
 title: <font-face>
 slug: Web/SVG/Reference/Element/font-face
-original_slug: Web/SVG/Element/font-face
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<font-face>`** [SVG](/zh-CN/docs/Web/SVG) 元素对应于 CSS 的 {{cssxref("@font-face")}} 规则，用于定义字体的外部属性。
 
@@ -66,4 +65,4 @@ l10n:
 
 - {{SVGElement("font")}}
 - {{SVGElement("font-face-src")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)

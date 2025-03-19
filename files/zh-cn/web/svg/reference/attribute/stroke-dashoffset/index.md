@@ -1,12 +1,9 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Reference/Attribute/stroke-dashoffset
-original_slug: Web/SVG/Attribute/stroke-dashoffset
 l10n:
   sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
-
-{{SVGRef}}
 
 **`stroke-dashoffset`** 是一种表现属性，它定义了虚线与路径起点之间的偏移量。
 
@@ -90,13 +87,13 @@ svg {
       <th scope="row">值</th>
       <td>
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#percentage"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
         |
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#length"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
@@ -113,7 +110,7 @@ svg {
   </tbody>
 </table>
 
-偏移量的计算通常基于 {{SVGAttr('pathLength')}}，但如果使用 [\<percentage>](/zh-CN/docs/Web/SVG/Content_type#百分数) 值，那么将根据当前视口的百分比进行计算。
+偏移量的计算通常基于 {{SVGAttr('pathLength')}}，但如果使用 [\<percentage>](/zh-CN/docs/Web/SVG/Guides/Content_type#百分数) 值，那么将根据当前视口的百分比进行计算。
 
 ## 规范
 

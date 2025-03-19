@@ -1,12 +1,9 @@
 ---
 title: SVG 元素参考
 slug: Web/SVG/Reference/Element
-original_slug: Web/SVG/Element
 l10n:
   sourceCommit: 2befe9ec5792e13f720396535a4aa20111be96ef
 ---
-
-{{SVGRef}}
 
 SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图像的结构、绘制与布局。在这里，你可以找到每个 SVG 元素的参考文档。
 
@@ -233,6 +230,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ## 参见
 
-- [SVG 属性参考](/zh-CN/docs/Web/SVG/Attribute)
-- [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial)
+- [SVG 属性参考](/zh-CN/docs/Web/SVG/Reference/Attribute)
+- [SVG 教程](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG 接口参考](/zh-CN/docs/Web/API/Document_Object_Model#svg_dom)

@@ -1,7 +1,6 @@
 ---
 title: script
 slug: Web/SVG/Reference/Element/script
-original_slug: Web/SVG/Element/script
 ---
 
 一个 SVG 脚本元素等同于 HTML 中的 `script` 元素，因此这个位置是面向脚本的（例如，ECMAScript）。
@@ -51,8 +50,8 @@ original_slug: Web/SVG/Element/script
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [Xlink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### 专有属性
@@ -71,5 +70,3 @@ original_slug: Web/SVG/Element/script
 ## 参见
 
 - [HTML 中的 `script` 元素](/zh-CN/docs/HTML/Element/Script)
-
-{{SVGRef}}

@@ -1,12 +1,9 @@
 ---
 title: <feGaussianBlur>
 slug: Web/SVG/Reference/Element/feGaussianBlur
-original_slug: Web/SVG/Element/feGaussianBlur
 l10n:
   sourceCommit: 01b8471b84e1d157cbddbb3ffaf560a86b082070
 ---
-
-{{SVGRef}}
 
 **`<feGaussianBlur>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语根据 {{SVGAttr("stdDeviation")}} 指定的值（其定义了模糊的钟形曲线）对输入图像进行模糊处理。
 
@@ -87,7 +84,7 @@ l10n:
 
 ## 参见
 
-- [SVG 滤镜原始属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
+- [SVG 滤镜原始属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜属性)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
@@ -104,4 +101,4 @@ l10n:
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

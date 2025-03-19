@@ -1,10 +1,7 @@
 ---
 title: style
 slug: Web/SVG/Reference/Attribute/style
-original_slug: Web/SVG/Attribute/style
 ---
-
-{{SVGRef}}
 
 **`style`** 属性指定了指定其元素的样式信息。它的功能与 HTML 中的 [style](/zh-CN/docs/Web/HTML/Global_attributes/style) 属性相同。
 
@@ -37,12 +34,12 @@ original_slug: Web/SVG/Attribute/style
 
 以下元素可以使用 style 属性
 
-- [Container elements](/zh-CN/docs/Web/SVG/Element#container) »
-- [Filter primitive elements](/zh-CN/docs/Web/SVG/Element#filterprimitive) »
-- [Gradient elements](/zh-CN/docs/Web/SVG/Element#gradient) »
-- [Graphics elements](/zh-CN/docs/Web/SVG/Element#graphics) »
-- [Structural elements](/zh-CN/docs/Web/SVG/Element#structural) »
-- [Text content elements](/zh-CN/docs/Web/SVG/Element#textcontent) »
+- [Container elements](/zh-CN/docs/Web/SVG/Reference/Element#container) »
+- [Filter primitive elements](/zh-CN/docs/Web/SVG/Reference/Element#filterprimitive) »
+- [Gradient elements](/zh-CN/docs/Web/SVG/Reference/Element#gradient) »
+- [Graphics elements](/zh-CN/docs/Web/SVG/Reference/Element#graphics) »
+- [Structural elements](/zh-CN/docs/Web/SVG/Reference/Element#structural) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Reference/Element#textcontent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
 - {{ SVGElement("font") }}

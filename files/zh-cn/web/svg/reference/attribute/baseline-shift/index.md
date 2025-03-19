@@ -1,12 +1,9 @@
 ---
 title: baseline-shift
 slug: Web/SVG/Reference/Attribute/baseline-shift
-original_slug: Web/SVG/Attribute/baseline-shift
 l10n:
   sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
 ---
-
-{{SVGRef}}
 
 **`baseline-shift`** 属性允许相对于父文本内容元素的 dominant-baseline 重新定位 dominant-baseline。移动的对象可能是上标或下标。
 

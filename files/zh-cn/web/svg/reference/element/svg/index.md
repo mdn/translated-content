@@ -1,10 +1,7 @@
 ---
 title: svg
 slug: Web/SVG/Reference/Element/svg
-original_slug: Web/SVG/Element/svg
 ---
-
-{{SVGRef}}
 
 - 如果 svg 不是根元素，`svg` 元素可以用于在当前文档（比如说，一个 HTML 文档）内嵌套一个独立的 svg 片段。这个独立片段拥有独立的视口和坐标系统。
 
@@ -51,11 +48,11 @@ original_slug: Web/SVG/Element/svg
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
-- [文档事件属性](/zh-CN/docs/Web/SVG/Attribute#documentevent) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [文档事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#documentevent) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

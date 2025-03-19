@@ -1,12 +1,9 @@
 ---
 title: id
 slug: Web/SVG/Reference/Attribute/id
-original_slug: Web/SVG/Attribute/id
 l10n:
   sourceCommit: 5c000c8621145c6915f3d545b505c216317bc64a
 ---
-
-{{SVGRef}}
 
 **`id`** 属性为元素分配一个唯一的名称。
 

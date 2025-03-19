@@ -1,10 +1,7 @@
 ---
 title: metadata
 slug: Web/SVG/Reference/Element/metadata
-original_slug: Web/SVG/Element/metadata
 ---
-
-{{SVGRef}}
 
 `metadata`是数据的结构化数据。SVG 内容里面包含的元数据必须放在`metadata`元素里面。`medatata`的内容物必须是来自其他 XML 命名空间的元素，比如说 RDF、FOAT，等等。
 
@@ -18,7 +15,7 @@ original_slug: Web/SVG/Element/metadata
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
 
 ### 专有属性
 

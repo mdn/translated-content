@@ -1,10 +1,7 @@
 ---
 title: r
 slug: Web/SVG/Reference/Attribute/r
-original_slug: Web/SVG/Attribute/r
 ---
-
-{{SVGRef}}
 
 **`r`** 属性用来定义圆的半径。
 
@@ -51,10 +48,10 @@ svg {
 
 对于 {{SVGElement('circle')}}，`r` 用来定义圆的半径以及它的大小。取值小于或等于零，圆将不会被绘制出来。
 
-| 值     | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#percentage)** |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| 默认值 | `0`                                                                                                                          |
-| 可变性 | Yes                                                                                                                          |
+| 值     | **[\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Guides/Content_type#percentage)** |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 默认值 | `0`                                                                                                                                        |
+| 可变性 | Yes                                                                                                                                        |
 
 **注：**起始于 SVG2，`r` 是一个几何属性，意味着该属性也可以用作圆的 CSS 属性。
 
@@ -64,10 +61,10 @@ svg {
 
 渐变将以此绘制出来：**100%** 渐变停止点会被映射到终止圆的一周上。取值小于或等于零，将会使用最后一个渐变 {{ SVGElement("stop") }} 的颜色和不透明度，导致该区域被绘制为单色。
 
-| 值     | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#percentage)** |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| 默认值 | `50%`                                                                                                                        |
-| 可变性 | Yes                                                                                                                          |
+| 值     | **[\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Guides/Content_type#percentage)** |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 默认值 | `50%`                                                                                                                                      |
+| 可变性 | Yes                                                                                                                                        |
 
 ## 规范
 

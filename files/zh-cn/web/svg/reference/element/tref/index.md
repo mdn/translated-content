@@ -1,10 +1,7 @@
 ---
 title: tref
 slug: Web/SVG/Reference/Element/tref
-original_slug: Web/SVG/Element/tref
 ---
-
-{{SVGRef}}
 
 {{ SVGElement("text") }} 的文本内容既可以是直接嵌入在 {{SVGElement("text")}} 元素中的字符数据，也可以是引用元素的字符数据内容，`tref` 元素用来指定的包含文本内容的引用元素。
 
@@ -42,11 +39,11 @@ original_slug: Web/SVG/Element/tref
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
-- [Xlink 属性](/zh-CN/docs/SVG/Attribute#xlink) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

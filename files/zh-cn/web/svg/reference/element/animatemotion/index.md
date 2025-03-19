@@ -1,10 +1,7 @@
 ---
 title: animateMotion
 slug: Web/SVG/Reference/Element/animateMotion
-original_slug: Web/SVG/Element/animateMotion
 ---
-
-{{SVGRef}}
 
 `<animateMotion>` 元素定义了一个元素如何沿着运动路径进行移动。
 
@@ -46,13 +43,13 @@ svg {
 
 ### Global 属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
-- [动画事件属性](/zh-CN/docs/Web/SVG/Attribute#animationevent) »
-- [Xlink 属性](/zh-CN/docs/Web/SVG/Attribute#xlink) »
-- [动画定时属性](/zh-CN/docs/Web/SVG/Attribute#animationtiming) »
-- [动画值属性](/zh-CN/docs/Web/SVG/Attribute#animationvalue) »
-- [An 动画累加属性](/zh-CN/docs/Web/SVG/Attribute#animationaddition) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [动画事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#animationevent) »
+- [Xlink 属性](/zh-CN/docs/Web/SVG/Reference/Attribute#xlink) »
+- [动画定时属性](/zh-CN/docs/Web/SVG/Reference/Attribute#animationtiming) »
+- [动画值属性](/zh-CN/docs/Web/SVG/Reference/Attribute#animationvalue) »
+- [An 动画累加属性](/zh-CN/docs/Web/SVG/Reference/Attribute#animationaddition) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 专有属性

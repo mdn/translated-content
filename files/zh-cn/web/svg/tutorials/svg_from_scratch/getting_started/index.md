@@ -1,12 +1,9 @@
 ---
 title: 入门
 slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-original_slug: Web/SVG/Tutorial/Getting_Started
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
 ## 一个简单的示例
 
@@ -37,7 +34,7 @@ original_slug: Web/SVG/Tutorial/Getting_Started
 
    - 应舍弃来自 (X)HTML 的 doctype 声明，因为基于 DTD 的 SVG 验证导致的问题比它能解决的问题更多。
    - SVG 2 之前 `version` 属性和 `baseProfile` 属性用来供其他类型的验证识别 SVG 的版本。SVG 2 已弃用 `version` 和 `baseProfile` 这两个属性。
-   - 作为 XML 的一种方言，SVG 必须正确的绑定命名空间（在 xmlns 属性中绑定）。请阅读[命名空间速成](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course)页面获取更多信息。
+   - 作为 XML 的一种方言，SVG 必须正确的绑定命名空间（在 xmlns 属性中绑定）。请阅读[命名空间速成](/zh-CN/docs/Web/SVG/Guides/Namespaces_crash_course)页面获取更多信息。
 
 2. 绘制一个完全覆盖图像区域的矩形 {{SVGElement("rect")}}，把背景颜色设为红色。
 3. 一个半径 80px 的绿色圆圈 {{SVGElement("circle")}} 绘制在红色矩形的正中央（向右偏移 150px，向下偏移 100px）。
@@ -65,7 +62,7 @@ original_slug: Web/SVG/Tutorial/Getting_Started
 
   - 最后，SVG 可以通过 JavaScript 动态创建并注入到 HTML DOM 中。
 
-- SVG 如何处理大小和单位将在[下一页](/zh-CN/docs/Web/SVG/Tutorial/Positions)详解。
+- SVG 如何处理大小和单位将在[下一页](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions)详解。
 
 ## SVG 文件类型
 
@@ -94,4 +91,4 @@ Vary: Accept-Encoding
 
 服务器配置错误是 SVG 加载失败的常见原因，所以一定要确保你的服务器配置正确。如果不能把服务器配置成给 SVG 文件发送正确的响应标头，这时 Firefox 很有可能把该文件的标记显示成文本或乱码，甚至会要求查看者选择打开文件的应用程序。
 
-{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

@@ -1,12 +1,9 @@
 ---
 title: <feTile>
 slug: Web/SVG/Reference/Element/feTile
-original_slug: Web/SVG/Element/feTile
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
-
-{{SVGRef}}
 
 **`<feTile>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语允许使用输入图像的重复、平铺模式来填充目标矩形。此效果类似于 {{SVGElement("pattern")}} 元素的效果。
 
@@ -89,4 +86,4 @@ l10n:
 - {{SVGElement("feOffset")}}
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

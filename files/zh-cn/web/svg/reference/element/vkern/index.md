@@ -1,12 +1,11 @@
 ---
 title: <vkern>
 slug: Web/SVG/Reference/Element/vkern
-original_slug: Web/SVG/Element/vkern
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<vkern>`** SVG 元素用于精细调整垂直方向字体中两个字形之间的距离。这一过程被称为[字距调整](https://en.wikipedia.org/wiki/Kerning)。
 
@@ -39,4 +38,4 @@ l10n:
 - {{SVGElement("font")}}
 - {{SVGElement("glyph")}}
 - {{SVGElement("hkern")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)

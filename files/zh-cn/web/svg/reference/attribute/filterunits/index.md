@@ -1,12 +1,9 @@
 ---
 title: filterUnits
 slug: Web/SVG/Reference/Attribute/filterUnits
-original_slug: Web/SVG/Attribute/filterUnits
 l10n:
   sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
-
-{{SVGRef}}
 
 **`filterUnits`** 属性定义了 {{SVGAttr("x")}}、{{SVGAttr("y")}}、{{SVGAttr("width")}} 和 {{SVGAttr("height")}} 属性的坐标系。
 

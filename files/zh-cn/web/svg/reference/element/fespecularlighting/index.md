@@ -1,10 +1,7 @@
 ---
 title: feSpecularLighting
 slug: Web/SVG/Reference/Element/feSpecularLighting
-original_slug: Web/SVG/Element/feSpecularLighting
 ---
-
-{{SVGRef}}
 
 该滤镜照亮一个源图形，使用 alpha 通道作为隆起映射。该结果图像是一个基于光色的 RGBA 图象。该光照计算遵守标准[冯氏照明模式](http://en.wikipedia.org/wiki/Phong_reflection_model)的镜面组件。结果图像依赖于光色、光的位置以及输入隆起映射的表面几何形状。光照计算的结果是叠加的。该滤镜假定观察者在 X 方向无穷远处。
 
@@ -20,9 +17,9 @@ original_slug: Web/SVG/Element/feSpecularLighting
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -59,4 +56,4 @@ original_slug: Web/SVG/Element/feSpecularLighting
 - {{ SVGElement("feSpotLight") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

@@ -1,10 +1,7 @@
 ---
 title: feTurbulence
 slug: Web/SVG/Reference/Element/feTurbulence
-original_slug: Web/SVG/Element/feTurbulence
 ---
-
-{{SVGRef}}
 
 该滤镜利用 Perlin 噪声函数创建了一个图像。它实现了人造纹理比如说云纹、大理石纹的合成。
 
@@ -18,9 +15,9 @@ original_slug: Web/SVG/Element/feTurbulence
 
 ### Global 属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -56,4 +53,4 @@ original_slug: Web/SVG/Element/feTurbulence
 - {{ SVGElement("feOffset") }}
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

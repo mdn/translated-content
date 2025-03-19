@@ -1,18 +1,15 @@
 ---
 title: 路径
 slug: Web/SVG/Tutorials/SVG_from_scratch/Paths
-original_slug: Web/SVG/Tutorial/Paths
 ---
 
-{{SVGRef}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
-
-如上一章所说，[`<path>`](/zh-CN/docs/Web/SVG/Element/path)元素是 SVG [基本形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)中最强大的一个。你可以用它创建线条，曲线，弧形等等。
+如上一章所说，[`<path>`](/zh-CN/docs/Web/SVG/Reference/Element/path)元素是 SVG [基本形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)中最强大的一个。你可以用它创建线条，曲线，弧形等等。
 
 另外，path 只需要设定很少的点，就可以创建平滑流畅的线条（比如曲线）。虽然`polyline`元素也能实现类似的效果，但是必须设置大量的点（点越密集，越接近连续，看起来越平滑流畅），并且这种做法不能够放大（放大后，点的离散更明显）。所以在绘制 SVG 时，对路径的良好理解很重要。虽然不建议使用 XML 编辑器或文本编辑器创建复杂的路径，但了解它们的工作方式将有助于识别和修复 SVG 中的显示问题。
 
-[上一章](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)提到过，path 元素的形状是通过属性 {{ SVGAttr("d") }} 定义的，属性`d`的值是一个“命令 + 参数”的序列，我们将讲解这些可用的命令，并且展示一些示例。
+[上一章](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)提到过，path 元素的形状是通过属性 {{ SVGAttr("d") }} 定义的，属性`d`的值是一个“命令 + 参数”的序列，我们将讲解这些可用的命令，并且展示一些示例。
 
 每一个命令都用一个关键字母来表示，比如，字母“M”表示的是“Move to”命令，当解析器读到这个命令时，它就知道你是打算移动到某个点。跟在命令字母后面的，是你需要移动到的那个点的 x 和 y 轴坐标。比如移动到 (10,10) 这个点的命令，应该写成“M 10 10”。这一段字符结束后，解析器就会去读下一段命令。每一个命令都有两种表示方式，一种是用**大写字母**，表示采用绝对定位。另一种是用**小写字母**，表示采用相对定位（例如：_从上一个点开始，向上移动 10px，向左移动 7px_）。
 
@@ -201,7 +198,7 @@ t dx dy
  a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 ```
 
-弧形命令 A 的前两个参数分别是 x 轴半径和 y 轴半径，它们的作用很明显，不用多做解释，如果你不是很清楚它们的作用，可以参考一下椭圆 [ellipse](/zh-CN/docs/Web/SVG/Element/ellipse)命令中的相同参数。弧形命令 A 的第三个参数表示弧形的旋转情况，下面的例子可以很好地解释它：
+弧形命令 A 的前两个参数分别是 x 轴半径和 y 轴半径，它们的作用很明显，不用多做解释，如果你不是很清楚它们的作用，可以参考一下椭圆 [ellipse](/zh-CN/docs/Web/SVG/Reference/Element/ellipse)命令中的相同参数。弧形命令 A 的第三个参数表示弧形的旋转情况，下面的例子可以很好地解释它：
 
 ![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
@@ -262,4 +259,4 @@ t dx dy
 
 如果你是从 {{HTMLElement("canvas")}} 过渡到 SVG，那么弧形会比较难以掌握，但它也是非常强大的。用路径来绘制完整的圆或者椭圆是比较困难的，因为圆上的任意点都可以是起点同时也是终点，无数种方案可以选择，真正的路径无法定义。通过绘制连续的路径段落，也可以达到近似的效果，但使用真正的 circle 或者 ellipse 元素会更容易一些。
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}

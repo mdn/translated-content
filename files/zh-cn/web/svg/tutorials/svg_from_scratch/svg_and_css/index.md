@@ -1,12 +1,9 @@
 ---
 title: SVG 和 CSS
 slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
-original_slug: Web/SVG/Tutorial/SVG_and_CSS
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 本节将演示如何将 CSS 应用到 [SVG](/zh-CN/docs/Web/SVG) 中。
 
@@ -396,7 +393,7 @@ svg {
 
 [查看挑战的参考答案](/zh-CN/docs/Learn_web_development/Core/Challenges#svg_和_css)
 
-{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 ## 接下来？
 

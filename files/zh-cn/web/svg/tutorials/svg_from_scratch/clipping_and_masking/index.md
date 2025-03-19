@@ -1,12 +1,9 @@
 ---
 title: 剪切和遮罩
 slug: Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
-original_slug: Web/SVG/Tutorial/Clipping_and_masking
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations", "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG") }}
 
 擦除已经创建的元素的部分内容，最初看起来有点矛盾。但是如果你打算在 SVG 中创建一个半圆形，你将很快发现下面的属性的作用了。
 
@@ -106,4 +103,4 @@ original_slug: Web/SVG/Tutorial/Clipping_and_masking
 
 Web 开发工具箱中有一个很有用的工具是 `display:none`。因此，决定将此 CSS 属性与 CSS 2 中定义的 `visibility` 和 `clip` 属性一起纳入 SVG 并不奇怪。对于恢复以前设置的 `display:none`，重要的是知道所有的 SVG 元素的初始 `display` 值都是 `inline`。
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations", "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG") }}

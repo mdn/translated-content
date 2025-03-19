@@ -1,10 +1,7 @@
 ---
 title: vector-effect
 slug: Web/SVG/Reference/Attribute/vector-effect
-original_slug: Web/SVG/Attribute/vector-effect
 ---
-
-{{SVGRef}}
 
 **`vector-effect`** 属性指明绘制对象时要使用的矢量效果。在任何其他合成操作（如滤镜，蒙版和剪辑等）之前，都要应用矢量效果。
 

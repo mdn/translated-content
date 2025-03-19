@@ -1,12 +1,11 @@
 ---
 title: <font>
 slug: Web/SVG/Reference/Element/font
-original_slug: Web/SVG/Element/font
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<font>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于定义文本布局的字体。
 
@@ -40,4 +39,4 @@ l10n:
 - {{SVGElement("font-face")}}
 - {{SVGElement("glyph")}}
 - {{SVGElement("text")}}
-- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)

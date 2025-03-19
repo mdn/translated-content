@@ -1,10 +1,7 @@
 ---
 title: x
 slug: Web/SVG/Reference/Attribute/x
-original_slug: Web/SVG/Attribute/x
 ---
-
-{{SVGRef}}
 
 **`x`** 属性在用户坐标系统中标识了一个 x 轴坐标。
 
@@ -79,13 +76,13 @@ svg {
       <th scope="row">值</th>
       <td>
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#长度"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#长度"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#百分数"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#百分数"
             >&#x3C;percentage></a
           ></strong
         >

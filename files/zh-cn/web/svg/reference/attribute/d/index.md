@@ -1,12 +1,9 @@
 ---
 title: d
 slug: Web/SVG/Reference/Attribute/d
-original_slug: Web/SVG/Attribute/d
 l10n:
   sourceCommit: 8cd08162e592c1baf5d888f4c5a08a58360344b5
 ---
-
-{{SVGRef}}
 
 **`d`** 属性定义了一个要绘制的路径。
 
@@ -50,7 +47,7 @@ svg {
     <tr>
       <th scope="row">值</th>
       <td>
-        <strong><a href="/zh-CN/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -76,7 +73,7 @@ svg {
     <tr>
       <th scope="row">值</th>
       <td>
-        <strong><a href="/zh-CN/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -105,7 +102,7 @@ svg {
     <tr>
       <th scope="row">值</th>
       <td>
-        <strong><a href="/zh-CN/docs/Web/SVG/Content_type#String">&#x3C;string></a></strong>
+        <strong><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#String">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>

@@ -1,12 +1,9 @@
 ---
 title: azimuth
 slug: Web/SVG/Reference/Attribute/azimuth
-original_slug: Web/SVG/Attribute/azimuth
 l10n:
   sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
-
-{{SVGRef}}
 
 **`azimuth`** 属性指定了光源在 XY 平面上的方向角度（顺时针），以相对于 x 轴的度数为单位。
 

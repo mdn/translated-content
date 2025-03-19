@@ -1,12 +1,9 @@
 ---
 title: path
 slug: Web/SVG/Reference/Element/path
-original_slug: Web/SVG/Element/path
 ---
 
-{{SVGRef}}
-
-**[起步](/zh-CN/docs/Web/SVG/Tutorial/Paths)**
+**[起步](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)**
 本教程将教你开始使用 SVG 路径。
 
 path 元素是用来定义形状的通用元素。所有的基本形状都可以用 path 元素来创建。
@@ -44,10 +41,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -74,4 +71,4 @@ svg {
 - {{SVGElement("polygon")}}
 - {{SVGElement("polyline")}}
 - {{SVGElement("rect")}}
-- [The MDN SVG "Getting Started" tutorial : Path](/zh-CN/docs/Web/SVG/Tutorial/Paths)
+- [The MDN SVG "Getting Started" tutorial : Path](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

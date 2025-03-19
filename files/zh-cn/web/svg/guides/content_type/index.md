@@ -1,10 +1,7 @@
 ---
 title: 内容类型
 slug: Web/SVG/Guides/Content_type
-original_slug: Web/SVG/Content_type
 ---
-
-{{SVGRef}}
 
 SVG 中使用了许多数据类型。本文列出了这些数据类型以及它们的语法和用途的描述。
 
@@ -102,13 +99,13 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 ## 坐标
 
 - \<coordinate>
-  - : 一个\<coordinate> 是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与[\<length>](/zh-CN/docs/Web/SVG#length)相同。在 SVG DOM 内部，一个 \<coordinate> 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}.
+  - : 一个\<coordinate> 是一个用户坐标系统中的长度，是从用户坐标系统的原点沿着相关轴走出给定的距离（X 轴针对 X 坐标，Y 轴针对 Y 坐标）。它的句法与 [\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#长度) 相同。在 SVG DOM 内部，一个 \<coordinate> 代表了一个{{domxref("SVGLength")}} 或者一个{{domxref("SVGAnimatedLength")}}。
 
 ## 频率
 
 - \<frequency>
 
-  - : 频率值用在可听到的属性上。就如 CSS2 中所定义的，一个频率值是一个 [\<number>](/zh-CN/docs/Web/SVG#number) 后面跟着一个频率单位标识符。频率单位标识符可以是：
+  - : 频率值用在可听到的属性上。就如 CSS2 中所定义的，一个频率值是一个 [\<number>](/zh-CN/docs/Web/SVG/Guides/Content_type#数字) 后面跟着一个频率单位标识符。频率单位标识符可以是：
 
     - `Hz`：赫兹
     - `kHz`：千赫
@@ -259,7 +256,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 ## 不透明度值
 
 - \<opacity-value>
-  - : 颜色不透明度或者当前对象填充的内容的不透明度，它是一个[\<number>](/zh-CN/docs/Web/SVG#number)。任何超出 0.0 到 1.0 范围的值将被压制回这个范围。0.0 表示完全透明，1.0 表示完全不透明。
+  - : 颜色不透明度或者当前对象填充的内容的不透明度，它是一个 [\<number>](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)。任何超出 0.0 到 1.0 范围的值将被压制回这个范围。0.0 表示完全透明，1.0 表示完全不透明。
 
 ## 涂色
 

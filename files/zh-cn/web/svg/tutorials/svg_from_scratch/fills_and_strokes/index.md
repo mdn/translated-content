@@ -1,12 +1,9 @@
 ---
 title: 填充和边框
 slug: Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
-original_slug: Web/SVG/Tutorial/Fills_and_Strokes
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}
 
 可以使用几种方法来着色（包括指定对象的属性）使用内联 CSS 样式、内嵌 CSS 样式，或者使用外部 CSS 样式文件。大多数的 web 网站的 SVG 使用的是内联样式 CSS，对于这些方法都有优缺点。
 
@@ -151,4 +148,4 @@ CSS 可以利用 style 属性插入到元素的行间：
 }
 ```
 
-{{ PreviousNext("Web/SVG/Tutorial/Paths", "Web/SVG/Tutorial/Gradients") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Paths", "Web/SVG/Tutorials/SVG_from_scratch/Gradients") }}

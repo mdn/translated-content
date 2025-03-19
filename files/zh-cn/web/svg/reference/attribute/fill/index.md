@@ -1,10 +1,7 @@
 ---
 title: fill
 slug: Web/SVG/Reference/Attribute/fill
-original_slug: Web/SVG/Attribute/fill
 ---
-
-{{SVGRef}}
 
 `fill` 属性根据它的使用环境，拥有两个意义。
 
@@ -14,11 +11,10 @@ original_slug: Web/SVG/Attribute/fill
 
 ### 对动画元素
 
-| 类别     | 动画定时属性                                                                  |
-| -------- | ----------------------------------------------------------------------------- |
-| 值       | **remove** \| freeze                                                          |
-| 可变性   | No                                                                            |
-| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#FillAttribute) |
+| 类别   | 动画定时属性         |
+| ------ | -------------------- |
+| 值     | **remove** \| freeze |
+| 可变性 | No                   |
 
 - remove（默认值）
   - : 在动画的激活持续时间结束后，动画效果会移除（不再应用）。在动画的激活结束后，动画不再对目标元素有影响（除非动画重新开始）。
@@ -27,11 +23,10 @@ original_slug: Web/SVG/Attribute/fill
 
 ### 对形状元素
 
-| 类别     | 外观属性                                                                      |
-| -------- | ----------------------------------------------------------------------------- |
-| 值       | [\<paint>](/zh-CN/docs/SVG/Content_type#paint)                                |
-| 可变性   | Yes                                                                           |
-| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillProperty) |
+| 类别   | 外观属性                                                 |
+| ------ | -------------------------------------------------------- |
+| 值     | [\<paint>](/zh-CN/docs/Web/SVG/Guides/Content_type#涂色) |
+| 可变性 | Yes                                                      |
 
 ## 示例
 
@@ -39,6 +34,14 @@ original_slug: Web/SVG/Attribute/fill
 
 下列元素可以使用`fill`属性：
 
-- [动画元素](/zh-CN/docs/Web/SVG/Element#animation_elements) »
-- [形状元素](/zh-CN/docs/Web/SVG/Element#shape) »
-- [文本内容元素](/zh-CN/docs/Web/SVG/Element#textcontent) »
+- [动画元素](/zh-CN/docs/Web/SVG/Reference/Element#animation_elements) »
+- [形状元素](/zh-CN/docs/Web/SVG/Reference/Element#shape) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Reference/Element#textcontent) »
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}

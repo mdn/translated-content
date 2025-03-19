@@ -1,12 +1,9 @@
 ---
 title: SVG image 元素
 slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
-original_slug: Web/SVG/Tutorial/SVG_Image_Tag
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Using_fonts", "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 SVG 的 {{ SVGElement("image") }} 元素允许在一个 SVG 对象内部呈现光栅图像。
 
@@ -28,4 +25,4 @@ SVG 的 {{ SVGElement("image") }} 元素允许在一个 SVG 对象内部呈现�
 - 如果你没有设置 height 属性或 width 属性，它们自动被设置为 0。
 - 如果 width 属性或 height 等于 0，将不会呈现这个图像。
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Using_fonts", "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}

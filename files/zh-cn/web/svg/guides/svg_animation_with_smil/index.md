@@ -1,10 +1,7 @@
 ---
 title: 使用 SMIL 的 SVG 动画
 slug: Web/SVG/Guides/SVG_animation_with_SMIL
-original_slug: Web/SVG/SVG_animation_with_SMIL
 ---
-
-{{SVGRef}}
 
 > [!WARNING]
 > 虽然 Chrome 45 弃用了 SMIL 而偏向于 CSS 动画和 Web 动画，但之后 Chrome 开发者[中止了](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ)对 SMIL 的弃用。

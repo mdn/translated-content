@@ -1,20 +1,16 @@
 ---
 title: fr
 slug: Web/SVG/Reference/Attribute/fr
-original_slug: Web/SVG/Attribute/fr
 ---
-
-{{SVGRef}}
 
 对于 {{ SVGElement("radialGradient") }} 元素，此属性用来定义径向渐变的焦点的半径。若该属性没有被定义，默认值为 0%。
 
 ## 使用说明
 
-| 类别     | 无                                                                                                                            |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 值       | [\<length>](/zh-CN/docs/Web/SVG/Content_type#length)                                                                          |
-| 可变性   | 非                                                                                                                            |
-| 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](https://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
+| 类别   | 无                                                          |
+| ------ | ----------------------------------------------------------- |
+| 值     | [\<length>](/zh-CN/docs/Web/SVG/Guides/Content_type#length) |
+| 可变性 | 非                                                          |
 
 ## 示例
 

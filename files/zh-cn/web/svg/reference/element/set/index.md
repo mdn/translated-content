@@ -1,12 +1,9 @@
 ---
 title: <set>
 slug: Web/SVG/Reference/Element/set
-original_slug: Web/SVG/Element/set
 l10n:
   sourceCommit: da99ca19ae62059f81dbee3f7b4919de784f3510
 ---
-
-{{SVGRef}}
 
 **`<set>`** [SVG](/zh-CN/docs/Web/SVG) 元素提供了一种在指定时间内设置属性值的方法。
 
@@ -47,7 +44,7 @@ svg {
 ## 属性
 
 - {{SVGAttr("to")}}
-  - : 此属性定义了在动画持续时间内应用于目标属性的值。该值必须符合目标属性的要求。_值类型_：[**\<anything>**](/zh-CN/docs/Web/SVG/Content_type#anything)；_默认值_：无；_动画性_：**否**
+  - : 此属性定义了在动画持续时间内应用于目标属性的值。该值必须符合目标属性的要求。_值类型_：[**\<anything>**](/zh-CN/docs/Web/SVG/Guides/Content_type#anything)；_默认值_：无；_动画性_：**否**
 
 ## 使用上下文
 
@@ -64,5 +61,5 @@ svg {
 ## 参见
 
 - {{SVGAttr("attributeName")}} 属性
-- [动画时间属性](/zh-CN/docs/Web/SVG/Attribute#动画时间属性)，包括 {{SVGAttr("begin")}}、{{SVGAttr("dur")}}、{{SVGAttr("end")}}、{{SVGAttr("min")}}、{{SVGAttr("max")}}、{{SVGAttr("restart")}}、{{SVGAttr("repeatCount")}}、{{SVGAttr("repeatDur")}} 和 {{SVGAttr("fill")}}。
+- [动画时间属性](/zh-CN/docs/Web/SVG/Reference/Attribute#动画时间属性)，包括 {{SVGAttr("begin")}}、{{SVGAttr("dur")}}、{{SVGAttr("end")}}、{{SVGAttr("min")}}、{{SVGAttr("max")}}、{{SVGAttr("restart")}}、{{SVGAttr("repeatCount")}}、{{SVGAttr("repeatDur")}} 和 {{SVGAttr("fill")}}。
 - {{SVGElement("animate")}}

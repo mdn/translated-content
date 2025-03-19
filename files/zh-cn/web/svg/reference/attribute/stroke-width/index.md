@@ -1,10 +1,7 @@
 ---
 title: stroke-width
 slug: Web/SVG/Reference/Attribute/stroke-width
-original_slug: Web/SVG/Attribute/stroke-width
 ---
-
-{{SVGRef}}
 
 **`stroke-width`** 表现属性定义了应用于图形的外轮廓的宽度。
 
@@ -55,12 +52,12 @@ svg {
       <th scope="row">值</th>
       <td>
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#长度"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#长度"
             >&#x3C;length></a
           ></strong
         > |
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#百分数"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#百分数"
             >&#x3C;percentage></a
           ></strong
         >

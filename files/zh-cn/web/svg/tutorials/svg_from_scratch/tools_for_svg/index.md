@@ -1,12 +1,9 @@
 ---
 title: SVG 工具
 slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
-original_slug: Web/SVG/Tutorial/Tools_for_SVG
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element", "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS") }}
 
 现在我们已经讲解了 SVG 内部的基础。我们将看一看哪些工具可以制作或呈现 SVG 文件。
 
@@ -60,4 +57,4 @@ URL：[www.google.com/google-d-s/drawings/](https://docs.google.com/drawings)
 
 W3C 提供了一个支持 SVG 的[程序列表](https://www.w3.org/Graphics/SVG/WG/wiki/Implementations)。
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element", "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS") }}

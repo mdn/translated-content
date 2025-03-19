@@ -1,10 +1,7 @@
 ---
 title: feDisplacementMap
 slug: Web/SVG/Reference/Element/feDisplacementMap
-original_slug: Web/SVG/Element/feDisplacementMap
 ---
-
-{{SVGRef}}
 
 映射置换滤镜，该滤镜用来自图像中从{{SVGAttr("in2")}}到空间的像素值置换图像从{{SVGAttr("in")}}到空间的像素值。
 
@@ -18,9 +15,9 @@ original_slug: Web/SVG/Element/feDisplacementMap
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
-- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/Web/SVG/Reference/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -56,4 +53,4 @@ original_slug: Web/SVG/Element/feDisplacementMap
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

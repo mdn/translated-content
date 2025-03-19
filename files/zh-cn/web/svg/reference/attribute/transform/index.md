@@ -1,12 +1,9 @@
 ---
 title: transform
 slug: Web/SVG/Reference/Attribute/transform
-original_slug: Web/SVG/Attribute/transform
 l10n:
   sourceCommit: 193ee88d26a8ab4dea8f8b70464167edccee92e1
 ---
-
-{{SVGRef}}
 
 **`transform`** 属性定义应用于元素及其子元素的变换规则列表。
 
@@ -57,7 +54,7 @@ svg {
       <th scope="row">值</th>
       <td>
         <strong
-          ><a href="/zh-CN/docs/Web/SVG/Content_type#transform-list"
+          ><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#transform-list"
             ><code>&#x3C;transform-list></code></a
           ></strong
         >

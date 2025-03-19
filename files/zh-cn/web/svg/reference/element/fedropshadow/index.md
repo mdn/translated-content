@@ -1,10 +1,7 @@
 ---
 title: <feDropShadow>
 slug: Web/SVG/Reference/Element/feDropShadow
-original_slug: Web/SVG/Element/feDropShadow
 ---
-
-{{SVGRef}}
 
 SVG **`<feDropShadow>`** 原语创建输入图像的阴影。它只能在 {{SVGElement('filter')}} 元素内使用
 
@@ -53,11 +50,11 @@ svg {
 ## 属性
 
 - {{SVGAttr("dx")}}
-  - : 此属性定义了投影的 x 轴偏移量。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
+  - : 此属性定义了投影的 x 轴偏移量。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
 - {{SVGAttr("dy")}}
-  - : 此属性定义了投影的 y 轴偏移量。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
+  - : 此属性定义了投影的 y 轴偏移量。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
 - {{SVGAttr("stdDeviation")}}
-  - : 此属性定义了投影的模糊操作的标准差。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
+  - : 此属性定义了投影的模糊操作的标准差。_值类型_：[**\<number>**](/zh-CN/docs/Web/SVG/Guides/Content_type#数字)；_默认值_：`2`；_可用于动画_：**是**
 
 ## 使用上下文
 

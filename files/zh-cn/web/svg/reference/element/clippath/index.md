@@ -1,10 +1,7 @@
 ---
 title: clipPath
 slug: Web/SVG/Reference/Element/clipPath
-original_slug: Web/SVG/Element/clipPath
 ---
-
-{{SVGRef}}
 
 [SVG](/zh-CN/docs/Web/SVG) 元素 **`<clipPath>`** 定义一条剪切路径，可作为其他元素的 {{SVGAttr("clip-path")}} 属性的值。
 

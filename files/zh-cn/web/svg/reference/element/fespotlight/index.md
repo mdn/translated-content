@@ -1,10 +1,7 @@
 ---
 title: feSpotLight
 slug: Web/SVG/Reference/Element/feSpotLight
-original_slug: Web/SVG/Element/feSpotLight
 ---
-
-{{SVGRef}}
 
 `feSpotLight`元素是一种光源元素，用于 SVG 文件。
 
@@ -18,7 +15,7 @@ original_slug: Web/SVG/Element/feSpotLight
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [核心属性](/zh-CN/docs/Web/SVG/Reference/Attribute#core) »
 
 ### 专有属性
 
@@ -44,4 +41,4 @@ original_slug: Web/SVG/Element/feSpotLight
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feDistantLight") }}
 - {{ SVGElement("fePointLight") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

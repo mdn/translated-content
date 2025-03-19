@@ -1,12 +1,9 @@
 ---
 title: baseFrequency
 slug: Web/SVG/Reference/Attribute/baseFrequency
-original_slug: Web/SVG/Attribute/baseFrequency
 l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
-
-{{SVGRef}}
 
 **`baseFrequency`** 属性表示 {{SVGElement("feTurbulence")}} 滤镜原语的噪点函数的基础频率参数。
 
@@ -82,7 +79,7 @@ svg {
     <tr>
       <th scope="row">值</th>
       <td>
-        <a href="/zh-CN/docs/Web/SVG/Content_type#带可取舍的后缀数字的数字"
+        <a href="/zh-CN/docs/Web/SVG/Guides/Content_type#带可取舍的后缀数字的数字"
           >&#x3C;number-optional-number></a
         >
       </td>

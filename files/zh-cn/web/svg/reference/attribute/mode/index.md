@@ -1,10 +1,7 @@
 ---
 title: mode
 slug: Web/SVG/Reference/Attribute/mode
-original_slug: Web/SVG/Attribute/mode
 ---
-
-{{SVGRef}}
 
 **`mode`** 属性定义了 {{SVGElement("feBlend")}} 滤镜原语上的混合模式。
 

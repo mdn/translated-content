@@ -1,10 +1,9 @@
 ---
 title: accent-height
 slug: Web/SVG/Reference/Attribute/accent-height
-original_slug: Web/SVG/Attribute/accent-height
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`accent-height`** 属性定义从原点到重点字符顶部的距离，通过字体坐标系内的距离测量。
 
@@ -21,7 +20,7 @@ original_slug: Web/SVG/Attribute/accent-height
     <tr>
       <th scope="row">值</th>
       <td>
-        <a href="/zh-CN/docs/Web/SVG/Content_type#number">&#x3C;number></a>
+        <a href="/zh-CN/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a>
       </td>
     </tr>
     <tr>

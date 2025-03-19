@@ -85,7 +85,7 @@ background: conic-gradient(
 - `<color-hint>`
   - : {{Glossary("interpolation", "插值")}}提示，定义了在相邻色标之间的渐变如何进行。这个长度定义了渐变色应在两个色标之间的哪一点到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色标之间的中点。
 
-> **备注：** [CSS 渐变中的色标](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
+> **备注：** [CSS 渐变中的色标](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)中的色标遵循相同的规则。
 
 ## 描述
 

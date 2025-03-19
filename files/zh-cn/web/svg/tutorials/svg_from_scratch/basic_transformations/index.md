@@ -1,12 +1,9 @@
 ---
 title: 基础变形
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations
-original_slug: Web/SVG/Tutorial/Basic_Transformations
 ---
 
-{{SVGRef}}
-
-{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Texts", "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking") }}
 
 现在我们准备好开始扭曲我们美丽的图像了。但是首先，让我们正式地介绍{{SVGElement("g")}}元素。利用这个助手，你可以把属性赋给一整个元素集合。实际上，这是它唯一的目的。一个示例：
 
@@ -57,7 +54,7 @@ original_slug: Web/SVG/Tutorial/Basic_Transformations
 
 <math display="block"><semantics><mrow><mo>{</mo><mtable rowspacing="0.5ex"><mtr><mtd><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>a</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>c</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>e</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>new</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>=</mo><mi>b</mi><msub><mi>x</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi></mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>d</mi><msub><mi>y</mi><mstyle mathvariant="normal"><mrow><mi>prev</mi><mi>C</mi><mi>o</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>S</mi><mi>y</mi><mi>s</mi></mrow></mstyle></msub><mo>+</mo><mi>f</mi></mtd></mtr></mtable></mrow><annotation encoding="TeX">\left\{ \begin{matrix} x*{\mathrm{prevCoordSys}} = a x*{\mathrm{newCoordSys}} + c y*{\mathrm{newCoordSys}} + e \\ y*{\mathrm{prevCoordSys}} = b x*{\mathrm{newCoordSys}} + d y*{\mathrm{newCoordSys}} + f \end{matrix} \right.</annotation></semantics></math>
 
-请看[关于 SVG 变形文档的具体实例](/zh-CN/docs/Web/SVG/Attribute/transform#general_transformation)。关于该属性的详细信息可以在 [SVG 推荐标准](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)上找到。
+请看[关于 SVG 变形文档的具体实例](/zh-CN/docs/Web/SVG/Reference/Attribute/transform#general_transformation)。关于该属性的详细信息可以在 [SVG 推荐标准](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)上找到。
 
 ## 坐标系统上的效果
 
@@ -85,4 +82,4 @@ original_slug: Web/SVG/Tutorial/Basic_Transformations
 
 以上示例基本上跟它上面的示例有同样的效果，也就是矩形将是指定的两倍大。
 
-{{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Texts", "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking") }}

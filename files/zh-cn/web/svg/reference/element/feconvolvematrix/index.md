@@ -1,12 +1,9 @@
 ---
 title: <feConvolveMatrix>
 slug: Web/SVG/Reference/Element/feConvolveMatrix
-original_slug: Web/SVG/Element/feConvolveMatrix
 l10n:
   sourceCommit: 1cec868de12e098b0c24d61fd91506887d8d5773
 ---
-
-{{SVGRef}}
 
 **`<feConvolveMatrix>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语应用矩阵卷积的滤镜效果。卷积是将输入图像中的像素与相邻像素组合以生成结果图像。通过卷积可以实现各种各样的图像操作，包括模糊、边缘检测、锐化、浮雕和斜角。
 
@@ -109,7 +106,7 @@ l10n:
 
 ## 参见
 
-- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜原语属性)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Reference/Attribute#滤镜原语属性)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
@@ -128,4 +125,4 @@ l10n:
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

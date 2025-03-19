@@ -1,10 +1,7 @@
 ---
 title: pointer-events
 slug: Web/SVG/Reference/Attribute/pointer-events
-original_slug: Web/SVG/Attribute/pointer-events
 ---
-
-{{SVGRef}}
 
 pointer-events 属性是一个展示属性，用于定义元素是否或何时可能是鼠标事件的目标元素。
 
