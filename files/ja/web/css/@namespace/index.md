@@ -52,7 +52,7 @@ svg|a {
 
 ## 解説
 
-定義された名前空間は、[全称](/ja/docs/Web/CSS/Universal_selectors)、[型](/ja/docs/Web/CSS/Type_selectors)、[属性](/ja/docs/Web/CSS/Attribute_selectors)[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)において、選択する要素をその名前空間に制限するために使用することができます。 `@namespace` ルールは一般に、複数の名前空間を含む文書を扱う場合—例えば、HTML5 でインラインの SVG や MathML を併用する場合や、複数の語彙が混在する XML などでのみ役立ちます。
+定義された名前空間は、[全称](/ja/docs/Web/CSS/Universal_selectors)、[型](/ja/docs/Web/CSS/Type_selectors)、[属性](/ja/docs/Web/CSS/Attribute_selectors)[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)において、選択する要素をその名前空間に制限するために使用することができます。 `@namespace` ルールは一般に、複数の名前空間を含む文書を扱う場合—例えば、HTML5 でインラインの SVG や MathML を併用する場合や、複数の語彙が混在する XML などでのみ役立ちます。
 
 `@namespace` ルールは、スタイルシート内ですべての {{cssxref("@charset")}} および {{cssxref("@import")}} ルールより後、また他のアットルールや[スタイル宣言](/ja/docs/Web/API/CSSStyleDeclaration)より前に配置しなければなりません。
 

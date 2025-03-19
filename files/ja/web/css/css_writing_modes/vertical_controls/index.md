@@ -473,5 +473,5 @@ input[type="text"] {
 
 - [`<input>`](/ja/docs/Web/HTML/Element/input) 要素
 - 他の関連要素: {{htmlelement("button")}}, {{htmlelement("meter")}}, {{htmlelement("progress")}}, {{htmlelement("select")}}
-- [様々なテキストの方向の扱い](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [様々なテキストの方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
 - [ウェブフォームのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
