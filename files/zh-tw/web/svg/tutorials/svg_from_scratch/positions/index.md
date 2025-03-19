@@ -1,11 +1,9 @@
 ---
 title: 座標定位
-slug: Web/SVG/Tutorial/Positions
+slug: Web/SVG/Tutorials/SVG_from_scratch/Positions
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
 
 ## 網格
 
@@ -45,4 +43,4 @@ slug: Web/SVG/Tutorial/Positions
 
 > \[…] 假設在用戶的設備環境裡，1px 等於 0.2822222 毫米（即分辨率是 90dpi），那麼所有的 SVG 內容都會按照這種比例處理： \[…] "1cm" 等於 "35.43307px" （即 35.43307 用戶單位）；
 
-{{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
