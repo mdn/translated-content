@@ -23,7 +23,7 @@ let updating = browser.windows.update(
 ### 参数
 
 - `windowId`
-  - : `integer`。要更新的窗口 ID。
+  - : `integer`。要更新的窗口的 ID。
 - `updateInfo`
 
   - : `object`。包含要更新的属性值。
@@ -59,7 +59,7 @@ let updating = browser.windows.update(
 
 ```js
 function onUpdated(windowInfo) {
-  console.log(`U 更新窗口：${windowInfo.id}`);
+  console.log(`更新窗口：${windowInfo.id}`);
 }
 
 function onError(error) {
