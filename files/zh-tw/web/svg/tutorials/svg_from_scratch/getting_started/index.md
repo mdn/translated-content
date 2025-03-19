@@ -1,12 +1,9 @@
 ---
 title: 入門
 slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-original_slug: Web/SVG/Tutorial/Getting_Started
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
 ### 一個簡單的例子
 
@@ -36,7 +33,7 @@ original_slug: Web/SVG/Tutorial/Getting_Started
 
    - 不使用類似(X)HTML 的文檔聲明，因為基於 SVG 的 DTD 會造成很多問題，弊大於利。
    - 為了明確 SVG 版本，`version` 和 baseProfile 兩個屬性必須要寫
-   - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/zh-TW/docs/Web/SVG/Namespaces_Crash_Course)
+   - 作為 XML 方言，SVG 必須始終绑定正確的命名空間（xmlns 属性）。更多資訊，請參考[命名空間速成班頁面](/zh-TW/docs/Web/SVG/Guides/Namespaces_crash_course)
 
 2. 畫一個覆蓋整個圖形的矩形 ，將背景設為红色
 3. 在红色矩形中間畫一個綠色的圓形，半徑是 80 像素（圓心坐標：x 軸向左偏移 150 像素，y 軸向上偏移 100 像素）【坐標系統會在後面章節介紹】
@@ -93,4 +90,4 @@ Content-Encoding: gzip
 
 服務器配置錯誤是 SVG 加載失敗的主要原因，所以一定要確認你的配置。如果你没有給 SVG 文件配置正確的服務器響應端，Firefox 將會以文本的方式展示文件的標記和編碼内容，甚至要求用户選擇一个應用程序打開它。
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
