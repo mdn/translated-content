@@ -1,7 +1,6 @@
 ---
 title: Замыкания
 slug: Web/JavaScript/Guide/Closures
-original_slug: Web/JavaScript/Closures
 ---
 
 {{jsSidebar("Intermediate")}}

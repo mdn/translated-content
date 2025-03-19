@@ -685,7 +685,7 @@ clipPathSelect.addEventListener("change", function (evt) {
 ## 参见
 
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [在 HTML 内容中应用 SVG 效果](/zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [在 HTML 内容中应用 SVG 效果](/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - SVG 属性：
 
   - {{SVGAttr("clip-path")}}

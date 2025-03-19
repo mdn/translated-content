@@ -22,7 +22,7 @@ l10n:
 }
 ```
 
-在 SVG 中，纵横比由四个值的 [`viewBox`](/zh-CN/docs/Web/SVG/Attribute/viewBox) 属性定义。前两个值是 SVG 可以具有的最小 X 和 Y 原点坐标，后两个值是宽度和高度，用于设置 SVG 的纵横比。
+在 SVG 中，纵横比由四个值的 [`viewBox`](/zh-CN/docs/Web/SVG/Reference/Attribute/viewBox) 属性定义。前两个值是 SVG 可以具有的最小 X 和 Y 原点坐标，后两个值是宽度和高度，用于设置 SVG 的纵横比。
 
 ```svg
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg"></svg>
