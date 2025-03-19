@@ -103,7 +103,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - [Touch event](/ja/docs/Web/API/Touch_events) を、Windows デスクトップ環境で再び有効化しました ([Firefox バグ 1244402](https://bugzil.la/1244402))。これはいくつかの主要サイトで問題が発生したため、Firefox 24 で無効化していました ([Firefox バグ 888304](https://bugzil.la/888304))。
 - {{domxref("Element/focusin_event", "focusin")}} および {{domxref("Element/focusout_event", "focusout")}} イベントを実装しました ([Firefox バグ 687787](https://bugzil.la/687787))。
 - {{domxref("isSecureContext")}} プロパティを実装しました ([Firefox バグ 1269052](https://bugzil.la/1269052))。
-- [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
 - [Drag and drop API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の {{domxref("DataTransfer.types")}} プロパティが、{{domxref("DOMStringList")}} ではなく文字列の凍結された配列を返すようになりました ([Firefox バグ 1298243](https://bugzil.la/1298243))。
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました ([Firefox バグ 1264769](https://bugzil.la/1264769)。
 - [通知 API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。

@@ -154,7 +154,7 @@ l10n:
     > 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
 
 - `manifest` {{Experimental_Inline}}
-  - : [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。
+  - : [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。
 - `modulepreload`
   - : パフォーマンスの向上に役立ちます。文書内の {{htmlelement('link')}} に関連して、 `rel="modulepreload"` を設定すると、ブラウザーはスクリプト (および依存関係) を先取りして取得し、文書のモジュールマップに保存して後で評価するようになります。 `modulepreload` リンクは、モジュールが必ずしも必要になる前に、モジュールマップに準備された (評価されていない) モジュールでネットワークの取得を確実に行うことができます。[`modulepreload`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) も参照してください。
 - `next`
