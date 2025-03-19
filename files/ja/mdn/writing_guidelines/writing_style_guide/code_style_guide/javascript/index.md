@@ -318,7 +318,7 @@ function doIt() {
 
 ### ループの初期化
 
-[ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)が必要な場合は、利用可能なループ（[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) など）の中から、適切なループを選択してください。
+[ループ](/ja/docs/Learn_web_development/Core/Scripting/Loops)が必要な場合は、利用可能なループ（[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) など）の中から、適切なループを選択してください。
 
 - コレクションの要素をすべて反復処理する場合は、古典的な `for (;;)` ループの使用を避け、`for...of` または `forEach()` を推奨します。配列 `Array` 以外のコレクションを使用している場合は、`for...of` が実際に対応しているか（反復可能な変数であることが要求される）、`forEach()` メソッドが実際に存在しているかを調べる必要があることに注意してください。
 
