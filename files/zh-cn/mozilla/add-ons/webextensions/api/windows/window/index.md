@@ -11,14 +11,14 @@ l10n:
 
 ## 类型
 
-该类型的取值是包含下列对象的 `objects`:
+该类型的取值是包含下列对象的 `objects`：
 
 - `alwaysOnTop`
   - : `boolean`。窗口是否设置为始终置顶。
 - `focused`
   - : `boolean`。窗口当前是否被聚焦。
 - `height` {{optional_inline}}
-  - : `integer`。窗口的高度，包括框架，以像素为单位。
+  - : `integer`。包括框架的窗口的高度（以像素为单位）。
 - `id` {{optional_inline}}
   - : `integer`。窗口的 ID。窗口 ID 在浏览器会话中是唯一的。
 - `incognito`
