@@ -190,22 +190,22 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 ### XPath のページ型
 
-この節では、[Web/XPath](/ja/docs/Web/XPath)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/XPath](/ja/docs/Web/XML/XPath)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xpath-function`: 関数。例えば [`ceiling()`](/ja/docs/Web/XPath/Functions/ceiling) など。
+- `xpath-function`: 関数。例えば [`ceiling()`](/ja/docs/Web/XML/XPath/Functions/ceiling) など。
 
 ### XSLT のページ型
 
-この節では、[Web/XSLT](/ja/docs/Web/XSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/XSLT](/ja/docs/Web/XML/XSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xslt-element`: XSLT の要素。例えば [`<xsl:message>`](/ja/docs/Web/XSLT/Element/message) など。
-- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XPath/Axes) など。
+- `xslt-element`: XSLT の要素。例えば [`<xsl:message>`](/ja/docs/Web/XML/XSLT/Element/message) など。
+- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XML/XPath/Axes) など。
 
 ### EXSLT のページ型
 
-この節では、[Web/EXSLT](/ja/docs/Web/EXSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/EXSLT](/ja/docs/Web/XML/EXSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/EXSLT/exsl/node-set) など。
+- `xslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/exsl/node-set) など。
 
 ### Firefox のページ型
 

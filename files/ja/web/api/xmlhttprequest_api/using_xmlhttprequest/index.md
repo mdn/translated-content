@@ -45,8 +45,8 @@ req.send();
 
 リモートの XML 文書のコンテンツを得るために `XMLHttpRequest` を使う場合、 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティが解釈済みの XML 文書を含む DOM オブジェクトとなります。これによって、操作や解析が難しくなる可能性があります。この XML 文書を解析するには主な 4 つの方法があります。
 
-1. 部分を指すために [XPath](/ja/docs/Web/XPath) を使う。
-2. 手動で [XML を解釈およびシリアライズして](/ja/docs/Web/XML/Parsing_and_serializing_XML)文字列やオブジェクトにする。
+1. 部分を指すために [XPath](/ja/docs/Web/XML/XPath) を使う。
+2. 手動で [XML を解釈およびシリアライズして](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)文字列やオブジェクトにする。
 3. {{domxref("XMLSerializer")}} を使って **DOM ツリーを文字列やファイルに**シリアライズする。
 4. 事前に XML 文書の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を `RegExp` でスキャンする場合に、改行を除去した方がよく見えることもありますが、 XML コードが少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
 

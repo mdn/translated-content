@@ -14,7 +14,7 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 ### 開発者ツール
 
 - [測定ツール](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) で長方形のリサイズが可能になりました ([Firefox バグ 1152321](https://bugzil.la/1152321))。
-- [インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) で、以前から使用できていた CSS セレクターに加えて、[XPath](/ja/docs/Web/XPath) の式を使用して要素を示すことが可能になりました ([Firefox バグ 963933](https://bugzil.la/963933))。
+- [インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) で、以前から使用できていた CSS セレクターに加えて、[XPath](/ja/docs/Web/XML/XPath) の式を使用して要素を示すことが可能になりました ([Firefox バグ 963933](https://bugzil.la/963933))。
 - プレーンテキストによる検索に加えて、スラッシュの間に [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions) を記述することで [WebSocket](/ja/docs/Web/API/WebSockets_API) メッセージをフィルタリングできるようになりました ([Firefox バグ 1593837](https://bugzil.la/1593837))。
 
 ### HTML

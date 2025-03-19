@@ -169,7 +169,7 @@ _変更なし。_
 ### その他
 
 - {{domxref("PerformanceObserver.observe()")}} の動作を、指定したエントリータイプの配列に有効な値が見つからない場合や、配列が空または存在しない場合に、単に何もしないように修正しました。以前は、Firefox は誤って `TypeError` を発生させていました ([Firefox バグ 1403027](https://bugzil.la/1403027))。
-- [OpenSearch](/ja/docs/Web/OpenSearch) で、検索 URL の型として `application/json` を、`application/x-suggestions+json` の別名として受け入れるようになりました ([Firefox バグ 1425827](https://bugzil.la/1425827))。
+- [OpenSearch](/ja/docs/Web/XML/Guides/OpenSearch) で、検索 URL の型として `application/json` を、`application/x-suggestions+json` の別名として受け入れるようになりました ([Firefox バグ 1425827](https://bugzil.la/1425827))。
 
 ## アドオン開発者向けの変更点
 
