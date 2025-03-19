@@ -58,7 +58,7 @@ EMBEDDED-TEXT - 1st place
 1 - EMBEDDED-TEXTst place
 ```
 
-さらに、 `EMBEDDED-TEXT` の書字方向が分かる場合は、[`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性のついた {{HTMLElement("span")}} で `EMBEDDED-TEXT` を囲むことでこの問題を修正できます。しかし、書字方向が分からない場合は - 例えば、 `EMBEDDED-TEXT` がデータベースから読み込まれたり、ユーザーに入力されたりするものであれば - `<bdi>` を使用して、 `EMBEDDED-TEXT` の書字方向が周囲に影響されることを防ぐべきです。
+さらに、 `EMBEDDED-TEXT` の書字方向が分かる場合は、[`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性のついた {{HTMLElement("span")}} で `EMBEDDED-TEXT` を囲むことでこの問題を修正できます。しかし、書字方向が分からない場合は - 例えば、 `EMBEDDED-TEXT` がデータベースから読み込まれたり、ユーザーに入力されたりするものであれば - `<bdi>` を使用して、 `EMBEDDED-TEXT` の書字方向が周囲に影響されることを防ぐべきです。
 
 同様の視覚効果は、 CSS の {{cssxref("unicode-bidi")}}`: isolate` を {{HTMLElement("span")}} またはその他の文字書式のための要素に付けることで達成できますが、これは意味が含まれず、ブラウザーは CSS の整形を無視することが許されているので、 HTML ではこのアプローチを使用しないでください。
 
@@ -66,7 +66,7 @@ EMBEDDED-TEXT - 1st place
 
 ## 属性
 
-この要素は、他のすべての HTML 要素と同様に[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応していますが、 [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性の挙動が通常とは異なります。初期値は `auto` であり、親要素から値を継承しないことを示します。つまり、 `dir` に `rtl` または `ltr` のどちらかの値を指定しない限り、{{Glossary("user agent", "ユーザーエージェント")}}は `<bdi>` の内容に基づいて正しい方向を特定します。
+この要素は、他のすべての HTML 要素と同様に[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応していますが、 [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性の挙動が通常とは異なります。初期値は `auto` であり、親要素から値を継承しないことを示します。つまり、 `dir` に `rtl` または `ltr` のどちらかの値を指定しない限り、{{Glossary("user agent", "ユーザーエージェント")}}は `<bdi>` の内容に基づいて正しい方向を特定します。
 
 ## 例
 

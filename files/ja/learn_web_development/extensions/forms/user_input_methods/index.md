@@ -123,7 +123,7 @@ if (elem.requestFullscreen) {
 
 私たちが実装する点は以下です:
 
-- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#attr-draggable) 属性を `true` にセットします。
+- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes/draggable) 属性を `true` にセットします。
 - [`dragstart`](/ja/docs/Web/API/HTMLElement/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
 > **メモ:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
@@ -132,7 +132,7 @@ if (elem.requestFullscreen) {
 
 一般に、ユーザーからデータを収集するには、 {{HTMLElement("form")}} 内の {{HTMLElement("textarea")}} または適切な {{HTMLElement("input")}} 型を、 {{HTMLElement("form")}} 内で説明用の {{HTMLElement("label")}} とともに使用すべきです。しかし、これらの要素がニーズを満たさない場合もあります。例えば、リッチテキストエディターは、イタリック体、太字、通常文字を収集できますが、リッチテキストを収集できるフォームコントロールは存在しません。このようなケースでは、スタイル設定や編集が可能なカスタムコントロールを作成する必要があります。そのための属性があります。
 
-どの DOM 要素も、 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#attr-contenteditable) 属性を使うことで、直接編集することができるようになります。
+どの DOM 要素も、 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を使うことで、直接編集することができるようになります。
 
 ```css hidden
 div {

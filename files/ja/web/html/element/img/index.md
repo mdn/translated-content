@@ -334,7 +334,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ### title 属性
 
-[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
+[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
 
 `title` 属性は、画像の `alt` の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 [`figure`](/ja/docs/Web/HTML/Element/figure) および [`figcaption`](/ja/docs/Web/HTML/Element/figcaption) 要素と組み合わせて使用してください。
 
