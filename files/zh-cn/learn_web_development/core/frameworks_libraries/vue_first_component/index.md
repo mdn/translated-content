@@ -101,7 +101,7 @@ export default {
 
 这和之前 Vue CLI 注册 `HelloWorld` 组件的方式是一样的。
 
-要在应用程序中实际展示 `ToDoItem` 组件，你需要在 `<template>` 模板内添加一个 `<to-do-item></to-do-item>` 元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用帕斯卡形式（例如 `ToDoList`），而等价的自定义元素总是用{{Glossary("kebab_case", "烤串命名法")}}（例如 `<to-do-list>`）。如果[直接在 DOM 中](https://cn.vuejs.org/guide/essentials/component-basics.html#dom-template-parsing-caveats)编写 Vue 模板，则有必要使用这种大小写样式。
+要在应用程序中实际展示 `ToDoItem` 组件，你需要在 `<template>` 模板内添加一个 `<to-do-item></to-do-item>` 元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用帕斯卡形式（例如 `ToDoList`），而等价的自定义元素总是用{{Glossary("kebab_case", "烤串命名法")}}（例如 `<to-do-list>`）。如果[直接在 DOM 中](https://cn.vuejs.org/guide/essentials/component-basics#dom-template-parsing-caveats)编写 Vue 模板，则有必要使用这种大小写样式。
 
 1. 在 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 下面，创建一个无序列表（[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)），其中包含一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Element/li)）。
 2. 在列表项里面添加 `<to-do-item></to-do-item>`。
@@ -137,7 +137,7 @@ export default {
 - 第二种方法是将 props 定义为一个对象，每个 key 对应于 prop 名称。将 props 列为对象允许你指定默认值，将 props 标记为 required，执行基本的对象类型 (特别是 JavaScript 基本类型) ，并执行简单的 prop 校验。
 
 > [!NOTE]
-> 注意：prop 验证只能在开发模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态（或其他 props）。
+> prop 验证只能在开发模式下进行，所以你不能在生产环境中严格依赖它。此外，prop 验证函数在组件实例创建之前被调用，因此它们不能访问组件状态（或其他 props）。
 
 针对 ToDoItem 组件，我们将使用对象注册法。
 
@@ -165,7 +165,7 @@ export default {
 };
 ```
 
-### 使用已注册的 props
+### 使用已注册的 prop
 
 随着组件对象中这些 props 的定义，我们可以在 template 里使用这些变量值。让我们开始向组件模版中添加 `label` prop。
 

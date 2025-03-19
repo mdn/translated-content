@@ -56,7 +56,7 @@ Vue CLI 还为我们提供了准备向网络发布应用程序的工具。你可
 这将创建一个新的 `dist` 目录，包含所有准备好的生产文件。要把你的网站发布到网上，请把这个文件夹的内容复制到你的主机环境中。
 
 > [!NOTE]
-> Vue CLI 文档也包含一个[专门的指导手册](https://cli.vuejs.org/zh/guide/deployment.html#platform-guides)，可以帮助你将应用发布到很多常见的托管平台。
+> Vue CLI 文档也包含一个[专门的指导手册](https://cli.vuejs.org/zh/guide/deployment.html#平台指南)，可以帮助你将应用发布到很多常见的托管平台。
 
 ## Vue 2
 
