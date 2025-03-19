@@ -28,7 +28,7 @@ l10n:
 ### API
 
 - {{domxref('PointerEvent')}} インターフェイスの {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} および {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} プロパティをサポートしました。- それぞれポインターやスタイラスと画面 (X 軸 -Y 軸の面) の角度、および画面上で X 軸に対するスタイラスの回転角を示します ([Firefox bug 1656377](https://bugzil.la/1656377))。
-- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments) をサポートしました。ユーザーがウェブページのテキストの一部分にリンクおよびハイライト表示することを可能にします。この機能は[URL フラグメント](/ja/docs/Web/URI/Fragment) で、表示されるテキストのパターンに基づいて対象を識別する特定の構文を使用します。
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments) をサポートしました。ユーザーがウェブページのテキストの一部分にリンクおよびハイライト表示することを可能にします。この機能は[URL フラグメント](/ja/docs/Web/URI/Reference/Fragment) で、表示されるテキストのパターンに基づいて対象を識別する特定の構文を使用します。
   開発者は {{domxref("Document.fragmentDirective")}} プロパティ ({{domxref("FragmentDirective")}} インターフェイスのインスタンス) の存在によって、テキストフラグメントをサポートしているか確認できます。また、{{CSSxRef("::target-text")}} 擬似要素を使用して、テキストフラグメントリンクで指定されたテキストの選択およびスタイル設定が可能です ([Firefox bug 1914877](https://bugzil.la/1914877))。
 - {{domxref("Document")}} インターフェイスの {{domxref('Document/caretPositionFromPoint','caretPositionFromPoint()')}} メソッドを、キャレットの位置に対応するシャドウルートがメソッドに渡されていればシャドウ DOM におけるキャレット位置のテキストノードとオフセットを返すように更新しました。{{domxref("ShadowRoot")}} オブジェクトは、新たに追加された引数 `options` の `shadowRoots` プロパティを使用してメソッドに渡すことができます ([Firefox bug 1914596](https://bugzil.la/1914596))。
 
