@@ -81,7 +81,7 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 - `<color-hint>`
   - : 颜色提示（color-hint）是一种插值提示，定义了渐变色在相邻色标之间的渐变方式。长度定义了渐变色应在两个色标之间的哪个点到达颜色过渡的中点。如果省略此值，颜色过渡的中点就是两个色标之间的中点。
 
-> **备注：** [CSS 渐变中的色标](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
+> **备注：** [CSS 渐变中的色标](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)中的色标遵循相同的规则。
 
 ### 形式语法
 

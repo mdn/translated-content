@@ -41282,7 +41282,7 @@
       "LIXer"
     ]
   },
-  "Web/SVG/Applying_SVG_effects_to_HTML_content": {
+  "Web/SVG/Guides/Applying_SVG_effects_to_HTML_content": {
     "modified": "2020-10-21T05:14:10.197Z",
     "contributors": [
       "Chellyyy",
@@ -41294,7 +41294,55 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute": {
+  "Web/SVG/Guides/Content_type": {
+    "modified": "2019-03-23T22:46:41.769Z",
+    "contributors": [
+      "fanxiaojie"
+    ]
+  },
+  "Web/SVG/Guides/Linking": {
+    "modified": "2019-11-28T05:35:16.253Z",
+    "contributors": [
+      "tangguolong"
+    ]
+  },
+  "Web/SVG/Guides/Namespaces_crash_course": {
+    "modified": "2019-10-11T20:02:55.677Z",
+    "contributors": [
+      "pacexy",
+      "cyemeng",
+      "876843240",
+      "RongMine",
+      "Ljrou",
+      "charlie"
+    ]
+  },
+  "Web/SVG/Guides/SVG_animation_with_SMIL": {
+    "modified": "2019-03-23T22:46:05.864Z",
+    "contributors": [
+      "WindStormrage",
+      "fscholz",
+      "Jackandjohn",
+      "fanxiaojie"
+    ]
+  },
+  "Web/SVG/Guides/SVG_as_an_image": {
+    "modified": "2019-03-23T22:46:05.004Z",
+    "contributors": [
+      "fanxiaojie"
+    ]
+  },
+  "Web/SVG/Guides/SVG_in_HTML": {
+    "modified": "2019-10-30T00:49:48.215Z",
+    "contributors": [
+      "donley828",
+      "crazy_rat",
+      "chrisdavidmills",
+      "zldream1106",
+      "lunix01"
+    ]
+  },
+  "Web/SVG/Reference/Attribute": {
     "modified": "2020-06-11T11:15:23.661Z",
     "contributors": [
       "chanvin",
@@ -41304,96 +41352,96 @@
       "stevenvachon"
     ]
   },
-  "Web/SVG/Attribute/From": {
+  "Web/SVG/Reference/Attribute/From": {
     "modified": "2019-03-23T22:07:46.163Z",
     "contributors": [
       "876843240"
     ]
   },
-  "Web/SVG/Attribute/accent-height": {
+  "Web/SVG/Reference/Attribute/accent-height": {
     "modified": "2019-07-05T08:35:14.107Z",
     "contributors": [
       "yvonneit"
     ]
   },
-  "Web/SVG/Attribute/accumulate": {
+  "Web/SVG/Reference/Attribute/accumulate": {
     "modified": "2019-03-23T22:32:55.125Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/alignment-baseline": {
+  "Web/SVG/Reference/Attribute/alignment-baseline": {
     "modified": "2019-07-05T08:35:05.656Z",
     "contributors": [
       "liyongleihf2006",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/attributeName": {
+  "Web/SVG/Reference/Attribute/attributeName": {
     "modified": "2019-03-23T22:46:42.034Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/attributeType": {
+  "Web/SVG/Reference/Attribute/attributeType": {
     "modified": "2019-03-23T22:46:39.534Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/baseProfile": {
+  "Web/SVG/Reference/Attribute/baseProfile": {
     "modified": "2019-07-05T08:35:43.566Z",
     "contributors": [
       "leighcc"
     ]
   },
-  "Web/SVG/Attribute/baseline-shift": {
+  "Web/SVG/Reference/Attribute/baseline-shift": {
     "modified": "2019-03-23T22:46:48.235Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/begin": {
+  "Web/SVG/Reference/Attribute/begin": {
     "modified": "2019-03-23T22:46:49.938Z",
     "contributors": [
       "wbamberg",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/clip": {
+  "Web/SVG/Reference/Attribute/clip": {
     "modified": "2020-10-15T21:39:26.851Z",
     "contributors": [
       "RainSlide",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/clip-path": {
+  "Web/SVG/Reference/Attribute/clip-path": {
     "modified": "2020-10-15T22:28:50.040Z",
     "contributors": [
       "jhchen6"
     ]
   },
-  "Web/SVG/Attribute/color": {
+  "Web/SVG/Reference/Attribute/color": {
     "modified": "2020-10-15T21:39:18.231Z",
     "contributors": [
       "RainSlide",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/cx": {
+  "Web/SVG/Reference/Attribute/cx": {
     "modified": "2019-03-23T22:18:03.024Z",
     "contributors": [
       "realstephenzhao",
       "huainanhai"
     ]
   },
-  "Web/SVG/Attribute/cy": {
+  "Web/SVG/Reference/Attribute/cy": {
     "modified": "2019-03-18T21:22:46.371Z",
     "contributors": [
       "realstephenzhao"
     ]
   },
-  "Web/SVG/Attribute/d": {
+  "Web/SVG/Reference/Attribute/d": {
     "modified": "2019-03-23T22:55:44.323Z",
     "contributors": [
       "msyfls123",
@@ -41402,7 +41450,7 @@
       "charlie"
     ]
   },
-  "Web/SVG/Attribute/display": {
+  "Web/SVG/Reference/Attribute/display": {
     "modified": "2020-11-17T10:08:32.937Z",
     "contributors": [
       "292514467",
@@ -41410,44 +41458,44 @@
       "radial-hks"
     ]
   },
-  "Web/SVG/Attribute/dur": {
+  "Web/SVG/Reference/Attribute/dur": {
     "modified": "2019-03-23T22:46:40.065Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/dx": {
+  "Web/SVG/Reference/Attribute/dx": {
     "modified": "2020-08-25T05:37:26.030Z",
     "contributors": [
       "danceash",
       "jiahui"
     ]
   },
-  "Web/SVG/Attribute/edgeMode": {
+  "Web/SVG/Reference/Attribute/edgeMode": {
     "modified": "2019-03-23T22:46:21.766Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/end": {
+  "Web/SVG/Reference/Attribute/end": {
     "modified": "2019-03-23T22:46:42.288Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/fill": {
+  "Web/SVG/Reference/Attribute/fill": {
     "modified": "2019-03-23T22:46:42.182Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/fill-opacity": {
+  "Web/SVG/Reference/Attribute/fill-opacity": {
     "modified": "2019-03-23T22:46:42.402Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/fill-rule": {
+  "Web/SVG/Reference/Attribute/fill-rule": {
     "modified": "2020-10-15T21:39:20.776Z",
     "contributors": [
       "skywalker_z",
@@ -41457,93 +41505,93 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/filter": {
+  "Web/SVG/Reference/Attribute/filter": {
     "modified": "2019-03-23T22:46:38.982Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/filterUnits": {
+  "Web/SVG/Reference/Attribute/filterUnits": {
     "modified": "2019-03-23T22:14:03.688Z",
     "contributors": [
       "liyongleihf2006"
     ]
   },
-  "Web/SVG/Attribute/font-family": {
+  "Web/SVG/Reference/Attribute/font-family": {
     "modified": "2019-03-23T23:04:59.299Z",
     "contributors": [
       "charlie"
     ]
   },
-  "Web/SVG/Attribute/fr": {
+  "Web/SVG/Reference/Attribute/fr": {
     "modified": "2019-03-18T21:22:49.932Z",
     "contributors": [
       "realstephenzhao"
     ]
   },
-  "Web/SVG/Attribute/fx": {
+  "Web/SVG/Reference/Attribute/fx": {
     "modified": "2019-03-18T21:28:55.964Z",
     "contributors": [
       "realstephenzhao",
       "longfeihouhouhou"
     ]
   },
-  "Web/SVG/Attribute/fy": {
+  "Web/SVG/Reference/Attribute/fy": {
     "modified": "2019-03-18T21:22:47.918Z",
     "contributors": [
       "realstephenzhao"
     ]
   },
-  "Web/SVG/Attribute/height": {
+  "Web/SVG/Reference/Attribute/height": {
     "modified": "2019-03-23T22:46:48.815Z",
     "contributors": [
       "Ende93",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/id": {
+  "Web/SVG/Reference/Attribute/id": {
     "modified": "2020-10-15T22:25:42.877Z",
     "contributors": [
       "cuixiping"
     ]
   },
-  "Web/SVG/Attribute/image-rendering": {
+  "Web/SVG/Reference/Attribute/image-rendering": {
     "modified": "2019-03-23T23:10:41.035Z",
     "contributors": [
       "ReyCG_sub"
     ]
   },
-  "Web/SVG/Attribute/in": {
+  "Web/SVG/Reference/Attribute/in": {
     "modified": "2019-03-23T22:13:50.542Z",
     "contributors": [
       "liyongleihf2006"
     ]
   },
-  "Web/SVG/Attribute/kernelMatrix": {
+  "Web/SVG/Reference/Attribute/kernelMatrix": {
     "modified": "2019-03-23T22:14:02.784Z",
     "contributors": [
       "liyongleihf2006"
     ]
   },
-  "Web/SVG/Attribute/keyTimes": {
+  "Web/SVG/Reference/Attribute/keyTimes": {
     "modified": "2019-03-18T21:30:15.598Z",
     "contributors": [
       "ZhenhuaChen"
     ]
   },
-  "Web/SVG/Attribute/marker-end": {
+  "Web/SVG/Reference/Attribute/marker-end": {
     "modified": "2020-10-15T22:18:07.958Z",
     "contributors": [
       "ciki6"
     ]
   },
-  "Web/SVG/Attribute/marker-start": {
+  "Web/SVG/Reference/Attribute/marker-start": {
     "modified": "2020-10-15T22:35:06.368Z",
     "contributors": [
       "ciki6"
     ]
   },
-  "Web/SVG/Attribute/mask": {
+  "Web/SVG/Reference/Attribute/mask": {
     "modified": "2019-03-23T22:46:32.037Z",
     "contributors": [
       "wbamberg",
@@ -41551,56 +41599,56 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/media": {
+  "Web/SVG/Reference/Attribute/media": {
     "modified": "2020-10-15T22:28:22.473Z",
     "contributors": [
       "Firefox_mozilla"
     ]
   },
-  "Web/SVG/Attribute/opacity": {
+  "Web/SVG/Reference/Attribute/opacity": {
     "modified": "2019-03-23T22:46:17.591Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/order": {
+  "Web/SVG/Reference/Attribute/order": {
     "modified": "2019-03-23T22:14:09.913Z",
     "contributors": [
       "liyongleihf2006"
     ]
   },
-  "Web/SVG/Attribute/origin": {
+  "Web/SVG/Reference/Attribute/origin": {
     "modified": "2020-09-21T09:25:39.365Z",
     "contributors": [
       "SphinxKnight",
       "a420980938"
     ]
   },
-  "Web/SVG/Attribute/path": {
+  "Web/SVG/Reference/Attribute/path": {
     "modified": "2019-01-17T01:11:59.482Z",
     "contributors": [
       "dfEric"
     ]
   },
-  "Web/SVG/Attribute/pointer-events": {
+  "Web/SVG/Reference/Attribute/pointer-events": {
     "modified": "2020-10-15T22:18:55.261Z",
     "contributors": [
       "WebsonLeo"
     ]
   },
-  "Web/SVG/Attribute/points": {
+  "Web/SVG/Reference/Attribute/points": {
     "modified": "2019-03-23T22:46:24.044Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/preserveAlpha": {
+  "Web/SVG/Reference/Attribute/preserveAlpha": {
     "modified": "2019-03-18T21:30:40.693Z",
     "contributors": [
       "hy512"
     ]
   },
-  "Web/SVG/Attribute/preserveAspectRatio": {
+  "Web/SVG/Reference/Attribute/preserveAspectRatio": {
     "modified": "2019-03-23T22:02:41.003Z",
     "contributors": [
       "codepandy",
@@ -41609,120 +41657,120 @@
       "webtuotuo2017"
     ]
   },
-  "Web/SVG/Attribute/primitiveUnits": {
+  "Web/SVG/Reference/Attribute/primitiveUnits": {
     "modified": "2019-03-23T22:14:03.826Z",
     "contributors": [
       "liyongleihf2006"
     ]
   },
-  "Web/SVG/Attribute/r": {
+  "Web/SVG/Reference/Attribute/r": {
     "modified": "2019-03-18T21:22:40.271Z",
     "contributors": [
       "realstephenzhao"
     ]
   },
-  "Web/SVG/Attribute/radius": {
+  "Web/SVG/Reference/Attribute/radius": {
     "modified": "2019-03-23T22:46:18.311Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/repeatCount": {
+  "Web/SVG/Reference/Attribute/repeatCount": {
     "modified": "2019-03-23T22:18:01.687Z",
     "contributors": [
       "876843240",
       "huainanhai"
     ]
   },
-  "Web/SVG/Attribute/result": {
+  "Web/SVG/Reference/Attribute/result": {
     "modified": "2019-01-16T21:31:09.328Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/rx": {
+  "Web/SVG/Reference/Attribute/rx": {
     "modified": "2019-03-18T21:00:24.171Z",
     "contributors": [
       "RainSlide",
       "BowenSun"
     ]
   },
-  "Web/SVG/Attribute/scale": {
+  "Web/SVG/Reference/Attribute/scale": {
     "modified": "2019-03-23T22:46:29.331Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/seed": {
+  "Web/SVG/Reference/Attribute/seed": {
     "modified": "2019-03-23T22:46:25.651Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/shape-rendering": {
+  "Web/SVG/Reference/Attribute/shape-rendering": {
     "modified": "2019-03-23T22:41:44.530Z",
     "contributors": [
       "maicss"
     ]
   },
-  "Web/SVG/Attribute/stdDeviation": {
+  "Web/SVG/Reference/Attribute/stdDeviation": {
     "modified": "2019-03-18T21:23:00.621Z",
     "contributors": [
       "realstephenzhao"
     ]
   },
-  "Web/SVG/Attribute/stroke": {
+  "Web/SVG/Reference/Attribute/stroke": {
     "modified": "2019-03-23T22:47:39.759Z",
     "contributors": [
       "fanxiaojie",
       "slientomorrr"
     ]
   },
-  "Web/SVG/Attribute/stroke-dasharray": {
+  "Web/SVG/Reference/Attribute/stroke-dasharray": {
     "modified": "2019-08-08T05:38:03.197Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/stroke-dashoffset": {
+  "Web/SVG/Reference/Attribute/stroke-dashoffset": {
     "modified": "2019-10-10T16:56:45.450Z",
     "contributors": [
       "ZhengYinBo",
       "yanagao"
     ]
   },
-  "Web/SVG/Attribute/stroke-linecap": {
+  "Web/SVG/Reference/Attribute/stroke-linecap": {
     "modified": "2019-03-23T22:21:59.850Z",
     "contributors": [
       "ZhengYinBo"
     ]
   },
-  "Web/SVG/Attribute/stroke-linejoin": {
+  "Web/SVG/Reference/Attribute/stroke-linejoin": {
     "modified": "2020-10-15T21:52:22.702Z",
     "contributors": [
       "cuixiping",
       "IridescentMia"
     ]
   },
-  "Web/SVG/Attribute/stroke-miterlimit": {
+  "Web/SVG/Reference/Attribute/stroke-miterlimit": {
     "modified": "2019-03-23T22:46:40.182Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/stroke-opacity": {
+  "Web/SVG/Reference/Attribute/stroke-opacity": {
     "modified": "2019-03-23T22:46:37.761Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/stroke-width": {
+  "Web/SVG/Reference/Attribute/stroke-width": {
     "modified": "2019-03-23T22:46:41.922Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/style": {
+  "Web/SVG/Reference/Attribute/style": {
     "modified": "2019-10-09T03:46:30.272Z",
     "contributors": [
       "xianshenglu",
@@ -41730,98 +41778,92 @@
       "monjer"
     ]
   },
-  "Web/SVG/Attribute/target": {
+  "Web/SVG/Reference/Attribute/target": {
     "modified": "2020-10-15T22:27:15.767Z",
     "contributors": [
       "fzhyzamt",
       "boli14"
     ]
   },
-  "Web/SVG/Attribute/text-anchor": {
+  "Web/SVG/Reference/Attribute/text-anchor": {
     "modified": "2019-03-23T22:22:02.773Z",
     "contributors": [
       "AozakiOrenji",
       "yashuer"
     ]
   },
-  "Web/SVG/Attribute/text-decoration": {
+  "Web/SVG/Reference/Attribute/text-decoration": {
     "modified": "2020-09-26T20:27:21.690Z",
     "contributors": [
       "xuhaooo",
       "qingpingy"
     ]
   },
-  "Web/SVG/Attribute/transform": {
+  "Web/SVG/Reference/Attribute/transform": {
     "modified": "2019-10-17T10:24:00.177Z",
     "contributors": [
       "qq240814476"
     ]
   },
-  "Web/SVG/Attribute/type": {
+  "Web/SVG/Reference/Attribute/type": {
     "modified": "2019-09-27T11:12:53.094Z",
     "contributors": [
       "Huang2019023239"
     ]
   },
-  "Web/SVG/Attribute/values": {
+  "Web/SVG/Reference/Attribute/values": {
     "modified": "2020-08-19T04:16:48.441Z",
     "contributors": [
       "keyline-1"
     ]
   },
-  "Web/SVG/Attribute/vector-effect": {
+  "Web/SVG/Reference/Attribute/vector-effect": {
     "modified": "2020-10-15T22:25:39.831Z",
     "contributors": [
       "cuixiping"
     ]
   },
-  "Web/SVG/Attribute/version": {
+  "Web/SVG/Reference/Attribute/version": {
     "modified": "2019-08-03T10:57:47.255Z",
     "contributors": [
       "monkeycf",
       "LiKunWillShine"
     ]
   },
-  "Web/SVG/Attribute/viewBox": {
+  "Web/SVG/Reference/Attribute/viewBox": {
     "modified": "2019-08-01T23:50:11.252Z",
     "contributors": [
       "lovefengruoqing",
       "act262"
     ]
   },
-  "Web/SVG/Attribute/visibility": {
+  "Web/SVG/Reference/Attribute/visibility": {
     "modified": "2019-03-23T22:46:34.860Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/width": {
+  "Web/SVG/Reference/Attribute/width": {
     "modified": "2019-03-23T22:46:51.950Z",
     "contributors": [
       "Ende93",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/x": {
+  "Web/SVG/Reference/Attribute/x": {
     "modified": "2019-03-23T22:46:48.086Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Attribute/y": {
+  "Web/SVG/Reference/Attribute/y": {
     "modified": "2019-03-23T22:46:47.078Z",
     "contributors": [
       "jiereal",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Content_type": {
-    "modified": "2019-03-23T22:46:41.769Z",
-    "contributors": [
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Element": {
+  "Web/SVG/Reference/Element": {
     "modified": "2020-03-13T06:26:33.332Z",
     "contributors": [
       "Dorence",
@@ -41833,7 +41875,7 @@
       "ethertank"
     ]
   },
-  "Web/SVG/Element/a": {
+  "Web/SVG/Reference/Element/a": {
     "modified": "2019-06-15T03:14:27.907Z",
     "contributors": [
       "lnh",
@@ -41844,7 +41886,7 @@
       "techird"
     ]
   },
-  "Web/SVG/Element/animate": {
+  "Web/SVG/Reference/Element/animate": {
     "modified": "2020-05-04T23:05:51.292Z",
     "contributors": [
       "knightyun",
@@ -41857,7 +41899,7 @@
       "lunix01"
     ]
   },
-  "Web/SVG/Element/animateMotion": {
+  "Web/SVG/Reference/Element/animateMotion": {
     "modified": "2020-10-15T21:39:29.124Z",
     "contributors": [
       "knightyun",
@@ -41866,14 +41908,14 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/animateTransform": {
+  "Web/SVG/Reference/Element/animateTransform": {
     "modified": "2019-03-23T22:46:37.058Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/circle": {
+  "Web/SVG/Reference/Element/circle": {
     "modified": "2019-03-23T21:45:42.756Z",
     "contributors": [
       "wbamberg",
@@ -41885,7 +41927,7 @@
       "cungen"
     ]
   },
-  "Web/SVG/Element/clipPath": {
+  "Web/SVG/Reference/Element/clipPath": {
     "modified": "2020-10-15T21:32:57.569Z",
     "contributors": [
       "jhchen6",
@@ -41895,7 +41937,7 @@
       "huyue"
     ]
   },
-  "Web/SVG/Element/cursor": {
+  "Web/SVG/Reference/Element/cursor": {
     "modified": "2020-10-15T21:39:22.908Z",
     "contributors": [
       "knightyun",
@@ -41903,7 +41945,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/defs": {
+  "Web/SVG/Reference/Element/defs": {
     "modified": "2019-03-23T23:05:33.636Z",
     "contributors": [
       "Sebastianz",
@@ -41912,14 +41954,14 @@
       "baiya"
     ]
   },
-  "Web/SVG/Element/desc": {
+  "Web/SVG/Reference/Element/desc": {
     "modified": "2019-03-23T22:46:43.461Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/ellipse": {
+  "Web/SVG/Reference/Element/ellipse": {
     "modified": "2019-03-23T22:54:08.203Z",
     "contributors": [
       "wbamberg",
@@ -41928,7 +41970,7 @@
       "FredWe"
     ]
   },
-  "Web/SVG/Element/feBlend": {
+  "Web/SVG/Reference/Element/feBlend": {
     "modified": "2019-03-23T22:46:45.814Z",
     "contributors": [
       "liyongleihf2006",
@@ -41936,7 +41978,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feColorMatrix": {
+  "Web/SVG/Reference/Element/feColorMatrix": {
     "modified": "2019-03-23T23:25:05.534Z",
     "contributors": [
       "Sebastianz",
@@ -41945,7 +41987,7 @@
       "daniel.tian"
     ]
   },
-  "Web/SVG/Element/feComponentTransfer": {
+  "Web/SVG/Reference/Element/feComponentTransfer": {
     "modified": "2019-03-23T22:46:30.620Z",
     "contributors": [
       "liyongleihf2006",
@@ -41953,14 +41995,14 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feComposite": {
+  "Web/SVG/Reference/Element/feComposite": {
     "modified": "2019-03-23T22:46:29.887Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feConvolveMatrix": {
+  "Web/SVG/Reference/Element/feConvolveMatrix": {
     "modified": "2019-08-01T01:30:07.081Z",
     "contributors": [
       "liyongleihf2006",
@@ -41968,35 +42010,35 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feDiffuseLighting": {
+  "Web/SVG/Reference/Element/feDiffuseLighting": {
     "modified": "2019-03-23T22:46:38.862Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feDisplacementMap": {
+  "Web/SVG/Reference/Element/feDisplacementMap": {
     "modified": "2019-03-23T22:46:34.138Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feDistantLight": {
+  "Web/SVG/Reference/Element/feDistantLight": {
     "modified": "2019-03-23T22:46:37.517Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feFlood": {
+  "Web/SVG/Reference/Element/feFlood": {
     "modified": "2019-03-23T22:46:31.627Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feFuncA": {
+  "Web/SVG/Reference/Element/feFuncA": {
     "modified": "2020-10-15T21:39:23.537Z",
     "contributors": [
       "RainSlide",
@@ -42004,35 +42046,35 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feFuncB": {
+  "Web/SVG/Reference/Element/feFuncB": {
     "modified": "2019-03-23T22:46:38.185Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feFuncG": {
+  "Web/SVG/Reference/Element/feFuncG": {
     "modified": "2019-03-23T22:46:32.939Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feFuncR": {
+  "Web/SVG/Reference/Element/feFuncR": {
     "modified": "2019-03-23T22:46:31.912Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feGaussianBlur": {
+  "Web/SVG/Reference/Element/feGaussianBlur": {
     "modified": "2019-03-23T22:46:35.725Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feImage": {
+  "Web/SVG/Reference/Element/feImage": {
     "modified": "2019-03-23T22:46:35.585Z",
     "contributors": [
       "AaronYehf",
@@ -42040,21 +42082,21 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feMerge": {
+  "Web/SVG/Reference/Element/feMerge": {
     "modified": "2019-03-23T22:46:36.019Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feMergeNode": {
+  "Web/SVG/Reference/Element/feMergeNode": {
     "modified": "2019-03-23T22:46:29.748Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feMorphology": {
+  "Web/SVG/Reference/Element/feMorphology": {
     "modified": "2019-03-23T22:51:21.184Z",
     "contributors": [
       "Sebastianz",
@@ -42062,49 +42104,49 @@
       "foolof41"
     ]
   },
-  "Web/SVG/Element/feOffset": {
+  "Web/SVG/Reference/Element/feOffset": {
     "modified": "2019-03-23T22:46:37.362Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/fePointLight": {
+  "Web/SVG/Reference/Element/fePointLight": {
     "modified": "2019-03-23T22:46:33.171Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feSpecularLighting": {
+  "Web/SVG/Reference/Element/feSpecularLighting": {
     "modified": "2019-03-23T22:46:21.088Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feSpotLight": {
+  "Web/SVG/Reference/Element/feSpotLight": {
     "modified": "2019-03-23T22:46:30.010Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feTile": {
+  "Web/SVG/Reference/Element/feTile": {
     "modified": "2019-03-23T22:46:20.383Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/feTurbulence": {
+  "Web/SVG/Reference/Element/feTurbulence": {
     "modified": "2019-03-23T22:46:22.298Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/filter": {
+  "Web/SVG/Reference/Element/filter": {
     "modified": "2020-07-14T05:46:35.376Z",
     "contributors": [
       "Yang_Gia",
@@ -42112,7 +42154,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/font": {
+  "Web/SVG/Reference/Element/font": {
     "modified": "2019-03-23T22:43:54.105Z",
     "contributors": [
       "Sebastianz",
@@ -42120,42 +42162,42 @@
       "charlie"
     ]
   },
-  "Web/SVG/Element/font-face": {
+  "Web/SVG/Reference/Element/font-face": {
     "modified": "2019-03-23T23:04:56.439Z",
     "contributors": [
       "Sebastianz",
       "charlie"
     ]
   },
-  "Web/SVG/Element/font-face-format": {
+  "Web/SVG/Reference/Element/font-face-format": {
     "modified": "2019-03-23T22:46:32.676Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/font-face-name": {
+  "Web/SVG/Reference/Element/font-face-name": {
     "modified": "2019-03-23T22:46:33.056Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/font-face-src": {
+  "Web/SVG/Reference/Element/font-face-src": {
     "modified": "2019-03-18T20:41:42.540Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/font-face-uri": {
+  "Web/SVG/Reference/Element/font-face-uri": {
     "modified": "2019-03-23T22:46:38.431Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/foreignObject": {
+  "Web/SVG/Reference/Element/foreignObject": {
     "modified": "2020-10-15T21:39:29.342Z",
     "contributors": [
       "hanjc1993",
@@ -42166,7 +42208,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/g": {
+  "Web/SVG/Reference/Element/g": {
     "modified": "2019-03-23T22:55:45.907Z",
     "contributors": [
       "Sebastianz",
@@ -42174,7 +42216,7 @@
       "monjer"
     ]
   },
-  "Web/SVG/Element/glyph": {
+  "Web/SVG/Reference/Element/glyph": {
     "modified": "2019-03-23T22:55:52.238Z",
     "contributors": [
       "Sebastianz",
@@ -42182,21 +42224,21 @@
       "charlie"
     ]
   },
-  "Web/SVG/Element/glyphRef": {
+  "Web/SVG/Reference/Element/glyphRef": {
     "modified": "2019-03-23T22:46:32.815Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/hkern": {
+  "Web/SVG/Reference/Element/hkern": {
     "modified": "2019-03-23T22:46:35.411Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/image": {
+  "Web/SVG/Reference/Element/image": {
     "modified": "2019-03-23T23:07:18.007Z",
     "contributors": [
       "tjyas",
@@ -42206,7 +42248,7 @@
       "cuixiping"
     ]
   },
-  "Web/SVG/Element/line": {
+  "Web/SVG/Reference/Element/line": {
     "modified": "2019-07-31T04:23:35.374Z",
     "contributors": [
       "wbamberg",
@@ -42214,7 +42256,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/linearGradient": {
+  "Web/SVG/Reference/Element/linearGradient": {
     "modified": "2019-07-01T05:50:18.527Z",
     "contributors": [
       "Sebastianz",
@@ -42223,7 +42265,7 @@
       "xile611"
     ]
   },
-  "Web/SVG/Element/marker": {
+  "Web/SVG/Reference/Element/marker": {
     "modified": "2019-03-23T23:03:51.340Z",
     "contributors": [
       "wbamberg",
@@ -42233,7 +42275,7 @@
       "fonglezen"
     ]
   },
-  "Web/SVG/Element/mask": {
+  "Web/SVG/Reference/Element/mask": {
     "modified": "2019-03-23T23:03:51.605Z",
     "contributors": [
       "wbamberg",
@@ -42242,14 +42284,14 @@
       "fonglezen"
     ]
   },
-  "Web/SVG/Element/metadata": {
+  "Web/SVG/Reference/Element/metadata": {
     "modified": "2019-03-23T22:46:43.887Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/missing-glyph": {
+  "Web/SVG/Reference/Element/missing-glyph": {
     "modified": "2019-03-23T23:04:57.001Z",
     "contributors": [
       "Sebastianz",
@@ -42258,14 +42300,14 @@
       "charlie"
     ]
   },
-  "Web/SVG/Element/mpath": {
+  "Web/SVG/Reference/Element/mpath": {
     "modified": "2019-03-23T22:46:38.309Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/path": {
+  "Web/SVG/Reference/Element/path": {
     "modified": "2019-03-23T23:07:18.417Z",
     "contributors": [
       "Sebastianz",
@@ -42273,7 +42315,7 @@
       "cuixiping"
     ]
   },
-  "Web/SVG/Element/pattern": {
+  "Web/SVG/Reference/Element/pattern": {
     "modified": "2019-03-23T23:03:50.981Z",
     "contributors": [
       "wbamberg",
@@ -42282,7 +42324,7 @@
       "fonglezen"
     ]
   },
-  "Web/SVG/Element/polygon": {
+  "Web/SVG/Reference/Element/polygon": {
     "modified": "2019-03-23T23:13:30.746Z",
     "contributors": [
       "wbamberg",
@@ -42292,7 +42334,7 @@
       "fly-bird"
     ]
   },
-  "Web/SVG/Element/polyline": {
+  "Web/SVG/Reference/Element/polyline": {
     "modified": "2019-03-23T22:57:44.713Z",
     "contributors": [
       "wbamberg",
@@ -42301,7 +42343,7 @@
       "e26h"
     ]
   },
-  "Web/SVG/Element/radialGradient": {
+  "Web/SVG/Reference/Element/radialGradient": {
     "modified": "2020-10-15T21:39:21.881Z",
     "contributors": [
       "realstephenzhao",
@@ -42309,7 +42351,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/rect": {
+  "Web/SVG/Reference/Element/rect": {
     "modified": "2019-03-23T22:57:44.926Z",
     "contributors": [
       "wbamberg",
@@ -42318,14 +42360,14 @@
       "e26h"
     ]
   },
-  "Web/SVG/Element/script": {
+  "Web/SVG/Reference/Element/script": {
     "modified": "2019-03-23T22:46:33.996Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/set": {
+  "Web/SVG/Reference/Element/set": {
     "modified": "2019-08-05T06:51:54.590Z",
     "contributors": [
       "Sebastianz",
@@ -42333,21 +42375,21 @@
       "baiya"
     ]
   },
-  "Web/SVG/Element/stop": {
+  "Web/SVG/Reference/Element/stop": {
     "modified": "2019-03-23T22:46:37.919Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/style": {
+  "Web/SVG/Reference/Element/style": {
     "modified": "2019-03-23T22:46:35.874Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/svg": {
+  "Web/SVG/Reference/Element/svg": {
     "modified": "2019-03-23T23:03:45.347Z",
     "contributors": [
       "alphabet007",
@@ -42358,7 +42400,7 @@
       "fonglezen"
     ]
   },
-  "Web/SVG/Element/switch": {
+  "Web/SVG/Reference/Element/switch": {
     "modified": "2019-03-23T23:03:50.332Z",
     "contributors": [
       "Sebastianz",
@@ -42366,7 +42408,7 @@
       "fonglezen"
     ]
   },
-  "Web/SVG/Element/symbol": {
+  "Web/SVG/Reference/Element/symbol": {
     "modified": "2019-03-23T23:05:34.325Z",
     "contributors": [
       "Sebastianz",
@@ -42374,7 +42416,7 @@
       "baiya"
     ]
   },
-  "Web/SVG/Element/text": {
+  "Web/SVG/Reference/Element/text": {
     "modified": "2019-03-23T23:05:43.568Z",
     "contributors": [
       "Sebastianz",
@@ -42384,7 +42426,7 @@
       "baiya"
     ]
   },
-  "Web/SVG/Element/textPath": {
+  "Web/SVG/Reference/Element/textPath": {
     "modified": "2019-03-23T23:05:43.375Z",
     "contributors": [
       "Sebastianz",
@@ -42392,14 +42434,14 @@
       "baiya"
     ]
   },
-  "Web/SVG/Element/title": {
+  "Web/SVG/Reference/Element/title": {
     "modified": "2019-03-23T22:46:43.066Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/tref": {
+  "Web/SVG/Reference/Element/tref": {
     "modified": "2019-03-23T23:05:44.122Z",
     "contributors": [
       "Sebastianz",
@@ -42407,7 +42449,7 @@
       "baiya"
     ]
   },
-  "Web/SVG/Element/tspan": {
+  "Web/SVG/Reference/Element/tspan": {
     "modified": "2019-03-23T23:29:30.380Z",
     "contributors": [
       "wbamberg",
@@ -42417,7 +42459,7 @@
       "flyonok"
     ]
   },
-  "Web/SVG/Element/use": {
+  "Web/SVG/Reference/Element/use": {
     "modified": "2019-03-23T22:46:45.349Z",
     "contributors": [
       "Sebastianz",
@@ -42425,14 +42467,14 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/view": {
+  "Web/SVG/Reference/Element/view": {
     "modified": "2019-06-15T03:14:56.821Z",
     "contributors": [
       "Sebastianz",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Element/vkern": {
+  "Web/SVG/Reference/Element/vkern": {
     "modified": "2020-10-15T21:39:26.145Z",
     "contributors": [
       "RainSlide",
@@ -42440,39 +42482,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Linking": {
-    "modified": "2019-11-28T05:35:16.253Z",
-    "contributors": [
-      "tangguolong"
-    ]
-  },
-  "Web/SVG/Namespaces_Crash_Course": {
-    "modified": "2019-10-11T20:02:55.677Z",
-    "contributors": [
-      "pacexy",
-      "cyemeng",
-      "876843240",
-      "RongMine",
-      "Ljrou",
-      "charlie"
-    ]
-  },
-  "Web/SVG/SVG_animation_with_SMIL": {
-    "modified": "2019-03-23T22:46:05.864Z",
-    "contributors": [
-      "WindStormrage",
-      "fscholz",
-      "Jackandjohn",
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/SVG_as_an_Image": {
-    "modified": "2019-03-23T22:46:05.004Z",
-    "contributors": [
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Tutorial": {
+  "Web/SVG/Tutorials/SVG_from_scratch": {
     "modified": "2019-08-15T22:27:47.736Z",
     "contributors": [
       "AngelName",
@@ -42486,7 +42496,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Shapes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes": {
     "modified": "2020-05-17T23:40:20.747Z",
     "contributors": [
       "nyz123",
@@ -42498,13 +42508,13 @@
       "act262"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Transformations": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations": {
     "modified": "2019-03-23T22:46:26.560Z",
     "contributors": [
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Tutorial/Clipping_and_masking": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking": {
     "modified": "2020-05-16T12:44:05.454Z",
     "contributors": [
       "Yayure",
@@ -42514,7 +42524,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Tutorial/Fills_and_Strokes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes": {
     "modified": "2019-07-02T00:36:20.256Z",
     "contributors": [
       "0229xiang",
@@ -42523,7 +42533,7 @@
       "act262"
     ]
   },
-  "Web/SVG/Tutorial/Filter_effects": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects": {
     "modified": "2020-05-16T13:46:25.008Z",
     "contributors": [
       "Yayure",
@@ -42532,7 +42542,7 @@
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Tutorial/Getting_Started": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Getting_started": {
     "modified": "2020-02-19T07:42:57.768Z",
     "contributors": [
       "Jamie0327",
@@ -42545,7 +42555,7 @@
       "dolphinX"
     ]
   },
-  "Web/SVG/Tutorial/Gradients": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Gradients": {
     "modified": "2019-03-23T22:50:18.555Z",
     "contributors": [
       "fanxiaojie",
@@ -42553,7 +42563,13 @@
       "zldream1106"
     ]
   },
-  "Web/SVG/Tutorial/Introduction": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Image_element": {
+    "modified": "2019-03-23T22:46:20.960Z",
+    "contributors": [
+      "fanxiaojie"
+    ]
+  },
+  "Web/SVG/Tutorials/SVG_from_scratch/Introduction": {
     "modified": "2020-06-30T12:46:55.614Z",
     "contributors": [
       "antimonyGu",
@@ -42571,14 +42587,14 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Other_content_in_SVG": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG": {
     "modified": "2020-05-16T13:02:06.652Z",
     "contributors": [
       "Yayure",
       "fanxiaojie"
     ]
   },
-  "Web/SVG/Tutorial/Paths": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Paths": {
     "modified": "2020-10-26T07:22:08.293Z",
     "contributors": [
       "WindStormrage",
@@ -42595,7 +42611,7 @@
       "ziyunfei"
     ]
   },
-  "Web/SVG/Tutorial/Patterns": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Patterns": {
     "modified": "2020-05-04T00:26:06.468Z",
     "contributors": [
       "knightyun",
@@ -42603,7 +42619,7 @@
       "zldream1106"
     ]
   },
-  "Web/SVG/Tutorial/Positions": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Positions": {
     "modified": "2019-06-07T11:18:02.352Z",
     "contributors": [
       "ymjrcc",
@@ -42614,23 +42630,7 @@
       "ziyunfei"
     ]
   },
-  "Web/SVG/Tutorial/SVG_Image_Tag": {
-    "modified": "2019-03-23T22:46:20.960Z",
-    "contributors": [
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Tutorial/SVG_In_HTML_Introduction": {
-    "modified": "2019-10-30T00:49:48.215Z",
-    "contributors": [
-      "donley828",
-      "crazy_rat",
-      "chrisdavidmills",
-      "zldream1106",
-      "lunix01"
-    ]
-  },
-  "Web/SVG/Tutorial/SVG_and_CSS": {
+  "Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS": {
     "modified": "2019-03-23T23:20:53.389Z",
     "contributors": [
       "ziyunfei",
@@ -42638,13 +42638,7 @@
       "aztack"
     ]
   },
-  "Web/SVG/Tutorial/SVG_fonts": {
-    "modified": "2019-03-23T22:46:23.842Z",
-    "contributors": [
-      "fanxiaojie"
-    ]
-  },
-  "Web/SVG/Tutorial/Texts": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Texts": {
     "modified": "2020-07-06T07:25:02.894Z",
     "contributors": [
       "zch233",
@@ -42653,8 +42647,14 @@
       "FEbyland"
     ]
   },
-  "Web/SVG/Tutorial/Tools_for_SVG": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG": {
     "modified": "2019-03-23T22:46:28.488Z",
+    "contributors": [
+      "fanxiaojie"
+    ]
+  },
+  "Web/SVG/Tutorials/SVG_from_scratch/Using_fonts": {
+    "modified": "2019-03-23T22:46:23.842Z",
     "contributors": [
       "fanxiaojie"
     ]
