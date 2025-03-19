@@ -1,7 +1,6 @@
 ---
 title: <polygon>
 slug: Web/SVG/Reference/Element/polygon
-original_slug: Web/SVG/Element/polygon
 ---
 
 {{SVGRef}}

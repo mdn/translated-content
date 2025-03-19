@@ -1,7 +1,6 @@
 ---
 title: viewBox
 slug: Web/SVG/Reference/Attribute/viewBox
-original_slug: Web/SVG/Attribute/viewBox
 ---
 
 {{SVGRef}}

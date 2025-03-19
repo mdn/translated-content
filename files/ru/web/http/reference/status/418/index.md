@@ -1,7 +1,6 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Reference/Status/418
-original_slug: Web/HTTP/Status/418
 ---
 
 {{HTTPSidebar}}

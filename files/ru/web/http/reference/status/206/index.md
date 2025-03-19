@@ -1,7 +1,6 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
-original_slug: Web/HTTP/Status/206
 ---
 
 {{HTTPSidebar}}

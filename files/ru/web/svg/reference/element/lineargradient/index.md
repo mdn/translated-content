@@ -1,7 +1,6 @@
 ---
 title: <linearGradient>
 slug: Web/SVG/Reference/Element/linearGradient
-original_slug: Web/SVG/Element/linearGradient
 ---
 
 {{SVGRef}}

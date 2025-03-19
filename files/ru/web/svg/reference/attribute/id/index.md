@@ -1,7 +1,6 @@
 ---
 title: id
 slug: Web/SVG/Reference/Attribute/id
-original_slug: Web/SVG/Attribute/id
 ---
 
 {{SVGRef}}

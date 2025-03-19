@@ -1,7 +1,6 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
-original_slug: Web/HTTP/Headers/X-Content-Type-Options
 ---
 
 {{HTTPSidebar}}

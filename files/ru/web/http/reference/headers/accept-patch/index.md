@@ -1,7 +1,6 @@
 ---
 title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
-original_slug: Web/HTTP/Headers/Accept-Patch
 ---
 
 {{HTTPSidebar}}

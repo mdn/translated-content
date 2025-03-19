@@ -1,7 +1,6 @@
 ---
 title: <line>
 slug: Web/SVG/Reference/Element/line
-original_slug: Web/SVG/Element/line
 ---
 
 {{SVGRef}}

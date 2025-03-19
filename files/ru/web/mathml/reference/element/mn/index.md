@@ -1,7 +1,6 @@
 ---
 title: <mn>
 slug: Web/MathML/Reference/Element/mn
-original_slug: Web/MathML/Element/mn
 ---
 
 {{MathMLRef}}

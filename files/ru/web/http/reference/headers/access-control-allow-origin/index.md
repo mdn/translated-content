@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
 
 {{HTTPSidebar}}

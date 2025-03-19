@@ -1,7 +1,6 @@
 ---
 title: y
 slug: Web/SVG/Reference/Attribute/y
-original_slug: Web/SVG/Attribute/y
 ---
 
 {{SVGRef}}

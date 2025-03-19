@@ -1,7 +1,6 @@
 ---
 title: end
 slug: Web/SVG/Reference/Attribute/end
-original_slug: Web/SVG/Attribute/end
 ---
 
 {{SVGRef}}

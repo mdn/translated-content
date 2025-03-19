@@ -1,7 +1,6 @@
 ---
 title: stop-color
 slug: Web/SVG/Reference/Attribute/stop-color
-original_slug: Web/SVG/Attribute/stop-color
 ---
 
 {{SVGRef}}

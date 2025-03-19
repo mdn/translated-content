@@ -1,7 +1,6 @@
 ---
 title: Расположение (позиции)
 slug: Web/SVG/Tutorials/SVG_from_scratch/Positions
-original_slug: Web/SVG/Tutorial/Positions
 ---
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}

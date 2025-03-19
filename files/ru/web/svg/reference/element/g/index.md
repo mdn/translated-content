@@ -1,7 +1,6 @@
 ---
 title: <g>
 slug: Web/SVG/Reference/Element/g
-original_slug: Web/SVG/Element/g
 l10n:
   sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---

@@ -1,7 +1,6 @@
 ---
 title: Применение эффектов SVG к содержимому HTML
 slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
-original_slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 
 {{SVGRef}}

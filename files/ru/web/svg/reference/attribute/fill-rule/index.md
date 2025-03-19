@@ -1,7 +1,6 @@
 ---
 title: fill-rule
 slug: Web/SVG/Reference/Attribute/fill-rule
-original_slug: Web/SVG/Attribute/fill-rule
 ---
 
 {{SVGRef}}

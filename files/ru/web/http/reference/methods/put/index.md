@@ -1,7 +1,6 @@
 ---
 title: PUT
 slug: Web/HTTP/Reference/Methods/PUT
-original_slug: Web/HTTP/Methods/PUT
 ---
 
 {{HTTPSidebar}}**Метод запроса HTTP PUT** создаёт новый ресурс или заменяет представление целевого ресурса данными, представленными в теле запроса.

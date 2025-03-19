@@ -1,7 +1,6 @@
 ---
 title: Средство разработки MathML
 slug: Web/MathML/Guides/Authoring
-original_slug: Web/MathML/Authoring
 ---
 
 {{MathMLRef}}

@@ -1,7 +1,6 @@
 ---
 title: Сообщения HTTP
 slug: Web/HTTP/Guides/Messages
-original_slug: Web/HTTP/Messages
 ---
 
 {{HTTPSidebar}}

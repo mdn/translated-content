@@ -1,7 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Reference/Headers/Content-Length
-original_slug: Web/HTTP/Headers/Content-Length
 ---
 
 {{HTTPSidebar}}

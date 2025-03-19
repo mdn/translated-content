@@ -1,7 +1,6 @@
 ---
 title: <rect>
 slug: Web/SVG/Reference/Element/rect
-original_slug: Web/SVG/Element/rect
 ---
 
 {{SVGRef}}

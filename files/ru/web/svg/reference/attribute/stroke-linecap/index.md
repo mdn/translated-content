@@ -1,7 +1,6 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Reference/Attribute/stroke-linecap
-original_slug: Web/SVG/Attribute/stroke-linecap
 ---
 
 {{SVGRef}}

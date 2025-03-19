@@ -1,7 +1,6 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Reference/Element/foreignObject
-original_slug: Web/SVG/Element/foreignObject
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
-original_slug: Web/HTTP/Status/502
 ---
 
 {{HTTPSidebar}}

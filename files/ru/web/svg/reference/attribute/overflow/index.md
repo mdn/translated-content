@@ -1,7 +1,6 @@
 ---
 title: overflow
 slug: Web/SVG/Reference/Attribute/overflow
-original_slug: Web/SVG/Attribute/overflow
 ---
 
 {{SVGRef}}

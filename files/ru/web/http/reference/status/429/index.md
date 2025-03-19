@@ -1,7 +1,6 @@
 ---
 title: 429 Too Many Requests
 slug: Web/HTTP/Reference/Status/429
-original_slug: Web/HTTP/Status/429
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Reference/Headers/Content-Encoding
-original_slug: Web/HTTP/Headers/Content-Encoding
 ---
 
 {{HTTPSidebar}}

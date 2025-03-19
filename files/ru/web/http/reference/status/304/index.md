@@ -1,7 +1,6 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
-original_slug: Web/HTTP/Status/304
 ---
 
 {{HTTPSidebar}}

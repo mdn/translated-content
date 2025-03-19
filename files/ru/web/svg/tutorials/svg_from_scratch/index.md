@@ -1,7 +1,6 @@
 ---
 title: SVG — учебное руководство
 slug: Web/SVG/Tutorials/SVG_from_scratch
-original_slug: Web/SVG/Tutorial
 ---
 
 {{SVGRef}}

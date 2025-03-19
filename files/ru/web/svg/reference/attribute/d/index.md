@@ -1,7 +1,6 @@
 ---
 title: d
 slug: Web/SVG/Reference/Attribute/d
-original_slug: Web/SVG/Attribute/d
 ---
 
 {{SVGRef}}

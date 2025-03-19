@@ -1,7 +1,6 @@
 ---
 title: "Причина: отсутствует заголовок CORS «Access-Control-Allow-Origin»"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---

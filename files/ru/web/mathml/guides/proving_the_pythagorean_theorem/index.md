@@ -1,7 +1,6 @@
 ---
 title: Доказательство теоремы Пифагора
 slug: Web/MathML/Guides/Proving_the_Pythagorean_theorem
-original_slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
 
 {{MathMLRef}}

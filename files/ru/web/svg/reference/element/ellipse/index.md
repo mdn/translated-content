@@ -1,7 +1,6 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Reference/Element/ellipse
-original_slug: Web/SVG/Element/ellipse
 ---
 
 {{SVGRef}}

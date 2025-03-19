@@ -1,7 +1,6 @@
 ---
 title: <feBlend>
 slug: Web/SVG/Reference/Element/feBlend
-original_slug: Web/SVG/Element/feBlend
 ---
 
 {{SVGRef}}

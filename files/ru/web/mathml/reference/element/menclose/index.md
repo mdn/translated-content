@@ -1,7 +1,6 @@
 ---
 title: <menclose>
 slug: Web/MathML/Reference/Element/menclose
-original_slug: Web/MathML/Element/menclose
 ---
 
 {{MathMLRef}}

@@ -1,7 +1,6 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Reference/Status/403
-original_slug: Web/HTTP/Status/403
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: keyTimes
 slug: Web/SVG/Reference/Attribute/keyTimes
-original_slug: Web/SVG/Attribute/keyTimes
 ---
 
 {{SVGRef}}

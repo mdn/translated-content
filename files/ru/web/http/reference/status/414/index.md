@@ -1,7 +1,6 @@
 ---
 title: 414 URI Too Long
 slug: Web/HTTP/Reference/Status/414
-original_slug: Web/HTTP/Status/414
 ---
 
 {{HTTPSidebar}}

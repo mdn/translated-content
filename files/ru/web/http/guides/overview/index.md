@@ -1,7 +1,6 @@
 ---
 title: Обзор протокола HTTP
 slug: Web/HTTP/Guides/Overview
-original_slug: Web/HTTP/Overview
 l10n:
   sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---

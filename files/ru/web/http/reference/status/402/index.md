@@ -1,7 +1,6 @@
 ---
 title: 402 Payment Required
 slug: Web/HTTP/Reference/Status/402
-original_slug: Web/HTTP/Status/402
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

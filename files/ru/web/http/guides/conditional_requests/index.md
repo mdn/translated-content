@@ -1,7 +1,6 @@
 ---
 title: Условные HTTP запросы
 slug: Web/HTTP/Guides/Conditional_requests
-original_slug: Web/HTTP/Conditional_requests
 ---
 
 {{HTTPSidebar}}

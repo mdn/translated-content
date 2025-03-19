@@ -1,7 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
-original_slug: Web/HTTP/Headers/Cache-Control
 ---
 
 {{HTTPSidebar}}

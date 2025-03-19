@@ -1,7 +1,6 @@
 ---
 title: Текст
 slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
-original_slug: Web/SVG/Tutorial/Texts
 ---
 
 {{SVGRef}}{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}

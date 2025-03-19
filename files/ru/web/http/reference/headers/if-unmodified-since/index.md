@@ -1,7 +1,6 @@
 ---
 title: If-Unmodified-Since
 slug: Web/HTTP/Reference/Headers/If-Unmodified-Since
-original_slug: Web/HTTP/Headers/If-Unmodified-Since
 ---
 
 {{HTTPSidebar}}

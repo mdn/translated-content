@@ -1,7 +1,6 @@
 ---
 title: rx
 slug: Web/SVG/Reference/Attribute/rx
-original_slug: Web/SVG/Attribute/rx
 ---
 
 {{SVGRef}}

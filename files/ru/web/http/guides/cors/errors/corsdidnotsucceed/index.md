@@ -1,7 +1,6 @@
 ---
 title: "Причина: Не удалось выполнить запрос CORS"
 slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
-original_slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <animateMotion>
 slug: Web/SVG/Reference/Element/animateMotion
-original_slug: Web/SVG/Element/animateMotion
 ---
 
 {{SVGRef}}

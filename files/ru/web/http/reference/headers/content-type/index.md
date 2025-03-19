@@ -1,7 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Reference/Headers/Content-Type
-original_slug: Web/HTTP/Headers/Content-Type
 ---
 
 {{HTTPSidebar}}

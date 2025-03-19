@@ -1,7 +1,6 @@
 ---
 title: GET
 slug: Web/HTTP/Reference/Methods/GET
-original_slug: Web/HTTP/Methods/GET
 ---
 
 {{HTTPSidebar}}

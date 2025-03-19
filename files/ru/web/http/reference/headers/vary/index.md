@@ -1,7 +1,6 @@
 ---
 title: Vary
 slug: Web/HTTP/Reference/Headers/Vary
-original_slug: Web/HTTP/Headers/Vary
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: font-weight
 slug: Web/SVG/Reference/Attribute/font-weight
-original_slug: Web/SVG/Attribute/font-weight
 ---
 
 {{SVGRef}}

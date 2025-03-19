@@ -1,7 +1,6 @@
 ---
 title: Используемые по умолчанию значения заголовка Accept
 slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
-original_slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 l10n:
   sourceCommit: e843500803b73cbf179b84864cd9c159c7d4d81c
 ---

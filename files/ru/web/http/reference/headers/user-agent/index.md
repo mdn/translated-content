@@ -1,7 +1,6 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Reference/Headers/User-Agent
-original_slug: Web/HTTP/Headers/User-Agent
 ---
 
 {{HTTPSidebar}}

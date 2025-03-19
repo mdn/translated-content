@@ -1,7 +1,6 @@
 ---
 title: Ширина
 slug: Web/SVG/Reference/Attribute/width
-original_slug: Web/SVG/Attribute/width
 ---
 
 {{SVGRef}}

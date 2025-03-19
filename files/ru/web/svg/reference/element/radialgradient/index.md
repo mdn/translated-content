@@ -1,7 +1,6 @@
 ---
 title: <radialGradient>
 slug: Web/SVG/Reference/Element/radialGradient
-original_slug: Web/SVG/Element/radialGradient
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: <svg>
 slug: Web/SVG/Reference/Element/svg
-original_slug: Web/SVG/Element/svg
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: SVG image element
 slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
-original_slug: Web/SVG/Tutorial/SVG_Image_Tag
 ---
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}

@@ -1,7 +1,6 @@
 ---
 title: HTTP сессия
 slug: Web/HTTP/Guides/Session
-original_slug: Web/HTTP/Session
 ---
 
 {{HTTPSidebar}}

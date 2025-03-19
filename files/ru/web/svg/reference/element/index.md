@@ -1,7 +1,6 @@
 ---
 title: Справочник SVG элементов
 slug: Web/SVG/Reference/Element
-original_slug: Web/SVG/Element
 ---
 
 {{SVGRef}}

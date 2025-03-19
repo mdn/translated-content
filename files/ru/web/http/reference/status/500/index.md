@@ -1,7 +1,6 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Reference/Status/500
-original_slug: Web/HTTP/Status/500
 ---
 
 {{HTTPSidebar}}

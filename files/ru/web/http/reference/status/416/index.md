@@ -1,7 +1,6 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Reference/Status/416
-original_slug: Web/HTTP/Status/416
 ---
 
 {{HTTPSidebar}}

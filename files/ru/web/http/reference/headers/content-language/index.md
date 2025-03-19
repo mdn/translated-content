@@ -1,7 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Reference/Headers/Content-Language
-original_slug: Web/HTTP/Headers/Content-Language
 ---
 
 {{HTTPSidebar}}

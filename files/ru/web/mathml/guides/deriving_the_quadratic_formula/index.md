@@ -1,7 +1,6 @@
 ---
 title: "MathML: Вывод Квадратичной Формулы"
 slug: Web/MathML/Guides/Deriving_the_quadratic_formula
-original_slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
 
 {{MathMLRef}}

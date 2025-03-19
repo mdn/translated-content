@@ -1,7 +1,6 @@
 ---
 title: HTTP аутентификация
 slug: Web/HTTP/Guides/Authentication
-original_slug: Web/HTTP/Authentication
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: additive
 slug: Web/SVG/Reference/Attribute/additive
-original_slug: Web/SVG/Attribute/additive
 ---
 
 {{SVGRef}}

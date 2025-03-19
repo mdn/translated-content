@@ -1,7 +1,6 @@
 ---
 title: Введение
 slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
-original_slug: Web/SVG/Tutorial/Introduction
 ---
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Руководство", "Web/SVG/Руководство/Введение") }}

@@ -1,7 +1,6 @@
 ---
 title: text-rendering
 slug: Web/SVG/Reference/Attribute/text-rendering
-original_slug: Web/SVG/Attribute/text-rendering
 ---
 
 {{SVGRef}}

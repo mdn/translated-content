@@ -1,7 +1,6 @@
 ---
 title: shape-rendering
 slug: Web/SVG/Reference/Attribute/shape-rendering
-original_slug: Web/SVG/Attribute/shape-rendering
 ---
 
 {{SVGRef}}

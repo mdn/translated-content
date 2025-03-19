@@ -1,7 +1,6 @@
 ---
 title: Date
 slug: Web/HTTP/Reference/Headers/Date
-original_slug: Web/HTTP/Headers/Date
 ---
 
 {{HTTPSidebar}}

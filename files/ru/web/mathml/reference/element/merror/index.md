@@ -1,7 +1,6 @@
 ---
 title: <merror>
 slug: Web/MathML/Reference/Element/merror
-original_slug: Web/MathML/Element/merror
 ---
 
 {{MathMLRef}}

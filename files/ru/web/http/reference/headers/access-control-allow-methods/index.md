@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Другое содержание в SVG
 slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
-original_slug: Web/SVG/Tutorial/Other_content_in_SVG
 ---
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}

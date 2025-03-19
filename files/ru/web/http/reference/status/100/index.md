@@ -1,7 +1,6 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
-original_slug: Web/HTTP/Status/100
 ---
 
 {{HTTPSidebar}}

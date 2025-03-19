@@ -1,7 +1,6 @@
 ---
 title: Перенаправления в HTTP
 slug: Web/HTTP/Guides/Redirections
-original_slug: Web/HTTP/Redirections
 ---
 
 {{HTTPSidebar}}

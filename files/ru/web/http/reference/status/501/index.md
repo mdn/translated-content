@@ -1,7 +1,6 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Reference/Status/501
-original_slug: Web/HTTP/Status/501
 ---
 
 {{HTTPSidebar}}

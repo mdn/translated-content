@@ -1,7 +1,6 @@
 ---
 title: Заголовки HTTP
 slug: Web/HTTP/Reference/Headers
-original_slug: Web/HTTP/Headers
 ---
 
 {{ HTTPSidebar }}

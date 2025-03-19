@@ -1,7 +1,6 @@
 ---
 title: values
 slug: Web/SVG/Reference/Attribute/values
-original_slug: Web/SVG/Attribute/values
 ---
 
 {{SVGRef}}

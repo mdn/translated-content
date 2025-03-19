@@ -1,7 +1,6 @@
 ---
 title: Начало работы
 slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-original_slug: Web/SVG/Tutorial/Getting_Started
 ---
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}

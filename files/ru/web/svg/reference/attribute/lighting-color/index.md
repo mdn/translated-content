@@ -1,7 +1,6 @@
 ---
 title: lighting-color
 slug: Web/SVG/Reference/Attribute/lighting-color
-original_slug: Web/SVG/Attribute/lighting-color
 ---
 
 {{SVGRef}}

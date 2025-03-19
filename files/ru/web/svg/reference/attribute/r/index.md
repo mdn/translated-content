@@ -1,7 +1,6 @@
 ---
 title: r
 slug: Web/SVG/Reference/Attribute/r
-original_slug: Web/SVG/Attribute/r
 ---
 
 {{SVGRef}}Атрибут r устанавливает значение радиуса круга.

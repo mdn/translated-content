@@ -1,7 +1,6 @@
 ---
 title: cy
 slug: Web/SVG/Reference/Attribute/cy
-original_slug: Web/SVG/Attribute/cy
 l10n:
   sourceCommit: 0c3c2bd5feaedbe0ffa7fd3530c625e5b1200670
 ---

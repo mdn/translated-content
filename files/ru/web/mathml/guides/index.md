@@ -1,7 +1,6 @@
 ---
 title: Примеры
 slug: Web/MathML/Guides
-original_slug: Web/MathML/Examples
 ---
 
 {{MathMLRef}}

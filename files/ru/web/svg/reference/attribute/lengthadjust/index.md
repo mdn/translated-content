@@ -1,7 +1,6 @@
 ---
 title: lengthAdjust
 slug: Web/SVG/Reference/Attribute/lengthAdjust
-original_slug: Web/SVG/Attribute/lengthAdjust
 ---
 
 {{SVGRef}}

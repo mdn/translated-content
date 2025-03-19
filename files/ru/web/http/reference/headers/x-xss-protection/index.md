@@ -1,7 +1,6 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Reference/Headers/X-XSS-Protection
-original_slug: Web/HTTP/Headers/X-XSS-Protection
 ---
 
 {{HTTPSidebar}}

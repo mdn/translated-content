@@ -1,7 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Reference/Headers/Accept
-original_slug: Web/HTTP/Headers/Accept
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: fill-opacity
 slug: Web/SVG/Reference/Attribute/fill-opacity
-original_slug: Web/SVG/Attribute/fill-opacity
 ---
 
 {{SVGRef}}

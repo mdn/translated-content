@@ -1,7 +1,6 @@
 ---
 title: dur
 slug: Web/SVG/Reference/Attribute/dur
-original_slug: Web/SVG/Attribute/dur
 ---
 
 {{SVGRef}}

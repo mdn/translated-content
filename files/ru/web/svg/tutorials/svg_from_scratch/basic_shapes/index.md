@@ -1,7 +1,6 @@
 ---
 title: Основные Фигуры
 slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
-original_slug: Web/SVG/Tutorial/Basic_Shapes
 ---
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

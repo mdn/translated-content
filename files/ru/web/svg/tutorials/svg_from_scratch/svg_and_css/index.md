@@ -1,7 +1,6 @@
 ---
 title: SVG и CSS
 slug: Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
-original_slug: Web/SVG/Tutorial/SVG_and_CSS
 ---
 
 {{SVGRef}}

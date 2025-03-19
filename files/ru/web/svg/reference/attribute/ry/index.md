@@ -1,7 +1,6 @@
 ---
 title: ry
 slug: Web/SVG/Reference/Attribute/ry
-original_slug: Web/SVG/Attribute/ry
 ---
 
 {{SVGRef}}

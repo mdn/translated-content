@@ -1,7 +1,6 @@
 ---
 title: repeatCount
 slug: Web/SVG/Reference/Attribute/repeatCount
-original_slug: Web/SVG/Attribute/repeatCount
 l10n:
   sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---

@@ -1,7 +1,6 @@
 ---
 title: Неполный список типов MIME
 slug: Web/HTTP/Guides/MIME_types/Common_types
-original_slug: Web/HTTP/MIME_types/Common_types
 ---
 
 {{HTTPSidebar}}Здесь представлен исчерпывающий список типов MIME, соотнесённых с типами документов и отсортированных по расширению.Два ключевых типа MIME, использующихся в качестве типов по умолчанию:

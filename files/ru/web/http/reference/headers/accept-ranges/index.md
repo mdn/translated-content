@@ -1,7 +1,6 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
-original_slug: Web/HTTP/Headers/Accept-Ranges
 ---
 
 {{HTTPSidebar}}

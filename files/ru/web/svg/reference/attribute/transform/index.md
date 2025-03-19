@@ -1,7 +1,6 @@
 ---
 title: transform
 slug: Web/SVG/Reference/Attribute/transform
-original_slug: Web/SVG/Attribute/transform
 ---
 
 {{SVGRef}}

@@ -1,7 +1,6 @@
 ---
 title: Работа с SVG
 slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
-original_slug: Web/SVG/Tutorial/Tools_for_SVG
 ---
 
 {{SVGRef}}

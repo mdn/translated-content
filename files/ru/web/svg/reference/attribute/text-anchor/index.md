@@ -1,7 +1,6 @@
 ---
 title: text-anchor
 slug: Web/SVG/Reference/Attribute/text-anchor
-original_slug: Web/SVG/Attribute/text-anchor
 ---
 
 {{SVGRef}}

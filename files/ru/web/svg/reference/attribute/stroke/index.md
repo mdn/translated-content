@@ -1,7 +1,6 @@
 ---
 title: stroke
 slug: Web/SVG/Reference/Attribute/stroke
-original_slug: Web/SVG/Attribute/stroke
 ---
 
 {{SVGRef}}

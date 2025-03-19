@@ -1,7 +1,6 @@
 ---
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
 {{HTTPSidebar}}
