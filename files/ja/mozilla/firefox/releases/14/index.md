@@ -45,7 +45,7 @@ _変更なし。_
 
 ### HTTP
 
-Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs/Web/HTTP/Status#308) ステータスコードに対応しました。 Gecko は永続的リダイレクトと一時的リダイレクトを区別しないので、 [`307 Temporary Redirect`](/ja/docs/Web/HTTP/Status#307) ステータスコードのように振る舞います。ユーザーエージェントが 2 つのリクエスト間で HTTP メソッドを変更することは禁止されます (`POST` は `POST` のままであり、`GET` は `GET` のままです)。
+Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs/Web/HTTP/Reference/Status#308) ステータスコードに対応しました。 Gecko は永続的リダイレクトと一時的リダイレクトを区別しないので、 [`307 Temporary Redirect`](/ja/docs/Web/HTTP/Reference/Status#307) ステータスコードのように振る舞います。ユーザーエージェントが 2 つのリクエスト間で HTTP メソッドを変更することは禁止されます (`POST` は `POST` のままであり、`GET` は `GET` のままです)。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 

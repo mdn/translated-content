@@ -182,7 +182,7 @@ let playAttempt = setInterval(() => {
 
 ## autoplay 機能ポリシー
 
-上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Feature-Policy")}} ヘッダーの [`autoplay`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 既定では、`autoplay` 機能ポリシー (feature policy) は `'self'`（_単一引用符を含む_）に設定されています。 これは、文書と同じドメインでホストされているときに自動再生が許可されることを示します。
+上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Feature-Policy")}} ヘッダーの [`autoplay`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay) ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 既定では、`autoplay` 機能ポリシー (feature policy) は `'self'`（_単一引用符を含む_）に設定されています。 これは、文書と同じドメインでホストされているときに自動再生が許可されることを示します。
 
 また、`'none'` を指定して自動再生を完全に無効にしたり、`'*'` を指定してすべてのドメインからの自動再生を許可したり、メディアを自動的に再生できる 1 つ以上の特定のオリジンを指定できます。 これらのオリジンはスペース文字で区切ります。
 

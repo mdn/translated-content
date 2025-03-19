@@ -39,9 +39,9 @@ iframe {
 
 - `allow`
 
-  - : [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を `<iframe>` に指定します。このポリシーは、 `<iframe>` が利用可能な機能（例：マイク、カメラ、バッテリー、ウェブ共有 API へのアクセスなど）をリクエストのオリジンに基づいて定義します。
+  - : [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を `<iframe>` に指定します。このポリシーは、 `<iframe>` が利用可能な機能（例：マイク、カメラ、バッテリー、ウェブ共有 API へのアクセスなど）をリクエストのオリジンに基づいて定義します。
 
-    その例は、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Headers/Permissions-Policy#iframes) を参照してください。
+    その例は、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) を参照してください。
 
     > **メモ:** `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
 
@@ -69,7 +69,7 @@ iframe {
 
 - `csp` {{experimental_inline}}
 
-  - : 埋め込みリソースを制限する[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)です。詳しくは {{domxref("HTMLIFrameElement.csp")}} をご覧ください。
+  - : 埋め込みリソースを制限する[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)です。詳しくは {{domxref("HTMLIFrameElement.csp")}} をご覧ください。
 
 - `height`
   - : フレームの高さを CSS ピクセル数で示します。既定値は `150` です。
@@ -348,5 +348,5 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 関連情報
 
-- [CSP: frame-ancestors](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP: frame-ancestors](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [プライバシー、アクセス制限、情報セキュリティ](/ja/docs/Web/Privacy)

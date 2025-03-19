@@ -34,7 +34,7 @@ Access-Control-Request-Method: <method>
 ## ディレクティブ
 
 - \<method>
-  - : [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)の 1 つ。例えば {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}} など。
+  - : [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)の 1 つ。例えば {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}} など。
 
 ## 例
 

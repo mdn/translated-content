@@ -33,7 +33,7 @@ _このインターフェイスは、親である {{domxref("EventTarget")}} か
 - {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : 文字列で、ソースの URL を表します。
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
-  - : 論理値で、 `EventSource` オブジェクトがオリジン間 ([CORS](/ja/docs/Web/HTTP/CORS)) 資格情報を設定してインスタンス化されたか (`true`)、設定されずにインスタンス化されたか (`false`、既定値) を示します。
+  - : 論理値で、 `EventSource` オブジェクトがオリジン間 ([CORS](/ja/docs/Web/HTTP/Guides/CORS)) 資格情報を設定してインスタンス化されたか (`true`)、設定されずにインスタンス化されたか (`false`、既定値) を示します。
 
 ## メソッド
 

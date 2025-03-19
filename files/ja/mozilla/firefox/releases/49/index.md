@@ -176,7 +176,7 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 ## HTTP
 
-- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Headers/Cache-Control) ディレクティブを実装しました ([Firefox バグ 1267474](https://bugzil.la/1267474))。詳しくは [ブログ記事](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) もご覧ください。
+- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ディレクティブを実装しました ([Firefox バグ 1267474](https://bugzil.la/1267474))。詳しくは [ブログ記事](https://bitsup.blogspot.com/2016/05/cache-control-immutable.html) もご覧ください。
 - {{HTTPHeader("Content-Security-Policy")}} の {{CSP("require-sri-for")}} を実装しました ([Firefox バグ 1265318](https://bugzil.la/1265318))。
 
 ## ネットワーク

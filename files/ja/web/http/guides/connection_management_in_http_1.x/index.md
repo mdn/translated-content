@@ -1,7 +1,7 @@
 ---
 title: HTTP/1.x のコネクション管理
 slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Connection_management_in_HTTP_1.x
+original_slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
@@ -21,9 +21,9 @@ HTTP/1.1 で、新たなモデルを 2 種類導入しました。持続的な�
 > [!NOTE]
 > HTTP/2 では、コネクションの管理モデルをさらに追加しました。
 
-特筆すべき重要なポイントとして、 HTTP のコネクション管理は隣接したノードの間のコネクション、すなわち[エンドツーエンド](/ja/docs/Web/HTTP/Headers#エンドツーエンドヘッダー)ではなく[ホップバイホップ](/ja/docs/Web/HTTP/Headers#ホップバイホップヘッダー)に適用されることがあります。クライアントと最初のプロキシーの間で使用するモデルと、プロキシーと宛先サーバー (または任意の中間プロキシー) の間で使用するモデルが異なることもあります。{{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} といったコネクションモデルの定義にかかわる HTTP ヘッダーは、中間のノードが値を変更できる [ホップバイホップ](/ja/docs/Web/HTTP/Headers#ホップバイホップヘッダー)ヘッダーです。
+特筆すべき重要なポイントとして、 HTTP のコネクション管理は隣接したノードの間のコネクション、すなわち[エンドツーエンド](/ja/docs/Web/HTTP/Reference/Headers#エンドツーエンドヘッダー)ではなく[ホップバイホップ](/ja/docs/Web/HTTP/Reference/Headers#ホップバイホップヘッダー)に適用されることがあります。クライアントと最初のプロキシーの間で使用するモデルと、プロキシーと宛先サーバー (または任意の中間プロキシー) の間で使用するモデルが異なることもあります。{{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} といったコネクションモデルの定義にかかわる HTTP ヘッダーは、中間のノードが値を変更できる [ホップバイホップ](/ja/docs/Web/HTTP/Reference/Headers#ホップバイホップヘッダー)ヘッダーです。
 
-関連するトピックとしては、 HTTP コネクションのアップグレードの概念、つまり HTTP/1.1 コネクションが TLS/1.0、 WebSocket、 又は平文の HTTP/2 のような異なるプロトコルにアップグレードされたことが挙げられます。この[プロトコルのアップグレードメカニズム](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism)は他の場所でもっと詳しく文書化されています。
+関連するトピックとしては、 HTTP コネクションのアップグレードの概念、つまり HTTP/1.1 コネクションが TLS/1.0、 WebSocket、 又は平文の HTTP/2 のような異なるプロトコルにアップグレードされたことが挙げられます。この[プロトコルのアップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)は他の場所でもっと詳しく文書化されています。
 
 ## 短命なコネクション
 

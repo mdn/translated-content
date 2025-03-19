@@ -155,8 +155,8 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 ### HTTP
 
 - {{HTTPHeader("Referrer-Policy")}} ヘッダーで `same-origin`、`strict-origin`、`strict-origin-when-cross-origin` ディレクティブをサポートしました ([Firefox バグ 1276836](https://bugzil.la/1276836))。
-- {{CSP("script-src")}} のように、[`'strict-dynamic'` source expression](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) を {{HTTPHeader("Content-Security-Policy")}} のディレクティブでサポートしました ([Firefox バグ 1299483](https://bugzil.la/1299483))。
-- [Strict Secure Cookies specification](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01) に従って、安全ではないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
+- {{CSP("script-src")}} のように、[`'strict-dynamic'` source expression](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#strict-dynamic) を {{HTTPHeader("Content-Security-Policy")}} のディレクティブでサポートしました ([Firefox バグ 1299483](https://bugzil.la/1299483))。
+- [Strict Secure Cookies specification](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01) に従って、安全ではないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Guides/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
 - HTTP/2 ヘッダー圧縮方式 [HPACK](https://tools.ietf.org/html/rfc7541) の最大テーブルサイズを 4 KB から 64 KB に拡張しました ([Firefox バグ 1296280](https://bugzil.la/1296280))。
 - {{HTTPHeader("Large-Allocation")}} ヘッダーを追加しました ([Firefox バグ 1304140](https://bugzil.la/1304140))。
 

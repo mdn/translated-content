@@ -8,12 +8,12 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`300 Multiple Choices`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードで、リクエストに対して複数のレスポンスがあることを示します。
+HTTP の **`300 Multiple Choices`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストに対して複数のレスポンスがあることを示します。
 ユーザーエージェントやユーザーは、その内から一つを選択します。
 
-> **メモ:** [エージェント駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation#エージェント駆動型ネゴシエーション)では、サーバーに複数の候補が存在する場合、クライアントとサーバーが共同で指定されたリソースの最適な候補を決定します。
+> **メモ:** [エージェント駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#エージェント駆動型ネゴシエーション)では、サーバーに複数の候補が存在する場合、クライアントとサーバーが共同で指定されたリソースの最適な候補を決定します。
 > ほとんどのクライアントは、レスポンスから自動的に選択する手段を持っていません。また、追加の往復通信により、クライアントとサーバーの対話が遅くなります。
-> [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)の方がはるかに広く使用されており、サーバーはリクエストヘッダー（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} など）に基づいて、クライアントに最も適したリソースを選べます。
+> [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)の方がはるかに広く使用されており、サーバーはリクエストヘッダー（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} など）に基づいて、クライアントに最も適したリソースを選べます。
 
 サーバーは、ユーザーまたはユーザーエージェントが選択できるリソースメタデータと URI のリストを含むコンテンツをレスポンスに含めるべきです。コンテンツの形式は実装に依存しますが、ユーザーエージェントによって簡単に解析できる形式（HTML や JSON など）であるべきです。
 
@@ -87,8 +87,8 @@ Available variants:
 
 ## 関連情報
 
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("301", "301 Moved Permanently")}}
 - {{HTTPStatus("302", "302 Found")}} 一時リダイレクト
 - {{HTTPStatus("308", "308 Permanent Redirect")}}

@@ -26,7 +26,7 @@ slug: Mozilla/Firefox/Releases/93
 
 ### HTTP
 
-- ダイジェストを使用する [HTTP 認証](/ja/docs/Web/HTTP/Authentication) で SHA-256 アルゴリズムをサポートしました。これは、以前から使用できた MD5 アルゴリズムより安全な認証を可能にします ([Firefox バグ 1682995](https://bugzil.la/1682995))。
+- ダイジェストを使用する [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication) で SHA-256 アルゴリズムをサポートしました。これは、以前から使用できた MD5 アルゴリズムより安全な認証を可能にします ([Firefox バグ 1682995](https://bugzil.la/1682995))。
 - _画像_ について、既定の HTTP {{HTTPHeader("ACCEPT")}} ヘッダーを `image/avif,image/webp,*/*` に変更しました ([AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_画像) 画像形式のサポートを追加した結果として) ([Firefox バグ 1682995](https://bugzil.la/1682995))。
 
 ### API
@@ -37,7 +37,7 @@ slug: Mozilla/Firefox/Releases/93
 
 #### イベント
 
-- {{domxref("GlobalEventHandlers.onsecuritypolicyviolation","onsecuritypolicyviolation")}} グローバルイベントハンドラープロパティをサポートしました。これは、[Content Security Policy](/ja/docs/Web/HTTP/CSP) の違反があるときに発生する [`securitypolicyviolation`](/ja/docs/Web/API/Element/securitypolicyviolation_event) イベントを処理するハンドラーを割り当てるために使用できます ([Firefox バグ 1727302](https://bugzil.la/1727302))。
+- {{domxref("GlobalEventHandlers.onsecuritypolicyviolation","onsecuritypolicyviolation")}} グローバルイベントハンドラープロパティをサポートしました。これは、[Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) の違反があるときに発生する [`securitypolicyviolation`](/ja/docs/Web/API/Element/securitypolicyviolation_event) イベントを処理するハンドラーを割り当てるために使用できます ([Firefox バグ 1727302](https://bugzil.la/1727302))。
 - {{domxref("GlobalEventHandlers.onslotchange","GlobalEventHandlers")}} および {{domxref("ShadowRoot.onslotchange","ShadowRoot")}} で `onslotchange` イベントハンドラープロパティをサポートしました。これは、スロットに含まれているノードが変更されたときに {{HTMLElement("slot")}} 要素で発生する [`slotchange`](/ja/docs/Web/API/HTMLSlotElement/slotchange_event) イベントを処理するハンドラーを割り当てるために使用できます ([Firefox バグ 1501983](https://bugzil.la/1501983))。
 
 #### 廃止

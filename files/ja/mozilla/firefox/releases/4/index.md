@@ -184,7 +184,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [`document.createElement`](/ja/docs/Web/API/Document/createElement) メソッドが Quirks モードでタグ名の前後の `<` と `>` を受け入れないようになりました。
 - [`element.setCapture()`](/ja/docs/Web/API/Element/setCapture) および[`document.releaseCapture()`](/ja/docs/Web/API/Document/releaseCapture) メソッドが追加され、これらを用いることで、`指定要素で mousedown` イベントが発生した後にマウスが通常の追跡領域を越えても、マウスイベントを追い続けることができます。
 - The [`window.mozPaintCount`](/ja/docs/Web/API/Window) プロパティが追加されました。これを用いることで、何回ドキュメントが描画されたかを判定できます。これはウェブアプリケーションのパフォーマンスをテストするときに役立ちます。
-- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダー](/ja/docs/Web/HTTP/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
+- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダー](/ja/docs/Web/HTTP/Guides/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
 - [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) オブジェクトに追加された Gecko 固有の `mozResponseArrayBuffer`プロパティを用いると、レスポンスを文字列と同様 に JavaScript Typed Array として扱えます。
 - [Mouse イベント](/ja/docs/Web/API/MouseEvent) に `mozPressure` プロパティが追加されました。このプロパティは圧力感知をサポートする入力デバイスでの圧力を示します。
 - ~~window\.createBlobURL()~~ [`window.URL.createObjectURL()`](/ja/docs/Web/API/URL/createObjectURL_static) および [`window.URL.revokeObjectURL()`](/ja/docs/Web/API/URL/revokeObjectURL_static) メソッドを用いることで、ローカルファイルを参照する BLOB ("Binary Large OBject") URL を作成できます。
@@ -199,13 +199,13 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 ### セキュリティ
 
-- [Content Security Policy (CSP)](/ja/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/ja/docs/Web/HTTP/Guides/CSP)
   - : Content Security Policy (CSP) は Mozilla が提案するウェブデザイナーとサーバー管理者がウェブサイトの相互利用でどのようなコンテンツを指定するかの仕様です。目的はクロスサイトスクリプティングを含む攻撃とデータインジェクション攻撃を判定し、軽減することです。
-- [HTTP Strict Transport Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict Transport Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HTTP Strict Transport Security はウェブサイトがブラウザーに HTTP を用いる代わりに HTTPS を用いてのみやり取りすべきであることを伝えるセキュリティ機能です。
-- [X-FRAME-OPTIONS レスポンスヘッダー](/ja/docs/Web/HTTP/Headers/X-Frame-Options)
+- [X-FRAME-OPTIONS レスポンスヘッダー](/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : Internet Explorer 8 で導入された X-FRAME-OPTIONS HTTP レスポンスヘッダーが Firefox でサポートされるようになりました。これを用いることでサイトがページをフレーム内で用いることができるかどうか、フレーム内で利用可能ならば、同じドメイン内に限定するかどうかを指示することができます。
-- [User Agent 文字列](/ja/docs/Web/HTTP/Headers/User-Agent/Firefox) の変更
+- [User Agent 文字列](/ja/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox) の変更
   - : [HTTP リクエストで送ったデータとエントロピーの総量を減少させるべき](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)にあるように、 ユーザーエージェント文字列から暗号の強度を表す文字列と言語を表す文字列が削除されました。
 
 ### JavaScript

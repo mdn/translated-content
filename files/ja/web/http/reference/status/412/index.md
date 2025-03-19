@@ -8,8 +8,8 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`412 Precondition Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、ターゲットリソースへのアクセスが拒否されたことを示します。
-これは、[条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)を {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} 以外のメソッドで行う際に、 {{HTTPHeader("If-Unmodified-Since")}} または {{HTTPHeader("If-Match")}} ヘッダーで定義された条件が満たされない場合に発生します。
+HTTP の **`412 Precondition Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、ターゲットリソースへのアクセスが拒否されたことを示します。
+これは、[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を {{HTTPMethod("GET")}} または {{HTTPMethod("HEAD")}} 以外のメソッドで行う際に、 {{HTTPHeader("If-Unmodified-Since")}} または {{HTTPHeader("If-Match")}} ヘッダーで定義された条件が満たされない場合に発生します。
 その場合、リクエスト（通常はリソースのアップロードまたは変更）は実行されず、このエラーレスポンスが返されます。
 
 ## ステータス
@@ -50,8 +50,8 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
-- [条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)
 - {{HTTPStatus("304")}}
 - {{HTTPHeader("If-Unmodified-Since")}}, {{HTTPHeader("If-Match")}}
 - {{HTTPStatus("428")}}

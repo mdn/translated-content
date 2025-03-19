@@ -98,7 +98,7 @@ li {
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
 
-  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)を送信するかです。
+  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)を送信するかです。
 
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。

@@ -134,7 +134,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- サイトで [Content Security Policy](/ja/docs/Web/HTTP/CSP) が設定されている場合に、favicon も CSP に従うようになりました ([Firefox バグ 1297156](https://bugzil.la/1297156))。
+- サイトで [Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) が設定されている場合に、favicon も CSP に従うようになりました ([Firefox バグ 1297156](https://bugzil.la/1297156))。
 - CSP の違反レポートを生成するとき、`script-src` ディレクティブの `'report-sample'` 式を認識するようになりました。このディレクディブは、違反が発生した場所の短いサンプルをレポートに含めるべきであることを示します。以前は、Firefox は常にサンプルを含めていました ([Firefox バグ 1473218](https://bugzil.la/1473218))。
 - Firefox が NSS 3.39 を使用するようになりました ([Firefox バグ 1470914](https://bugzil.la/1470914))。
 

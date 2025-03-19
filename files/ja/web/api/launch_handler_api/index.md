@@ -38,7 +38,7 @@ window.launchQueue.setConsumer((launchParams) => {
 });
 ```
 
-> **メモ:** {{domxref("LaunchParams")}} には、 {{domxref("LaunchParams.files")}} プロパティもあり、これは、 [`POST`](/ja/docs/Web/HTTP/Methods/POST) メソッド経由で起動ナビゲーションと共に渡されるすべてのファイルを表す、 {{domxref("FileSystemHandle")}} オブジェクトの読み取り専用の配列を返します。これにより、カスタムファイル処理の実装が可能になります。
+> **メモ:** {{domxref("LaunchParams")}} には、 {{domxref("LaunchParams.files")}} プロパティもあり、これは、 [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) メソッド経由で起動ナビゲーションと共に渡されるすべてのファイルを表す、 {{domxref("FileSystemHandle")}} オブジェクトの読み取り専用の配列を返します。これにより、カスタムファイル処理の実装が可能になります。
 
 ## インターフェイス
 

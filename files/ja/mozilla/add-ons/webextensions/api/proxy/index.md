@@ -48,11 +48,11 @@ browser.runtime.onMessage.addListener((message) => {
 
 ## PAC ファイル仕様
 
-The basic PAC file syntax is described in the [PAC documentation](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>), but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.
+The basic PAC file syntax is described in the [PAC documentation](</ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file>), but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.
 
 ### FindProxyForURL() return value
 
-The standard `FindProxyForURL()` [returns a string](/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format). In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 _only_, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.
+The standard `FindProxyForURL()` [returns a string](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_%28PAC%29_file#Return_value_format). In Firefox 55 and 56, the PAC file used with the proxy API also returns a string. In Firefox 55 _only_, you must pass an argument to the "DIRECT" return value, even though it doesn't need an argument.
 
 From Firefox 57 onwards, `FindProxyForURL()` may still return a string, but may alternatively (and preferably) return an array of objects. Each object has the following properties:
 
@@ -94,7 +94,7 @@ The first proxy in the array will be tried first. If it does not respond in `fai
 
 ### PAC ファイル環境
 
-The global helper functions usually available for PAC files ([`isPlainHostName()`](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#isPlainHostName()_2>), [`dnsDomainIs()`](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file#dnsDomainIs()>), and so on) are not available.
+The global helper functions usually available for PAC files ([`isPlainHostName()`](</ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#isPlainHostName()_2>), [`dnsDomainIs()`](</ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file#dnsDomainIs()>), and so on) are not available.
 
 Code running in the PAC file does not get access to:
 

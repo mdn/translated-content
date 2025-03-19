@@ -191,7 +191,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [Cache-Control ヘッダー](/ja/docs/Web/HTTP/Headers/Cache-Control)
+- [Cache-Control ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control)
 
 #### テンプレート
 

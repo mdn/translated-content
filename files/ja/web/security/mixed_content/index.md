@@ -162,4 +162,4 @@ URLのホストがドメイン名ではなくIPアドレスの場合、アップ
 
 ## 関連情報
 
-- [CSP: `upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) ブロック可能な混在コンテンツを含め、すべてのリクエストを HTTPS へアップグレードする
+- [CSP: `upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) ブロック可能な混在コンテンツを含め、すべてのリクエストを HTTPS へアップグレードする

@@ -21,7 +21,7 @@ Firefox 62 は、米国時間 2018 年 9 月 5 日 にリリースされまし�
 - 設定の "現在の対象ドキュメントとして読み込む iframe を選択します" にチェックが入っているとき、設定タブを開いている間は現在のページに iframe が含まれていない場合でもツールバーにアイコンを表示します ([Firefox バグ 1456069](https://bugzil.la/1456069))。
 - [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の [Cookie タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#Cookies) で、Cookie の `samesite` 属性を表示するようになりました ([Firefox バグ 1452715](https://bugzil.la/1452715))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) が、コンテナータブ内で動作するようになりました ([Firefox バグ 1306975](https://bugzil.la/1306975))。
-- {{Glossary("CORS")}} のエラーが発生してコンソールに報告されているとき、Firefox がエラーに対応する [CORS エラーのドキュメント](/ja/docs/Web/HTTP/CORS/Errors) へのリンクを提供するようになりました ([Firefox バグ 1475391](https://bugzil.la/1475391))。
+- {{Glossary("CORS")}} のエラーが発生してコンソールに報告されているとき、Firefox がエラーに対応する [CORS エラーのドキュメント](/ja/docs/Web/HTTP/Guides/CORS/Errors) へのリンクを提供するようになりました ([Firefox バグ 1475391](https://bugzil.la/1475391))。
 - 以下のコマンドを使用して、コンソールタブで現在のページのスクリーンショットを作成できるようになりました (ファイル名も指定可能です) ([Firefox バグ 1464461](https://bugzil.la/1464461)):
 
   ```bash

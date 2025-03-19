@@ -37,4 +37,4 @@ console.log(navigator.userAgentData.brands);
 
 ## 関連情報
 
-- {{HTTPHeader("Sec-CH-UA")}} ヘッダー（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）が同じ情報を保持しています。
+- {{HTTPHeader("Sec-CH-UA")}} ヘッダー（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）が同じ情報を保持しています。

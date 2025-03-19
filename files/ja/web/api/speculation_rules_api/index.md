@@ -46,7 +46,7 @@ l10n:
 利用可能な構文の全般的な説明は、 [`<script type="speculationrules">`](/ja/docs/Web/HTML/Element/script/type/speculationrules) を参照してください。
 
 > [!NOTE]
-> 投機ルールは `<script>` 要素を使用するので、サイトが含まれるのであれば {{httpheader("Content-Security-Policy")}} の [`script-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) ディレクティブで明示的に許可する必要があります。これは `'inline-speculation-rules'` のソースを hash- または nonce-source とともに追加することで行われます。
+> 投機ルールは `<script>` 要素を使用するので、サイトが含まれるのであれば {{httpheader("Content-Security-Policy")}} の [`script-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ディレクティブで明示的に許可する必要があります。これは `'inline-speculation-rules'` のソースを hash- または nonce-source とともに追加することで行われます。
 
 ### 先読みの使用
 
