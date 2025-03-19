@@ -184,9 +184,9 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 ### ウェブマニフェストのページ型
 
-この節では、[Web/Manifest](/ja/docs/Web/Manifest)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/Manifest](/ja/docs/Web/Progressive_web_apps/Manifest)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Manifest/description) など。
+- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Progressive_web_apps/Manifest/description) など。
 
 ### XPath のページ型
 

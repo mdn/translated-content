@@ -112,7 +112,7 @@ abbr {
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 出力機器のレンダリング面の幅。 Media Queries Level 4 で非推奨。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : ウェブアプリのマニフェストの [`display`](/ja/docs/Web/Manifest#display) メンバーで指定されているアプリケーションの表示モード。
+  - : ウェブアプリのマニフェストの [`display`](/ja/docs/Web/Progressive_web_apps/Manifest#display) メンバーで指定されているアプリケーションの表示モード。
     [Web App Manifest 仕様書](https://w3c.github.io/manifest/#the-display-mode-media-feature)で定義。
 - {{cssxref("@media/forced-colors", "forced-colors")}}
   - : ユーザーエージェントがカラーパレットを制限しているかどうかを検出。
