@@ -89,4 +89,4 @@ There is another group of statements - the **nested statements**. These are stat
 
   - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可置換元素](/zh-TW/docs/Web/CSS/Replaced_element)
+  - {{glossary("replaced elements", "可置換元素")}}

@@ -142,4 +142,4 @@ hello world
 
 - [Attribute selectors](/zh-CN/docs/Web/CSS/Attribute_selectors)
 - [HTML `data-*` attributes](/zh-CN/docs/Web/HTML/Global_attributes/data-*)
-- [SVG `data-*` attributes](/zh-CN/docs/Web/SVG/Attribute/data-*)
+- [SVG `data-*` attributes](/zh-CN/docs/Web/SVG/Reference/Attribute/data-*)

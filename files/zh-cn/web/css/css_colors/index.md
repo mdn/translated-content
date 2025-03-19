@@ -108,12 +108,12 @@ l10n:
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - 属于其他规范的 SVG 颜色属性：
-  - [`fill`](/zh-CN/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/zh-CN/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/zh-CN/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/zh-CN/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/zh-CN/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/zh-CN/docs/Web/SVG/Attribute/color) 属性
+  - [`fill`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/zh-CN/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/zh-CN/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色环")}}术语
 - {{glossary("Interpolation", "插值")}}术语
 - [`@font-palette-values`](/zh-CN/docs/Web/CSS/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/@font-palette-values/override-colors) 描述符
@@ -130,5 +130,5 @@ l10n:
 - [CSS 颜色调整](/zh-CN/docs/Web/CSS/CSS_color_adjustment)模块和 {{cssxref("print-color-adjust")}} 属性。
 - [CSS 图像](/zh-CN/docs/Web/CSS/CSS_images)模块，其中定义了 CSS [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 图像。
 - [`VideoColorSpace`](/zh-CN/docs/Web/API/VideoColorSpace) 接口
-- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Element/feColorMatrix) SVG 元素
+- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Reference/Element/feColorMatrix) SVG 元素
 - [Canvas API：应用样式及颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色彩)

@@ -7,7 +7,53 @@ slug: Web/CSS/border-image
 
 La propriété **`border-image`** dessine une image sur la bordure d'un élément.
 
-{{EmbedInteractiveExample("pages/css/border-image.html")}}
+{{InteractiveExample("CSS Demo: border-image")}}
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30 /
+  19px round;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+  fill / 30px / 30px space;
+```
+
+```css interactive-example-choice
+border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+```
+
+```css interactive-example-choice
+border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
+  60;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 > [!NOTE]
 > Il est préférable d'indiquer un style de bordure distinct avec [`border-style`](/fr/docs/Web/CSS/border-style) dans le cas où l'image ne chargerait pas. Bien que la spécification ne le nécessite pas, certains navigateurs n'affichent pas l'image de bordure si [`border-style`](/fr/docs/Web/CSS/border-style) vaut `none` ou si [`border-width`](/fr/docs/Web/CSS/border-width) vaut `0`.

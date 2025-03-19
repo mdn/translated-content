@@ -2,7 +2,7 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{CSSRef}}

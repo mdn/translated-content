@@ -2,18 +2,21 @@
 title: cx
 slug: Web/SVG/Attribute/cx
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: fceea994be5c930065bb1f2b45bee9ac38de491c
 ---
 
 {{SVGRef}}
 
-**`cx`** 属性は中心の x-座標を定義します。
+**`cx`** 属性は中心の X 座標を定義します。
 
 この属性は次の SVG 要素で使用できます。
 
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("radialGradient")}}
+
+> [!NOTE]
+> 幾何プロパティであるため、 {{cssxref("cx")}} は `<circle>` および `<ellipse>` の CSS プロパティとしても使用できます。
 
 ## 例
 
@@ -42,7 +45,7 @@ svg {
 
 ## circle
 
-{{SVGElement('circle')}}に対して、`cx`は、図形の x-軸の中心を定義します。
+{{SVGElement('circle')}} に対して、 `cx` は図形の X 軸の中心を定義します。
 
 <table class="properties">
   <tbody>
@@ -56,17 +59,16 @@ svg {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>Yes</td>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
 
-> [!NOTE]
-> SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が円への CSS プロパティとしても利用可能であることを意味します。
+> **メモ:** `<circle>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
 
 ## ellipse
 
-{{SVGElement('ellipse')}}に対して、`cx`は、図形の x-軸の中心を定義します。
+{{SVGElement('ellipse')}}に対して、`cx`は、図形の X 軸の中心を定義します。
 
 <table class="properties">
   <tbody>
@@ -80,23 +82,24 @@ svg {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>はい</td>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
 
-> [!NOTE]
-> SVG2 として開始する場合には、`cx`は*ジオメトリプロパティ*です。これは本属性が楕円への CSS プロパティとしても利用可能であることを意味します。
+> **メモ:** `<ellipse>` の中心の X 座標は {{cssxref("cx")}} 幾何プロパティでも定義できます。 CSS で設定した場合、 `cx` プロパティの値がこの `cx` 属性の値を上書きします。
 
 ## radialGradient
 
-{{SVGElement('radialGradient')}}に対して、`cx`は、放射状勾配の終端円の x-軸の中心を定義します。
+{{SVGElement('radialGradient')}}に対して、`cx`は、放射状勾配の終端円の X 軸の中心を定義します。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">値</th>
-      <td>{{cssxref("length-percentage")}}</td>
+      <td>
+        <strong><a href="/ja/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong>
+      </td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
@@ -104,7 +107,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>はい</td>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
@@ -171,7 +174,14 @@ svg {
 
 {{Specifications}}
 
+## ブラウザーの互換性
+
+{{Compat}}
+
 ## 関連情報
 
 - {{SVGAttr("cy")}}
 - {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
+- 幾何プロパティ: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}}, {{cssxref("height")}}

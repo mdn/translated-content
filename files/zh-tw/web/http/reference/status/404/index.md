@@ -2,14 +2,16 @@
 title: 404 Not Found
 slug: Web/HTTP/Reference/Status/404
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`404 Not Found`** 回應狀態碼表示伺服器找不到所請求的資源。導致 404 頁面的連結通常稱為無效或死連結，可能會受到[失效連結](https://zh.wikipedia.org/zh-tw/%E5%A4%B1%E6%95%88%E9%80%A3%E7%B5%90)的影響。
+HTTP **`404 Not Found`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器找不到所請求的資源。導致 404 頁面的連結通常稱為無效或死連結，可能會受到[失效連結](https://zh.wikipedia.org/wiki/失效連結)的影響。
 
-404 狀態碼僅表示資源不存在，而不表示缺席是暫時的還是永久的。如果資源永久刪除，請改用 {{HTTPStatus("410")}}（Gone）狀態。
+404 狀態碼僅表示資源遺失，但不指明這是暫時的還是永久的。如果資源永久刪除，伺服器應傳送 {{HTTPStatus("410", "410 Gone")}} 狀態。
+
+網站上的 404 錯誤可能會導致訪客的使用者體驗不佳，因此應盡量減少內部及外部的失效連結，以避免讀者感到困惑或沮喪。常見的 404 回應原因包括輸入錯誤的 URL，或是頁面已移動或刪除但未進行適當的重新導向。更多資訊請參閱 [HTTP 重新導向指南](/zh-TW/docs/Web/HTTP/Guides/Redirections)。
 
 ## 狀態
 
@@ -17,28 +19,57 @@ HTTP **`404 Not Found`** 回應狀態碼表示伺服器找不到所請求的資�
 404 Not Found
 ```
 
-## 自訂錯誤頁面
+## 範例
 
-你可以顯示一個自訂的 404 頁面，以對使用者提供更多幫助並提供下一步的指引。例如，對於 Apache 伺服器，你可以在 `.htaccess` 檔案中指定一個自訂 404 頁面的路徑：
+### 頁面未找到
+
+獲取不存在的頁面可能會產生如下的請求：
+
+```http
+GET /my-deleted-blog-post HTTP/1.1
+Host: example.com
+```
+
+伺服器回應類似如下內容：
+
+```http
+HTTP/1.1 404 Not Found
+Age: 249970
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 28 Jun 2024 11:40:58 GMT
+Expires: Fri, 05 Jul 2024 11:40:58 GMT
+Last-Modified: Tue, 25 Jun 2024 14:14:48 GMT
+Server: ECAcc (nyd/D13E)
+Vary: Accept-Encoding
+X-Cache: 404-HIT
+Content-Length: 1256
+
+<!doctype html>
+<head>
+    <title>404 not found</title>
+    ...
+```
+
+### 在 Apache 中設定自訂錯誤頁面
+
+對於 Apache 伺服器，可以在 `.htaccess` 檔案中指定自訂 404 頁面的路徑。以下範例使用 `notfound.html` 作為 404 頁面，然而一般做法是將其命名為 `404.html` 或 `404.php`（取決於伺服器端技術）並放置於伺服器的頂層目錄：
 
 ```apacheconf
 ErrorDocument 404 /notfound.html
 ```
 
-有關自訂 404 頁面的範例，請參見此 [404 頁面](https://konmari.com/404)。
-
 > [!NOTE]
-> 適度地自訂設計是一個好事情。可以使你的 404 頁面幽默和人性化，但不要讓你的用戶感到困惑。
+> 適度設計自訂 404 頁面是個不錯的做法。你可以讓 404 頁面變得幽默且具有親和力，但不要讓訪客感到困惑，不知道為何會看到這個預期外的頁面。
+>
+> 若需自定義 404 頁面範例，請參閱 [KonMari 404 頁面](https://konmari.com/404)。
 
 ## 規範
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("410")}}
-- [維基百科: HTTP 404](https://zh.wikipedia.org/zh-tw/HTTP_404)
+- [維基百科: HTTP 404](https://zh.wikipedia.org/wiki/HTTP_404)
