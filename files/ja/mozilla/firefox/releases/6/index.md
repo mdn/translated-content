@@ -85,7 +85,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 ### MathML
 
-- [`<mstyle>`](/ja/docs/Web/MathML/Element/mstyle) の実装が修正されました。
+- [`<mstyle>`](/ja/docs/Web/MathML/Reference/Element/mstyle) の実装が修正されました。
 
 ### アクセシビリティ (ARIA)
 
