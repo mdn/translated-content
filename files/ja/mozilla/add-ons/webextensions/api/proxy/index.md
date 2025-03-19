@@ -48,7 +48,7 @@ browser.runtime.onMessage.addListener((message) => {
 
 ## PAC ファイル仕様
 
-The basic PAC file syntax is described in the [PAC documentation](</ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file>), but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.
+The basic PAC file syntax is described in the [PAC documentation](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file), but the implementation used by the proxy API differs from standard PAC design in several ways, which are described in this section.
 
 ### FindProxyForURL() return value
 
