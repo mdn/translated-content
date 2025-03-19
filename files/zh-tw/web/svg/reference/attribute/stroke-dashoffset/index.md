@@ -1,15 +1,11 @@
 ---
 title: stroke-dashoffset
-slug: Web/SVG/Attribute/stroke-dashoffset
+slug: Web/SVG/Reference/Attribute/stroke-dashoffset
 ---
-
-{{SVGRef}}
-
-« [SVG 屬性引用首頁](/zh-TW/docs/Web/SVG/Attribute)
 
 `stroke-dashoffset` 屬性指定一個數值至虛線的開頭。
 
-如果使用 [\<percentage>](/zh-TW/docs/Web/SVG#percentage) ，值則會代表當前 viewport 的百分比。
+如果使用 [\<percentage>](/zh-TW/docs/Web/SVG#percentage)，值則會代表當前 viewport 的百分比。
 
 值允許為負值。
 
@@ -121,8 +117,8 @@ line {
 
 以下元素可以使用 `stroke-dashoffset` 屬性
 
-- [Shape elements](/zh-TW/docs/Web/SVG/Element#shape) »
-- [Text content elements](/zh-TW/docs/Web/SVG/Element#textcontent) »
+- [Shape elements](/zh-TW/docs/Web/SVG/Reference/Element#shape) »
+- [Text content elements](/zh-TW/docs/Web/SVG/Reference/Element#textcontent) »
 
 ## 規範
 

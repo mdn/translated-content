@@ -1,11 +1,9 @@
 ---
 title: 漸層
-slug: Web/SVG/Tutorial/Gradients
+slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}
 
 除了基本的 fill 和 stroke 之外，我們還有一個更令人興奮的功能：給邊框和填充設置漸層。
 
@@ -81,7 +79,7 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
 >     xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
 > ```
 >
-> 這裡我直接在元素裡定義了 xlink 的命名空間，通常我們會在文檔的頂部定義它。在 [talk about images](/zh-TW/docs/Web/SVG/Tutorial/Other_content_in_SVG) 有更多相關內容。
+> 這裡我直接在元素裡定義了 xlink 的命名空間，通常我們會在文檔的頂部定義它。在 [talk about images](/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG) 有更多相關內容。
 
 ## 放射形漸層
 
@@ -270,8 +268,8 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
   gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
-你還可以使用`gradientTransform`屬性創建其他類型的變換，但現在我們還沒說到[introduced transforms](/zh-TW/docs/Web/SVG/Tutorial/Basic_Transformations)，所以這些內容會留到後面再講。
+你還可以使用`gradientTransform`屬性創建其他類型的變換，但現在我們還沒說到[introduced transforms](/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations)，所以這些內容會留到後面再講。
 
 當圖形對象的不是方形時，還有一個需要注意的處理方式：`gradientUnits="objectBoundingBox"`。但是它太複雜了，需要其他專家來講解。
 
-{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}
