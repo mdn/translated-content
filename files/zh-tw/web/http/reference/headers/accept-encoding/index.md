@@ -54,7 +54,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 - `compress`
   - : 使用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）演算法的壓縮格式。
 - `deflate`
-  - : 使用具有 [_deflate_](https://zh.wikipedia.org/wiki/Deflate) 壓縮演算法的 [zlib](https://en.wikipedia.org/wiki/Zlib) 結構的壓縮格式。
+  - : 使用具有 [_deflate_](https://zh.wikipedia.org/wiki/Deflate) 壓縮演算法的 [zlib](https://zh.wikipedia.org/wiki/Zlib) 結構的壓縮格式。
 - `br`
   - : 使用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 演算法的壓縮格式。
 - `zstd`
