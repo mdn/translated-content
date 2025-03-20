@@ -265,7 +265,10 @@ textarea.onkeyup = () => {
 ```html
 <p>我们使用 <abbr>HTML</abbr> 超文本标记语言来组织网页文档。</p>
 
-<p>我认为<abbr title="Reverend">Rev</abbr> 格林在厨房里用电锯做的。</p>
+<p>
+  第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>已于 2024 年 7
+  月在法国巴黎举行。
+</p>
 ```
 
 这些代码的显示效果如下：
