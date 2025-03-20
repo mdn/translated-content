@@ -14,8 +14,8 @@ l10n:
 >
 > 为了实现你的目标，你可以使用：
 >
-> - 无类型的 [CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)，广泛支持；
-> - 或者现代的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API)，支持较少且被视为实验性功能。
+> - 无类型的 [CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)，广泛支持；或
+> - 现代化的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API)，支持较少且被视为实验性特性。
 
 某些属性在其语法中允许使用空列表。在这种情况下，这些属性会采用 `none` 标识符。因此，空列表意味着该属性的值为 `none`。
 
