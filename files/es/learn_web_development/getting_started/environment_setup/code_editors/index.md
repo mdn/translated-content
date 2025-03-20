@@ -14,7 +14,7 @@ Anteriormente, te dijimos que instalaras un editor de código, ya que necesitar�
 <table>
   <tbody>
     <tr>
-      <th scope="row">Requisitos Previos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
         Familiaridad básica con el sistema operativo de tu computadora.
       </td>
@@ -160,9 +160,9 @@ La mayoría de los editores de código tienen un sistema de extensión o plugin 
 - Proporcionar interfaz de usuario adicional o temas de resaltado de código/esquemas de color.
 - Sugerir fragmentos de código para cumplir con los requisitos. Estos se pueden generar a partir de plantillas estáticas o a través de herramientas de IA. El uso de IA para generar fragmentos de código tiene muchas de las mismas ventajas y advertencias que usarlo para generar resultados de búsqueda (consulta [Búsqueda de información > Uso de la IA](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web#using_ai) para obtener más información).
 
-Las extensiones de VS Code se administran a través del panel del Mercado de extensiones en VS Code, al que se accede a través del menú _Ver_ > _Extensiones_. Exploremoslo ahora.
+Las extensiones de VS Code se administran a través del panel del Mercado de extensiones (Marketplace) en VS Code, al que se accede a través del menú _Ver_ > _Extensiones_. Exploremoslo ahora.
 
-1. Abre el panel del Mercado de extensiones.
+1. Abre el panel de extensiones.
 2. En el cuadro _Buscar..._ en la parte superior del panel, escribe "JavaScript" para ver qué extensiones relacionadas con JavaScript están disponibles. Intenta hacer clic en algunos de los resultados de búsqueda que aparecen para ver qué tipo de cosas hacen. No instales ninguno de ellos por ahora.
 3. En cambio, instalemos una extensión que sea fácil de entender y que sea útil para casi cualquier archivo de código en el que trabajes en este conjunto de módulos. Escribe "Prettier" en el cuadro _Buscar..._ y haz clic en el resultado _Prettier - code formatter_. Cuando la extensión [Prettier](https://prettier.io/) está instalada, se puede usar para formatear tu código cada vez que guardas un archivo, lo que hace que tu código sea mucho más fácil de leer como resultado.
 4. Haz clic en el botón _Instalar_ en la pestaña _Extensión_. Cierra la pestaña cuando finalice la instalación.
