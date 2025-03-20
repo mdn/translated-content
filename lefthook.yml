@@ -20,8 +20,9 @@ pre-commit:
           - name: Autocorrect
             run: yarn autocorrect --fix {staged_files}
             stage_fixed: true
-          - name: Check changed xrefs
-            run: yarn node scripts/update-moved-file-links.js --check
+          - name: Prettier
+            run: yarn prettier --write --cache {staged_files}
+            stage_fixed: true
 
 post-merge:
   commands:
