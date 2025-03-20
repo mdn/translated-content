@@ -389,7 +389,7 @@ function insertAtCaret(text) {
 // 每次用户更新文本区域代码，更新存储的 userCode
 textarea.onkeyup = () => {
   // 我们只想在用户代码显示时保存状态，而不是答案，以免答案覆盖用户代码。
-  if (solution.value === "Show solution") {
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
