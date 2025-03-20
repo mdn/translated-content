@@ -1490,6 +1490,12 @@
 /zh-CN/docs/MDN/Structures/Macros/Other	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /zh-CN/docs/MDN/Writing_guidelines/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Sidebars
+/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion	/zh-CN/docs/MDN/Writing_guidelines/Criteria_for_inclusion
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/CSS
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/HTML
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/Shell
 /zh-CN/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/查询	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query

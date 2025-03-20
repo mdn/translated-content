@@ -1,6 +1,7 @@
 ---
 title: HTML 代码示例编写指南
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+slug: MDN/Writing_guidelines/Code_style_guide/HTML
+original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 ---
 
 下面的指南涵盖了如何为 MDN Web 文档编写 HTML 示例代码。

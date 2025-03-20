@@ -1,6 +1,7 @@
 ---
 title: shell 提示符代码示例编写指南
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
+slug: MDN/Writing_guidelines/Code_style_guide/Shell
+original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
 l10n:
   sourceCommit: 9e804ddae5a375983996218409b80f6bfd71eb82
 ---

@@ -1,6 +1,7 @@
 ---
 title: 代码示例编写指南
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+slug: MDN/Writing_guidelines/Code_style_guide
+original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 l10n:
   sourceCommit: 2ef5f5de8982fb9df0a0b8385d7b7a16b5497a6a
 ---
