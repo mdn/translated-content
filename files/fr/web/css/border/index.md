@@ -7,7 +7,45 @@ slug: Web/CSS/border
 
 La propriété CSS **`border`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les propriétés liées à la bordure. `border` peut être utilisée pour définir les valeurs de {{cssxref("border-width")}}, {{cssxref("border-style")}} et {{cssxref("border-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border.html")}}
+{{InteractiveExample("CSS Demo: border")}}
+
+```css interactive-example-choice
+border: solid;
+```
+
+```css interactive-example-choice
+border: dashed red;
+```
+
+```css interactive-example-choice
+border: 1rem solid;
+```
+
+```css interactive-example-choice
+border: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Comme pour toutes les propriétés raccourcie, si une valeur est absente pour la propriété détaillée correspondante, cette dernière sera réinitialisée avec sa valeur initiale. On notera également que {{cssxref("border-image")}} ne peut pas être définie via cette propriété raccourcie mais elle sera quand même réinitialisée (sa valeur initiale est `none`). Ainsi, `border` peut être utilisée pour réinitialiser n'importe quelle propriété liée à la bordure définie plus haut dans la cascade.
 

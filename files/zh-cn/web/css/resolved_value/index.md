@@ -13,6 +13,8 @@ CSS 属性的解析值（**resolved value**）是 {{domxref("Window.getComputedS
 
 ## 参见
 
+- {{domxref("window.getComputedStyle")}}
+- {{domxref("CSSStyleDeclaration.getPropertyValue")}}
 - [CSS 参考](/zh-CN/docs/Web/CSS/Reference)
 - CSS 重要概念：
 
@@ -36,6 +38,3 @@ CSS 属性的解析值（**resolved value**）是 {{domxref("Window.getComputedS
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
-
-- {{domxref("window.getComputedStyle")}}

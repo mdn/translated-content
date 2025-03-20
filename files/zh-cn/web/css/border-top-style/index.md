@@ -7,7 +7,54 @@ slug: Web/CSS/border-top-style
 
 **`border-top-style`** [CSS](/zh-CN/docs/Web/CSS) 设置元素上边框的 {{cssxref("border")}}.
 
-{{EmbedInteractiveExample("pages/css/border-top-style.html")}}
+{{InteractiveExample("CSS Demo: border-top-style")}}
+
+```css interactive-example-choice
+border-top-style: none;
+```
+
+```css interactive-example-choice
+border-top-style: dotted;
+```
+
+```css interactive-example-choice
+border-top-style: dashed;
+```
+
+```css interactive-example-choice
+border-top-style: solid;
+```
+
+```css interactive-example-choice
+border-top-style: groove;
+```
+
+```css interactive-example-choice
+border-top-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > 此规范并未定义不同样式的边框边角处如何连接。

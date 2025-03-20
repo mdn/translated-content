@@ -7,7 +7,41 @@ slug: Web/CSS/height
 
 CSS атрибут **`height`** позволят обозначать высоту элемента. По умолчанию, свойство определяет высоту [внутренней области](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content). Если {{cssxref("box-sizing")}} имеет значение `border-box`, то свойство будет определять высоту [области рамки](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border).
 
-{{EmbedInteractiveExample("pages/css/height.html")}}
+{{InteractiveExample("CSS Demo: height")}}
+
+```css interactive-example-choice
+height: 150px;
+```
+
+```css interactive-example-choice
+height: 6em;
+```
+
+```css interactive-example-choice
+height: 75%;
+```
+
+```css interactive-example-choice
+height: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Атрибуты {{cssxref("min-height")}} и {{cssxref("max-height")}} при добавлении меняют значение {{Cssxref("height")}}.
 

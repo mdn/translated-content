@@ -63,6 +63,7 @@ jobs:
         run: yarn content sync-translated-content ${{ matrix.lang }}
 
       - name: Gather related upstream commits
+        id: gather
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -83,14 +84,14 @@ jobs:
           FILE_COMMIT_URLS=$(echo -e "${FILE_COMMIT_URLS}" | grep -v '^$' | sort | uniq)
           echo -e "commit urls:\n${FILE_COMMIT_URLS}"
 
-          # set multiline string to env
+          # set multiline string to output
           # https://docs.github.com/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           # as the commit urls would not contain 'EOF', we can use it as a delimiter
           {
             echo 'COMMIT_URLS<<EOF'
             echo "${FILE_COMMIT_URLS}"
             echo EOF
-          } >> "$GITHUB_ENV"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Create PR with sync for ${{ matrix.lang }}
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
@@ -100,7 +101,7 @@ jobs:
           title: "[${{ matrix.lang }}] sync translated content"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
-          body: "Rari generated sync. Related upstream commits:\n\n${{ env.COMMIT_URLS }}"
+          body: "Rari generated sync. Related upstream commits:\n\n${{ steps.gather.outputs.COMMIT_URLS }}"
           labels: |
             automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}

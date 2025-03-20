@@ -7,7 +7,7 @@ slug: Web/API/Fetch_API/Using_Fetch
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。
 
-这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如 {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/CORS) 和 HTTP 的扩展。
+这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如 {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 和 HTTP 的扩展。
 
 请注意，`fetch` 规范与 `jQuery.ajax()` 主要有以下的不同：
 
@@ -28,7 +28,7 @@ fetch("http://example.com/movies.json")
 
 > **备注：** [Body](#body) 还有其他相似的方法，用于获取其他类型的内容。
 
-最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
+最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
 
 ### 支持的请求参数
 
@@ -82,7 +82,7 @@ fetch("https://example.com", {
 > 当请求使用 `credentials: 'include'` 时，响应的 `Access-Control-Allow-Origin` 不能使用通配符 "`*`"。在这种情况下，`Access-Control-Allow-Origin` 必须是当前请求的源，在使用 CORS Unblock 插件的情况下请求仍会失败。
 
 > [!NOTE]
-> 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/CORS#附带身份凭证的请求)
+> 无论怎么设置，浏览器都不应在 _预检请求_ 中发送凭据。了解更多：[跨域资源共享 > 附带身份凭证的请求](/zh-CN/docs/Web/HTTP/Guides/CORS#附带身份凭证的请求)
 
 如果你只想在请求 URL 与调用脚本位于同一起源处时发送凭据，请添加 `credentials: 'same-origin'`。
 
@@ -432,7 +432,7 @@ if (window.fetch) {
 ## 参见
 
 - {{domxref("Service_Worker_API", "ServiceWorker API")}}
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch examples on GitHub](https://github.com/mdn/fetch-examples/)

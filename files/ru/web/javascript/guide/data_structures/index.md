@@ -1,7 +1,6 @@
 ---
 title: Типы и структуры данных JavaScript
 slug: Web/JavaScript/Guide/Data_structures
-original_slug: Web/JavaScript/Data_structures
 ---
 
 {{jsSidebar("More")}}

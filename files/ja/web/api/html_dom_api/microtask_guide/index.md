@@ -290,6 +290,6 @@ log("Main program exiting");
 - [徹底解説: マイクロタスクと JavaScript ランタイム環境](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}
 - [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
-  - [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
+  - [非同期 JavaScript 入門](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)
   - [強調的非同期 JavaScript: タイムアウトとインターバル](/ja/docs/Learn/JavaScript/Asynchronous)
-  - [プロミスによる礼儀正しい非同期プログラミング](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
+  - [プロミスによる礼儀正しい非同期プログラミング](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises)

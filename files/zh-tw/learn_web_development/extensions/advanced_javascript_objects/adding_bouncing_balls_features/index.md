@@ -1,7 +1,6 @@
 ---
 title: 為彈跳彩球添增其他功能
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
-original_slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

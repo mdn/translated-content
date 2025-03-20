@@ -35,7 +35,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 外边距区域的大小由 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}}，和简写属性 {{cssxref("margin")}} 控制。在发生[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)的情况下，由于盒之间共享外边距，外边距不容易弄清楚。
 
-最后，请注意，除[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)外，对于行内元素来说，尽管内容周围存在内边距与边框，但其占用空间（每一行文字的高度）则由 {{cssxref('line-height')}} 属性决定，即使边框和内边距仍会显示在内容周围。
+最后，请注意，除[可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)外，对于行内元素来说，尽管内容周围存在内边距与边框，但其占用空间（每一行文字的高度）则由 {{cssxref('line-height')}} 属性决定，即使边框和内边距仍会显示在内容周围。
 
 ## 参见
 
@@ -64,4 +64,4 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+  - [可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)

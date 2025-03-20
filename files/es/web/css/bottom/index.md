@@ -9,7 +9,57 @@ l10n:
 
 La propiedad **`bottom`** de [CSS](/es/docs/Web/CSS) establece la posición vertical de un [elemento posicionado](/es/docs/Web/CSS/position). No tiene efecto en elementos no posicionados.
 
-{{EmbedInteractiveExample("pages/css/bottom.html")}}
+{{InteractiveExample("CSS Demo: bottom")}}
+
+```css interactive-example-choice
+bottom: 0;
+```
+
+```css interactive-example-choice
+bottom: 4em;
+```
+
+```css interactive-example-choice
+bottom: 10%;
+```
+
+```css interactive-example-choice
+bottom: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 El efecto de la propiedad `bottom` depende de cómo esté posicionado el elemento (es decir, del valor de la propiedad {{cssxref("position")}}):
 

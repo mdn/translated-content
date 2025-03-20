@@ -46,8 +46,7 @@ delete object["property"];
 
 ### 返値
 
-プロパティが{{jsxref("Object.hasOwnProperty", "自分自身の", "", 1)}}{{jsxref("Errors/Cant_delete",
- "構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
+プロパティが{{jsxref("Object.hasOwnProperty", "自分自身の", "", 1)}}{{jsxref("Errors/Cant_delete", "構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
 
 ### 例外
 

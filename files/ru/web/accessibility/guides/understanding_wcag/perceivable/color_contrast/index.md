@@ -1,7 +1,6 @@
 ---
 title: Цветовой контраст
 slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
 
 {{AccessibilitySidebar}}

@@ -9,7 +9,48 @@ l10n:
 
 **`backdrop-filter`** [CSS](/zh-CN/docs/Web/CSS) 属性可以让你为一个元素后面区域添加图形效果（如模糊或颜色偏移）。因为它适用于元素*背后*的所有元素，为了看到效果，必须使元素或其背景至少部分透明。
 
-{{EmbedInteractiveExample("pages/css/backdrop-filter.html")}}
+{{InteractiveExample("CSS Demo: backdrop-filter()")}}
+
+```css interactive-example-choice
+backdrop-filter: blur(10px);
+```
+
+```css interactive-example-choice
+backdrop-filter: invert(80%);
+```
+
+```css interactive-example-choice
+backdrop-filter: sepia(90%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div id="example-element">Example</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-image: url("/shared-assets/images/examples/balloon.jpg");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+#example-element {
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+```
 
 ## 语法
 
@@ -48,7 +89,7 @@ backdrop-filter: unset;
 - `none`
   - : 没有应用于背景的滤镜。
 - `<filter-value-list>`
-  - : 以空格分隔的 {{cssxref("&lt;filter-function&gt;")}} 或是要应用到背景上的 [SVG 滤镜](/zh-CN/docs/Web/SVG/Element/filter)。CSS 的 `<filter-function>` 包括 {{CSSxRef("filter-function/blur", "blur()")}}、{{CSSxRef("filter-function/brightness", "brightness()")}}、{{CSSxRef("filter-function/contrast", "contrast()")}}、{{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}、{{CSSxRef("filter-function/grayscale", "grayscale()")}}、{{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}、{{CSSxRef("filter-function/invert", "invert()")}}、{{CSSxRef("filter-function/opacity", "opacity()")}}、{{CSSxRef("filter-function/saturate", "saturate()")}} 和 {{CSSxRef("filter-function/sepia", "sepia()")}}。
+  - : 以空格分隔的 {{cssxref("&lt;filter-function&gt;")}} 或是要应用到背景上的 [SVG 滤镜](/zh-CN/docs/Web/SVG/Reference/Element/filter)。CSS 的 `<filter-function>` 包括 {{CSSxRef("filter-function/blur", "blur()")}}、{{CSSxRef("filter-function/brightness", "brightness()")}}、{{CSSxRef("filter-function/contrast", "contrast()")}}、{{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}、{{CSSxRef("filter-function/grayscale", "grayscale()")}}、{{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}、{{CSSxRef("filter-function/invert", "invert()")}}、{{CSSxRef("filter-function/opacity", "opacity()")}}、{{CSSxRef("filter-function/saturate", "saturate()")}} 和 {{CSSxRef("filter-function/sepia", "sepia()")}}。
 
 ## 形式定义
 

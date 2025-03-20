@@ -9,7 +9,42 @@ l10n:
 
 **`max-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大高を設定します。これは {{Cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、 `max-height` に指定した値を上回ることを防ぎます。
 
-{{EmbedInteractiveExample("pages/css/max-height.html")}}
+{{InteractiveExample("CSS Demo: max-height")}}
+
+```css interactive-example-choice
+max-height: 150px;
+```
+
+```css interactive-example-choice
+max-height: 7em;
+```
+
+```css interactive-example-choice
+max-height: 75%;
+```
+
+```css interactive-example-choice
+max-height: 10px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the maximum height. <br />This will limit
+    how tall the box can be, potentially causing an overflow.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `max-height` は {{cssxref("height")}} を上書きしますが、 {{cssxref("min-height")}} は `max-height` を上書きします。
 
