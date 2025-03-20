@@ -1,7 +1,6 @@
 ---
 title: 代码示例编写指南
 slug: MDN/Writing_guidelines/Code_style_guide
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 l10n:
   sourceCommit: 2ef5f5de8982fb9df0a0b8385d7b7a16b5497a6a
 ---
@@ -10,10 +9,10 @@ l10n:
 
 对于特定技术的指南，请参阅以下文章：
 
-- [HTML 指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [CSS 指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [JavaScript 指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Shell 提示符指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [HTML 指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [CSS 指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [JavaScript 指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [Shell 提示符指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## 通用最佳实践
 

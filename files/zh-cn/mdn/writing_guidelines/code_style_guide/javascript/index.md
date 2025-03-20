@@ -1,7 +1,6 @@
 ---
 title: JavaScript 代码示例编写指南
 slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 ---
 
 以下指南涵盖了如何为 MDN Web Docs 编写 JavaScript 示例代码。本文列出了编写简洁示例的规则，以期这些示例将被尽可能多的人理解。
