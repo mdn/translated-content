@@ -45,9 +45,9 @@ l10n:
 ## 関連インターフェイス
 
 - {{domxref("Element.ariaPlaceholder")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaPlaceholder`](/ja/docs/Web/API/Element/ariaPlaceholder) プロパティは、`aria-placeholder` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaPlaceholder`](/ja/docs/Web/API/Element/ariaPlaceholder) プロパティは、`aria-placeholder` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaPlaceholder")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaPlaceholder`](/ja/docs/Web/API/ElementInternals/ariaPlaceholder) プロパティは、`aria-placeholder` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaPlaceholder`](/ja/docs/Web/API/ElementInternals/ariaPlaceholder) プロパティは、`aria-placeholder` 属性の値を反映します。
 
 ## 関連付けられたロール
 
