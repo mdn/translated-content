@@ -35,7 +35,7 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
 - [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)および[関数記法](/ja/docs/Web/CSS/CSS_Functions)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [包含ブロック](/ja/docs/Web/CSS/Containing_block)
-- [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト
+- [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト
 - [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
 - [CSS 一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
 - [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)レイアウト

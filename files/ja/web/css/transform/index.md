@@ -46,7 +46,7 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。
+このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)が作成されます。
 この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
 
 > [!WARNING]
