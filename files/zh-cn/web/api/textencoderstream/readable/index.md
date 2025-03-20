@@ -2,7 +2,7 @@
 title: TextEncoderStream：readable 属性
 slug: Web/API/TextEncoderStream/readable
 l10n:
-  sourceCommit: 4094b9256ace2d7d805abb6b536e23079aaf9170
+  sourceCommit: 0f42b8ccf6bef96f27e678163954b3a363b9dcf6
 ---
 
 {{APIRef("Encoding API")}}{{AvailableInWorkers}}
@@ -18,7 +18,7 @@ l10n:
 以下示例演示了如何从 `TextEncoderStream` 对象返回一个 `ReadableStream`。
 
 ```js
-stream = new TextEncoderStream();
+const stream = new TextEncoderStream();
 console.log(stream.readable); // 一个 ReadableStream
 ```
 
