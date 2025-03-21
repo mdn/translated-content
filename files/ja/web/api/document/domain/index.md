@@ -17,7 +17,7 @@ l10n:
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされた。
+  - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされた。
 
 ## 例
 

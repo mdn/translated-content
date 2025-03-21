@@ -48,7 +48,7 @@ new WebSocket(url, protocols)
     - [`url`](#url) の解釈に失敗した場合
     - [`url`](#url) のスキームが `ws` または `wss` 以外であった場合
     - [`url`](#url) に[フラグメント](/ja/docs/Web/URI#フラグメント)があった場合
-    - [`protocols`](#protocols) のいずれかの値が複数回現れている、または WebSocket プロトコル仕様で定義された [`Sec-WebSocket-Protocol`](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol) フィールドの値を構成する要素の要件に一致しない場合。
+    - [`protocols`](#protocols) のいずれかの値が複数回現れている、または WebSocket プロトコル仕様で定義された [`Sec-WebSocket-Protocol`](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#sec-websocket-protocol) フィールドの値を構成する要素の要件に一致しない場合。
 
 ## 例
 

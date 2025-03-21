@@ -87,7 +87,7 @@ l10n:
   {{jsxref("Error.captureStackTrace()")}} 静的メソッドは、{{jsxref("Error.stack")}} プロパティとして与えられたオブジェクトにスタックトレース情報をインストールします。
   主な用途は、{{jsxref("Error")}} インターフェイスから派生していない独自のエラーオブジェクトにスタックトレースをインストールすることです ([Firefox bug 1886820](https://bugzil.la/1886820))。
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`。
-  [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) ヘッダーは [`cache`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data#cache) および `*` ディレクティブと合わせて、ブラウザーのキャッシュを消去するために使用できます ([Firefox bug 1942272](https://bugzil.la/1942272))。
+  [`Clear-Site-Data`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) ヘッダーは [`cache`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) および `*` ディレクティブと合わせて、ブラウザーのキャッシュを消去するために使用できます ([Firefox bug 1942272](https://bugzil.la/1942272))。
 - **SVG アニメーション用の SVG `<discard>` 要素**: `svg.discard.enabled`。
   {{svgelement("discard")}} SVG 要素は、SVG が DOM に読み込まれてから経過した時間や特定のアニメーションが終了したなど、指定した要素とその子孫を DOM から削除すべききっかけを開発者が指定できるようにします。これは、不要になったアニメーション要素を破棄することで SVG ビューアーがメモリーを節約できます ([Firefox bug 1069931](https://bugzil.la/1069931))。
 - **SVG パス API のメソッド**: `dom.svg.pathSegment.enabled`。

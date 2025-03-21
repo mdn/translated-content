@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`200 OK`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、リクエストが成功したことを示します。
+HTTP の **`200 OK`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したことを示します。
 `200 OK` レスポンスは既定でキャッシュ可能です。
 
 `200 OK` レスポンスは、 HTTP リクエストメソッドによって意味と形式が異なります。
@@ -90,6 +90,6 @@ Content-Type: application/json
 
 ## 関連情報
 
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - 用語集: {{Glossary("Idempotent", "べき等")}}

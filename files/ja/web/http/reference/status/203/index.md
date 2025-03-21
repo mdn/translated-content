@@ -8,13 +8,13 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`203 Non-Authoritative Information`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、変換{{Glossary("Proxy server", "プロキシー")}}によって元のサーバーの {{HTTPStatus("200")}} (`OK`) レスポンスからヘッダーやコンテンツが変更されたことを表します。
+HTTP の **`203 Non-Authoritative Information`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、変換{{Glossary("Proxy server", "プロキシー")}}によって元のサーバーの {{HTTPStatus("200")}} (`OK`) レスポンスからヘッダーやコンテンツが変更されたことを表します。
 
 このステータスコードの目的は、変換プロキシーが、成功したレスポンスに変更が適用された際にクライアントに通知できるようにすることです。これは、コンテンツに関する後々の決定に影響を与える可能性があるためです。
 メッセージへの変換は、リソースがミラーまたはバックアップから取得されたものであることを示すためにヘッダーを変更することを意味しますが、クライアントにとって望ましいと思われる方法でコンテンツを変更するという意味にもなります。
 これらの変更には、マルウェアフィルター、ファイル形式の変換、プライバシーフィルター、またはクライアントへの今後のリクエストに関するヒントなどがあります。
 
-`203` レスポンスは [`214`](/ja/docs/Web/HTTP/Headers/Warning#warning_codes) `Transformation Applied` の非推奨となった {{HTTPHeader("Warning")}} ヘッダーの値と似ていますが、こちらはどのステータスコードのレスポンスにも適用できます。
+`203` レスポンスは [`214`](/ja/docs/Web/HTTP/Reference/Headers/Warning#warning_codes) `Transformation Applied` の非推奨となった {{HTTPHeader("Warning")}} ヘッダーの値と似ていますが、こちらはどのステータスコードのレスポンスにも適用できます。
 
 ## ステータス
 
@@ -58,5 +58,5 @@ Content-Length: 123
 - {{HTTPStatus("200")}}
 - {{Glossary("Proxy server")}}
 - {{HTTPHeader("Warning")}}
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)

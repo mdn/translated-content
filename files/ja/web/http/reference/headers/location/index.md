@@ -17,7 +17,7 @@ original_slug: Web/HTTP/Headers/Location
 
 リソース作成 (created) では、新しく作成されたリソースへの URL を示します。
 
-`Location` と {{HTTPHeader("Content-Location")}} は異なります。 `Location` ヘッダーは、リダイレクトの対象 (または新しく作成されたリソースの URL) を示し、 {{HTTPHeader("Content-Location")}} ヘッダーは[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)が起きたとき、更なるコンテンツネゴシエーションが起きないように、リソースへアクセスできる直接的な URL を指します。 `Location` はレスポンスに関連付くヘッダーで、 {{HTTPHeader("Content-Location")}} は返されるエンティティに関連付けられます。
+`Location` と {{HTTPHeader("Content-Location")}} は異なります。 `Location` ヘッダーは、リダイレクトの対象 (または新しく作成されたリソースの URL) を示し、 {{HTTPHeader("Content-Location")}} ヘッダーは[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)が起きたとき、更なるコンテンツネゴシエーションが起きないように、リソースへアクセスできる直接的な URL を指します。 `Location` はレスポンスに関連付くヘッダーで、 {{HTTPHeader("Content-Location")}} は返されるエンティティに関連付けられます。
 
 <table class="properties">
   <tbody>

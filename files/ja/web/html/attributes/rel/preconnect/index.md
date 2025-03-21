@@ -19,7 +19,7 @@ l10n:
 <link rel="preconnect" href="https://example.com" />
 ```
 
-事前接続は HTTP の [Link](/ja/docs/Web/HTTP/Headers/Link) ヘッダーで、次のように実装することもできます。
+事前接続は HTTP の [Link](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーで、次のように実装することもできます。
 
 ```http
 Link: <https://example.com>; rel="preconnect"

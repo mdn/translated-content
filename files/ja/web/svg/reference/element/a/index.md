@@ -78,7 +78,7 @@ svg|a:active {
   - : 空白区切りの URL のリストで、ハイパーリンクをたどるとき、 {{HTTPMethod("POST")}} リクエストで本文が `PING` であるものがブラウザーから (バックグラウンドで) 送信されます。通常はトラッキングのために使用されます。同じ用途でもっと広く対応されている機能として、 {{domxref("Navigator.sendBeacon()")}} を参照してください。
     _値種別_: **[\<list-of-URLs>](/ja/docs/Web/SVG/Content_type#list-of-ts)** ; _既定値_: _none_; _アニメーション_: **no**
 - [`referrerpolicy`](/ja/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
-  - : どの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)をアクセス先の {{Glossary("URL")}} に送信するかです。
+  - : どの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)をアクセス先の {{Glossary("URL")}} に送信するかです。
     _値種別_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _既定値_: _none_; _アニメーション_: **no**
 - [`rel`](/ja/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
   - : 対象のオブジェクトとリンクしているオブジェクトの関係です。

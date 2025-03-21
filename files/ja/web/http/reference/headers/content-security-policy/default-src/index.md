@@ -51,9 +51,9 @@ Content-Security-Policy: default-src <source> <source>;
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
@@ -97,5 +97,5 @@ Content-Security-Policy: connect-src 'self';
   - {{Glossary("Document directive", "文書ディレクティブ")}}
   - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}
   - {{Glossary("Reporting directive", "報告ディレクティブ")}}
-  - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
+  - [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests)
+  - [`block-all-mixed-content`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content)

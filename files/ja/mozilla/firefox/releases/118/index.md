@@ -29,7 +29,7 @@ l10n:
 
 ### HTTP
 
-- HTTP [`Permissions-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) ヘッダーの [`publickey-credentials-get`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) ディレクティブをサポートしました。これはクロスオリジンのインラインフレームで、公開鍵証明書を取得するために [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) インターフェイスを使用可能にします ([Firefox bug 1460986](https://bugzil.la/1460986))。
+- HTTP [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) ヘッダーの [`publickey-credentials-get`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) ディレクティブをサポートしました。これはクロスオリジンのインラインフレームで、公開鍵証明書を取得するために [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) インターフェイスを使用可能にします ([Firefox bug 1460986](https://bugzil.la/1460986))。
 
 ### MathML
 

@@ -20,7 +20,7 @@ new Headers(init)
 ### 引数
 
 - `init` {{optional_inline}}
-  - : `Headers` オブジェクトに事前に入力したい、任意の [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)を含むオブジェクトです。これは文字列の値を持つ単純なオブジェクトリテラル、名前と値の組の配列（各組は 2 つの要素を持つ文字列の配列）、あるいは既存の `Headers` オブジェクトになります。最後の場合は、新しい `Headers` オブジェクトは既存の `Headers` オブジェクトからそのデータをコピーします。
+  - : `Headers` オブジェクトに事前に入力したい、任意の [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)を含むオブジェクトです。これは文字列の値を持つ単純なオブジェクトリテラル、名前と値の組の配列（各組は 2 つの要素を持つ文字列の配列）、あるいは既存の `Headers` オブジェクトになります。最後の場合は、新しい `Headers` オブジェクトは既存の `Headers` オブジェクトからそのデータをコピーします。
 
 ## 例
 
@@ -75,5 +75,5 @@ const myHeaders = new Headers(headers);
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

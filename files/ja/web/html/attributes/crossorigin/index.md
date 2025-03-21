@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`crossorigin`** 属性は、{{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("video")}} の各要素で有効です。[CORS](/ja/docs/Web/HTTP/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
+**`crossorigin`** 属性は、{{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("video")}} の各要素で有効です。[CORS](/ja/docs/Web/HTTP/Guides/CORS) への対応を提供し、したがって要素が読み取るデータのために CORS リクエストの構成を有効にします。要素によっては、属性は CORS 設定属性になります。
 
 メディア要素の `crossorigin` コンテンツ属性は CORS 設定属性です。
 
@@ -81,7 +81,7 @@ l10n:
 
 ## 関連情報
 
-- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTML 属性: `rel`](/ja/docs/Web/HTML/Attributes/rel)
 
 {{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}

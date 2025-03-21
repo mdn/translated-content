@@ -103,7 +103,7 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
-- {{WebExtAPIRef("proxy.ProxyInfo")}} の `proxyAuthorization` プロパティの内容を、[CONNECT](/ja/docs/Web/HTTP/Methods/CONNECT) リクエストの一部として (すでにサポートする HTTPS プロキシ向けに加えて) HTTP プロキシに送信する {{httpheader("Proxy-Authorization")}} リクエストヘッダーに渡すようになりました ([Firefox bug 1794464](https://bugzil.la/1794464))。
+- {{WebExtAPIRef("proxy.ProxyInfo")}} の `proxyAuthorization` プロパティの内容を、[CONNECT](/ja/docs/Web/HTTP/Reference/Methods/CONNECT) リクエストの一部として (すでにサポートする HTTPS プロキシ向けに加えて) HTTP プロキシに送信する {{httpheader("Proxy-Authorization")}} リクエストヘッダーに渡すようになりました ([Firefox bug 1794464](https://bugzil.la/1794464))。
 
 ## 実験的なウェブ機能
 

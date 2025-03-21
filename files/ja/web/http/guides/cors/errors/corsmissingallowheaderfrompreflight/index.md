@@ -1,7 +1,7 @@
 ---
 title: "Reason: missing token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers’ from CORS preflight channel"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
-original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ---
 
 {{HTTPSidebar}}
@@ -20,7 +20,7 @@ Reason: missing token ‘xyz’ in CORS header ‘Access-Control-Allow-Headers�
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)

@@ -8,12 +8,12 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`506 Variant Also Negotiates`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Status#サーバーエラーレスポンス)のステータスコードで、コンテンツの選択プロセスに再帰ループがある場合、コンテンツネゴシエーション中に返されます。
+HTTP の **`506 Variant Also Negotiates`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、コンテンツの選択プロセスに再帰ループがある場合、コンテンツネゴシエーション中に返されます。
 
-[エージェント主導のコンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation#エージェント駆動型ネゴシエーション)により、サーバーが複数の版を保有している場合に、クライアントとサーバーが協調して指定されたリソースの最適な版を決定することができます。サーバーがレスポンスを作成する際にサーバーの誤設定により、自分自身への循環参照が発生した場合、サーバーは `506` ステータスコードを送信します。
+[エージェント主導のコンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#エージェント駆動型ネゴシエーション)により、サーバーが複数の版を保有している場合に、クライアントとサーバーが協調して指定されたリソースの最適な版を決定することができます。サーバーがレスポンスを作成する際にサーバーの誤設定により、自分自身への循環参照が発生した場合、サーバーは `506` ステータスコードを送信します。
 
 クライアントがレスポンスから自動的に選べる方法の標準化が欠如しており、クライアントとサーバーの操作が遅くなる追加の往復があるため、このメカニズムはほとんど使用されていないということ意味しています。
-[サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)の方がはるかに一般的であり、サーバーはリクエストヘッダー（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} など）に基づいて、クライアントに最も適したリソースを直接選べます。
+[サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)の方がはるかに一般的であり、サーバーはリクエストヘッダー（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} など）に基づいて、クライアントに最も適したリソースを直接選べます。
 
 ## ステータス
 
@@ -75,7 +75,7 @@ Alternates: {"index.html.en" 1 {type text/html} {language en} {length 48}}, {"an
 
 - {{HTTPStatus("300", "300 Multiple Choices")}}
 - {{RFC("2295")}}
-- [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - [Content Negotiation](https://httpd.apache.org/docs/2.4/content-negotiation.html) (Apache HTTP Server ドキュメント)
 - [Apache httpd `mod_negotiation.c` source](https://github.com/apache/httpd/blob/6a2433cb3fbc30c8a55f450a046e4b0f69e73143/modules/mappers/mod_negotiation.c#L2687-L2691) は、`HTTP_VARIANT_ALSO_VARIES` レスポンスの発生する条件を示しています。

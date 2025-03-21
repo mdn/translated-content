@@ -21,9 +21,9 @@ l10n:
 
 ### HTTP
 
-- [`SameSite=None`](/ja/docs/Web/HTTP/Headers/Set-Cookie#none) の属性値を持つ {{httpheader("Set-Cookie")}} HTTP ヘッダーは、[`Secure`](/ja/docs/Web/HTTP/Headers/Set-Cookie#secure) 属性も持つことが必要になりました。これは、`SameSite=None` を設定した Cookie が HTTPS 接続だけで送信されることを保証します。また、Firefox は値が不特定な `SameSite` を `SameSite=None` とみなすため、`SameSite` を指定していない Cookie も同じ制約があります ([Firefox bug 1909673](https://bugzil.la/1909673))。
+- [`SameSite=None`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#none) の属性値を持つ {{httpheader("Set-Cookie")}} HTTP ヘッダーは、[`Secure`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) 属性も持つことが必要になりました。これは、`SameSite=None` を設定した Cookie が HTTPS 接続だけで送信されることを保証します。また、Firefox は値が不特定な `SameSite` を `SameSite=None` とみなすため、`SameSite` を指定していない Cookie も同じ制約があります ([Firefox bug 1909673](https://bugzil.la/1909673))。
 - [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)、いわゆる "Partitioned Cookies" をサポートしました。
-  この機能は開発者が {{HTTPHeader("Set-Cookie")}} HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分割された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分割された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1908160](https://bugzil.la/1908160))。
+  この機能は開発者が {{HTTPHeader("Set-Cookie")}} HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分割された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分割された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1908160](https://bugzil.la/1908160))。
 
 ### API
 
