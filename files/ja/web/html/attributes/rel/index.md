@@ -196,7 +196,7 @@ l10n:
 
   - : {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} の各要素に関連する `search` キーワードは、ハイパーリンクが、現在の文書、サイト、および関連リソースでの検索のために特別に設計されたインターフェイスを持つ文書を参照していることを示し、検索に使用できるリソースへのリンクを提供します。
 
-    [`type`](/ja/docs/Web/HTML/Element/link#type) 属性が `application/opensearchdescription+xml` に設定されている場合、そのリソースは、Firefox のインターフェイスに簡単に追加できる [OpenSearch](/ja/docs/Web/OpenSearch) プラグインです。
+    [`type`](/ja/docs/Web/HTML/Element/link#type) 属性が `application/opensearchdescription+xml` に設定されている場合、そのリソースは、Firefox のインターフェイスに簡単に追加できる [OpenSearch](/ja/docs/Web/XML/Guides/OpenSearch) プラグインです。
 
 - `stylesheet`
 

@@ -99,7 +99,7 @@ l10n:
 #### DOM & HTML DOM
 
 - 既存のサイトとの互換性を確保するため、 `Document.charset` を {{domxref("Document.characterSet")}} の別名として実装しました ([Firefox バグ 647621](https://bugzil.la/647621))。
-- ウェブページから Sherlock プラグインをインストールすることを可能にする [`window.sidebar.addSearchEngine()`](/ja/docs/Web/OpenSearch#installing_sherlock_plugins) メソッドの対応を廃止して、ウェブコンソールに警告を出力するようになりました ([Firefox バグ 862148](https://bugzil.la/862148))。
+- ウェブページから Sherlock プラグインをインストールすることを可能にする [`window.sidebar.addSearchEngine()`](/ja/docs/Web/XML/Guides/OpenSearch#installing_sherlock_plugins) メソッドの対応を廃止して、ウェブコンソールに警告を出力するようになりました ([Firefox バグ 862148](https://bugzil.la/862148))。
 - 望まないポップアップに対抗するため、対話がないページでは {{domxref("Window/beforeunload_event", "beforeunload")}} イベントで要求されたプロンプトを表示しないようになりました ([Firefox バグ 636905](https://bugzil.la/636905))。
 - 非推奨メソッド {{domxref("MessageEvent.initMessageEvent()")}} を、後方互換性のために再実装しました ([Firefox バグ 949376](https://bugzil.la/949376))。
 - 廃止した `DocumentType.internalSubset` プロパティを削除しました ([Firefox バグ 801545](https://bugzil.la/801545))。

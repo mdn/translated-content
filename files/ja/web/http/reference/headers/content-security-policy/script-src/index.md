@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/ja/docs/Web/XSLT)のようなものも含まれます。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src`** ディレクティブは、 JavaScript の情報なソースを指定します。これは {{HTMLElement("script")}} 要素の中に直接読み込まれる URL だけでなく、インラインのスクリプトイベントハンドラー (`onclick`) やスクリプト実行のトリガーとなりうる [XSLT スタイルシート](/ja/docs/Web/XML/XSLT)のようなものも含まれます。
 
 <table class="properties">
   <tbody>

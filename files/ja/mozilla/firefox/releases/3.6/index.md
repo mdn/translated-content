@@ -81,7 +81,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/docs
 ### XPath
 
 - choose() XPath メソッドをサポート
-  - : [`choose()`](/ja/docs/Web/XPath/Functions/choose) メソッドが [XPath](/ja/docs/Web/XPath) でサポートされました。
+  - : [`choose()`](/ja/docs/Web/XML/XPath/Functions/choose) メソッドが [XPath](/ja/docs/Web/XML/XPath) でサポートされました。
 
 ## XUL とアドオン開発者向け
 

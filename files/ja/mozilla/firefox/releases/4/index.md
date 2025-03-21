@@ -379,7 +379,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - `accessibility.disablecache` 設定はサポートされなくなりました。これはデバッグ目的で公開されており、もはや用いられません。
 - バージョンアップによって GUID が変更になるアドオンが正しく更新されるようになりました。
 - プラットフォーム固有のディレクトリーを削除した副作用として、各プラットフォーム向けに異なった設定を提供することができなくなりました。
-- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリーコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Web/OpenSearch)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリーからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
+- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリーコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Web/XML/Guides/OpenSearch)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリーからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
 - カスタマイズされた Firefox に[アプリケーションスタートアップ時に自動でインストールされる](/ja/docs/Developer_Guide/Customizing_Firefox#Including_extensions_with_your_distribution_of_Firefox)拡張を含められるようになりました。
 
 ## その他の変更
