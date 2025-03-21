@@ -1,3 +1,6 @@
+# This is a port of the equivalent workflow in mdn/content.
+# See https://github.com/mdn/content/blob/main/.github/workflows/auto-cleanup-bot.yml
+
 name: Create content auto-fix PR
 
 on:
