@@ -82,7 +82,7 @@ body
 
 `.article-body` 域根选择器定义了 DOM 树作用域的上边界，规则集将应用于该区域内，而 `figure` 域限选择器定义了下边界。最终，只有在具有 `article-body` 类名的 `<section>` 内，但不在 {{htmlelement("figure")}} 内的 {{htmlelement("img")}} 元素会被选中。
 
-> [! 备注]
+> [!NOTE]
 > 这种作用域的界定————具有上下边界的————通常被称为 **环形作用域**。
 
 作用域的上边界是包括在内的，而下边界是不包括的。想要更改这一行为，你可以将任一选择器与共同的子选择器结合使用。例如，`@scope (scope root) to (scope limit > *)` 使上下边界包括在内，`@scope (scope root > *) to (scope limit)` 不包括两个边界，而 `@scope (scope root > *) to (scope limit > *)` 将不包括上边界而包括下边界。
@@ -115,7 +115,7 @@ body
 </section>
 ```
 
-> [! 备注]
+> [!NOTE]
 > 重要的是要明白，虽然 `@scope` 允许你将选择器的应用范围限制在特定的 DOM 子树中，但它并不能完全将应用的样式限制在这些子树内部。继承表现得最为显著————由子元素继承的属性（比如 {{cssxref("color")}} 或 {{cssxref("font-family")}}）仍会被继承，不受任何设定的作用域限制。
 
 ### `:scope` 伪类
@@ -283,7 +283,7 @@ body
 
 现在最深层的段落的字体颜色正确地设置为黑色，这是因为在 DOM 树中距离 `.light-theme` 域根只有一个层级，而距离 `.dark-theme` 域根有两个层级。因此，浅色样式的优先级高。
 
-> [! 备注]
+> [!NOTE]
 > 作用域就近原则将无视源代码顺序，但其自身会被其它优先级更高的标准覆盖，比如：[importance 关键字](/zh-CN/docs/Web/CSS/important)、[层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) 和 [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。
 
 ## 形式语法
