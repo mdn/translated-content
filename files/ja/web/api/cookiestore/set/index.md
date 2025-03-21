@@ -43,7 +43,7 @@ set(options)
       - : Cookie のパスの入った文字列です。
     - `sameSite` {{Optional_Inline}}
 
-      - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) のいずれかの値です。
+      - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) のいずれかの値です。
 
         - `"strict"`
           - : Cookie は、ファーストパーティのコンテキストでのみ送信され、サードパーティのウェブサイトによるリクエストと一緒に送信されることはありません

@@ -41,7 +41,7 @@ original_slug: Web/HTTP/Permissions_Policy
 
 HTTP ヘッダーと allow 属性の主な違いは、 allow 属性が iframe 内の機能のみを制御することです。ヘッダーは、レスポンス内とそのページ内の埋め込みコンテンツの機能を制御します。
 
-詳細は[機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)を参照してください。
+詳細は[機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)を参照してください。
 
 ### ポリシーの推定
 
@@ -82,7 +82,7 @@ The features include:
 
 ウェブは、悪用された場合にプライバシーやセキュリティ上のリスクを伴う可能性のある機能や API を提供します。場合によっては、そのような機能がウェブサイト上でどのように使用されるかを厳密に制限することもできます。ウェブサイト内の特定の原点やフレームに対して機能を有効/無効にするポリシー制御の機能があります。利用可能な場合、機能は Permissions API、または機能が利用可能かどうかを確認する機能固有のメカニズムと統合されます。
 
-機能には以下のものが含まれます ([機能一覧](/ja/docs/Web/HTTP/Headers/Permissions-Policy#directives)を参照してください)。
+機能には以下のものが含まれます ([機能一覧](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)を参照してください)。
 
 - Accelerometer
 - Ambient light sensor
@@ -102,7 +102,7 @@ The features include:
 
 ## 例
 
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
 - 数多くのポリシーの使用例については [Feature Policy Demos](https://feature-policy-demos.appspot.com/) をご覧ください。
 
 ## 仕様書
@@ -115,7 +115,7 @@ The features include:
 
 ## 関連情報
 
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
 - HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダー
 - iframe の {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} 属性
 - [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)

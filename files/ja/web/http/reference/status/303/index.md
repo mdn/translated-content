@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`303 See Other`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードで、ブラウザーがリクエストされたリソースをレンダリングするのではなく、 {{HTTPHeader("Location")}} ヘッダー内の URL にリダイレクトすべきであることを示します。
+HTTP の **`303 See Other`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、ブラウザーがリクエストされたリソースをレンダリングするのではなく、 {{HTTPHeader("Location")}} ヘッダー内の URL にリダイレクトすべきであることを示します。
 
 このレスポンスコードは、 {{HTTPMethod("PUT")}} や {{HTTPMethod("POST")}} メソッドの結果として返されることが多く、クライアントが確認を受け取ったり、実世界のオブジェクトの表現を表示したりするために使用されます（[HTTP range-14](https://en.wikipedia.org/wiki/HTTPRange-14) を参照）。
 リダイレクトされたリソースを取得する方法は、常に {{HTTPMethod("GET")}} を使用してください。
@@ -49,7 +49,7 @@ Content-Length: 0
 
 ## 関連情報
 
-- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Redirections)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Guides/Redirections)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("302", "302 Found")}} 一時的なリダイレクト
 - {{HTTPStatus("307", "307 Temporary Redirect")}} 使用されたメソッドが変更されない場面でこのステータスコードと等価。

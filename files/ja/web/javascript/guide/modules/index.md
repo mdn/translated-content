@@ -64,7 +64,7 @@ modules ディレクトリーには、次の 2 つのモジュールがありま
 
 しかし、少なくとも今のところは `.js` を使い続けることにしました。ブラウザーでモジュールを正しく動作させるためには、サーバーが `Content-Type` ヘッダーで JavaScript の MIME タイプ、例えば `text/javascript` などを含めて提供していることを確認する必要があります。そうしないと、"The server responded with a non-JavaScript MIME type" のような厳格な MIME タイプチェックエラーが表示され、ブラウザーは JavaScript を実行しません。ほとんどのサーバーでは、`.js` ファイルにはすでに正しい MIME タイプが設定されていますが、`.mjs` ファイルにはまだ設定されていません。すでに `.mjs` ファイルを正しく提供しているサーバーには、[GitHub Pages](https://pages.github.com/) や Node.js の [`http-server`](https://github.com/http-party/http-server#readme) などがあります。
 
-これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません（つまり、`.mjs` ファイルに正しい [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) を設定するようにサーバーを設定することができます）。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。
+これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません（つまり、`.mjs` ファイルに正しい [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) を設定するようにサーバーを設定することができます）。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。
 
 この記事では学習と移植性を考慮して、`.js` を使用することにしました。
 

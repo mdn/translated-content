@@ -47,9 +47,9 @@ Access-Control-Expose-Headers: *
 ## ディレクティブ
 
 - \<header-name>
-  - : ゼロ個以上の[ヘッダー名](/ja/docs/Web/HTTP/Headers)の一覧で、 {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}に含まれないものであり、リソースが使用する可能性があり、公開される可能性があるものです。
+  - : ゼロ個以上の[ヘッダー名](/ja/docs/Web/HTTP/Reference/Headers)の一覧で、 {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}に含まれないものであり、リソースが使用する可能性があり、公開される可能性があるものです。
 - `*` (ワイルドカード)
-  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Cookies) や HTTP の資格情報のないリクエスト) の特殊なワイルドカード値です。資格情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。
+  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や HTTP の資格情報のないリクエスト) の特殊なワイルドカード値です。資格情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。
     なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。
 
 ## 例

@@ -38,7 +38,7 @@ l10n:
 
    - (X)HTML で知られているような doctype 宣言は省略してください。 DTD に基づく SVG 検証は解決する問題よりも多くの問題を引き起こすからです。
    - SVG 2 より前では、他にもバージョンの SVG から識別するために `version` 属性と `baseProfile` 属性を常に使用しましょう。 SVG 2 では `version` 属性も `baseProfile` 属性も非推奨です。
-   - XML の派生として、 SVG は (xmlns 属性で) 正しい名前空間に結び付けなければなりません。[名前空間の速修講座](/ja/docs/Web/SVG/Namespaces_Crash_Course)に詳細が載っていますのでご覧ください。
+   - XML の派生として、 SVG は (xmlns 属性で) 正しい名前空間に結び付けなければなりません。[名前空間の速修講座](/ja/docs/Web/SVG/Guides/Namespaces_crash_course)に詳細が載っていますのでご覧ください。
 
 2. {{SVGElement("rect")}} で画像領域全体を覆う長方形を描画することで、背景を赤色にします。
 3. {{SVGElement("circle")}} で半径が 80px の緑色の円を赤色の長方形の中心（内側に 30+120px、上方に 50+50px のオフセット）に描画します。
@@ -66,7 +66,7 @@ l10n:
 
   - 最後に、 SVG は JavaScript を用いて動的に生成したり、 HTML DOM に挿入したりすることができます。
 
-- SVG が寸法や単位を管理する方法については[次のページ](/ja/docs/Web/SVG/Tutorial/Positions)で説明します。
+- SVG が寸法や単位を管理する方法については[次のページ](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions)で説明します。
 
 ### SVG ファイルの種類
 

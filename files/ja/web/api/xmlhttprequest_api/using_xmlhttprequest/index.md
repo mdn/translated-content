@@ -17,7 +17,7 @@ HTTP リクエストを送るには、
 2. URL を開き、
 3. リクエストを送信します。
 
-トランザクションが完了すると、オブジェクトには結果の [HTTP ステータスコード](/ja/docs/Web/HTTP/Status)やレスポンスの本文などの有益な情報が格納されます。
+トランザクションが完了すると、オブジェクトには結果の [HTTP ステータスコード](/ja/docs/Web/HTTP/Reference/Status)やレスポンスの本文などの有益な情報が格納されます。
 
 ```js
 function reqListener() {
@@ -235,7 +235,7 @@ ifHasChanged("yourpage.html", function (modified, visit) {
 
 ## サイトをまたがる XMLHttpRequest
 
-現在のブラウザーは、[オリジン間リソース共有](/ja/docs/Web/HTTP/CORS) (Cross-Origin Resource Sharing, CORS) を実装することでサイト間リクエストに対応しています。サーバーがウェブアプリケーションのオリジンからのリクエストを許可するように構成されている場合のみ、 `XMLHttpRequest` は動作します。それ以外の場合は、 `INVALID_ACCESS_ERR` 例外が投げられます。
+現在のブラウザーは、[オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS) (Cross-Origin Resource Sharing, CORS) を実装することでサイト間リクエストに対応しています。サーバーがウェブアプリケーションのオリジンからのリクエストを許可するように構成されている場合のみ、 `XMLHttpRequest` は動作します。それ以外の場合は、 `INVALID_ACCESS_ERR` 例外が投げられます。
 
 ## キャッシュをバイパスする
 
@@ -275,8 +275,8 @@ XMLHttpRequest が `status=0` および `statusText=null` を受信して終了�
 
 ## 関連情報
 
-- [MDN の AJAX 入門](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [MDN の AJAX 入門](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御](/ja/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

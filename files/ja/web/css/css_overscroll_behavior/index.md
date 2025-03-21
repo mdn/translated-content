@@ -34,7 +34,7 @@ l10n:
 
 ## ガイド
 
-- [CSS の構成要素: コンテンツのオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS の構成要素: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : オーバーフローとは何か、どのように制御するのかを学びます。
 
 ## 関連概念

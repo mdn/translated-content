@@ -87,4 +87,4 @@ Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
 ## 関連情報
 
 - {{HTTPHeader("Date")}}
-- [HTTP response status codes](/ja/docs/Web/HTTP/Status)
+- [HTTP response status codes](/ja/docs/Web/HTTP/Reference/Status)

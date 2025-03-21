@@ -60,7 +60,7 @@ calc(var(--hue) + 180)
 lch(from aquamarine l c calc(h + 180))
 ```
 
-`calc()` 関数は、引数として単一の式を取り、その式の結果が CSS プロパティの値として使用されます。この式において、{{Glossary("operand", "オペランド")}}は、以下の一覧に掲載されている{{Glossary("operator", "演算子")}}を使用して結合することができます。式に複数のオペランドが含まれる場合、 `calc()` は標準的な[演算子の優先順位のルール](/ja/docs/Learn/JavaScript/First_steps/Math#演算子の優先順位)を使用します。
+`calc()` 関数は、引数として単一の式を取り、その式の結果が CSS プロパティの値として使用されます。この式において、{{Glossary("operand", "オペランド")}}は、以下の一覧に掲載されている{{Glossary("operator", "演算子")}}を使用して結合することができます。式に複数のオペランドが含まれる場合、 `calc()` は標準的な[演算子の優先順位のルール](/ja/docs/Learn_web_development/Core/Scripting/Math#演算子の優先順位)を使用します。
 
 - `+`
   - : 指定されたオペランド同士を加算します。

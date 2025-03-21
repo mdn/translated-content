@@ -183,7 +183,7 @@ _変更なし。_
 
 ## HTTP
 
-- [Brotli](https://en.wikipedia.org/wiki/Brotli) アルゴリズムに対応しました。また、 [`Accept-Encoding`](/ja/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) および [`Content-Encoding`](/ja/docs/Web/HTTP/Headers/Content-Encoding) ヘッダーで値 `br` に対応しました ([Firefox バグ 366559](https://bugzil.la/366559) および [Firefox バグ 1211916](https://bugzil.la/1211916))。
+- [Brotli](https://en.wikipedia.org/wiki/Brotli) アルゴリズムに対応しました。また、 [`Accept-Encoding`](/ja/docs/Web/HTTP/Guides/Content_negotiation#the_accept-encoding_header) および [`Content-Encoding`](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding) ヘッダーで値 `br` に対応しました ([Firefox バグ 366559](https://bugzil.la/366559) および [Firefox バグ 1211916](https://bugzil.la/1211916))。
 - 改行 (`'/n'`) を含む HTTP/2 ヘッダーについて、HTTP/1 とは異なり仕様書で許可されていないため、誤って対応していた箇所を削除しました ([Firefox バグ 1197847](https://bugzil.la/1197847))。
 
 ## ネットワーク

@@ -9,8 +9,8 @@ original_slug: WebAssembly/JavaScript_interface/compileStreaming_static
 **`WebAssembly.compileStreaming()`** 関数は [`WebAssembly.Module`](/ja/docs/WebAssembly/JavaScript_interface/Module) を直接、基礎的なソースのストリームからコンパイルします。この関数はモジュールをインスタンス化する前にコンパイルする必要がある場合に役立ちます（そうでない場合は、[`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 関数を使用してください）。
 
 > [!NOTE]
-> 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
-> WebAssembly のコンパイルと実行を許可することについての詳しい情報は、 [CSP の script-src](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) を参照してください。
+> 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
+> WebAssembly のコンパイルと実行を許可することについての詳しい情報は、 [CSP の script-src](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) を参照してください。
 
 ## 構文
 

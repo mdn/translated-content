@@ -36,7 +36,7 @@ Access-Control-Allow-Origin: null
 - `*`（ワイルドカード）
   - : 任意のオリジンからのリクエストコードがこのリソースにアクセスすることができます。
     資格情報がないリクエストでは、リテラル値 `*` をワイルドカードとして指定することができます。
-    資格情報がある時にワイルドカードを使用すると、[エラーを返します](/ja/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)。
+    資格情報がある時にワイルドカードを使用すると、[エラーを返します](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials)。
 - `<origin>`
   - : 単一のオリジンを指定します。サーバーが複数のオリジンからのクライアントに対応している場合、リクエストを行った特定のクライアントのオリジンを返さなければなりません。
 - `null`
@@ -83,5 +83,5 @@ Vary: Origin
 
 - {{HTTPHeader("Origin")}}
 - {{HTTPHeader("Vary")}}
-- [Cross-Origin Resource Sharing (CORS)](/ja/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}

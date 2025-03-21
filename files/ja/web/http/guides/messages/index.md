@@ -37,7 +37,7 @@ _メモ: HTTP リクエストにおいて、開始行は『リクエスト行』
 
 HTTP リクエストは、アクションを始めるためにクラアントからサーバーへ送られます。そのリクエスト行には、3 つの要素が含まれています。
 
-1. _[HTTP メソッド](/ja/docs/Web/HTTP/Methods)_。実行するアクションを表わす動詞 ({{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("POST")}} など) または名詞 ({{HTTPMethod("HEAD")}}、{{HTTPMethod("OPTIONS")}})。例えば `GET` はリソースを取り込むこと、`POST` はデータをサーバーへ送信すること (リソースを作成または変更する、あるいは返送する一時的なドキュメントを生成する) ことを示します。
+1. _[HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)_。実行するアクションを表わす動詞 ({{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("POST")}} など) または名詞 ({{HTTPMethod("HEAD")}}、{{HTTPMethod("OPTIONS")}})。例えば `GET` はリソースを取り込むこと、`POST` はデータをサーバーへ送信すること (リソースを作成または変更する、あるいは返送する一時的なドキュメントを生成する) ことを示します。
 2. _リクエスト対象_。通常は {{glossary("URL")}} ですが、プロトコル、ポート番号、ドメインの絶対パスは通常、リクエストの状況から明らかにされます。リクエスト対象の形式は、HTTP メソッドにより異なります。以下のような形式があります。
 
    - 最後に `'?'` とクエリー文字列がある絶対パス。これは*オリジン形式*とも呼ばれているもっとも一般的な形式であり、`GET`、`POST`、`HEAD`、`OPTIONS` メソッドで使用します。
@@ -46,7 +46,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
      - `HEAD /test.html?query=alibaba HTTP/1.1`
      - `OPTIONS /anypage.html HTTP/1.0`
    - 完全な URL は*絶対形式*とも呼ばれ、主にプロキシーへ接続する際に `GET` で使用します。
-     `GET https://developer.mozilla.org/ja/docs/Web/HTTP/Messages HTTP/1.1`
+     `GET https://developer.mozilla.org/ja/docs/Web/HTTP/Guides/Messages HTTP/1.1`
    - ドメイン名とポート（省略可能。`':'` を前につける）で構成される、URL の authority の部分は*認証形式*と呼ばれます。これは `CONNECT` で HTTP トンネルを設定するときに限り使用されます。
      `CONNECT developer.mozilla.org:80 HTTP/1.1`
    - 単純なアスタリスク (`'*'`) である*アスタリスク形式*は `OPTIONS` で使用され、サーバー全体を表します。
@@ -56,7 +56,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
 
 ### ヘッダー
 
-リクエストの [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers) は、HTTP ヘッダーの一定の基本構造に従います。大文字・小文字を区別しない文字列の後にコロン (`':'`) と、ヘッダーに応じた構造の値が続きます。値を含むヘッダー全体は 1 行で構成されており、とても長くなる場合もあります。
+リクエストの [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers) は、HTTP ヘッダーの一定の基本構造に従います。大文字・小文字を区別しない文字列の後にコロン (`':'`) と、ヘッダーに応じた構造の値が続きます。値を含むヘッダー全体は 1 行で構成されており、とても長くなる場合もあります。
 
 様々なヘッダーがリクエストに現れることがあります。これらはいくつかのグループに分類されます。
 
@@ -73,7 +73,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
 本体は、大きく 2 種類に分類されます。
 
 - 単一リソースの本体。1 個のファイルで構成され、{{HTTPHeader("Content-Type")}} と {{HTTPHeader("Content-Length")}} の 2 つのヘッダーで定義されます。
-- [複数リソースの本体](/ja/docs/Web/HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn/Forms)と関連付けられます。
+- [複数リソースの本体](/ja/docs/Web/HTTP/Guides/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn/Forms)と関連付けられます。
 
 ## HTTP レスポンス
 
@@ -89,7 +89,7 @@ HTTP レスポンスの開始行は*ステータス行*と呼ばれ、以下の�
 
 ### ヘッダー
 
-レスポンスの [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)は、他のヘッダーと同様に一定の基本構造に従います。大文字・小文字を区別しない文字列の後にコロン (`':'`) と、ヘッダーの種類に応じた構造の値が続きます。値を含むヘッダー全体は 1 行で構成されます。
+レスポンスの [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)は、他のヘッダーと同様に一定の基本構造に従います。大文字・小文字を区別しない文字列の後にコロン (`':'`) と、ヘッダーの種類に応じた構造の値が続きます。値を含むヘッダー全体は 1 行で構成されます。
 
 使用できるレスポンスヘッダーは多数あります。これらはいくつかのグループに分類されます。
 
@@ -107,7 +107,7 @@ HTTP レスポンスの開始行は*ステータス行*と呼ばれ、以下の�
 
 - 大きさが判明している 1 個のファイルで構成される、単一リソースの本体。 {{HTTPHeader("Content-Type")}} と {{HTTPHeader("Content-Length")}} の 2 つのヘッダーで定義されます。
 - 大きさが不明な 1 個のファイルで構成される、単一リソースの本体。 {{HTTPHeader("Transfer-Encoding")}} を `chunked` に設定して、 chunked 形式でエンコードされます。
-- [複数リソースの本体](/ja/docs/Web/HTTP/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報のセクションを持ちます。これは比較的まれです。
+- [複数リソースの本体](/ja/docs/Web/HTTP/Guides/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報のセクションを持ちます。これは比較的まれです。
 
 ## HTTP/2 フレーム
 

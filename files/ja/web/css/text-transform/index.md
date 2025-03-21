@@ -70,7 +70,7 @@ text-transform: math-auto;
 - ギリシャ語 (`el`) で、小文字のシグマは `σ` と `ς` の 2 種類あります。`ς` は、単語の末尾にあるシグマに限り使用します。大文字のシグマ (`Σ`) に `text-transform: lowercase` を適用すると、ブラウザーは状況に応じて正しい小文字を選択しなければなりません。
 - アイルランド語 (`ga`) では、頭文字が大文字化されていても特定の接頭辞文字が小文字のままになります。例えば `text-transform: uppercase` は `ar aon tslí` を、予想される `AR AON TSLÍ` ではなく `AR AON tSLÍ` にします (Firefox に限る)。大文字化によりハイフンが削除される場合もあり、`an t-uisce` は `AN tUISCE` になります (また、`text-transform: lowercase` ではハイフンが適切に再挿入されます)。
 
-言語は HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性や XML の [`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性で定義します。
+言語は HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性や XML の [`xml:lang`](/ja/docs/Web/SVG/Reference/Attribute/xml:lang) 属性で定義します。
 
 > [!NOTE]
 > これらの特定のケースはブラウザーにより異なりますので、[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。

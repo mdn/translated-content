@@ -35,7 +35,7 @@ l10n:
 
 ### HTTP
 
-- [Content-Security-Policy](/ja/docs/Web/HTTP/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
+- [Content-Security-Policy](/ja/docs/Web/HTTP/Guides/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
   `script-src` が提供されていないときに代替として `default-src` ディレクティブの値を使用することで、動作が仕様書に合致するようになりました ([Firefox bug 1313937](https://bugzil.la/1313937))。
 
 - `Range` ヘッダーが、値が 1 バイトの範囲内である (例: `bytes=100-200`) 場合に [CORS セーフリストリクエストヘッダー](/ja/docs/Glossary/CORS-safelisted_request_header) になります。

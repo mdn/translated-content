@@ -111,10 +111,10 @@ l10n:
   - [補間](/ja/docs/Glossary/Interpolation)
   - [重ね合わせコンテキスト](/ja/docs/Glossary/Stacking_context)
 - [SVG](/ja/docs/Web/SVG) の概念:
-  - [`<animate>`](/ja/docs/Web/SVG/Element/animate) 要素
-  - [`<animateTransform>`](/ja/docs/Web/SVG/Element/animateTransform) 要素
-  - [`<set>`](/ja/docs/Web/SVG/Element/set) 要素
-  - [`transform`](/ja/docs/Web/SVG/Attribute/transform) 要素
+  - [`<animate>`](/ja/docs/Web/SVG/Reference/Element/animate) 要素
+  - [`<animateTransform>`](/ja/docs/Web/SVG/Reference/Element/animateTransform) 要素
+  - [`<set>`](/ja/docs/Web/SVG/Reference/Element/set) 要素
+  - [`transform`](/ja/docs/Web/SVG/Reference/Attribute/transform) 要素
 
 ## 仕様書
 
@@ -122,6 +122,6 @@ l10n:
 
 ## 関連情報
 
-- [基本的な SVG 座標変換](/ja/docs/Web/SVG/Tutorial/Basic_Transformations)のチュートリアル
+- [基本的な SVG 座標変換](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Transformations)のチュートリアル
 - [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
 - [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)モジュール

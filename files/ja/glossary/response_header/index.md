@@ -33,7 +33,7 @@ x-frame-options: DENY
 
 1. Learn more
 
-   1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
+   1. [すべての HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Reference/Headers)
 
 2. 関連用語:
 

@@ -90,7 +90,7 @@ original_slug: Web/Accessibility/ARIA/Roles/region_role
 
 ### SVG
 
-[SVG](/ja/docs/Web/SVG/Element/svg) の個々のセクションを説明できるようにするために、SVG の領域上に `role="region"` を `aria-label` とともに宣言することができます。
+[SVG](/ja/docs/Web/SVG/Reference/Element/svg) の個々のセクションを説明できるようにするために、SVG の領域上に `role="region"` を `aria-label` とともに宣言することができます。
 
 ### 追加された利点
 

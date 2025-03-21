@@ -283,7 +283,7 @@ function draw(img) {
 
 ## 画像の保存
 
-{{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、[データ URL](/ja/docs/Web/URI/Schemes/data) として引数 `type` で指定した形式（既定値は [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
+{{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) として引数 `type` で指定した形式（既定値は [PNG](https://ja.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
 
 > [!NOTE]
 > CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。

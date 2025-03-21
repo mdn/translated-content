@@ -9,8 +9,8 @@ original_slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 **`WebAssembly.instantiateStreaming()`** 関数は、ソースのストリームから直接 WebAssembly モジュールをコンパイルしてインスタンス化します。これは、 wasm コードをロードするための最も効率的で最適な方法です。
 
 > [!NOTE]
-> 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
-> WebAssembly のコンパイルと実行を許可することについての詳しい情報は、 [CSP の script-src](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) を参照してください。
+> 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
+> WebAssembly のコンパイルと実行を許可することについての詳しい情報は、 [CSP の script-src](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) を参照してください。
 
 ## 構文
 

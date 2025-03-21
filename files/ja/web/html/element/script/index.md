@@ -101,7 +101,7 @@ l10n:
 - `nomodule`
   - : この論理属性は、 [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているブラウザーでは、スクリプトを実行するべきではないことを示します。要するに、モジュール式の JavaScript コードに対応していない古いブラウザー向けの代替スクリプトを提供するために使用できます。
 - `nonce`
-  - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)内のスクリプトをホワイトリストに入れるための暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスを推測できないノンスを提供することが重要です。
+  - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)内のスクリプトをホワイトリストに入れるための暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスを推測できないノンスを提供することが重要です。
 - `referrerpolicy`
 
   - : スクリプトを読み込んだり、スクリプトがリソースを読み込んだりする際に、どの[リファラー](/ja/docs/Web/API/Document/referrer)を送信するかを示します。
@@ -128,7 +128,7 @@ l10n:
     - **属性が未設定（既定値）、空文字列、JavaScript の MIME タイプ**
       - : スクリプトが「クラシックスクリプト」であること、JavaScript コードを保持していることを示します。
         このスクリプトが JavaScript コードを参照している場合、MIME タイプを指定するのではなく、この属性を省略することを推奨します。
-        JavaScript の MIME タイプは [IANA media types specification に掲載されています](/ja/docs/Web/HTTP/MIME_types#textjavascript)。
+        JavaScript の MIME タイプは [IANA media types specification に掲載されています](/ja/docs/Web/HTTP/Guides/MIME_types#textjavascript)。
     - [`importmap`](/ja/docs/Web/HTML/Element/script/type/importmap)
       - : この値は、要素の本体にインポートマップが格納されていることを示します。
         インポートマップ JSON オブジェクトで、開発者が [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules#インポートマップを使用したモジュールのインポート)をインポートする際に、ブラウザーがモジュール指定子を解決する方法を制御するために使用できます。
