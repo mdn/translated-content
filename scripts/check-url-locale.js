@@ -12,13 +12,10 @@
 import fs from "node:fs/promises";
 import * as path from "node:path";
 import { fdir } from "fdir";
-import ora from "ora";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import { visit } from "unist-util-visit";
-
-const spinner = ora().start();
 
 const IGNORE_BLOCK_STRINGS = [
   "<!-- url-locale-check ignore-start -->",
@@ -222,8 +219,6 @@ async function main() {
 
   const files = [];
 
-  spinner.text = "Crawling files...";
-
   const dryRun = !argv.fix;
 
   for (const fp of argv.files) {
@@ -244,16 +239,17 @@ async function main() {
 
   let exitCode = 0;
 
+  console.info(`Crawling ${files.length} files…`);
+
   for (const i in files) {
     const file = files[i];
-
-    spinner.text = `${i}/${files.length}: ${file}...`;
+    // This is a little verbose for large file lists
+    // console.info(`${i}/${files.length}: ${file}...`);
 
     const relativePath = path.relative(process.cwd(), file);
     const parts = relativePath.split(path.sep);
     if (parts.length < 2 || parts[0] !== "files") {
-      spinner.warn(`File "${file}" is not in the files directory!`);
-      spinner.start();
+      console.warn(`File "${file}" is not in the files directory!`);
       continue;
     }
 
@@ -267,41 +263,39 @@ async function main() {
 
       if (urlLocaleErrors.length > 0) {
         if (dryRun) {
-          spinner.fail(
+          console.error(
             `${file}: Found ${
               urlLocaleErrors.length
-            } URL locale errors!\n${generateReport(
+            } URL locale error(s)!\n${generateReport(
               relativePath,
               urlLocaleErrors,
               locale,
             )}`,
           );
+
           exitCode = 1;
         } else {
-          spinner.info(
-            `${file}: Found ${urlLocaleErrors.length} URL locale errors! Fixing...`,
+          console.info(
+            `${file}: Found ${urlLocaleErrors.length} URL locale error(s)! Fixing...`,
           );
+
           const newContent = fixUrlLocale(
             originContent,
             urlLocaleErrors,
             locale,
           );
           if (newContent === originContent) {
-            spinner.fail(`${file}: Fixing URL locale errors failed!`);
+            console.error(`${file}: Fixing URL locale error(s) failed!`);
             exitCode = 1;
           } else {
             await fs.writeFile(relativePath, newContent);
           }
         }
-        spinner.start();
       }
     } catch (e) {
-      spinner.fail(`${file}: ${e}`);
-      spinner.start();
+      console.error(`${file}: ${e}`);
     }
   }
-
-  spinner.stop();
 
   if (exitCode === 0) {
     console.log("Checked all files successfully!");
