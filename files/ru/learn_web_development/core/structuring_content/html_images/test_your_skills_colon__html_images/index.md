@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skill
 
 {{learnsidebar}}
 
-Цель этого теста навыков - оценить, поняли ли вы нашу статью [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+Цель этого теста навыков - оценить, поняли ли вы нашу статью [Изображения в HTML](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 > [!NOTE]
 > Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезно загрузить код и использовать онлайн-инструмент, такой как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/) для работы с задачами.

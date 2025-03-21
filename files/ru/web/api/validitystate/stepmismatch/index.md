@@ -30,5 +30,5 @@ slug: Web/API/ValidityState/stepMismatch
 ## Смотрите также
 
 - [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
-- [Валидация форм на стороне клиента](/ru/docs/Learn/Forms/Form_validation)
+- [Валидация форм на стороне клиента](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Атрибут `step`](/ru/docs/Web/HTML/Attributes/step)

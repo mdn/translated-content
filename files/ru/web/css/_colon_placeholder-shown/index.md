@@ -195,4 +195,4 @@ input.studentid:placeholder-shown {
 
 - Псевдоэлемент {{cssxref("::placeholder")}}, применяющий стили к _самому себе_.
 - Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML формы](/ru/docs/Learn/Forms)
+- [HTML формы](/ru/docs/Learn_web_development/Extensions/Forms)

@@ -17,7 +17,7 @@ slug: Web/Performance
 
 ## Руководства для начинающих
 
-The MDN [Web Performance Learning Area](/ru/docs/Learn/Performance) contains modern, up-to-date tutorials covering Performance essentials. Start here if you are a newcomer to performance:
+The MDN [Web Performance Learning Area](/ru/docs/Learn_web_development/Extensions/Performance) contains modern, up-to-date tutorials covering Performance essentials. Start here if you are a newcomer to performance:
 
 - [Производительность веба: краткий обзор](/ru/docs/Learn/Performance/What_is_web_performance)
   - : Обзор пути обучения повышения веб-производительности.
@@ -134,13 +134,13 @@ The MDN [Web Performance Learning Area](/ru/docs/Learn/Performance) contains mod
   - : When it comes to images and videos, there are more formats than you're likely aware of. Some of these formats can take your highly optimized media-rich pages even further by offering additional reductions in file size. In this guide we'll discuss some alternative media formats, how to use them responsibly so that non-supporting browsers don't get left out in the cold, and some advanced guidance on transcoding your existing assets to them.
 - Analyzing JavaScript bundles
   - : No doubt, JavaScript is a big part of modern web development. While you should always strive to reduce the amount of JavaScript you use in your applications, it can be difficult to know where to start. In this guide, we'll show you how to analyze your application's script bundles, so you know _what_ you're using, as well how to detect if your app contains duplicated scripts between bundles.
-- [Lazy loading](/ru/docs/Web/Performance/Lazy_loading)
+- [Lazy loading](/ru/docs/Web/Performance/Guides/Lazy_loading)
   - : Lazy loading (ленивая загрузка) - это стратегия, направленная на определение ресурсов как неблокирующих (не критических) для того, чтобы отложить загрузку этих ресурсов на тот момент, когда они действительно необходимы.
 - Lazy-loading JavaScript with dynamic imports
   - : When developers hear the term "lazy loading", they immediately think of below-the-fold imagery that loads when it scrolls into the viewport. But did you know you can lazy load JavaScript as well? In this guide we'll talk about the dynamic import() statement, which is a feature in modern browsers that loads a JavaScript module on demand. Of course, since this feature isn't available everywhere, we'll also show you how you can configure your tooling to use this feature in a widely compatible fashion.
 - [Controlling resource delivery with resource hints](/ru/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints)
   - : Browsers often know better than we do when it comes to resource prioritization and delivery however they're far from clairyovant. Native browser features enable us to hint to the browser when it should connect to another server, or preload a resource before the browser knows it ever needs it. When used judiciously, this can make fast experience seem even faster. In this article, we cover native browser features like rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload, and how to use them to your advantage.
-- [Performance Budgets](/ru/docs/Web/Performance/Performance_budgets)
+- [Performance Budgets](/ru/docs/Web/Performance/Guides/Performance_budgets)
   - : Marketing, design, and sales needs, and developer experience, often ad bloat, third-party scripts, and other features that can slow down web performance. To help set priorities, it is helpful to set a performance budget: a set of restrictions to not exceed during the development phase. In this article, we'll discuss creating and sticking to a performance budget.
 - [Web performance checklist](/ru/docs/Web/Performance/Checklist)
   - : A performance checklist of features to consider when developing applications with links to tutorials on how to implement each feature, include service workers, diagnosing performance problems, font loading best practices, client hints, creating performant animations, etc.
@@ -156,7 +156,7 @@ HTML
 - [The `<source>` Element](/ru/docs/Web/HTML/Element/source)
 - [The `<img> srcset` attribute](/ru/docs/Web/HTML/Element/img#attributes)
 
-  - [Responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [Responsive images](/ru/docs/Web/HTML/Responsive_images)
 
 - [Preloading content with `rel="preload"`](/ru/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 
@@ -199,7 +199,7 @@ APIs
 
 Headers
 
-- [Content-encoding](/ru/docs/Web/HTTP/Headers/Content-Encoding)
+- [Content-encoding](/ru/docs/Web/HTTP/Reference/Headers/Content-Encoding)
 - HTTP/2
 - [gZip](/ru/docs/Glossary/GZip_compression)
 - Client Hints
@@ -223,5 +223,5 @@ Best Practices
   - [Web Workers API](/ru/docs/Web/API/Web_Workers_API)
 
 - [PWA](/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
-- [Caching](/ru/docs/Web/HTTP/Caching)
+- [Caching](/ru/docs/Web/HTTP/Guides/Caching)
 - Content Delivery Networks (CDN)

@@ -52,5 +52,5 @@ BookInstanceSchema.virtual("due_back_formatted").get(function () {
 
 ## Далее
 
-- Вернуться к [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Перейти к следующему подразделу части 5: [Author list page and Genre list page challenge](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page) (страница списка авторов и тест- страница списка жанров).
+- Вернуться к [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
+- Перейти к следующему подразделу части 5: [Author list page and Genre list page challenge](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page) (страница списка авторов и тест- страница списка жанров).

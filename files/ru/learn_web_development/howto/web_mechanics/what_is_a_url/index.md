@@ -7,9 +7,9 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 
 Данная статья описывает Единый локатор ресурсов или Uniform Resource Locators (URLs), объясняет, что это такое, и описывает его структуру.
 
-| Предварительно: | Вам нужно узнать [как работает интернет](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work), [что такое Веб сервер](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) and [что лежит в основе веб ссылок](/ru/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks). |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:           | Вы узнаете, что такое URL и как они работают в вебе.                                                                                                                                                                                                                                                                   |
+| Предварительно: | Вам нужно узнать [как работает интернет](/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work), [что такое Веб сервер](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) and [что лежит в основе веб ссылок](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks). |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:           | Вы узнаете, что такое URL и как они работают в вебе.                                                                                                                                                                                                                                                                                  |
 
 ## Введение
 
@@ -63,7 +63,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 Каждый URL может быть напечатан напрямую в адресной строке браузера, чтобы сразу получить запрошенный ресурс. Но это только вершина айсберга!
 
-Язык {{Glossary("HTML")}} — [который будет обсуждать позже](/ru/docs/Learn/HTML/Introduction_to_HTML) — позволяет активно использовать URL для:
+Язык {{Glossary("HTML")}} — [который будет обсуждать позже](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content) — позволяет активно использовать URL для:
 
 - создания ссылок на другие документы с помощью тега {{HTMLElement("a")}};
 - связывания документа с его дополнительными файлами, например с помощью тегов {{HTMLElement("link")}} или {{HTMLElement("script")}};
@@ -151,4 +151,4 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 ## Следующие шаги
 
-- [Понимание доменных имён](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Понимание доменных имён](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

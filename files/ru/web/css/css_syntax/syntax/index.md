@@ -39,7 +39,7 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 ![](ruleset.png)
 
-As an element of the page may be matched by several selectors, and therefore by several rules eventually containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
+As an element of the page may be matched by several selectors, and therefore by several rules eventually containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) algorithm.
 
 > [!NOTE]
 > It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
@@ -57,7 +57,7 @@ A **statement** is a building block that begins with any non-space characters an
 There are different kinds of statements:
 
 - **Rulesets** (or _rules_) that, as seen, associate a collection of CSS declarations to a condition described by a selector.
-- **At-rules** that start with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of [at-rules](/ru/docs/Web/CSS/At-rule), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
+- **At-rules** that start with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of [at-rules](/ru/docs/Web/CSS/CSS_syntax/At-rule), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
 
 Any statement which isn't a rule or an at-rule is invalid and ignored.
 
@@ -66,20 +66,20 @@ There is another group of statements, the **nested statements**, these are state
 ## Смотрите также
 
 - Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/Comments)
-  - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/computed_value)
-    - [используемые](/ru/docs/Web/CSS/used_value)
-    - [действительные](/ru/docs/Web/CSS/actual_value)
+    - [начальные](/ru/docs/Web/CSS/CSS_cascade/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/CSS_cascade/computed_value)
+    - [используемые](/ru/docs/Web/CSS/CSS_cascade/used_value)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/actual_value)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
