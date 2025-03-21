@@ -23,4 +23,4 @@ CSS では、正規順序は、別々の値を指定（または{{Glossary("pars
 ## より詳しく知る
 
 - [CSS のプロパティに関して、「正規順序」とは何を意味しますか？](https://stackoverflow.com/questions/28963536/what-does-canonical-order-mean-with-respect-to-css-properties) は、Stack Overflow において、有用なさらなる議論を提供します。（英語）
-- MDN の [CSS の値に使用される形式的構文の説明](/ja/docs/Web/CSS/Value_definition_syntax)
+- MDN の [CSS の値に使用される形式的構文の説明](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)

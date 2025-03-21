@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-この要素は[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)を受け入れます。 単一の文字を含む `<mi>` 要素では、 [`mathvariant`](/ja/docs/Web/MathML/Reference/Element/mi#mathvariant) 属性の既定値が `italic` になります。
+この要素は[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)を受け入れます。 単一の文字を含む `<mi>` 要素では、 [`mathvariant`](/ja/docs/Web/MathML/Reference/Element/mi#mathvariant) 属性の既定値が `italic` になります。
 
 ## 例
 

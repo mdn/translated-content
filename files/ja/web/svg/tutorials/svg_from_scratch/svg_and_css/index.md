@@ -414,7 +414,7 @@ SVG 対応のブラウザーで `doc8.svg` 文書を開いてください。マ�
 
 外側の花びらが動作する方法は変えずに、内側の花びらのどれかにマウスポインターが重なったときに内側の花びらがすべてピンクになるようにスタイルシートを変更しましょう。
 
-[この練習の解答を見る](/ja/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_and_css)
+[この練習の解答を見る](/ja/docs/Learn_web_development/Core/Challenges#svg_and_css)
 
 ## 簡略化された構造
 

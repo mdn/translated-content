@@ -8,7 +8,7 @@ l10n:
 
 {{XsltSidebar}}
 
-[« XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Transforming_XML_with_XSLT)
+[« XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
 eXtensible Stylesheet Language/Transform は非常に強力な言語であり、この記事の全体的な議論はこの記事の範囲をはるかに超えていますが、基本的な概念の簡単な説明は Netscape の機能の説明の理解に役立ちます。
 
@@ -45,4 +45,4 @@ eXtensible Stylesheet Language/Transform は非常に強力な言語であり、
 - `<?xml-stylesheet type="text/xml" href="inventory.xsl"?>`
   - : これは XML 文書のプロローグセクションに配置する必要があります。
 
-XSLT と XPath の詳細については、この記事の最後にある[参考文献](/ja/docs/Web/XML/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)を参照してください。
+XSLT と XPath の詳細については、この記事の最後にある[参考文献](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading)を参照してください。

@@ -52,4 +52,4 @@ l10n:
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - {{domxref('element.className')}}
 - {{domxref('element.classList')}}
-- [CSS 入門](/ja/docs/Learn/CSS)
+- [CSS 入門](/ja/docs/Learn_web_development/Core/Styling_basics)

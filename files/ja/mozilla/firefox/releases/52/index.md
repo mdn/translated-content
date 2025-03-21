@@ -82,8 +82,8 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 #### 変更および削除
 
-- [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
-- [オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
+- [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
+- [オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
 - {{jsxref("Array.prototype.toLocaleString()")}} を、Intl API の引数 "`locales`" および "`options`" をサポートするように再実装しました ([Firefox バグ 1130636](https://bugzil.la/1130636))。
 - {{jsxref("TypedArray")}} コンストラクターで、新しい typed array を生成するため [iterable](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) を受け入れるようになりました ([Firefox バグ 1232266](https://bugzil.la/1232266))。
 - {{jsxref("TypedArray.from()")}}、{{jsxref("TypedArray.of()")}}、{{jsxref("TypedArray.prototype.filter()")}}、{{jsxref("TypedArray.prototype.map()")}}、{{jsxref("TypedArray.prototype.slice()")}}、{{jsxref("TypedArray.prototype.subarray()")}} が、値 `this` が有効な Typed Array のコンストラクターであることを要求するようになりました ([Firefox バグ 1122396](https://bugzil.la/1122396))。

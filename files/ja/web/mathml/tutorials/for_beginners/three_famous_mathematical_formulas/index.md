@@ -114,6 +114,6 @@ using the following expression:
 - 部分式のグループ化には `<mrow>` を使用することを忘れないでください。
 - 伸縮性のある演算子や大きな演算子に注意してください！
 - [W3C validator](https://validator.w3.org/nu/) を使用して、 HTML/MathML マークアップの意図しない間違いを見つけてください。
-- もし行き詰まったり、手作業で MathML を書くのが苦痛に感じたりした場合は、 [MathML を書く](/ja/docs/Web/MathML/Authoring)ためのツール、たとえば [TeXZilla](https://fred-wang.github.io/TeXZilla/) など使用することもできます。
+- もし行き詰まったり、手作業で MathML を書くのが苦痛に感じたりした場合は、 [MathML を書く](/ja/docs/Web/MathML/Guides/Authoring)ためのツール、たとえば [TeXZilla](https://fred-wang.github.io/TeXZilla/) など使用することもできます。
 
 {{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

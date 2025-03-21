@@ -39,7 +39,7 @@ Content-Location: <url>
 ## ディレクティブ
 
 - \<url>
-  - : （リクエスト URL に対する）[相対](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL または[絶対](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL。
+  - : （リクエスト URL に対する）[相対](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL または[絶対](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL。
 
 ## 例
 

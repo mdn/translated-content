@@ -37,7 +37,7 @@ l10n:
 - 特定の形式に対応していないブラウザーに対して、**代替画像形式を提供する**。
 
   > [!NOTE]
-  > 例えば、[AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_画像) や [WEBP](/ja/docs/Web/Media/Formats/Image_types#webp_画像) と言った新しい形式には多くの利点がありますが、ブラウザーが対応していない可能性があります。対応している画像形式のリストは、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)にあります。
+  > 例えば、[AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) や [WEBP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_画像) と言った新しい形式には多くの利点がありますが、ブラウザーが対応していない可能性があります。対応している画像形式のリストは、[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)にあります。
 
 - 見る人の画面に最も適合する画像を読み込むことで、**通信帯域を節約しページの読み込みをより速くする**。
 
@@ -161,4 +161,4 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
 - {{HTMLElement("img")}} 要素
 - {{HTMLElement("source")}} 要素
 - フレーム内の画像の位置や寸法の設定: {{cssxref("object-position")}} および {{cssxref("object-fit")}}
-- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)
+- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)

@@ -55,7 +55,7 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 }
 ```
 
-要素をアンカー位置指定要素に変換するには、2 段階のプロセスが必要です。まず、{{cssxref("position")}} プロパティを使用して、絶対[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)または固定位置指定にする必要があります。次に、位置指定された要素の {{cssxref("position-anchor")}} プロパティに、アンカー要素の `anchor-name` プロパティの値を設定して、2 つの要素を関連付けます。
+要素をアンカー位置指定要素に変換するには、2 段階のプロセスが必要です。まず、{{cssxref("position")}} プロパティを使用して、絶対[位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)または固定位置指定にする必要があります。次に、位置指定された要素の {{cssxref("position-anchor")}} プロパティに、アンカー要素の `anchor-name` プロパティの値を設定して、2 つの要素を関連付けます。
 
 ```css hidden
 .infobox {
@@ -305,7 +305,7 @@ body {
 - 3 つの行は、物理的な値では `top`、`center`、`bottom` で表します。 また、`start`、`center`、`end` といった論理的な値や、`y-start`、`center`、`y-end` といった座標の値もあります。
 - 3 つの列は、物理的な値では `left`、`center`、`right` で表します。また、`start`、`center`、`end` といった論理的な値や、`x-start`、`center`、`x-end` といった座標の値もあります。
 
-中央のタイルの寸法は、アンカー要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)によって定義され、中央のタイルとグリッドの外縁との間の距離は、位置指定要素の包含ブロックによって定義されます。
+中央のタイルの寸法は、アンカー要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)によって定義され、中央のタイルとグリッドの外縁との間の距離は、位置指定要素の包含ブロックによって定義されます。
 
 `position-area` プロパティの値は、上記の行と列の値に基づいて 1 つまたは 2 つの値で構成され、要素が配置されるべきグリッドの領域を定義するためのスパニングオプションが利用可能です。
 
@@ -468,7 +468,7 @@ selectElem.addEventListener("change", () => {
 
 例えば、上記の例では、位置指定された要素のサイズを明示的に指定していません。 意図的にサイズ指定を省略することで、それが引き起こす動作を観察できるようにしてあります。
 
-配置された要素が明示的なサイズ指定なしに `position-area` グリッドセルに配置されると、指定されたグリッド領域に配置され、{{cssxref("width")}} が {{cssxref("max-content")}} に設定されているかのように動作します。 そのサイズは、その[包含ブロック](/ja/docs/Web/CSS/Containing_block)サイズ（コンテンツの幅）に従って決定されます。 このサイズは、`position: fixed` の設定によって強制的に決定されます。 自動的にサイズが決定され、絶対位置指定された要素は、自動的にサイズが決定され、テキストコンテンツに合わせて必要に応じて幅が広げられますが、ビューポートの端によって制約されます。この場合、グリッドの左辺に `left` または `inline-start` 値で配置された場合、テキストは折り返されます。アンカー要素の `max-content` サイズがアンカーよりも狭い場合、または短い場合、アンカーのサイズに一致するように拡大することはありません。
+配置された要素が明示的なサイズ指定なしに `position-area` グリッドセルに配置されると、指定されたグリッド領域に配置され、{{cssxref("width")}} が {{cssxref("max-content")}} に設定されているかのように動作します。 そのサイズは、その[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)サイズ（コンテンツの幅）に従って決定されます。 このサイズは、`position: fixed` の設定によって強制的に決定されます。 自動的にサイズが決定され、絶対位置指定された要素は、自動的にサイズが決定され、テキストコンテンツに合わせて必要に応じて幅が広げられますが、ビューポートの端によって制約されます。この場合、グリッドの左辺に `left` または `inline-start` 値で配置された場合、テキストは折り返されます。アンカー要素の `max-content` サイズがアンカーよりも狭い場合、または短い場合、アンカーのサイズに一致するように拡大することはありません。
 
 `position-area: bottom center` のように、配置された要素が垂直方向に中央揃えされている場合、指定されたグリッドセルに配置され、幅はアンカー要素と同じになります。この場合、その最小の高さは、アンカー要素の包含ブロックサイズになります。`min-width` が {{cssxref("min-content")}}、つまり、最も長い単語と同じ幅以上になるため、はみ出すことはありません。
 
@@ -695,6 +695,6 @@ body {
 
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
 - [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
+- [位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS 論理プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
 - [CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)

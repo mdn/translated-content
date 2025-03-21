@@ -101,7 +101,7 @@ const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
 ### 基本的な例
 
-この基本的な例では、 XML ファイルを読み込み、 XSL 変換を適用します。これらは、 [HTML を生成](/ja/docs/Web/API/XSLTProcessor/Generating_HTML)する例で使用したのと同じファイルです。 XML ファイルには記事が記述されており、 XSL ファイルは表示用の情報を書式化します。
+この基本的な例では、 XML ファイルを読み込み、 XSL 変換を適用します。これらは、 [HTML を生成](/ja/docs/Web/API/Document_Object_Model/Transforming_with_XSLT)する例で使用したのと同じファイルです。 XML ファイルには記事が記述されており、 XSL ファイルは表示用の情報を書式化します。
 
 #### XML
 

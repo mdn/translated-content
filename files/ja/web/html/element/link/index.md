@@ -252,7 +252,7 @@ l10n:
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
 - `title`
-  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/CSS/Alternative_style_sheets) を定義します。
+  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet) を定義します。
 - `type`
   - : この属性は、リンク先コンテンツの種類を定義します。この属性の値は **text/html** や **text/css** などの MIME タイプにします。
     この属性の一般的な使用法は、参照されるスタイルシートのタイプ（**text/css** など）の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、`type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
@@ -300,7 +300,7 @@ l10n:
 
 ### 代替スタイルシートの提供
 
-[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)も提示できます。
+[代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)も提示できます。
 
 ユーザーはメニューの **表示 > スタイルシート** で、使用するスタイルシートを選択できます。
 これは、ユーザーがページをさまざまなバージョンで閲覧する手段を提供します。

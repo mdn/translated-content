@@ -113,7 +113,7 @@ document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 ```
 
 上記の例では、コンテキストとして `document` の代わりに `document.body` が使用されているので、_xpath_ は body 要素から始まることに注意してください。（この例内の `"."` は、コンテキストノードである document.body からクエリーを始めることを示すために重要です。"." が省略された場合（`//h2`のまま）、クエリーはルートノード (`html`) から開始することになり、より無駄が多くなります）。
-詳しくは[JavaScript での XPath の利用の手引き](/ja/docs/Web/XML/XPath/Introduction_to_using_XPath_in_JavaScript)を参照してください。
+詳しくは[JavaScript での XPath の利用の手引き](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)を参照してください。
 
 ### xml:id で要素を取得
 

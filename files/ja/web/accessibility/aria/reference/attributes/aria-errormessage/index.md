@@ -19,7 +19,7 @@ l10n:
 
 `aria-errormessage` が関連する場合、参照する要素はユーザーがエラーメッセージを見たり聞いたりできるように可視でなければなりません。
 
-多くの場合、エラーメッセージを持つ要素は [ARIA ライブ領域](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)であることが望まれます。例えば、ユーザーが無効な値を指定した後にエラーメッセージが表示される場合などです。エラーメッセージは、何が間違っているかを記述し、オブジェクトを有効にするために何が必要かをユーザーに通知する必要があります。 ARIA ライブ領域としてエラーメッセージを追加することは、エラーメッセージが他の方法でユーザーに伝えられなくても、エラーメッセージのコンテンツからユーザーが好ましいことを支援技術に知らせます。
+多くの場合、エラーメッセージを持つ要素は [ARIA ライブ領域](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions)であることが望まれます。例えば、ユーザーが無効な値を指定した後にエラーメッセージが表示される場合などです。エラーメッセージは、何が間違っているかを記述し、オブジェクトを有効にするために何が必要かをユーザーに通知する必要があります。 ARIA ライブ領域としてエラーメッセージを追加することは、エラーメッセージが他の方法でユーザーに伝えられなくても、エラーメッセージのコンテンツからユーザーが好ましいことを支援技術に知らせます。
 
 失敗が視覚的に明らかで、エラーの明示的な説明が必要な場合は、目に見えるエラーメッセージを記載し、 `aria-errormessage` 属性で不正なオブジェクトにリンクしてください。
 
@@ -64,7 +64,7 @@ l10n:
 </p>
 ```
 
-有効から不正になったとき、この例での JavaScript の変更は、メール入力オブジェクトの `aria-invalid` への更新だけでした。エラーメッセージは入力に従うことで、アクセシビリティツリー上で可視化され利用できるようになるため、この例を単純に保つことができます。また、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) プロパティを適用したり、 [`alert`](/ja/docs/Web/Accessibility/ARIA/Roles/alert_role) のようなライブ領域のロールを使用することもできました。
+有効から不正になったとき、この例での JavaScript の変更は、メール入力オブジェクトの `aria-invalid` への更新だけでした。エラーメッセージは入力に従うことで、アクセシビリティツリー上で可視化され利用できるようになるため、この例を単純に保つことができます。また、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) プロパティを適用したり、 [`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) のようなライブ領域のロールを使用することもできました。
 
 ## 値
 
@@ -75,15 +75,15 @@ l10n:
 
 使用しているロール:
 
-- [`application`](/ja/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
+- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-- [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
+- [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
 - [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
-- [`slider`](/ja/docs/Web/Accessibility/ARIA/Roles/slider_role)
-- [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
+- [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
+- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 - [`tree`](/ja/docs/Web/Accessibility/ARIA/Roles/tree_role)
 
 継承しているロール:
@@ -91,7 +91,7 @@ l10n:
 - [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
 - [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`switch`](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 - [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 
 ## 仕様書
@@ -103,5 +103,5 @@ l10n:
 - HTML の [`invalid`](/ja/docs/Web/HTML/Global_attributes/invalid) 属性
 - CSS の {{CSSxref(':invalid')}} 擬似クラス
 - [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-- [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
+- [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)

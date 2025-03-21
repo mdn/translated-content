@@ -116,9 +116,9 @@ l10n:
 ```
 
 > [!NOTE]
-> 現在のところ、ページの題名を動的に更新しても、スクリーンリーダーによって自動的にアナウンスされることはありません。ページの状態の大幅な変更を反映するためにページの題名を更新する場合は、[ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)を使用する必要があるかもしれません。
+> 現在のところ、ページの題名を動的に更新しても、スクリーンリーダーによって自動的にアナウンスされることはありません。ページの状態の大幅な変更を反映するためにページの題名を更新する場合は、[ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions)を使用する必要があるかもしれません。
 
-- [MDN WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## 仕様書

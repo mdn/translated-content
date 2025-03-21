@@ -216,5 +216,5 @@ document.body.appendChild(preloadedScript);
 
 ## 関連情報
 
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、 `<link rel="preload">` をはじめとする同様のパフォーマンス向上機能の比較ができます。
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、 `<link rel="preload">` をはじめとする同様のパフォーマンス向上機能の比較ができます。
 - [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss

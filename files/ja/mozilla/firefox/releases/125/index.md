@@ -53,7 +53,7 @@ l10n:
 - {{domxref("RTCIceTransport")}} の {{domxref("RTCIceTransport/state","state")}} および {{domxref("RTCIceTransport/gatheringState","gatheringState")}} プロパティと、これらに関連づけられる {{domxref("RTCIceTransport/statechange_event","statechange")}} および {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}} イベントをサポートしました。また、{{domxref("RTCDtlsTransport.iceTransport")}} プロパティ ({{domxref("RTCDtlsTransport")}} の基礎をなす `RTCIceTransport` を返します) もサポートしました。
   これらは、{{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} および {{domxref("RTCPeerConnection.connectionState","connectionState")}} プロパティで提供されるものよりとてもきめ細かいモニタリングを可能にします。
   ([Firefox bug 1811912](https://bugzil.la/1811912))
-- {{domxref("Element.ariaBrailleLabel")}} および {{domxref("Element.ariaBrailleRoleDescription")}} をサポートしました。それぞれ、ARIA のグローバル HTML 属性である [`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) および [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) を反映します ([Firefox bug 1861201](https://bugzil.la/1861201))。
+- {{domxref("Element.ariaBrailleLabel")}} および {{domxref("Element.ariaBrailleRoleDescription")}} をサポートしました。それぞれ、ARIA のグローバル HTML 属性である [`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) および [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) を反映します ([Firefox bug 1861201](https://bugzil.la/1861201))。
 
 - キャンバスが一時的に自身の 2D コンテキストを失ったとき、ウェブアプリケーションが体裁よく回復できるようになりました。これはキャンバスが GPU でハードウェアアクセラレーションされていて、GPU のドライバーがクラッシュしたときに発生する可能性があります ([Firefox bug 1887729](https://bugzil.la/1887729))。
   以下は、キャンバスのコンテキストが失われたり回復したりするときのイベントの詳細情報です:
@@ -71,7 +71,7 @@ l10n:
 
 #### Media、WebRTC、Web Audio
 
-- [AV1](/ja/docs/Web/Media/Formats/Video_codecs#av1) コーデックを [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API) でサポートしました。動画ストリーミング提供者から、より高品質な再生が可能になります ([Firefox bug 1601817](https://bugzil.la/1601817))。
+- [AV1](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) コーデックを [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API) でサポートしました。動画ストリーミング提供者から、より高品質な再生が可能になります ([Firefox bug 1601817](https://bugzil.la/1601817))。
 
 #### 廃止
 
@@ -84,7 +84,7 @@ l10n:
   メモリーは JavaScript で作成して Wasm モジュールにインポートする、または Wasm モジュールで作成してエクスポートすることができます。
   Wasm インスタンス内にあるそれぞれの新規線形メモリーに、ゼロから始まる連番のインデックスが与えられます。
   WebAssembly の [メモリー命令](/ja/docs/WebAssembly/Reference/Memory) で、操作するメモリーを参照するためにインデックスを使用します。インデックスを指定しない場合は、最初のメモリーが既定値として定義されます。
-  詳しくは _WebAssembly テキスト形式の理解_ で [WebAssembly メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#webassembly_メモリー) をご覧ください ([Firefox bug 1860816](https://bugzil.la/1860816))。
+  詳しくは _WebAssembly テキスト形式の理解_ で [WebAssembly メモリー](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_メモリー) をご覧ください ([Firefox bug 1860816](https://bugzil.la/1860816))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

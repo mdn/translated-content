@@ -53,4 +53,4 @@ Cross-Origin-Resource-Policy: same-origin
 
 ## 関連情報
 
-- [Cross-Origin Resource Policy (CORP) の説明](</ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy>)
+- [Cross-Origin Resource Policy (CORP) の説明](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)

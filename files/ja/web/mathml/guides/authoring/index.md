@@ -86,7 +86,7 @@ MathML に対応していないブラウザーに対しては、代替機構を�
 
 #### 数学記号用のフォント
 
-[MathML フォント](/ja/docs/Web/MathML/Fonts)の記事で説明したように、数学フォントは MathML コンテンツをレンダリングするのに役立ちます。そのため、[そのようなフォントのインストール手順](/ja/docs/Web/MathML/Fonts#インストール手順)を共有したり、[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)として指定されたフォントを提供することは常によい考えです。
+[MathML フォント](/ja/docs/Web/MathML/Guides/Fonts)の記事で説明したように、数学フォントは MathML コンテンツをレンダリングするのに役立ちます。そのため、[そのようなフォントのインストール手順](/ja/docs/Web/MathML/Guides/Fonts#インストール手順)を共有したり、[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)として指定されたフォントを提供することは常によい考えです。
 
 [MathFonts ページ](https://fred-wang.github.io/MathFonts/)は、そのようなウェブフォントを適切なスタイルシートとともに提供しています。例えば、以下の行を文書内のヘッダーに挿入するだけで、フォールバックのウェブフォントとともに現代の欧文フォントを選択することができます。
 

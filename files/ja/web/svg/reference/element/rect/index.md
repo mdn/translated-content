@@ -8,7 +8,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<rect>`** 要素は [SVG の基本図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes)であり、位置・幅・高さで定義される長方形を描画します。長方形は角を丸めることができます。
+**`<rect>`** 要素は [SVG の基本図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)であり、位置・幅・高さで定義される長方形を描画します。長方形は角を丸めることができます。
 
 ## 例
 

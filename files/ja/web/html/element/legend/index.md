@@ -111,4 +111,4 @@ input {
 
 ## 関連情報
 
-- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Roles/form_role)
+- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)

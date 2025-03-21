@@ -175,7 +175,7 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 
 ## 関連情報
 
-- [MathML の使用](/ja/docs/Web/MathML/Authoring#using_mathml)
+- [MathML の使用](/ja/docs/Web/MathML/Guides/Authoring#using_mathml)
 - [`<math>` 要素](/ja/docs/Web/MathML/Reference/Element/math)
 - [`<mfrac>` 要素](/ja/docs/Web/MathML/Reference/Element/mfrac)
 - [`<mrow>` 要素](/ja/docs/Web/MathML/Reference/Element/mrow)

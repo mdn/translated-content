@@ -63,7 +63,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP では、リソースに対して実行したいアクションを示す[要求メソッド](/ja/docs/Web/HTTP/Reference/Methods)のセットを定義しています。要求メソッドには名詞も存在しますが、 HTTP 動詞と言われることがあります。 `GET` と `POST` が最も一般的です。
 
 - {{HTTPMethod("GET")}} メソッドは、指定したリソースのデータを要求します。 `GET` を使用する要求は、データの取り込みに限ります。
-- {{HTTPMethod("POST")}} メソッドはサーバーにデータを送信しますので、データの状態を変更できます。これは、 [HTML フォーム](/ja/docs/Learn/Forms)用によく使用されるメソッドです。
+- {{HTTPMethod("POST")}} メソッドはサーバーにデータを送信しますので、データの状態を変更できます。これは、 [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)用によく使用されるメソッドです。
 
 ## サーバー応答の構造
 

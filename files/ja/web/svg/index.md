@@ -38,7 +38,7 @@ SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)
 ## 例
 
 - [SVG authoring guidelines](https://jwatt.org/svg/authoring/)
-- [画像としての SVG](/ja/docs/Web/SVG/Guides/SVG_as_an_Image)
+- [画像としての SVG](/ja/docs/Web/SVG/Guides/SVG_as_an_image)
 - [SMIL を用いた SVG のアニメーション](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
 - [SVG art gallery](https://www1.plurib.us/svg_gallery/)
 - [D3](https://d3js.org) (HTML, SVG, CSS でデータを可視化する JavaScript ライブラリー)

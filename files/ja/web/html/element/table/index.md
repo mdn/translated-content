@@ -184,14 +184,14 @@ tfoot td {
 
 これはスクリーンリーダーのような支援技術を利用して操作している人、弱視の人、認知問題を抱えた人にとって役立ちます。
 
-- [MDN \<caption> を用いて表にタイトルをつける](/ja/docs/Learn/HTML/Tables/Advanced#caption_を用いて表にキャプションを追加する)
+- [MDN \<caption> を用いて表にタイトルをつける](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#caption_を用いて表にキャプションを追加する)
 - [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### 行と列のスコープ
 
 [`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性を見出しセル（{{HTMLElement("th")}} 要素）につけることは、文脈が単純な場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、見出しにスコープを設定すると使い勝手が向上することがあります。複雑な表では、 [`scope`](/ja/docs/Web/HTML/Element/th#scope) を指定することで、セルと見出しの関係に関する必要な情報を提供することができます。
 
-- [MDN 視覚障碍者向けの表](/ja/docs/Learn/HTML/Tables/Advanced#視覚障碍者向けの表)
+- [MDN 視覚障碍者向けの表](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#視覚障碍者向けの表)
 - [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
@@ -204,13 +204,13 @@ tfoot td {
 
 表を分割することができないのであれば、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) および [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性の組み合わせを用いて、表のセルとそのセルに関連した見出し（{{HTMLElement("th")}} 要素）をプログラム的に結び付けてください。
 
-- [MDN 視覚障碍者向けの表](/ja/docs/Learn/HTML/Tables/Advanced#視覚障碍者向けの表)
+- [MDN 視覚障碍者向けの表](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#視覚障碍者向けの表)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
 ## 例
 
-下記の例には、徐々に複雑になる表が記載されています。 さらに詳しい例については、詳細なチュートリアルを含む「[ウェブ開発の学習](/ja/docs/Learn)」領域の「[HTML の表](/ja/docs/Learn/HTML/Tables)」シリーズを参照してください。 ここでは、表要素とその属性を使用して表形式のデータを正しく構造化する方法を学習できます。「[表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)ガイド」では、一般的な便利なテクニックを含む表のスタイル設定情報が指定されています。
+下記の例には、徐々に複雑になる表が記載されています。 さらに詳しい例については、詳細なチュートリアルを含む「[ウェブ開発の学習](/ja/docs/Learn_web_development)」領域の「[HTML の表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)」シリーズを参照してください。 ここでは、表要素とその属性を使用して表形式のデータを正しく構造化する方法を学習できます。「[表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)ガイド」では、一般的な便利なテクニックを含む表のスタイル設定情報が指定されています。
 
 `<table>` の構造は、いくつかの表関連の HTML 要素と、関連付けられた様々な属性を使用するものであるため、次の例は、基本と一般的な標準をカバーするシンプルな説明を意図したものです。 追加の情報やより詳細な情報は、対応するリンク先のページで得られます。
 
@@ -247,7 +247,7 @@ HTML の表は構造化されているため、{{Glossary("markup", "マーク�
 
 #### 結果
 
-この表には独自の [CSS](/ja/docs/Web/CSS) や[ユーザースタイルシート](/ja/docs/Web/CSS/Cascade#ユーザースタイルシート)が適用されていません。スタイル設定の結果は純粋に[ユーザーエージェントスタイルシート](/ja/docs/Web/CSS/Cascade#ユーザーエージェントスタイルシート)からのものです。
+この表には独自の [CSS](/ja/docs/Web/CSS) や[ユーザースタイルシート](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザースタイルシート)が適用されていません。スタイル設定の結果は純粋に[ユーザーエージェントスタイルシート](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザーエージェントスタイルシート)からのものです。
 
 {{EmbedLiveSample('Basic_table', 650, 80)}}
 
@@ -1093,7 +1093,7 @@ tr:last-child td {
 
 ## 関連情報
 
-- [学習: HTML 表](/ja/docs/Learn/HTML/Tables)
+- [学習: HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: その他の表関連要素
 - {{cssxref("background-color")}}: 表の背景色を設定する CSS プロパティ
 - {{cssxref("border")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}}: セルの境界線、罫線、枠線の外観をコントロールする CSS プロパティ

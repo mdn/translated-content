@@ -221,4 +221,4 @@ abbr {
 
 ## 関連情報
 
-- [`<abbr>` 要素の使用](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#略語)
+- [`<abbr>` 要素の使用](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#略語)

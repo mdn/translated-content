@@ -100,7 +100,7 @@ iframe {
     - `no-referrer-when-downgrade`
       - : {{HTTPHeader("Referer")}} ヘッダーは {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) のない{{Glossary("origin", "オリジン")}}には送信しません。
     - `origin`
-      - : 送信するリファラーを、参照しているページのオリジン（[スキーム](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host", "ホスト名")}}, {{Glossary("port", "ポート番号")}}）に限定します。
+      - : 送信するリファラーを、参照しているページのオリジン（[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host", "ホスト名")}}, {{Glossary("port", "ポート番号")}}）に限定します。
     - `origin-when-cross-origin`
       - : 他のオリジンへ送信されるリファラーは、スキーム、ホスト名、ポート番号のみにします。同一オリジンへの移動では、パスも含めます。
     - `same-origin`
@@ -205,7 +205,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 位置指定と表示倍率
 
-[置換要素](/ja/docs/Web/CSS/Replaced_element)なので、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
+[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)なので、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
 
 > **メモ:** {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
 

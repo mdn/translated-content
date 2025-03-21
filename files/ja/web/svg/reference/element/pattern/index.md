@@ -8,7 +8,7 @@ original_slug: Web/SVG/Element/pattern
 
 **`<pattern>`** 要素は、ある領域をカバーするために、x座標とy座標の間隔を繰り返して (「タイル」) 再描画することができるグラフィックオブジェクトを定義します。
 
-`<pattern>` は、他の[グラフィック要素](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes)の {{SVGAttr("fill")}} や {{SVGAttr("stroke")}} 属性から参照され、参照されたパターンでそれらの要素を埋めたり、描いたりします。
+`<pattern>` は、他の[グラフィック要素](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)の {{SVGAttr("fill")}} や {{SVGAttr("stroke")}} 属性から参照され、参照されたパターンでそれらの要素を埋めたり、描いたりします。
 
 <h2 id="Example">例</h2>
 

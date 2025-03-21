@@ -73,7 +73,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
 本体は、大きく 2 種類に分類されます。
 
 - 単一リソースの本体。1 個のファイルで構成され、{{HTTPHeader("Content-Type")}} と {{HTTPHeader("Content-Length")}} の 2 つのヘッダーで定義されます。
-- [複数リソースの本体](/ja/docs/Web/HTTP/Guides/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn/Forms)と関連付けられます。
+- [複数リソースの本体](/ja/docs/Web/HTTP/Guides/MIME_types#multipartform-data)。マルチパートの本体で構成され、それぞれが異なる情報を持ちます。これは主に、 [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)と関連付けられます。
 
 ## HTTP レスポンス
 

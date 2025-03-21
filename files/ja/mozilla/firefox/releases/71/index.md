@@ -67,7 +67,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 - CSS Grid Level 2 から値 [subgrid](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid) を、{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しました ([Firefox バグ 1580894](https://bugzil.la/1580894))。
 - [段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout) で {{cssxref("column-span")}} をサポートしました ([Firefox バグ 1426010](https://bugzil.la/1426010))。
 - {{cssxref("clip-path")}} で `path()` の値をサポートしました ([Firefox バグ 1488530](https://bugzil.la/1488530))。
-- {{htmlelement("img")}} 要素の `height` および `width` HTML 属性を、内部の {{cssxref("aspect-ratio")}} プロパティにマッピングしました ([Firefox バグ 1585637](https://bugzil.la/1585637))。[この機能について、MDN のガイドをご覧ください](/ja/docs/Learn/Performance/Multimedia)。
+- {{htmlelement("img")}} 要素の `height` および `width` HTML 属性を、内部の {{cssxref("aspect-ratio")}} プロパティにマッピングしました ([Firefox バグ 1585637](https://bugzil.la/1585637))。[この機能について、MDN のガイドをご覧ください](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia)。
 
 #### 廃止
 

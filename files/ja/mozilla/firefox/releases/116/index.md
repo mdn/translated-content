@@ -22,7 +22,7 @@ l10n:
 
 ### Accessibility (ARIA)
 
-- [`image`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) ロールを `img` の同義語としてサポートしました。
+- [`image`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) ロールを `img` の同義語としてサポートしました。
   これにより、完全な単語または完全な単語を連結したものである多くのロール名との一貫性が保たれます ([Firefox bug 1829269](https://bugzil.la/1829269))。
 
 ### JavaScript

@@ -28,7 +28,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 - {{cssxref("text-justify")}} プロパティを実装しました ([Firefox バグ 1343512](https://bugzil.la/1343512), [Firefox バグ 276079](https://bugzil.la/276079)).
 - \[css-grid] repeat() 内で {{cssxref("fit-content")}} が、意図せず最大限に制限したサイズで領域を確保してしまう問題を修正しました ([Firefox バグ 1359060](https://bugzil.la/1359060))。
 - {{cssxref("float")}} / {{cssxref("clear")}} の論理値 `inline-start` および `inline-end` は、以前から実装していましたが Release チャンネルでは無効化していました。これを、すべてのチャンネルにおいてデフォルトで有効化しました ([Firefox バグ 1253919](https://bugzil.la/1253919))。
-- 設定項目 `layout.css.variables.enabled` を完全に削除しました。[CSS 変数](/ja/docs/Web/CSS/Using_CSS_custom_properties) の機能は常にデフォルトで有効であり、無効化できません ([Firefox バグ 1312328](https://bugzil.la/1312328))。
+- 設定項目 `layout.css.variables.enabled` を完全に削除しました。[CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) の機能は常にデフォルトで有効であり、無効化できません ([Firefox バグ 1312328](https://bugzil.la/1312328))。
 - 独自仕様である `-moz-context-properties` プロパティを実装しました ([Firefox バグ 1058040](https://bugzil.la/1058040))。
 - 角度の単位がつかない 0 度の値が、{{cssxref("gradient/linear-gradient", "linear-gradient()")}} で正しく解釈されない問題を修正しました ([Firefox バグ 1363292](https://bugzil.la/1363292))。
 - {{cssxref("::cue")}} 擬似要素をサポートしました。これは、メディア要素内で提供するテキストキューにマッチします ([Firefox バグ 1318542](https://bugzil.la/1318542))。
@@ -40,7 +40,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 ### JavaScript
 
 - {{jsxref("SharedArrayBuffer")}} および {{jsxref("Atomics")}} オブジェクトをデフォルトで有効化しました。JavaScript の Shared Memory と Atomics の入門として、[A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) をご覧ください。
-- [object destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で rest operator (`...`) をサポートしました。また、spread operator (`...`) が [オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#オブジェクトリテラルでのスプレッド構文) で動作するようになりました (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread)。 [Firefox バグ 1339395](https://bugzil.la/1339395))。
+- [object destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) で rest operator (`...`) をサポートしました。また、spread operator (`...`) が [オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#オブジェクトリテラルでのスプレッド構文) で動作するようになりました (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread)。 [Firefox バグ 1339395](https://bugzil.la/1339395))。
 - [非同期ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions#非同期ジェネレーターメソッド) をサポートしました ([Firefox バグ 1353693](https://bugzil.la/1353693))。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}} および {{jsxref("String.prototype.toLocaleUpperCase()")}} メソッドで、ロケール固有の大文字・小文字の対応を言語タグで指定するための、省略可能な引数 `locale` をサポートしました ([Firefox バグ 1318403](https://bugzil.la/1318403))。
 - {{jsxref("Intl/Collator", "Intl.Collator")}} オブジェクトで `caseFirst` オプションをサポートしました ([Firefox バグ 866473](https://bugzil.la/866473))。

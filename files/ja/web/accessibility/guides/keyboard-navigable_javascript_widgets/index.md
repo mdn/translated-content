@@ -134,7 +134,7 @@ l10n:
 
 ### テクニック 2: `aria-activedescendant`
 
-このテクニックでは、単一のイベントハンドラーをコンテナーウィジェットにバインドし、`aria-activedescendant` を使用して「仮想」フォーカスを追跡します。 （ARIA に関する詳細は、[アクセス可能なウェブアプリケーションとウィジェットの概要](/ja/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)を参照してください。）
+このテクニックでは、単一のイベントハンドラーをコンテナーウィジェットにバインドし、`aria-activedescendant` を使用して「仮想」フォーカスを追跡します。 （ARIA に関する詳細は、[アクセス可能なウェブアプリケーションとウィジェットの概要](/ja/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets)を参照してください。）
 
 `aria-activedescendant` プロパティは、現在仮想フォーカスを持っている子孫要素の ID を識別します。 コンテナーのイベントハンドラーは、`aria-activedescendant` の値を更新し、（例えば、境界線や背景色で）現在の項目が適切にスタイル設定されていることを確実にすることで、キーイベントおよびマウスイベントに応答する必要があります。
 

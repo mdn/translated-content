@@ -35,9 +35,9 @@ l10n:
 
 ## ガイド
 
-- [MathML の記述](/ja/docs/Web/MathML/Authoring)
+- [MathML の記述](/ja/docs/Web/MathML/Guides/Authoring)
   - : MathML の記述に関する提案やヒント、推奨する MathML エディター、およびその出力をウェブコンテンツに統合する方法が含まれます。
-- [MathML のためのフォント](/ja/docs/Web/MathML/Fonts)
+- [MathML のためのフォント](/ja/docs/Web/MathML/Guides/Fonts)
   - : ユーザーがブラウザーで MathML を正規に表示するために、このような数学フォントをインストールする方法です。。
 
 ## MathML リファレンス

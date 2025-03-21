@@ -44,7 +44,7 @@ l10n:
 
 ## アクセシビリティの考慮
 
-多くのブラウザーでは、この要素を [`aria-live`](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 領域として実装しています。これにより、支援技術は、その中に出力された UI 操作の結果を読み上げますが、その結果を生成するコントロールからフォーカスを外す必要はありません。
+多くのブラウザーでは、この要素を [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) 領域として実装しています。これにより、支援技術は、その中に出力された UI 操作の結果を読み上げますが、その結果を生成するコントロールからフォーカスを外す必要はありません。
 
 <table class="properties">
   <tbody>

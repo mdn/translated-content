@@ -30,7 +30,7 @@ const inst = new Ctor();
 console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 ```
 
-「[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#コンストラクター)」に、コンストラクター関数の `prototype` プロパティと、結果オブジェクトのプロトタイプ間の操作に関する詳しい情報があります。
+「[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#コンストラクター)」に、コンストラクター関数の `prototype` プロパティと、結果オブジェクトのプロトタイプ間の操作に関する詳しい情報があります。
 
 ある関数に `prototype` プロパティがあるというだけでは、コンストラクターとして認められるには不十分です。[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)は `prototype` プロパティを持っていますがが、 `new` で呼び出すことはできません。
 
@@ -125,4 +125,4 @@ console.log(new Dog("Jack").species); // "dog"
 ## 関連情報
 
 - {{jsxref("Function")}}
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#コンストラクター)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#コンストラクター)

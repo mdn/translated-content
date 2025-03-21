@@ -49,7 +49,7 @@ l10n:
 
   - : セレクターに関する CSS 構成要素の節の一部です。この記事では、擬似要素とは何か、擬似クラスとどのように組み合わせ、 `::before` および `::after` 擬似要素でコンテンツを生成するために使用できるかを定義します。
 
-- [擬似要素を使用した装飾的なボックスの作成](/ja/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
+- [擬似要素を使用した装飾的なボックスの作成](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#pseudo-elements)
 
   - : 視覚効果のために `::before` と `::after` 擬似要素を使用して生成コンテンツをスタイル設定する例です。
 
@@ -111,7 +111,7 @@ l10n:
 
 ## 関連情報
 
-- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
 - [CSS シャドウ部品](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール

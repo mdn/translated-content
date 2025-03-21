@@ -49,7 +49,7 @@ l10n:
 - フォーマット用の [Prettier](https://prettier.io/) や lint 用の [ESLint](https://eslint.org/) などの便利な開発ツール。
 - [PostCSS](https://postcss.org/) は、 CSS のネスティング機能を提供します。
 - [Parcel](https://parceljs.org/) コードをビルドして縮小し、多数の構成ファイルのコンテンツを自動的に書き込みます。
-- [GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を使ってソースコードを管理しています。
+- [GitHub](/ja/docs/Learn_web_development/Core/Version_control) を使ってソースコードを管理しています。
 - [Netlify](https://www.netlify.com/) を使ってデプロイプロセスを自動化します。
 
 上記の機能やツールが何をするものなのか、よく知らないかもしれないがパニックにならないでください。この記事を進めながら各部分について説明します。
@@ -81,7 +81,7 @@ l10n:
 
 ## 3 段階のツール
 
-[クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)で説明したようにツールチェーンは次のフェーズで構成されます。
+[クライアントサイドツールの概要](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Overview)で説明したようにツールチェーンは次のフェーズで構成されます。
 
 - **セーフティネット**: ソフトウェア開発体験を安定させ、より効率的にします。 これを開発環境と呼ぶこともあります。
 - **トランスフォーメーション**: 開発プロセスにおいて、ある言語 (JavaScript など) または別の言語全体 (JSX や TypeScript など) の最新機能を使用できるようにし、製品版がモダンなものから古いものまで様々なブラウザーで動作するようにコードを変換します。
@@ -106,7 +106,7 @@ l10n:
 
 ### ライブラリーインストールツール
 
-第 2 章で初めて説明した npm を使用してツールをインストールします。Node.js と npm がすでにインストールされている必要がありますが、インストールされていない場合は、[そのセクションを参照してください](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups)。
+第 2 章で初めて説明した npm を使用してツールをインストールします。Node.js と npm がすでにインストールされている必要がありますが、インストールされていない場合は、[そのセクションを参照してください](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#adding_powerups)。
 
 > [!NOTE]
 > インストールプロセスから分かりませんが、 npm をインストールすると、 npx と呼ばれる補完ツールもインストールされます。 この章の後半では、プロジェクトのローカル依存関係としてインストールされているツールの実行に役立つ npx を使用します。
@@ -135,7 +135,7 @@ Git は [git-scm をウェブサイトからダウンロードしてインスト
 
 ### コード整理ツール
 
-このプロジェクトでは、第 2 章で最初に説明した Prettier を使用してコードを整形します。 [Prettier のインストール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#installing_prettier)セクションの指示に従っている場合は、すでに Prettier がインストールされている可能性があります。そうでない場合は、今すぐ端末を使用して Prettier をグローバルユーティリティとしてインストールするように指示します。
+このプロジェクトでは、第 2 章で最初に説明した Prettier を使用してコードを整形します。 [Prettier のインストール](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#installing_prettier)セクションの指示に従っている場合は、すでに Prettier がインストールされている可能性があります。そうでない場合は、今すぐ端末を使用して Prettier をグローバルユーティリティとしてインストールするように指示します。
 
 次のコマンドを使用して、すでにグローバルにインストールされているかどうかを確認できます。
 

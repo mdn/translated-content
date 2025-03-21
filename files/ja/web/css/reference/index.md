@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Types)、[関数記法](/ja/docs/Web/CSS/CSS_Functions)、[アットルール](/ja/docs/Web/CSS/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
+この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
 ## 基本的なルールと構文
 
@@ -45,11 +45,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn/CSS/Building_blocks/Selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/Syntax) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて ({{Glossary("ASCII")}}) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
+初心者レベルの CSS セレクター構文への入門については、 [CSS セレクターのガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。ルール定義内での [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax) エラーは、そのルール全体を無効にするので十分に注意してください。無効なルールはブラウザーにより無視されます。 CSS ルールの定義はすべて ({{Glossary("ASCII")}}) [テキストベース](https://www.w3.org/TR/css-syntax-3/#intro) であり、DOM-CSS / CSSOM (ルール管理システム) は [オブジェクトベース](https://www.w3.org/TR/cssom/#introduction) なので注意してください。
 
 ### アットルールの構文
 
-アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/At-rule)のページをご覧ください。
+アットルールの構造は様々であるため、知りたい構文について調べるには[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)のページをご覧ください。
 
 ## 索引
 
@@ -108,37 +108,37 @@ div.menu-bar li:hover > ul {
 
 ### 構文と意味
 
-- [CSS 構文](/ja/docs/Web/CSS/Syntax)
-- [アットルール](/ja/docs/Web/CSS/At-rule)
-- [カスケード](/ja/docs/Web/CSS/Cascade)
-- [コメント](/ja/docs/Web/CSS/Comments)
+- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
+- [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
 - [記述子](/ja/docs/Glossary/CSS_Descriptor)
-- [継承](/ja/docs/Web/CSS/Inheritance)
-- [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-- [優先度](/ja/docs/Web/CSS/Specificity)
-- [値定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+- [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+- [優先度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS 単位と値の種類](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 関数記法](/ja/docs/Web/CSS/CSS_Functions)
+- [CSS 関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
 ### 値
 
-- [実効値](/ja/docs/Web/CSS/actual_value)
-- [算出値](/ja/docs/Web/CSS/computed_value)
-- [初期値](/ja/docs/Web/CSS/initial_value)
+- [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+- [算出値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
 - [解決値](/ja/docs/Web/CSS/resolved_value)
-- [指定値](/ja/docs/Web/CSS/specified_value)
-- [使用値](/ja/docs/Web/CSS/used_value)
+- [指定値](/ja/docs/Web/CSS/CSS_cascade/specified_value)
+- [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
 
 ### レイアウト
 
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [包含ブロック](/ja/docs/Web/CSS/Containing_block)
-- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+- [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

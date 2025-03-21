@@ -114,7 +114,7 @@ para.textContent =
 
 ## メモ
 
-- 返された {{DOMxRef("CSSStyleDeclaration")}} オブジェクトは、 CSS プロパティの**個別指定**の名前のアクティブな値を含んでいます。例えば、 `border-bottom-width` の値は `border-width` や `border` などの[一括指定プロパティ名](/ja/docs/Web/CSS/Shorthand_properties)ではアクセスできません。 `font-size` のような個別指定の名前だけで値を問い合わせるのが最も安全です。 `font` のような一括指定の名前では、ほとんどのブラウザーでは動作しません。
+- 返された {{DOMxRef("CSSStyleDeclaration")}} オブジェクトは、 CSS プロパティの**個別指定**の名前のアクティブな値を含んでいます。例えば、 `border-bottom-width` の値は `border-width` や `border` などの[一括指定プロパティ名](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)ではアクセスできません。 `font-size` のような個別指定の名前だけで値を問い合わせるのが最も安全です。 `font` のような一括指定の名前では、ほとんどのブラウザーでは動作しません。
 - CSS のプロパティ値は、 `getPropertyValue(propName)` API を使用してアクセスすることも、 `obj['z-index']` や `obj.zIndex`のようにオブジェクトに直接添字を指定してアクセスすることもできます。
 - `getComputedStyle` によって返される値は、{{CSSxRef("resolved_value", "解決値", "", 1)}}です。これらの値は通常、CSS 2.1 の{{CSSxRef("computed_value","計算値", "", 1)}}と同じですが、 `width`, `height`, `padding` のような古いプロパティの場合は、{{CSSxRef("used_value","使用値", "", 1)}}と同じになります。もともと CSS 2.0 では、*計算値*はカスケードと継承後のプロパティの「使用可能な」最終値として定義されていましたが、 CSS 2.1 ではレイアウトする前の値として再定義され、*使用値*はレイアウト後の値として再定義されています。 CSS 2.0 のプロパティでは、 `getComputedStyle` は計算値の古い意味を返しますが、現在は**使用値**と呼ばれています。レイアウト前の値とレイアウト後の値の違いの例として、 `width` や `height` のパーセント値の解像度があり、これらは*使用値*のみ同等のピクセル数に置き換えられます。
 - 返される値が意図的に不正確になる場合があります。 "CSS History Leak" のセキュリティ問題を回避するために、ブラウザーは訪問したリンクの計算されたスタイルについて嘘をつき、ユーザーがリンク先の URL を訪問していないかのような値を返すことがあります。これがどのように実装されているかについては、 [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) と [Privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) を参照してください。

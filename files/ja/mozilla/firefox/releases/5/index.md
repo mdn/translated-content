@@ -44,7 +44,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 - アクティブでないタブにおいて {{ domxref("window.setTimeout()") }} メソッドのタイムアウトが 1 秒に 1 回 を超えないようになりました。また、入れ子のタイムアウトが HTML5 仕様で定められた最小値 4ms になりました (これまでは 10ms でした)。
 - 上記と同様に、アクティブでないタブにおける {{ domxref("window.setInterval()") }} も 1 秒に 1 回以下になりました。
 - [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) が [`loadend` イベントをサポート](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. このイベントはすべての転送が終了した際 (つまり、`abort`, `error`, `load` イベントの後) に発生します。このイベントを利用すると、転送の成功・失敗に関わらず実行されるタスクを処理できます。
-- {{ domxref("Blob") }} オブジェクトと {{ domxref("File") }} オブジェクトの `slice()` メソッドが削除され、代わりに提案中のメソッドに置き換えられました。提案中のメソッドは JavaScript の [`Array.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`String.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice) メソッドにより近いものです。現時点では [`mozSlice()`](</ja/docs/DOM/Blob#mozSlice()>) という名前がつけられています。
+- {{ domxref("Blob") }} オブジェクトと {{ domxref("File") }} オブジェクトの `slice()` メソッドが削除され、代わりに提案中のメソッドに置き換えられました。提案中のメソッドは JavaScript の [`Array.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`String.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice) メソッドにより近いものです。現時点では [`mozSlice()`](</ja/docs/Web/API/Blob#mozSlice()>) という名前がつけられています。
 - {{ domxref("window.navigator.language") }} の値が `Accept-Language` [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers) の値から決定されるようになりました。
 - DOM 仕様の要件により、{{ domxref("Node.prefix") }} プロパティが readonly になりました。
 

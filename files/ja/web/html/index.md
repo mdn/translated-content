@@ -21,25 +21,25 @@ HTML 要素は文書中で、`<` および `>` で囲まれた要素名で構成
 ## 中心的なリソース
 
 - HTML 入門
-  - : ウェブ開発が初めてであれば、 HTML とは何か、 HTML の使用方法を説明する[HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)をご覧ください。
+  - : ウェブ開発が初めてであれば、 HTML とは何か、 HTML の使用方法を説明する[HTML の基本](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)をご覧ください。
 - HTML チュートリアル
-  - : チュートリアルや例を含む HTML の使用方法に関する記事は、[HTML 学習エリア](/ja/docs/Learn/HTML)を確認してください。
+  - : チュートリアルや例を含む HTML の使用方法に関する記事は、[HTML 学習エリア](/ja/docs/Learn_web_development/Core/Structuring_content)を確認してください。
 - HTML リファレンス
   - : 広範な [HTML リファレンス](/ja/docs/Web/HTML/Reference)の章で、 HTML のすべての要素と属性についての詳細が分かります。
 
 ## 初心者向けチュートリアル
 
-[HTML 学習エリア](/ja/docs/Learn/HTML)は HTML を基礎から学ぶための複数のモジュールを中心としています。――前提知識は必要ありません。
+[HTML 学習エリア](/ja/docs/Learn_web_development/Core/Structuring_content)は HTML を基礎から学ぶための複数のモジュールを中心としています。――前提知識は必要ありません。
 
-- [HTML 概論](/ja/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 概論](/ja/docs/Learn_web_development/Core/Structuring_content)
   - : このモジュールでは、 HTML を文章に適用する方法、ハイパーリンクを作成する方法、 HTML を使用してウェブページを構築する方法など、重要な概念と構文に慣れていく段階を設定します。
-- [マルチメディアとその埋め込み方](/ja/docs/Learn/HTML/Multimedia_and_embedding)
+- [マルチメディアとその埋め込み方](/ja/docs/Learn_web_development/Core/Structuring_content)
   - : このモジュールでは、ウェブページにマルチメディアを埋め込むための HTML の使い方を探ります。画像を入れるための様々な方法、映像、音声、他のウェブページ全体を含める場合も含みます。
-- [HTML テーブル](/ja/docs/Learn/HTML/Tables)
+- [HTML テーブル](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : ウェブページ上で表形式のデータを分かりやすく使いやすい方法で表現するのは難しいことです。このモジュールでは、基本的なテーブルのマークアップと、キャプションやサマリーの追加などのより複雑な機能を扱います。
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
   - : フォームはウェブで非常に重要な部分です。――これはウェブサイトとのやり取り（登録やログイン、フィードバックの送信、商品の購入など）に必要な多くの機能を提供します。このモジュールでは、フォームのクライアント側／フロントエンド部分の作成から始めます。
-- [よくある問題解決に HTML を使う](/ja/docs/Learn/HTML/Howto)
+- [よくある問題解決に HTML を使う](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems)
   - : HTML を使用してウェブページを作成する際に、とてもよくある問題（タイトルの扱い、画像や動画の追加、コンテンツの強調、基本フォームの作成など）を解決する方法を説明する記事の章へのリンクを紹介します。
 
 ## 高度なトピック
@@ -65,7 +65,7 @@ HTML 要素は文書中で、`<` および `>` で囲まれた要素名で構成
   - : 通常、 HTML の要素は「インラインレベル」要素または「ブロックレベル」要素のどちらかです。インラインレベル要素は、要素を定義するタグによって指定された範囲のみを占有します。ブロックレベル要素は親要素（コンテナー）の範囲全体を占有し、それによって「ブロックボックス」を作成します。
 - [HTML コメント](/ja/docs/Web/HTML/Comments)
   - : HTML コメントは、マークアップに説明メモを追加したり、文書内の特定の部分をブラウザーが解釈しないようにしたりするために使用します。
-- [ウェブにおけるメディア種別と形式のガイド](/ja/docs/Web/Media/Formats)
+- [ウェブにおけるメディア種別と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
   - : {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素では、外部のソフトウェアの支援を必要とせずにコンテンツの中でネイティブに音声や動画を再生できます。
 - [HTML コンテンツカテゴリー](/ja/docs/Web/HTML/Content_categories)
   - : HTML は数種類のコンテンツで構成されています。それぞれのコンテンツは特定のコンテキストで使用することができ、それ以外のコンテキストでは使用できません。同様に、それぞれのコンテキストには、格納することができる他のコンテンツカテゴリーと、その中で使用できる要素、または使用できない要素の集合があります。これは、これらのカテゴリーへのガイドです

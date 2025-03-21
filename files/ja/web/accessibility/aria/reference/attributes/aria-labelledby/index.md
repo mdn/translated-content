@@ -16,11 +16,11 @@ l10n:
 
 操作可能な要素はすべて、アクセシブル名がなければなりません。 `aria-labelledby` は、要素のアクセシブル名を定義するために別の要素を参照するために使用することができます。
 
-アクセシブル名を作成するために参照できるコンテンツがない場合は、代わりに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用してください。
+アクセシブル名を作成するために参照できるコンテンツがない場合は、代わりに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を使用してください。
 
 `aria-labelledby` の目的は `aria-label` と同じです。これはユーザーに対して、インタラクティブ要素に対して認識可能でアクセシブル名を提供します。要素に両方の属性が設定されている場合、 `aria-labelledby` が使用されます。 `aria-labelledby` は `aria-label` や {{HTMLElement('label')}}、要素の内部テキストなど、アクセシブル名を提供する他のすべてのメソッドよりも優先されます。
 
-`aria-labelledby` および [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性は、どちらも代替テキストを計算するために他の要素を参照します。 `aria-labelledby` は要素にアクセシブル名を提供する短いテキストを参照します。 `aria-describedby` は説明を提供する詳しいコンテンツを参照するために使用します。インタラクティブ要素のアクセシブル名に適切な短いラベル付けを提供する要素が DOM にない場合、 `aria-label` を使用してインタラクティブ要素のアクセシブル名を定義します。
+`aria-labelledby` および [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性は、どちらも代替テキストを計算するために他の要素を参照します。 `aria-labelledby` は要素にアクセシブル名を提供する短いテキストを参照します。 `aria-describedby` は説明を提供する詳しいコンテンツを参照するために使用します。インタラクティブ要素のアクセシブル名に適切な短いラベル付けを提供する要素が DOM にない場合、 `aria-label` を使用してインタラクティブ要素のアクセシブル名を定義します。
 
 > [!NOTE]
 > アメリカ英語では、この属性は "labeledby" と綴られるとみなされますが、 "labelledby" という綴りが確立されており、アクセシビリティ API で使用されています。
@@ -98,16 +98,16 @@ l10n:
 - [`caption`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`deletion`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`emphasis`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`generic`](/ja/docs/Web/Accessibility/ARIA/Roles/generic_role)
+- [`generic`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
 - [`insertion`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`mark`](/ja/docs/Web/Accessibility/ARIA/Roles/mark_role)
 - [`paragraph`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) / [`none`](/ja/docs/Web/Accessibility/ARIA/Roles/none_role)
+- [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
 - [`strong`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`subscript`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`superscript`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`suggestion`](/ja/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
-- [`term`](/ja/docs/Web/Accessibility/ARIA/Roles/term_role)
+- [`term`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - [`time`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 
 ## 仕様書
@@ -119,8 +119,8 @@ l10n:
 - HTML の {{HTMLElement('label')}} 要素
 - HTML の {{HTMLElement('legend')}} 要素
 - HTML の {{HTMLElement('caption')}} 要素
-- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 
 <section id="Quick_links">
 <strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

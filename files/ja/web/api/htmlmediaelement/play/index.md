@@ -50,7 +50,7 @@ play()
 
 > **メモ:** `play()` メソッドを使用すると、ユーザーはメディアの再生を許可するように要求され、返されたプロミスが解決されるまでに遅延が生じる可能性があります。 コードが即座の応答を期待していないことを確認してください。
 
-自動再生および自動再生のブロックの詳細については、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。
+自動再生および自動再生のブロックの詳細については、[メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)を参照してください。
 
 ## 例
 
@@ -99,6 +99,6 @@ function handlePlayButton() {
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- 学習: [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
+- 学習: [動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)
 - [ウェブオーディオ API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

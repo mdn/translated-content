@@ -5,7 +5,7 @@ slug: Web/CSS/env
 
 {{CSSRef}}
 
-**`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、ユーザーエージェントが定義した環境変数の値を、 {{cssxref("var()")}} 関数や[カスタムプロパティ](/ja/docs/Web/CSS/--*)と同じ方法で CSS に挿入するために使用することができます。異なる点は、ユーザーが定義しているのではなくユーザーエージェントが定義しているものであること、カスタムプロパティは宣言されている要素のスコープであるのに対し、環境変数は文書でグローバルなスコープであることです。
+**`env()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、ユーザーエージェントが定義した環境変数の値を、 {{cssxref("var()")}} 関数や[カスタムプロパティ](/ja/docs/Web/CSS/--*)と同じ方法で CSS に挿入するために使用することができます。異なる点は、ユーザーが定義しているのではなくユーザーエージェントが定義しているものであること、カスタムプロパティは宣言されている要素のスコープであるのに対し、環境変数は文書でグローバルなスコープであることです。
 
 加えて、宣言の外部で使用することができないカスタムプロパティとは異なり、 `env()` 関数はプロパティ値の任意の部分、記述子の任意の部分 (例 [メディアクエリールール](/ja/docs/Web/CSS/@media)) で使用することができます。仕様書が発展すると、セレクターなどの他の場所でも使用することができるかもしれません。
 
@@ -211,7 +211,7 @@ main {
 - {{CSSxRef("var()", "var(…)")}}
 - [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_cascading_variables)
 - [カスタムプロパティ (--\*)](/ja/docs/Web/CSS/--*)
-- [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

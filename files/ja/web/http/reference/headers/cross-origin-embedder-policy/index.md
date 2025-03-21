@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 
 {{HTTPSidebar}}
 
-HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](</ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy>) または [CORS](/ja/docs/Web/HTTP/Guides/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
+HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy) または [CORS](/ja/docs/Web/HTTP/Guides/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
 
 <table class="properties">
   <tbody>

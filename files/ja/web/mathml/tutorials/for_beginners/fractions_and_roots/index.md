@@ -266,7 +266,7 @@ checkboxes.forEach((checkbox) => {
 {{ EmbedLiveSample('Stretchy_radical_symbols', 700, 200, "", "") }}
 
 > [!WARNING]
-> 伸縮を可能にするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が必要です。前回の例は[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)を使用しています。
+> 伸縮を可能にするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Guides/Fonts)が必要です。前回の例は[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)を使用しています。
 
 ## 線のない分数
 

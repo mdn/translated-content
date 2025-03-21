@@ -31,8 +31,8 @@ EXSLT Common パッケージは、 XSLT の機能を拡張する基本的な関�
 
 #### 関数
 
-- [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/exsl/node-set)
-- [`exsl:object-type()`](/ja/docs/Web/XML/EXSLT/exsl/object-type)
+- [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set)
+- [`exsl:object-type()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/object-type)
 
 ### Math
 
@@ -40,10 +40,10 @@ EXSLT の Math パッケージは、数値を扱ったり、ノードを比較�
 
 #### 関数
 
-- [`math:highest()`](/ja/docs/Web/XML/EXSLT/math/highest)
-- [`math:lowest()`](/ja/docs/Web/XML/EXSLT/math/lowest)
-- [`math:max()`](/ja/docs/Web/XML/EXSLT/math/max)
-- [`math:min()`](/ja/docs/Web/XML/EXSLT/math/min)
+- [`math:highest()`](/ja/docs/Web/XML/EXSLT/Reference/math/highest)
+- [`math:lowest()`](/ja/docs/Web/XML/EXSLT/Reference/math/lowest)
+- [`math:max()`](/ja/docs/Web/EXSLT/math/max)
+- [`math:min()`](/ja/docs/Web/EXSLT/math/min)
 
 ### 正規表現
 

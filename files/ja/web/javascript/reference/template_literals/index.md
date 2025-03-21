@@ -366,7 +366,7 @@ const bad = `bad escape sequence: \unicode`;
 
 ## 関連情報
 
-- [テキスト整形](/ja/docs/Web/JavaScript/Guide/Text_formatting)ガイド
+- [テキスト整形](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)

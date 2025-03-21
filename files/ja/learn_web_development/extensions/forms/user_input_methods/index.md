@@ -150,7 +150,7 @@ div {
 
 使い勝手を良くするためには、作成するカスタムフォームコントロールは、アクセシビリティがあり、ネイティブのフォームコントロールと同じ機能を持つ必要があります。
 
-- 要素の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles)、[ラベル](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)、[説明](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) を ARIA で追加する必要があります。
+- 要素の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)、[ラベル](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)、[説明](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を ARIA で追加する必要があります。
 - すべてのユーザー入力方法、たとえば[キーボード](#キーボード)、[マウス](#マウス)、[タッチ](#指でのタッチ)、[ポインター](#ポインターイベント)の各イベントに対応する必要があります。
 - ユーザーが更新したコンテンツの[検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)、[送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)、[保存](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)などの機能を処理するには、 JavaScript が必要です。
 

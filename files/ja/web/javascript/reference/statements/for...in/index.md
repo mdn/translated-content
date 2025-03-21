@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`for...in` 文**は、キーが文字列であるオブジェクトの[列挙可能プロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)すべてに対して、継承された列挙可能プロパティも含めて反復処理を行います ([Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) がキーになったものは無視します)。
+**`for...in` 文**は、キーが文字列であるオブジェクトの[列挙可能プロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)すべてに対して、継承された列挙可能プロパティも含めて反復処理を行います ([Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) がキーになったものは無視します)。
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
@@ -48,7 +48,7 @@ for (variable in object)
 
 現代の ECMAScript の仕様では、走査順序は明確に定義されており、 実装同士の間で一貫しています。プロトタイプチェーンのそれぞれの成分内では、非負の整数値（配列の添字となるもの）はすべて値の昇順で最初に走査され、次に文字列のキーがプロパティの作成時系列で昇順に走査されます。
 
-`for...in` の `variable` 部分は、`=` 演算子の前に来ることができるものであれば、何でも受け入れることができます。ループ本体の中で再代入されない限り、{{jsxref("Statements/const", "const")}} を使用して変数を宣言できます（これらは反復処理毎に別々の変数と見なされるため、変化が可能です）。そうでない場合は、{{jsxref("Statements/let", "let")}} を使用してください。[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) や `for (x.y in iterable)` のようなオブジェクトプロパティを使用することもできます。
+`for...in` の `variable` 部分は、`=` 演算子の前に来ることができるものであれば、何でも受け入れることができます。ループ本体の中で再代入されない限り、{{jsxref("Statements/const", "const")}} を使用して変数を宣言できます（これらは反復処理毎に別々の変数と見なされるため、変化が可能です）。そうでない場合は、{{jsxref("Statements/let", "let")}} を使用してください。[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) や `for (x.y in iterable)` のようなオブジェクトプロパティを使用することもできます。
 
 [古い構文](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#文)では、初期化子付きのループ変数を `var` 宣言で行うことができます。これは厳格モードでは[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)が発生し、非厳格モードでは無視されます。
 
@@ -131,7 +131,7 @@ for (const prop in obj) {
 
 - {{jsxref("Statements/for...of", "for...of")}}
 - {{jsxref("Statements/for", "for")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Array.prototype.forEach()")}}

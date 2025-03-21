@@ -1028,7 +1028,7 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
 
 **MPEG-4 Video Elemental Stream** (**MP4V-ES**) 形式は、 MPEG-4 Part 2 Visual 標準の一部です。一般的に、 MPEG-4 パート 2 動画は、他のコーデックと比較して有益な値が示されていないため、誰にも使用されていませんが、 MP4V-ES はモバイルで使用されているものがあります。 MP4V は、基本的に H.263 を MPEG-4 コンテナーでエンコードしたものです。
 
-そのため、 {{Glossary("RTP")}} セッション上で MPEG-4 音声と動画をストリーミングするために使用されます。しかし、 MP4V-ES は、 [3GP](/ja/docs/Web/Media/Formats/Containers#3gp) を使用してモバイル接続を介して MPEG-4 の音声と映像を送信するために使用されます。
+そのため、 {{Glossary("RTP")}} セッション上で MPEG-4 音声と動画をストリーミングするために使用されます。しかし、 MP4V-ES は、 [3GP](/ja/docs/Web/Media/Guides/Formats/Containers#3gp) を使用してモバイル接続を介して MPEG-4 の音声と映像を送信するために使用されます。
 
 この形式は、主要なブラウザーで意味のある形で対応しておらず、かなり時代遅れなので、ほぼ間違いなく使用しない方がよいでしょう。この種類のファイルは `.mp4v` という拡張子があるはずですが、時には `.mp4` という不正確なラベルが付いていることがあります。
 
@@ -1535,7 +1535,7 @@ Theora の欠点は、色成分あたり 8 ビットしか対応していない�
 
 ブラウザーが対応している場合、 VP8 ではアルファチャンネルを持つ動画を再生でき、それぞれのピクセルのアルファ成分で指定した程度まで背景が透けて見えるようにすることができます。
 
-VP8 のブラウザーの対応は、 HTML コンテンツ、特に [WebM](/ja/docs/Web/Media/Formats/Containers#webm) ファイル内では良好です。
+VP8 のブラウザーの対応は、 HTML コンテンツ、特に [WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm) ファイル内では良好です。
 このため、 VP8 はコンテンツの有力な候補となりますが、利用できるのであれば VP9 がより望ましい選択となります。
 ウェブブラウザーは、 WebRTC のために VP8 に対応している必要がありますが、対応しているすべてのブラウザーが HTML の audio おｙび video 要素で VP8 に対応しているわけではありません。
 
@@ -1623,7 +1623,7 @@ VP9 のメインプロファイルは、 4:2:0 のクロマサブサンプリン
 また、複数の HDR 実装に対応しており、フレームレート、アスペクト比、フレームサイズを自由に選択することができます。
 
 VP9 はブラウザーで広く対応しており、このコーデックのハードウェア実装はかなり一般的になっています。
-VP9 は [WebM](/ja/docs/Web/Media/Formats/Containers#webm) で義務づけられている 2 つの動画コーデックのうちの 1 つです（他にも [VP8](#vp8) があります）。
+VP9 は [WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm) で義務づけられている 2 つの動画コーデックのうちの 1 つです（他にも [VP8](#vp8) があります）。
 ただし、 WebM と VP9 の Safari 対応はバージョン 14.1 でしか導入されていないので、 VP9 を使用することを選んだ場合は、iPhone、iPad、Mac ユーザー向けに AVC や HEVC などのフォールバック形式を提供することを検討してください。
 
 VP9 は、WebM コンテナーを使用することができる（そして、必要なときにフォールバック動画を提供することができる）場合に、良い選択肢となります。
@@ -1766,13 +1766,13 @@ VP9 は、WebM コンテナーを使用することができる（そして、�
 
 まず、ブログ、情報サイト、動画が製品のデモに使用される（ただし、動画自体が製品であるわけではない）中小企業のウェブサイトなど、一般的なウェブサイトで表示される動画に最適なオプションを見てみましょう。
 
-1. **[WebM](/ja/docs/Web/Media/Formats/Containers#webm)** コンテナーで、動画には **[VP9](#vp9)** コーデック、音声には **[Opus](/ja/docs/Web/Media/Formats/Audio_codecs#opus)** コーデックを使用する方法。これらはすべてオープンでロイヤリティフリーの形式で、対応が進んでいますが、かなり最近のブラウザーでしか対応していませんので、フォールバックを使用するといいでしょう。
+1. **[WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm)** コンテナーで、動画には **[VP9](#vp9)** コーデック、音声には **[Opus](/ja/docs/Web/Media/Formats/Audio_codecs#opus)** コーデックを使用する方法。これらはすべてオープンでロイヤリティフリーの形式で、対応が進んでいますが、かなり最近のブラウザーでしか対応していませんので、フォールバックを使用するといいでしょう。
 
    ```html
    <video controls src="filename.webm"></video>
    ```
 
-2. **[MP4](/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** コンテナーで、動画には **[AVC](#avc_h.264)** (**H.264**) コーデック、音声には **[AAC](/ja/docs/Web/Media/Formats/Audio_codecs#aac_advanced_audio_coding)** コーデックが理想的です。これは、 MP4 コンテナー、 AVC および AAC コーデックの組み合わせが、すべての主要なブラウザーで広く対応しているためで、その品質は、ほとんどの用途で一般的に良好です。ただし、ライセンス要件に準拠していることを確認してください。
+2. **[MP4](/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4)** コンテナーで、動画には **[AVC](#avc_h.264)** (**H.264**) コーデック、音声には **[AAC](/ja/docs/Web/Media/Formats/Audio_codecs#aac_advanced_audio_coding)** コーデックが理想的です。これは、 MP4 コンテナー、 AVC および AAC コーデックの組み合わせが、すべての主要なブラウザーで広く対応しているためで、その品質は、ほとんどの用途で一般的に良好です。ただし、ライセンス要件に準拠していることを確認してください。
 
    ```html
    <video controls>
@@ -1856,7 +1856,7 @@ let recorder = new MediaRecorder(sourceStream, options);
 ## 関連情報
 
 - [ウェブ音声コーデックガイド](/ja/docs/Web/Media/Formats/Audio_codecs)
-- [メディアコンテナー形式（ファイル形式）](/ja/docs/Web/Media/Formats/Containers)
+- [メディアコンテナー形式（ファイル形式）](/ja/docs/Web/Media/Guides/Formats/Containers)
 - [ウェブコンテンツにおけるメディア対応に関する問題の扱い](/ja/docs/Web/Media/Formats/Support_issues)
 - [WebRTC で使用されるコーデック](/ja/docs/Web/Media/Formats/WebRTC_codecs)
 - {{RFC(6381)}}: The "Codecs" and "Profiles" parameters for "Bucket" media types

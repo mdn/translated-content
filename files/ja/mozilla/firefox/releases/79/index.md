@@ -101,9 +101,9 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 ### WebAssembly
 
-- [WebAssembly の Bulk memory operations](/ja/docs/WebAssembly/Understanding_the_text_format#大規模メモリー操作) をサポートしました ([Firefox バグ 1528294](https://bugzil.la/1528294))。
-- [WebAssembly の Reference types](/ja/docs/WebAssembly/Understanding_the_text_format#参照型) をサポートしました ([Firefox バグ 1637884](https://bugzil.la/1637884))。
-- [WebAssembly の Threads](/ja/docs/WebAssembly/Understanding_the_text_format#webassembly_スレッド) (Shared memory および Atomics) をサポートしました ([Firefox バグ 1389458](https://bugzil.la/1389458), [Firefox バグ 1648685](https://bugzil.la/1648685))。
+- [WebAssembly の Bulk memory operations](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#大規模メモリー操作) をサポートしました ([Firefox バグ 1528294](https://bugzil.la/1528294))。
+- [WebAssembly の Reference types](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#参照型) をサポートしました ([Firefox バグ 1637884](https://bugzil.la/1637884))。
+- [WebAssembly の Threads](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_スレッド) (Shared memory および Atomics) をサポートしました ([Firefox バグ 1389458](https://bugzil.la/1389458), [Firefox バグ 1648685](https://bugzil.la/1648685))。
 
 ## アドオン開発者向けの変更点
 

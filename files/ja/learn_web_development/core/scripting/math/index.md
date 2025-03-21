@@ -449,7 +449,7 @@ function updateBtn() {
 
 ## 関連情報
 
-- [数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

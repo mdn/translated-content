@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@scope`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)を使用すると、特定の DOM サブツリー内の要素を選択できるようになり、セレクターを DOM 構造に密接に結合させることなく、また上書きしにくい特定のセレクターを書くことなく、要素を正確に対象とすることができます。
+**`@scope`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用すると、特定の DOM サブツリー内の要素を選択できるようになり、セレクターを DOM 構造に密接に結合させることなく、また上書きしにくい特定のセレクターを書くことなく、要素を正確に対象とすることができます。
 
 JavaScript で `@scope` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSScopeRule")}} からアクセスすることができます。
 
@@ -278,7 +278,7 @@ body
 これで一番内側の段落は正しく黒く色づけされました。これは、 `.light-theme` のスコープルートからは DOM ツリーの階層が1階層しか離れておらず、 `.dark-theme` のスコープルートからは 2 階層しか離れていないためです。したがって、 light スタイルが勝ちます。
 
 > [!NOTE]
-> スコープの近さはソースの順序を上書きしますが、[重要度](/ja/docs/Web/CSS/important)、[レイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)、[詳細度](/ja/docs/Web/CSS/Specificity)のような他にも優先度の高い仕様によって上書きされます。
+> スコープの近さはソースの順序を上書きしますが、[重要度](/ja/docs/Web/CSS/important)、[レイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)のような他にも優先度の高い仕様によって上書きされます。
 
 ## 形式文法
 

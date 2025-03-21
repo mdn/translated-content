@@ -27,7 +27,7 @@ slug: Mozilla/Firefox/Releases/93
 ### HTTP
 
 - ダイジェストを使用する [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication) で SHA-256 アルゴリズムをサポートしました。これは、以前から使用できた MD5 アルゴリズムより安全な認証を可能にします ([Firefox バグ 1682995](https://bugzil.la/1682995))。
-- _画像_ について、既定の HTTP {{HTTPHeader("ACCEPT")}} ヘッダーを `image/avif,image/webp,*/*` に変更しました ([AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_画像) 画像形式のサポートを追加した結果として) ([Firefox バグ 1682995](https://bugzil.la/1682995))。
+- _画像_ について、既定の HTTP {{HTTPHeader("ACCEPT")}} ヘッダーを `image/avif,image/webp,*/*` に変更しました ([AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) 画像形式のサポートを追加した結果として) ([Firefox バグ 1682995](https://bugzil.la/1682995))。
 
 ### API
 
@@ -54,7 +54,7 @@ slug: Mozilla/Firefox/Releases/93
 
 ## その他
 
-- [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_画像) 画像のサポートを、デフォルトで有効化しました ([Firefox バグ 1682995](https://bugzil.la/1682995))。この形式は圧縮率が優れており、また特許の制限がありません (これは [Alliance for Open Media](http://aomedia.org/) が開発しています)。Firefox はフルレンジおよびリミテッドレンジの両方の色空間をサポートして静的画像を表示でき、画像の変形や回転も可能です。設定項目 [image.avif.compliance_strictness](/ja/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness) で、仕様へどの程度厳密に従うかを調節できます。アニメーション画像は未サポートです。
+- [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_画像) 画像のサポートを、デフォルトで有効化しました ([Firefox バグ 1682995](https://bugzil.la/1682995))。この形式は圧縮率が優れており、また特許の制限がありません (これは [Alliance for Open Media](http://aomedia.org/) が開発しています)。Firefox はフルレンジおよびリミテッドレンジの両方の色空間をサポートして静的画像を表示でき、画像の変形や回転も可能です。設定項目 [image.avif.compliance_strictness](/ja/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness) で、仕様へどの程度厳密に従うかを調節できます。アニメーション画像は未サポートです。
 
 ## 過去のバージョン
 

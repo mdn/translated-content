@@ -259,4 +259,4 @@ MDNの「[ウェブ開発の学習](/ja/docs/Learn_web_development)」の章は�
 ## 関連情報
 
 - [ページのコンポーネント](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#ページの構成要素)
-- [Markdown でのコードサンプルの作成](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+- [Markdown でのコードサンプルの作成](/ja/docs/MDN/Writing_guidelines/Code_style_guide)

@@ -10,7 +10,7 @@ l10n:
 
 **`<desc>`** 要素は SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな長文の説明を提供します。
 
-`<desc>` 要素内のテキストはグラフィックの一部としてレンダリングされません。要素が可視テキストで記述できる場合、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性でそのテキストを参照することが可能です。 `aria-describedby` を使用する場合、 `<desc>` よりも優先されます。
+`<desc>` 要素内のテキストはグラフィックの一部としてレンダリングされません。要素が可視テキストで記述できる場合、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性でそのテキストを参照することが可能です。 `aria-describedby` を使用する場合、 `<desc>` よりも優先されます。
 
 `<desc>` 要素の隠しテキストは、 `aria-describedby` 値で複数の ID を使用して、他の要素の可視テキストと連結することもできます。その場合、 `<desc>` 要素は参照するための ID を提供しなければなりません。
 

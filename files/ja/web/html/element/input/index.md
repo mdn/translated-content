@@ -946,7 +946,7 @@ input.custom {
 
 ### object-position と object-fit
 
-`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）（には、[置換要素](/ja/docs/Web/CSS/Replaced_element)になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
+`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）（には、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
 
 ### スタイル設定
 

@@ -141,7 +141,7 @@ l10n:
   - {{HTMLElement("input")}} 要素の [`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性および {{domxref("HTMLInputElement.webkitdirectory")}} を実装しました。ファイルではなくディレクトリーを受け入れるように、file 型の input を設定できます ([Firefox バグ 1258489](https://bugzil.la/1258489))。
   - {{domxref("HTMLInputElement.webkitEntries")}} を実装しました。これは、選択されたアイテムを表す {{domxref("FileSystemEntry")}} ベースのオブジェクトの配列を返します。
   - {{domxref("File.webkitRelativePath")}} を実装しました。これは、{{domxref("HTMLInputElement.webkitGetEntries()")}} が返すリスト内のアイテムのひとつである {{domxref("FileSystemDirectoryEntry")}} に含まれているルートに対して相対的な、ファイルのパスを持ちます。
-  - この API で何をサポートしているかについて、詳しくは [Firefox におけるファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) をご覧ください。
+  - この API で何をサポートしているかについて、詳しくは [Firefox におけるファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) をご覧ください。
   - これらの API はデフォルトで有効です。一部の API は以前から使用できましたが、設定で無効化されていました ([Firefox バグ 1288683](https://bugzil.la/1288683))。
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) の一部として、{{domxref("DataTransferItem.webkitGetAsEntry()")}} を実装しました。これは、ドロップされたファイルを表す {{domxref("FileSystemEntry")}} を取得できます ([Firefox バグ 1289255](https://bugzil.la/1289255))。これはデフォルトで有効です。

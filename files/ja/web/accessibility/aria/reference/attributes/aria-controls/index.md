@@ -20,7 +20,7 @@ l10n:
 
 - アコーディオンウィジェットの、関連付けられているパネルコンテンツの表示・非表示を切り替えるボタン部分。各ボタンは、呼び出し元のコントロールに関連付けられているコンテンツを含む要素の ID を参照する `aria-controls` を指定する場合があります。
 - ロールが [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) の要素: スクロールバーが制御している要素の ID を参照する `aria-controls` 属性が必要です。
-- それぞれ異なるタブパネルを表示するタブのグループ: [`role="tab"`](/ja/docs/Web/Accessibility/ARIA/Roles/tab_role) の各要素には、関連付けられている [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) を参照する `aria-controls` 属性があります。
+- それぞれ異なるタブパネルを表示するタブのグループ: [`role="tab"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の各要素には、関連付けられている [`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) を参照する `aria-controls` 属性があります。
 
 ## 例
 

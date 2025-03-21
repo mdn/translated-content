@@ -43,7 +43,7 @@ slug: Mozilla/Firefox/Releases/96
 
 #### Canvas
 
-- [WebP](/ja/docs/Web/Media/Formats/Image_types#webp) 画像形式のエンコーダーをサポートしました。
+- [WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp) 画像形式のエンコーダーをサポートしました。
   canvas 要素が、以下のメソッドを使用して内容物を WebP データとしてエクスポートできます: {{domxref("HTMLCanvasElement.toDataURL()")}}、{{domxref("HTMLCanvasElement.toBlob()")}}、{{domxref("OffscreenCanvas.convertToBlob", "OffscreenCanvas.toBlob")}}
   ([Firefox バグ 1511670](https://bugzil.la/1511670))。
 

@@ -163,9 +163,9 @@ h4 {
 見出しが入れ子になった場合、見出しレベルは節が閉じる際に「飛ばされる」ことがあります。
 
 - [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
 - [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
@@ -174,7 +174,7 @@ h4 {
 
 スクリーンリーダー利用者のための他のナビゲーションテクニックとして、[区分コンテンツ](/ja/docs/Web/HTML/Element#コンテンツ区分)の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
 
-区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) および [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに 2 つ以上の区分要素がある場合に有用です。
+区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) および [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに 2 つ以上の区分要素がある場合に有用です。
 
 #### 例
 
@@ -200,7 +200,7 @@ h4 {
 
 この例では、スクリーンリーダーは 2 つの {{HTMLElement("nav")}} セクションがあり、1 つが "Primary navigation" でもう 1 つが "Footer navigation" であるとアナウンスするでしょう。ラベルが提供されていない場合は、スクリーンリーダーを使用している人がそれぞれの `nav` 要素の中身を調べて、それぞれの用途を確かめなければならないかもしれません。
 
-- [aria-labelledby 属性の利用](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [aria-labelledby 属性の利用](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 技術的概要

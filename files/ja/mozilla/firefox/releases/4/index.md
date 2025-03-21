@@ -50,8 +50,8 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - `canvas2dcontext.globalCompositeOperation` が認識できない値を設定したときに例外を投げなくなりました。また、非標準の値 `darker` をサポートしなくなりました。
 - 他のブラウザーでは実装されておらず、非推奨 な要素である [`<spacer>`](/ja/docs/Web/HTML/Element/spacer) 要素のサポートが無くなりました。
 - The [`<isindex>`](/ja/docs/Web/HTML/Element/isindex) 要素が、[`document.createElement()`](/ja/docs/Web/API/Document/createElement) メソッドによって作成されたときに、 一切プロパティもメソッドも持たない単純な要素として作成されるようになりました。
-- Gecko に [`<input>`](/ja/docs/Web/HTML/Element/input) 要素での `click()`メソッドの呼び出しが追加されました。このメソッドを用いることでファイル選択ダイアログが開けます。[ウェブアプリケーションからファイルを利用する](/ja/docs/Web/API/File_API/Using_files_from_web_applications) の記事内の [例](/ja/docs/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click%28%29_method) を参照してください。
-- [`<input>`](/ja/docs/Web/HTML/Element/input) 要素に新しい [`mozactionhint`](/ja/docs/Web/HTML/Element/Input#attr-mozactionhint) 属性が追加されました。これを用いることで仮想キーボード上でのエンターキーのラベルを指定できます。
+- Gecko に [`<input>`](/ja/docs/Web/HTML/Element/input) 要素での `click()`メソッドの呼び出しが追加されました。このメソッドを用いることでファイル選択ダイアログが開けます。[ウェブアプリケーションからファイルを利用する](/ja/docs/Web/API/File_API/Using_files_from_web_applications) の記事内の [例](/ja/docs/Web/API/File_API/Using_files_from_web_applications#Using_hidden_file_input_elements_using_the_click%28%29_method) を参照してください。
+- [`<input>`](/ja/docs/Web/HTML/Element/input) 要素に新しい [`mozactionhint`](/ja/docs/Web/HTML/Element/input#attr-mozactionhint) 属性が追加されました。これを用いることで仮想キーボード上でのエンターキーのラベルを指定できます。
 - [`<iframe>`](/ja/docs/Web/HTML/Element/iframe)、[`<noembed>`](/ja/docs/Web/HTML/Element/noembed)、および [`<noframes>`](/ja/docs/Web/HTML/Element/noframes) 要素内の [`<script>`](/ja/docs/Web/HTML/Element/script) 要素が実行されるようになりました。以前のバージョンの Firefox ではこれらの要素内での実行はされませんでした。これは仕様準拠であり、他のブラウザーの挙動と合致します。
 
 ### CSS
@@ -68,7 +68,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : touch プロパティ群が追加されました。詳細と正式な記事名は後日追記予定です。
 - [CSS 背景として任意の要素を使用する](/ja/docs/Web/CSS/element)
   - : [`-moz-element`](/ja/docs/Web/CSS/element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : CSS セレクターを用いた訪問済みリンクのスタイルについて取得できる情報が変更されました。これはいくつかのウェブアプリケーションに影響するかもしれません。
 
 #### 新しい CSS プロパティ
@@ -129,7 +129,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : 開発中の WebGL 標準が Firefox でサポートされました。
 - [グラフィックパフォーマンスの最適化](/ja/docs/Optimizing_graphics_performance)
   - : Firefox 4 でグラフィックとビデオのパフォーマンスを最大限引き出すための Tips & Tricks。
-- [WebM ビデオのサポート](/ja/docs/Web/Media/Formats#webm)
+- [WebM ビデオのサポート](/ja/docs/Web/Media/Guides/Formats#webm)
   - : 新しいオープンな [WebM](http://www.webmproject.org/) ビデオフォーマットが Gecko2.0 でサポートされます。このサポートは 6 月 9 日以降のナイトリーに含まれています。
 - [SMIL による SVG アニメーション](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : SVG の SMIL アニメーションのサポートが利用できるようになりました。[バグ 482402](https://bugzilla.mozilla.org/show_bug.cgi?id=482402 'FIXED: Enable "svg.smil.enabled" pref by default') を参照してください。

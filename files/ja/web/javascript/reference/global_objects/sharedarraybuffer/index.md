@@ -69,12 +69,12 @@ if (crossOriginIsolated) {
 上記のセキュリティ対策の有無により、各種メモリー共有 API の利用可能性は異なります。
 
 - `Atomics` オブジェクトは常に利用できます。
-- `SharedArrayBuffer` オブジェクトは原則として常に利用できますが、残念ながら、ウェブコンテンツとの互換性のために、上記の 2 つのヘッダーが設定されていない限り、グローバルオブジェクトのコンストラクターは隠されます。この制限は将来的に取り除かれることが期待されています。[`WebAssembly.Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) はまだインスタンスを取得するために使用することができます。
+- `SharedArrayBuffer` オブジェクトは原則として常に利用できますが、残念ながら、ウェブコンテンツとの互換性のために、上記の 2 つのヘッダーが設定されていない限り、グローバルオブジェクトのコンストラクターは隠されます。この制限は将来的に取り除かれることが期待されています。[`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) はまだインスタンスを取得するために使用することができます。
 - 上記の 2 つのヘッダーが設定されていない限り、さまざまな `postMessage()` API が `SharedArrayBuffer` オブジェクトに対して例外を発生することになります。これらが設定された場合は、`Window` オブジェクトと専用ワーカーの `postMessage()` が機能し、メモリーを共有できるようになります。
 
 ### WebAssembly の共有メモリー
 
-[`WebAssembly.Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) オブジェクトは、コンストラクターの [`shared`](/ja/docs/WebAssembly/JavaScript_interface/Memory/Memory#shared) フラグで作成することができます。このフラグを `true` に設定すると、構築されたメモリーオブジェクトは `SharedArrayBuffer` と同様に `postMessage()` を通じてワーカー間で共有でき、メモリーオブジェクトの背後となる [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) は `SharedArrayBuffer` となります。したがって、ワーカー間で `SharedArrayBuffer` を共有するための上記の要件は、`WebAssembly.Memory.Buffer` を共有する場合にも当てはまります。
+[`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトは、コンストラクターの [`shared`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/Memory#shared) フラグで作成することができます。このフラグを `true` に設定すると、構築されたメモリーオブジェクトは `SharedArrayBuffer` と同様に `postMessage()` を通じてワーカー間で共有でき、メモリーオブジェクトの背後となる [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) は `SharedArrayBuffer` となります。したがって、ワーカー間で `SharedArrayBuffer` を共有するための上記の要件は、`WebAssembly.Memory.Buffer` を共有する場合にも当てはまります。
 
 WebAssembly Threads の提案では、新しい[不可分](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses)命令の集合も定義されています。`SharedArrayBuffer` とそのメソッドが無条件に有効であるように（そしてスレッド間の共有のみが新しいヘッダー上で制限されます）、WebAssembly の不可分命令も無条件に許可されます。
 
@@ -82,7 +82,7 @@ WebAssembly Threads の提案では、新しい[不可分](https://github.com/We
 
 `SharedArrayBuffer` オブジェクトは {{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer()")}} コンストラクターを呼び出す際に `maxByteLength` オプションを含めることで成長可能にすることができます。また、`SharedArrayBuffer` の {{jsxref("SharedArrayBuffer/growable", "growable")}} および {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} プロパティを参照すれば、そのサイズが成長可能かどうかを調べることが可能であり、最大サイズは何であるかがわかります。成長可能な `SharedArrayBuffer` には {{jsxref("SharedArrayBuffer/grow()", "grow()")}} を呼び出して新しいサイズを割り当てることができます。新しいバイトは 0 に初期化されます。
 
-これらの機能により、`SharedArrayBuffer` をより効率的に成長させることができます。そうしないと、新しいサイズのバッファーコピーを作成しなければなりません。また、この点において、JavaScript は WebAssembly と同等になります（WASM のリニアメモリーは [`WebAssembly.Memory.prototype.grow()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/grow) でサイズを変更することができます）。
+これらの機能により、`SharedArrayBuffer` をより効率的に成長させることができます。そうしないと、新しいサイズのバッファーコピーを作成しなければなりません。また、この点において、JavaScript は WebAssembly と同等になります（WASM のリニアメモリーは [`WebAssembly.Memory.prototype.grow()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) でサイズを変更することができます）。
 
 セキュリティ上の理由から、`SharedArrayBuffer` はサイズを縮小することはできませんが、大きくすることはできます。
 

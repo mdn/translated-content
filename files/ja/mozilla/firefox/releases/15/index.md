@@ -27,11 +27,11 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 ### DOM
 
-- DOM Events Level 3 のメソッドであり、`Ctrl` `や Shift`のような、モディファイアキーの状態を調べることができる、[`KeyboardEvent.getModifierState()`](/ja/docs/DOM/KeyboardEvent#getModifierState%28%29) と [`MouseEvent.getModifierState()`](/ja/docs/DOM/MouseEvent#getModifierState%28%29)　が実装されました（bugs [630811](https://bugzilla.mozilla.org/show_bug.cgi?id=630811) および [731878](https://bugzilla.mozilla.org/show_bug.cgi?id=731878)）。ただし、その挙動は最新の D3E 草案に従っています。そのため、モディファイアキー名のいくつかが IE と異なります（[Firefox バグ 769190](https://bugzil.la/769190)）。
+- DOM Events Level 3 のメソッドであり、`Ctrl` `や Shift`のような、モディファイアキーの状態を調べることができる、[`KeyboardEvent.getModifierState()`](/ja/docs/Web/API/KeyboardEvent#getModifierState%28%29) と [`MouseEvent.getModifierState()`](/ja/docs/DOM/MouseEvent#getModifierState%28%29)　が実装されました（bugs [630811](https://bugzilla.mozilla.org/show_bug.cgi?id=630811) および [731878](https://bugzilla.mozilla.org/show_bug.cgi?id=731878)）。ただし、その挙動は最新の D3E 草案に従っています。そのため、モディファイアキー名のいくつかが IE と異なります（[Firefox バグ 769190](https://bugzil.la/769190)）。
 - マウスイベントで、[`MouseEvent.buttons`](/ja/docs/Web/API/MouseEvent) 属性を用いたマウスボタンの状態を調べるためのサポートが実装されました。
 - キーボードイベントで、 [KeyboardEvent.location](/ja/docs/Web/API/KeyboardEvent#attributes_location) 属性を用いたキーの位置（標準、モディファイアキーの左もしくは右、テンキー上）を調べるためのサポートが実装されました（[Firefox バグ 166240](https://bugzil.la/166240)）。
 - `KeyboardEvent.keycode` の結果が Windows/Linux/Mac でほぼ同じであった従来のルールよりも優れたルールから算出されるようになりました。そして、それらは アラビア文字、キリル文字, タイ文字などのような、Linux と Mac での非 ASCII 入力可能レイアウトでも利用可能です。[仮想キーコードのための文書](/ja/docs/Web/API/KeyboardEvent#virtual_key_codes)を参照してください。
-- [`range.detach()`](/ja/docs/Web/API/range/detach) メソッドは何もしないように変更されました。恐らく、将来的に削除されるでしょう。
+- [`range.detach()`](/ja/docs/Web/API/Range/detach) メソッドは何もしないように変更されました。恐らく、将来的に削除されるでしょう。
 - `HTMLVideoElement.mozHasAudio()` メソッドが実装されました。与えられた video 要素に関連づけられた音声トラックがあるかどうかを示します（[Firefox バグ 480376](https://bugzil.la/480376)）。
 - `Performance` API に新しいメソッド `now()` が追加されました。このメソッドは `DOMHighResTimeStamp` 型の高解像度タイマをサポートします（[bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)）。
 - [WebSMS API](/ja/docs/API/WebSMS) が更新され、SMS テキストメッセージが既読か未読かのどちらかを示す `read` 属性がサポートされました。
@@ -43,7 +43,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 ### JavaScript
 
-- Typed Arrays 仕様由来の [`DataView`](/ja/docs/Web/JavaScript/Reference/Global_objects/DataView) インターフェイスのサポートが追加されました。これは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer) に含まれるデータへの低レベルアクセスを提供します。
+- Typed Arrays 仕様由来の [`DataView`](/ja/docs/Web/JavaScript/Reference/Global_Objects/DataView) インターフェイスのサポートが追加されました。これは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) に含まれるデータへの低レベルアクセスを提供します。
 - ECMAScript Harmony の `Number.isNaN` のサポートが追加されました。([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818))
 - ECMAScript Harmony のデフォルト引数が追加されました。 ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
 - ECMAScript Harmony のレスト引数が追加されました。 ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
@@ -73,7 +73,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 ### インターフェイスの変更点
 
 - `nsIDOMWindowUtils`
-  - : `sendMouseEvent()`、`sendTouchEvent()`、`sendMouseEventToWindow()`、`sendMouseScrollEvent()` および `sendKeyEvent()` の `aModifiers` は [`KeyboardEvent.getModifierState()`](/ja/docs/DOM/KeyboardEvent#getModifierState%28%29) でサポートされている修飾キーのすべてをサポートします。`MODIFIER_*` という値を利用してください。 また、`sendKeyEvent()` の第 5 引数が `boolean` から `unsigned long` に変更されました。後方互換性のために、呼び出し元がそれに対して `true` または false を渡している場合、挙動は変更されません。この変更によって呼び出し元がキーの位置を指定することができるようになります。
+  - : `sendMouseEvent()`、`sendTouchEvent()`、`sendMouseEventToWindow()`、`sendMouseScrollEvent()` および `sendKeyEvent()` の `aModifiers` は [`KeyboardEvent.getModifierState()`](/ja/docs/Web/API/KeyboardEvent#getModifierState%28%29) でサポートされている修飾キーのすべてをサポートします。`MODIFIER_*` という値を利用してください。 また、`sendKeyEvent()` の第 5 引数が `boolean` から `unsigned long` に変更されました。後方互換性のために、呼び出し元がそれに対して `true` または false を渡している場合、挙動は変更されません。この変更によって呼び出し元がキーの位置を指定することができるようになります。
 - `nsIBrowserHistory`
   - : `hidePage()` メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。[Places](/ja/docs/Places) API のすべてを非同期化する進行中の作業の一部として、`addPageWithDetails()` メソッドも削除されます。代わりに `mozIAsyncHistory.updatePlaces` を利用してください。また、`count` 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリーが存在したかどうかを返していました）。代わりに \`nsINavHistoryService.hasHistoryEntries\` を利用できます。
 - `inIDOMUtils`

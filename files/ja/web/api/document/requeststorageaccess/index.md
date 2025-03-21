@@ -13,7 +13,7 @@ l10n:
 サードパーティクッキーにアクセスする権限が既に与えられているかどうかを調べるには、{{domxref("Permissions.query()")}} を呼び出して、特性名 `"storage-access"`を指定してください。
 
 > [!NOTE]
-> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされる場合があります。さらに、文書は、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、[クリックジャッキング](/ja/docs/Glossary/Clickjacking)防止の経験則、またはユーザーに明示的な許可を求めるプロンプトのような、ブラウザー固有の追加のチェックに合格する必要があります。
+> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされる場合があります。さらに、文書は、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)防止の経験則、またはユーザーに明示的な許可を求めるプロンプトのような、ブラウザー固有の追加のチェックに合格する必要があります。
 
 ## 構文
 

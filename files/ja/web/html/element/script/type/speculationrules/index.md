@@ -211,5 +211,5 @@ if (
 ## 関連情報
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
-- [投機的な読み込み](/ja/docs/Web/Performance/Speculative_loading)
+- [投機的な読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)
 - [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)

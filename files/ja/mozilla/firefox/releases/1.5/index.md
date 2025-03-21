@@ -85,7 +85,7 @@ Firefox のウェブ標準のサポートは、一貫性のあるクロスプラ
 - XML Path Language ([XPath](/ja/docs/Web/XML/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath)
 - Resource Description Framework ([RDF](/ja/docs/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/SOAP/)
-- [ECMA-262](/ja/docs/Web/JavaScript/JavaScript_technologies_overview), revision 3 に基づく [JavaScript](/ja/docs/Web/JavaScript) 1.6: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [ECMA-262](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview), revision 3 に基づく [JavaScript](/ja/docs/Web/JavaScript) 1.6: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 
 Firefox 1.5 は、データ転送プロトコル (HTTP/FTP/SSL/TLS/その他)、他言語文字データ (Unicode)、画像 (GIF/JPEG/PNG/SVG/その他) や、世界でもっとも普及したスクリプト言語の最新版である [JavaScript 1.6](/ja/docs/New_in_JavaScript_1.6) をサポートしています。
 

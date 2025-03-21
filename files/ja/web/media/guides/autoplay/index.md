@@ -295,6 +295,6 @@ Feature-Policy: autoplay 'none'
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)（学習ガイド）
+- [動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)（学習ガイド）
 - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [クロスブラウザー音声の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

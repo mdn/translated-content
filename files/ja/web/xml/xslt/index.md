@@ -11,13 +11,13 @@ original_slug: Web/XSLT
 3. **[XPath](/ja/docs/Web/XML/XPath)**
 4. ガイド
 
-   1. [よくある XSLT のエラー](/ja/docs/Web/XML/XSLT/Common_errors)
-   2. [PI 引数](/ja/docs/Web/XML/XSLT/PI_Parameters)
+   1. [よくある XSLT のエラー](/ja/docs/Web/XML/XSLT/Guides/Common_errors)
+   2. [PI 引数](/ja/docs/Web/XML/XSLT/Guides/PI_Parameters)
    3. [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/API/XSLTProcessor)
-   4. [XML を XSLT で変換](/ja/docs/Web/XML/XSLT/Transforming_XML_with_XSLT)
+   4. [XML を XSLT で変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
    5. [Mozilla JavaScript インターフェイスからの XSLT の使用](/ja/docs/Web/API/XSLTProcessor)
 
-5. [XSLT Elements](/ja/docs/Web/XML/XSLT/Element/element){{ListSubpagesForSidebar("/ja/docs/Web/XML/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
+5. [XSLT Elements](/ja/docs/Web/XML/XSLT/Reference/Element/element){{ListSubpagesForSidebar("/ja/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XML/XSLT")}}
 
@@ -29,19 +29,19 @@ XSLT は異なる XML スキーマ間でのデータの変換や、XML データ
 
 ## ドキュメント
 
-- [XSLT 要素リファレンス](/ja/docs/Web/XML/XSLT/Element)
+- [XSLT 要素リファレンス](/ja/docs/Web/XML/XSLT/Reference/Element)
   - : リファレンスです。
-- [XSLT を使った XML 変換](/ja/docs/Web/XML/XSLT/Transforming_XML_with_XSLT)
+- [XSLT を使った XML 変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT を使うと、スタイルシートの制作者は、元の XML 文書を二つの重要な手法で変換できます。すなわち、コンテンツの操作・選別（もしお望みならば大規模な並べ替えも含まれます）および、異なる形式への変換です。
 - [Mozilla JavaScript インターフェイスから XSLT を使う](/ja/docs/Web/API/XSLTProcessor)
   - : Mozilla 1.2 以降の JavaScript から XSLT 処理エンジンへのインターフェイスを説明します。
-- [処理命令を使った引数の指定](/ja/docs/Web/XML/XSLT/PI_Parameters)
+- [処理命令を使った引数の指定](/ja/docs/Web/XML/XSLT/Guides/PI_Parameters)
   - : Firefox では `<?xml-stylesheet?>` 処理指令を使ってスタイルシートの引数を指定することができます。各引数は `<?xslt-param?>` 処理指令によって指定でき、この文書ではこれらを説明しています。
 - [XSLT チュートリアル](https://www.w3schools.com/xml/xsl_intro.asp)
   - : この [W3Schools](https://www.w3schools.com) のチュートリアルでは、XML 文書を他の XHTML のような形態に変換するために、どのように XSLT を用いればいいのかを示します。
 - [XSLT とは?](https://www.xml.com/pub/a/2000/08/holman/)
   - : この XSLT と XPath についての強力な導入では、技術についての予備知識が無い読者を想定して、背景、前後関係、構造、コンセプト、用語紹介を含めたガイドを提供します。
-- [一般的な XSLT エラー](/ja/docs/Web/XML/XSLT/Common_errors)
+- [一般的な XSLT エラー](/ja/docs/Web/XML/XSLT/Guides/Common_errors)
   - : この記事は Firefox で XSLT を使う際の問題点を列挙しています。
 
 ## 関連トピック

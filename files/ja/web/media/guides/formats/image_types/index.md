@@ -577,7 +577,7 @@ GIF は単純な画像やアニメーションに適していますが、フル�
 ### ICO (Microsoft Windows icon)
 
 ICO (Microsoft Windows icon) ファイル形式は、 Windows システムのデスクトップアイコン用に Microsoft が設計しました。
-しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#サイトに自分の好きなアイコンを追加)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
+しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#サイトに自分の好きなアイコンを追加)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
 
 ICO ファイルには、複数のアイコンを含むことができ、それぞれの詳細が記載されたディレクトリーから始まります。
 ディレクトリーの後に、アイコンのデータが続きます。
@@ -1530,9 +1530,9 @@ JPEG や非可逆 WebP のような非可逆形式を選択する場合は、テ
 
 ## 関連情報
 
-- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
+- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [ウェブで使用される動画コーデックのガイド](/ja/docs/Web/Media/Formats/Video_codecs)
+- [ウェブで使用される動画コーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)
 - {{Glossary("HTML")}} の {{HTMLElement("img")}} および {{HTMLElement("picture")}} 要素
 - CSS の {{cssxref("background-image")}} プロパティ
 - {{domxref("HTMLImageElement.Image()")}} コンストラクターと {{domxref("HTMLImageElement")}} インターフェイス

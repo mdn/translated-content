@@ -8,7 +8,7 @@ l10n:
 
 {{XsltSidebar}}
 
-`<xsl:transform>` 要素は [`<xsl:stylesheet>`](/ja/docs/Web/XML/XSLT/Element/stylesheet) 要素とまったく同じです。
+`<xsl:transform>` 要素は [`<xsl:stylesheet>`](/ja/docs/Web/XML/XSLT/Reference/Element/stylesheet) 要素とまったく同じです。
 
 ### Gecko のサポート
 

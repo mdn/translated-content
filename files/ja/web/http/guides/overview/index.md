@@ -198,7 +198,7 @@ HTTP リクエストの例です。
 リクエストは以下の要素で構成されます。
 
 - HTTP [メソッド](/ja/docs/Web/HTTP/Reference/Methods)。通常、クライアントが実行したい操作を定義する {{HTTPMethod("GET")}} や {{HTTPMethod("POST")}} のような動詞か、{{HTTPMethod("OPTIONS")}} や {{HTTPMethod("HEAD")}} のような名詞です。
-  一般的にクライアントはリソースを取り込む（`GET` を使用）か [HTML フォーム](/ja/docs/Learn/Forms) の値を送信する（`POST` を使用）ことを望みますが、場合によってはほかの操作が必要になります。
+  一般的にクライアントはリソースを取り込む（`GET` を使用）か [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms) の値を送信する（`POST` を使用）ことを望みますが、場合によってはほかの操作が必要になります。
 - 取り込むリソースのパス。状況から明らかであればリソースの URL はこの要素から取り除かれます。たとえば{{Glossary("protocol","プロトコル")}} (`http://`)、{{Glossary("domain","ドメイン")}}（ここでは `developer.mozilla.org`）、TCP {{Glossary("port","ポート")}}（ここでは `80`）が取り除かれます。
 - HTTP プロトコルのバージョン。
 - サーバーに追加の情報を与える任意の[ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)。

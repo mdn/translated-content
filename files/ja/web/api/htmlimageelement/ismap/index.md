@@ -12,7 +12,7 @@ l10n:
 これは {{HTMLElement("a")}} 要素内にある画像にのみ使用することができます。
 
 > [!NOTE]
-> アクセシビリティの観点から、サーバーサイドイメージマップはマウスを使う必要があるため、一般に使用しない方が良いでしょう。代わりに[クライアントサイドイメージマップ](/ja/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)を使ってください。
+> アクセシビリティの観点から、サーバーサイドイメージマップはマウスを使う必要があるため、一般に使用しない方が良いでしょう。代わりに[クライアントサイドイメージマップ](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)を使ってください。
 
 ## 値
 

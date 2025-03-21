@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)に加えて、この要素は[演算子の形状や内容による既定値をもつ](https://w3c.github.io/mathml-core/#algorithm-for-determining-the-properties-of-an-embellished-operator)以下の属性を受け入れます。
+[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)に加えて、この要素は[演算子の形状や内容による既定値をもつ](https://w3c.github.io/mathml-core/#algorithm-for-determining-the-properties-of-an-embellished-operator)以下の属性を受け入れます。
 
 - `accent` {{Non-standard_Inline}}
   - : [`<boolean>`](/ja/docs/Web/MathML/Reference/Values#mathml-specific_types) で、この演算子が[下の文字](/ja/docs/Web/MathML/Reference/Element/munder)または[上の文字](/ja/docs/Web/MathML/Reference/Element/mover)として使用されたときに、アクセントとして処理されるべきか（つまり、基本式に対して大きく描画され、より近くなるべきか）どうかを示す。

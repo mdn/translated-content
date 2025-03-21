@@ -107,6 +107,6 @@ l10n:
 
 ## 次のステップ
 
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [ウェブのしくみ](/ja/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
 - [ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違いは？](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
 - [ドメイン名とは？](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

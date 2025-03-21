@@ -54,7 +54,7 @@ _変更なし。_
 
 ### JavaScript
 
-- [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global) コンストラクターを、WebAssembly のグローバル変数とともにサポートしました ([Firefox バグ 1464656](https://bugzil.la/1464656))。
+- [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global) コンストラクターを、WebAssembly のグローバル変数とともにサポートしました ([Firefox バグ 1464656](https://bugzil.la/1464656))。
 - {{jsxref("Array.prototype.flat()")}} および {{jsxref("Array.prototype.flatMap()")}} メソッドをデフォルトで有効化しました ([Firefox バグ 1435813](https://bugzil.la/1435813))。
 - コンテキスト固有のメタデータを JavaScript モジュールに公開するための、[`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) プロパティを実装しました ([Firefox バグ 1427610](https://bugzil.la/1427610))。
 - JavaScript の [文字列リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) で、 U+2028 LINE SEPARATOR や U+2029 PARAGRAPH SEPARATOR の文字を直接含めることが可能になりました。この結果、{{jsxref("JSON")}} 構文が JavaScript リテラル構文のサブセットになりました ([Firefox バグ 1435828](https://bugzil.la/1435828) および TC39 提案 [json-superset](https://github.com/tc39/proposal-json-superset))。

@@ -28,16 +28,16 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
 
 [CSS リファレンス](/ja/docs/Web/CSS/Reference)は、経験豊富なウェブ開発者向けの包括的なリファレンスであり、CSS のすべてのプロパティと概念を記述しています。
 
-- [言語の構文と書式](/ja/docs/Web/CSS/Syntax)
-- [詳細度](/ja/docs/Web/CSS/Specificity)と[継承](/ja/docs/Web/CSS/Inheritance)と[カスケード](/ja/docs/Web/CSS/Cascade)
+- [言語の構文と書式](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)と[継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)と[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)、[擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)、[入れ子](/ja/docs/Web/CSS/CSS_nesting)、[スコープ化](/ja/docs/Web/CSS/CSS_scoping)、[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)
-- [CSS アットルール](/ja/docs/Web/CSS/At-rule)（[メディア](/ja/docs/Web/CSS/CSS_media_queries)や[コンテナー](/ja/docs/Web/CSS/CSS_containment)クエリーを含む）
-- [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)および[関数記法](/ja/docs/Web/CSS/CSS_Functions)
+- [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)（[メディア](/ja/docs/Web/CSS/CSS_media_queries)や[コンテナー](/ja/docs/Web/CSS/CSS_containment)クエリーを含む）
+- [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)および[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [包含ブロック](/ja/docs/Web/CSS/Containing_block)
+- [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト
-- [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
-- [CSS 一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+- [CSS 一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)レイアウト
 - [アニメーション](/ja/docs/Web/CSS/animation)、[トランジション](/ja/docs/Web/CSS/CSS_transitions)、[座標変換](/ja/docs/Web/CSS/CSS_transforms)
 

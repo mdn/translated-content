@@ -772,7 +772,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 #### AVIF 準拠の厳格性
 
-`image.avif.compliance_strictness` 環境設定は [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) 画像を処理するときに適用する _厳格性_ を制御するために使うことができます。
+`image.avif.compliance_strictness` 環境設定は [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) 画像を処理するときに適用する _厳格性_ を制御するために使うことができます。
 これにより、 Firefox ユーザーは、他のいくつかのブラウザーでレンダリングされる画像を、たとえ厳密に準拠していなくても表示することができます。
 
 許可される値は以下の通りです。
@@ -819,7 +819,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 #### Android 版 Firefox の AV1 対応
 
-Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Formats/Video_codecs#av1)を利用できるようになります。この機能は、 Android 版 Firefox 81 以降で有効な Nightly ビルドで利用できます。既定では有効になっています。
+Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1)を利用できるようになります。この機能は、 Android 版 Firefox 81 以降で有効な Nightly ビルドで利用できます。既定では有効になっています。
 
 <table>
   <thead>

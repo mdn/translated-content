@@ -19,23 +19,23 @@ l10n:
 
 ## 初心者向けチュートリアル
 
-MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn/Performance)には、パフォーマンスの基礎をカバーする最新のチュートリアルが含まれています。パフォーマンスについての初心者は、ここから始めてください。
+MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_development/Extensions/Performance)には、パフォーマンスの基礎をカバーする最新のチュートリアルが含まれています。パフォーマンスについての初心者は、ここから始めてください。
 
-- [ウェブパフォーマンス: 短い概要](/ja/docs/Learn/Performance/What_is_web_performance)
+- [ウェブパフォーマンス: 短い概要](/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
   - : ウェブパフォーマンスの学習経路の概要です。ここから旅を始めましょう。
-- [ウェブパフォーマンスとは](/ja/docs/Learn/Performance/What_is_web_performance)
+- [ウェブパフォーマンスとは](/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
   - : この記事では、パフォーマンスとは何かをよく理解することからモジュールを始めます。パフォーマンスについて考えるときに考慮すべきツール、指標、API、ネットワーク、人々のグループ、そしてウェブ開発のワークフローの一部としてパフォーマンスを活用する方法などを紹介します。
-- [ユーザーはパフォーマンスをどう知覚するのか](/ja/docs/Learn/Performance/Perceived_performance)
+- [ユーザーはパフォーマンスをどう知覚するのか](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
   - : ウェブサイトの速さをミリ秒単位で示すことよりも重要なのは、ユーザーがサイトの速さをどのように認識しているかということです。これらの認識は、実際のページロード時間、アイドリング、ユーザーインタラクションへの応答性、スクロールやその他のアニメーションのスムーズさに影響されます。この記事では、様々なロードメトリクス、アニメーション、応答性のメトリクスと、実際の時間ではなくてもユーザーの認識を改善するためのベストプラクティスについて説明します。
-- [ウェブパフォーマンスの基本](/ja/docs/Learn/Performance/Web_Performance_Basics)
+- [ウェブパフォーマンスの基本](/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
   - : HTML、CSS、JavaScript、メディアファイルなどのフロントエンド部品に加えて、アプリケーションを遅くする機能と、主観的・客観的にアプリケーションを速くする機能があります。ウェブパフォーマンスに関連する API、開発者ツール、ベストプラクティス、バッドプラクティスは数多くあります。ここでは、これらの機能の多くを基本的なレベルで紹介し、それぞれのトピックについて、パフォーマンスを向上させるためのより深い考察へのリンクを提供します。
-- [HTML のパフォーマンス特性](/ja/docs/Learn/Performance/HTML)
+- [HTML のパフォーマンス特性](/ja/docs/Learn_web_development/Extensions/Performance/HTML)
   - : マークアップの属性やソースの順序によっては、ウェブサイトのパフォーマンスに影響を与えることがあります。 DOM ノードの数を最小限に抑え、スタイル、スクリプト、メディア、サードパーティのスクリプトなどのコンテンツを含むために、最適な順序と属性を使用することで、ユーザーエクスペリエンスを劇的に向上させることができます。この記事では、最大限のパフォーマンスを確保するために HTML をどのように使用すればよいかを詳しく見ていきます。
-- [マルチメディア: 画像と動画](/ja/docs/Learn/Performance/Multimedia)
+- [マルチメディア: 画像と動画](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia)
   - : ウェブパフォーマンスの中で最も身近な位置にあるのは、メディアの最適化です。各ユーザーエージェントの能力、サイズ、ピクセル密度に応じて、異なるメディアファイルを提供することが可能です。また、バックグラウンドのビデオからオーディオトラックを削除するなどのヒントを加えると、さらにパフォーマンスが向上します。この記事では、動画、音声、画像のコンテンツがパフォーマンスに与える影響と、その影響をできるだけ小さくするための方法について説明します。
-- [CSS パフォーマンス特性](/ja/docs/Learn/Performance/CSS)
+- [CSS パフォーマンス特性](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
   - : CSS は、パフォーマンス向上のための最適化の焦点としてはあまり重要ではないかもしれませんが、パフォーマンスに影響を与える CSS の機能はいくつかあります。この記事では、パフォーマンスに影響を与えるいくつかの CSS プロパティと、パフォーマンスに悪影響を与えないためのスタイルの処理方法を提案します。
-- [JavaScript パフォーマンスのベストプラクティス](/ja/docs/Learn/Performance/JavaScript)
+- [JavaScript パフォーマンスのベストプラクティス](/ja/docs/Learn_web_development/Extensions/Performance/JavaScript)
   - : JavaScript は、適切に使用すればインタラクティブで没入感のあるウェブ体験を実現できますが、ダウンロード時間、レンダリング時間、アプリ内のパフォーマンス、バッテリー寿命、ユーザーエクスペリエンスを大きく損なう可能性があります。この記事では、複雑なコンテンツであっても可能な限りパフォーマンスを向上させるために考慮すべき JavaScript のベストプラクティスを紹介します。
 
 ## パフォーマンス API の使用
@@ -116,7 +116,7 @@ HTML
 - [`<source>` 要素](/ja/docs/Web/HTML/Element/source)
 - [`<img> srcset` 属性](/ja/docs/Web/HTML/Element/img#attributes)
 
-  - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
 
 - [`rel="preload"` によるコンテンツの事前読み込み](/ja/docs/Web/HTML/Attributes/rel/preload)
 - <https://w3c.github.io/preload/>

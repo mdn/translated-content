@@ -135,7 +135,7 @@ background-size: contain;
 
 上記の `<img>` 方式と同様に、 CSS 背景画像を使用して SVG を挿入すると、 SVG を JavaScript で操作することができず、同じ CSS の制限が適用されます。
 
-SVG がまったく表示されない場合は、サーバーが正しく設定されていない可能性があります。それが問題なら、[この記事が正しい方向へ導いてくれます](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_Started#a_word_on_web_servers_for_.svgz_files)。
+SVG がまったく表示されない場合は、サーバーが正しく設定されていない可能性があります。それが問題なら、[この記事が正しい方向へ導いてくれます](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_web_servers_for_.svgz_files)。
 
 ### HTML の中に SVG コードを組み込む方法
 
@@ -328,7 +328,7 @@ textarea.onkeyup = function () {
 
 ## 関連情報
 
-- MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_Started)
+- MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
 - [Sara Soueidan のレスポンシブ SVG 画像に関するチュートリアル](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/) (英語)
 - [SVG のアクセシビリティ上の長所](https://www.w3.org/TR/SVG-access/) (英語)
 - [SVG を縮尺変更する方法](https://css-tricks.com/scale-svg/) (ラスターグラフィックほど簡単ではありません！) (英語)

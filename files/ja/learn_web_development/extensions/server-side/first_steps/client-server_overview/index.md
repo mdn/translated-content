@@ -31,7 +31,7 @@ l10n:
 
 ## ウェブサーバーと HTTP （入門）
 
-ウェブブラウザーは[ウェブサーバー](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)と、 [HTTP](/ja/docs/Web/HTTP) (**H**yper**T**ext **T**ransfer **P**rotocol ) を使用して通信します。ウェブページのリンクをクリックしたり、フォームを送信したり、検索を実行したりすると、ブラウザーは *HTTP リクエスト*をサーバーに送信します。
+ウェブブラウザーは[ウェブサーバー](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)と、 [HTTP](/ja/docs/Web/HTTP) (**H**yper**T**ext **T**ransfer **P**rotocol ) を使用して通信します。ウェブページのリンクをクリックしたり、フォームを送信したり、検索を実行したりすると、ブラウザーは *HTTP リクエスト*をサーバーに送信します。
 
 このリクエストに含まれるものは次の通りです。
 
@@ -66,7 +66,7 @@ HTML ページが返されると、ウェブブラウザーによってレンダ
 
 #### リクエスト
 
-リクエストの各行にはそれに関する情報が含まれています。 最初の部分は**ヘッダー**と呼ばれ、[HTML head](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) に HTML 文書に関する有用な情報が含まれるのと同じで、リクエストに関する有用な情報が含まれます（ただし、実際のコンテンツ自体は含まれません）。
+リクエストの各行にはそれに関する情報が含まれています。 最初の部分は**ヘッダー**と呼ばれ、[HTML head](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) に HTML 文書に関する有用な情報が含まれるのと同じで、リクエストに関する有用な情報が含まれます（ただし、実際のコンテンツ自体は含まれません）。
 
 ```http
 GET /ja/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1

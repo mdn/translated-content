@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<calc-sum>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、任意の [CSS 数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)を用いて計算を行う式を表します。この式は、2つの値の間の加算と減算の基本的な算術処理を実行します。
+**`<calc-sum>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、任意の [CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)を用いて計算を行う式を表します。この式は、2つの値の間の加算と減算の基本的な算術処理を実行します。
 
 ## 構文
 

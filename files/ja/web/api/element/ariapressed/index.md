@@ -51,4 +51,4 @@ console.log(el.ariaPressed); // "true"
 
 ## 関連情報
 
-- [ARIA: button ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)
+- [ARIA: button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)

@@ -413,4 +413,4 @@ if (document.prerendering) {
 ## 関連情報
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) (developer.chrome.com, 2023)
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、投機ルールとその他の同様のパフォーマンス改善機能を比較しています。
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、投機ルールとその他の同様のパフォーマンス改善機能を比較しています。

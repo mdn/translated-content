@@ -45,10 +45,12 @@ HTML ファイルにインライン SVG を記述するには、 SVG ファイ�
 特筆すべきは 3 つの属性と 1 つの入れ子要素です。
 
 1. [`viewBox`](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性は、 SVG 画像の座標が相対的である論理座標系を確立します。この場合、画像は 100 x 100 のビューポートに配置されます。
+1. [`viewBox`](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性は、 SVG 画像の座標が相対的である論理座標系を確立します。この場合、画像は 100 x 100 のビューポートに配置されます。
 
 2. [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性は、利用できるサイズで画像を中央に配置し、高さや幅の最大値まで変倍し、はみ出した部分をカットすることで、アスペクト比を保持することを指定します。
+2. [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性は、利用できるサイズで画像を中央に配置し、高さや幅の最大値まで変倍し、はみ出した部分をカットすることで、アスペクト比を保持することを指定します。
 
-3. [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) を記載することで、支援技術が SVG を画像として処理することを保証します。
+3. [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) を記載することで、支援技術が SVG を画像として処理することを保証します。
 
 4. SVG 内の [`<title>`](/ja/docs/Web/SVG/Reference/Element/title) はグラフィックのアクセシビリティのための短いテキストによる説明を提供します。タイトルテキストは描画されませんが、ブラウザーは SVG にポインターを乗せた時にツールチップとして表示することがあります。 `<title>` は `<svg>` 開始タグの後の最初の要素でなければなりません。
 
@@ -58,7 +60,7 @@ SVG が {{HTMLElement('img')}} 要素を介して記述される場合、 `alt` 
 
 画像が短いタイトル以上のことを伝える場合は、 [`<desc>`](/ja/docs/Web/SVG/Reference/Element/desc) 要素で詳しい説明を記載してください。 `<desc>` 要素はアクセシビリティのための長文の説明を提供します。 `<title>` テキストと同様に、 `<desc>` 内のテキストは画面に描画されません。
 
-SVG が可視テキストでラベル付けできる場合、そのテキストを [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性で参照します。あるいは、 `<title>` の [`id`](/ja/docs/Web/SVG/Reference/Attribute/id) に `aria-labelledby` 属性を記述します。
+SVG が可視テキストでラベル付けできる場合、そのテキストを [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性で参照します。あるいは、 `<title>` の [`id`](/ja/docs/Web/SVG/Reference/Attribute/id) に `aria-labelledby` 属性を記述します。
 
 ```html
 <svg viewBox="0 0 100 125" role="img" aria-labelledby="svgTitle svgDescription">
@@ -121,10 +123,10 @@ SVG が可視テキストでラベル付けできる場合、そのテキスト�
 </svg>
 ```
 
-SVG が可視テキストで記述できる場合、そのテキストは [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性で参照することができます。 aria-describedby を使用する場合、 `<desc>` よりも優先されます。
+SVG が可視テキストで記述できる場合、そのテキストは [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性で参照することができます。 aria-describedby を使用する場合、 `<desc>` よりも優先されます。
 
 この例では、 `aria-labelledby` 属性は `aria-describedby` 属性よりも支援技術に対応しているため、説明文とタイトルの両方を記載しています。
 
 ## 関連情報
 
-- [SVG を始めましょう](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_Started)
+- [SVG を始めましょう](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)

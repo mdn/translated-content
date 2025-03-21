@@ -237,8 +237,8 @@ WebXR 互換機器には、モーションと方向の追跡が可能な完全�
 
 ## 関連情報
 
-- [ウェブのグラフィック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [ウェブのグラフィック](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [グラフィックの描画](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/ja/docs/Web/API/WebGL_API): ウェブ上の 2D および 3D グラフィックスの高速化
 - [キャンバス API](/ja/docs/Web/API/Canvas_API): ウェブのための 2D 描画
 - [キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)

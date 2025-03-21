@@ -140,7 +140,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 
 ## ライブリージョン属性を含むロール
 
-次の [`role="…"`](/ja/docs/Web/Accessibility/ARIA/Roles) 値を持つ要素は、既定ではライブリージョンのように振る舞います。
+次の [`role="…"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 値を持つ要素は、既定ではライブリージョンのように振る舞います。
 
 <table style="width: 100%;">
  <thead>
@@ -280,4 +280,4 @@ ARIA ライブプロパティの内訳:
 
 ## 関連情報
 
-- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)

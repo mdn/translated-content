@@ -105,7 +105,7 @@ CSS の {{CSSxRef("outline")}} と {{CSSxRef("outline-offset")}} プロパティ
 
 ## ガイド
 
-- [フォームの学習: フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [フォームの学習: フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
   - : {{CSSxRef("appearance")}} を使用してフォームコントロールをスタイル設定する方法を説明します。
 
 ## 関連概念

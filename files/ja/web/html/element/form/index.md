@@ -215,8 +215,8 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - フォームの作成に使用される、その他の要素: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}
 - フォーム内の要素一覧の取得: {{domxref("HTMLFormElement.elements")}}
-- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Roles/form_role)
-- [ARIA: Search ロール](/ja/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA: Form ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/form_role)
+- [ARIA: Search ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

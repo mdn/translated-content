@@ -19,15 +19,15 @@ XPath は XML 文書の階層構造を辿るために（URL のような）パ�
 
 ## ドキュメント
 
-- [JavaScript からの XPath 利用入門](/ja/docs/Web/XML/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [JavaScript からの XPath 利用入門](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : XSLT 以外で XPath を使用する方法です。
-- [XPath:Axes](/ja/docs/Web/XML/XPath/Axes)
+- [XPath:Axes](/ja/docs/Web/XML/XPath/Reference/Axes)
   - : XPath 仕様で定められている軸 (Axis) の一覧とその定義。軸はノード間の関係性を記述するのに使われます。
-- [XPath:Functions](/ja/docs/Web/XML/XPath/Functions)
+- [XPath:Functions](/ja/docs/Web/XML/XPath/Reference/Functions)
   - : コア XPath 関数及び XSLT 固有の追加 XPath 関数の一覧とその定義。
-- [XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Transforming_XML_with_XSLT)
+- [XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT では変換したい XML 文書内のコードの一部を指し示すのに XPath を使います。
-- [XPath スニペット](/ja/docs/Web/XML/XPath/Snippets)
+- [XPath スニペット](/ja/docs/Web/XML/XPath/Guides/Snippets)
   - : これらは [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) API に基づいて、独自のコードで使用できる JavaScript ユーティリティ関数です。
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/) （英語）
   - : XSLT と XPath の予備知識が無い人を対象に、その背景や構造、概念、初歩的な専門用語を紹介する広範囲な入門ガイド。
@@ -40,4 +40,4 @@ XPath は XML 文書の階層構造を辿るために（URL のような）パ�
 ## 関連事項
 
 - [XSLT](/ja/docs/Web/XML/XSLT), [XML](/ja/docs/Web/XML), [DOM](/ja/docs/Web/API/Document_Object_Model)
-- [CSS セレクターと XPath の比較](/ja/docs/Web/XML/XPath/Comparison_with_CSS_selectors)
+- [CSS セレクターと XPath の比較](/ja/docs/Web/XML/XPath/Guides/Comparison_with_CSS_selectors)

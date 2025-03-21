@@ -31,7 +31,7 @@ MathML は以下の構文を使用します。つまり、基本式に任意の�
 
 ## 属性
 
-この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)の他に以下の属性があります。
+この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他に以下の属性があります。
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、式のベースラインより下に添字を移動させる最小の空間を示します。

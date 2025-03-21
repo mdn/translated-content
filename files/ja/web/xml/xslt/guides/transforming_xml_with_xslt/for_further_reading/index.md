@@ -8,7 +8,7 @@ l10n:
 
 {{XsltSidebar}}
 
-[« XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Transforming_XML_with_XSLT)
+[« XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
 ## 印刷物
 

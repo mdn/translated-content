@@ -330,7 +330,7 @@ elt.addEventListener("click", () => {
 });
 ```
 
-文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Closures)を使う方法も便利です。
+文字列を連結せずにパラメーター化した関数を作成する方法としては、[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を使う方法も便利です。
 
 ### JSON の使用
 

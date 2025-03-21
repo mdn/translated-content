@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
+**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
 
 {{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
 
@@ -72,7 +72,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ### シェイプ関数
 
-以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/Value_definition_syntax)で定義されます。
+以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)で定義されます。
 
 - `{{cssxref("basic-shape/inset","inset()")}}`
 

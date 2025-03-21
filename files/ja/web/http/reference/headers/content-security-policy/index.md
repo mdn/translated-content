@@ -275,7 +275,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### 'wasm-unsafe-eval'
 
-既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、ページは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/compileStreaming_static) などの関数を使用して WebAssembly をコンパイルすることは許可されません。
+既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、ページは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) などの関数を使用して WebAssembly をコンパイルすることは許可されません。
 
 この保護を解除するには、 `wasm-unsafe-eval` キーワードを使用することができます。これは、 JavaScript の一般的な評価を可能にしないため、 `'unsafe-eval'` よりもはるかに安全な代替手段です。
 

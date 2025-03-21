@@ -8,7 +8,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<circle>`** は [SVG](/ja/docs/Web/SVG) の要素で、[SVG 基本図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes)の一つであり、中心座標と半径を指定して円を描画します。
+**`<circle>`** は [SVG](/ja/docs/Web/SVG) の要素で、[SVG 基本図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)の一つであり、中心座標と半径を指定して円を描画します。
 
 ## 例
 

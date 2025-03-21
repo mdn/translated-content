@@ -56,7 +56,7 @@ l10n:
 
   - : 現在の文書の代替表現を示します。 {{htmlelement('link')}}、{{htmlelement('a')}}、{{htmlelement('area')}} で有効であり、意味は他の属性の値に依存します。
 
-    - [`stylesheet`](#stylesheet) キーワードと共に `<link>` で使用された場合は、[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)を生成します。
+    - [`stylesheet`](#stylesheet) キーワードと共に `<link>` で使用された場合は、[代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)を生成します。
 
       ```html
       <!-- 常設スタイルシート -->
@@ -117,7 +117,7 @@ l10n:
 - `canonical`
   - : {{htmlelement('link')}} で有効であり、現在の文書で推奨される URL を示します。検索エンジンが重複するコンテンツをまとめるのに有用です。
 - `dns-prefetch`
-  - : {{htmlelement('link')}} 要素が {{htmlelement('body')}} と {{htmlelement('head')}} の両方の中にある場合に関連し、ターゲットとなるリソースのオリジンに対する DNS 解決を先取りして実行するようブラウザーに指示します。ユーザーが必要とする可能性の高いリソースに有効で、ユーザーがリソースにアクセスする際に、ブラウザーが指定されたリソースのオリジンに対する DNS 解決を先取りして実行するため、待ち時間を短縮してパフォーマンスを向上させることができます。リソースヒントにある [dns-prefetch](/ja/docs/Web/Performance/dns-prefetch) を参照してください。
+  - : {{htmlelement('link')}} 要素が {{htmlelement('body')}} と {{htmlelement('head')}} の両方の中にある場合に関連し、ターゲットとなるリソースのオリジンに対する DNS 解決を先取りして実行するようブラウザーに指示します。ユーザーが必要とする可能性の高いリソースに有効で、ユーザーがリソースにアクセスする際に、ブラウザーが指定されたリソースのオリジンに対する DNS 解決を先取りして実行するため、待ち時間を短縮してパフォーマンスを向上させることができます。リソースヒントにある [dns-prefetch](/ja/docs/Web/Performance/Guides/dns-prefetch) を参照してください。
 - `external`
   - : {{htmlelement('form')}}、{{htmlelement('a')}}、{{htmlelement('area')}} に関連し、参照先の文書が現在のサイトの一部ではないことを示します。属性セレクターと一緒に使うことで、外部リンクを現在のサイトから離れることをユーザーに示すようなスタイルにすることができます。
 - `help`

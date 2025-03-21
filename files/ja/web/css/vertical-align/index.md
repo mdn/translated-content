@@ -97,7 +97,7 @@ vertical-align: unset;
 以下の値は、親要素に対する垂直方向の配置方法を表します。
 
 - `baseline`
-  - : 要素のベースラインを親要素のベースラインに揃えます。一部の[置換要素](/ja/docs/Web/CSS/Replaced_element)、例えば {{HTMLElement("textarea")}} などのベースラインは HTML 仕様で未定義です。このため、このキーワードの挙動はブラウザーにより異なるかもしれません。
+  - : 要素のベースラインを親要素のベースラインに揃えます。一部の[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)、例えば {{HTMLElement("textarea")}} などのベースラインは HTML 仕様で未定義です。このため、このキーワードの挙動はブラウザーにより異なるかもしれません。
 - `sub`
   - : 要素のベースラインを親要素の subscript-baseline に揃えます。
 - `super`

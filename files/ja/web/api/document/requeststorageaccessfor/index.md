@@ -65,7 +65,7 @@ navigator.permissions.query({
 ```
 
 > [!NOTE]
-> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Glossary/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
+> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
 
 ## 例
 

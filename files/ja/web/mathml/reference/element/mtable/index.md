@@ -12,7 +12,7 @@ MathML の `<mtable>` 要素は表や行列を作るのに使えます。`<mtabl
 
 ## 属性
 
-この要素の属性には[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)があります。一部のブラウザーは以下の属性にも対応していることがあります。
+この要素の属性には[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)があります。一部のブラウザーは以下の属性にも対応していることがあります。
 
 - `align` {{Non-standard_Inline}}
 

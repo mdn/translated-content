@@ -292,7 +292,7 @@ l10n:
   gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
-`gradientTransform` 属性を用いてグラデーションを変形させることもできますが、まだ[座標変換の紹介](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Transformations)を行っていないため、後で説明します。
+`gradientTransform` 属性を用いてグラデーションを変形させることもできますが、まだ[座標変換の紹介](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations)を行っていないため、後で説明します。
 
 以上の他に、オブジェクトを包み込むボックスが長方形ではない場合に `gradientUnits="objectBoundingBox"` で値を扱うときの注意事項がありますが、それらはやや複雑であり、またそれの説明に詳しい方が現れるのを待たなければなりません。
 
