@@ -37,7 +37,7 @@ l10n:
 
 一般的に、あるオリジンの文書から、他のオリジンにリクエストを送信することはできません。 これには意味があります。サイト同士が干渉し合ったり、許可されていないデータにアクセスしたりすることを防ぐためです。
 
-しかし、状況によってはこの制限を緩和したい場合もあるでしょう。例えば、相互に操作する複数のウェブサイトがある場合、それらのサイト間で [`fetch()`](/ja/docs/Web/API/Window/fetch) を使用してリソースをリクエストできるようにすることができます。これは、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を使用して許可することができます。 CORS は、 HTTP ヘッダーベースのメカニズムで、ブラウザーがリソースの読み取りを許可すべき、自分自身以外のオリジン（ドメイン、スキーム、ポート）をサーバーが示すことを可能にします。
+しかし、状況によってはこの制限を緩和したい場合もあるでしょう。例えば、相互に操作する複数のウェブサイトがある場合、それらのサイト間で [`fetch()`](/ja/docs/Web/API/Window/fetch) を使用してリソースをリクエストできるようにすることができます。これは、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) を使用して許可することができます。 CORS は、 HTTP ヘッダーベースのメカニズムで、ブラウザーがリソースの読み取りを許可すべき、自分自身以外のオリジン（ドメイン、スキーム、ポート）をサーバーが示すことを可能にします。
 
 ### 通信のための HTTP モデル
 
@@ -51,7 +51,7 @@ l10n:
 
 - [トランスポート層セキュリティ](/ja/docs/Web/Security/Transport_Layer_Security) (TLS)
   - : TLS プロトコルは、ネットワーク上の 2 つのアプリケーションまたは端末が情報を安全に交換するための標準です。 TLS を使用するアプリケーションは、セキュリティパラメーターを選べます。これは、データのセキュリティと信頼性に大きな影響を及ぼす可能性があります。
-- [HTTP Strict-Transport-Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : `Strict-Transport-Security` は [HTTP](/ja/docs/Web/HTTP) のヘッダーで、ウェブサイトが HTTPS のみを使用してアクセスすることを指定します。
 - [証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency)
   - : 証明書の透明性 (CT) は、証明書の誤発行を防止し、監視するための開かれた枠組みです。新たに発行された証明書は、一般に実行されている、多くの場合独立した CT ログに「ログ出力」されます。これらは、発行された TLS 証明書の追記専用で、暗号化により保証された記録を提供します。
@@ -117,7 +117,7 @@ l10n:
 
 ### 使用ポリシーの強制
 
-[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP) (CSP) や[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)などのウェブプラットフォームの機能を使用して、ウェブサイトに一連の機能やリソースの使用ルールを設定し、脆弱性を導入しにくくすることを検討してください。
+[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP) (CSP) や[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)などのウェブプラットフォームの機能を使用して、ウェブサイトに一連の機能やリソースの使用ルールを設定し、脆弱性を導入しにくくすることを検討してください。
 
 CSP を使用すると、例えば、特定の信頼された元から読み込まれた画像やスクリプトのみを許可するなど、セキュリティのレイヤーを追加することができます。これにより、クロスサイトスクリプティング ({{Glossary("Cross-site_scripting", "XSS")}}) やデータインジェクション攻撃など、特定の種類の攻撃を検知し、緩和するのに役立ちます。これらの攻撃には、データ盗難、サイト改ざん、マルウェアの配布など、さまざまな悪意のある活動が含まれます。
 
@@ -134,10 +134,10 @@ CSP を使用すると、例えば、特定の信頼された元から読み込�
 
 - [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)
   - : **サブリソース完全性** (SRI) は、ブラウザーが（例えば、 {{Glossary("CDN")}} から）取得するリソースが予期せぬ操作なしに配信されていることを確認できるセキュリティ機能です。これは、取得するリソースが一致しなければならない暗号ハッシュを指定することでうまくいきます。
-- [HTTP Access-Control-Allow-Origin](/ja/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [HTTP Access-Control-Allow-Origin](/ja/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** レスポンスヘッダーは、このレスポンスが指定された{{glossary("Origin","オリジン")}}からリクエストされたコードに共有できるかどうかを示します。
-- [HTTP X-Content-Type-Options](/ja/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : **`X-Content-Type-Options`** レスポンスヘッダーは、サーバーが使用するマーカーであり、 {{HTTPHeader("Content-Type")}} ヘッダーで指定された [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)を変更すべきではなく、従わなければならないことを示すものです。 このヘッダーは、[MIME タイプスニッフィング](/ja/docs/Web/HTTP/MIME_types#mime_スニッフィング)を拒否する方法、言い換えれば、MIME タイプが意図的に構成されていることを指定する方法です。
+- [HTTP X-Content-Type-Options](/ja/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)
+  - : **`X-Content-Type-Options`** レスポンスヘッダーは、サーバーが使用するマーカーであり、 {{HTTPHeader("Content-Type")}} ヘッダーで指定された [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)を変更すべきではなく、従わなければならないことを示すものです。 このヘッダーは、[MIME タイプスニッフィング](/ja/docs/Web/HTTP/Guides/MIME_types#mime_スニッフィング)を拒否する方法、言い換えれば、MIME タイプが意図的に構成されていることを指定する方法です。
 
 ### 入力のサニタイジング
 

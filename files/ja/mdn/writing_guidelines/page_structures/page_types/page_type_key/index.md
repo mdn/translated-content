@@ -93,12 +93,12 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/HTTP](/ja/docs/Web/HTTP)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `http-csp-directive`: [CSP](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) ディレクティブ。例えば [`script-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) です。
-- `http-cors-error`: [CORS](/ja/docs/Web/HTTP/CORS) エラー。例えば [`CORSDidNotSucceed`](/ja/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed) です。
-- `http-permissions-policy-directive`: [`Permissions-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) ディレクティブ。例えば [`accelerometer`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer) です。
-- `http-header`: [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)。例えば [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) です。
-- `http-method`: [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)。例えば [`GET`](/ja/docs/Web/HTTP/Methods/GET) です。
-- `http-status-code`: [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)。例えば [`404`](/ja/docs/Web/HTTP/Status/404) です。
+- `http-csp-directive`: [CSP](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) ディレクティブ。例えば [`script-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) です。
+- `http-cors-error`: [CORS](/ja/docs/Web/HTTP/Guides/CORS) エラー。例えば [`CORSDidNotSucceed`](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed) です。
+- `http-permissions-policy-directive`: [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) ディレクティブ。例えば [`accelerometer`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer) です。
+- `http-header`: [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)。例えば [`Referer`](/ja/docs/Web/HTTP/Reference/Headers/Referer) です。
+- `http-method`: [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)。例えば [`GET`](/ja/docs/Web/HTTP/Reference/Methods/GET) です。
+- `http-status-code`: [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)。例えば [`404`](/ja/docs/Web/HTTP/Reference/Status/404) です。
 
 ### JavaScript のページ型
 
@@ -125,14 +125,14 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/MathML](/ja/docs/Web/MathML)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `mathml-attribute`: MathML 属性。例えば [`mathcolor`](/ja/docs/Web/MathML/Global_attributes/mathcolor) など。
-- `mathml-element`: HTML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Element/msqrt) など。
+- `mathml-element`: HTML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Reference/Element/msqrt) など。
 
 ### SVG のページ型
 
 この節では、[Web/SVG](/ja/docs/Web/SVG)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `svg-attribute`: SVG 属性。例えば [`crossorigin`](/ja/docs/Web/SVG/Attribute/crossorigin) など。
-- `svg-element`: SVG 要素。例えば [`<circle>`](/ja/docs/Web/SVG/Element/circle) など。
+- `svg-attribute`: SVG 属性。例えば [`crossorigin`](/ja/docs/Web/SVG/Reference/Attribute/crossorigin) など。
+- `svg-element`: SVG 要素。例えば [`<circle>`](/ja/docs/Web/SVG/Reference/Element/circle) など。
 
 ### Web API のページ型
 
@@ -184,28 +184,28 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 ### ウェブマニフェストのページ型
 
-この節では、[Web/Manifest](/ja/docs/Web/Manifest)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/Manifest](/ja/docs/Web/Progressive_web_apps/Manifest)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Manifest/description) など。
+- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Progressive_web_apps/Manifest/description) など。
 
 ### XPath のページ型
 
-この節では、[Web/XPath](/ja/docs/Web/XPath)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/XPath](/ja/docs/Web/XML/XPath)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xpath-function`: 関数。例えば [`ceiling()`](/ja/docs/Web/XPath/Functions/ceiling) など。
+- `xpath-function`: 関数。例えば [`ceiling()`](/ja/docs/Web/XML/XPath/Functions/ceiling) など。
 
 ### XSLT のページ型
 
-この節では、[Web/XSLT](/ja/docs/Web/XSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/XSLT](/ja/docs/Web/XML/XSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xslt-element`: XSLT の要素。例えば [`<xsl:message>`](/ja/docs/Web/XSLT/Element/message) など。
-- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XPath/Axes) など。
+- `xslt-element`: XSLT の要素。例えば [`<xsl:message>`](/ja/docs/Web/XML/XSLT/Element/message) など。
+- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XML/XPath/Axes) など。
 
 ### EXSLT のページ型
 
-この節では、[Web/EXSLT](/ja/docs/Web/EXSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/EXSLT](/ja/docs/Web/XML/EXSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `xslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/EXSLT/exsl/node-set) など。
+- `xslt-function`: EXSLT の関数。例えば [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/exsl/node-set) など。
 
 ### Firefox のページ型
 

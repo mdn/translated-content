@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`205 Reset Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、リクエストが成功し、クライアントに文書ビューをリセットするように指示します。
+HTTP の **`205 Reset Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功し、クライアントに文書ビューをリセットするように指示します。
 
 このレスポンスは、ユーザーがデータ入力に対応しているコンテンツを受信し、リクエストでユーザーが編集したデータを送信し、次の入力のためにコンテンツをリセットする必要がある場合の使用例に対応するためのものです。
 「コンテンツのリセット」という指示は、フォームの内容をクリアすること、キャンバスの状態をリセットすること、または UI をリフレッシュすること、などの意味を表す可能性があり、実装はクライアントに依存します。
@@ -56,10 +56,10 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 ## 互換性のメモ
 
 このレスポンスが永続的な接続上で誤って本文を含んだ場合、ブラウザーの動作はさまざまです。
-詳しくは [`204 No Content` の互換性のメモ](/ja/docs/Web/HTTP/Status/204#互換性のメモ)を参照してください。
+詳しくは [`204 No Content` の互換性のメモ](/ja/docs/Web/HTTP/Reference/Status/204#互換性のメモ)を参照してください。
 
 ## 関連情報
 
 - {{HTTPStatus(204)}} No Content
-- [HTTP リクエストのメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストのメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)

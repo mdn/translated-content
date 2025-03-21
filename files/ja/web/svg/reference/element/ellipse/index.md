@@ -35,19 +35,19 @@ svg {
 
 - {{SVGAttr("cx")}}
   - : 楕円の中心の x 座標。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("cy")}}
   - : 楕円の中心の y 座標。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("rx")}}
   - : 楕円の x 軸の半径。
-    _値の型_: `auto`|[**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; _既定値_: `auto`; _アニメーション_: **可**
+    _値の型_: `auto`|[**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `auto`; _アニメーション_: **可**
 - {{SVGAttr("ry")}}
   - : 楕円の y 軸の半径。
-    _値の型_: `auto`|[**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; _既定値_: `auto`; _アニメーション_: **可**
+    _値の型_: `auto`|[**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: `auto`; _アニメーション_: **可**
 - {{SVGAttr("pathLength")}}
   - : この属性は、使用単位でのパスの全長を指定します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
 
 > [!NOTE]
 > SVG2 以降、`cx`、`cy`、`rx`、`ry` は、ジオメトリー属性であり、これらの属性は要素の CSS プロパティとして使用することもできます。

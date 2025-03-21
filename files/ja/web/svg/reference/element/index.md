@@ -234,8 +234,8 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ## 関連情報
 
-- [SVG 属性リファレンス](/ja/docs/Web/SVG/Attribute)
-- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial)
+- [SVG 属性リファレンス](/ja/docs/Web/SVG/Reference/Attribute)
+- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#svg_dom)
 
 {{SVGRef}}

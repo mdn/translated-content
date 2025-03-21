@@ -154,7 +154,7 @@ l10n:
     > 認識はされているものの、同義語の `copyright` は正しくないため使用しないでください。
 
 - `manifest` {{Experimental_Inline}}
-  - : [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。
+  - : [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)です。オリジンをまたいだ読み取りのための CORS プロトコルの使用に必要です。
 - `modulepreload`
   - : パフォーマンスの向上に役立ちます。文書内の {{htmlelement('link')}} に関連して、 `rel="modulepreload"` を設定すると、ブラウザーはスクリプト (および依存関係) を先取りして取得し、文書のモジュールマップに保存して後で評価するようになります。 `modulepreload` リンクは、モジュールが必ずしも必要になる前に、モジュールマップに準備された (評価されていない) モジュールでネットワークの取得を確実に行うことができます。[`modulepreload`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) も参照してください。
 - `next`
@@ -196,7 +196,7 @@ l10n:
 
   - : {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}} の各要素に関連する `search` キーワードは、ハイパーリンクが、現在の文書、サイト、および関連リソースでの検索のために特別に設計されたインターフェイスを持つ文書を参照していることを示し、検索に使用できるリソースへのリンクを提供します。
 
-    [`type`](/ja/docs/Web/HTML/Element/link#type) 属性が `application/opensearchdescription+xml` に設定されている場合、そのリソースは、Firefox のインターフェイスに簡単に追加できる [OpenSearch](/ja/docs/Web/OpenSearch) プラグインです。
+    [`type`](/ja/docs/Web/HTML/Element/link#type) 属性が `application/opensearchdescription+xml` に設定されている場合、そのリソースは、Firefox のインターフェイスに簡単に追加できる [OpenSearch](/ja/docs/Web/XML/Guides/OpenSearch) プラグインです。
 
 - `stylesheet`
 

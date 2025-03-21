@@ -67,9 +67,9 @@ A' | 0 0 0 1 0 |
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute#core_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#presentation_attributes)
-- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
+- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -199,4 +199,4 @@ A' | 0 0 0 1 0 |
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

@@ -138,7 +138,7 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
 
 ### type 属性
 
-`type` 属性は、 {{HTMLElement("source")}} 要素の `srcset` 属性で与えられるリソース URL の [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)を指定します。ユーザーエージェントが指定されたタイプに対応していない場合、その {{HTMLElement("source")}} 要素はスキップされます。
+`type` 属性は、 {{HTMLElement("source")}} 要素の `srcset` 属性で与えられるリソース URL の [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)を指定します。ユーザーエージェントが指定されたタイプに対応していない場合、その {{HTMLElement("source")}} 要素はスキップされます。
 
 ```html
 <picture>

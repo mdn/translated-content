@@ -57,4 +57,4 @@ if (window.isSecureContext) {
 - [保護されたコンテキストに制限されたプラットフォーム機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — 保護されたコンテキストでのみ使用できる機能のリスト
 - {{domxref("Window.isSecureContext")}} および {{domxref("WorkerGlobalScope.isSecureContext")}}
 - <https://permission.site> — HTTP と HTTPS を使用して、ブラウザーが使用している API のアクセス許可チェックを確認できるサイト。
-- [Strict-Transport-Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP ヘッダー
+- [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP ヘッダー

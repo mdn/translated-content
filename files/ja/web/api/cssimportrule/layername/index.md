@@ -45,5 +45,5 @@ console.log(myRules[2].layerName); // `null` を返す
 
 ## 関連情報
 
-- 学習領域: [カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- 学習領域: [カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - {{cssxref("@import")}} および {{cssxref("@layer")}}

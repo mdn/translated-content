@@ -280,7 +280,7 @@ Content-Type: text/plain
 > [!NOTE]
 > 資格情報を含むリクエストを異なるドメインに行う場合、サードパーティクッキーポリシーも適用されます。このポリシーは、この章で説明しているように、サーバーやクライアントでの設定とは無関係に常に実施されます。
 
-{{domxref("Window/fetch", "fetch()")}} または {{domxref("XMLHttpRequest")}} と CORS の両方によって明らかになる最も興味深い機能は、[HTTP クッキー](/ja/docs/Web/HTTP/Cookies)と HTTP 資格情報によってわかる「資格情報を含む」リクエストを作成することができることです。既定では、オリジン間の `fetch()` または `XMLHttpRequest` の呼び出しにおいて、ブラウザーは資格情報を送信**しません**。
+{{domxref("Window/fetch", "fetch()")}} または {{domxref("XMLHttpRequest")}} と CORS の両方によって明らかになる最も興味深い機能は、[HTTP クッキー](/ja/docs/Web/HTTP/Guides/Cookies)と HTTP 資格情報によってわかる「資格情報を含む」リクエストを作成することができることです。既定では、オリジン間の `fetch()` または `XMLHttpRequest` の呼び出しにおいて、ブラウザーは資格情報を送信**しません**。
 
 `fetch()` リクエストに資格情報を含めるようにするには、[`credentials`](/ja/docs/Web/API/RequestInit#credentials) オプションを `"include"` に設定してください。
 
@@ -365,7 +365,7 @@ CORS のレスポンスに設定されたクッキーは、サードパーティ
 
 リクエスト中のクッキーは、通常のサードパーティクッキーポリシーでも抑制されることがあります。したがって、クッキーポリシーが強制されていると、この章で説明されている機能が無効になり、事実上、認証されたリクエストを行うことができなくなるかもしれません。
 
-[SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性に関するクッキーポリシーは適用されます。
+[SameSite](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性に関するクッキーポリシーは適用されます。
 
 ## HTTP レスポンスヘッダー
 
@@ -492,7 +492,7 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - [CORS の有効化: CORS 対応をサーバーに追加したい](https://enable-cors.org/server.html)（英語）
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - {{domxref("XMLHttpRequest")}}

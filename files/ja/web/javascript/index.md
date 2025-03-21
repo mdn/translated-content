@@ -32,7 +32,7 @@ JavaScript 仕様と関連技術に関する詳細は、 [JavaScript 技術概�
 
 JavaScript について学びたいと思っているが、JavaScript あるいはプログラミングについて過去に経験がないのであれば、 [JavaScript 学習エリアのトピック](/ja/docs/Learn/JavaScript)に向かいましょう。以下のモジュールが利用可能です。
 
-- [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)
+- [JavaScript の第一歩](/ja/docs/Learn_web_development/Core/Scripting)
   - : 変数、文字列、数値、配列のような JavaScript の基本機能の解説に加え、「JavaScript とは何か」「何に似ているか」「何ができるか」といった基本的な質問に答えます。
 - [JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)
   - : 引き続き JavaScript の基本機能について、条件分岐、ループ、関数、イベントなどのよく目にするタイプのコードブロックに注意を向けつつ説明します。

@@ -1,7 +1,7 @@
 ---
 title: CSP のエラーと警告 (Content Security Policy)
 slug: Web/HTTP/Guides/CSP/Errors
-original_slug: Web/HTTP/CSP/Errors
+original_slug: Web/HTTP/Guides/CSP/Errors
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
@@ -10,7 +10,7 @@ l10n:
 
 このページは CSP のエラーと警告に関する記事を参照する親となり、概要を示したり、可能であれば問題解決の一般的な助言をしたりします。
 
-- [The page's settings blocked the loading of a resource: %1$S](/ja/docs/Web/HTTP/CSP/Errors/CSPViolation)
+- [The page's settings blocked the loading of a resource: %1$S](/ja/docs/Web/HTTP/Guides/CSP/Errors/CSPViolation)
 - The page's settings blocked the loading of a resource at %2$S ("%1$S").
 - A violation occurred for a report-only CSP policy ("%1$S"). The behavior was allowed, and a CSP report was sent.
 - The page's settings observed the loading of a resource at %2$S ("%1$S"). A CSP report is being sent.
@@ -34,7 +34,7 @@ l10n:
 - Ignoring srcs for directive '%1$S'
 - Interpreting %1$S as a hostname, not a keyword. If you intended this to be a keyword, use '%2$S' (wrapped in single quotes).
 - Not supporting directive '%1$S'. Directive and values will be ignored.
-- Blocking insecure request '%1$S'.(/en-US/docs/Web/HTTP/CSP/Errors/blockAllMixedContent)
+- Blocking insecure request '%1$S'.(/en-US/docs/Web/HTTP/Guides/CSP/Errors/blockAllMixedContent)
 - Ignoring '%1$S' since it does not contain any parameters.
 - Ignoring sandbox directive when delivered in a report-only policy '%1$S'
 - Referrer Directive '%1$S' has been deprecated. Please use the Referrer-Policy header instead.

@@ -254,7 +254,7 @@ body {
 - [コメント](/ja/docs/Web/CSS/Comments)
 - [詳細度](/ja/docs/Web/CSS/Specificity)
 - [継承](/ja/docs/Web/CSS/Inheritance)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)

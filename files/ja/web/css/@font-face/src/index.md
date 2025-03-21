@@ -118,7 +118,7 @@ src: url(fonts.svg#WhichFont);
 
 > [!NOTE]
 >
-> - `format(svg)` は [SVG フォント](/ja/docs/Web/SVG/Tutorial/SVG_fonts)を表し、 `tech(color-SVG)` は [SVG 表を持つ OpenType フォント](https://learn.microsoft.com/typography/opentype/spec/svg)（OpenType-SVG 色フォントとも呼ばれる）を表し、これらは完全に異なります。
+> - `format(svg)` は [SVG フォント](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_fonts)を表し、 `tech(color-SVG)` は [SVG 表を持つ OpenType フォント](https://learn.microsoft.com/typography/opentype/spec/svg)（OpenType-SVG 色フォントとも呼ばれる）を表し、これらは完全に異なります。
 > - `opentype` 値 と `truetype` 値は、フォントファイルが 3 次ベジェ曲線（CFF/CFF2 表内）を用いているか、 2 次ベジェ曲線（字体テーブル内）を用いているかにかかわらず等価です。
 
 古い正規化されていない `format()` の値には、次のような構文があります。後方互換性のために引用符で囲まれた文字列として指定されます。

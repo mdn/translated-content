@@ -103,13 +103,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
@@ -126,7 +126,7 @@ svg {
   </tbody>
 </table>
 
-オフセットは通常 {{SVGAttr('pathLength')}} に対して解決されたユーザー単位で表現されますが、 [\<percentage>](/ja/docs/Web/SVG/Content_type#percentage) が使用された場合、値は現在のビューポートに対するパーセント値として解決されます。
+オフセットは通常 {{SVGAttr('pathLength')}} に対して解決されたユーザー単位で表現されますが、 [\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage) が使用された場合、値は現在のビューポートに対するパーセント値として解決されます。
 
 ## 仕様書
 

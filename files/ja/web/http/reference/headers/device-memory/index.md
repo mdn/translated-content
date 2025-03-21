@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Device-Memory
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-**`Device-Memory`** ヘッダーは、[クライアントヒント](/ja/docs/Web/HTTP/Client_hints)のヘッダーのように機能する [Device Memory API](/ja/docs/Web/API/Device_Memory_API) のヘッダーで、クライアントデバイスの RAM の概算量を表します。
+**`Device-Memory`** ヘッダーは、[クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)のヘッダーのように機能する [Device Memory API](/ja/docs/Web/API/Device_Memory_API) のヘッダーで、クライアントデバイスの RAM の概算量を表します。
 
 <table class="properties">
   <tbody>

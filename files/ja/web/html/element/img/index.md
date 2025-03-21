@@ -31,7 +31,7 @@ l10n:
 
 他にも、様々な目的で指定できる属性がたくさんあります。
 
-- セキュリティとプライバシーのための[リファラー](/ja/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 制御。 [`crossorigin`](#crossorigin) および [`referrerpolicy`](#referrerpolicy) を参照してください。
+- セキュリティとプライバシーのための[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 制御。 [`crossorigin`](#crossorigin) および [`referrerpolicy`](#referrerpolicy) を参照してください。
 - [`width`](#width) と [`height`](#height) の両方を使用して画像の固有の寸法を設定すると、画像を読み込む前に場所を確保し、コンテンツのレイアウトが移動することを防ぐことができます。
 - [`sizes`](#sizes) および [`srcset`](#srcset) を使用したレスポンシブ画像のヒント ({{htmlelement("picture")}} 要素と[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)のチュートリアルもご覧ください)。
 
@@ -334,7 +334,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ### title 属性
 
-[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
+[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
 
 `title` 属性は、画像の `alt` の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 [`figure`](/ja/docs/Web/HTML/Element/figure) および [`figcaption`](/ja/docs/Web/HTML/Element/figcaption) 要素と組み合わせて使用してください。
 

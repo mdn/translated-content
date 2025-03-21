@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの[マニフェスト](/ja/docs/Web/Manifest)がリソースに適用されるかを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの[マニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)がリソースに適用されるかを指定します。
 
 <table class="properties">
   <tbody>
@@ -40,9 +40,9 @@ Content-Security-Policy: manifest-src <source> <source>;
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 
@@ -71,5 +71,5 @@ Content-Security-Policy: manifest-src https://example.com/
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)
 - {{HTMLElement("link")}}

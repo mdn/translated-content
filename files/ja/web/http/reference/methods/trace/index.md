@@ -55,4 +55,4 @@ TRACE /index.html
 
 ## 関連情報
 
-- [HTTP メソッド](/ja/docs/Web/HTTP/Methods)
+- [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)

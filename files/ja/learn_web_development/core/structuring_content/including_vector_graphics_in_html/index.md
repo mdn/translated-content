@@ -135,7 +135,7 @@ background-size: contain;
 
 上記の `<img>` 方式と同様に、 CSS 背景画像を使用して SVG を挿入すると、 SVG を JavaScript で操作することができず、同じ CSS の制限が適用されます。
 
-SVG がまったく表示されない場合は、サーバーが正しく設定されていない可能性があります。それが問題なら、[この記事が正しい方向へ導いてくれます](/ja/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_web_servers_for_.svgz_files)。
+SVG がまったく表示されない場合は、サーバーが正しく設定されていない可能性があります。それが問題なら、[この記事が正しい方向へ導いてくれます](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_Started#a_word_on_web_servers_for_.svgz_files)。
 
 ### HTML の中に SVG コードを組み込む方法
 
@@ -150,7 +150,7 @@ SVG がまったく表示されない場合は、サーバーが正しく設定�
 #### 長所
 
 - SVG をインラインで配置すると、 HTTP リクエストが節約されるので、読み込み時間が少し短縮されます。
-- `class` と `id` を SVG 要素に割り当て、 SVG 内または HTML 文書の CSS スタイル規則を置く場所で、CSS でスタイルを設定することができます。 実際には、任意の [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#プレゼンテーション属性)を CSS プロパティとして使用できます。
+- `class` と `id` を SVG 要素に割り当て、 SVG 内または HTML 文書の CSS スタイル規則を置く場所で、CSS でスタイルを設定することができます。 実際には、任意の [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#プレゼンテーション属性)を CSS プロパティとして使用できます。
 - SVG のインライン化は、CSS の相互作用（`:focus` など）と CSS アニメーションを（通常のスタイルシートでも） SVG 画像に使用できる唯一のアプローチです。
 - SVG マークアップを {{htmlelement("a")}} 要素で囲むことでハイパーリンクにすることができます。
 
@@ -182,7 +182,7 @@ SVG 画像は、ウェブページのようにブラウザーで開くことが�
 
 ## アクティブラーニング: SVG で遊ぶ
 
-このアクティブラーニングの節では、 SVG をとても楽しく遊ぶことができます。 下の入力セクションでは、始めるためのサンプルをすでに提供していることがわかります。 また、[SVG 要素のリファレンス](/ja/docs/Web/SVG/Element)にアクセスして、SVG で使用できる他のおもちゃの詳細を調べて、それらを試してみることもできます。 このセクションでは、あなたの研究スキルを鍛え、楽しく学びましょう。
+このアクティブラーニングの節では、 SVG をとても楽しく遊ぶことができます。 下の入力セクションでは、始めるためのサンプルをすでに提供していることがわかります。 また、[SVG 要素のリファレンス](/ja/docs/Web/SVG/Reference/Element)にアクセスして、SVG で使用できる他のおもちゃの詳細を調べて、それらを試してみることもできます。 このセクションでは、あなたの研究スキルを鍛え、楽しく学びましょう。
 
 コードが機能しなくなった場合は、 \[リセット] ボタンを使用していつでもリセットすることができます。
 
@@ -328,7 +328,7 @@ textarea.onkeyup = function () {
 
 ## 関連情報
 
-- MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial/Getting_Started)
+- MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_Started)
 - [Sara Soueidan のレスポンシブ SVG 画像に関するチュートリアル](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/) (英語)
 - [SVG のアクセシビリティ上の長所](https://www.w3.org/TR/SVG-access/) (英語)
 - [SVG を縮尺変更する方法](https://css-tricks.com/scale-svg/) (ラスターグラフィックほど簡単ではありません！) (英語)

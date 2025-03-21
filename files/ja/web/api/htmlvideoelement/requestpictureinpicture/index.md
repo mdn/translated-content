@@ -31,7 +31,7 @@ requestPictureInPicture()
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Tこの機能に対応してない場合（ユーザー設定で無効になっている場合や、プラットフォームの制限により無効になっている場合など）に発生します。
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされた場合。
+  - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされた場合。
 - `InvalidStateError` {{domxref("DOMException")}}
   - : video 要素の `readState` が `HAVE_NOTHING` の場合、video 要素に動画トラックが存在しない場合、または video 要素の `disablePictureInPicture` 属性が `true` の場合に発生します。
 - `NotAllowedError` {{domxref("DOMException")}}

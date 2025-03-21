@@ -137,4 +137,4 @@ p {
 - {{CSSxRef("calc()")}}
 - {{CSSxRef("max()")}}
 - {{CSSxRef("min()")}}
-- [CSS 値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

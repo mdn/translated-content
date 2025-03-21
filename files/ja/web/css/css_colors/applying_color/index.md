@@ -71,12 +71,12 @@ l10n:
 
 - {{cssxref("outline-color")}}
 
-  - : 要素の外側に輪郭を描画する際に使用する色です。この輪郭は、文書内の補助的な空間を確保しないという点で、ボーダーとは異なります。輪郭は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)には参加せず、他のコンテンツと重複します。輪郭は一般的にフォーカスインジケーターとして使用され、現在どの要素がフォーカスを持っており、キーボード入力イベントを受信するかを示します。
+  - : 要素の外側に輪郭を描画する際に使用する色です。この輪郭は、文書内の補助的な空間を確保しないという点で、ボーダーとは異なります。輪郭は[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)には参加せず、他のコンテンツと重複します。輪郭は一般的にフォーカスインジケーターとして使用され、現在どの要素がフォーカスを持っており、キーボード入力イベントを受信するかを示します。
 
 ### 境界線
 
-あらゆる要素で、周囲に[境界線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
-基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル設定](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) を参照してください。
+あらゆる要素で、周囲に[境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
+基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) を参照してください。
 
 {{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/border-width)、[線種](/ja/docs/Web/CSS/border-style)（実線、破線など) などの特性も含んだ）すべての設定をこれ一つで行えます。
 

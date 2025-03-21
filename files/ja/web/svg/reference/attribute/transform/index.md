@@ -57,7 +57,7 @@ SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('c
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#transform-list"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#transform-list"
             ><code>&#x3C;transform-list></code></a
           ></strong
         >

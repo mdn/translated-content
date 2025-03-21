@@ -1,7 +1,7 @@
 ---
 title: HTTP キャッシュ
 slug: Web/HTTP/Guides/Caching
-original_slug: Web/HTTP/Caching
+original_slug: Web/HTTP/Guides/Caching
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---

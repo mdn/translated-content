@@ -73,7 +73,7 @@ opacity: unset;
 
 `opacity` の値は子要素に継承されませんが、要素のコンテンツを含む全体に適用されます。すなわち、ある要素とその子の不透明度が互いに異なっていたとしても、その要素の背景に対してはすべて同じ不透明度になります。
 
-このプロパティを `1` 以外の値で用いると、その要素は新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を作ります。
+このプロパティを `1` 以外の値で用いると、その要素は新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作ります。
 
 背景の不透明度のみを変更したい場合は、{{cssxref("background")}} プロパティでアルファチャネルを使用できる{{cssxref("color_value", "色の値")}}を使用してください。
 

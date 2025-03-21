@@ -99,7 +99,7 @@ height: unset;
   - : 利用可能な空間に対して fit-content 式を使用し、指定された引数に置き換えられます。すなわち `min(max-content, max(min-content, <length-percentage>))` です。
 - `stretch`
 
-  - : 要素の[マージンボックス](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスの構成)の高さを、[包含ブロック](/ja/docs/Web/CSS/Containing_block#包含ブロックの識別)の高さに設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 100% と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
+  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の高さを、[包含ブロック](/ja/docs/Web/CSS/Containing_block#包含ブロックの識別)の高さに設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 100% と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
 
     > [!NOTE]
     > ブラウザーが `stretch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。

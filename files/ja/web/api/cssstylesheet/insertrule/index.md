@@ -24,7 +24,7 @@ insertRule(rule, index)
 
   - : 挿入されるルールが入った文字列です。どのようなルールを挿入するかは、種類によります。
 
-    - **[ルールセット](/ja/docs/Web/CSS/Syntax#css_の文)** の場合、[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)とスタイル定義です。
+    - **[ルールセット](/ja/docs/Web/CSS/Syntax#css_の文)** の場合、[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)とスタイル定義です。
     - **[アットルール](/ja/docs/Web/CSS/At-rule)** の場合、アットマーク付き識別子とルールの内容です。
 
 - `index` {{optional_inline}}

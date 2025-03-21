@@ -12,7 +12,7 @@ l10n:
 LCP を決定する要素の例として、以下が挙げられます。
 
 - {{HTMLElement("img")}} 要素
-- SVG 内の [`<image>`](/ja/docs/Web/SVG/Element/image) 要素
+- SVG 内の [`<image>`](/ja/docs/Web/SVG/Reference/Element/image) 要素
 - {{HTMLElement("video")}} 要素のポスター画像
 - {{cssxref("background-image")}} が設定された要素
 - {{HTMLElement("p")}} などのテキストノードのまとまり

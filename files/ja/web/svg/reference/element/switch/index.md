@@ -18,10 +18,10 @@ original_slug: Web/SVG/Element/switch
 
 ### グローバル属性
 
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [コア属性](/ja/docs/Web/SVG/Attribute#core_attributes)
-- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#presentation_attributes)
+- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#graphical_event_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

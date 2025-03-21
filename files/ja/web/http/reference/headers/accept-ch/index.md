@@ -44,7 +44,7 @@ Vary: DPR, Viewport-Width, Width
 ```
 
 > [!NOTE]
-> 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/Web/HTTP/Client_hints#varying_client_hints)することを忘れないでください。
+> 受け入れられたクライアントのヒントに基づいて、[レスポンスを変更](/ja/docs/Web/HTTP/Guides/Client_hints#varying_client_hints)することを忘れないでください。
 
 ## ブラウザーの互換性
 

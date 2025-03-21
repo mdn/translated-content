@@ -133,7 +133,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 ## セキュリティ
 
-- [CSP](/ja/docs/Web/HTTP/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 1089255](https://bugzil.la/1089255))。
+- [CSP](/ja/docs/Web/HTTP/Guides/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 1089255](https://bugzil.la/1089255))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

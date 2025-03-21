@@ -108,13 +108,13 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### ネットワーク機能
 
-- [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/CORS)
+- [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/Guides/CORS)
   - : Firefox 3.5 では、サーバーがサポートする場合に、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) によるものも含む HTTP リクエストでドメインを超える動作が可能になりました。
 - [`XMLHttpRequest` のための Progress イベント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
   - : Progress イベントが拡張がリクエストの進捗を監視できるようにするために提供されるようになりました。
 - 同期 `XMLHttpRequest`サポートの改善
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) と [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) が同期 `XMLHttpRequest中に抑制されるようになりました。`
-- [DNS プリフェッチの制御](/ja/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
+- [DNS プリフェッチの制御](/ja/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)
   - : Firefox 3.5 では DNS プリフェッチが提供され、それにより現在のページに含まれるリンクのドメイン名解決が事前に行われ、リンクが実際にクリックされたときの時間を節約しま す。この記事ではウェブサイト側でプリフェッチを無効にする、もしくは、プリフェッチの動作を調整する方法について説明しています。
 
 #### 新しい Canvas の機能
@@ -130,7 +130,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しい SVG の機能
 
-- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : SVG 効果を HTML および XHTML の内容に適用できるようになりました。この記事はその方法について説明しています。
 
 #### その他の新機能

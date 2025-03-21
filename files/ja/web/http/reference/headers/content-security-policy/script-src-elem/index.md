@@ -11,7 +11,7 @@ l10n:
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src-elem`** ディレクティブは、 JavaScript の {{HTMLElement("script")}} 要素の有効なソースを指定します。
 
 このディレクティブは `<script>` 要素（スクリプトリクエストとブロックの両方）の中で有効なソースのみを指定します。
-インラインスクリプトイベントハンドラー (`onclick`) や ["unsafe-eval" チェックでゲートされた](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#安全ではない_eval_式)スクリプト実行メソッド、[XSLT スタイルシート](/ja/docs/Web/XSLT)など、スクリプトの実行のきっかけとなるような他の JavaScript ソースには適用されません。
+インラインスクリプトイベントハンドラー (`onclick`) や ["unsafe-eval" チェックでゲートされた](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#安全ではない_eval_式)スクリプト実行メソッド、[XSLT スタイルシート](/ja/docs/Web/XML/XSLT)など、スクリプトの実行のきっかけとなるような他の JavaScript ソースには適用されません。
 （有効なソースは、script-src を使用してすべての JavaScript スクリプトソースに指定することも、script-src-attr を使用してインラインスクリプトハンドラーにのみ指定することも可能です。）
 
 <table class="properties">
@@ -52,9 +52,9 @@ Content-Security-Policy: script-src-elem <source>;
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`402 Payment Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、将来使用するために予約されている**標準外**のレスポンスコードです。
+HTTP の **`402 Payment Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、将来使用するために予約されている**標準外**のレスポンスコードです。
 
 このステータスコードは、デジタルキャッシュや（マイクロ）決済システムを可能にするために作成されたもので、クライアントが決済を行うまでリクエストされたコンテンツが利用できないことを示します。
 標準的な使用法の規約は存在せず、様々なシステムが様々なコンテキストで使用しています。
@@ -83,5 +83,5 @@ Content-Length: 175
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
-- [HTTP 認証](/ja/docs/Web/HTTP/Authentication)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)

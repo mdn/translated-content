@@ -17,7 +17,7 @@ l10n:
 
 - `display` が `none` に設定された {{SVGElement("tspan")}} または {{SVGElement("tref")}} 要素では、テキスト文字列はテキストレイアウトの目的では無視されます。
 - イベントに関しては、 `display` が `none` に設定された場合、その要素はイベントを受け取らなくなります。
-- [グラフィック要素](/ja/docs/Web/SVG/Element#graphics_elements)の `display` を `none` に設定したときの形状は、境界ボックスやクリッピングパスの計算には含まれません。
+- [グラフィック要素](/ja/docs/Web/SVG/Reference/Element#graphics_elements)の `display` を `none` に設定したときの形状は、境界ボックスやクリッピングパスの計算には含まれません。
 
 `display` 属性は指定された要素の直接レンダリングにのみ影響し、他の要素から参照されることを防ぐことはできません。例えば、 {{SVGElement("path")}} 要素に `none` を設定すると、その要素がキャンバスで直接レンダリングされるのを防ぐことができますが、 {{SVGElement("path")}} 要素は引き続き {{SVGElement("textPath")}} 要素から参照することができます。さらに、 {{SVGElement("path")}} に `display` 属性の値として `none` が設定されていても、その形状はパス上のテキスト処理で使用することができます。
 

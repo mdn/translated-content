@@ -119,7 +119,7 @@ p {
 }
 ```
 
-この例では、各ブロックの最後の宣言 — `display: flex;` と `border-radius: 50%;` — は、すべてのブラウザーで有効です。[カスケード](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#ソース順)には[出現順](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)ルールがあるため、ブラウザーは理解できる接頭辞の宣言を適用し、それらの値を標準の接頭辞なしバージョンで上書きします。
+この例では、各ブロックの最後の宣言 — `display: flex;` と `border-radius: 50%;` — は、すべてのブラウザーで有効です。[カスケード](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#ソース順)には[出現順](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)ルールがあるため、ブラウザーは理解できる接頭辞の宣言を適用し、それらの値を標準の接頭辞なしバージョンで上書きします。
 
 > [!NOTE]
 > 接頭辞の付いたプロパティやプロパティ値を含めることは、可能な限り避けてください。どうしても使用する必要がある場合は、接頭辞付きバージョンを接頭辞なしバージョンの前に宣言してください。

@@ -63,7 +63,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#paint"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#paint"
             >&#x3C;paint></a
           ></strong
         >

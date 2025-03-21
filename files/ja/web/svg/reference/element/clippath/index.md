@@ -75,13 +75,13 @@ svg {
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : 最重要なもの: {{SVGAttr('id')}}
-- [スタイル付け属性](/ja/docs/Web/SVG/Attribute)
+- [スタイル付け属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Attribute)
+- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 
 ## 利用メモ

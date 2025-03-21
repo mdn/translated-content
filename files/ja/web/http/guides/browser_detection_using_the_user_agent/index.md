@@ -1,7 +1,7 @@
 ---
 title: ユーザーエージェント文字列を用いたブラウザーの判定
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/Browser_detection_using_the_user_agent
+original_slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 l10n:
   sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
 ---
@@ -280,5 +280,5 @@ addEventListener("resize", () =>
 ## 関連情報
 
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- [HTTP クライアントヒント](/ja/docs/Web/HTTP/Client_hints)
+- [HTTP クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)
 - [機能検出の実装](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)
