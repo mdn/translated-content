@@ -34,7 +34,7 @@ l10n:
 
 ### API
 
-- Chromium ブラウザーの制限に合わせて、[Data URL](/ja/docs/Web/URI/Schemes/data) のサイズの上限を 32MB から 512MB に拡張しました ([Firefox bug 1911300](https://bugzil.la/1911300))。
+- Chromium ブラウザーの制限に合わせて、[Data URL](/ja/docs/Web/URI/Reference/Schemes/data) のサイズの上限を 32MB から 512MB に拡張しました ([Firefox bug 1911300](https://bugzil.la/1911300))。
 - [Cookie Store API](/ja/docs/Web/API/Cookie_Store_API) は新しい {{glossary("asynchronous, "非同期")}} な {{jsxref("Promise")}} ベースの Cookie 管理方法で、メインスレッドと [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) の両方で使用できます。
   Cookie Store API のサブセットを実装しました ([Firefox bug 1937477](https://bugzil.la/1937477))。以下のプロパティが含まれます:
 

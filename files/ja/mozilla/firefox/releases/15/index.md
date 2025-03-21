@@ -57,7 +57,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 - 数学演算記号で {{cssxref("@font-face")}} で指定したダウンローダブルフォントを利用できるようになりました。これにより、[MathML-fonts アドオン](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) で引き伸ばされた演算記号が正常に表示されるようになります。
 - {{MathMLElement("maction")}} の `selection` 属性が `actiontype` 属性の値が `toggle` のときにのみ考慮されるようになりました。
 - [非推奨の名前付き空白バインディング](https://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) が削除されました（[Firefox バグ 673759](https://bugzil.la/673759)）。
-- [Length](/ja/docs/Web/MathML/Values) と {{MathMLElement("mpadded")}} の値でサポートされる構文が MathML3 仕様で指定されたものにより近くなりました。
+- [Length](/ja/docs/Web/MathML/Reference/Values) と {{MathMLElement("mpadded")}} の値でサポートされる構文が MathML3 仕様で指定されたものにより近くなりました。
 - New MathML mirrorable operators for Arabic math have been added to the operator dictionary ([Firefox バグ 757125](https://bugzil.la/757125)).
 
 ### SVG

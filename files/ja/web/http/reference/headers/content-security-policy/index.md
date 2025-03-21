@@ -246,7 +246,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### \<scheme-source>
 
-[スキーム](/ja/docs/Web/URI/Schemes) （`https:` など）です。コロンは必須です。
+[スキーム](/ja/docs/Web/URI/Reference/Schemes) （`https:` など）です。コロンは必須です。
 
 安全なアップグレードが許可されています。
 

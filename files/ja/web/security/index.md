@@ -1,9 +1,31 @@
 ---
-title: ウェブセキュリティ
+title: ウェブのセキュリティ
 slug: Web/Security
+l10n:
+  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
 
-ウェブサイトや公開ウェブアプリケーションが安全であることを保証するのは重要なことです。コードの中の単純なバグが、個人情報の漏洩という結果を招くことがありますし、データを盗む方法を見つけようとしている悪い輩があちこちにいます。以下に紹介するセキュリティ方面の記事では、コードの安全性を確保する際に助けとなる情報を提供しています。
+ウェブサイトには、さまざまな種類の異なる情報が含まれています。中には、例えば一般公開ページに表示させるコピーのように、機密性の低い情報もあります。また、例えば顧客のユーザー名やパスワード、銀行情報、あるいは内部アルゴリズムや非公開の製品情報など、機密性の高い情報もあります。
+
+機密情報は保護する必要があり、それがウェブセキュリティの焦点となっています。その情報が悪用された場合、以下のようなことに使用されている可能性があります。
+
+- 競合他社に情報を漏洩することで、企業を競争上不利な立場に置きます。
+- 彼らのサービスワーカースクリプトを無効にしたり乗っ取ったりして、彼らの運営にも深刻な問題を引き起こします。
+- 顧客の[プライバシー](/ja/docs/Web/Privacy)を危険にさらし、プロファイリング、対象とする、データの損失、個人情報の盗難、さらには金銭的な損失のリスクにさらすことになります。
+
+現行のブラウザーはすでにウェブ上のユーザーのセキュリティを保護するいくつかの機能を備えていますが、開発者も最善の手法を使用し、コードを慎重に記述して、ウェブサイトが安全であることを確保する必要があります。 コードに単純なバグがあるだけでも、悪意のあるユーザーがデータを盗んだり、サービスを不正に制御したりするために悪用できる脆弱性が生じる可能性があります。
+
+この記事では、ウェブセキュリティの概要を説明し、ウェブサイトの脆弱性を理解するのに役立つ概念的な情報や、ウェブサイトを保護する方法についての実践的なガイドを提供します。
+
+## セキュリティとプライバシーの関係
+
+セキュリティとプライバシーは、それぞれ独立したトピックですが、密接に関連しています。この 2 つの違いと関連性を理解しておくことは価値があります。
+
+- **セキュリティ**とは、許可されていないアクセスから機密データやシステムを保護する行為です。これには、社内（内部）データとユーザーおよびパートナー（外部）データのどちらも含まれます。
+
+- **プライバシー**とは、ユーザーが自身のデータの収集、保存、利用方法について制御できることを指し、同時に、無責任な利用が行われないよう保証する意味します。例えば、ユーザーに対して、どのようなデータを収集しているか、そのデータが共有される相手は誰か、どのように利用されるかなどを知らせる必要があります。ユーザーには、プライバシーポリシーに同意する機会が与えられ、自身のデータにアクセスし、必要に応じて削除できる必要があります。
+
+良いセキュリティは、良いプライバシーにとって不可欠です。[ウェブ上のプライバシー](/ja/docs/Web/Privacy)に関するガイドに掲載されているすべてのアドバイスに従うことはできますが、サイトが安全でなく、攻撃者がデータを盗むことができるのであれば、誠実に行動し、堅牢なプライバシーポリシーを持っていてもまったく無意味です。
 
 ## ブラウザーが提供するセキュリティ機能
 
@@ -34,13 +56,7 @@ slug: Web/Security
 - [証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency)
   - : 証明書の透明性 (CT) は、証明書の誤発行を防止し、監視するための開かれた枠組みです。新たに発行された証明書は、一般に実行されている、多くの場合独立した CT ログに「ログ出力」されます。これらは、発行された TLS 証明書の追記専用で、暗号化により保証された記録を提供します。
 - [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)
-  - : HTTPS のページの中に通常の平文の HTTP で送られてくるコンテンツが含まれている場合、**混在コンテンツ**と呼ばれます。このようなページは部分的にしか暗号化されておらず、盗聴者や中間者攻撃者が暗号化されていないコンテンツにアクセスできてしまいます。
-- [混在コンテンツでブロックされるウェブサイトを修正するには](/ja/docs/Web/Security/Mixed_content#developer_console)
-  - : ウェブサイトを HTTPS で配信している場合、ページ上にある [能動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_active_content)はすべて既定でブロックされます。結果として、ユーザーからはそのウェブサイトが壊れているように見えるかもしれません (iframe やプラグインが読み込まれないなど)。一方、[受動的な混在コンテンツ](/ja/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)は既定で表示されますが、このようなコンテンツをブロックするようにユーザーが設定することも可能です。このページでは、ウェブ開発者として知っておくべきことを説明します。
-- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-  - : **保護されたコンテキスト (Secure Context)** とは、(HTTPS/TLS を介して) コンテンツが安全に配信され、安全**ではない**コンテキストとの通信の可能性が限られているという合理的な確信がある `Window`、または `Worker` のことです。多くの Web API が保護されたコンテキストでのみ利用可能です。保護されたコンテキストの主目的は、[中間者攻撃者](https://ja.wikipedia.org/wiki/中間者攻撃)が被害者に更なる危険にさらす可能性がある強力な API にアクセスするのを防ぐことにあります。
-- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-  - : このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です。
+  - : HTTPS ページが[平文](/ja/docs/Glossary/Plaintext)の HTTP を使用して取得したコンテンツを含んだ場合、**混在コンテンツ**ページと呼ばれます。このようなページは部分的にしか暗号化されないため、暗号化されていないコンテンツはスニッファーや中間者攻撃者にアクセス可能な状態となります。
 - [脆弱な署名アルゴリズム](/ja/docs/Web/Security/Weak_Signature_Algorithm)
   - : {{Glossary("Digital certificate", "デジタル証明書")}}に{{Glossary("Signature/Security", "署名")}}する際に使用するハッシュアルゴリズムの強度は、資格情報のセキュリティにとって重要な要素です。一部の署名アルゴリズムは脆弱であることが知られており、適切な場合には避けるべきです。
 
@@ -142,66 +158,24 @@ CSP を使用すると、例えば、特定の信頼された元から読み込�
 
 次の機能はクリックジャッキング対策として役立ちます。
 
-- [HTTP X-Frame-Options](/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
+- [HTTP X-Frame-Options](/ja/docs/Web/HTTP/Headers/X-Frame-Options)
   - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーがページを [`<frame>`](/ja/docs/Web/HTML/Element/frame)、[`<iframe>`](/ja/docs/Web/HTML/Element/iframe)、[`<embed>`](/ja/docs/Web/HTML/Element/embed)、[`<object>`](/ja/docs/Web/HTML/Element/object) でレンダリングすることを許可するかどうかを指定することができます。 サイトは、このヘッダーを使用して、コンテンツが他のサイトに埋め込まれないように確保することで、クリックジャッキング攻撃を避けることができます。
-- [CSP: frame-ancestors](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP: frame-ancestors](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} を使用してページを埋め込むことができる有効な親を指定します。
 
-## ユーザー情報セキュリティ
+## 実践的なセキュリティ実装ガイド
 
-- [安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords)
-  - : HTTP 経由でログインフォームを送信することは、ユーザのパスワードを抽出するために使用できる様々な攻撃があるため、特に危険です。ネットワーク盗聴者は、ネットワークを盗聴したり、転送中に提供されたページを変更したりすることで、ユーザのパスワードを盗むことができます。
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
-  - : 2010 年頃までは、[CSS](/ja/docs/Web/CSS) {{cssxref(":visited")}} セレクターにより、ウェブサイトがユーザーの閲覧履歴を明らかにし、そのユーザーがどのサイトを訪問したかを把握することができました。この問題を軽減するために、ブラウザーは訪問したリンクから取得できる情報量を制限しています。
+ウェブサイトにセキュリティ機能を効果的に実装するための包括的な指示を取得し、最善の手法に従っていることを確実に保持するには、[実践的なセキュリティ実装ガイド](/ja/docs/Web/Security/Practical_implementation_guides)を設定します。
 
-## セキュリティに関する用語集の用語
-
-- {{Glossary("Block cipher mode of operation")}}
-- {{Glossary("Certificate authority")}}
-- {{Glossary("challenge", "Challenge-response authentication")}}
-- {{Glossary("Cipher")}}
-- {{Glossary("Cipher suite")}}
-- {{Glossary("Ciphertext")}}
-- {{Glossary("CORS")}}
-- {{Glossary("CORS-safelisted request header")}}
-- {{Glossary("CORS-safelisted response header")}}
-- {{Glossary("Cross-site scripting")}}
-- {{Glossary("Cryptanalysis")}}
-- {{Glossary("Cryptographic hash function")}}
-- {{Glossary("Cryptography")}}
-- {{Glossary("CSP")}}
-- {{Glossary("CSRF")}}
-- {{Glossary("Decryption")}}
-- {{Glossary("Digital certificate")}}
-- {{Glossary("DTLS")}}
-- {{Glossary("Encryption")}}
-- {{Glossary("Forbidden header name")}}
-- {{Glossary("Forbidden response header name")}}
-- {{Glossary("Hash")}}
-- {{Glossary("HMAC")}}
-- {{Glossary("HPKP")}}
-- {{Glossary("HSTS")}}
-- {{Glossary("HTTPS")}}
-- {{Glossary("Key")}}
-- {{Glossary("MitM")}}
-- {{Glossary("OWASP")}}
-- {{Glossary("Preflight request")}}
-- {{Glossary("Public-key cryptography")}}
-- {{Glossary("Reporting directive")}}
-- {{Glossary("Robots.txt")}}
-- {{Glossary("Same-origin policy")}}
-- {{Glossary("Session hijacking")}}
-- {{Glossary("SQL injection")}}
-- {{Glossary("Symmetric-key cryptography")}}
-- {{Glossary("TOFU")}}
-
-<!---->
-
-- {{Glossary("TLS")}}
+これらのガイドの一部は、[HTTP Observatory](/ja/observatory) ツールに直接関連しています。Observatory はウェブサイトに対してセキュリティ監査を行い、セキュリティ上の問題点が見つかった場合には、その修正に関する推奨事項とともに、評価とスコアを提供します。これらのガイドでは、MDN Observatory テストで検出された問題の解決方法について説明しています。このツールは、各課題に関連するガイドにリンクしており、効果的な解決方法を手伝ってくれます。興味深いことに、Mozilla の内部開発者チームは、ウェブサイトを実装する際に、このガイドラインを使用して、セキュリティに関する最善の手法が確実に適用されるようにしています。
 
 ## 関連情報
 
-- [ブログ](https://blog.mozilla.com/security/)</li>
-- [@mozsec (Twitter)](https://twitter.com/mozsec)</li>
+- [ウェブのプライバシー](/ja/docs/Web/Privacy)
+- [学習: ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
+- [Mozilla Security Blog](https://blog.mozilla.org/security/)
+- [OWASP Cheat Sheet series](https://cheatsheetseries.owasp.org/index.html)
 
-{{QuickLinksWithSubpages}}
+<section id="Quick_links">
+{{ListSubpages("/ja/docs/Web/Security", "1", "0", "1")}}
+</section>

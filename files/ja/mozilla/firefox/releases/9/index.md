@@ -53,8 +53,8 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 
 ### MathML
 
-- [`<maction>`](/ja/docs/Web/MathML/Element/maction) 要素の `actiontype` 属性における非推奨な値 `restyle` が削除されました。
-- まだ要素自体はサポートされていませんが、[`<mlabeledtr>`](/ja/docs/Web/MathML/Element/mlabeledtr) 要素を用いても、描画を完全に壊さないようになりました。この要素の実際のサポートの進捗は [バグ 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) を参照してください。
+- [`<maction>`](/ja/docs/Web/MathML/Reference/Element/maction) 要素の `actiontype` 属性における非推奨な値 `restyle` が削除されました。
+- まだ要素自体はサポートされていませんが、[`<mlabeledtr>`](/ja/docs/Web/MathML/Reference/Element/mlabeledtr) 要素を用いても、描画を完全に壊さないようになりました。この要素の実際のサポートの進捗は [バグ 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) を参照してください。
 
 ### Networking
 

@@ -125,7 +125,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/MathML](/ja/docs/Web/MathML)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `mathml-attribute`: MathML 属性。例えば [`mathcolor`](/ja/docs/Web/MathML/Global_attributes/mathcolor) など。
-- `mathml-element`: HTML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Element/msqrt) など。
+- `mathml-element`: HTML 要素。例えば [`<msqrt>`](/ja/docs/Web/MathML/Reference/Element/msqrt) など。
 
 ### SVG のページ型
 
@@ -184,9 +184,9 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 ### ウェブマニフェストのページ型
 
-この節では、[Web/Manifest](/ja/docs/Web/Manifest)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
+この節では、[Web/Manifest](/ja/docs/Web/Progressive_web_apps/Manifest)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Manifest/description) など。
+- `web-manifest-member`: マニフェストのメンバー。例えば [`description`](/ja/docs/Web/Progressive_web_apps/Manifest/description) など。
 
 ### XPath のページ型
 

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの[マニフェスト](/ja/docs/Web/Manifest)がリソースに適用されるかを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}}`: manifest-src` ディレクティブは、どの[マニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)がリソースに適用されるかを指定します。
 
 <table class="properties">
   <tbody>
@@ -71,5 +71,5 @@ Content-Security-Policy: manifest-src https://example.com/
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)
 - {{HTMLElement("link")}}

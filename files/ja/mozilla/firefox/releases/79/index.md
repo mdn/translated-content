@@ -27,7 +27,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 #### その他のツール
 
-- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) の調査やデバッグの機能を提供します。
+- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest) の調査やデバッグの機能を提供します。
 - ネットワークモニターのメッセージタブを、[応答タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) に統合しました ([Firefox バグ 1636421](https://bugzil.la/1636421))。
 - アクセシビリティインスペクターが、タブにアクセスすると自動的に有効化します。明示的に有効化することが不要になりました ([Firefox バグ 1602075](https://bugzil.la/1602075))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling_responsive_design_mode) でタッチシミュレーションを有効にしたとき、マウスドラッグのイベントをタッチ & ドラッグまたはスワイプのイベントとして解釈するようになりました ([Firefox バグ 1621781](https://bugzil.la/1621781))。

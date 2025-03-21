@@ -150,7 +150,7 @@ margin: 10px 5px 10px 5px;
 
 CSS は全体の一括指定プロパティとして {{cssxref("all")}} を提供しており、値を文書中のすべてのプロパティに適用させます。これは、プロパティの継承モデルを変更するためのものです。
 
-CSS の継承がどのように動作するかについての詳細については、[カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)または [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)をご覧ください。
+CSS の継承がどのように動作するかについての詳細については、[カスケードと継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)または [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)をご覧ください。
 
 ## 関連情報
 

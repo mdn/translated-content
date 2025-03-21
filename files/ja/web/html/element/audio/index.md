@@ -256,7 +256,7 @@ figure {
 </audio>
 ```
 
-音声ソースには、有効な [URL](/ja/docs/Web/URI) を設定することができます。これには HTTP(S) の URL や[データ URL](/ja/docs/Web/URI/Schemes/data) を含みます。 HTTP(S) の URL を使用する場合、ブラウザーのキャッシュ動作が、サーバーからファイルがリクエストされる頻度に影響することに注意してください。データ URL は音声データを直接 HTML に埋め込みます。これは小さな音声ファイルの場合には有益な使用することができますが、大きな音声ファイルの場合には HTML ファイルサイズが大きくなるため、推奨されません。
+音声ソースには、有効な [URL](/ja/docs/Web/URI) を設定することができます。これには HTTP(S) の URL や[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を含みます。 HTTP(S) の URL を使用する場合、ブラウザーのキャッシュ動作が、サーバーからファイルがリクエストされる頻度に影響することに注意してください。データ URL は音声データを直接 HTML に埋め込みます。これは小さな音声ファイルの場合には有益な使用することができますが、大きな音声ファイルの場合には HTML ファイルサイズが大きくなるため、推奨されません。
 
 また、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を使用することで、既存の音声ファイルをストリーミングするのではなく、 JavaScript コードから直接音声ストリームを生成し、操作することができます。 JavaScript で [`srcObject`](/ja/docs/Web/API/HTMLMediaElement/srcObject) を {{domxref("MediaStream")}} オブジェクトに設定することができます。これはライブ音声ストリームやリアルタイム音声処理に使用するのが一般的です。
 

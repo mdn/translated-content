@@ -149,7 +149,7 @@ l10n:
 - 仕様書に合わせて、{{domxref("VTTCue.positionAlign")}} プロパティが `Align` 列挙型ではなく `PositionAlign` 列挙型を返すようになりました ([Firefox バグ 1276129](https://bugzil.la/1276129))。
 - [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API#speech_synthesis) の、音声合成の部分をサポートしました ([Firefox バグ 1268633](https://bugzil.la/1268633))。
 - [Performance Timeline API](/ja/docs/Web/API/Performance_Timeline) を、Nightly でデフォルトで有効化しました (Aurora、Beta、Release では無効です)。
-- {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} イベントおよび {{domxref("Window.appinstalled_event", "Window.oninstall")}} イベントハンドラーを[ウェブマニフェスト](/ja/docs/Web/Manifest)向けにサポートしました ([Firefox バグ 1265279](https://bugzil.la/1265279))。
+- {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} イベントおよび {{domxref("Window.appinstalled_event", "Window.oninstall")}} イベントハンドラーを[ウェブマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)向けにサポートしました ([Firefox バグ 1265279](https://bugzil.la/1265279))。
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("BaseAudioContext/createPeriodicWave", "AudioContext.createPeriodicWave()")}} メソッドを使用するとき、結果の周期的な波形をノーマライズすべきかを、第 3 引数にディクショナリーオブジェクトを含めることで指定可能になりました。このオブジェクトにはひとつの引数を含めて `{disableNormalization: true}` のようにします ([Firefox バグ 1265405](https://bugzil.la/1265405))。
 - WebVTT API で {{domxref("VTTCue.positionAlign")}} が、仕様書どおりに正しく `PositionAlignSetting` 列挙型を返すようになりました。以前は `AlignSetting` 列挙型を返していました ([Firefox バグ 1276129](https://bugzil.la/1276129))。
 - ウェブ音声 API の音声合成の部分を、すべてのデスクトップブラウザーでデフォルトで有効にしました ([Firefox バグ 1268633](https://bugzil.la/1268633))。

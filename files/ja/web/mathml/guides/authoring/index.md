@@ -16,7 +16,7 @@ MathML の数式がオーサリングツールで生成されるとしても、�
 
 ### HTML ページ中の MathML
 
-それぞれの MathML 数式はルート [`math`](/ja/docs/Web/MathML/Element/math) 要素で表され、HTML ページに直接埋め込むことができます。既定では、数式はインラインで表示され、高さが最小になるように調整されます。 `display="block"` 属性を使用すると、複雑な数式を普通に、自分自身で段落を作って表示することができます。
+それぞれの MathML 数式はルート [`math`](/ja/docs/Web/MathML/Reference/Element/math) 要素で表され、HTML ページに直接埋め込むことができます。既定では、数式はインラインで表示され、高さが最小になるように調整されます。 `display="block"` 属性を使用すると、複雑な数式を普通に、自分自身で段落を作って表示することができます。
 
 ```html
 <!doctype html>
@@ -82,7 +82,7 @@ MathML に対応していないブラウザーに対しては、代替機構を�
 ```
 
 > [!NOTE]
-> これら 2 つのスクリプトは [mspace](/ja/docs/Web/MathML/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Element/mpadded) 要素の機能検出を行うことに注意してください（これらのページのブラウザー互換性表を参照してください）。また、良好な MathML の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
+> これら 2 つのスクリプトは [mspace](/ja/docs/Web/MathML/Reference/Element/mspace) または [mpadded](/ja/docs/Web/MathML/Reference/Element/mpadded) 要素の機能検出を行うことに注意してください（これらのページのブラウザー互換性表を参照してください）。また、良好な MathML の対応のないブラウザーのためにページの上部に警告を表示し、ユーザーに上記のフォールバックのいずれかを選択させるための同様のスクリプトもあります。
 
 #### 数学記号用のフォント
 

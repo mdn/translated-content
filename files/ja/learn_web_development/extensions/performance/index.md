@@ -20,7 +20,7 @@ l10n:
 
 - [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)
-- [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)
+- [JavaScript の第一歩](/ja/docs/Learn_web_development/Core/Scripting)
 
 このモジュールに取り組んだ後は、ウェブパフォーマンスについてもっと深く知りたくなるでしょう。パフォーマンス API の概要、テストと分析ツール、パフォーマンスのボトルネックの問題など、[MDN のウェブパフォーマンスの章](/ja/docs/Web/Performance)で多くの詳しい説明を見つけることができます。
 

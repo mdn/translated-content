@@ -84,7 +84,7 @@ string text line 2`);
 
 ### 文字列の補間
 
-テンプレートリテラルなしで、式からの出力と文字列を結合したい場合、[結合](/ja/docs/Learn/JavaScript/First_steps/Strings#_を用いた連結)は[加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) `+` を使用して行うことになります。
+テンプレートリテラルなしで、式からの出力と文字列を結合したい場合、[結合](/ja/docs/Learn_web_development/Core/Scripting/Strings#_を用いた連結)は[加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition) `+` を使用して行うことになります。
 
 ```js
 const a = 5;

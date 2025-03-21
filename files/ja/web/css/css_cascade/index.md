@@ -59,8 +59,8 @@ CSS の基本設計原則の一つに、ルールのカスケードがありま�
   - [作者オリジン](/ja/docs/Web/CSS/Cascade#author_stylesheets)
   - [ユーザーオリジン](/ja/docs/Web/CSS/Cascade#user_stylesheets)
 - [レイヤーの宣言](/ja/docs/Web/CSS/@import#importing_css_rules_into_a_cascade_layer)
-  - [名前付きレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
-  - [無名レイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers#the-layer-block-at-rule-for-named-and-anonymous-layers)
+  - [名前付きレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
+  - [無名レイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the-layer-block-at-rule-for-named-and-anonymous-layers)
 - 用語集: {{glossary("style origin", "スタイルオリジン")}}
 
 ## ガイド
@@ -69,11 +69,11 @@ CSS の基本設計原則の一つに、ルールのカスケードがありま�
 
   - : ユーザーエージェントが異なる元から来たプロパティ値をどのように結合するかを定義するカスケードアルゴリズムのガイドです。
 
-- [学習: カスケード、詳細度、継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [学習: カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
   - : CSS の最も基本的な概念であるカスケード、詳細度、継承は、 CSS を HTML に適用する方法や競合を解決する方法を制御します。
 
-- [学習: カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 
   - : [カスケードレイヤー](/ja/docs/Web/CSS/@layer) の紹介です。 [CSS カスケード](/ja/docs/Web/CSS/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/Specificity)の基本概念の上に構築された、より高度な機能です。
 
