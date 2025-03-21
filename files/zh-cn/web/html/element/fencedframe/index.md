@@ -9,7 +9,7 @@ l10n:
 
 **`<fencedframe>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个嵌套的{{Glossary("browsing context", "浏览上下文")}}，用于将另一个 HTML 页面嵌入到当前页面中。`<fencedframe>` 在形式和功能上与 {{htmlelement("iframe")}} 元素非常相似，但有以下不同：
 
-- `<fencedframe>` 内容与嵌入网站之间无法共享通信。
+- `<fencedframe>` 内容与嵌入网站之间通信受到限制。
 - `<fencedframe>` 可以访问跨站数据，但仅限于在非常特定的受控情况下进行，以保护用户隐私。
 - `<fencedframe>` 不能通过常规脚本进行自由操作或访问其数据（例如读取或设置源 URL）。`<fencedframe>` 内容只能通过[特定 API](/zh-CN/docs/Web/API/Fenced_frame_API#用例) 嵌入。
 - `<fencedframe>` 无法访问嵌入上下文的 DOM，嵌入上下文也无法访问 `<fencedframe>` 的 DOM。
@@ -135,11 +135,11 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>、
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
