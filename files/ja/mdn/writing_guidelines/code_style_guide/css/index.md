@@ -1,6 +1,7 @@
 ---
 title: CSS のサンプルコードの作成ガイドライン
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
+slug: MDN/Writing_guidelines/Code_style_guide/CSS
+original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 l10n:
   sourceCommit: 4680281518d584657960f984b3b720d79b3119ab
 ---

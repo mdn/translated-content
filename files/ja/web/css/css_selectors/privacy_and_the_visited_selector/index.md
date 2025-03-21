@@ -1,6 +1,7 @@
 ---
 title: プライバシーと :visited セレクター
-slug: Web/CSS/Privacy_and_the_:visited_selector
+slug: Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
+original_slug: Web/CSS/Privacy_and_the_:visited_selector
 l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---

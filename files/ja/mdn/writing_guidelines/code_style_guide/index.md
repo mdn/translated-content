@@ -1,6 +1,7 @@
 ---
 title: サンプルコードのガイドライン
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+slug: MDN/Writing_guidelines/Code_style_guide
+original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 l10n:
   sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
 ---
