@@ -131,4 +131,4 @@ l10n:
 
 ## 関連情報
 
-- SVG の [`<title>`](/ja/docs/Web/SVG/Element/title) 要素
+- SVG の [`<title>`](/ja/docs/Web/SVG/Reference/Element/title) 要素

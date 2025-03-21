@@ -107,5 +107,5 @@ mask:
 
 - {{Cssxref("clip-path")}}, {{Cssxref("filter")}}
 - [CSS Shapes, clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [HTML コンテンツへ SVG 効果を適用する](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML コンテンツへ SVG 効果を適用する](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - [SVG](/ja/docs/Web/SVG)

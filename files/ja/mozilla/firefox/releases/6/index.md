@@ -80,7 +80,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 ### SVG
 
-- [`pathLength`](/ja/docs/Web/SVG/Attribute/pathLength) 属性がサポートされました。
+- [`pathLength`](/ja/docs/Web/SVG/Reference/Attribute/pathLength) 属性がサポートされました。
 - [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) から読み込まれたパターン、グラデーション、フィルターが適切に動作するようになりました。
 
 ### MathML

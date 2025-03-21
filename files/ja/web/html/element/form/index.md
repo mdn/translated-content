@@ -55,7 +55,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
 - `accept` {{deprecated_inline}}
 
-  - : サーバーが受け付ける[コンテンツ型](/ja/docs/Web/SVG/Content_type)のカンマ区切りリストです。
+  - : サーバーが受け付ける[コンテンツ型](/ja/docs/Web/SVG/Guides/Content_type)のカンマ区切りリストです。
 
     > **メモ:** **この属性は非推奨であり、使用すべきではありません。** 代わりに `<input type=file>` 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性を使用してください。
 

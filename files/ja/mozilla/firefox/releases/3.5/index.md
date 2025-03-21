@@ -130,7 +130,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しい SVG の機能
 
-- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : SVG 効果を HTML および XHTML の内容に適用できるようになりました。この記事はその方法について説明しています。
 
 #### その他の新機能

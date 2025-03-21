@@ -111,7 +111,7 @@ CSS の {{CSSxRef("outline")}} と {{CSSxRef("outline-offset")}} プロパティ
 ## 関連概念
 
 - CSS の [`cursor`](/ja/docs/Web/CSS/cursor) プロパティ
-- SVG の [`cursor`](/ja/docs/Web/SVG/Attribute/cursor) 属性
+- SVG の [`cursor`](/ja/docs/Web/SVG/Reference/Attribute/cursor) 属性
 - CSS の {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, {{CSSxRef(":focus-visible")}} 擬似クラス
 - {{DOMXref("CaretPosition")}} インターフェイス
 

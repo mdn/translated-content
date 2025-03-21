@@ -131,8 +131,8 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/SVG](/ja/docs/Web/SVG)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `svg-attribute`: SVG 属性。例えば [`crossorigin`](/ja/docs/Web/SVG/Attribute/crossorigin) など。
-- `svg-element`: SVG 要素。例えば [`<circle>`](/ja/docs/Web/SVG/Element/circle) など。
+- `svg-attribute`: SVG 属性。例えば [`crossorigin`](/ja/docs/Web/SVG/Reference/Attribute/crossorigin) など。
+- `svg-element`: SVG 要素。例えば [`<circle>`](/ja/docs/Web/SVG/Reference/Element/circle) など。
 
 ### Web API のページ型
 

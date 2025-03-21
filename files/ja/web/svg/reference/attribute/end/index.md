@@ -32,7 +32,7 @@ original_slug: Web/SVG/Attribute/end
 `<end-value-list>` は値のセミコロン区切りのリストです。それぞれの値は以下のうちの 1 つです。
 
 - `<offset-value>`
-  - : この値は時点を表す [clock-value](/ja/docs/Web/SVG/Content_type#clock-value) を、 SVG 文書の始まり (通常は {{domxref("SVGElement/load_event", "load")}} または {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベント) からの相対で定義します。負の数も有効です。
+  - : この値は時点を表す [clock-value](/ja/docs/Web/SVG/Guides/Content_type#clock-value) を、 SVG 文書の始まり (通常は {{domxref("SVGElement/load_event", "load")}} または {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベント) からの相対で定義します。負の数も有効です。
 - `<syncbase-value>`
   - : この値は _syncbase_ と、任意でその _syncbase_ からのオフセットを定義します。要素のアニメーションの終了時刻は、他のアニメーションの開始またはアクティブ状態の終了からの相対で定義します。
     有効な syncbase-value は、他のアニメーション要素への ID による参照にドット、そして `begin` または `end` が続き、参照先のアニメーション要素の開始とアクティブ状態の終了のどちらと同期するかを識別します。 `<offset-value>` で定義される任意のオフセット値を追加することができます。

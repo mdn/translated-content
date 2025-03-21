@@ -100,4 +100,4 @@ svg|a {
 
 ## 関連情報
 
-- [名前空間の集中講座](/ja/docs/Web/SVG/Namespaces_Crash_Course)
+- [名前空間の集中講座](/ja/docs/Web/SVG/Guides/Namespaces_crash_course)

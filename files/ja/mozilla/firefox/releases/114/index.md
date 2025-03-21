@@ -36,7 +36,7 @@ l10n:
 
 ### SVG
 
-- [`image`](/ja/docs/Web/SVG/Element/image) および [`feImage`](/ja/docs/Web/SVG/Element/feImage) 要素で [`crossorigin`](/ja/docs/Web/SVG/Attribute/crossorigin) 属性をサポートしました ([Firefox bug 1240357](https://bugzil.la/1240357))。
+- [`image`](/ja/docs/Web/SVG/Reference/Element/image) および [`feImage`](/ja/docs/Web/SVG/Reference/Element/feImage) 要素で [`crossorigin`](/ja/docs/Web/SVG/Reference/Attribute/crossorigin) 属性をサポートしました ([Firefox bug 1240357](https://bugzil.la/1240357))。
 
 ### API
 
