@@ -45,7 +45,7 @@ l10n:
 
   - : すべての CSS 仕様と WebVTT で定義されている擬似要素のアルファベット順リスト。
 
-- [構成要素: 擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 
   - : セレクターに関する CSS 構成要素の節の一部です。この記事では、擬似要素とは何か、擬似クラスとどのように組み合わせ、 `::before` および `::after` 擬似要素でコンテンツを生成するために使用できるかを定義します。
 

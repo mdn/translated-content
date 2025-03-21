@@ -190,9 +190,9 @@ _論理演算子_ `not`, `and`, `only` を使うと、複雑なメディアク�
 
 ## アクセシビリティの考慮
 
-サイトの文字の大きさを調整している人に合わせられるようには、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で {{cssxref("&lt;length&gt;")}} が必要な時には [`em`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) を使用してください。
+サイトの文字の大きさを調整している人に合わせられるようには、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で {{cssxref("&lt;length&gt;")}} が必要な時には [`em`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) を使用してください。
 
-[`em`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) および [`px`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) はどちらも有効な単位ですが、 [`em`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) はユーザーがブラウザーのテキストの寸法を変更した場合によりうまく動作します。
+[`em`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) および [`px`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) はどちらも有効な単位ですが、 [`em`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) はユーザーがブラウザーのテキストの寸法を変更した場合によりうまく動作します。
 
 また、ユーザーの使い勝手を向上させるために Level 4 のメディアクエリーを使用することを検討してください。例えば、 `prefers-reduced-motion` は[ユーザーがシステムにアニメーションや動きの量を最小化するよう要求していることを検出します](/ja/docs/Web/CSS/@media/prefers-reduced-motion)。
 

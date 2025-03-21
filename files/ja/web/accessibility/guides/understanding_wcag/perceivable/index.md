@@ -90,7 +90,7 @@ l10n:
       <td>
         <p>
           装飾画像は CSS 背景画像を使用して実装する必要があります（<a
-            href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
+            href="/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders"
             >背景</a
           >を参照）。 {{htmlelement("img")}}
           要素を介して画像を含める必要がある場合は、空白の

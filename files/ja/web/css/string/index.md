@@ -60,4 +60,4 @@ awesome string"
 
 - [CSS の単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS の基本データ型](/ja/docs/Web/CSS/CSS_Types)
-- [CSS 入門: 単位と値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 入門: 単位と値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
