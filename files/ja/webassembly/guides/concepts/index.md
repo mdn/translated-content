@@ -48,11 +48,11 @@ WebAssembly は JavaScript とは異なる言語ですが、置き換えを意�
 
 ブラウザーにおける WebAssembly の登場によって、私たちが先述したような仮想マシンはこれから 2 つの種類の言語をロードして実行することになります — JavaScript と WebAssembly です。
 
-必要に応じてこの異なったコードは互いを呼び出し合うことができます — [WebAssembly JavaScript API](/ja/docs/WebAssembly/JavaScript_interface) はエクスポートした WebAssembly のコードを普遍的に呼び出せる JavaScript 関数でラップし、WebAssembly のコードは通常の JavaScript 関数をインポートして同期的に呼び出せます。実際、WebAssembly のコードの基本単位はモジュールと呼ばれ、 WebAssembly のモジュールは ES モジュールと多くの対になる概念を持っています。
+必要に応じてこの異なったコードは互いを呼び出し合うことができます — [WebAssembly JavaScript API](/ja/docs/WebAssembly/Reference/JavaScript_interface) はエクスポートした WebAssembly のコードを普遍的に呼び出せる JavaScript 関数でラップし、WebAssembly のコードは通常の JavaScript 関数をインポートして同期的に呼び出せます。実際、WebAssembly のコードの基本単位はモジュールと呼ばれ、 WebAssembly のモジュールは ES モジュールと多くの対になる概念を持っています。
 
 ### WebAssembly の主要概念
 
-ブラウザー上で WebAssembly がどのように動作するかを理解するため必要となる主要概念がいくつか存在します。これらのコンセプトはそれぞれが [WebAssembly JavaScript API](/ja/docs/WebAssembly/JavaScript_interface) に一対一で対応しています。
+ブラウザー上で WebAssembly がどのように動作するかを理解するため必要となる主要概念がいくつか存在します。これらのコンセプトはそれぞれが [WebAssembly JavaScript API](/ja/docs/WebAssembly/Reference/JavaScript_interface) に一対一で対応しています。
 
 - **モジュール** (Module): ブラウザーによって実行可能な機械語にコンパイルされた WebAssembly のバイナリーを表します。モジュールはステートレスであるため、[`Blob`](/ja/docs/Web/API/Blob) のように、ウィンドウやウェブワーカーと（[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を経由して）共有することができます。モジュールは ES のモジュールのように import と export の宣言を行います。
 - **メモリー** (Memory): WebAssembly の低水準なメモリーアクセス命令によって読み込みおよび書き込みが行われるバイト列を一次元の配列として保持している、リサイズ可能な ArrayBuffer です。
@@ -107,7 +107,7 @@ JavaScript グルーコードは多くの人が想像するほど簡単な構造
 
 生成された HTML 文章は JavaScript グルーコードのファイルを読み込んで {{htmlelement("textarea")}} に標準出力を書き出します。もしアプリケーションが OpenGL を利用している場合、その HTML はまた出力先となる {{htmlelement("canvas")}} 要素を含みます。Emscripten の出力結果を修正して必要とするウェブアプリに変換するのは非常に簡単です。
 
-Emscripten に関する完全なドキュメントは [emscripten.org](https://emscripten.org) で参照でき、このツールチェインの組み込みと自身の C/C++ アプリを Wasm へとコンパイルするガイドとしては [C/C++ を WebAssembly にコンパイルする](/ja/docs/WebAssembly/C_to_Wasm) が参考になります。
+Emscripten に関する完全なドキュメントは [emscripten.org](https://emscripten.org) で参照でき、このツールチェインの組み込みと自身の C/C++ アプリを Wasm へとコンパイルするガイドとしては [C/C++ を WebAssembly にコンパイルする](/ja/docs/WebAssembly/Guides/C_to_Wasm) が参考になります。
 
 ### WebAssembly を直接記述する
 
@@ -115,11 +115,11 @@ Emscripten に関する完全なドキュメントは [emscripten.org](https://e
 
 実際のアセンブリー言語同様、 WebAssembly バイナリー形式はテキスト表現を持っています — これらは一対一で対応しています。なんらかの [WebAssemby テキスト表現バイナリー変換ツール](https://webassembly.org/getting-started/advanced-tools/) を用いることでテキスト表現を直接記述してバイナリー形式に変換することができます。
 
-この手順に関しては、 [WebAssembly テキスト表現を Wasm 形式に変換する](/ja/docs/WebAssembly/Text_format_to_Wasm) の項目を参照ください。
+この手順に関しては、 [WebAssembly テキスト表現を Wasm 形式に変換する](/ja/docs/WebAssembly/Guides/Text_format_to_Wasm) の項目を参照ください。
 
 ### WebAssembly をターゲットとした Rust の記述
 
-Rust WebAssembly ワーキンググループの不断の仕事のおかげで、Rust コードを書いて WebAssembly にコンパイルすることも可能です。必要なツールチェーンをインストールし、サンプル Rust プログラムを WebAssembly npm パッケージにコンパイルし、ウェブアプリケーションのサンプルを使用して、 [Rust から WebAssembly へのコンパイル](/ja/docs/WebAssembly/Rust_to_Wasm)の記事を読むことができます。
+Rust WebAssembly ワーキンググループの不断の仕事のおかげで、Rust コードを書いて WebAssembly にコンパイルすることも可能です。必要なツールチェーンをインストールし、サンプル Rust プログラムを WebAssembly npm パッケージにコンパイルし、ウェブアプリケーションのサンプルを使用して、 [Rust から WebAssembly へのコンパイル](/ja/docs/WebAssembly/Guides/Rust_to_Wasm)の記事を読むことができます。
 
 ### AssemblyScript の使用
 
@@ -133,5 +133,5 @@ C や Rust の詳細を学ぶ必要なく、 TypeScript のような慣れ親し
 
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)
-- [WebAssembly コードの読み込みと実行](/ja/docs/WebAssembly/Loading_and_running) — ウェブページでどのようにして自作の WebAssembly モジュールをロードするかについての理解が深まります。
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API) — WebAssembly JavaScript API のその他の利用法について理解が深まります。
+- [WebAssembly コードの読み込みと実行](/ja/docs/WebAssembly/Guides/Loading_and_running) — ウェブページでどのようにして自作の WebAssembly モジュールをロードするかについての理解が深まります。
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API) — WebAssembly JavaScript API のその他の利用法について理解が深まります。

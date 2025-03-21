@@ -18,7 +18,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}
   - : 文字列で、周囲のコンテキストに対するフレームの配置を指定します。
 - {{domxref("HTMLIFrameElement.allow")}}
-  - : この `<iframe>` に指定された[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を示す文字列です。
+  - : この `<iframe>` に指定された[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を示す文字列です。
 - {{domxref("HTMLIFrameElement.allowFullscreen")}}
   - : 論理値で、インラインフレームを全画面モードにすることが期待されているかを示します。詳細は、[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)を参照してください。
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -34,7 +34,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : 埋め込み文書が自分自身に適用することに同意しなければならないコンテンツセキュリティポリシーを指定します。
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : {{domxref("FeaturePolicy")}} インターフェイスを返します。これは、特定の文書に適用された[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を調査するための単純な API を提供します。
+  - : {{domxref("FeaturePolicy")}} インターフェイスを返します。これは、特定の文書に適用された[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を調査するための単純な API を提供します。
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : 文字列で、フレーム間に境界線を生成するかどうかを示します。
 - {{domxref("HTMLIFrameElement.height")}}

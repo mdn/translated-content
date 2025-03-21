@@ -59,7 +59,7 @@ label {
 一点気を付けなければならないことは、表示される日付と時刻の書式は実際の `value` とは異なることです。表示される日付と時刻は、オペレーティングシステムからの報告に従ってユーザーのロケールによって書式化されますが、日付や時刻の `value` は常に `YYYY-MM-DDTHH:mm` の書式です。例えば、上記の値をサーバーに送信すると、 `party-date=2024-06-01T08:30` のようになります。
 
 > [!NOTE]
-> このようなデータが HTTP の [`GET`](/ja/docs/Web/HTTP/Methods/GET) を通じて送信されると、コロン文字を URL 引数に含めるために、 `party-date=2024-06-01T08%3A30` のようにエスケープする必要があることもお忘れなく。これを行う方法の一つとして {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} を参照してください。
+> このようなデータが HTTP の [`GET`](/ja/docs/Web/HTTP/Reference/Methods/GET) を通じて送信されると、コロン文字を URL 引数に含めるために、 `party-date=2024-06-01T08%3A30` のようにエスケープする必要があることもお忘れなく。これを行う方法の一つとして {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} を参照してください。
 
 次のように、 JavaScript で {{domxref("HTMLInputElement")}} の `value` プロパティを使用して日付の値を取得したり設定したりすることもできます。
 

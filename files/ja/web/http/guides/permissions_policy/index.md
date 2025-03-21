@@ -82,7 +82,7 @@ The features include:
 
 ウェブは、悪用された場合にプライバシーやセキュリティ上のリスクを伴う可能性のある機能や API を提供します。場合によっては、そのような機能がウェブサイト上でどのように使用されるかを厳密に制限することもできます。ウェブサイト内の特定の原点やフレームに対して機能を有効/無効にするポリシー制御の機能があります。利用可能な場合、機能は Permissions API、または機能が利用可能かどうかを確認する機能固有のメカニズムと統合されます。
 
-機能には以下のものが含まれます ([機能一覧](/ja/docs/Web/HTTP/Headers/Permissions-Policy#directives)を参照してください)。
+機能には以下のものが含まれます ([機能一覧](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)を参照してください)。
 
 - Accelerometer
 - Ambient light sensor

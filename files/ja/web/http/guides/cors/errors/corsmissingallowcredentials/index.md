@@ -28,6 +28,6 @@ Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。
+HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。
 
 このステータスを受信したブラウザーは、自動的に `Location` ヘッダー内の URL のリソースをリクエストし、ユーザーを新しいページにリダイレクトします。
 このレスポンスを受け取った検索エンジンは、リンクを元の URL からリダイレクトされたリソースへと関連付けするため、 {{Glossary("SEO")}} の値を新しい URL に移行させます。
@@ -52,7 +52,7 @@ Content-Length: 0
 
 ## 関連情報
 
-- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Redirections)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Guides/Redirections)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("301", "301 Moved Permanently")}}: このステータスコードに相当するもので、リクエストメソッドが {{HTTPMethod("GET")}} ではない場合に変更する可能性があります。
 - {{HTTPStatus("302", "302 Found")}}: 一時リダイレクト

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<dimension>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{CSSxRef("&lt;number&gt;")}} とそれに添付された単位を表します (`10px` など)。
+**`<dimension>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{CSSxRef("&lt;number&gt;")}} とそれに添付された単位を表します (`10px` など)。
 
 CSS は `<dimension>` を使用して、長さ ({{CSSxRef("&lt;length&gt;")}})、時間 ({{CSSxRef("&lt;time&gt;")}})、周期 ({{CSSxRef("&lt;frequency&gt;")}})、解像度 ({{CSSxRef("&lt;resolution&gt;")}})、その他の量を指定します。
 
@@ -47,6 +47,6 @@ CSS は `<dimension>` を使用して、長さ ({{CSSxRef("&lt;length&gt;")}})�
 
 ## 関連情報
 
-- [CSS データ型](/ja/docs/Web/CSS/CSS_Types)
-- [CSS を使用した HTML のスタイル付けの学習](/ja/docs/Learn/CSS)
+- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS を使用した HTML のスタイル付けの学習](/ja/docs/Learn_web_development/Core/Styling_basics)
 - CSS の長さ ({{CSSxRef("&lt;length&gt;")}}), 時間 ({{CSSxRef("&lt;time&gt;")}}), 周期 ({{CSSxRef("&lt;frequency&gt;")}}), 解像度 ({{CSSxRef("&lt;resolution&gt;")}})

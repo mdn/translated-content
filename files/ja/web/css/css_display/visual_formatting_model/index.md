@@ -150,7 +150,7 @@ CSS では、ボックスをレイアウトするための配置の仕組みが 
 
 CSS において、**通常フロー** (normal flow) にはブロックボックスのブロックレベル整形、インラインボックスのインラインレベル整形、それにブロックレベルおよびインラインレベルボックスの相対位置指定と粘着位置指定があります。
 
-詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_flow_layout)を参照してください。
+詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)を参照してください。
 
 ## 浮動ボックス
 
@@ -172,7 +172,7 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ボックスには内部表示型もあり、これは子がどのように動作するかを示します。通常ブロックかつインラインレイアウト、または通常フローであれば、この表示型は `flow` です。これは、子要素が `block` または `inline` のどちらかであることを示します。
 
-しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
+しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
 
 ブロックレベルとインラインレベルの各ボックスの相互作用は、 {{cssxref("display")}} のプロパティリファレンスで説明しています。
 
@@ -250,15 +250,15 @@ body {
 
 ## 関連情報
 
-- [CSS の構文](/ja/docs/Web/CSS/Syntax)ガイド
-- [コメント](/ja/docs/Web/CSS/Comments)
-- [詳細度](/ja/docs/Web/CSS/Specificity)
-- [継承](/ja/docs/Web/CSS/Inheritance)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
+- [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - {{DOMxRef("VisualViewport")}} インターフェイス
 - {{glossary("Scroll container")}}

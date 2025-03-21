@@ -238,7 +238,7 @@ body {
 
 {{EmbedLiveSample('Visualizing_the_float', '100%', 500)}}
 
-続く要素の[行ボックス](/ja/docs/Web/CSS/Visual_formatting_model#line_boxes)が短くなっているので、テキストは浮動ボックスを回り込みますが、浮動ボックスは通常フローから除かれるため、段落の周りのボックスは全幅のままになります。
+続く要素の[行ボックス](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#line_boxes)が短くなっているので、テキストは浮動ボックスを回り込みますが、浮動ボックスは通常フローから除かれるため、段落の周りのボックスは全幅のままになります。
 
 ## 浮動ボックスの解除
 

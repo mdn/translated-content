@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`508 Loop Detected`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Status#サーバーエラーレスポンス)のステータスコードで、 `Depth: infinity`のリクエストを処理中に無限ループに遭遇したため、操作全体が失敗したことを示しています。
+HTTP の **`508 Loop Detected`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、 `Depth: infinity`のリクエストを処理中に無限ループに遭遇したため、操作全体が失敗したことを示しています。
 
 このステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) のコンテキストで使用される可能性があります。
 これは、 WebDAV クライアントが {{HTTPStatus("208", "208 Already Reported")}} レスポンスに対応していない場合（リクエストに明示的に `DAV` ヘッダーが記載されていない場合）の代替策として導入されました。
@@ -54,5 +54,5 @@ Content-Length: 72
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("208", "208 Already Reported")}}

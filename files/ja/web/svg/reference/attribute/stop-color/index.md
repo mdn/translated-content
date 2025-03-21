@@ -48,7 +48,7 @@ l10n:
 </table>
 
 - `currentcolor`
-  - : このキーワードは、現在の塗りつぶしの色を表し、 [`<paint>`](/ja/docs/Web/SVG/Content_type#paint) の指定の中で、 {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} 属性と同じ方法で指定することができます。
+  - : このキーワードは、現在の塗りつぶしの色を表し、 [`<paint>`](/ja/docs/Web/SVG/Guides/Content_type#paint) の指定の中で、 {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} 属性と同じ方法で指定することができます。
 - `<color>`
   - : この値は色の値を示します。
 - `<icccolor>`

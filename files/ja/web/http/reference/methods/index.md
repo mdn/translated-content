@@ -49,7 +49,7 @@ HTTP では、一連の**リクエストメソッド**を定義しています�
 | {{HTTPMethod("PATCH")}}   | なし   | なし     | 条件付き\* |
 | {{HTTPMethod("CONNECT")}} | なし   | なし     | 不可       |
 
-\* `POST` と `PATCH` は、レスポンスに[鮮度](/ja/docs/Web/HTTP/Caching)情報と、一致する {{HTTPHeader("Content-Location")}} ヘッダーが明示的に含まれている場合、キャッシュ可能です。
+\* `POST` と `PATCH` は、レスポンスに[鮮度](/ja/docs/Web/HTTP/Guides/Caching)情報と、一致する {{HTTPHeader("Content-Location")}} ヘッダーが明示的に含まれている場合、キャッシュ可能です。
 
 ## 仕様書
 
@@ -61,5 +61,5 @@ HTTP では、一連の**リクエストメソッド**を定義しています�
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)

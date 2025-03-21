@@ -7,7 +7,7 @@ l10n:
 
 {{MDNSidebar}}
 
-MDN Web Docs の [HTTP ヘッダーリファレンス](/ja/docs/Web/HTTP/Headers) は、 HTTP のヘッダーフィールドを説明しています。これらはハイパーテキスト転送プロトコル [HTTP](/ja/docs/Web/HTTP) のリクエストおよびレスポンスメッセージのヘッダーセクションの構成要素です。ここでは HTTP トランザクションの操作引数を定義しています。この記事は、 HTTP ヘッダーに対応する新しいリファレンスページを作成する方法を説明します。
+MDN Web Docs の [HTTP ヘッダーリファレンス](/ja/docs/Web/HTTP/Reference/Headers) は、 HTTP のヘッダーフィールドを説明しています。これらはハイパーテキスト転送プロトコル [HTTP](/ja/docs/Web/HTTP) のリクエストおよびレスポンスメッセージのヘッダーセクションの構成要素です。ここでは HTTP トランザクションの操作引数を定義しています。この記事は、 HTTP ヘッダーに対応する新しいリファレンスページを作成する方法を説明します。
 
 [HTTP](/ja/docs/Web/HTTP) の知識があるか、または没頭できる必要があります。
 
@@ -15,19 +15,19 @@ MDN Web Docs の [HTTP ヘッダーリファレンス](/ja/docs/Web/HTTP/Headers
 
 - HTTP ヘッダーは、 IETF の各種標準規格で定義されているものが多数あります。
 - IANA は [HTTP ヘッダーフィールドのレジストリー](https://www.iana.org/assignments/http-fields/http-fields.xhtml)を管理しており、 Wikipedia は[既知のヘッダーフィールド（英語）](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)を掲載していますが、すべてがウェブ開発者に関連していたり、公式な標準の一部であるとは限りません。
-- 現在の [MDN ヘッダーリファレンス概要ページ](/ja/docs/Web/HTTP/Headers)に**赤リンク**がある場合、これらのヘッダーは文書化するのに良い選択です。
+- 現在の [MDN ヘッダーリファレンス概要ページ](/ja/docs/Web/HTTP/Reference/Headers)に**赤リンク**がある場合、これらのヘッダーは文書化するのに良い選択です。
 - もし、あなたが選んだヘッダーについて書くことに意味があるかどうかわからない場合は、 [MDN Web Docs チーム](/ja/docs/MDN/Community/Communication_channels)に尋ねてください。
 
 ## 手順 2 – 既存のヘッダーリファレンスページを見る
 
-- 既存の HTTP ヘッダーについては、[こちら](/ja/docs/Web/HTTP/Headers)に記載されています。
+- 既存の HTTP ヘッダーについては、[こちら](/ja/docs/Web/HTTP/Reference/Headers)に記載されています。
 - ヘッダーには様々なカテゴリーがあります。{{Glossary("Request header", "リクエストヘッダー")}}、{{Glossary("Response header", "レスポンスヘッダー")}}、{{Glossary("Representation header", "表現ヘッダー")}}などです。
 - 文書化しようとしているヘッダーのカテゴリーを見つけてください（文脈によっては、リクエストヘッダーとレスポンスヘッダーの両方になるヘッダーもあることに注意）。
 - 同じカテゴリーを持つ既存のヘッダー参照ページに移動します。
 
 ## 手順 3 – 新しいページを作成する
 
-- すべてのヘッダーページは [/docs/Web/HTTP/Headers/](/ja/docs/Web/HTTP/Headers) 以下にあります。
+- すべてのヘッダーページは [/docs/Web/HTTP/Headers/](/ja/docs/Web/HTTP/Reference/Headers) 以下にあります。
 - 新しいページを作成するには、[ページの作成方法](/ja/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)のガイドの指示を参照してください。
 
 ## 手順 4 – 内容を書く
@@ -51,7 +51,7 @@ MDN Web Docs の [HTTP ヘッダーリファレンス](/ja/docs/Web/HTTP/Headers
 
 ## 手順 6 – HTTP ヘッダーリストにヘッダーを追加する
 
-- [HTTP ヘッダーリファレンス概要ページ](/ja/docs/Web/HTTP/Headers)で、ヘッダーが適切なカテゴリーにリストアップされていることを確認してください。
+- [HTTP ヘッダーリファレンス概要ページ](/ja/docs/Web/HTTP/Reference/Headers)で、ヘッダーが適切なカテゴリーにリストアップされていることを確認してください。
 
 ## 手順 7 — レビューを受ける
 

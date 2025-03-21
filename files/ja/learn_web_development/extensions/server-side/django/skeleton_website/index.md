@@ -6,11 +6,11 @@ original_slug: Learn/Server-side/Django/skeleton_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-[Django チュートリアル](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) の 2 つ目の記事では、基本的なウェブサイトプロジェクトの「スケルトン」をどのように作っていくのかを説明します。サイト固有の設定、URL、モデル、ビュー、テンプレートを作成する方法について説明します。
+[Django チュートリアル](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) の 2 つ目の記事では、基本的なウェブサイトプロジェクトの「スケルトン」をどのように作っていくのかを説明します。サイト固有の設定、URL、モデル、ビュー、テンプレートを作成する方法について説明します。
 
-| 前提条件: | [Django 開発環境の設定](/ja/docs/Learn/Server-side/Django/development_environment)。[Django チュートリアル](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website)を確認してください。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | Django のツールを使って自分の新しいウェブサイトプロジェクトを開始できるようにする。                                                                                                               |
+| 前提条件: | [Django 開発環境の設定](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)。[Django チュートリアル](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)を確認してください。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | Django のツールを使って自分の新しいウェブサイトプロジェクトを開始できるようにする。                                                                                                                                                                     |
 
 ## 概要
 
@@ -27,7 +27,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 3. プロジェクトにアプリケーションを含めるために登録します。
 4. url/path マッパーはそれらのアプリケーションを結びつけます。
 
-[Local Library website](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダーとプロジェクトフォルダーは*locallibrary* という名前をつけます。また、１つのアプリケーションは*catalog*という名前をつけます。 したがって、最上位のフォルダー構成は以下のようになります。:
+[Local Library website](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダーとプロジェクトフォルダーは*locallibrary* という名前をつけます。また、１つのアプリケーションは*catalog*という名前をつけます。 したがって、最上位のフォルダー構成は以下のようになります。:
 
 ```bash
 locallibrary/         # Website folder
@@ -40,7 +40,7 @@ locallibrary/         # Website folder
 
 ## プロジェクトの作成
 
-始めにコマンドプロンプトまたはターミナルを開いて、（先に自分が仮想環境([virtual environment](/ja/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment))にいることを確認して下さい）、Django アプリを格納したい場所へ移動します（ドキュメントフォルダーの中など探しやすい場所にしましょう）。そして、新しいウェブサイトのフォルダー（この場合は _locallibrary_）を作りましょう。そして、cd コマンドでそのフォルダーへ移動しましょう。
+始めにコマンドプロンプトまたはターミナルを開いて、（先に自分が仮想環境([virtual environment](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#using_a_virtual_environment))にいることを確認して下さい）、Django アプリを格納したい場所へ移動します（ドキュメントフォルダーの中など探しやすい場所にしましょう）。そして、新しいウェブサイトのフォルダー（この場合は _locallibrary_）を作りましょう。そして、cd コマンドでそのフォルダーへ移動しましょう。
 
 ```bash
 mkdir locallibrary
@@ -354,7 +354,7 @@ As you saw above, a URL-mapping for the Admin site has already been added in the
 
 You have now created a complete skeleton website project, which you can go on to populate with urls, models, views, and templates.
 
-Now the skeleton for the [Local Library website](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.
+Now the skeleton for the [Local Library website](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) is complete and running, it's time to start writing the code that makes this website do what it is supposed to do.
 
 ## 参考文献
 

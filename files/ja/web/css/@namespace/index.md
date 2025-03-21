@@ -5,7 +5,7 @@ slug: Web/CSS/@namespace
 
 {{CSSRef}}
 
-**`@namespace`** は[アットルール](/ja/docs/Web/CSS/At-rule)で、
+**`@namespace`** は[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、
 [CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する [XML 名前空間](/ja/docs/Namespaces)を定義します。
 
 {{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
@@ -100,4 +100,4 @@ svg|a {
 
 ## 関連情報
 
-- [名前空間の集中講座](/ja/docs/Web/SVG/Namespaces_Crash_Course)
+- [名前空間の集中講座](/ja/docs/Web/SVG/Guides/Namespaces_crash_course)

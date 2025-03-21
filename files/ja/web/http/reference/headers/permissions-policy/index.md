@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Permissions-Policy
 
 HTTP の **`Permissions-Policy`** ヘッダーは、自身のフレームおよび文書内の {{HTMLElement("iframe")}} 要素で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
 
-詳しくは、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の記事を参照してください。
+詳しくは、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の記事を参照してください。
 
 <table class="properties">
   <tbody>
@@ -157,7 +157,7 @@ Permissions-Policy: microphone=(), geolocation=()
 
 ## 関連情報
 
-- [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
 - {{DOMxRef("Document.featurePolicy")}} および {{DOMxRef("FeaturePolicy")}}
 - [Feature-Policy Tester (Chrome Developer Tools extension)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
 - {{HTTPHeader("Content-Security-Policy")}}

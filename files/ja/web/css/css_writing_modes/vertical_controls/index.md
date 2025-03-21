@@ -60,7 +60,7 @@ l10n:
 ```
 
 > [!NOTE]
-> 最善の手法は、アクセシビリティの目的で、各フォームコントロールに {{htmlelement("label")}} 要素を含め、各フィールドに意味のあるテキスト説明を関連付けます（詳細は「[意味の通るテキストラベル](/ja/docs/Learn/Accessibility/HTML#意味の通るテキストラベル)」を参照）。この記事ではフォームコントロールの視覚的なレンダリングに焦点を絞っているため、ここではその手法を採用していませんが、本番コードでは必ずそのようにしてください。
+> 最善の手法は、アクセシビリティの目的で、各フォームコントロールに {{htmlelement("label")}} 要素を含め、各フィールドに意味のあるテキスト説明を関連付けます（詳細は「[意味の通るテキストラベル](/ja/docs/Learn_web_development/Core/Accessibility/HTML#意味の通るテキストラベル)」を参照）。この記事ではフォームコントロールの視覚的なレンダリングに焦点を絞っているため、ここではその手法を採用していませんが、本番コードでは必ずそのようにしてください。
 
 次のような CSS を使用すると、コントロールを縦に表示できます。
 
@@ -474,4 +474,4 @@ input[type="text"] {
 - [`<input>`](/ja/docs/Web/HTML/Element/input) 要素
 - 他の関連要素: {{htmlelement("button")}}, {{htmlelement("meter")}}, {{htmlelement("progress")}}, {{htmlelement("select")}}
 - [様々なテキストの方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
-- [ウェブフォームのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
+- [ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)

@@ -141,13 +141,13 @@ l10n:
 
 {{SVGElement("path")}} は SVG で使用できる最も一般的な図形です。 `path` 要素を用いると、矩形（角丸の有無は問わない）、円、楕円、ポリライン、多角形を描くことができます。基本的には他の種類の形状、ベジェ曲線、二次曲線、その他多くの形状を描くことができます。
 
-このため、パスについてはこのチュートリアルの[次の章](/ja/docs/Web/SVG/Tutorial/Paths)に独立していますが、 ここではその図形をコントロールするただ一つの属性があることを示します。
+このため、パスについてはこのチュートリアルの[次の章](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)に独立していますが、 ここではその図形をコントロールするただ一つの属性があることを示します。
 
 ```xml
 <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
 ```
 
 - `d`
-  - : 点のリストと、パスの描画方法に関する情報です。詳しくは[パス](/ja/docs/Web/SVG/Tutorial/Paths)の節を参照してください。
+  - : 点のリストと、パスの描画方法に関する情報です。詳しくは[パス](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)の節を参照してください。
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

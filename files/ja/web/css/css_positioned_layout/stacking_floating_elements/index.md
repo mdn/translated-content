@@ -121,9 +121,9 @@ strong {
 
 ## 関連情報
 
-- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): 既定の重ね合わせ規則
-- [z-index の追加](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): 既定の重ね合わせ規則
+- [z-index の追加](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
+- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
+- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
+- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`

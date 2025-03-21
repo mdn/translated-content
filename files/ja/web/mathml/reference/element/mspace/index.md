@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-この要素の属性は、[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)と共に以下の属性があります。
+この要素の属性は、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)と共に以下の属性があります。
 
 - `depth`
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、この空間の希望する（ベースライン以下の）空間を示します。

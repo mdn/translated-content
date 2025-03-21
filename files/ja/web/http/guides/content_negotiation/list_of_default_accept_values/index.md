@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 
 {{HTTPSidebar}}
 
-この記事では、特定の入力とブラウザーのバージョンにおける HTTP の [`Accept`](/ja/docs/Web/HTTP/Headers/Accept) ヘッダーの既定値について説明します。
+この記事では、特定の入力とブラウザーのバージョンにおける HTTP の [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーの既定値について説明します。
 
 ## 既定値
 

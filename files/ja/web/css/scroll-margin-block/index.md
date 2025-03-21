@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-margin-block
 
 {{CSSRef}}
 
-`scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
+`scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
 
 {{InteractiveExample("CSS Demo: scroll-margin-block")}}
 

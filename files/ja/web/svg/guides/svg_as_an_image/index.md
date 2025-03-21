@@ -35,4 +35,4 @@ SVG 画像は、様々な場面で画像形式の一つとして使用するこ�
 
 ## 関連情報
 
-- [HTML 内の SVG 入門](/ja/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)
+- [HTML 内の SVG 入門](/ja/docs/Web/SVG/Guides/SVG_in_HTML)

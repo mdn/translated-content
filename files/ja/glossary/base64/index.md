@@ -15,13 +15,13 @@ l10n:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-よくある変化形は "Base64 URL safe" で、{{glossary("URL")}} のパス部分やクエリー引数で問題が発生する可能性のある文字を避けるために、パディングを除外して `+/` を `-_` に置き換えます。パス部分またはクエリー引数にデータを格納しない場合は、このエンコード方式は必要ありません。例えば、[データ URL](/ja/docs/Web/URI/Schemes/data) にはどちらもないので、標準の Base64 エンコードを使用することができます。
+よくある変化形は "Base64 URL safe" で、{{glossary("URL")}} のパス部分やクエリー引数で問題が発生する可能性のある文字を避けるために、パディングを除外して `+/` を `-_` に置き換えます。パス部分またはクエリー引数にデータを格納しない場合は、このエンコード方式は必要ありません。例えば、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) にはどちらもないので、標準の Base64 エンコードを使用することができます。
 
 Base64 エンコード方式は、ASCII テキスト（または任意のバイナリーデータを受け入れるにはまだ不十分な ASCII のスーパーセット）しか扱えないメディア上で保存や送信を行う際に、バイナリーデータをエンコードするために一般的に使用されます。これにより、転送中にデータが変更されることなく、そのままの状態を確実に保持します。Base64 の一般的な用途としては、以下のものがあります。
 
 - [MIME](https://ja.wikipedia.org/wiki/MIME) による電子メールの場合
 - [XML](/ja/docs/Web/XML) に複雑なデータを格納する場合
-- バイナリーデータをエンコードして [`data:` URL](/ja/docs/Web/URI/Schemes/data) に含めることができるようにする場合
+- バイナリーデータをエンコードして [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) に含めることができるようにする場合
 
 ## 符号化によるサイズの増加
 
@@ -97,6 +97,6 @@ await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array
 - JavaScript API:
   - {{domxref("Window.atob()")}}（{{domxref("WorkerGlobalScope.atob()", "ワーカーでも利用可能", "", "nocode")}}）
   - {{domxref("Window.btoa()")}}（{{domxref("WorkerGlobalScope.btoa()", "ワーカーでも利用可能", "", "nocode")}}）
-- [データ URL](/ja/docs/Web/URI/Schemes/data)
+- [データ URL](/ja/docs/Web/URI/Reference/Schemes/data)
 - [Base64](https://ja.wikipedia.org/wiki/Base64)（ウィキペディア）
 - Base64 のアルゴリズム（[RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) の説明）

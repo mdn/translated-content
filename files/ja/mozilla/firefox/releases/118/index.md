@@ -18,7 +18,7 @@ l10n:
 ### CSS
 
 - {{cssxref("font-synthesis-position")}} プロパティと、{{cssxref("font-synthesis")}} ショートハンドプロパティの値 `position` をサポートしました。これらは {{cssxref("font-variant-position")}} を使用しているときに、上付き文字や下付き文字のグリフを持たないフォントでそれらを無効にすることができます ([Firefox bug 1849010](https://bugzil.la/1849010))。
-- 以下の CSS [数学関数](/ja/docs/Web/CSS/CSS_Functions#math_functions) をサポートしました: [`abs()`](/ja/docs/Web/CSS/abs)、[`sign()`](/ja/docs/Web/CSS/sign)、[`round()`](/ja/docs/Web/CSS/round)、[`mod()`](/ja/docs/Web/CSS/mod)、[`rem()`](/ja/docs/Web/CSS/rem)、[`pow()`](/ja/docs/Web/CSS/pow)、[`sqrt()`](/ja/docs/Web/CSS/sqrt)、[`hypot()`](/ja/docs/Web/CSS/hypot)、[`log()`](/ja/docs/Web/CSS/log)、[`exp()`](/ja/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589))。
+- 以下の CSS [数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) をサポートしました: [`abs()`](/ja/docs/Web/CSS/abs)、[`sign()`](/ja/docs/Web/CSS/sign)、[`round()`](/ja/docs/Web/CSS/round)、[`mod()`](/ja/docs/Web/CSS/mod)、[`rem()`](/ja/docs/Web/CSS/rem)、[`pow()`](/ja/docs/Web/CSS/pow)、[`sqrt()`](/ja/docs/Web/CSS/sqrt)、[`hypot()`](/ja/docs/Web/CSS/hypot)、[`log()`](/ja/docs/Web/CSS/log)、[`exp()`](/ja/docs/Web/CSS/exp) (Firefox bug [1814589](https://bugzil.la/1814589))。
 - CSS [`font-size-adjust`](/ja/docs/Web/CSS/font-size-adjust) プロパティの新しいキーワード `from-font` で、最初に使用可能なフォントから望まれた `<font-metric>` を取得できるようになりました (Firefox bug [1708240](https://bugzil.la/1708240))。
 - CSS の [`transform-box`](/ja/docs/Web/CSS/transform-box) プロパティで、値 `content-box` および `stroke-box` をサポートしました。値 `content-box` は [コンテンツボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成) を参照ボックスとして使用します。また、値 `stroke-box` は SVG の図形を包含するストロークのバウンディングボックスを参照ボックスとして使用します (Firefox bug [1819464](https://bugzil.la/1819464))。
 - CSS [`font-size-adjust`](/ja/docs/Web/CSS/font-size-adjust) プロパティで、最初に使用可能なフォントから望まれた `<font-metric>` を取得できるキーワード `from-font` をサポートしました (Firefox bug [1708240](https://bugzil.la/1708240))。
@@ -29,7 +29,7 @@ l10n:
 
 ### HTTP
 
-- HTTP [`Permissions-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) ヘッダーの [`publickey-credentials-get`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) ディレクティブをサポートしました。これはクロスオリジンのインラインフレームで、公開鍵証明書を取得するために [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) インターフェイスを使用可能にします ([Firefox bug 1460986](https://bugzil.la/1460986))。
+- HTTP [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) ヘッダーの [`publickey-credentials-get`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) ディレクティブをサポートしました。これはクロスオリジンのインラインフレームで、公開鍵証明書を取得するために [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) インターフェイスを使用可能にします ([Firefox bug 1460986](https://bugzil.la/1460986))。
 
 ### MathML
 

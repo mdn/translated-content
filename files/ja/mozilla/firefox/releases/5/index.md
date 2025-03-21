@@ -15,7 +15,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 - HTML5 仕様への準拠により、[文字エンコーディング](/ja/docs/Character_Sets_Supported_by_Gecko) UTF-7 と UTF-32 のサポートが削除されました。
 - Quirks モードにおいて、空の {{ HTMLElement("map") }} がマッチされず、空でない `<map>` にスキップしてしまう問題が修正されました。詳細は {{ HTMLElement("map") }} 要素のページにある [Gecko の実装に関する注意書き](/ja/docs/Web/HTML/Element/map#gecko_notes) をご覧ください。
 - Android 版 Firefox mobile が {{ cssxref("@font-face") }} で WOFF を利用できるようになりました。
-- セキュリティ対策により、WebGL で [もとのドメイン外からのテクスチャが読み込まれなくなりました](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。将来的に [HTTP access control](/ja/docs/Web/HTTP/CORS) のサポートが行われ、セキュリティを確保したかたちでクロステクスチャが実現できるでしょう。
+- セキュリティ対策により、WebGL で [もとのドメイン外からのテクスチャが読み込まれなくなりました](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。将来的に [HTTP access control](/ja/docs/Web/HTTP/Guides/CORS) のサポートが行われ、セキュリティを確保したかたちでクロステクスチャが実現できるでしょう。
 
 #### Canvas の修正
 
@@ -44,8 +44,8 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 - アクティブでないタブにおいて {{ domxref("window.setTimeout()") }} メソッドのタイムアウトが 1 秒に 1 回 を超えないようになりました。また、入れ子のタイムアウトが HTML5 仕様で定められた最小値 4ms になりました (これまでは 10ms でした)。
 - 上記と同様に、アクティブでないタブにおける {{ domxref("window.setInterval()") }} も 1 秒に 1 回以下になりました。
 - [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) が [`loadend` イベントをサポート](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. このイベントはすべての転送が終了した際 (つまり、`abort`, `error`, `load` イベントの後) に発生します。このイベントを利用すると、転送の成功・失敗に関わらず実行されるタスクを処理できます。
-- {{ domxref("Blob") }} オブジェクトと {{ domxref("File") }} オブジェクトの `slice()` メソッドが削除され、代わりに提案中のメソッドに置き換えられました。提案中のメソッドは JavaScript の [`Array.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`String.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice) メソッドにより近いものです。現時点では [`mozSlice()`](</ja/docs/DOM/Blob#mozSlice()>) という名前がつけられています。
-- {{ domxref("window.navigator.language") }} の値が `Accept-Language` [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers) の値から決定されるようになりました。
+- {{ domxref("Blob") }} オブジェクトと {{ domxref("File") }} オブジェクトの `slice()` メソッドが削除され、代わりに提案中のメソッドに置き換えられました。提案中のメソッドは JavaScript の [`Array.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`String.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice) メソッドにより近いものです。現時点では [`mozSlice()`](</ja/docs/Web/API/Blob#mozSlice()>) という名前がつけられています。
+- {{ domxref("window.navigator.language") }} の値が `Accept-Language` [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers) の値から決定されるようになりました。
 - DOM 仕様の要件により、{{ domxref("Node.prefix") }} プロパティが readonly になりました。
 
 ### JavaScript

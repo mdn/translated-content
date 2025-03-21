@@ -30,7 +30,7 @@ l10n:
 
 ### HTTP
 
-- ページが必要とする可能性があるリソースを、サーバーがまだ完全なレスポンスを準備している間に [先読み](/ja/docs/Web/HTML/Attributes/rel/preload) するための HTTP [`103 Early Hints`](/ja/docs/Web/HTTP/Status/103) [情報レスポンス](/ja/docs/Web/HTTP/Status#情報レスポンス) ステータスコードが有効になりました。
+- ページが必要とする可能性があるリソースを、サーバーがまだ完全なレスポンスを準備している間に [先読み](/ja/docs/Web/HTML/Attributes/rel/preload) するための HTTP [`103 Early Hints`](/ja/docs/Web/HTTP/Reference/Status/103) [情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス) ステータスコードが有効になりました。
   これは、ページの読み込み時間を大きく削減できます。
   なお、[事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect) のために使用する `103 Early Hints` ヘッダーは [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#http) でサポートしました。
   詳しくは [Firefox bug 1874445](https://bugzil.la/1874445) をご覧ください。

@@ -174,6 +174,6 @@ widthSlider.dispatchEvent(new Event("input"));
 
 ## 関連情報
 
-- SVG チュートリアル: [テキスト](/ja/docs/Web/SVG/Tutorial/Texts)
+- SVG チュートリアル: [テキスト](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Texts)
 - {{domxref("SVGAnimatedLength")}} および {{domxref("SVGLength")}}
 - {{SVGElement("text")}}

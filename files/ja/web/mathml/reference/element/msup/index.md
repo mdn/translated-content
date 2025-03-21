@@ -14,7 +14,7 @@ l10n:
 
 ## 属性
 
-この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)の他、以下の非推奨属性があります。
+この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他、以下の非推奨属性があります。
 
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)で、上付き文字のベースラインを上に移動させる最小量を示します。

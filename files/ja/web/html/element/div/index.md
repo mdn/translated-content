@@ -45,7 +45,7 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
+> **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
 
 ## 使用上の注意
 

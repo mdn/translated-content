@@ -54,7 +54,7 @@ l10n:
 
 - [`nonce`](/ja/docs/Web/HTML/Global_attributes/nonce)
 
-  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)が指定されたフェッチを許可するかどうかを決定するために使用できる暗号化ノンス（「一度だけ使用する番号」）です。
+  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)が指定されたフェッチを許可するかどうかを決定するために使用できる暗号化ノンス（「一度だけ使用する番号」）です。
 
 - [`scriptlevel`](/ja/docs/Web/MathML/Global_attributes/scriptlevel)
 

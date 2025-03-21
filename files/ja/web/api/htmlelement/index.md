@@ -30,7 +30,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("DOMStringMap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) を表します。
+  - : {{DOMxRef("DOMStringMap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) (`data-*`) を表します。
 - {{DOMxRef("HTMLElement.dir")}}
   - : 文字列で、要素の書字方向を表す `dir` グローバル属性を反映します。利用可能な値は、`"ltr"` および `"rtl"`、`"auto"` です。
 - {{DOMxRef("HTMLElement.draggable")}}

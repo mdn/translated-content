@@ -16,7 +16,7 @@ l10n:
 
 数式には多くの特殊文字が含まれます。例えば、ギリシャ文字（例: Δ）、フラクター文字（例: 𝔄）、二重打文字（例: ℂ）、二項演算子（例: ≠）、矢印（例: ⇒）、積分記号（例: ∮）、和記号 (例: ∑), 論理記号 (例: ↪Ps∀), 柵 (例: ↪Ps_230A) など。ウィキペディアの記事 [Unicode における数学演算子と記号](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode)は、使用する文字の概要を提供しています。
 
-これらの文字のほとんどは基本ラテン語 Unicode ブロックに属しませんので、[文書の文字エンコーディング](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#html_文書の文字コードを指定する)を指定し、適切なウェブフォントで提供することをお勧めします。以下は UTF-8 エンコーディング方式と [Latin Modern Math](/ja/docs/Web/MathML/Fonts#math_表を含むフォント) フォントを使用する基本的なテンプレートです。
+これらの文字のほとんどは基本ラテン語 Unicode ブロックに属しませんので、[文書の文字エンコーディング](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#html_文書の文字コードを指定する)を指定し、適切なウェブフォントで提供することをお勧めします。以下は UTF-8 エンコーディング方式と [Latin Modern Math](/ja/docs/Web/MathML/Guides/Fonts#math_表を含むフォント) フォントを使用する基本的なテンプレートです。
 
 ```html
 <!doctype html>
@@ -295,7 +295,7 @@ document.getElementById("showSolution").addEventListener(
 {{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
 
 > [!NOTE]
-> 明らかな違いは、 MathML ではソースコードがより冗長になることです。このチュートリアルはこの言語を学ぶためのものですが、実際には MathML のコンテンツは一般的に手動では書かれません。詳しい情報は [MathML を書く](/ja/docs/Web/MathML/Authoring)のページを参照してください。
+> 明らかな違いは、 MathML ではソースコードがより冗長になることです。このチュートリアルはこの言語を学ぶためのものですが、実際には MathML のコンテンツは一般的に手動では書かれません。詳しい情報は [MathML を書く](/ja/docs/Web/MathML/Guides/Authoring)のページを参照してください。
 
 ### アクティブラーニング: 伸縮演算子
 
@@ -436,7 +436,7 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 ```
 
 > [!WARNING]
-> 伸縮できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が要求されます。上記の例は[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)に頼っています。
+> 伸縮できるようにするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Guides/Fonts)が要求されます。上記の例は[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)に頼っています。
 
 ## まとめ
 

@@ -22,7 +22,7 @@ l10n:
 
 ### Accessibility (ARIA)
 
-- [`image`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) ロールを `img` の同義語としてサポートしました。
+- [`image`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) ロールを `img` の同義語としてサポートしました。
   これにより、完全な単語または完全な単語を連結したものである多くのロール名との一貫性が保たれます ([Firefox bug 1829269](https://bugzil.la/1829269))。
 
 ### JavaScript
@@ -33,11 +33,11 @@ l10n:
 
 ### SVG
 
-- [長さの単位](/ja/docs/Web/SVG/Content_type#length) `q` (`1q = 1cm の 40 分の 1`) をサポートしました ([Firefox bug 1836995](https://bugzil.la/1836995))。
+- [長さの単位](/ja/docs/Web/SVG/Guides/Content_type#length) `q` (`1q = 1cm の 40 分の 1`) をサポートしました ([Firefox bug 1836995](https://bugzil.la/1836995))。
 
 ### HTTP
 
-- [Content-Security-Policy](/ja/docs/Web/HTTP/CSP) の構成で、[ハッシュを使用して外部 JavaScript ファイルをホワイトリストに登録する](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#whitelisting_external_scripts_using_hashes) 指定方法をサポートしました。以前は、インラインスクリプトに限りハッシュを使用してホワイトリストに登録できました ([Firefox bug 1409200](https://bugzil.la/1409200))。
+- [Content-Security-Policy](/ja/docs/Web/HTTP/Guides/CSP) の構成で、[ハッシュを使用して外部 JavaScript ファイルをホワイトリストに登録する](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#whitelisting_external_scripts_using_hashes) 指定方法をサポートしました。以前は、インラインスクリプトに限りハッシュを使用してホワイトリストに登録できました ([Firefox bug 1409200](https://bugzil.la/1409200))。
 
 ### API
 

@@ -21,7 +21,7 @@ Firefox 62 は、米国時間 2018 年 9 月 5 日 にリリースされまし�
 - 設定の "現在の対象ドキュメントとして読み込む iframe を選択します" にチェックが入っているとき、設定タブを開いている間は現在のページに iframe が含まれていない場合でもツールバーにアイコンを表示します ([Firefox バグ 1456069](https://bugzil.la/1456069))。
 - [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の [Cookie タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#Cookies) で、Cookie の `samesite` 属性を表示するようになりました ([Firefox バグ 1452715](https://bugzil.la/1452715))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) が、コンテナータブ内で動作するようになりました ([Firefox バグ 1306975](https://bugzil.la/1306975))。
-- {{Glossary("CORS")}} のエラーが発生してコンソールに報告されているとき、Firefox がエラーに対応する [CORS エラーのドキュメント](/ja/docs/Web/HTTP/CORS/Errors) へのリンクを提供するようになりました ([Firefox バグ 1475391](https://bugzil.la/1475391))。
+- {{Glossary("CORS")}} のエラーが発生してコンソールに報告されているとき、Firefox がエラーに対応する [CORS エラーのドキュメント](/ja/docs/Web/HTTP/Guides/CORS/Errors) へのリンクを提供するようになりました ([Firefox バグ 1475391](https://bugzil.la/1475391))。
 - 以下のコマンドを使用して、コンソールタブで現在のページのスクリーンショットを作成できるようになりました (ファイル名も指定可能です) ([Firefox バグ 1464461](https://bugzil.la/1464461)):
 
   ```bash
@@ -54,7 +54,7 @@ _変更なし。_
 
 ### JavaScript
 
-- [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global) コンストラクターを、WebAssembly のグローバル変数とともにサポートしました ([Firefox バグ 1464656](https://bugzil.la/1464656))。
+- [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global) コンストラクターを、WebAssembly のグローバル変数とともにサポートしました ([Firefox バグ 1464656](https://bugzil.la/1464656))。
 - {{jsxref("Array.prototype.flat()")}} および {{jsxref("Array.prototype.flatMap()")}} メソッドをデフォルトで有効化しました ([Firefox バグ 1435813](https://bugzil.la/1435813))。
 - コンテキスト固有のメタデータを JavaScript モジュールに公開するための、[`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) プロパティを実装しました ([Firefox バグ 1427610](https://bugzil.la/1427610))。
 - JavaScript の [文字列リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) で、 U+2028 LINE SEPARATOR や U+2029 PARAGRAPH SEPARATOR の文字を直接含めることが可能になりました。この結果、{{jsxref("JSON")}} 構文が JavaScript リテラル構文のサブセットになりました ([Firefox バグ 1435828](https://bugzil.la/1435828) および TC39 提案 [json-superset](https://github.com/tc39/proposal-json-superset))。

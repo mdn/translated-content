@@ -156,4 +156,4 @@ aside > p {
 
 - 他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Complementary ロール](/ja/docs/Web/Accessibility/ARIA/Roles/complementary_role)
+- [ARIA: Complementary ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)

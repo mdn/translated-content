@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックコンテナー](/ja/docs/Web/CSS/Visual_formatting_model#ブロックコンテナー)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ（画像やインラインテーブルなど）がないときに限ります。
+**`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックコンテナー](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#ブロックコンテナー)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ（画像やインラインテーブルなど）がないときに限ります。
 
 {{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 

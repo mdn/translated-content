@@ -58,11 +58,11 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 
 ### Networking
 
-- You can now send the contents of [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer) object) [using XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
+- You can now send the contents of [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
 - WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
 - The HTTP `Accept` header for XSLT requests has been changed to simply "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
 - Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/ja/docs/Web/HTTP#more_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
-- Content served with an empty [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) were previously treated as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) were "attachment"; this didn't always work as expected. These are now handled as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) were "inline".
+- Content served with an empty [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) were previously treated as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) were "attachment"; this didn't always work as expected. These are now handled as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) were "inline".
 - The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
 
 ### Developer tools

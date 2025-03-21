@@ -304,7 +304,7 @@ function moveToastsUp() {
 
 ## ポップオーバーのアニメーション
 
-ポップオーバーは{{glossary("top layer", "最上位レイヤー")}}と[アクセシビリティツリー](/ja/docs/Web/Performance/How_browsers_work#building_the_accessibility_tree)から除去されたり追加されたりするだけでなく、非表示時には `display: none;`、表示時には `display: block;` に設定されます。したがって、ポップオーバーをアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション可能にする必要があります。[対応しているブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` を[離散アニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)の変形でアニメーションさせます。具体的には、ブラウザーはアニメーションの再生時間全体にわたってコンテンツを表示させるように、 `none` と `display` の他の値を切り替えます。例えば、次のようになります。
+ポップオーバーは{{glossary("top layer", "最上位レイヤー")}}と[アクセシビリティツリー](/ja/docs/Web/Performance/Guides/How_browsers_work#building_the_accessibility_tree)から除去されたり追加されたりするだけでなく、非表示時には `display: none;`、表示時には `display: block;` に設定されます。したがって、ポップオーバーをアニメーションさせるには、 {{cssxref("display")}} プロパティをアニメーション可能にする必要があります。[対応しているブラウザー](/ja/docs/Web/CSS/display#ブラウザーの互換性)では、`display` を[離散アニメーション型](/ja/docs/Web/CSS/CSS_animated_properties#離散)の変形でアニメーションさせます。具体的には、ブラウザーはアニメーションの再生時間全体にわたってコンテンツを表示させるように、 `none` と `display` の他の値を切り替えます。例えば、次のようになります。
 
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせる場合、値はアニメーション時間の `0%` で `block` に切り替わり、ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせる場合、値はアニメーション時間の `100%` で `none` に切り替わり、ずっと表示されます。

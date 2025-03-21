@@ -188,7 +188,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 しかし、これは、検索入力が何であるかを言葉で示していないため、スクリーンリーダーの利用者に混乱を引き起こす可能性があります。 ビジュアルデザインに影響を与えないでこれを解決する方法として、 [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) の機能を使用することができます。
 
 - `<form>` フォームの `role` 属性の値が `search` であると、スクリーンリーダーがフォームが検索フォームであることをアナウンスします。
-- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用することができます。これはスクリーンリーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
+- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を使用することができます。これはスクリーンリーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
 
 例を見てみましょう。
 

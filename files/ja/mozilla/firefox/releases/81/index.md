@@ -39,8 +39,8 @@ _変更なし。_
 
 ### HTTP
 
-- Firefox で、空白を含むクォートされていないファイル名を持つ非標準の [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) ヘッダーを受け入れるようになりました ([Firefox バグ 1440677](https://bugzil.la/1440677))。
-- Firefox で HTTP [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) ヘッダーの [`web-share`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) ディレクティブをサポートしました。これは、[Web Share API](/ja/docs/Web/API/Navigator/share) へのアクセスを信頼されたオリジンに制限するために使用できます。現時点で Firefox は Web Share API 自体をサポートしていないことに注意してください ([Firefox バグ 1653199](https://bugzil.la/1653199))。
+- Firefox で、空白を含むクォートされていないファイル名を持つ非標準の [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) ヘッダーを受け入れるようになりました ([Firefox バグ 1440677](https://bugzil.la/1440677))。
+- Firefox で HTTP [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) ヘッダーの [`web-share`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) ディレクティブをサポートしました。これは、[Web Share API](/ja/docs/Web/API/Navigator/share) へのアクセスを信頼されたオリジンに制限するために使用できます。現時点で Firefox は Web Share API 自体をサポートしていないことに注意してください ([Firefox バグ 1653199](https://bugzil.la/1653199))。
 
 ### API
 

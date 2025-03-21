@@ -27,7 +27,7 @@ l10n:
 
 - {{cssxref("color")}}
 
-  - : テキストと[テキスト装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (下線や上線、打ち消し線などを付加するもの) に使用する色です。
+  - : テキストと[テキスト装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (下線や上線、打ち消し線などを付加するもの) に使用する色です。
 
 - {{cssxref("background-color")}}
 
@@ -35,7 +35,7 @@ l10n:
 
 - {{cssxref("text-shadow")}}
 
-  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows)を参照してください。
+  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows)を参照してください。
 
 - {{cssxref("text-decoration-color")}}
 
@@ -212,5 +212,5 @@ CSS が唯一の色を付けるためのウェブ技術ではありません。�
 - [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)ガイド
 - [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [ウェブのグラフィック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブ上のその他のグラフィック)
+- [グラフィックの描画](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
+- [ウェブのグラフィック](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブ上のその他のグラフィック)

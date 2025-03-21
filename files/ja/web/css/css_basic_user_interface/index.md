@@ -105,13 +105,13 @@ CSS の {{CSSxRef("outline")}} と {{CSSxRef("outline-offset")}} プロパティ
 
 ## ガイド
 
-- [フォームの学習: フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [フォームの学習: フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
   - : {{CSSxRef("appearance")}} を使用してフォームコントロールをスタイル設定する方法を説明します。
 
 ## 関連概念
 
 - CSS の [`cursor`](/ja/docs/Web/CSS/cursor) プロパティ
-- SVG の [`cursor`](/ja/docs/Web/SVG/Attribute/cursor) 属性
+- SVG の [`cursor`](/ja/docs/Web/SVG/Reference/Attribute/cursor) 属性
 - CSS の {{CSSxRef(":focus")}}, {{CSSxRef(":focus-within")}}, {{CSSxRef(":focus-visible")}} 擬似クラス
 - {{DOMXref("CaretPosition")}} インターフェイス
 

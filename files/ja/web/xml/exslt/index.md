@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT
 original_slug: Web/EXSLT
 ---
 
-EXSLT は [XSLT](/ja/docs/Web/XSLT) に対する一連の拡張機能です。いくつものモジュールがあります。 Firefox が対応しているものは以下の通りです。
+EXSLT は [XSLT](/ja/docs/Web/XML/XSLT) に対する一連の拡張機能です。いくつものモジュールがあります。 Firefox が対応しているものは以下の通りです。
 
 {{SubpagesWithSummaries}}
 
@@ -31,8 +31,8 @@ EXSLT Common パッケージは、 XSLT の機能を拡張する基本的な関�
 
 #### 関数
 
-- [`exsl:node-set()`](/ja/docs/Web/EXSLT/exsl/node-set)
-- [`exsl:object-type()`](/ja/docs/Web/EXSLT/exsl/object-type)
+- [`exsl:node-set()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/node-set)
+- [`exsl:object-type()`](/ja/docs/Web/XML/EXSLT/Reference/exsl/object-type)
 
 ### Math
 
@@ -40,8 +40,8 @@ EXSLT の Math パッケージは、数値を扱ったり、ノードを比較�
 
 #### 関数
 
-- [`math:highest()`](/ja/docs/Web/EXSLT/math/highest)
-- [`math:lowest()`](/ja/docs/Web/EXSLT/math/lowest)
+- [`math:highest()`](/ja/docs/Web/XML/EXSLT/Reference/math/highest)
+- [`math:lowest()`](/ja/docs/Web/XML/EXSLT/Reference/math/lowest)
 - [`math:max()`](/ja/docs/Web/EXSLT/math/max)
 - [`math:min()`](/ja/docs/Web/EXSLT/math/min)
 

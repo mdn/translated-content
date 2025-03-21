@@ -30,7 +30,7 @@ load()
 
 ## 使用上のメモ
 
-`load()` を呼び出すと、このメディア要素を含む進行中のすべての操作が中止され、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素で指定されたオプションとその [`src`](/ja/docs/Web/HTML/Element/video#src) 属性または子の {{HTMLElement("source")}} 要素を指定して適切なメディアリソースの選択と読み込みのプロセスが開始されます。 これについては、[動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#複数のソース形式を使用して互換性を向上させる)で詳しく説明しています。
+`load()` を呼び出すと、このメディア要素を含む進行中のすべての操作が中止され、{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素で指定されたオプションとその [`src`](/ja/docs/Web/HTML/Element/video#src) 属性または子の {{HTMLElement("source")}} 要素を指定して適切なメディアリソースの選択と読み込みのプロセスが開始されます。 これについては、[動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#複数のソース形式を使用して互換性を向上させる)で詳しく説明しています。
 
 進行中のアクティビティを中止するプロセスにより、 {{domxref("HTMLMediaElement.play", "play()")}} によって返された未処理のプロミス ({{jsxref("Promise")}}) が、新しいメディアの読み込みが開始される前に、そのステータスに基づいて適切に解決または拒否されます。保留中の再生用のプロミスは、 `"AbortError"` {{domxref("DOMException")}} で中止されます。
 

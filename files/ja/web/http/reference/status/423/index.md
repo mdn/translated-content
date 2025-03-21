@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`423 Locked`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、対象のリソースがロックされている、すなわちアクセスできないことを示します。コンテンツは、 {{glossary("WebDAV")}} の XML 形式で情報を含むべきです。
+HTTP の **`423 Locked`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、対象のリソースがロックされている、すなわちアクセスできないことを示します。コンテンツは、 {{glossary("WebDAV")}} の XML 形式で情報を含むべきです。
 
 > [!NOTE]
 > リソースをロックする機能は、{{Glossary("WebDAV")}} サーバーの一部に固有のものです。ウェブページにアクセスしているブラウザーがこのステータスコードを受け取ることは無いはずです。これを受け取る間違った状況では、ブラウザーはこれを一般の {{HTTPStatus(400)}} ステータスコードとして扱うでしょう。
@@ -42,4 +42,4 @@ Content-Length: xxxx
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)

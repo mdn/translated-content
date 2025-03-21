@@ -83,7 +83,7 @@ HTML では `<html>` 要素の開始タグと終了タグを指定する必要�
 
 `<html>` 要素に妥当な `lang` を設定することで、ページで {{HTMLElement("head")}} に含まれる {{HTMLElement("title")}} などの重要なメタデータについても、正しくアナウンスすることができます。
 
-- [MDN "WCAG を理解する ― ガイドライン 3.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
+- [MDN "WCAG を理解する ― ガイドライン 3.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [Understanding Success Criterion 3.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 
 ## 仕様書

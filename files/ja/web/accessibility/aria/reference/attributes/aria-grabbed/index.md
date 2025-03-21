@@ -36,7 +36,7 @@ l10n:
 
 ## 関連するロール
 
-**ALL** すべての[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)で使用されます。
+**ALL** すべての[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)で使用されます。
 
 ## 仕様書
 

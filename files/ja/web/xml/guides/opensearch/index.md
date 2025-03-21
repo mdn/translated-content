@@ -44,7 +44,7 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 
   - : 検索エンジンのアイコンの URL です。可能であれば、 16×16 の画像を `image/x-icon` 形式で (`/favicon.ico` など)、 および 64×64 の画像を `image/jpeg` または `image/png` 形式で含めてください。
 
-    この URL には [`data:` URL スキーム](/ja/docs/Web/URI/Schemes/data)を使用することもできます。 (`data:` URL はアイコンファイルから [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) で生成することができます。)
+    この URL には [`data:` URL スキーム](/ja/docs/Web/URI/Reference/Schemes/data)を使用することもできます。 (`data:` URL はアイコンファイルから [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) で生成することができます。)
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>

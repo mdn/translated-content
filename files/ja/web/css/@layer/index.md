@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
+**`@layer`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、カスケードレイヤーを宣言するために使用し、また複数のカスケードレイヤーがある場合に、優先順位を定義するためにも使用することができます。
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -226,7 +226,7 @@ p {
 - {{domxref("CSSLayerStatementRule")}}
 - [`!important`](/ja/docs/Web/CSS/important)
 - [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
-- [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)
+- [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) (bram.us (2021))

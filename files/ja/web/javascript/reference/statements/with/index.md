@@ -86,7 +86,7 @@ with ([1, 2, 3]) {
 
   ECMAScript 5 環境で `f([1, 2, 3], obj)` を呼び出すと、`with` 文の中にある `values` の参照先は `obj` に解決されます。ところが、ECMAScript 2015 では [`values`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values) プロパティが `Array.prototype` に導入されました (よって、すべての配列で使用できます)。従って、環境を更新すると、`with` 文の内部にある `values` の参照先は `[1, 2, 3].values` に解決されるようになり、バグを引き起こす可能性があります。
 
-  この具体的な例では、`values` は [`Array.prototype[@@unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) によってスコープ不可と定義されているので、やはり `values` 引数に正しく解決さ れます。もし、スコープ不可と定義されていなければ、デバッグが困難な課題になるのは目に見えています。
+  この具体的な例では、`values` は [`Array.prototype[@@unscopables]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) によってスコープ不可と定義されているので、やはり `values` 引数に正しく解決さ れます。もし、スコープ不可と定義されていなければ、デバッグが困難な課題になるのは目に見えています。
 
 ## 例
 
@@ -107,7 +107,7 @@ with (Math) {
 
 ### プロパティを現在のスコープに分割代入して with 文を避ける
 
-通常、[プロパティの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)によって `with` を使用するのを避けることができます。ここでは、`with` が余分なスコープを作る動作を模倣するために余分なブロックを作成していますが、実際の使用では、通常はこのブロックを除外することができます。
+通常、[プロパティの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)によって `with` を使用するのを避けることができます。ここでは、`with` が余分なスコープを作る動作を模倣するために余分なブロックを作成していますが、実際の使用では、通常はこのブロックを除外することができます。
 
 ```js
 let a, x, y;

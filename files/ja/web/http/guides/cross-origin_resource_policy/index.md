@@ -21,7 +21,7 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 
 2018 年の前半に、_Meltdown_ と _Spectre_ として知られる 2 つのサイドチャネルハードウェア脆弱性が公表されました。パフォーマンスを改善するために設計された投機的実行機能の一部として生じた競合状態により、これらの脆弱性は機密性の高いデータを漏洩することができます。
 
-これを受けて Chromium は [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb) を実装しました。これにより、クロスオリジンの読み込みに対してリソース（`Content-Type` が HTML、JSON、XML）を自動的に保護します。アプリケーションが [`no-sniff` ディレクティブ](/ja/docs/Web/HTTP/Headers/X-Content-Type-Options)を渡していない場合、Chromium は `Content-Type` を推測しようと試みて、とにかく保護を適用します。
+これを受けて Chromium は [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb) を実装しました。これにより、クロスオリジンの読み込みに対してリソース（`Content-Type` が HTML、JSON、XML）を自動的に保護します。アプリケーションが [`no-sniff` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)を渡していない場合、Chromium は `Content-Type` を推測しようと試みて、とにかく保護を適用します。
 
 クロスオリジンリソースポリシーは*どのような*リソースでも保護することができるオプトインのレスポンスヘッダーです。ブラウザーが MIME タイプを嗅ぎ分ける必要はありません。
 

@@ -27,7 +27,7 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 - `href`
   - : 特定の URI へのハイパーリンクを設定するのに使われます。
 - `linethickness`
-  - : 分数の水平線の太さ。既定値は `medium` で、`thin`、`thick` や、それ以外の [length 値](/ja/docs/Web/CSS/Length) が取り得ます。
+  - : 分数の水平線の太さ。既定値は `medium` で、`thin`、`thick` や、それ以外の [length 値](/ja/docs/Web/CSS/length) が取り得ます。
 - `mathbackground`
   - : 数式の背景色を指定するために使われます。`#rgb`、`#rrggbb`のような 16 進表現のほか、HTML で定められた[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。
 - `mathcolor`

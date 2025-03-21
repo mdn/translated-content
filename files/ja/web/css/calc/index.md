@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}} が利用できる場所ならば使用できます。
+**`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}} が利用できる場所ならば使用できます。
 
 {{InteractiveExample("CSS Demo: calc()")}}
 
@@ -118,7 +118,7 @@ h1 {
 
 これによって、ページが拡大縮小されたときにテキストの大きさが変化します。
 
-- [MDN WCAG のを理解する 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN WCAG のを理解する 1.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 例
@@ -249,5 +249,5 @@ p {
 ## 関連情報
 
 - {{CSSxRef("&lt;calc-keyword&gt;")}}
-- [CSS 関数](/ja/docs/Web/CSS/CSS_Functions)
+- [CSS 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 - [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

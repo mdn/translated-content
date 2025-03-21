@@ -16,7 +16,7 @@ l10n:
 - **属性が未設定（既定値）、空文字列、JavaScript の MIME タイプ**
   - : スクリプトが「クラシックスクリプト」であること、JavaScript コードを保持していることを示します。
     このスクリプトが JavaScript コードを参照している場合、MIME タイプを指定するのではなく、この属性を省略することを推奨します。
-    JavaScript の MIME タイプは [IANA media types specification に掲載されています](/ja/docs/Web/HTTP/MIME_types#textjavascript)。
+    JavaScript の MIME タイプは [IANA media types specification に掲載されています](/ja/docs/Web/HTTP/Guides/MIME_types#textjavascript)。
 - `module`
   - : コードを JavaScript モジュールとして扱います。
     スクリプトコンテンツの処理は延期されます。
