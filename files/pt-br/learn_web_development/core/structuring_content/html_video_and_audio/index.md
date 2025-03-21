@@ -106,7 +106,7 @@ Outra situação é o sempre popular arquivo MP3. Um "arquivo MP3" é na verdade
 Um reprodutor de áudio tenderá a reproduzir uma faixa de áudio diretamente, por exemplo um arquivo MP3 ou Ogg. Estes não precisam de contêineres.
 
 > [!NOTE]
-> Não é tão simples, como você pode ver no nosso [tabela de compatibilidade de codec de áudio e vídeo](/pt-BR/docs/Web/Media/Formats#browser_compatibility). Além disso, muitos navegadores de plataforma móvel podem reproduzir um formato não suportado, entregando-o ao reprodutor de mídia do sistema subjacente. Mas isso servirá por enquanto.
+> Não é tão simples, como você pode ver no nosso [tabela de compatibilidade de codec de áudio e vídeo](/pt-BR/docs/Web/Media/Guides/Formats#browser_compatibility). Além disso, muitos navegadores de plataforma móvel podem reproduzir um formato não suportado, entregando-o ao reprodutor de mídia do sistema subjacente. Mas isso servirá por enquanto.
 
 #### Suporte a arquivos de mídia em navegadores
 
@@ -139,7 +139,7 @@ Aqui nós tiramos o atributo `src` (source) do {{HTMLElement("video")}} tag, mas
 Cada elemento `<source>` também tem um atributo [`type`](/pt-BR/docs/Web/HTML/Element/source#type). Isso é opcional, mas é recomendável que você os inclua - eles contêm o {{glossary("MIME type","MIME types")}} dos arquivos de vídeo, e os navegadores podem lê-los e pular imediatamente os vídeos que não entendem. Se não estiverem incluídos, os navegadores carregarão e tentarão reproduzir cada arquivo até encontrar um que funcione, consumindo ainda mais tempo e recursos.
 
 > [!NOTE]
-> Consulte o nosso [guia sobre tipos e formatos de mídias](/pt-BR/docs/Web/Media/Formats) (inglês) para obter ajuda na seleção dos melhores contêineres e codecs para suas necessidades, bem como procurar os tipos MIME certos para especificar cada
+> Consulte o nosso [guia sobre tipos e formatos de mídias](/pt-BR/docs/Web/Media/Guides/Formats) (inglês) para obter ajuda na seleção dos melhores contêineres e codecs para suas necessidades, bem como procurar os tipos MIME certos para especificar cada
 
 ### Outros recursos de \<video>
 
@@ -325,7 +325,7 @@ E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e
 
 - Os elementos de mídia HTML: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, {{htmlelement("track")}}.
 - [Tecnologias de mídia da Web](/pt-BR/docs/Web/Media).
-- [Guia para tipos e formatos de mídia na Web](/pt-BR/docs/Web/Media/Formats).
+- [Guia para tipos e formatos de mídia na Web](/pt-BR/docs/Web/Media/Guides/Formats).
 - [Adicionando legendas e legendas ao vídeo HTML5](/pt-BR/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).
 - [Entrega de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_delivery) muitos detalhes sobre como colocar áudio e vídeo em páginas da Web usando HTML e JavaScript.
 - [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).

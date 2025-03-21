@@ -80,7 +80,7 @@ let result = someInterface.customMethod?.();
 
 #### Lidando com callbacks opcionais ou manipuladores de eventos
 
-Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
+Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
 
 ```js
 // Escrito como ES2019

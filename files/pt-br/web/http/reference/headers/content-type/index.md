@@ -37,7 +37,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Diretivas
 
 - `media-type`
-  - : O [MIME type](/pt-BR/docs/Web/HTTP/MIME_types) do recurso ou dado.
+  - : O [MIME type](/pt-BR/docs/Web/HTTP/Guides/MIME_types) do recurso ou dado.
 - charset
   - : O encoding da string
 - boundary

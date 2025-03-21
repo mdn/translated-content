@@ -20,7 +20,7 @@ p {
 
 Vamos tentar: cole as três linhas de CSS acima em um novo arquivo, no seu editor de texto, e salve o arquivo como `estilo.css` na sua pasta `estilos`.
 
-Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o estilo CSS não irá afetar a maneira como o seu navegador mostra seu documento HTML (se você não estiver acompanhando o nosso projeto, leia [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files) e [HTML básico](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics) para descobrir o que você precisa fazer primeiro).
+Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o estilo CSS não irá afetar a maneira como o seu navegador mostra seu documento HTML (se você não estiver acompanhando o nosso projeto, leia [Lidando com arquivos](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) e [HTML básico](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) para descobrir o que você precisa fazer primeiro).
 
 1. Abra seu arquivo `index.html` e cole o seguinte código em algum lugar no cabeçalho, ou seja, entre as tags {{HTMLElement("head")}} e `</head>`:
 
@@ -89,13 +89,13 @@ Há muitos tipos diferentes de seletores. Abaixo, nós mostramos apenas os **sel
 | Seletor de atributo                                            | O(s) elemento(s) na página com o atributo especificado.                                                                                                                                                             | `img[src]` Seleciona `<img src="myimage.png">` mas não `<img>`              |
 | Seletor de pseudo-classe                                       | O(s) elemento(s) específicado(s), mas somente quando estiver no estado especificado. Ex.: com o mouse sobre ele.                                                                                                    | `a:hover` Seleciona `<a>`, mas somente quando o mouse está em cima do link. |
 
-Há muito mais seletores para explorar e você pode achar uma lista mais detalhada em nosso [Guia de seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors).
+Há muito mais seletores para explorar e você pode achar uma lista mais detalhada em nosso [Guia de seletores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Fontes e texto
 
 Agora que exploramos algumas noções básicas de CSS, vamos começar a adicionar mais regras e informações no nosso arquivo `estilo.css` para deixar nosso exemplo bonito. Vamos começar fazendo nossas fontes e textos parecerem um pouco melhores.
 
-1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
+1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
 
    ```html
    <link
@@ -169,7 +169,7 @@ html {
 }
 ```
 
-Essa regra define uma cor de fundo para toda a página. Mude a cor acima para a cor [que você escolheu ao planejar seu site.](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#cor_do_tema)
+Essa regra define uma cor de fundo para toda a página. Mude a cor acima para a cor [que você escolheu ao planejar seu site.](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#cor_do_tema)
 
 ### Separando o corpo
 
@@ -240,6 +240,6 @@ Se você seguiu todas as instruções desse artigo, você deve terminar com uma 
 
 Se você emperrar, sempre poderá comparar seu trabalho com nosso código de [exemplo finalizado no Github](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/Learn/CSS).
+Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

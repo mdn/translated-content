@@ -17,11 +17,11 @@ Os artigos abaixo podem ajudá-lo a aprender mais sobre HTML.
 
 - Introdução ao HTML
 
-  Se você é novo no desenvolvimento web, não deixe de ler nosso artigo [O Básico do HTML](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics) para aprender o que é HTML e como usá-lo.
+  Se você é novo no desenvolvimento web, não deixe de ler nosso artigo [O Básico do HTML](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) para aprender o que é HTML e como usá-lo.
 
 - Tutoriais HTML
 
-  Para artigos sobre como usar o HTML, assim como tutoriais e exemplos completos, confira nossa [Área de Aprendizado de HTML](/pt-BR/docs/Learn/HTML).
+  Para artigos sobre como usar o HTML, assim como tutoriais e exemplos completos, confira nossa [Área de Aprendizado de HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d).
 
 - Referência do HTML
 
@@ -29,17 +29,17 @@ Os artigos abaixo podem ajudá-lo a aprender mais sobre HTML.
 
 ## Tutoriais para iniciantes
 
-Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Learn/HTML) apresenta vários módulos que ensinam HTML desde o início — sem necessidade de conhecimento prévio.
+Nossa [Área de Aprendizado de HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d) apresenta vários módulos que ensinam HTML desde o início — sem necessidade de conhecimento prévio.
 
-- [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
+- [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo fornece uma base de conhecimento, permitindo que você acostume-se com os conceitos e sintaxes importantes, tais como aplicar HTML para texto, como criar _hyperlinks_ e como usar HTML para estruturar uma página web.
-- [Multimídia e como incorporá-la](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding)
+- [Multimídia e como incorporá-la](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : Este módulo explora como usar HTML para incluir multimídia em sua página web, incluindo as diferentes maneiras para incluir imagens, e como incorporar vídeos, áudios e até como colocar uma página inteira em outras páginas web.
-- [Tabelas HTML](/pt-BR/docs/Learn/HTML/Tables)
+- [Tabelas HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Representar dados tabulares em uma página web de maneira entendível e acessível pode ser um desafio. Este módulo cobre marcação tabular básica, junto com outras funcionalidades mais complexas como legendas e sumários.
-- [Formulários HTML](/pt-BR/docs/Learn/Forms)
+- [Formulários HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms)
   - : Formulários são partes muito importantes na Web — proporcionam muitas das funcionalidades que você precisa para interagir em páginas web. Exemplos disso são registrar-se e conectar-se, enviar comentários, comprar produtos e muito mais. Este módulo lhe permite começar a criar as partes visíveis dos formulários, ou seja, as partes que os usuários interagem.
-- [Usando HTML para resolver problemas comuns](/pt-BR/docs/Learn/HTML/Howto)
+- [Usando HTML para resolver problemas comuns](/pt-BR/docs/Learn_web_development/Howto/Solve_HTML_problems)
   - : Apresenta links para seções com conteúdo explicando como usar HTML para resolver problemas muito comuns, quando se cria uma página web: como trabalhar com títulos, agregar imagens ou vídeos, colocar ênfase em conteúdo, criar um formulário básico, etc.
 
 ## Tópicos avançados
@@ -47,12 +47,12 @@ Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Learn/HTML) apresenta vários m
 - [Habilitando Imagem CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image)
   - : O atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin), em combinação com um cabeçalho [CORS](/pt-BR/docs/Glossary/CORS) adequado, permite definir imagens pelo elemento {{HTMLElement("img")}} para ser carregado de outras fontes em um elemento {{HTMLElement("canvas")}} como se estivessem sendo carregados da fonte atual.
 - [Configuração de atributos CORS](/pt-BR/docs/Web/HTML/Attributes/crossorigin)
-  - : Alguns elementos em HTML que suportam [CORS](/pt-BR/docs/Web/HTTP/CORS), como por exemplo o {{HTMLElement("img")}} ou {{HTMLElement("video")}}, têm o atributo `crossorigin` (a propriedade `crossOrigin`), que permite configurar as requisições CORS para os dados recebidos pelo elemento.
+  - : Alguns elementos em HTML que suportam [CORS](/pt-BR/docs/Web/HTTP/Guides/CORS), como por exemplo o {{HTMLElement("img")}} ou {{HTMLElement("video")}}, têm o atributo `crossorigin` (a propriedade `crossOrigin`), que permite configurar as requisições CORS para os dados recebidos pelo elemento.
 - [Gerenciamento de foco em HTML](/pt-BR/docs/Web/API/Document/hasFocus)
   - : O atributo DOM [`activeElement`](/pt-BR/docs/Web/API/Document/activeElement) e o método DOM [`hasFocus()`](/pt-BR/docs/Web/API/Document/hasFocus) lhe ajudam a melhorar a interação entre o usuário e os elementos da página.
 - [Tipos de conexões](/pt-BR/docs/Web/HTML/Attributes/rel)
   - : Em HTML, vários tipos de links podem ser utilizados para realizar conexões entre documentos, como por exemplo [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/pt-BR/docs/Web/HTML/Element/link).
-- [Formatos de arquivos suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/Media/Formats)
+- [Formatos de arquivos suportados pelos elementos de áudio e vídeo em HTML](/pt-BR/docs/Web/Media/Guides/Formats)
   - : Os elementos [`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) e [`<video>`](/pt-BR/docs/Web/HTML/Element/video) permitem que você reproduza áudios e vídeos no seu HTML. Estes elementos fornecem uma alternativa nativa de recursos do navegador, parecidos com a do Adobe Flash Player e outros plug-ins.
 - [Usando o cachê de aplicação](/pt-BR/docs/Web/HTML/Using_the_application_cache)
   - : O cachê de aplicação tem como o objetivo executar a aplicação offline. Você pode usar a interface **Application Cache** (_AppCache_) para escolher elementos que o browser possa guardar, deixando-os disponíveis para usuários desconectados. As aplicações que forem armazenadas em cache podem ser utilizadas sem nenhum problema, mesmo que o usuário clique no botão de atualizar a página enquanto estiver offline.
@@ -73,7 +73,7 @@ Nossa [Área de Aprendizado de HTML](/pt-BR/docs/Learn/HTML) apresenta vários m
   - : Elementos HTML são normalmente elementos _inline_ (em linha) ou _block-level_ (em nível de bloco). Um elemento em linha ocupa somente o espaço limitado pelas tags que o definem. Um elemento em nível de bloco ocupa o espaço inteiro do elemento pai (container), portanto criando um bloco.
 - [Tipos de Links](/pt-BR/docs/Web/HTML/Attributes/rel)
   - : No HTML, vários tipos de links podem ser utilizados para estabelecer e definir o relacionamento entre dois documentos. Os tipos de elementos de link que podem ser incluídos são [`<a>`](/pt-BR/docs/Web/HTML/Element/a), [`<area>`](/pt-BR/docs/Web/HTML/Element/area) e [`<link>`](/pt-BR/docs/Web/HTML/Element/link).
-- [Formatos de mídia suportados pelos elementos vídeo e áudio do HTML](/pt-BR/docs/Web/Media/Formats)
+- [Formatos de mídia suportados pelos elementos vídeo e áudio do HTML](/pt-BR/docs/Web/Media/Guides/Formats)
   - : Os elementos [`<audio>`](/pt-BR/docs/Web/HTML/Element/audio) e [`<video>`](/pt-BR/docs/Web/HTML/Element/video) permitem que você reproduza mídias de áudio e vídeo. Estes elementos fornecem uma alternativa nativa para o navegador reproduzir recursos similares aos encontrados no Adobe Flash e outros plug-ins.
 - [Tipos de conteúdo HTML](/pt-BR/docs/Web/HTML/Content_categories)
   - : O HTML é composto de uma grande diversidade de conteúdos, e cada um pode ser usado em certos contextos e não ser permitido em outros. Da mesma forma, cada um tem um conjunto de outras categorias de conteúdos que podem ou não serem usadas dentro deles. Este é um guia destas categorias.

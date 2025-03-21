@@ -1040,10 +1040,10 @@ Aqui está a melhor regra geral: provavelmente é apropriado usar `<b>`, `<i>` o
 
 ## Teste suas habilidades!
 
-Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você absorveu essas informações antes de prosseguir — consulte [Teste suas habilidades: noções básicas de texto HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics).
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você absorveu essas informações antes de prosseguir — consulte [Teste suas habilidades: noções básicas de texto HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
 
 ## Resumo
 
-Por enquanto é isso! Este artigo deve fornecer uma boa idéia de como começar a marcar texto em HTML e apresentar alguns dos elementos mais importantes nessa área. Há muito mais elementos semânticos a serem abordados nesta área, e veremos muito mais em nosso artigo de [Formatação avançada de texto](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting), mais adiante neste curso. No próximo artigo, veremos detalhadamente como [criar links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), possivelmente o elemento mais importante na Web.
+Por enquanto é isso! Este artigo deve fornecer uma boa idéia de como começar a marcar texto em HTML e apresentar alguns dos elementos mais importantes nessa área. Há muito mais elementos semânticos a serem abordados nesta área, e veremos muito mais em nosso artigo de [Formatação avançada de texto](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features), mais adiante neste curso. No próximo artigo, veremos detalhadamente como [criar links](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links), possivelmente o elemento mais importante na Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
