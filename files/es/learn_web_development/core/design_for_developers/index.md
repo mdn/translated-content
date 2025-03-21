@@ -81,7 +81,7 @@ Resultados del aprendizaje:
 - [Diseñando para la Web](https://designingfortheweb.co.uk/) (en Inglés), Mark Boulton
 - [Diseño para la Web](https://designforweb.org/) (en Inglés), Prisca Schmarsow + otros colaboradores
 - [Tipografía práctica](https://practicaltypography.com/) (en Inglés), Matthew Butterick
-- [Guía de estilo web](https://webstyleguide.com/ (en Inglés)), Patrick J. Lynch and Sarah Horton
+- [Guía de estilo web](https://webstyleguide.com/), (en Inglés), Patrick J. Lynch and Sarah Horton
 - [Reglas de diseño visual que puedes seguir con seguridad en todo momento](https://anthonyhobday.com/sideprojects/saferules/) (en Inglés), Anthony Hobday
 - [16 pequeñas reglas de diseño de UI que tienen un gran impacto](https://www.adhamdannaway.com/blog/ui-design/ui-design-tips) (en Inglés), Adham Dannaway
 
