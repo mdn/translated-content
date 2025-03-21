@@ -9,7 +9,7 @@ l10n:
 
 **`EventSource`** インターフェイスは、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)のウェブコンテンツのインターフェイスです。
 
-`EventSource` インターフェイスは、 [HTTP](/ja/docs/Web/HTTP) サーバーとの間で永続的なコネクションを開き、[イベント](/ja/docs/Learn/JavaScript/Building_blocks/Events)を `text/event-stream` の形式で受け取ります。コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。
+`EventSource` インターフェイスは、 [HTTP](/ja/docs/Web/HTTP) サーバーとの間で永続的なコネクションを開き、[イベント](/ja/docs/Learn_web_development/Core/Scripting/Events)を `text/event-stream` の形式で受け取ります。コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。
 
 {{InheritanceDiagram}}
 

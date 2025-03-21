@@ -275,7 +275,7 @@ XMLHttpRequest が `status=0` および `statusText=null` を受信して終了�
 
 ## 関連情報
 
-- [MDN の AJAX 入門](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [MDN の AJAX 入門](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
