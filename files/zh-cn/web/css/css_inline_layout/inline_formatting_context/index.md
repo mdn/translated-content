@@ -1,6 +1,7 @@
 ---
 title: 行内格式化上下文（Inline formatting context）
-slug: Web/CSS/Inline_formatting_context
+slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
+original_slug: Web/CSS/Inline_formatting_context
 ---
 
 {{CSSRef}}
