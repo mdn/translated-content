@@ -103,7 +103,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - [Touch event](/ja/docs/Web/API/Touch_events) を、Windows デスクトップ環境で再び有効化しました ([Firefox バグ 1244402](https://bugzil.la/1244402))。これはいくつかの主要サイトで問題が発生したため、Firefox 24 で無効化していました ([Firefox バグ 888304](https://bugzil.la/888304))。
 - {{domxref("Element/focusin_event", "focusin")}} および {{domxref("Element/focusout_event", "focusout")}} イベントを実装しました ([Firefox バグ 687787](https://bugzil.la/687787))。
 - {{domxref("isSecureContext")}} プロパティを実装しました ([Firefox バグ 1269052](https://bugzil.la/1269052))。
-- [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
 - [Drag and drop API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の {{domxref("DataTransfer.types")}} プロパティが、{{domxref("DOMStringList")}} ではなく文字列の凍結された配列を返すようになりました ([Firefox バグ 1298243](https://bugzil.la/1298243))。
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました ([Firefox バグ 1264769](https://bugzil.la/1264769)。
 - [通知 API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
@@ -155,8 +155,8 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 ### HTTP
 
 - {{HTTPHeader("Referrer-Policy")}} ヘッダーで `same-origin`、`strict-origin`、`strict-origin-when-cross-origin` ディレクティブをサポートしました ([Firefox バグ 1276836](https://bugzil.la/1276836))。
-- {{CSP("script-src")}} のように、[`'strict-dynamic'` source expression](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) を {{HTTPHeader("Content-Security-Policy")}} のディレクティブでサポートしました ([Firefox バグ 1299483](https://bugzil.la/1299483))。
-- [Strict Secure Cookies specification](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01) に従って、安全ではないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
+- {{CSP("script-src")}} のように、[`'strict-dynamic'` source expression](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#strict-dynamic) を {{HTTPHeader("Content-Security-Policy")}} のディレクティブでサポートしました ([Firefox バグ 1299483](https://bugzil.la/1299483))。
+- [Strict Secure Cookies specification](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01) に従って、安全ではないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Guides/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
 - HTTP/2 ヘッダー圧縮方式 [HPACK](https://tools.ietf.org/html/rfc7541) の最大テーブルサイズを 4 KB から 64 KB に拡張しました ([Firefox バグ 1296280](https://bugzil.la/1296280))。
 - {{HTTPHeader("Large-Allocation")}} ヘッダーを追加しました ([Firefox バグ 1304140](https://bugzil.la/1304140))。
 

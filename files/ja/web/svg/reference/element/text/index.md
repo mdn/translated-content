@@ -56,25 +56,25 @@ svg {
 
 - {{SVGAttr("x")}}
   - : テキストのベースラインの始点の x 座標、 または値のリストが指定されている場合は個々のグリフの x 座標。
-    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)) のリスト ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト ; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : テキストのベースラインの始点の y 座標、 または値のリストが指定されている場合は個々のグリフの y 座標。
-    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)) のリスト ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト ; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("dx")}}
   - : テキスト位置を前回のテキスト要素から水平方向にずらすか、値のリストが指定された場合は個々のグリフの位置をずらします。
-    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)) のリスト ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト ; _既定値_: _none_; _アニメーション_: **可**
 - {{SVGAttr("dy")}}
   - : テキスト位置を前回のテキスト要素から垂直方向にずらすか、値のリストが指定された場合は個々のグリフの位置をずらします。
-    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)) のリスト ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト ; _既定値_: _none_; _アニメーション_: **可**
 - {{SVGAttr("rotate")}}
   - : 個々のグリフの方向を回転します。グリフを個別に回転可能です。
-    _値の型_: [**\<list-of-number>**](/ja/docs/Web/SVG/Content_type#list-of-ts) ; _既定値_: none; _アニメーション_: **可**
+    _値の型_: [**\<list-of-number>**](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts) ; _既定値_: none; _アニメーション_: **可**
 - {{SVGAttr("lengthAdjust")}}
   - : `textLength` 属性で定義する幅に収まるようにテキストをどのように伸縮させるか。
     _値の型_: `spacing`|`spacingAndGlyphs`; _既定値_: `spacing`; _アニメーション_: **可**
 - {{SVGAttr("textLength")}}
   - : テキストを合わせるために変倍する幅。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage) ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage) ; _既定値_: _none_; _アニメーション_: **可**
 
 ## 使用可能な場所
 

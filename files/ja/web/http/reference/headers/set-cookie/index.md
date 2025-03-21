@@ -14,9 +14,9 @@ l10n:
 > [!WARNING]
 > ブラウザーは、フロントエンドの JavaScript コードが `Set-Cookie` ヘッダーにアクセスするのをブロックします。これは、 Fetch 仕様が `Set-Cookie` を[禁止レスポンスヘッダー名](https://fetch.spec.whatwg.org/#forbidden-response-header-name)として定義しているためで、フロントエンドコードに公開されるすべてのレスポンスから[フィルタリング](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0)しなければなりません。
 >
-> [フェッチ API](/ja/docs/Web/API/Fetch_API/Using_Fetch) または [XMLHttpRequest API](/ja/docs/Web/API/XMLHttpRequest_API) のリクエストが [CORS を使用する](/ja/docs/Web/HTTP/CORS#what_requests_use_cors) 場合、ブラウザーはリクエストに資格情報がない限り、サーバーのレスポンスにある `Set-Cookie` ヘッダーを無視します。資格情報の設定方法について知るには、 [フェッチ API の使用 - 資格情報を含める](/ja/docs/Web/API/Fetch_API/Using_Fetch#including_credentials)および [XMLHttpRequest の記事](/ja/docs/Web/API/XMLHttpRequest_API)を参照してください。
+> [フェッチ API](/ja/docs/Web/API/Fetch_API/Using_Fetch) または [XMLHttpRequest API](/ja/docs/Web/API/XMLHttpRequest_API) のリクエストが [CORS を使用する](/ja/docs/Web/HTTP/Guides/CORS#what_requests_use_cors) 場合、ブラウザーはリクエストに資格情報がない限り、サーバーのレスポンスにある `Set-Cookie` ヘッダーを無視します。資格情報の設定方法について知るには、 [フェッチ API の使用 - 資格情報を含める](/ja/docs/Web/API/Fetch_API/Using_Fetch#including_credentials)および [XMLHttpRequest の記事](/ja/docs/Web/API/XMLHttpRequest_API)を参照してください。
 
-詳しくは、 [HTTP クッキーのガイド](/ja/docs/Web/HTTP/Cookies)を参照してください。
+詳しくは、 [HTTP クッキーのガイド](/ja/docs/Web/HTTP/Guides/Cookies)を参照してください。
 
 <table class="properties">
   <tbody>
@@ -255,7 +255,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 関連情報
 
-- [HTTP クッキー](/ja/docs/Web/HTTP/Cookies)
+- [HTTP クッキー](/ja/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - [Samesite cookies explained](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)

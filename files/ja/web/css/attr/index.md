@@ -235,4 +235,4 @@ blockquote::after {
 
 - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
 - [HTML `data-*` 属性](/ja/docs/Web/HTML/Global_attributes/data-*)
-- [SVG `data-*` 属性](/ja/docs/Web/SVG/Attribute/data-*)
+- [SVG `data-*` 属性](/ja/docs/Web/SVG/Reference/Attribute/data-*)

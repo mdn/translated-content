@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("XSLT")}}
 
-**`XSLTProcessor`** は、[XSLT](/ja/docs/Web/XSLT) スタイルシート変換を XML 文書に適用して、新しい XML 文書を出力として生成します。 XSLT スタイルシートをロードし、 `<xsl:param>` 引数の値を操作し、変換処理を文書に適用するメソッドを持っています。
+**`XSLTProcessor`** は、[XSLT](/ja/docs/Web/XML/XSLT) スタイルシート変換を XML 文書に適用して、新しい XML 文書を出力として生成します。 XSLT スタイルシートをロードし、 `<xsl:param>` 引数の値を操作し、変換処理を文書に適用するメソッドを持っています。
 
 ## コンストラクター
 
@@ -326,7 +326,7 @@ async function sort() {
 
 ## 関連情報
 
-- [XSLT](/ja/docs/Web/XSLT)
+- [XSLT](/ja/docs/Web/XML/XSLT)
 - [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) ([IBM developer](https://developer.ibm.com/))
 - [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) ([zvon.org](https://zvon.org/))
 - [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) ([zvon.org](https://zvon.org/))

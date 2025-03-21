@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`204 No Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、クライアントが現在のページから移動する必要がないことを示します。
+HTTP の **`204 No Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、クライアントが現在のページから移動する必要がないことを示します。
 `204`のレスポンスは既定ではキャッシュ可能であり、そのような場合は {{HTTPHeader("ETag")}} ヘッダーが含まれます。
 
 これらのリクエストメソッドに対するレスポンスが `204 No Content` である場合、次の意味と結果が指定されています。
@@ -62,5 +62,5 @@ Firefox は、有効なレスポンスの前にある 1 キロバイトを超え
 
 ## 関連情報
 
-- [HTTP リクエストのメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストのメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)

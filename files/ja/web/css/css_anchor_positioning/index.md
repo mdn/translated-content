@@ -112,4 +112,4 @@ l10n:
 
 - [学習: CSS 位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
-- [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [CSS によるサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)

@@ -103,8 +103,8 @@ None.
 
 サイトをオリジン間分離するためには、 2 つのヘッダーを設定する必要があります。
 
-- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) で `same-origin` を値として指定したもの（攻撃からオリジンを保護）
-- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) で `require-corp` または `credentialless` を値として指定したもの（オリジンから被害者を保護）
+- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) で `same-origin` を値として指定したもの（攻撃からオリジンを保護）
+- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) で `require-corp` または `credentialless` を値として指定したもの（オリジンから被害者を保護）
 
 ```http
 Cross-Origin-Opener-Policy: same-origin

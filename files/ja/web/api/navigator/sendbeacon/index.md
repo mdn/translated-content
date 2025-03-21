@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`navigator.sendBeacon()`** メソッドは、ウェブサーバーに{{glossary("Asynchronous", "非同期")}}に少量のデータを [HTTP POST](/ja/docs/Web/HTTP/Methods/POST) リクエストで送ります。
+**`navigator.sendBeacon()`** メソッドは、ウェブサーバーに{{glossary("Asynchronous", "非同期")}}に少量のデータを [HTTP POST](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストで送ります。
 
 これはウェブサーバーに分析データを送信するために使用するためのものであり、 {{domxref("XMLHttpRequest", "XMLHttpRequest")}} を使用するような、分析を送信するための古い技術の問題のいくつかを避けています。
 
@@ -53,7 +53,7 @@ sendBeacon(url, data)
 - 非同期に送信されます。
 - 次のページの読み込みには影響しません
 
-データは [HTTP POST](/ja/docs/Web/HTTP/Methods/POST) リクエストで送信されます。
+データは [HTTP POST](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストで送信されます。
 
 ### セッション終了時の分析の送信
 

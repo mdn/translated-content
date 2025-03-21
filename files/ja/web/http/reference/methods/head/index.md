@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Methods/HEAD
 
 {{HTTPSidebar}}
 
-**HTTP の `HEAD` メソッド**は、この `HEAD` リクエストが HTTP {{HTTPMethod("GET")}} メソッドでリクエストされた場合に返される[ヘッダー](/ja/docs/Web/HTTP/Headers)をリクエストします。例えば、ある URL が大きなファイルをダウンロードする可能性がある場合、 `HEAD` リクエストは {{HTTPHeader("Content-Length")}} ヘッダーを読み込んで、実際にファイルをダウンロードすることなくファイルサイズを確認することができます。
+**HTTP の `HEAD` メソッド**は、この `HEAD` リクエストが HTTP {{HTTPMethod("GET")}} メソッドでリクエストされた場合に返される[ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)をリクエストします。例えば、ある URL が大きなファイルをダウンロードする可能性がある場合、 `HEAD` リクエストは {{HTTPHeader("Content-Length")}} ヘッダーを読み込んで、実際にファイルをダウンロードすることなくファイルサイズを確認することができます。
 
 > **警告:** `HEAD` メソッドへのレスポンスには本文が含まれては*いけません*。あった場合は無視**しなければなりません**。誤った本文を記述する可能性がある{{glossary("Representation header", "表現ヘッダー")}}は、同様の `GET` リクエストで受け取るであろうレスポンスを記述していると仮定します。
 

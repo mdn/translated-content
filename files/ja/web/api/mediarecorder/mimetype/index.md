@@ -19,7 +19,7 @@ l10n:
 
 記録されたメディアの形式を記述する MIME メディア種別（文字列）。この文字列は、メディアレコーダが使用するコーデックとコーデック構成の詳細を示す [`codecs` 引数] (/ja/docs/Web/Media/Formats/codecs_parameter)を含んでいてもかまいません。
 
-メディア種別の文字列は、インターネット番号割当機構（IANA）によって標準化されています。定義されているメディア種別の文字列の公式な一覧は、IANA サイトの記事 [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) を参照してください。メディア種別について、またそれらがウェブコンテンツやウェブブラウザーでどのように使用されているかについては[メディア種別](/ja/docs/Web/HTTP/MIME_types)も参照してください。
+メディア種別の文字列は、インターネット番号割当機構（IANA）によって標準化されています。定義されているメディア種別の文字列の公式な一覧は、IANA サイトの記事 [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) を参照してください。メディア種別について、またそれらがウェブコンテンツやウェブブラウザーでどのように使用されているかについては[メディア種別](/ja/docs/Web/HTTP/Guides/MIME_types)も参照してください。
 
 ## 例
 

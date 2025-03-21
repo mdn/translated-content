@@ -698,7 +698,7 @@ clipPathSelect.addEventListener("change", (evt) => {
 
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
 - CSS プロパティ: {{cssxref("mask")}}, {{cssxref("filter")}}
-- [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - SVG 属性:
 
   - {{SVGAttr("clip-path")}}

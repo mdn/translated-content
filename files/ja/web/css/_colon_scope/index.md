@@ -150,7 +150,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 #### 結果
 
-`context` のスコープは [`id`](/ja/docs/Web/HTML/Global_attributes#id) が `context` である要素です。選択される要素は、そのコンテキストの直接の子である `<div>` 要素、すなわち `element-1` と `element-2` です。
+`context` のスコープは [`id`](/ja/docs/Web/HTML/Global_attributes/id) が `context` である要素です。選択される要素は、そのコンテキストの直接の子である `<div>` 要素、すなわち `element-1` と `element-2` です。
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
 

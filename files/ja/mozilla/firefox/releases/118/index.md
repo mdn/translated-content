@@ -29,12 +29,12 @@ l10n:
 
 ### HTTP
 
-- HTTP [`Permissions-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) ヘッダーの [`publickey-credentials-get`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) ディレクティブをサポートしました。これはクロスオリジンのインラインフレームで、公開鍵証明書を取得するために [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) インターフェイスを使用可能にします ([Firefox bug 1460986](https://bugzil.la/1460986))。
+- HTTP [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) ヘッダーの [`publickey-credentials-get`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/publickey-credentials-get) ディレクティブをサポートしました。これはクロスオリジンのインラインフレームで、公開鍵証明書を取得するために [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) インターフェイスを使用可能にします ([Firefox bug 1460986](https://bugzil.la/1460986))。
 
 ### MathML
 
-- [`<semantics>`](/ja/docs/Web/MathML/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました。設定項目 `mathml.legacy_maction_and_semantics_implementations.disabled` を削除しました (Firefox bug [1788223](https://bugzil.la/1788223))。
-- [`mathvariant`](/ja/docs/Web/MathML/Element/mi#mathvariant) で、`normal` を除くすべての値が非推奨になりました。また、この属性を使う要素が `<mi>` に限定されました (Firefox bug [1845461](https://bugzil.la/1845461))。
+- [`<semantics>`](/ja/docs/Web/MathML/Reference/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Reference/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました。設定項目 `mathml.legacy_maction_and_semantics_implementations.disabled` を削除しました (Firefox bug [1788223](https://bugzil.la/1788223))。
+- [`mathvariant`](/ja/docs/Web/MathML/Reference/Element/mi#mathvariant) で、`normal` を除くすべての値が非推奨になりました。また、この属性を使う要素が `<mi>` に限定されました (Firefox bug [1845461](https://bugzil.la/1845461))。
 
 ### SVG
 

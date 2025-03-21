@@ -26,7 +26,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 
 - [DOMParser](/ja/docs/Web/API/DOMParser) が HTML ドキュメントのソース解析に対応しました。
 - {{ domxref("XMLHttpRequest") }} で `timeout` プロパティと {{ domxref("XMLHttpRequestEventTarget") }} インターフェイス 上の `ontimeout` イベントハンドラーである "timeout" イベントを用いた、タイムアウトがサポートされました。
-- {{ domxref("XMLHttpRequest") }} が[`data:` URI](/ja/docs/Web/URI/Schemes/data) から読み込めるようになりました。
+- {{ domxref("XMLHttpRequest") }} が[`data:` URI](/ja/docs/Web/URI/Reference/Schemes/data) から読み込めるようになりました。
 - {{ domxref("XMLHttpRequest") }} で巨大なデータをダウンロードしているとき、`responseType` に "moz-blob" を設定していると、 これまでに受信したデータのすべてを含む {{ domxref("Blob") }} であるレスポンスを参照できる progress イベントハンドラーが定期的に呼び出されるようになりました。これによって、progress ハンドラーでデータのすべてが到着するまで待つことなしにデータを処理し始められます。
 - Gecko が Android 上で [マルチタッチ](/ja/docs/Web/API/Touch_events) をサポートしました。今までは一度に一つのタッチ操作しか認識しかできませんでした。
 - エディター (フォーム) 上で IME を使った文字入力を行っている場合、従来は確定後に `input` イベントが発生していましたが、Firefox 12 では、IME で編集中の文字列が変更されたことを示す `compositionupdate` イベントの直後にも `input` イベントが発生するようになりました。これにより、`input` イベントハンドラーを使って、日本語入力中にも未確定文字列を含めたフォームの入力内容を取得することが可能となりました。

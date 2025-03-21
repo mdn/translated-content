@@ -36,8 +36,8 @@ worker.postMessage(sab);
 
 最上位の文書では、サイトにオリジン間の分離性を持たせるため、次の 2 つのヘッダーを設定する必要があります。
 
-- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) で `same-origin` の値を指定すること（オリジンを攻撃者から守るため）
-- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) で `require-corp` または `credentialless` の値を指定すること（被害者を自分のオリジンから守るため）
+- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) で `same-origin` の値を指定すること（オリジンを攻撃者から守るため）
+- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) で `require-corp` または `credentialless` の値を指定すること（被害者を自分のオリジンから守るため）
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
@@ -60,9 +60,9 @@ if (crossOriginIsolated) {
 
 これらの 2 つのヘッダーが設定されていた場合、 `postMessage()` は `SharedArrayBuffer` オブジェクトに例外を発生させなくなり、従ってスレッド間での共有メモリーが利用できるようになります。
 
-入れ子の文書と専用ワーカーは同様に、 [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) ヘッダーを同じ値で設定する必要があります。同一オリジンの入れ子の文書とサブリソースについては、これ以上の変更は必要ありません。同一サイト（ただし別オリジン）の入れ子の文書とサブリソースは、 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーを `same-site` という値で設定する必要があります。そして、同様に別オリジン（かつ別サイト）のものは、 `cross-origin` を値として同じヘッダーを設定する必要があります。 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーを `same-origin` 以外の値に設定すると、[Spectre](https://ja.wikipedia.org/wiki/Spectre) などの潜在的な攻撃にリソースがさらされることになることに注意してください。
+入れ子の文書と専用ワーカーは同様に、 [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) ヘッダーを同じ値で設定する必要があります。同一オリジンの入れ子の文書とサブリソースについては、これ以上の変更は必要ありません。同一サイト（ただし別オリジン）の入れ子の文書とサブリソースは、 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) ヘッダーを `same-site` という値で設定する必要があります。そして、同様に別オリジン（かつ別サイト）のものは、 `cross-origin` を値として同じヘッダーを設定する必要があります。 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) ヘッダーを `same-origin` 以外の値に設定すると、[Spectre](https://ja.wikipedia.org/wiki/Spectre) などの潜在的な攻撃にリソースがさらされることになることに注意してください。
 
-[`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) ヘッダーはポップアップへの参照を保持するための能力を制限していることに注意してください。2 つの最上位のウィンドウコンテキスト間の直接アクセスは、基本的に、同一オリジンであり、同じ 2 つの値を持つヘッダーを運んでいる場合にのみ動作するようになっています。
+[`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) ヘッダーはポップアップへの参照を保持するための能力を制限していることに注意してください。2 つの最上位のウィンドウコンテキスト間の直接アクセスは、基本的に、同一オリジンであり、同じ 2 つの値を持つヘッダーを運んでいる場合にのみ動作するようになっています。
 
 ### API の利用可能性
 

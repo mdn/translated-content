@@ -250,7 +250,7 @@ function runCodeWithDateFunction(obj) {
 console.log(runCodeWithDateFunction("Date(5)")); // Saturday
 ```
 
-`eval()` と `Function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [CSP](/ja/docs/Web/HTTP/CSP) 設定では禁止されています。また、一般的な用途では `eval()` や `Function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
+`eval()` と `Function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [CSP](/ja/docs/Web/HTTP/Guides/CSP) 設定では禁止されています。また、一般的な用途では `eval()` や `Function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
 
 #### ブラケットアクセサーの使用
 
@@ -338,7 +338,7 @@ elt.addEventListener("click", () => {
 
 JSON の構文は JavaScript の構文に比べて制限があり、多くの有効な JavaScript リテラルが JSON としては解釈されないことに注意してください。例えば、最後にカンマを付けることは JSON では許されておらず、オブジェクトリテラル内のプロパティ名（キー）は引用符で囲む必要があります。後で JSON として解析される文字列を生成するには、JSON シリアライザーを使うようにしてください。
 
-任意のコードではなく、注意深く制約されたデータを渡すことは、一般的によい考えです。例えば、ウェブページの内容を取得できるよう設計された拡張であれば、JavaScript コードの代わりに <a href="/ja/docs/Web/XPath">XPath</a> を使って取得ルールを定義できます。
+任意のコードではなく、注意深く制約されたデータを渡すことは、一般的によい考えです。例えば、ウェブページの内容を取得できるよう設計された拡張であれば、JavaScript コードの代わりに <a href="/ja/docs/Web/XML/XPath">XPath</a> を使って取得ルールを定義できます。
 
 ## 例
 

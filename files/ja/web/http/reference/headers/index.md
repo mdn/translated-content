@@ -21,7 +21,7 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - {{Glossary("Response header", "レスポンスヘッダー")}}
   - : レスポンスに関する追加情報、例えば場所や提供しているサーバーに関する情報を保持します。
 - {{Glossary("Representation header", "表現ヘッダー")}}
-  - : リソースの本体に関する情報、例えば [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
+  - : リソースの本体に関する情報、例えば [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
 - {{Glossary("Payload header","ペイロードヘッダー")}}
   - : 転送されるデータの表現から独立した情報、例えばコンテンツの長さや転送に使われるエンコード方式などを持ちます。
 
@@ -82,36 +82,36 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 
 ## コンテンツネゴシエーション
 
-詳しくは、[コンテンツネゴシエーションの記事](/ja/docs/Web/HTTP/Content_negotiation)を参照してください。
+詳しくは、[コンテンツネゴシエーションの記事](/ja/docs/Web/HTTP/Guides/Content_negotiation)を参照してください。
 
 - {{HTTPHeader("Accept")}}
   - : 送り返すことができるデータの{{Glossary("MIME_type", "種類")}}をサーバーに通知します。
 - {{HTTPHeader("Accept-Encoding")}}
-  - : 送り返すリソースで使用できるエンコードアルゴリズム (一般的には[圧縮アルゴリズム](/ja/docs/Web/HTTP/Compression)) をサーバーに通知します。
+  - : 送り返すリソースで使用できるエンコードアルゴリズム (一般的には[圧縮アルゴリズム](/ja/docs/Web/HTTP/Guides/Compression)) をサーバーに通知します。
 - {{HTTPHeader("Accept-Language")}}
   - : 送り返すリソースで期待する自然言語をサーバーに通知します。これはヒントであり、必ずしもユーザーの完全な制御下にあるものではありません。サーバーはユーザーの選択 (ドロップダウンリストで選ぶ言語など) を明示的に上書きしないように、常に注意を払うべきです。
 - {{HTTPHeader("Accept-Patch")}}
-  - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("PATCH")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/MIME_types)を通知します。
+  - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("PATCH")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/Guides/MIME_types)を通知します。
 - {{HTTPHeader("Accept-Post")}}
-  - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("POST")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/MIME_types)を通知します。
+  - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("POST")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/Guides/MIME_types)を通知します。
 
 ## 制御
 
 - {{HTTPHeader("Expect")}}
   - : リクエストを適切に扱うためにサーバーが実行しなければならないと期待されていることを示します。
 - {{HTTPHeader("Max-Forwards")}}
-  - : [`TRACE`](/ja/docs/Web/HTTP/Methods/TRACE) を使用する場合、リクエストが送信者に反映されるまでにできる最大のホップ数を示します。
+  - : [`TRACE`](/ja/docs/Web/HTTP/Reference/Methods/TRACE) を使用する場合、リクエストが送信者に反映されるまでにできる最大のホップ数を示します。
 
 ## クッキー
 
 - {{HTTPHeader("Cookie")}}
-  - : 過去に {{HTTPHeader("Set-Cookie")}} ヘッダーでサーバーから送信されて保存している [HTTP クッキー](/ja/docs/Web/HTTP/Cookies)を持ちます。
+  - : 過去に {{HTTPHeader("Set-Cookie")}} ヘッダーでサーバーから送信されて保存している [HTTP クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を持ちます。
 - {{HTTPHeader("Set-Cookie")}}
   - : サーバーからユーザーエージェントにクッキーを送信します。
 
 ## CORS
 
-詳細は、[CORS のドキュメント](/ja/docs/Web/HTTP/CORS)を参照してください。
+詳細は、[CORS のドキュメント](/ja/docs/Web/HTTP/Guides/CORS)を参照してください。
 
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
   - : credentials フラグが真であるときに、リクエストへのレスポンスを開示してよいかを示します。
@@ -128,7 +128,7 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : 実際のリクエストを行う際に使用する HTTP ヘッダーをサーバーがわかるようにするため、プリフライトリクエストを発信する際に使用します。
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : 実際のリクエストを行う際に使用する [HTTP メソッド](/ja/docs/Web/HTTP/Methods)をサーバーがわかるようにするため、プリフライトリクエストを発信する際に使用します。
+  - : 実際のリクエストを行う際に使用する [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)をサーバーがわかるようにするため、プリフライトリクエストを発信する際に使用します。
 - {{HTTPHeader("Origin")}}
   - : どこから読み込みが発生したかを示します。
 - {{HTTPHeader("Timing-Allow-Origin")}}
@@ -175,7 +175,7 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 
 ## 範囲付きリクエスト
 
-HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Range_requests)により、クライアントはサーバーからリソースの一部をリクエストすることができます。
+HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)により、クライアントはサーバーからリソースの一部をリクエストすることができます。
 範囲付きリクエストは、ランダムアクセスに対応しているメディアプレーヤーや、大きなファイルの一部のみが必要なデータツール、ダウンロードを一時停止したり再開したりできるダウンロードマネージャーなどのアプリケーションに便利です。
 
 - {{HTTPHeader("Accept-Ranges")}}
@@ -221,7 +221,7 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Range_requests)により
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : 他のドメインがウィンドウを開いたり制御したりすることを防ぎます。
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
-  - : このヘッダーが適用されたリソースのレスポンスが他のドメインから読み取られるのを防ぎます。[CORP の説明記事](/ja/docs/Web/HTTP/Cross-Origin_Resource_Policy)を参照してください。
+  - : このヘッダーが適用されたリソースのレスポンスが他のドメインから読み取られるのを防ぎます。[CORP の説明記事](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)を参照してください。
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : ユーザーエージェントがページで読み込むことを許可するリソースを制御します。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
@@ -340,20 +340,20 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Range_requests)により
 
 ### クライアントヒント
 
-HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連のリクエストヘッダーで、端末の種類や ネットワークの状態といったクライアントに関する有益な情報を提供し、 サーバーがそれらの状態に応じて提供されるものを最適化できるようにします。
+HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一連のリクエストヘッダーで、端末の種類や ネットワークの状態といったクライアントに関する有益な情報を提供し、 サーバーがそれらの状態に応じて提供されるものを最適化できるようにします。
 
 サーバーは {{HTTPHeader("Accept-CH")}} を使用して、クライアントに関心があるクライアントヒントヘッダーを積極的にリクエストします。クライアントはリクエストされたヘッダーをその後のリクエストに記載することを選べます。
 
 - {{HTTPHeader("Accept-CH")}}
   - : サーバーは Accept-CH ヘッダーフィールドや HTML `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性を使ってクライアントヒントに対応していることを告知できます。
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
-  - : サーバーは `Critical-CH` を {{HttpHeader("Accept-CH")}} とともに使用して、受け入れられるクライアントヒントも[重要なクライアントヒント](/ja/docs/Web/HTTP/Client_hints#critical_client_hints)であることを指定します。
+  - : サーバーは `Critical-CH` を {{HttpHeader("Accept-CH")}} とともに使用して、受け入れられるクライアントヒントも[重要なクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#critical_client_hints)であることを指定します。
 
 クライアントヒントのカテゴリーを以下に一覧します。
 
 #### ユーザーエージェントクライアントヒント
 
-[UA クライアントヒント](/ja/docs/Web/HTTP/Client_hints#user-agent_client_hints)は、ユーザーエージェント、それが動作しているプラット フォーム/アーキテクチャ、ユーザーエージェントまたはプラットフォームで設定され ているユーザーの環境設定についての情報を提供するリクエストヘッダーです。
+[UA クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)は、ユーザーエージェント、それが動作しているプラット フォーム/アーキテクチャ、ユーザーエージェントまたはプラットフォームで設定され ているユーザーの環境設定についての情報を提供するリクエストヘッダーです。
 
 - {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
   - : ユーザーエージェントのブランドとバージョンです。
@@ -385,7 +385,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
   - : 透過率を低下させることを示すユーザーエージェントの環境設定を示すリクエストヘッダーです。
 
 > [!NOTE]
-> ユーザーエージェントクライアントヒントは、データの漏洩に使用することができる[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の委譲が必要であるため、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内では利用できません。
+> ユーザーエージェントクライアントヒントは、データの漏洩に使用することができる[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の委譲が必要であるため、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内では利用できません。
 
 #### 端末クライアントヒント
 

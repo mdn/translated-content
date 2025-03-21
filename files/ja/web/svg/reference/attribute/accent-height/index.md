@@ -22,7 +22,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">値</th>
-      <td><a href="/ja/docs/Web/SVG/Content_type#number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></td>
     </tr>
     <tr>
       <th scope="row">既定値</th>

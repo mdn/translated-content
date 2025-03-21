@@ -108,12 +108,12 @@ l10n:
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - 他の仕様の一部である SVG 色プロパティ:
-  - [`fill`](/ja/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/ja/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/ja/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/ja/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/ja/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/ja/docs/Web/SVG/Attribute/color) 属性
+  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/ja/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色相環")}}（用語）
 - {{glossary("Interpolation", "補間")}}（用語）
 - [`@font-palette-values`](/ja/docs/Web/CSS/@font-palette-values) アットルールの [`override-colors`](/ja/docs/Web/CSS/@font-palette-values/override-colors) 記述子
@@ -130,5 +130,5 @@ l10n:
 - [CSS 色調整](/ja/docs/Web/CSS/CSS_color_adjustment)モジュールと {{cssxref("print-color-adjust")}} プロパティ
 - [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール（CSS [`<gradient>`](/ja/docs/Web/CSS/gradient) 画像を定義）
 - [`VideoColorSpace`](/ja/docs/Web/API/VideoColorSpace) インターフェイス
-- SVG の [`<feColorMatrix>`](/ja/docs/Web/SVG/Element/feColorMatrix) 要素
+- SVG の [`<feColorMatrix>`](/ja/docs/Web/SVG/Reference/Element/feColorMatrix) 要素
 - [キャンバス API: スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色)

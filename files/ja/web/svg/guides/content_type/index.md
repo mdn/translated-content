@@ -295,7 +295,7 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     paint ::= none | <color> | <url> [none | <color>]? | context-fill | context-stroke
     ```
 
-    `context-fill` と `context-stroke` の値により、 [marker](/ja/docs/Web/SVG/Element/marker) と [use](/ja/docs/Web/SVG/Element/use) 要素の値を継承することができます。
+    `context-fill` と `context-stroke` の値により、 [marker](/ja/docs/Web/SVG/Reference/Element/marker) と [use](/ja/docs/Web/SVG/Reference/Element/use) 要素の値を継承することができます。
 
     SVG DOM 内では、 \<paint> vの値は {{domxref("SVGPaint")}} オブジェクトを使用して表します。
 

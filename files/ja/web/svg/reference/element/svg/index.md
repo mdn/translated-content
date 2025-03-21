@@ -8,7 +8,7 @@ l10n:
 
 {{SVGRef}}
 
-`svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Attribute/viewBox)を定義するコンテナーです。これは SVG 文書の最も外側の要素として使用されますが、SVG または HTML 文書の中に SVG フラグメントを埋め込むためにも使用できます。
+`svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Reference/Attribute/viewBox)を定義するコンテナーです。これは SVG 文書の最も外側の要素として使用されますが、SVG または HTML 文書の中に SVG フラグメントを埋め込むためにも使用できます。
 
 > **メモ:** `xmlns` 属性は *SVG 文書*の最も外側の `svg` 要素、または XML シリアライズによる HTML 文書内にのみ必要です。内部の `svg` 要素や HTML シリアライズによる HTML 文書の内部には不要です。
 
@@ -97,25 +97,25 @@ iframe の寸法を変更するには、右下の赤い点線の枠のサイズ�
     _値の型_: **\<string>**、_既定値_: なし、_アニメーション_: **不可**
 - {{SVGAttr("height")}}
   - : 矩形ビューポートで表示される高さです。（それ自身の座標系の高さではありません。）
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)、_既定値_: `auto`、_アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `auto`、_アニメーション_: **可**
 - {{SVGAttr("preserveAspectRatio")}}
   - : `svg` フラグメントが、異なる{{glossary("aspect ratio", "アスペクト比")}}での表示時にどう変形されるか。
     _値の型_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)?、_既定値_: `xMidYMid meet`、_アニメーション_: **可**
 - {{SVGAttr("version")}} {{deprecated_inline}}
   - : 要素の内部の内容にどのバージョンの SVG が用いられるか。
-    _値の型_: **[\<number>](/ja/docs/Web/SVG/Content_type#number)**、_既定値_: none、_アニメーション_: **不可**
+    _値の型_: **[\<number>](/ja/docs/Web/SVG/Guides/Content_type#number)**、_既定値_: none、_アニメーション_: **不可**
 - {{SVGAttr("viewBox")}}
   - : The SVG viewport coordinates for the current SVG fragment.
-    _値の型_: **[\<list-of-numbers>](/ja/docs/Web/SVG/Content_type#list-of-ts)。**、_既定値_: none、_アニメーション_: **可**
+    _値の型_: **[\<list-of-numbers>](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts)。**、_既定値_: none、_アニメーション_: **可**
 - {{SVGAttr("width")}}
   - : 矩形ビューポートで表示される幅。（それ自身の座標系の幅ではありません。）
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)、_既定値_: `auto`、_アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `auto`、_アニメーション_: **可**
 - {{SVGAttr("x")}}
   - : SVG コンテナーが表示される x 座標。最も外側の `svg` 要素では効果ありません。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)、_既定値_: `0`、_アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `0`、_アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : SVG コンテナーが表示される y 座標。最も外側の `svg` 要素では効果ありません。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)、_既定値_: `0`; _Animatable_: **yes**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `0`; _Animatable_: **yes**
 
 > [!NOTE]
 > SVG2 から、`x`, `y`, `width`, `height` は、 *幾何プロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。

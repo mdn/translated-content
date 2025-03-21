@@ -19,7 +19,7 @@ l10n:
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)で、上付き文字のベースラインを上に移動させる最小量を示します。
 
-> **メモ:** `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> **メモ:** `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
 
 ## 例
 

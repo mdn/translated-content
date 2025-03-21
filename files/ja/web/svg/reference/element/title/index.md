@@ -8,7 +8,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<title>`** 要素は、SVG の[コンテナー要素](/ja/docs/Web/SVG/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Element#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
+**`<title>`** 要素は、SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな短いテキストの説明を提供します。
 
 `<title>` 要素内のテキストはグラフィックの一部としてレンダリングされませんが、ブラウザーは通常ツールチップとして表示します。要素が可視テキストで記述されている場合、 `<title>` 要素を使用するのではなく、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性でそのテキストを参照することが推奨されます。
 

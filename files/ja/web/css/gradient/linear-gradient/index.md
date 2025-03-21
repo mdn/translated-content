@@ -95,7 +95,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 - `<color-hint>`
   - : 隣り合う色経由点の間でどのようにグラデーションが進むかを定義する{{glossary("interpolation","補間")}}のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
 
-> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じルールに従います。
+> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)と同じルールに従います。
 
 ## 解説
 

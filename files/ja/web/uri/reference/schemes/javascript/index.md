@@ -34,7 +34,7 @@ javascript:<script>
 
 ブラウザーがそのような場所に移動しようとすると、スクリプト本体を解釈し実行します。スクリプトは、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) で実行された場合と同じ値である、_補完値_（返値ではありません）を持つことができます。最後の文が[式](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)の場合は、補完値はその式の値となります。この補完値が文字列の場合は、その文字列は HTML 文書として扱われ、ブラウザーは現在のページと同じ URL を使用して、そのコンテンツを含む新しい文書に移動します。履歴項目は作成されません。補完値が文字列でない場合、ブラウザーはコードを実行するだけで、移動はしません。そのため、スクリプトが `javascript:foo()` のように関数を呼び出すことで終わっている場合、関数が文字列を返す可能性がある場合に誤って移動しないように、{{jsxref("Operators/void", "void")}} を接頭辞として付けることが推奨されることがよくあります。
 
-JavaScript でのナビゲーションは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP) の設定、具体的には {{CSP("script-src")}} によってブロックされる場合があります。
+JavaScript でのナビゲーションは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP) の設定、具体的には {{CSP("script-src")}} によってブロックされる場合があります。
 
 ## 例
 
@@ -137,5 +137,5 @@ document.body.textContent = "Hello, world!";
 ## 関連情報
 
 - [URI](/ja/docs/Web/URI)
-- [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP)
+- [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

@@ -34,7 +34,7 @@ CSS 宣言ブロックは以下の図のように表すことができます。
 ![css syntax - declarations block.png](declaration-block.png)
 
 > [!NOTE]
-> 左中括弧と右中括弧を除いた、セミコロンで分割された宣言のリストである CSS 宣言ブロックの内容は、 HTML の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の中に置くことができます。
+> 左中括弧と右中括弧を除いた、セミコロンで分割された宣言のリストである CSS 宣言ブロックの内容は、 HTML の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性の中に置くことができます。
 
 ## CSS のルールセット
 
@@ -46,7 +46,7 @@ CSS のルールセット (またはルール) は下記の図のように表現
 
 ![css syntax - ruleset.png](ruleset.png)
 
-ページの要素は複数のセレクターに一致する可能性があり、あるプロパティが複数のルールで異なる値で複数回現れる可能性があるため、 CSS 標準ではあるプロパティが他のプロパティより優先され、適用しなければならないことを定義しています。これを[カスケード](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)アルゴリズムと呼びます。
+ページの要素は複数のセレクターに一致する可能性があり、あるプロパティが複数のルールで異なる値で複数回現れる可能性があるため、 CSS 標準ではあるプロパティが他のプロパティより優先され、適用しなければならないことを定義しています。これを[カスケード](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)アルゴリズムと呼びます。
 
 > [!NOTE]
 > 単一のセレクターで構成されるルールセットを複数まとめて表記する方法の一つとして、ルールセットをセレクターの集合で記述することが挙げられますが、各ルールセットの妥当性を上手くまとめるものではない点に注意しましょう。

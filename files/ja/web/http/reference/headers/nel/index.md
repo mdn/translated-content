@@ -39,4 +39,4 @@ NEL: { "report_to": "name_of_reporting_group", "max_age": 12345, "include_subdom
 
 ## 関連情報
 
-- [Network Error Logging (NEL) の説明](/ja/docs/Web/HTTP/Network_Error_Logging)
+- [Network Error Logging (NEL) の説明](/ja/docs/Web/HTTP/Guides/Network_Error_Logging)

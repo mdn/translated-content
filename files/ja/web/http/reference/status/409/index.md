@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`409 Conflict`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、リクエストが現在のサーバーの状態と競合したことを示します。
+HTTP **`409 Conflict`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストが現在のサーバーの状態と競合したことを示します。
 
 {{glossary("WebDAV")}} のリモートウェブオーサリングでは、 `409 conflict` レスポンスはクライアントに送信されるエラーであり、ユーザーが競合を解決してリクエストを再送信できるようにするためのものです。
 例えば、 `/a/b/c/d/` という集合を作成するリクエストが行われ、 `/a/b/c/` が存在しない場合、リクエストは 409 で失敗しなければなりません。
@@ -61,5 +61,5 @@ Content-Type: application/json
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPMethod("PUT")}}

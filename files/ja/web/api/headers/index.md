@@ -7,12 +7,12 @@ l10n:
 
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-**`Headers`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、 [HTTP リクエスト／レスポンス](/ja/docs/Web/HTTP/Headers)ヘッダー上のさまざまなアクションを実行します。アクションとしては、リクエストヘッダーのリストに対するヘッダーの取得、設定、追加、削除などがあります。
+**`Headers`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、 [HTTP リクエスト／レスポンス](/ja/docs/Web/HTTP/Reference/Headers)ヘッダー上のさまざまなアクションを実行します。アクションとしては、リクエストヘッダーのリストに対するヘッダーの取得、設定、追加、削除などがあります。
 
 `Headers` オブジェクトは {{domxref("Request.headers")}} および {{domxref("Response.headers")}} プロパティから受け取ることができ、新しい `Headers` オブジェクトは {{domxref("Headers.Headers", "Headers()")}} コンストラクターで作成することができます。
 
 > [!NOTE]
-> 利用可能なヘッダーについての詳細は、 [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)のリファレンスをお読みください。
+> 利用可能なヘッダーについての詳細は、 [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)のリファレンスをお読みください。
 
 ## 解説
 
@@ -102,5 +102,5 @@ myHeaders.get("Content-Type"); // 'text/xml' が返される
 ## 関連項目
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -8,9 +8,9 @@ l10n:
 
 {{XsltSidebar}}
 
-XPath は XML Path Language の略称です。非 XML 構文を使って、柔軟な方法で [XML](/ja/docs/Web/XML/XML_introduction) 文書の様々な部分をアドレッシングする（指し示す）ことができます。さらに、文書中で指し示されたノードがパターンに一致するかどうかの判定を行うこともできます。
+XPath は XML Path Language の略称です。非 XML 構文を使って、柔軟な方法で [XML](/ja/docs/Web/XML/Guides/XML_introduction) 文書の様々な部分をアドレッシングする（指し示す）ことができます。さらに、文書中で指し示されたノードがパターンに一致するかどうかの判定を行うこともできます。
 
-XPath は主に [XSLT](/ja/docs/Web/XSLT) で使われていますが、 [HTML](/ja/docs/Web/HTML) や [SVG](/ja/docs/Web/SVG) のような XML 風の言語の文書の [DOM](/ja/docs/Web/API/Document_Object_Model) においても {{DOMxRef("XPathExpression")}} を用いることで、 {{DOMxRef("Document.getElementById()")}} や {{DOMxRef("Document.querySelectorAll()")}} メソッドや {{DOMxRef("Node.childNodes")}} プロパティ、その他の DOM コア機能に依存することなく、はるかにパワフルな方法でたどることができます。
+XPath は主に [XSLT](/ja/docs/Web/XML/XSLT) で使われていますが、 [HTML](/ja/docs/Web/HTML) や [SVG](/ja/docs/Web/SVG) のような XML 風の言語の文書の [DOM](/ja/docs/Web/API/Document_Object_Model) においても {{DOMxRef("XPathExpression")}} を用いることで、 {{DOMxRef("Document.getElementById()")}} や {{DOMxRef("Document.querySelectorAll()")}} メソッドや {{DOMxRef("Node.childNodes")}} プロパティ、その他の DOM コア機能に依存することなく、はるかにパワフルな方法でたどることができます。
 
 XPath は XML 文書の階層構造を辿るために（URL のような）パス表記を使います。また、URI や XML 属性値の中で使えるように非 XML 構文を採用しています。
 
@@ -19,15 +19,15 @@ XPath は XML 文書の階層構造を辿るために（URL のような）パ�
 
 ## ドキュメント
 
-- [JavaScript からの XPath 利用入門](/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [JavaScript からの XPath 利用入門](/ja/docs/Web/XML/XPath/Introduction_to_using_XPath_in_JavaScript)
   - : XSLT 以外で XPath を使用する方法です。
-- [XPath:Axes](/ja/docs/Web/XPath/Axes)
+- [XPath:Axes](/ja/docs/Web/XML/XPath/Axes)
   - : XPath 仕様で定められている軸 (Axis) の一覧とその定義。軸はノード間の関係性を記述するのに使われます。
-- [XPath:Functions](/ja/docs/Web/XPath/Functions)
+- [XPath:Functions](/ja/docs/Web/XML/XPath/Functions)
   - : コア XPath 関数及び XSLT 固有の追加 XPath 関数の一覧とその定義。
-- [XSLT による XML の変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Transforming_XML_with_XSLT)
   - : XSLT では変換したい XML 文書内のコードの一部を指し示すのに XPath を使います。
-- [XPath スニペット](/ja/docs/Web/XPath/Snippets)
+- [XPath スニペット](/ja/docs/Web/XML/XPath/Snippets)
   - : これらは [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) API に基づいて、独自のコードで使用できる JavaScript ユーティリティ関数です。
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/) （英語）
   - : XSLT と XPath の予備知識が無い人を対象に、その背景や構造、概念、初歩的な専門用語を紹介する広範囲な入門ガイド。
@@ -39,5 +39,5 @@ XPath は XML 文書の階層構造を辿るために（URL のような）パ�
 
 ## 関連事項
 
-- [XSLT](/ja/docs/Web/XSLT), [XML](/ja/docs/Web/XML), [DOM](/ja/docs/Web/API/Document_Object_Model)
-- [CSS セレクターと XPath の比較](/ja/docs/Web/XPath/Comparison_with_CSS_selectors)
+- [XSLT](/ja/docs/Web/XML/XSLT), [XML](/ja/docs/Web/XML), [DOM](/ja/docs/Web/API/Document_Object_Model)
+- [CSS セレクターと XPath の比較](/ja/docs/Web/XML/XPath/Comparison_with_CSS_selectors)

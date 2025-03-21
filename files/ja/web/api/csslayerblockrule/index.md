@@ -69,4 +69,4 @@ item.textContent = `この CSSLayerBlockRule は "${layer.name}" レイヤーの
 
 - {{cssxref("@layer")}}
 - {{DOMxRef("CSSLayerStatementRule")}}
-- [CSS カスケードレイヤーの学習](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [CSS カスケードレイヤーの学習](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)

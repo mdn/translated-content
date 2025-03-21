@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`206 Partial Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、[範囲リクエスト](/ja/docs/Web/HTTP/Range_requests)へのレスポンスとして送信されます。
+HTTP の **`206 Partial Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、[範囲リクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)へのレスポンスとして送信されます。
 レスポンス本体には、リクエストの {{HTTPHeader("Range")}} ヘッダーで指定されたリクエストされたデータ範囲が含まれます。
 
 レスポンスの形式は、リクエストされた範囲の数値によって異なります。
@@ -89,5 +89,5 @@ Content-Range: bytes 4590-7999/8000
 - {{HTTPHeader("Range")}}
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Content-Type")}}
-- [HTTP リクエストのメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストのメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
