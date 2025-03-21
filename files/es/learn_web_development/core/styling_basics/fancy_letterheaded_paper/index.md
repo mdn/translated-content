@@ -1,8 +1,8 @@
 ---
-title: "Desafío: Crear un elegante papel con membrete"
+title: "Desafío: Crear un elegante documento con membrete"
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
 {{LearnSidebar}}
@@ -15,8 +15,8 @@ Si quieres causar una buena impresión, escribir una carta en un bonito papel co
 
 Para comenzar este desafío, debes:
 
-- Haz copias locales del [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/index.html) y [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/style.css) — guárdalos como `index.html` y `style.css` en un nuevo directorio.
-- Guarda copias locales de las imágenes [superior](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [inferior](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) y [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) en el mismo directorio que tus archivos de código.
+- Hacer copias locales del [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/index.html) y [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/letterheaded-paper-start/style.css) — guárdalos como `index.html` y `style.css` en un nuevo directorio.
+- Guardar copias locales de las imágenes [superior](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [inferior](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) y [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) en el mismo directorio que tus archivos de código.
 
 Alternativamente, podrías usar un editor en línea como [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/).
 Podrías pegar el HTML y completar el CSS en uno de estos editores en línea.
@@ -28,16 +28,16 @@ Podrías pegar el HTML y completar el CSS en uno de estos editores en línea.
 
 Se te han proporcionado los archivos necesarios para crear una plantilla de papel con membrete. Solo necesitas juntar los archivos. Para llegar allí, necesitas:
 
-### La carta principal
+### El documento principal
 
 - Aplica el CSS al HTML.
-- Agrega una declaración de fondo a la carta que:
+- Agrega un estilo de fondo a la carta que:
 
   - Fija la imagen superior a la parte superior de la carta
   - Fija la imagen inferior a la parte inferior de la carta
   - Agrega un gradiente semitransparente sobre la parte superior de ambos fondos anteriores que le da a la carta un poco de textura. Hazlo ligeramente oscuro cerca de la parte superior e inferior, pero completamente transparente para una gran parte del centro.
 
-- Agrega otra declaración de fondo que simplemente agregue la imagen superior a la parte superior de la carta, como una alternativa para los navegadores que no admiten la declaración anterior.
+- Agrega otro estilo de fondo que simplemente agregue la imagen superior a la parte superior de la carta, como una alternativa para los navegadores que no admiten la declaración anterior.
 - Agrega un color de fondo blanco a la carta.
 - Agrega un borde sólido de 1 mm en la parte superior e inferior de la carta, en un color que esté en consonancia con el resto de la combinación de colores.
 
@@ -49,7 +49,7 @@ Se te han proporcionado los archivos necesarios para crear una plantilla de pape
 
 ## Pistas y consejos
 
-- Recuerda que puedes crear una alternativa para navegadores más antiguos colocando primero la versión alternativa de una declaración, seguida de la versión que funciona solo en los navegadores más nuevos. Los navegadores más antiguos aplicarán la primera declaración e ignorarán la segunda, mientras que los navegadores más nuevos aplicarán la primera y luego la anularán con la segunda.
+- Recuerda que puedes crear una alternativa para navegadores más antiguos colocando primero la versión alternativa de un estilo, seguida de la versión que funciona solo en los navegadores más nuevos. Los navegadores más antiguos aplicarán la primera declaración e ignorarán la segunda, mientras que los navegadores más nuevos aplicarán la primera y luego la anularán con la segunda.
 - Si lo deseas, siéntete libre de crear tus propios gráficos para el desafío.
 
 ## Ejemplo
