@@ -32,7 +32,7 @@ l10n:
 
 ### HTTP
 
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP レスポンスヘッダーの [`credentialless`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#credentialless) をデスクトッププラットフォーム (および Android を除くモバイルプラットフォーム) でサポートしました。Cookie やほかの資格情報がない場合でも、明示的に許可していない外部オリジンのサーバーへリソースの `no-cors` 要求を行えます ([Firefox bug 1851467](https://bugzil.la/1851467))。
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP レスポンスヘッダーの [`credentialless`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#credentialless) をデスクトッププラットフォーム (および Android を除くモバイルプラットフォーム) でサポートしました。Cookie やほかの資格情報がない場合でも、明示的に許可していない外部オリジンのサーバーへリソースの `no-cors` 要求を行えます ([Firefox bug 1851467](https://bugzil.la/1851467))。
 
 ### API
 

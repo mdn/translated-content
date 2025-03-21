@@ -77,7 +77,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- CSS セレクターや `.getAttribute("nonce")` の呼び出しなど、スクリプト以外をソースとする [CSP](/ja/docs/Web/HTTP/CSP) nonce が隠されるようになりました。代わりに、スクリプトから nonce へアクセスするには [`.nonce`](/ja/docs/Web/API/HTMLElement/nonce) プロパティを確認してください ([Firefox バグ 1374612](https://bugzil.la/1374612))。
+- CSS セレクターや `.getAttribute("nonce")` の呼び出しなど、スクリプト以外をソースとする [CSP](/ja/docs/Web/HTTP/Guides/CSP) nonce が隠されるようになりました。代わりに、スクリプトから nonce へアクセスするには [`.nonce`](/ja/docs/Web/API/HTMLElement/nonce) プロパティを確認してください ([Firefox バグ 1374612](https://bugzil.la/1374612))。
 
 ### プラグイン
 

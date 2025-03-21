@@ -159,5 +159,5 @@ Superior lettering は、厳密には上付き文字と同じではありませ�
 ## 関連情報
 
 - 下付き文字を表現する HTML の {{HTMLElement("sub")}} 要素。なお、`sub` と `sup` を同時に使用することはできません。化学式で上付き文字と下付き文字の両方が必要な場合には、[MathML](/ja/docs/Web/MathML) を用いる必要があります。
-- MathML 要素: [`<msub>`](/ja/docs/Web/MathML/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Element/msubsup)
+- MathML 要素: [`<msub>`](/ja/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Reference/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Reference/Element/msubsup)
 - CSS の {{cssxref("vertical-align")}} プロパティ

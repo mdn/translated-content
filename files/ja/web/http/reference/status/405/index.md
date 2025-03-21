@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`405 Method Not Allowed`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードは、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
+HTTP の **`405 Method Not Allowed`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
 サーバーは、対象のリソースで現在対応しているメソッドの一覧を含む {{HTTPHeader("Allow")}} ヘッダーフィールドを、 405 レスポンスの中で生成しなければなりません。
 
 ファイルやディレクトリ－に正しくないサーバー側権限を設定すると、リクエストが成功するはずであるにもかかわらず、 405 レスポンスが発生する可能性があります。
@@ -45,7 +45,7 @@ Allow: GET, POST, HEAD
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Allow")}}
 - {{HTTPStatus("501", "501 Not Implemented")}}, {{HTTPStatus("510", "510 Not Extended")}}
 - [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.405)

@@ -250,7 +250,7 @@ function runCodeWithDateFunction(obj) {
 console.log(runCodeWithDateFunction("Date(5)")); // Saturday
 ```
 
-`eval()` と `Function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [CSP](/ja/docs/Web/HTTP/CSP) 設定では禁止されています。また、一般的な用途では `eval()` や `Function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
+`eval()` と `Function()` はどちらも暗黙的に任意のコードを評価するので、厳格な [CSP](/ja/docs/Web/HTTP/Guides/CSP) 設定では禁止されています。また、一般的な用途では `eval()` や `Function()` に代わる、より安全な（そして、より高速な）方法が他にもあります。
 
 #### ブラケットアクセサーの使用
 

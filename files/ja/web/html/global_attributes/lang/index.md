@@ -164,5 +164,5 @@ WCAG 成功基準 3.1.2 は、異なる言語の**部分**があるページに�
 ## 関連情報
 
 - すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
-- [HTTP の `Content-Language` ヘッダー](/ja/docs/Web/HTTP/Headers/Content-Language)
+- [HTTP の `Content-Language` ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Content-Language)
 - HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes#translate) 属性

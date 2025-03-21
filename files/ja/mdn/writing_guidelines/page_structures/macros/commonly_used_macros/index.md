@@ -115,7 +115,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
         <code><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPHeader</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a> (/Web/HTTP/Headers)
+        <a href="/ja/docs/Web/HTTP/Reference/Headers">HTTP ヘッダー</a> (/Web/HTTP/Headers)
       </td>
       <td>
         <code>\{{HTTPHeader("Accept")}}</code> は {{HTTPHeader("Accept")}} になります。
@@ -126,7 +126,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPMethod</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTTP/Methods">HTTP リクエストメソッド</a> (/Web/HTTP/Methods)
+        <a href="/ja/docs/Web/HTTP/Reference/Methods">HTTP リクエストメソッド</a> (/Web/HTTP/Methods)
       </td>
       <td>
         <code>\{{HTTPMethod("HEAD")}}</code> は {{HTTPMethod("HEAD")}} になります。
@@ -137,7 +137,7 @@ MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）の
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPStatus</a>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTTP/Status">HTTP レスポンスステータスコード</a> (/Web/HTTP/Status)
+        <a href="/ja/docs/Web/HTTP/Reference/Status">HTTP レスポンスステータスコード</a> (/Web/HTTP/Status)
       </td>
       <td>
         <code>\{{HTTPStatus("404")}}</code> は {{HTTPStatus("404")}} になります。

@@ -11,7 +11,7 @@ l10n:
 
 ## 構文
 
-`<calc-sum>` 型は 2 つの数値とその間の以下の[算術演算子](/ja/docs/Learn/JavaScript/First_steps/Math#算術演算子)のいずれかを定義します。
+`<calc-sum>` 型は 2 つの数値とその間の以下の[算術演算子](/ja/docs/Learn_web_development/Core/Scripting/Math#算術演算子)のいずれかを定義します。
 
 - `+`
 

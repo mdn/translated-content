@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`302 Found`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードは、リクエストされたリソースが一時的に {{HTTPHeader("Location")}} で示された URL へ移動したことを示します。
+HTTP の **`302 Found`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードは、リクエストされたリソースが一時的に {{HTTPHeader("Location")}} で示された URL へ移動したことを示します。
 
 このステータスを受信したブラウザーは、自動的に `Location` ヘッダーの中の URL にあるリソースをリクエストし、ユーザーを新しいページへリダイレクトさせます。
 このレスポンスを受け取った検索エンジンは、新しいリソースに元のURLへのリンクの属性を付与しないため、新しい URL に {{Glossary("SEO")}} の値が引き継がれません。
@@ -47,8 +47,8 @@ Content-Length: 0
 
 ## 関連情報
 
-- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Redirections)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Guides/Redirections)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("307", "307 Temporary Redirect")}} 使用されたメソッドが変更されない場面では、このステータスコードと等価。
 - {{HTTPStatus("303", "303 See Other")}} メソッドを {{HTTPMethod("GET")}} に変更する一時リダイレクト。
 - {{HTTPStatus("301", "301 Moved Permanently")}} 恒久リダイレクト

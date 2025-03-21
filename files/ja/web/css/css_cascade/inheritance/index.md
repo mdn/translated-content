@@ -71,7 +71,7 @@ p {
 
 - 継承を制御する CSS 値: {{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, {{cssxref("unset")}}
 - [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)
-- [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [カスケードと継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/Syntax)
   - [アットルール](/ja/docs/Web/CSS/At-rule)

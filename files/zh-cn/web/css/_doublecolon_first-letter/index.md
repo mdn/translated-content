@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::first-letter`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)将样式应用于[区块容器](/zh-CN/docs/Web/CSS/Visual_formatting_model#区块容器)第一行的第一个字母，但仅当其前面没有其他内容（例如图像或行内表格）时才有效。
+**`::first-letter`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)将样式应用于[区块容器](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#区块容器)第一行的第一个字母，但仅当其前面没有其他内容（例如图像或行内表格）时才有效。
 
 {{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 

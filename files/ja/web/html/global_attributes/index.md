@@ -87,7 +87,7 @@ l10n:
 - [`lang`](/ja/docs/Web/HTML/Global_attributes/lang)
   - : 要素の言語を定義します。編集不可能な要素を記述している言語、または編集可能な要素に記述されるべき言語を定義します。この属性の値は、 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定義された形式の「言語タグ」（ハイフン区切りの「言語サブタグ」列）です。 `xml:lang` はこの要素より優先します。
 - [`nonce`](/ja/docs/Web/HTML/Global_attributes/nonce)
-  - : 暗号化ノンス ("number user once") で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)が取得を許可するかどうかを決定するために使用することがあります。
+  - : 暗号化ノンス ("number user once") で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)が取得を許可するかどうかを決定するために使用することがあります。
 - [`part`](/ja/docs/Web/HTML/Global_attributes/part)
   - : 要素のパート名の空白区切りによるリストです。パート名を利用すると、 CSS がシャドウツリー内にある特定の要素を {{CSSxRef("::part")}} 擬似要素を使用することで選択し、スタイル付けすることができます。
 - [`popover`](/ja/docs/Web/HTML/Global_attributes/popover)

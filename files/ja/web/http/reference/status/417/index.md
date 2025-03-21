@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`417 Expectation Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。
+HTTP の **`417 Expectation Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。
 417 のレスポンスを受け取った後、クライアントは `Expect` リクエストヘッダーを付けずにリクエストを繰り返し、 {{HTTPStatus("100")}} レスポンスを待たずにリクエスト本体にファイルを含める必要があります。
 詳細は {{HTTPHeader("Expect")}} ヘッダーを参照してください。
 
@@ -57,6 +57,6 @@ Content-Length: 1234567890987
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("100", "100 Continue")}}
 - {{HTTPHeader("Expect")}}

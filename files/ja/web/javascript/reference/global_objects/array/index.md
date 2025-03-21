@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数のアイテムの集合を単一の変数名の下に格納](/ja/docs/Learn/JavaScript/First_steps/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
+**`Array`** オブジェクトは、他のプログラミング言語の配列と同様に、[複数のアイテムの集合を単一の変数名の下に格納](/ja/docs/Learn_web_development/Core/Scripting/Arrays)することができ、[共通の配列操作を行う](#例)ためのメンバーを持っています。
 
 ## 解説
 
@@ -378,7 +378,7 @@ f("a", "b"); // 'a+b'
 この節では、 JavaScript で一般的な配列操作の例をいくつか紹介します。
 
 > [!NOTE]
-> まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn/JavaScript/First_steps/Arrays) の[配列とは何かの説明](/ja/docs/Learn/JavaScript/First_steps/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
+> まだ配列の基本に慣れていない場合は、最初に [JavaScript の第一歩: 配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays) の[配列とは何かの説明](/ja/docs/Learn_web_development/Core/Scripting/Arrays#配列とは何か)、およびよくある配列の操作の他の例を読んでみてください。
 
 ### 配列の作成
 

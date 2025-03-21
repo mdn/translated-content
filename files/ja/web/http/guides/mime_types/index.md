@@ -190,7 +190,7 @@ MIME タイプが `image` であるファイルは、画像データを含んで
 音声ファイルや動画ファイルの MIME タイプに関しては、通常、コンテナー形式（ファイルタイプ）を指定します。
 オプションの[コーデック引数](/ja/docs/Web/Media/Formats/codecs_parameter)を MIME タイプに追加すると、使用するコーデックと、コーデックプロファイル、レベルなど、メディアのエンコードに使用したオプションをさらに指定することができます。
 
-よくあるメディア型についての詳しい情報は、[よくある MIME タイプ](/ja/docs/Web/HTTP/MIME_types/Common_types)ページを参照してください。
+よくあるメディア型についての詳しい情報は、[よくある MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)ページを参照してください。
 
 ### multipart/form-data
 

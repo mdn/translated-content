@@ -73,7 +73,7 @@ l10n:
 
 注意欠陥多動性障碍（ADHD）などの認知能力に不安のある方にとって、まばたきや点滅するアニメーションは問題となることがあります。さらに、ある種の動作は、前庭障害、てんかん、片頭痛、スコトピック過敏症の引き金になることがあります。
 
-アニメーションを一時停止したり、無効にしたりするメカニズムを提供したり、[動作縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#ユーザーエージェントクライアントヒント) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}})）を使って、アニメーションなしの操作を希望するユーザーのために補完的な操作を提供することを検討してください。
+アニメーションを一時停止したり、無効にしたりするメカニズムを提供したり、[動作縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}})）を使って、アニメーションなしの操作を希望するユーザーのために補完的な操作を提供することを検討してください。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)

@@ -61,7 +61,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
 - `accept-charset`
 
-  - : サーバーが受け付ける空白区切りの{{Glossary("character encoding", "文字エンコーディング")}}です。ブラウザーは、列挙されたされた順に使用します。既定値は、[ページと同じエンコーディング](/ja/docs/Web/HTTP/Headers/Content-Encoding)を意味します。
+  - : サーバーが受け付ける空白区切りの{{Glossary("character encoding", "文字エンコーディング")}}です。ブラウザーは、列挙されたされた順に使用します。既定値は、[ページと同じエンコーディング](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding)を意味します。
     （以前のバージョンの HTML では、文字エンコーディングをカンマで区切ることもできました。）
 
 - `autocapitalize`

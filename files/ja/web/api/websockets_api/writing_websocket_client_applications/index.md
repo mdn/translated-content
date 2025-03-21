@@ -67,7 +67,7 @@ const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
 
 接続が確立されると（つまり `readyState` が `OPEN`）、 {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} は、サーバーが選択したプロトコルを通知します。
 
-WebSocket を確立するには、 [HTTP アップグレードメカニズム](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism)が必要です。したがって、 HTTP サーバーを `ws://www.example.com` または `wss://www.example.com` としてアドレス指定すると、プロトコルのアップグレードのためのリクエストが暗黙的に行われます。
+WebSocket を確立するには、 [HTTP アップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)が必要です。したがって、 HTTP サーバーを `ws://www.example.com` または `wss://www.example.com` としてアドレス指定すると、プロトコルのアップグレードのためのリクエストが暗黙的に行われます。
 
 ## サーバーへのデータの送信
 

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`400 Bad Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがクライアントエラーとみなした何らかの理由により、サーバーがリクエストを処理しなかったことを示します。
+HTTP の **`400 Bad Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがクライアントエラーとみなした何らかの理由により、サーバーがリクエストを処理しなかったことを示します。
 `400` レスポンスの理由は、通常、リクエスト構文が不正であったり、リクエストメッセージのフレームが不正であったり、リクエストルーティングが不正であったりするものです。
 
 `400` のレスポンスを受け取ったクライアントは、リクエストを変更せずに繰り返しても、同じエラーで失敗することを想定しておくべきです。
@@ -57,5 +57,5 @@ Content-Length: 71
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.400)

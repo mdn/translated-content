@@ -32,12 +32,12 @@ l10n:
 
 ### HTTP
 
-- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP ヘッダーの [`style-src-elem`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem) および [`style-src-attr`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr) ディレクティブをサポートしました。
+- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP ヘッダーの [`style-src-elem`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem) および [`style-src-attr`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<style>` 要素や `rel="stylesheet"` を持つ `<link>` 要素のスタイルシート、および個々の要素に適用するスタイルの正当な提供元を指定できます ([Firefox バグ 1529338](https://bugzil.la/1529338))。
-- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
+- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<script>` 要素の JavaScript、および `onclick` などのイベントハンドラーのインラインスクリプトの正当な提供元を指定できます ([Firefox バグ 1529337](https://bugzil.la/1529337))。
-- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の違反内容の報告が、`effective-directive` および `status-code` プロパティを含むようになりました。
-  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/CSP#違反内容の報告の構文) をご覧ください ([Firefox バグ 1192684](https://bugzil.la/1192684))。
+- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) の違反内容の報告が、`effective-directive` および `status-code` プロパティを含むようになりました。
+  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/Guides/CSP#違反内容の報告の構文) をご覧ください ([Firefox バグ 1192684](https://bugzil.la/1192684))。
 
 ### API
 

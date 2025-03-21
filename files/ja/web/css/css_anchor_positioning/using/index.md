@@ -697,4 +697,4 @@ body {
 - [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
 - [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
 - [CSS 論理プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
-- [CSS におけるアイテムのサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)

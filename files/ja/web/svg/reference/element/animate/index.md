@@ -44,7 +44,7 @@ svg {
 
 点滅や発光のアニメーションは、注意欠陥障碍 (ADHD) のような認知障碍を持つ人にとって問題になることがあります。加えて、このような動きは、前庭障害、てんかん、偏頭痛、光感受性障害の引き金になる可能性があります。
 
-アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#user-agent_client_hints)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
+アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)

@@ -49,7 +49,7 @@ l10n:
 
 ページがたくさんの第三者のドメインに接続する必要がある場合、それらすべてを事前に接続すると、逆効果になることがあります。 `<link rel="preconnect">` のヒントは、最も重要な接続だけに使うのが最善です。それ以外の場合は、 `<link rel="dns-prefetch">` を使用することで、最初のステップである DNS ルックアップの時間を節約することができます。
 
-事前接続は HTTP の [Link](/ja/docs/Web/HTTP/Headers/Link) ヘッダーで、次のように実装することもできます。
+事前接続は HTTP の [Link](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーで、次のように実装することもできます。
 
 ```http
 Link: <https://example.com>; rel="preconnect"
@@ -89,7 +89,7 @@ Link: <https://example.com>; rel="preconnect"
 
 結果は文書内のメモリーキャッシュに保存されます。現在のページがサブリソースとして使用しないものを先読みさせた場合、ヘッダーが許可していれば結果は HTTP キャッシュに入るかもしれませんが、一般的にはリソースの無駄になります。
 
-次のように、 HTTP の [Link](/ja/docs/Web/HTTP/Headers/Link) ヘッダーとして先読みを実装することもできます。
+次のように、 HTTP の [Link](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーとして先読みを実装することもできます。
 
 ```http
 Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
@@ -130,7 +130,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 <link rel="prefetch" href="/landing-page" />
 ```
 
-結果はディスク上の HTTP キャッシュに保存されます。このため、現在のページで使用していないサブリソースを先読みするのに有益です。また、ユーザーがサイト内で次に訪れるであろう文書を先読みするために使用することもできます。ただし、その結果、ヘッダーに注意する必要があります。例えば、特定の [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダー（`no-cache` や `no-store` など）は先読みをブロックする可能性があります。
+結果はディスク上の HTTP キャッシュに保存されます。このため、現在のページで使用していないサブリソースを先読みするのに有益です。また、ユーザーがサイト内で次に訪れるであろう文書を先読みするために使用することもできます。ただし、その結果、ヘッダーに注意する必要があります。例えば、特定の [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダー（`no-cache` や `no-store` など）は先読みをブロックする可能性があります。
 
 多くのブラウザーでは、何らかの形で[キャッシュ分割](https://developer.chrome.com/blog/http-cache-partitioning)を実装しており、これが異なる最上位サイトで使用することを意図したリソースに対しては、 `<link rel="prefetch">` を無意味なものにしています。これには、サイト間を移動する際のメイン文書も含まれます。例えば、次の例のような先読み指定があったとします。
 
@@ -140,9 +140,9 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 これは `https://aggregator.example/` からアクセスできません。
 
-> **メモ:** `<link rel="prefetch">` は機能的には {{domxref("fetch()")}} を `priority: "low"` オプション付きで呼び出したのと同等ですが、前者は一般に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) ヘッダーが設定されます。
+> **メモ:** `<link rel="prefetch">` は機能的には {{domxref("fetch()")}} を `priority: "low"` オプション付きで呼び出したのと同等ですが、前者は一般に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーが設定されます。
 
-> **メモ:** `prefetch` 操作の取得リクエストは、 [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) ヘッダーを含む HTTP リクエストになります。サーバーはこのヘッダーを使用して、リソースのキャッシュ期限を変更したり、他の特別な処理を行ったりするかもしれません。
+> **メモ:** `prefetch` 操作の取得リクエストは、 [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーを含む HTTP リクエストになります。サーバーはこのヘッダーを使用して、リソースのキャッシュ期限を変更したり、他の特別な処理を行ったりするかもしれません。
 > このリクエストでは、 {{HTTPHeader("Sec-Fetch-Dest")}} ヘッダーの値も `empty` に設定されます。
 > このリクエストの {{HTTPHeader("Accept")}} へッダーは、通常のナビゲーションリクエストで使用する値と一致します。これにより、ブラウザーは以降のナビゲーションで一致するキャッシュリソースを探すことができます。
 > レスポンスが返された場合は、リクエストと一緒に HTTP キャッシュにキャッシュされます。
@@ -160,7 +160,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 <link rel="prerender" href="/next-page" />
 ```
 
-参照先の文書を取得し、次に静的に見つけられるリンクされたリソースを取得してそれらも取得し、その結果を 5 分間の期限付きでディスク上の HTTP キャッシュに格納します。例外は JavaScript で読み込まれるサブリソースで、これは見つけられません。問題は他にもあります。 `<link rel="prefetch">` のように、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーによってブロックされたり、ブラウザーの[キャッシュ分割](https://developer.chrome.com/blog/http-cache-partitioning)によって、異なる最上位サイトで使用することが意図されているリソースに対して役に立たなくなったりします。
+参照先の文書を取得し、次に静的に見つけられるリンクされたリソースを取得してそれらも取得し、その結果を 5 分間の期限付きでディスク上の HTTP キャッシュに格納します。例外は JavaScript で読み込まれるサブリソースで、これは見つけられません。問題は他にもあります。 `<link rel="prefetch">` のように、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーによってブロックされたり、ブラウザーの[キャッシュ分割](https://developer.chrome.com/blog/http-cache-partitioning)によって、異なる最上位サイトで使用することが意図されているリソースに対して役に立たなくなったりします。
 
 ### 投機ルール API
 
@@ -176,7 +176,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 | [`<link rel="dns-prefetch">`](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch)   | オリジン間接続の準備                               | すべてのオリジン間接続に使用して、接続時のパフォーマンスをわずかに改善します。                                                                                                                                                                                                                                                                                                                                             |
 | [`<link rel="preload">`](/ja/docs/Web/HTML/Attributes/rel/preload)             | 現在のページのサブリソースの事前読み込み           | 戦略的なパフォーマンス向上のために、現在のページで優先度の高いリソースをより速く読み込むために使用します。すべてを事前読み込みさせないでください。そうしないと効果が見えません。他にも興味深い使用法があります。 Smashing Magazine (2016) の [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) を参照してください。                                                   |
 | [`<link rel="modulepreload">`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) | 現在のページの JavaScript モジュールの事前読み込み | 戦略的なパフォーマンス向上のために優先度の高い JavaScript モジュールを事前読み込みさせるために使用します。                                                                                                                                                                                                                                                                                                                 |
-| [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch)           | HTTP キャッシュの事前投入                          | 同じサイトの将来のナビゲーションリソースや、それらのページで使用するサブリソースを先読みするために使用します。HTTP キャッシュを使用するため、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーによってブロックされる可能性があるなど、文書の先読みには多くの課題があります。対応している場合は、代わりに [投機ルールAPI](/ja/docs/Web/API/Speculation_Rules_API) を使用して文書の先読みを行ってください。 |
+| [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch)           | HTTP キャッシュの事前投入                          | 同じサイトの将来のナビゲーションリソースや、それらのページで使用するサブリソースを先読みするために使用します。HTTP キャッシュを使用するため、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーによってブロックされる可能性があるなど、文書の先読みには多くの課題があります。対応している場合は、代わりに [投機ルールAPI](/ja/docs/Web/API/Speculation_Rules_API) を使用して文書の先読みを行ってください。 |
 | [`<link rel="prerender">`](/ja/docs/Web/HTML/Attributes/rel/prerender)         | 次のナビゲーションの準備                           | 非推奨です。使用しないことをお勧めします。対応している場合は、代わりに [投機ルールAPI](/ja/docs/Web/API/Speculation_Rules_API)の事前レンダリングを使用してください。                                                                                                                                                                                                                                                       |
 | [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の先読み              | 次のナビゲーションの準備                           | 同じサイトやクロスサイトの将来のナビゲーション文書を先読みするために使用します。対応しているページが[先読みして安全](/ja/docs/Web/API/Speculation_Rules_API#安全でない先読み)であることを確認してください。サブリソースの先読みは処理しません。そのためには `<link rel="prefetch">` を使用する必要があります。                                                                                                             |
 | [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の事前レンダリング    | 次のナビゲーションの準備                           | ほぼ瞬時にナビゲーションを行うために、同じオリジンの将来のナビゲーションリソースを先読みするために使用します。対応している優先度の高いページで使用してください。ページが[事前レンダリングして安全](/ja/docs/Web/API/Speculation_Rules_API#安全でない事前レンダリング)であることを確認してください。                                                                                                                        |
