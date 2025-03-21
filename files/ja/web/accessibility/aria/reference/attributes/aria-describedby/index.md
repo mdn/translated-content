@@ -12,7 +12,7 @@ l10n:
 
 ## 解説
 
-`aria-describedby` 属性は、オブジェクトを説明する要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を列挙します。これは、ウィジェットやグループとそれらを説明するテキストとの関係を確立するために使用します。
+`aria-describedby` 属性は、オブジェクトを説明する要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を列挙します。これは、ウィジェットやグループとそれらを説明するテキストとの関係を確立するために使用します。
 
 `aria-describedby` 属性はあるフォームコントロールに限ったものではありません。ウィジェットや要素のグループ、見出しのある領域、定義などに静的テキストを関連付けるためにも使用することができます。 `aria-describedby` 属性は、意味づけされた HTML 要素や ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) を持つ要素で使用することができます。
 

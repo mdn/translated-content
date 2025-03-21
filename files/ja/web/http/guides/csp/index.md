@@ -1,7 +1,7 @@
 ---
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/Guides/CSP
-original_slug: Web/HTTP/CSP
+original_slug: Web/HTTP/Guides/CSP
 l10n:
   sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---

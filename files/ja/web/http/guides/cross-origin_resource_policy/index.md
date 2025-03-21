@@ -1,7 +1,7 @@
 ---
 title: Cross-Origin Resource Policy (CORP)
 slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
-original_slug: Web/HTTP/Cross-Origin_Resource_Policy
+original_slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 ---
 
 {{HTTPSidebar}}

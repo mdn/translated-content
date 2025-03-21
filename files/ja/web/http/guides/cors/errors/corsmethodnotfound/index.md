@@ -1,7 +1,7 @@
 ---
 title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
-original_slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---

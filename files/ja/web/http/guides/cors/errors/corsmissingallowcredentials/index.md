@@ -1,7 +1,7 @@
 ---
 title: "Reason: expected 'true' in CORS header 'Access-Control-Allow-Credentials'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
-original_slug: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSMIssingAllowCredentials
 l10n:
   sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---

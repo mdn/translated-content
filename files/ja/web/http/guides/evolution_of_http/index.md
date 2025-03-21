@@ -1,7 +1,7 @@
 ---
 title: HTTP の進化
 slug: Web/HTTP/Guides/Evolution_of_HTTP
-original_slug: Web/HTTP/Evolution_of_HTTP
+original_slug: Web/HTTP/Guides/Evolution_of_HTTP
 l10n:
   sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---

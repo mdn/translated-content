@@ -251,7 +251,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
         <p><strong>設定時の例外:</strong></p>
         <ul>
           <li>
-            代入された文字列が有効な <a href="/ja/docs/Web/SVG/Content_type#length">&#x3C;length></a> として解釈できない場合、{{ domxref("DOMException") }} 例外が <code>SYNTAX_ERR</code> のコードで発生します。
+            代入された文字列が有効な <a href="/ja/docs/Web/SVG/Guides/Content_type#length">&#x3C;length></a> として解釈できない場合、{{ domxref("DOMException") }} 例外が <code>SYNTAX_ERR</code> のコードで発生します。
           </li>
           <li>
             長さが読み取り専用属性に対応している場合、またはオブジェクト自体が読み取り専用である場合に、{{ domxref("DOMException") }} 例外が <code>NO_MODIFICATION_ALLOWED_ERR</code> のコードで発生します。

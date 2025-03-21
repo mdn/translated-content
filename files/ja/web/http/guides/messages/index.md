@@ -46,7 +46,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
      - `HEAD /test.html?query=alibaba HTTP/1.1`
      - `OPTIONS /anypage.html HTTP/1.0`
    - 完全な URL は*絶対形式*とも呼ばれ、主にプロキシーへ接続する際に `GET` で使用します。
-     `GET https://developer.mozilla.org/ja/docs/Web/HTTP/Messages HTTP/1.1`
+     `GET https://developer.mozilla.org/ja/docs/Web/HTTP/Guides/Messages HTTP/1.1`
    - ドメイン名とポート（省略可能。`':'` を前につける）で構成される、URL の authority の部分は*認証形式*と呼ばれます。これは `CONNECT` で HTTP トンネルを設定するときに限り使用されます。
      `CONNECT developer.mozilla.org:80 HTTP/1.1`
    - 単純なアスタリスク (`'*'`) である*アスタリスク形式*は `OPTIONS` で使用され、サーバー全体を表します。

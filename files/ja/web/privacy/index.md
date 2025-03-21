@@ -76,14 +76,14 @@ l10n:
       </td>
     </tr>
     <tr>
-      <td><a href="/ja/docs/Web/HTTP/CSP">コンテンツセキュリティポリシー</a></td>
+      <td><a href="/ja/docs/Web/HTTP/Guides/CSP">コンテンツセキュリティポリシー</a></td>
       <td>
         文書内のコンテンツがウェブ上で他の機器からアクセスできる範囲を定義する機能を提供した。特にサーバーへの攻撃を防止または軽減するために使用できる。
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
+        <a href="/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
       </td>
       <td>
         HSTS は、サイトがクライアントに対してサーバーとの通信に HTTPS のみを使用することを指示することによって、プロトコルのダウングレードやクッキーハイジャック攻撃から自身を保護するためにサーバーから使用されます。
@@ -102,7 +102,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <td><a href="/ja/docs/Web/HTTP/Permissions_Policy">権限ポリシー</a></td>
+      <td><a href="/ja/docs/Web/HTTP/Guides/Permissions_Policy">権限ポリシー</a></td>
       <td>
         ウェブサーバーが {{HTMLElement("iframe")}} で読み込んだ文書とサブ文書の両方で、{{HTTPHeader("Permissions-Policy")}} を介して機能や API を選択的に有効または無効にできるようにします。
         <a href="/ja/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> 属性は、個々の {{HTMLElement("iframe")}} に権限ポリシーを設定するために使用できます。

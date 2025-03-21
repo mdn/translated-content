@@ -1,7 +1,7 @@
 ---
 title: HTTP の圧縮
 slug: Web/HTTP/Guides/Compression
-original_slug: Web/HTTP/Compression
+original_slug: Web/HTTP/Guides/Compression
 l10n:
   sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---

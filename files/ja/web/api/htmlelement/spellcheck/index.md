@@ -59,4 +59,4 @@ controller.addEventListener("change", (e) => {
 
 ## 関連情報
 
-- HTML の [`spellcheck`](/ja/docs/Web/HTML/Global_attributes#spellcheck) グローバル属性
+- HTML の [`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck) グローバル属性

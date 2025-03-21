@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/exsl/object-type
 original_slug: Web/EXSLT/exsl/object-type
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/EXSLT")}}
+{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
 
 `exsl:object-type()` は、指定されたオブジェクトの型を示す文字列を返します。
 

@@ -46,5 +46,5 @@ if (notDraggableElement.draggable) {
 
 ## 関連情報
 
-- HTML の [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) グローバル属性
+- HTML の [`draggable`](/ja/docs/Web/HTML/Global_attributes/draggable) グローバル属性
 - [HTML のドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の概要

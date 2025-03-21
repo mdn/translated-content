@@ -114,6 +114,12 @@ l10n:
   - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
   - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
 - SVG [`color`](/ja/docs/Web/SVG/Reference/Attribute/color) 属性
+  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/ja/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色相環")}}（用語）
 - {{glossary("Interpolation", "補間")}}（用語）
 - [`@font-palette-values`](/ja/docs/Web/CSS/@font-palette-values) アットルールの [`override-colors`](/ja/docs/Web/CSS/@font-palette-values/override-colors) 記述子

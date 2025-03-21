@@ -1,7 +1,7 @@
 ---
 title: "Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
-original_slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
 l10n:
   sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---

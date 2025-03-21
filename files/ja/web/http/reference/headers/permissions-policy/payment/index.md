@@ -33,4 +33,4 @@ Feature-Policy: payment <allowlist>;
 
 - {{HTTPHeader("Feature-Policy")}} ヘッダーフィールド
 - [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)

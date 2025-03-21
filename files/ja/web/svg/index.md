@@ -28,7 +28,7 @@ SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)
 - [SVG DOM インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#svg_interfaces)
   - : JavaScript と連携するための SVG DOM API の詳細情報です。
 - [HTML コンテンツへ SVG 効果を適用する](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
-  - : SVG は {{Glossary("HTML")}}、{{Glossary("CSS")}} と {{Glossary("JavaScript")}} と連携して動作します。SVG を使用することで、[通常の HTML ページやウェブアプリケーションを拡張](/ja/docs/Web/SVG/Guides/SVG_in_HTML)することができます。
+  - : SVG は {{Glossary("HTML")}}、{{Glossary("CSS")}} と {{Glossary("JavaScript")}} と連携して動作します。SVG を使用することで、[通常の HTML ページやウェブアプリケーションを拡張](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction)することができます。
 
 ## ツール
 

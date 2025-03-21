@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---

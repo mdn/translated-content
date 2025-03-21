@@ -19,7 +19,7 @@ original_slug: Web/XSLT
 
 5. [XSLT Elements](/ja/docs/Web/XML/XSLT/Reference/Element/element){{ListSubpagesForSidebar("/ja/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
 
-{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/XML/XSLT")}}
 
 **Extensible Stylesheet Language Transformations (XSLT)** は [XML](/ja/docs/Web/XML/Guides/XML_introduction) ベースの言語で、XML 文書の変換をするために特別な処理ソフトウェア (プロセッサー) とともに利用されます。
 

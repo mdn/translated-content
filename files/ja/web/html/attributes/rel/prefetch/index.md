@@ -14,9 +14,9 @@ l10n:
 > [!NOTE]
 > このような制限があるため、対応している場合には、代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を文書の先読みに使用することをお勧めします。
 
-`<link rel="prefetch">` は、機能的には `fetch()` を `priority: "low"` オプション付きで呼び出すのと同等ですが、前者は一般的に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) ヘッダーが設定されます。一般的にブラウザーは、先読みするリソースには事前読み込みリソース（`<link rel="preload">` でリクエストされたものなど）よりも低い優先度を与えることに注意してください。現在のページは次のページよりも重要です。
+`<link rel="prefetch">` は、機能的には `fetch()` を `priority: "low"` オプション付きで呼び出すのと同等ですが、前者は一般的に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーが設定されます。一般的にブラウザーは、先読みするリソースには事前読み込みリソース（`<link rel="preload">` でリクエストされたものなど）よりも低い優先度を与えることに注意してください。現在のページは次のページよりも重要です。
 
-`prefetch` 操作の取得リクエストは HTTP ヘッダー [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) を含む HTTP リクエストになります。サーバーはリソースのキャッシュタイムアウトを変更したり、他にも特別な処理を行うためにこのヘッダーを使用するかもしれません。
+`prefetch` 操作の取得リクエストは HTTP ヘッダー [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) を含む HTTP リクエストになります。サーバーはリソースのキャッシュタイムアウトを変更したり、他にも特別な処理を行うためにこのヘッダーを使用するかもしれません。
 リクエストは、 {{HTTPHeader("Sec-Fetch-Dest")}} ヘッダーの値を `empty` に設定したものも含みます。
 
 リクエストの {{HTTPHeader("Accept")}} ヘッダーは通常のナビゲーションリクエストで使用する値と一致します。これにより、ブラウザーは以降のナビゲーションで一致するキャッシュリソースを探すことができます。

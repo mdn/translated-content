@@ -27,7 +27,7 @@ l10n:
     <tr>
       <th scope="row">値</th>
       <td>
-        [[<a href="/ja/docs/Web/SVG/Content_type#funciri">&#x3C;FuncIRI></a
+        [[<a href="/ja/docs/Web/SVG/Guides/Content_type#funciri">&#x3C;FuncIRI></a
         >,]* [ <strong>auto</strong> | crosshair | default | pointer | move |
         e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize |
         s-resize | w-resize| text | wait | help ]] | inherit

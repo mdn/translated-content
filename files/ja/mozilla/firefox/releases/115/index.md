@@ -34,7 +34,7 @@ l10n:
 
 ### HTTP
 
-- [`Sec-Purpose`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}} が、リソースを {{Glossary("Prefetch", "プリフェッチ")}} する要求に含まれるようになりました。
+- [`Sec-Purpose`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}} が、リソースを {{Glossary("Prefetch", "プリフェッチ")}} する要求に含まれるようになりました。
   これにより要求に対してキャッシュの期限を調節するなど、サーバーが必要に応じて特別な制御を行うことができます ([Firefox bug 1836328](https://bugzil.la/1836328))。
 
 ### API

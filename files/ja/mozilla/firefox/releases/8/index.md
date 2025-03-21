@@ -15,7 +15,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 - [`HTMLSelectElement.add()`](</ja/docs/Web/API/HTMLSelectElement#add()>) メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: [バグ 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200))
 - `HTMLIsIndexElement` コンストラクターが削除されました。Firefox 4 以前から、どの要素もこのインターフェイスをインプリメントしていませんでした。
 - HTML5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は HTML5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: [バグ 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'))
-- すべての要素に [`accesskeylabel`](/ja/docs/Web/HTML/Global_attributes#attr-accesskeylabel) 属性がサポートされました。
+- すべての要素に [`accesskeylabel`](/ja/docs/Web/HTML/Global_attributes/accesskeylabel) 属性がサポートされました。
 - [`<input>`](/ja/docs/Web/HTML/Element/input) と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) に `selectionDirection` アトリビュートが追加されました。また、`setSelectionRange()` メソッドが選択方向を指定できるようになりました。
 - `tabindex` 属性でフォーカス可能になった要素にフォーカスしたとき、ほとんどの要素でフォーカスリングが描画されるようになりました。
 

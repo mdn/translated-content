@@ -1,7 +1,7 @@
 ---
 title: "Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed
-original_slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

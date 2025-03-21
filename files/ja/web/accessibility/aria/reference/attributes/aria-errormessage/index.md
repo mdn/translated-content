@@ -100,7 +100,7 @@ l10n:
 
 ## 関連情報
 
-- HTML の [`invalid`](/ja/docs/Web/HTML/Global_attributes#invalid) 属性
+- HTML の [`invalid`](/ja/docs/Web/HTML/Global_attributes/invalid) 属性
 - CSS の {{CSSxref(':invalid')}} 擬似クラス
 - [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)

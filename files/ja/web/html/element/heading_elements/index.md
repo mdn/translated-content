@@ -174,7 +174,7 @@ h4 {
 
 スクリーンリーダー利用者のための他のナビゲーションテクニックとして、[区分コンテンツ](/ja/docs/Web/HTML/Element#コンテンツ区分)の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
 
-区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) および [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに 2 つ以上の区分要素がある場合に有用です。
+区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) および [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに 2 つ以上の区分要素がある場合に有用です。
 
 #### 例
 

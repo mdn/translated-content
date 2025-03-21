@@ -30,7 +30,7 @@ l10n:
         <code>currentcolor</code> |
         {{cssxref("color_value", "&lt;color&gt;")}}
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#icccolor"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#icccolor"
             >&#x3C;icccolor></a
           ></code
         >

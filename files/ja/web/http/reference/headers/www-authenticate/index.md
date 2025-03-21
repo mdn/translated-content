@@ -152,7 +152,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 `"Basic"` 認証では、資格情報はまず、ユーザー名とパスワードをコロンで結合し (`aladdin:opensesame`)、その結果の文字列を [`base64`](/ja/docs/Glossary/Base64) でエンコードすることで構築します (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
 > [!NOTE]
-> Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保護する方法の例については、 <a href="/ja/docs/Web/HTTP/Authentication">HTTP 認証</a> を参照してください。
+> Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保護する方法の例については、 <a href="/ja/docs/Web/HTTP/Guides/Authentication">HTTP 認証</a> を参照してください。
 
 ### SHA-256 と MD5 を使用した Digest 認証
 

@@ -24,7 +24,7 @@ Firefox 1.5 での新機能のいくつかを紹介します。
 
 ### ウェブサイト、ウェブアプリケーション開発者向け
 
-- [XHTML の中での SVG についての導入](/ja/docs/Web/SVG/Guides/SVG_in_HTML)
+- [XHTML の中での SVG についての導入](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction)
   - : SVG を XHTML ページの中でどのように利用し、JavaScript と CSS を通常の XHTML でのスクリプトと同様な方法で画像を操作する方法について学習します。[SVG in Firefox](/ja/docs/SVG_in_Firefox) も読み、 Firefox における SVG 実装の問題点と現状について学習してください。
 - [Canvas での画像の描き方](/ja/docs/Web/API/Canvas_API/Tutorial)
   - : 新しい `<canvas>` タグについて、Firefox においてどのようにグラフやその他のオブジェクトを描くかについて学習します。

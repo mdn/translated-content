@@ -1,7 +1,7 @@
 ---
 title: ユーザーエージェント文字列を用いたブラウザーの判定
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
-original_slug: Web/HTTP/Browser_detection_using_the_user_agent
+original_slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 l10n:
   sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
 ---

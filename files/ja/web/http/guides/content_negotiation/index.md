@@ -1,7 +1,7 @@
 ---
 title: コンテンツネゴシエーション
 slug: Web/HTTP/Guides/Content_negotiation
-original_slug: Web/HTTP/Content_negotiation
+original_slug: Web/HTTP/Guides/Content_negotiation
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

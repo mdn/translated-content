@@ -1,7 +1,7 @@
 ---
 title: 既定の Accept 値の一覧
 slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
-original_slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
+original_slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
 ---
 
 {{HTTPSidebar}}

@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS preflight channel did not succeed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed
-original_slug: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSPreflightDidNotSucceed
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

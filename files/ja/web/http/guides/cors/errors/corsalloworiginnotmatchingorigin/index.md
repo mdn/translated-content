@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---

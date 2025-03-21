@@ -27,22 +27,22 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -69,22 +69,22 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -111,22 +111,22 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -153,22 +153,22 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >
@@ -195,22 +195,22 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >,?
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#number"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
             >&#x3C;number></a
           ></strong
         >

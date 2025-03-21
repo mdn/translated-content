@@ -52,7 +52,7 @@ svg {
     _値の型_: `align`|`stretch` ; _既定値_: `align`; _アニメーション_: **可**
 - {{SVGAttr("path")}} {{Experimental_Inline}}
   - : テキストが描画されるパスです。
-    _値の型_: [**\<path_data>**](/ja/docs/Web/SVG/Attribute/path#path-data) ; _既定値_: なし; _アニメーション_: **可**
+    _値の型_: [**\<path_data>**](/ja/docs/Web/SVG/Reference/Attribute/path#path-data) ; _既定値_: なし; _アニメーション_: **可**
 - {{SVGAttr("side")}} {{Experimental_Inline}}
   - : テキストをパス上のどの辺に描画するかです。
     _値の型_: `left`|`right` ; _既定値_: `left`; _アニメーション_: **可**

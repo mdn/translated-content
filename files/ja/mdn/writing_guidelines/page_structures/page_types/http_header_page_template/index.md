@@ -70,7 +70,7 @@ l10n:
         ヘッダーカテゴリーを入れてください。例えば、
         {{Glossary("Request header", "リクエストヘッダー")}}、
         {{Glossary("Response header", "レスポンスヘッダー")}}、
-        <a href="/ja/docs/Web/HTTP/Client_hints">クライアントヒント</a>などです。
+        <a href="/ja/docs/Web/HTTP/Guides/Client_hints">クライアントヒント</a>などです。
       </td>
     </tr>
     <tr>

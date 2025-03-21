@@ -88,7 +88,7 @@ Supports-Loading-Mode: fenced-frame
 
 - [ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)は[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の委譲に頼っているため、データを漏洩するために使用することができるため、フェンスフレーム内では利用できません。
 - 厳密な [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 設定は、フェンスで囲まれたフレーム内から開くための新しい閲覧コンテキストに対して強制されます。フェンスされたフレームの中から開かれた新しいウィンドウは [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) と `Cross-Origin-Opener-Policy: same-origin` を保有し、 {{domxref("Window.opener")}} が `null` を返し、自分自身の閲覧コンテキストグループに置かれるようにします。
-- [`Content-Security-Policy: fenced-frame-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) が `<fencedframe>` 要素に読み込まれる入れ子ブラウズコンテキストの有効なソースを指定するために追加されました。
+- [`Content-Security-Policy: fenced-frame-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src) が `<fencedframe>` 要素に読み込まれる入れ子ブラウズコンテキストの有効なソースを指定するために追加されました。
 - [`Content-Security-Policy: sandbox`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) カスタム設定は、プライバシーの課題を軽減するために、フェンスフレームに継承することができません。フェンスされたフレームを読み込むには、 `sandbox` CSP を指定しないか（下記値を意味します）、以下のサンドボックス値を指定する必要があります：
   - `allow-same-origin`
   - `allow-forms`

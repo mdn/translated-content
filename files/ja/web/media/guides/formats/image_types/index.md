@@ -1067,7 +1067,7 @@ SVG は、一連の描画コマンドで表現できる画像に最適です。�
     <tr>
       <th scope="row">圧縮</th>
       <td>
-        SVG ソースは転送中に <a href="/ja/docs/Web/HTTP/Compression">HTTP 圧縮</a>技術を使用したり、ディスク上で <code>.svgz</code> ファイルを使用したりすることで圧縮できます。
+        SVG ソースは転送中に <a href="/ja/docs/Web/HTTP/Guides/Compression">HTTP 圧縮</a>技術を使用したり、ディスク上で <code>.svgz</code> ファイルを使用したりすることで圧縮できます。
       </td>
     </tr>
     <tr>

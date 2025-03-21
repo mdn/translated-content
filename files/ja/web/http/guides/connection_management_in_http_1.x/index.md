@@ -1,7 +1,7 @@
 ---
 title: HTTP/1.x のコネクション管理
 slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Connection_management_in_HTTP_1.x
+original_slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---

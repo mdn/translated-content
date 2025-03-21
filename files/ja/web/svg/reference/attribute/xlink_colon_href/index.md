@@ -65,7 +65,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -98,7 +98,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -123,7 +123,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#funciri"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#funciri"
             >&#x3C;FuncIRI></a
           ></code
         >
@@ -150,7 +150,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -175,7 +175,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -200,7 +200,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -225,7 +225,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -250,7 +250,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -275,7 +275,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -300,7 +300,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -325,7 +325,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -350,7 +350,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -375,7 +375,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -400,7 +400,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -425,7 +425,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>
@@ -450,7 +450,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
         >
       </td>
     </tr>

@@ -13,7 +13,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 `<image>` で表示される SVG ファイルは[画像として扱われます](/ja/docs/Web/SVG/Guides/SVG_as_an_image)。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは[適用されず](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。
 
 > [!NOTE]
-> HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/Web/SVG/Guides/SVG_in_HTML) 内のみのものです。
+> HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction) 内のみのものです。
 
 ## 使用場所
 

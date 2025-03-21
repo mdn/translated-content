@@ -37,8 +37,8 @@ l10n:
   - {{cssxref("color-scheme")}}
   - {{cssxref("column-rule-color")}}
   - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
-  - [`flood-color`](/ja/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/ja/docs/Web/SVG/Attribute/lighting-color)
+  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
   - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)

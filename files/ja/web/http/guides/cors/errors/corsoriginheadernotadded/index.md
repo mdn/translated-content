@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS header 'Origin' cannot be added"
 slug: Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
-original_slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---

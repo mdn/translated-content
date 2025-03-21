@@ -47,7 +47,7 @@ selectAudioOutput(options)
 ### 例外
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 現在のページに [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が与えられていない場合、またはユーザーが機器を選択せずに選択プロンプトを閉じた場合に返されます。
+  - : 現在のページに [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が与えられていない場合、またはユーザーが機器を選択せずに選択プロンプトを閉じた場合に返されます。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 利用可能な音声出力機器がない場合に返されます。
 - `InvalidStateError` {{domxref("DOMException")}}
