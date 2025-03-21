@@ -1,7 +1,6 @@
 ---
 title: 隐私与:visited 选择器
 slug: Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
-original_slug: Web/CSS/Privacy_and_the_:visited_selector
 ---
 
 {{CSSRef}}
