@@ -42,4 +42,4 @@ l10n:
 - [ARIA: `navigation` 역할](/ko/docs/Web/Accessibility/ARIA/Roles/navigation_role)
 - [ARIA: `region` 역할](/ko/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [ARIA: `search` 역할](/ko/docs/Web/Accessibility/ARIA/Roles/search_role)
-- [접근성 향상을 위한 HTML 랜드마크 역할 사용하기](https://developer.mozilla.org/en-US/blog/aria-accessibility-html-landmark-roles/) (MDN 블로그, 2023)
+- [접근성 향상을 위한 HTML 랜드마크 역할 사용하기](/en-US/blog/aria-accessibility-html-landmark-roles/) (MDN 블로그, 2023)

@@ -217,7 +217,7 @@ h1 + p {
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
 > [!NOTE]
-> 보시다시피, CSS 는 요소를 대상으로 하는 여러 가지 방법을 제공하며, 지금까지는 표면적인 부분만 살펴봤습니다! 이 과정의 뒷부분에 있는 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors) 관련 문서에서 이러한 모든 선택자와 더 많은 선택자에 대해 자세히 살펴볼 것입니다.
+> 보시다시피, CSS 는 요소를 대상으로 하는 여러 가지 방법을 제공하며, 지금까지는 표면적인 부분만 살펴봤습니다! 이 과정의 뒷부분에 있는 [CSS 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) 관련 문서에서 이러한 모든 선택자와 더 많은 선택자에 대해 자세히 살펴볼 것입니다.
 
 ## 상태에 따른 스타일링
 
@@ -248,7 +248,7 @@ a:hover {
 우리는 hover 링크에서 밑줄을 제거했습니다. 링크의 모든 상태에서 밑줄을 제거할 수 있습니다. 그러나 실제 사이트에서는 링크임을 방문자에게 알리고자 합니다. 밑줄을 제자리에 두면, 단락 내의 일부 텍스트를 클릭할 수 있다는 사실을 사람들이 인식할 수 있는 중요한 단서가 될 수 있습니다. CSS 의 모든 항목과 마찬가지로 변경 사항으로 인해 문서에 대한 접근성을 떨어뜨릴 수 있는 가능성이 있습니다. 적절한 장소에서 발생할 수 있는 잠재적 위험을 강조하는 것이 목표입니다.
 
 > [!NOTE]
-> 이러한 교육 과정과 MDN 전반에 걸쳐 [접근성](/ko/docs/Learn/Accessibility) 에 대한 언급이 자주 있을 것입니다. 접근성에 대해 이야기할 때 웹 페이지를 모든 사용자가 이해하고 사용할 수 있어야 한다는 요구 사항을 언급하고 있습니다.
+> 이러한 교육 과정과 MDN 전반에 걸쳐 [접근성](/ko/docs/Learn_web_development/Core/Accessibility) 에 대한 언급이 자주 있을 것입니다. 접근성에 대해 이야기할 때 웹 페이지를 모든 사용자가 이해하고 사용할 수 있어야 한다는 요구 사항을 언급하고 있습니다.
 >
 > 방문자는 마우스나 trackpad 또는 터치스크린이 있는 스마트폰에 있을 수 있습니다. 또는 문서의 내용을 읽어내는 스크린 리더를 사용하거나 훨씬 큰 텍스트를 사용하거나 키보드만 사용하여 사이트를 탐색해야 할 수도 있습니다.
 >
@@ -286,6 +286,6 @@ body h1 + p .special {
 
 이 자습서에서는, CSS 를 사용하여 문서의 스타일을 지정할 수 있는 여러 가지 방법을 살펴 보았습니다. 우리는 나머지 수업을 진행 하면서 이 지식을 개발할 것입니다. 그러나 이제 텍스트 스타일을 지정하고 문서의 요소를 대상으로 하는 다양한 방법을 기반으로 CSS 를 적용하고 MDN 설명서에서 속성과 값을 검색할 수 있을 정도로 이미 알고 있습니다.
 
-다음 수업에서는 [CSS의 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)에 대해 살펴 볼 것입니다.
+다음 수업에서는 [CSS의 구조](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started)에 대해 살펴 볼 것입니다.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}

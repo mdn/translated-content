@@ -14,5 +14,5 @@ l10n:
 ## 같이 보기
 
 - {{cssxref("&lt;length&gt;")}}
-- [배우기: CSS 값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [배우기: CSS 값과 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [TextMetrics API](/ko/docs/Web/API/TextMetrics)

@@ -10,10 +10,10 @@ Express는 JavaScript로 작성되고 Node.js 런타임 환경에서 구동되�
 
 ## 알아야할 것들
 
-이 장의 내용은 Server-side 웹 프로그래밍과 웹 프레임워크에 대한 이해가 필요합니다. 잘 모르겠다면 [Server-side website programming first steps](/ko/docs/Learn/Server-side/First_steps) 을 먼저 확인해보세요. 일반적인 프로그래밍 컨셉과 [JavaScript](/ko/docs/Web/JavaScript) 의 지식이 요구되지만, 핵심까지 세세하게 알 필요는 없습니다.
+이 장의 내용은 Server-side 웹 프로그래밍과 웹 프레임워크에 대한 이해가 필요합니다. 잘 모르겠다면 [Server-side website programming first steps](/ko/docs/Learn_web_development/Extensions/Server-side/First_steps) 을 먼저 확인해보세요. 일반적인 프로그래밍 컨셉과 [JavaScript](/ko/docs/Web/JavaScript) 의 지식이 요구되지만, 핵심까지 세세하게 알 필요는 없습니다.
 
 > [!NOTE]
-> 여기서는 클라이언트 측에서의 자바스크립에 관한 많은 유용한 자료들을 이용할 수 있다. [JavaScript](/ko/docs/Web/JavaScript), [JavaScript Guide](/ko/docs/Web/JavaScript/Guide), [JavaScript Basics](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/ko/docs/Learn/JavaScript) (한 번 배워보자). JavaScript의 핵심과 컨셉은 Node.js를 이용한 서버측 개발과 같으므로, 여기의 자료들을 이용하는 게 좋을 것이다. Node.js 는HTTP서버를 구축하고 파일 시스템에 접근하는 등의 브라우저가 필요없는 환경에서에서 유용한 기능을 제공하는 [additional APIs](https://nodejs.org/dist/latest-v6.x/docs/api/documentation.htm)를 제공하지만, 브라우저나 DOM에서 작동되는 JavaScript API는 지원하지 않는다.
+> 여기서는 클라이언트 측에서의 자바스크립에 관한 많은 유용한 자료들을 이용할 수 있다. [JavaScript](/ko/docs/Web/JavaScript), [JavaScript Guide](/ko/docs/Web/JavaScript/Guide), [JavaScript Basics](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity), [JavaScript](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) (한 번 배워보자). JavaScript의 핵심과 컨셉은 Node.js를 이용한 서버측 개발과 같으므로, 여기의 자료들을 이용하는 게 좋을 것이다. Node.js 는HTTP서버를 구축하고 파일 시스템에 접근하는 등의 브라우저가 필요없는 환경에서에서 유용한 기능을 제공하는 [additional APIs](https://nodejs.org/dist/latest-v6.x/docs/api/documentation.htm)를 제공하지만, 브라우저나 DOM에서 작동되는 JavaScript API는 지원하지 않는다.
 >
 > 다음 목차에서는 Node.js와 Express 그리고 인터넷과 책에서의 방대한 좋은 자료들에 있는 정보들을 알려준다. 이들은 [How do I get started with Node.js](https://stackoverflow.com/a/5511507/894359) (StackOverflow) 나 [What are the best resources for learning Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Quora)에 참고해보자
 
@@ -34,7 +34,7 @@ Express는 JavaScript로 작성되고 Node.js 런타임 환경에서 구동되�
 - [Express Tutorial Part 5: Displaying library data](/ko/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
   - : 자, 이제 웹사이트에 책이나 데이터들을 표시할 페이지를 추가할 수 있다. 페이지에는 사이트에 관련된 자세한 부분과 리스트 및 모델 타입들이 얼마나 많이 기록되는지에 관한 홈 페이지가 포함되어 있다. 따라서 우리들은 데이터베이스에서 기록을 얻고 템플릿을 사용하는 데 실질적인 경험을 가질 수 있다.
 - [Express Tutorial Part 6: Working with forms](/ko/docs/Learn/Server-side/Express_Nodejs/forms)
-  - : 이 수업에서는 Pug를 사용해서 어떻게 Express에서 [HTML Forms](/ko/docs/Learn/Forms) 이 사용되는지 보여주고, 특히 데이터베이스에서 폼을 작성하고 업데이트하고 지우기 위해 사용하는 방법에 대해 배울 것이다.
+  - : 이 수업에서는 Pug를 사용해서 어떻게 Express에서 [HTML Forms](/ko/docs/Learn_web_development/Extensions/Forms) 이 사용되는지 보여주고, 특히 데이터베이스에서 폼을 작성하고 업데이트하고 지우기 위해 사용하는 방법에 대해 배울 것이다.
 - [Express Tutorial Part 7: Deploying to production](/ko/docs/Learn/Server-side/Express_Nodejs/deployment)
   - : 이제 꽤 훌륭한 로컬라이브러리 웹사이트 만들 수 있으며 , 웹 서버에 업로드 함으로서 여러 사람들이 인터넷을 통해 접근할 수 있게 만들 수 있다. 이 수업은 전반적으로 웹 사이트를 배포하기 위해 호스트와 연결하는 등을 배우고, 실제 서비스를 하기위해 준비해야할 것들을 알려 준다.
 

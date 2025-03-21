@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Objects/Test_your_skills:_JSON
 
 {{learnsidebar}}
 
-이 테스트의 목표는 [JSON으로 작업하기](/ko/docs/Learn/JavaScript/Objects/JSON)를 잘 이해했는지 평가해보는 것입니다.
+이 테스트의 목표는 [JSON으로 작업하기](/ko/docs/Learn_web_development/Core/Scripting/JSON)를 잘 이해했는지 평가해보는 것입니다.
 
 > [!NOTE]
 > 아래에 있는 편집기를 사용해보세요. 테스트 중 막히면, 도움을 요청할 수 있습니다. 페이지 하단의 "평가 또는 추가 도움말" 을 참고하세요.

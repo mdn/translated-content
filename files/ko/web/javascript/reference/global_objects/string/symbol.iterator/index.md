@@ -99,6 +99,6 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ## 같이 보기
 
 - [`core-js`에서 `String.prototype[@@iterator]`의 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Text formatting](/ko/docs/Web/JavaScript/Guide/Text_formatting) 가이드
+- [Text formatting](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings) 가이드
 - {{jsxref("Symbol.iterator")}}
 - [순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
