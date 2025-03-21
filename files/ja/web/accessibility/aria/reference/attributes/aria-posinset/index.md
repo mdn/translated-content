@@ -11,7 +11,7 @@ l10n:
 
 「position in set」（セット内の位置）の略である `aria-posinset` 属性は、項目のサブセットのみが DOM 内に存在する場合に、リスト項目またはツリー項目のセット全体内での要素の位置を定義します。
 
-リスト内の全ての項目が DOM に存在する場合、ブラウザは各項目の合計と位置を計算できるため、`aria-posinset` は不要です。セットの一部のみが DOM に存在する場合は `aria-posinset` を含めて、セット内の要素の位置に関する情報を提供するとともに、[`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) を使用して完全なセットに含まれる項目の数をユーザーに通知します。
+リスト内の全ての項目が DOM に存在する場合、ブラウザーは各項目の合計と位置を計算できるため、`aria-posinset` は不要です。セットの一部のみが DOM に存在する場合は `aria-posinset` を含めて、セット内の要素の位置に関する情報を提供するとともに、[`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) を使用して完全なセットに含まれる項目の数をユーザーに通知します。
 
 次の例は、化学元素周期表の 118 個の元素のうち 4 つの元素オプションを含むリストボックスを示しています。
 
