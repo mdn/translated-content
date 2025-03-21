@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 
 **`setInt8()`** 从 [`DataView`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DataView) 起始位置以 byte 为计数的指定偏移量 (byteOffset) 处储存一个 8-bit 数 (一个字节)。
 
-{{EmbedInteractiveExample("pages/js/dataview-setint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setInt8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt8(1, 127); // Max signed 8-bit integer
+
+console.log(view.getInt8(1));
+// Expected output: 127
+```
 
 ## 语法
 

@@ -110,7 +110,8 @@ Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et
    ```css
    html {
      font-size: 10px; /* px signifie 'pixels': la taille de base pour la police est désormais 10 pixels de haut  */
-     font-family: "Open Sans", sans-serif; /* cela devrait être le reste du résultat obtenu à partir de Google fonts */
+     font-family:
+       "Open Sans", sans-serif; /* cela devrait être le reste du résultat obtenu à partir de Google fonts */
    }
    ```
 

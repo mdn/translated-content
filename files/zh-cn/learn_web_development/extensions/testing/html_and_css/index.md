@@ -1,7 +1,6 @@
 ---
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 l10n:
   sourceCommit: 56fc816a9fb8e96a6b69cd19be03f62b582c06ae
 ---
@@ -274,8 +273,8 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 为使用 Mozilla 开发者网络（MDN），大多数人会搜索他们正在尝试查找的信息的技术术语加上“mdn”，例如“mdn HTML5 video”。MDN 包含几种有用的内容类型：
 
 - 带有客户端 web 技术浏览器支持信息的参考资料，例如 [\<video> 参考页面](/zh-CN/docs/Web/HTML/Element/video)。
-- 其他的支持性参考资料，例如 [web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)。
-- 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)。
+- 其他的支持性参考资料，例如 [web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)。
+- 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 
 [caniuse.com](https://caniuse.com/) 提供支持信息，以及一些有用的外部资源链接。例如，请参阅 <https://caniuse.com/#search=video>（你只需在文本框中输入要搜索的特性）。
 

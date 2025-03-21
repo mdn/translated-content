@@ -3,8 +3,6 @@ title: 兼容性表格和浏览器兼容性数据仓库（BCD）
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 ---
 
-{{MDNSidebar}}
-
 MDN 为我们的开放 web 文档提供了兼容性表格的标准格式；它是对比所有浏览器之间，包含 DOM、HTML、CSS、JavaScript、SVG 等技术的文档。为使这些数据可以编程的方式在在多个项目中可用，我们从 [`browser-compat-data` 仓库](https://github.com/mdn/browser-compat-data)构建了一个 Node.js 包，并将其发布到了 npm。
 
 要修改这些表格中的数据，以及获取最新的用于表示数据的流程和 JSON 格式的更改，请参考数据仓库的 [contributor guide](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md) 和 [data guidelines guide](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md)。如果你有疑问或是发现了问题，欢迎[与我们联系](/zh-CN/docs/MDN/Community/Communication_channels)。

@@ -1,7 +1,6 @@
 ---
 title: 绘图
 slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
-original_slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 l10n:
   sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
@@ -74,7 +73,7 @@ l10n:
 回退内容应为画布内容提供有用的替代内容。比如，如果你要渲染不断更新的股价曲线图，回退内容可以是最新股价图的静态图像，并带有替代文本（以文本的形式说明价格）或指向各个股票页面的链接列表。
 
 > [!NOTE]
-> 屏幕阅读器无法获取画布内容。需要在画布元素的 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性填写描述性文本，或者在起始和结束的 `<canvas>` 标签里嵌入回退内容。画布内容不是 DOM 的一部分，但嵌入的回退内容是 DOM 的一部分。
+> 屏幕阅读器无法获取画布内容。需要在画布元素的 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性填写描述性文本，或者在起始和结束的 `<canvas>` 标签里嵌入回退内容。画布内容不是 DOM 的一部分，但嵌入的回退内容是 DOM 的一部分。
 
 ### 创建画布并确定尺寸
 

@@ -2,7 +2,7 @@
 title: FileSystemDirectoryEntry：createReader() 方法
 slug: Web/API/FileSystemDirectoryEntry/createReader
 l10n:
-  sourceCommit: 23228f1b9c756862dac77b238ca74c2e5bd3c9dc
+  sourceCommit: cbe4c570701052c120808ea54c24c46ec9734084
 ---
 
 {{APIRef("File and Directory Entries API")}}
@@ -63,7 +63,6 @@ async function readDirectory(directory) {
 ## 参见
 
 - [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [文件与目录条目 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystemFileEntry")}}

@@ -1,5 +1,5 @@
 ---
-title: "::slotted()"
+title: ::slotted()
 slug: Web/CSS/::slotted
 l10n:
   sourceCommit: cebbd9095ac12557c55157355181672027fffc14
@@ -11,7 +11,65 @@ l10n:
 
 这个伪元素选择器仅仅适用于[影子 DOM（shadow DOM）](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)。请注意它只会选择实际的元素节点，而不包括文本节点。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-slotted.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::slotted()", "tabbed-shorter")}}
+
+```css interactive-example
+/* This CSS is being applied inside the shadow DOM. */
+
+::slotted(.content) {
+  background-color: aqua;
+}
+
+h2 ::slotted(span) {
+  background: silver;
+}
+```
+
+```html interactive-example
+<template id="card-template">
+  <div>
+    <h2><slot name="caption">title goes here</slot></h2>
+    <slot name="content">content goes here</slot>
+  </div>
+</template>
+
+<my-card>
+  <span slot="caption">Error</span>
+  <p class="content" slot="content">Build failed!</p>
+</my-card>
+```
+
+```js interactive-example
+customElements.define(
+  "my-card",
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const template = document.getElementById("card-template");
+      const shadow = this.attachShadow({ mode: "open" });
+      shadow.appendChild(template.content.cloneNode(true));
+
+      const elementStyle = document.createElement("style");
+      elementStyle.textContent = `
+        div {
+          width: 200px;
+          border: 2px dotted red;
+          border-radius: 4px;
+        }`;
+      shadow.appendChild(elementStyle);
+
+      const cssTab = document.querySelector("#css-output");
+      const editorStyle = document.createElement("style");
+      editorStyle.textContent = cssTab.textContent;
+      shadow.appendChild(editorStyle);
+      cssTab.addEventListener("change", () => {
+        editorStyle.textContent = cssTab.textContent;
+      });
+    }
+  },
+);
+```
 
 ```css
 /* 选择插槽内容任意元素 */

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 Логический оператор НЕ (`!`) (логическое отрицание) меняет логическое значение операнда с истины в ложь и наоборот. Обычно он используется с {{jsxref("Boolean", "булевыми")}} (логическими) значениями. При использовании с любыми другими значениями, если операнд может быть преобразован в `true`, то вернёт `false`; в противном случае он возвращается `true`.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(!(a > 0 || b > 0));
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -49,8 +57,7 @@ n4 = !"Cat"; // !t вернёт false
 Можно один за другим использовать пару операторов НЕ, чтобы явным образом принудительно преобразовать любое значение в соответствующий [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#boolean_type).
 Преобразование основано на "истинноподобности" или "ложноподобности" значения (см. {{Glossary("truthy")}} и {{Glossary("falsy")}})).
 
-Точно такое же преобразование может быть выполнено с помощью функции {{jsxref("Global_Objects/Boolean/Boolean",
-  "Boolean")}}.
+Точно такое же преобразование может быть выполнено с помощью функции {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ```js
 n1 = !!true; // !!truthy вернёт true

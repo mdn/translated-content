@@ -9,7 +9,49 @@ l10n:
 
 **`animation`** [단축](/ko/docs/Web/CSS/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+{{InteractiveExample("CSS Demo: animation")}}
+
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slidein;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slidein;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
 
 ## 구성 속성
 

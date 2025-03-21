@@ -70,7 +70,7 @@ slug: Web/CSS/CSS_scroll_snap
 - Element {{DOMXref("Element.scrollIntoView", "scrollIntoView()")}} 方法
 - Element {{DOMXref("Element.scrollTo", "scrollTo()")}} 方法
 - Document {{DOMXref("Document.scroll_event", "scroll")}} 事件
-- ARIA 角色 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
+- ARIA 角色 [`scrollbar`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
 - 术语{{Glossary("Scroll container", "滚动容器")}}
 
 ## 规范

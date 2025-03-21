@@ -1,7 +1,6 @@
 ---
 title: 第三方 API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
@@ -193,7 +192,7 @@ L.marker([53.480759, -2.242631], {
 
 ### 将 API 连接到你的应用程序
 
-首先，你需要在 API 和你的应用程序之间建立连接。在纽约时报文章搜索这个 API 的情况下，你需要每次从服务请求数据时都将 API 密钥作为 [get](/zh-CN/docs/Web/HTTP/Methods/GET) 参数包含在正确的 URL 中。
+首先，你需要在 API 和你的应用程序之间建立连接。在纽约时报文章搜索这个 API 的情况下，你需要每次从服务请求数据时都将 API 密钥作为 [get](/zh-CN/docs/Web/HTTP/Reference/Methods/GET) 参数包含在正确的 URL 中。
 
 1. 找到以下行：
 

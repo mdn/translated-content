@@ -9,7 +9,35 @@ l10n:
 
 **`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者对其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
 
-{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
+
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
 作为一个“纯粹的”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
 
@@ -110,7 +138,7 @@ l10n:
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

@@ -9,7 +9,45 @@ l10n:
 
 **`border-right`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
 
-{{EmbedInteractiveExample("pages/css/border-right.html")}}
+{{InteractiveExample("CSS Demo: border-right")}}
+
+```css interactive-example-choice
+border-right: solid;
+```
+
+```css interactive-example-choice
+border-right: dashed red;
+```
+
+```css interactive-example-choice
+border-right: 1rem solid;
+```
+
+```css interactive-example-choice
+border-right: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 他の一括指定プロパティと同様に、 `border-right` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 

@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 
 La propriété **`hasIndices`** indique si le marqueur "`d`" a été utilisé ou non avec l'expression rationnelle. `hasIndices` est une propriété en lecture seule, rattachée à une instance d'expression rationnelle.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "d");
+
+console.log(regex1.hasIndices);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.hasIndices);
+// Expected output: false
+```
 
 {{JS_Property_Attributes(0, 0, 1)}}
 

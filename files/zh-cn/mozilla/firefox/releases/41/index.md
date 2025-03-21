@@ -56,7 +56,7 @@ Highlights:
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment","#Destructured_parameter_with_default_value_assignment", 1)}} 现在已经被支持 ([Firefox bug 1018628](https://bugzil.la/1018628)).
 - Per ES2015, [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) 需要尖括号。从现在开始语法没有尖括号将会失败 ([Firefox bug 1150855](https://bugzil.la/1150855)).
 - [方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions) (除了生成方法) 已经不再可构造 ([Firefox bug 1059908](https://bugzil.la/1059908) 和[Firefox bug 1166950](https://bugzil.la/1166950)).
-- As part of ES2015 specification compliance, parenthesized [destructuring](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
+- As part of ES2015 specification compliance, parenthesized [destructuring](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
 - The [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ([Firefox bug 1141865](https://bugzil.la/1141865)).
 
 ### Interfaces/APIs/DOM
@@ -134,8 +134,8 @@ Highlights:
 
 ## Security
 
-- The [CSP](/zh-CN/docs/Web/HTTP/CSP) 1.1 `manifest-src` [directive](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy) 已经被支持 ([Firefox bug 1089255](https://bugzil.la/1089255)).
-- Previous versions of Firefox incorrectly expected the [Content Security Policy](/zh-CN/docs/Web/HTTP/CSP) [referrer](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#referrer)directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
+- The [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 1.1 `manifest-src` [directive](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) 已经被支持 ([Firefox bug 1089255](https://bugzil.la/1089255)).
+- Previous versions of Firefox incorrectly expected the [Content Security Policy](/zh-CN/docs/Web/HTTP/Guides/CSP) [referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#referrer)directive's value `origin-when-cross-origin` to be spelled `origin-when-crossorigin`. This has been corrected to include the missing dash character.
 
 ## Changes for add-on and Mozilla developers
 

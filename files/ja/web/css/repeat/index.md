@@ -9,7 +9,52 @@ l10n:
 
 **`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、[トラックリスト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
 
-{{EmbedInteractiveExample("pages/css/function-repeat.html")}}
+{{InteractiveExample("CSS Demo: repeat()")}}
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr repeat(2, 60px);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(2, 20px 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: repeat(auto-fill, 40px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 この関数は CSS グリッドのプロパティである {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} の中で使うことができます。
 

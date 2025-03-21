@@ -50,7 +50,7 @@ l10n:
 
 このインターフェイスは、以下のタイムスタンププロパティに対応しています。図に示すように、リソースのフェッチに記録される順番で掲載されています。アルファベット順の一覧は、左のナビゲーションに掲載されています。
 
-![リソースのフェッチに記録された順にタイムスタンプを掲載しているタイムスタンプ図](timestamp-diagram.svg)
+![リソースのフェッチに記録された順にタイムスタンプを掲載しているタイムスタンプ図](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
 - {{domxref('PerformanceResourceTiming.redirectStart')}} {{ReadOnlyInline}}
   - : リダイレクトを開始するフェッチの開始時刻を表す {{domxref("DOMHighResTimeStamp")}} です。

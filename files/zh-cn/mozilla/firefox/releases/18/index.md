@@ -47,7 +47,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 ### 网络
 
 - HTTP 请求头`Accept-Language` 可以使用两位数字的质量因子（"q-values"）（[Firefox bug 672448](https://bugzil.la/672448)）。
-- HTTP 响应头支持了[`X-FRAME-OPTIONS`](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)中的`ALLOW-FROM`语法 ([Firefox bug 690168](https://bugzil.la/690168)).
+- HTTP 响应头支持了[`X-FRAME-OPTIONS`](/zh-CN/docs/Web/HTTP/Reference/Headers/X-Frame-Options)中的`ALLOW-FROM`语法 ([Firefox bug 690168](https://bugzil.la/690168)).
 
 ### 开发者工具
 

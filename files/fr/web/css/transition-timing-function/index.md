@@ -7,7 +7,47 @@ slug: Web/CSS/transition-timing-function
 
 La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
 
-{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
+{{InteractiveExample("CSS Demo: transition-timing-function")}}
+
+```css interactive-example-choice
+transition-timing-function: linear;
+```
+
+```css interactive-example-choice
+transition-timing-function: ease-in;
+```
+
+```css interactive-example-choice
+transition-timing-function: steps(6, end);
+```
+
+```css interactive-example-choice
+transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 Cette courbe d'accelération est définie en utilisant une {{cssxref("&lt;timing-function&gt;")}} pour chacune des propriétés à animer.
 

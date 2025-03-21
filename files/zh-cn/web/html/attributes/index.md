@@ -948,7 +948,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles">role</a></code>
       </td>
       <td><a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a></td>
       <td>定义元素的显式角色，供辅助技术使用。</td>

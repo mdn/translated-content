@@ -7,7 +7,46 @@ slug: Web/CSS/border-left-width
 
 [CSS](/ko/docs/Web/CSS) **`border-left-width`** 속성은 요소의 왼쪽 테두리 너비를 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-left-width.html")}}
+{{InteractiveExample("CSS Demo: border-left-width")}}
+
+```css interactive-example-choice
+border-left-width: thick;
+```
+
+```css interactive-example-choice
+border-left-width: 2em;
+```
+
+```css interactive-example-choice
+border-left-width: 4px;
+```
+
+```css interactive-example-choice
+border-left-width: 2ex;
+```
+
+```css interactive-example-choice
+border-left-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구문
 

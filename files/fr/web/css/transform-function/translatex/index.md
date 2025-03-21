@@ -7,7 +7,49 @@ slug: Web/CSS/transform-function/translateX
 
 La fonction CSS **`translateX()`** permet d'appliquer une translation en 2D. La valeur obtenue sera du type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-{{EmbedInteractiveExample("pages/css/function-translateX.html")}}
+{{InteractiveExample("CSS Demo: translateX()")}}
+
+```css interactive-example-choice
+transform: translateX(0);
+```
+
+```css interactive-example-choice
+transform: translateX(42px);
+```
+
+```css interactive-example-choice
+transform: translateX(-2.1rem);
+```
+
+```css interactive-example-choice
+transform: translateX(3ch);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
 
 > **Note :** `translateX(tx)` est équivalent à `translate(tx, 0)` ou `translate3d(tx, 0, 0)`.
 

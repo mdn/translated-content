@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 
 **`toString()`** 메서드는 특정한 {{jsxref("Number")}} 객체를 나타내는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/number-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+
+```js interactive-example
+function hexColour(c) {
+  if (c < 256) {
+    return Math.abs(c).toString(16);
+  }
+  return 0;
+}
+
+console.log(hexColour(233));
+// Expected output: "e9"
+
+console.log(hexColour("11"));
+// Expected output: "b"
+```
 
 ## 구문
 

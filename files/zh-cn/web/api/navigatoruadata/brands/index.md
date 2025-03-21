@@ -36,4 +36,4 @@ console.log(navigator.userAgentData.brands);
 
 ## 参见
 
-- {{HTTPHeader("Sec-CH-UA")}}（[低熵客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#低熵提示)）包含相同的信息。
+- {{HTTPHeader("Sec-CH-UA")}}（[低熵客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#低熵提示)）包含相同的信息。

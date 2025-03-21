@@ -9,7 +9,40 @@ l10n:
 
 **`calc()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 CSS のプロパティ値を指定する際に計算を行うことができるものです。 {{cssxref("&lt;length&gt;")}}、{{cssxref("&lt;frequency&gt;")}}、{{cssxref("&lt;angle&gt;")}}、{{cssxref("&lt;time&gt;")}}、{{cssxref("&lt;percentage&gt;")}}、{{cssxref("&lt;number&gt;")}}、{{cssxref("&lt;integer&gt;")}} が利用できる場所ならば使用できます。
 
-{{EmbedInteractiveExample("pages/css/function-calc.html")}}
+{{InteractiveExample("CSS Demo: calc()")}}
+
+```css interactive-example-choice
+width: calc(10px + 100px);
+```
+
+```css interactive-example-choice
+width: calc(100% - 30px);
+```
+
+```css interactive-example-choice
+width: calc(2em * 5);
+```
+
+```css interactive-example-choice
+width: calc(var(--variable-width) + 20px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Change my width.</div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --variable-width: 100px;
+}
+
+#example-element {
+  border: 10px solid #000;
+  padding: 10px;
+}
+```
 
 ## 構文
 
@@ -51,7 +84,7 @@ lch(from aquamarine l c calc(h + 180))
 
 - `calc()` 関数は、パーセント値に直接数値を代入することはできません。例えば、 `calc(100 / 4)%` は不正ですが、 `calc(100% / 4)` は有効です。
 
-- `calc()` が {{cssxref("&lt;integer&gt;")}} の期待される場所で使用されると、値は最も近い整数に丸められます。つまり、 `calc(1.4)` は `1` という値になります。 値の小数部分がちょぷど `0.5` の場合、値は切り上げられます。 例えば、 `calc(1.5)` は `2` という値になりますが、`calc(-1.5)` は `-1` に丸められます。
+- `calc()` が {{cssxref("&lt;integer&gt;")}} の期待される場所で使用されると、値は最も近い整数に丸められます。つまり、 `calc(1.4)` は `1` という値になります。 値の小数部分がちょうど `0.5` の場合、値は切り上げられます。 例えば、 `calc(1.5)` は `2` という値になりますが、`calc(-1.5)` は `-1` に丸められます。
 
 - `calc()` は[内在的なサイズの値](/ja/docs/Glossary/Intrinsic_Size)、例えば {{cssxref("width#auto", "auto")}} や {{cssxref("fit-content")}} では計算を行うことができません。代わりに {{cssxref("calc-size()")}} 関数を使用してください。
 

@@ -11,7 +11,41 @@ l10n:
 
 置換要素のオブジェクトの内在サイズ（すなわち、自然なサイズ）を、その要素のボックス内に合わせる方法を調整するために、{{cssxref("object-fit")}} プロパティを使用することができます。
 
-{{EmbedInteractiveExample("pages/css/object-position.html")}}
+{{InteractiveExample("CSS Demo: object-position")}}
+
+```css interactive-example-choice
+object-position: 50% 50%;
+```
+
+```css interactive-example-choice
+object-position: right top;
+```
+
+```css interactive-example-choice
+object-position: left bottom;
+```
+
+```css interactive-example-choice
+object-position: 250px 125px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/moon.jpg" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 250px;
+  width: 250px;
+  object-fit: none;
+  border: 1px solid red;
+}
+```
 
 ## 構文
 
@@ -68,7 +102,7 @@ object-position: unset;
 
 それぞれ MDN のロゴを表示する 2 つの {{HTMLElement("img")}} 要素があります。
 
-```html
+```html live-sample___positioning_image_content
 <img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
 <img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
@@ -77,7 +111,7 @@ object-position: unset;
 
 この CSS には、`<img>` 要素自体の既定のスタイルと、2 つの画像それぞれに個別のスタイルが含まれています。
 
-```css
+```css live-sample___positioning_image_content
 img {
   width: 300px;
   height: 250px;

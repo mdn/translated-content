@@ -3,8 +3,6 @@ title: 拉取请求的提交和审查指南
 slug: MDN/Community/Pull_requests
 ---
 
-{{MDNSidebar}}
-
 本文档描述了贡献者应如何对 MDN Web 文档进行更改，以及这些更改是如何进行审查并发布到网站上的。MDN Web 文档的内容更改包括：
 
 - API 文档、CSS 属性、平台更新和内容添加的**日常改进**。这通常由 Mozilla、谷歌、Open Web Docs、三星的 MDN Web 文档员工以及社区志愿者完成。
@@ -78,7 +76,7 @@ MDN Web 文档团队使用审查员（reviewer）和受理人（assignee）来�
 
 ### 审查拉取请求
 
-当涉及拉取请求的更改时，内容和散文必须遵循 [MDN 写作风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide) ，示例代码必须遵循[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+当涉及拉取请求的更改时，内容和散文必须遵循 [MDN 写作风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide) ，示例代码必须遵循[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)。
 
 在审查拉取请求时，你应该：
 

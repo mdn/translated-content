@@ -1,7 +1,6 @@
 ---
 title: 在 CSS 中调整大小
 slug: Learn_web_development/Core/Styling_basics/Sizing
-original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

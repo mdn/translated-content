@@ -7,7 +7,62 @@ slug: Web/CSS/clear
 
 La propriété **`clear`** indique si un élément peut être situé à côté d'éléments [flottants](/fr/docs/Web/CSS/float) qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. La propriété `clear` s'applique aux éléments flottants comme aux éléments non-flottants.
 
-{{EmbedInteractiveExample("pages/css/clear.html")}}
+{{InteractiveExample("CSS Demo: clear")}}
+
+```css interactive-example-choice
+clear: none;
+```
+
+```css interactive-example-choice
+clear: left;
+```
+
+```css interactive-example-choice
+clear: right;
+```
+
+```css interactive-example-choice
+clear: both;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="floated-left">Left</div>
+    <div class="floated-right">Right</div>
+    <div class="transition-all" id="example-element">
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  text-align: left;
+  line-height: normal;
+}
+
+.floated-left {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: left;
+}
+
+.floated-right {
+  border: solid 10px #ffc129;
+  background-color: rgba(81, 81, 81, 0.6);
+  padding: 1em;
+  float: right;
+  height: 150px;
+}
+```
 
 Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace [le bord de la bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de tous les éléments flottants concernés. Il y aura [fusion des marges (_margin collapsing_)](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.
 

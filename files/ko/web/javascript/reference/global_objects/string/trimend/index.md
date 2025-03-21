@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("String")}} 값의 **`trimEnd()`** 메서드는 해당 문자열 마지막의 공백을 제거하고 원본 문자열의 수정 없이 새로운 문자열을 반환합니다. `trimRight()`은 이 메서드의 별칭입니다.
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## 구문
 

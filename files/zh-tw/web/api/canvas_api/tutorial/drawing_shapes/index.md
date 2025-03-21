@@ -476,7 +476,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 {{domxref("Path2D.Path2D", "Path2D()")}}
 
-Path2D 的建構子，可接受的參數有無參數、另一個 Path2D 物件、 字元表式的 [SVG path](/zh-TW/docs/Web/SVG/Tutorial/Paths):
+Path2D 的建構子，可接受的參數有無參數、另一個 Path2D 物件、 字元表式的 [SVG path](/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)：
 
 ```js
 new Path2D(); // 不傳入參數會回傳一個空的 Path2D 物件

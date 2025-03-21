@@ -1,7 +1,6 @@
 ---
 title: 万维网是如何工作的
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
-original_slug: Learn/Getting_started_with_the_web/How_the_Web_works
 l10n:
   sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
 ---
@@ -53,11 +52,11 @@ l10n:
 
 ## 解析组成文件的顺序
 
-当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素，这些元素分别指向了外部的 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 样式表文件和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 脚本文件。了解页面加载时[浏览器解析](/zh-CN/docs/Web/Performance/How_browsers_work#解析)这些文件的顺序是很重要的：
+当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素，这些元素分别指向了外部的 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 样式表文件和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 脚本文件。了解页面加载时[浏览器解析](/zh-CN/docs/Web/Performance/Guides/How_browsers_work#解析)这些文件的顺序是很重要的：
 
 - 浏览器首先解析 HTML 文件，并从中识别出所有的指向外部 CSS 样式表的 `<link>` 和指向脚本的 `<script>` 元素引用。
 - 继续解析 HTML 文件的同时，浏览器继续向服务器发送请求以获取 `<link>` 元素中找到的 CSS 文件以及 `<script>` 元素中找到的 JavaScript 文件，然后解析 CSS 和 JavaScript。
-- 接着浏览器会给解析后的 HTML 文件生成一个 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 树（在内存中），会给解析后的 CSS 文件生成一个 [CSSOM](/zh-CN/docs/Glossary/CSSOM) 树（在内存中），并且会[编译和执行](/zh-CN/docs/Web/Performance/How_browsers_work#javascript_编译)解析后的 JavaScript 脚本文件。
+- 接着浏览器会给解析后的 HTML 文件生成一个 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 树（在内存中），会给解析后的 CSS 文件生成一个 [CSSOM](/zh-CN/docs/Glossary/CSSOM) 树（在内存中），并且会[编译和执行](/zh-CN/docs/Web/Performance/Guides/How_browsers_work#javascript_编译)解析后的 JavaScript 脚本文件。
 - 伴随着构建 DOM 树、应用 CSSOM 树的样式，以及执行 JavaScript 脚本文件，浏览器会在屏幕上绘制出网页的界面；用户看到网页界面也就可以跟网页进行交互了。
 
 ## DNS 解析

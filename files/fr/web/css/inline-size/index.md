@@ -7,7 +7,46 @@ slug: Web/CSS/inline-size
 
 La propriété **`inline-size`** définit la taille verticale ou horizontale d'un élément de bloc selon son mode d'écriture. Selon la valeur de {{cssxref("writing-mode")}}, cette propriété correspond à {{cssxref("width")}} quand le mode d'écriture n'est pas vertical ou à {{cssxref("height")}} sinon.
 
-{{EmbedInteractiveExample("pages/css/inline-size.html")}}
+{{InteractiveExample("CSS Demo: inline-size")}}
+
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the inline-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Cette propriété est à rapprocher de {{cssxref("block-size")}} qui définit l'autre dimension de l'élément.
 

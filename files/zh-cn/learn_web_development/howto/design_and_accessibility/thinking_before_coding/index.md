@@ -1,7 +1,6 @@
 ---
 title: 我该怎样开始设计我的网站？
 slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
-original_slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}

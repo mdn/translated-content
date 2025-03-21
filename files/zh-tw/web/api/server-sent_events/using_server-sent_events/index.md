@@ -101,7 +101,7 @@ while (true) {
 
 ## 錯誤處理
 
-當錯誤發生時（譬如網路逾時或有關[存取控制](/zh-TW/docs/Web/HTTP/CORS)的問題）會產生錯誤事件。你可以透過對 `EventSource` 物件實作 `onerror` 回呼的方式採取程式化的處理：
+當錯誤發生時（譬如網路逾時或有關[存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)的問題）會產生錯誤事件。你可以透過對 `EventSource` 物件實作 `onerror` 回呼的方式採取程式化的處理：
 
 ```js
 evtSource.onerror = function (err) {

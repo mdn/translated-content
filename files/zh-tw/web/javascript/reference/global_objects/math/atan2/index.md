@@ -2,14 +2,29 @@
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
 
 **`Math.atan2()`** 靜態方法返回平面上由 (0, 0) 到點 (x, y) 的射線與正 x 軸之間的角度（以弧度表示），即 `Math.atan2(y, x)`。
 
-{{EmbedInteractiveExample("pages/js/math-atan2.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+
+```js interactive-example
+function calcAngleDegrees(x, y) {
+  return (Math.atan2(y, x) * 180) / Math.PI;
+}
+
+console.log(calcAngleDegrees(5, 5));
+// 預期輸出：45
+
+console.log(calcAngleDegrees(10, 10));
+// 預期輸出：45
+
+console.log(calcAngleDegrees(0, 10));
+// 預期輸出：90
+```
 
 ## 語法
 

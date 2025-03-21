@@ -2,7 +2,7 @@
 title: Robots.txt
 slug: Glossary/Robots.txt
 l10n:
-  sourceCommit: 24d8a34da576f86b10923e426f66df48ab6201b9
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{GlossarySidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 網站擁有者可以禁止爬蟲檢測某個路徑（以及該路徑中的所有檔案）或特定檔案。這通常用於防止這些資源被索引或被搜索引擎提供服務。
 
-如果允許爬蟲訪問資源，可以透過 `<meta name="robots">` 標籤與 {{HTTPHeader("X-Robots-Tag")}} HTTP 標頭為這些資源定義[索引規則](/zh-TW/docs/Web/HTTP/Headers/X-Robots-Tag#指令)。與搜索相關的爬蟲會利用這些規則來決定如何在搜索結果中索引與提供資源，或隨時間調整對特定資源的爬取速率。
+如果允許爬蟲訪問資源，可以透過 `<meta name="robots">` 標籤與 {{HTTPHeader("X-Robots-Tag")}} HTTP 標頭為這些資源定義[索引規則](/zh-TW/docs/Web/HTTP/Reference/Headers/X-Robots-Tag#指令)。與搜索相關的爬蟲會利用這些規則來決定如何在搜索結果中索引與提供資源，或隨時間調整對特定資源的爬取速率。
 
 ## 參見
 

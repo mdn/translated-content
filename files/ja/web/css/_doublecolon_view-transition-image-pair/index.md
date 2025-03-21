@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-image-pair"
+title: ::view-transition-image-pair
 slug: Web/CSS/::view-transition-image-pair
 l10n:
   sourceCommit: 1a27ade8c981c8a98c8fac9881b362e881a4d236

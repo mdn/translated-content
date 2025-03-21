@@ -1,7 +1,6 @@
 ---
 title: 如何构建 HTML 表单
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
-original_slug: Learn/Forms/How_to_structure_a_web_form
 l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
 ---
@@ -158,7 +157,7 @@ l10n:
 
 {{EmbedLiveSample("多个标签", 120, 120)}}
 
-顶部的段落定义了必填元素的规则。该规则必须在使用之前列入，以便视力正常的用户和屏幕阅读器等辅助技术的用户在遇到必填元素之前就能了解其含义。虽然这有助于告知用户星号的含义，但不能依赖它。屏幕阅读器在遇到星号时会将其说成“_星号_”。当视力正常的鼠标用户悬停鼠标时，应显示“_必须_”，这可以通过使用 `title` 属性来实现。标题是否被朗读取决于屏幕阅读器的设置，因此同时包含 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性更为可靠，屏幕阅读器始终会读取该属性。
+顶部的段落定义了必填元素的规则。该规则必须在使用之前列入，以便视力正常的用户和屏幕阅读器等辅助技术的用户在遇到必填元素之前就能了解其含义。虽然这有助于告知用户星号的含义，但不能依赖它。屏幕阅读器在遇到星号时会将其说成“_星号_”。当视力正常的鼠标用户悬停鼠标时，应显示“_必须_”，这可以通过使用 `title` 属性来实现。标题是否被朗读取决于屏幕阅读器的设置，因此同时包含 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性更为可靠，屏幕阅读器始终会读取该属性。
 
 上述变体的效果会随着时间的推移而增强：
 

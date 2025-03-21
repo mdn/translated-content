@@ -42,7 +42,7 @@ Bluetooth API 扩展了以下 API，添加了列出的特性。
 
 Web Bluetooth API 只能在安全的上下文中使用。
 
-对此 API 的访问由[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)中的 {{HTTPHeader("Permissions-Policy/bluetooth","bluetooth")}} 指令控制。`bluetooth` 策略的默认白名单是 `self`，它允许在同源嵌套框架中使用蓝牙，但默认禁止第三方内容访问。如要启用跨源访问，需要同时在 `Permissions-Policy: bluetooth` HTTP 请求标头和所需的 `<iframe>` 中指定允许的来源。
+对此 API 的访问由[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)中的 {{HTTPHeader("Permissions-Policy/bluetooth","bluetooth")}} 指令控制。`bluetooth` 策略的默认白名单是 `self`，它允许在同源嵌套框架中使用蓝牙，但默认禁止第三方内容访问。如要启用跨源访问，需要同时在 `Permissions-Policy: bluetooth` HTTP 请求标头和所需的 `<iframe>` 中指定允许的来源。
 
 要使用该特性，用户必须首先显式地授予权限（如果由于其他原因不允许访问，例如被权限策略阻止，则不会弹出提示）。当调用 {{domxref("Bluetooth.requestDevice()")}} 请求访问未授权的新蓝牙设备时，将显示权限提示（拥有的全局对象还必须具有 {{glossary("transient activation")}}）。你可以使用 {{domxref("Bluetooth.getDevices()")}} 来检索先前已被授予站点权限的任何设备。
 

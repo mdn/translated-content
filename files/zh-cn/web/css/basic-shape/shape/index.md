@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/CSS_Functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
+**`shape()`** [CSS 函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于定义 {{cssxref("clip-path")}} 和 {{cssxref("offset-path")}} 属性的形状。它结合了一个初始起点和一系列定义形状路径的形状命令。`shape()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的成员。
 
 ## 语法
 
@@ -54,7 +54,7 @@ clip-path: shape(
 
 ### 参数
 
-- [`<fill-rule>`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
 
   - : 指定了如何填充形状的重叠区域。可能的取值包括：
 
@@ -70,7 +70,7 @@ clip-path: shape(
 
 - `<shape-command>`
 
-  - : 指定一个或多个逗号分隔的命令列表，用于定义形状，其语法类似于 [SVG 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#路径命令)。命令包括 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close`。每个命令的起始点是前一个命令的结束点，形状的第一个点由 [`from <coordinate-pair>`](#from_coordinate-pair) 参数定义。
+  - : 指定一个或多个逗号分隔的命令列表，用于定义形状，其语法类似于 [SVG 路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#路径命令)。命令包括 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close`。每个命令的起始点是前一个命令的结束点，形状的第一个点由 [`from <coordinate-pair>`](#from_coordinate-pair) 参数定义。
 
     大多数形状命令的语法是一个关键字，提供一个指令，如 `move` 或 `line`，后跟 `by` 或 `to` 关键字，以及一组坐标。
 
@@ -83,25 +83,25 @@ clip-path: shape(
 
     可以指定 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close` 作为 `<shape-command>`。
 
-    `<move-command>`：指定为 `move [by | to] <coordinate-pair>`。此命令将 [MoveTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#moveto_路径命令)添加到形状命令列表中。它不绘制任何内容。相反，它指定了下一个命令的起始位置。`by` 或 `to` 关键字分别指定 `<coordinate-pair>` 点是“相对”还是“绝对”。如果 `<move-command>` 跟随 `close` 命令，则它标识了下一个形状或子路径的起始点。
+    `<move-command>`：指定为 `move [by | to] <coordinate-pair>`。此命令将 [MoveTo 路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#moveto_路径命令)添加到形状命令列表中。它不绘制任何内容。相反，它指定了下一个命令的起始位置。`by` 或 `to` 关键字分别指定 `<coordinate-pair>` 点是“相对”还是“绝对”。如果 `<move-command>` 跟随 `close` 命令，则它标识了下一个形状或子路径的起始点。
 
-    `<line-command>`：指定为 `line [by | to] <coordinate-pair>`。此命令将 [LineTo 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令)添加到形状命令列表中。它从命令的起始点直线绘制到其结束点。`by` 或 `to` 关键字指定由 `<coordinate-pair>` 分别指定的结束点是“相对”还是“绝对”。
+    `<line-command>`：指定为 `line [by | to] <coordinate-pair>`。此命令将 [LineTo 路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#lineto_路径命令)添加到形状命令列表中。它从命令的起始点直线绘制到其结束点。`by` 或 `to` 关键字指定由 `<coordinate-pair>` 分别指定的结束点是“相对”还是“绝对”。
 
-    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值与命令开始时的保持一致。
+    `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#lineto_路径命令)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值与命令开始时的保持一致。
 
-    `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。`via` 关键字指定贝塞尔曲线的控制点。
+    `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。`via` 关键字指定贝塞尔曲线的控制点。
 
-    - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一条[二次贝塞尔曲线](/zh-CN/docs/Web/SVG/Attribute/d#二次贝塞尔曲线)，它由三个点（起点、控制点和终点）定义。
+    - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一条[二次贝塞尔曲线](/zh-CN/docs/Web/SVG/Reference/Attribute/d#二次贝塞尔曲线)，它由三个点（起点、控制点和终点）定义。
     - 如果提供两个 `<coordinate-pair>` 值，该命令会绘制一条三次贝塞尔曲线，它由四个点（起点、两个控制点和终点）定义。
 
-    `<smooth-command>`：指定为 `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`。此命令将一个平滑的[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对“还是”绝对“。
+    `<smooth-command>`：指定为 `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`。此命令将一个平滑的[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对“还是”绝对“。
 
     - 如果省略 `via <coordinate-pair>`，该命令会绘制一条平滑的二次贝塞尔曲线，该曲线使用前一个控制点和当前终点来定义。
     - 如果包含可选的 `via` 关键字，则通过 `<coordinate-pair>` 指定曲线的控制点，绘制一条平滑的三次贝塞尔曲线，该曲线由前一个控制点、当前控制点和当前终点定义。
 
     平滑曲线确保形状的连续过渡，而二次曲线则不然。平滑的二次曲线使用单个控制点来保持无缝过渡，而平滑的三次曲线使用两个控制点提供更精细的过渡。
 
-    `<arc-command>`：指定为 `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`。此命令将一个[椭圆曲线命令](/zh-CN/docs/Web/SVG/Attribute/d#椭圆曲线)添加到形状命令列表中。它在起始点和结束点之间绘制椭圆弧。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。
+    `<arc-command>`：指定为 `arc [by | to] <coordinate-pair> of <length-percentage> [<length-percentage>] [<arc-sweep> | <arc-size> | rotate <angle>]`。此命令将一个[椭圆曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#椭圆曲线)添加到形状命令列表中。它在起始点和结束点之间绘制椭圆弧。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。
 
     椭圆弧曲线命令定义了两个可能的椭圆，这两个椭圆都与起始点和结束点相交，并且每个椭圆都可以顺时针或逆时针追踪，从而根据弧的大小、方向和角度得到四个可能的弧。`of` 关键字指定从中获取弧的椭圆的大小。第一个 `<length-percentage>` 提供椭圆的水平半径，第二个提供垂直半径。如果只提供一个 `<length-percentage>`，则该值用于两个半径（圆的半径）。
 
@@ -119,18 +119,18 @@ clip-path: shape(
     - 如果水平和垂直半径不能描述一个足够大的椭圆来同时与起点和终点相交（在通过指定的 `<angle>` 旋转后），则半径会被均匀放大，直到椭圆刚好足够大以与两点相交。
     - 如果弧的起点和终点恰好位于椭圆的两侧，则只有一个可能的椭圆和两个可能的弧。在这种情况下，`<arc-sweep>` 指定选择的弧，而 `<arc-size>` 没有影响。
 
-    `close`：将一个 [ClosePath 命令](/zh-CN/docs/Web/SVG/Attribute/d#closepath)添加到形状命令列表中，从当前位置（最后一个命令的终点）到在 `from <coordinate-pair>` 参数中定义的路径的第一个点绘制一条直线。要关闭形状而不绘制直线，请在关闭命令之前包含一个带有起始坐标的 `<move-command>`。如果 `close` 命令后立即跟随一个 `<move-command>`，则它定义了下一个形状或子路径的起点。
+    `close`：将一个 [ClosePath 命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#closepath)添加到形状命令列表中，从当前位置（最后一个命令的终点）到在 `from <coordinate-pair>` 参数中定义的路径的第一个点绘制一条直线。要关闭形状而不绘制直线，请在关闭命令之前包含一个带有起始坐标的 `<move-command>`。如果 `close` 命令后立即跟随一个 `<move-command>`，则它定义了下一个形状或子路径的起点。
 
 ## 描述
 
 `shape()` 函数允许你定义复杂的形状。它在几个方面类似于 {{cssxref("basic-shape/path","path()")}} 形状函数：
 
 - `shape()` 函数中的 `<fill-rule>` 参数的工作方式与 `path()` 函数中的相同。
-- `shape()` 函数要求指定一个或多个 `<shape-command>`，其中每个命令使用底层的[路径命令](/zh-CN/docs/Web/SVG/Attribute/d#路径命令)，例如 [MoveTo](/zh-CN/docs/Web/SVG/Attribute/d#moveto_路径命令)、[LineTo](/zh-CN/docs/Web/SVG/Attribute/d#lineto_路径命令) 和 [ClosePath](/zh-CN/docs/Web/SVG/Attribute/d#closepath)。
+- `shape()` 函数要求指定一个或多个 `<shape-command>`，其中每个命令使用底层的[路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#路径命令)，例如 [MoveTo](/zh-CN/docs/Web/SVG/Reference/Attribute/d#moveto_路径命令)、[LineTo](/zh-CN/docs/Web/SVG/Reference/Attribute/d#lineto_路径命令) 和 [ClosePath](/zh-CN/docs/Web/SVG/Reference/Attribute/d#closepath)。
 
 然而，与使用 `path()` 相比，`shape()` 提供了几个优点：
 
-- `shape()` 使用标准的 CSS 语法，使得在样式表中直接创建和修改形状更加容易。相比之下，`path()` 使用 [SVG 路径](/zh-CN/docs/Web/SVG/Element/path)语法，对于不熟悉 SVG 的用户来说可能不太直观。
+- `shape()` 使用标准的 CSS 语法，使得在样式表中直接创建和修改形状更加容易。相比之下，`path()` 使用 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Element/path)语法，对于不熟悉 SVG 的用户来说可能不太直观。
 - `shape()` 支持各种 CSS 单位，包括百分比、`rem` 和 `em`。相反，`path()` 将形状定义为单个字符串，并将单位限制为 `px`。
 - `shape()` 还允许使用 CSS 数学函数，例如 {{cssxref("calc")}}、{{cssxref("max")}} 和 {{cssxref("abs")}}，在定义形状时提供了更多的灵活性。
 

@@ -1,7 +1,6 @@
 ---
 title: Web API 简介
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
-original_slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 l10n:
   sourceCommit: 7e97f3c5ada65b6638909bde92881a4b8d46a2b8
 ---
@@ -76,7 +75,7 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 - **操作文档的 API** 内置于浏览器中。最明显的例子是 [DOM（文档对象模型）API](/zh-CN/docs/Web/API/Document_Object_Model)，它允许你操作 HTML 和 CSS——创建、移除以及修改 HTML，动态地将新样式应用到你的页面，等等。每当你看到一个弹出窗口出现在一个页面上，或者显示一些新的内容时，这都是 DOM 的行为。你可以在[操控文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)一文中找到关于这些类型的 API 的更多信息。
 - **从服务器获取数据的 API** 用于更新网页的一小部分，其非常常用。这个看似很小的细节可以对网站的性能和行为产生巨大的影响——如果你只是更新一个股票列表或者一些可用的新故事而不需要从服务器重新加载整个页面将使网站或应用程序的响应感觉更快、更“敏捷”。主要用于此目的的 API 是 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)，虽然旧的代码可能仍然会使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) API。你也可能会同时遇到描述这项技术的术语 **Ajax**）。你可以在[从服务器中获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)一文找到关于此类 API 的更多信息。
 - **用于绘制和操作图形的 API** 目前已被浏览器广泛支持。最流行的是允许你以编程方式更新包含在 HTML {{htmlelement("canvas")}} 元素中的像素数据以创建 2D 和 3D 场景的 [Canvas](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API)。例如，你可以绘制矩形或圆形等形状，将图像导入到画布上，然后使用 Canvas API 对其应用滤镜（如棕褐色滤镜或灰度滤镜），或使用 WebGL 创建具有光照和纹理的复杂 3D 场景。这些 API 经常与用于创建动画循环的 API（例如 {{domxref("window.requestAnimationFrame()")}}）和其他 API 一起不断更新诸如动画和游戏之类的场景。
-- **[音频和视频 API](/zh-CN/docs/Web/Media/Audio_and_video_delivery)** 例如 {{domxref("HTMLMediaElement")}}、[Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 允许你使用多媒体来做一些非常有趣的事情，比如创建用于播放音频和视频的自定义 UI 控件、显示字幕字幕和你的视频、从网络摄像机抓取视频、通过画布操纵（见上），或在网络会议中显示在别人的电脑上，或者添加效果到音轨（如增益、失真、平移等） 。
+- **[音频和视频 API](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)** 例如 {{domxref("HTMLMediaElement")}}、[Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 允许你使用多媒体来做一些非常有趣的事情，比如创建用于播放音频和视频的自定义 UI 控件、显示字幕字幕和你的视频、从网络摄像机抓取视频、通过画布操纵（见上），或在网络会议中显示在别人的电脑上，或者添加效果到音轨（如增益、失真、平移等） 。
 - **设备 API** 使得你可以与设备的硬件进行交互：例如，使用[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)来访问设备的 GPS，从而查找用户的位置。
 - **客户端存储 API** 使得你可以在客户端存储数据，因此你可以创建一个保存页面加载状态的应用，甚至让设备在处于离线状态时可用。有多种选项可供选择，例如使用 [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API) 的简单的键/值存储以及使用 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的更复杂的数据库存储。
 

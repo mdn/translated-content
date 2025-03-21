@@ -7,7 +7,23 @@ slug: Web/HTML/Element/data
 
 **`<data>`** [HTML](/zh-TW/docs/Web/HTML) 元素將給定的內容與可機器讀取的翻譯相關聯。如果內容與時間或日期有關，則必須使用 {{HTMLElement("time")}} 元素。
 
-{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>New Products:</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+```css interactive-example
+data:hover::after {
+  content: " (ID " attr(value) ")";
+  font-size: 0.7em;
+}
+```
 
 ## 屬性
 
@@ -75,7 +91,7 @@ slug: Web/HTML/Element/data
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

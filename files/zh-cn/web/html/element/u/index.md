@@ -12,7 +12,24 @@ l10n:
 > [!WARNING]
 > 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，你应该应用包含 CSS {{cssxref("text-decoration")}} 属性设置为 `underline` 的样式。
 
-{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You could use this element to highlight <u>speling</u> mistakes, so the writer
+  can <u>corect</u> them.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 0;
+}
+
+u {
+  text-decoration: #f00 wavy underline;
+}
+```
 
 有关何时适合使用以及何时不使用 `<u>` 的详细信息，请参阅[使用说明](#使用说明)部分。
 
@@ -177,7 +194,7 @@ cite {
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

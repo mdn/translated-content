@@ -3,8 +3,6 @@ title: 规范表格
 slug: MDN/Writing_guidelines/Page_structures/Specification_tables
 ---
 
-{{MDNSidebar}}
-
 MDN 上的每一个参考页面都应该提供有关该 API 或技术定义的一个或多个规范的信息。这篇文章展示了这些表格的样子，并解释了如何添加这些表格。
 
 规范部分的定义与[兼容性表格](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)的定义相似，通常从同一数据源生成，并且通常出现在页面中紧接在后者之前的位置。
@@ -27,7 +25,7 @@ MDN 上的每一个参考页面都应该提供有关该 API 或技术定义的�
 browser-compat: css.property.text-align
 ```
 
-有些特性不在上述仓库中维护。在这些情况下，可以使用 `spec-urls` 键将规范信息添加到页面元数据中。例如，[`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性拥有以下页面元数据：
+有些特性不在上述仓库中维护。在这些情况下，可以使用 `spec-urls` 键将规范信息添加到页面元数据中。例如，[`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性拥有以下页面元数据：
 
 ```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic

@@ -11,7 +11,27 @@ l10n:
 
 段落是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，如果在关闭的 `</p>` 标签之前解析了另一个块级元素，则该标签将自动关闭。请参阅下面的“标签省略”。
 
-{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  Geckos are a group of usually small, usually nocturnal lizards. They are found
+  on every continent except Antarctica.
+</p>
+
+<p>
+  Some species live in houses where they hunt insects attracted by artificial
+  light.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #999;
+}
+```
 
 ## 属性
 
@@ -148,7 +168,7 @@ p {
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles"
           >paragraph</a
         >
       </td>

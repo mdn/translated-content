@@ -9,7 +9,54 @@ l10n:
 
 **`border-bottom-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素底部 {{cssxref("border")}} 的线条样式。
 
-{{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-style")}}
+
+```css interactive-example-choice
+border-bottom-style: none;
+```
+
+```css interactive-example-choice
+border-bottom-style: dotted;
+```
+
+```css interactive-example-choice
+border-bottom-style: dashed;
+```
+
+```css interactive-example-choice
+border-bottom-style: solid;
+```
+
+```css interactive-example-choice
+border-bottom-style: groove;
+```
+
+```css interactive-example-choice
+border-bottom-style: inset;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 > [!NOTE]
 > 规范中没有定义不同样式的边框在边角处是如何连接的。

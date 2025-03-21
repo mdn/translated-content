@@ -1,7 +1,6 @@
 ---
 title: 命令行速成课
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}

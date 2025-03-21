@@ -44,7 +44,7 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 - [CORS 处理跨域图片](/zh-CN/docs/Web/HTML/CORS_enabled_image)
   - : 通过搭配 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#crossorigin) 属性和适当的 {{glossary("CORS")}} 标头，在 {{HTMLElement("img")}} 元素中定义的图片可以从外部来源加载并在 {{HTMLElement("canvas")}} 元素中使用，就像是从本地源加载一样。
 - [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
-  - : 一些提供了对 [CORS](/zh-CN/docs/Web/HTTP/CORS) 的支持的 HTML 元素，比如 {{HTMLElement("img")}} 或 {{HTMLElement("video")}}，具有 `crossorigin` 元素属性／attribute（`crossOrigin` 对象属性／property），该属性能使你配置其跨域获取资源的请求。
+  - : 一些提供了对 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 的支持的 HTML 元素，比如 {{HTMLElement("img")}} 或 {{HTMLElement("video")}}，具有 `crossorigin` 元素属性／attribute（`crossOrigin` 对象属性／property），该属性能使你配置其跨域获取资源的请求。
 - [使用 rel="preload" 预加载页面内容](/zh-CN/docs/Web/HTML/Attributes/rel/preload)
   - : {{htmlelement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性的值 `preload` 允许你在 HTML 的 {{htmlelement("head")}} 部分声明一些（资源）获取请求，以指定那些在页面加载后即刻需要的资源。因此在浏览器的主渲染机制介入前，这些资源会在页面加载生命周期的早期阶段进行预加载。这样可以保证这些资源可被更早使用并减少阻塞页面初次渲染的可能性，从而提升性能。这篇文章提供了关于 `preload` 作用机制的基本指导。
 
@@ -62,7 +62,7 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
   - : HTML 元素通常是“行级”或“块级”元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
 - [链接类型](/zh-CN/docs/Web/HTML/Attributes/rel)
   - : 在 HTML 中，各种各样的链接类型被用来确立和定义两个文档之间的关系。可以设置链接类型的链接元素包括 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}}。
-- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
   - : {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素允许你原生地播放音频和视频媒体，无需任何外部软件的支持。
 - [HTML 内容种类](/zh-CN/docs/Web/HTML/Content_categories)
   - : HTML 包含了几种内容，每种内容在特定的情景上下文中有效，而在其他上下文中无效。每种内容也指定了可以被它们包含的类别，以及可以或不可以在其中使用的元素。这里提供了一个关于这些类别的说明。

@@ -21,7 +21,33 @@ l10n:
 > [!NOTE]
 > capture 以前是一个布尔属性，如果存在，则要求使用设备自身的媒体捕捉设备（如摄像头或麦克风），而不是要求输入文件。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-capture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: capture", "tabbed-standard")}}
+
+```html interactive-example
+<label for="selfie">Take a picture of your face:</label>
+
+<input type="file" id="selfie" name="selfie" accept="image/*" capture="user" />
+
+<label for="picture">Take a picture using back facing camera:</label>
+
+<input
+  type="file"
+  id="picture"
+  name="picture"
+  accept="image/*"
+  capture="environment" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+```
 
 ## 示例
 

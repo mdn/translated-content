@@ -7,7 +7,43 @@ slug: Web/CSS/isolation
 
 **`isolation`** [CSS](/ko/docs/Web/CSS) 속성은 요소가 새로운 {{glossary("stacking context", "쌓임 맥락")}}을 생성해야 하는지 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/isolation.html")}}
+{{InteractiveExample("CSS Demo: isolation")}}
+
+```css interactive-example-choice
+isolation: auto;
+```
+
+```css interactive-example-choice
+isolation: isolate;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="background-container">
+    <div id="example-element">
+      <img src="/shared-assets/images/examples/firefox-logo.svg" />
+      <p><code>mix-blend-mode: multiply;</code></p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.background-container {
+  background-color: #f4f460;
+  width: 250px;
+}
+
+#example-element {
+  border: 1px solid black;
+  margin: 2em;
+}
+
+#example-element * {
+  mix-blend-mode: multiply;
+  color: #8245a3;
+}
+```
 
 {{cssxref("mix-blend-mode")}}와 함께 사용했을 때 특히 유용합니다.
 

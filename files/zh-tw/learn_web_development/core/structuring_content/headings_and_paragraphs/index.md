@@ -1,7 +1,6 @@
 ---
 title: 基本 HTML 文字
 slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}

@@ -1,7 +1,6 @@
 ---
 title: Creating hyperlinks
 slug: Learn_web_development/Core/Structuring_content/Creating_links
-original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}

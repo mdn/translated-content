@@ -95,7 +95,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 若一个对象拥有迭代行为，比如在 {{jsxref("Statements/for...of", "for...of")}} 中会循环一些值，那么那个对象便是一个可迭代对象。一些内置类型，如 {{jsxref("Array")}} 或 {{jsxref("Map")}} 拥有默认的迭代行为，而其他类型（比如 {{jsxref("Object")}}）则没有。
 
-为了实现**可迭代**，对象必须实现 `[Symbol.iterator]()` 方法，这意味着这个对象（或其[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的任意一个对象）必须具有一个键值为 {{jsxref("Symbol.iterator")}} 的属性。
+为了实现**可迭代**，对象必须实现 `[Symbol.iterator]()` 方法，这意味着这个对象（或其[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中的任意一个对象）必须具有一个键值为 {{jsxref("Symbol.iterator")}} 的属性。
 
 程序员应知道一个可迭代对象可以多次迭代，还是只能迭代一次。
 

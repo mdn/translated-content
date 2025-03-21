@@ -1,7 +1,6 @@
 ---
 title: 客户端服务端交互概述
 slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
@@ -47,7 +46,7 @@ Web 浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HT
   - POST 数据：POST 请求会增加新的资源，这些数据将会在请求体中编码。
   - 客户端 cookie：cookie 包含与客户相关的会话数据，服务器可以用这些数据来判断用户的登录状态以及用户是否有访问资源的权限。
 
-Web 服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Status)来暗示请求是否成功（比如 {{HTTPStatus("200", "200 OK")}} 连接成功，{{HTTPStatus("404", "404 Not Found")}} 资源没有找到，{{HTTPStatus("403", "403 Forbidden")}} 用户没有被授权查看资源，等等）。一个成功的响应主体，会包含 GET 请求所请求的资源。
+Web 服务器等待来自客户的请求信息，当请求到达时处理它们，然后发给浏览器 HTTP 响应消息。回应包含一个 [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)来暗示请求是否成功（比如 {{HTTPStatus("200", "200 OK")}} 连接成功，{{HTTPStatus("404", "404 Not Found")}} 资源没有找到，{{HTTPStatus("403", "403 Forbidden")}} 用户没有被授权查看资源，等等）。一个成功的响应主体，会包含 GET 请求所请求的资源。
 
 当一个 HTML 页面被返时，页面会被 Web 浏览器呈现出来。作为处理工作的一部分，浏览器会发现指向其他资源的链接（比如，一个 HTML 页面通常会参考 Javascript 和 CSS 页面），并且会发送独立的 HTTP 请求来下载这些文件。
 

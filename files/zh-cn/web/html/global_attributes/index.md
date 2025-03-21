@@ -12,7 +12,7 @@ slug: Web/HTML/Global_attributes
 除了基本的 HTML 全局属性之外，还存在以下全局属性：
 
 - `xml:lang` 和 `xml:base`——两者都是从 XHTML 规范继承且被弃用，但为了兼容性而被保留的。
-- ARIA [`role`](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 和多重 [`aria-*`](/zh-CN/docs/Web/Accessibility/ARIA) 状态和属性，用于保证无障碍。
+- ARIA [`role`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles) 和多重 [`aria-*`](/zh-CN/docs/Web/Accessibility/ARIA) 状态和属性，用于保证无障碍。
 - [事件处理器](/zh-CN/docs/Web/HTML/Attributes#事件处理器属性)属性：`onabort`、`onautocomplete`、`onautocompleteerror`、`onblur`、`oncancel`、`oncanplay`、`oncanplaythrough`、`onchange`、`onclick`、`onclose`、`oncontextmenu`、`oncuechange`、`ondblclick`、`ondrag`、`ondragend`、`ondragenter`、`ondragleave`、`ondragover`、`ondragstart`、`ondrop`、`ondurationchange`、`onemptied`、`onended`、`onerror`、`onfocus`、`oninput`、`oninvalid`、`onkeydown`、`onkeypress`、`onkeyup`、`onload`、`onloadeddata`、`onloadedmetadata`、`onloadstart`、`onmousedown`、`onmouseenter`、`onmouseleave`、`onmousemove`、`onmouseout`、`onmouseover`、`onmouseup`、`onmousewheel`、`onpause`、`onplay`、`onplaying`、`onprogress`、`onratechange`、`onreset`、`onresize`、`onscroll`、`onseeked`、`onseeking`、`onselect`、`onshow`、`onsort`、`onstalled`、`onsubmit`、`onsuspend`、`ontimeupdate`、`ontoggle`、`onvolumechange`、`onwaiting`。
 
 ## 全局属性列表
@@ -87,12 +87,12 @@ slug: Web/HTML/Global_attributes
 - [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang)
   - : 帮助定义元素的语言：不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个“语言标记”（由用连字符分隔的“语言子标记”组成），格式在 {{RFC(5646, "Tags for Identifying Languages（也称为 BCP 47）")}} 中定义。[**xml:lang**](#xml:lang) 优先于它。
 - [`nonce`](/zh-CN/docs/Web/HTML/Global_attributes/nonce)
-  - : 一个加密的 nonce（“只使用一次的数字”），可以被[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)使用，以确定是否允许进行给定的获取。
+  - : 一个加密的 nonce（“只使用一次的数字”），可以被[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)使用，以确定是否允许进行给定的获取。
 - [`part`](/zh-CN/docs/Web/HTML/Global_attributes/part)
   - : 元素的部件名称的空格分隔列表。Part 名称允许 CSS 通过 {{CSSxRef("::part")}} 伪元素选择和设置影子树中的特定元素。
 - [`popover`](/zh-CN/docs/Web/HTML/Global_attributes/popover)
   - : 用于将某个元素指定为弹出式元素（详见 {{domxref("Popover API", "Popover API", "", "nocode")}}）。弹出式元素通过 `display: none` 隐藏，直到通过调用/控制元素（即 `<button>` 或 `<input type="button">` 带有 [`popovertarget`](/zh-CN/docs/Web/HTML/Element/button#popovertarget) 属性）或 {{domxref("HTMLElement.showPopover()")}} 调用而打开。
-- [`role`](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- [`role`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : Role 定义了内容的语义，允许屏幕阅读器和其他工具以符合用户对该类型对象的期望的方式来展示和支持与该对象的互动。`roles` 以 `role="role_type"` 的形式添加到 HTML 元素中，其中 `role_type` 是 ARIA 规范中的一个角色名称。
 - [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot)
   - : 将[影子 DOM](/zh-CN/docs/Web/API/Web_components/Shadow_DOM) 影子树中的一个空槽分配给一个元素：具有 `slot` 属性的元素被分配给由 {{HTMLElement("slot")}} 元素创建的空槽，其 [`name`](/zh-CN/docs/Web/HTML/Element/slot#name) 属性的值与 `slot` 属性的值匹配。

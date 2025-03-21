@@ -1,7 +1,6 @@
 ---
 title: 事件介绍
 slug: Learn_web_development/Core/Scripting/Events
-original_slug: Learn/JavaScript/Building_blocks/Events
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}

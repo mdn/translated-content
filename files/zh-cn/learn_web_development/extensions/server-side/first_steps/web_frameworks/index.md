@@ -1,7 +1,6 @@
 ---
 title: 服务端 web 框架
 slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/First_steps/Web_frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

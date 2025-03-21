@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("RegExp")}} 인스턴스의 **`hasIndices`** 접근자 속성은 이 정규 표현식과 함께 `d` 플래그가 사용되는지 여부를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "d");
+
+console.log(regex1.hasIndices);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.hasIndices);
+// Expected output: false
+```
 
 ## 설명
 

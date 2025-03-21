@@ -1,7 +1,6 @@
 ---
 title: "Django 教程 6: 通用列表和详细信息视图"
 slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
-original_slug: Learn/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}

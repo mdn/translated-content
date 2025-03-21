@@ -9,7 +9,22 @@ l10n:
 
 **`<b>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于吸引读者注意元素内容，而这些内容本身并不具有特别重要性。它以前被称为粗体元素，大多数浏览器仍然以粗体显示文本。但是，你不应该使用 `<b>` 来设置文本样式或赋予重要性。如果你希望创建粗体文本，应该使用 CSS {{cssxref("font-weight")}} 属性。如果你希望指示某个元素特别重要，应该使用 {{HTMLElement("strong")}} 元素。
 
-{{EmbedInteractiveExample("pages/tabbed/b.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The two most popular science courses offered by the school are
+  <b class="term">chemistry</b> (the study of chemicals and the composition of
+  substances) and <b class="term">physics</b> (the study of the nature and
+  properties of matter and energy).
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+b {
+}
+```
 
 ## 属性
 
@@ -80,7 +95,7 @@ l10n:
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

@@ -2,14 +2,56 @@
 title: font-weight
 slug: Web/CSS/font-weight
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
 **`font-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの太さ（あるいは重み）を指定します。実際に表示されるフォントの太さは、現在設定されている {{cssxref("font-family")}} に依存する場合があります。
 
-{{EmbedInteractiveExample("pages/css/font-weight.html")}}
+{{InteractiveExample("CSS Demo: font-weight")}}
+
+```css interactive-example-choice
+font-weight: normal;
+```
+
+```css interactive-example-choice
+font-weight: bold;
+```
+
+```css interactive-example-choice
+font-weight: lighter;
+```
+
+```css interactive-example-choice
+font-weight: bolder;
+```
+
+```css interactive-example-choice
+font-weight: 100;
+```
+
+```css interactive-example-choice
+font-weight: 900;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 ## 構文
 
@@ -267,5 +309,5 @@ span {
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール

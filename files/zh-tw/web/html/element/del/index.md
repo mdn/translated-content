@@ -7,7 +7,33 @@ slug: Web/HTML/Element/del
 
 **`<del>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表從文件中刪除的文字範圍。例如，這可用於渲染「跟踪更改」或源代碼差異信息。{{HTMLElement("ins")}} 元素可用於相反的目的：指示已添加到文檔中的文字。
 
-{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<blockquote>
+  There is <del>nothing</del> <ins>no code</ins> either good or bad, but
+  <del>thinking</del> <ins>running it</ins> makes it so.
+</blockquote>
+```
+
+```css interactive-example
+del {
+  text-decoration: line-through;
+  background-color: #fbb;
+  color: #555;
+}
+
+ins {
+  text-decoration: none;
+  background-color: #d4fcbc;
+}
+
+blockquote {
+  padding-left: 15px;
+  border-left: 3px solid #d7d7db;
+  font-size: 1rem;
+}
+```
 
 此元素通常（但不一定）通過對文本應用刪除線樣式來呈現。
 
@@ -104,7 +130,7 @@ del::after {
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">deletion</a
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">deletion</a
           ></code
         >
       </td>

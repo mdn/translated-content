@@ -1,7 +1,6 @@
 ---
 title: 用戶端 Web API
 slug: Learn_web_development/Extensions/Client-side_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs
 ---
 
 {{LearnSidebar}}

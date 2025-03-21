@@ -90,7 +90,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 - 一个行内元素（`<span>`，包含一个空格和一个单词“World!”）。
 - 另外一个文本节点（只包含制表符和空格）。
 
-正因为如此，它建立了所谓的[行内格式化上下文](/zh-CN/docs/Web/CSS/Inline_formatting_context)。这是浏览器引擎可能使用的布局渲染上下文之一。
+正因为如此，它建立了所谓的[行内格式化上下文](/zh-CN/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)。这是浏览器引擎可能使用的布局渲染上下文之一。
 
 在这个上下文中，空白符的处理可以总结如下：
 

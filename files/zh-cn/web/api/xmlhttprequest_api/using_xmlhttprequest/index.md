@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 
 在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 [HTTP](/zh-CN/docs/Web/HTTP) 请求以实现网站和服务器之间的数据交换。`XMLHttpRequest`常见和晦涩的使用情况都将包含在例子中。
 
-发送一个 HTTP 请求，需要创建一个 `XMLHttpRequest` 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 [HTTP status](/zh-CN/docs/Web/HTTP/Status) 的有用信息。
+发送一个 HTTP 请求，需要创建一个 `XMLHttpRequest` 对象，打开一个 URL，最后发送请求。当所有这些事务完成后，该对象将会包含一些诸如响应主体或 [HTTP status](/zh-CN/docs/Web/HTTP/Reference/Status) 的有用信息。
 
 ```js
 function reqListener() {
@@ -37,7 +37,7 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 
 如果你使用 `XMLHttpRequest` 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：
 
-1. 使用 [XPath](/zh-CN/docs/Web/XPath) 定位到文档的指定部分。
+1. 使用 [XPath](/zh-CN/docs/Web/XML/XPath) 定位到文档的指定部分。
 2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML) 为字符串或对象。
 3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
@@ -217,7 +217,7 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
   The second line.
   ```
 
-- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)：
+- 方法：`POST`；编码类型：[`multipart/form-data`](/zh-CN/docs/Web/HTTP/Guides/MIME_types#multipartform-data)：
 
   ```plain
   Content-Type: multipart/form-data; boundary=---------------------------314911788813839
@@ -859,7 +859,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
 
 ## 跨站的 XMLHttpRequest
 
-现代浏览器通过实现[跨源资源共享](/zh-CN/docs/Web/HTTP/CORS)（CORS）标准来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest`。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
+现代浏览器通过实现[跨源资源共享](/zh-CN/docs/Web/HTTP/Guides/CORS)（CORS）标准来支持跨站请求。只要服务器端的配置允许你从你的 Web 应用发送请求，就可以使用 `XMLHttpRequest`。否则，会抛出一个 `INVALID_ACCESS_ERR` 异常
 
 ## 绕过缓存
 
@@ -900,7 +900,7 @@ req.send(null);
 ## 参见
 
 - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

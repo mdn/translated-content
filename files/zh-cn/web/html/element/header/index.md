@@ -9,11 +9,52 @@ l10n:
 
 **`<header>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示介绍性内容，通常是一组介绍性或导航性辅助内容。它可能包含一些标题元素，也可能包含徽标、搜索表单、作者姓名和其他元素。
 
-{{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<header>
+  <a class="logo" href="#">Cute Puppies Express!</a>
+</header>
+
+<article>
+  <header>
+    <h1>Beagles</h1>
+    <time>08.12.2014</time>
+  </header>
+  <p>
+    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
+    their ears are so, so snugly soft!
+  </p>
+</article>
+```
+
+```css interactive-example
+.logo {
+  background: left / cover
+    url("/shared-assets/images/examples/puppy-header.jpg");
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  font:
+    bold calc(1em + 2 * (100vw - 120px) / 100) "Dancing Script",
+    fantasy;
+  color: #ff0083;
+  text-shadow: #000 2px 2px 0.2rem;
+}
+
+header > h1 {
+  margin-bottom: 0;
+}
+
+header > time {
+  font: italic 0.7rem sans-serif;
+}
+```
 
 ## 使用说明
 
-`<header>` 元素的意义与网站范围内的 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标角色相同，除非嵌套在分段内容内。在这种情况下，`<header>` 元素不再是地标。
+`<header>` 元素的意义与网站范围内的 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) 地标角色相同，除非嵌套在分段内容内。在这种情况下，`<header>` 元素不再是地标。
 
 `<header>` 元素可以定义一个全局站点标题，在无障碍树中描述为 `banner`。它通常包括一个徽标、公司名称、搜索功能，以及可能的全局导航或标语。它通常位于页面的顶端。
 
@@ -29,7 +70,7 @@ l10n:
 
 ## 无障碍
 
-当 `<header>` 元素的上下文为 {{HTMLElement('body')}} 元素时，它定义了一个 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role) 地标。当 HTML 标题元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的后代时，则不视为 banner 地标。
+当 `<header>` 元素的上下文为 {{HTMLElement('body')}} 元素时，它定义了一个 [`banner`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) 地标。当 HTML 标题元素是 {{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('main')}}、{{HTMLElement('nav')}} 或 {{HTMLElement('section')}} 元素的后代时，则不视为 banner 地标。
 
 ## 示例
 
@@ -116,34 +157,34 @@ l10n:
         <code><a href="/zh-CN/docs/Web/HTML/Element/section">section</a></code>
         元素的后代，或者是带有
         <code
-          >role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/article_role"
+          >role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
             >article</a
           ></code
         >、<code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/complementary_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
             >complementary</a
           ></code
         >、<code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/main_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
             >main</a
           ></code
         >、<code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/navigation_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
             >navigation</a
           ></code
         >
         或
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/region_role"
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
             >region</a
           ></code
-        > 属性的元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/generic_role">generic</a>；否则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a>。
+        > 属性的元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>；否则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role">banner</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

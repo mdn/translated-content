@@ -19,7 +19,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 
 ## Активное изучение
 
-_Пока нет активного обучения._ [Пожалуйста, подумайте о том, чтобы внести свой вклад.](/ru/docs/MDN/Community/Contributing/Getting_started)
+_Пока нет активного обучения._ [Пожалуйста, подумайте о том, чтобы внести свой вклад.](/ru/docs/MDN/Community/Getting_started)
 
 ## Копай глубже
 
