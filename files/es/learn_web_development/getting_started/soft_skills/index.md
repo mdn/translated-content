@@ -1,8 +1,8 @@
 ---
-title: Habilidades Blandas
+title: Habilidades blandas
 slug: Learn_web_development/Getting_started/Soft_skills
 l10n:
-  sourceCommit: bc189699de65d47506372588cad935b7bffa5097
+  sourceCommit: 9cb5158a90dfff3140735af4dada772d00168e77
 ---
 
 {{LearnSidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 Este módulo proporciona recomendaciones de habilidades blandas que puedes intentar mejorar mientras aprendes desarrollo web, y que constituyen buenos rasgos para tener al ingresar a la industria. Te ayudarán enormemente a desarrollar las actitudes correctas para aprender, investigar y colaborar, y aumentarán las posibilidades de ser contratado.
 
-## Requisitos Previos
+## Requisitos previos
 
 Este módulo es principalmente teórico y no asume ningún conocimiento práctico específico de las tecnologías web. Sin embargo, aún recomendaríamos que trabajes en los módulos anteriores en orden antes de abordar este.
 
