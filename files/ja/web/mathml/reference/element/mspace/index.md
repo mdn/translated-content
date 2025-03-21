@@ -21,7 +21,7 @@ l10n:
 - `width`
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、この空間の希望の幅を示します。
 
-> **メモ:** `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Values#古い_mathml_における長さ)も受け入れることがあります。
+> **メモ:** `depth`、`height`、`width` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
 
 ## 例
 

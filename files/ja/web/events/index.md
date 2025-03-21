@@ -377,7 +377,7 @@ l10n:
       <td>マニフェスト</td>
       <td>
         <p>
-          <a href="/ja/docs/Web/Manifest">プログレッシブウェブアプリのマニフェスト</a>のインストールに関するイベント。
+          <a href="/ja/docs/Web/Progressive_web_apps/Manifest">プログレッシブウェブアプリのマニフェスト</a>のインストールに関するイベント。
         </p>
       </td>
       <td>

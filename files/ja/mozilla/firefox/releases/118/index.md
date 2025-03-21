@@ -33,8 +33,8 @@ l10n:
 
 ### MathML
 
-- [`<semantics>`](/ja/docs/Web/MathML/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました。設定項目 `mathml.legacy_maction_and_semantics_implementations.disabled` を削除しました (Firefox bug [1788223](https://bugzil.la/1788223))。
-- [`mathvariant`](/ja/docs/Web/MathML/Element/mi#mathvariant) で、`normal` を除くすべての値が非推奨になりました。また、この属性を使う要素が `<mi>` に限定されました (Firefox bug [1845461](https://bugzil.la/1845461))。
+- [`<semantics>`](/ja/docs/Web/MathML/Reference/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Reference/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました。設定項目 `mathml.legacy_maction_and_semantics_implementations.disabled` を削除しました (Firefox bug [1788223](https://bugzil.la/1788223))。
+- [`mathvariant`](/ja/docs/Web/MathML/Reference/Element/mi#mathvariant) で、`normal` を除くすべての値が非推奨になりました。また、この属性を使う要素が `<mi>` に限定されました (Firefox bug [1845461](https://bugzil.la/1845461))。
 
 ### SVG
 

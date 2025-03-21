@@ -80,11 +80,11 @@ PWAはウェブ技術に基づいています。これは、端末にインス�
 ユーザーは、インストールされた PWA が、インストールされたプラットフォーム専用のアプリのように動作することを期待しています。ユーザーが期待するアプリのような使い勝手を提供するには、何らかの方法でアプリをオペレーティングシステムと統合しましょう。例えば、次のような方法です：
 
 - [通知 API](/ja/docs/Web/API/Notifications_API) を使用してユーザーの端末に通知を送信します。
-- ウェブアプリマニフェストの [`file_handlers`](/ja/docs/Web/Manifest/file_handlers) メンバーでファイルを処理します。
+- ウェブアプリマニフェストの [`file_handlers`](/ja/docs/Web/Progressive_web_apps/Manifest/file_handlers) メンバーでファイルを処理します。
 - アプリのアイコンに[バッジを表示](/ja/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)します。
 - [アプリ間のデータ共有](/ja/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)ができるようにします。
 
-[ウェブアプリマニフェストメンバー](/ja/docs/Web/Manifest#メンバー)の多くを使用して、ユーザーの端末上でのアプリの表示方法をカスタマイズしたり、オペレーティングシステム内でより深く統合したりすることができます。
+[ウェブアプリマニフェストメンバー](/ja/docs/Web/Progressive_web_apps/Manifest#メンバー)の多くを使用して、ユーザーの端末上でのアプリの表示方法をカスタマイズしたり、オペレーティングシステム内でより深く統合したりすることができます。
 
 ### ルック＆フィール
 

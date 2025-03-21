@@ -227,6 +227,6 @@ p {
 - [`!important`](/ja/docs/Web/CSS/important)
 - [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
 - [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)
-- [カスケード、詳細度、継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) (bram.us (2021))

@@ -83,7 +83,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
 ### MathML
 
-- [MathML 要素](/ja/docs/Web/MathML/Element) が MathML DOM を実装しました。クラスは {{domxref("MathMLElement")}} です。例えば適切な MathML DOM と、`mathmlEl.style`、グローバルイベントハンドラーを使用できます。従来は MathML 要素が {{domxref("Element")}} クラスのみ実装していました ([Firefox バグ 1571487](https://bugzil.la/1571487))。
+- [MathML 要素](/ja/docs/Web/MathML/Reference/Element) が MathML DOM を実装しました。クラスは {{domxref("MathMLElement")}} です。例えば適切な MathML DOM と、`mathmlEl.style`、グローバルイベントハンドラーを使用できます。従来は MathML 要素が {{domxref("Element")}} クラスのみ実装していました ([Firefox バグ 1571487](https://bugzil.la/1571487))。
 
 ### API
 

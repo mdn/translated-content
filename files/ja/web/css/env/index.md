@@ -36,7 +36,7 @@ env(safe-area-inset-left, 1.4rem);
 - `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
   - : `safe-area-inset-*` の値は 4 つの環境変数から成り、矩形ではない画面において、ビューポートの縁から、内容物を置いても切り取られる危険がない安全な矩形までの寸法を、上、右、下、左で定義します。一般的なノートパソコンのモニターなどの矩形のビューポートでは、これらの値はゼロに等しくなります。矩形ではない画面 — 例えば円い腕時計の画面 — では、矩形の中のすべての内容物が表示できるような矩形から、ユーザーエージェントが設定します。
 - `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, `titlebar-area-height`
-  - : `titlebar-area-*` 変数は、デスクトップ端末にインストールされた PWA に有用です。デスクトップの PWA が `window-controls-overlay` で [display_override](/ja/docs/Web/Manifest/display_override) の値を使用すると、 `titlebar-area-*` 変数を使用して内容物がウィンドウの制御ボタン（すなわち、最小化、最大化、閉じるボタン）に重ならないようにすることができます。
+  - : `titlebar-area-*` 変数は、デスクトップ端末にインストールされた PWA に有用です。デスクトップの PWA が `window-controls-overlay` で [display_override](/ja/docs/Web/Progressive_web_apps/Manifest/display_override) の値を使用すると、 `titlebar-area-*` 変数を使用して内容物がウィンドウの制御ボタン（すなわち、最小化、最大化、閉じるボタン）に重ならないようにすることができます。
 
 **注**: ほかの CSS プロパティとは異なり、ユーザーエージェントの定義するプロパティ名は大文字・小文字が区別されます。
 
