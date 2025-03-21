@@ -7,37 +7,37 @@ l10n:
 
 {{CSSRef}}
 
-**`@scope`** [CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 能够让你选中特定的 DOM 子树中的元素，无需编写过于具体的难以覆盖的选择器就能准确地定位元素，也不用将选择器与 DOM 结构紧密地耦合。
+**`@scope`** [CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)能够让你选中特定的 DOM 子树中的元素，无需编写过于具体的难以覆盖的选择器就能准确地定位元素，也不用将选择器与 DOM 结构紧密地耦合。
 
 在 JavaScript 中，可以通过 CSS 对象模型接口 {{DOMxRef("CSSScopeRule")}} 访问 `@scope`。
 
 ## 语法
 
-`@scope` @规则包含了一个或多个规则集（称为 **scoped style rules**），并定义一个应用于选定元素的作用域。`@scope` 有两种用法：
+`@scope` @ 规则包含了一个或多个规则集（称为 **作用域样式规则**），并定义一个应用于选定元素的作用域。`@scope` 有两种用法：
 
-1. 作为 CSS 中的一个独立块，在这种情况下，它包含一个前置部分，这部分包括 **scope root** （域根）和可选的 **scope limit** （域限）选择器————这些选择器定义了作用域的上下边界。
+1. 作为 CSS 中的一个独立块，在这种情况下，它包含一个前置部分，这部分包括 **域根** （scope root）和可选的 **域限** （scope limit）选择器————这些选择器定义了作用域的上下边界。
 
    ```css
    @scope (scope root) to (scope limit) {
-     rulesets
+     规则集
    }
    ```
 
-2. 作为 HTML 中包含在{{htmlelement("style")}} 元素里面的内联样式，这种情况下，前置部分可以省略，所包含的规则集只会在 `<style>` 元素的父级元素下有效。
+2. 作为 HTML 中包含在 {{htmlelement("style")}} 元素里面的内联样式，这种情况下，前置部分可以省略，所包含的规则集只会在 `<style>` 元素的父级元素下有效。
 
    ```html
    <parent-element>
      <style>
        @scope {
-         rulesets
+         规则集
        }
      </style>
    </parent-element>
    ```
 
-   也可以将内联 `@scope` 范围限制选择器组合在一起，像这样 `@scope to (scope limit) { ... }`。
+   也可以将内联 `@scope` 与域限选择器组合在一起，像这样 `@scope to (scope limit) { ... }`。
 
-## 说明
+## 描述
 
 一个复杂的网页可能包括页眉、页脚，新闻文章、地图、媒体播放器、广告和其它组件。随着复杂性越来越高，有效地管理这些组件的样式变得尤为重要，有效地定义样式的范围有助于降低复杂性。我们来看看下面的 DOM 树：
 
@@ -83,7 +83,7 @@ body
 `.article-body` 域根选择器定义了 DOM 树作用域的上边界，规则集将应用于该区域内，而 `figure` 域限选择器定义了下边界。最终，只有在具有 `article-body` 类名的 `<section>` 内，但不在 {{htmlelement("figure")}} 内的 {{htmlelement("img")}} 元素会被选中。
 
 > [!NOTE]
-> 这种作用域的界定————具有上下边界的————通常被称为 **环形作用域**。
+> 这种作用域的界定————具有上下边界的————通常被称为**环形作用域**。
 
 作用域的上边界是包括在内的，而下边界是不包括的。想要更改这一行为，你可以将任一选择器与共同的子选择器结合使用。例如，`@scope (scope root) to (scope limit > *)` 使上下边界包括在内，`@scope (scope root > *) to (scope limit)` 不包括两个边界，而 `@scope (scope root > *) to (scope limit > *)` 将不包括上边界而包括下边界。
 
@@ -132,7 +132,7 @@ body
 }
 ```
 
-实际上，`:scope` 隐式地添加到所有作用域样式规则的前面。如果你想描述得更容易理解，也可以显式地在样式规则前面添加 `:scope` 或者 [嵌套](/zh-CN/docs/Web/CSS/CSS_nesting) 选择器（`&`）以实现同样的效果。
+实际上，`:scope` 隐式地添加到所有作用域样式规则的前面。如果你想描述得更容易理解，也可以显式地在样式规则前面添加 `:scope` 或者[嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)选择器（`&`）以实现同样的效果。
 
 下列区块中的三种规则所选中的元素都是等同的：
 
@@ -164,7 +164,7 @@ body
 
 - 作用域样式规则是无法脱离子树的。像 `:scope + p` 这样的选择操作是无效的，因为它选中的元素处于子树之外。
 
-- 将域根和域限定义为选择器列表是完全有效的，这将会定义多个作用域。下列示例中，样式将应用于任意具有 `article-hero` 或 `article-body` 类名的 `<section>` 中的 `<img>` ，但不会应用于嵌套在 `<figure>` 中的 `<img>`：
+- 将域根和域限定义为选择器列表是完全有效的，这将会定义多个作用域。下列示例中，样式将应用于任意具有 `article-hero` 或 `article-body` 类名的 `<section>` 中的 `<img>`，但不会应用于嵌套在 `<figure>` 中的 `<img>`：
 
   ```css
   @scope (.article-hero, .article-body) to (figure) {
