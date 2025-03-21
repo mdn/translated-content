@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS request did not succeed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
-original_slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
 l10n:
   sourceCommit: 7c7c127e8486f6b0467cfaaeb8c86ac874bea4b2
 ---
@@ -32,6 +32,6 @@ CORS を使用した {{Glossary("HTTP")}} 要求が、ネットワークまた�
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)

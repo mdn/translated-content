@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
@@ -39,7 +39,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties
 
 现在我们想为待办事项列表添加一个摘要计数器。这在为用户提供帮助的同时，也保留了列表的标签作为辅助。如果我们在待办事项列表中完成了 5 项中的 2 项，那么我们的摘要可以是“已完成 2/5”。似乎我们应该这样做：
 
-```html
+```vue
 <h2>
   \{{ToDoItems.filter(item =&gt; item.done).length}} out of
   \{{ToDoItems.length}} items completed
@@ -69,7 +69,7 @@ computed: {
 
 添加用于展示摘要的 `<h2>`，并更新 `App` 模板中的 `<ul>`，如下所示：
 
-```html
+```vue
 <h2 id="list-summary">\{{listSummary}}</h2>
 <ul aria-labelledby="list-summary" class="stack-large">
   <li v-for="item in ToDoItems" :key="item.id">
@@ -91,7 +91,7 @@ computed: {
 
 把 `ToDoItem.vue` 中的 `<input>` 元素改成下面这样：
 
-```html
+```vue
 <input
   type="checkbox"
   class="checkbox"
@@ -113,7 +113,7 @@ updateDoneStatus(toDoId) {
 
 我们想在 `ToDoItem` 触发 `checkbox-changed` 事件时运行此方法，并传入它的 `item.id` 作为参数。将你的 `<to-do-item></to-do-item>` 标签改成下面这样：
 
-```html
+```vue
 <to-do-item
   :label="item.label"
   :done="item.done"

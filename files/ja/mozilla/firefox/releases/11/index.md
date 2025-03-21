@@ -29,7 +29,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 - {{ domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()") }} メソッドは引数がない形式をサポートしなくなりました。このような形式はあまり使用されておらず、また標準化される見込みもありません。
 - 画像としての SVG が、[canvas を汚染せずに](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) canvas 内へ描画できるようになりました。
 - `GeoPositionAddress`インターフェイスの非標準プロパティである `countryCode` を削除しました。`nsIDOMGeoPositionAddress` をご覧ください。
-- [Server-sent events](/ja/docs/Web/API/Server-sent_events) が [CORS](/ja/docs/Web/HTTP/CORS) をサポートしました。
+- [Server-sent events](/ja/docs/Web/API/Server-sent_events) が [CORS](/ja/docs/Web/HTTP/Guides/CORS) をサポートしました。
 - 従来、ユーザーがリンクをたどると {{ domxref("window.navigator") }} オブジェクトでセットしている値は新しいページが保持していました。これが、新しいページ用に新たな `navigator` オブジェクトを作成するようになりました。これにより、Firefox は他のブラウザーと同様に動作します。
 
 ### CSS

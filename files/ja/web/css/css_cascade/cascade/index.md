@@ -391,7 +391,7 @@ p {
 
 ## 関連情報
 
-- [とても簡単な CSS カスケードの紹介](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [とても簡単な CSS カスケードの紹介](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/Syntax)
   - [アットルール](/ja/docs/Web/CSS/At-rule)

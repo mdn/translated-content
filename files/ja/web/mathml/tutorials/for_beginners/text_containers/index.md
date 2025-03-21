@@ -38,7 +38,7 @@ l10n:
 
 ## ちょっとした意味づけ
 
-[MathML を始めよう](/ja/docs/Web/MathML/Guides/Getting_started)の記事で、 MathML の数式中のテキストは `<mn>` や `<mo>` のような固有のコンテナー要素に包まれていることに注目しました。より一般的には、 MathML 数式のすべてのテキストはトークン要素と呼ばれるコンテナーの中に記載しなければなりません。さらに、 MathML ではテキストコンテンツの様々な意味を判別するために、複数のトークン要素を指定しています。
+[MathML を始めよう](/ja/docs/Web/MathML/Tutorials/For_beginners/Getting_started)の記事で、 MathML の数式中のテキストは `<mn>` や `<mo>` のような固有のコンテナー要素に包まれていることに注目しました。より一般的には、 MathML 数式のすべてのテキストはトークン要素と呼ばれるコンテナーの中に記載しなければなりません。さらに、 MathML ではテキストコンテンツの様々な意味を判別するために、複数のトークン要素を指定しています。
 
 - `<mi>` 要素は「識別子」を表します。この「識別子」は記号でも任意のテキストでもかまいません。例えば、`<mi>x</mi>` （変数）、`<mi>cos</mi>` （関数名）、`<mi>π</mi>`（記号定数）などです。
 - `<mn>` 要素は「数値リテラル」、または数値リテラルとして表示されるべき他のデータを表します。例えば、`<mn>2</mn>` （整数）、 `<mn>0.123</mn>` （10 進数）、 `<mn>0xFFEF</mn>` （16 進数値）などです。
@@ -440,13 +440,13 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 ## まとめ
 
-この記事では、テキストコンテナーとして使用されるいくつかのトークン要素とその意味付け、すなわち `<mi>` （識別子）、 `<mn>` （数値）、 `<mo>` （演算子）、 `<mtext>` （汎用テキスト）について学びました。ここまで、数式でよく使われる特殊な Unicode 文字を見て、 `<mi>` と `<mo>` 要素の監視できる動作の概要を述べてきました。次の記事では、トークン要素によって[分数と根号](/ja/docs/Web/MathML/Guides/Fractions_and_roots)のような複雑な式を作る方法を見ていきます。
+この記事では、テキストコンテナーとして使用されるいくつかのトークン要素とその意味付け、すなわち `<mi>` （識別子）、 `<mn>` （数値）、 `<mo>` （演算子）、 `<mtext>` （汎用テキスト）について学びました。ここまで、数式でよく使われる特殊な Unicode 文字を見て、 `<mi>` と `<mo>` 要素の監視できる動作の概要を述べてきました。次の記事では、トークン要素によって[分数と根号](/ja/docs/Web/MathML/Tutorials/For_beginners/Fractions_and_roots)のような複雑な式を作る方法を見ていきます。
 
 ## 関連情報
 
-- [`<mi>` 要素](/ja/docs/Web/MathML/Element/mi)
-- [`<mn>` 要素](/ja/docs/Web/MathML/Element/mn)
-- [`<mo>` 要素](/ja/docs/Web/MathML/Element/mo)
-- [`<mtext>` 要素](/ja/docs/Web/MathML/Element/mtext)
+- [`<mi>` 要素](/ja/docs/Web/MathML/Reference/Element/mi)
+- [`<mn>` 要素](/ja/docs/Web/MathML/Reference/Element/mn)
+- [`<mo>` 要素](/ja/docs/Web/MathML/Reference/Element/mo)
+- [`<mtext>` 要素](/ja/docs/Web/MathML/Reference/Element/mtext)
 
 {{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}

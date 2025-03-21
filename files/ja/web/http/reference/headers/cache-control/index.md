@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Cache-Control`** は HTTP のヘッダーフィールドで、 [キャッシュ](/ja/docs/Web/HTTP/Caching) をブラウザーや共有キャッシュ（プロキシーや CDN など）において制御するためのディレクティブ (指示) を、リクエストとレスポンスの両方で保持します。
+**`Cache-Control`** は HTTP のヘッダーフィールドで、 [キャッシュ](/ja/docs/Web/HTTP/Guides/Caching) をブラウザーや共有キャッシュ（プロキシーや CDN など）において制御するためのディレクティブ (指示) を、リクエストとレスポンスの両方で保持します。
 
 <table class="properties">
   <tbody>
@@ -80,13 +80,13 @@ l10n:
 - レスポンスの再利用
   - : キャッシュされたレスポンスを次のリクエストに再利用します。
 - レスポンスの再検証
-  - : オリジンサーバーに、保存されているレスポンスがまだ[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)であるかを確認します。通常は条件付きのリクエストで行います。
+  - : オリジンサーバーに、保存されているレスポンスがまだ[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)であるかを確認します。通常は条件付きのリクエストで行います。
 - 新鮮なレスポンス
-  - : レスポンスが[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)であることを示します。これは通常、リクエストの指示に応じて、レスポンスを後続のリクエストに再利用できることを意味します。
+  - : レスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)であることを示します。これは通常、リクエストの指示に応じて、レスポンスを後続のリクエストに再利用できることを意味します。
 - 古いレスポンス
-  - : レスポンスが[古い状態](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)になっていることを示します。これは通常、レスポンスがそのままでは再利用できないことを意味します。キャッシュストレージは古いレスポンスをすぐに削除する必要はありません。なぜなら、再検証によってレスポンスが古いものから再び新しい状態に変わる可能性があるからです。
+  - : レスポンスが[古い状態](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)になっていることを示します。これは通常、レスポンスがそのままでは再利用できないことを意味します。キャッシュストレージは古いレスポンスをすぐに削除する必要はありません。なぜなら、再検証によってレスポンスが古いものから再び新しい状態に変わる可能性があるからです。
 - Age
-  - : レスポンスが生成されてからの経過時間です。レスポンスが[新しいか古いか](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)の基準となります。
+  - : レスポンスが生成されてからの経過時間です。レスポンスが[新しいか古いか](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)の基準となります。
 
 ## ディレクティブ
 
@@ -96,15 +96,15 @@ l10n:
 
 #### `max-age`
 
-レスポンスディレクティブの`max-age=N` は、レスポンスが生成されてから _N_ 秒後まで、レスポンスが[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なままであることを示します。
+レスポンスディレクティブの`max-age=N` は、レスポンスが生成されてから _N_ 秒後まで、レスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なままであることを示します。
 
 ```http
 Cache-Control: max-age=604800
 ```
 
-キャッシュがこのリクエストを保存し、[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なうちに後続のリクエストに再利用できることを示します。
+キャッシュがこのリクエストを保存し、[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なうちに後続のリクエストに再利用できることを示します。
 
-なお、`max-age` はレスポンスを受信してからの経過時間ではなく、オリジンサーバーでレスポンスが生成されてからの経過時間であることに注意してください。したがって、他のキャッシュ（レスポンスが通ったネットワーク経路上）が 100 秒間保存した場合（レスポンスヘッダーフィールドの `Age` で示される）、ブラウザーキャッシュはその[鮮度の有効期間](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)から 100 秒を差し引きます。
+なお、`max-age` はレスポンスを受信してからの経過時間ではなく、オリジンサーバーでレスポンスが生成されてからの経過時間であることに注意してください。したがって、他のキャッシュ（レスポンスが通ったネットワーク経路上）が 100 秒間保存した場合（レスポンスヘッダーフィールドの `Age` で示される）、ブラウザーキャッシュはその[鮮度の有効期間](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)から 100 秒を差し引きます。
 
 `max-age` の値が負数（`-1` など）である場合、または整数ではない場合（`3599.99` など）、キャッシュの動作は特定されません。キャッシュは、値が `0` であるかのように処理することが推奨されます（これは HTTP 仕様書の「[鮮度の有効期間の計算](https://httpwg.org/specs/rfc9111.html#calculating.freshness.lifetime)」の章に記載されています）。
 
@@ -115,7 +115,7 @@ Age: 100
 
 #### `s-maxage`
 
-レスポンスディレクティブの `s-maxage` も、レスポンスが[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)である期間を示します(`max-age` に似ています)。しかし、これは共有キャッシュ特有のもので、共有キャッシュは `s-maxage` と `max-age` の両方が存在した場合 `max-age` を無視します。
+レスポンスディレクティブの `s-maxage` も、レスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)である期間を示します(`max-age` に似ています)。しかし、これは共有キャッシュ特有のもので、共有キャッシュは `s-maxage` と `max-age` の両方が存在した場合 `max-age` を無視します。
 
 ```http
 Cache-Control: s-maxage=604800
@@ -135,7 +135,7 @@ Cache-Control: no-cache
 
 #### `must-revalidate`
 
-レスポンスディレクティブの `must-revalidate` は、レスポンスがキャッシュに保存され、[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なうちは再利用できることを示します。[古くなった](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)レスポンスは、再利用する前にオリジンサーバーで検証されなければなりません。
+レスポンスディレクティブの `must-revalidate` は、レスポンスがキャッシュに保存され、[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なうちは再利用できることを示します。[古くなった](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)レスポンスは、再利用する前にオリジンサーバーで検証されなければなりません。
 
 通常、`must-revalidate` は `max-age` と共に使用されます。
 
@@ -143,7 +143,7 @@ Cache-Control: no-cache
 Cache-Control: max-age=604800, must-revalidate
 ```
 
-HTTP では、キャッシュがオリジンサーバーから切り離されたときに、[古いレスポンス](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)を再利用できます。 `must-revalidate` はそれを防ぐための方法で、キャッシュは保存されたレスポンスを元のサーバーで再検証するか、それが検証不可能な場合は 504 (Gateway Timeout) のレスポンスを生成します。
+HTTP では、キャッシュがオリジンサーバーから切り離されたときに、[古いレスポンス](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)を再利用できます。 `must-revalidate` はそれを防ぐための方法で、キャッシュは保存されたレスポンスを元のサーバーで再検証するか、それが検証不可能な場合は 504 (Gateway Timeout) のレスポンスを生成します。
 
 #### `proxy-revalidate`
 
@@ -211,7 +211,7 @@ Cache-Control: must-understand, no-store
 
 #### `immutable`
 
-レスポンスディレクティブの `immutable` は、レスポンスが[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)な間は更新されないことを示します。
+レスポンスディレクティブの `immutable` は、レスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)な間は更新されないことを示します。
 
 ```http
 Cache-Control: public, max-age=604800, immutable
@@ -224,7 +224,7 @@ Cache-Control: public, max-age=604800, immutable
 ```
 
 ユーザーがブラウザーをリロードすると、ブラウザーはオリジンサーバーに検証のための条件付きリクエストを送信します。しかし、これらの静的リソースは、ユーザーがブラウザーをリロードしても決して変更されないため、再検証する必要がありません。
-`immutable` はキャッシュにレスポンスが[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)な間は不変であることを伝え、サーバーへの不要な条件付きリクエストを回避します。
+`immutable` はキャッシュにレスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)な間は不変であることを伝え、サーバーへの不要な条件付きリクエストを回避します。
 
 リソースに cache-busting パターンを使用し、長い `max-age` を適用すると、再検証を避けるために `immutable` も追加することができます。
 
@@ -236,21 +236,21 @@ Cache-Control: public, max-age=604800, immutable
 Cache-Control: max-age=604800, stale-while-revalidate=86400
 ```
 
-上記の例では、レスポンスがは[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なのは 7 日間（604800 秒間）です。7 日後、レスポンスは[古く](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なりますが、キャッシュは翌日（86400 秒後）のリクエストに再利用できます。ただし、バックグラウンドでレスポンスを再検証することが条件です。
+上記の例では、レスポンスがは[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なのは 7 日間（604800 秒間）です。7 日後、レスポンスは[古く](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なりますが、キャッシュは翌日（86400 秒後）のリクエストに再利用できます。ただし、バックグラウンドでレスポンスを再検証することが条件です。
 
-再検証により、キャッシュは再び[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)になるため、クライアントはその期間中は常に[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)であったかのように見えます。これにより再検証の遅延ペナルティを効果的にクライアントから隠蔽できます。
+再検証により、キャッシュは再び[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)になるため、クライアントはその期間中は常に[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)であったかのように見えます。これにより再検証の遅延ペナルティを効果的にクライアントから隠蔽できます。
 
-その間にリクエストがなければ、キャッシュは[古く](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なり、次のリクエストは正常に再検証されます。
+その間にリクエストがなければ、キャッシュは[古く](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なり、次のリクエストは正常に再検証されます。
 
 #### `stale-if-error`
 
-レスポンスディレクティブの `stale-if-error` は、オリジンサーバーがエラー（500、502、503、504）でレスポンスを返したときに、キャッシュが[古い](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)レスポンスを再利用できることを指示します。
+レスポンスディレクティブの `stale-if-error` は、オリジンサーバーがエラー（500、502、503、504）でレスポンスを返したときに、キャッシュが[古い](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)レスポンスを再利用できることを指示します。
 
 ```http
 Cache-Control: max-age=604800, stale-if-error=86400
 ```
 
-上記の例では、レスポンスが[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なのは 7 日間（604800 秒間）です。7 日を過ぎると[古く](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なりますが、サーバーがエラーを返した場合はさらに 1 日（86400 秒間）利用できます。
+上記の例では、レスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なのは 7 日間（604800 秒間）です。7 日を過ぎると[古く](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なりますが、サーバーがエラーを返した場合はさらに 1 日（86400 秒間）利用できます。
 
 `stale-if-error` の時間が経過した後、クライアントは生成されたエラーを受け取ります。
 
@@ -264,7 +264,7 @@ Cache-Control: max-age=604800, stale-if-error=86400
 Cache-Control: no-cache
 ```
 
-`no-cache` は、キャッシュに[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)なレスポンスがある場合でも、クライアントが最新のレスポンスを要求することができるようにします。
+`no-cache` は、キャッシュに[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)なレスポンスがある場合でも、クライアントが最新のレスポンスを要求することができるようにします。
 
 ブラウザーは通常、ユーザーがページを**強制再読み込み**したときに、リクエストに `no-cache` を追加します。
 
@@ -298,7 +298,7 @@ Cache-Control: max-age=0
 
 #### `max-stale`
 
-`max-stale=N` リクエストディレクティブは、クライアントが _N_ 秒以内に[期限切れ](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)となるレスポンスを格納することを示すものです。
+`max-stale=N` リクエストディレクティブは、クライアントが _N_ 秒以内に[期限切れ](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)となるレスポンスを格納することを示すものです。
 _N_ の値が指定されていない場合、クライアントは期限切れのレスポンスをどのタイミングでも受け入れることになります。
 
 ```http
@@ -313,7 +313,7 @@ Cache-Control: max-stale=3600
 
 #### `min-fresh`
 
-リクエストディレクティブの `min-fresh` は、クライアントが少なくとも _N_ 秒間[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)な保存されたレスポンスを許可することを示します。
+リクエストディレクティブの `min-fresh` は、クライアントが少なくとも _N_ 秒間[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)な保存されたレスポンスを許可することを示します。
 
 ```http
 Cache-Control: min-fresh=600
@@ -321,7 +321,7 @@ Cache-Control: min-fresh=600
 
 上記の場合、51 分前に `Cache-Control: max-age=3600` を持つレスポンスがキャッシュに保存されていた場合、キャッシュはそのレスポンスを再利用できません。
 
-クライアントがこのヘッダーを使用できるのは、ユーザーのレスポンスが[新鮮](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)であることだけでなく、一定期間更新されないことも要求する場合です。
+クライアントがこのヘッダーを使用できるのは、ユーザーのレスポンスが[新鮮](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)であることだけでなく、一定期間更新されないことも要求する場合です。
 
 主要なブラウザーは `min-fresh` を使ったリクエストに対応していないことに注意してください。
 
@@ -331,7 +331,7 @@ Cache-Control: min-fresh=600
 
 #### `only-if-cached`
 
-クライアントは、キャッシュがすでに保存済みのレスポンスを転送する必要があることを示します。キャッシュにレスポンスが保存されている場合、それが再利用されます。キャッシュされたレスポンスが利用できない場合は、 [504 Gateway Timeout](/ja/docs/Web/HTTP/Status/504) レスポンスが返されます。
+クライアントは、キャッシュがすでに保存済みのレスポンスを転送する必要があることを示します。キャッシュにレスポンスが保存されている場合、それが再利用されます。キャッシュされたレスポンスが利用できない場合は、 [504 Gateway Timeout](/ja/docs/Web/HTTP/Reference/Status/504) レスポンスが返されます。
 
 ## 用途
 
@@ -437,7 +437,7 @@ Cache-Control: max-age=0, must-revalidate
 
 ## 関連情報
 
-- [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching)
+- [HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)

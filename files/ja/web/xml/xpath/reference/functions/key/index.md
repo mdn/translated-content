@@ -19,7 +19,7 @@ key( keyname, value )
 ### 引数
 
 - `keyname`
-  - : 使用される [`xsl:key`](/ja/docs/Web/XSLT/Element/key) 要素の名前を含む文字列。
+  - : 使用される [`xsl:key`](/ja/docs/Web/XML/XSLT/Element/key) 要素の名前を含む文字列。
 - `value`
   - : 返されるノード集合には、指定されたキーに対してこの値を持つすべてのノードが含まれます。
 
@@ -29,7 +29,7 @@ key( keyname, value )
 
 ### メモ
 
-- [`xsl:key`](/ja/docs/Web/XSLT/Element/key) 要素は、指定された要素がキーと一致するために使用される属性を定義します
+- [`xsl:key`](/ja/docs/Web/XML/XSLT/Element/key) 要素は、指定された要素がキーと一致するために使用される属性を定義します
 
 この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリーの一部ではありません。
 

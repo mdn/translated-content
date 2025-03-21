@@ -64,7 +64,7 @@ li {
 
       - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
-      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
+      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
 
     - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
@@ -83,13 +83,13 @@ li {
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
     - SMS テキストメッセージを示す `sms:` URL
-    - [`javascript:` URL](/ja/docs/Web/URI/Schemes/javascript) による実行可能なコード
+    - [`javascript:` URL](/ja/docs/Web/URI/Reference/Schemes/javascript) による実行可能なコード
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
     他にも、次のようにして URL 機能でリソースの特定の部分を記載することができます。
 
     - ページの節を示すフラグメント URL
-    - [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)で指定されたテキストの部分
+    - [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)で指定されたテキストの部分
     - メディアファイルの一部を示すメディアフラグメント
 
 - `hreflang`
@@ -98,7 +98,7 @@ li {
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
 
-  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)を送信するかです。
+  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)を送信するかです。
 
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。
@@ -564,4 +564,4 @@ document
 - {{CSSxRef(":link")}} は CSS の擬似クラスで、 `<a>` 要素に有効な `href` 属性がついている場合に一致します。
 - {{CSSxRef(":visited")}} は CSS の擬似クラスで、`<a>` 要素の `href` 属性が、過去にユーザーが訪問したことのある URL である場合に一致します。
 - {{CSSxRef(":any-link")}} は CSS の擬似クラスで、`<a>` 要素に `href` 属性がある場合に一致します。
-- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)は、URL に追加するユーザーエージェント指示で、コンテンツ作成者が ID を使用せずに、ページ上の固有のテキストにリンクすることを可能にするものです。
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)は、URL に追加するユーザーエージェント指示で、コンテンツ作成者が ID を使用せずに、ページ上の固有のテキストにリンクすることを可能にするものです。

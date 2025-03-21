@@ -74,7 +74,7 @@ l10n:
 その他の使い方のメモです。
 
 - `<link>` 要素は[リンク種別](https://html.spec.whatwg.org/multipage/links.html#body-ok)が **body-ok** であるかどうかによって、 {{HTMLElement("head")}} 要素または {{HTMLElement("body")}} 要素のどちらかに置くことができます。例えば `stylesheet` リンク種別は body-ok であり、`<link rel="stylesheet">` を body 要素内に置くことができます。しかし、これは従うべき良い方法ではありません。 `<link>` 要素は `<head>` に入れて本文から離した方が分かりやすくなります。
-- サイトにファビコンを設定するために `<link>` を使用する場合で、サイトがセキュリティの強化のためにコンテンツセキュリティポリシー (CSP) を使用している場合、ファビコンにポリシーが適用されます。ファビコンが読み込まれないという問題が発生したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを禁止していないかどうか確認してください。
+- サイトにファビコンを設定するために `<link>` を使用する場合で、サイトがセキュリティの強化のためにコンテンツセキュリティポリシー (CSP) を使用している場合、ファビコンにポリシーが適用されます。ファビコンが読み込まれないという問題が発生したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)がアクセスを禁止していないかどうか確認してください。
 - HTML および XHTML の仕様では `<link>` 要素向けのイベントハンドラーを定義していますが、それらがどのように使用されるかは不明確です。
 - XHTML 1.0 では `<link>` のような{{glossary("void element", "空要素")}}では、 `<link />` のように末尾のスラッシュが必要です。
 - WebTV は `rel` に `next` の値を使用して、一連の文書の次のページを先読みすることに対応しています。
@@ -86,7 +86,7 @@ l10n:
 - `as`
 
   - : この属性は、 [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload) を `<link>` 要素に設定した場合に必要となり、また [`rel="modulepreload"`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) を設定した場合はオプションですが、それ以外は使用すべきではありません。
-    これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
+    これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
 
     さらに、 `rel="preload"` はこれをリクエストの優先度付の信号として使用します。下記の表はこの属性に有効な値と、適用先の要素またはリソースの一覧です。
 

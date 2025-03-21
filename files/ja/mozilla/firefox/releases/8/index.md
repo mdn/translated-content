@@ -76,8 +76,8 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 ### MathML
 
-- [`<math>`](/ja/docs/Web/MathML/Element/math) 要素に `displaystyle` 属性のサポートが追加されました。
-- [`<mtable>`](/ja/docs/Web/MathML/Element/mtable) 要素の `align` において、_負の行数_ の解釈が修正されました。
+- [`<math>`](/ja/docs/Web/MathML/Reference/Element/math) 要素に `displaystyle` 属性のサポートが追加されました。
+- [`<mtable>`](/ja/docs/Web/MathML/Reference/Element/mtable) 要素の `align` において、_負の行数_ の解釈が修正されました。
 
 ### 開発者ツール
 

@@ -8,11 +8,11 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`304 Not Modified`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードは、リクエストされたリソースを再送する必要がないことを示します。
+HTTP **`304 Not Modified`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードは、リクエストされたリソースを再送する必要がないことを示します。
 
-このレスポンスコードは、リクエストが[条件付き](/ja/docs/Web/HTTP/Conditional_requests)の {{HTTPMethod("GET")}} や {{HTTPMethod("HEAD")}} リクエストに {{HTTPHeader("If-None-Match")}} もしくは {{HTTPHeader("If-Modified-Since")}} ヘッダーが付いており、条件が 'false' と評価された時に送信されます。
+このレスポンスコードは、リクエストが[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)の {{HTTPMethod("GET")}} や {{HTTPMethod("HEAD")}} リクエストに {{HTTPHeader("If-None-Match")}} もしくは {{HTTPHeader("If-Modified-Since")}} ヘッダーが付いており、条件が 'false' と評価された時に送信されます。
 これは、クライアントがキャッシュしたリソースがまだ有効であり、条件が 'true' と評価された場合、サーバーはリソースとともに {{HTTPStatus("200", "200 OK")}} レスポンスを送信したであろうことを確認します。
-詳細については、 [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching)を参照してください。
+詳細については、 [HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)を参照してください。
 
 レスポンスには本体を含んではならず、 {{HTTPStatus("200")}} レスポンスで送信されるであろう次のようなヘッダーを記載しなければなりません。
 
@@ -114,8 +114,8 @@ Alt-Svc: clear
 
 ## 関連情報
 
-- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Redirections)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
-- [HTTP 条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)
+- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Guides/Redirections)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [HTTP 条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}

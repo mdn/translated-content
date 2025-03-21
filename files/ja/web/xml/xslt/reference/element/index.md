@@ -30,38 +30,38 @@ l10n:
 
 続く要素の注釈には説明、構文リスト、必須およびオプションの属性のリスト、タイプと位置の説明、W3C 勧告のソース、および現在の Gecko サポートの程度の説明が含まれます。
 
-- [`<xsl:apply-imports>`](/ja/docs/Web/XSLT/Element/apply-imports)
-- [`<xsl:apply-templates>`](/ja/docs/Web/XSLT/Element/apply-templates)
-- [`<xsl:attribute>`](/ja/docs/Web/XSLT/Element/attribute)
-- [`<xsl:attribute-set>`](/ja/docs/Web/XSLT/Element/attribute-set)
-- [`<xsl:call-template>`](/ja/docs/Web/XSLT/Element/call-template)
-- [`<xsl:choose>`](/ja/docs/Web/XSLT/Element/choose)
-- [`<xsl:comment>`](/ja/docs/Web/XSLT/Element/comment)
-- [`<xsl:copy>`](/ja/docs/Web/XSLT/Element/copy)
-- [`<xsl:copy-of>`](/ja/docs/Web/XSLT/Element/copy-of)
-- [`<xsl:decimal-format>`](/ja/docs/Web/XSLT/Element/decimal-format)
-- [`<xsl:element>`](/ja/docs/Web/XSLT/Element/element)
-- [`<xsl:fallback>`](/ja/docs/Web/XSLT/Element/fallback) _(対応外)_
-- [`<xsl:for-each>`](/ja/docs/Web/XSLT/Element/for-each)
-- [`<xsl:if>`](/ja/docs/Web/XSLT/Element/if)
-- [`<xsl:import>`](/ja/docs/Web/XSLT/Element/import) _(ほぼ対応)_
-- [`<xsl:include>`](/ja/docs/Web/XSLT/Element/include)
-- [`<xsl:key>`](/ja/docs/Web/XSLT/Element/key)
-- [`<xsl:message>`](/ja/docs/Web/XSLT/Element/message)
-- [`<xsl:namespace-alias>`](/ja/docs/Web/XSLT/Element/namespace-alias) _(対応外)_
-- [`<xsl:number>`](/ja/docs/Web/XSLT/Element/number) _(一部対応)_
-- [`<xsl:otherwise>`](/ja/docs/Web/XSLT/Element/otherwise)
-- [`<xsl:output>`](/ja/docs/Web/XSLT/Element/output) _(一部対応)_
-- [`<xsl:param>`](/ja/docs/Web/XSLT/Element/param)
-- [`<xsl:preserve-space>`](/ja/docs/Web/XSLT/Element/preserve-space)
-- [`<xsl:processing-instruction>`](/ja/docs/Web/XSLT/Element/processing-instruction)
-- [`<xsl:sort>`](/ja/docs/Web/XSLT/Element/sort)
-- [`<xsl:strip-space>`](/ja/docs/Web/XSLT/Element/strip-space)
-- [`<xsl:stylesheet>`](/ja/docs/Web/XSLT/Element/stylesheet) _(一部対応)_
-- [`<xsl:template>`](/ja/docs/Web/XSLT/Element/template)
-- [`<xsl:text>`](/ja/docs/Web/XSLT/Element/text) _(一部対応)_
-- [`<xsl:transform>`](/ja/docs/Web/XSLT/Element/transform)
-- [`<xsl:value-of>`](/ja/docs/Web/XSLT/Element/value-of) _(一部対応)_
-- [`<xsl:variable>`](/ja/docs/Web/XSLT/Element/variable)
-- [`<xsl:when>`](/ja/docs/Web/XSLT/Element/when)
-- [`<xsl:with-param>`](/ja/docs/Web/XSLT/Element/with-param)
+- [`<xsl:apply-imports>`](/ja/docs/Web/XML/XSLT/Element/apply-imports)
+- [`<xsl:apply-templates>`](/ja/docs/Web/XML/XSLT/Element/apply-templates)
+- [`<xsl:attribute>`](/ja/docs/Web/XML/XSLT/Element/attribute)
+- [`<xsl:attribute-set>`](/ja/docs/Web/XML/XSLT/Element/attribute-set)
+- [`<xsl:call-template>`](/ja/docs/Web/XML/XSLT/Element/call-template)
+- [`<xsl:choose>`](/ja/docs/Web/XML/XSLT/Element/choose)
+- [`<xsl:comment>`](/ja/docs/Web/XML/XSLT/Element/comment)
+- [`<xsl:copy>`](/ja/docs/Web/XML/XSLT/Element/copy)
+- [`<xsl:copy-of>`](/ja/docs/Web/XML/XSLT/Element/copy-of)
+- [`<xsl:decimal-format>`](/ja/docs/Web/XML/XSLT/Element/decimal-format)
+- [`<xsl:element>`](/ja/docs/Web/XML/XSLT/Element/element)
+- [`<xsl:fallback>`](/ja/docs/Web/XML/XSLT/Element/fallback) _(対応外)_
+- [`<xsl:for-each>`](/ja/docs/Web/XML/XSLT/Element/for-each)
+- [`<xsl:if>`](/ja/docs/Web/XML/XSLT/Element/if)
+- [`<xsl:import>`](/ja/docs/Web/XML/XSLT/Element/import) _(ほぼ対応)_
+- [`<xsl:include>`](/ja/docs/Web/XML/XSLT/Element/include)
+- [`<xsl:key>`](/ja/docs/Web/XML/XSLT/Element/key)
+- [`<xsl:message>`](/ja/docs/Web/XML/XSLT/Element/message)
+- [`<xsl:namespace-alias>`](/ja/docs/Web/XML/XSLT/Element/namespace-alias) _(対応外)_
+- [`<xsl:number>`](/ja/docs/Web/XML/XSLT/Element/number) _(一部対応)_
+- [`<xsl:otherwise>`](/ja/docs/Web/XML/XSLT/Element/otherwise)
+- [`<xsl:output>`](/ja/docs/Web/XML/XSLT/Element/output) _(一部対応)_
+- [`<xsl:param>`](/ja/docs/Web/XML/XSLT/Element/param)
+- [`<xsl:preserve-space>`](/ja/docs/Web/XML/XSLT/Element/preserve-space)
+- [`<xsl:processing-instruction>`](/ja/docs/Web/XML/XSLT/Element/processing-instruction)
+- [`<xsl:sort>`](/ja/docs/Web/XML/XSLT/Element/sort)
+- [`<xsl:strip-space>`](/ja/docs/Web/XML/XSLT/Element/strip-space)
+- [`<xsl:stylesheet>`](/ja/docs/Web/XML/XSLT/Element/stylesheet) _(一部対応)_
+- [`<xsl:template>`](/ja/docs/Web/XML/XSLT/Element/template)
+- [`<xsl:text>`](/ja/docs/Web/XML/XSLT/Element/text) _(一部対応)_
+- [`<xsl:transform>`](/ja/docs/Web/XML/XSLT/Element/transform)
+- [`<xsl:value-of>`](/ja/docs/Web/XML/XSLT/Element/value-of) _(一部対応)_
+- [`<xsl:variable>`](/ja/docs/Web/XML/XSLT/Element/variable)
+- [`<xsl:when>`](/ja/docs/Web/XML/XSLT/Element/when)
+- [`<xsl:with-param>`](/ja/docs/Web/XML/XSLT/Element/with-param)

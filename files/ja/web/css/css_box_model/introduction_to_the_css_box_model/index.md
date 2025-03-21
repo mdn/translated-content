@@ -43,7 +43,7 @@ l10n:
 
 - [レイアウトと包含ブロック](/ja/docs/Web/CSS/Containing_block)
 - [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)
-- [カスケード、詳細度、継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/Syntax)
   - [アットルール](/ja/docs/Web/CSS/At-rule)

@@ -10,7 +10,7 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`trusted-types`** {{experimental_inline}} ディレクティブは、既知の DOM XSS シンクの使用を、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れる定義済みの関数のセットに制限するようにユーザエージェントに指示します。
 
-**[`require-trusted-types-for`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)** ディレクティブと一緒に使用することで、作者は DOM への値の書き込みを守るルールを定義することができ、 DOM XSS 攻撃の対象をウェブアプリケーションのコードベースの小さな孤立した部分に減らすことができ、監視やコードレビューが容易になります。このディレクティブは、 Trusted Types API から `trustedTypes.createPolicy` で作成された信頼できる型のポリシー名の許可リストを宣言します。
+**[`require-trusted-types-for`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)** ディレクティブと一緒に使用することで、作者は DOM への値の書き込みを守るルールを定義することができ、 DOM XSS 攻撃の対象をウェブアプリケーションのコードベースの小さな孤立した部分に減らすことができ、監視やコードレビューが容易になります。このディレクティブは、 Trusted Types API から `trustedTypes.createPolicy` で作成された信頼できる型のポリシー名の許可リストを宣言します。
 
 ## 構文
 

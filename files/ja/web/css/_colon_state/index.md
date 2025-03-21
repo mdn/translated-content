@@ -105,5 +105,5 @@ question-box::part(checkbox):state(checked) {
 
 - [`CustomStateSet`](/ja/docs/Web/API/CustomStateSet)
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-- [擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [カスタム状態と CSS のカスタム状態擬似クラスセレクター](/ja/docs/Web/API/Web_components/Using_custom_elements#カスタム状態と_css_のカスタム状態擬似クラスセレクター)（[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)）

@@ -310,7 +310,7 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{domxref("Element/input_event","input")}}
   - : ユーザー操作の結果として要素の値が変更されたときに発行されます。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
-  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
+  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)に違反したときに発生します。
 - {{domxref("Element/wheel_event","wheel")}}
   - : ユーザーがポインティングデバイス（普通はマウス）のホイールボタンを回転させたときに発行されます。
 

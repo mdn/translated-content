@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS request not HTTP"
 slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
-original_slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
@@ -38,6 +38,6 @@ Firefox や Chrome を含む多くのブラウザーは現在、（既定では�
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
 - [URL とは](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)

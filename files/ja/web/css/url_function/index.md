@@ -78,7 +78,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
         URL を引用符なしで書く場合は、バックスラッシュを (`\`) を URL に含まれる括弧、ホワイトスペース文字、単一引用符 (`'`)、二重引用符 (`"`) の前に使用してください。
 
     - パス
-      - : [SVG 図形](/ja/docs/Web/SVG/Tutorial/Basic_Shapes)または　[SVG フィルター](/ja/docs/Web/SVG/Element/filter)の ID への参照です。
+      - : [SVG 図形](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_Shapes)または　[SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の ID への参照です。
 
 - `<url-modifier>`
   - : 将来的には、`url()` 関数で修飾子、識別子、または関数記法を指定して、URL 文字列の意味を変更できるようになるかもしれません。これはサポートされておらず、仕様書でも完全に定義されていません。

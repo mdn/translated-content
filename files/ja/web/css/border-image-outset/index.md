@@ -138,5 +138,5 @@ border-image-outset: unset;
 ## 関連情報
 
 - [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/)（MDN ブログ、2023）

@@ -278,7 +278,7 @@ button {
 ```
 
 この例では、フォームから "`user_name`", "`user_email`", "`user_message`" という 3 つのデータが送信されます。
-このデータは、 [HTTP の `POST`](/ja/docs/Web/HTTP/Methods/POST) メソッドを用いて "`/my-handling-form-page`" という URL に送信されます。
+このデータは、 [HTTP の `POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) メソッドを用いて "`/my-handling-form-page`" という URL に送信されます。
 
 サーバー側では、 URL "`/my-handling-form-page`" にあるスクリプトが、 HTTP リクエストに含まれる 3 つのキー/値の項目のリストとしてデータを受け取ることになります。
 このスクリプトがどのようにデータを処理するかは、あなた次第です。

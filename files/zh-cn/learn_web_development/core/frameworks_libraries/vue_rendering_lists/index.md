@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
@@ -77,10 +77,10 @@ export default {
 
 为了确保 Vue 能够准确地比较 `key` 属性，它们需要是字符串或数字值。虽然使用名字字段很好，但这个字段最终将由用户输入控制，这意味着我们不能保证名字是唯一的。然而，我们可以使用 `lodash.uniqueid()`，就像我们在上一篇文章中做的那样。
 
-1. 使用导入 `ToDoItem` 组件相同的方法导入 `lodash.uniqueid` 到 `App` 组件。
+1. 使用导入 `ToDoItem` 组件相同的方法导入 `nanoid` 到 `App` 组件。
 
    ```js
-   import uniqueId from "lodash.uniqueid";
+   import { nanoid } from "nanoid";
    ```
 
 2. 添加 `id` 字段到 `ToDoItems` 数组的每一个元素中，并且将他们赋值为 `uniqueId('todo-')`。
@@ -89,7 +89,8 @@ export default {
 
    ```js
    import ToDoItem from "./components/ToDoItem.vue";
-   import uniqueId from "lodash.uniqueid";
+   import { nanoid } from "nanoid";
+
    export default {
      name: "app",
      components: {
@@ -98,14 +99,18 @@ export default {
      data() {
        return {
          ToDoItems: [
-           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
            {
-             id: uniqueId("todo-"),
+             id: "todo-" + nanoid(),
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: uniqueId("todo-"), label: "Have fun", done: true },
-           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           {
+             id: "todo-" + nanoid(),
+             label: "Create a to-do list",
+             done: false,
+           },
          ],
        };
      },
@@ -124,7 +129,7 @@ export default {
 
    这样修改后，`<li>` 标签中的 JavaScript 表达式就可以访问 `item` 了，这意味着我们可以使用 `v-bind` 来传递 `item` 对象的字段给 `ToDoItem` 组件了。这非常有用，我们想让列表中的待办事项的 `label` 值展示到它的 label 中，而不是显示一个静态的“My Todo Item”。此外，我们想让它们的 checked 状态反映它们的 `done` 字段，而不是总设置为 `done="true"`。
 
-4. 把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"`，像下面这样：
+4. 把 `label="My ToDo Item"` 改成 `:label="item.label"`，`:done="false"` 改成 `:done="item.done"`，像下面这样：
 
    ```html
    <ul>
@@ -145,7 +150,7 @@ export default {
 1. 添加一个新的 prop `id` 到 `ToDoItem` 组件。
 2. 标记它为 required，类型是 `String`。
 3. 为防止命名冲突，删除掉 `data` 属性中的 `id` 字段。
-4. 现在不需要再使用 `uniqueId` 了，所以需要删除掉 `import uniqueId from 'lodash.uniqueid';` 这行，否则你的应用会报错。
+4. 现在不需要再使用 `nanoid` 了，所以需要删除掉 `import { nanoid } from 'nanoid';` 这行，否则你的应用会报错。
 
 现在，`ToDoItem` 中的 `<script>` 内容应该如下所示：
 

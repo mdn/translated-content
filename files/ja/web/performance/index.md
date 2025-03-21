@@ -60,7 +60,7 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn/Performanc
 
 - {{glossary('Beacon', 'ビーコン')}}
 - {{glossary('Brotli compression', 'Brotli 圧縮')}}
-- [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)
+- [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)
 - {{glossary('Code splitting', 'コード分割')}}
 - {{glossary('CSSOM')}}
 - {{glossary('Domain sharding', 'ドメインシャーディング')}}
@@ -153,13 +153,13 @@ API
   - [requestIdleCallback()](/ja/docs/Web/API/Window/requestIdleCallback)
 
 - [ビーコン API](/ja/docs/Web/API/Beacon_API)
-- リソースのヒント - [dns-prefetch](/ja/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/ja/docs/Glossary/Prefetch), prerender
+- リソースのヒント - [dns-prefetch](/ja/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/ja/docs/Glossary/Prefetch), prerender
 - [FetchEvent.preloadResponse](/ja/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/ja/docs/Web/API/PerformanceServerTiming)
 
 ヘッダー
 
-- [Content-encoding](/ja/docs/Web/HTTP/Headers/Content-Encoding)
+- [Content-encoding](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding)
 - HTTP/2
 - [gZip](/ja/docs/Glossary/gzip_compression)
 - クライアントヒント
@@ -180,5 +180,5 @@ API
   - [ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API)
 
 - [オフラインとバックグラウンド操作](/ja/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
-- [キャッシュ](/ja/docs/Web/HTTP/Caching)
+- [キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)
 - コンテンツ配信ネットワーク (CDN)

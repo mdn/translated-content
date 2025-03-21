@@ -43,13 +43,13 @@ svg {
 
 - {{SVGAttr("offset")}}
   - : この属性は、グラデーションベクトルに沿って配置される色経由点の位置を定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("stop-color")}}
   - : この属性は、グラデーションの色経由点の色を定義します。 CSS プロパティとして使用することができます。
-    _値の型_: `currentcolor`|[**\<color>**](/ja/docs/Web/SVG/Content_type#color)|[**\<icccolor>**](/ja/docs/Web/SVG/Content_type#icccolor); _既定値_: `black`; _アニメーション_: **可**
+    _値の型_: `currentcolor`|[**\<color>**](/ja/docs/Web/SVG/Guides/Content_type#color)|[**\<icccolor>**](/ja/docs/Web/SVG/Guides/Content_type#icccolor); _既定値_: `black`; _アニメーション_: **可**
 - {{SVGAttr("stop-opacity")}}
   - : この属性はグラデーションの色経由点の (不) 透明度を表します。 CSS プロパティとして使用することができます。
-    _値の型_: [**\<opacity>**](/ja/docs/Web/SVG/Content_type#opacity_value); _既定値_: `1`; _アニメーション_: **可**
+    _値の型_: [**\<opacity>**](/ja/docs/Web/SVG/Guides/Content_type#opacity_value); _既定値_: `1`; _アニメーション_: **可**
 
 ## 使用コンテキスト
 

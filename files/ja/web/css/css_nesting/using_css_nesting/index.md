@@ -151,7 +151,7 @@ label {
 
 ## 結合子
 
-[CSS 結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)は `&` 入れ子セレクターの有無にかかわらず使用することができます。
+[CSS 結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)は `&` 入れ子セレクターの有無にかかわらず使用することができます。
 
 ### 例
 
@@ -405,7 +405,7 @@ h2 {
 ```
 
 > [!WARNING]
-> これは CSS の入れ子ではできません。[結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)を用いない場合、入れ子のセレクターは[要素型セレクター](/ja/docs/Web/CSS/Type_selectors)として扱われます。連結を許可すると、これが壊れてしまいます。
+> これは CSS の入れ子ではできません。[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)を用いない場合、入れ子のセレクターは[要素型セレクター](/ja/docs/Web/CSS/Type_selectors)として扱われます。連結を許可すると、これが壊れてしまいます。
 
 [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)では、要素型セレクターを最初に入力しなければなりません。 `&Element` （[要素型セレクター](/ja/docs/Web/CSS/Type_selectors)）を書くと、 CSS セレクターとセレクターブロック全体が無効になります。要素型セレクターを最初に入力しなければならないので、複合セレクターは `Element&` と書かなければなりません。
 

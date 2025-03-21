@@ -37,8 +37,8 @@ l10n:
   - : Firefox 3 は、DOM 実装において、いくつかの Internet Explorer 独自拡張を含む、多くの新機能を提供します。
 - [JavaScript 1.8 対応](/ja/docs/New_in_JavaScript_1.8)
   - : Firefox 3 は JavaScript 1.8 をサポートします。
-- [EXSLT support](/ja/docs/Web/EXSLT)
-  - : Firefox 3 は、 [XSLT](/ja/docs/Web/XSLT) の拡張となる [EXSLT](/ja/docs/Web/EXSLT) の実質的なサブセットのサポートを提供します。
+- [EXSLT support](/ja/docs/Web/XML/EXSLT)
+  - : Firefox 3 は、 [XSLT](/ja/docs/Web/XML/XSLT) の拡張となる [EXSLT](/ja/docs/Web/XML/EXSLT) の実質的なサブセットのサポートを提供します。
 - [Firefox 3 での SVG の改良](/ja/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : Firefox 3 での SVG サポートは、24 を超える新しいフィルター、いくつかの新しい要素と属性、そして、その他の改良を含み、大幅に強化されました。
 - [アニメーション PNG グラフィック](/ja/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)

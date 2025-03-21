@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`407 Proxy Authentication Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、ブラウザーとリクエストされたリソースにアクセスできるサーバーとの間にある{{Glossary("Proxy server", "プロキシーサーバー")}}に有効な認証情報が不足しているため、リクエストが成功されていないことを示します。
+HTTP の **`407 Proxy Authentication Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、ブラウザーとリクエストされたリソースにアクセスできるサーバーとの間にある{{Glossary("Proxy server", "プロキシーサーバー")}}に有効な認証情報が不足しているため、リクエストが成功されていないことを示します。
 
 このレスポンスは、リクエストを正しく認証する方法に関する情報が含まれている {{HTTPHeader("Proxy-Authenticate")}} ヘッダーと共に送信されます。
 クライアントは {{HTTPHeader("Proxy-Authorization")}} ヘッダーフィールドを新しく付けたり、置換したりしてリクエストを繰り返すことができます。
@@ -44,8 +44,8 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## 参照
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
-- [HTTP 認証](/ja/docs/Web/HTTP/Authentication)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
