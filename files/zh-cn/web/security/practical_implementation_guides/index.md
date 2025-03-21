@@ -14,7 +14,7 @@ slug: Web/Security/Practical_implementation_guides
 
 - [如何关闭表单的自动完成功能](/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)
   - : 在 Gecko 中表单字段支持自动完成功能；因此它们的值可以被记住，并且在下一次用户访问你的网站时自动被填充。对于某些特定类型的数据，你可能希望禁止这个功能。
-- [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : 这篇文章讨论对于 `getComputedStyle()` 方法的改动，消除恶意站点获取用户浏览历史的能力。
 - [用安全算法散列密码](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)（OWASP）
   - : 使用明文存储密码容易导致攻击者得知且泄露站点用户的密码，令用户处于风险之中。使用陈旧或不安全的散列算法（例如 md5）也会出现相同的问题。应该使用专门用于加密的散列算法（如 Argon2、PBKDF2、scrypt 或 bcrypt），而不是消息摘要算法（例如 md5 和 sha）。这篇文章讲述了存储密码的最好实践。
