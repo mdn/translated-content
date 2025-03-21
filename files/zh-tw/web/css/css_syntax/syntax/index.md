@@ -69,7 +69,7 @@ There is another group of statements - the **nested statements**. These are stat
 
 - CSS 重要概念：
 
-  - [CSS 語法](/zh-TW/docs/Web/CSS/Syntax)
+  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
