@@ -1,6 +1,6 @@
 ---
 title: スクロール固定のガイド
-slug: Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
+slug: Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring
 l10n:
   sourceCommit: ad896488bf8fac04fc6fa144c441fdbfd880737c
 ---
