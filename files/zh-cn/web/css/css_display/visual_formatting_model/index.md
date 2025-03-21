@@ -1,9 +1,8 @@
 ---
 title: 视觉格式化模型
 slug: Web/CSS/CSS_display/Visual_formatting_model
-original_slug: Web/CSS/Visual_formatting_model
 l10n:
-  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
+  sourceCommit: 6d55eec58e38583da60aa635d41393ad051d1c6d
 ---
 
 {{CSSRef}}

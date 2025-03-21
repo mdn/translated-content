@@ -52,4 +52,4 @@ Margins, borders, 以及 padding 的设置，在行的方向上是生效的。�
 ## 参见
 
 - [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
