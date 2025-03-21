@@ -1,21 +1,20 @@
 ---
-title: 行内格式化上下文（Inline formatting context）
+title: 行内格式化上下文
 slug: Web/CSS/CSS_inline_layout/Inline_formatting_context
-original_slug: Web/CSS/Inline_formatting_context
 ---
 
 {{CSSRef}}
 
-这篇文章将解释什么是行内格式化上下文（Inline formatting context）
+该指南将解释什么是行内格式化上下文（inline formatting context）。
 
 ## 核心概念
 
-行内格式化上下文是一个网页的渲染结果的一部分。其中，各行内框（inline boxes）一个接一个地排列，其排列顺序根据书写模式（writing-mode）的设置来决定：
+行内格式化上下文是一个网页的渲染结果的一部分。其中，各行内框（inline box）一个接一个地排列，其排列顺序根据书写模式（writing-mode）的设置来决定：
 
 - 对于水平书写模式，各个框从左边开始水平地排列
 - 对于垂直书写模式，各个框从顶部开始水平地排列
 
-在下面给出的例子中，带黑色边框的两个 ({{HTMLElement("div")}}) 元素组成了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
+在下面给出的例子中，带黑色边框的两个 {{HTMLElement("div")}} 元素组成了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，其中的每一个单词都参与一个行内格式化上下文中。水平书写模式下的各个框水平地排列，垂直书写模式下的各个框垂直地排列。
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
 
