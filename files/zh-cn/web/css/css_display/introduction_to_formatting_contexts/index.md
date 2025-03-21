@@ -78,5 +78,5 @@ box model 不完全适用于参与内联格式上下文。在水平书写模式�
 ## 参见
 
 - [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)

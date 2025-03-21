@@ -99,7 +99,7 @@ l10n:
   - {{cssxref("content")}} プロパティ
   - {{cssxref("quotes")}} プロパティ
 
-- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} プロパティ
 - {{DOMXref("KeyframeEffect.pseudoElement")}} プロパティ

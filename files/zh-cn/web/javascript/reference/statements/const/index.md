@@ -61,7 +61,7 @@ const FOO; // SyntaxError: Missing initializer in const declaration
 
 `const` 声明创建了一个对值的不可变引用。它并*不*意味着它所持有的值是不可变的，只是变量标识符不能被重新赋值。例如，在内容是对象的情况下，这意味着对象的内容（例如属性）是可以被修改的。你应该将 `const` 声明理解为“创建一个*身份*保持不变”的标识符（变量），而不是“保持*值*不变的标识符”——换言之，是“创建不可变的{{Glossary("binding", "绑定")}}”，而不是“不可变的值”。
 
-许多代码风格指南（包括 [MDN 的指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#变量声明)建议当变量在其作用域中不会重新赋值时使用 `const` 而不是 {{jsxref("Statements/let", "let")}}。这样可以清晰地表达变量的类型（或值，如果是原始类型的情况下）永远不会改变的意图。对非原始值可能改变的情况下其他人可能更喜欢使用 `let`。
+许多代码风格指南（包括 [MDN 的指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#变量声明)建议当变量在其作用域中不会重新赋值时使用 `const` 而不是 {{jsxref("Statements/let", "let")}}。这样可以清晰地表达变量的类型（或值，如果是原始类型的情况下）永远不会改变的意图。对非原始值可能改变的情况下其他人可能更喜欢使用 `let`。
 
 紧跟在 `const` 关键字后面的列表被称为[_绑定_](/zh-CN/docs/Glossary/Binding)_列表_，用逗号分隔，其中逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，`=` 符号*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后面变量的初始值可以引用处在列表前面的变量。
 

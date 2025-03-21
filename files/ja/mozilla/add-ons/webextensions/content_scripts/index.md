@@ -75,7 +75,7 @@ Firefox では、これには次のドメインが含まれます。
 
 ### 制限
 
-タブやフレーム全体を読み込むには、 [`data:` URI](/ja/docs/Web/URI/Schemes/data) や {{DOMxRef("URL.createObjectURL_static", "Blob")}} オブジェクト、その他同様のテクニックを使用して、タブやフレーム全体を読み込むことができます。このような特殊文書へのコンテンツスクリプトの挿入に対応しているかどうかはブラウザーによって異なります。詳細は [Firefox バグ #1411641 のコメント 41](https://bugzil.la/1411641#c41) を参照してください。
+タブやフレーム全体を読み込むには、 [`data:` URI](/ja/docs/Web/URI/Reference/Schemes/data) や {{DOMxRef("URL.createObjectURL_static", "Blob")}} オブジェクト、その他同様のテクニックを使用して、タブやフレーム全体を読み込むことができます。このような特殊文書へのコンテンツスクリプトの挿入に対応しているかどうかはブラウザーによって異なります。詳細は [Firefox バグ #1411641 のコメント 41](https://bugzil.la/1411641#c41) を参照してください。
 
 ## コンテンツスクリプト環境
 

@@ -22,7 +22,7 @@ new WebSocket(url, protocols)
 - `url`
 
   - : 接続対象とする WebSocket サーバーの URL です。
-    URL のスキームには、`ws`、`wss`、`http`、`https` のいずれかを使用する必要があります。 [URLフラグメント](/ja/docs/Web/URI/Fragment)を含めることはできません。
+    URL のスキームには、`ws`、`wss`、`http`、`https` のいずれかを使用する必要があります。 [URLフラグメント](/ja/docs/Web/URI/Reference/Fragment)を含めることはできません。
     相対 URL が指定された場合、それは呼び出し元のスクリプトのベース URL に対する相対 URL となります。
 
 - `protocols` {{optional_inline}}
