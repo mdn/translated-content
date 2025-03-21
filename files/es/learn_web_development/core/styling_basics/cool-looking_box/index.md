@@ -2,7 +2,7 @@
 title: "Desafío: Una caja con aspecto genial"
 slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
 l10n:
-  sourceCommit: ca58132c5bef8bf0e40919325d0c5ed2c47972c7
+  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
 {{LearnSidebar}}
@@ -14,7 +14,7 @@ En esta evaluación, practicarás más la creación de cajas con un aspecto geni
 <table>
   <tbody>
     <tr>
-      <th scope="row">Requisitos Previos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
         Antes de intentar esta evaluación, debes haber trabajado en todos los
         artículos de este módulo.
@@ -34,13 +34,13 @@ En esta evaluación, practicarás más la creación de cajas con un aspecto geni
 
 Para comenzar esta evaluación, debes:
 
-- Guarda el HTML y el CSS que se muestran a continuación como dos archivos separados: `index.html` y `style.css`, en un nuevo directorio.
+- Guardar el HTML y el CSS que se muestran a continuación como dos archivos separados: `index.html` y `style.css`, en un nuevo directorio.
 
 ### HTML
 
 ```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
