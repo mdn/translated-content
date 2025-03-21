@@ -122,7 +122,7 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 </fieldset>
 ```
 
-`aria-selected="true"` の代わりに、[`checked`](/ja/docs/Web/HTML/Element/input/checkbox#checked) 属性を含めてください。残りはブラウザが行います。
+`aria-selected="true"` の代わりに、[`checked`](/ja/docs/Web/HTML/Element/input/checkbox#checked) 属性を含めてください。残りはブラウザーが行います。
 
 ## 値
 
