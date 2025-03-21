@@ -160,7 +160,7 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值

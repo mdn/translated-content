@@ -131,7 +131,7 @@ div.menu-bar li:hover > ul {
 - [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
-- [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+- [布局模式](/zh-CN/docs/Glossary/Layout_mode)
 - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [可替换元素](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)

@@ -1,10 +1,9 @@
 ---
 title: 布局模式
 slug: Glossary/Layout_mode
-original_slug: Web/CSS/Layout_mode
 ---
 
-{{CSSRef}}
+{{GlossarySidebar}}
 
 [CSS](/zh-CN/docs/Web/CSS) **布局模式**，有时简称为布局，是一种基于盒子与其兄弟和祖辈盒子的交互方式来确定盒子的位置和大小的算法。有以下几种形式：
 
@@ -28,7 +27,7 @@ original_slug: Web/CSS/Layout_mode
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值

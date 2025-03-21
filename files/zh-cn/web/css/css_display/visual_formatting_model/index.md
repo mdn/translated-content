@@ -257,7 +257,7 @@ body {
 - [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
+- [布局模式](/zh-CN/docs/Glossary/Layout_mode)
 - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - {{glossary("Replaced elements", "可替换元素")}}
 - {{DOMxRef("VisualViewport")}} 接口
