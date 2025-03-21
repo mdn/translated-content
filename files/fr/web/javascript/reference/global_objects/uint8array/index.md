@@ -89,7 +89,7 @@ Le tableau typé **`Uint8Array`** représente un tableau d'entiers non signés, 
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
 - [`Uint8Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
   - : Renvoie une chaîne de caractères qui représente le tableau et ses éléments. Voir également [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
-- [`Uint8Array.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`Uint8Array.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs correspondantes à chaque indice du tableau.
 
 ## Exemples

@@ -27,7 +27,7 @@ Cette page liste l'ensemble des tutoriels, avec une courte description. Ils sont
 Certaines fonctionnalités, parfois plus récemment apparues, sont plus avancées. Une fois les bases acquises, vous pourrez les utiliser distinctement si besoin.
 
 - [Compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - : Compter les éléments et pages est une tâche aisée en CSS. Apprenez à utiliser [`counter-reset`](/fr/docs/Web/CSS/counter-reset), [`counter-increment`](/fr/docs/Web/CSS/counter-increment), [`counters()`](</fr/docs/Web/CSS/counters()>), et [`counter()`](</fr/docs/Web/CSS/counter()>).
+  - : Compter les éléments et pages est une tâche aisée en CSS. Apprenez à utiliser [`counter-reset`](/fr/docs/Web/CSS/counter-reset), [`counter-increment`](/fr/docs/Web/CSS/counter-increment), [`counters()`](/fr/docs/Web/CSS/counters), et [`counter()`](/fr/docs/Web/CSS/counter).
 - [Animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Les animations CSS vous permettent de définir des configurations de style via des _[keyframes](/fr/docs/Web/CSS/CSS_animations)_, et de réaliser une transition entre elles pour définir une animation.
 - [Transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
