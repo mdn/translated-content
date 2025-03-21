@@ -1,7 +1,6 @@
 ---
 title: Навигация с клавиатуры в JavaScript
 slug: Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
-original_slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 ---
 
 {{AccessibilitySidebar}}

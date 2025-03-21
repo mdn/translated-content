@@ -69,12 +69,12 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/SVG/Attribute">SVG 属性参考</a>（/Web/SVG/Attribute）</td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Attribute">SVG 属性参考</a>（/Web/SVG/Attribute）</td>
       <td><code>\{{SVGAttr("d")}}</code> 会生成 {{SVGAttr("d")}}。</td>
     </tr>
     <tr>
       <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a></td>
-      <td><a href="/zh-CN/docs/Web/SVG/Element">SVG 元素参考</a>（/Web/SVG/Element）</td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Element">SVG 元素参考</a>（/Web/SVG/Element）</td>
       <td><code>\{{SVGElement("view")}}</code> 会生成 {{SVGElement("view")}}。</td>
     </tr>
     <tr>

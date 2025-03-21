@@ -956,7 +956,7 @@ SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像�
 
 在网页内容中使用 SVG 有两种方式：
 
-1. 你可以直接在 HTML 中写入 {{SVGElement("svg")}} 元素，包含 [SVG 元素](/zh-CN/docs/Web/SVG/Element)来绘制图像。
+1. 你可以直接在 HTML 中写入 {{SVGElement("svg")}} 元素，包含 [SVG 元素](/zh-CN/docs/Web/SVG/Reference/Element)来绘制图像。
 2. 你可以在任何可以使用其他图像类型的地方显示 SVG 图像，包括使用 {{HTMLElement("img")}} 和 {{HTMLElement("picture")}} 元素、{{cssxref("background-image")}} CSS 属性等。
 
 对于可以使用一系列绘图命令来表示的图像来说，SVG 是一个理想的选择，尤其是当图像的渲染尺寸未知或可能变化时，因为 SVG 可以平滑地缩放到所需的尺寸。对于严格意义上的位图或照片图像，SVG 通常并不适用，尽管可以在 SVG 中包含位图图像。

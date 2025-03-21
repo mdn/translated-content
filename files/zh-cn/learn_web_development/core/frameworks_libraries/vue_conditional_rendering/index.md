@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
@@ -196,7 +196,7 @@ methods: {
 
 现在我们有了一个可用的 `isEditing` 标志来表示事项正在被编辑（或者未被编辑）。如果 `isEditing` 为真，我们会用这个标志来展示我们的 `ToDoItemEditForm` 而不是复选框。为此，我们将使用另一个 Vue 指令：[`v-if`](https://cn.vuejs.org/api/built-in-directives.html#v-if)。
 
-`v-if` 指令只会在传递给它的值为真的情况下渲染一个块。这和 `if` 语句在 JavaScript 起作用的方式相似。`v-if` 也有对应的 [`v-else-if`](https://vuejs.org/api/built-in-directives.html#v-else-if) 和 [`v-else`](https://vuejs.org/api/built-in-directives.html#v-else) 指令，在 Vue 模板中提供相当于 JavaScript 的 `else if` 和 `else` 逻辑。
+`v-if` 指令只会在传递给它的值为真的情况下渲染一个块。这和 `if` 语句在 JavaScript 起作用的方式相似。`v-if` 也有对应的 [`v-else-if`](https://cn.vuejs.org/api/built-in-directives#v-else-if) 和 [`v-else`](https://cn.vuejs.org/api/built-in-directives#v-else) 指令，在 Vue 模板中提供相当于 JavaScript 的 `else if` 和 `else` 逻辑。
 
 需要注意的是，`v-else` 和 `v-else-if` 块需要是 `v-if`/`v-else-if` 块的第一个兄弟，否则 Vue 将无法识别它们。如果你需要条件渲染整个模板，你也可以将 `v-if` 添加到 `<template>` 标签上。
 
@@ -316,7 +316,7 @@ editToDo(toDoId, newLabel) {
 
 注意你取消后复选框的状态——不仅应用程序忘记了复选框的状态，而且待办事项的完成状态现在也不正常了。如果你尝试再次勾选（或取消勾选）它，完成项的计数值将反向更改。这是因为在组件加载时，`data` 中的 `isDone` 只给出了值 `this.done`。
 
-幸运的是，修复这个问题很容易：我们可以通过将我们的 `isDone` 数据转换为[计算属性](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties)来做到这一点。计算属性的另一个优点是，它们保留了[反应性](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)，这意味着（在其他事情中）当模板发生变化时，它们的状态会被保存，就像我们现在做的那样。
+幸运的是，修复这个问题很容易：我们可以通过将我们的 `isDone` 数据转换为[计算属性](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties)来做到这一点。计算属性的另一个优点是，它们保留了[响应性](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals)，这意味着（在其他事情中）当模板发生变化时，它们的状态会被保存，就像我们现在做的那样。
 
 所以，让我们来修复一下 `ToDoItem.vue`：
 

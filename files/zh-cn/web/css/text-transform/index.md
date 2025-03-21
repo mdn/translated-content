@@ -68,7 +68,7 @@ text-transform: math-auto;
 - 在希腊语中（`el`），小写的西格玛字符有两种形式：`σ` 和 `ς`。`ς` 只在西格玛结束一个词的时候使用。当对大写西格玛（`Σ`）应用 `text-transform: lowercase` 时，浏览器需要根据上下文选择正确的小写形式。
 - 在爱尔兰语中（`ga`），某些前缀字母在基本首字母大写时仍为小写，因此，例如 `text-transform: uppercase` 会将 `ar aon tslí` 变为 `AR AON tSLÍ`，而不是像人们所期望的那样，变为 `AR AON TSLÍ`（仅在 Firefox）。在某些情况下，大写字母也会被删除：`an t-uisce` 转换为 `AN tUISCE`（并且连字符被 `text-transform: lowercase` 正确地重新插入）。
 
-语言由 HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性或 XML [`xml:lang`](/zh-CN/docs/Web/SVG/Attribute/xml:lang) 属性定义。
+语言由 HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性或 XML [`xml:lang`](/zh-CN/docs/Web/SVG/Reference/Attribute/xml:lang) 属性定义。
 
 > [!NOTE]
 > 特定情况的支持因浏览器而异，因此请检查[浏览器兼容性表格](#浏览器兼容性)。
