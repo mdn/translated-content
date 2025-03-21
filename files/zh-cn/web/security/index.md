@@ -73,7 +73,7 @@ slug: Web/Security
 
 - [不安全的密码](/zh-CN/docs/Web/Security/Insecure_passwords)
   - : 通过 HTTP 提供登录表格是特别危险的，因为有各种各样的攻击可以用来提取用户的密码。网络窃听者可以通过嗅探网络，或通过修改传输中的服务页面来窃取用户的密码。
-- [隐私性和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [隐私性和 :visited 选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
   - : 在大约 2010 年之前，[CSS](/zh-CN/docs/Web/CSS) {{cssxref(":visited")}} 选择器允许网站获取用户的浏览历史，弄清用户访问过哪些网站。为了缓解这个问题，浏览器已经限制了从访问过的链接中获得的信息量。
 
 ## 参见
