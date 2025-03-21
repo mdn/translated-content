@@ -99,7 +99,7 @@ En esta sección, veremos las diferentes formas en las que puede agregar gráfic
 
 ### La forma rápida: {{htmlelement("img")}}
 
-Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo necesita hacer referencia a él en el atributo src como es de esperar. Necesitará un atributo de altura o ancho (o ambos si su SVG no tiene una relación de aspecto inherente). Si aún no lo ha hecho, lea [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo necesita hacer referencia a él en el atributo src como es de esperar. Necesitará un atributo de altura o ancho (o ambos si su SVG no tiene una relación de aspecto inherente). Si aún no lo ha hecho, lea [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 ```html
 <img
@@ -170,7 +170,7 @@ También puede abrir el archivo SVG en un editor de texto, copiar el código SVG
 
 ### Cómo incrustar un SVG con un {{htmlelement("iframe")}}
 
-Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
 
 Aquí hay una revisión rápida:
 

@@ -47,4 +47,4 @@ Si el formulario también contiene entradas opcionales, las entradas requeridas 
 ## Ver también
 
 - Otras pseudo-clases relacionadas con la validación: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)
+- [Validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation)

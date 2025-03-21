@@ -92,7 +92,7 @@ function f(...args) {
 
 ### Desestructuración de los parametros rest
 
-Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Los parámetros rest pueden ser desestructurados, eso significa que sus datos pueden ser desempaquetados dentro de distintas variables. Ver [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```js
 function f(...[a, b, c]) {
@@ -215,4 +215,4 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 - [Functions](/es/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring)

@@ -75,7 +75,7 @@ El objetivo final es que las aplicaciones web tengan una mejor representación e
 
 Algunas de las capacidades ya se han habilitado en ciertas plataformas basadas en web mediante tecnologías patentadas como [Open Graph](https://ogp.me/), que proporciona un formato para especificar metadatos similares en el bloque {{HTMLElement("head")}} de {{Glossary("HTML")}} con etiquetas {{HTMLElement("meta")}}.
 
-El estándar web relevante aquí es el [manifiesto de la aplicación web](/es/docs/Web/Manifest), que define las características de una aplicación, como el nombre, el icono, la pantalla de presentación y los colores del tema en un archivo de manifiesto con formato {{Glossary("JSON")}}. Esto es para usar en contextos como listas de aplicaciones y pantallas de inicio de dispositivos.
+El estándar web relevante aquí es el [manifiesto de la aplicación web](/es/docs/Web/Progressive_web_apps/Manifest), que define las características de una aplicación, como el nombre, el icono, la pantalla de presentación y los colores del tema en un archivo de manifiesto con formato {{Glossary("JSON")}}. Esto es para usar en contextos como listas de aplicaciones y pantallas de inicio de dispositivos.
 
 ### Instalable
 
@@ -121,7 +121,7 @@ Como se mencionó anteriormente, las PWAs no dependen de una sola API, sino que 
 
 El ingrediente clave requerido para las PWAs es la asistencia de [servicio workers](/es/docs/Web/API/Service_Worker_API). Afortunadamente, los servicios de _workers_ [ahora son compatibles con los principales navegadores](https://jakearchibald.github.io/isserviceworkerready/) en computadoras de escritorio y dispositivos móviles.
 
-Otras características como [manifiesto de App Web](/es/docs/Web/Manifest), [Push](/es/docs/Web/API/Push_API), [Notificaciones](/es/docs/Web/API/Notifications_API) y la funcionalidad [Agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) también tienen un amplio soporte. Actualmente, Safari tiene soporte limitado para el manifiesto de aplicaciones web y Agregar a la pantalla de inicio y no admite notificaciones _push web_. Sin embargo, otros navegadores importantes admiten todas estas funciones.
+Otras características como [manifiesto de App Web](/es/docs/Web/Progressive_web_apps/Manifest), [Push](/es/docs/Web/API/Push_API), [Notificaciones](/es/docs/Web/API/Notifications_API) y la funcionalidad [Agregar a la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) también tienen un amplio soporte. Actualmente, Safari tiene soporte limitado para el manifiesto de aplicaciones web y Agregar a la pantalla de inicio y no admite notificaciones _push web_. Sin embargo, otros navegadores importantes admiten todas estas funciones.
 
 Por encima de todo, debes seguir la regla de mejora progresiva: usa tecnologías que mejoren la apariencia y la utilidad de tu aplicación cuando estén disponibles, pero que sigan ofreciendo la funcionalidad básica de tu aplicación cuando esas funciones no estén disponibles. Presentar un sitio web confiable con un buen rendimiento es una consecuencia del uso de estas mejoras; esto, a su vez, significa crear aplicaciones web que sigan las mejores prácticas. De esta manera, todos podrán usar la aplicación, pero aquellos con navegadores modernos se beneficiarán aún más de las funciones de PWA.
 

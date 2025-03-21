@@ -32,7 +32,7 @@ No hay código real en el debate porque ¡todavía no hemos seleccionado el fram
 
 ## Servidores Web y HTTP (iniciación)
 
-Los exploradores web se comunican con los [servidores web](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) usando el Protocolo de Transferencia de HyperTexto (**H**yper**T**ext**T**ransfer **P**rotocol [HTTP](/es/docs/Web/HTTP)). Cuando pinchas en un enlace sobre una página web, envías un formulario o ejecutas una búsqueda, el explorador envía una petición (_Request)_ HTTP al servidor.
+Los exploradores web se comunican con los [servidores web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) usando el Protocolo de Transferencia de HyperTexto (**H**yper**T**ext**T**ransfer **P**rotocol [HTTP](/es/docs/Web/HTTP)). Cuando pinchas en un enlace sobre una página web, envías un formulario o ejecutas una búsqueda, el explorador envía una petición (_Request)_ HTTP al servidor.
 
 Esta petición incluye:
 
@@ -67,7 +67,7 @@ Puedes realizar una petición `GET` simplemente pinchando sobre un enlace o busc
 
 #### La petición
 
-Cada linea de la petición contiene información sobre ella. La primera parte se llama **cabecera** o **header**, y contiene información útil sobre la petición, de la misma manera que un [HTML head](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contiene información útil sobre un documento (pero no el contenido mismo, que está en el cuerpo):
+Cada linea de la petición contiene información sobre ella. La primera parte se llama **cabecera** o **header**, y contiene información útil sobre la petición, de la misma manera que un [HTML head](/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) contiene información útil sobre un documento (pero no el contenido mismo, que está en el cuerpo):
 
 ```
 GET https://developer.mozilla.org/en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1

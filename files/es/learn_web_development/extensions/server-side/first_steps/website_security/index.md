@@ -143,6 +143,6 @@ Los frameworks web pueden ayudar a mitigar muchas de las vulnerabilidades más c
 
 Este artículo ha explicado el concepto de seguridad en sitios web y algunas de las amanazas más comunes contra las que tu sitio debería empezar a protegerse. Lo más importante que deberías entender es que ¡una aplicación web no puede confiar en ningún dato que provenga de explorador web! Todos los datos de usuario deberían ser desinfectados antes de ser mostrados, o usados en queries SQL o llamadas a ficheros de sistema.
 
-Hemos llegado al final de [este módulo](/es/docs/Learn/Server-side/First_steps), tratando tus primeros pasos en la programación de lado servidor de un sitio web. Esperamos que hayas disfrutado del aprendizaje de los conceptos fundamentales y estés listo para seleccionar un framework web y empezar a programar.
+Hemos llegado al final de [este módulo](/es/docs/Learn_web_development/Extensions/Server-side/First_steps), tratando tus primeros pasos en la programación de lado servidor de un sitio web. Esperamos que hayas disfrutado del aprendizaje de los conceptos fundamentales y estés listo para seleccionar un framework web y empezar a programar.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

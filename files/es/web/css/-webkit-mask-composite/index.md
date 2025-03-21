@@ -9,11 +9,11 @@ slug: Web/CSS/-webkit-mask-composite
 
 La propiedad `-webkit-mask-composite` especifica la forma en la que múltiples imágenes de máscara son compuestas para ser aplicadas al mismo elemento. Son compuestas en el orden en el que son declaradas en la propiedad {{ Cssxref("-webkit-mask-image") }}.
 
-- [Valor inicial](/es/docs/Web/CSS/initial_value): source-over
+- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/initial_value): source-over
 - Se aplica a : todos los elementos
-- [Heredable](/es/docs/Web/CSS/Inheritance): no
+- [Heredable](/es/docs/Web/CSS/CSS_cascade/Inheritance): no
 - Media: {{cssxref("Media/Visual", "visual")}}
-- [Valor calculado](/es/docs/Web/CSS/computed_value): tal y como se especifica.
+- [Valor calculado](/es/docs/Web/CSS/CSS_cascade/computed_value): tal y como se especifica.
 
 ## Síntaxis
 

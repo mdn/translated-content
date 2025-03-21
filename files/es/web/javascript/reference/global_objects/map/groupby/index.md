@@ -96,7 +96,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-Note que el argumento `{ quantity }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `quantity` del objeto pasado como parámetro, y lo asigna a la variable llamada `quantity` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
+Note que el argumento `{ quantity }` de la función, es un ejemplo básico de la [sintaxis de destructuración de objetos pasados como parámetros de función](/es/docs/Web/JavaScript/Reference/Operators/Destructuring#desempacar_campos_de_objetos_pasados_como_parámetro_de_función). Esto desempaca la propiedad `quantity` del objeto pasado como parámetro, y lo asigna a la variable llamada `quantity` en el cuerpo de la función. Esta es una forma muy concisa de accesar los valores relevantes de elementos, dentro de una función.
 
 La llave de un `Map` puede ser modificada y aún usarse. Sin embargo no puedes recrear la llave y aún usarla. Por esa razón es importante que cualquiera que necesite usar el _map_ mantenga una referencia de sus llaves.
 

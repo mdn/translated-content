@@ -56,7 +56,7 @@ multipart/form-data
 multipart/byteranges
 ```
 
-Los tipos de _partes múltiples_ indican una categoría de documento que está rota en distintas partes, a menudo con diferentes tipos de MIME. Es una forma de representar un documento compuesto. Con la excepción de `multipart/form-data`, que se utilizan en relación con [formularios HTML](/es/docs/Learn/Forms) y el método {{HTTPMethod("POST")}}, y `multipart/byteranges`, que se utilizan junto con el mensaje de estado de `Contenido Parcial` {{HTTPStatus("206")}} para enviar solo un subconjunto de un documento completo, HTTP no maneja documentos multiparte de una manera específica: el mensaje simplemente se transmite al navegador (que probablemente propondrá una ventana Guardar como, sin saber cómo mostrar el documento en línea.)
+Los tipos de _partes múltiples_ indican una categoría de documento que está rota en distintas partes, a menudo con diferentes tipos de MIME. Es una forma de representar un documento compuesto. Con la excepción de `multipart/form-data`, que se utilizan en relación con [formularios HTML](/es/docs/Learn_web_development/Extensions/Forms) y el método {{HTTPMethod("POST")}}, y `multipart/byteranges`, que se utilizan junto con el mensaje de estado de `Contenido Parcial` {{HTTPStatus("206")}} para enviar solo un subconjunto de un documento completo, HTTP no maneja documentos multiparte de una manera específica: el mensaje simplemente se transmite al navegador (que probablemente propondrá una ventana Guardar como, sin saber cómo mostrar el documento en línea.)
 
 ## Tipos MIME importantes para desarrolladores Web
 
@@ -111,7 +111,7 @@ El tipo MIME de dichos archivos representa principalmente los formatos de conten
 
 ### `multipart/form-data`
 
-El tipo de datos `multipart/form-data` se puede usar al enviar el contenido de un [formulario HTML](/es/docs/Learn/Forms) completo desde el navegador al servidor. Como formato de documento multiparte, consta de diferentes partes, delimitadas por un límite (una cadena que comienza con un doble guión `'--'`). Cada parte es una entidad en sí misma, con sus propios encabezados HTTP, {{HTTPHeader("Content-Disposition")}} y {{HTTPHeader("Content-Type")}} para los campos de carga de archivos, y los más comunes ({{HTTPHeader("Content-Length")}} es ignorado ya que la línea límite se usa como delimitador).
+El tipo de datos `multipart/form-data` se puede usar al enviar el contenido de un [formulario HTML](/es/docs/Learn_web_development/Extensions/Forms) completo desde el navegador al servidor. Como formato de documento multiparte, consta de diferentes partes, delimitadas por un límite (una cadena que comienza con un doble guión `'--'`). Cada parte es una entidad en sí misma, con sus propios encabezados HTTP, {{HTTPHeader("Content-Disposition")}} y {{HTTPHeader("Content-Type")}} para los campos de carga de archivos, y los más comunes ({{HTTPHeader("Content-Length")}} es ignorado ya que la línea límite se usa como delimitador).
 
 ```
 Content-Type: multipart/form-data; boundary=unaCadenaDelimitadora
@@ -220,6 +220,6 @@ Los tipos MIME no son la única forma de transmitir la información del tipo de 
 
 ## Ver también
 
-- [Configurar correctamente los tipos MIME del servidor](/es/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [Configurar correctamente los tipos MIME del servidor](/es/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
 - [Formatos de medios compatibles con los elementos de audio y video HTML](/es/docs/Web/Media/Formats)
 - <https://www.iana.org/assignments/media-types/application/json>

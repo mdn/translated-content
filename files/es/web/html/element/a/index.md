@@ -89,7 +89,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     > [!NOTE]
     >
     > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
-    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
+    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Reference/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
     > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
     > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
 
@@ -208,7 +208,7 @@ Es común crear enlaces que abren el programa de correo del usuario para permiti
 
 [Envia un correo a: nowhere](mailto:nowhere@mozilla.org)
 
-Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) o {{RFC(6068)}}.
+Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) o {{RFC(6068)}}.
 
 ### Creando un enlace a un número de teléfono
 

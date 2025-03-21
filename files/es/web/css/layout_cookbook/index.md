@@ -8,7 +8,7 @@ slug: Web/CSS/Layout_cookbook
 El libro de recetas de maquetación CSS tiene como objetivo reunir recetas para patrones de diseño comunes, cosas que podrías necesitar para implementar en tus propios sitios. Además de proporcionar código que puedes utilizar como punto de partida en tus proyectos, estas recetas resaltan las diferentes formas en que se pueden utilizar las especificaciones de diseño y las opciones que puedes tomar como desarrollador.
 
 > [!NOTE]
-> Si es nuevo en el diseño de CSS, es posible que primero quiera echar un vistazo a nuestro [módulo de aprendizaje de diseño CSS](/es/docs/Learn/CSS/CSS_layout), ya que esto le dará la base básica que necesita para hacer aquí uso de las recetas.
+> Si es nuevo en el diseño de CSS, es posible que primero quiera echar un vistazo a nuestro [módulo de aprendizaje de diseño CSS](/es/docs/Learn_web_development/Core/CSS_layout), ya que esto le dará la base básica que necesita para hacer aquí uso de las recetas.
 
 ## Las recetas
 

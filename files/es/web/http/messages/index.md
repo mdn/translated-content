@@ -65,7 +65,7 @@ La parte final de la petición el el cuerpo. No todas las peticiones llevan uno:
 Los cuerpos pueden ser dividos en dos categorias:
 
 - Cuerpos con un único dato, que consisten en un único archivo defindo por las dos cabeceras: {{HTTPHeader("Content-Type")}} y {{HTTPHeader("Content-Length")}}.
-- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/MIME_types#multipartform-data), que están formados por distintos contenidos, normalmente estan asociados con los [formularios HTML](/es/docs/Learn/Forms).
+- [Cuerpos con múltiples datos](/es/docs/Web/HTTP/MIME_types#multipartform-data), que están formados por distintos contenidos, normalmente estan asociados con los [formularios HTML](/es/docs/Learn_web_development/Extensions/Forms).
 
 ## Respuestas HTTP
 

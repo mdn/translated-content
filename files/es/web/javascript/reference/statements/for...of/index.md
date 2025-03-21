@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Recibe un valor de la secuencia en cada iteración. Puede ser una declaración con [`const`](/es/docs/Web/JavaScript/Reference/Statements/const), [`let`](/es/docs/Web/JavaScript/Reference/Statements/let), o [`var`](/es/docs/Web/JavaScript/Reference/Statements/var), o un objetivo de [asignación](/es/docs/Web/JavaScript/Reference/Operators/Assignment) (p. ej., una variable previamente declarada, una propiedad de objeto o un [patrón de asignación por desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Las variables declaradas con `var` no son locales al bucle, es decir, están en el mismo ámbito en el que se encuentra el bucle `for...of`.
+  - : Recibe un valor de la secuencia en cada iteración. Puede ser una declaración con [`const`](/es/docs/Web/JavaScript/Reference/Statements/const), [`let`](/es/docs/Web/JavaScript/Reference/Statements/let), o [`var`](/es/docs/Web/JavaScript/Reference/Statements/var), o un objetivo de [asignación](/es/docs/Web/JavaScript/Reference/Operators/Assignment) (p. ej., una variable previamente declarada, una propiedad de objeto o un [patrón de asignación por desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring)). Las variables declaradas con `var` no son locales al bucle, es decir, están en el mismo ámbito en el que se encuentra el bucle `for...of`.
 - `iterable`
   - : Un objeto iterable. La fuente de la secuencia de valores sobre la que opera el bucle.
 - `statement`
@@ -67,7 +67,7 @@ for (let value of iterable) {
 > [!NOTE]
 > Cada iteración crea una nueva variable. Reasignar la variable dentro del cuerpo del bucle no afecta al valor original en el iterable (un arreglo, en este caso).
 
-Puedes usar [desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) para asignar múltiples variables locales, o usar un acceso a propiedades como `for (x.y of iterable)` para asignar el valor a una propiedad de objeto.
+Puedes usar [desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring) para asignar múltiples variables locales, o usar un acceso a propiedades como `for (x.y of iterable)` para asignar el valor a una propiedad de objeto.
 
 Sin embargo, una regla especial prohíbe usar `async` como el nombre de la variable. Esta es una sintaxis inválida:
 
@@ -341,7 +341,7 @@ for (const value of generator) {
 
 Ambas sentencias `for...in` y `for...of` iteran sobre algo. La principal diferencia entre ellas radica en sobre qué iteran.
 
-La sentencia {{jsxref("Statements/for...in", "for...in")}} itera sobre las [propiedades de cadena enumerables](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) de un objeto, mientras que la sentencia `for...of` itera sobre los valores que el [objeto iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) define para ser iterados.
+La sentencia {{jsxref("Statements/for...in", "for...in")}} itera sobre las [propiedades de cadena enumerables](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) de un objeto, mientras que la sentencia `for...of` itera sobre los valores que el [objeto iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) define para ser iterados.
 
 El siguiente ejemplo muestra la diferencia entre un bucle `for...of` y un bucle `for...in` cuando se utilizan con un {{jsxref("Array")}}.
 
@@ -370,9 +370,9 @@ for (const i of iterable) {
 // 3 5 7
 ```
 
-El objeto `iterable` hereda las propiedades `objCustom` y `arrCustom` porque contiene tanto `Object.prototype` como `Array.prototype` en su [cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+El objeto `iterable` hereda las propiedades `objCustom` y `arrCustom` porque contiene tanto `Object.prototype` como `Array.prototype` en su [cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
-El bucle `for...in` solo registra las [propiedades enumerables](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) del objeto `iterable`. No registra los _elementos_ del array `3`, `5`, `7` o `"hello"` porque no son _propiedades_, sino _valores_. Registra los _índices_ del array, así como `arrCustom` y `objCustom`, que son propiedades reales. Si no estás seguro de por qué se itera sobre estas propiedades, hay una explicación más detallada de cómo funciona la [iteración de arrays y `for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in).
+El bucle `for...in` solo registra las [propiedades enumerables](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) del objeto `iterable`. No registra los _elementos_ del array `3`, `5`, `7` o `"hello"` porque no son _propiedades_, sino _valores_. Registra los _índices_ del array, así como `arrCustom` y `objCustom`, que son propiedades reales. Si no estás seguro de por qué se itera sobre estas propiedades, hay una explicación más detallada de cómo funciona la [iteración de arrays y `for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in).
 
 El segundo bucle es similar al primero, pero utiliza {{jsxref("Object.hasOwn()")}} para comprobar si la propiedad enumerable encontrada es propia del objeto, es decir, no heredada. Si lo es, se registra la propiedad. Las propiedades `0`, `1`, `2` y `foo` se registran porque son propiedades propias. Las propiedades `arrCustom` y `objCustom` no se registran porque son heredadas.
 

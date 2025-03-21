@@ -25,7 +25,7 @@ slug: Web/API/WebSockets_API
 
 ## Temas RELACIONADOS
 
-- [AJAX](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/es/docs/Web/JavaScript)
+- [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/es/docs/Web/JavaScript)
 
 ## Especificaciones
 

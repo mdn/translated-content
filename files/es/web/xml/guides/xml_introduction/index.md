@@ -77,7 +77,7 @@ Una forma de estilizar la salida de XML es especificando [CSS](/es/docs/Web/CSS)
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 
-También hay otra manera más poderosa de presentar XML: **Extensible Stylesheet Language Transformations** ([XSLT](/es/docs/Web/XSLT)) que puede ser usado para transformar XML a otros lenguajes como HTML. Esto hace a XML increíblemente versátil.
+También hay otra manera más poderosa de presentar XML: **Extensible Stylesheet Language Transformations** ([XSLT](/es/docs/Web/XML/XSLT)) que puede ser usado para transformar XML a otros lenguajes como HTML. Esto hace a XML increíblemente versátil.
 
 ```
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>

@@ -71,7 +71,7 @@ Pendiente
 ### Técnicas ARIA relacionadas
 
 - [usando el rol `dialog`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [usando el rol `alert`](/es/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [usando el rol `alert`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
 
 ### Compatibilidad
 

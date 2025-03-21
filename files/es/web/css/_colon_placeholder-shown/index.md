@@ -80,4 +80,4 @@ input:placeholder-shown {
 - El pseudo-elemento {{cssxref("::placeholder")}} estiliza el placeholder _por sí mismo_.
 - Elementos HTML relacionados: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
 - {{cssxref(":-moz-placeholder")}}, {{cssxref("::-moz-placeholder")}}
-- [Formularios HTML](/es/docs/Learn/Forms)
+- [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)

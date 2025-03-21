@@ -33,7 +33,7 @@ console.log(b);
 
 ## Descripción
 
-El operador `-` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar el operando a un valor numérico](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba su tipo. Realiza una negación BigInt si elo operando se convirtió en un BigInt; de lo contrario, realiza la negación de número.
+El operador `-` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar el operando a un valor numérico](/es/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) y prueba su tipo. Realiza una negación BigInt si elo operando se convirtió en un BigInt; de lo contrario, realiza la negación de número.
 
 ## Ejemplos
 

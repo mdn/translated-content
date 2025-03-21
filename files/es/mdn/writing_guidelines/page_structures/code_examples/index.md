@@ -103,5 +103,5 @@ Esto se ve así cuando se renderiza:
 
 ### Consejos para usar muestras en vivo de GitHub
 
-- Obviamente, primero debes obtener un ejemplo de código adecuado en la [organización GitHub de MDN](https://github.com/mdn/). Esto debe hacerse utilizando Git. Si no estás familiarizado con Git, consulta nuestro artículo [¿Cómo uso GitHub Pages?](/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) y [Preparación para agregar los datos](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para usos más avanzados.
+- Obviamente, primero debes obtener un ejemplo de código adecuado en la [organización GitHub de MDN](https://github.com/mdn/). Esto debe hacerse utilizando Git. Si no estás familiarizado con Git, consulta nuestro artículo [¿Cómo uso GitHub Pages?](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) y [Preparación para agregar los datos](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para usos más avanzados.
 - Tu ejemplo de código debe ser adecuado para mostrar lo que estás tratando de demostrar; debe contener un ejemplo simple que haga una cosa bien, no debe contener contenido ofensivo y debe seguir las [pautas de ejemplos de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) de MDN.

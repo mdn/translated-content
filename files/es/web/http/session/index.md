@@ -62,7 +62,7 @@ name=Juan%20Garcia&request=Envieme%20uno%20de%20sus%20catalogos
 HTTP define un conjunto de [métodos de peticiones](/es/docs/Web/HTTP/Methods) en los que se indican las acciones que se piden realizar al recibir un conjunto de datos. A pesar de que pueden referirse como 'nombres', estos métodos de petición, son denominados a veces como 'verbos' de HTTP. La peticiones más comunes son `GET` y `POST`:
 
 - El método {{HTTPMethod("GET")}} hace una petición de un recurso específico. Las peticiones con `GET` unicamente hacen peticiones de datos.
-- El método {{HTTPMethod("POST")}} envía datos al servidor de manera que este pueda cambiar su estado. Este es el método usado normalmente para enviar los datos de un [formulario HTML](/es/docs/Learn/Forms).
+- El método {{HTTPMethod("POST")}} envía datos al servidor de manera que este pueda cambiar su estado. Este es el método usado normalmente para enviar los datos de un [formulario HTML](/es/docs/Learn_web_development/Extensions/Forms).
 
 ## Estructura de la respuesta del servidor
 

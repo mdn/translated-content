@@ -57,7 +57,7 @@ En el ejemplo siguiente hay dos cajas, ambas de 200 píxeles de tamaño:
 
 ¿Qué podemos hacer con el problema del desbordado?
 
-Como aprendimos en [nuestro artículo anterior](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), una técnica común es hacer que el la propiedad {{cssxref ("max-width")}} de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como [`<video>`](/es/docs/Web/HTML/Element/video) o [`<iframe>`](/es/docs/Web/HTML/Element/iframe).
+Como aprendimos en [nuestro artículo anterior](/es/docs/Learn_web_development/Core/Styling_basics/Sizing), una técnica común es hacer que el la propiedad {{cssxref ("max-width")}} de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como [`<video>`](/es/docs/Web/HTML/Element/video) o [`<iframe>`](/es/docs/Web/HTML/Element/iframe).
 
 **Añade `max-width: 100%` al elemento `<img>` del ejemplo anterior. Verás que la imagen más pequeña permanece sin cambios, pero la más grande se reduce hasta caber en la caja.**
 
@@ -96,7 +96,7 @@ Sin embargo, esto deformaría la imagen, por lo que probablemente no es lo que q
 
 ## Los elementos de formulario
 
-Los elementos de formulario pueden ser un problema si queremos diseñar con CSS, y el [artículo sobre formularios web](/es/docs/Learn/Forms) contiene guías detalladas sobre los aspectos más complicados relativos a este tema, que no vamos a repetir en este artículo. Hay algunos conceptos básicos clave que vale la pena destacar en esta sección.
+Los elementos de formulario pueden ser un problema si queremos diseñar con CSS, y el [artículo sobre formularios web](/es/docs/Learn_web_development/Extensions/Forms) contiene guías detalladas sobre los aspectos más complicados relativos a este tema, que no vamos a repetir en este artículo. Hay algunos conceptos básicos clave que vale la pena destacar en esta sección.
 
 Muchos controles de formulario se añaden con el elemento [`<input>`](/es/docs/Web/HTML/Element/input): este elemento define desde campos de formulario simples, como entradas de texto, hasta campos más complejos añadidos en HTML5, como selectores de color y fecha. Hay algunos elementos adicionales, como [`<textarea>`](/es/docs/Web/HTML/Element/textarea) para la entrada de texto multilínea, y también elementos que se utilizan para contener y etiquetar partes de formularios como [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset) y [`<legend>`](/es/docs/Web/HTML/Element/legend).
 
@@ -113,7 +113,7 @@ En el ejemplo siguiente hemos diseñado algunas entradas de texto con CSS: puede
 > [!WARNING]
 > Al cambiar el estilo de los elementos de formulario debes asegurarte de que para el usuario sigue siendo obvio que se trata de elementos de formulario. Podrías crear una entrada de formulario sin bordes y un fondo que sea casi indistinguible del contenido que lo rodea, pero esto haría que sea muy difícil de reconocer y completar.
 
-Como se explica en los artículos sobre [el diseño de formularios](/es/docs/Learn/Forms/Styling_web_forms) en la parte HTML de esta web, el sistema operativo presenta muchos de los tipos de entrada más complejos y son inaccesibles para el diseño. Por lo tanto, siempre debes suponer que los formularios se verán de manera bastante diferentes para los distintos visitantes, y deberás probar los formularios complejos en diversos navegadores.
+Como se explica en los artículos sobre [el diseño de formularios](/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) en la parte HTML de esta web, el sistema operativo presenta muchos de los tipos de entrada más complejos y son inaccesibles para el diseño. Por lo tanto, siempre debes suponer que los formularios se verán de manera bastante diferentes para los distintos visitantes, y deberás probar los formularios complejos en diversos navegadores.
 
 ### Herencia y elementos de formulario
 
@@ -131,7 +131,7 @@ textarea {
 
 ### Elementos de formulario y tamaño de la caja
 
-Los elementos de formulario utilizan reglas diferentes en los diversos navegadores para el dimensionado de las cajas de los diferentes controles de formulario. Ya cubrimos la propiedad `box-sizing` en [el artículo sobre el modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model). Puedes usar este conocimiento cuando diseñes formularios que garanticen una experiencia homogénea en cuanto a los anchos y las alturas de los elementos de formulario.
+Los elementos de formulario utilizan reglas diferentes en los diversos navegadores para el dimensionado de las cajas de los diferentes controles de formulario. Ya cubrimos la propiedad `box-sizing` en [el artículo sobre el modelo de cajas](/es/docs/Learn_web_development/Core/Styling_basics/Box_model). Puedes usar este conocimiento cuando diseñes formularios que garanticen una experiencia homogénea en cuanto a los anchos y las alturas de los elementos de formulario.
 
 Por coherencia, es una buena idea establecer los márgenes y el área de relleno en `0` para todos los elementos, y luego establecerlos de nuevo al diseñar cada uno de los controles de formulario.
 
@@ -182,7 +182,7 @@ textarea {
 
 Para obtener más información sobre los formularios de estilo, echa un vistazo a los dos artículos en la sección HTML de estas guías.
 
-- [Diseño de formularios web](/es/docs/Learn/Forms/Styling_web_forms)
+- [Diseño de formularios web](/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Aspectos avanzados de aplicación de estilo a formularios](/es/docs/Learn/Forms/Advanced_form_styling)
 
 ## Resumen

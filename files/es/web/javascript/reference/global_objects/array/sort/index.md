@@ -75,7 +75,7 @@ Para comparar números en lugar de strings, la función de comparación puede si
 const compareNumbers = (a, b) => a - b;
 ```
 
-El metodo `sort` puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y [closures](/es/docs/Web/JavaScript/Closures)):
+El metodo `sort` puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y [closures](/es/docs/Web/JavaScript/Guide/Closures)):
 
 ```js
 const numbers = [4, 2, 5, 1, 3];

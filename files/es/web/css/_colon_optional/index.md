@@ -47,4 +47,4 @@ Las entradas requeridas también deben indicarse visualmente, utilizando un trat
 ## Ver también
 
 - Otras pseudo-clases relacionadas con la validación: {{ cssxref(":required") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validación de datos de formulario](/es/docs/Learn/Forms/Form_validation)
+- [Validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation)

@@ -93,6 +93,6 @@ Puedes [probar o remezclar este ejemplo en tiempo real en Glitch](https://media-
 ## Ver también
 
 - [Web media technologies](/es/docs/Web/Media)
-- Learning: [Video and audio content](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- Learning: [Video and audio content](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Autoplay guide for media and Web Audio APIs](/es/docs/Web/Media/Autoplay_guide)
 - [Using the Web Audio API](/es/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

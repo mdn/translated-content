@@ -136,7 +136,7 @@ Un ejemplo de petición HTTP:
 
 Una petición de HTTP, está formado por los siguientes campos:
 
-- Un [método](/es/docs/Web/HTTP/Methods) HTTP, normalmente pueden ser un verbo, como: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} o un nombre como: {{HTTPMethod("OPTIONS")}} o {{HTTPMethod("HEAD")}}, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un [formulario HTML](/es/docs/Learn/Forms), usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones.
+- Un [método](/es/docs/Web/HTTP/Methods) HTTP, normalmente pueden ser un verbo, como: {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} o un nombre como: {{HTTPMethod("OPTIONS")}} o {{HTTPMethod("HEAD")}}, que defina la operación que el cliente quiera realizar. El objetivo de un cliente, suele ser una petición de recursos, usando GET, o presentar un valor de un [formulario HTML](/es/docs/Learn_web_development/Extensions/Forms), usando POST, aunque en otras ocasiones puede hacer otros tipos de peticiones.
 - La dirección del recurso pedido; la URL del recurso, sin los elementos obvios por el contexto, como pueden ser: sin el {{glossary("protocol","protocolo")}} (`http://`), el {{glossary("domain","dominio")}} (aquí `developer.mozilla.org`), o el {{glossary("port","puerto")}} TCP (aquí el 80).
 - La versión del protocolo HTTP.
 - Cabeceras HTTP opcionales, que pueden aportar información adicional a los servidores.

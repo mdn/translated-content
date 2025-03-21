@@ -94,7 +94,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
     - `no-referrer`: La cabecera {{HTTPHeader("Referer")}} no sera enviada.
     - `no-referrer-when-downgrade`: La cabecera {{HTTPHeader("Referer")}} no sera enviada a {{Glossary("origin")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: El referente enviado será limitado al origen de la página de referencia: su [esquema](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port", "puerto")}}.
+    - `origin`: El referente enviado será limitado al origen de la página de referencia: su [esquema](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port", "puerto")}}.
     - `origin-when-cross-origin`: El referente enviado será limitado al esquema, _host_ y el puerto. Las navegaciones del mismo origen seran aun incluidas en la ruta.
     - `same-origin`: Un referente será enviado para el {{Glossary("Same-origin policy", "mismo origen")}}, Sin embargo, las solicitudes de origen cruzado no contendrán información de referencia.
     - `strict-origin`: Solo envía el origen del documento como referente cuando el nivel del protocolo de seguridad se mantiene igual (HTTPS→HTTPS), pero no lo envía si el destino es menos seguro, como un HTTP.

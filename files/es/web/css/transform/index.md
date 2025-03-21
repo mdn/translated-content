@@ -43,7 +43,7 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
+Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
 
 ## Síntaxis
 

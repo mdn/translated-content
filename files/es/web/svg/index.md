@@ -8,7 +8,7 @@ slug: Web/SVG
 **[Comenzando con SVG](/es/docs/Web/SVG/Tutorial)**
 Este tutorial te ayudará a comenzar a usar SVG.
 
-**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/Web/XML/XML_introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/Web/HTML) es al texto.
+**Gráficos vectoriales escalables** **(SVG)** es un lenguaje de marcado [XML](/es/docs/Web/XML/Guides/XML_introduction) para describir [gráficos vectoriales](https://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial)en dos dimensiones. Básicamente, es a los gráficos lo que [HTML](/es/docs/Web/HTML) es al texto.
 
 SVG es un estándar Web abierto basado en texto. Está expresamente diseñado para trabajar con otros estándares web como [CSS](/es/docs/Web/CSS), [DOM](/es/docs/Web/API/Document_Object_Model), y [SMIL](/es/docs/Web/SVG/SVG_animation_with_SMIL).
 

@@ -184,6 +184,6 @@ These methods are obsolete and should not be used, even if a browser still suppo
 
 - Articles
 
-  - [Using HTML5 audio and video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - [Using HTML5 audio and video](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - [Media formats supported by the audio and video elements](/es/docs/Web/Media/Formats)
   - [Web Audio API](/es/docs/Web/API/Web_Audio_API)

@@ -9,11 +9,11 @@ slug: Web/CSS/inherit
 
 ### Resumen
 
-**inherit** es un valor permitido en todas las propiedades CSS. Hace que el elemento al cual se aplica tome el [valor calculado](/es/docs/Web/CSS/computed_value) de la propiedad de su elemento padre.
+**inherit** es un valor permitido en todas las propiedades CSS. Hace que el elemento al cual se aplica tome el [valor calculado](/es/docs/Web/CSS/CSS_cascade/computed_value) de la propiedad de su elemento padre.
 
 #### Para propiedades heredadas
 
-Para las propiedades [heredadas](/es/docs/Web/CSS/Inheritance#propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
+Para las propiedades [heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
 
 ```
   /* hacer las cabeceras de segundo nivel, verdes */
@@ -33,7 +33,7 @@ el elemento será azul.
 
 #### Para propiedades no heredadas
 
-Para las propiedades [no heredadas](/es/docs/Web/CSS/Inheritance#propiedades_no_heredadas), este valor especifica un comportamiento que tiene relativamente poco sentido al no reforzar el valor por defecto.
+Para las propiedades [no heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_no_heredadas), este valor especifica un comportamiento que tiene relativamente poco sentido al no reforzar el valor por defecto.
 
 ### Notas
 

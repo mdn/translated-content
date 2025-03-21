@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-Esta _Referencia CSS_ muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares [CSS](/es/docs/Web/CSS), [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) y [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements), [reglas-at](/es/docs/Web/CSS/At-rule), [unidades](/es/docs/Web/CSS/length), y [selectores](/es/docs/Web/CSS/Introducci%C3%B3n/Selectors), todos juntos en [orden alfabético](#keyword_index), así como los [selectores por tipo](#selectors); y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de [CSS3](/es/docs/Web/CSS/CSS3) estandarizado, o ya establecido. También incluye una breve [referencia DOM-CSS / CSSOM](#dom_css).
+Esta _Referencia CSS_ muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares [CSS](/es/docs/Web/CSS), [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) y [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements), [reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule), [unidades](/es/docs/Web/CSS/length), y [selectores](/es/docs/Web/CSS/Introducci%C3%B3n/Selectors), todos juntos en [orden alfabético](#keyword_index), así como los [selectores por tipo](#selectors); y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de [CSS3](/es/docs/Web/CSS/CSS3) estandarizado, o ya establecido. También incluye una breve [referencia DOM-CSS / CSSOM](#dom_css).
 
 Tenga en cuenta que las definiciones de reglas CSS son completamente [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII), mientras que DOM-CSS / CSSOM, el sistema de gestión de reglas, está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
 
@@ -40,11 +40,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte [este tutorial](/es/docs/Learn/CSS/Building_blocks/Selectors). Tenga en cuenta que cualquier error de [sintaxis CSS](/es/docs/Web/CSS/Syntax) en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro), mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
+Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte [este tutorial](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Tenga en cuenta que cualquier error de [sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax) en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro), mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
 
 ### Sintaxis de las reglas-at (@rules)
 
-Debido a que éstas tienen formatos de estructura variados, revise la sección [reglas-At](/es/docs/Web/CSS/At-rule) para ver la sintaxis de la regla deseada.
+Debido a que éstas tienen formatos de estructura variados, revise la sección [reglas-At](/es/docs/Web/CSS/CSS_syntax/At-rule) para ver la sintaxis de la regla deseada.
 
 ## Índice de palabras clave
 
@@ -139,23 +139,23 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 
 ### Sintaxis y semántica
 
-- [Sintaxis CSS](/es/docs/Web/CSS/Syntax)
-- [Reglas-at](/es/docs/Web/CSS/At-rule)
+- [Sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax)
+- [Reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule)
 - [Cascada](/es/docs/Web/CSS/Cascade)
-- [Comentarios](/es/docs/Web/CSS/Comments)
+- [Comentarios](/es/docs/Web/CSS/CSS_syntax/Comments)
 - [Descriptor](</es/docs/Glossary/Descriptor_(CSS)>)
-- [Herencia](/es/docs/Web/CSS/Inheritance)
-- [Propiedades abreviadas](/es/docs/Web/CSS/Shorthand_properties)
-- [Especificidad](/es/docs/Web/CSS/Specificity)
-- [Sintaxis de definición de valor](/es/docs/Web/CSS/Value_definition_syntax)
+- [Herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+- [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
+- [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
 ### Valores
 
-- [Valor actual](/es/docs/Web/CSS/actual_value)
-- [Valor calculado](/es/docs/Web/CSS/computed_value)
-- [Valor inicial](/es/docs/Web/CSS/initial_value)
+- [Valor actual](/es/docs/Web/CSS/CSS_cascade/actual_value)
+- [Valor calculado](/es/docs/Web/CSS/CSS_cascade/computed_value)
+- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/initial_value)
 - [Valor resuelto](/es/docs/Web/CSS/resolved_value)
-- [Valor específico](/es/docs/Web/CSS/specified_value)
+- [Valor específico](/es/docs/Web/CSS/CSS_cascade/specified_value)
 - [Valor utilizado](/es/docs/Web/CSS/used_value)
 
 ### Diseño
@@ -166,7 +166,7 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 - [Modo de diseño](/es/docs/Web/CSS/Layout_mode)
 - [Margen colapsando](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Elementos reemplazados](/es/docs/Web/CSS/Replaced_element)
-- [Contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
 - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

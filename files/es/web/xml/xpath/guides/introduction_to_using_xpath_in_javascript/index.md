@@ -6,7 +6,7 @@ original_slug: Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 
 {{XsltSidebar}}
 
-Este documento describe la interfaz para usar [XPath](/es/docs/Web/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
+Este documento describe la interfaz para usar [XPath](/es/docs/Web/XML/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
 
 La interfaz principal a usar con XPath es la función [evaluate](/es/docs/DOM/document.evaluate) del objeto [document](/es/docs/Web/API/Document).
 

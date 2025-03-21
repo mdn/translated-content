@@ -20,7 +20,7 @@ El protocolo HTTP es un protocolo ampliable, es decir se puede añadir "vocabula
   - : Una breve descripción sobre qué son los recursos, identificadores y localidades en la Web.
 - [Identificación de recursos en la Web](/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
   - : Descripción de como se referencian recursos en la Web, como son referenciados y como localizarlos.
-- [URIs de datos](/es/docs/Web/URI/Schemes/data)
+- [URIs de datos](/es/docs/Web/URI/Reference/Schemes/data)
   - : Hay un tipo de URIs que permiten integrar directamente el recurso al que señalan. Los URIs de datos, son muy ventajosos, pero también tienen algunas desventajas.
 - [URLs de recursos](/es/docs/Web/URI/Schemes/resource)
 
@@ -30,7 +30,7 @@ El protocolo HTTP es un protocolo ampliable, es decir se puede añadir "vocabula
   - : En la mayoría de los casos, la identidad y localización de un recurso Web, son compartidos, esto se puede modificar con la cabecera de HTTP: {{HTTPHeader("Alt-Svc")}}.
 - [Tipos MIME](/es/docs/Web/HTTP/MIME_types)
   - : Desde la versión HTTP/1.0, es posible trasmitir distintos formatos de recursos. En este artículo se explica como se hace, usando la cabecera: {{HTTPHeader("Content-Type")}}, y el estándar MIME.
-- [Elección de URLs: www y no-www](/es/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
+- [Elección de URLs: www y no-www](/es/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)
   - : Recomendación sobre el uso de dominios con prefijo www o no. En este artículo se explican los resultados de la elección y cómo hacerla.
 - [Flujo de comunicación en una sesión HTTP](/es/docs/Web/URI/Schemes/resource)
   - : En este artículo se describe una comunicación típica de una sesión HTTP, y lo que sucede internamente cuando se hace click en un hiper-vínculo.

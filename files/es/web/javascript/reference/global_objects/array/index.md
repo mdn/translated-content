@@ -237,7 +237,7 @@ Las propiedades y elementos que se obtienen de esta búsqueda son los siguientes
 
 ## Propiedades estáticas
 
-- [`get Array[@@species]`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@species)
+- [`get Array[@@species]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : La función del constructor se utiliza para crear objetos derivados.
 
 ## Métodos estáticos
@@ -253,7 +253,7 @@ Las propiedades y elementos que se obtienen de esta búsqueda son los siguientes
 
 - [`Array.prototype.length`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
   - : Indica el número de elementos de un _array_.
-- [`Array.prototype[@@unscopables]`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@unscopables)
+- [`Array.prototype[@@unscopables]`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : Símbolo que contiene todos los nombres de las propiedades que se excluyen de un ámbito de enlace [`with`](/es/docs/Web/JavaScript/Referencia/Sentencias/with).
 
 ## Métodos de instancia
@@ -316,7 +316,7 @@ Las propiedades y elementos que se obtienen de esta búsqueda son los siguientes
   - : Añada uno o más elementos al inicio de un _array_ y devuelve el nuevo valor de `length` para el _array_ resultante.
 - [`Array.prototype.values()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores para cada índice del _array_.
-- [`Array.prototype[@@iterator]()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores para cada índice del _array_.
 
 Ejemplos

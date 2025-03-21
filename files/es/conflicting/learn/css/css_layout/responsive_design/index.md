@@ -6,7 +6,7 @@ original_slug: Web/Guide/Mobile
 
 Esta página proporciona una visión general de algunas de las principales técnicas necesarias para diseñar sitios web que funcionen bien en dispositivos móviles. Si está buscando información sobre el proyecto Firefox OS de Mozilla, consulte la página de [Firefox OS](/en-US/Mozilla/Firefox_OS). O podría estar interesado en detalles sobre [Firefox para Android](/en-US/Mozilla/Firefox_for_Android).
 
-Hemos organizado esta documentación en dos secciones, [diseñando para dispositivos móviles](#disenandoparadispositivosmoviles) y [desarrollo para diferentes navegadores](#desarrolloparadiferentesnavegadores). Vea también la guía a la [amigabilidad móvil](/es/docs/Learn/CSS/CSS_layout/Responsive_Design) para desarrolladores web de Jason Grlicky.
+Hemos organizado esta documentación en dos secciones, [diseñando para dispositivos móviles](#disenandoparadispositivosmoviles) y [desarrollo para diferentes navegadores](#desarrolloparadiferentesnavegadores). Vea también la guía a la [amigabilidad móvil](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) para desarrolladores web de Jason Grlicky.
 
 ## Diseñando para dispositivos móviles
 

@@ -6,7 +6,7 @@ original_slug: Learn/Forms/HTML5_input_types
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
-En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos
+En el [artículo anterior](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos
 
 <table>
   <tbody>
@@ -32,7 +32,7 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
 > [!NOTE]
 > La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
 
-Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls).
+Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
 ## Campo de dirección de correo electrónico
 
@@ -65,9 +65,9 @@ Mejorar la experiéncia del usuario para usuarios con estos dispositivos, es otr
 
 Como puedes haber visto anteriormente, `email`, junto con otros tipos de `input` más recientes, proporciona la validación de errores _en el lado cliente_ de forma predeterminada, realizados por el navegador antes de que los datos obtenidos se envíen al servidor. _Es_ una ayuda útil guiar a los usuarios a rellenar un formulario de forma precisa y puede ahorrar tiempo: es útil saber de inmediato que tu dato no es correcto, en vez de tener que esperar el viaje de ida y vuelta al servidor.
 
-Pero _no debería ser considerado_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad en cada dato, tanto en el _lado servidor_ como en el lado cliente debido a que la validación en el lado cliente es muy fácil desactivarla, por lo que usuarios malintencionados pueden enviar fácilmente datos incorrectos al servidor. Lee [Seguridad en el sitio web](/es/docs/Learn/Server-side/First_steps/Website_security) para tener una idea de lo que _podría_ ocurrir; Implementar validación en el lado servidor está más allá del alcance de este módulo-guía, pero debería tenerlo en cuenta.
+Pero _no debería ser considerado_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad en cada dato, tanto en el _lado servidor_ como en el lado cliente debido a que la validación en el lado cliente es muy fácil desactivarla, por lo que usuarios malintencionados pueden enviar fácilmente datos incorrectos al servidor. Lee [Seguridad en el sitio web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) para tener una idea de lo que _podría_ ocurrir; Implementar validación en el lado servidor está más allá del alcance de este módulo-guía, pero debería tenerlo en cuenta.
 
-Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acuerdo a las restricciones proporcionadaas por defecto. Esto es debido a que el tipo de input `email`, permite por defecto direcciones de correo electrónico de una intranet. Para implementar un comportamiento diferente de validación puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), y también puedes utilizar mensajes de error personalizados; Hablaremos de cómo utilizar estas características en [Validación de formularios en el lado cliente](/es/docs/Learn/Forms/Form_validation) en un artículo posterior.
+Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acuerdo a las restricciones proporcionadaas por defecto. Esto es debido a que el tipo de input `email`, permite por defecto direcciones de correo electrónico de una intranet. Para implementar un comportamiento diferente de validación puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern), y también puedes utilizar mensajes de error personalizados; Hablaremos de cómo utilizar estas características en [Validación de formularios en el lado cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation) en un artículo posterior.
 
 > [!NOTE]
 > Si los datos introducidos no son una dirección de correo electrónico, habrá coincidéncia con la pseudo clase {{cssxref(':invalid')}}, y la propiedad {{domxref('validityState.typeMismatch')}} devolverá `true`.
@@ -104,7 +104,7 @@ La siguiente captura de pantalla del teclado de Firefox para Android proporciona
 
 Debido a la gran variedad de formatos de número de teléfono existentes, este tipo de campo no cumple con ningún tipo de restricción sobre el valor introducido por el usuario. (Esto significa que puede incluir letras, etc...).
 
-Como mencionamos anteriormente, se puede utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) para que asuma restricciones, sobre el cuál aprenderemos en [Validación de formulario en el lado cliente](/es/docs/Learn/Forms/Form_validation).
+Como mencionamos anteriormente, se puede utilizar el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern) para que asuma restricciones, sobre el cuál aprenderemos en [Validación de formulario en el lado cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 ## Campo URL
 
@@ -297,6 +297,6 @@ That brings us to the end of our tour of the HTML5 form input types. There are a
 
 ### Advanced Topics
 
-- [How to build custom form controls](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [How to build custom form controls](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Sending forms through JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [Property compatibility table for form widgets](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -22,7 +22,7 @@ Content-Location: <url>
 ## Directivas
 
 - \<url>
-  - : Una URL [relativa](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls) o [absoluta](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls) (a la URL de la petición).
+  - : Una URL [relativa](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#examples_of_relative_urls) o [absoluta](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#examples_of_absolute_urls) (a la URL de la petición).
 
 ## Ejemplos
 

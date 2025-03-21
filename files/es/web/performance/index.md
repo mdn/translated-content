@@ -13,7 +13,7 @@ Existen herramientas, API y mejores prácticas que nos ayudan a medir y mejorar 
 
 ## Tutoriales claves
 
-El [Área de aprendizaje de Rendimiento](/es/docs/Learn/Performance) Web de MDN contiene tutoriales modernos y actualizados que cubren aspectos esenciales del rendimiento:
+El [Área de aprendizaje de Rendimiento](/es/docs/Learn_web_development/Extensions/Performance) Web de MDN contiene tutoriales modernos y actualizados que cubren aspectos esenciales del rendimiento:
 
 [¿Qué es el rendimiento web?](/es/docs/Learn/Performance/What_is_web_performance)
 
@@ -74,7 +74,7 @@ Este artículo inicia el módulo con un buen vistazo a lo que realmente es el re
   - : Las necesidades de mercadotecnia, diseño y ventas, y la experiencia del desarrollador, grandes anuncios, scripts de terceros y otras características que pueden ralentizar el rendimiento web. Para ayudar a establecer prioridades, es útil establecer un presupuesto de desempeño: un conjunto de restricciones que no deben excederse durante la fase de desarrollo. En este artículo, analizaremos la creación y el apego a un presupuesto de rendimiento.
 - [Lista de pendientes de rendimiento móvil](/es/docs/Web/Performance/Mobile_performance_checklist)
   - : Una lista de pendientes concisa de las consideraciones de rendimiento que afectan a los usuarios de redes móviles en dispositivos portátiles que funcionan con baterías.
-- [Optimización del rendimiento de inicio](/es/docs/Web/Performance/Optimizing_startup_performance)
+- [Optimización del rendimiento de inicio](/es/docs/Web/Performance/Guides/Optimizing_startup_performance)
   - : ¿Cuánto tiempo demora su aplicación en iniciarse? ¿Bloquea el navegador mientras se carga? Tómese el tiempo para asegurarse de que su aplicación se inicie bien. Este artículo ofrece consejos y sugerencias para ayudarle a alcanzar ese objetivo.
 - [Funciones de rendimiento en las herramientas de desarrollo](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
   - : This section provides information on how to use and understand the performance features in your developer tools, including [Waterfall](https://profiler.firefox.com/docs/), [Call Tree](https://profiler.firefox.com/docs/), and [Flame Charts](https://profiler.firefox.com/docs/).
@@ -109,7 +109,7 @@ HTML
 - [El elemento `<source>`](/es/docs/Web/HTML/Element/source)
 - [El atributo `<img> srcset`](/es/docs/Web/HTML/Element/img#attributes)
 
-  - [Imagenes responsivas](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [Imagenes responsivas](/es/docs/Web/HTML/Responsive_images)
 
 - [Precargando contenido con `rel="preload"`](/es/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 

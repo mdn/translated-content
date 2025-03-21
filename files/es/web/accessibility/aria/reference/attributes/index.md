@@ -27,7 +27,7 @@ Hay 4 categorías de estados y propiedades ARIA:
    - [`aria-haspopup`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
    - [`aria-hidden`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
    - [`aria-invalid`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-   - [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+   - [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
    - [`aria-level`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-level)
    - [`aria-modal`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
    - [`aria-multiline`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
@@ -36,7 +36,7 @@ Hay 4 categorías de estados y propiedades ARIA:
    - [`aria-placeholder`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
    - [`aria-pressed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
    - [`aria-readonly`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-   - [`aria-required`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+   - [`aria-required`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
    - [`aria-selected`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
    - [`aria-sort`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
    - [`aria-valuemax`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
@@ -98,7 +98,7 @@ Muchos de los atributos anteriores son globales, lo que significa que se pueden 
 - [`aria-hidden`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - [`aria-invalid`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-keyshortcuts`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts)
-- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-live`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-live)
 - [`aria-owns`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
@@ -115,11 +115,11 @@ Las siguientes son las páginas de referencia que cubren los estados y propiedad
 
 ## Véase también
 
-- [Uso de ARIA: funciones, estados y propiedades](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Uso de ARIA: funciones, estados y propiedades](/es/docs/Web/Accessibility/ARIA/Guides/Techniques)
 
 <section id="Quick_links">
 
-1. [**Atributos <abbr>WAI-ARIA</abbr>**](/es/docs/Web/Accessibility/ARIA/Attributes)
+1. [**Atributos <abbr>WAI-ARIA</abbr>**](/es/docs/Web/Accessibility/ARIA/Reference/Attributes)
 
    {{ListSubpagesForSidebar("/es/docs/Web/Accessibility/ARIA/Attributes")}}
 

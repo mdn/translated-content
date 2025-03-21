@@ -5,13 +5,13 @@ slug: Web/Progressive_web_apps
 
 ![Logotipo de la comunidad PWA](pwa.png)Las **_aplicaciones web progresivas_** (mejor conocidas como **PWA**s por «_**P**rogressive **W**eb **A**pps_») son aplicaciones web que utilizan APIs y funciones emergentes del navegador web junto a una estrategia tradicional de mejora progresiva para ofrecer una aplicación nativa —como la experiencia del usuario para aplicaciones web multiplataforma. Las aplicaciones web progresivas son un patrón de diseño útil, aunque no son un estándar formalizado. Se puede pensar que PWA es similar a AJAX u otros patrones similares que abarcan un conjunto de atributos de aplicación, incluido el uso de tecnologías y técnicas web específicas. Este conjunto de documentos te dice todo lo que necesitas saber sobre ellas.
 
-Para poder llamar PWA a una aplicación web, técnicamente hablando debe tener las siguientes características: [Contexto seguro](/es/docs/Web/Security/Secure_Contexts) (**{{Glossary("HTTPS")}}**), uno o más [Servicio Workers](/es/docs/Web/API/Service_Worker_API) y un [archivo de manifiesto](/es/docs/Web/Manifest).
+Para poder llamar PWA a una aplicación web, técnicamente hablando debe tener las siguientes características: [Contexto seguro](/es/docs/Web/Security/Secure_Contexts) (**{{Glossary("HTTPS")}}**), uno o más [Servicio Workers](/es/docs/Web/API/Service_Worker_API) y un [archivo de manifiesto](/es/docs/Web/Progressive_web_apps/Manifest).
 
 - [Contexto seguro](/es/docs/Web/Security/Secure_Contexts) ({{Glossary("HTTPS")}})
   - : La aplicación web se debe servir a través de una red segura. Ser un sitio seguro no solo es una buena práctica, sino que también establece tu aplicación web como un sitio confiable, especialmente si los usuarios necesitan realizar transacciones seguras. La mayoría de las funciones relacionadas con una PWA, como la geolocalización e incluso los servicios _workers_, solamente están disponibles cuando la aplicación se ha cargado mediante HTTPS.
 - [Servicio workers](/es/docs/Web/API/Service_Worker_API)
   - : Un servicio _worker_ es un script que permite interceptar y controlar cómo un navegador web maneja tus solicitudes de red y el almacenamiento en caché de activos. Con los servicios _worker_, los desarrolladores web pueden crear páginas web rápidas y fiables junto con experiencias fuera de línea.
-- [El archivo manifest](/es/docs/Web/Manifest)
+- [El archivo manifest](/es/docs/Web/Progressive_web_apps/Manifest)
   - : Un archivo {{Glossary("JSON")}} que controla cómo se muestra tu aplicación al usuario y garantiza que las aplicaciones web progresivas sean detectables. Describe el nombre de la aplicación, la URL de inicio, los iconos y todos los demás detalles necesarios para transformar el sitio web en un formato similar al de una aplicación.
 
 ## Ventajas de PWA
@@ -39,15 +39,15 @@ Las siguientes guías te muestran lo que debes hacer para implementar una PWA, e
 
 ## Guías tecnológicas
 
-- [Almacenamiento del lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) — una extensa guía que muestra cómo y cuándo utilizar el almacenamiento web, `IndexedDB` y el servicio _workers_.
+- [Almacenamiento del lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage) — una extensa guía que muestra cómo y cuándo utilizar el almacenamiento web, `IndexedDB` y el servicio _workers_.
 - [Uso del servicio workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers) — una guía más detallada que cubre la API del servicio _workers_.
 - [Uso de IndexedDB](/es/docs/Web/API/IndexedDB_API/Using_IndexedDB) — los fundamentos de `IndexedDB`, explicados en detalle.
 - [Uso de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) — la API de almacenamiento web simplificada.
 - [Aplicaciones web de carga instantánea con una arquitectura de intérprete de aplicaciones](https://developers.google.com/web/updates/2015/11/app-shell) — una guía para usar el patrón de codificación de intérprete de App para crear aplicaciones que se cargan rápidamente.
 - [Uso de la API Push](/es/docs/Web/API/Push_API) — aprende los conceptos básicos de la API Web `Push`.
 - [Uso de la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API) — notificaciones web en pocas palabras.
-- [Los componentes básicos del diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design) — aprende los conceptos básicos del diseño responsivo, un tema esencial para el diseño de aplicaciones modernas.
-- [Primero móvil](/es/docs/Learn/CSS/CSS_layout/Responsive_Design) — a menudo, al crear diseños de aplicaciones adaptables, tiene sentido crear el diseño móvil como predeterminado y construir diseños más anchos en la parte superior.
+- [Los componentes básicos del diseño responsivo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) — aprende los conceptos básicos del diseño responsivo, un tema esencial para el diseño de aplicaciones modernas.
+- [Primero móvil](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) — a menudo, al crear diseños de aplicaciones adaptables, tiene sentido crear el diseño móvil como predeterminado y construir diseños más anchos en la parte superior.
 - [Guía para agregar la pantalla de inicio](/es/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) — aprende cómo tus aplicaciones pueden aprovechar agregar la pantalla de inicio (A2HS).
 
 ## Herramientas

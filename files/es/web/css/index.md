@@ -13,11 +13,11 @@ Desde CSS3, el alcance de las especificaciones se incrementó de forma significa
 
 - Introducción a CSS
 
-  - : Si eres nuevo en el desarrollo web, asegúrate de leer nuestro artículo de [conceptos básicos de CSS](/es/docs/Learn/Getting_started_with_the_web/CSS_basics) para saber qué es CSS y cómo usarlo.
+  - : Si eres nuevo en el desarrollo web, asegúrate de leer nuestro artículo de [conceptos básicos de CSS](/es/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) para saber qué es CSS y cómo usarlo.
 
 - Tutoriales CSS
 
-  - : Nuestra [área de aprendizaje de CSS](/es/docs/Learn/CSS) contiene una gran cantidad de tutoriales que te llevan desde el nivel de principiante hasta el nivel de competencia, cubriendo todos los aspectos fundamentales.
+  - : Nuestra [área de aprendizaje de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) contiene una gran cantidad de tutoriales que te llevan desde el nivel de principiante hasta el nivel de competencia, cubriendo todos los aspectos fundamentales.
 
 - Referencia CSS
 
@@ -25,22 +25,22 @@ Desde CSS3, el alcance de las especificaciones se incrementó de forma significa
 
 ## Tutoriales
 
-Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módulos que enseñan CSS desde cero — no se requieren conocimientos previos.
+Nuestra [área de aprendizaje CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) presenta múltiples módulos que enseñan CSS desde cero — no se requieren conocimientos previos.
 
-- [Primeros pasos en CSS](/es/docs/Learn/CSS/First_steps)
+- [Primeros pasos en CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : CSS es utilizado para diseñar y dar estilo a las páginas web, por ejemplo, alterando la fuente, color, tamaño y espaciado del contenido, dividirlo en múltiples columnas o agregar animaciones y otras características decorativas. Este módulo proporciona un suave comienzo hacia el dominio de CSS con los conceptos básicos acerca de su funcionamiento, la sintaxis y la manera en que puedes comenzar a utilizarlo para agregar estilos al HTML.
 
 <!---->
 
-- [Bloques de construcción CSS.](/es/docs/Learn/CSS/Building_blocks)
+- [Bloques de construcción CSS.](/es/docs/Learn_web_development/Core/Styling_basics)
 
-  - : Este módulo continúa a partir de donde dejó el módulo de [primeros pasos de CSS](/es/docs/Learn/CSS/First_steps). Ahora que has adquirido familiaridad con el lenguaje y su sintaxis, y has ganado cierta experiencia básica con su uso, es hora de profundizar un poco más. Este módulo analiza la cascada y la herencia, todos los tipos de selectores que tenemos disponibles, unidades, tamaño, estilo de fondos y bordes, depuración (_debugging_) y mucho más.
+  - : Este módulo continúa a partir de donde dejó el módulo de [primeros pasos de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics). Ahora que has adquirido familiaridad con el lenguaje y su sintaxis, y has ganado cierta experiencia básica con su uso, es hora de profundizar un poco más. Este módulo analiza la cascada y la herencia, todos los tipos de selectores que tenemos disponibles, unidades, tamaño, estilo de fondos y bordes, depuración (_debugging_) y mucho más.
 
-    El propósito de este módulo es proporcionarte un set de herramientas para escribir CSS competente y ayudarte a entender todas la teoría esencial antes de avanzar hacia cuestiones más específicas como [estilo de textos](/es/docs/Learn/CSS/Styling_text) y [diseño CSS](/es/docs/Learn/CSS/CSS_layout).
+    El propósito de este módulo es proporcionarte un set de herramientas para escribir CSS competente y ayudarte a entender todas la teoría esencial antes de avanzar hacia cuestiones más específicas como [estilo de textos](/es/docs/Learn_web_development/Core/Text_styling) y [diseño CSS](/es/docs/Learn_web_development/Core/CSS_layout).
 
-- [Estilo de texto](/es/docs/Learn/CSS/Styling_text)
+- [Estilo de texto](/es/docs/Learn_web_development/Core/Text_styling)
   - : Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS en el que debes concentrarte es dar estilo al texto, una de las cosas más comunes que harás con CSS. Aquí veremos los fundamentos del estilo del texto, incluida la configuración de la fuente, negrita, cursiva, espaciado entre líneas y letras, sombras y otras características del texto. Terminaremos el módulo analizando la aplicación de fuentes personalizadas a tu página y en el estilo de listas y enlaces.
-- [Diseño de CSS](/es/docs/Learn/CSS/CSS_layout)
+- [Diseño de CSS](/es/docs/Learn_web_development/Core/CSS_layout)
   - : En este punto ya hemos analizado los fundamentos de CSS, cómo dar estilo al texto y cómo diseñar y manipular las cajas en las que se encuentra el contenido. Ahora es el momento de ver cómo colocar sus cajas en el lugar correcto en relación con la pantalla del dispositivo y entre sí. Hemos cubierto los requisitos previos necesarios para que ahora puedas profundizar en el diseño de CSS, mirando diferentes configuraciones de pantalla, métodos de diseño tradicionales que implican flotación y posicionamiento, y nuevas herramientas de diseño como flexbox, grid y posicionamiento, así como algunas técnicas de herencia que quizás desees conocer.
 - [Uso de CSS para resolver problemas comunes](/es/docs/Learn/CSS/S%C3%A1bercomo)
   - : Proporciona enlaces a secciones de contenido que explican cómo usar CSS para resolver problemas muy comunes al crear una página web.
@@ -50,14 +50,14 @@ Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módu
 - [Referencia CSS:](/es/docs/Web/CSS/Reference) Esta referencia exhaustiva para desarrolladores web experimentados describe cada propiedad y concepto de CSS.
 - Conceptos clave de CSS:
 
-  - La [sintaxis y las formas del lenguaje](/es/docs/Web/CSS/Syntax)
-  - [Especificidad](/es/docs/Web/CSS/Specificity), [herencia](/es/docs/Web/CSS/Inheritance) y [la cascada](/es/docs/Web/CSS/Cascade)
+  - La [sintaxis y las formas del lenguaje](/es/docs/Web/CSS/CSS_syntax/Syntax)
+  - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity), [herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance) y [la cascada](/es/docs/Web/CSS/Cascade)
   - [Unidades y valores CSS](/es/docs/Web/CSS/CSS_Values_and_Units)
   - [Modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) y [colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - El [bloque contenedor](/es/docs/Web/CSS/Containing_block)
-  - Contextos de [apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) y [formato de bloques](/es/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - Valores [iniciales](/es/docs/Web/CSS/initial_value), [calculados](/es/docs/Web/CSS/computed_value), [usados](/es/docs/Web/CSS/used_value) y [actuales](/es/docs/Web/CSS/actual_value)
-  - [Propiedades abreviadas de CSS](/es/docs/Web/CSS/Shorthand_properties)
+  - Contextos de [apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) y [formato de bloques](/es/docs/Web/CSS/CSS_display/Block_formatting_context)
+  - Valores [iniciales](/es/docs/Web/CSS/CSS_cascade/initial_value), [calculados](/es/docs/Web/CSS/CSS_cascade/computed_value), [usados](/es/docs/Web/CSS/used_value) y [actuales](/es/docs/Web/CSS/CSS_cascade/actual_value)
+  - [Propiedades abreviadas de CSS](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Diseño de caja flexible de CSS](/es/docs/Web/CSS/CSS_flexible_box_layout)
   - [Diseño de cuadrícula CSS (_CSS Grid_)](/es/docs/Web/CSS/CSS_grid_layout)
   - _[Media queries](/es/docs/Web/CSS/CSS_media_queries)_

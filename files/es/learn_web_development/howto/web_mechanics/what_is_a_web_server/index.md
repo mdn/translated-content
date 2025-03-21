@@ -51,7 +51,7 @@ Por ejemplo, para producir las páginas web que finalmente ves en tu navegador, 
 
 ## Aprendizaje activo
 
-_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Community/Contributing/Getting_started)_
+_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Community/Getting_started)_
 
 ## Inmersión más profunda
 
@@ -68,7 +68,7 @@ Técnicamente, puede alojar todos esos archivos en su propia computadora, pero e
 - tiene la misma dirección IP todo el tiempo.
 - es mantenido por un proveedor externo.
 
-Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#alojamiento).
+Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#alojamiento).
 
 Una vez que configura una solución de alojamiento web, solo tiene que [cargar sus archivos en su servidor web](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
 
@@ -105,12 +105,12 @@ Es imposible sugerir un único servidor de aplicaciones que sea la solución cor
 
 La mayoría de los desarrolladores de sitios web no necesitarán crear un servidor de aplicaciones desde cero, porque hay muchas soluciones listas para usar, muchas de las cuales son altamente configurables.
 Pero si necesita crear su propio servidor, probablemente querrá utilizar un _framework_ de servidor, aprovechando su código y bibliotecas existentes, y extendiendo solo las partes que necesita para satisfacer su caso de uso.
-Solo un número relativamente pequeño de desarrolladores debería necesitar desarrollar un servidor completamente desde cero: por ejemplo, para cumplir con restricciones de recursos en un sistema integrado. Si desea experimentar con la creación de un servidor, eche un vistazo a los recursos en la [vía de aprendizaje de programación de sitios web del lado del servidor](/es/docs/Learn/Server-side).
+Solo un número relativamente pequeño de desarrolladores debería necesitar desarrollar un servidor completamente desde cero: por ejemplo, para cumplir con restricciones de recursos en un sistema integrado. Si desea experimentar con la creación de un servidor, eche un vistazo a los recursos en la [vía de aprendizaje de programación de sitios web del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side).
 
 ## Próximos pasos
 
 Ahora que estás familiarizado con los servidores web, podrías:
 
-- leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- consultar otros artículos relacionados con[los diferentes software que puedes utilizar para crear un sitio web](/es/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- consultar otros artículos relacionados con[los diferentes software que puedes utilizar para crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
 - pasar a algo práctico tipo: [¿cómo subir archivos al servidor?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).

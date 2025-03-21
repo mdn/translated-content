@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-Los elementos {{HTMLElement("input")}} con **`type="file"`** permiten al usuario elegir uno o más archivos desde el almacenamiento de su dispositivo. Una vez seleccionados, los archivos pueden ser subidos a un servidor usando el [envío de formularios](/es/docs/Learn/Forms), o manipulados utilizando código JavaScript y la [API de archivos (File API)](/es/docs/Web/API/File_API/Using_files_from_web_applications).
+Los elementos {{HTMLElement("input")}} con **`type="file"`** permiten al usuario elegir uno o más archivos desde el almacenamiento de su dispositivo. Una vez seleccionados, los archivos pueden ser subidos a un servidor usando el [envío de formularios](/es/docs/Learn_web_development/Extensions/Forms), o manipulados utilizando código JavaScript y la [API de archivos (File API)](/es/docs/Web/API/File_API/Using_files_from_web_applications).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
