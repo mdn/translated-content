@@ -1,6 +1,7 @@
 ---
 title: MDN Web Docs の掲載基準
-slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
+slug: MDN/Writing_guidelines/Criteria_for_inclusion
+original_slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 l10n:
   sourceCommit: ce83b64f1132a29a19471e46bfffced755f775eb
 ---

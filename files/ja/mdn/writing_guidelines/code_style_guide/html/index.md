@@ -1,6 +1,7 @@
 ---
 title: HTML のサンプルコードの作成ガイドライン
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+slug: MDN/Writing_guidelines/Code_style_guide/HTML
+original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 l10n:
   sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
 ---

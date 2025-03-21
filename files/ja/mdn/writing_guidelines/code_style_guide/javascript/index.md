@@ -1,6 +1,7 @@
 ---
 title: JavaScript のサンプルコードの作成ガイドライン
-slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
+original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 l10n:
   sourceCommit: f845422a4b52c149e87846242d26b3cdf2705376
 ---
