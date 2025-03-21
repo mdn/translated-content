@@ -24,7 +24,7 @@ Gecko は現在 [HTML5](/ja/docs/HTML/HTML5) パーサーを利用していま�
   - : HTML5 におけるウェブフォームの改善の概説。これらの変更点には [`<input>`](/ja/docs/Web/HTML/Element/input) 要素における入力種類の追加、データバリデーションなどが含まれています。
 - [HTML5 Sections](/ja/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko は文書におけるセクションに関する新しい HTML5 要素をサポートします。: [`<article>`](/ja/docs/Web/HTML/Element/article)、[`<section>`](/ja/docs/Web/HTML/Element/section)、[`<nav>`](/ja/docs/Web/HTML/Element/nav)、[`<aside>`](/ja/docs/Web/HTML/Element/aside)、 [`<hgroup>`](/ja/docs/Web/HTML/Element/hgroup)、[`<header>`](/ja/docs/Web/HTML/Element/header) および [`<footer>`](/ja/docs/Web/HTML/Element/footer)。
-- [HTML5 の hidden 属性](/ja/docs/Web/HTML/Global_attributes#attr-hidden)
+- [HTML5 の hidden 属性](/ja/docs/Web/HTML/Global_attributes/hidden)
   - : この属性は、すべての要素に共通であり、ウェブページでユーザーに現在は関係しないコンテントを隠すために用いられます。
 - その他の HTML5 要素
   - : Gecko は次の新しい HTML5 要素もサポートします。: [`<mark>`](/ja/docs/Web/HTML/Element/mark)、[`<figure>`](/ja/docs/Web/HTML/Element/figure) および [`<figcaption>`](/ja/docs/Web/HTML/Element/figcaption)。
