@@ -280,5 +280,5 @@ addEventListener("resize", () =>
 ## 関連情報
 
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- [HTTP クライアントヒント](/ja/docs/Web/HTTP/Client_hints)
+- [HTTP クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)
 - [機能検出の実装](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)

@@ -36,7 +36,7 @@ l10n:
 
 ### SVG
 
-- [`image`](/ja/docs/Web/SVG/Element/image) および [`feImage`](/ja/docs/Web/SVG/Element/feImage) 要素で [`crossorigin`](/ja/docs/Web/SVG/Attribute/crossorigin) 属性をサポートしました ([Firefox bug 1240357](https://bugzil.la/1240357))。
+- [`image`](/ja/docs/Web/SVG/Reference/Element/image) および [`feImage`](/ja/docs/Web/SVG/Element/feImage) 要素で [`crossorigin`](/ja/docs/Web/SVG/Attribute/crossorigin) 属性をサポートしました ([Firefox bug 1240357](https://bugzil.la/1240357))。
 
 ### API
 
@@ -44,7 +44,7 @@ l10n:
 - [WebTransport API](/ja/docs/Web/API/WebTransport_API) をサポートしました。[`WebTransport`](/ja/docs/Web/API/WebTransport)、[`WebTransportBidirectionalStream`](/ja/docs/Web/API/WebTransportBidirectionalStream)、[`WebTransportDatagramDuplexStream`](/ja/docs/Web/API/WebTransportDatagramDuplexStream)、[`WebTransportReceiveStream`](/ja/docs/Web/API/WebTransportReceiveStream)、[`WebTransportDatagramDuplexStream`](/ja/docs/Web/API/WebTransportDatagramDuplexStream)、[`WebTransportError`](/ja/docs/Web/API/WebTransportError) インターフェイスをサポートしています。
   詳しくは [Firefox bug 1692754](https://bugzil.la/1692754)、[Firefox bug 1818754](https://bugzil.la/1818754)、[Firefox bug 1791835](https://bugzil.la/1791835) をご覧ください。
 
-- {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule) を使用するときに指定した `supports()` 条件を取得する、[`CSSImportRule.supportsText`](/ja/docs/Web/API/CSSImportRule/supportsText) が使用可能になりました ([Firefox bug 1829590](https://bugzil.la/1829590))。
+- {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) を使用するときに指定した `supports()` 条件を取得する、[`CSSImportRule.supportsText`](/ja/docs/Web/API/CSSImportRule/supportsText) が使用可能になりました ([Firefox bug 1829590](https://bugzil.la/1829590))。
 
 #### DOM
 

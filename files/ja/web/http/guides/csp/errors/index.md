@@ -10,7 +10,7 @@ l10n:
 
 このページは CSP のエラーと警告に関する記事を参照する親となり、概要を示したり、可能であれば問題解決の一般的な助言をしたりします。
 
-- [The page's settings blocked the loading of a resource: %1$S](/ja/docs/Web/HTTP/CSP/Errors/CSPViolation)
+- [The page's settings blocked the loading of a resource: %1$S](/ja/docs/Web/HTTP/Guides/CSP/Errors/CSPViolation)
 - The page's settings blocked the loading of a resource at %2$S ("%1$S").
 - A violation occurred for a report-only CSP policy ("%1$S"). The behavior was allowed, and a CSP report was sent.
 - The page's settings observed the loading of a resource at %2$S ("%1$S"). A CSP report is being sent.

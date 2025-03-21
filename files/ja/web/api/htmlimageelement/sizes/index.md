@@ -133,6 +133,6 @@ break50.addEventListener(
 
 - [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [HTML における画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [HTML における画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
 - [`srcset` および `sizes` 属性の使用](/ja/docs/Web/HTML/Element/img#srcset_および_sizes_属性の使用)

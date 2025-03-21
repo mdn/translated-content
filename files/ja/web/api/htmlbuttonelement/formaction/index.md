@@ -36,4 +36,4 @@ btnEl.formAction = "/cgi-bin/publish";
 - {{domxref("HTMLButtonElement.formMethod")}}
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formTarget")}}
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

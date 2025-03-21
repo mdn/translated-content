@@ -13,5 +13,5 @@ l10n:
 
 ## 関連情報
 
-- [FTP を介してファイルをアップロードする初心者向けのガイド](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [FTP を介してファイルをアップロードする初心者向けのガイド](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
 - [FTP](https://ja.wikipedia.org/wiki/File_Transfer_Protocol) （ウィキペディア）

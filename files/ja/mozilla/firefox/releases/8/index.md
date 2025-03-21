@@ -49,7 +49,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 - [`background-size`](/ja/docs/Web/CSS/background-size) の処理が仕様により従ったものになりました。
 - これまで Quriks モードでの [`text-decoration`](/ja/docs/Web/CSS/text-decoration) は、太い線で描画され、また子孫要素のテキストに沿って描画されていました。Firefox 8 からは、標準モードにより近い表示になります。
 - 要素の水平方向への配置がより仕様に沿った実装になりました。この件に関するドキュメントを準備中ですが、今は [バグ 682780](https://bugzilla.mozilla.org/show_bug.cgi?id=682780) のコメント 23 をお読みください。
-- [SVG 画像の拡大縮小](/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds) が背景画像においても適切に処理されるようになりました。
+- [SVG 画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds) が背景画像においても適切に処理されるようになりました。
 
 ### Network
 
@@ -76,8 +76,8 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 ### MathML
 
-- [`<math>`](/ja/docs/Web/MathML/Element/math) 要素に `displaystyle` 属性のサポートが追加されました。
-- [`<mtable>`](/ja/docs/Web/MathML/Element/mtable) 要素の `align` において、_負の行数_ の解釈が修正されました。
+- [`<math>`](/ja/docs/Web/MathML/Reference/Element/math) 要素に `displaystyle` 属性のサポートが追加されました。
+- [`<mtable>`](/ja/docs/Web/MathML/Reference/Element/mtable) 要素の `align` において、_負の行数_ の解釈が修正されました。
 
 ### 開発者ツール
 

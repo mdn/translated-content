@@ -70,15 +70,15 @@ svg|a:active {
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **no**
 - {{SVGAttr("href")}}
   - : ハイパーリンクが指す先の {{Glossary("URL")}} または URL フラグメントです。
-    _値種別_: **[\<URL>](/ja/docs/Web/SVG/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **yes**
+    _値種別_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **yes**
 - [`hreflang`](/ja/docs/Web/HTML/Element/a#hreflang)
   - : ハイパーリンクが指す先の URL または URL フラグメントにおける人間の言語です。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **yes**
 - [`ping`](/ja/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : 空白区切りの URL のリストで、ハイパーリンクをたどるとき、 {{HTTPMethod("POST")}} リクエストで本文が `PING` であるものがブラウザーから (バックグラウンドで) 送信されます。通常はトラッキングのために使用されます。同じ用途でもっと広く対応されている機能として、 {{domxref("Navigator.sendBeacon()")}} を参照してください。
-    _値種別_: **[\<list-of-URLs>](/ja/docs/Web/SVG/Content_type#list-of-ts)** ; _既定値_: _none_; _アニメーション_: **no**
+    _値種別_: **[\<list-of-URLs>](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _既定値_: _none_; _アニメーション_: **no**
 - [`referrerpolicy`](/ja/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
-  - : どの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)をアクセス先の {{Glossary("URL")}} に送信するかです。
+  - : どの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)をアクセス先の {{Glossary("URL")}} に送信するかです。
     _値種別_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _既定値_: _none_; _アニメーション_: **no**
 - [`rel`](/ja/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
   - : 対象のオブジェクトとリンクしているオブジェクトの関係です。
@@ -91,19 +91,19 @@ svg|a:active {
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : ハイパーリンクがさす先の URL または URL フラグメントです。古いブラウザー向けの後方互換性のために必要な場合があります。
-    _値種別_: **[\<URL>](/ja/docs/Web/SVG/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **yes**
+    _値種別_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **yes**
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : 主なもの: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
-- [スタイル属性](/ja/docs/Web/SVG/Attribute)
+- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件付き処理属性](/ja/docs/Web/SVG/Attribute)
+- [条件付き処理属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : 主なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Attribute#文書要素イベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Reference/Attribute#文書要素イベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
   - : 主なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink 属性
   - : 主なもの: {{SVGAttr("xlink:title")}}

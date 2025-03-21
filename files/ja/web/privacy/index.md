@@ -146,5 +146,5 @@ l10n:
 
 - [ウェブセキュリティ](/ja/docs/Web/Security)
 - [権限 API](/ja/docs/Web/API/Permissions_API)
-- [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
 - [The Privacy Sandbox](https://developer.google.com/privacy-sandbox)

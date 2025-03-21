@@ -29,11 +29,11 @@ Access-Control-Allow-Methods: GET,HEAD,POST
 コードからサービスにアクセスするときは、許可された HTTP メソッドのみを使用するように確認してください。
 
 > [!NOTE]
-> サーバーが `Access-Control-Allow-methods` ヘッダーに理解できないまたは未定義のメソッド名を含めた場合、別なエラー [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/ja/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod) が発生します。
+> サーバーが `Access-Control-Allow-methods` ヘッダーに理解できないまたは未定義のメソッド名を含めた場合、別なエラー [Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod) が発生します。
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)

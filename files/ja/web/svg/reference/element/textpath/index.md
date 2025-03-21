@@ -43,7 +43,7 @@ svg {
 
 - {{SVGAttr("href")}}
   - : テキストを表示するパスまたは基本図形への URL です。 `path` 属性を設定した場合、 `href` は効果がありません。
-    _値の型_: [**\<URL>**](/ja/docs/Web/SVG/Content_type#url) ; _既定値_: なし; _アニメーション_: **可**
+    _値の型_: [**\<URL>**](/ja/docs/Web/SVG/Guides/Content_type#url) ; _既定値_: なし; _アニメーション_: **可**
 - {{SVGAttr("lengthAdjust")}}
   - : テキストの長さを調整する場所です。文字間、または空間と文字の両方。
     _値の型_: `spacing`|`spacingAndGlyphs`; _既定値_: `spacing`; _アニメーション_: **可**
@@ -61,10 +61,10 @@ svg {
     _値の型_: `auto`|`exact` ; _既定値_: `exact`; _アニメーション_: **可**
 - {{SVGAttr("startOffset")}}
   - : テキストの開始位置をパスの開始位置からどれだけずらすか。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Content_type#number) ; _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("textLength")}}
   - : テキストがレンダリングされる空間の幅。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Content_type#number) ; _既定値_: _auto_; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _auto_; _アニメーション_: **可**
 
 ## 使用コンテキスト
 

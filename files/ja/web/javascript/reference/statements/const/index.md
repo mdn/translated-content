@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`const`** 宣言はブロックスコープのローカル変数（定数）を宣言します。定数の値は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を使用して再代入することができませんが、定数が[オブジェクト](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)であった場合、そのプロパティを追加したり、更新したり、削除したりすることができます。
+**`const`** 宣言はブロックスコープのローカル変数（定数）を宣言します。定数の値は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を使用して再代入することができませんが、定数が[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)であった場合、そのプロパティを追加したり、更新したり、削除したりすることができます。
 
 {{InteractiveExample("JavaScript Demo: Statement - Const")}}
 
@@ -35,7 +35,7 @@ const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
-  - : 宣言する変数名。それぞれ、正当な JavaScript [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)または[分割結合パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)でなければなりません。
+  - : 宣言する変数名。それぞれ、正当な JavaScript [識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)または[分割結合パターン](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でなければなりません。
 - `valueN`
   - : 変数の初期値。正式な式であれば何でもかまいません。
 
@@ -147,7 +147,7 @@ const [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-詳しくは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を参照してください。
+詳しくは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を参照してください。
 
 ## 仕様書
 

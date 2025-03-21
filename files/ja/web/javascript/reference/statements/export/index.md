@@ -262,7 +262,7 @@ console.log(foo); // 4.555806215962888
 以下の点に注意することが重要です。
 
 - このスクリプトを HTML の {{HTMLElement("script")}} 要素で type="module" を指定したものに入れる必要があり、そうすれば適切にモジュールとして認識され、扱われます。
-- `file://` の URL で JavaScript モジュールを実行することはできません。— [CORS](/ja/docs/Web/HTTP/CORS) エラーになります。HTTP サーバーを通して実行する必要があります。
+- `file://` の URL で JavaScript モジュールを実行することはできません。— [CORS](/ja/docs/Web/HTTP/Guides/CORS) エラーになります。HTTP サーバーを通して実行する必要があります。
 
 ### デフォルトエクスポートの使用
 

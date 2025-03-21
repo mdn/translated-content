@@ -5,7 +5,7 @@ slug: Web/CSS/@keyframes
 
 {{CSSRef}}
 
-**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_transitions)よりも詳細に制御できます。
+**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_transitions)よりも詳細に制御できます。
 
 ## 構文
 

@@ -333,7 +333,7 @@ l10n:
 
 ## ガイドライン 1.4: 前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする
 
-このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色（[色のコントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)と指示を伝えるための[色の使い方](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color)の両方が）ですが、他の状況でも適用されます。
+このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色（[色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)と指示を伝えるための[色の使い方](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color)の両方が）ですが、他の状況でも適用されます。
 
 <table class="standard-table">
   <thead>
@@ -585,9 +585,9 @@ l10n:
 
 ## 関連情報
 
-- [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
   1. 知覚可能
-  2. [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3. [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4. [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  2. [操作可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  3. [理解可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  4. [堅牢](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)

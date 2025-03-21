@@ -19,7 +19,7 @@ l10n:
 
 呼び出しているウェブアプリをプラットフォーム専用のアプリまたは PWA と関連付けるには、次の 2 つのことを行う必要があります。
 
-1. 呼び出すウェブアプリは、[マニフェストファイル](/ja/docs/Web/Manifest) の [`related_applications`](/ja/docs/Web/Manifest/related_applications) メンバーで指定する必要があります。
+1. 呼び出すウェブアプリは、[マニフェストファイル](/ja/docs/Web/Progressive_web_apps/Manifest) の [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) メンバーで指定する必要があります。
 2. プラットフォーム専用のアプリまたは PWA は、呼び出し元のアプリとの関係を定義する必要があります。
 
 関係を定義する方法は、アプリの機種によって異なります。
@@ -65,7 +65,7 @@ getInstalledRelatedApps()
 - `version` {{optional_inline}}
   - : 関連するアプリのバージョンを表す文字列です。
 
-関連するアプリの情報は、前回呼び出したウェブアプリの [マニフェストファイル](/ja/docs/Web/Manifest) のメンバーである [`related_applications`](/ja/docs/Web/Manifest/related_applications) に指定された情報である必要があります。
+関連するアプリの情報は、前回呼び出したウェブアプリの [マニフェストファイル](/ja/docs/Web/Progressive_web_apps/Manifest) のメンバーである [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/related_applications) に指定された情報である必要があります。
 
 ### 例外
 

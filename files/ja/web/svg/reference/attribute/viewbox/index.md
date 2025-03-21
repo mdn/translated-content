@@ -11,7 +11,7 @@ l10n:
 **`viewBox`** 属性は、 SVG ビューポートのユーザー空間の位置と大きさを定義します。
 
 `viewBox` 属性の値は、`min-x`、`min-y`、`width`、`height` の 4 つの数値がホワイトスペースまたはカンマで区切られたリストです。 `min-x` と `min-y` は `viewBox` が持つ可能性がある最も小さい X および Y 座標（`viewBox` の原点の座標）で、 `width` と `height` は `viewBox` の寸法を表します。結果的に `viewBox` は、ユーザー空間において SVG 要素のビューポートの境界に対応付けられた四角形になります（[ブラウザービューポート](/ja/docs/Glossary/Viewport)ではありません）。
-SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Attribute/preserveAspectRatio) 属性との組み合わせが多い）がある場合、座標変換により、具体的なコンテナー要素に合うように SVG ビューポートが引き伸ばされたり、サイズが変更されたりします。
+SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性との組み合わせが多い）がある場合、座標変換により、具体的なコンテナー要素に合うように SVG ビューポートが引き伸ばされたり、サイズが変更されたりします。
 
 ## 要素
 

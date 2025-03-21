@@ -92,7 +92,7 @@ l10n:
 
 最初の数字は塗りつぶされた部分の長さを、 2 番目の数字は塗りつぶされていない部分の長さを指定します。上の例では、 2 番目のパスで 5 ピクセル単位を埋め、 5 単位の次のダッシュまで 5 単位の空白を作ります。もっと複雑なダッシュパターンにしたい場合は、より多くの数字を指定することができます。最初の例では 3 つの数字を指定していますが、この場合、レンダラーは数字を 2 回ループさせて偶数のパターンを作ります。つまり、最初のパスでは、 5 個の塗りつぶし、 10 個の空、 5 個の塗りつぶしがレンダリングされ、さらにループして、 5 個の空、 10 個の塗りつぶし、 5 個の空が作成されます。このパターンが繰り返されます。
 
-`stroke` および `fill` プロパティは他にもあります。例えば、 [`fill-rule`](/ja/docs/Web/SVG/Attribute/fill-rule) は自身が重なり合っている図形でどのように色をつけるかを指定します。 [`stroke-miterlimit`](/ja/docs/Web/SVG/Attribute/stroke-miterlimit) はストロークが miter を描画するかどうかを指定します。そして [stroke-dashoffset](/ja/docs/Web/SVG/Attribute/stroke-dashoffset) は、線上で波線の列をどこから始めるかを指定します。
+`stroke` および `fill` プロパティは他にもあります。例えば、 [`fill-rule`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) は自身が重なり合っている図形でどのように色をつけるかを指定します。 [`stroke-miterlimit`](/ja/docs/Web/SVG/Reference/Attribute/stroke-miterlimit) はストロークが miter を描画するかどうかを指定します。そして [stroke-dashoffset](/ja/docs/Web/SVG/Reference/Attribute/stroke-dashoffset) は、線上で波線の列をどこから始めるかを指定します。
 
 ## CSS の使用
 

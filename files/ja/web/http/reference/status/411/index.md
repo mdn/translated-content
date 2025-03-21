@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`411 Length Required`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードは、{{HTTPHeader("Content-Length")}} ヘッダーが定義されていないリクエストをサーバーが受け入れないことを示します。
+HTTP の **`411 Length Required`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、{{HTTPHeader("Content-Length")}} ヘッダーが定義されていないリクエストをサーバーが受け入れないことを示します。
 
 > [!NOTE]
 > チャンクの連続でデータを送信する場合は、`Content-Length` ヘッダーを省略し、各チャンクの先頭に現在のチャンクの長さを 16 進数形式で記載する必要があります。
@@ -56,6 +56,6 @@ Content-Length: 110
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Transfer-Encoding")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border-right`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
+**`border-right`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
 
 {{InteractiveExample("CSS Demo: border-right")}}
 

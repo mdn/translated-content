@@ -8,7 +8,7 @@ original_slug: Web/CSS/Cascade
 
 **カスケード**は、異なるソースから来るプロパティ値を組み合わせる方法を定義するアルゴリズムです。カスケードでは、複数の[オリジン](#オリジンの種類)や[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の宣言が要素のプロパティに値を設定する場合に、何が優先されるかを定義します。
 
-これは*カスケーディング*スタイルシートという名前で強調されているように、 CSS の中心を占めるものです。[セレクター](/ja/docs/Web/CSS/CSS_selectors)が要素に一致する場合、優先順位の低いオリジンやレイヤーのセレクターがより高い[詳細度](/ja/docs/Web/CSS/Specificity)を持っていたとしても、優先順位の最も高いオリジンのプロパティ値が適用されます。
+これは*カスケーディング*スタイルシートという名前で強調されているように、 CSS の中心を占めるものです。[セレクター](/ja/docs/Web/CSS/CSS_selectors)が要素に一致する場合、優先順位の低いオリジンやレイヤーのセレクターがより高い[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)を持っていたとしても、優先順位の最も高いオリジンのプロパティ値が適用されます。
 
 この記事では、カスケードとは何か、 {{Glossary("CSS")}} の[宣言](/ja/docs/Web/API/CSSStyleDeclaration)をカスケードする順番、そしてウェブ開発者にどのように影響するかを説明します。
 
@@ -26,7 +26,7 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
 
 ユーザーエージェントスタイルシートに関するいくつかの制約は HTML 仕様書によって設定されていますが、ブラウザーにはまだ多くの自由度があります。つまり、ブラウザーごとに大きな違いがあります。開発プロセスを簡素化するために、ウェブ開発者は多くの場合、 CSS リセットスタイルシート（例えば [normalize.css](https://github.com/necolas/normalize.css)）を使用して、あらゆるブラウザーが特定のニーズに合わせて変更を開始する前に、共通のプロパティ値を既知の状態にします。
 
-ユーザーエージェントスタイルシートがプロパティの隣に [`!important`](/ja/docs/Web/CSS/Specificity#the_!important_exception) を含み、それを "important" にしない限り、リセットスタイルシートを含む作成者スタイルによって宣言されたスタイルは、関連するセレクターの詳細度にかかわらず、ユーザーエージェントスタイルより優先さ れます。
+ユーザーエージェントスタイルシートがプロパティの隣に [`!important`](/ja/docs/Web/CSS/CSS_cascade/Specificity#the_!important_exception) を含み、それを "important" にしない限り、リセットスタイルシートを含む作成者スタイルによって宣言されたスタイルは、関連するセレクターの詳細度にかかわらず、ユーザーエージェントスタイルより優先さ れます。
 
 ### 作成者スタイルシート
 
@@ -61,14 +61,14 @@ CSS カスケードアルゴリズムの役割は、 CSS プロパティの正�
    | 7              | ユーザーエージェント（ブラウザー） | `!important` |
    | 8              | CSS トランジション                 |              |
 
-3. **詳細度:** あるオリジンと等しい場合、ルールの[詳細度](/ja/docs/Web/CSS/Specificity)を考慮して、ある値を選択することができる。セレクターの詳細度を比較し、最も高い詳細度を持つ宣言が勝利します。
+3. **詳細度:** あるオリジンと等しい場合、ルールの[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)を考慮して、ある値を選択することができる。セレクターの詳細度を比較し、最も高い詳細度を持つ宣言が勝利します。
 4. **出現順**: 優先順位を持つオリジンでは、ある特性に対して、同等の詳細度を持つセレクターに一致するスタイルブロックに競合する値がある場合、スタイルの順序の最後の宣言が適用されます。
 
 カスケードは昇順で、アニメーションはユーザー、作成者、ユーザーエージェントのいずれのスタイルで宣言されていても通常の値より優先され、重要な値はアニメーションより優先され、トランジションは重要な値より優先されることを意味しています。
 
 > **メモ:** **トランジションとアニメーション**
 >
-> アニメーションで設定されたプロパティ値 {{cssxref('@keyframes')}} は、すべての通常のスタイル（[`!important`](/ja/docs/Web/CSS/Specificity#the_!important_exception)を設定していないもの）よりも優先されます。
+> アニメーションで設定されたプロパティ値 {{cssxref('@keyframes')}} は、すべての通常のスタイル（[`!important`](/ja/docs/Web/CSS/CSS_cascade/Specificity#the_!important_exception)を設定していないもの）よりも優先されます。
 >
 > {{cssxref('transition')}} で設定されているプロパティ値は、たとえ `!important` でマークされているものであっても、他のすべての設定値より優先されます。
 
@@ -321,7 +321,7 @@ p {
 
 ## どの CSS エンティティがカスケードに関係するか
 
-CSS 宣言のみが、つまりプロパティ/値の組だけが、カスケードに加わります。つまり、宣言以外のエンティティを含む[アットルール](/ja/docs/Web/CSS/At-rule)、例えば*記述子*を含む {{ cssxref("@font-face")}} などは、カスケードには加わりません。
+CSS 宣言のみが、つまりプロパティ/値の組だけが、カスケードに加わります。つまり、宣言以外のエンティティを含む[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)、例えば*記述子*を含む {{ cssxref("@font-face")}} などは、カスケードには加わりません。
 
 ほとんどの場合、アットルールで定義されたプロパティと記述子はカスケードには参加しません。カスケードには、アットルールだけが全体として参加します。例えば、`@font-face`ルールの中では、フォント名は [`font-family`](/ja/docs/Web/CSS/@font-face/font-family) 記述子によって識別されます。同じ記述子を持つ複数の `@font-face` ルールが定義されている場合、全体として最も適切な `@font-face` のみが考慮されます。同じように適切なものが複数ある場合は、アルゴリズムのステップ 1、2、および 4 を使用して `@font-face` 宣言全体が比較されます（アットルールに関しては仕様がありません）。
 
@@ -391,22 +391,22 @@ p {
 
 ## 関連情報
 
-- [とても簡単な CSS カスケードの紹介](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [とても簡単な CSS カスケードの紹介](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
   - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

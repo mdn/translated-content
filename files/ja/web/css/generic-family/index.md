@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<generic-family>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{cssxref("font")}} 一括指定プロパティと {{cssxref("font-family")}} 個別指定プロパティで使用する一般的なフォントファミリーのキーワード値を表します。 `<generic-family>` はそのカテゴリーに属する 1 つ以上のローカルにインストールされたフォントを表します。
+**`<generic-family>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{cssxref("font")}} 一括指定プロパティと {{cssxref("font-family")}} 個別指定プロパティで使用する一般的なフォントファミリーのキーワード値を表します。 `<generic-family>` はそのカテゴリーに属する 1 つ以上のローカルにインストールされたフォントを表します。
 
 ## 構文
 

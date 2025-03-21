@@ -168,5 +168,5 @@ processor.computeFrame = function () {
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
-- [学習領域: 動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
+- [学習領域: 動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

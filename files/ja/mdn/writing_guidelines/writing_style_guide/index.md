@@ -450,7 +450,7 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 次のように、ページの節にリンクする場合も同様のスタイル設定を行ってください。
 
-- **正**: 詳しくは、_メモリー管理_ ページの [JavaScript での割り当て](/ja/docs/Web/JavaScript/Memory_management#javascript_での割り当て)の節を参照してください。
+- **正**: 詳しくは、_メモリー管理_ ページの [JavaScript での割り当て](/ja/docs/Web/JavaScript/Guide/Memory_management#javascript_での割り当て)の節を参照してください。
 
 リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
 
@@ -592,8 +592,8 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 
 #### リンクテキスト
 
-- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [ARIA](/ja/docs/Web/Accessibility/ARIA/Attributes) ページのページタイトル「ARIA の状態とプロパティ」へのリンクテキストは次のようになります。
-  - **正**: [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Attributes)
+- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [ARIA](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes) ページのページタイトル「ARIA の状態とプロパティ」へのリンクテキストは次のようになります。
+  - **正**: [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - リンクテキストは大文字小文字は、リンク先のページタイトルやセクションタイトルと異なっていても、文の大文字小文字を使用してください。ページや節のタイトルで使用している用途が正しくない可能性があります。例えば、 [Quirks Mode](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) ページへのリンクテキストを正しい大文字小文字で書くと、次のようになります。
   - **正**: [Quirks mode](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 - 外部リンクの場合も、対象とする記事ページのケーシングが異なっていても、文の大文字小文字を使用してください。これは MDN Web Docs 全体の一貫性を確実に保持するためです。書籍名等は例外です。
@@ -632,7 +632,7 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 - [JavaScript/Guide](/ja/docs/Web/JavaScript/Guide) – メインの目次となるページ
 - [JavaScript/Guide/JavaScript Overview](/ja/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/ja/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 記事を階層の一番上に置くと、サイトの動作が遅くなり、検索やサイトのナビゲーションが効かなくなるので、なるべく避けましょう。
 

@@ -236,4 +236,4 @@ section {
 - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
 - [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

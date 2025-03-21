@@ -15,9 +15,9 @@ l10n:
 
 ## 解説
 
-`aria-checked` 属性は、要素がチェックされているか (`true`)、チェックされていないか (`false`)、またはチェック状態が未決定 (`mixed`)（チェックされている状態でもチェックされていない状態でもない）であるかどうかを示します。`mixed` の値は 3 状態入力ロールである [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role) と [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) によってサポートされています。
+`aria-checked` 属性は、要素がチェックされているか (`true`)、チェックされていないか (`false`)、またはチェック状態が未決定 (`mixed`)（チェックされている状態でもチェックされていない状態でもない）であるかどうかを示します。`mixed` の値は 3 状態入力ロールである [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) と [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) によってサポートされています。
 
-`mixed` の値は、[`radio`](/ja/docs/Web/Accessibility/ARIA/Roles/radio_role) や [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)、 [`switch`](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role) などのロール、およびこれらを継承する要素ではサポートされていません。サポートされていないときに `mixed` が設定されている場合、値は `false` になります。
+`mixed` の値は、[`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) や [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)、 [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) などのロール、およびこれらを継承する要素ではサポートされていません。サポートされていないときに `mixed` が設定されている場合、値は `false` になります。
 
 ```html
 <span
@@ -47,7 +47,7 @@ l10n:
 - true
   - : 要素はチェックされています。
 - mixed
-  - : [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role) および [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) の場合のみ、`indeterminate` と同等であり、チェックもチェック解除もされていない混合モードの値を示します。
+  - : [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) および [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role) の場合のみ、`indeterminate` と同等であり、チェックもチェック解除もされていない混合モードの値を示します。
 - undefined (デフォルト)
   - : 要素はチェックに対応していません。
 
@@ -55,12 +55,12 @@ l10n:
 
 以下のロールで使用されます:
 
-- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [`option`](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [`radio`](/ja/docs/Web/Accessibility/ARIA/Roles/radio_role)
-- [`switch`](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role)
+- [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
+- [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
 
 ## 関連インターフェイス
 

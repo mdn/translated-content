@@ -91,7 +91,7 @@ JavaScript の識別子は必ず文字、アンダースコア (`_`)、あるい
 - キーワード {{jsxref("Statements/var", "var")}} を使う（例 `var x = 42`）。この構文は、*実行コンテキスト*によって、**ローカル変数**と**グローバル変数**の両方の宣言に使用できます。
 - {{jsxref("Statements/const", "const")}} または {{jsxref("Statements/let", "let")}} キーワードを使う。例えば、`let y = 13`。この構文はブロックスコープのローカル変数を宣言することができます。（以下にある[変数のスコープ](#変数のスコープ)をご覧ください。）
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文を使用して、複数の変数を宣言することができます。例えば、`const { bar } = foo` とします。これは `bar` という名前の変数を作成し、オブジェクト `foo` の同名キーから対応する値を代入します。
+[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)構文を使用して、複数の変数を宣言することができます。例えば、`const { bar } = foo` とします。これは `bar` という名前の変数を作成し、オブジェクト `foo` の同名キーから対応する値を代入します。
 
 変数は使用する前に常に宣言するようにしてください。 JavaScript は未宣言の変数に代入することができ、 **[未宣言のグローバル](/ja/docs/Web/JavaScript/Reference/Statements/var#解説)** 変数を生成します。これは[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#assigning_to_undeclared_variables)ではエラーとなるものであり、完全に避けるべきです。
 

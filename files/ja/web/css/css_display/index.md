@@ -37,7 +37,7 @@ l10n:
 - {{glossary("Grid", "グリッド")}}
 - [インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)
 - {{glossary("Inline-level content", "インラインレベルコンテンツ")}}
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - {{glossary("Ruby", "ルビ")}}
 
 ## ガイド

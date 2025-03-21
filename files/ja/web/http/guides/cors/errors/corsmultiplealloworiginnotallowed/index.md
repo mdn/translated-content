@@ -22,7 +22,7 @@ Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
 - [CORS の有効化: CORS 対応をサーバーに追加したい](https://enable-cors.org/server.html)（英語）

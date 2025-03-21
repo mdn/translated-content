@@ -74,7 +74,7 @@ l10n:
 その他の使い方のメモです。
 
 - `<link>` 要素は[リンク種別](https://html.spec.whatwg.org/multipage/links.html#body-ok)が **body-ok** であるかどうかによって、 {{HTMLElement("head")}} 要素または {{HTMLElement("body")}} 要素のどちらかに置くことができます。例えば `stylesheet` リンク種別は body-ok であり、`<link rel="stylesheet">` を body 要素内に置くことができます。しかし、これは従うべき良い方法ではありません。 `<link>` 要素は `<head>` に入れて本文から離した方が分かりやすくなります。
-- サイトにファビコンを設定するために `<link>` を使用する場合で、サイトがセキュリティの強化のためにコンテンツセキュリティポリシー (CSP) を使用している場合、ファビコンにポリシーが適用されます。ファビコンが読み込まれないという問題が発生したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを禁止していないかどうか確認してください。
+- サイトにファビコンを設定するために `<link>` を使用する場合で、サイトがセキュリティの強化のためにコンテンツセキュリティポリシー (CSP) を使用している場合、ファビコンにポリシーが適用されます。ファビコンが読み込まれないという問題が発生したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)がアクセスを禁止していないかどうか確認してください。
 - HTML および XHTML の仕様では `<link>` 要素向けのイベントハンドラーを定義していますが、それらがどのように使用されるかは不明確です。
 - XHTML 1.0 では `<link>` のような{{glossary("void element", "空要素")}}では、 `<link />` のように末尾のスラッシュが必要です。
 - WebTV は `rel` に `next` の値を使用して、一連の文書の次のページを先読みすることに対応しています。
@@ -86,7 +86,7 @@ l10n:
 - `as`
 
   - : この属性は、 [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload) を `<link>` 要素に設定した場合に必要となり、また [`rel="modulepreload"`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) を設定した場合はオプションですが、それ以外は使用すべきではありません。
-    これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
+    これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
 
     さらに、 `rel="preload"` はこれをリクエストの優先度付の信号として使用します。下記の表はこの属性に有効な値と、適用先の要素またはリソースの一覧です。
 
@@ -252,7 +252,7 @@ l10n:
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
 - `title`
-  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/CSS/Alternative_style_sheets) を定義します。
+  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet) を定義します。
 - `type`
   - : この属性は、リンク先コンテンツの種類を定義します。この属性の値は **text/html** や **text/css** などの MIME タイプにします。
     この属性の一般的な使用法は、参照されるスタイルシートのタイプ（**text/css** など）の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、`type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
@@ -300,7 +300,7 @@ l10n:
 
 ### 代替スタイルシートの提供
 
-[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)も提示できます。
+[代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)も提示できます。
 
 ユーザーはメニューの **表示 > スタイルシート** で、使用するスタイルシートを選択できます。
 これは、ユーザーがページをさまざまなバージョンで閲覧する手段を提供します。

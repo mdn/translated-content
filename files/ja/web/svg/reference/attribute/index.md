@@ -523,6 +523,6 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 
 ## 関連情報
 
-- [SVG 要素リファレンス](/ja/docs/Web/SVG/Element)
-- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial)
+- [SVG 要素リファレンス](/ja/docs/Web/SVG/Reference/Element)
+- [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG インターフェイスリファレンス](/ja/docs/Web/API/SVG_API#インターフェイス)

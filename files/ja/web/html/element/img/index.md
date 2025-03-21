@@ -31,28 +31,28 @@ l10n:
 
 他にも、様々な目的で指定できる属性がたくさんあります。
 
-- セキュリティとプライバシーのための[リファラー](/ja/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 制御。 [`crossorigin`](#crossorigin) および [`referrerpolicy`](#referrerpolicy) を参照してください。
+- セキュリティとプライバシーのための[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 制御。 [`crossorigin`](#crossorigin) および [`referrerpolicy`](#referrerpolicy) を参照してください。
 - [`width`](#width) と [`height`](#height) の両方を使用して画像の固有の寸法を設定すると、画像を読み込む前に場所を確保し、コンテンツのレイアウトが移動することを防ぐことができます。
-- [`sizes`](#sizes) および [`srcset`](#srcset) を使用したレスポンシブ画像のヒント ({{htmlelement("picture")}} 要素と[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)のチュートリアルもご覧ください)。
+- [`sizes`](#sizes) および [`srcset`](#srcset) を使用したレスポンシブ画像のヒント ({{htmlelement("picture")}} 要素と[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)のチュートリアルもご覧ください)。
 
 ## 対応している画像形式
 
 HTML 標準では、対応する画像形式を指定していないので、{{glossary("user agent", "ユーザーエージェント")}}によって対応する画像形式は異なります。
 
-> **メモ:** [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types) には、画像ファイルとウェブブラウザーの対応に関する包括的な情報があります。
+> **メモ:** [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types) には、画像ファイルとウェブブラウザーの対応に関する包括的な情報があります。
 > この節は概要のみです。
 
 ウェブで最もよく使われる画像ファイル形式は、以下の通りです。
 
-- [APNG (Animated Portable Network Graphics)](/ja/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics) — 可逆性のあるアニメーションシーケンスに適しています（GIF はパフォーマンスが劣る）
-- [AVIF (AV1 Image File Format)](/ja/docs/Web/Media/Formats/Image_types#avif_image) — 高い性能により、画像とアニメーションの両方に適しています。
-- [GIF (Graphics Interchange Format)](/ja/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) — シンプルな画像やアニメーションに適しています。
-- [JPEG (Joint Photographic Expert Group image)](/ja/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — 静止画の非可逆圧縮に適しています（現在最も普及しています）。
-- [PNG (Portable Network Graphics)](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) — 静止画の可逆圧縮に適しています（JPEG より若干画質が良い）。
-- [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
-- [WebP (Web Picture format)](/ja/docs/Web/Media/Formats/Image_types#webp_image) — 画像とアニメーションの両方に優れた選択です。
+- [APNG (Animated Portable Network Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) — 可逆性のあるアニメーションシーケンスに適しています（GIF はパフォーマンスが劣る）
+- [AVIF (AV1 Image File Format)](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) — 高い性能により、画像とアニメーションの両方に適しています。
+- [GIF (Graphics Interchange Format)](/ja/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) — シンプルな画像やアニメーションに適しています。
+- [JPEG (Joint Photographic Expert Group image)](/ja/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — 静止画の非可逆圧縮に適しています（現在最も普及しています）。
+- [PNG (Portable Network Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) — 静止画の可逆圧縮に適しています（JPEG より若干画質が良い）。
+- [SVG (Scalable Vector Graphics)](/ja/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) — ベクター画像形式。異なるサイズでも正確に描画する必要がある画像に使用します。
+- [WebP (Web Picture format)](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_image) — 画像とアニメーションの両方に優れた選択です。
 
-[WebP](/ja/docs/Web/Media/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。
+[WebP](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_image) や [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) などは、PNG、JPEG、GIF よりはるかに性能が良く、静止画と動画の両方で使えるのでおすすめします。
 
 SVG は、異なるサイズでも正確に描画する必要がある画像に推奨される形式であることに変わりはありません。
 
@@ -204,7 +204,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
     - `no-referrer-when-downgrade`: ある{{glossary("origin", "オリジン")}}へ{{glossary("TLS")}} ({{glossary("HTTPS")}}) を使用せずに移動した場合に、 {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
-    - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{glossary("host", "ホスト名")}}、{{glossary("port", "ポート番号")}}のみとなります。
+    - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{glossary("host", "ホスト名")}}、{{glossary("port", "ポート番号")}}のみとなります。
     - `origin-when-cross-origin`: 異なるオリジンへの移動では、リファラーをスキーム、ホスト、ポートのみに制限します。同一のオリジンへの移動では、リファラーのフルパスを含めます。
     - `same-origin`: リファラーは{{glossary("Same-origin policy", "同じオリジン")}}に対しては送信されますが、オリジン間リクエストではリファラー情報が入りません。
     - `strict-origin`: プロトコルのセキュリティレベルが同等 (HTTPS→HTTPS) である場合は、リファラーとしてこの文書のオリジンが送信されますが、安全性の低い宛先 (HTTPS→HTTP) には送信されません。
@@ -240,7 +240,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
     `srcset` 属性が幅の記述子を使用した場合、 `sizes` 属性も指定しなければなりません。そうでなければ、 `srcset` 自体が無視されます。
 
-    ユーザーエージェントには、利用可能なソースからひとつを選択する裁量があります。これは、ユーザー設定や{{glossary("bandwidth", "帯域幅")}}の条件などに基づいて選択を適合させるような、かなりの裁量が与えられています。例としては[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)のチュートリアルをご覧ください。
+    ユーザーエージェントには、利用可能なソースからひとつを選択する裁量があります。これは、ユーザー設定や{{glossary("bandwidth", "帯域幅")}}の条件などに基づいて選択を適合させるような、かなりの裁量が与えられています。例としては[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)のチュートリアルをご覧ください。
 
 - `width`
   - : 画像固有の幅をピクセル値で指定します。単位のない整数でなければなりません。
@@ -286,7 +286,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ## CSS でのスタイル付け
 
-`<img>` は[置換要素](/ja/docs/Web/CSS/Replaced_element)です。 {{cssxref("display")}} の値が既定で `inline` ですが、既定の寸法は埋め込まれた画像の内部的な値で定義されます。画像には {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, などのプロパティを設定することができます。
+`<img>` は[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)です。 {{cssxref("display")}} の値が既定で `inline` ですが、既定の寸法は埋め込まれた画像の内部的な値で定義されます。画像には {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, などのプロパティを設定することができます。
 
 `<img>` にはベースラインがありません。つまり {{cssxref("vertical-align", "vertical-align: baseline")}} を伴うインライン整形コンテキスト内で使用したときに、画像の下端はコンテナーのベースラインに揃えられます。
 
@@ -321,12 +321,12 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
 - [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### SVG を画像として識別
 
-[VoiceOver のバグ](https://webkit.org/b/216364)により、VoiceOver は SVG 画像を画像として正しくアナウンスしません。SVG のソースファイルを持つすべての `<img>` 要素に [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) を記載し、支援技術が SVG を画像コンテンツとして正しくアナウンスするようにしてください。
+[VoiceOver のバグ](https://webkit.org/b/216364)により、VoiceOver は SVG 画像を画像として正しくアナウンスしません。SVG のソースファイルを持つすべての `<img>` 要素に [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) を記載し、支援技術が SVG を画像コンテンツとして正しくアナウンスするようにしてください。
 
 ```html
 <img src="mdn.svg" alt="MDN" role="img" />
@@ -525,6 +525,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - {{HTMLElement("picture")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}} 要素
 - その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
 - この要素の {{domxref("HTMLImageElement")}} インターフェイス
-- [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [画像のファイル形式のガイド](/ja/docs/Web/Media/Formats/Image_types)
-- [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [画像のファイル形式のガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)
+- [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)

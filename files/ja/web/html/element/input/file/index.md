@@ -139,7 +139,7 @@ div {
 - `size`
   - : バイト数によるファイルサイズです。
 - `type`
-  - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)です。
+  - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
 - `webkitRelativePath` {{non-standard_inline}}
   - : ディレクトリー選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリーからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 

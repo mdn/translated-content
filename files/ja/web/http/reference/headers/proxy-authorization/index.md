@@ -34,7 +34,7 @@ Proxy-Authorization: <type> <credentials>
 ## ディレクティブ
 
 - \<type>
-  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)。一般的には ["Basic"](/ja/docs/Web/HTTP/Authentication#basic_認証方式) です。[認証方式の IANA レジストリ](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)も参照してください。
+  - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)。一般的には ["Basic"](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式) です。[認証方式の IANA レジストリ](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)も参照してください。
 - \<credentials>
 
   - : "Basic" 認証方式を使用している場合、認証情報は次のように構築されます。
@@ -60,7 +60,7 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## 関連情報
 
-- [HTTP 認証](/ja/docs/Web/HTTP/Authentication)
+- [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Proxy-Authenticate")}}
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}

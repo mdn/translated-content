@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`invert()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像の色サンプルを反転します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`invert()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力画像の色サンプルを反転します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
 {{InteractiveExample("CSS Demo: invert()")}}
 

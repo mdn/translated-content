@@ -19,7 +19,7 @@ l10n:
 <link rel="preconnect" href="https://example.com" />
 ```
 
-事前接続は HTTP の [Link](/ja/docs/Web/HTTP/Headers/Link) ヘッダーで、次のように実装することもできます。
+事前接続は HTTP の [Link](/ja/docs/Web/HTTP/Reference/Headers/Link) ヘッダーで、次のように実装することもできます。
 
 ```http
 Link: <https://example.com>; rel="preconnect"
@@ -35,4 +35,4 @@ Link: <https://example.com>; rel="preconnect"
 
 ## 関連情報
 
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、 `<link rel="preconnect">` をはじめとする同様のパフォーマンス向上機能の比較ができます。
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、 `<link rel="preconnect">` をはじめとする同様のパフォーマンス向上機能の比較ができます。

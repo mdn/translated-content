@@ -41,4 +41,4 @@ Prettier はすべてのコードを書式化し、スタイルの一貫性を�
 
 ## 関連情報
 
-[Django サーバーサイド開発ドキュメント](/ja/docs/Learn/Server-side/Django)では、シェルプロンプトコマンドなどの MDN での良い実践的な表示を示しています。
+[Django サーバーサイド開発ドキュメント](/ja/docs/Learn_web_development/Extensions/Server-side/Django)では、シェルプロンプトコマンドなどの MDN での良い実践的な表示を示しています。

@@ -28,9 +28,9 @@ l10n:
 > ```
 >
 > - **title**
->   - : タイトルの見出しで、ページの最上部に表示されます。書式は _NameOfTheHeader_ です。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーの _title_ は `Cache-Control` となります。
+>   - : タイトルの見出しで、ページの最上部に表示されます。書式は _NameOfTheHeader_ です。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーの _title_ は `Cache-Control` となります。
 > - **slug**
->   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/HTML/Element/NameOfTheHeader` のような形式になります。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) の _slug_ は `Web/HTTP/Headers/Cache-Control` となります。
+>   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/HTML/Element/NameOfTheHeader` のような形式になります。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) の _slug_ は `Web/HTTP/Headers/Cache-Control` となります。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >

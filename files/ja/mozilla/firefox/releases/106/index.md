@@ -20,7 +20,7 @@ l10n:
 
 ### MathML
 
-- MathML の [`<semantics>`](/ja/docs/Web/MathML/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました ([Firefox バグ 1588733](https://bugzil.la/1588733))。
+- MathML の [`<semantics>`](/ja/docs/Web/MathML/Reference/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました ([Firefox バグ 1588733](https://bugzil.la/1588733))。
 
 ### CSS
 

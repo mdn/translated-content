@@ -16,9 +16,9 @@ original_slug: Web/SVG/Element/feMorphology
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute#core_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/ja/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
+- [Filter primitive attributes](/ja/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 
@@ -138,4 +138,4 @@ p {
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

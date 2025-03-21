@@ -164,7 +164,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 ## 関連情報
 
-- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/At-rule)
+- {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
 - [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}

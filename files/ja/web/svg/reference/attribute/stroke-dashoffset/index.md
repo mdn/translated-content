@@ -126,7 +126,7 @@ svg {
   </tbody>
 </table>
 
-オフセットは通常 {{SVGAttr('pathLength')}} に対して解決されたユーザー単位で表現されますが、 [\<percentage>](/ja/docs/Web/SVG/Content_type#percentage) が使用された場合、値は現在のビューポートに対するパーセント値として解決されます。
+オフセットは通常 {{SVGAttr('pathLength')}} に対して解決されたユーザー単位で表現されますが、 [\<percentage>](/ja/docs/Web/SVG/Guides/Content_type#percentage) が使用された場合、値は現在のビューポートに対するパーセント値として解決されます。
 
 ## 仕様書
 

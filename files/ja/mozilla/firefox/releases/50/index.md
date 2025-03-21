@@ -53,10 +53,10 @@ l10n:
 
 ### セキュリティ
 
-- {{htmlelement("a")}} 要素の [`ping`](/ja/docs/Web/HTML/Element/a#ping) 属性が、[`connect-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#connect-src) [CSP 1.1 ポリシーディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)に従うようになりました ([Firefox バグ 1100181](https://bugzil.la/1100181))。
-- [`sandbox`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#sandbox) [CSP](/ja/docs/Web/HTTP/CSP) ディレクティブをサポートしました ([Firefox バグ 671389](https://bugzil.la/671389))。
+- {{htmlelement("a")}} 要素の [`ping`](/ja/docs/Web/HTML/Element/a#ping) 属性が、[`connect-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#connect-src) [CSP 1.1 ポリシーディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)に従うようになりました ([Firefox バグ 1100181](https://bugzil.la/1100181))。
+- [`sandbox`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#sandbox) [CSP](/ja/docs/Web/HTTP/Guides/CSP) ディレクティブをサポートしました ([Firefox バグ 671389](https://bugzil.la/671389))。
 - [workers に content security policy を設定する](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy) ことが可能になりました ([Firefox バグ 959388](https://bugzil.la/959388))。
-- [Content Security Policy](/ja/docs/Web/HTTP/CSP) の制限によりビーコンデータを送信できなかったとき、{{domxref("Navigator.sendBeacon()")}} メソッドで例外が発生しないようになりました。代わりに、想定どおり `false` を返します ([Firefox バグ 1234813](https://bugzil.la/1234813))。
+- [Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) の制限によりビーコンデータを送信できなかったとき、{{domxref("Navigator.sendBeacon()")}} メソッドで例外が発生しないようになりました。代わりに、想定どおり `false` を返します ([Firefox バグ 1234813](https://bugzil.la/1234813))。
 - RC4 暗号のサポートは Firefox 36 から非推奨にしており、Firefox 44 では既定で無効にしました。1 年間の猶予期間が終了しましたので、Firefox 50 で RC4 のサポートを全面的に廃止しました (Google Chrome は 2016 年 8 月に RC4 のサポートを廃止しました)。今後、Firefox は RC4 暗号に出くわすと常に `SSL_ERROR_NO_CYPHER_OVERLAP` エラーが発生します。
 
 ### ネットワーク
@@ -141,7 +141,7 @@ l10n:
   - {{HTMLElement("input")}} 要素の [`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性および {{domxref("HTMLInputElement.webkitdirectory")}} を実装しました。ファイルではなくディレクトリーを受け入れるように、file 型の input を設定できます ([Firefox バグ 1258489](https://bugzil.la/1258489))。
   - {{domxref("HTMLInputElement.webkitEntries")}} を実装しました。これは、選択されたアイテムを表す {{domxref("FileSystemEntry")}} ベースのオブジェクトの配列を返します。
   - {{domxref("File.webkitRelativePath")}} を実装しました。これは、{{domxref("HTMLInputElement.webkitGetEntries()")}} が返すリスト内のアイテムのひとつである {{domxref("FileSystemDirectoryEntry")}} に含まれているルートに対して相対的な、ファイルのパスを持ちます。
-  - この API で何をサポートしているかについて、詳しくは [Firefox におけるファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) をご覧ください。
+  - この API で何をサポートしているかについて、詳しくは [Firefox におけるファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) をご覧ください。
   - これらの API はデフォルトで有効です。一部の API は以前から使用できましたが、設定で無効化されていました ([Firefox バグ 1288683](https://bugzil.la/1288683))。
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) の一部として、{{domxref("DataTransferItem.webkitGetAsEntry()")}} を実装しました。これは、ドロップされたファイルを表す {{domxref("FileSystemEntry")}} を取得できます ([Firefox バグ 1289255](https://bugzil.la/1289255))。これはデフォルトで有効です。

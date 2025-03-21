@@ -110,7 +110,7 @@ bold && <length>
 
 ### 二重バー
 
-2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)の値定義に使われます。
+2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の値定義に使われます。
 
 ```css
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -456,5 +456,5 @@ bold smaller#{2}
     - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
     - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
   - **値定義構文**
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

@@ -36,8 +36,8 @@ l10n:
 - {{cssxref("outline-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("-webkit-tap-highlight-color")}}
-- [SVG fill 属性](/ja/docs/Web/SVG/Attribute/fill)
-- [SVG stroke 属性](/ja/docs/Web/SVG/Attribute/stroke)
+- [SVG fill 属性](/ja/docs/Web/SVG/Reference/Attribute/fill)
+- [SVG stroke 属性](/ja/docs/Web/SVG/Reference/Attribute/stroke)
 
 また、以下のプロパティは、強制カラーモードでは特別な動作をします。
 

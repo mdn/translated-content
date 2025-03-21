@@ -9,7 +9,7 @@ l10n:
 
 ## SVG length インターフェイス
 
-`SVGLength` インターフェイスは、[\<length>](/ja/docs/Web/SVG/Content_type#length) 基本データ型に対応します。
+`SVGLength` インターフェイスは、[\<length>](/ja/docs/Web/SVG/Guides/Content_type#length) 基本データ型に対応します。
 
 `SVGLength` オブジェクトは読み取り専用として指定されていることがあり、その場合はオブジェクトを変更しようとすると例外が発生します。
 

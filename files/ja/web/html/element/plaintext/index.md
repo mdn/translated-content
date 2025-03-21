@@ -14,7 +14,7 @@ l10n:
 >
 > - `<plaintext>` は HTML 2 より非推奨となっており、全てのブラウザーが実装しているわけではありません。実装しているブラウザーでも、一貫していません。
 > - `<plaintext>` は廃止されています。この要素を受け付けるブラウザーは {{HTMLElement("pre")}} 要素と同様に扱い、内部の HTML を解釈する場合もあります。
-> - `<plaintext>` 要素が ({{HTMLElement("head")}} などの非表示の要素を除いて) ページの最初の要素になるのであれば、 HTML は使用しないでください。代わりに、テキストファイルを `text/plain` の [MIME タイプ](/ja/docs/Learn/Server-side/Configuring_server_MIME_types)で送信するようにしてください。
+> - `<plaintext>` 要素が ({{HTMLElement("head")}} などの非表示の要素を除いて) ページの最初の要素になるのであれば、 HTML は使用しないでください。代わりに、テキストファイルを `text/plain` の [MIME タイプ](/ja/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)で送信するようにしてください。
 > - この要素を使用する代わりに、 {{HTMLElement("pre")}} 要素か、意味的に適切であれば (インラインテキスト向けの) {{HTMLElement("code")}} 要素を使用してください。その際、コンテンツの中身がうっかり HTML として解釈されないように、 `<`, `>` `&` の各文字をエスケープしてください。
 > - 等幅フォントは、 HTML 要素に [CSS](/ja/docs/Web/CSS) の {{cssxref("font-family")}} スタイルを `monospace` にすることで適用することができます。
 

@@ -38,7 +38,7 @@ l10n:
 
 ### HTTP
 
-- [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Headers/Accept) ヘッダーに `image/svg+xml` MIME タイプを含むようになりました ([Firefox bug 1711622](https://bugzil.la/1711622))。
+- [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーに `image/svg+xml` MIME タイプを含むようになりました ([Firefox bug 1711622](https://bugzil.la/1711622))。
 - HTTP [`Priority`](/ja/docs/Web/HTTP/Headers/Priority) リクエストヘッダーおよびレスポンスヘッダーを含む、{{rfc("9218", "Extensible Prioritization Scheme for HTTP")}} をサポートしました。これは、コネクションで送信するリソースに対して想定する相対的な優先度と、ヘッダーが送信された後に優先度を変更できる HTTP/2 および HTTP/3 の `PRIORITY_UPDATE` をクライアントが示すことを可能にします ([Firefox bug 1865040](https://bugzil.la/1865040))。
 
 ### API
@@ -97,11 +97,11 @@ l10n:
 
 - **既定および画像のリクエストで `image/jxl` MIME タイプを Accept ヘッダーに追加:** `image.jxl.enabled`.
 
-  - [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Headers/Accept) ヘッダーで `image/jxl` MIME タイプのサポートを示すように設定できます ([Firefox bug 1711622](https://bugzil.la/1711622))。
+  - [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーで `image/jxl` MIME タイプのサポートを示すように設定できます ([Firefox bug 1711622](https://bugzil.la/1711622))。
 
 - **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`。
 
-  [CHIPS](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), または "partitioned cookies" は、開発者が `Set-Cookie` HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分離された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分離された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1898253](https://bugzil.la/1898253))。
+  [CHIPS](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), または "partitioned cookies" は、開発者が `Set-Cookie` HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分離された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分離された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1898253](https://bugzil.la/1898253))。
 
 ## 過去のバージョン
 

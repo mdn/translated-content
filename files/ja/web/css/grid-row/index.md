@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`grid-row`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、{{glossary("grid row", "グリッド行")}}の中におけるグリッドアイテムの寸法と位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭と末尾の端を指定します。
+**`grid-row`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、{{glossary("grid row", "グリッド行")}}の中におけるグリッドアイテムの寸法と位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭と末尾の端を指定します。
 
 {{InteractiveExample("CSS Demo: grid-row")}}
 

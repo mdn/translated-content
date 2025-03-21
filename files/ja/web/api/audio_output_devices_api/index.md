@@ -16,7 +16,7 @@ l10n:
 
 権限ポリシーで許可されている場合でも、ユーザーは一部の出力デバイスから音声を再生するべきではない場所に居る可能性があるので、特定の音声出力デバイスへのアクセスには明示的なユーザーの許可が必要です。
 
-この API は、ドキュメントの [`Permissions-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) HTTP ヘッダーの [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) ディレクティブによって許可されている場合、ユーザーが希望する音声出力デバイスを選択できるようにする [`MediaDevices.selectAudioOutput()`](/ja/docs/Web/API/MediaDevices/selectAudioOutput) メソッドを提供します。
+この API は、ドキュメントの [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) HTTP ヘッダーの [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) ディレクティブによって許可されている場合、ユーザーが希望する音声出力デバイスを選択できるようにする [`MediaDevices.selectAudioOutput()`](/ja/docs/Web/API/MediaDevices/selectAudioOutput) メソッドを提供します。
 これにより選択されたデバイスはユーザーの許可が得られるので、[`MediaDevices.enumerateDevices()`](/ja/docs/Web/API/MediaDevices/enumerateDevices) により列挙したり、[`HTMLMediaElement.setSinkId()`](/ja/docs/Web/API/HTMLMediaElement/setSinkId) により音声出力デバイスとして設定したりできるようになります。
 
 音声デバイスは、自由に接続したり切断したりできます。
@@ -50,13 +50,13 @@ Audio Output Devices API は以下の API を拡張し、以下の機能を追�
 
 - [`MediaDevices.selectAudioOutput()`](/ja/docs/Web/API/MediaDevices/selectAudioOutput) はユーザーから選択されたデバイスを音声の出力先として使用する許可を得ます。
 
-  - アクセスは HTTP の[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) により制限される可能性があります。
+  - アクセスは HTTP の[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) により制限される可能性があります。
   - [ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)が必要です。
     このメソッドを呼び出すには、ユーザーがページまたは UI 要素を操作する必要があります。
 
 - [`HTMLMediaElement.setSinkId()`](/ja/docs/Web/API/HTMLMediaElement/setSinkId) は許可された ID を音声の出力先として設定します。
 
-  - アクセスは HTTP の[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) により制限される可能性があります。
+  - アクセスは HTTP の[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) により制限される可能性があります。
   - デフォルト以外のデバイス ID を設定するにはユーザーの許可が必要です。
     - この許可は、`MediaDevices.selectAudioOutput()` によって開くプロンプトで選択することで得られます。
     - ユーザーが [`MediaDevices.getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia) により既に同じグループのメディア入力デバイスを使用することを許可している場合、出力デバイスを使用する許可が暗黙的に得られます。

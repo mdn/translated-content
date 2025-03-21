@@ -43,7 +43,7 @@ l10n:
 
 ## 関連情報
 
-- [CSP のエラーと警告](/ja/docs/Web/HTTP/CSP/Errors)
-- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)
+- [CSP のエラーと警告](/ja/docs/Web/HTTP/Guides/CSP/Errors)
+- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}

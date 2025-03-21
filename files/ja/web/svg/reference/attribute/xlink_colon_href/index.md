@@ -8,7 +8,7 @@ l10n:
 
 {{SVGRef}}{{Deprecated_Header}}
 
-**`xlink:href`** 属性は、リソースを参照する [IRI](/ja/docs/Web/SVG/Content_type#iri) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
+**`xlink:href`** 属性は、リソースを参照する [IRI](/ja/docs/Web/SVG/Guides/Content_type#iri) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
 
 > [!NOTE]
 > SVG 2 では、 `xlink` 名前空間は除去されたため、 `xlink:href` の代わりに {{SVGAttr("href")}} を使用してください。以前のバージョンのブラウザーに対応する必要がある場合は、非推奨の `xlink:href` 属性を `href` 属性に加えて予備として使用することができます。例えば、 `<use href="some-id" xlink:href="some-id" x="5" y="5" />` のようにしますです。

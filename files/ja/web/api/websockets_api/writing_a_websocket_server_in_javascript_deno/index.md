@@ -53,7 +53,7 @@ Deno.serve({
 });
 ```
 
-`Deno.upgradeWebSocket()` は接続をウェブソケット接続にアップグレードします。これは[プロトコルアップグレードメカニズム](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism)で詳しく説明されています。
+`Deno.upgradeWebSocket()` は接続をウェブソケット接続にアップグレードします。これは[プロトコルアップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)で詳しく説明されています。
 
 [`Deno.serve()`](https://docs.deno.com/api/deno/~/Deno.serve) は、 `Deno.listen()` と `Deno.serveHttp()` を基盤に使用し、 HTTP サーバーを簡単に設定するための上位インターフェイスです。これがなければ、コードは次のように見ていくことになります。
 

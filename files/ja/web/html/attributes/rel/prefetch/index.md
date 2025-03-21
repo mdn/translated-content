@@ -9,7 +9,7 @@ l10n:
 
 **`prefetch`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性に設定すると、ユーザーが将来の操作でターゲットリソースを必要とする可能性が高く、したがってブラウザーはリソースを先読みしてキャッシュすることでユーザーの使い勝手を向上させることができる可能性があることをブラウザーに示唆するものです。 `<link rel="prefetch">` は同じサイトのナビゲーションリソース、または同じサイトのページで使用するサブリソースに使用されます。
 
-結果はディスク上の HTTP キャッシュに保存されます。このため、現在のページで使用していないサブリソースを先読みするのに有益です。また、ユーザーがサイト内で次に訪れるであろう文書を先読みするために使用することもできます。ただし、その結果、ヘッダーに注意する必要があります。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Headers/Cache-Control) ヘッダーは先読みをブロックする可能性があります（`no-cache` や `no-store` など）。
+結果はディスク上の HTTP キャッシュに保存されます。このため、現在のページで使用していないサブリソースを先読みするのに有益です。また、ユーザーがサイト内で次に訪れるであろう文書を先読みするために使用することもできます。ただし、その結果、ヘッダーに注意する必要があります。例えば、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーは先読みをブロックする可能性があります（`no-cache` や `no-store` など）。
 
 > [!NOTE]
 > このような制限があるため、対応している場合には、代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を文書の先読みに使用することをお勧めします。
@@ -58,4 +58,4 @@ l10n:
 
 ## 関連情報
 
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、 `<link rel="prefetch">` をはじめとする同様のパフォーマンス向上機能の比較ができます。
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、 `<link rel="prefetch">` をはじめとする同様のパフォーマンス向上機能の比較ができます。

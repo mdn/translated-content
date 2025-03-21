@@ -34,5 +34,5 @@ const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -103,7 +103,7 @@ l10n:
 >   href="#Gradient1" />
 > ```
 >
-> ここでは xlink 名前空間を、通常は文書の先頭にて定義するものですが、このノードで直接定義しました。詳細は[画像について説明する際](/ja/docs/Web/SVG/Tutorial/Other_content_in_SVG)に述べます。
+> ここでは xlink 名前空間を、通常は文書の先頭にて定義するものですが、このノードで直接定義しました。詳細は[画像について説明する際](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG)に述べます。
 
 ## 放射グラデーション
 
@@ -292,7 +292,7 @@ l10n:
   gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
-`gradientTransform` 属性を用いてグラデーションを変形させることもできますが、まだ[座標変換の紹介](/ja/docs/Web/SVG/Tutorial/Basic_Transformations)を行っていないため、後で説明します。
+`gradientTransform` 属性を用いてグラデーションを変形させることもできますが、まだ[座標変換の紹介](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations)を行っていないため、後で説明します。
 
 以上の他に、オブジェクトを包み込むボックスが長方形ではない場合に `gradientUnits="objectBoundingBox"` で値を扱うときの注意事項がありますが、それらはやや複雑であり、またそれの説明に詳しい方が現れるのを待たなければなりません。
 

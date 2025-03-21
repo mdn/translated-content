@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`415 Unsupported Media Type`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードは、メッセージの{{Glossary("HTTP Content", "コンテンツ")}}が対応していない形式であるため、サーバーがリクエストの受け入れを拒否することを示します。
+HTTP の **`415 Unsupported Media Type`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、メッセージの{{Glossary("HTTP Content", "コンテンツ")}}が対応していない形式であるため、サーバーがリクエストの受け入れを拒否することを示します。
 
 形式で問題が発生するのは、リクエストの {{HTTPHeader("Content-Type")}} または {{HTTPHeader("Content-Encoding")}} で示されたものであったり、リクエストメッセージのコンテンツを処理した結果であることであったりします。
 サーバーによっては、リクエストでリクエストされた `Content-Type` を厳密にチェックすることがあります。
@@ -79,7 +79,7 @@ Content-Length: 0
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Encoding")}}
 - {{HTTPHeader("Accept-Post")}}

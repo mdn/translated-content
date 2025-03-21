@@ -48,7 +48,7 @@ select {
 
 さらに、 {{HTMLElement("option")}} 要素を {{HTMLElement("optgroup")}} 要素の中に入れることで、ドロップダウンの中で選択肢をグループに分割することができます。また、{{HTMLElement("hr")}} 要素を含めることで、選択肢間に視覚的な区切りを追加することができます。
 
-その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/Learn/Forms/Other_form_controls#ドロップダウンコントロール)を参照してください。
+その他の例は、[ネイティブフォームウィジェット: ドロップダウンコンテンツ](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls#ドロップダウンコントロール)を参照してください。
 
 ## 属性
 
@@ -146,14 +146,14 @@ select {
 
 ## CSS のスタイル付け
 
-`<select>` 要素は、 CSS を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。例えば、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)や[表示されるフォント](/ja/docs/Web/CSS/CSS_fonts)を操作したり、 {{cssxref("appearance")}} プロパティを使用してシステムの既定の `appearance` を削除したりすることができます。
+`<select>` 要素は、 CSS を使って生産的にスタイル付けすることが困難です。他の要素のように、特定の側面で影響を与えることはできます。例えば、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)や[表示されるフォント](/ja/docs/Web/CSS/CSS_fonts)を操作したり、 {{cssxref("appearance")}} プロパティを使用してシステムの既定の `appearance` を削除したりすることができます。
 
-しかし、これらのプロパティはブラウザー間で一貫した結果が得られませんし、異なる種類のフォーム要素を互いに一列に並べたりするのは困難なことです。 `<select>` 要素の内部構造は複雑で、制御するのは困難です。完全に制御したいのであれば、スタイル付けをするのに優れた機能を備えたライブラリーを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) をを使用して独自のドロップダウンメニューを実装することを検討してください。
+しかし、これらのプロパティはブラウザー間で一貫した結果が得られませんし、異なる種類のフォーム要素を互いに一列に並べたりするのは困難なことです。 `<select>` 要素の内部構造は複雑で、制御するのは困難です。完全に制御したいのであれば、スタイル付けをするのに優れた機能を備えたライブラリーを使用するか、非意味的要素や JavaScript や [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) をを使用して独自のドロップダウンメニューを実装することを検討してください。
 
 `<select>` のスタイル付けについてのさらなる有益な情報は、以下を参照してください。
 
-- [HTML フォームのスタイル付け](/ja/docs/Learn/Forms/Styling_web_forms)
-- [HTML フォームの高度なスタイル付け](/ja/docs/Learn/Forms/Advanced_form_styling)
+- [HTML フォームのスタイル付け](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [HTML フォームの高度なスタイル付け](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 - {{cssxref("field-sizing")}} プロパティは、`<select>` 要素が格納する選択肢との相対的なサイズを決めるかを制御します。
 
 ## アクセシビリティ

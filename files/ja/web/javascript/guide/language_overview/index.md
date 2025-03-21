@@ -8,7 +8,7 @@ l10n:
 
 {{jsSidebar}}
 
-JavaScript はマルチパラダイムの動的言語であり、型や演算子、標準組み込みオブジェクト、メソッドがあります。その構文は Java や C 言語に由来するので、それらの言語の多くの構造が JavaScript にも同様に適用できます。 JavaScript は、[オブジェクトプロトタイプ](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)やクラスによるオブジェクト指向プログラミングに対応しています。また、JavaScript は関数型プログラミングもサポートします。関数が[第一級](/ja/docs/Glossary/First-class_Function)オブジェクトであり、式から容易に作成し、他のオブジェクトと同じように受け渡しすることができます。
+JavaScript はマルチパラダイムの動的言語であり、型や演算子、標準組み込みオブジェクト、メソッドがあります。その構文は Java や C 言語に由来するので、それらの言語の多くの構造が JavaScript にも同様に適用できます。 JavaScript は、[オブジェクトプロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)やクラスによるオブジェクト指向プログラミングに対応しています。また、JavaScript は関数型プログラミングもサポートします。関数が[第一級](/ja/docs/Glossary/First-class_Function)オブジェクトであり、式から容易に作成し、他のオブジェクトと同じように受け渡しすることができます。
 
 このページは、 JavaScript のさまざまな言語機能の概要で、 C や Java など、他の言語のバックグラウンドがある読者のために書かれたものです。
 
@@ -16,15 +16,15 @@ JavaScript はマルチパラダイムの動的言語であり、型や演算子
 
 まずはあらゆる言語の構成要素、「型」を見ることから始めましょう。 JavaScript のプログラムは値を操作し、それらの値はすべて型に属しています。JavaScript の型は次の通りです。
 
-- [数値型](/ja/docs/Web/JavaScript/Data_structures#数値型): 非常に大きな整数を除くすべての数値（整数、浮動小数点数）で使用します。
-- [長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型): 任意の長さの大きな整数に使用します。
-- [文字列型](/ja/docs/Web/JavaScript/Data_structures#文字列型): テキストを格納するために使用されます。
-- [論理型](/ja/docs/Web/JavaScript/Data_structures#論理型): `true`と `false` - 通常は条件の論理に使用します。
-- [シンボル型](/ja/docs/Web/JavaScript/Data_structures#シンボル型): 衝突しない固有の識別子を作成するために使用します。
-- [Undefined](/ja/docs/Web/JavaScript/Data_structures#undefined_型): 変数に値が割り当てられていないことを示します。
-- [Null](/ja/docs/Web/JavaScript/Data_structures#null_型): 意図的に値がないことを示します。
+- [数値型](/ja/docs/Web/JavaScript/Guide/Data_structures#数値型): 非常に大きな整数を除くすべての数値（整数、浮動小数点数）で使用します。
+- [長整数型](/ja/docs/Web/JavaScript/Guide/Data_structures#長整数型): 任意の長さの大きな整数に使用します。
+- [文字列型](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型): テキストを格納するために使用されます。
+- [論理型](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型): `true`と `false` - 通常は条件の論理に使用します。
+- [シンボル型](/ja/docs/Web/JavaScript/Guide/Data_structures#シンボル型): 衝突しない固有の識別子を作成するために使用します。
+- [Undefined](/ja/docs/Web/JavaScript/Guide/Data_structures#undefined_型): 変数に値が割り当てられていないことを示します。
+- [Null](/ja/docs/Web/JavaScript/Guide/Data_structures#null_型): 意図的に値がないことを示します。
 
-他のすべてのものは[オブジェクト型](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)と呼ばれます。主なオブジェクト型には次のものがあります。
+他のすべてのものは[オブジェクト型](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)と呼ばれます。主なオブジェクト型には次のものがあります。
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
@@ -317,7 +317,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript にはこの他に、特徴的な for ループが 2 つあります。 [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) は[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)や多くの特徴的な配列を反復処理し、 [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) はオブジェクトのすべての[列挙可能](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)プロパティを反復処理します。
+JavaScript にはこの他に、特徴的な for ループが 2 つあります。 [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) は[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)や多くの特徴的な配列を反復処理し、 [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) はオブジェクトのすべての[列挙可能](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)プロパティを反復処理します。
 
 ```js
 for (const value of array) {
@@ -460,7 +460,7 @@ console.log(stillMe.x); // 1
 
 オブジェクトとプロトタイプの詳細については、 [`Object` のリファレンスページ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)を参照してください。オブジェクト初期化構文の詳細については、[リファレンスページ](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)を参照してください。
 
-このページでは、オブジェクトのプロトタイプと継承についての詳細はすべて省略しました。というのも、通常は（難解に聞こえるかもしれない）基盤のメカニズムに触れることなく、[クラス](#クラス)で継承を実現できるからです。これらについては、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を参照してください。
+このページでは、オブジェクトのプロトタイプと継承についての詳細はすべて省略しました。というのも、通常は（難解に聞こえるかもしれない）基盤のメカニズムに触れることなく、[クラス](#クラス)で継承を実現できるからです。これらについては、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を参照してください。
 
 ## 配列
 
@@ -565,7 +565,7 @@ avg(2, 3, 4, 5); // 3.5
 
 関数が引数のリストを受け入れ、それらがすでに配列にある場合、関数呼び出しの中で[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使って、配列を要素のリストとして展開することができます。例えば `avg(...numbers)` のようにします。
 
-JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を使用して実装することは可能です。
+JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して実装することは可能です。
 
 ```js
 // { } 中括弧はオブジェクト野分割代入する
@@ -630,7 +630,7 @@ const sum = (a, b, c) => a + b + c;
 })();
 ```
 
-IIFE の用途については、[クロージャでプライベートメソッドを模倣する](/ja/docs/Web/JavaScript/Closures#クロージャでプライベートメソッドを模倣する)で見ることができます。
+IIFE の用途については、[クロージャでプライベートメソッドを模倣する](/ja/docs/Web/JavaScript/Guide/Closures#クロージャでプライベートメソッドを模倣する)で見ることができます。
 
 ### 再帰関数
 
@@ -672,7 +672,7 @@ const charsInBody = (function counter(elm) {
 
 ### 関数は第一級オブジェクト
 
-JavaScript の関数は第一級のオブジェクトです。これは、関数が変数に割り当てることができ、他の関数に引数として渡すことができ、他の関数から返すことができることを意味しています。さらに JavaScript では、明示的にキャプチャすることなくすぐに[クロージャ](/ja/docs/Web/JavaScript/Closures)に対応しているため、関数型プログラミングのスタイルを便利に適用することができます。
+JavaScript の関数は第一級のオブジェクトです。これは、関数が変数に割り当てることができ、他の関数に引数として渡すことができ、他の関数から返すことができることを意味しています。さらに JavaScript では、明示的にキャプチャすることなくすぐに[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)に対応しているため、関数型プログラミングのスタイルを便利に適用することができます。
 
 ```js
 // 関数を返す関数
@@ -742,7 +742,7 @@ class Admin extends withAuthentication(Person) {
 
 ## 非同期プログラミング
 
-JavaScript は本質的に単一スレッドです。[並列処理](https://ja.wikipedia.org/wiki/並列計算)はなく、[並行処理](https://ja.wikipedia.org/wiki/並行計算)のみです。非同期プログラミングは[イベントループ](/ja/docs/Web/JavaScript/Event_loop)によって行われ、設定するにはタスクの集合をキューに入れ、完了をポーリングします。
+JavaScript は本質的に単一スレッドです。[並列処理](https://ja.wikipedia.org/wiki/並列計算)はなく、[並行処理](https://ja.wikipedia.org/wiki/並行計算)のみです。非同期プログラミングは[イベントループ](/ja/docs/Web/JavaScript/Reference/Execution_model)によって行われ、設定するにはタスクの集合をキューに入れ、完了をポーリングします。
 
 JavaScript で非同期コードを書く慣用的な方法は 3 つあります。
 
@@ -787,7 +787,7 @@ async function readFile(filename) {
 
 実際、シングルスレッドモデルであるにもかかわらず、 Node.js はノンブロッキング IO のため、多数のデータベースやファイルシステムリクエストを処理してもとてもパフォーマンスが高く、サーバーサイドプログラミングによく使われています。しかし、純粋な JavaScript である CPU バウンド（計算集約的な）タスクはメインスレッドをブロックします。本当の並列化を実現するには、[ワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) を使用する必要があるかもしれません。
 
-非同期プログラミングについてもっと学ぶには、[プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)を読むか、[非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous) チュートリアルに従ってください。
+非同期プログラミングについてもっと学ぶには、[プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)を読むか、[非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS) チュートリアルに従ってください。
 
 ## モジュール
 
@@ -814,7 +814,7 @@ Haskell、Python、Java などとは異なり、 JavaScript のモジュール�
 
 このページを通して、ある機能は「言語レベル」であり、他にも「ランタイムレベル」の機能があることを常に述べてきました。
 
-JavaScript は汎用スクリプト言語です。[コア言語仕様](/ja/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_コア言語_ecmascript)は、純粋な計算ロジックに焦点を当てています。入出力は扱いません。実際、特別なランタイムレベルの API （最も有名なものが [`console.log()`](/ja/docs/Web/API/console/log_static)）がなければ、 JavaScript プログラムの動作は完全に観察不可能です。
+JavaScript は汎用スクリプト言語です。[コア言語仕様](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_コア言語_ecmascript)は、純粋な計算ロジックに焦点を当てています。入出力は扱いません。実際、特別なランタイムレベルの API （最も有名なものが [`console.log()`](/ja/docs/Web/API/console/log_static)）がなければ、 JavaScript プログラムの動作は完全に観察不可能です。
 
 ランタイム、またはホストとは、 JavaScript エンジン（インタープリター）にデータを供給し、特別なグローバルプロパティを提供し、エンジンが外の世界と対話するための仕掛けを提供するものです。モジュール解決、データの読み込み、メッセージの出力、ネットワークリクエストの送信などはすべてランタイムレベルの処理です。 JavaScript はその誕生以来、 [DOM](/ja/docs/Web/API/Document_Object_Model) のような API を提供するブラウザー、[ファイルシステムアクセス](https://nodejs.org/api/fs.html) などの API を提供する Node.js など、さまざまな環境で採用されてきました。 JavaScript はウェブ（これが本来の目的でした）、モバイルアプリ、デスクトップアプリ、サーバーサイドアプリ、サーバーレス、組み込みシステムなどでうまく統合されています。 JavaScript のコア機能を学ぶ一方で、知識を使用するためにはホスティング提供された機能を理解することも重要です。例えば、[ウェブプラットフォーム API](/ja/docs/Web/API) はすべて読むことができ、これらはブラウザー、時にはブラウザー以外によって実装されます。
 
@@ -824,7 +824,7 @@ JavaScript は汎用スクリプト言語です。[コア言語仕様](/ja/docs/
 
 言語の本質的な部分については、紙面や 複雑さのために省略した部分もありますが、自分自身で探求してください。
 
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [クロージャ](/ja/docs/Web/JavaScript/Closures)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)
 - [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
 - [反復処理](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)
