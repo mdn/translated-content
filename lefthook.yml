@@ -6,6 +6,11 @@ pre-commit:
       run: yarn prettier --write --cache {staged_files}
       stage_fixed: true
 
+    - name: Autocorrect zh-cn
+      glob: "{docs,files}/zh-cn/*.md"
+      run: yarn autocorrect --fix {staged_files}
+      stage_fixed: true
+
     - name: Format markdown
       glob: "*.md"
       group:
@@ -13,9 +18,6 @@ pre-commit:
         jobs:
           - name: Markdownlint
             run: yarn markdownlint-cli2 --fix {staged_files}
-            stage_fixed: true
-          - name: Autocorrect
-            run: yarn autocorrect --fix {staged_files}
             stage_fixed: true
           - name: Check URLs per locale
             run: yarn node ./scripts/check-url-locale.js --fix {staged_files}
@@ -35,6 +37,7 @@ post-merge:
           yarn install
         fi
 
+# For condensed output
 output:
   - summary
   - failure
