@@ -11,7 +11,7 @@ permissions: {}
 
 jobs:
   fix:
-    if: github.repository == 'mdn/content'
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 
     strategy:
