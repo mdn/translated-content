@@ -31,7 +31,7 @@ slug: Learn_web_development/Core/CSS_layout/Introduction
   </tbody>
 </table>
 
-CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们相对正常布局流、周边元素、父容器或者主视口/窗口的位置。在这个模块中将涉及更多关于页面[布局技术](/zh-CN/docs/Web/CSS/Layout_mode)的细节：
+CSS 页面布局技术允许我们拾取网页中的元素，并且控制它们相对正常布局流、周边元素、父容器或者主视口/窗口的位置。在这个模块中将涉及更多关于页面[布局技术](/zh-CN/docs/Glossary/Layout_mode)的细节：
 
 - 正常布局流
 - {{cssxref("display")}}属性

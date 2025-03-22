@@ -137,11 +137,11 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
 ## ガイド
 
-- [テキストとフォントのスタイル設定の基礎](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [テキストとフォントのスタイル設定の基礎](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 
   - : この初心者向けの学習記事では、テキストとフォントのスタイル設定の基本に応じた内容を扱っています。 {{cssxref("font")}} 一括指定を使ってフォントの太さ、ファミリ、スタイルを設定する方法や、テキストの配置、行間や字間を管理する方法などに応じた内容となっています。
 
-- [学習: ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
+- [学習: ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 
   - : この初心者向け学習記事では、ウェブページでカスタムフォントを使用して、より多様で独自のテキストスタイル設定を実現する方法を説明します。
 
@@ -153,7 +153,7 @@ CSS フォントモジュールは可変フォントにも対応しています�
 
   - : この記事は可変フォントを使用し始めるのに役立つでしょう。
 
-- [フォントのパフォーマンスの改善](/ja/docs/Learn/Performance/CSS#improving_font_performance)
+- [フォントのパフォーマンスの改善](/ja/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
 
   - : CSS パフォーマンスガイドの一部であるこの記事では、フォントの読み込み、要求されるグリフのみの読み込み、 `font-display` 記述子によるフォント表示の動作を定義することについて説明しています。
 

@@ -120,7 +120,7 @@ console.log(val); // 0 と表示
 
 ### 分割代入
 
-より複雑な代入方法、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)構文は、配列やオブジェクトのリテラル構造を反映した構文を用いて、配列やオブジェクトからデータを抽出することができる JavaScript の式です。
+より複雑な代入方法、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)構文は、配列やオブジェクトのリテラル構造を反映した構文を用いて、配列やオブジェクトからデータを抽出することができる JavaScript の式です。
 
 分割代入をしないと、配列やオブジェクトから値を取り出すのに複数の文が必要になります。
 
@@ -542,7 +542,7 @@ const var2 = 4;
 ビットシフト演算子は 2 つのオペランドをとります。第 1 オペランドはシフトされる数を指定し、第 2 オペランドは、第 1 オペランドをシフトさせるビット数を指定します。
 シフト演算の方向は使用する演算子によって決まります。
 
-シフト演算子はそのオペランドを 32 ビット整数に変換し、結果を[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型)または[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型)のどちらかで返します。特に、左のオペランドの型が長整数型であった場合、長整数型を返します。それ以外の場合は数値型を返します。
+シフト演算子はそのオペランドを 32 ビット整数に変換し、結果を[数値型](/ja/docs/Web/JavaScript/Guide/Data_structures#数値型)または[長整数型](/ja/docs/Web/JavaScript/Guide/Data_structures#長整数型)のどちらかで返します。特に、左のオペランドの型が長整数型であった場合、長整数型を返します。それ以外の場合は数値型を返します。
 
 シフト演算子の種類は次表のとおりです。
 
@@ -710,7 +710,7 @@ const n3 = !"Cat"; // !t は false を返す
 
 ## 長整数型の演算子
 
-数値同士の間で使用できるほとんどの演算子は、[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型)の値の間でも同様に使用することができます。
+数値同士の間で使用できるほとんどの演算子は、[長整数型](/ja/docs/Web/JavaScript/Guide/Data_structures#長整数型)の値の間でも同様に使用することができます。
 
 ```js
 // 長整数型の加算

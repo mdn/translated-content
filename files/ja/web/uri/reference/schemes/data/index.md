@@ -13,17 +13,17 @@ l10n:
 
 ## 構文
 
-データ URL は接頭辞 (`data:`)、データの種類を示す [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)、テキストではないデータである場合のオプションである `base64` トークン、データ自体の 4 つの部品で構成されます。
+データ URL は接頭辞 (`data:`)、データの種類を示す [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)、テキストではないデータである場合のオプションである `base64` トークン、データ自体の 4 つの部品で構成されます。
 
 ```plain
 data:[<media-type>][;base64],<data>
 ```
 
-`media-type` は [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)で, 例えば `'image/jpeg'` で JPEG 画像を表します。省略時の既定値は `text/plain;charset=US-ASCII` です。
+`media-type` は [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)で, 例えば `'image/jpeg'` で JPEG 画像を表します。省略時の既定値は `text/plain;charset=US-ASCII` です。
 
 データに [RFC 3986 で予約文字として定義されている文字](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)が含まれている場合、または空白文字、改行文字、その他の出力されない文字が含まれている場合は、それらの文字は{{Glossary("Percent-encoding", "パーセントエンコード")}}でエンコードする必要があります。
 
-データが文字ならば、そのまま埋め込めます (埋め込む文書タイプに応じて、適切な実体参照やエスケープを行なってください)。それ以外では `base64` を指定し、 base64 エンコードしたバイナリーデータを埋め込みます。 MIME タイプについての詳しい情報は[こちら](/ja/docs/Web/HTTP/MIME_types)や[こちら](/ja/docs/Web/HTTP/MIME_types/Common_types)にあります。
+データが文字ならば、そのまま埋め込めます (埋め込む文書タイプに応じて、適切な実体参照やエスケープを行なってください)。それ以外では `base64` を指定し、 base64 エンコードしたバイナリーデータを埋め込みます。 MIME タイプについての詳しい情報は[こちら](/ja/docs/Web/HTTP/Guides/MIME_types)や[こちら](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)にあります。
 
 例:
 

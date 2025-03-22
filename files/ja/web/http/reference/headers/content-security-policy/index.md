@@ -11,7 +11,7 @@ l10n:
 
 HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
 
-[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP) がブラウザーにどのように配信されるか、また、その外観や、用途、展開戦略など、詳細については、ガイドをご覧ください。
+[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) がブラウザーにどのように配信されるか、また、その外観や、用途、展開戦略など、詳細については、ガイドをご覧ください。
 
 <table class="properties">
   <tbody>
@@ -190,7 +190,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ディレクティブがノンスと `unsafe-inline` を持っている場合、ブラウザーは `unsafe-inline` を無視します。
 
-さらなる使用例の情報については、 CSP ガイドの[ノンス](/ja/docs/Web/HTTP/CSP#ノンス)を参照してください。
+さらなる使用例の情報については、 CSP ガイドの[ノンス](/ja/docs/Web/HTTP/Guides/CSP#ノンス)を参照してください。
 
 > [!NOTE]
 > ノンスソース式は {{htmlelement("script")}} および {{htmlelement("style")}} 属性にのみ適用できます。
@@ -214,7 +214,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ディレクティブにハッシュと `unsafe-inline` がある場合、ブラウザーは `unsafe-inline` を無視します。
 
-より詳しい使用方法については、 CSP ガイドの[ハッシュ](/ja/docs/Web/HTTP/CSP#ハッシュ)の項目を参照してください。
+より詳しい使用方法については、 CSP ガイドの[ハッシュ](/ja/docs/Web/HTTP/Guides/CSP#ハッシュ)の項目を参照してください。
 
 > [!NOTE]
 > ハッシュのソース式は、 {{htmlelement("script")}} および {{htmlelement("style")}} 要素にのみ適用できます。
@@ -246,7 +246,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### \<scheme-source>
 
-[スキーム](/ja/docs/Web/URI/Schemes) （`https:` など）です。コロンは必須です。
+[スキーム](/ja/docs/Web/URI/Reference/Schemes) （`https:` など）です。コロンは必須です。
 
 安全なアップグレードが許可されています。
 
@@ -271,11 +271,11 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 > [!WARNING]
 > 開発者は `'unsafe-eval'` を避けるべきです。なぜなら、それは CSP が存在する目的の多くを無意味にするからです。
 
-詳しい使い方の情報は、 CSP ガイドの [`eval()` と同様の API](/ja/docs/Web/HTTP/CSP#eval_and_similar_apis) を参照してください。
+詳しい使い方の情報は、 CSP ガイドの [`eval()` と同様の API](/ja/docs/Web/HTTP/Guides/CSP#eval_and_similar_apis) を参照してください。
 
 ### 'wasm-unsafe-eval'
 
-既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、ページは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/compileStreaming_static) などの関数を使用して WebAssembly をコンパイルすることは許可されません。
+既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、ページは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) などの関数を使用して WebAssembly をコンパイルすることは許可されません。
 
 この保護を解除するには、 `wasm-unsafe-eval` キーワードを使用することができます。これは、 JavaScript の一般的な評価を可能にしないため、 `'unsafe-eval'` よりもはるかに安全な代替手段です。
 
@@ -297,7 +297,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 > [!WARNING]
 > 開発者は `'unsafe-inline'` を避けるべきです。なぜなら、 CSP を保有する多くの目的を無効にするからです。
 
-詳しい使い方の情報は、 CSP ガイドの[インライン JavaScript](/ja/docs/Web/HTTP/CSP#inline_javascript) を参照してください。
+詳しい使い方の情報は、 CSP ガイドの[インライン JavaScript](/ja/docs/Web/HTTP/Guides/CSP#inline_javascript) を参照してください。
 
 ### 'unsafe-hashes'
 
@@ -340,11 +340,11 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 - [`'self'`](#self)
 - [`'unsafe-inline'`](#unsafe-inline)
 
-より詳しい使用に関する情報は、 CSP ガイドの [`strict-dynamic` キーワード](/ja/docs/Web/HTTP/CSP#the_strict-dynamic_keyword)を参照してください。
+より詳しい使用に関する情報は、 CSP ガイドの [`strict-dynamic` キーワード](/ja/docs/Web/HTTP/Guides/CSP#the_strict-dynamic_keyword)を参照してください。
 
 ### 'report-sample'
 
-この式がスクリプトやスタイルを制御するディレクティブに含まれ、そのディレクティブがブラウザーにインラインスクリプト、インラインスタイル、またはイベントハンドラー属性をブロックさせる場合、ブラウザーが生成する[違反レポート](/ja/docs/Web/HTTP/CSP#違反の報告)には、ブロックされたリソースの最初の 40 文字を含む {{domxref("CSPViolationReportBody.sample", "sample")}} プロパティが含まれます。
+この式がスクリプトやスタイルを制御するディレクティブに含まれ、そのディレクティブがブラウザーにインラインスクリプト、インラインスタイル、またはイベントハンドラー属性をブロックさせる場合、ブラウザーが生成する[違反レポート](/ja/docs/Web/HTTP/Guides/CSP#違反の報告)には、ブロックされたリソースの最初の 40 文字を含む {{domxref("CSPViolationReportBody.sample", "sample")}} プロパティが含まれます。
 
 ## ワーカー内の CSP
 
@@ -422,7 +422,7 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [コンテンツセキュリティポリシーを学ぶ](/ja/docs/Web/HTTP/CSP)
+- [コンテンツセキュリティポリシーを学ぶ](/ja/docs/Web/HTTP/Guides/CSP)
 - [WebExtension のコンテンツセキュリティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - コンテンツセキュリティポリシーを評価する

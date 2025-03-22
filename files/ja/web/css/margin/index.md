@@ -110,7 +110,7 @@ margin: unset;
 - {{cssxref("length")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("percentage")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
   - : ブラウザーが適切なマージンを選択して使用します。例えば、要素を中央揃えするためにこの値を使用することもあります。
 
@@ -118,7 +118,7 @@ margin: unset;
 
 このプロパティを使用して、要素の全四辺のマージンを設定することができます。マージンは要素の周りに追加の領域を作成します。それに対して、 {{cssxref("padding")}} は要素*内部*に追加の領域を作成します。
 
-top および bottom のマージンは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} などの[置換要素](/ja/docs/Web/CSS/Replaced_element)ではないインライン要素には効果がありません。
+top および bottom のマージンは、 {{HTMLElement("span")}} または {{HTMLElement("code")}} などの[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)ではないインライン要素には効果がありません。
 
 ### 水平方向の中央揃え
 

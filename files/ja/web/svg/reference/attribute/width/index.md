@@ -69,13 +69,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -102,13 +102,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -135,13 +135,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -168,13 +168,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -201,13 +201,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -234,13 +234,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -267,13 +267,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -300,13 +300,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -333,13 +333,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -366,13 +366,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -399,13 +399,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -432,13 +432,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -465,13 +465,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -498,13 +498,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -531,13 +531,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -564,13 +564,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -597,13 +597,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -630,13 +630,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -664,13 +664,13 @@ svg {
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -701,13 +701,13 @@ svg {
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -737,13 +737,13 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -770,7 +770,7 @@ svg {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
@@ -798,13 +798,13 @@ svg {
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -838,13 +838,13 @@ svg {
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -875,13 +875,13 @@ svg {
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#length"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
             >&#x3C;length></a
           ></strong
         >
         |
         <strong
-          ><a href="/ja/docs/Web/SVG/Content_type#percentage"
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
             >&#x3C;percentage></a
           ></strong
         >
@@ -899,7 +899,7 @@ svg {
 </table>
 
 > [!NOTE]
-> 参照する要素が [viewBox](/ja/docs/Web/SVG/Attribute/viewBox) を持っていない限り、 `width` は `use` 要素には効果がありません。つまり、`use` が `svg` または `symbol` 要素を参照している場合にのみ効果があります。
+> 参照する要素が [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) を持っていない限り、 `width` は `use` 要素には効果がありません。つまり、`use` が `svg` または `symbol` 要素を参照している場合にのみ効果があります。
 
 > [!NOTE]
 > SVG2 から `width` は幾何プロパティであり、この属性は使用される要素の CSS プロパティとしても使用することができます。

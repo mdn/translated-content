@@ -12,7 +12,7 @@ l10n:
 
 ## 解説
 
-この記事の前の部分である [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)では、ある要素の描画順はそれらの `z-index` の値に影響を受けていました。これは、要素が*重ね合わせコンテキスト*を生じさせる特別なプロパティを持っていたからです。
+この記事の前の部分である [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index)では、ある要素の描画順はそれらの `z-index` の値に影響を受けていました。これは、要素が*重ね合わせコンテキスト*を生じさせる特別なプロパティを持っていたからです。
 
 重ね合わせコンテキストは以下のような場面で、文書の随所に様々な要素によって構成されます。
 
@@ -219,10 +219,10 @@ h1 {
 
 ## 関連情報
 
-- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements): 浮動要素が重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
-- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
+- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
+- [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動要素が重ね合わせでどのように扱われるか
+- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
+- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
+- [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
 - [最上位レイヤー](/ja/docs/Glossary/Top_layer)

@@ -2006,6 +2006,15 @@
       "dskmori"
     ]
   },
+  "Glossary/Layout_mode": {
+    "modified": "2019-03-23T23:31:15.394Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Glossary/Lazy_load": {
     "modified": "2020-06-27T00:26:39.086Z",
     "contributors": [
@@ -5720,6 +5729,32 @@
       "Kozawa"
     ]
   },
+  "MDN/Writing_guidelines/Code_style_guide": {
+    "modified": "2020-09-30T15:30:25.414Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
+  "MDN/Writing_guidelines/Code_style_guide/CSS": {
+    "modified": "2020-10-01T14:47:46.429Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "shuheiy2000",
+      "silverskyvicto"
+    ]
+  },
+  "MDN/Writing_guidelines/Code_style_guide/HTML": {
+    "modified": "2020-09-30T15:30:25.212Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Uemmra3",
+      "hamasaki",
+      "dskmori",
+      "kenji-yamasaki"
+    ]
+  },
   "MDN/Writing_guidelines/Experimental_deprecated_obsolete": {
     "modified": "2020-09-30T15:30:24.078Z",
     "contributors": [
@@ -5865,32 +5900,6 @@
     "modified": "2019-03-18T21:21:46.339Z",
     "contributors": [
       "silverskyvicto"
-    ]
-  },
-  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
-    "modified": "2020-09-30T15:30:25.414Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS": {
-    "modified": "2020-10-01T14:47:46.429Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "shuheiy2000",
-      "silverskyvicto"
-    ]
-  },
-  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML": {
-    "modified": "2020-09-30T15:30:25.212Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Uemmra3",
-      "hamasaki",
-      "dskmori",
-      "kenji-yamasaki"
     ]
   },
   "Mozilla": {
@@ -24839,6 +24848,17 @@
       "mfuji09"
     ]
   },
+  "Web/CSS/CSS_display/Visual_formatting_model": {
+    "modified": "2020-09-05T23:17:45.192Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "uint256_t",
+      "mokeke",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-10-15T22:11:38.008Z",
     "contributors": [
@@ -25268,6 +25288,13 @@
       "mfuji09"
     ]
   },
+  "Web/CSS/CSS_scroll_anchoring/Scroll_anchoring": {
+    "modified": "2020-10-15T22:16:02.146Z",
+    "contributors": [
+      "mfuji09",
+      "myakura"
+    ]
+  },
   "Web/CSS/CSS_scroll_snap": {
     "modified": "2019-03-18T21:30:31.785Z",
     "contributors": [
@@ -25286,6 +25313,15 @@
       "mfuji09",
       "silverskyvicto",
       "Eai"
+    ]
+  },
+  "Web/CSS/CSS_selectors/Privacy_and_the_visited_selector": {
+    "modified": "2020-12-01T21:03:57.973Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "ethertank",
+      "sosleepy"
     ]
   },
   "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
@@ -25551,15 +25587,6 @@
       "Wind1808"
     ]
   },
-  "Web/CSS/Layout_mode": {
-    "modified": "2019-03-23T23:31:15.394Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/CSS/Length": {
     "modified": "2020-10-15T21:14:25.961Z",
     "contributors": [
@@ -25611,15 +25638,6 @@
       "sii",
       "lv7777",
       "ethertank"
-    ]
-  },
-  "Web/CSS/Privacy_and_the_:visited_selector": {
-    "modified": "2020-12-01T21:03:57.973Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/CSS/Pseudo-classes": {
@@ -25700,17 +25718,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Visual_formatting_model": {
-    "modified": "2020-09-05T23:17:45.192Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "uint256_t",
-      "mokeke",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/CSS/WebKit_Extensions": {
@@ -28397,13 +28404,6 @@
     "contributors": [
       "mfuji09",
       "Marsf"
-    ]
-  },
-  "Web/CSS/overflow-anchor/Guide_to_scroll_anchoring": {
-    "modified": "2020-10-15T22:16:02.146Z",
-    "contributors": [
-      "mfuji09",
-      "myakura"
     ]
   },
   "Web/CSS/overflow-block": {

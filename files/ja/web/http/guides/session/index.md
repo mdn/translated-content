@@ -60,10 +60,10 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### 要求メソッド
 
-HTTP では、リソースに対して実行したいアクションを示す[要求メソッド](/ja/docs/Web/HTTP/Methods)のセットを定義しています。要求メソッドには名詞も存在しますが、 HTTP 動詞と言われることがあります。 `GET` と `POST` が最も一般的です。
+HTTP では、リソースに対して実行したいアクションを示す[要求メソッド](/ja/docs/Web/HTTP/Reference/Methods)のセットを定義しています。要求メソッドには名詞も存在しますが、 HTTP 動詞と言われることがあります。 `GET` と `POST` が最も一般的です。
 
 - {{HTTPMethod("GET")}} メソッドは、指定したリソースのデータを要求します。 `GET` を使用する要求は、データの取り込みに限ります。
-- {{HTTPMethod("POST")}} メソッドはサーバーにデータを送信しますので、データの状態を変更できます。これは、 [HTML フォーム](/ja/docs/Learn/Forms)用によく使用されるメソッドです。
+- {{HTTPMethod("POST")}} メソッドはサーバーにデータを送信しますので、データの状態を変更できます。これは、 [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)用によく使用されるメソッドです。
 
 ## サーバー応答の構造
 
@@ -134,7 +134,7 @@ Content-Type: text/html
 
 ### 応答ステータスコード
 
-[HTTP 応答ステータスコード](/ja/docs/Web/HTTP/Status) は、特定の HTTP 要求が正常に完了したかを示します。応答は情報応答、成功応答、リダイレクション、クライアントエラー、サーバーエラーの 5 つのクラスに分類されます。
+[HTTP 応答ステータスコード](/ja/docs/Web/HTTP/Reference/Status) は、特定の HTTP 要求が正常に完了したかを示します。応答は情報応答、成功応答、リダイレクション、クライアントエラー、サーバーエラーの 5 つのクラスに分類されます。
 
 - {{HTTPStatus(200)}}: OK. 要求は成功しました。
 - {{HTTPStatus(301)}}: Moved Permanently. この応答コードは、要求したリソースの URI が変更されたことを表します。
@@ -143,6 +143,6 @@ Content-Type: text/html
 ## 関連情報
 
 - [ウェブ上のリソースの識別](/ja/docs/Web/URI)
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
-- [HTTP 要求メソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP 応答ステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
+- [HTTP 要求メソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP 応答ステータスコード](/ja/docs/Web/HTTP/Reference/Status)

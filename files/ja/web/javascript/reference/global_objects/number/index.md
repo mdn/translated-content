@@ -77,7 +77,7 @@ JavaScript の数値 (`Number`) 型は [IEEE 754 の倍精度 64ビットバイ�
   - [数値の区切り文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値の区切り文字)は許可されません。
 - [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は、意図しない精度の低下を防ぐために {{jsxref("TypeError")}} 例外が発生します。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} 例外が発生します。
-- オブジェクトはまず[プリミティブに変換されます](/ja/docs/Web/JavaScript/Data_structures#primitive_coercion)（[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)を `"number"` のヒント付きで、`valueOf()`、`toString()` メソッドをこの順で呼び出すことで）。結果のプリミティブは数値へ変換されます。
+- オブジェクトはまず[プリミティブに変換されます](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion)（[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)を `"number"` のヒント付きで、`valueOf()`、`toString()` メソッドをこの順で呼び出すことで）。結果のプリミティブは数値へ変換されます。
 
 JavaScript でほぼ同じ効果を得るには、2 つの方法があります。
 

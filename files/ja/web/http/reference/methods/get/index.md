@@ -55,6 +55,6 @@ GET /index.html
 
 ## 関連情報
 
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Range")}}
 - {{HTTPMethod("POST")}}

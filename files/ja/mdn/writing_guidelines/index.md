@@ -11,13 +11,13 @@ MDN Web Docs はオープンソースのプロジェクトです。以下のセ�
 
   - : このコーナーでは MDN Web Docs に載せるものと載せないもの、そして新しい技術について書く場合、コンテンツの提案プロセス、外部リンクを受け入れるかどうかなど、他の多くのポリシーについて説明します。私たちのためにコンテンツを書いたり更新したりすることを検討しているのであれば、これは良い出発点です。このコーナーには、以下の記事も載せています。
 
-    - [掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+    - [掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)
 
       - : MDN Web Docs に載せるべきコンテンツの詳細な基準、 MDN Web Docs で新しい文書化をしてもらうための申請プロセス、申請する側の希望やガイドラインを提供しています。
 
 - [執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : 執筆スタイルガイドは、 MDN Web Docs で使用する言語とスタイルを扱います。また、[サンプルコードの書式化](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)の方法も扱っています。
+  - : 執筆スタイルガイドは、 MDN Web Docs で使用する言語とスタイルを扱います。また、[サンプルコードの書式化](/ja/docs/MDN/Writing_guidelines/Code_style_guide)の方法も扱っています。
 
 - [ウェブ開発の学習の執筆ガイドライン](/ja/docs/MDN/Writing_guidelines/Learning_content)
 

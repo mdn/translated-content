@@ -31,14 +31,14 @@ MathML は以下の構文を使用します。つまり、基本式に任意の�
 
 ## 属性
 
-この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)の他に以下の属性があります。
+この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他に以下の属性があります。
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、式のベースラインより下に添字を移動させる最小の空間を示します。
 - `superscriptshift` {{deprecated_inline}}
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) で、式のベースライン上に上付き文字を移動させる最小の空間を示します。
 
-> **メモ:** `subscriptsshift` 属性と `superscriptsshift` 属性については、ブラウザーによっては [MathML における古い長さ](/ja/docs/Web/MathML/Values#mathml_における古い長さ)も受け付けます。
+> **メモ:** `subscriptsshift` 属性と `superscriptsshift` 属性については、ブラウザーによっては [MathML における古い長さ](/ja/docs/Web/MathML/Reference/Values#mathml_における古い長さ)も受け付けます。
 
 ## 例
 

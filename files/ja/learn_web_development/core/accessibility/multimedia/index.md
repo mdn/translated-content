@@ -226,7 +226,7 @@ player.ontimeupdate = () => {
 
 ここでは、映像/音声プレイヤーに対してどのようにカスタムしたプレイヤー機能を加えるかという基本的なアイデアが得られます。映像/音声プレイヤーに対して、古いブラウザーでの Flash のフォールバックも含めて、より複雑な機能を加えるには、以下のリンク先を参照してください:
 
-- [音声と映像の配信](/ja/docs/Web/Media/Audio_and_video_delivery)
+- [音声と映像の配信](/ja/docs/Web/Media/Guides/Audio_and_video_delivery)
 - [映像プレイヤーのスタイル設定の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
 - [ブラウザー間互換の映像プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
 
@@ -324,7 +324,7 @@ HTML のメディア再生と共に表示させるためには、次のことを
 
 ![再生、停止、音量、キャプションの単発のオン・オフなど標準制御する動画プレーヤー。再生されている動画は、槍のような武器を持った男性のシーンを示し、キャプションには "Esta hoja tiene pasado oscuro. "と書かれています。](video-player-with-captions.png)
 
-詳細は [HTML の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)を読んでください。あなたは、GitHub で GIan Devlin によって作られた[例](http://iandevlin.github.io/mdn/video-player-with-captions/)をこの記事と併せて見ることができます。([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions) も見てください) この例では JavaScript を使用して、ユーザーが異なる言語の字幕を選択できるようになっています。字幕を表示するためには、"CC" ボタンをクリックして英語、ドイツ語、スペイン後のオプションを選択する必要があります。
+詳細は [HTML の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)を読んでください。あなたは、GitHub で GIan Devlin によって作られた[例](http://iandevlin.github.io/mdn/video-player-with-captions/)をこの記事と併せて見ることができます。([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions) も見てください) この例では JavaScript を使用して、ユーザーが異なる言語の字幕を選択できるようになっています。字幕を表示するためには、"CC" ボタンをクリックして英語、ドイツ語、スペイン後のオプションを選択する必要があります。
 
 > [!NOTE]
 > テキストトラックは {{glossary("SEO")}} でも役に立ちます。検索エンジンはテキストによって更新されるためです。検索エンジンは、テキストトラックによって映像の途中に直接リンクすることさえできます。

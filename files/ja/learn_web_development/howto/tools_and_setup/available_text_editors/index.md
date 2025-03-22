@@ -467,4 +467,4 @@ l10n:
 
 ## 次のステップ
 
-良いテキストエディターが見つかったら、[基本的な作業環境](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)（テストサーバー）の構築に着手しましょう。あるいは、[最初のウェブページ](/ja/docs/Learn/Getting_started_with_the_web)を書いてみるのもいいでしょう。
+良いテキストエディターが見つかったら、[基本的な作業環境](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)（テストサーバー）の構築に着手しましょう。あるいは、[最初のウェブページ](/ja/docs/Learn_web_development/Getting_started/Your_first_website)を書いてみるのもいいでしょう。

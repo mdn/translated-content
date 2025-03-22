@@ -8,9 +8,9 @@ original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 実践的なチュートリアルシリーズの最初の記事は、学習する内容を説明し、後の記事で進めていく「地域図書館」のサンプルウェブサイトの概要を示しています。
 
-| 前提条件: | [Django の紹介](/ja/docs/Learn/Server-side/Django/Introduction)を読んでください。以下の記事では、[Django 開発環境をセットアップする](/ja/docs/Learn/Server-side/Django/development_environment)必要があります。 |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | このチュートリアルで使用されているサンプルアプリケーションを紹介し、読者が何をするかを理解できるようにします。                                                                                                  |
+| 前提条件: | [Django の紹介](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Introduction)を読んでください。以下の記事では、[Django 開発環境をセットアップする](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)必要があります。 |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | このチュートリアルで使用されているサンプルアプリケーションを紹介し、読者が何をするかを理解できるようにします。                                                                                                                                                        |
 
 ## 概要
 
@@ -51,6 +51,6 @@ _地域図書館（LocalLibrary）は、この一連のチュートリアルの�
 
 ## 要約
 
-地域図書館ウェブサイトについてと、何を学ぶのかをもう少し知りました。今度は例を含む[スケルトンプロジェクト](/ja/docs/Learn/Server-side/Django/skeleton_website)を作成しましょう。
+地域図書館ウェブサイトについてと、何を学ぶのかをもう少し知りました。今度は例を含む[スケルトンプロジェクト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)を作成しましょう。
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

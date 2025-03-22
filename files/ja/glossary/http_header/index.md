@@ -56,7 +56,7 @@ X-Cache-Info: cached
 
 ## 関連情報
 
-- [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
+- [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Reference/Headers)
 - [ヘッダー](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2) の構文（HTTP 仕様書、英語）
 - 関連用語:
 

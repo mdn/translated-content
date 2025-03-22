@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`413 Content Too Large`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、リクエストエンティティがサーバーによって定義された制限よりも大きいことを示します。
+HTTP の **`413 Content Too Large`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストエンティティがサーバーによって定義された制限よりも大きいことを示します。
 サーバーは接続を閉じるか {{HTTPHeader("Retry-After")}} ヘッダーフィールドを返します。
 
 {{rfc("9110")}} 以前では、このステータスのレスポンスフレーズは **`Payload Too Large`** でした。
@@ -59,6 +59,6 @@ Content-Length: 97
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Retry-After")}}

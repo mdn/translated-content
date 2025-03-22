@@ -57,7 +57,7 @@ document.domain = "company.com";
 
 ブラウザーはポート番号を個別に検査します。 `document.domain` を呼び出すと、 `document.domain = document.domain` の場合も含め、ポート番号が `null` で上書きされます。従って、スクリプトの最初に `document.domain = "company.com"` を設定しただけでは、 `company.com:8080` と `company.com` とは互いにアクセス**できません**。双方のポートが `null` になるように、双方で設定しなければなりません。
 
-この仕組みにはいくつかの制限があります。例えば、 [`document-domain`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/document-domain) の [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) が有効になっている場合や、文書がサンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 内にある場合は、 `SecurityError` の [`DOMException`](/ja/docs/Web/API/DOMException) が発生します。また、この方法でオリジンを変更しても、多くの Web API ([`localStorage`](/ja/docs/Web/API/Window/localStorage), [`indexedDB`](/ja/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/ja/docs/Web/API/BroadcastChannel), [`SharedWorker`](/ja/docs/Web/API/SharedWorker) など) で使用されているオリジンチェックには影響しません。失敗事例のより詳細なリストは、 [Document.domain > Failures](/ja/docs/Web/API/Document/domain#failures) にあります。
+この仕組みにはいくつかの制限があります。例えば、 [`document-domain`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain) の [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) が有効になっている場合や、文書がサンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 内にある場合は、 `SecurityError` の [`DOMException`](/ja/docs/Web/API/DOMException) が発生します。また、この方法でオリジンを変更しても、多くの Web API ([`localStorage`](/ja/docs/Web/API/Window/localStorage), [`indexedDB`](/ja/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/ja/docs/Web/API/BroadcastChannel), [`SharedWorker`](/ja/docs/Web/API/SharedWorker) など) で使用されているオリジンチェックには影響しません。失敗事例のより詳細なリストは、 [Document.domain > Failures](/ja/docs/Web/API/Document/domain#failures) にあります。
 
 > [!NOTE]
 > サブドメインから親ドメインへアクセスさせるために `document.domain` を使用する際は、親ドメインとサブドメインの双方で同じ値を `document.domain` に設定することが必要です。この作業は、親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。
@@ -66,7 +66,7 @@ document.domain = "company.com";
 
 {{domxref("XMLHttpRequest")}} や {{htmlelement("img")}} 要素を使用する場合など、 同一オリジンポリシーは 2 つのオリジン間における通信を制御します。一般にこれらの通信は 3 つのカテゴリーに分類されます。
 
-- 異なるオリジンへの*書き込み*は、概して許可されます。例えばリンクやリダイレクト、フォームの送信などがあります。まれに使用される HTTP リクエストの際は[プリフライト](/ja/docs/Web/HTTP/CORS#preflighted_requests)が必要です。
+- 異なるオリジンへの*書き込み*は、概して許可されます。例えばリンクやリダイレクト、フォームの送信などがあります。まれに使用される HTTP リクエストの際は[プリフライト](/ja/docs/Web/HTTP/Guides/CORS#preflighted_requests)が必要です。
 - 異なるオリジンの*埋め込み*は、概して許可されます。例は後述します。
 - 異なるオリジンからの*読み込み*は一般に許可されませんが、埋め込みによって読み取り権限がしばしば漏れてしまいます。例えば埋め込み画像の幅や高さ、埋め込みスクリプトの動作内容、あるいは[埋め込みリソースでアクセス可能なもの](https://bugzilla.mozilla.org/show_bug.cgi?id=629094)を読み取ることができます。
 
@@ -82,7 +82,7 @@ document.domain = "company.com";
 
 ### 異なるオリジンへのアクセスを許可する方法
 
-異なるオリジンへのアクセスを許可するには、 [CORS](/ja/docs/Web/HTTP/CORS) を使用してください。 CORS は {{Glossary("HTTP")}} の一部で、ブラウザーがコンテンツの読み込みを許可する他のホストをサーバーが指定できるようにするものです。
+異なるオリジンへのアクセスを許可するには、 [CORS](/ja/docs/Web/HTTP/Guides/CORS) を使用してください。 CORS は {{Glossary("HTTP")}} の一部で、ブラウザーがコンテンツの読み込みを許可する他のホストをサーバーが指定できるようにするものです。
 
 ### 異なるオリジンへのアクセスをブロックする方法
 

@@ -100,4 +100,4 @@ Firefox はバージョン 74 以降、古い TLS バージョンを使用して
 - Mozilla Operations Security (OpSec) チームは、 [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS) のウィキページを保守しています。
 - [HTTP Observatory](/en-US/observatory/), [SSL Labs](https://www.ssllabs.com/ssltest/) はサイトの HTTP/TLS 構成がどれだけ安全かを確認するテストに役立ちます。
 - [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-- [Strict-Transport-Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP ヘッダー
+- [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP ヘッダー

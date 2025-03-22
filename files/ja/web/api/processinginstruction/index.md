@@ -11,7 +11,7 @@ l10n:
 
 > **警告:** `ProcessingInstruction` ノードは XML 文書のみが対応しており、 HTML 文書は対応していません。この中では、処理命令はコメントとみなされ、ツリーでは {{domxref("Comment")}} オブジェクトとして表現されます。
 
-処理命令は [XML 宣言](/ja/docs/Web/XML/XML_introduction#xml_declaration)とは異なることがあります。
+処理命令は [XML 宣言](/ja/docs/Web/XML/Guides/XML_introduction#xml_declaration)とは異なることがあります。
 
 > [!NOTE]
 > ユーザー定義の処理命令は "`xml`" で始めることはできません。 `xml` 接頭辞を持つ処理命令のターゲット名は、 XML 仕様書によって特定の標準的な用途のために予約されているからです（例えば、 `<?xml-stylesheet ?>` などを見てください）。

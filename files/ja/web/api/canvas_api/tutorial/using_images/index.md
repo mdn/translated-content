@@ -80,7 +80,7 @@ img.src = "myImage.png"; // ソースのパスを設定
 
 ### data: URL で画像を埋め込む
 
-画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Schemes/data) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
+画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Reference/Schemes/data) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
 
 ```js
 const img = new Image(); // 新たな img 要素を作成

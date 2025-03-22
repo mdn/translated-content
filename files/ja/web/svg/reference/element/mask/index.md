@@ -46,7 +46,7 @@ svg {
 
 - {{SVGAttr("height")}}
   - : この属性はマスク領域の高さを定義します。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
 - {{SVGAttr("maskContentUnits")}}
   - : この属性は `<mask>` のコンテンツの座標系を定義します。
     _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
@@ -55,13 +55,13 @@ svg {
     _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `objectBoundingBox`; _アニメーション_: **可**
 - {{SVGAttr("x")}}
   - : この属性は、マスク領域の左上隅の x 軸座標を定義します。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
+    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : この属性は、マスク領域の左上隅の y 軸座標を定義します。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
+    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
 - {{SVGAttr("width")}}
   - : この属性はマスク領域の幅を定義します。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
 
 ## 使用上のメモ
 

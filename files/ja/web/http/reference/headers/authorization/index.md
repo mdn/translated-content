@@ -18,8 +18,8 @@ HTTP の **`Authorization`** {{Glossary("request header", "リクエストヘッ
 このヘッダーはオリジン間リダイレクトでは取り除かれます。
 
 > [!NOTE]
-> このヘッダーは、 [一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#一般的な_http_認証の枠組み) の一部です。
-> これは数々の[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で使用可能です。
+> このヘッダーは、 [一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Guides/Authentication#一般的な_http_認証の枠組み) の一部です。
+> これは数々の[認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で使用可能です。
 
 <table class="properties">
   <tbody>
@@ -59,13 +59,13 @@ Authorization: Digest username=<username>,
 
 - `<auth-scheme>`
 
-  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で、視覚情報をエンコードする方法を定義します。
-    よく使われる方式（大文字小文字の区別なし）には、 [`Basic`](/ja/docs/Web/HTTP/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります。
+  - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で、視覚情報をエンコードする方法を定義します。
+    よく使われる方式（大文字小文字の区別なし）には、 [`Basic`](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります。
 
     > [!NOTE]
-    > 詳しい情報やオプションについては、 [HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)を参照してください。
+    > 詳しい情報やオプションについては、 [HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)を参照してください。
 
-`<auth-scheme>` 以外のディレクティブは、各[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)の仕様上のものです。
+`<auth-scheme>` 以外のディレクティブは、各[認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)の仕様上のものです。
 一般的に、これらの仕様については、関連する仕様を調べる必要があります（方式の一部のキーは以下の一覧に掲載されています）。
 
 ### Basic 認証
@@ -75,7 +75,7 @@ Authorization: Digest username=<username>,
   - : 資格情報で、指定された方式によってエンコードされています。
 
     > [!NOTE]
-    > エンコーディングアルゴリズムについての情報は、 {{HTTPHeader("WWW-Authenticate")}}、[HTTP 認証](/ja/docs/Web/HTTP/Authentication)、関連する仕様書の例を参照してください。
+    > エンコーディングアルゴリズムについての情報は、 {{HTTPHeader("WWW-Authenticate")}}、[HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)、関連する仕様書の例を参照してください。
 
 ### Digest 認証
 
@@ -125,7 +125,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 > **警告:** {{Glossary("Base64")}} エンコードは簡単に元に戻すことができ、元の名前とパスワードを取得することができます。そのため、 `Basic` 認証には暗号化セキュリティがありません。
 > 認証を使用する際には常に {{Glossary("HTTPS")}} の使用をお勧めしますが、 `Basic` 認証を使用する場合は特にその必要性が強くなります。
 
-HTTP の Basic 認証を使用してサイトをパスワードで保護するために、 Apache または Nginx サーバーを構成する方法の例については、 [HTTP 認証](/ja/docs/Web/HTTP/Authentication)もご覧ください。
+HTTP の Basic 認証を使用してサイトをパスワードで保護するために、 Apache または Nginx サーバーを構成する方法の例については、 [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)もご覧ください。
 
 ## 仕様書
 
@@ -137,7 +137,7 @@ HTTP の Basic 認証を使用してサイトをパスワードで保護する�
 
 ## 関連情報
 
-- [HTTP 認証](/ja/docs/Web/HTTP/Authentication)
+- [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

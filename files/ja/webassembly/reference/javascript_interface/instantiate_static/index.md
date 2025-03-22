@@ -34,7 +34,7 @@ Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
 解決時に次の 2 つのフィールドを持つ `ResultObject` を渡す `Promise`。
 
 - `module`: コンパイルされた {{jsxref("WebAssembly.Module")}} オブジェクト。この `Module` は再度インスタンス化することや、 {{domxref("Worker.postMessage", "postMessage()")}} 経由で共有したり、 [IndexedDB にキャッシュ](/ja/docs/WebAssembly/Caching_modules)することができます。
-- `instance`: {{jsxref("WebAssembly.Instance")}} オブジェクトで、すべての [エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions) を含む。
+- `instance`: {{jsxref("WebAssembly.Instance")}} オブジェクトで、すべての [エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions) を含む。
 
 #### 例外
 
@@ -69,7 +69,7 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 
 ### 第一のオーバーロードの例
 
-fetch を使用して WebAssembly バイトコードを読み込んだ後、 {{jsxref("WebAssembly.instantiate()")}} 関数を使用してモジュールをコンパイル、インスタンス化し、その処理中に JavaScript の関数を WebAssembly モジュールにインポートします。次に、 `Instance` によってエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)を呼び出します。
+fetch を使用して WebAssembly バイトコードを読み込んだ後、 {{jsxref("WebAssembly.instantiate()")}} 関数を使用してモジュールをコンパイル、インスタンス化し、その処理中に JavaScript の関数を WebAssembly モジュールにインポートします。次に、 `Instance` によってエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を呼び出します。
 
 ```js
 var importObject = {
@@ -133,5 +133,5 @@ onmessage = function (e) {
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -35,7 +35,7 @@ l10n:
 
 ## 概要
 
-シンプルなウェブページを作成している場合 (例として [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)を参照)、ウェブサーバー上にオンラインで転送したいと思うかもしれません。この記事では SFTP クライアント、RSync、GitHub などの選択肢をとおして、その方法を説明します。
+シンプルなウェブページを作成している場合 (例として [HTML の基本](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)を参照)、ウェブサーバー上にオンラインで転送したいと思うかもしれません。この記事では SFTP クライアント、RSync、GitHub などの選択肢をとおして、その方法を説明します。
 
 ## SFTP
 
@@ -155,7 +155,7 @@ rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
 
 GitHub では、[GitHub pages](https://pages.github.com/) (gh-pages) を介してウェブサイトを公開することができます。
 
-これの使い方の基本については、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)の[ウェブサイトの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)の記事で説明しているので、ここでは繰り返しません。
+これの使い方の基本については、[ウェブ入門](/ja/docs/Learn_web_development/Getting_started/Your_first_website)の[ウェブサイトの公開](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)の記事で説明しているので、ここでは繰り返しません。
 
 ただし、 GitHub でウェブサイトをホスティングすることはできますが、カスタムドメインを使用することもできます。詳しいガイドは [Using a custom domain with GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) をご覧ください。
 

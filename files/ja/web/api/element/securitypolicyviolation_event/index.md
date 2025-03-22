@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`securitypolicyviolation`** イベントは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
+**`securitypolicyviolation`** イベントは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)に違反したときに発生します。
 
 イベントはポリシーに違反した要素で発行され、バブリングします。
 通常は {{domxref("Window")}} または {{domxref("Document")}} オブジェクトのイベントハンドラーによって処理されます。
@@ -59,4 +59,4 @@ window.addEventListener("securitypolicyviolation", (e) => {
 
 ## 関連情報
 
-- [HTTP > コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)
+- [HTTP > コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離に矩形を定義します。これは、 {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つを定義するために使用される基本図形関数です。
+**`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離に矩形を定義します。これは、 {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つを定義するために使用される基本図形関数です。
 
 {{InteractiveExample("CSS Demo: inset()")}}
 
