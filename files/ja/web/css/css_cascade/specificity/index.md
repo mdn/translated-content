@@ -11,7 +11,7 @@ l10n:
 **詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文の基本)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
 
 > [!NOTE]
-> ブラウザーは、[カスケードのオリジンと重要度](/ja/docs/Web/CSS/Cascade)を決定した**後**に、詳細度を検討します。言い換えれば、プロパティ宣言が競合している場合、そのプロパティの優先順位を保有する 1 つの[カスケードのオリジンとレイヤー](/ja/docs/Web/CSS/@layer)のセレクター間でのみ、詳細度が関連し比較されます。優先順位を持つカスケードレイヤーで競合する宣言のセレクターの詳細度が等しいとき、[スコープの詳細度](/ja/docs/Web/CSS/@scope#scope_の競合の解決方法)と出現順序が関連するようになります。
+> ブラウザーは、[カスケードのオリジンと重要度](/ja/docs/Web/CSS/CSS_cascade/Cascade)を決定した**後**に、詳細度を検討します。言い換えれば、プロパティ宣言が競合している場合、そのプロパティの優先順位を保有する 1 つの[カスケードのオリジンとレイヤー](/ja/docs/Web/CSS/@layer)のセレクター間でのみ、詳細度が関連し比較されます。優先順位を持つカスケードレイヤーで競合する宣言のセレクターの詳細度が等しいとき、[スコープの詳細度](/ja/docs/Web/CSS/@scope#scope_の競合の解決方法)と出現順序が関連するようになります。
 
 ## 詳細度の計算方法
 
@@ -209,7 +209,7 @@ important フラグを使用する際は必ずコメントを入れてくださ�
 
 ### !important の例外
 
-important とマークされた CSS 宣言は、同じカスケード層とオリジン内の他の宣言を上書きします。技術的には、[`!important`](/ja/docs/Web/CSS/important)は詳細度と何の関係もありませんが、詳細度やカスケードとは直接的に相互作用するものです。これは、スタイルシートの[カスケード](/ja/docs/Web/CSS/Cascade)の順序を逆転させます。
+important とマークされた CSS 宣言は、同じカスケード層とオリジン内の他の宣言を上書きします。技術的には、[`!important`](/ja/docs/Web/CSS/important)は詳細度と何の関係もありませんが、詳細度やカスケードとは直接的に相互作用するものです。これは、スタイルシートの[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)の順序を逆転させます。
 
 同じオリジンとカスケードレイヤーからの宣言が競合し、一方のプロパティ値に `!important` フラグが設定されている場合、詳細度に関係なく、重要な宣言が適用されます。同じオリジンとカスケードレイヤーで `!important` フラグを持つ宣言が競合した場合、同じ要素に適用されると、より詳細度の高い宣言が適用されます。
 
@@ -476,7 +476,7 @@ input[type="password"]:required {
 
 詳細度について、いくつか覚えておきたいことがあります。
 
-1. 詳細度は、同じ要素が同じカスケードレイヤーやオリジンの複数の宣言によってターゲットにされている場合にのみ適用されます。特定度は、同じ重要度、同じオリジン、[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の宣言にのみ関係します。一致するセレクターが異なるオリジンにある場合、[カスケード](/ja/docs/Web/CSS/Cascade)はどちらの宣言が優先されるかを決定します。
+1. 詳細度は、同じ要素が同じカスケードレイヤーやオリジンの複数の宣言によってターゲットにされている場合にのみ適用されます。特定度は、同じ重要度、同じオリジン、[カスケードレイヤー](/ja/docs/Web/CSS/@layer)の宣言にのみ関係します。一致するセレクターが異なるオリジンにある場合、[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)はどちらの宣言が優先されるかを決定します。
 
 2. 2 つのセレクターが同じカスケードレイヤーとオリジンで同じ詳細度を持っている場合、スコープの近接度が計算されます。最もスコープの近接度が低いルールセットが優先されます。詳細と例えばについては、 [`@scope` の競合の解決方法](/ja/docs/Web/CSS/@scope#scope_の競合の解決方法)を参照してください。
 
@@ -496,13 +496,13 @@ input[type="password"]:required {
 - [SpeciFISHity](https://specifishity.com/)
 - [Specificity Calculator](https://specificity.keegan.st/): 自身の CSS ルールをテストし、理解するための対話型ウェブサイト
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) 詳細度クイズ（英語）
-- [CSS の構文](/ja/docs/Web/CSS/Syntax)ガイド
+- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax) モジュール
 - [CSS のエラーの扱い](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
-- [アットルール](/ja/docs/Web/CSS/At-rule)
-- [継承](/ja/docs/Web/CSS/Inheritance)
-- [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
-- [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+- [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール

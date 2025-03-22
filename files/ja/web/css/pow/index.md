@@ -5,7 +5,7 @@ slug: Web/CSS/pow
 
 {{CSSRef}}
 
-**`pow()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions)は、基数を累乗した値を返す指数関数です。
+**`pow()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)は、基数を累乗した値を返す指数関数です。
 
 {{CSSxRef("exp")}} 関数は `pow()` の特別なケースで、基数が数学定数 [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) になります。
 

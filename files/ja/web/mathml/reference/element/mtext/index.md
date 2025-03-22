@@ -14,7 +14,7 @@ l10n:
 
 ## 属性
 
-この属性は[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)を受け入れます。
+この属性は[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)を受け入れます。
 
 ## 例
 

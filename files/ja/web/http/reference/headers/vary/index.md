@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Vary
 
 {{HTTPSidebar}}
 
-**`Vary`** HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。
+**`Vary`** HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。
 
 `Vary` ヘッダーは {{HTTPStatus("200")}} `OK` レスポンスに設定されるのと同様に、 {{HTTPStatus("304")}} `Not Modified` にも設定されます。
 
@@ -69,4 +69,4 @@ Vary: User-Agent
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](/ja/docs/Web/HTTP/Content_negotiation)
+- [Content negotiation](/ja/docs/Web/HTTP/Guides/Content_negotiation)

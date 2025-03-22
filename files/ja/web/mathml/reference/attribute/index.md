@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-これは MathML 属性のアルファベット順リストです。それぞれの属性の詳細は、関連する [MathML 要素ページ](/ja/docs/Web/MathML/Element)および[グローバル属性ページ](/ja/docs/Web/MathML/Global_attributes)にあります。[値](/ja/docs/Web/MathML/Values)ページでは、 MathML 属性で使用される共通の値についての注意を説明しています。
+これは MathML 属性のアルファベット順リストです。それぞれの属性の詳細は、関連する [MathML 要素ページ](/ja/docs/Web/MathML/Reference/Element)および[グローバル属性ページ](/ja/docs/Web/MathML/Reference/Global_attributes)にあります。[値](/ja/docs/Web/MathML/Reference/Values)ページでは、 MathML 属性で使用される共通の値についての注意を説明しています。
 
 > [!NOTE]
 > 主要な [MathML](/ja/docs/Web/MathML) ページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) をリファレンス仕様書として使用しています。しかし、いくつかのブラウザーでまだ実装されている古い機能も文書化されています。これらの機能やその他の機能についての詳細は [MathML 4](https://w3c.github.io/mathml/) で見ることができます。
@@ -28,7 +28,7 @@ l10n:
         {{ MathMLElement("mo") }}
       </td>
       <td>
-         <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子を下付き文字または上付き文字として使用する際にアクセントとして扱うかどうかを示します。
+         <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子を下付き文字または上付き文字として使用する際にアクセントとして扱うかどうかを示します。
       </td>
     </tr>
     <tr>
@@ -38,7 +38,7 @@ l10n:
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子がアクセントとして扱われるべきか否かを指定します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子がアクセントとして扱われるべきか否かを指定します。
       </td>
     </tr>
     <tr>
@@ -48,7 +48,7 @@ l10n:
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、上付き文字がアクセントとして扱われるべきか否かを指定します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、上付き文字がアクセントとして扱われるべきか否かを指定します。
       </td>
     </tr>
     <tr>
@@ -143,7 +143,7 @@ l10n:
       <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
       <td>
         <p>
-        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> を <code>normal</code> （true の場合）と <code>compact</code> （それ以外の場合）のどちらに設定するかを指定します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> を <code>normal</code> （true の場合）と <code>compact</code> （それ以外の場合）のどちらに設定するかを指定します。
         </p>
       </td>
     </tr>
@@ -151,7 +151,7 @@ l10n:
       <td><code>fence</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子がフェンス（括弧など）であるかどうかを指定します。この属性には視覚的効果はありません。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子がフェンス（括弧など）であるかどうかを指定します。この属性には視覚的効果はありません。
       </td>
     </tr>
     <tr>
@@ -286,7 +286,7 @@ l10n:
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> が <code>compact</code> に設定されていた場合に上側・下側の文字が上付き・下付き文字に移動するかどうかを示します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> が <code>compact</code> に設定されていた場合に上側・下側の文字が上付き・下付き文字に移動するかどうかを示します。
       </td>
     </tr>
     <tr>
@@ -374,7 +374,7 @@ l10n:
       <td><code>separator</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-      <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、この属性には視覚的な効果はありませんが、演算子が区切り文字（カンマなど）であるかどうかを指定するものです。
+      <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、この属性には視覚的な効果はありませんが、演算子が区切り文字（カンマなど）であるかどうかを指定するものです。
       </td>
     </tr>
     <tr>
@@ -388,7 +388,7 @@ l10n:
       <td><code>stretchy</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子を隣接する要素のサイズに引き伸ばすかどうかを指定します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子を隣接する要素のサイズに引き伸ばすかどうかを指定します。
       </td>
     </tr>
     <tr>
@@ -417,7 +417,7 @@ l10n:
       <td><code>symmetric</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子が伸張された場合、演算子が虚数軸（中央の分数線）の周りに上下対称であるべきかを指定します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、演算子が伸張された場合、演算子が虚数軸（中央の分数線）の周りに上下対称であるべきかを指定します。
       </td>
     </tr>
     <tr>

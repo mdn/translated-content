@@ -37,7 +37,7 @@ l10n:
 - {{glossary("Grid", "グリッド")}}
 - [インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)
 - {{glossary("Inline-level content", "インラインレベルコンテンツ")}}
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - {{glossary("Ruby", "ルビ")}}
 
 ## ガイド
@@ -95,4 +95,4 @@ l10n:
 - [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
 - [CSS ルビレイアウト](/ja/docs/Web/CSS/CSS_ruby_layout)モジュール
 - [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)

@@ -19,7 +19,7 @@ Permissions-Policy: picture-in-picture=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : この機能を使用する権限が与えられているオリジンのリスト。詳しくは [`Permissions-Policy` > 構文](/ja/docs/Web/HTTP/Headers/Permissions-Policy#構文)を参照してください。
+  - : この機能を使用する権限が与えられているオリジンのリスト。詳しくは [`Permissions-Policy` > 構文](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#構文)を参照してください。
 
 ## 既定のポリシー
 
@@ -36,4 +36,4 @@ Permissions-Policy: picture-in-picture=<allowlist>;
 ## 関連情報
 
 - {{HTTPHeader("Permissions-Policy")}} ヘッダー
-- [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)

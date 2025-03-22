@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_resources
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           熟悉核心 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a>
@@ -56,7 +56,7 @@ Vue CLI 还为我们提供了准备向网络发布应用程序的工具。你可
 这将创建一个新的 `dist` 目录，包含所有准备好的生产文件。要把你的网站发布到网上，请把这个文件夹的内容复制到你的主机环境中。
 
 > [!NOTE]
-> Vue CLI 文档也包含一个[专门的指导手册](https://cli.vuejs.org/guide/deployment.html#platform-guides)，可以帮助你将应用发布到很多常见的托管平台。
+> Vue CLI 文档也包含一个[专门的指导手册](https://cli.vuejs.org/zh/guide/deployment.html#平台指南)，可以帮助你将应用发布到很多常见的托管平台。
 
 ## Vue 2
 

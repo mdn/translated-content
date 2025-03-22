@@ -186,5 +186,5 @@ strong {
 ## 関連情報
 
 - [ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)

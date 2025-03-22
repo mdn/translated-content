@@ -8,11 +8,11 @@ l10n:
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Global`** はグローバル変数のインスタンスを表します。JavaScript からアクセスでき、1 つ以上の [`WebAssembly.Module`](/ja/docs/WebAssembly/JavaScript_interface/Module) インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
+**`WebAssembly.Global`** はグローバル変数のインスタンスを表します。JavaScript からアクセスでき、1 つ以上の [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) インスタンス間でインポート/エクスポートすることができます。これにより複数のモジュールを動的にリンクすることができます。
 
 ## コンストラクター
 
-- [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global/Global)
+- [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global/Global)
   - : 新しい `Global` オブジェクトを生成します。
 
 ## Global のインスタンス
@@ -22,7 +22,7 @@ l10n:
 ### インスタンスプロパティ
 
 - `Global.prototype.constructor`
-  - : このオブジェクトのインスタンスを生成した関数を返します。既定では、これは [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global/Global) コンストラクターです。
+  - : このオブジェクトのインスタンスを生成した関数を返します。既定では、これは [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) コンストラクターです。
 - `Global.prototype[@@toStringTag]`
   - : [@@toStringTag](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値で、文字列値 "WebAssembly.Global" です。
 - `Global.prototype.value`
@@ -89,6 +89,6 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概要](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)
 - [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

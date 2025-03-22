@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS request external redirect not allowed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
-original_slug: Web/HTTP/CORS/Errors/CORSExternalRedirectNotAllowed
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
@@ -24,6 +24,6 @@ Reason: CORS request external redirect not allowed
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)

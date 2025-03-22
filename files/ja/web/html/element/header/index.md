@@ -54,7 +54,7 @@ header > time {
 
 ## 使用上の注意
 
-`<header>` 要素は、区分コンテンツの中に含まれていない限り、ウェブサイト全体の [`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/banner_role) ランドマークロールと同じ意味を持ちます。区分コンテンツの中に含まれている場合、`<header>` 要素はランドマークではありません。
+`<header>` 要素は、区分コンテンツの中に含まれていない限り、ウェブサイト全体の [`banner`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) ランドマークロールと同じ意味を持ちます。区分コンテンツの中に含まれている場合、`<header>` 要素はランドマークではありません。
 
 `<header>` 要素はグローバルなサイトヘッダーを定義することができ、アクセシビリティツリーでは `banner` として記述されます。通常、ロゴ、会社名、検索機能、そして場合によってはグローバルナビゲーションやスローガンを含みます。一般的にはページの上部に配置されます。
 
@@ -107,7 +107,7 @@ header > time {
 
 ## アクセシビリティ
 
-`<header>` 要素が [`banner`](/ja/docs/Web/Accessibility/ARIA/Roles/banner_role) ランドマークを定義するのは、そのコンテキストが {{HTMLElement('body')}} 要素のときです。HTML の header 要素は、{{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('nav')}}、{{HTMLElement('section')}} 要素の子孫である場合は banner ランドマークとみなされません。
+`<header>` 要素が [`banner`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) ランドマークを定義するのは、そのコンテキストが {{HTMLElement('body')}} 要素のときです。HTML の header 要素は、{{HTMLElement('article')}}、{{HTMLElement('aside')}}、{{HTMLElement('nav')}}、{{HTMLElement('section')}} 要素の子孫である場合は banner ランドマークとみなされません。
 
 ## 技術的概要
 

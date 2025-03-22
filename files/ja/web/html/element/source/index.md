@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<source>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("picture")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}} の各要素に対し、複数のメディアリソースを指定します。この要素は{{glossary("void element", "空要素")}}であり、すなわち中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。
+**`<source>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("picture")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}} の各要素に対し、複数のメディアリソースを指定します。この要素は{{glossary("void element", "空要素")}}であり、すなわち中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Guides/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。
 
 {{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
 
@@ -29,7 +29,7 @@ l10n:
 
 - `type`
 
-  - : [画像の MIME メディア型](/ja/docs/Web/Media/Formats/Image_types)または[その他のメディア型](/ja/docs/Web/Media/Formats/Containers)で、オプションで [`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)を伴います。
+  - : [画像の MIME メディア型](/ja/docs/Web/Media/Guides/Formats/Image_types)または[その他のメディア型](/ja/docs/Web/Media/Guides/Formats/Containers)で、オプションで [`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)を伴います。
 
 - `src`
 
@@ -83,13 +83,13 @@ l10n:
 - `<picture>` 要素で用いた場合は、`<picture>` 要素の子の {{HTMLElement("img")}} で指定した画像を代わりに使用します。
 - `<audio>` または `<video>`要素で用いた場合は、代わりにブラウザーは開始タグと終了タグの間にある内容を表示します。
 
-ウェブブラウザーが対応している画像形式の詳細と、使用する適切な形式を選択するためのガイダンスについては、ウェブ上で使用する[画像ファイルの種類と画像のガイド](/ja/docs/Web/Media/Formats/Image_types)を参照してください。使用できる動画・音声メディアの種類については、[ウェブ上で使用するメディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)を参照してください。
+ウェブブラウザーが対応している画像形式の詳細と、使用する適切な形式を選択するためのガイダンスについては、ウェブ上で使用する[画像ファイルの種類と画像のガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)を参照してください。使用できる動画・音声メディアの種類については、[ウェブ上で使用するメディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)を参照してください。
 
 ## 例
 
 ### `video` で `type` 属性を使う例
 
-次の例は、 異なる形式で動画を提供する記述方法です。Webm 形式をサポートするブラウザーと、Ogg 形式に対応した環境と QuickTime 動画形式を再生可能なブラウザーを想定した記述例です。 `audio` 要素や `video` 要素に対応していない場合、代わりに通知が表示されます。 audio 要素や video 要素には対応していても指定した形式のすべてが再生不可である場合は、 `error` イベントが発生し、（もしあれば）既定のメディアコントロールがエラーを示します。使用できるメディアファイル形式や、ブラウザーが対応しているメディアファイル形式の詳細については、[ウェブ上のメディアの種類と形式についてのガイド](/ja/docs/Web/Media/Formats)を参照してください。
+次の例は、 異なる形式で動画を提供する記述方法です。Webm 形式をサポートするブラウザーと、Ogg 形式に対応した環境と QuickTime 動画形式を再生可能なブラウザーを想定した記述例です。 `audio` 要素や `video` 要素に対応していない場合、代わりに通知が表示されます。 audio 要素や video 要素には対応していても指定した形式のすべてが再生不可である場合は、 `error` イベントが発生し、（もしあれば）既定のメディアコントロールがエラーを示します。使用できるメディアファイル形式や、ブラウザーが対応しているメディアファイル形式の詳細については、[ウェブ上のメディアの種類と形式についてのガイド](/ja/docs/Web/Media/Guides/Formats)を参照してください。
 
 ```html
 <video controls>
@@ -112,7 +112,7 @@ l10n:
 </video>
 ```
 
-その他の例については、学習エリアの記事[動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)にすばらしいリソースがあります。
+その他の例については、学習エリアの記事[動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)にすばらしいリソースがあります。
 
 ### `picture` で `media` 属性を使う例
 
@@ -226,6 +226,6 @@ l10n:
 - {{HTMLElement("audio")}} 要素
 - {{HTMLElement("picture")}} 要素
 - {{HTMLElement("video")}} 要素
-- [画像ファイルの型と形式のガイド](/ja/docs/Web/Media/Formats/Image_types)
-- [ウェブ上のメディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
-- [ウェブパフォーマンス](/ja/docs/Learn/Performance)
+- [画像ファイルの型と形式のガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)
+- [ウェブ上のメディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
+- [ウェブパフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance)

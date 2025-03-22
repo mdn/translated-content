@@ -136,7 +136,7 @@ background-size: unset;
   - 画像に一方だけ内在的な寸法があり、内在的な比率がない場合は、指定された寸法と、もう一方は背景配置領域の寸法を使用して描画されます。
 
   > [!NOTE]
-  > SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
+  > SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
 
 - **`background-size` の一方が `auto` でもう一方が `auto` ではない場合:**
 
@@ -196,5 +196,5 @@ background-size: unset;
 ## 関連情報
 
 - [背景画像の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [背景 SVG の変倍](/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [背景 SVG の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

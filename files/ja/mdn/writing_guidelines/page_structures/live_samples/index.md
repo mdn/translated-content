@@ -358,7 +358,7 @@ el.onclick = function () {
 
 ### 機能の許可
 
-`allow` 引数を使用すると、ライブサンプル出力が含まれている `<iframe>` 要素内で許可される機能を指定することができます。利用可能な値は[フレームの権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax)からのものです。
+`allow` 引数を使用すると、ライブサンプル出力が含まれている `<iframe>` 要素内で許可される機能を指定することができます。利用可能な値は[フレームの権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy#embedded_frame_syntax)からのものです。
 
 ```html
 <div id="fullscreen-content">

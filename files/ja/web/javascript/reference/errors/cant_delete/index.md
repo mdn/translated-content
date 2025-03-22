@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Cant_delete
 
 {{jsSidebar("Errors")}}
 
-JavaScript の例外 "property is non-configurable and can't be deleted" は、プロパティを削除しようとしたが、そのプロパティが[構成不可](/ja/docs/Web/JavaScript/Data_structures#プロパティ)である場合に発生します。
+JavaScript の例外 "property is non-configurable and can't be deleted" は、プロパティを削除しようとしたが、そのプロパティが[構成不可](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)である場合に発生します。
 
 ## エラーメッセージ
 
@@ -21,7 +21,7 @@ strict モードでのみ、{{jsxref("TypeError")}} の警告が出ます。
 
 ## エラーの原因
 
-プロパティを削除しようとしましたが、プロパティが [non-configurable](/ja/docs/Web/JavaScript/Data_structures#プロパティ) でした。`configurable` 属性は、オブジェクトからプロパティを削除できるかどうか、および (`writable` を除く) 属性を変更できるかどうかを制御します。
+プロパティを削除しようとしましたが、プロパティが [non-configurable](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ) でした。`configurable` 属性は、オブジェクトからプロパティを削除できるかどうか、および (`writable` を除く) 属性を変更できるかどうかを制御します。
 
 このエラーは、[strict モードのコード](/ja/docs/Web/JavaScript/Reference/Strict_mode) でのみ発生します。非 strict コードでは、この操作は `false` を返します。
 

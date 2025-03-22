@@ -424,7 +424,7 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 
 最初に GitHub で無料アカウントを作成します。
 無料アカウントではプライベートリポジトリーを作成することはできませんが、_public_ リポジトリー ("repos") を好きなだけ作成することができます。
-次に、このチュートリアルの残りの部分で進化させる [ローカルライブラリーウェブサイト](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) を格納するために "django_local_library" という名前のリポジトリーを作成し、構成可能な状態にします。
+次に、このチュートリアルの残りの部分で進化させる [ローカルライブラリーウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) を格納するために "django_local_library" という名前のリポジトリーを作成し、構成可能な状態にします。
 
 手順は次の通りです。
 

@@ -56,7 +56,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 - {{jsxref("Functions/Default_parameters", "既定値の代入を含む、分割された引数", "#Destructured_parameter_with_default_value_assignment", 1)}}をサポートしました ([Firefox バグ 1018628](https://bugzil.la/1018628))。
 - ES6 に従い、[メソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で波括弧が必要になりました。波括弧を欠いた構文はエラーになります ([Firefox バグ 1150855](https://bugzil.la/1150855))。
 - コンストラクター形式の[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) (ジェネレーターメソッドを除く) は不可になりました ([Firefox バグ 1059908](https://bugzil.la/1059908) および [Firefox バグ 1166950](https://bugzil.la/1166950))。
-- ES6 使用への準拠の一環として `([a, b]) = [1, 2]` や `({a, b}) = { a: 1, b: 2 }` といった、括弧でくくるパターンの [destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 構文は無効と判断され、{{jsxref("SyntaxError")}} が発生するようになりました。詳しくは [Jeff Walden のブログ記事](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) をご覧ください。
+- ES6 使用への準拠の一環として `([a, b]) = [1, 2]` や `({a, b}) = { a: 1, b: 2 }` といった、括弧でくくるパターンの [destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) 構文は無効と判断され、{{jsxref("SyntaxError")}} が発生するようになりました。詳しくは [Jeff Walden のブログ記事](https://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) をご覧ください。
 - [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) 構文をサポートしました ([Firefox バグ 1141865](https://bugzil.la/1141865))。
 
 ### インターフェイス/API/DOM
@@ -133,7 +133,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 ## セキュリティ
 
-- [CSP](/ja/docs/Web/HTTP/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 1089255](https://bugzil.la/1089255))。
+- [CSP](/ja/docs/Web/HTTP/Guides/CSP) 1.1 の `manifest-src` [ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 1089255](https://bugzil.la/1089255))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

@@ -67,7 +67,7 @@ Content-Security-Policy: frame-ancestors <space separated list of sources>;
 
   - : `http:` または `https:` のようなスキームです。コロンは必要です。単一引用符は使用しないでください。 data スキームも指定することができます (非推奨)。
 
-    - `data:` コンテンツのソースとして [`data:` URL](/ja/docs/Web/URI/Schemes/data) が使えるようにします。
+    - `data:` コンテンツのソースとして [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) が使えるようにします。
       _これは安全ではありません。攻撃者は任意の data: URI を挿入することもできます。使用は控え、スクリプトには絶対に使用しないでください。_
     - `mediastream:` コンテンツのソースとして [`mediastream:` URI](/ja/docs/Web/API/Media_Capture_and_Streams_API) が使えるようにします。
     - `blob:` コンテンツのソースとして [`blob:` URI](/ja/docs/Web/API/Blob) が使えるようにします。

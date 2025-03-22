@@ -38,7 +38,7 @@ slug: Web/HTML/Element/samp
 
 ## DOM 接口
 
-该元素实现了 [`HTMLElement`](/zh-CN/docs/Web/API/element) 接口。
+该元素实现了 [`HTMLElement`](/zh-CN/docs/Web/API/Element) 接口。
 
 > [!NOTE]
 > 基于 Gecko 1.9.2 及以上，Firefox 还为该元素实现了[HTMLSpanElement](/zh-CN/docs/DOM/span) 接口。

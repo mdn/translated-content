@@ -1,7 +1,6 @@
 ---
 title: Повторное введение в JavaScript (JS учебник)
 slug: Web/JavaScript/Guide/Language_overview
-original_slug: Web/JavaScript/Language_overview
 ---
 
 {{jsSidebar}}

@@ -31,9 +31,9 @@ set(key, value)
 ### 引数
 
 - `key`
-  - : `Map` オブジェクトに追加する要素のキーです。キーはいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)）です。
+  - : `Map` オブジェクトに追加する要素のキーです。キーはいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
 - `value`
-  - : `Map` オブジェクトに追加する要素の値です。値はいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Data_structures#オブジェクト)）です。
+  - : `Map` オブジェクトに追加する要素の値です。値はいずれかの [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures) （いずれかの[プリミティブ値](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ値)または任意の型の [JavaScript オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)）です。
 
 ### 返値
 

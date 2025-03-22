@@ -41,4 +41,4 @@ inputElement.formEnctype = "application/x-www-form-urlencoded";
 - {{domxref("HTMLFormElement.enctype")}}
 - [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)
 - [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

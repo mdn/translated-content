@@ -34,7 +34,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 新しいリファレンスページやガイドについては、[新しい issue](https://github.com/mdn/mdn/issues/new/choose) で、提案する内容とその理由を説明するディスカッションを開いてください（できるだけ明確にしてください）。
 
-コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
+コンテンツの新しいセクションを含む大規模なプロジェクトを提案する場合は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照し、申請プロセスについても概説してください。
 
 ## どのようなトピックが MDN Web Docs に載るのか
 
@@ -64,7 +64,7 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 
 MDN Web Docs のすべてのコンテンツは、それが掲載されている技術分野に関連したものでなければなりません。投稿者は、書き方やコードサンプルなどについて、この [MDN 執筆ガイドライン](/ja/docs/MDN/Writing_guidelines) に従うことが期待されています。
 
-MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)ページを参照してください。
+MDN Web Docs に技術を文書化できるかどうかの基準についての詳細は、[掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)ページを参照してください。
 
 ### 新しい技術を文書化するとき
 

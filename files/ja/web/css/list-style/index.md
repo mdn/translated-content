@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
+**`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
 
 {{InteractiveExample("CSS Demo: list-style")}}
 
@@ -151,7 +151,7 @@ list-style: unset;
 
 Safari では、 `list-style` 値が `none` である場合、それが {{HTMLElement("nav")}} のナビゲーション要素内に含まれていない限り、順序付きリストまたは順序なしリストをアクセシビリティツリー内のリストとして認識しません。これは[意図的な動作](https://webkit.org/b/170179#c1)であり、バグと認識されていません。
 
-リストを確実にリストとしてアナウンスするようにするには、 [`role="list"`](/ja/docs/Web/Accessibility/ARIA/Roles/list_role) を {{HTMLElement("ol")}} および {{HTMLElement("ul")}} 要素に設定しておください。特に、このリストが `<nav>` に含まれていない場合はなおさらです。これによって、デザインに影響を与えることなく、リストの意味を回復することができます。
+リストを確実にリストとしてアナウンスするようにするには、 [`role="list"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) を {{HTMLElement("ol")}} および {{HTMLElement("ul")}} 要素に設定しておください。特に、このリストが `<nav>` に含まれていない場合はなおさらです。これによって、デザインに影響を与えることなく、リストの意味を回復することができます。
 
 ```html
 <ul role="list">
@@ -178,7 +178,7 @@ ul li::before {
 
 - ['Fixing' Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) (2023)
 - [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html) (2017)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding success criterion 1.3.1: Info and relationships | WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
 ## 例

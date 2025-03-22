@@ -142,7 +142,7 @@ someElement.addEventListener(
 
 ここでは、 {{domxref("Element/mouseup_event", "mouseup")}} イベントのリスナーを `someElement` 要素に追加しています。第 3 引数の `passiveSupported` が `true` である場合、 `options` オブジェクトを `passive` を `true` に設定して指定しています。そうでない場合は、論理値を渡す必要があることがわかっているので、 `useCapture` 引数の値として `false` を渡しています。
 
-[機能検出の実装](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)のドキュメントや [Web Incubator Community Group](https://wicg.github.io/admin/charter.html) の [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) に関する説明で詳しく学ぶことができます。
+[機能検出の実装](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)のドキュメントや [Web Incubator Community Group](https://wicg.github.io/admin/charter.html) の [`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection) に関する説明で詳しく学ぶことができます。
 
 ### ハンドラー内での "this" の値
 
@@ -275,7 +275,7 @@ myObject.register();
 ### イベントリスナーのデータの出し入れ
 
 イベントリスナーは {{domxref("Event")}} または `Event` のサブクラスの引数を 1 つだけ取りますが、これは自動的にリスナーに渡され、返値は無視されます。
-したがって、イベントリスナーにデータを取得したり、イベントリスナーからデータを取得したりするには、引数と返値でデータを渡すのではなく、代わりに[クロージャ](/ja/docs/Web/JavaScript/Closures)を作成する必要があります。
+したがって、イベントリスナーにデータを取得したり、イベントリスナーからデータを取得したりするには、引数と返値でデータを渡すのではなく、代わりに[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を作成する必要があります。
 
 イベントリスナーとして渡された関数は、その関数を格納する外部スコープで宣言されたすべての変数にアクセスすることができます。
 

@@ -41,7 +41,7 @@ HTML は既定で高速でアクセシビリティに優れています。開発
 - [`<source>` 要素](/ja/docs/Web/HTML/Element/source)
 - [`<img> srcset` 属性](/ja/docs/Web/HTML/Element/img#attributes)
 
-  - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
 
 - [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)
 - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
@@ -62,7 +62,7 @@ HTML は既定で高速でアクセシビリティに優れています。開発
 - [`<source>` 要素](/ja/docs/Web/HTML/Element/source)
 - [`<img> srcset` 属性](/ja/docs/Web/HTML/Element/img#attributes)
 
-  - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
 
 - [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)
 - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))

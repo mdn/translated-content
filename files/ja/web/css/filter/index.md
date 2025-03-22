@@ -103,7 +103,7 @@ filter: unset;
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-`url()` を使用して [SVG の filter 要素](/ja/docs/Web/SVG/Element/filter)を参照することができます。 SVG の {{SVGElement("filter")}} 要素を参照するには、次のような構文を使用してください。
+`url()` を使用して [SVG の filter 要素](/ja/docs/Web/SVG/Reference/Element/filter)を参照することができます。 SVG の {{SVGElement("filter")}} 要素を参照するには、次のような構文を使用してください。
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -288,4 +288,4 @@ img:nth-of-type(2) {
 - CSS [合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)モジュール（CSS の {{cssxref("background-blend-mode")}} および {{cssxref("mix-blend-mode")}} プロパティを含む）
 - CSS の {{cssxref("mask")}} プロパティ
 - [SVG](/ja/docs/Web/SVG) （SVG の {{SVGElement("filter")}} 要素や {{SVGAttr("filter")}} 属性を含む）
-- [HTML コンテンツへの SVG 効果の適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML コンテンツへの SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
