@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)。
+[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)。
 
-形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_display/flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
+形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
 
 {{InteractiveExample("CSS Demo: display")}}
 

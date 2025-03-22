@@ -50,7 +50,7 @@ slug: Web/HTML/Attributes/rel
 
   - : 表示当前文档的另一种方式。对 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 有效，其含义取决于其他属性的值。
 
-    - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)。
+    - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)。
 
       ```html
       <!-- 一个永久样式表 -->
@@ -185,7 +185,7 @@ slug: Web/HTML/Attributes/rel
 
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
 
-    如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
+    如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/XML/Guides/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
 
 - `stylesheet`
 
