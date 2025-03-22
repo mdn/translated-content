@@ -1,15 +1,16 @@
 ---
 title: 初期値
 slug: Web/CSS/CSS_cascade/initial_value
-original_slug: Web/CSS/initial_value
+l10n:
+  sourceCommit: 95edea913e7f0726243aff3f47b85cfd6f02d995
 ---
 
 {{CSSRef}}
 
-**初期値 (initial value)** は [CSS](/ja/docs/Web/CSS) のプロパティの既定値であり、仕様書の定義表に挙げられているものです。初期値の使い方はプロパティが継承されているかどうかで異なります。
+**初期値** (initial value) は [CSS](/ja/docs/Web/CSS) のプロパティの既定値であり、仕様書の定義表に挙げられているものです。初期値の使い方はプロパティが継承されているかどうかで異なります。
 
-- [継承されるプロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)では、初期値は*ルート要素に対してのみ*、[指定値](/ja/docs/Web/CSS/CSS_cascade/specified_value)が指定されていない場合に限り使用されます。
-- [継承されないプロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#non-inherited_properties)では、初期値は*すべての要素*において、[指定値](/ja/docs/Web/CSS/CSS_cascade/specified_value)が指定されていない場合に限り使用されます。
+- [継承されるプロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)では、初期値は*ルート要素に対してのみ*、[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)が指定されていない場合に限り使用されます。
+- [継承されないプロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#非継承プロパティ)では、初期値は*すべての要素*において、[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)が指定されていない場合に限り使用されます。
 
 {{cssxref("initial")}} キーワードを使用すると、明示的に初期値を指定することができます。
 
@@ -34,9 +35,9 @@ original_slug: Web/CSS/initial_value
   - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
   - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - {{glossary("Replaced elements", "置換要素")}}

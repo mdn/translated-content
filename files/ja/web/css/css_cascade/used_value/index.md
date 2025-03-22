@@ -1,17 +1,18 @@
 ---
 title: 使用値
 slug: Web/CSS/CSS_cascade/used_value
-original_slug: Web/CSS/used_value
+l10n:
+  sourceCommit: 95edea913e7f0726243aff3f47b85cfd6f02d995
 ---
 
 {{CSSRef}}
 
-**使用値** (used value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)で行われたすべての計算が実行された後の値です。
+**使用値** (used value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)で行われたすべての計算が実行された後の値です。
 
 {{glossary("user agent", "ユーザーエージェント")}}が計算を終了した後、すべての CSS プロパティは使用値を持ちます。長さ ({{cssxref("width")}} や {{cssxref("line-height")}} など) の使用値はピクセル数です。一括指定プロパティ ({{cssxref("background")}} など) の使用値は、各成分 ({{cssxref("background-color")}} や {{cssxref("background-size")}} など) のプロパティに、 {{cssxref("position")}} や {{cssxref("float")}} が加味されたものと一致します。
 
 > [!NOTE]
-> DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/resolved_value)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)または[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)のどちらかになります。
+> DOM の {{domxref("Window.getComputedStyle", "getComputedStyle()")}} API が返すのは[解決値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#解決値)であり、これはプロパティによって[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)または使用値のどちらかになります。
 
 ## 例
 
@@ -103,7 +104,6 @@ CSS 2.0 では、プロパティの計算の最後のステップとして*計�
 - {{domxref("window.getComputedStyle")}}
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
   - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
   - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
   - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
@@ -112,9 +112,10 @@ CSS 2.0 では、プロパティの計算の最後のステップとして*計�
   - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+    - [解決値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#解決値)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+  - [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - {{glossary("Replaced elements", "置換要素")}}
