@@ -15,7 +15,7 @@ a::after {
 ```
 
 > [!NOTE]
-> Los pseudo-elementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto no aplica a _[elementos reemplazados](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.
+> Los pseudo-elementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto no aplica a _[elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)_ como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.
 
 ## Sintaxis
 

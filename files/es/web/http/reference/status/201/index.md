@@ -26,4 +26,4 @@ El caso de uso común de este código de estado es el resultado de una solicitud
 
 ## Ver también
 
-- [HTTP request methods](/es/docs/Web/HTTP/Methods)
+- [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods)

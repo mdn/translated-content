@@ -18,7 +18,7 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/
 El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.
 
 > [!NOTE]
-> Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
+> Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
 
 ## Sintaxis
 

@@ -49,7 +49,7 @@ User-Agent: Mozilla/5.0 (<información-de-sistema>) <plataforma> (<platforma-det
 
 ## Cadena UA de Firefox
 
-Para más información sobre cadenas de agente de usuarios basadas en Firefox y Gecko, visita [Referencia de la cadena del agente de usuario de Firefox](/es/docs/Web/HTTP/Headers/User-Agent/Firefox). La cadena del UA (user agent) de Firefox se divide en 4 componentes:
+Para más información sobre cadenas de agente de usuarios basadas en Firefox y Gecko, visita [Referencia de la cadena del agente de usuario de Firefox](/es/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox). La cadena del UA (user agent) de Firefox se divide en 4 componentes:
 
 ```
 Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
@@ -158,6 +158,6 @@ PostmanRuntime/7.26.5
 ## Véase también
 
 - [Detección del agente de usuario, historia y lista de verificación](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
-- [Cadenas del agente de usuario de Firefox](/es/docs/Web/HTTP/Headers/User-Agent/Firefox)
+- [Cadenas del agente de usuario de Firefox](/es/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox)
 - [Detección de navegador utilizando el agente de usuario](/es/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - [Sugerencias del cliente](/es/docs/Web/HTTP/Client_hints)

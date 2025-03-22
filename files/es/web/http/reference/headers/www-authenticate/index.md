@@ -23,7 +23,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## Directives
 
 - \<type>
-  - : [Tipo de autentificación](/es/docs/Web/HTTP/Authentication#authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA mantiene una [lista de los esquemas de autentificación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autentificación](/es/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). IANA mantiene una [lista de los esquemas de autentificación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Una descripción del recurso protegido. Si el realm no es especificado, los clientes a menudo muestran el hostname.
 - charset=\<charset>
@@ -39,7 +39,7 @@ WWW-Authenticate: Basic
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 ```
 
-Vea también [HTTP authentication](/es/docs/Web/HTTP/Authentication) por ejemplos sobre como configurar un servidor Apache o nginx para proteger con contraseña tu sitio con autenticación básica HTTP.
+Vea también [HTTP authentication](/es/docs/Web/HTTP/Guides/Authentication) por ejemplos sobre como configurar un servidor Apache o nginx para proteger con contraseña tu sitio con autenticación básica HTTP.
 
 ## Especificaciones
 
@@ -51,7 +51,7 @@ Vea también [HTTP authentication](/es/docs/Web/HTTP/Authentication) por ejemplo
 
 ## Véase también
 
-- [HTTP authentication](/es/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/es/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

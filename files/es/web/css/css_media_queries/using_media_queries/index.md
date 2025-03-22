@@ -8,7 +8,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 Las **_Media queries_** le permiten aplicar estilos CSS según el tipo general de un dispositivo (como impresión o pantalla) u otras características como la resolución de la pantalla o el ancho del _{{glossary("viewport")}}_ del navegador.
 Las _media queries_ se utilizan para lo siguiente:
 
-- Para aplicar estilos condicionalmente utilizando las [reglas de arroba](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} e {{cssxref("@import")}}.
+- Para aplicar estilos condicionalmente utilizando las [reglas de arroba](/es/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} e {{cssxref("@import")}}.
 - Para segmentar medios específicos para {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros [HTML](/es/docs/Web/HTML) con el atributo `media=`.
 - Para [probar y monitorear los estados de los medios](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries) usando los métodos {{domxref("Window.matchMedia()")}} y {{domxref("EventTarget.addEventListener()")}}.
 

@@ -119,7 +119,7 @@ La función `minmax()` puede ser usada dentro de:
 
 ## Mira también
 
-- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Track_sizing_and_minmax()>)_
+- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Track_sizing_and_minmax()>)_
 - [Rejillas CSS, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - Video tutorial: _[Presentando minmax()](https://gridbyexample.com/video/series-minmax/)_
 

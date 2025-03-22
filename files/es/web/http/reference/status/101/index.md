@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Status/101
 
 {{HTTPSidebar}}El código de respuesta **`101 Switching Protocols`** que el servidor está cambiando de protocolo al solicitado por un cliente que mandó un mensaje incluyendo la cabecera {{HTTPHeader("Upgrade")}}.
 
-El servidor incluye en esta respuesta una cabecera {{HTTPHeader("Upgrade")}} para indicar a qué protocolo ha cambiado. El proceso se describe en detalle en el artículo [Protocol upgrade mechanism](/es/docs/Web/HTTP/Protocol_upgrade_mechanism).
+El servidor incluye en esta respuesta una cabecera {{HTTPHeader("Upgrade")}} para indicar a qué protocolo ha cambiado. El proceso se describe en detalle en el artículo [Protocol upgrade mechanism](/es/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 
 ## Estado
 
@@ -32,7 +32,7 @@ Connection: Upgrade
 
 ## Vea también
 
-- [Protocol upgrade mechanism](/es/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [Protocol upgrade mechanism](/es/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - [WebSockets](/es/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("426")}} `Upgrade Required`

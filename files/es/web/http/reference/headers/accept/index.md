@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Accept
 
 {{HTTPSidebar}}
 
-`La cabecera de pedido Accept` anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo [MIME](/es/docs/Web/HTTP/MIME_types). Usando [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation), el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de la cabecera de respuesta {{HTTPHeader("Content-Type")}} .
+`La cabecera de pedido Accept` anuncia que tipo de contenido el cliente puede procesar, expresado como un tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types). Usando [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation), el servidor selecciona una de las propuestas , la utiliza e informa al cliente de la elección a través de la cabecera de respuesta {{HTTPHeader("Content-Type")}} .
 
 Los navegadores configuran los valores adecuados en dependencia del contexto donde se ha hecho el pedido, por ejemplo: al solicitar una hoja de estilos CSS es configurado un valor diferente que cuando se solicita una imagen, un video o un script.
 
@@ -43,7 +43,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ## Directivas
 
 - `<MIME_type>/<MIME_subtype>`
-  - : Un único y preciso tipo [MIME](/es/docs/Web/HTTP/MIME_types), como `text/html`.
+  - : Un único y preciso tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types), como `text/html`.
 - `<MIME_type>/*`
 
   - : Un tipo MIME, pero con cualquier subtipo.
