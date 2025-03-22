@@ -3,14 +3,14 @@ title: "Element: beforexrselect イベント"
 short-title: beforexrselect
 slug: Web/API/Element/beforexrselect_event
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef}}{{SeeCompatTable}}
 
 **`beforexrselect`** イベントは、WebXR の選択イベント ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) が配信される前に発行されます。ユーザーが DOM オーバーレイ UI を走査する間、XR ワールド入力イベントを抑制するために使用することができます。
 
-このイベントは[バブリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)し、[キャンセル可能](/ja/docs/Web/API/Event/cancelable)で、[合成されます](/ja/docs/Web/API/Event/composed)。
+このイベントは[バブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)し、[キャンセル可能](/ja/docs/Web/API/Event/cancelable)で、[合成されます](/ja/docs/Web/API/Event/composed)。
 
 ## 構文
 

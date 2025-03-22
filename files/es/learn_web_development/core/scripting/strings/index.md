@@ -22,7 +22,7 @@ Casi todos los programas que hemos mostrado hasta ahora en el curso han involucr
 
 ## Cadenas — las bases
 
-A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveeremos de una aquí abajo (también puedes [abrir la consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separada, o usar la [consola de desarrollo del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si así lo prefieres).
+A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveremos de una aquí abajo (o utilice la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
 
 ```html hidden
 <!doctype html>

@@ -1,7 +1,6 @@
 ---
 title: "Django Tutorial Part 8: User authentication and permissions"
 slug: Learn_web_development/Extensions/Server-side/Django/Authentication
-original_slug: Learn/Server-side/Django/Authentication
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}

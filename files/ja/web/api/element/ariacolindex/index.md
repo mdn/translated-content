@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaColIndex`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性の値を反映し、表、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスや位置を定義します。
+**`ariaColIndex`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性の値を反映し、表、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスや位置を定義します。
 
 ## 値
 
@@ -85,4 +85,4 @@ console.log(el.ariaColIndex); // 2
 
 ## 関連情報
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

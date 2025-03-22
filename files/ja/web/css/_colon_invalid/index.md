@@ -1,5 +1,5 @@
 ---
-title: ":invalid"
+title: :invalid
 slug: Web/CSS/:invalid
 ---
 
@@ -14,7 +14,39 @@ input:invalid {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="na@me@example.com" />
+
+  <label for="secret">Secret Code: (lower case letters)</label>
+  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+
+  <label for="age">Your age: (18+)</label>
+  <input id="age" name="age" type="number" value="5" min="18" />
+
+  <label
+    ><input name="tos" type="checkbox" required checked /> - Do you agree to
+    ToS?</label
+  >
+</form>
+```
 
 この擬似クラスは、フィールドのエラーをユーザーに強調表示するのに便利です。
 
@@ -92,7 +124,7 @@ input:required:invalid {
 
 赤は入力が無効であることを示すためによく使われます。色盲の人によっては、それ以外の色によらない識別方法を伴わないと、入力状態が判別できないことがあります。通常、文字列やアイコンを使用して説明します。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## 注
@@ -117,5 +149,5 @@ input:required:invalid {
 
 - 検証に関する他の擬似クラス: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - 関連する Mozilla の擬似クラス: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - JavaScript からの [validity state](/ja/docs/Web/API/ValidityState) へのアクセス

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`abs()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions) は、引数の絶対値を同じ型で返します。
+**`abs()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は、引数の絶対値を同じ型で返します。
 
 ## 構文
 

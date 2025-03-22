@@ -7,13 +7,51 @@ l10n:
 
 {{CSSRef}}
 
-**`counters()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)により、カウンターが入れ子になっている場合にマーカーを組み合わせることができます。この関数は、指定された文字列と、存在する場合は名前付きで入れ子になったカウンターの現在の値を連結した文字列を返します。 3 番目はオプションの引数で、リストのスタイルを定義することができます。
+**`counters()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)により、カウンターが入れ子になっている場合にマーカーを組み合わせることができます。この関数は、指定された文字列と、存在する場合は名前付きで入れ子になったカウンターの現在の値を連結した文字列を返します。 3 番目はオプションの引数で、リストのスタイルを定義することができます。
 
 `counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/string) に対応するすべての箇所で用いることができます。
 
 `counters()` 関数には `counters(<name>, <string>)` と `counters(<name>, <string>, <style>)` の 2 つの形があります。生成されるテキストは、 `<name>` で指定された名前のすべてのカウンターの値を、最も外側から内側に向けて並べ、指定された `<string>` で区切ったものです。カウンターは指定された `<style>` でレンダリングされ、`<style>` が指定されていない場合は `decimal` が既定値となります。
 
-{{EmbedInteractiveExample("pages/tabbed/function-counters.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: counters()", "tabbed-standard")}}
+
+```css interactive-example
+ol {
+  counter-reset: index;
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: index;
+  content: counters(index, ".", decimal) " ";
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Mars</li>
+  <li>
+    Saturn
+    <ol>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ol>
+  </li>
+  <li>
+    Uranus
+    <ol>
+      <li>Titania</li>
+    </ol>
+  </li>
+</ol>
+```
 
 ## 構文
 

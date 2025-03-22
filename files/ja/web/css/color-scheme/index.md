@@ -9,9 +9,34 @@ l10n:
 
 **`color-scheme`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がどのような配色で快適に表示されるかを示すことができます。
 
-オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェースを調整します。これには、[フォームコントロール](/ja/docs/Learn/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/CSS_colors)の使用値が含まれます。
+オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェースを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/CSS_colors)の使用値が含まれます。
 
-{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
+{{InteractiveExample("CSS Demo: color-scheme")}}
+
+```css interactive-example-choice
+color-scheme: normal;
+```
+
+```css interactive-example-choice
+color-scheme: dark;
+```
+
+```css interactive-example-choice
+color-scheme: light;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <textarea id="example-element">Text Area</textarea>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 50%;
+}
+```
 
 ## 構文
 
@@ -104,7 +129,7 @@ footer {
 }
 ```
 
-また、実験的な [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_Functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
+また、実験的な [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
 
 ```css
 :root {

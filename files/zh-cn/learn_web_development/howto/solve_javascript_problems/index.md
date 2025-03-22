@@ -1,7 +1,6 @@
 ---
 title: 解决 JavaSctript 代码的常见问题
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
-original_slug: Learn/JavaScript/Howto
 ---
 
 {{LearnSidebar}}

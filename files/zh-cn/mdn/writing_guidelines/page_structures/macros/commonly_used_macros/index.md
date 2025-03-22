@@ -3,8 +3,6 @@ title: 常用的宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 ---
 
-{{MDNSidebar}}
-
 本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)这篇文章。
 
 还有一些不常用或只在特定上下文中使用的，以及一些弃用的宏的信息，参见[其他宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)。
@@ -71,33 +69,33 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/SVG/Attribute">SVG 属性参考</a>（/Web/SVG/Attribute）</td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Attribute">SVG 属性参考</a>（/Web/SVG/Attribute）</td>
       <td><code>\{{SVGAttr("d")}}</code> 会生成 {{SVGAttr("d")}}。</td>
     </tr>
     <tr>
       <td><a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a></td>
-      <td><a href="/zh-CN/docs/Web/SVG/Element">SVG 元素参考</a>（/Web/SVG/Element）</td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Element">SVG 元素参考</a>（/Web/SVG/Element）</td>
       <td><code>\{{SVGElement("view")}}</code> 会生成 {{SVGElement("view")}}。</td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/httpheader.ejs">HTTPHeader</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP 标头</a>（/Web/HTTP/Headers）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Headers">HTTP 标头</a>（/Web/HTTP/Headers）</td>
       <td><code>\{{HTTPHeader("ACCEPT")}}</code> 会生成 {{HTTPHeader("ACCEPT")}}。</td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Methods">HTTP 请求方法</a>（/Web/HTTP/Methods）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Methods">HTTP 请求方法</a>（/Web/HTTP/Methods）</td>
       <td><code>\{{HTTPMethod("HEAD")}}</code> 会生成 {{HTTPMethod("HEAD")}}。</td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Status">HTTP 响应状态码</a>（/Web/HTTP/Status）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Status">HTTP 响应状态码</a>（/Web/HTTP/Status）</td>
       <td><code>\{{HTTPStatus("404")}}</code> 会生成 {{HTTPStatus("404")}}。</td>
     </tr>
   </tbody>

@@ -11,13 +11,29 @@ l10n:
 
 略語や頭字語を記載する場合、最初の使用時には、略語をマークアップするための `<abbr>` とともに、その用語の完全な展開をプレーンテキストで提供してください。これにより、ユーザーにその略語や頭字語の意味を知らせることができます。
 
-オプションの [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性で、略語や頭字語の完全な展開形が存在しない場合に、その展開形を提供することができます。これは、ユーザーエージェントがコンテンツをどのように告知/表示するかのヒントを提供し、同時にすべてのユーザーにその略語が意味していることを知らせます。設定する場合、`title` はこの完全な説明のみを含み、それ以外を含んではいけません。
+オプションの [`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性で、略語や頭字語の完全な展開形が存在しない場合に、その展開形を提供することができます。これは、ユーザーエージェントがコンテンツをどのように告知/表示するかのヒントを提供し、同時にすべてのユーザーにその略語が意味していることを知らせます。設定する場合、`title` はこの完全な説明のみを含み、それ以外を含んではいけません。
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみに対応しています。[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性は `<abbr>` 要素と共に使用すると、特定の意味を持ちます。これは完全な人間が読める形の説明または略語の完全形を設定する必要があります。この文字列は、よくマウスポインターが要素の上で静止したときに、ブラウザーがツールチップとして表示することがあります。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみに対応しています。[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性は `<abbr>` 要素と共に使用すると、特定の意味を持ちます。これは完全な人間が読める形の説明または略語の完全形を設定する必要があります。この文字列は、よくマウスポインターが要素の上で静止したときに、ブラウザーがツールチップとして表示することがあります。
 
 それぞれの `<abbr>` 要素は他の独立しています。同じ文書内で他の省略形ではない表現の文字列に自動的に結びつかない場合は、`title` を使用してください。
 
@@ -27,7 +43,7 @@ l10n:
 
 必ずしもすべての略語を `<abbr>` でマークアップする必要はありません。しかし、有用な場合がいくつかあります。
 
-- 略語が使用され、文書コンテンツの流れの外で完全形や定義を提供したい場合は、 `<abbr>` を適切な [`title`](/ja/docs/Web/HTML/Global_attributes#title) と共に使用してください。
+- 略語が使用され、文書コンテンツの流れの外で完全形や定義を提供したい場合は、 `<abbr>` を適切な [`title`](/ja/docs/Web/HTML/Global_attributes/title) と共に使用してください。
 - 読み手にとってなじみのない略語を定義する場合、用語を `<abbr>` を使用して表現し、`title` 属性や行内文字列で定義を説明してください。
 - テキスト内に略語が存在し、意味の注釈が必要な場合、`<abbr>` 要素は有用です。これはスタイル付けやスクリプトの目的で使用することができます。
 - `<abbr>` は {{HTMLElement("dfn")}} との組み合わせで、略語や頭字語の用語の定義を行なうことができます。以下の[略語の定義](#defining_an_abbreviation)の例をご覧ください。
@@ -82,7 +98,7 @@ abbr {
 
 ### 完全形の提供
 
-[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を追加することで、略語や頭字語の完全形や定義を提供することができます。
+[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を追加することで、略語や頭字語の完全形や定義を提供することができます。
 
 #### HTML
 
@@ -205,4 +221,4 @@ abbr {
 
 ## 関連情報
 
-- [`<abbr>` 要素の使用](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#略語)
+- [`<abbr>` 要素の使用](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#略語)

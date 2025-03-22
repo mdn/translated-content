@@ -49,7 +49,7 @@ var charge = function () {
 };
 ```
 
-たとえば、 [IIFE](/ja/docs/Glossary/IIFE) や[クロージャ](/ja/docs/Web/JavaScript/Closures)、そのほかのたくさんの中括弧や括弧を使用する構造を使用しているときは、さらに分かりにくくなります。
+たとえば、 [IIFE](/ja/docs/Glossary/IIFE) や[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)、そのほかのたくさんの中括弧や括弧を使用する構造を使用しているときは、さらに分かりにくくなります。
 
 ```js example-bad
 (function() { if (true) { return false; } );

@@ -9,7 +9,35 @@ slug: Web/HTML/Element/pre
 
 預設情況下，`<pre>` 是[區塊級](/zh-TW/docs/Glossary/Block-level_content)元素，即其預設的 {{cssxref("display")}} 值為 `block`。
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 如果你需要在 `<pre>` 標籤內顯示保留字元，如 `<`、`>`、`&` 和 `"`，這些字元必須使用相應的 [HTML 實體](/zh-TW/docs/Glossary/Entity)進行轉義。
 
@@ -30,7 +58,7 @@ slug: Web/HTML/Element/pre
 
 使用輔助技術（如屏幕閱讀器）瀏覽的視覺受損人士可能無法理解預格式化文本字符在順序讀出時代表什麼。
 
-{{HTMLElement("figure")}} 和 {{HTMLElement("figcaption")}} 元素的組合，再加上 `pre` 元素上的 [ARIA](/zh-TW/docs/Web/Accessibility/ARIA) `role` 和 [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-label) 屬性，允許預格式化的 {{Glossary("ASCII")}} 藝術被宣告為帶有替代文本的圖片，`figcaption` 則作為圖片的標題。
+{{HTMLElement("figure")}} 和 {{HTMLElement("figcaption")}} 元素的組合，再加上 `pre` 元素上的 [ARIA](/zh-TW/docs/Web/Accessibility/ARIA) `role` 和 [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 屬性，允許預格式化的 {{Glossary("ASCII")}} 藝術被宣告為帶有替代文本的圖片，`figcaption` 則作為圖片的標題。
 
 ### 範例
 
@@ -53,7 +81,7 @@ slug: Web/HTML/Element/pre
 </figure>
 ```
 
-- [MDN 了解 WCAG，指南 1.1 解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN 了解 WCAG，指南 1.1 解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [H86: 為 ASCII 藝術、表情符號和 13375p34k 提供文本替代 | W3C WCAG 2.0 技術](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
 ## 範例
@@ -132,7 +160,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
       <th scope="row">隱含 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

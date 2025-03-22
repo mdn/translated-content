@@ -1,7 +1,6 @@
 ---
 title: 學習 HTML ：指南與教學
 slug: Learn_web_development/Core/Structuring_content
-original_slug: Learn/HTML
 ---
 
 {{LearnSidebar}}

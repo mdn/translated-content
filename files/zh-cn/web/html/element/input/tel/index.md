@@ -7,7 +7,35 @@ slug: Web/HTML/Element/input/tel
 
 **`tel`** 类型的 {{HTMLElement("input")}} 元素用于让用户输入和编辑电话号码。不同于 [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)，在提交表单之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。
 
-{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="phone">
+  Enter your phone number:<br />
+  <small>Format: 123-456-7890</small>
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 尽管 `tel` 类型的输入在功能上和 `text` 输入一致，但它们确实有用；其中最明显的就是移动浏览器（特别是在手机上），可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。
 
@@ -352,7 +380,7 @@ input:valid + span::after {
 
 在这个示例中，我们展示了一个简单的界面，其中有一个 {{htmlelement("select")}} 元素，让用户选择他们所在的国家，还有一组 `<input type="tel">` 元素，让他们输入电话号码的每一部分；显然你应该有多个 `tel` 输入。
 
-每个输入都有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性，以向视力正常的用户显示一个关于输入内容的提示，一个 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 来执行所需部分的特定字符数。和一个 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)属性，以包含一个提示，向屏幕阅读器用户宣读要输入的信息。
+每个输入都有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性，以向视力正常的用户显示一个关于输入内容的提示，一个 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 来执行所需部分的特定字符数。和一个 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)属性，以包含一个提示，向屏幕阅读器用户宣读要输入的信息。
 
 ```html
 <form>

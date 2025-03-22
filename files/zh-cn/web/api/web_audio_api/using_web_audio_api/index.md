@@ -58,7 +58,7 @@ const audioContext = new AudioContext();
 ```
 
 > [!NOTE]
-> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
+> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS) 取得更多信息。
 
 为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -79,7 +79,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 通过 JavaScript 代码控制声音会受到浏览器的自动播放策略的影响 (autoplay support policies)，因此在未经用户（或白名单）许可的情况下脚本对声音的控制会被阻止。浏览器的自动播放策略通常要求显式权限或者用户与页面产生互动后，才允许脚本触发音频播放。
 
-这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致无障碍问题。你可以在文章 [媒体与 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide) 了解更多相关信息。
+这些特殊的要求基本上是因为意外的声音可能会打扰到用户，令人厌烦，并且可能导致无障碍问题。你可以在文章 [媒体与 Web 音频 API 自动播放指南](/zh-CN/docs/Web/Media/Guides/Autoplay) 了解更多相关信息。
 
 因为我们的脚本正响应用户输入（例如，点击播放按钮）进行播放音频，我们状态良好且应该没有自动播放阻止的问题。所以，让我们看看我们的播放和暂停功能。我们有一个当音频播放时变为暂停按钮的播放按钮：
 

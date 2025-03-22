@@ -19,7 +19,7 @@ var range = selObj.getRangeAt(0);
 ```
 
 - `selObj` 被赋予一个 Selection 对象
-- `range` 被赋予一个 [Range](/zh-CN/docs/Web/API/range) 对象
+- `range` 被赋予一个 [Range](/zh-CN/docs/Web/API/Range) 对象
 
 调用 {{domxref("Selection.toString()","")}} 方法会返回被选中区域中的**纯文本**。要求变量为字符串的函数会自动对对象进行该处理，例如：
 
@@ -130,7 +130,7 @@ var range = selObj.getRangeAt(0);
 
 选择和输入焦点（由 {{domxref("Document.activeElement")}} 表示）有一个复杂的关系，该关系因浏览器而异。在跨浏览器兼容的代码中，最好分别处理它们。
 
-Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 [WebKit bug 3869](https://webkit.org/b/3869)）。
+Safari 和 Chrome（与 Firefox 不同）目前在以编程方式修改 `Selection` 时会将包含选区的元素作为焦点；这可能在将来会发生变化（请参见 [W3C Bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) 和 [WebKit bug 38696](https://webkit.org/b/38696)）。
 
 ### Selection API 在可编辑元素焦点更改方面的行为
 

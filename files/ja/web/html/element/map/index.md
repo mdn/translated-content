@@ -9,14 +9,47 @@ l10n:
 
 **`<map>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("area")}} 要素とともにイメージマップ（クリック可能なリンク領域）を定義するために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="130,147,200,107,254,219,130,228"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="130,147,130,228,6,219,59,107"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+  <area
+    shape="poly"
+    coords="130,147,200,107,130,4,59,107"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info2.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 232px;
+}
+```
 
 ## 属性
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持っています。
 
 - `name`
-  - : `name` 属性は、マップを参照できるようにするための名前を指定します。この属性は必ず存在する必要があり、空白文字を含まない空でない値を持たなければなりません。 `name` 属性の値は、同じ文書内の他の `<map>` 要素の `name` 属性の値と同じであってはいけません。もし [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性も指定されている場合は、両方の属性が同じ値でなければなりません。
+  - : `name` 属性は、マップを参照できるようにするための名前を指定します。この属性は必ず存在する必要があり、空白文字を含まない空でない値を持たなければなりません。 `name` 属性の値は、同じ文書内の他の `<map>` 要素の `name` 属性の値と同じであってはいけません。もし [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性も指定されている場合は、両方の属性が同じ値でなければなりません。
 
 ## 例
 

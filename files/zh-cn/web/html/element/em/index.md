@@ -7,7 +7,21 @@ slug: Web/HTML/Element/em
 
 [HTML](/zh-CN/docs/Web/HTML) **`<em>`** 元素将文本标记为强调（emphasis）格式。`<em>` 元素可以嵌套，嵌套层次越深，则强调的程度越深。
 
-{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Get out of bed <em>now</em>!</p>
+
+<p>We <em>had</em> to do something about it.</p>
+
+<p>This is <em>not</em> a drill!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+em {
+}
+```
 
 ## 属性
 
@@ -87,7 +101,7 @@ slug: Web/HTML/Element/em
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
           ></code
         >
       </td>

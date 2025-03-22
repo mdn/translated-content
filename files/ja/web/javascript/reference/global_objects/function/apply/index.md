@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 **`apply()`** メソッドは、 `this` 値を指定して関数を呼び出し、 `arguments` は配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)) として提供します。
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## 構文
 
@@ -153,7 +167,7 @@ Function.prototype.construct = function (aArgs) {
 > };
 > ```
 >
-> [クロージャ](/ja/docs/Web/JavaScript/Closures)を利用:
+> [クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を利用:
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {

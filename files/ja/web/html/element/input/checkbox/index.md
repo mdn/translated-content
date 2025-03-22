@@ -2,14 +2,43 @@
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
 l10n:
-  sourceCommit: 8720024f7e04f09f7ca879a0291a85b0eb7168df
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
 {{htmlelement("input")}} 要素の **`checkbox`** 型は、既定でボックスとして描画され、政府の書類で見られるように、有効な時にはチェックが入ります。正確な外見はブラウザーが実行されているオペレーティングシステムの構成によります。一般にこれは四角形ですが、角が丸くなることもあります。チェックボックスによって、フォームで単一の値を選択して（または選択せずに）送信することができます。
 
-{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 > **メモ:** [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。[同じ名前のラジオボタン](/ja/docs/Web/HTML/Element/input/radio#ラジオグループの定義)はグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
 
@@ -111,13 +140,16 @@ l10n:
 
 ### 未決定状態のチェックボックス
 
-チェックボックスにはチェックと未チェックの状態に加え、第三の状態である**未決定** (indeterminate) を持つことができます。この状態は項目がオンともオフとも言えない状態です。これは JavaScript から {{domxref("HTMLInputElement")}} オブジェクトの `indeterminate` プロパティを使用して設定されます (HTML の属性を使用して設定することはできません)。
+チェックボックスは**未決定** (indeterminate) 状態にすることができます。これは JavaScript から {{domxref("HTMLInputElement")}} オブジェクトの [`indeterminate`](/ja/docs/Web/API/HTMLInputElement/indeterminate) プロパティを使用して設定します（HTML の属性を使用して設定することはできません）。
 
 ```js
 inputInstance.indeterminate = true;
 ```
 
-多くのブラウザーでは、未決定の状態のチェックボックスにはボックス内にチェックの代わりに水平線（ハイフンやマイナス記号のように見えるもの）が引かれます。
+`indeterminate` が `true` である場合、多くのブラウザーでは、チェックボックスにはボックス内にチェックの代わりに水平線（ハイフンやマイナス記号のように見えるもの）が引かれます。
+
+> [!NOTE]
+> これは純粋に視覚的な変更です。チェックボックスの `value` がフォーム送信に使用されているかどうかには影響しません。これは `checked` の状態によって決定され、 `indeterminate` の状態とは関係ありません。
 
 このプロパティを使用する機会は多くありません。最もよくある例では、チェックボックスが複数のサブオプション（チェックボックス）を「統括」している場合です。すべてのサブオプションがチェックされたとき、統括しているチェックボックスもチェックされ、すべてのチェックボックスのチェックが外れたとき、統括しているチェックボックスもチェックが外れます。1 つ以上のサブオプションが他とは異なる状態にあるとき、統括しているチェックボックスは未決定の状態になります。
 
@@ -164,20 +196,17 @@ function updateDisplay() {
 
 {{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
 
-> [!NOTE]
-> 未決定状態のチェックボックスを持つフォームを送信すると、チェックボックスがチェックされていない場合と同じ結果になります。 — チェックボックスを表すデータは送られません。
-
 ## 検証
 
 チェックボックスは[検証](/ja/docs/Web/HTML/Constraint_validation)（すべての {{HTMLElement("input")}} に対して行われる）に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに [`required`](/ja/docs/Web/HTML/Element/input#required) 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
 
 ## 例
 
-次の例は、上で見た「複数のチェックボックス」の拡張版です。より標準的なオプションと、チェックされたときに「その他」オプションの値を入力する入力欄を表示させる「その他」チェックボックスがあります。これは JavaScript の単純なブロックで実現します。この例では、`<input>` が直接 `<label>` の中にあり、暗黙のラベルを含んでいます。目に見えるラベルのないテキスト入力は、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) を指定すると、指定されたアクセス可能な名前を提供することができます。この例では、スタイル設定を改善するためにいくつかの CSS も記載しています。
+次の例は、上で見た「複数のチェックボックス」の拡張版です。より標準的なオプションと、チェックされたときに「その他」オプションの値を入力する入力欄を表示させる「その他」チェックボックスがあります。これは JavaScript の短いブロックで実現します。この例では、`<input>` が直接 `<label>` の中にあり、暗黙のラベルを含んでいます。目に見えるラベルのないテキスト入力は、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を指定すると、指定されたアクセス可能な名前を提供することができます。この例では、スタイル設定を改善するためにいくつかの CSS も記載しています。
 
 ### HTML
 
-```html
+```html live-sample___examples
 <form>
   <fieldset>
     <legend>興味のあるものを選択してください</legend>
@@ -231,7 +260,7 @@ function updateDisplay() {
 
 ### CSS
 
-```css
+```css live-sample___examples
 html {
   font-family: sans-serif;
 }
@@ -259,7 +288,7 @@ legend {
 
 ### JavaScript
 
-```js
+```js live-sample___examples
 const otherCheckbox = document.querySelector("#other");
 const otherText = document.querySelector("#otherValue");
 otherText.style.visibility = "hidden";
@@ -273,8 +302,6 @@ otherCheckbox.addEventListener("change", () => {
   }
 });
 ```
-
-### 結果
 
 {{EmbedLiveSample('Examples', '100%', 300)}}
 
@@ -294,12 +321,12 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>対応している共通属性</strong></td>
-      <td><code>checked</code></td>
+      <td><code><a href="#checked">checked</a></code></td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <code><a href="#checked">checked</a></code>、<code><a href="#indeterminate">indeterminate</a></code>、<code><a href="#value">value</a></code>
+        <code><a href="/ja/docs/Web/API/HTMLInputElement/checked">checked</a></code>、<code><a href="/ja/docs/Web/API/HTMLInputElement/indeterminate">indeterminate</a></code>、<code><a href="/ja/docs/Web/API/HTMLInputElement/value">value</a></code>
       </td>
     </tr>
     <tr>
@@ -331,4 +358,3 @@ otherCheckbox.addEventListener("change", () => {
 
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS のセレクターで、現在の状態に基づいてチェックボックスを整形できます
 - {{domxref("HTMLInputElement")}}: HTML DOM API において `<input>` 要素が実装しているもの
-- [フォームコントロールの CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -9,7 +9,21 @@ l10n:
 
 **`Math.fround()`** は静的メソッドで、ある数値を表す最も近い [32 ビット単精度](https://ja.wikipedia.org/wiki/単精度浮動小数点数)浮動小数点数を返します。
 
-{{EmbedInteractiveExample("pages/js/math-fround.html")}}
+{{InteractiveExample("JavaScript Demo: Math.fround()")}}
+
+```js interactive-example
+console.log(Math.fround(5.5));
+// Expected output: 5.5
+
+console.log(Math.fround(5.05));
+// Expected output: 5.050000190734863
+
+console.log(Math.fround(5));
+// Expected output: 5
+
+console.log(Math.fround(-5.05));
+// Expected output: -5.050000190734863
+```
 
 ## 構文
 

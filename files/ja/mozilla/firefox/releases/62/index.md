@@ -21,7 +21,7 @@ Firefox 62 は、米国時間 2018 年 9 月 5 日 にリリースされまし�
 - 設定の "現在の対象ドキュメントとして読み込む iframe を選択します" にチェックが入っているとき、設定タブを開いている間は現在のページに iframe が含まれていない場合でもツールバーにアイコンを表示します ([Firefox バグ 1456069](https://bugzil.la/1456069))。
 - [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の [Cookie タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#Cookies) で、Cookie の `samesite` 属性を表示するようになりました ([Firefox バグ 1452715](https://bugzil.la/1452715))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) が、コンテナータブ内で動作するようになりました ([Firefox バグ 1306975](https://bugzil.la/1306975))。
-- {{Glossary("CORS")}} のエラーが発生してコンソールに報告されているとき、Firefox がエラーに対応する [CORS エラーのドキュメント](/ja/docs/Web/HTTP/CORS/Errors) へのリンクを提供するようになりました ([Firefox バグ 1475391](https://bugzil.la/1475391))。
+- {{Glossary("CORS")}} のエラーが発生してコンソールに報告されているとき、Firefox がエラーに対応する [CORS エラーのドキュメント](/ja/docs/Web/HTTP/Guides/CORS/Errors) へのリンクを提供するようになりました ([Firefox バグ 1475391](https://bugzil.la/1475391))。
 - 以下のコマンドを使用して、コンソールタブで現在のページのスクリーンショットを作成できるようになりました (ファイル名も指定可能です) ([Firefox バグ 1464461](https://bugzil.la/1464461)):
 
   ```bash
@@ -54,7 +54,7 @@ _変更なし。_
 
 ### JavaScript
 
-- [`WebAssembly.Global()`](/ja/docs/WebAssembly/JavaScript_interface/Global) コンストラクターを、WebAssembly のグローバル変数とともにサポートしました ([Firefox バグ 1464656](https://bugzil.la/1464656))。
+- [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global) コンストラクターを、WebAssembly のグローバル変数とともにサポートしました ([Firefox バグ 1464656](https://bugzil.la/1464656))。
 - {{jsxref("Array.prototype.flat()")}} および {{jsxref("Array.prototype.flatMap()")}} メソッドをデフォルトで有効化しました ([Firefox バグ 1435813](https://bugzil.la/1435813))。
 - コンテキスト固有のメタデータを JavaScript モジュールに公開するための、[`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) プロパティを実装しました ([Firefox バグ 1427610](https://bugzil.la/1427610))。
 - JavaScript の [文字列リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) で、 U+2028 LINE SEPARATOR や U+2029 PARAGRAPH SEPARATOR の文字を直接含めることが可能になりました。この結果、{{jsxref("JSON")}} 構文が JavaScript リテラル構文のサブセットになりました ([Firefox バグ 1435828](https://bugzil.la/1435828) および TC39 提案 [json-superset](https://github.com/tc39/proposal-json-superset))。
@@ -75,7 +75,7 @@ _変更なし。_
 
 - {{domxref("DOMPointReadOnly")}} インターフェイスで {{domxref("DOMPointReadOnly.fromPoint()")}} 静的関数をサポートしました。これは {{domxref("DOMPointInit")}} と互換性があるディクショナリーから新しい座標オブジェクトを作成するものであり、{{domxref("DOMPoint")}} オブジェクトを含みます。この関数は {{domxref("DOMPoint")}} でも使用できます ([Firefox バグ 1186265](https://bugzil.la/1186265))。
 - 互換性の理由で、{{domxref("Event.srcElement")}} プロパティをサポートしました。これは {{domxref("Event.target")}} の別名です ([Firefox バグ 453968](https://bugzil.la/453968))。
-- {{domxref("Navigator.registerProtocolHandler()")}} が、安全なコンテキストに限り呼び出し可能になりました ([Firefox バグ 1460506](https://bugzil.la/1460506))。
+- {{domxref("Navigator.registerProtocolHandler()")}} が、保護されたコンテキストに限り呼び出し可能になりました ([Firefox バグ 1460506](https://bugzil.la/1460506))。
 - しばらく前から廃止扱いであった {{domxref("Navigator.registerContentHandler()")}} メソッドが、完全に削除するための準備としてデフォルトで無効になりました ([Firefox バグ 1460481](https://bugzil.la/1460481))。
 - {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} コンストラクターを実装しました ([Firefox バグ 1351193](https://bugzil.la/1351193))。
 - {{domxref("Document.domain")}} が `null` を返さないようになりました ([Firefox バグ 819475](https://bugzil.la/819475))。ドメインを識別できないとき、`domain` は `null` ではなく空文字列を返します。
@@ -99,7 +99,7 @@ _変更なし。_
 
 - `userproximity` および `deviceproximity` イベント (UserProximityEvent`および`DeviceProximityEvent`もご覧ください) を設定項目`device.sensors.proximity.enabled` で、デフォルトで無効化しました ([Firefox バグ 1462308](https://bugzil.la/1462308))。
 - `devicelight` イベント (`DeviceLightEvent` もご覧ください) を設定項目 `device.sensors.ambientLight.enabled` で、デフォルトで無効化しました ([Firefox バグ 1462308](https://bugzil.la/1462308))。
-- `DOMSubtreeModified` および `DOMAttrModified` [ミューテーションイベント](/ja/docs/Web/API/MutationEvent) は、CSSOM によって [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性が変更されたときに発生しないようになりました ([Firefox バグ 1460295](https://bugzil.la/1460295)).
+- `DOMSubtreeModified` および `DOMAttrModified` [ミューテーションイベント](/ja/docs/Web/API/MutationEvent) は、CSSOM によって [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性が変更されたときに発生しないようになりました ([Firefox バグ 1460295](https://bugzil.la/1460295)).
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} のサポートを廃止しました ([Firefox バグ 1408301](https://bugzil.la/1408301))。
 - {{domxref("CSSValue")}}、{{domxref("CSSPrimitiveValue")}}、{{domxref("CSSValueList")}} のサポートを廃止しました ([Firefox バグ 1459871](https://bugzil.la/1459871))。
 - {{domxref("window.getComputedStyle()")}} が表示するものがない `Window` で呼び出されたときに、`null` を返さないようになりました ([Firefox バグ 1467722](https://bugzil.la/1467722))。

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
 
 これらの豆知識は、一般の知識や実験に基づくものです。
 
@@ -28,7 +28,7 @@ l10n:
 
 ウェブページが参照するファイル数を削減することで、ページのダウンロードに必要な [HTTP](/ja/docs/Web/HTTP) コネクションの数が減り、それによってリクエストを送信したり、レスポンスを受け取ったりする時間が短縮できます。
 
-ブラウザーのキャッシュ設定によっては、ブラウザーが各ファイルの [`If-Modified-Since`](/ja/docs/Web/HTTP/Headers/If-Modified-Since) ヘッダーで、ファイルが最後にダウンロードされてから変更されているかどうかを確認するリクエストを送信することがあります。ページをレンダリングする前に、ブラウザーがこれらの各ファイルの変更時刻をチェックする必要があるため、参照されたファイルの最終変更時刻をチェックするのに時間がかかり過ぎると、ウェブページの初期表示が遅くなることがあります。
+ブラウザーのキャッシュ設定によっては、ブラウザーが各ファイルの [`If-Modified-Since`](/ja/docs/Web/HTTP/Reference/Headers/If-Modified-Since) ヘッダーで、ファイルが最後にダウンロードされてから変更されているかどうかを確認するリクエストを送信することがあります。ページをレンダリングする前に、ブラウザーがこれらの各ファイルの変更時刻をチェックする必要があるため、参照されたファイルの最終変更時刻をチェックするのに時間がかかり過ぎると、ウェブページの初期表示が遅くなることがあります。
 
 CSS で多数の背景画像を使用している場合は、画像スプライトと呼ばれる方法でで画像を 1 つに結合することで必要な HTTP による参照の数を減らすことができます。すなわち、背景として用いる画像ファイルは毎回同じものを適用し、それを適切な x/y 座標に調整します。これは寸法が限られている要素について最善の方法ですが、適用できない場合もあるでしょう。しかし、HTTP リクエストを少なくしてキャッシュする画像を単一にすることで、ページの読み込み時間を削減できます。
 
@@ -40,7 +40,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 参考文献:
 
-- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
+- [Understanding CDNs](https://www.imperva.com/Learn_web_development/Extensions/Performance/what-is-cdn-how-it-works/)
 
 ### ドメイン検索の削減
 
@@ -71,7 +71,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 ### インラインスクリプト数の削減
 
-インラインスクリプトがあると、インラインスクリプトのパース中にページの構造が変わる可能性があるとパーサーが想定しなければならないため、ページの読み込みにおいて重荷になることがあります。一般的にはインラインスクリプトの使用を減らし、また特に `document.write()` を用いたコンテンツの出力を減らすことで、ページ読み込みのパフォーマンスが向上するでしょう。 `document.write()` ではなく、[ページのコンテンツを操作する DOM API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) を使用してください。
+インラインスクリプトがあると、インラインスクリプトのパース中にページの構造が変わる可能性があるとパーサーが想定しなければならないため、ページの読み込みにおいて重荷になることがあります。一般的にはインラインスクリプトの使用を減らし、また特に `document.write()` を用いたコンテンツの出力を減らすことで、ページ読み込みのパフォーマンスが向上するでしょう。 `document.write()` ではなく、[ページのコンテンツを操作する DOM API](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting) を使用してください。
 
 ### 最新の CSS と正しいマークアップの使用
 
@@ -83,7 +83,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 ### コンテンツをまとめる
 
-表をレイアウトのために使うのは陳腐化した方法であり、もはや使うべきではありません。レイアウトを行うには、代わりに[浮動要素](/ja/docs/Learn/CSS/CSS_layout/Floats)、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)、[グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)を使用してください。
+表をレイアウトのために使うのは陳腐化した方法であり、もはや使うべきではありません。レイアウトを行うには、代わりに[浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Floats)、[位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)、[グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)を使用してください。
 
 表は現在でも妥当なマークアップと考えられていますが、表形式のデータを表示するために用いるべきです。ブラウザーがページを迅速に表示するためには、表を入れ子にしないようにしてください。
 
@@ -157,7 +157,7 @@ table-layout: fixed;
 
 ### 可能なら async や defer を使用する
 
-[async](/ja/docs/Web/HTML/Element/script#attributes) と [defer](/ja/docs/Web/HTML/Element/script#attributes) 属性の両方と互換性のある JavaScript を使用し、特に、複数の script 要素がある場合、可能ならば [async](/ja/docs/Web/HTML/Element/script#attributes) をいつでも使用してください。
+[async](/ja/docs/Web/HTML/Element/script#属性) と [defer](/ja/docs/Web/HTML/Element/script#属性) 属性の両方と互換性のある JavaScript を使用し、特に、複数の script 要素がある場合、可能ならば [async](/ja/docs/Web/HTML/Element/script#属性) をいつでも使用してください。
 
 これにより、ページで JavaScript が読み込み中である間はレンダリングを中断できます。さもなければ、ブラウザーはこれらの属性を持たない script 要素の後にあるコンテンツをレンダリングしないでしょう。
 

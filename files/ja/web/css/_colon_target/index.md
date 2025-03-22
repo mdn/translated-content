@@ -1,5 +1,5 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 l10n:
   sourceCommit: 259a7061abfce122ff8bb3a6687b02509263ef38
@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Global_attributes#id) を持つ固有の要素（_ターゲット要素_）を表します。
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Global_attributes/id) を持つ固有の要素（_ターゲット要素_）を表します。
 
 ```css
 /* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */

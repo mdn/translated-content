@@ -14,7 +14,7 @@ l10n:
 
 画像に適用するイメージマップを定義する {{HTMLElement("map")}} 要素のページローカル URL (つまり、ハッシュまたはポンド記号 "`#`" で始まる URL) を指定する文字列です。
 
-クライアントサイドのイメージマップについては、学習記事「[画像の上にヒットマップを追加する](/ja/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)」で詳しく説明されています。
+クライアントサイドのイメージマップについては、学習記事「[画像の上にヒットマップを追加する](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)」で詳しく説明されています。
 
 ## 使用上の注意
 
@@ -39,11 +39,54 @@ l10n:
 <img src="menubox.png" usemap="#mainmenu-map" />
 ```
 
-他の例（インタラクティブなものもあります）については、 {{HTMLElement("map")}} と {{HTMLElement("area")}} 要素についての記事や、[イメージマップの使用法](/ja/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)をご覧下さい。
+他の例（インタラクティブなものもあります）については、 {{HTMLElement("map")}} と {{HTMLElement("area")}} 要素についての記事や、[イメージマップの使用法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)をご覧下さい。
 
 ## 例
 
-{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="129,0,260,95,129,138"
+    href="https://developer.mozilla.org/docs/Web/HTTP"
+    alt="HTTP" />
+  <area
+    shape="poly"
+    coords="260,96,209,249,130,138"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="209,249,49,249,130,139"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+  <area
+    shape="poly"
+    coords="48,249,0,96,129,138"
+    href="https://developer.mozilla.org/docs/Web/API"
+    alt="Web APIs" />
+  <area
+    shape="poly"
+    coords="0,95,128,0,128,137"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info.png"
+  alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+}
+```
 
 ## 仕様書
 

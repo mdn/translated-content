@@ -7,7 +7,20 @@ slug: Web/HTML/Element/img
 
 **`<img>`** [HTML](/zh-CN/docs/Web/HTML) 元素将一张图像嵌入文档。
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 上面的例子展示了 `<img>` 元素的用法：
 
@@ -16,7 +29,7 @@ slug: Web/HTML/Element/img
 
 还有很多其他属性，可以实现各种不同的目的：
 
-- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
+- [Referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
 - 使用 [`width`](#width) 和 [`height`](#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
 - 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程）。
 
@@ -24,19 +37,19 @@ slug: Web/HTML/Element/img
 
 HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{glossary("user agent", "用户代理")}}支持一组不同的格式。
 
-> **备注：** [网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)提供了有关图像格式及 Web 浏览器支持的综合信息。本节只是一个总结！
+> **备注：** [网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)提供了有关图像格式及 Web 浏览器支持的综合信息。本节只是一个总结！
 
 Web 最常用的图像格式是：
 
-- [APNG（动态可移植网络图形）](/zh-CN/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)——无损动画序列的不错选择（GIF 性能较差）。
-- [AVIF（AV1 图像文件格式）](/zh-CN/docs/Web/Media/Formats/Image_types#avif_image)——静态图像或动画的不错选择，其性能较好。
-- [GIF（图像互换格式）](/zh-CN/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)——*简单*图像和动画的不错选择。
-- [JPEG（联合图像专家组）](/zh-CN/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)——有损压缩静态图像的不错选择（目前最流行的格式）。
-- [PNG（便携式网络图形）](/zh-CN/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)——对于无损压缩静态图像而言是不错的选择（质量略好于 JPEG）。
-- [SVG（可缩放矢量图形）](/zh-CN/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)——矢量图像格式。用于必须以不同尺寸准确描绘的图像。
-- [WebP（网络图片格式）](/zh-CN/docs/Web/Media/Formats/Image_types#webp_image)——图像和动画的绝佳选择。
+- [APNG（动态可移植网络图形）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)——无损动画序列的不错选择（GIF 性能较差）。
+- [AVIF（AV1 图像文件格式）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_image)——静态图像或动画的不错选择，其性能较好。
+- [GIF（图像互换格式）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format)——*简单*图像和动画的不错选择。
+- [JPEG（联合图像专家组）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image)——有损压缩静态图像的不错选择（目前最流行的格式）。
+- [PNG（便携式网络图形）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics)——对于无损压缩静态图像而言是不错的选择（质量略好于 JPEG）。
+- [SVG（可缩放矢量图形）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics)——矢量图像格式。用于必须以不同尺寸准确描绘的图像。
+- [WebP（网络图片格式）](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#webp_image)——图像和动画的绝佳选择。
 
-推荐使用诸如 [WebP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_image) 和 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_image) 等图像格式，因为它们在静态图像和动画的性能均比 PNG、JPEG、JIF 好得多。WebP 得到了广泛的支持，而 AVIF 则缺乏 Safari 的支持。
+推荐使用诸如 [WebP](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#webp_image) 和 [AVIF](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_image) 等图像格式，因为它们在静态图像和动画的性能均比 PNG、JPEG、JIF 好得多。WebP 得到了广泛的支持，而 AVIF 则缺乏 Safari 的支持。
 
 对于必须以不同尺寸准确绘制的图像，则仍然推荐使用 SVG 格式。
 
@@ -222,7 +235,7 @@ Web 最常用的图像格式是：
 
 ## 使用 CSS 添加样式
 
-`<img>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等 CSS 属性。
+`<img>` 是一个{{glossary("Replaced elements", "可替换元素")}}。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等 CSS 属性。
 
 `<img>` 没有基线（baseline），这意味着，当在一个内联格式化上下文（inline formatting context）中使用 {{cssxref("vertical-align")}}`: baseline` 时，图像的底部将会与容器的文字基线对齐。
 
@@ -308,12 +321,12 @@ Web 最常用的图像格式是：
 - [alt 决策树 • 图像 • WAI Web 无障碍教程](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - [备用文本：终极指南——Axess Lab](https://axesslab.com/alt-texts/)
 - [如何设计出色的替代文本：教程 | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN 理解 WCAG——指南 1.1 解析](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN 理解 WCAG——指南 1.1 解析](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [了解成功的标准 1.1.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### 将 SVG 识别为图像
 
-由于 [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364)，VoiceOver 无法正确地将 SVG 图像渲染为图像。在所有使用 SVG 资源文件的 `<img>` 元素中包含 [`role="img"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role) 以保证无障碍技术正确地将 SVG 声明为图像内容。
+由于 [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364)，VoiceOver 无法正确地将 SVG 图像渲染为图像。在所有使用 SVG 资源文件的 `<img>` 元素中包含 [`role="img"`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) 以保证无障碍技术正确地将 SVG 声明为图像内容。
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />
@@ -370,13 +383,13 @@ Web 最常用的图像格式是：
           <li>
             具有非空 <code>alt</code> 属性或没有
             <code>alt</code> 属性：<code
-              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"
+              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"
                 ><code>img</code></a
               ></code
             >
           </li>
           <li>
-            具有空 <code>alt</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+            具有空 <code>alt</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
               ><code>presentation</code></a
             >
           </li>
@@ -393,7 +406,7 @@ Web 最常用的图像格式是：
               <li>
                 <code
                   ><a
-                    href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role"
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
                     >button</a
                   ></code
                 >
@@ -401,20 +414,20 @@ Web 最常用的图像格式是：
               <li>
                 <code
                   ><a
-                    href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role"
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"
                     >checkbox</a
                   ></code
                 >
               </li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
@@ -430,12 +443,12 @@ Web 最常用的图像格式是：
                   ></code
                 >
               </li>
-              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+              <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            具有空 <code>alt</code> 属性、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-            或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+            具有空 <code>alt</code> 属性、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+            或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             没有 <code>alt</code> 属性，或没有允许的角色（<code>role</code>）
@@ -461,7 +474,7 @@ Web 最常用的图像格式是：
 ## 参见
 
 - [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
+- [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)
 - [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
 - {{HTMLElement("picture")}}、{{HTMLElement("object")}} 和 {{HTMLElement("embed")}} 元素
 - 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。

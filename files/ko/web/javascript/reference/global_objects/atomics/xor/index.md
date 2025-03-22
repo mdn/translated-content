@@ -10,7 +10,21 @@ l10n:
 **`Atomics.xor()`** 정적 메서드는 배열에서 주어진 위치에 주어진 값으로 XOR 비트 연산을 수행하고
 해당 포지션의 기존 값을 반환합니다. 이 아토믹 연산은 수정된 값이 쓰이기 전까지 다른 쓰기 연산이 일어나지 않음을 보장합니다.
 
-{{EmbedInteractiveExample("pages/js/atomics-xor.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 (0111) XOR 2 (0010) = 5 (0101)
+console.log(Atomics.xor(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+```
 
 ## 구문
 

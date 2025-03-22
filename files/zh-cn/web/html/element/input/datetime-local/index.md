@@ -7,7 +7,33 @@ slug: Web/HTML/Element/input/datetime-local
 
 {{htmlelement("input")}} 元素的 **`datetime-local`** 类型创建让用户便捷输入日期和时间的输入控件，包括“年”、“月”、“日”，以及“时”和“分”。
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
+
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 此控件的 UI 因浏览器而异。在不支持的浏览器中，其会优雅地降级为简单的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 控件。
 
@@ -78,7 +104,7 @@ slug: Web/HTML/Element/input/datetime-local
 需要注意的是：显示的日期和时间的格式与实际 `value` 中的格式不同，显示的日期和时间格式以用户操作系统所的区域设置信息为准，而控件的日期/时间值 `value` 总是 `yyyy-MM-ddThh:mm` 格式。例如，当上例中的值被提供到服务器之后，将会像这样 `partydate=2017-06-01T08:30`。
 
 > [!NOTE]
-> 另外请注意，如果这样的数据以 HTTP [`GET`](/zh-CN/docs/Web/HTTP/Methods/GET) 提交，时间部分的冒号需要编码之后才能放在 URL 参数中，例如 `partydate=2017-06-01T08%3A30`。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}。
+> 另外请注意，如果这样的数据以 HTTP [`GET`](/zh-CN/docs/Web/HTTP/Reference/Methods/GET) 提交，时间部分的冒号需要编码之后才能放在 URL 参数中，例如 `partydate=2017-06-01T08%3A30`。编码方法请参见 {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}。
 
 你也可以在 JavaScript 中使用 {{domxref("HTMLInputElement")}} 的 `value` 属性来获取和设置日期的值，例如：
 

@@ -105,5 +105,5 @@ document.getElementById("okButton").addEventListener(
 
 ## 関連情報
 
-- [hidden](/ja/docs/Web/HTML/Global_attributes#hidden) 属性
+- [hidden](/ja/docs/Web/HTML/Global_attributes/hidden) 属性
 - {{cssxref("display")}}

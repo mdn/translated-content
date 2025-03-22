@@ -7,14 +7,106 @@ slug: Web/CSS/position
 
 CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{{Cssxref("top")}}，{{Cssxref("right")}}，{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性则决定了该元素的最终位置。
 
-{{EmbedInteractiveExample("pages/css/position.html")}}
+{{InteractiveExample("CSS Demo: position")}}
+
+```css interactive-example-choice
+position: static;
+```
+
+```css interactive-example-choice
+position: relative;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: absolute;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: sticky;
+top: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element-container">
+    <p>
+      In this demo you can control the <code>position</code> property for the
+      yellow box.
+    </p>
+    <div class="box"></div>
+    <div class="box" id="example-element"></div>
+    <div class="box"></div>
+    <p class="clear">
+      To see the effect of <code>sticky</code> positioning, select the
+      <code>position: sticky</code> option and scroll this container.
+    </p>
+    <p>
+      The element will scroll along with its container, until it is at the top
+      of the container (or reaches the offset specified in <code>top</code>),
+      and will then stop scrolling, so it stays visible.
+    </p>
+    <p>
+      The rest of this text is only supplied to make sure the container
+      overflows, so as to enable you to scroll it and see the effect.
+    </p>
+    <hr />
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.box + .box {
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+  padding-top: 1em;
+}
+
+#example-element-container {
+  position: relative;
+  text-align: left;
+}
+
+#example-element {
+  background-color: yellow;
+  border: 3px solid red;
+  z-index: 1;
+}
+```
 
 ### 定位类型
 
-- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`, `absolute`, `fixed` 或 `sticky` 的一个元素（换句话说，除`static`以外的任何东西）。
-- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `relative`的元素。
-- **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `absolute` 或 `fixed` 的元素。
-- **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/computed_value)位置属性为 `sticky` 的元素。
+- **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `relative`, `absolute`, `fixed` 或 `sticky` 的一个元素（换句话说，除`static`以外的任何东西）。
+- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `relative`的元素。
+- **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `absolute` 或 `fixed` 的元素。
+- **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)位置属性为 `sticky` 的元素。
 
 大多数情况下，{{Cssxref("height")}}和{{Cssxref("width")}} 被设定为 auto 的绝对定位元素，按其内容大小调整尺寸。但是，被绝对定位的元素可以通过指定{{Cssxref("top")}}和{{Cssxref("bottom")}} ，保留{{Cssxref("height")}}未指定（即`auto`），来填充可用的垂直空间。它们同样可以通过指定{{Cssxref("left")}} 和 {{Cssxref("right")}}并将{{Cssxref("width")}} 指定为`auto`来填充可用的水平空间。
 
@@ -38,8 +130,8 @@ CSS **`position`** 属性用于指定一个元素在文档中的定位方式。{
 - `fixed`
   - : 元素会被移出正常文档流，并不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。`fixed` 属性会创建新的层叠上下文。当元素祖先的 `transform`、`perspective`、`filter` 或 `backdrop-filter` 属性非 `none` 时，容器由视口改为该祖先。
 - `sticky`
-  - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先*（nearest scrolling ancestor）和 [containing block](/zh-CN/docs/Web/CSS/Containing_block)（最近块级祖先 nearest block-level ancestor），包括 table-related 元素，基于 `top`、`right`、`bottom` 和 `left` 的值进行偏移。偏移值不会影响任何其他元素的位置。
-    该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)（stacking context）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见 [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)）。
+  - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先*（nearest scrolling ancestor）和[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)（最近块级祖先 nearest block-level ancestor），包括 table-related 元素，基于 `top`、`right`、`bottom` 和 `left` 的值进行偏移。偏移值不会影响任何其他元素的位置。
+    该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)（stacking context）。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。这有效地抑制了任何“sticky”行为（详情见 [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)）。
 
 ### 形式语法
 

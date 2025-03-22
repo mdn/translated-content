@@ -28,5 +28,5 @@ l10n:
 ## 参见
 
 - [布尔](/zh-CN/docs/Glossary/Boolean)
-- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - HTML 标准中的[枚举属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)

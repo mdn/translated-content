@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 
 **`get()`** 메서드는 `WeakMap` 객체에서 특정 요소를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.get()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, 42);
+
+console.log(weakmap1.get(object1));
+// Expected output: 42
+
+console.log(weakmap1.get(object2));
+// Expected output: undefined
+```
 
 ## 구문
 

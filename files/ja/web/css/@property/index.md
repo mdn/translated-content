@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@property`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、 API の [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあるものです。開発者が明示的に {{cssxref('--*', 'CSS カスタムプロパティ')}}を定義し、プロパティ型のチェック、既定値の設定、プロパティが値を継承するかどうかの定義ができるようになっています。
+**`@property`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、 API の [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあるものです。開発者が明示的に {{cssxref('--*', 'CSS カスタムプロパティ')}}を定義し、プロパティ型のチェック、既定値の設定、プロパティが値を継承するかどうかの定義ができるようになっています。
 
 `@property` ルールは、 JS を実行することなく、スタイルシートの中で直接カスタムプロパティの登録を表します。有効な `@property` ルールは、あたかも {{domxref('CSS.registerProperty_static', 'registerProperty()')}} が同等の引数で呼び出されたかのように、登録されたカスタムプロパティを生成します。
 
@@ -137,5 +137,5 @@ window.CSS.registerProperty({
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
 - [Houdini API](/ja/docs/Web/API/Houdini_APIs)
-- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)ガイド
+- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)ガイド
 - [カスケード変数のための CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables)モジュール

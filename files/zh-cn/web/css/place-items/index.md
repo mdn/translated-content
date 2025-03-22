@@ -5,9 +5,53 @@ slug: Web/CSS/place-items
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 中的 **`place-items`** 是一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，它允许你在相关的布局（如 [Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 或 [Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）中可以同时沿着块级和内联方向对齐元素 (例如：{{CSSxRef("align-items")}} 和 {{CSSxRef("justify-items")}} 属性) 。如果未提供第二个值，则第一个值作为第二个值的默认值。
+[CSS](/zh-CN/docs/Web/CSS) 中的 **`place-items`** 是一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，它允许你在相关的布局（如[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）中可以同时沿着块级和内联方向对齐元素（例如：{{CSSxRef("align-items")}} 和 {{CSSxRef("justify-items")}} 属性）。如果未提供第二个值，则第一个值作为第二个值的默认值。
 
-{{EmbedInteractiveExample("pages/css/place-items.html")}}
+{{InteractiveExample("CSS Demo: place-items")}}
+
+```css interactive-example-choice
+place-items: center stretch;
+```
+
+```css interactive-example-choice
+place-items: center start;
+```
+
+```css interactive-example-choice
+place-items: start end;
+```
+
+```css interactive-example-choice
+place-items: end center;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 构成属性
 

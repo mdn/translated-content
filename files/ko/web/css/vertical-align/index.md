@@ -7,7 +7,49 @@ slug: Web/CSS/vertical-align
 
 **`vertical-align`** [CSS](/ko/docs/Web/CSS) 속성은 inline 또는 table-cell box에서의 수직 정렬을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
+
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
 
 vertical-align 속성은 두 가지 상황에서 사용할 수 있습니다.
 

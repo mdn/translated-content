@@ -9,7 +9,23 @@ l10n:
 
 **`Promise()`** 构造函数创建 {{jsxref("Promise")}} 对象。它主要用于封装尚未支持 Promise 的基于回调的 API。
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## 语法
 

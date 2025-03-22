@@ -9,7 +9,22 @@ l10n:
 
 **条件 (三項) 演算子**は JavaScript では唯一の、3 つのオペランドをとる演算子です。条件に続いて疑問符 (`?`)、そして条件が{{Glossary("truthy", "真値")}}であった場合に実行する式、コロン (`:`) が続き、条件が{{Glossary("falsy", "偽値")}}であった場合に実行する式が最後に来ます。この演算子は、 [`if`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文の代替としてよく用いられます。
 
-{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+
+```js interactive-example
+function getFee(isMember) {
+  return isMember ? "$2.00" : "$10.00";
+}
+
+console.log(getFee(true));
+// Expected output: "$2.00"
+
+console.log(getFee(false));
+// Expected output: "$10.00"
+
+console.log(getFee(null));
+// Expected output: "$10.00"
+```
 
 ## 構文
 
@@ -96,5 +111,5 @@ function example() {
 - [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [オプショナルチェーン (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)ガイド

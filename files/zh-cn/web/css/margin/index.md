@@ -5,11 +5,65 @@ slug: Web/CSS/margin
 
 {{CSSRef}}
 
-**`margin`** 属性为给定元素设置所有四个（上右下左）方向的外边距属性。也就是 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+**`margin`** 属性为给定元素设置所有四个（上右下左）方向的外边距属性。也就是 {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}} 四个外边距属性设置的[简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
-{{EmbedInteractiveExample("pages/css/margin.html")}}
+{{InteractiveExample("CSS Demo: margin")}}
 
-上、下外边框的设置对*不[可替换](/zh-CN/docs/Web/CSS/Replaced_element)*内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。
+```css interactive-example-choice
+margin: 1em;
+```
+
+```css interactive-example-choice
+margin: 5% 0;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+margin: 10px 50px 20px 0;
+```
+
+```css interactive-example-choice
+margin: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
+
+上、下外边框的设置对*不[可替换](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)*内联元素，如 {{HTMLElement("span")}} 和 {{HTMLElement("code")}}，无效。
 
 > [!NOTE]
 > 外边距控制的是元素外部空出的空间。相反，{{cssxref("padding")}} 操作元素*内部*空出的空间。
@@ -48,7 +102,7 @@ margin: unset;
 - **{{cssxref("length")}}**
   - : 以固定值为外边距。
 - {{cssxref("percentage")}}
-  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的*宽度*，以百分比值为外边距。
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的*宽度*，以百分比值为外边距。
 - `auto`
   - : 让浏览器自己选择一个合适的外边距。有时，在一些特殊情况下，该值可以使元素居中。
 
@@ -138,5 +192,5 @@ margin: auto; /* 上边和下边：无外边距 */
 
 - [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
-- 逻辑相关的属性：{{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}，和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}} 和 {{cssxref("margin-left")}}
+- 逻辑相关的属性：{{cssxref("margin-block-start")}}、{{cssxref("margin-block-end")}}、{{cssxref("margin-inline-start")}} 和 {{cssxref("margin-inline-end")}} 与其简称 {{cssxref("margin-block")}} 和 {{cssxref("margin-inline")}}

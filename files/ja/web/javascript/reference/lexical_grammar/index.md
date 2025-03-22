@@ -312,7 +312,7 @@ null
 
 ### 論理値リテラル
 
-詳細については[論理型](/ja/docs/Web/JavaScript/Data_structures#論理型)を参照してください。
+詳細については[論理型](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)を参照してください。
 
 ```js-nolint
 true
@@ -321,7 +321,7 @@ false
 
 ### 数値リテラル
 
-[数値型](/ja/docs/Web/JavaScript/Data_structures#数値型) (Number) および[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型) (BigInt) が数値リテラルを使用します。
+[数値型](/ja/docs/Web/JavaScript/Guide/Data_structures#数値型) (Number) および[長整数型](/ja/docs/Web/JavaScript/Guide/Data_structures#長整数型) (BigInt) が数値リテラルを使用します。
 
 #### 10 進数
 
@@ -382,7 +382,7 @@ false
 
 #### 長整数リテラル
 
-[長整数型](/ja/docs/Web/JavaScript/Data_structures#長整数型) (BigInt) は JavaScript の数値プリミティブであり、自由な精度の整数を表すことができます。長整数リテラルは、整数の末尾に `n` を追加することで作成されます。
+[長整数型](/ja/docs/Web/JavaScript/Guide/Data_structures#長整数型) (BigInt) は JavaScript の数値プリミティブであり、自由な精度の整数を表すことができます。長整数リテラルは、整数の末尾に `n` を追加することで作成されます。
 
 ```js-nolint
 123456789123456789n     // 123456789123456789
@@ -403,7 +403,7 @@ false
 0o755n;
 ```
 
-`BigInt` についての詳細な情報は、 [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures#長整数型)を参照してください。
+`BigInt` についての詳細な情報は、 [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures#長整数型)を参照してください。
 
 #### 数値の区切り文字
 
@@ -433,7 +433,7 @@ false
 
 ### 文字列リテラル
 
-[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)リテラルは、単一引用符または二重引用符に囲まれた 0 個以上の Unicode コードポイントです。 Unicode コードポイントはエスケープシーケンスで表すこともできます。以下の引用符を閉じるコードポイントを除いて、すべてのコードポイントが文字列リテラルに現れることができます。
+[文字列](/ja/docs/Web/JavaScript/Guide/Data_structures#文字列型)リテラルは、単一引用符または二重引用符に囲まれた 0 個以上の Unicode コードポイントです。 Unicode コードポイントはエスケープシーケンスで表すこともできます。以下の引用符を閉じるコードポイントを除いて、すべてのコードポイントが文字列リテラルに現れることができます。
 
 - U+005C \ (バックスラッシュ)
 - U+000D \<CR>

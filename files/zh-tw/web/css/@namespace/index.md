@@ -5,9 +5,37 @@ slug: Web/CSS/@namespace
 
 {{CSSRef}}
 
-**`@namespace`** 是一個 [at-rule](/zh-TW/docs/Web/CSS/At-rule)，它決定要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中要使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespaces)。
+**`@namespace`** 是一個 [at-rule](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)，它決定要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中要使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespaces)。
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-namespace.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
+
+```css interactive-example
+@namespace svg url("http://www.w3.org/2000/svg");
+
+a {
+  color: orangered;
+  text-decoration: underline dashed;
+  font-weight: bold;
+}
+
+svg|a {
+  fill: blueviolet;
+  text-decoration: underline solid;
+  text-transform: uppercase;
+}
+```
+
+```html interactive-example
+<p>
+  <a href="#">This is an ordinary HTML link</a>
+</p>
+
+<svg width="250px" viewBox="0 0 250 20" xmlns="http://www.w3.org/2000/svg">
+  <a href="#">
+    <text x="0" y="15">This is a link created in SVG</text>
+  </a>
+</svg>
+```
 
 ## 語法
 
@@ -28,7 +56,7 @@ slug: Web/CSS/@namespace
 
 `@namespace` 可以用來定義**默認命名空間**或是**有前綴的命名空間**的樣式。所有在指定命名空間下的通用、元素選擇器都會套用該樣式，屬性選擇器則只適用於「有前綴的命名空間」（詳見下方註釋）。
 
-在 [HTML5](/zh-TW/docs/Glossary/HTML5)，已知的[外部元素](https://html.spec.whatwg.org/#foreign-elements)會自動為其分配命名空間。舉例來說，即使沒有設置 `xmlns` 屬性，所有的 HTML 元素都會自動視為 XHTML 命名空間（`http://www.w3.org/1999/xhtml`）；[\<svg>](/zh-TW/docs/Web/SVG/Element/svg) 和 [\<math>](/zh-TW/docs/Web/MathML/Element/math) 則會自動分配屬於他們的命名空間（`http://www.w3.org/2000/svg` 和 `http://www.w3.org/1998/Math/MathML`）。
+在 [HTML5](/zh-TW/docs/Glossary/HTML5)，已知的[外部元素](https://html.spec.whatwg.org/#foreign-elements)會自動為其分配命名空間。舉例來說，即使沒有設置 `xmlns` 屬性，所有的 HTML 元素都會自動視為 XHTML 命名空間（`http://www.w3.org/1999/xhtml`）；[\<svg>](/zh-TW/docs/Web/SVG/Reference/Element/svg) 和 [\<math>](/zh-TW/docs/Web/MathML/Reference/Element/math) 則會自動分配屬於他們的命名空間（`http://www.w3.org/2000/svg` 和 `http://www.w3.org/1998/Math/MathML`）。
 
 > [!NOTE]
 > 在 XML，屬性若沒有前綴（例如 `xlink:href`），該屬性就不會繼承元素的命名空間（亦即 `link`的命名空間可能是 `http://www.w3.org/1999/xhtml` 而不是 `http://www.w3.org/2000/svg`）。因此，CSS 的「默認的命名空間」並不適用於屬性
@@ -64,4 +92,4 @@ svg|a {
 
 ## 參見
 
-- [命名空間速成班](/zh-TW/docs/Web/SVG/Namespaces_Crash_Course)
+- [命名空間速成班](/zh-TW/docs/Web/SVG/Guides/Namespaces_crash_course)

@@ -21,8 +21,8 @@ LTR とは逆に、 {{Glossary("RTL")}} (Right To Left, 右書き) はアラビ�
 
 - [HTML グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 
-  - [`dir`](/ja/docs/Web/HTML/Global_attributes#dir)
-  - [`lang`](/ja/docs/Web/HTML/Global_attributes#lang)
+  - [`dir`](/ja/docs/Web/HTML/Global_attributes/dir)
+  - [`lang`](/ja/docs/Web/HTML/Global_attributes/lang)
 
 - [CSS](/ja/docs/Web/CSS)
 

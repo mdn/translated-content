@@ -9,7 +9,37 @@ l10n:
 
 **`<footer>`** は [HTML](/ja/docs/Web/HTML) の要素で、直近の[区分コンテンツ](/ja/docs/Web/HTML/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/HTML/Element/Heading_Elements#区分コンテンツのラベル付け)要素のフッターを表します。フッターには通常、そのセクションの著者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
-{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article>
+  <h1>How to be a wizard</h1>
+  <ol>
+    <li>Grow a long, majestic beard.</li>
+    <li>Wear a tall, pointed hat.</li>
+    <li>Have I mentioned the beard?</li>
+  </ol>
+  <footer>
+    <p>© 2018 Gandalf</p>
+  </footer>
+</article>
+```
+
+```css interactive-example
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
+```
 
 ## 属性
 
@@ -53,7 +83,7 @@ footer {
 
 ## アクセシビリティの考慮
 
-Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロール](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#道しるべランドマーク_signpostlandmark)が [VoiceOver](https://help.apple.com/voiceover/info/guide/) によって適切に公開されていませんでした。古い Safari ブラウザーに対応する必要がある場合は、 `role="contentinfo"` を `footer` 要素に追加して、ランドマークが適切に表示されるようにしてください。
+Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロール](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#道しるべランドマーク_signpostlandmark)が [VoiceOver](https://help.apple.com/voiceover/info/guide/) によって適切に公開されていませんでした。古い Safari ブラウザーに対応する必要がある場合は、 `role="contentinfo"` を `footer` 要素に追加して、ランドマークが適切に表示されるようにしてください。
 
 - 関連記事: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 
@@ -132,4 +162,4 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}
 - [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Contentinfo ロール](/ja/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
+- [ARIA: Contentinfo ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)

@@ -20,7 +20,16 @@ l10n:
   こちらも、テスト関数を使用する代わりに、各要素が値と等しいかどうかを調べます。
 - 指定されたテスト関数を満たす要素を得るには {{jsxref("Array/some", "some()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const found = array1.findLast((element) => element > 45);
+
+console.log(found);
+// Expected output: 130
+```
 
 ## 構文
 
@@ -88,7 +97,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### アロー関数と分割代入の使用
 
-先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#オブジェクトの分割代入)を使用して書くことができるかもしれません。
+先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#オブジェクトの分割代入)を使用して書くことができるかもしれません。
 
 ```js
 const inventory = [

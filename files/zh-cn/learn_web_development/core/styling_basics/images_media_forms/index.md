@@ -1,7 +1,6 @@
 ---
 title: 图像、媒体和表单元素
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
-original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
@@ -32,9 +31,9 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
   </tbody>
 </table>
 
-## 替换元素
+## 可替换元素
 
-图像和视频被描述为**[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)**。这意味着 CSS 不能影响它们的内部布局——而仅影响它们在页面上相对于其他元素的位置。但是，正如我们将看到的，CSS 可以对图像执行多种操作。
+图像和视频被描述为**{{glossary("Replaced elements", "可替换元素")}}**。这意味着 CSS 不能影响它们的内部布局——而仅影响它们在页面上相对于其他元素的位置。但是，正如我们将看到的，CSS 可以对图像执行多种操作。
 
 某些替换元素（例如图像和视频）也具有**宽高比**。这意味着它在水平（x）和垂直（y）方向上均具有大小，并且默认情况下将使用文件的固有尺寸进行显示。
 

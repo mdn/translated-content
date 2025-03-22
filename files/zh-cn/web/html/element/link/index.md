@@ -9,7 +9,16 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<link>`** 元素规定了当前文档与某个外部资源的关系。该元素最常用于链接{{Glossary("CSS", "样式表")}}，此外也可以被用来创建站点图标（比如 PC 端的“favicon”图标和移动设备上用以显示在主屏幕的图标) 。
 
-{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 要链接一个外部的样式表，你需要像这样在你的 {{HTMLElement("head")}} 中包含一个 `<link>` 元素：
 
@@ -63,7 +72,7 @@ l10n:
 其他使用说明：
 
 - `<link>` 元素可以出现在 {{HTMLElement("head")}} 元素或 {{HTMLElement("body")}} 元素中，具体取决于它是否有一个 **body-ok** 的[链接类型](https://html.spec.whatwg.org/multipage/links.html#body-ok)。例如，`stylesheet` 链接类型是 body-ok 的，因此 `<link rel="stylesheet">` 允许出现在 body 中。然而，这不是一种好的可遵循的实践方式；更合理的方式是，将你的 `<link>` 元素从你的 body 内容中分离出来，将其放在 `<head>` 中。
-- 当使用 `<link>` 为网站创建一个 favicon 时，你的网站使用内容安全策略（CSP）来增强它的安全性，这种策略适用于 favicon。如果你遇到 favicon 未加载的问题，验证 {{HTTPHeader("Content-Security-Policy")}} 标头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)没有在阻止对它的访问。
+- 当使用 `<link>` 为网站创建一个 favicon 时，你的网站使用内容安全策略（CSP）来增强它的安全性，这种策略适用于 favicon。如果你遇到 favicon 未加载的问题，验证 {{HTTPHeader("Content-Security-Policy")}} 标头的 [`img-src` 指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)没有在阻止对它的访问。
 - HTML 和 XHTML 规范为 `<link>` 元素定义了一些事件处理器，但是对于它们的使用方法不明确。
 - 在 XHTML 1.0 下，像 `<link>` 这样的{{glossary("void element", "空元素")}}需要一个尾斜杠：`<link />`。
 - WebTV 支持 `rel` 使用 `next` 值，用于在一个文档系列中预加载下一页。
@@ -74,7 +83,7 @@ l10n:
 
 - `as`
 
-  - : 当在 `<link>` 元素上设置了 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 时，该属性为必填属性；当设置了 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)时，该属性为可选属性，否则不应使用。它指定了 `<link>` 正在加载的内容类型，这对于匹配请求、应用正确的[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)和设置正确的 {{HTTPHeader("Accept")}} 请求标头都是必要的。此外，`rel="preload"` 将其用作请求优先级的信号。下表列出了该属性的有效值及其适用的元素或资源。
+  - : 当在 `<link>` 元素上设置了 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 时，该属性为必填属性；当设置了 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)时，该属性为可选属性，否则不应使用。它指定了 `<link>` 正在加载的内容类型，这对于匹配请求、应用正确的[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)和设置正确的 {{HTTPHeader("Accept")}} 请求标头都是必要的。此外，`rel="preload"` 将其用作请求优先级的信号。下表列出了该属性的有效值及其适用的元素或资源。
 
     <table class="standard-table">
       <thead>
@@ -228,7 +237,7 @@ l10n:
     > 大多数的图标格式只能存储一个图标。因此绝大多数使用 [`sizes`](#sizes) 时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式可以在一个文件中存储多个图标尺寸。ICO 具有更好的浏览器支持，因此如果需要跨浏览器支持，应使用这种格式。
 
 - `title`
-  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)。
 - `type`
   - : 这个属性被用于定义链接的内容的类型。这个属性的值应该是类似于 **text/html**、**text/css** 这样的 MIME 类型。该属性的通常用法是定义被引用的样式表类型（如 **text/css**），但由于 CSS 是网络上使用的唯一样式表语言，因此不仅可以省略 `type` 属性，而且现在已成为推荐做法。它还用于 `rel="preload"` 链接类型，以确保浏览器只下载其支持的文件类型。
 
@@ -265,7 +274,7 @@ l10n:
 
 ### 提供替代样式表
 
-你也可以指定[替代外部样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+你也可以指定[替代外部样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)。
 
 用户可以从**查看 > 页面样式**菜单中选择要使用的样式表。这样，用户就可以看到一个页面的多个版本。
 
@@ -384,7 +393,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">隐式 ARIA 角色</th>
-      <td>具有 <code>href</code> 属性的 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>
+      <td>具有 <code>href</code> 属性的 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>

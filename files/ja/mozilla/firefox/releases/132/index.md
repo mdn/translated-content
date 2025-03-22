@@ -78,7 +78,7 @@ l10n:
 
   {{domxref('Window.fetch','fetch()')}} グローバルメソッドに [`keepalive`](/ja/docs/Web/API/RequestInit#keepalive) 初期化オプションがあります。`keepalive` を `true` に設定すると、ブラウザーはリクエストが完了する前にリクエストを開始したページがアンロードされても、関連するリクエストを中止しません。
 
-  これはセッションの終了時に分析情報を送信するときに {{domxref("Navigator.sendBeacon()")}} の代替として読み込みリクエストが機能することを可能にして、いくつかの利点をもたらします ([`POST`](/ja/docs/Web/HTTP/Methods/POST) 以外の HTTP メソッドを利用する、リクエストのプロパティをカスタマイズする、あるいは読み込みの {{jsxref("Promise")}} のフルフィルメントを通してサーバーのレスポンスにアクセスすることが可能です)。これは [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) でも使用できます ([Firefox bug 1906952](https://bugzil.la/1906952))。
+  これはセッションの終了時に分析情報を送信するときに {{domxref("Navigator.sendBeacon()")}} の代替として読み込みリクエストが機能することを可能にして、いくつかの利点をもたらします ([`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) 以外の HTTP メソッドを利用する、リクエストのプロパティをカスタマイズする、あるいは読み込みの {{jsxref("Promise")}} のフルフィルメントを通してサーバーのレスポンスにアクセスすることが可能です)。これは [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) でも使用できます ([Firefox bug 1906952](https://bugzil.la/1906952))。
 
 - **`CloseWatcher`**: <code>dom.closewatcher.enabled</code>。
   {{domxref("CloseWatcher")}} インターフェイスは、組み込みコンポーネントと同じようにデバイスのネイティブな仕組みを使用して閉じることが可能なコンポーネントを開発者が実装することを可能にします。たとえば Android では、戻るボタンを使用してダイアログを閉じることができます。このインターフェイスで、独自のサイドバーを同じように閉じることができます ([Firefox bug 1888729](https://bugzil.la/1888729))。

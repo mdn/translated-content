@@ -14,7 +14,20 @@ l10n:
 >
 > この機能は言語の一部であるため、その機能の実装による負荷は (理念上は) エンジンの開発者によります。エンジンの開発者がこの問題に対処するまでの間、性能が気になる場合は、オブジェクトの `[[Prototype]]` を変更することは避けるべきです。代わりに、 {{jsxref("Object.create()")}} を使用して必要な `[[Prototype]]` をもつオブジェクトを生成してください。
 
-{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.setPrototypeOf()")}}
+
+```js interactive-example
+const obj = {};
+const parent = { foo: "bar" };
+
+console.log(obj.foo);
+// Expected output: undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.foo);
+// Expected output: "bar"
+```
 
 ## 構文
 
@@ -99,7 +112,7 @@ console.log(superMan.fly());
 console.log(superMan.speak());
 ```
 
-上記のような古典的継承（クラスによる継承）と擬似古典的継承（コンストラクターの `prototype` プロパティによる継承）の類似性については、[継承チェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#より長い継承のチェーンの構築)で述べられています。
+上記のような古典的継承（クラスによる継承）と擬似古典的継承（コンストラクターの `prototype` プロパティによる継承）の類似性については、[継承チェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#より長い継承のチェーンの構築)で述べられています。
 
 関数コンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティは書き込み可能なので、 [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create#classical_inheritance_with_object.create) で作成した新しいオブジェクトに再割り当てすることで、同じ継承連鎖を実現できます。 `create()` を使用する際には、 [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) プロパティを再度追加することを忘れないようにするなどの注意点があります。
 
@@ -137,5 +150,5 @@ const superMan = new SuperHero();
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- [継承チェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
+- [継承チェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
 - [ES6 In Depth: Subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) on hacks.mozilla.org (2015)

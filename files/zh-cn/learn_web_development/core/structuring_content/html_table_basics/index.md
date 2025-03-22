@@ -1,7 +1,6 @@
 ---
 title: HTML 表格基础
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables/Basics
 ---
 
 {{LearnSidebar}}

@@ -76,6 +76,6 @@ _从父类 {{domxref("HTMLMediaElement")}} 和祖先 {{domxref("HTMLElement")}} 
 
 ## 参见
 
-- [Web media technologies](/zh-CN/docs/Web/Media)
-- [Using audio and video in HTML](/zh-CN/docs/Web/Media/HTML_media)
-- HTML element implementing this interface: {{HTMLElement("audio")}}.
+- [Web 媒体技术](/zh-CN/docs/Web/Media)
+- [在 HTML 中使用音视频](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)
+- 实现此接口的 HTML 元素：{{HTMLElement("audio")}}。

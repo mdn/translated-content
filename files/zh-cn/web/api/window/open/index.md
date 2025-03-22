@@ -68,7 +68,7 @@ open(url, target, windowFeatures)
         使用 `noopener` 时，在决定是否打开新的浏览上下文时，除 `_top`、`_self` 和 `_parent` 以外的非空目标名称会像 `_blank` 一样处理。
 
     - `noreferrer`
-      - : 如果设置了此特性，浏览器将省略 [`Referer`](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头，并将 `noopener` 设为 true。更多信息请参阅 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 。
+      - : 如果设置了此特性，浏览器将省略 [`Referer`](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 标头，并将 `noopener` 设为 true。更多信息请参阅 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 。
 
 > **备注：** `windowFeatures` 中要求的位置（`top`、`left`）和尺寸（`width`、`height`）值，如果其中任何一个值不允许在用户操作系统应用程序的工作区内呈现整个浏览器弹出窗口，**则将被更正**。换句话说，新弹出窗口的任何部分最初都不能置于屏幕之外。
 
@@ -277,7 +277,7 @@ console.log(sameOriginContext.origin);
 如果在上下文发生极端变化之前就明确指出，那么用户就可以决定是否要继续使用，或者为这种变化做好准备：他们不仅不会感到困惑或迷失方向，而且更有经验的用户还可以更好地决定如何打开这些链接（是否在新窗口、是否在同一窗口、是否在新标签页、是否“在后台”）。
 
 - [WebAIM：链接与超文本——超文本链接](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / 理解 WCAG，指南 3.2](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / 理解 WCAG，指南 3.2](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200：只在必要时从链接打开新窗口和标签页](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201：打开新窗口时，给用户额外提示](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 

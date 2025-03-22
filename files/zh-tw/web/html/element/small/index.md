@@ -7,7 +7,29 @@ slug: Web/HTML/Element/small
 
 **`<small>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示側注和小字印刷，如版權和法律文本，獨立於其風格化呈現。默認情況下，它以比其中的文本小一號的字體大小呈現，例如從 `small` 到 `x-small`。
 
-{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  MDN Web Docs is a learning platform for Web technologies and the software that
+  powers the Web.
+</p>
+
+<hr />
+
+<p>
+  <small
+    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
+    Generic License.</small
+  >
+</p>
+```
+
+```css interactive-example
+small {
+  font-size: 0.7em;
+}
+```
 
 ## 屬性
 
@@ -85,7 +107,7 @@ slug: Web/HTML/Element/small
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

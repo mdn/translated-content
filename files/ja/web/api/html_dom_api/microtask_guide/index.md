@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**マイクロタスク**は、それを作成した関数やプログラムが終了した後、 [JavaScript 実行スタック](/ja/docs/Web/JavaScript/Event_loop#stack)が空の場合にのみ実行され、{{Glossary("user agent", "ユーザーエージェント")}}がスクリプトの実行環境を動かすために使用しているイベントループにコントロールを返す前に実行される短い関数です。
+**マイクロタスク**は、それを作成した関数やプログラムが終了した後、 [JavaScript 実行スタック](/ja/docs/Web/JavaScript/Reference/Execution_model#stack)が空の場合にのみ実行され、{{Glossary("user agent", "ユーザーエージェント")}}がスクリプトの実行環境を動かすために使用しているイベントループにコントロールを返す前に実行される短い関数です。
 
 このイベントループは、ブラウザーのメインイベントループか、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)を駆動するイベントループのどちらかです。これにより、他のスクリプトの実行を妨げるリスクなしに与えられた関数を実行することができ、同時に、ユーザーエージェントがマイクロタスクによって行われるアクションに反応する機会を得る前に、マイクロタスクが確実に実行されるようにします。
 
@@ -289,7 +289,7 @@ log("Main program exiting");
 
 - [徹底解説: マイクロタスクと JavaScript ランタイム環境](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}
-- [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
-  - [非同期 JavaScript 入門](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [強調的非同期 JavaScript: タイムアウトとインターバル](/ja/docs/Learn/JavaScript/Asynchronous)
-  - [プロミスによる礼儀正しい非同期プログラミング](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
+- [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
+  - [非同期 JavaScript 入門](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [強調的非同期 JavaScript: タイムアウトとインターバル](/ja/docs/Learn_web_development/Extensions/Async_JS)
+  - [プロミスによる礼儀正しい非同期プログラミング](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises)

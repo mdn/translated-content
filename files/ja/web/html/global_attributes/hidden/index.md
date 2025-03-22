@@ -10,7 +10,28 @@ l10n:
 **`hidden`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は {{Glossary("enumerated", "列挙型")}}属性であり、ブラウザーがその要素の中身を表示すべきではないことを示します。例えば、
 要素がまだ、あるいはもはや*関連性*がないことを示す論理型属性です。例えば、ログイン処理が完了するまで使用できないページの要素を非表示にするために使用することができます。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  This content should be read right now, as it is important. I am so glad you
+  are able to find it!
+</p>
+
+<p hidden>
+  This content is not relevant to this page right now, so should not be seen.
+  Nothing to see here. Nada.
+</p>
+```
+
+```css interactive-example
+p {
+  background: #ffe8d4;
+  border: 1px solid #f69d3c;
+  padding: 5px;
+  border-radius: 5px;
+}
+```
 
 ## 解説
 
@@ -44,7 +65,7 @@ hidden` 属性には、 _hidden_ 状態と _hidden until found_ 状態の2つの
 
 隠された要素は隠されていない要素からリンクすべきではありません。隠された要素の子孫である要素はまだアクティブであり、スクリプト要素はまだ実行でき、フォーム要素はまだ送信できることを意味します。しかし、要素とスクリプトは、他の文脈で隠された要素を参照することがあります。
 
-しかし、ARIA の [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性を使用して、それ自身が隠されている記述を参照することは問題ないでしょう。記述を隠すことは、それ自身は有用でないことを意味しますが、それらが記述された要素から参照されるという固有の文脈で有用であるように書くことができます。
+しかし、ARIA の [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性を使用して、それ自身が隠されている記述を参照することは問題ないでしょう。記述を隠すことは、それ自身は有用でないことを意味しますが、それらが記述された要素から参照されるという固有の文脈で有用であるように書くことができます。
 
 同様に、`hidden` 属性のついたキャンバス要素はスクリプト化されたグラフィックエンジンによってオフスクリーンバッファーとして使用することができ、フォームコントロールはその form 属性を使用して隠されたフォーム要素を参照することができます。
 
@@ -164,5 +185,5 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 - {{DOMxRef("HTMLElement.hidden")}}
 - すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
-- [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性
+- [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性
 - [`beforematch`](/ja/docs/Web/API/Element/beforematch_event) イベント

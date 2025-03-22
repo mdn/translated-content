@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-**`csp`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、埋め込まれる文書が従い支配を受ける[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)を返します。
+**`csp`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、埋め込まれる文書が従い支配を受ける[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)を返します。
 
 ## 値
 

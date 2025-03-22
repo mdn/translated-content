@@ -13,15 +13,15 @@ l10n:
 
 如果你不使用 flex 或者 grid 布局，那么你的内容则会采用常规流布局，或者块级、内联布局。这些指南可以帮助你理解这种布局方式的工作原理。
 
-- [常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
   - : 对常规流的介绍。
-- [应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
   - : 怎样使一个元素脱离常规流，以及这对于页面的布局有何影响。
-- [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
   - : 介绍怎样创建一个新的格式化上下文。
-- [流布局和书写模式](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [流布局和书写模式](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
   - : 流式布局怎样在不同的书写模式工作，例如竖排文本。
-- [流布局和溢出](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
+- [流布局和溢出](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
   - : 理解并管理溢出。
 - [CSS 盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : 理解盒模型是 CSS 的基础之一，这篇指南介绍了它的工作原理。
@@ -86,8 +86,6 @@ CSS 弹性盒布局（通常被称为 flexbox），是一种为用户界面设�
   - : 怎样在网格布局中使用相对于流的属性和值而不是物理值。
 - [CSS 网格布局和无障碍](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
   - : 当使用网格布局时的一些无障碍考虑。
-- [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-  - : 怎样确保你的站点在不支持网格布局的浏览器中仍正常运行。
 - [利用 CSS 网格布局实现常用布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
   - : 使用网格来搭建一些常见布局。
 - [子网格](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)

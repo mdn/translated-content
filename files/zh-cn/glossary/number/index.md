@@ -12,7 +12,7 @@ l10n:
 ## 参见
 
 - 维基百科上的[数字类型](https://zh.wikipedia.org/wiki/資料類型#數值範圍)
-- JavaScript 类型：[`Number`](/zh-CN/docs/Web/JavaScript/Data_structures#number_类型)
+- JavaScript 类型：[`Number`](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#number_类型)
 - JavaScript 全局对象 {{jsxref("Number")}}
 - [术语](/zh-CN/docs/Glossary)
 

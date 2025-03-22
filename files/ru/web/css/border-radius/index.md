@@ -7,7 +7,52 @@ slug: Web/CSS/border-radius
 
 **`border-radius`** — это [CSS](/ru/docs/Web/CSS)-свойство, позволяющее разработчикам определять, как скругляются границы блока. Закруглённость каждого угла определяется с помощью одного или двух радиусов, определяя его форму: круг или эллипс.
 
-{{EmbedInteractiveExample("pages/css/border-radius.html")}}
+{{InteractiveExample("CSS Demo: border-radius")}}
+
+```css interactive-example-choice
+border-radius: 30px;
+```
+
+```css interactive-example-choice
+border-radius: 25% 10%;
+```
+
+```css interactive-example-choice
+border-radius: 10% 30% 50% 70%;
+```
+
+```css interactive-example-choice
+border-radius: 10% / 50%;
+```
+
+```css interactive-example-choice
+border-radius: 10px 100px / 120px;
+```
+
+```css interactive-example-choice
+border-radius: 50% 20% / 10% 40%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with rounded corners.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 Это свойство является [короткой записью](/ru/docs/Web/CSS/Shorthand_properties) для четырёх свойств {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} и{{Cssxref("border-bottom-left-radius")}}.
 

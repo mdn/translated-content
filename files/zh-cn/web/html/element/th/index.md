@@ -7,7 +7,73 @@ slug: Web/HTML/Element/th
 
 **HTML `<th>` 元素**定义表格内的表头单元格。这部分特征是由 [`scope`](#scope) 和 [`headers`](#headers) 属性准确定义的。
 
-{{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 ## 属性
 
@@ -102,7 +168,7 @@ slug: Web/HTML/Element/th
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheader</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheader</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role"><code>columnheader</code></a> 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role"><code>rowheader</code></a>
       </td>
     </tr>
     <tr>

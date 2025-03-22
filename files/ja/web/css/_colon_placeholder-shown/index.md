@@ -1,5 +1,5 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
@@ -14,7 +14,38 @@ slug: Web/CSS/:placeholder-shown
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:placeholder-shown {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Full Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" placeholder="name@example.com" />
+
+  <label for="age">Your age:</label>
+  <input
+    id="age"
+    name="age"
+    type="number"
+    value="18"
+    placeholder="You must be 18+" />
+</form>
+```
 
 ## 構文
 
@@ -137,4 +168,4 @@ input.studentid:placeholder-shown {
 
 - {{CSSxRef("::placeholder")}} 擬似要素はプレイスホルダー*自身*にスタイルを適用します。
 - 関連する HTML 要素: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)

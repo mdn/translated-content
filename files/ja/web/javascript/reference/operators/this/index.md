@@ -14,7 +14,19 @@ JavaScript で `this` の値は、関数がどのように定義されている�
 
 [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)では、`this` の扱いが異なります。定義された時点で親スコープから継承します。この動作により、アロー関数はコールバックやコンテキストの保持を行う上で特に便利です。ただし、アロー関数には独自の `this` バインディングがありません。そのため、`bind()`、`apply()`、`call()` メソッドで `this` の値を設定することはできません。また、オブジェクトメソッドで現在のオブジェクトを指すこともできません。
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## 構文
 
@@ -53,7 +65,7 @@ console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
 
 関数は同じですが、呼び出し方法によって `this` の値が異なることに注目してください。これは、関数への引数がどのように動作するのかと似ています。
 
-`this` の値は、自分自身のプロパティとして機能を持つオブジェクトではなく、その機能を呼び出すために使用されるオブジェクトです。これを証明するために、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)の上位にあるオブジェクトのメソッドを呼び出してみましょう。
+`this` の値は、自分自身のプロパティとして機能を持つオブジェクトではなく、その機能を呼び出すために使用されるオブジェクトです。これを証明するために、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)の上位にあるオブジェクトのメソッドを呼び出してみましょう。
 
 ```js
 const obj3 = {
@@ -151,7 +163,7 @@ const foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
-アロー関数は、その関数が存在するスコープの `this` 値を囲む[クロージャ](/ja/docs/Web/JavaScript/Closures)を作成します。つまり、アロー関数は「自動バインド」されているかのように動作します。つまり、どのように呼び出されたとしても、`this` は関数が作成された時点での値（例えば、グローバルオブジェクト）にバインドされます。他の関数内で作成されたアロー関数にも同じことが言えます。そのthisは、それを囲む字句コンテキストのままです。[下記の例を参照してください](#アロー関数内の_this)。
+アロー関数は、その関数が存在するスコープの `this` 値を囲む[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を作成します。つまり、アロー関数は「自動バインド」されているかのように動作します。つまり、どのように呼び出されたとしても、`this` は関数が作成された時点での値（例えば、グローバルオブジェクト）にバインドされます。他の関数内で作成されたアロー関数にも同じことが言えます。そのthisは、それを囲む字句コンテキストのままです。[下記の例を参照してください](#アロー関数内の_this)。
 
 さらに、`call()`、`bind()`、`apply()` を使用してアロー関数を呼び出す場合、`thisArg` 引数は無視されます。ただし、これらのメソッドを使用しても、他にも引数を渡すことができます。
 

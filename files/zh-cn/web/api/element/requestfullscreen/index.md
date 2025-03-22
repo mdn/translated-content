@@ -47,7 +47,7 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 
     - 文档中包含的元素未完全激活，也就是说不是当前活动的元素。
     - 元素不在文档之内。
-    - 因为[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)配置或其他访问控制特性，元素不被允许使用 `fullscreen` 特性。
+    - 因为[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)配置或其他访问控制特性，元素不被允许使用 `fullscreen` 特性。
     - 元素和它的文档是同一个节点。
     - 该元素是一个[弹出窗口](/zh-CN/docs/Web/API/Popover_API)，已通过 {{domxref("HTMLElement.showPopover()")}} 显示。
 

@@ -1,5 +1,5 @@
 ---
-title: ":indeterminate"
+title: :indeterminate
 slug: Web/CSS/:indeterminate
 ---
 
@@ -127,8 +127,8 @@ progress:indeterminate {
 
 ## 関連情報
 
-- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn/Forms)
-- [ウェブフォームの整形](/ja/docs/Learn/Forms/Styling_web_forms)
+- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn_web_development/Extensions/Forms)
+- [ウェブフォームの整形](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) 要素の [`indeterminate`](/ja/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性
 - {{HTMLElement("input")}} およびそれを実装している {{domxref("HTMLInputElement")}} インターフェイス
 - {{cssxref(":checked")}} セレクターは、チェックボックスがチェックされているかどうかでスタイル付けすることができます

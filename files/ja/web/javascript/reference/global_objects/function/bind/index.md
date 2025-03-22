@@ -9,7 +9,24 @@ l10n:
 
 **`bind()`** メソッドは新しい関数を生成し、これは呼び出された際に `this` キーワードに指定された値が設定されます。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## 構文
 
@@ -85,7 +102,7 @@ console.log(new Base() instanceof BoundBase); // true
 - [`name`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : 対象となる関数の `name` に `"bound "` という接頭辞を加えたものです。
 
-バインド済み関数は、ターゲット関数の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)も引き継ぎます。しかし、他にターゲット関数の独自のプロパティ（ターゲット関数がクラスの場合は[静的プロパティ](/ja/docs/Web/JavaScript/Reference/Classes/static)など）を持つことはありません。
+バインド済み関数は、ターゲット関数の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)も引き継ぎます。しかし、他にターゲット関数の独自のプロパティ（ターゲット関数がクラスの場合は[静的プロパティ](/ja/docs/Web/JavaScript/Reference/Classes/static)など）を持つことはありません。
 
 ## 例
 

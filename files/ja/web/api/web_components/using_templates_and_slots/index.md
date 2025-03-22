@@ -96,7 +96,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 マークアップに要素が含まれるときにスロットの内容が定義されていない場合、またはブラウザーがスロットに対応していない場合、 `<my-paragraph>` はに単に代替内容である「既定のテキスト」が入ります。
 
-スロットの内容を定義するために、`<my-paragraph>` 要素の中に HTML 構造を入れ、 [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性の値が埋めたいスロットの名前と同じになるようにします。前と同じように、これは好きなものを指定できます。
+スロットの内容を定義するために、`<my-paragraph>` 要素の中に HTML 構造を入れ、 [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性の値が埋めたいスロットの名前と同じになるようにします。前と同じように、これは好きなものを指定できます。
 
 ```html
 <my-paragraph>
@@ -119,7 +119,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 > スロットに挿入することができるノードは「スロット可能 (Slottable)」ノードと呼ばれます。ノードがスロットに挿入されたとき、「スロットされている」と言います。
 
 > [!NOTE]
-> 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
+> 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
 
 簡単な例での説明は以上です。
 もっと実行してみたい場合は、 [GitHub 上にあります](https://github.com/mdn/web-components-examples/tree/main/simple-template)（[ライブ実行版](https://mdn.github.io/web-components-examples/simple-template/)もあります）。
@@ -260,7 +260,7 @@ customElements.define(
 
 このコードについて以下の点に注意してください。
 
-- このスニペットには **`<element-details>`** 要素が 2 つあり、どちらも [`slot`](/ja/docs/Web/HTML/Global_attributes#slot) 属性を使って `<element-details>` の[シャドウルート](/ja/docs/Web/API/ShadowRoot)に置いた[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)の `"element-name"` と `"description"` を参照しています。
+- このスニペットには **`<element-details>`** 要素が 2 つあり、どちらも [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性を使って `<element-details>` の[シャドウルート](/ja/docs/Web/API/ShadowRoot)に置いた[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)の `"element-name"` と `"description"` を参照しています。
 - これら 2 つの **`<element-details>`** 要素のうち最初のものだけが `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name) を参照しています。 2 番目の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name) への参照を欠いています。
 - 最初の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name) を {{HTMLElement("dl")}} およびその子要素である {{HTMLElement("dt")}} と {{HTMLElement("dd")}} を使って参照しています。
 

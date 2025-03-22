@@ -1,7 +1,6 @@
 ---
 title: 如何设置一个本地测试服务器？
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}

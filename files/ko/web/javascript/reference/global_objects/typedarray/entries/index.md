@@ -9,7 +9,18 @@ l10n:
 
 **`entries()`** 메서드는 해당 배열의 각 인덱스에 대한 키/값 쌍을 포함하는 새로운 {{jsxref("Array", "배열")}} 반복자 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = uint8.entries();
+
+eArr.next();
+eArr.next();
+
+console.log(eArr.next().value);
+// Expected output: Array [2, 30]
+```
 
 ## 구문
 

@@ -1,5 +1,5 @@
 ---
-title: "::before"
+title: ::before
 slug: Web/CSS/::before
 l10n:
   sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
@@ -9,7 +9,36 @@ l10n:
 
 CSS에서, **`::before`** 는 선택된 요소의 첫번째 자식인 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 생성합니다. 이는 종종 {{cssxref("content")}} 속성을 활용하여 요소에 장식 콘텐츠를 추가하는 데에 사용됩니다. 기본적으로 인라인 형식입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-before.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
+
+```css interactive-example
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a::before {
+  content: "🔗";
+}
+
+.local-link::before {
+  content: url("/shared-assets/images/examples/firefox-logo.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+```
+
+```html interactive-example
+<p>
+  Learning resources for web developers can be found all over the internet. Try
+  out
+  <a href="https://web.dev/">web.dev</a>,
+  <a href="https://www.w3schools.com/">w3schools.com</a> or our
+  <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.
+</p>
+```
 
 > [!NOTE] > `::before` 와 `::after` 로 생성된 의사 요소들은 마치 해당 요소가 적용된 요소의 직속 자식인 것처럼 생성된 박스입니다. 즉, 원본 요소의 직계 자식이기 때문에 {{htmlelement("img")}} 처럼 콘텐츠가 CSS 서식 모델의 범위를 벗어나는 [대체 요소](/ko/docs/Web/CSS/Replaced_element) 에는 적용할 수 없습니다.
 

@@ -27,7 +27,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 相対色は、絶対色と同じ[色関数](/ja/docs/Web/CSS/CSS_colors#関数)を使用しますが、異なる引数で作成します。
 
 1. 基本的な色関数（上記で _`color-function()`_ で表したもの）である [`rgb()`](/ja/docs/Web/CSS/color_value/rgb), [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) などを用います。どの関数を使用するかは、作成する相対色（**出力色**）に使用する色モデルによって異なります。
-2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
+2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
 3. [`color()`](/ja/docs/Web/CSS/color_value/color) 関数の場合、出力色の _[`colorspace`](/ja/docs/Web/CSS/color_value/color#colorspace)_（色空間）を指定します。
 4. 各チャンネルに個別の出力値を指定します。出力色は、元の色（上記の _`channel1`_、_`channel2`_、_`channel3`_ のプレースホルダーで表したもの）の後に定義します。ここで定義するチャンネルは、相対色に使用する[色関数](/ja/docs/Web/CSS/CSS_colors#関数)によって異なります。例えば、 [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) を使用している場合は、色相、彩度、明度の値を定義する必要があります。各チャンネルの値は、新しい値、元の値と同じ値、または元の色チャンネルの値に関連する値とすることができます。
 5. オプションとして、出力色のアルファチャンネル値 (`alpha`) をスラッシュ (`/`) の後に定義することができます。アルファチャンネル値 (`alpha`) が明示的に指定されていない場合、アルファチャンネル値は元の色の既定値となります（絶対的な色値の場合の 100% ではありません）。
@@ -174,7 +174,7 @@ rgb(from red r g b / alpha)
 
 ## カスタムプロパティの使用
 
-相対色を作成する際に、元の色と出力される色チャンネル値の定義の両方で、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)で定義された値を使用することができます。 例えば、次の例をご覧ください。
+相対色を作成する際に、元の色と出力される色チャンネル値の定義の両方で、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で定義された値を使用することができます。 例えば、次の例をご覧ください。
 
 下記の CSS では、 2 つのカスタムプロパティを定義しています。
 
@@ -232,7 +232,7 @@ rgb(from red r g b / alpha)
 
 ## 数学関数の使用
 
-出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
+出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
 
 次の CSS は、異なる背景色を持つ 3 つの {{htmlelement("div")}} 要素のスタイルを指定しています。中央の要素には変更されていない `--base-color` が指定され、左右の要素には、その `--base-color` の明度を上げたもの、下げたものがそれぞれ指定されています。これらのバリエーションは相対色を使用して定義されています。 `--base-color` は `lch()` 関数に渡され、 `calc()` 関数を使用して、望みの効果を得るために出力色の明度チャンネルを変更しています。明るくする色には明度チャンネルに 20% を加算し、暗くする色には 20% を減算しています。
 

@@ -9,7 +9,27 @@ slug: Web/HTML/Element/input/number
 
 浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 不支持 `number` 类型的浏览器会回退为标准的 `text` 输入框。
 
@@ -419,7 +439,7 @@ switchBtn.addEventListener("click", () => {
 
 ## 无障碍
 
-`<input type="number">` 元素的隐含 [role](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 是 [`spinbutton`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) 。如果 spinbutton 对你的表单控件来说不是一个重要的功能，那就*不要*使用 `type="number"`；此时，请使用带有 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性的 [`inputmode="numeric"`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)，将字符限制在数字和相关字符。如果坚持使用 `<input type="number">`，用户在试图做其他事情时，有可能意外地增加一个数字。此外，如果用户试图输入不是数字的东西，也没有明确的反馈说明他们做错了什么。
+`<input type="number">` 元素的隐含 [role](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles) 是 [`spinbutton`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) 。如果 spinbutton 对你的表单控件来说不是一个重要的功能，那就*不要*使用 `type="number"`；此时，请使用带有 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性的 [`inputmode="numeric"`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)，将字符限制在数字和相关字符。如果坚持使用 `<input type="number">`，用户在试图做其他事情时，有可能意外地增加一个数字。此外，如果用户试图输入不是数字的东西，也没有明确的反馈说明他们做错了什么。
 
 也可以考虑使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性，帮助用户更快完成表单，减少出错的机会。例如，要在一个邮编字段上启用自动填写功能，请设置 `autocomplete="postal-code"`。
 

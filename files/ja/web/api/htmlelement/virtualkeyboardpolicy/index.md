@@ -42,4 +42,4 @@ element.virtualKeyboardPolicy = "manual";
 
 ## 関連情報
 
-- HTML の [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes#virtualkeyboardpolicy) グローバル属性
+- HTML の [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) グローバル属性

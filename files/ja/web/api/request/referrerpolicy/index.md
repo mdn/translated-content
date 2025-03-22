@@ -3,10 +3,10 @@ title: "Request: referrerPolicy プロパティ"
 short-title: referrerPolicy
 slug: Web/API/Request/referrerPolicy
 l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`referrerPolicy`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、{{HTTPHeader("Referer")}} ヘッダーで送信されるどのリファラー情報がリクエストに記載されるべきかを管理する、リファラーポリシーを返します。
 
@@ -34,5 +34,5 @@ const myReferrer = myRequest.referrerPolicy; // returns "" by default
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

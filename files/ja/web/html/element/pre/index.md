@@ -11,7 +11,35 @@ l10n:
 
 既定では、 `<pre>` は[ブロックレベル](/ja/docs/Glossary/Block-level_content)要素であり、 {{cssxref("display")}} の既定値は `block` です。
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 `<pre>` タグ内で `<`、`>`、`&`、`"` などの予約文字を表示する必要がある場合は、それぞれの [HTML エンティティ](/ja/docs/Glossary/Entity)を用いてエスケープする必要があります。
 
@@ -32,7 +60,7 @@ l10n:
 
 弱視の人やスクリーンリーダーなどの支援技術を使って閲覧している人は、整形済みテキスト文字が順番に読み上げられたときに何を表しているのか理解できないかもしれません。
 
-{{HTMLElement("figure")}} 要素と {{HTMLElement("figcaption")}} 要素の組み合わせや、`pre` 要素の [ARIA](/ja/docs/Web/Accessibility/ARIA) の `role` と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性によって補われます。整形済み {{Glossary("ASCII")}} アートは代替テキストを持つ画像としてアナウンスされ、`figcaption` は画像のキャプションとして機能します。
+{{HTMLElement("figure")}} 要素と {{HTMLElement("figcaption")}} 要素の組み合わせや、`pre` 要素の [ARIA](/ja/docs/Web/Accessibility/ARIA) の `role` と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性によって補われます。整形済み {{Glossary("ASCII")}} アートは代替テキストを持つ画像としてアナウンスされ、`figcaption` は画像のキャプションとして機能します。
 
 ### 例
 
@@ -54,7 +82,7 @@ l10n:
 </figure>
 ```
 
-- [MDN「WCAG を理解する」ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [MDN「WCAG を理解する」ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
 ## 例

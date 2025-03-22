@@ -9,7 +9,18 @@ l10n:
 
 **`for`** 文は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文（ふつうは[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)）から成るループを構成します。
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 構文
 
@@ -118,7 +129,7 @@ while (i <= 3) {
 
 ### 初期化ブロックの字句の宣言
 
-初期化ブロック内で変数を宣言する場合、上位の[スコープ](/ja/docs/Glossary/Scope)で宣言する場合と異なる点があり、特にループ本体内で[クロージャ](/ja/docs/Web/JavaScript/Closures)を作成する場合は重要です。例えば、下記のコードを見てください。
+初期化ブロック内で変数を宣言する場合、上位の[スコープ](/ja/docs/Glossary/Scope)で宣言する場合と異なる点があり、特にループ本体内で[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を作成する場合は重要です。例えば、下記のコードを見てください。
 
 ```js
 for (let i = 0; i < 3; i++) {

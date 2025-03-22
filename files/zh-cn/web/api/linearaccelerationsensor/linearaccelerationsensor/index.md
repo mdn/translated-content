@@ -28,7 +28,7 @@ new LinearAccelerationSensor(options)
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 此特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+  - : 此特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
 
 ## 规范
 

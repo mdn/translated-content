@@ -22,7 +22,7 @@ l10n:
 
 - `allow` {{experimental_inline}}
 
-  - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
+  - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Guides/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
 
 - `height` {{experimental_inline}}
 
@@ -33,7 +33,7 @@ l10n:
 
 ## 可用於圍欄頁框權限策略
 
-從頂層上下文委派給圍欄頁框的允許和拒絕功能的權限策略可以用作通信通道，因此構成一種隱私威脅。因此，標準 Web 功能可以通過[權限策略](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy)（例如 [`camera`](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy/camera) 或 [`geolocation`](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)）控制其可用性的**不可用**在圍欄頁框內。
+從頂層上下文委派給圍欄頁框的允許和拒絕功能的權限策略可以用作通信通道，因此構成一種隱私威脅。因此，標準 Web 功能可以通過[權限策略](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy)（例如 [`camera`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera) 或 [`geolocation`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)）控制其可用性的**不可用**在圍欄頁框內。
 
 可以通過策略在圍欄頁框內啟用的唯一功能是專為在圍欄頁框內使用而設計的特定功能：
 
@@ -58,7 +58,7 @@ l10n:
 
 ## 定位和縮放
 
-作為[替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
+作為{{glossary("replaced elements", "可置換元素")}}，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
 
 > **備註：** {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
 
@@ -147,9 +147,9 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

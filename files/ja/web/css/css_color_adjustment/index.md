@@ -36,13 +36,13 @@ l10n:
   - {{cssxref("color")}}
   - {{cssxref("color-scheme")}}
   - {{cssxref("column-rule-color")}}
-  - [`fill`](/ja/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/ja/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/ja/docs/Web/SVG/Attribute/lighting-color)
+  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
-  - [`stop-color`](/ja/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/ja/docs/Web/SVG/Attribute/stroke)
+  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-shadow")}}

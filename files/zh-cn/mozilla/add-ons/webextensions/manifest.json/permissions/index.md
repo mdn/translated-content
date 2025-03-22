@@ -104,7 +104,7 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 在大部分情况下这种权限仅仅允许你访问 API，除了以下情况：
 
 - `tabs` 让你可以访问[一部分特权 API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs)：`Tab.url`、`Tab.title` 和 `Tab.faviconUrl`。在 Firefox 中你也需要 `tabs` 来将 queryInfo 中的 url 参数加入 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)。剩余的 `tabs` API 能在不要求任何权限的情况被使用
-- `webRequestBlocking` 允许你是用“blocking”参数，所以你可以 [修改或取消 requests](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).
+- `webRequestBlocking` 允许你是用“blocking”参数，所以你可以 [修改或取消 requests](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
 - `downloads.open` 让你使用 {{WebExtAPIRef("downloads.open()")}} API.
 
 ## 活动标签权限

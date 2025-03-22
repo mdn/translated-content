@@ -7,9 +7,44 @@ slug: Web/CSS/columns
 
 CSS 属性 **`columns`** 用来设置元素的列宽和列数。
 
-{{EmbedInteractiveExample("pages/css/columns.html")}}
+{{InteractiveExample("CSS Demo: columns")}}
 
-它是一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，可在单个方便的声明中设置 {{cssxref('column-width')}} 和 {{cssxref("column-count")}} 属性。与所有简写属性一样，任何省略的子值都将设置为其[初始值](/zh-CN/docs/Web/CSS/initial_value)。
+```css interactive-example-choice
+columns: 2;
+```
+
+```css interactive-example-choice
+columns: 6rem auto;
+```
+
+```css interactive-example-choice
+columns: 12em;
+```
+
+```css interactive-example-choice
+columns: 3;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 21rem;
+  text-align: left;
+}
+```
+
+它是一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，可在单个方便的声明中设置 {{cssxref('column-width')}} 和 {{cssxref("column-count")}} 属性。与所有简写属性一样，任何省略的子值都将设置为其[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)。
 
 ## 语法
 

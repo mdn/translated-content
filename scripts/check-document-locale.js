@@ -4,12 +4,16 @@
 // or untranslated documents within the repository, as well as any documents
 // in the upstream content that shouldn't be translated.
 //
+// The languages are represented by ISO 639-3, you can check the full list here:
+// https://github.com/wooorm/franc/tree/main/packages/franc-min#data
+//
 // Written by Queen Vinyl Da.i'gyu-Kazotetsu (@queengooborg, https://www.queengoob.org)
 
 import fs from "node:fs/promises";
-import cld from "cld";
+import { franc } from "franc-min";
 import { fdir } from "fdir";
 import MarkdownIt from "markdown-it";
+import { htmlToText } from "html-to-text";
 import ora from "ora";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
@@ -23,19 +27,15 @@ const IGNORE_BLOCK_STRINGS = [
   "<!-- lang-detect ignore-end -->",
 ];
 
-const IGNORED_LANGUAGES = [
-  "LATIN", // Commonly used as example text
-];
-
-const LANGUAGES = Object.keys(cld.LANGUAGES).filter(
-  (l) => !IGNORED_LANGUAGES.includes(l.name),
-);
+const IGNORED_LANGUAGES = [];
 
 const DETECTED_LANGUAGES = new Set();
 
 const mdConverter = MarkdownIt({
   html: true,
 });
+
+const textSegmenter = new Intl.Segmenter([], { granularity: "sentence" });
 
 const removeIgnoredSections = (content) => {
   while (true) {
@@ -55,40 +55,69 @@ const removeIgnoredSections = (content) => {
   return content;
 };
 
-const convertToHTML = async (doc) => {
-  const data = await fs.readFile(doc, "utf8");
-  return removeIgnoredSections(mdConverter.render(data));
+const convertToText = async (doc) => {
+  let data = await fs.readFile(doc, "utf8");
+  // remove the front matter
+  data = data.replace(/^---.*---/ms, "").trimStart();
+
+  const html = mdConverter.render(removeIgnoredSections(data));
+  return htmlToText(html, {
+    selectors: [
+      { selector: "a", options: { ignoreHref: true } },
+      { selector: "img", format: "skip" },
+      // ignore fenced code blocks
+      { selector: "pre", format: "skip" },
+    ],
+  });
 };
 
-const getDocumentLanguages = async (doc, expectedLocale = "ENGLISH") => {
-  const content = await convertToHTML(doc);
-
-  let detection;
-  try {
-    detection = await cld.detect(content, {
-      isHTML: true,
-      languageHint: expectedLocale,
+const detectLanguageByParts = (parts) => {
+  const results = [];
+  for (const part of parts) {
+    const result = franc(part);
+    results.push({
+      language: result,
+      input: part,
     });
-  } catch (e) {
-    if (e.message === "Failed to identify language") {
-      // If the language couldn't be identified, silently ignore
-      return null;
-    }
-
-    throw e;
   }
+  return results;
+};
 
-  const detectedLanguages = detection.languages
-    .filter((l) => !IGNORED_LANGUAGES.includes(l.name))
-    .filter((l) => l.percent >= THRESHOLD);
+const getDocumentLanguages = async (content) => {
+  let textLength = 0;
+
+  const segments = Array.from(textSegmenter.segment(content)).map(
+    (segment) => segment.segment,
+  );
+  const languageResults = detectLanguageByParts(segments);
+
   const result = {};
-
-  for (const l of detectedLanguages) {
-    DETECTED_LANGUAGES.add(l.name);
-    result[l.name] = l.percent;
+  for (const languageResult of languageResults) {
+    if (
+      IGNORED_LANGUAGES.includes(languageResult.language) ||
+      languageResult.language === "und"
+    ) {
+      continue;
+    }
+    result[languageResult.language] =
+      (result[languageResult.language] || 0) + languageResult.input.length;
+    textLength += languageResult.input.length;
   }
 
-  return result;
+  if (textLength === 0) {
+    return null;
+  }
+
+  const detectedLanguages = {};
+  for (const language in result) {
+    const pencent = (result[language] / textLength) * 100;
+    if (pencent > THRESHOLD) {
+      detectedLanguages[language] = pencent;
+      DETECTED_LANGUAGES.add(language);
+    }
+  }
+
+  return detectedLanguages;
 };
 
 const printTable = (data, md = true) => {
@@ -148,13 +177,6 @@ const main = async () => {
           type: "string",
           default: "md",
           choices: ["md", "csv", "json"],
-        })
-        .option("expectedLocale", {
-          alias: "l",
-          describe: "The expected locale of the files",
-          type: "string",
-          default: "ENGLISH",
-          choices: LANGUAGES,
         });
     },
   );
@@ -186,7 +208,8 @@ const main = async () => {
     spinner.text = `${i}/${files.length}: ${file}...`;
 
     try {
-      data[file] = await getDocumentLanguages(file, argv.expectedLocale);
+      const content = await convertToText(file);
+      data[file] = await getDocumentLanguages(content);
 
       if (!data[file]) {
         spinner.fail(`${file}: Failed to identify language!`);

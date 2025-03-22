@@ -5,9 +5,48 @@ slug: Web/CSS/border-color
 
 {{CSSRef}}
 
-**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。
+**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。
 
-{{EmbedInteractiveExample("pages/css/border-color.html")}}
+{{InteractiveExample("CSS Demo: border-color")}}
+
+```css interactive-example-choice
+border-color: red;
+```
+
+```css interactive-example-choice
+border-color: red #32a1ce;
+```
+
+```css interactive-example-choice
+border-color: red rgba(170, 50, 220, 0.6) green;
+```
+
+```css interactive-example-choice
+border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-color: red yellow green transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 border-color 雖可一次設定四邊框線色彩，但每個邊框亦可用以下屬性分別指定：{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}；能因應文字書寫方向改變框線相對位置（the writing mode-aware）的屬性如：{{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}}、{{CSSxRef("border-inline-end-color")}}，也可達成分別指定的功能。
 

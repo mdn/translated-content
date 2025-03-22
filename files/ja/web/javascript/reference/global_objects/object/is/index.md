@@ -7,9 +7,24 @@ l10n:
 
 {{JSRef}}
 
-**`Object.is()`** は静的メソッドで、 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。
+**`Object.is()`** は静的メソッドで、 2 つの値が[同一値](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。
 
-{{EmbedInteractiveExample("pages/js/object-is.html")}}
+{{InteractiveExample("JavaScript Demo: Object.is()")}}
+
+```js interactive-example
+console.log(Object.is("1", 1));
+// Expected output: false
+
+console.log(Object.is(NaN, NaN));
+// Expected output: true
+
+console.log(Object.is(-0, 0));
+// Expected output: false
+
+const obj = {};
+console.log(Object.is(obj, {}));
+// Expected output: false
+```
 
 ## 構文
 
@@ -30,7 +45,7 @@ Object.is(value1, value2)
 
 ## 解説
 
-`Object.is()` は 2 つの値が[同一値](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。
+`Object.is()` は 2 つの値が[同一値](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。2 つの値が以下の規則の一つに当てはまる場合に同一となります。
 
 - どちらも {{jsxref("undefined")}}
 - どちらも [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
@@ -91,4 +106,4 @@ Object.is(NaN, Number.NaN); // true
 ## 関連情報
 
 - [`Object.is` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [等価性の比較と同一性](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [等価性の比較と同一性](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)

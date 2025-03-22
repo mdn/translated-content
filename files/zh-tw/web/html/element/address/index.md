@@ -7,7 +7,26 @@ slug: Web/HTML/Element/address
 
 **`<address>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示所包含的 HTML 提供了一個人、一組人或一個組織的聯絡資訊。
 
-{{EmbedInteractiveExample("pages/tabbed/address.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@example.com">jim@example.com</a><br />
+  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+```
+
+```css interactive-example
+a[href^="mailto"]::before {
+  content: "📧 ";
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
+}
+```
 
 `<address>` 元素內容提供的聯絡資訊可以根據上下文而定，可能包含任何需要的聯絡資訊，例如實際地址、URL、電子郵件地址、電話號碼、社交媒體帳號、地理座標等等。`<address>` 元素應包含所述聯絡資訊所指的人、人群或組織的名稱。
 
@@ -87,7 +106,7 @@ slug: Web/HTML/Element/address
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
             >group</a
           ></code
         >

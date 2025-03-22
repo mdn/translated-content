@@ -5,11 +5,48 @@ slug: Web/CSS/outline
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
+[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}
+{{InteractiveExample("CSS Demo: outline")}}
 
-与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/initial_value)。
+```css interactive-example-choice
+outline: solid;
+```
+
+```css interactive-example-choice
+outline: dashed red;
+```
+
+```css interactive-example-choice
+outline: 1rem solid;
+```
+
+```css interactive-example-choice
+outline: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+outline: 8px ridge rgba(170, 50, 220, 0.6);
+border-radius: 2rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  padding: 0.75rem;
+  width: 80%;
+  height: 100px;
+}
+```
+
+与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)。
 
 ### border 和 outline
 

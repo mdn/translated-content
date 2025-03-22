@@ -1,7 +1,6 @@
 ---
 title: "Django 教學 2: 創建一個骨架網站"
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
-original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

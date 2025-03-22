@@ -21,14 +21,14 @@ l10n:
 
 ### HTTP
 
-- [`SameSite=None`](/ja/docs/Web/HTTP/Headers/Set-Cookie#none) の属性値を持つ {{httpheader("Set-Cookie")}} HTTP ヘッダーは、[`Secure`](/ja/docs/Web/HTTP/Headers/Set-Cookie#secure) 属性も持つことが必要になりました。これは、`SameSite=None` を設定した Cookie が HTTPS 接続だけで送信されることを保証します。また、Firefox は値が不特定な `SameSite` を `SameSite=None` とみなすため、`SameSite` を指定していない Cookie も同じ制約があります ([Firefox bug 1909673](https://bugzil.la/1909673))。
+- [`SameSite=None`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#none) の属性値を持つ {{httpheader("Set-Cookie")}} HTTP ヘッダーは、[`Secure`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) 属性も持つことが必要になりました。これは、`SameSite=None` を設定した Cookie が HTTPS 接続だけで送信されることを保証します。また、Firefox は値が不特定な `SameSite` を `SameSite=None` とみなすため、`SameSite` を指定していない Cookie も同じ制約があります ([Firefox bug 1909673](https://bugzil.la/1909673))。
 - [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)、いわゆる "Partitioned Cookies" をサポートしました。
-  この機能は開発者が {{HTTPHeader("Set-Cookie")}} HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分割された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分割された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1908160](https://bugzil.la/1908160))。
+  この機能は開発者が {{HTTPHeader("Set-Cookie")}} HTTP ヘッダーの [`partitioned`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) ディレクティブを使用して、Cookie を分割された記憶領域へ保存できるようにします。これを設定すると Cookie がトップレベルごとに分割された記憶領域に保存されて、同じトップレベルサイトかサブドメインに限り読み取れるようになります。これはクロスサイトトラッキングを防ぎながら、サイトのさまざまなサブドメインにわたって埋め込み地図やチャットウィジェットの状態を維持するなどの、適切なサードパーティ Cookie の利用を可能にします ([Firefox bug 1908160](https://bugzil.la/1908160))。
 
 ### API
 
 - {{domxref('PointerEvent')}} インターフェイスの {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} および {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} プロパティをサポートしました。- それぞれポインターやスタイラスと画面 (X 軸 -Y 軸の面) の角度、および画面上で X 軸に対するスタイラスの回転角を示します ([Firefox bug 1656377](https://bugzil.la/1656377))。
-- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments) をサポートしました。ユーザーがウェブページのテキストの一部分にリンクおよびハイライト表示することを可能にします。この機能は[URL フラグメント](/ja/docs/Web/URI/Fragment) で、表示されるテキストのパターンに基づいて対象を識別する特定の構文を使用します。
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments) をサポートしました。ユーザーがウェブページのテキストの一部分にリンクおよびハイライト表示することを可能にします。この機能は[URL フラグメント](/ja/docs/Web/URI/Reference/Fragment) で、表示されるテキストのパターンに基づいて対象を識別する特定の構文を使用します。
   開発者は {{domxref("Document.fragmentDirective")}} プロパティ ({{domxref("FragmentDirective")}} インターフェイスのインスタンス) の存在によって、テキストフラグメントをサポートしているか確認できます。また、{{CSSxRef("::target-text")}} 擬似要素を使用して、テキストフラグメントリンクで指定されたテキストの選択およびスタイル設定が可能です ([Firefox bug 1914877](https://bugzil.la/1914877))。
 - {{domxref("Document")}} インターフェイスの {{domxref('Document/caretPositionFromPoint','caretPositionFromPoint()')}} メソッドを、キャレットの位置に対応するシャドウルートがメソッドに渡されていればシャドウ DOM におけるキャレット位置のテキストノードとオフセットを返すように更新しました。{{domxref("ShadowRoot")}} オブジェクトは、新たに追加された引数 `options` の `shadowRoots` プロパティを使用してメソッドに渡すことができます ([Firefox bug 1914596](https://bugzil.la/1914596))。
 

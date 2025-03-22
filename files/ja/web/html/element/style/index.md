@@ -9,7 +9,33 @@ l10n:
 
 **`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 
-{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<style>
+  p {
+    color: #26b72b;
+  }
+  code {
+    font-weight: bold;
+  }
+</style>
+
+<p>
+  This text will be green. Inline styles take precedence over CSS included
+  externally.
+</p>
+
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
+
+```css interactive-example
+p {
+  color: #f00;
+}
+```
 
 `<style>` 要素は文書の {{htmlelement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmlelement("link")}} 要素を使用することをより推奨します。
 
@@ -24,9 +50,9 @@ l10n:
 - `media`
   - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)であり、省略した場合の既定値は `all` です。
 - `nonce`
-  - : [style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
+  - : [style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
 - `title`
-  - : この属性は[代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)のセットを指定します。
+  - : この属性は[代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)のセットを指定します。
 - `blocking` {{Experimental_Inline}}
   - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@import`](/ja/docs/Web/CSS/@import) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`background-image`](/ja/docs/Web/CSS/background-image) やフォントはそうとはみなされません。
     - `render`: 画面へのコンテンツの描画がブロックされます。
@@ -66,7 +92,7 @@ l10n:
 
 ### 複数の style 要素
 
-この例には、2 つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
+この例には、2 つの `<style>` 要素が含まれています。 — 競合する宣言は、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が同じであれば、後の `<style>` 要素が優先されることに注意してください。
 
 ```html
 <!doctype html>
@@ -197,4 +223,4 @@ l10n:
 ## 関連情報
 
 - 文書に外部スタイルシートを適用することができる {{HTMLElement("link")}} 要素
-- [代替スタイルシート](/ja/docs/Web/CSS/Alternative_style_sheets)
+- [代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)

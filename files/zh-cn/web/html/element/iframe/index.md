@@ -9,7 +9,24 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) 元素 **`<iframe>`** 表示嵌套的{{Glossary("browsing context", "浏览上下文")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 每个嵌入的浏览上下文都有自己的[文档](/zh-CN/docs/Web/API/Document)并允许并且允许 URL 导航。每个嵌入式浏览上下文的导航都会被线性嵌入到*顶级*浏览上下文的[会话历史记录](/zh-CN/docs/Web/API/History)中。包含嵌入内容的浏览上下文称为*父级浏览上下文*。*顶级*浏览上下文（没有父级）通常是由 {{domxref("Window")}} 对象表示的浏览器窗口。
 
@@ -22,9 +39,9 @@ l10n:
 
 - `allow`
 
-  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些特性（例如，访问麦克风、摄像头、电池、web 共享等）。
+  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些特性（例如，访问麦克风、摄像头、电池、web 共享等）。
 
-    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframe)。
+    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframe)。
 
     > [!NOTE]
     > 通过 `allow` 属性指定的权限策略会在 {{httpheader("Permissions-Policy")}} 标头指定的策略基础上进一步地限制。它不会替换原有策略。
@@ -48,7 +65,7 @@ l10n:
 - `credentialless` {{Experimental_Inline}}
   - : 设置为 `true` 可以将 `<iframe>` 设为无凭据模式，这意味着将内容加载到新的临时上下文中。它无法访问与其来源相关的网络、cookie 和存储数据。它使用一个新上下文（生命周期局限于顶层文档的生命周期）。作为补偿，可以解除 {{httpheader("Cross-Origin-Embedder-Policy")}}（COEP）嵌入规则的限制，所以设置了 COEP 的文档可以嵌入未设置的第三方文档。更多信息请参见 [iFrame 无凭据模式](/zh-CN/docs/Web/Security/IFrame_credentialless)。
 - `csp` {{experimental_inline}}
-  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
+  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - `height`
   - : 以 CSS 像素格式指定框架的高度。默认值为 `150`。
 - `loading`
@@ -182,7 +199,7 @@ l10n:
 
 ## 定位和缩放
 
-作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 来调整 `<iframe>` 元素内嵌入的文档的位置。
+作为一个{{glossary("Replaced elements", "可替换元素")}}，可以使用 {{cssxref("object-position")}} 来调整 `<iframe>` 元素内嵌入的文档的位置。
 
 > **备注：** {{cssxref("object-fit")}} 属性对 `<iframe>` 元素没有影响。
 
@@ -304,7 +321,7 @@ l10n:
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -324,5 +341,5 @@ l10n:
 
 ## 参见
 
-- [CSP：frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP：frame-ancestors](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)

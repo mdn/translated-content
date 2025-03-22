@@ -7,9 +7,46 @@ l10n:
 
 {{CSSRef}}
 
-**`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、輪郭線 (outline) に関する大部分のプロパティを単一の宣言で設定します。
+**`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、輪郭線 (outline) に関する大部分のプロパティを単一の宣言で設定します。
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}
+{{InteractiveExample("CSS Demo: outline")}}
+
+```css interactive-example-choice
+outline: solid;
+```
+
+```css interactive-example-choice
+outline: dashed red;
+```
+
+```css interactive-example-choice
+outline: 1rem solid;
+```
+
+```css interactive-example-choice
+outline: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+outline: 8px ridge rgba(170, 50, 220, 0.6);
+border-radius: 2rem;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  padding: 0.75rem;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -42,7 +79,7 @@ outline: revert-layer;
 outline: unset;
 ```
 
-`outline` プロパティは以下に挙げた 1 ～ 3 つの値を用いて指定することができます。値は順不同です。すべての一括指定プロパティと同様に、除外したサブ値はその[初期値](/ja/docs/Web/CSS/initial_value)に設定されます。
+`outline` プロパティは以下に挙げた 1 ～ 3 つの値を用いて指定することができます。値は順不同です。すべての一括指定プロパティと同様に、除外したサブ値はその[初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)に設定されます。
 
 > [!NOTE]
 > 多くの要素では、スタイルが定義されていないと輪郭線は表示されません。これは style の既定値が `none` だからです。特筆すべき例外は `input` 要素で、ブラウザーが既定のスタイルを与えます。

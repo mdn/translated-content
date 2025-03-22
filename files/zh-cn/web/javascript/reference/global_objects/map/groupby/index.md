@@ -12,7 +12,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 
 该方法主要用于对与对象相关的元素进行分组，特别是当该对象可能随时间而变化时。如果对象不变，你可以使用字符串表示它，并使用 {{jsxref("Object.groupBy()")}} 分组元素。
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "shorter")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 语法
 
@@ -76,7 +94,7 @@ console.log(result.get(restock));
 // [{ name: "香蕉", type: "水果", quantity: 5 }]
 ```
 
-请注意，函数参数 `{ quantity }` 是[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数参数传递的对象中提取属性)的一个基本示例。这会解构作为参数传递的对象的 `quantity` 属性，并将其赋值给函数体中名为 `quantity` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
+请注意，函数参数 `{ quantity }` 是[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#从作为函数参数传递的对象中提取属性)的一个基本示例。这会解构作为参数传递的对象的 `quantity` 属性，并将其赋值给函数体中名为 `quantity` 的变量。这是一种非常简洁的访问函数中相关元素的值的方式。
 
 `Map` 的键在修改后仍可以使用。但是，你不能重新创建键并仍然使用它。因此，任何需要使用映射的内容都保留对其键的引用是非常重要的。
 

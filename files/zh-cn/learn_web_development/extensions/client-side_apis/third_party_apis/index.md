@@ -1,7 +1,6 @@
 ---
 title: 第三方 API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
@@ -40,7 +39,7 @@ l10n:
 让我们再来看看这个[简单的 Mapquest API 示例](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest)，并用它来说明第三方 API 接口与浏览器 API 接口的区别。
 
 > [!NOTE]
-> 你可能想要一次[获得所有的代码示例](/zh-CN/docs/Learn#获取代码示例)，在这种情况下，你可以在存储库中搜索来获取各部分中需要的示例文件。
+> 你可能想要一次[获得所有的代码示例](/zh-CN/docs/Learn_web_development#获取代码示例)，在这种情况下，你可以在存储库中搜索来获取各部分中需要的示例文件。
 
 ### 它们植根于第三方服务器
 
@@ -108,7 +107,7 @@ L.mapquest.key = "你的 API 密钥";
 
 让我们为 Mapquest 示例添加一些更多的功能，以展示如何使用 API 的其他功能。
 
-1. 首先，在一个新目录中创建 [Mapquest 入门文件](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html)的副本。如果你已经[克隆了示例代码库](/zh-CN/docs/Learn#获取代码示例)，你将已经拥有这个文件的副本：你可以在 _javascript/apis/third-party-apis/mapquest/start_ 目录中找到它。
+1. 首先，在一个新目录中创建 [Mapquest 入门文件](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html)的副本。如果你已经[克隆了示例代码库](/zh-CN/docs/Learn_web_development#获取代码示例)，你将已经拥有这个文件的副本：你可以在 _javascript/apis/third-party-apis/mapquest/start_ 目录中找到它。
 2. 接下来，你需要访问 [Mapquest 开发者网站](https://developer.mapquest.com/)，创建一个账户，然后创建一个开发者密钥来使用你的示例。（在编纂本文时，它在网站上被称为“consumer key”，密钥创建过程还要求提供一个可选的“callback URL”。现在你并不需要给出 URL，只需留空即可。）
 3. 打开你的起始文件，并用你的密钥替换 API 密钥占位符。
 
@@ -185,7 +184,7 @@ L.marker([53.480759, -2.242631], {
 
 1. 让我们请求一个文章搜索 API 的密钥——创建一个新应用，选择这个 API 作为你想要使用的 API（填写名称和描述，在“Article Search API”下切换开关到开启位置，然后点击“Create”）。
 2. 从结果页面获取 API 密钥。
-3. 现在，开始修改示例。先将 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) 目录中的所有文件复制一份。如果你已经[克隆了示例代码库](/zh-CN/docs/Learn#获取代码示例)，你将已经拥有这些文件的副本，可以在 _javascript/apis/third-party-apis/nytimes/start_ 目录中找到。最开始 `script.js` 文件会包含设置示例所需的一些变量；下面我们将填写所需的功能。
+3. 现在，开始修改示例。先将 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) 目录中的所有文件复制一份。如果你已经[克隆了示例代码库](/zh-CN/docs/Learn_web_development#获取代码示例)，你将已经拥有这些文件的副本，可以在 _javascript/apis/third-party-apis/nytimes/start_ 目录中找到。最开始 `script.js` 文件会包含设置示例所需的一些变量；下面我们将填写所需的功能。
 
 该应用程序最终允许你输入搜索词和可选的开始和结束日期，然后使用这些信息查询文章搜索 API 并显示搜索结果。
 
@@ -193,7 +192,7 @@ L.marker([53.480759, -2.242631], {
 
 ### 将 API 连接到你的应用程序
 
-首先，你需要在 API 和你的应用程序之间建立连接。在纽约时报文章搜索这个 API 的情况下，你需要每次从服务请求数据时都将 API 密钥作为 [get](/zh-CN/docs/Web/HTTP/Methods/GET) 参数包含在正确的 URL 中。
+首先，你需要在 API 和你的应用程序之间建立连接。在纽约时报文章搜索这个 API 的情况下，你需要每次从服务请求数据时都将 API 密钥作为 [get](/zh-CN/docs/Web/HTTP/Reference/Methods/GET) 参数包含在正确的 URL 中。
 
 1. 找到以下行：
 

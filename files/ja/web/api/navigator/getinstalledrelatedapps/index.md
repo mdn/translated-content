@@ -11,7 +11,7 @@ l10n:
 **`getInstalledRelatedApps()`** メソッドは、ユーザーがインストールしたプラットフォーム専用のアプリや[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)を表すオブジェクトの配列で解決するプロミスを返します。プラットフォーム専用のアプリや PWA がすでにインストールされている場合、ウェブアプリから「アプリをインストール」のバナーが除去されるなど、コンテンツの個人設定に使用することができます。
 
 > [!NOTE]
-> このメソッドは、最上位の[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)から呼び出す必要があります。つまり、{{htmlelement("iframe")}} に埋め込まれたところからは呼び出せません。
+> このメソッドは、最上位の[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)から呼び出す必要があります。つまり、{{htmlelement("iframe")}} に埋め込まれたところからは呼び出せません。
 
 ## 解説
 
@@ -19,7 +19,7 @@ l10n:
 
 呼び出しているウェブアプリをプラットフォーム専用のアプリまたは PWA と関連付けるには、次の 2 つのことを行う必要があります。
 
-1. 呼び出すウェブアプリは、[マニフェストファイル](/ja/docs/Web/Manifest) の [`related_applications`](/ja/docs/Web/Manifest/related_applications) メンバーで指定する必要があります。
+1. 呼び出すウェブアプリは、[マニフェストファイル](/ja/docs/Web/Progressive_web_apps/Manifest) の [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/related_applications) メンバーで指定する必要があります。
 2. プラットフォーム専用のアプリまたは PWA は、呼び出し元のアプリとの関係を定義する必要があります。
 
 関係を定義する方法は、アプリの機種によって異なります。
@@ -65,7 +65,7 @@ getInstalledRelatedApps()
 - `version` {{optional_inline}}
   - : 関連するアプリのバージョンを表す文字列です。
 
-関連するアプリの情報は、前回呼び出したウェブアプリの [マニフェストファイル](/ja/docs/Web/Manifest) のメンバーである [`related_applications`](/ja/docs/Web/Manifest/related_applications) に指定された情報である必要があります。
+関連するアプリの情報は、前回呼び出したウェブアプリの [マニフェストファイル](/ja/docs/Web/Progressive_web_apps/Manifest) のメンバーである [`related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/related_applications) に指定された情報である必要があります。
 
 ### 例外
 
