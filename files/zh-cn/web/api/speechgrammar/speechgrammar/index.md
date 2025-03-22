@@ -2,10 +2,10 @@
 title: SpeechGrammar：SpeechGrammar() 构造函数
 slug: Web/API/SpeechGrammar/SpeechGrammar
 l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+  sourceCommit: 706cbf21987296c604cc96b7f95095ed7aba6bb8
 ---
 
-{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 {{domxref("SpeechGrammar")}} 接口的 **`SpeechGrammar()`** 构造函数创建一个新的 `SpeechGrammar` 对象实例。
 
