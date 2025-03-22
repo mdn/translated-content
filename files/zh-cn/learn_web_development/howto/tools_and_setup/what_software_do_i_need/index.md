@@ -41,7 +41,7 @@ l10n:
 
 ## 动手练习
 
-_现在还没有动手练习的内容。[请考虑投稿](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
+_现在还没有动手练习的内容。[请考虑投稿](/zh-CN/docs/MDN/Community/Getting_started)。_
 
 ## 深度探索
 

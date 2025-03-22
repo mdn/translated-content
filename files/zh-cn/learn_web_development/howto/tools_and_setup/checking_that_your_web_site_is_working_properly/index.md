@@ -32,7 +32,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is
 
 ## 主动学习
 
-_当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/docs/MDN/Community/Contributing/Getting_started)_。
+_当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/docs/MDN/Community/Getting_started)_。
 
 ## 深入探索
 

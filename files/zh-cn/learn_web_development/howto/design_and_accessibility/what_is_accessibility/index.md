@@ -26,7 +26,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 
 ## 主动学习
 
-_还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
+_还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Getting_started)。_
 
 ## 深入探索
 

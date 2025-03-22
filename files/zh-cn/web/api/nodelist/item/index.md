@@ -36,7 +36,7 @@ var firstTable = tables.item(1); // 或者简写为 tables[1]，返回一个文�
 
 如果索引越界，该方法不会抛出异常，只会返回 `null`。
 
-`item()` 不是 DOM [元素](/zh-CN/docs/Web/API/element)或者 DOM 节点的方法，而是 NodeList 对象的方法。
+`item()` 不是 DOM [元素](/zh-CN/docs/Web/API/Element)或者 DOM 节点的方法，而是 NodeList 对象的方法。
 
 ### 规范
 
