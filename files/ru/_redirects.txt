@@ -812,6 +812,7 @@
 /ru/docs/Web/CSS/General_sibling_combinator	/ru/docs/Web/CSS/Subsequent-sibling_combinator
 /ru/docs/Web/CSS/General_sibling_selectors	/ru/docs/Web/CSS/Subsequent-sibling_combinator
 /ru/docs/Web/CSS/Inheritance	/ru/docs/Web/CSS/CSS_cascade/Inheritance
+/ru/docs/Web/CSS/Layout_mode	/ru/docs/Glossary/Layout_mode
 /ru/docs/Web/CSS/Media_Queries	/ru/docs/Web/CSS/CSS_media_queries
 /ru/docs/Web/CSS/Media_Queries/Testing_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ru/docs/Web/CSS/Media_Queries/Using_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries
@@ -824,6 +825,7 @@
 /ru/docs/Web/CSS/Syntax	/ru/docs/Web/CSS/CSS_syntax/Syntax
 /ru/docs/Web/CSS/Using_CSS_custom_properties	/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /ru/docs/Web/CSS/Using_CSS_variables	/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+/ru/docs/Web/CSS/Visual_formatting_model	/ru/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ru/docs/Web/CSS/actual_value	/ru/docs/Web/CSS/CSS_cascade/actual_value
 /ru/docs/Web/CSS/attr()	/ru/docs/Web/CSS/attr
 /ru/docs/Web/CSS/box_model	/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
@@ -844,7 +846,7 @@
 /ru/docs/Web/CSS/Замещаемый_элемент	/ru/docs/Web/CSS/CSS_images/Replaced_element_properties
 /ru/docs/Web/CSS/Псевдо-классы	/ru/docs/Web/CSS/Pseudo-classes
 /ru/docs/Web/CSS/Синтаксис	/ru/docs/Web/CSS/CSS_syntax/Syntax
-/ru/docs/Web/CSS/Способ_расположения	/ru/docs/Web/CSS/Layout_mode
+/ru/docs/Web/CSS/Способ_расположения	/ru/docs/Glossary/Layout_mode
 /ru/docs/Web/CSS/Тихий	/ru/docs/Web/CSS/CSS_syntax/Comments
 /ru/docs/Web/CSS/Указанное_значение	/ru/docs/Web/CSS/CSS_cascade/specified_value
 /ru/docs/Web/CSS/размер	/ru/docs/Web/CSS/length
@@ -881,7 +883,7 @@
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Using_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Stacking_without_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /ru/docs/Web/Guide/CSS/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-/ru/docs/Web/Guide/CSS/Visual_formatting_model	/ru/docs/Web/CSS/Visual_formatting_model
+/ru/docs/Web/Guide/CSS/Visual_formatting_model	/ru/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ru/docs/Web/Guide/CSS/ispolzovanie_css_animatciy	/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations
 /ru/docs/Web/Guide/HTML	/ru/docs/Learn_web_development/Core/Structuring_content
 /ru/docs/Web/Guide/HTML/Canvas_tutorial	/ru/docs/Web/API/Canvas_API/Tutorial

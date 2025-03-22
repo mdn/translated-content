@@ -1195,6 +1195,14 @@
       "Vovchikb6"
     ]
   },
+  "Glossary/Layout_mode": {
+    "modified": "2019-03-23T23:09:42.012Z",
+    "contributors": [
+      "idoru",
+      "BychekRU",
+      "ldone"
+    ]
+  },
   "Glossary/Loop": {
     "modified": "2020-02-28T13:59:22.366Z",
     "contributors": [
@@ -11536,6 +11544,21 @@
       "Radragon"
     ]
   },
+  "Web/CSS/CSS_display/Visual_formatting_model": {
+    "modified": "2019-09-20T10:50:10.502Z",
+    "contributors": [
+      "RomanBush",
+      "SphinxKnight",
+      "FlightBlaze",
+      "Chugou9",
+      "ZapevalovAnton",
+      "fmva",
+      "levi2ki",
+      "kapvik",
+      "hhharm",
+      "ViT09"
+    ]
+  },
   "Web/CSS/CSS_flexible_box_layout": {
     "modified": "2020-10-19T05:53:46.314Z",
     "contributors": [
@@ -11916,14 +11939,6 @@
       "domminik"
     ]
   },
-  "Web/CSS/Layout_mode": {
-    "modified": "2019-03-23T23:09:42.012Z",
-    "contributors": [
-      "idoru",
-      "BychekRU",
-      "ldone"
-    ]
-  },
   "Web/CSS/Next-sibling_combinator": {
     "modified": "2019-03-23T22:45:33.275Z",
     "contributors": [
@@ -11996,21 +12011,6 @@
     "modified": "2019-03-23T22:46:25.942Z",
     "contributors": [
       "BychekRU"
-    ]
-  },
-  "Web/CSS/Visual_formatting_model": {
-    "modified": "2019-09-20T10:50:10.502Z",
-    "contributors": [
-      "RomanBush",
-      "SphinxKnight",
-      "FlightBlaze",
-      "Chugou9",
-      "ZapevalovAnton",
-      "fmva",
-      "levi2ki",
-      "kapvik",
-      "hhharm",
-      "ViT09"
     ]
   },
   "Web/CSS/align-content": {

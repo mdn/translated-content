@@ -1,6 +1,7 @@
 ---
 title: Модель визуального форматирования
-slug: Web/CSS/Visual_formatting_model
+slug: Web/CSS/CSS_display/Visual_formatting_model
+original_slug: Web/CSS/Visual_formatting_model
 ---
 
 {{CSSRef}}
