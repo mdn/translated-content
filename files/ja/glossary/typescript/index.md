@@ -1,7 +1,9 @@
 ---
 title: TypeScript
 slug: Glossary/TypeScript
-page-type: glossary-definition
+l10n:
+  sourceCommit: 8005d92738cb5678d9b1e434f02ddebaa15c1eaa
+
 ---
 
 {{GlossarySidebar}}
