@@ -1,6 +1,7 @@
 ---
 title: rotate
-slug: Web/SVG/Attribute/rotate
+slug: Web/SVG/Reference/Attribute/rotate
+original_slug: Web/SVG/Attribute/rotate
 l10n:
   sourceCommit: 052d4c77d0346c43351c50de9ea5e834af365779
 ---

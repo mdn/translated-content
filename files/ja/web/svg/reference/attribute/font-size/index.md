@@ -1,6 +1,7 @@
 ---
 title: font-size
-slug: Web/SVG/Attribute/font-size
+slug: Web/SVG/Reference/Attribute/font-size
+original_slug: Web/SVG/Attribute/font-size
 l10n:
   sourceCommit: 892a7fb41030e07dfd8daaa57d874239be1ecc8a
 ---
