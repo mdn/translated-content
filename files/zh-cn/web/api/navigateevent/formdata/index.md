@@ -2,7 +2,7 @@
 title: NavigateEvent：formData 属性
 slug: Web/API/NavigateEvent/formData
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}

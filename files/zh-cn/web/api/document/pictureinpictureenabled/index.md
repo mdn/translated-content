@@ -2,7 +2,7 @@
 title: Document：pictureInPictureEnabled 属性
 slug: Web/API/Document/pictureInPictureEnabled
 l10n:
-  sourceCommit: 04ebe57066db2cff350018649bdb15b2a10c67ba
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Picture-in-Picture API")}}

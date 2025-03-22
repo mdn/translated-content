@@ -2,7 +2,7 @@
 title: HTMLVideoElement：requestPictureInPicture() 方法
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
 l10n:
-  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Picture-in-Picture API")}}
