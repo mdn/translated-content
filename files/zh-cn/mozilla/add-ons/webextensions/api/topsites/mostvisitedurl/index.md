@@ -29,7 +29,7 @@ l10n:
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.topSites`](https://developer.chrome.google.cn/docs/extensions/reference/api/topSites) API。
+> 此 API 基于 Chromium 的 [`chrome.topSites`](https://developer.chrome.google.cn/docs/extensions/reference/api/topSites) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

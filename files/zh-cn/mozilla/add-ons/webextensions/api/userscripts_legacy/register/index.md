@@ -14,7 +14,7 @@ l10n:
 
 该方法与 {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} API 方法非常相似（例如，它们都返回一个 Promise，且都会以一个具有 {{WebExtAPIRef("userScripts_legacy.RegisteredUserScript.unregister","unregister()")}} 方法（用于注销脚本）的 API 对象兑现）。但是，支持的选项有所区别。
 
-这是一个返回 {{JSxRef("Promise")}} 的异步方法。
+这是一个返回 {{JSxRef("Promise")}} 的异步函数。
 
 ## 语法
 

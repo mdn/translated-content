@@ -55,4 +55,4 @@ browser.permissions.onRemoved.addListener(handleRemoved);
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。
+> 此 API 基于 Chromium 的 [`chrome.permissions`](https://developer.chrome.google.cn/docs/extensions/reference/api/permissions) API。

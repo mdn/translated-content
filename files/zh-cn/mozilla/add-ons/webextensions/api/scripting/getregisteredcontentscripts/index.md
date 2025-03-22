@@ -70,4 +70,4 @@ console.log(scripts.map((script) => script.id)); // ["script-2"]
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-getRegisteredContentScripts) API。
+> 此 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-getRegisteredContentScripts) API。

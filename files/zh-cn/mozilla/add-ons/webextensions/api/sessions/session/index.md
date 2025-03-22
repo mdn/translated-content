@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.sessions`](https://developer.chrome.google.cn/docs/extensions/reference/api/sessions) API。
+> 此 API 基于 Chromium 的 [`chrome.sessions`](https://developer.chrome.google.cn/docs/extensions/reference/api/sessions) API。
 
 <!--
 //版权所有 2015 The Chromium Authors。版权所有。
