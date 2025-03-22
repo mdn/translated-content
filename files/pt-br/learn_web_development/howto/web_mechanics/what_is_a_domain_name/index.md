@@ -42,7 +42,7 @@ Qualquer computador conectado na Internet pode ser alcançado através de um end
 
 ## Active Learning
 
-_There is no active learning available yet. [Please, consider contributing](/pt-BR/docs/MDN/Community/Contributing/Getting_started)._
+_There is no active learning available yet. [Please, consider contributing](/pt-BR/docs/MDN/Community/Getting_started)._
 
 ## Deeper dive
 
