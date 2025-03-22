@@ -65,7 +65,7 @@ l10n:
 
 - **Reporting API を使用した CSP 違反報告:** `dom.reporting.enabled`。
 
-  [Content Security Policy (CSP)](/ja/docs/Web/HTTP/CSP) 違反の報告に [Reporting API](/ja/docs/Web/API/Reporting_API) が使用可能になりました。
+  [Content Security Policy (CSP)](/ja/docs/Web/HTTP/Guides/CSP) 違反の報告に [Reporting API](/ja/docs/Web/API/Reporting_API) が使用可能になりました。
   これは値が `"csp-violation"` である `type` プロパティと {{domxref('CSPViolationReportBody')}} のインスタンスである `body` プロパティを持つ {{domxref('Report')}} オブジェクト、{{httpheader('Content-Security-Policy')}} HTTP レスポンスヘッダーの {{CSP("report-to")}} ディレクティブ、{{httpheader('Reporting-Endpoints')}} HTTP レスポンスヘッダー、{{httpheader('Report-To')}} HTTP レスポンスヘッダーのサポートを含みます。
   この機能はデフォルトで無効です ([Firefox bug 1391243](https://bugzil.la/1391243))。
 

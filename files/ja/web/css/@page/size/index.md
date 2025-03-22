@@ -5,7 +5,7 @@ slug: Web/CSS/@page/size
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/ja/docs/Web/CSS) の **`size`** [アット規則](/ja/docs/Web/CSS/At-rule)記述子は、 {{cssxref("@page")}} アット規則で使用し、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。
+[CSS](/ja/docs/Web/CSS) の **`size`** [アット規則](/ja/docs/Web/CSS/CSS_syntax/At-rule)記述子は、 {{cssxref("@page")}} アット規則で使用し、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。
 
 寸法は「拡縮可能な」キーワード (この場合、ページの有効な大きさ全体を使用します) 又は絶対的な長さのどちらかで定義します。
 

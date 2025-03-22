@@ -38,45 +38,45 @@ l10n:
 > これらは、カスタム要素に既定のアクセシビリティ上の意味を定義できるようにするために取り込まれています。これらは作者が定義した属性によって上書きされる可能性がありますが、作者が属性を削除したり追加しなかったりした場合でも、既定の意味が保持されるようにします。詳しくは、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
 
 - {{domxref("ElementInternals.ariaAtomic")}}
-  - : [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性を反映した文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。
+  - : [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性を反映した文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。
 - {{domxref("ElementInternals.ariaAutoComplete")}}
-  - : [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性を反映した文字列で、テキスト入力が、コンボボックス、検索ボックス、またはテキストボックスに対するユーザーの意図する値の 1 つまたは複数の予測を表示するトリガーとなり得るかどうかを示し、予測が行われた場合にどのように表示されるかを指定します。
+  - : [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性を反映した文字列で、テキスト入力が、コンボボックス、検索ボックス、またはテキストボックスに対するユーザーの意図する値の 1 つまたは複数の予測を表示するトリガーとなり得るかどうかを示し、予測が行われた場合にどのように表示されるかを指定します。
 - {{domxref("ElementInternals.ariaBusy")}}
-  - : [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 属性を反映した文字列で、要素が変更されているかどうかを示すもので、支援技術はユーザーに公開する前に変更が完了するまで待ちたい場合があります。
+  - : [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) 属性を反映した文字列で、要素が変更されているかどうかを示すもので、支援技術はユーザーに公開する前に変更が完了するまで待ちたい場合があります。
 - {{domxref("ElementInternals.ariaChecked")}}
-  - : [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked) 属性を反映した文字列で、チェックボックス、ラジオボタン、その他のチェック状態を持つウィジェットの現在の「チェックされた」状態を示します。
+  - : [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 属性を反映した文字列で、チェックボックス、ラジオボタン、その他のチェック状態を持つウィジェットの現在の「チェックされた」状態を示します。
 - {{domxref("ElementInternals.ariaColCount")}}
-  - : [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッドの列数を定義します。
+  - : [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッドの列数を定義します。
 - {{domxref("ElementInternals.ariaColIndex")}}
-  - : [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスまたは位置を定義します。
+  - : [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスまたは位置を定義します。
 - {{domxref("ElementInternals.ariaColIndexText")}} {{experimental_inline}}
-  - : [`aria-colindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) 属性を反映した文字列で、aria-colindex の人間が読むための代替テキストを定義します。
+  - : [`aria-colindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) 属性を反映した文字列で、aria-colindex の人間が読むための代替テキストを定義します。
 - {{domxref("ElementInternals.ariaColSpan")}}
-  - : [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッド内のセルやグリッドセルにまたがる列の数を定義します。
+  - : [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッド内のセルやグリッドセルにまたがる列の数を定義します。
 - {{domxref("ElementInternals.ariaCurrent")}}
-  - : [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性を反映した文字列で、コンテナーや関連する要素の集合の中で、現在のアイテムを表す要素を表します。
+  - : [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性を反映した文字列で、コンテナーや関連する要素の集合の中で、現在のアイテムを表す要素を表します。
 - {{domxref("ElementInternals.ariaDescription")}}
   - : [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性を反映した文字列で、現在の ElementInternals を説明または注釈する文字列値を定義します。
 - {{domxref("ElementInternals.ariaDisabled")}}
-  - : [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) 属性を反映した文字列で、その要素が知覚可能であるが無効であり、編集やその他の操作ができないことを示します。
+  - : [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) 属性を反映した文字列で、その要素が知覚可能であるが無効であり、編集やその他の操作ができないことを示します。
 - {{domxref("ElementInternals.ariaExpanded")}}
   - : [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性を反映した文字列で、この要素が所有または制御するグループ化要素が展開されているか、折りたたまれているかを示します。
 - {{domxref("ElementInternals.ariaHasPopup")}}
   - : [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性を反映した文字列で、 ElementInternals によって起動される、メニューやダイアログのような操作可能なポップアップ要素の有無と種類を示します。
 - {{domxref("ElementInternals.ariaHidden")}}
-  - : [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性を反映した文字列で、その要素がアクセシビリティ API に公開されているかどうかを示します。
+  - : [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性を反映した文字列で、その要素がアクセシビリティ API に公開されているかどうかを示します。
 - {{domxref("ElementInternals.ariaKeyShortcuts")}}
   - : [`aria-keyshortcuts`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性を反映した文字列で、作者が ElementInternals をアクティブにしたりフォーカスを与えたりするために実装したキーボードショートカットを示します。
 - {{domxref("ElementInternals.ariaLabel")}}
-  - : [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を反映した文字列で、現在の ElementInternals にラベルを付ける文字列値を定義します。
+  - : [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を反映した文字列で、現在の ElementInternals にラベルを付ける文字列値を定義します。
 - {{domxref("ElementInternals.ariaLevel")}}
-  - : [`aria-level`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-level) 属性を反映した文字列で、構造内の要素の階層レベルを定義します。
+  - : [`aria-level`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) 属性を反映した文字列で、構造内の要素の階層レベルを定義します。
 - {{domxref("ElementInternals.ariaLive")}}
-  - : [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性を反映した文字列で、要素が更新されることを示し、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
+  - : [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性を反映した文字列で、要素が更新されることを示し、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
 - {{domxref("ElementInternals.ariaModal")}}
   - : [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) 属性を反映した文字列で、要素が表示されたときにモーダルであるかどうかを示します。
 - {{domxref("ElementInternals.ariaMultiline")}}
-  - : [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性を反映した文字列で、テキストボックスが複数行の入力を受け付けるか、 1 行のみの入力を受け付けるかを示します。
+  - : [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性を反映した文字列で、テキストボックスが複数行の入力を受け付けるか、 1 行のみの入力を受け付けるかを示します。
 - {{domxref("ElementInternals.ariaMultiSelectable")}}
   - : [`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性を反映した文字列で、ユーザーが現在の選択可能な子孫から複数のアイテムを選択できることを示します。
 - {{domxref("ElementInternals.ariaOrientation")}}
@@ -94,7 +94,7 @@ l10n:
 - {{domxref("ElementInternals.ariaRequired")}}
   - : [`aria-required`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性を反映した文字列で、これは、フォームを送信する前に、その要素でユーザー入力が必要であることを示します。
 - {{domxref("ElementInternals.role")}}
-  - : ARIA ロールを含む文字列です。 ARIA ロールの完全なリストは [ARIA 技術のページ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques)にあります。
+  - : ARIA ロールを含む文字列です。 ARIA ロールの完全なリストは [ARIA 技術のページ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques)にあります。
 - {{domxref("ElementInternals.ariaRoleDescription")}}
   - : [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性を反映した文字列で、要素のロールのための、人間が読める、作者がローカライズした説明を定義します。
 - {{domxref("ElementInternals.ariaRowCount")}}

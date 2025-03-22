@@ -26,7 +26,7 @@ _変更なし。_
 
 ### SVG
 
-- SVG フィルターで [`lighter` operator](/ja/docs/Web/SVG/Attribute/operator#fecomposite) を持つ {{SVGElement("feComposite")}} 要素が使用可能になりました ([Firefox バグ 1518099](https://bugzil.la/1518099))。operator は、2 つのソース画像のピクセルを加算します。
+- SVG フィルターで [`lighter` operator](/ja/docs/Web/SVG/Reference/Attribute/operator#fecomposite) を持つ {{SVGElement("feComposite")}} 要素が使用可能になりました ([Firefox バグ 1518099](https://bugzil.la/1518099))。operator は、2 つのソース画像のピクセルを加算します。
 
 ### CSS
 

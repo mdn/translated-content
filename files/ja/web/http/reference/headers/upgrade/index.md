@@ -58,7 +58,7 @@ Upgrade: example/1, foo/2
 
 サーバーは、 {{HTTPStatus("426")}} `Upgrade Required` レスポンスの一部としてこのヘッダーを送信することもあります。これはサーバーが現在のプロトコルではリクエストを実行しないが、プロトコルが変更されれば実行するかもしれないことを示すものです。クライアントは上記の手順でプロトコルの変更を要求することができます。
 
-より詳細な情報と例は、[プロトコルのアップグレードメカニズム](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism)に記載されています。
+より詳細な情報と例は、[プロトコルのアップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)に記載されています。
 
 ## 構文
 
@@ -104,7 +104,7 @@ Upgrade: websocket
 
 ## 関連情報
 
-- [プロトコルのアップグレードメカニズム](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [プロトコルのアップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - {{HTTPStatus("101")}} `Switching Protocol`
 - {{HTTPStatus("426")}} `Upgrade Required`
 - {{HTTPHeader("Connection")}}

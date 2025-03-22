@@ -10,7 +10,7 @@ l10n:
 **サブリソース完全性** (Subresource Integrity, SRI) は、（[CDN](/ja/docs/Glossary/CDN) などから）取得したリソースが意図せず改ざんされていないかをブラウザーが検証するセキュリティ機能です。 SRI を利用する際には、取得したリソースのハッシュ値と一致すべきハッシュ値を指定します。
 
 > [!NOTE]
-> サブリソース完全性の検証において、サブリソースが埋め込まれる文書のオリジン以外から提供されたリソースについては、ブラウザーは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を使用してリソースに追加のチェックを行い、オリジンがリソースがリクエストしたオリジンに共有されることを許可しているかどうかを確認します。
+> サブリソース完全性の検証において、サブリソースが埋め込まれる文書のオリジン以外から提供されたリソースについては、ブラウザーは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) を使用してリソースに追加のチェックを行い、オリジンがリソースがリクエストしたオリジンに共有されることを許可しているかどうかを確認します。
 
 ## サブリソース完全性の必要性
 
@@ -92,7 +92,7 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 
 ### オリジン間リソース共有とサブリソース完全性
 
-サブリソース完全性の検証において、サブリソースが埋め込まれる文書のオリジン以外から提供されたリソースについては、ブラウザーは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を使用してリソースに追加のチェックを行い、オリジンがリソースがリクエストしたオリジンに共有されることを許可しているかどうかを確認します。従って、次の例のように、リソースが要求されたオリジンに共有できるよう [`Access-Control-Allow-Origin`](/ja/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) ヘッダーを付けて提供する必要があります。
+サブリソース完全性の検証において、サブリソースが埋め込まれる文書のオリジン以外から提供されたリソースについては、ブラウザーは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) を使用してリソースに追加のチェックを行い、オリジンがリソースがリクエストしたオリジンに共有されることを許可しているかどうかを確認します。従って、次の例のように、リソースが要求されたオリジンに共有できるよう [`Access-Control-Allow-Origin`](/ja/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) ヘッダーを付けて提供する必要があります。
 
 ```http
 Access-Control-Allow-Origin: *
@@ -121,7 +121,7 @@ Access-Control-Allow-Origin: *
 
 1. ブラウザーは `integrity` 属性を持った {{HTMLElement("script")}} または {{HTMLElement("link")}} 属性を見つけると、スクリプトや {{HTMLElement("link")}} 属性で指定された任意のスタイルシートを適用する前に、`integrity` 属性のハッシュ値とスクリプトやスタイルシートのハッシュ値を比較しなくてはなりません。
 
-   サブリソース完全性の検証において、サブリソースが埋め込まれる文書のオリジン以外から提供されたリソースについては、ブラウザーは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を使用してリソースに追加のチェックを行い、オリジンがリソースがリクエストしたオリジンに共有されることを許可しているかどうかを確認します。
+   サブリソース完全性の検証において、サブリソースが埋め込まれる文書のオリジン以外から提供されたリソースについては、ブラウザーは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) を使用してリソースに追加のチェックを行い、オリジンがリソースがリクエストしたオリジンに共有されることを許可しているかどうかを確認します。
 
 2. スクリプトやスタイルシートが対応する `integrity` 属性値と一致しない場合、ブラウザーはスクリプトを実行したりスタイルシートを適用してはいけません。その代わりに、スクリプトやスタイルシートの取得が失敗したというネットワークエラーを返さなくてはなりません。
 
@@ -135,7 +135,7 @@ Access-Control-Allow-Origin: *
 
 ## 関連情報
 
-- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)
+- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)
 - HTTP の {{httpheader("Content-Security-Policy")}} ヘッダー
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederikbraun.de/using-subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)

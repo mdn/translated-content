@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-`path()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)接受 [SVG 路径](/zh-CN/docs/Web/SVG/Element/path)字符串作为参数，用于 [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)和[运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)模块中绘制形状。`path()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的值。它可以用于 CSS 的 [`offset-path`](/zh-CN/docs/Web/CSS/offset-path) 和 [`clip-path`](/zh-CN/docs/Web/CSS/clip-path) 属性，以及 SVG 的 [`d`](/zh-CN/docs/Web/SVG/Attribute/d) 属性。
+`path()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)接受 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Element/path)字符串作为参数，用于 [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)和[运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)模块中绘制形状。`path()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的值。它可以用于 CSS 的 [`offset-path`](/zh-CN/docs/Web/CSS/offset-path) 和 [`clip-path`](/zh-CN/docs/Web/CSS/clip-path) 属性，以及 SVG 的 [`d`](/zh-CN/docs/Web/SVG/Reference/Attribute/d) 属性。
 
 {{InteractiveExample("CSS Demo: path()")}}
 
@@ -62,14 +62,14 @@ path( [<fill-rule>,]? <string> )
 
 ### 参数
 
-- [`<fill-rule>`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
 
-  - : 可选值为 [`nonzero`](/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero)（默认值，当省略时）或 [`evenodd`](/zh-CN/docs/Web/SVG/Attribute/fill-rule#evenodd)，定义填充形状内部的规则。
+  - : 可选值为 [`nonzero`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule#nonzero)（默认值，当省略时）或 [`evenodd`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule#evenodd)，定义填充形状内部的规则。
     > **备注：** {{cssxref("offset-path")}} 不支持 `<fill-rule>` 值，使用它会使属性失效。
 
 - {{cssxref("string")}}
 
-  - : 用于定义 [SVG 路径](/zh-CN/docs/Web/SVG/Element/path)的[数据字符串](/zh-CN/docs/Web/SVG/Attribute/d)。该 `<string>` 的内容语法与 SVG 相同。
+  - : 用于定义 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Element/path)的[数据字符串](/zh-CN/docs/Web/SVG/Reference/Attribute/d)。该 `<string>` 的内容语法与 SVG 相同。
 
 ### 返回值
 
@@ -96,7 +96,7 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 
 ### 修改 SVG 路径 d 属性的值
 
-`path()` 可以用于修改 SVG 的 [`d` 属性](/zh-CN/docs/Web/SVG/Attribute/d)的值，该属性也可以在 CSS 中设置为 `none`。
+`path()` 可以用于修改 SVG 的 [`d` 属性](/zh-CN/docs/Web/SVG/Reference/Attribute/d)的值，该属性也可以在 CSS 中设置为 `none`。
 
 如果支持将 `d` 作为 CSS 属性，当你将鼠标悬停在“V”符号上面时，它会垂直翻转。
 

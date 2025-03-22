@@ -74,9 +74,9 @@ _変更なし。_
 
 ### HTTP
 
-- {{httpheader("Content-Security-Policy-Report-Only")}} で [`frame-ancestors`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) を無視しないようになりました ([Firefox バグ 1380755](https://bugzil.la/1380755))。
+- {{httpheader("Content-Security-Policy-Report-Only")}} で [`frame-ancestors`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) を無視しないようになりました ([Firefox バグ 1380755](https://bugzil.la/1380755))。
 - TLS ハンドシェイクのタイムアウトを Firefox に実装しました。既定値は 30 秒です。タイムアウト時間は、about:config の設定項目 `network.http.tls-handshake-timeout` で変更できます ([Firefox バグ 1393691](https://bugzil.la/1393691))。
-- [`worker-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/worker-src) CSP ディレクティブを実装しました ([Firefox バグ 1302667](https://bugzil.la/1302667))。
+- [`worker-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src) CSP ディレクティブを実装しました ([Firefox バグ 1302667](https://bugzil.la/1302667))。
 
 ### セキュリティ
 

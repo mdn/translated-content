@@ -22,9 +22,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("scrollend", (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onscrollend = (event) => {};
+onselectionchange = (event) => {};
 ```
 
 ## イベント型

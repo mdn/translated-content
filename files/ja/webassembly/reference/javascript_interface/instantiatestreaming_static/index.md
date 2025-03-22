@@ -9,8 +9,8 @@ original_slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 **`WebAssembly.instantiateStreaming()`** 関数は、ソースのストリームから直接 WebAssembly モジュールをコンパイルしてインスタンス化します。これは、 wasm コードをロードするための最も効率的で最適な方法です。
 
 > [!NOTE]
-> 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
-> WebAssembly のコンパイルと実行を許可することについての詳しい情報は、 [CSP の script-src](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) を参照してください。
+> 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
+> WebAssembly のコンパイルと実行を許可することについての詳しい情報は、 [CSP の script-src](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) を参照してください。
 
 ## 構文
 
@@ -23,19 +23,19 @@ WebAssembly.instantiateStreaming(source, importObject)
 - `source`
   - : [`Response`](/ja/docs/Web/API/Response) オブジェクト、またはそれで解決するプロミスで、コンパイルしてインスタンス化する .wasm モジュールのソースを表します。
 - `importObject` {{optional_inline}}
-  - : 関数や [`WebAssembly.Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) オブジェクトなど、新しく生成される `Instance` にインポートされる値を持つオブジェクト。コンパイルされたモジュールの宣言されたインポートそれぞれに対応するプロパティが存在する必要があります。そうでない場合、[`WebAssembly.LinkError`](/ja/docs/WebAssembly/JavaScript_interface/LinkError) が発生します。
+  - : 関数や [`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトなど、新しく生成される `Instance` にインポートされる値を持つオブジェクト。コンパイルされたモジュールの宣言されたインポートそれぞれに対応するプロパティが存在する必要があります。そうでない場合、[`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError) が発生します。
 
 ### 返値
 
 `Promise` で、次の 2 つのフィールドを持つ `ResultObject` で解決します。
 
-- `module`: コンパイルされた [`WebAssembly.Module`](/ja/docs/WebAssembly/JavaScript_interface/Module) オブジェクト。この `Module` は再度インスタンス化することや、[postMessage()](/ja/docs/Web/API/Worker/postMessage) 経由で共有することができます。
-- `instance`: [`WebAssembly.Instance`](/ja/docs/WebAssembly/JavaScript_interface/Instance) オブジェクトで、すべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)を含みます。
+- `module`: コンパイルされた [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクト。この `Module` は再度インスタンス化することや、[postMessage()](/ja/docs/Web/API/Worker/postMessage) 経由で共有することができます。
+- `instance`: [`WebAssembly.Instance`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance) オブジェクトで、すべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を含みます。
 
 ### 例外
 
 - いずれかの引数が正しい型または構造でない場合、{{jsxref("TypeError")}} が発生します。
-- 失敗した場合、プロミスは失敗の原因に応じて [`WebAssembly.CompileError`](/ja/docs/WebAssembly/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/ja/docs/WebAssembly/JavaScript_interface/LinkError)、[`WebAssembly.RuntimeError`](/ja/docs/WebAssembly/JavaScript_interface/RuntimeError) をもって拒否されます。
+- 失敗した場合、プロミスは失敗の原因に応じて [`WebAssembly.CompileError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/LinkError)、[`WebAssembly.RuntimeError`](/ja/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) をもって拒否されます。
 
 ## 例
 
@@ -67,5 +67,5 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

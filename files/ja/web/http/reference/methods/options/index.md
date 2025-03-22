@@ -66,7 +66,7 @@ Server: EOS (lax004/2813)
 
 ### CORS でのプリフライトリクエスト
 
-[CORS](/ja/docs/Web/HTTP/CORS) では、[プリフライトリクエスト](/ja/docs/Glossary/Preflight_request)を `OPTIONS` メソッドで送信すると、サーバーはリクエストを送信して受け付けられるかどうかを応答できるようにします。下記の例では、次の引数に対する許可を要求します。
+[CORS](/ja/docs/Web/HTTP/Guides/CORS) では、[プリフライトリクエスト](/ja/docs/Glossary/Preflight_request)を `OPTIONS` メソッドで送信すると、サーバーはリクエストを送信して受け付けられるかどうかを応答できるようにします。下記の例では、次の引数に対する許可を要求します。
 
 - プリフライトリクエストで送信される {{HTTPHeader("Access-Control-Request-Method")}} ヘッダーは、実際のリクエストを送信する際に、リクエストメソッドが {{HTTPMethod("POST")}} であることをサーバに知らせます。
 - {{HTTPHeader("Access-Control-Request-Headers")}} ヘッダーは、実際のリクエスト送信時に `X-PINGOTHER` と `Content-Type` ヘッダーを持つことをサーバーに知らせます。
@@ -88,7 +88,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : `https://foo.example` のオリジンは、以下の方法で `bar.example/resources/post-here/` の URL をリクエストすることが許可されています。
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
-  - : {{HTTPMethod("POST")}}, {{HTTPMethod("GET")}}, `OPTIONS` がその URL で許可されているメソッドです。（このヘッダーは {{HTTPHeader("Allow")}} レスポンスヘッダーに似ていますが、[CORS](/ja/docs/Web/HTTP/CORS) でのみ使用します。）
+  - : {{HTTPMethod("POST")}}, {{HTTPMethod("GET")}}, `OPTIONS` がその URL で許可されているメソッドです。（このヘッダーは {{HTTPHeader("Allow")}} レスポンスヘッダーに似ていますが、[CORS](/ja/docs/Web/HTTP/Guides/CORS) でのみ使用します。）
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : レスポンスを検査するスクリプトは `X-PINGOTHER` と `Content-Type` ヘッダーの値を読み取ることが許可されます。
 - {{HTTPHeader("Access-Control-Max-Age")}}
@@ -118,4 +118,4 @@ Connection: Keep-Alive
 ## 関連情報
 
 - {{HTTPHeader("Allow")}} ヘッダー
-- [CORS](/ja/docs/Web/HTTP/CORS)
+- [CORS](/ja/docs/Web/HTTP/Guides/CORS)

@@ -147,4 +147,4 @@ th {
 ## 関連情報
 
 - {{cssxref("border-collapse")}}
-- [表のスタイル付け](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [表のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)

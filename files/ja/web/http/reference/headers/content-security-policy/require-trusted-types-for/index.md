@@ -10,7 +10,7 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`require-trusted-types-for`** {{experimental_inline}} ディレクティブは、 {{DOMxRef("Element.innerHTML")}} セッターのような DOM XSS シンク関数に渡されるデータを制御するように、ユーザーエージェントに指示します。
 
-使用された場合、これらの関数は Trusted Type ポリシーによって作成された、なりすましできない、型付きの値のみを受け入れ、文字列は拒否します。これは Trusted Type ポリシーの作成を保護する **[`trusted-types`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)** ディレクティブと一緒に、DOM への値の書き込みを保護するルールを定義し、ウェブアプリケーションコードベースの小さく孤立した部分に DOM XSS 攻撃表面を削減し、監視とコードレビューを容易にすることができるようにしました。
+使用された場合、これらの関数は Trusted Type ポリシーによって作成された、なりすましできない、型付きの値のみを受け入れ、文字列は拒否します。これは Trusted Type ポリシーの作成を保護する **[`trusted-types`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)** ディレクティブと一緒に、DOM への値の書き込みを保護するルールを定義し、ウェブアプリケーションコードベースの小さく孤立した部分に DOM XSS 攻撃表面を削減し、監視とコードレビューを容易にすることができるようにしました。
 
 ## 構文
 

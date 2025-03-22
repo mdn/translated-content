@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一つの色を表します。
+**`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、一つの色を表します。
 `<color>` は[アルファチャネル](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB)の*透過値*を含むことがあり、この色を背景とどれだけ[混合](https://www.w3.org/TR/compositing-1/#simplealphacompositing)するかを示すこともできます。
 
 > **メモ:** `<color>` の色は詳細に定義されていますが、出力機器によって（時には著しく）違って見えるかもしれません。出力機器の大半は色補正がされておらず、ブラウザーによっては出力機器の[色プロファイル](https://ja.wikipedia.org/wiki/ICC%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)に対応していないからです。
@@ -113,7 +113,7 @@ background-color: hsl(0deg 100% 50%);
 
 色の補間は[グラデーション](/ja/docs/Web/CSS/gradient)、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)で発生します。
 
-`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/computed_value)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/easing-function)で定められます。
+`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/easing-function)で定められます。
 補間色空間の既定値は Oklab ですが、一部の色関連の関数記法では {{CSSXref("&lt;color-interpolation-method&gt;")}} で上書きできます。
 
 ### 成分が欠落した補間
@@ -190,7 +190,7 @@ color(display-p3 0.7 0.5 none)
 
 ## アクセシビリティの考慮
 
-色を見分けることが難しい人がいます。 [WCAG 2.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)をご覧ください。
+色を見分けることが難しい人がいます。 [WCAG 2.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) 勧告では、色を特定のメッセージ、動作、結果を伝える唯一の手段として使用することを避けるよう強く勧告しています。詳しくは[色と色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)をご覧ください。
 
 ## 形式文法
 

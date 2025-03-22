@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-**`hypot()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions) は、各引数の 2 乗の合計値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返す指数関数です。
+**`hypot()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は、各引数の 2 乗の合計値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返す指数関数です。
 
-{{CSSxRef("pow")}} と {{CSSxRef("sqrt")}} は単位のない数値のみを扱いますが、`hypot()` は単位を持つ値を受け入れます。ただし、すべての値は同じ[型](/ja/docs/Web/CSS/CSS_Types)である必要があります。
+{{CSSxRef("pow")}} と {{CSSxRef("sqrt")}} は単位のない数値のみを扱いますが、`hypot()` は単位を持つ値を受け入れます。ただし、すべての値は同じ[型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)である必要があります。
 
 ## 構文
 
@@ -59,7 +59,7 @@ width: hypot(3px, 4px, 5px); /* 7.0710678118654755px */
 
 #### CSS
 
-ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
+ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
 
 - `--size-1` は、`--size-0` (100px) の斜辺の長さとして計算されます。値は 2 乗され、他に値がないためその平方根が返され、結果は 100px になります。
 - `--size-2` は、2 つの `--size-0` (100px) の斜辺の長さとして計算されます。値は 2 乗され (100px \* 100px = 10000px<sup>2</sup>)、それに再び `--size-0` の 2 乗が加算され (10000px<sup>2</sup> + 10000px<sup>2</sup> = 20000px<sup>2</sup>)、その合計値の平方根 (√(20000px<sup>2</sup>)) が返され、結果は 141.42px になります。

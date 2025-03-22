@@ -168,4 +168,4 @@ input.studentid:placeholder-shown {
 
 - {{CSSxRef("::placeholder")}} 擬似要素はプレイスホルダー*自身*にスタイルを適用します。
 - 関連する HTML 要素: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)

@@ -16,7 +16,7 @@ original_slug: Web/HTTP/Methods/PATCH
 
 `PATCH` は（{{HTTPMethod("PUT")}} のように）他のリソースに対して副作用が発生する<em>場合があります</em>。
 
-サーバーが `PATCH` に対応しているかどうかを調べるために、サーバーは {{HTTPHeader("Allow")}} または {{HTTPHeader("Access-Control-Allow-Methods")}} （[CORS](/ja/docs/Web/HTTP/CORS) の場合）レスポンスヘッダーのリストに追加することで対応状況を知らせることができます。
+サーバーが `PATCH` に対応しているかどうかを調べるために、サーバーは {{HTTPHeader("Allow")}} または {{HTTPHeader("Access-Control-Allow-Methods")}} （[CORS](/ja/docs/Web/HTTP/Guides/CORS) の場合）レスポンスヘッダーのリストに追加することで対応状況を知らせることができます。
 
 `PATCH` が許可されていることを示すもう1つの（暗黙の）識別方法は、サーバーが受け付けるパッチ文書の形式を指定する {{HTTPHeader("Accept-Patch")}} があることです。
 

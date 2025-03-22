@@ -42,4 +42,4 @@ console.log(el.ariaRoleDescription); // "an updated description of this widget"
 
 {{Compat}}
 
-- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)

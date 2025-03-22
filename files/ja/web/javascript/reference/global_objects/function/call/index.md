@@ -175,4 +175,4 @@ display.call(); // undefined の 'sData' のプロパティは読めない
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [オブジェクト指向 JavaScript 入門](/ja/docs/Learn/JavaScript/Objects)
+- [オブジェクト指向 JavaScript 入門](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

@@ -144,11 +144,11 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 ## 関連情報
 
 - [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)
-- [ARIA: radio ロール](/ja/docs/Web/Accessibility/ARIA/Roles/radio_role)
+- [ARIA: radio ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
 - [ARIA: menuitem ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
 - [ARIA: menuitemcheckbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)
 - [ARIA: menuitemradio ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
-- [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Roles/switch_role)
-- [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [ARIA: switch ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
+- [ARIA: option ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

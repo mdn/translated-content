@@ -29,7 +29,7 @@ l10n:
 
    - {{htmlelement("summary")}} 由其所嵌套的 {{htmlelement("details")}} 的内容描述。
    - {{htmlelement("input")}} 按钮（带有 `button`、`submit` 或 `reset` 类型属性）由其 `value` 属性的值描述。
-   - 在 SVG 中，如果存在 [`<desc>`](/zh-CN/docs/Web/SVG/Element/desc) 元素，则由其内容描述；否则如果其后代文本容器元素（即 [`<text>`](/zh-CN/docs/Web/SVG/Element/text)）中的文本尚未被用于{{glossary("accessible name", "无障碍名称")}}，则由这些文本描述。
+   - 在 SVG 中，如果存在 [`<desc>`](/zh-CN/docs/Web/SVG/Reference/Element/desc) 元素，则由其内容描述；否则如果其后代文本容器元素（即 [`<text>`](/zh-CN/docs/Web/SVG/Reference/Element/text)）中的文本尚未被用于{{glossary("accessible name", "无障碍名称")}}，则由这些文本描述。
 
 4. 如果以上的规则都没有满足，那么在 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 不是该元素的{{glossary("accessible name", "无障碍名称")}}的时候将采用这个属性作为元素的无障碍描述。
 

@@ -268,6 +268,6 @@ some-element::after {
 
 ## 関連情報
 
-- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/Specificity)が 0 です。
+- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が 0 です。
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Reference/Roles/gridcell_role
 original_slug: Web/Accessibility/ARIA/Roles/gridcell_role
 ---
 
-[グリッドセル (gridcell) ロール](https://www.w3.org/TR/wai-aria-1.1/#gridcell)は、グリッド ([grid](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role)) やツリーグリッド ([treegrid](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_role)) にセルを作成するために使用します。 これは、情報を表スタイルでグループ化する [HTML の `td` 要素](/ja/docs/Web/HTML/Element/td)の機能を模倣することを意図しています。
+[グリッドセル (gridcell) ロール](https://www.w3.org/TR/wai-aria-1.1/#gridcell)は、グリッド ([grid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) やツリーグリッド ([treegrid](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_role)) にセルを作成するために使用します。 これは、情報を表スタイルでグループ化する [HTML の `td` 要素](/ja/docs/Web/HTML/Element/td)の機能を模倣することを意図しています。
 
 ```html
 <div role="gridcell">Potato</div>
@@ -12,7 +12,7 @@ original_slug: Web/Accessibility/ARIA/Roles/gridcell_role
 <div role="gridcell">Onion</div>
 ```
 
-`role="gridcell"` が適用されている要素は、行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)) ロールを持つ要素の子である必要があります。
+`role="gridcell"` が適用されている要素は、行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)) ロールを持つ要素の子である必要があります。
 
 ```html
 <div role="row">
@@ -37,7 +37,7 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 
 `role="gridcell"` が適用されている要素は、表、グリッド、またはツリーグリッドに行や列を動的に追加、非表示、または削除する機能がある場合、ARIA を使用して表スタイルのグループ化における順序を説明する必要があります。
 
-`aria-colindex` を使用して、列の並びでのグリッドセル (`gridcell`) の順序を説明し、`aria-rowindex` を使用して、行の並びでのグリッドセルの順序を説明します。 [`role="grid"`](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role) が適用された親要素で `aria-colcount` と `aria-rowcount` を使用して、列または行の総数を設定します。
+`aria-colindex` を使用して、列の並びでのグリッドセル (`gridcell`) の順序を説明し、`aria-rowindex` を使用して、行の並びでのグリッドセルの順序を説明します。 [`role="grid"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) が適用された親要素で `aria-colcount` と `aria-rowcount` を使用して、列または行の総数を設定します。
 
 次のサンプルコードは、3 番目と 4 番目の列が削除された情報の表スタイルでのグループ化を示しています。 `aria-colindex` は行の位置を説明するために使用されており、支援技術を使用している人が特定の行が削除されたことを推測できるようにします。
 
@@ -150,13 +150,13 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 ## 関連情報
 
 - [表要素](/ja/docs/Web/HTML/Element/table)
-- [ARIA: grid ロール](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role)
+- [ARIA: grid ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
 - [Grid Role - Maxability](http://www.maxability.co.in/wai-aria-overview/grid-role/)
 - [表の行要素](/ja/docs/Web/HTML/Element/tr)
-- [ARIA: row ロール](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)
+- [ARIA: row ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [Row Role - Maxability](http://www.maxability.co.in/wai-aria-overview/row-role/)
 - [aria-rowcount - Maxability](http://www.maxability.co.in/2018/09/aria-rowcount-property/)
-- [ARIA: rowgroup ロール](/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
+- [ARIA: rowgroup ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
 - [Rowgroup Role - Maxability](http://www.maxability.co.in/wai-aria-overview/rowgroup-role/)
 - [表のヘッダー要素](/ja/docs/Web/HTML/Element/th)
 - [Columnheader - Maxability](http://www.maxability.co.in/wai-aria-overview/columnheader-role/)
@@ -165,4 +165,4 @@ ARIA の第一のルールは、ネイティブな HTML の要素や属性に必
 - [gridcell: Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/#gridcell)
 - [Gridcell Role - Maxability](http://www.maxability.co.in/wai-aria-overview/gridcell-role/)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

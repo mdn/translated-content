@@ -16,7 +16,7 @@ original_slug: Web/XML/Parsing_and_serializing_XML
   - : XML を含む文字列を解析して DOM ツリーを構築し、入力データに基づいて適切な {{domxref("XMLDocument")}} または {{domxref("Document")}} を返します。
 - {{domxref("XMLHttpRequest")}}
   - : URL からコンテンツを読み込みます。XML コンテンツは、XML 自体から構築された DOM ツリーを持つ XML {{domxref("Document")}} オブジェクトとして返されます。
-- [XPath](/ja/docs/Web/XPath)
+- [XPath](/ja/docs/Web/XML/XPath)
   - : XML 文書の特定の部分のアドレスを含む文字列を作成し、それらのアドレスに基づいて XML ノードを特定する技術。
 
 ## XML 文書を作成する
@@ -103,6 +103,6 @@ const docOuterHtml = document.documentElement.outerHTML;
 
 ## 関連項目
 
-- [XPath](/ja/docs/Web/XPath)
+- [XPath](/ja/docs/Web/XML/XPath)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("Document")}}, {{domxref("XMLDocument")}} および {{domxref("HTMLDocument")}}
