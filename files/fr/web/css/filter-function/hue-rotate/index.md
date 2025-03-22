@@ -69,12 +69,12 @@ hue-rotate(405deg);  /* Correspond à une rotation de 45deg */
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
-  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
-  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
-  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
-  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
-  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
-  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
-  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
-  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)
+  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
+  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
+  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
+  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
+  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
+  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
+  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
+  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
+  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)

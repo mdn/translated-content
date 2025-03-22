@@ -177,4 +177,4 @@ div {
 
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`rotate3d()`](</fr/docs/Web/CSS/transform-function/rotate3d()>)
+- [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d)

@@ -108,7 +108,7 @@ input.number {
 
 Il y a deux manières de définir un bouton dans un formulaire HTML&nbsp;:
 
-- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/Web/HTML/Element/Input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
+- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/Web/HTML/Element/input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
 - un élément {{HTMLElement("button")}}
 
 L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément&nbsp;:

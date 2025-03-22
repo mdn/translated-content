@@ -75,7 +75,7 @@ copie.length = 1;
 
 ## Voir aussi
 
-- [La propriété interne `[[Configurable]]`](/fr/docs/Web/JavaScript/Structures_de_données#Propriétés)
+- [La propriété interne `[[Configurable]]`](/fr/docs/Web/JavaScript/Data_structures#Propriétés)
 - {{jsxref("Array.length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

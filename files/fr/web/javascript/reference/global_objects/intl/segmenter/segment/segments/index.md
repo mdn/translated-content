@@ -13,7 +13,7 @@ Une instance **`Intl.Segments`** est une collection itérable des segments d'une
 
 - [`Segments.prototype.containing()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing)
   - : Renvoie un objet décrivant le segment de la chaîne de caractères originale qui contient le codet situé à l'indice passé en argument.
-- [`Segments.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator)
+- [`Segments.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator)
   - : Renvoie un itérateur permettant de parcourir les segments.
 
 ## Spécifications

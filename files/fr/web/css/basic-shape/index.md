@@ -147,7 +147,7 @@ Les valeurs d'une fonction `<basic-shape>` sont calculées comme indiqué, avec 
 
 ## L'interpolation des formes simples
 
-Afin d'obtenir une interpolation entre deux formes simples, il faut que les règles qui suivent soient respectées. Les valeurs des argument des fonctions de formes sont interpolées comme une liste simple. Les valeurs de la liste sont interpolées comme [des longueurs](/fr/docs/Web/CSS/length), [des pourcentages](/fr/docs/Web/CSS/percentage) ou [des valeurs calculées](</fr/docs/Web/CSS/calc()>) lorsque c'est possible. Si les valeurs de la liste ne sont pas de ces types mais sont identiques, ces valeurs seront interpolées.
+Afin d'obtenir une interpolation entre deux formes simples, il faut que les règles qui suivent soient respectées. Les valeurs des argument des fonctions de formes sont interpolées comme une liste simple. Les valeurs de la liste sont interpolées comme [des longueurs](/fr/docs/Web/CSS/length), [des pourcentages](/fr/docs/Web/CSS/percentage) ou [des valeurs calculées](/fr/docs/Web/CSS/calc) lorsque c'est possible. Si les valeurs de la liste ne sont pas de ces types mais sont identiques, ces valeurs seront interpolées.
 
 - Les deux formes doivent partager la même boîte de référence.
 - Si les deux formes sont du même type et que ce type est `ellipse()` ou `circle()`, qu'aucun des rayons n'utilise les mots-clés `closest-side` ou `farthest-side`, on aura une interpolation entre chaque valeur.

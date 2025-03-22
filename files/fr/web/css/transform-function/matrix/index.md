@@ -131,5 +131,5 @@ p {
 
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`matrix3d()`](</fr/docs/Web/CSS/transform-function/matrix3d()>)
+- [`matrix3d()`](/fr/docs/Web/CSS/transform-function/matrix3d)
 - [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

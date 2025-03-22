@@ -91,7 +91,7 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 ## Propriétés
 
 - {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : Le nombre de fois que [`handlerBehaviorChanged()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) peut être appelé dans une période de 10 minutes.
+  - : Le nombre de fois que [`handlerBehaviorChanged()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged) peut être appelé dans une période de 10 minutes.
 
 ## Méthodes
 

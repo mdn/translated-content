@@ -294,7 +294,7 @@ body {
 
 Les rangées de trame de 100 pixels de haut ne seront pas très utiles si nous y plaçons des contenus de plus de 100 pixels de haut&nbsp;: il y aurait alors débordement. Il est préférable d'avoir des pistes d'_au moins_ 100 pixels de haut, mais susceptibles de s'agrandir si le contenu déposé le nécessite. C'est un constat classique à propos du web&nbsp;: vous ne savez jamais vraiment quelle sera la hauteur d'un élément — du contenu supplémentaire ou des tailles de police plus grandes peuvent amener des problèmes avec des designs en pixels visant la perfection dans toute dimension.
 
-La fonction [`minmax()`](</fr/docs/Web/CSS/minmax()>) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
+La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
 
 ```css
 .container {
@@ -309,7 +309,7 @@ Si vous ajoutez du contenu supplémentaire, vous verrez que la trame grandit pou
 
 ### Autant de chaînes que possible
 
-Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](</fr/docs/Web/CSS/minmax()>) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](</fr/docs/Web/CSS/repeat()>) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
+Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](/fr/docs/Web/CSS/minmax) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](/fr/docs/Web/CSS/repeat) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
 
 Essayez ceci dans le fichier avec la CSS ci-dessous&nbsp;:
 

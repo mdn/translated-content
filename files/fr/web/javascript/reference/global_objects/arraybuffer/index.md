@@ -18,7 +18,7 @@ Le constructeur [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objec
 
 ## Propriétés statiques
 
-- [`get ArrayBuffer[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species)
+- [`get ArrayBuffer[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : La fonction de construction utilisée pour créer des objets dérivés.
 
 ## Méthodes statiques

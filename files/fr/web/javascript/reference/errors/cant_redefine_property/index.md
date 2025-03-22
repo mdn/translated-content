@@ -45,5 +45,5 @@ Object.defineProperty(obj, "toto", { value: "bidule", configurable: true });
 
 ## Voir aussi
 
-- [\[\[Configurable\]\]](/fr/docs/Web/JavaScript/Structures_de_données#Propriétés)
+- [\[\[Configurable\]\]](/fr/docs/Web/JavaScript/Data_structures#Propriétés)
 - {{jsxref("Object.defineProperty()")}}

@@ -193,7 +193,7 @@ Dans ce cas, les résultats de `var(--test)` seront :
 
 Gardez à l'esprit qu'il s'agit de propriétés personnalisées et non de propriétés personnalisées réelles. La valeur est calculée là où elle est nécessaire, non stockée pour être utilisée dans d'autres règles. Par exemple, vous ne pouvez pas définir une propriété pour un élément et espérer l'extraire dans la règle du descendant d'un frère. La propriété est uniquement définie pour le sélecteur correspondant et ses descendants, comme tout CSS normal.
 
-Avec [`var()`](</fr/docs/Web/CSS/var()>) on peut définir plusieurs valeurs par défaut lorsque la variable donnée n'est pas définie. Cela peut s'avérer utile lorsqu'on travaille avec des éléments personnalisés (_Custom Elements_) et le _Shadow DOM_.
+Avec [`var()`](/fr/docs/Web/CSS/var) on peut définir plusieurs valeurs par défaut lorsque la variable donnée n'est pas définie. Cela peut s'avérer utile lorsqu'on travaille avec des éléments personnalisés (_Custom Elements_) et le _Shadow DOM_.
 
 Le premier argument passé à la fonction est le nom de la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) qui doit être substituée. Le deuxième argument, s'il est fourni, indique la valeur par défaut qui est utilisée lorsque la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property) en question est invalide.
 

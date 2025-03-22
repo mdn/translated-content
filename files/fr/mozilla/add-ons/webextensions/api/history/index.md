@@ -38,7 +38,7 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mo
 ## Fonctions
 
 - {{WebExtAPIRef("history.search()")}}
-  - : Recherche dans l'historique du navigateur les objets [`history.HistoryItem`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/History/HistoryItem) correspondant aux critères donnés.
+  - : Recherche dans l'historique du navigateur les objets [`history.HistoryItem`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) correspondant aux critères donnés.
 - {{WebExtAPIRef("history.getVisits()")}}
   - : Récupère des informations sur les visites sur une page donnée.
 - {{WebExtAPIRef("history.addUrl()")}}

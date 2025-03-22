@@ -23,7 +23,7 @@ Pour les pages de niveau supérieur, vous pourrez voir la liste des pages dans l
 
 Pour des raisons de sécurité, l'objet `History` n'autorise pas l'accès au URL d'autres pages présentes dans l'historique de la session mais autorise d'y naviguer.
 
-Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode [location.replace()](/fr/docs/Web/API/window/location#replace), permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.
+Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode [location.replace()](/fr/docs/Web/API/Window/location#replace), permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.
 
 ## Spécifications
 

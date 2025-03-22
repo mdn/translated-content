@@ -37,7 +37,7 @@ transform: skewX(0.352rad);
 
 La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-`skewX(a)` est équivalent à [`skew(a)`](</fr/docs/Web/CSS/transform-function/skew()>).
+`skewX(a)` est équivalent à [`skew(a)`](/fr/docs/Web/CSS/transform-function/skew).
 
 ## Syntaxe
 
