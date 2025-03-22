@@ -17,7 +17,7 @@ slug: Web/Performance
 
 ## 초보자를 위한 튜토리얼
 
-MDN의 [웹 성능 학습 안내서](/ko/docs/Learn/Performance)에는 웹 성능의 필수 개념들에 대한 최신 튜토리얼들이 있습니다. 웹 성능의 세계에 막 발을 들여놓았다면 여기에서 시작하세요.
+MDN의 [웹 성능 학습 안내서](/ko/docs/Learn_web_development/Extensions/Performance)에는 웹 성능의 필수 개념들에 대한 최신 튜토리얼들이 있습니다. 웹 성능의 세계에 막 발을 들여놓았다면 여기에서 시작하세요.
 
 - [웹 성능: 개요](/ko/docs/Learn/Performance/What_is_web_performance)
   - : 본격적으로 웹 성능에 대해 배우기 전 내용을 전반적으로 살펴봅니다. 여기에서 여정을 시작하세요.
@@ -25,11 +25,11 @@ MDN의 [웹 성능 학습 안내서](/ko/docs/Learn/Performance)에는 웹 성�
   - : 이 글에서는 성능이란 어떤 것인지에 대해 자세히 살펴보면서 전체 모듈을 시작합니다. 성능에 관해 생각할 때 고려해야 할 도구나 지표, API, 네트워크, 사용자 그룹, 그리고 성능을 웹 개발 과정의 일부로 포함시키는 방법에 대해 다룹니다.
 - [사용자는 성능을 어떻게 인지하는가?](/ko/docs/Learn/Performance/Perceived_performance)
   - : 웹사이트를 사용자가 주관적으로 얼마나 빠르다고 인식하는지가 실제 몇 ms 단위로 빠른지보다 중요합니다. 사용자의 주관적 인식은 실제 페이지 로딩 시간, 유휴 시간, 사용자의 상호작용에 대한 응답성, 스크롤 및 기타 애니메이션들이 얼마나 부드러운가에 의해 영향을 받습니다. 이 글에서는 로딩과 관련된 다양한 지표, 애니메이션, 응답성 지표에 대해 논의하고 실제 타이밍과 일치하지 않더라도 주관적 인식을 개선할 수 있는 모범 사례들을 살펴봅니다.
-- [웹 성능 기초](/ko/docs/Learn/Performance/Web_Performance_Basics)
+- [웹 성능 기초](/ko/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
   - : HTML, CSS, JavaScript, 미디어 파일 등의 프론트엔드 구성 요소뿐만 아니라 어플리케이션을 느리게 만들 수 있는 기능들과 주관적, 객관적으로 빠르게 만들 수 있는 기능들이 있습니다. 웹 성능과 관련된 API, 개발자 도구, 모범 사례, 안 좋은 사례를 여럿 소개합니다. 이 글에서는 그런 기능들을 기본적인 수준으로 다루면서 각 주제별로 성능을 개선하기 위해 더 깊게 살펴볼 수 있는 링크를 제공합니다.
 - [HTML과 웹 성능](/ko/docs/Learn/Performance/HTML)
   - : 마크업의 순서나 속성들이 웹사이트의 성능에 영향을 미칠 수 있습니다. DOM 노드의 개수를 최소화하고 스타일과 스크립트, 미디어와 써드파티 스크립트 등을 포함할 때의 순서와 속성을 최적화하여 사용자 경험을 크게 개선할 수 있습니다. 이 글에서는 최고의 성능을 끌어내려면 HTML을 어떻게 사용해야 하는지를 다룹니다.
-- [멀티미디어: 이미지와 비디오](/ko/docs/Learn/Performance/Multimedia)
+- [멀티미디어: 이미지와 비디오](/ko/docs/Learn_web_development/Extensions/Performance/Multimedia)
   - : 많은 경우 웹 성능을 개선하는 가장 쉬운 방법은 미디어 최적화입니다. 사용자 에이전트의 기능, 크기, 픽셀 밀도를 고려해 제각기 다른 미디어 파일을 제공할 수 있습니다. 배경의 비디오에서 오디오 트랙을 없애는 것과 같은 팁을 추가로 활용하면 더 성능을 개선할 수 있습니다. 이 글에서는 비디오, 오디오, 이미지 콘텐트가 성능에 어떻게 영향을 미치는지, 그리고 어떻게 그런 영향을 최소화할 수 있는지 살펴봅니다.
 - [CSS와 웹 성능](/ko/docs/Learn/Performance/CSS)
   - : 성능 개선 시 CSS 최적화는 상대적으로 중요하지 않습니다. 하지만 다른 CSS 기능보다 성능에 많은 영향을 끼치는 기능들이 몇 가지 있습니다. 이 글에서는 성능에 영향을 미치는 CSS 속성을 살펴보고 성능에 부정적인 영향을 주지 않도록 스타일을 다루는 방법을 제안합니다.
@@ -121,7 +121,7 @@ HTML
 - [`<source>` 요소](/ko/docs/Web/HTML/Element/source)
 - [`<img> srcset` 요소](/ko/docs/Web/HTML/Element/img#attributes)
 
-  - [반응형 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)
 
 - [`rel="preload"`를 사용해 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Attributes/rel/preload) - <https://w3c.github.io/preload/>
 

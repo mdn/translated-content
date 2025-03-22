@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
-[이전 글](/ko/docs/Learn/Forms/How_to_structure_a_web_form)에서는 기능적인 웹 폼 예시를 마크업하며, 일부 폼 컨트롤과 공통 구조 요소를 소개하고 접근성 모범 사례에 중점을 두었습니다. 다음에는 폼 컨트롤 또는 위젯의 기능을 자세히 살펴보고, 다양한 유형의 데이터를 수집하기 위한 모든 다른 옵션을 연구할 것입니다. 이 글에서는 웹 초기부터 모든 브라우저에서 사용 가능한 원래의 폼 컨트롤 세트를 살펴볼 것입니다.
+[이전 글](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)에서는 기능적인 웹 폼 예시를 마크업하며, 일부 폼 컨트롤과 공통 구조 요소를 소개하고 접근성 모범 사례에 중점을 두었습니다. 다음에는 폼 컨트롤 또는 위젯의 기능을 자세히 살펴보고, 다양한 유형의 데이터를 수집하기 위한 모든 다른 옵션을 연구할 것입니다. 이 글에서는 웹 초기부터 모든 브라우저에서 사용 가능한 원래의 폼 컨트롤 세트를 살펴볼 것입니다.
 
 <table>
   <tbody>
@@ -97,7 +97,7 @@ l10n:
 
 이러한 요소를 만들려면 `name` 및 `value` 속성을 설정해야 합니다. 값은 JavaScript를 통해 동적으로 설정할 수 있습니다. `hidden` 입력 유형에는 관련 레이블이 없어야 합니다.
 
-다른 텍스트 입력 유형, 예를 들면 {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, 그리고 {{HTMLElement("input/tel", "tel")}}은 다음 자습서인 [HTML5 입력 유형](/ko/docs/Learn/Forms/HTML5_input_types)에서 다룰 것입니다.
+다른 텍스트 입력 유형, 예를 들면 {{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, 그리고 {{HTMLElement("input/tel", "tel")}}은 다음 자습서인 [HTML5 입력 유형](/ko/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)에서 다룰 것입니다.
 
 ## 체크 가능한 항목: 체크박스와 라디오 버튼
 

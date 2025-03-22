@@ -165,4 +165,4 @@ input.studentid:placeholder-shown {
 
 - {{CSSxRef("::placeholder")}} 의사 요소는 플레이스홀더 자체를 꾸밉니다.
 - 관련된 HTML 요소들: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML forms](/ko/docs/Learn/Forms)
+- [HTML forms](/ko/docs/Learn_web_development/Extensions/Forms)
