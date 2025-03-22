@@ -45,7 +45,7 @@ svg {
   - : Определяет систему координат для атрибутов `x1`, `x2`, `y1`, `y2`
     _Тип значения_: `userSpaceOnUse`|`objectBoundingBox` ; _Значение по умолчанию_: `objectBoundingBox`; _Анимируемый_: **да**
 - {{SVGAttr("gradientTransform")}}
-  - : Этот атрибут обеспечивает дополнительное [преобразование](/ru/docs/Web/SVG/Attribute/transform) для системы координат градиента.
+  - : Этот атрибут обеспечивает дополнительное [преобразование](/ru/docs/Web/SVG/Reference/Attribute/transform) для системы координат градиента.
     _Тип значения_: **[\<transform-list>](/ru/docs/Web/SVG/Content_type#transform-list)** ; _Значение по умолчанию_: _identity transform_; _Анимируемый_: **да**
 - {{SVGAttr("href")}}
   - : Этот атрибут определяет ссылку на другой элемент `<linearGradient>`, который будет использоваться в качестве шаблона.

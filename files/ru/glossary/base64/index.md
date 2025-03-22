@@ -20,7 +20,7 @@ slug: Glossary/Base64
 
 ## Документация
 
-- [`data` URIs](/ru/docs/Web/URI/Schemes/data)
+- [`data` URIs](/ru/docs/Web/URI/Reference/Schemes/data)
   - : `data` URIs, описанные в [RFC 2397](https://tools.ietf.org/html/rfc2397), позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).
 - [Base64](https://en.wikipedia.org/wiki/Base64)
   - : Wikipedia article about Base64 encoding.

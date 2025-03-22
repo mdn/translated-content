@@ -86,7 +86,7 @@ console.log(Object.values("foo")); // ['f', 'o', 'o']
 
 ## Смотрите также
 
-- [Перечисляемость и принадлежность свойств](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и принадлежность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

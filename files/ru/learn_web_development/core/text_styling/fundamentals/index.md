@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 
 В данной статье мы начнём путь к овладению стилизацией текста при помощи {{glossary("CSS")}}. Мы подробно изучим основы стилизации текста и шрифта, такие как толщина, начертание, семейство, стенография, выравнивание текста и другие эффекты, а также рассмотрим междустрочный и межбуквенный интервалы.
 
-| Необходимые знания: | Базовые компьютерные знания, Основы HTML (раздел [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), основы CSS (раздел [Введение в CSS](/ru/docs/Learn/CSS/First_steps)). |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Задача:             | Изучить основные свойства и техники, необходимые для стилизации текста на веб-страницах.                                                                                             |
+| Необходимые знания: | Базовые компьютерные знания, Основы HTML (раздел [Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), основы CSS (раздел [Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics)). |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:             | Изучить основные свойства и техники, необходимые для стилизации текста на веб-страницах.                                                                                                                                                        |
 
 ## Что участвует в стилизации текста в CSS?
 
@@ -50,7 +50,7 @@ You can find the [finished example on GitHub](https://mdn.github.io/learning-are
 
 The {{cssxref("color")}} property sets the color of the foreground content of the selected elements (which is usually the text, but can also include a couple of other things, such as an underline or overline placed on text using the {{cssxref("text-decoration")}} property).
 
-`color` can accept any [CSS color unit](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#colors), for example:
+`color` can accept any [CSS color unit](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors), for example:
 
 ```css
 p {
@@ -109,7 +109,7 @@ The list of actual web safe fonts will change as operating systems evolve, but i
 > Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
 
 > [!NOTE]
-> There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn/CSS/Styling_text/Web_fonts) later on in the module.
+> There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn_web_development/Core/Text_styling/Web_fonts) later on in the module.
 
 #### Default fonts
 
@@ -173,7 +173,7 @@ This gives us the following result:
 
 ### Font size
 
-In our previous module's [CSS values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)), however the most common units you'll use to size text are:
+In our previous module's [CSS values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages)), however the most common units you'll use to size text are:
 
 - `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
 - `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element.) This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
@@ -316,10 +316,10 @@ text-shadow: 4px 4px 5px red;
 
 The four properties are as follows:
 
-1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
+1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text; behaves basically just like the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
-3. The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
-4. The base color of the shadow, which can take any [CSS color unit](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#colors). If not included, it defaults to `black`.
+3. The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size).
+4. The base color of the shadow, which can take any [CSS color unit](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors). If not included, it defaults to `black`.
 
 #### Multiple shadows
 
@@ -434,7 +434,7 @@ p {
 
 ### Line height
 
-The {{cssxref("line-height")}} property sets the height of each line of text — this can take most [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option — the {{cssxref("font-size")}} is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5 – 2 (double spaced.) So to set our lines of text to 1.6 times the height of the font, you'd use this:
+The {{cssxref("line-height")}} property sets the height of each line of text — this can take most [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option — the {{cssxref("font-size")}} is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5 – 2 (double spaced.) So to set our lines of text to 1.6 times the height of the font, you'd use this:
 
 ```css
 line-height: 1.6;
@@ -486,7 +486,7 @@ p {
 
 ### Letter and word spacing
 
-The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font. They can take most [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
+The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font. They can take most [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size).
 
 So as an example, we could apply some word- and letter-spacing to the first line of each {{htmlelement("p")}} element in our example:
 
@@ -674,7 +674,7 @@ window.addEventListener("load", drawOutput);
 
 ## Test your skills!
 
-You've reached the end of this article, and already did some skill testing in our Active Learning section, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/ru/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
+You've reached the end of this article, and already did some skill testing in our Active Learning section, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/ru/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage).
 
 This assessment tests all the knowledge discussed in this module, so you might want to read the other articles before moving on to it.
 
@@ -686,8 +686,8 @@ We hoped you enjoyed playing with text in this article! The next article will gi
 
 ## In this module
 
-- [Fundamental text and font styling](/ru/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/ru/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/ru/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/ru/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/ru/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Fundamental text and font styling](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [Styling lists](/ru/docs/Learn_web_development/Core/Text_styling/Styling_lists)
+- [Styling links](/ru/docs/Learn_web_development/Core/Text_styling/Styling_links)
+- [Web fonts](/ru/docs/Learn_web_development/Core/Text_styling/Web_fonts)
+- [Typesetting a community school homepage](/ru/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage)

@@ -41,7 +41,7 @@ fetch("simple.wasm")
 ```
 
 > [!NOTE]
-> Вероятно, вы захотите использовать [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/JavaScript_interface/compileStreaming_static) в большинстве случаев, поскольку он более эффективен, чем `compile()`.
+> Вероятно, вы захотите использовать [`WebAssembly.compileStreaming()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) в большинстве случаев, поскольку он более эффективен, чем `compile()`.
 
 ## Характеристики
 
@@ -54,5 +54,5 @@ fetch("simple.wasm")
 ## Смотрите также
 
 - [WebAssembly](/ru/docs/WebAssembly) обзорная страница
-- [WebAssembly концепции](/ru/docs/WebAssembly/Concepts)
-- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly концепции](/ru/docs/WebAssembly/Guides/Concepts)
+- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API)

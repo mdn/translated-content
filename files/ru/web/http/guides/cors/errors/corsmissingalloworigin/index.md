@@ -56,4 +56,4 @@ add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 
 - [Ошибки CORS](/ru/docs/Web/HTTP/CORS/Errors)
 - Глоссарий: {{Glossary("CORS")}}
-- [Введение в CORS](/ru/docs/Web/HTTP/CORS)
+- [Введение в CORS](/ru/docs/Web/HTTP/Guides/CORS)

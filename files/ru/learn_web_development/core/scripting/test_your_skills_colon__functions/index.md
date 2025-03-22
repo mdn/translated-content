@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills:_Functions
 
 {{learnsidebar}}
 
-Целью данного теста навыков является оценка понимания таких статей, как: [Функций — многократное использование блоков кода](/ru/docs/Learn/JavaScript/Building_blocks/Functions), [Построение своих собственных функций](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function) и [Возвращаемые значения функции](/ru/docs/Learn/JavaScript/Building_blocks/Return_values).
+Целью данного теста навыков является оценка понимания таких статей, как: [Функций — многократное использование блоков кода](/ru/docs/Learn_web_development/Core/Scripting/Functions), [Построение своих собственных функций](/ru/docs/Learn_web_development/Core/Scripting/Build_your_own_function) и [Возвращаемые значения функции](/ru/docs/Learn_web_development/Core/Scripting/Return_values).
 
 > [!NOTE]
 > Вы можете проверить решения в интерактивных редакторах ниже, однако может быть полезно загрузить код и использовать онлайн-инструменты, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/) для работы над задачами.
@@ -19,7 +19,7 @@ slug: Learn_web_development/Core/Scripting/Test_your_skills:_Functions
 
 Некоторые из вопросов, приведённых ниже, требуют написания кода для управления структурой [DOM](/ru/docs/Glossary/DOM) для их решения - например, создание новых HTML-элементов, установка их текстового содержимого в соответствие с определёнными значениями строк, и вложение их внутри существующих элементов на странице - и все это с помощью JavaScript.
 
-Мы ещё не обучали этому прямо в курсе, но вы увидите некоторые примеры, которые используют данную структуру, и мы хотели бы, чтобы вы провели некоторые исследования в отношении того, какие DOM API вам нужны, чтобы успешно ответить на эти вопросы. Хорошим началом будет наше учебное пособие [Управление документами](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
+Мы ещё не обучали этому прямо в курсе, но вы увидите некоторые примеры, которые используют данную структуру, и мы хотели бы, чтобы вы провели некоторые исследования в отношении того, какие DOM API вам нужны, чтобы успешно ответить на эти вопросы. Хорошим началом будет наше учебное пособие [Управление документами](/ru/docs/Learn_web_development/Core/Scripting/DOM_scripting).
 
 ## Функции 1
 

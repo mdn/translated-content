@@ -5,7 +5,7 @@ slug: Web/SVG
 
 {{SVGRef}}
 
-**[С чего начать](/ru/docs/Web/SVG/Tutorial)**
+**[С чего начать](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch)**
 Этот урок поможет вам начать использовать SVG.
 
 **Масштабируемая векторная графика (Scalable Vector Graphics — SVG)** является {{Glossary("язык разметки", "языком разметки")}} расширенным из [XML](/ru/docs/Web/XML) для описания двухмерной {{Glossary("векторная графика", "векторной графики")}}. SVG по существу является графикой, так же, как {{Glossary("XHTML")}} — текстом.
@@ -18,22 +18,22 @@ SVG — открытый стандарт, разработанный [World Wid
 
 ## Документация
 
-- [Справочник по элементам SVG](/ru/docs/Web/SVG/Element)
+- [Справочник по элементам SVG](/ru/docs/Web/SVG/Reference/Element)
   - : Подробная информация о каждом элементе SVG.
-- [Справочник по атрибутам SVG](/ru/docs/Web/SVG/Attribute)
+- [Справочник по атрибутам SVG](/ru/docs/Web/SVG/Reference/Attribute)
   - : Подробная информация о каждом атрибуте SVG.
 - [Справочник по интерфейсу SVG DOM](/ru/docs/Web/API/Document_Object_Model#svg_interfaces)
   - : Подробная информация по всему SVG DOM API.
-- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : SVG работает вместе с {{Glossary("HTML")}}, {{Glossary("CSS")}} и {{Glossary("JavaScript")}}.
-    [Используйте SVG для улучшения обычной страницы HTML или веб-приложения.](/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction).
+    [Используйте SVG для улучшения обычной страницы HTML или веб-приложения.](/ru/docs/Web/SVG/Guides/SVG_in_HTML).
 - SVG в Mozilla
 
   - : Замечания и информация о том, как SVG реализован в Mozilla.
 
     - [Полнота реализации SVG в Firefox](/ru/docs/SVG_in_Firefox)
-    - [SVG - учебное руководство](/ru/docs/Web/SVG/Tutorial)
-    - [SVG в XHTML](/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)
+    - [SVG - учебное руководство](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch)
+    - [SVG в XHTML](/ru/docs/Web/SVG/Guides/SVG_in_HTML)
 
 ## Инструменты
 
@@ -50,7 +50,7 @@ SVG — открытый стандарт, разработанный [World Wid
 - Обзор [Проекта Mozilla SVG](/ru/docs/Mozilla_SVG_Project)
 - [Часто задаваемые вопросы](/ru/docs/SVG/FAQ), касающиеся SVG и Mozilla
 - Слайды и демонстрации с обсуждения [SVG и Mozilla](https://jwatt.org/blog/2009/11/16/slides-and-demos-from-svg-open-2009), проходившего на SVG Open 2009
-- [Использование SVG в качестве изображения](/ru/docs/Web/SVG/SVG_as_an_Image)
+- [Использование SVG в качестве изображения](/ru/docs/Web/SVG/Guides/SVG_as_an_image)
 - [SVG анимация при помощи SMIL](/ru/docs/Web/SVG/SVG_animation_with_SMIL)
 - [Художественная галерея SVG](https://plurib.us/1shot/2007/svg_gallery/)
 - Больше примеров (примеры SVG с [carto.net](https://old.carto.net/papers/svg/samples/))

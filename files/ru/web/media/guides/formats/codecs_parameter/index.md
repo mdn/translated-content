@@ -776,4 +776,4 @@ You can also use the codecs parameter when specifying a MIME media type to the {
 - [Guide to media types and formats on the web](/ru/docs/Web/Media/Formats)
 - [Guide to audio codecs used on the web](/ru/docs/Web/Media/Formats/Audio_codecs)
 - [Guide to video codecs used on the web](/ru/docs/Web/Media/Formats/Video_codecs)
-- [Codecs used by WebRTC](/ru/docs/Web/Media/Formats/WebRTC_codecs)
+- [Codecs used by WebRTC](/ru/docs/Web/Media/Guides/Formats/WebRTC_codecs)

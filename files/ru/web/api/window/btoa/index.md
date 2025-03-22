@@ -64,6 +64,6 @@ b64_to_utf8("SSUyNTIwJTI1dTI2NjElMjUyMFVuaWNvZGUlMjUyMQ=="); // "I ♡ Unicode!"
 ## Смотрите также
 
 - [Base64 encoding and decoding](/ru/docs/Glossary/Base64)
-- [`data` URIs](/ru/docs/Web/URI/Schemes/data)
+- [`data` URIs](/ru/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WindowBase64.atob","window.atob()")}}
 - [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)

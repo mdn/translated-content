@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Headers/Set-Cookie
 
 HTTP заголовок **`Set-Cookie`** используется для отправки cookies с сервера на агент пользователя.
 
-Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Cookies).
+Для детальной информации, смотрите руководство по [HTTP cookies](/ru/docs/Web/HTTP/Guides/Cookies).
 
 | Тип заголовка                         | {{Glossary("Response header")}} |
 | ------------------------------------- | ------------------------------- |
@@ -169,6 +169,6 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Смотрите также
 
-- [HTTP cookies](/ru/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/ru/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}

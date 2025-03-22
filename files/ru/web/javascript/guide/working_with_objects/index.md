@@ -550,7 +550,7 @@ console.log(fruitbear); // вернёт { name: "grape" } вместо { name: "
 
 ## Смотрите также
 
-- Для детального изучения читайте [подробнее об объектной модели JavaScript](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+- Для детального изучения читайте [подробнее об объектной модели JavaScript](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 - Для изучения классов ECMAScript 2015 (новый способ определения объектов), читайте главу [классы JavaScript](/ru/docs/Web/JavaScript/Reference/Classes).
 
 {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

@@ -114,7 +114,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 ## Смотрите также
 
-- [Анализ и сериализация XML](/ru/docs/Web/XML/Parsing_and_serializing_XML)
+- [Анализ и сериализация XML](/ru/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest)
 - [XMLSerializer](/ru/docs/Web/API/XMLSerializer)
 - [Parsing HTML to DOM](/ru/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)

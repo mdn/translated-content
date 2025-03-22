@@ -3,7 +3,7 @@ title: Используемое значение
 slug: Web/CSS/CSS_cascade/used_value
 ---
 
-{{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/computed_value).
+{{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/CSS_cascade/computed_value).
 
 После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
@@ -98,20 +98,20 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
 
 - {{domxref("window.getComputedStyle")}}
 - Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/Comments)
-  - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/computed_value)
-    - [используемые](/ru/docs/Web/CSS/used_value)
-    - [действительные](/ru/docs/Web/CSS/actual_value)
+    - [начальные](/ru/docs/Web/CSS/CSS_cascade/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/CSS_cascade/computed_value)
+    - [используемые](/ru/docs/Web/CSS/CSS_cascade/used_value)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/actual_value)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)

@@ -19,4 +19,4 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed
 
 - [Ошибки CORS](/ru/docs/Web/HTTP/CORS/Errors)
 - Глоссарий: {{Glossary("CORS")}}
-- [Введение в CORS](/ru/docs/Web/HTTP/CORS)
+- [Введение в CORS](/ru/docs/Web/HTTP/Guides/CORS)

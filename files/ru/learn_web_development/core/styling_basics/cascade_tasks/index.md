@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/Styling_basics/Cascade_tasks
 
 {{LearnSidebar}}
 
-Цель этого задания — помочь вам проверить ваше понимание некоторых значений и элементов, которые мы рассмотрели в уроке [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+Цель этого задания — помочь вам проверить ваше понимание некоторых значений и элементов, которые мы рассмотрели в уроке [Каскад и наследование](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 
 > [!NOTE]
 > Вы можете проверять решения в интерактивном редакторе, расположенном ниже, но, возможно, вам будут полезны онлайн-инструменты, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/), которые можно использовать для работы над заданием, предварительно загрузив в них код.
@@ -14,7 +14,7 @@ slug: Learn_web_development/Core/Styling_basics/Cascade_tasks
 
 ## Задание 1
 
-В этом задании вам надо использовать одно из специальных значений, рассмотренных нами в разделе [Контроль наследования](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C_%D0%BD%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F), чтобы написать в новом правиле объявление, которое восстановит белый цвет фона без использования фактического значения цвета.
+В этом задании вам надо использовать одно из специальных значений, рассмотренных нами в разделе [Контроль наследования](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C_%D0%BD%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F), чтобы написать в новом правиле объявление, которое восстановит белый цвет фона без использования фактического значения цвета.
 
 ![Barely visible yellow links on a white background.](mdn-cascade.png)
 

@@ -166,7 +166,7 @@ WebGL API расширяется спецификацией WebXR для тог�
 
 ## Смотрите также
 
-- [Graphics on the web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Graphics on the web](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [WebGL API](/ru/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/ru/docs/Web/API/Canvas_API): 2D drawing for the web

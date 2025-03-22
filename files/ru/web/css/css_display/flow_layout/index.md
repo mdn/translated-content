@@ -25,7 +25,7 @@ _Нормальный поток (normal flow)_ или поточная раск
 
 - Блочная и строчная раскладки в нормальном потоке ([Block and Inline Layout in Normal Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)).
 - В потоке и вне потока ([In Flow and Out of Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)).
-- Объяснение контекстов форматирования ([Formatting Contexts Explained](/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)).
+- Объяснение контекстов форматирования ([Formatting Contexts Explained](/ru/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)).
 - Поточная раскладка и режимы письма ([Flow Layout and Writing Modes](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)).
 - Поточная раскладка и переполнение ([Flow Layout and Overflow](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)).
 

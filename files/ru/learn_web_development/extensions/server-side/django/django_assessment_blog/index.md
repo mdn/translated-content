@@ -5,7 +5,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-В этом задании вы будете оценивать знания Django, которые вы приобрели в [Django Web Framework (Python)](/ru/docs/Learn/Server-side/Django), чтобы создать очень простой блог.
+В этом задании вы будете оценивать знания Django, которые вы приобрели в [Django Web Framework (Python)](/ru/docs/Learn_web_development/Extensions/Server-side/Django), чтобы создать очень простой блог.
 
 | Предпосылки: | Перед этим заданием, вы должны были проработать все статьи этого модуля.                            |
 | ------------ | --------------------------------------------------------------------------------------------------- |
@@ -259,7 +259,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 
 В следующих разделах описывается, что вам нужно делать.
 
-1. Создайте скелет проекта и веб-приложение для сайта (как описано в [Django Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Django/skeleton_website)). Вы можете использовать «diyblog» для имени проекта и «blog» для имени приложения.
+1. Создайте скелет проекта и веб-приложение для сайта (как описано в [Django Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)). Вы можете использовать «diyblog» для имени проекта и «blog» для имени приложения.
 2. Создавайте модели для записей в блогах, комментариев и любых других необходимых объектов.
 
    - Каждый комментарий будет иметь только один блог, но блог может иметь много комментариев.
@@ -275,12 +275,12 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 
 ## Советы и подсказки
 
-Этот проект очень похож на [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website) учебник. Вы сможете настроить скелет, поведение входа пользователя / выхода из системы, поддержку статических файлов, представлений, URL-адресов, форм, базовых шаблонов и конфигурации админ-панели, используя почти все те же подходы.
+Этот проект очень похож на [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) учебник. Вы сможете настроить скелет, поведение входа пользователя / выхода из системы, поддержку статических файлов, представлений, URL-адресов, форм, базовых шаблонов и конфигурации админ-панели, используя почти все те же подходы.
 
 Некоторые общие рекомендации:
 
 1. Индексная страница (index page) может быть реализована в качестве основной функции представления и шаблона (как и для locallibrary).
-2. Просмотр списка публикаций блога и блогеров, а также подробное представление для сообщений в блоге можно создать с помощью [generic list and detail views](/ru/docs/Learn/Server-side/Django/Generic_views).
+2. Просмотр списка публикаций блога и блогеров, а также подробное представление для сообщений в блоге можно создать с помощью [generic list and detail views](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views).
 3. Список постов в блоге конкретного автора может быть создан с помощью общего списка Blog list view и фильтрация для объекта блога, соответствующего указанному автору.
 
    - Вам придётся реализовать `get_queryset(self)` для фильтрации (как и в нашем классе библиотеки `LoanedBooksAllListView`) и получить информацию об авторе из URL-адреса.
@@ -306,7 +306,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 
    - Для успешного перенаправления после проверки формы вам нужно будет указать URL-адрес; это должен быть оригинальный блог. Для этого вам нужно будет переопределить `get_success_url()` и «обратный» URL-адрес для исходного блога. Вы можете получить требуемый ID блога, используя `self.kwargs` атрибут, как показано в методе `form_valid()` выше.
 
-Мы кратко говорили о передаче контекста шаблону в представлении на основе классов в теме [Django Tutorial Part 6: Generic list and detail views](/ru/docs/Learn/Server-side/Django/Generic_views#overriding_methods_in_class-based_views). Для этого вам нужно переопределить `get_context_data()` (сначала получить существующий контекст, обновить его любыми дополнительными переменными, которые вы хотите передать шаблону, а затем вернуть обновлённый контекст). Например, фрагмент кода ниже показывает, как вы можете добавить объект blogger в контекст на основе его `BlogAuthor` id.
+Мы кратко говорили о передаче контекста шаблону в представлении на основе классов в теме [Django Tutorial Part 6: Generic list and detail views](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views#overriding_methods_in_class-based_views). Для этого вам нужно переопределить `get_context_data()` (сначала получить существующий контекст, обновить его любыми дополнительными переменными, которые вы хотите передать шаблону, а затем вернуть обновлённый контекст). Например, фрагмент кода ниже показывает, как вы можете добавить объект blogger в контекст на основе его `BlogAuthor` id.
 
 ```python
 class SomeView(generic.ListView):

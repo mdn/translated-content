@@ -53,5 +53,5 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 ## Смотрите также
 
 - [WebAssembly](/ru/docs/WebAssembly) обзорная страница
-- [WebAssembly концепции](/ru/docs/WebAssembly/Concepts)
-- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly концепции](/ru/docs/WebAssembly/Guides/Concepts)
+- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API)

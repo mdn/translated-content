@@ -78,10 +78,10 @@ svg|a:active {
   - : URL на человеческом языке или фрагмент URL для перехода.
     _Тип_: **\<string>**; _Значение по умолчанию_: _none_; _Анимируем_: **да**
 - [`ping`](/ru/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
-  - : Разделённый пробелами список URL при переходе по которым браузер будет отправлять [`POST`](/ru/docs/Web/HTTP/Methods/POST) запросы с телом `PING` (в фоне). Обычно используется для трекинга.
+  - : Разделённый пробелами список URL при переходе по которым браузер будет отправлять [`POST`](/ru/docs/Web/HTTP/Reference/Methods/POST) запросы с телом `PING` (в фоне). Обычно используется для трекинга.
     _Тип_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)**; _Значение по умолчанию_: _none_; _Анимируем_: **нет**
 - [`referrerpolicy`](/ru/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
-  - : Какой [referrer](/ru/docs/Web/HTTP/Headers/Referer) отправить при получении {{Glossary("URL")}}.
+  - : Какой [referrer](/ru/docs/Web/HTTP/Reference/Headers/Referer) отправить при получении {{Glossary("URL")}}.
     _Тип_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Значение по умолчанию_: _none_; _Анимируем_: **нет**
 - [`rel`](/ru/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
   - : Отношение между целевым объектом и объектом link.

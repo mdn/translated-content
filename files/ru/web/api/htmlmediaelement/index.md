@@ -228,6 +228,6 @@ _Наследует методы от своего родителя {{domxref ("
 
 - Статьи
 
-  - [Использование HTML5 аудио и видео](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - [Использование HTML5 аудио и видео](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - [Медиа форматы, поддерживаемые аудио и видео элементами](/ru/docs/Web/Media/Formats)
   - [API веб-аудио](/ru/docs/Web/API/Web_Audio_API)

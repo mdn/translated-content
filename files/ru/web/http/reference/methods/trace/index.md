@@ -62,4 +62,4 @@ TRACE /index.html
 
 ## Смотрите также
 
-- [HTTP methods](/ru/docs/Web/HTTP/Methods)
+- [HTTP methods](/ru/docs/Web/HTTP/Reference/Methods)

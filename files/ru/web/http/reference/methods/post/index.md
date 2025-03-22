@@ -109,4 +109,4 @@ value2
 
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Disposition")}}
-- [GET](/ru/docs/Web/HTTP/Methods/GET)
+- [GET](/ru/docs/Web/HTTP/Reference/Methods/GET)

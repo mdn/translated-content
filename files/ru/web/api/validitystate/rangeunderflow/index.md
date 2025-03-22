@@ -29,6 +29,6 @@ slug: Web/API/ValidityState/rangeUnderflow
 
 - {{domxref("ValidityState.rangeOverflow")}}
 - [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
-- [Валидация форм на стороне клиента](/ru/docs/Learn/Forms/Form_validation)
+- [Валидация форм на стороне клиента](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Атрибут `step`](/ru/docs/Web/HTML/Attributes/step)
 - [Атрибут `max`](/ru/docs/Web/HTML/Attributes/max)

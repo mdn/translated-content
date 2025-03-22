@@ -5,11 +5,11 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-Это вторая статья из нашего [руководства по Django](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), которая показывает, как можно создать "скелет" сайта, как фундамент, на котором можно строить всё остальное: настройки, ссылки, модели, контроллеры и представления.
+Это вторая статья из нашего [руководства по Django](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), которая показывает, как можно создать "скелет" сайта, как фундамент, на котором можно строить всё остальное: настройки, ссылки, модели, контроллеры и представления.
 
-| Необходимо: | [Настройка окружения](/ru/docs/Learn/Server-side/Django/development_environment). Прочитать первую статью [руководства по Django](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website). |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:       | Научиться использовать инструменты Django для создания новых веб-сайтов.                                                                                                                             |
+| Необходимо: | [Настройка окружения](/ru/docs/Learn_web_development/Extensions/Server-side/Django/development_environment). Прочитать первую статью [руководства по Django](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:       | Научиться использовать инструменты Django для создания новых веб-сайтов.                                                                                                                                                                                   |
 
 ## Обзор
 
@@ -26,7 +26,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 3. Зарегистрировать в настройках эти приложения, чтобы использовать их в проекте.
 4. Настроить маршруты url адресов для каждого из приложений.
 
-Для [Сайта местной библиотеки](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website) папка сайта и проекта будет называться _locallibrary_, и у нас будет одно приложение с названием _catalog_. Верхняя структура проекта будет следующей:
+Для [Сайта местной библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) папка сайта и проекта будет называться _locallibrary_, и у нас будет одно приложение с названием _catalog_. Верхняя структура проекта будет следующей:
 
 ```bash
 locallibrary/         # Папка сайта
@@ -132,7 +132,7 @@ INSTALLED_APPS = [
 Новая строка указывает на файл конфигурации приложения (`CatalogConfig`), который был создан в **/locallibrary/catalog/apps.py** , когда вы создали приложение.
 
 > [!NOTE]
-> Легко заметить, что в `INSTALLED_APPS` уже подключено большое количество приложений (и объектов `MIDDLEWARE`, ниже в файле конфигурации). Они добавляют поддержку [админ-панели Django](/ru/docs/Learn/Server-side/Django/Admin_site) и, как следствие, огромное количество функциональности (включая сессии, аутентификацию и прочее).
+> Легко заметить, что в `INSTALLED_APPS` уже подключено большое количество приложений (и объектов `MIDDLEWARE`, ниже в файле конфигурации). Они добавляют поддержку [админ-панели Django](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) и, как следствие, огромное количество функциональности (включая сессии, аутентификацию и прочее).
 
 ## Настройка базы данных
 
@@ -332,7 +332,7 @@ python3 manage.py runserver
 
 Теперь вы создали полноценный скелет веб-приложения, который теперь вы можете расширить url соотносителями, контроллерами(views) и моделями(models).
 
-Теперь скелет [Сайта местной библиотеки](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website) сделан и запущен, теперь самое время начать писать код, который научит сайт делать то, что он должен делать.
+Теперь скелет [Сайта местной библиотеки](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) сделан и запущен, теперь самое время начать писать код, который научит сайт делать то, что он должен делать.
 
 ## Смотрите также
 

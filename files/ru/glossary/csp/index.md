@@ -5,7 +5,7 @@ slug: Glossary/CSP
 
 {{GlossarySidebar}}
 
-CSP ([Политика безопасности контента](/ru/docs/Web/HTTP/CSP)) используется для обнаружения и смягчения определённых типов атак, связанных с веб-сайтами, таких как {{Glossary("XSS")}} и инъекции данных.
+CSP ([Политика безопасности контента](/ru/docs/Web/HTTP/Guides/CSP)) используется для обнаружения и смягчения определённых типов атак, связанных с веб-сайтами, таких как {{Glossary("XSS")}} и инъекции данных.
 
 Реализация основана на заголовке {{Glossary ("HTTP")}} с именем {{HTTPHeader("Content-Security-Policy")}}.
 
@@ -13,4 +13,4 @@ CSP ([Политика безопасности контента](/ru/docs/Web/H
 
 ### Техническая информация
 
-- [Content Security Policy на MDN](/ru/docs/Web/HTTP/CSP)
+- [Content Security Policy на MDN](/ru/docs/Web/HTTP/Guides/CSP)

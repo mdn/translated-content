@@ -17,7 +17,7 @@ Ajax можно использовать для создания {{Glossary("SPA
 
 ## Смотрите также
 
-- [Получение данных с сервера](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Получение данных с сервера](/ru/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Fetch API](/ru/docs/Web/API/Fetch_API)
 - Related glossary terms:
   - {{Glossary("SPA", "Одностраничное приложение")}}

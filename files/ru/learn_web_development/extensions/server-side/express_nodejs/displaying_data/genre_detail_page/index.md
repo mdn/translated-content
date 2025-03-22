@@ -66,7 +66,7 @@ The ID of the required genre record is encoded at the end of the URL and extract
 > }
 > ```
 >
-> The message will then propagate through to our error handling code (this was set up when we [generated the app skeleton](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website#error_handling) - for more information see [Handling Errors](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction#handling_errors)).
+> The message will then propagate through to our error handling code (this was set up when we [generated the app skeleton](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#error_handling) - for more information see [Handling Errors](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors)).
 
 The rendered view is **genre_detail** and it is passed variables for the `title`, `genre` and the list of books in this genre (`genre_books`).
 
@@ -126,5 +126,5 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
 - Proceed to the next subarticle of part 5: [Book detail page](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page).

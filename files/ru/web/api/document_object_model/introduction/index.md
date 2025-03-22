@@ -44,7 +44,7 @@ doc.nodeName # Свойство объекта документа DOM;
 p_list = doc.getElementsByTagName("para");
 ```
 
-Для подробной информации о том, какие технологии участвуют в написании JavaScript для веб, смотрите обзорную статью [JavaScript technologies overview.](/ru/docs/Web/JavaScript/JavaScript_technologies_overview)
+Для подробной информации о том, какие технологии участвуют в написании JavaScript для веб, смотрите обзорную статью [JavaScript technologies overview.](/ru/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)
 
 ## Каким образом доступен DOM?
 

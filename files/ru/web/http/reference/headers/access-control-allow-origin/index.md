@@ -77,5 +77,5 @@ Vary: Origin
 
 - {{HTTPHeader("Origin")}}
 - {{HTTPHeader("Vary")}}
-- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - {{httpheader("Cross-Origin-Resource-Policy")}}

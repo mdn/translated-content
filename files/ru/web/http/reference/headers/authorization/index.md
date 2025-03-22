@@ -32,7 +32,7 @@ Authorization: <тип> <данные пользователя>
 
 - <тип>
 
-  - : [Тип авторизации](/ru/docs/Web/HTTP/Authentication#authentication_schemes). Общий тип [«Базовая»](/ru/docs/Web/HTTP/Authentication#basic_authentication_scheme). Остальные типы:
+  - : [Тип авторизации](/ru/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Общий тип [«Базовая»](/ru/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). Остальные типы:
 
     - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)

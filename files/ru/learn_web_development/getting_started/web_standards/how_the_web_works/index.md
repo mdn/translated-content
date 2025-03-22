@@ -60,7 +60,7 @@ _Как работает Веб_ даст упрощённое представ�
 
 ## Смотрите также
 
-- [Как работает Интернет](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [Как работает Интернет](/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — Протокол уровня приложений](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Давайте изучим его!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Коды ответов](https://dev.opera.com/articles/http-response-codes/)

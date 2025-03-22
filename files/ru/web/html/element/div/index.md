@@ -52,7 +52,7 @@ slug: Web/HTML/Element/div
 К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 > [!NOTE]
-> Атрибут `align` устарел и вышел из употребления; не используйте его больше. Вместо этого, вам следует использовать свойства {{glossary("CSS")}} или методы, такие как [CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout) или [CSS Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox) для выравнивания и изменения положения элементов `<div>` на странице.
+> Атрибут `align` устарел и вышел из употребления; не используйте его больше. Вместо этого, вам следует использовать свойства {{glossary("CSS")}} или методы, такие как [CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout) или [CSS Flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox) для выравнивания и изменения положения элементов `<div>` на странице.
 
 ## Примечание
 

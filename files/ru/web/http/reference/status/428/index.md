@@ -5,7 +5,7 @@ slug: Web/HTTP/Reference/Status/428
 
 {{HTTPSidebar}}
 
-Код статуса HTTP **428 Precondition Required** означает, что сервер требует, чтобы запрос был [условным](/ru/docs/Web/HTTP/Conditional_requests) (соответствовал неким предварительно заданным условиям).
+Код статуса HTTP **428 Precondition Required** означает, что сервер требует, чтобы запрос был [условным](/ru/docs/Web/HTTP/Guides/Conditional_requests) (соответствовал неким предварительно заданным условиям).
 
 Как правило, это означает, что требуемый заголовок предварительного условия, например {{HTTPHeader("If-Match")}} отсутствует .
 
@@ -25,6 +25,6 @@ slug: Web/HTTP/Reference/Status/428
 
 ## Смотрите также
 
-- [Условные запросы HTTP](/ru/docs/Web/HTTP/Conditional_requests)
+- [Условные запросы HTTP](/ru/docs/Web/HTTP/Guides/Conditional_requests)
 - {{HTTPHeader("If-Match")}}
 - {{HTTPStatus(412)}}

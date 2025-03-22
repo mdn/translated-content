@@ -7,13 +7,13 @@ slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
 
 Порой, при написании CSS, вы будете сталкиваться с проблемой, при которой будет казаться, что CSS не делает того, чего вы ожидаете от него. Возможно, вы считаете, что определённый селектор должен соответствовать элементу, но ничего не происходит, или поле имеет размер, отличный от ожидаемого. Эта статья поможет вам с тем, как отладить CSS проблемы и покажет вам как DevTools (инструменты разработчика), включённые во все современные браузеры, могут помочь разобраться с тем, что происходит.
 
-| Необходимые знания: | Basic computer literacy, [basic software installed](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Задачи:             | Изучить основы того, что такое DevTools и как выполнять простую инспекцию и редактирование CSS.                                                                                                                                                                                                                                                                                                                    |
+| Необходимые знания: | Basic computer literacy, [basic software installed](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), basic knowledge of [working with files](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), and an idea of how CSS works (study [CSS first steps](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задачи:             | Изучить основы того, что такое DevTools и как выполнять простую инспекцию и редактирование CSS.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Как получить доступ к DevTools браузера
 
-Статья [What are browser developer tools](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) это обновлённое руководство объясняющее как получить доступ к инструментам разных браузеров и платформ. Хотя вы можете выбрать в основном разрабатывать в конкретном браузере и поэтому инструменты, включённые в этот браузер, будут вам знакомы больше всего, стоит знать, как получать доступ к инструментам и в других браузерах. Это поможет вам если вы наблюдаете разное отображение среди разных браузеров.
+Статья [What are browser developer tools](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) это обновлённое руководство объясняющее как получить доступ к инструментам разных браузеров и платформ. Хотя вы можете выбрать в основном разрабатывать в конкретном браузере и поэтому инструменты, включённые в этот браузер, будут вам знакомы больше всего, стоит знать, как получать доступ к инструментам и в других браузерах. Это поможет вам если вы наблюдаете разное отображение среди разных браузеров.
 
 Вы также обнаружите, что браузеры фокусировались на различных областях при создании своих DevTools. Например в Firefox существует несколько замечательных инструментов для визуальной работы с CSS Layout (разметкой), позволяющих вам проводить инспекцию и править [Grid Layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html), и [Shapes](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). Тем не менее, все другие браузеры имеют схожие фундаментальные инструменты, например для инспекции свойств и значений применённых к элементам на вашей странице и для выполнения изменений к ним в редакторе.
 
@@ -64,7 +64,7 @@ View Source же для сравнения — это просто исходн�
 
 ## Понимание модели блоков
 
-В предыдущем уроке мы обсудили [модель блоков](/ru/docs/Learn/CSS/Building_blocks/The_box_model) и тот факт, что у нас есть альтернативная модель блоков, которая изменяет способ расчёта размера элементов основываясь на размере который вы им задаёте, плюс padding и границы. DevTools может действительно помочь вам понять, как вычисляется размер элемента.
+В предыдущем уроке мы обсудили [модель блоков](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model) и тот факт, что у нас есть альтернативная модель блоков, которая изменяет способ расчёта размера элементов основываясь на размере который вы им задаёте, плюс padding и границы. DevTools может действительно помочь вам понять, как вычисляется размер элемента.
 
 [Layout view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout_view) показывает вам диаграмму блочной модели выбранного элемента, вместе с описанием свойств и значений, которые изменяют способ расположения элемента. Это включает описание свойств, которые вы могли и не использовать напрямую к элементу, но которые имеют набор начальных значений.
 
@@ -100,7 +100,7 @@ em {
 }
 ```
 
-Как вы помните из урока [каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) где мы обсуждали специфичность, селекторы классов являются более специфичными чем селекторы элементов, и поэтому это то значение которое применяется. DevTools может помочь вам найти такие проблемы, особенно если информация закопана где-то в дебрях огромной таблицы стилей.
+Как вы помните из урока [каскад и наследование](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) где мы обсуждали специфичность, селекторы классов являются более специфичными чем селекторы элементов, и поэтому это то значение которое применяется. DevTools может помочь вам найти такие проблемы, особенно если информация закопана где-то в дебрях огромной таблицы стилей.
 
 **Проведите инспекцию `<em>` с классом `.special` и DevTools покажет вам что оранжевый это цвет который применяется, а также отобразит вам свойство `color` применённое к em зачёркнутым. Теперь вы можете видеть, что класс переопределяет селектор элемента.**
 
@@ -162,21 +162,21 @@ As you become more experienced with CSS, you will find that you get faster at fi
 
 ## In this module
 
-1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
+   - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+   - [Combinators](/ru/docs/Learn_web_development/Core/Styling_basics/Combinators)
 
-3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+3. [The box model](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
+4. [Backgrounds and borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+5. [Handling different text directions](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+6. [Overflowing content](/ru/docs/Learn_web_development/Core/Styling_basics/Overflow)
+7. [Values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+8. [Sizing items in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing)
+9. [Images, media, and form elements](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
+10. [Styling tables](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
+11. [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
 12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

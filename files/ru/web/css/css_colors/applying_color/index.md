@@ -24,11 +24,11 @@ slug: Web/CSS/CSS_colors/Applying_color
 Эти свойства используются для определения цвета текста, его фона и любого оформления текста.
 
 - {{cssxref("color")}}
-  - : Свойство color применяется к тексту и любому [оформлению текста](/ru/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration), например: подчёркивание, линии на текстом, перечёркивание и т.д.
+  - : Свойство color применяется к тексту и любому [оформлению текста](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration), например: подчёркивание, линии на текстом, перечёркивание и т.д.
 - {{cssxref("background-color")}}
   - : Цвет фона текста.
 - {{cssxref("text-shadow")}}
-  - : Добавляет и устанавливает параметры тени для текста. Один из параметров тени - это основной цвет, который размывается и смешивается с цветом фона на основе других параметров. См. [Text drop shadows](/ru/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows), чтобы узнать больше.
+  - : Добавляет и устанавливает параметры тени для текста. Один из параметров тени - это основной цвет, который размывается и смешивается с цветом фона на основе других параметров. См. [Text drop shadows](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows), чтобы узнать больше.
 - {{cssxref("text-decoration-color")}}
   - : По умолчанию, элементы оформление текста (подчёркивание, перечёркивание) используют цвет свойства `color`. Но вы можете присвоить другой цвет с помощью свойства `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
@@ -51,7 +51,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 
 ### Границы
 
-Вокруг любого элемента можно создать [границу](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), т.е. линию вокруг содержимого элемента. См. [Box properties](/ru/docs/Learn/CSS/Building_blocks/The_box_model#box_properties), чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), чтобы узнать больше про то, как применять стили к границам.
+Вокруг любого элемента можно создать [границу](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders), т.е. линию вокруг содержимого элемента. См. [Box properties](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#box_properties), чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders), чтобы узнать больше про то, как применять стили к границам.
 
 Существует краткая запись {{cssxref("border")}}, которая позволяет задать сразу все свойства границы, включая даже не связанные с цветом свойства, такие как толщина линии ([width](/ru/docs/Web/CSS/border-width)), стиль линии ([style](/ru/docs/Web/CSS/border-style)): сплошная (solid), штриховая (dashed) и так далее.
 
@@ -479,5 +479,5 @@ Once you have these colors, you will probably still need to select appropriate n
 ## Смотрите также
 
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Graphics on the web](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [MDN's color picker tool](https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html)

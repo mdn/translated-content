@@ -11,23 +11,23 @@ slug: Web/HTTP
 
 Узнайте, как использовать HTTP, благодаря учебникам и руководствам.
 
-- [Обзор HTTP](/ru/docs/Web/HTTP/Overview)
+- [Обзор HTTP](/ru/docs/Web/HTTP/Guides/Overview)
   - : Основные свойства клиент-серверного протокола: что можно сделать и для чего он предназначен.
-- [HTTP-кеширование (HTTP Cache)](/ru/docs/Web/HTTP/Caching)
+- [HTTP-кеширование (HTTP Cache)](/ru/docs/Web/HTTP/Guides/Caching)
   - : Кеширование - это важнейший инструмент для повышения производительности веб-сайтов. Эта статья описывает разные виды кеша, а также использование HTTP-заголовков для конфигурации и управления кешированием.
-- [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Cookies)
+- [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Guides/Cookies)
   - : Как работают куки, можно почитать в [RFC 6265](https://tools.ietf.org/html/rfc6265). При обслуживании HTTP-запроса сервер может отправить в ответе HTTP-заголовок `Set-Cookie`. После этого значение куки посылается клиентом с каждым запросом к этому серверу. Делается это в форме заголовка запроса `Cookie`. Дополнительно можно указать истечение срока куки, а так же ограничения для специфического домена или пути.
-- [Контроль доступа (совместное использование ресурсов между разными источниками, HTTP access control (CORS))](/ru/docs/Web/HTTP/CORS)
+- [Контроль доступа (совместное использование ресурсов между разными источниками, HTTP access control (CORS))](/ru/docs/Web/HTTP/Guides/CORS)
   - : **Межсайтовые HTTP-запросы** (кросс-сайтовые) - это HTTP-запросы к ресурсам, находящимся в домене, **отличающемся** от того, с которого производится запрос. Например, HTML-страница, загружаемая с домена А (`http://domaina.example`), запрашивает изображение с домена Б (`http://domainb.foo`), используя тег `img` (`http://domainb.foo/image.jpg`). Это происходит постоянно в мире веба: страницы загружают различные ресурсы в кросс-сайтовой манере, включая стили (CSS), изображения, скрипты и другие ресурсы. CORS позволяет разработчикам сайтов контролировать межсайтовые запросы.
 - [Эволюция HTTP](/ru/docs/Web/HTTP/Evolution_of_HTTP)
   - : Краткое описание изменений, произошедших в HTTP, начиная с самых ранних версий, заканчивая новой HTTP/2 и далее.
 - [Принципы веб-безопасности Mozilla](https://wiki.mozilla.org/Security/Guidelines/Web_Security)
   - : Сборник советов для помощи в разработке защищённых веб-приложений.
-- [HTTP-сообщения (HTTP Messages)](/ru/docs/Web/HTTP/Messages)
+- [HTTP-сообщения (HTTP Messages)](/ru/docs/Web/HTTP/Guides/Messages)
   - : Описывает тип и структуру разных видов сообщений HTTP/1.x и HTTP/2.
-- [Обычный сеанс HTTP](/ru/docs/Web/HTTP/Session)
+- [Обычный сеанс HTTP](/ru/docs/Web/HTTP/Guides/Session)
   - : Показывает и описывает течение обычного сеанса HTTP.
-- [Управление подключениями в HTTP/1.x](/ru/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Управление подключениями в HTTP/1.x](/ru/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
   - : Описывает три модели управления подключениями, доступными в HTTP/1.x, их сильные и слабые стороны.
 - [Контроль предварительной загрузки DNS (Controlling DNS prefetching)](/ru/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
   - : Firefox, как и большинство других браузеров, выполняет **предварительную загрузку DNS (DNS prefetching)**. Это действие, когда браузеры превентивно выполняют разрешение доменных имён (получают имена доменов) для ссылок, по которым пользователь может перейти, а также для ссылок на ресурсы, такие как картинки, CSS, JavaScript. Эта предварительная загрузка выполняется в фоновом режиме, так что вполне вероятно, что к моменту обращения к объектам в документе DNS уже получен. Это уменьшает задержки, когда, например, пользователь кликает на ссылку.
@@ -36,9 +36,9 @@ slug: Web/HTTP
 
 Глубже изучите HTTP с помощью справочников и документации.
 
-- [HTTP-заголовки (HTTP Headers)](/ru/docs/Web/HTTP/Headers)
+- [HTTP-заголовки (HTTP Headers)](/ru/docs/Web/HTTP/Reference/Headers)
   - : Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя `X-` префикс; другие перечислены в [IANA registry](https://www.iana.org/assignments/message-headers/perm-headers.html), содержание которого в свою очередь определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA так же поддерживает [регистр предложенных новых HTTP-заголовков](https://www.iana.org/assignments/message-headers/prov-headers.html).
-- [Методы HTTP-запроса](/ru/docs/Web/HTTP/Methods)
+- [Методы HTTP-запроса](/ru/docs/Web/HTTP/Reference/Methods)
 
   - : Различные операции, которые выполняются с HTTP:
 
@@ -50,7 +50,7 @@ slug: Web/HTTP
     - {{HTTPMethod("PATCH")}}
     - другие
 
-- [Коды ответа (HTTP response codes)](/ru/docs/Web/HTTP/Status)
+- [Коды ответа (HTTP response codes)](/ru/docs/Web/HTTP/Reference/Status)
   - : Коды ответа HTTP указывают на результат выполнения определённого HTTP-запроса. Ответы сгруппированы в пять категорий: информационные ответы, удачные ответы, перенаправления, ошибки клиента и ошибки сервера.
 - [Директивы CSP](/ru/docs/Web/HTTP/Headers/Content-Security-Policy)
   - : Поля заголовка ответа {{HTTPHeader("Content-Security-Policy")}} позволяют администраторам веб-сайтов контролировать ресурсы, которые браузер пользователя может загрузить на данную веб-страницу. За некоторым исключением, эти политики связаны с указанием сервера-источника и адресов доступа (обращения) скриптов.
@@ -72,7 +72,7 @@ slug: Web/HTTP
 
 - [Controlling DNS prefetching](/en-US/Controlling_DNS_prefetching)
 - [HTTP pipelining FAQ](/en-US/HTTP_Pipelining_FAQ)
-- [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Cookies)
-- [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
+- [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Guides/Cookies)
+- [HTTP заголовки](/ru/docs/Web/HTTP/Reference/Headers)
 - [Basic access authentication](/ru/docs/HTTP/Basic_access_authentication)
-- [HTTP контроль доступа (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP контроль доступа (CORS)](/ru/docs/Web/HTTP/Guides/CORS)

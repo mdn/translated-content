@@ -137,4 +137,4 @@ slug: Web/HTML/Element/dialog
 
 - Событие [`close`](/ru/docs/Web/API/HTMLDialogElement/close_event)
 - Событие [`cancel`](/ru/docs/Web/API/HTMLDialogElement/cancel_event)
-- [HTML forms guide](/ru/docs/Learn/Forms).
+- [HTML forms guide](/ru/docs/Learn_web_development/Extensions/Forms).

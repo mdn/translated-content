@@ -58,11 +58,11 @@ View расширит базовый шаблон **layout.pug** и переоп
 
 ## На что это похоже?
 
-Запустите приложение (смотрите [тестирование маршрутов](/ru/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes) для соответствующей команды) и откройте ваш браузер по адресу: <http://localhost:3000/>. Затем выберите ссылку: _All books_. Если все сделано корректно, то вы должны увидеть нечто подобное скриншоту ниже.
+Запустите приложение (смотрите [тестирование маршрутов](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#testing_the_routes) для соответствующей команды) и откройте ваш браузер по адресу: <http://localhost:3000/>. Затем выберите ссылку: _All books_. Если все сделано корректно, то вы должны увидеть нечто подобное скриншоту ниже.
 
 ![Book List Page - Express Local Library site](locallibary_express_book_list.png)
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [BookInstance list page](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).
+- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [BookInstance list page](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).

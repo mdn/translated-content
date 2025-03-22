@@ -300,4 +300,4 @@ if (p1 instanceof Person && p2 instanceof Person) {
 - [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

@@ -5,7 +5,7 @@ slug: Web/HTTP/Reference/Headers/Vary
 
 {{HTTPSidebar}}
 
-Заголовок ответа **`Vary`** определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в [алгоритме согласования](/ru/docs/Web/HTTP/Content_negotiation) контента.
+Заголовок ответа **`Vary`** определяет, как сопоставить будущие заголовки запроса, чтобы решить, можно ли использовать кешированный ответ, а не запрашивать новый с исходного сервера. Он используется сервером для указания того, какие заголовки он использовал при выборе представления ресурса в [алгоритме согласования](/ru/docs/Web/HTTP/Guides/Content_negotiation) контента.
 
 Заголовок `Vary` должен быть установлен для ответа {{HTTPStatus("304")}} `Not Modified` точно так же, как он был бы установлен для эквивалентного ответа {{HTTPStatus("200")}} `OK`.
 
@@ -64,4 +64,4 @@ Vary: User-Agent
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](/ru/docs/Web/HTTP/Content_negotiation)
+- [Content negotiation](/ru/docs/Web/HTTP/Guides/Content_negotiation)

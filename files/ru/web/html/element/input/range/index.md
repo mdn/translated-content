@@ -464,7 +464,7 @@ input[type="range"] {
 
 ## Смотрите также
 
-- [HTML Forms](/ru/docs/Learn/Forms)
+- [HTML Forms](/ru/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} и интерфейс {{domxref("HTMLInputElement")}}, на котором он основан
 - [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} и{{domxref('validityState.rangeUnderflow')}}

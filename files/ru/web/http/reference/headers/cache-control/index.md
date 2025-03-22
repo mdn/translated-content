@@ -142,7 +142,7 @@ Cache-Control: public, max-age=31536000
 
 ## Смотрите также
 
-- [HTTP Caching FAQ](/ru/docs/Web/HTTP/Caching)
+- [HTTP Caching FAQ](/ru/docs/Web/HTTP/Guides/Caching)
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

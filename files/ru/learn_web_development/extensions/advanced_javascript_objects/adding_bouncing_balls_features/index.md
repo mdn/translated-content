@@ -159,10 +159,10 @@ window.onkeydown = function (e) {
 
 ## In this module
 
-- [Object basics](/ru/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Object prototypes](/ru/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/ru/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/ru/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/ru/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- [Object basics](/ru/docs/Learn_web_development/Core/Scripting/Object_basics)
+- [Object-oriented JavaScript for beginners](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [Object prototypes](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
+- [Inheritance in JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [Working with JSON data](/ru/docs/Learn_web_development/Core/Scripting/JSON)
+- [Object building practice](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)
+- [Adding features to our bouncing balls demo](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features)

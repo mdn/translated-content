@@ -5,7 +5,7 @@ slug: Web/SVG/Reference/Attribute/attributeType
 
 {{SVGRef}}
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
 
 Этот атрибут задаёт пространство имён, в котором определяются конечный атрибут и связанные с ним значения.
 

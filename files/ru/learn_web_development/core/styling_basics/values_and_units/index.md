@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/Styling_basics/Values_and_units
 
 Каждое свойство используемое в CSS имеет значение или набор значений которые допустимы для этого свойства, и изучение страниц MDN со свойствами поможет вам понять какие значения валидны для того или иного свойства. В этом уроке мы рассмотрим некоторые наиболее общие значения и единицы в использовании.
 
-| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To learn about the different types of values and units used in CSS properties.                                                                                                                                                                                                                                                                                                                                     |
+| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), basic knowledge of [working with files](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), and an idea of how CSS works (study [CSS first steps](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | To learn about the different types of values and units used in CSS properties.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Что такое значение CSS?
 
@@ -95,7 +95,7 @@ h1 {
 
 #### em и rem
 
-`em` и `rem` — две относительные длины, с которыми вы вероятное всего сталкиваетесь чаще при разметке чего-либо от блоков до текста. Стоит понимать как они работают, понимать различия между ними, особенно когда вы начинаете переходить к более сложным темам как [стилизация текста](/ru/docs/Learn/CSS/Styling_text) или [разметка CSS](/ru/docs/Learn/CSS/CSS_layout). Приведённый ниже пример показывает это.
+`em` и `rem` — две относительные длины, с которыми вы вероятное всего сталкиваетесь чаще при разметке чего-либо от блоков до текста. Стоит понимать как они работают, понимать различия между ними, особенно когда вы начинаете переходить к более сложным темам как [стилизация текста](/ru/docs/Learn_web_development/Core/Text_styling) или [разметка CSS](/ru/docs/Learn_web_development/Core/CSS_layout). Приведённый ниже пример показывает это.
 
 HTML это набор вложенных списков — у нас имеется три списка в общей сложности и оба примера имеют одинаковый HTML. Единственное различие в том, что первый имеет класс _ems,_ а второй класс _rems_.
 
@@ -230,7 +230,7 @@ In the following example we have positioned a background image 40px from the top
 
 Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-There are places where you use strings in CSS, for example [when specifying generated content](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
+There are places where you use strings in CSS, for example [when specifying generated content](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#generating_content_with_before_and_after). In this case the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 
@@ -256,21 +256,21 @@ For example, understanding that [`<image>`](/ru/docs/Web/CSS/image) also allows 
 
 ## In this module
 
-1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
+   - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+   - [Combinators](/ru/docs/Learn_web_development/Core/Styling_basics/Combinators)
 
-3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+3. [The box model](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
+4. [Backgrounds and borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+5. [Handling different text directions](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+6. [Overflowing content](/ru/docs/Learn_web_development/Core/Styling_basics/Overflow)
+7. [Values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+8. [Sizing items in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing)
+9. [Images, media, and form elements](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
+10. [Styling tables](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
+11. [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
 12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

@@ -9,7 +9,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
 
 ## Основы
 
-В [getting started](/ru/docs/Web/SVG/Tutorial/Getting_Started) мы уже видели, что элемент `text` может использоваться для размещения произвольного текста в SVG документах:
+В [getting started](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) мы уже видели, что элемент `text` может использоваться для размещения произвольного текста в SVG документах:
 
 ```xml
 <text x="10" y="10">Hello World!</text>

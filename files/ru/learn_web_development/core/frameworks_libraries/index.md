@@ -22,7 +22,7 @@ JavaScript-фреймворки являются неотъемлемой час
 
 ## Prerequisites
 
-You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), and especially [JavaScript](/ru/docs/Learn/JavaScript).
+You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), and especially [JavaScript](/ru/docs/Learn/JavaScript).
 
 Your code will be richer and more professional as a result, and you'll be able to troubleshoot problems with more confidence if you understand the fundamental web platform features that the frameworks are building on top of.
 
@@ -40,7 +40,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 >
 > If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
 
-- [1. Getting started with React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. Getting started with React](/ru/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
 - [2. Beginning our React todo list](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - : Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.

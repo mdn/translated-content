@@ -16,7 +16,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_dat
 
 ## Конфигурация шаблона
 
-Когда создавался каркас ([the skeleton website](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website)) веб-сайта _LocalLibrary,_ он был настроен на использование [Pug](https://pugjs.org/api/getting-started.html) . Можно было заметить, что модуль pug включён в зависимости в файле **package.json**, и установлен (app.set(...)) как движок представлений в файле **app.js**. Эта установка показывает,, что движок представлений - pug, и что _Express_ должен искать шаблоны в подкаталоге **/views**.
+Когда создавался каркас ([the skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)) веб-сайта _LocalLibrary,_ он был настроен на использование [Pug](https://pugjs.org/api/getting-started.html) . Можно было заметить, что модуль pug включён в зависимости в файле **package.json**, и установлен (app.set(...)) как движок представлений в файле **app.js**. Эта установка показывает,, что движок представлений - pug, и что _Express_ должен искать шаблоны в подкаталоге **/views**.
 
 ```js
 // View engine setup.
@@ -158,5 +158,5 @@ block content
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [The LocalLibrary base template](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template).
+- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
+- Proceed to the next subarticle of part 5: [The LocalLibrary base template](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template).

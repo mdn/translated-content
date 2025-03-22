@@ -47,7 +47,7 @@ figure {
 - вы так же можете использовать [Web Audio API](/ru/docs/Web/API/Web_Audio_API) для непосредственной генерации и управления потоками аудио из кода {{glossary("JavaScript")}};
 - элементы `<audio>` не могут иметь субтитры, в отличие от элементов {{HTMLElement("video")}}. Смотрите "[WebVTT и аудио](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/)" для более подробной информации.
 
-Хороший источник информации по использованию HTML-элемента `<audio>` – это руководство для начинающих "[Видео- и аудиоконтент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)".
+Хороший источник информации по использованию HTML-элемента `<audio>` – это руководство для начинающих "[Видео- и аудиоконтент](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)".
 
 ## Атрибуты
 
@@ -82,7 +82,7 @@ figure {
       > - Спецификация не обязывает браузер придерживаться значения этого атрибута – это просто совет.
 
 - `src`
-  - : {{glossary("URL")}} аудио для встраивания. Это является темой [контроля доступа HTTP](/ru/docs/Web/HTTP/CORS). Этот атрибут является необязательным; вы можете вместо него использовать элемент {{htmlelement("source")}} внутри блока audio (`<audio></audio>`), чтобы указать аудио для встраивания.
+  - : {{glossary("URL")}} аудио для встраивания. Это является темой [контроля доступа HTTP](/ru/docs/Web/HTTP/Guides/CORS). Этот атрибут является необязательным; вы можете вместо него использовать элемент {{htmlelement("source")}} внутри блока audio (`<audio></audio>`), чтобы указать аудио для встраивания.
 
 ## События
 
@@ -191,5 +191,5 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 - [`nsIDOMHTMLMediaElement`](/ru/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement).
 - {{htmlelement("source")}}.
 - {{htmlelement("video")}}.
-- [Видео и аудио контент](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+- [Видео и аудио контент](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 - [Основы кросс-браузерного audio](/ru/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics).

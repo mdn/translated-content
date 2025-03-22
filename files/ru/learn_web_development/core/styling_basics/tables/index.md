@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/Styling_basics/Tables
 
 Стилизация HTML таблиц это не самая гламурная работа в мире, но иногда нам нужно это делать. Эта статья руководство как сделать, чтобы ваши HTML таблицы выглядели хорошо, с некоторыми свойствами подробно рассмотренными в предыдущих статьях.
 
-| Необходимые знания: | Базовый HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), HTML таблицы (смотрите раздел HTML таблицы (TBD)), и представление о том как работает CSS ([Введение в CSS](/ru/docs/Learn/CSS/First_steps)). |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:               | Научиться эффективно стилизовать HTML таблицы.                                                                                                                                                                            |
+| Необходимые знания: | Базовый HTML ([Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), HTML таблицы (смотрите раздел HTML таблицы (TBD)), и представление о том как работает CSS ([Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics)). |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Цель:               | Научиться эффективно стилизовать HTML таблицы.                                                                                                                                                                                                                                       |
 
 ## Типичная HTML таблица
 
@@ -294,10 +294,10 @@ caption {
 
 ## В этом блоке
 
-- [Box model recap](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Backgrounds](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [Advanced box effects](/ru/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
+- [Box model recap](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [Backgrounds](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Стилизация таблиц](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
+- [Advanced box effects](/ru/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
 - [Creating fancy letterheaded paper](/ru/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
 - [A cool looking box](/ru/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

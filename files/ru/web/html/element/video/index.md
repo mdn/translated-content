@@ -146,7 +146,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 - [Media formats supported by the audio and video elements](/ru/docs/Web/Media/Formats)
 - {{htmlelement("audio")}}
-- [Using HTML5 audio and video](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Using HTML5 audio and video](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [`nsIDOMHTMLMediaElement`](/ru/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [TinyVid](http://tinyvid.tv/) - examples using ogg files in HTML5.

@@ -41,6 +41,6 @@ slug: Learn_web_development/Getting_started/Environment_setup/Installing_softwar
 
 ### Установка локального веб-сервера
 
-Некоторые примеры для успешной работы необходимо будет запустить на веб-сервере. Вы можете узнать, как это сделать в статье [Как настроить локальный сервер для тестирования?](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+Некоторые примеры для успешной работы необходимо будет запустить на веб-сервере. Вы можете узнать, как это сделать в статье [Как настроить локальный сервер для тестирования?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

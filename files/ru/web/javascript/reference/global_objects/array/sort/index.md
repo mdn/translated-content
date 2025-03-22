@@ -71,7 +71,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-Метод `sort` можно удобно использовать с {{jsxref("Operators/function", "функциональными выражениями", "", 1)}} (и [замыканиями](/ru/docs/Web/JavaScript/Closures)):
+Метод `sort` можно удобно использовать с {{jsxref("Operators/function", "функциональными выражениями", "", 1)}} (и [замыканиями](/ru/docs/Web/JavaScript/Guide/Closures)):
 
 ```js
 var numbers = [4, 2, 5, 1, 3];

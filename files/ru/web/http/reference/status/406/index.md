@@ -5,7 +5,7 @@ slug: Web/HTTP/Reference/Status/406
 
 {{HTTPSidebar}}
 
-HyperText Transfer Protocol (HTTP) код ошибки клиента **`406 Not Acceptable`** означает, что сервер не может вернуть ответ, соответствующий списку допустимых значений, определённых в заголовках упреждающего [согласования контента](/ru/docs/Web/HTTP/Content_negotiation), и что сервер не желает вернуть представление контента по умолчанию.
+HyperText Transfer Protocol (HTTP) код ошибки клиента **`406 Not Acceptable`** означает, что сервер не может вернуть ответ, соответствующий списку допустимых значений, определённых в заголовках упреждающего [согласования контента](/ru/docs/Web/HTTP/Guides/Content_negotiation), и что сервер не желает вернуть представление контента по умолчанию.
 
 Заголовки упреждающего согласования контента включают:
 
@@ -38,4 +38,4 @@ HyperText Transfer Protocol (HTTP) код ошибки клиента **`406 Not
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
-- HTTP [content negotiation](/ru/docs/Web/HTTP/Content_negotiation)
+- HTTP [content negotiation](/ru/docs/Web/HTTP/Guides/Content_negotiation)

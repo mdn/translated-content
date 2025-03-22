@@ -121,7 +121,7 @@ counter();
 
 ### Возвращение функции
 
-Смотрите также статью о [замыканиях](/ru/docs/Web/JavaScript/Closures).
+Смотрите также статью о [замыканиях](/ru/docs/Web/JavaScript/Guide/Closures).
 
 ```js
 function magic(x) {
@@ -145,4 +145,4 @@ answer(1337); // 56154
 ## Смотрите также
 
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
-- [Замыкания](/ru/docs/Web/JavaScript/Closures)
+- [Замыкания](/ru/docs/Web/JavaScript/Guide/Closures)

@@ -64,4 +64,4 @@ input:out-of-range + label::after {
 ## Смотрите также
 
 - {{cssxref(":in-range")}}
-- [Руководство валидации данных в формах](/ru/docs/Learn/Forms/Form_validation)
+- [Руководство валидации данных в формах](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)

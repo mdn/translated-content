@@ -17,7 +17,7 @@ l10n:
 
 `PATCH` (как и {{HTTPMethod("POST")}}) _может_ иметь побочные эффекты.
 
-Чтобы обозначить, что сервер поддерживает `PATCH`, можно добавить этот метод в список заголовков ответа {{HTTPHeader("Allow")}} или {{HTTPHeader("Access-Control-Allow-Methods")}} (для [CORS](/ru/docs/Web/HTTP/CORS)).
+Чтобы обозначить, что сервер поддерживает `PATCH`, можно добавить этот метод в список заголовков ответа {{HTTPHeader("Allow")}} или {{HTTPHeader("Access-Control-Allow-Methods")}} (для [CORS](/ru/docs/Web/HTTP/Guides/CORS)).
 
 Другим (неявным) индикатором, что метод `PATCH` разрешён, является наличие заголовка {{HTTPHeader("Accept-Patch")}}, который описывает, какой формат изменения документа принимает сервер.
 

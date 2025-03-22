@@ -56,21 +56,21 @@ slug: Web/JavaScript/Guide
 
   [Присваивание](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%9e%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b_%d0%bf%d1%80%d0%b8%d1%81%d0%b2%d0%b0%d0%b8%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f) и [Сравнение](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%9e%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b_%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f)
   [Арифметические операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%90%d1%80%d0%b8%d1%84%d0%bc%d0%b5%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5_%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b)
-  [Побитовые операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Битовые_(поразрядные)_операторы>) и [логические операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%9b%d0%be%d0%b3%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5_%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b)
-  [Условный (тернарный) операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Условный_(тернарный)_оператор>)
+  [Побитовые операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_operators#Битовые_(поразрядные)_операторы>) и [логические операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#%d0%9b%d0%be%d0%b3%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5_%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b)
+  [Условный (тернарный) операторы](</ru/docs/Web/JavaScript/Guide/Expressions_and_operators#Условный_(тернарный)_оператор>)
 
-- [Числа и даты](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates) [Числовые литералы](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
+- [Числа и даты](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings) [Числовые литералы](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
 
-  [Объект `Number`](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#объект_number)
-  [Объект `Math`](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#объект_math)
-  [Объект `Date`](/ru/docs/Web/JavaScript/Guide/Numbers_and_dates#объект_date)
+  [Объект `Number`](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#объект_number)
+  [Объект `Math`](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#объект_math)
+  [Объект `Date`](/ru/docs/Web/JavaScript/Guide/Numbers_and_strings#объект_date)
 
-- [Форматирование текста](/ru/docs/Web/JavaScript/Guide/Text_formatting)
+- [Форматирование текста](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 
-  [Строковые литералы](/ru/docs/Web/JavaScript/Guide/Text_formatting#строковые_литералы)
-  [Объект `String`](/ru/docs/Web/JavaScript/Guide/Text_formatting#объекты_string)
-  [Шаблонные литералы](/ru/docs/Web/JavaScript/Guide/Text_formatting#многострочные_шаблонные_строки)
-  [Интернационализация](/ru/docs/Web/JavaScript/Guide/Text_formatting#интернационализация)
+  [Строковые литералы](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#строковые_литералы)
+  [Объект `String`](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#объекты_string)
+  [Шаблонные литералы](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#многострочные_шаблонные_строки)
+  [Интернационализация](/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#интернационализация)
   [Регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions#%d0%a0%d0%b0%d0%b1%d0%be%d1%82%d0%b0_%d1%81_%d0%a0%d0%b5%d0%b3%d1%83%d0%bb%d1%8f%d1%80%d0%bd%d1%8b%d0%bc%d0%b8_%d0%92%d1%8b%d1%80%d0%b0%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f%d0%bc%d0%b8)
 
 <!---->
@@ -94,11 +94,11 @@ slug: Web/JavaScript/Guide
   [Определение методов](/ru/docs/Web/JavaScript/Guide/Working_with_objects#%d0%9e%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5_%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d0%be%d0%b2)
   [Геттеры и Сеттеры](/ru/docs/Web/JavaScript/Guide/Working_with_objects#%d0%9e%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5_%d0%b3%d0%b5%d1%82%d1%82%d0%b5%d1%80%d0%be%d0%b2_%d0%b8_%d1%81%d0%b5%d1%82%d1%82%d0%b5%d1%80%d0%be%d0%b2)
 
-- [Подробнее про объектную модель](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Подробнее про объектную модель](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
-  [Прототипно-ориентированное ООП](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#%d0%af%d0%b7%d1%8b%d0%ba%d0%b8_%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d0%bd%d0%b0_%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b0%d1%85_%d0%bf%d1%80%d0%be%d1%82%d0%b8%d0%b2_%d0%9f%d1%80%d0%be%d1%82%d0%be%d1%82%d0%b8%d0%bf%d0%bd%d0%be-%d0%be%d1%80%d0%b8%d0%b5%d0%bd%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d1%85_%d1%8f%d0%b7%d1%8b%d0%ba%d0%be%d0%b2)
-  [Создание иерархии объектов](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5_%d0%b8%d0%b5%d1%80%d0%b0%d1%80%d1%85%d0%b8%d0%b8)
-  [Наследование](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#%d0%9d%d0%b0%d1%81%d0%bb%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2)
+  [Прототипно-ориентированное ООП](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#%d0%af%d0%b7%d1%8b%d0%ba%d0%b8_%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d0%b5_%d0%bd%d0%b0_%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b0%d1%85_%d0%bf%d1%80%d0%be%d1%82%d0%b8%d0%b2_%d0%9f%d1%80%d0%be%d1%82%d0%be%d1%82%d0%b8%d0%bf%d0%bd%d0%be-%d0%be%d1%80%d0%b8%d0%b5%d0%bd%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d1%8b%d1%85_%d1%8f%d0%b7%d1%8b%d0%ba%d0%be%d0%b2)
+  [Создание иерархии объектов](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5_%d0%b8%d0%b5%d1%80%d0%b0%d1%80%d1%85%d0%b8%d0%b8)
+  [Наследование](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#%d0%9d%d0%b0%d1%81%d0%bb%d0%b5%d0%b4%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2)
 
 <!---->
 

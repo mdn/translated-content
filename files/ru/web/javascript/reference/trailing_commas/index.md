@@ -100,7 +100,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## Висящие запятые в деструктурировании
 
-Висящие запятые так же можно использовать слева при использовании [деструктурирующего присваивания](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Висящие запятые так же можно использовать слева при использовании [деструктурирующего присваивания](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring):
 
 ```js-nolint
 // массив деструктурируется с висящей запятой
