@@ -70,7 +70,7 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
 넓게 보면 본문은 두가지 종류로 나뉩니다.
 
 - 헤더 두 개({{HTTPHeader("Content-Type")}}와 {{HTTPHeader("Content-Length")}})로 정의된 단일 파일로 구성되는 단일-리소스 본문(single-resource bodies)입니다.
-- 각각 서로 다른 정보를 담고 있는 멀티파트 본문으로 구성되는 [다중 리소스 본문](/ko/docs/Web/HTTP/MIME_types#multipartform-data)입니다. 보통 [HTML 폼](/ko/docs/Learn/Forms)과 관련이 있습니다.
+- 각각 서로 다른 정보를 담고 있는 멀티파트 본문으로 구성되는 [다중 리소스 본문](/ko/docs/Web/HTTP/MIME_types#multipartform-data)입니다. 보통 [HTML 폼](/ko/docs/Learn_web_development/Extensions/Forms)과 관련이 있습니다.
 
 ## HTTP 응답
 

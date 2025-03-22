@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 
 {{learnsidebar}}
 
-이 실력 테스트의 목적은 여러분이 우리의 [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code) 문서를 이해했는지를 평가하기 위함입니다.
+이 실력 테스트의 목적은 여러분이 우리의 [반복문](/ko/docs/Learn_web_development/Core/Scripting/Loops) 문서를 이해했는지를 평가하기 위함입니다.
 
 > [!NOTE]
 > 여러분은 코드를 다운로드하고, [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 툴(tool)에 넣고, 그리고서 과제에 도전해 봄으로써 아래의 과제들에 대한 해답을 시도해볼 수 있습니다. 무한 루프를 만들고 평가 페이지를 멈추게 하는 위험 때문에 우리는 이 과제들에 대해 실시간으로 수정 가능한 에디터를 제공하지 않았습니다!

@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
-우리는 이제 첫 전체 페이지를 보여주는 코드를 추가할 때가 되었습니다 — [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) website를 위한 홈페이지를요. 이 홈페이지는 각각의 모델 타입마다 갖고 있는 레코드들의 숫자를 보여주고, 우리의 다른 페이지들로 이동할 수 있는 사이드바 내비게이션 링크들을 제공합니다. 이 섹션에서 우리는 기본 URL 맵과 뷰들을 작성하고, 데이터베이스에서 레코드들을 가져오고 그리고 탬플릿을 사용하는 것에 대한 연습 경험을 가질 수 있습니다.
+우리는 이제 첫 전체 페이지를 보여주는 코드를 추가할 때가 되었습니다 — [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website를 위한 홈페이지를요. 이 홈페이지는 각각의 모델 타입마다 갖고 있는 레코드들의 숫자를 보여주고, 우리의 다른 페이지들로 이동할 수 있는 사이드바 내비게이션 링크들을 제공합니다. 이 섹션에서 우리는 기본 URL 맵과 뷰들을 작성하고, 데이터베이스에서 레코드들을 가져오고 그리고 탬플릿을 사용하는 것에 대한 연습 경험을 가질 수 있습니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -76,7 +76,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 ### URL 매핑
 
-[skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website)를 만들었을 때, 우리는 **locallibrary/urls.py** 파일을 업데이트했습니다. `catalog/`로 시작하는 URL을 받았을 때, URLConf 모듈인 `catalog.urls` 가 나머지 문자열을 처리하도록 하기 위해서죠.
+[skeleton website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)를 만들었을 때, 우리는 **locallibrary/urls.py** 파일을 업데이트했습니다. `catalog/`로 시작하는 URL을 받았을 때, URLConf 모듈인 `catalog.urls` 가 나머지 문자열을 처리하도록 하기 위해서죠.
 
 **locallibrary/urls.py** 의 아래 코드 조각은 `catalog.urls` 모듈을 포함합니다:
 
@@ -152,7 +152,7 @@ def index(request):
 
 첫번째 줄은 우리의 모든 뷰들 안에서 데이터에 접근하는 데 사용할 모델 클래스들을 포함(import)합니다.
 
-view 함수의 첫번째 부분은 모델 클래스들에서 `objects.all()` 속성을 사용하는 레코드들의 개수를 가져옵니다. 이 함수는 또한 상태 필드에서 'a'(Available) 값을 가지고 있는 `BookInstance` 객체들의 목록도 가져옵니다. 이전 튜토리얼에서 모델 데이터에 접근하는 방법에 대한 더 많은 정보를 찾을 수 있습니다 : [Django Tutorial Part 3: Using models > Searching for records](/ko/docs/Learn/Server-side/Django/Models#searching_for_records).
+view 함수의 첫번째 부분은 모델 클래스들에서 `objects.all()` 속성을 사용하는 레코드들의 개수를 가져옵니다. 이 함수는 또한 상태 필드에서 'a'(Available) 값을 가지고 있는 `BookInstance` 객체들의 목록도 가져옵니다. 이전 튜토리얼에서 모델 데이터에 접근하는 방법에 대한 더 많은 정보를 찾을 수 있습니다 : [Django Tutorial Part 3: Using models > Searching for records](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records).
 
 view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 응답으로서 반환하기 위해 `render()` 함수를 호출합니다. 이 바로가기(shortcut) 함수는 아주 일반적으로 사용되는 경우들을 간단히 하기 위해 여러 다른 함수들을 포함합니다. `render()` 함수는 아래 매개 변수들을 허용합니다:
 
@@ -316,7 +316,7 @@ return render(request, 'index.html', context=context)
   style="width:555px;height:540px;" />
 ```
 
-> **참고:** **주의**: 위의 샘플은 파일들의 위치를 특정하지만, 장고는 기본적으로 파일을 제공하지 않습니다. 우리는 우리가 웹사이트 뼈대를 생성했을 때([created the website skeleton](/ko/docs/Learn/Server-side/Django/skeleton_website)) 전역 URL 매퍼(/locallibrary/locallibrary/urls.py)를 수정하여 개발 웹 서버가 파일을 제공하도록 설정했습니다만, 제품화되었을(in production)때도 파일을 제공할 수 있어야 합니다. 이것에 관해 차후에 다루겠습니다.
+> **참고:** **주의**: 위의 샘플은 파일들의 위치를 특정하지만, 장고는 기본적으로 파일을 제공하지 않습니다. 우리는 우리가 웹사이트 뼈대를 생성했을 때([created the website skeleton](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)) 전역 URL 매퍼(/locallibrary/locallibrary/urls.py)를 수정하여 개발 웹 서버가 파일을 제공하도록 설정했습니다만, 제품화되었을(in production)때도 파일을 제공할 수 있어야 합니다. 이것에 관해 차후에 다루겠습니다.
 
 정적 파일들로 작업하는 것에 대한 더 많은 정보는 장고 문서 안의 [Managing static files](https://docs.djangoproject.com/en/2.0/howto/static-files/) 를 참고하세요.
 

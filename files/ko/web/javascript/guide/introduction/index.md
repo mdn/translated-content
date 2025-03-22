@@ -21,11 +21,11 @@ l10n:
 
 MDN에 있는 JavaScript 문서는 다음 세가지 파트로 되어있습니다.
 
-- [Web 개발 학습하기](/ko/docs/Learn)는 입문자를 위한 정보를 제공하며, 프로그래밍과 인터넷에 대한 기본 개념을 소개합니다.
+- [Web 개발 학습하기](/ko/docs/Learn_web_development)는 입문자를 위한 정보를 제공하며, 프로그래밍과 인터넷에 대한 기본 개념을 소개합니다.
 - [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide) (이 안내서)는 JavaScript 언어와 객체에 대한 개요를 제공합니다.
 - [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference) JavaScript에 관련된 자세한 참고 자료를 제공합니다.
 
-JavaScript가 처음이라면, [학습터](/ko/docs/Learn)와 [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide)부터 시작해 보세요. 기본 사항을 확실히 이해했다면 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)에서 개별 객체 및 명령문에 대한 자세한 내용을 확인할 수 있습니다.
+JavaScript가 처음이라면, [학습터](/ko/docs/Learn_web_development)와 [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide)부터 시작해 보세요. 기본 사항을 확실히 이해했다면 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference)에서 개별 객체 및 명령문에 대한 자세한 내용을 확인할 수 있습니다.
 
 ## JavaScript는 무엇인가?
 

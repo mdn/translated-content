@@ -221,5 +221,5 @@ Exampleville CA 95555
 - {{htmlelement("select")}} 요소.
 - {{htmlelement("textarea")}} 요소.
 - {{htmlelement("form")}} 요소.
-- [HTML 양식](/ko/docs/Learn/Forms)
+- [HTML 양식](/ko/docs/Learn_web_development/Extensions/Forms)
 - 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).

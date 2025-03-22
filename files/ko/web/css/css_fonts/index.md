@@ -74,7 +74,7 @@ p {
 
 ## 가이드
 
-- [기본적인 텍스트 및 글꼴 스타일링](/ko/docs/Learn/CSS/Styling_text/Fundamentals)
+- [기본적인 텍스트 및 글꼴 스타일링](/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 
   - 초보자를 위한 이 학습 기사에서는 텍스트/글꼴의 스타일링에 있어 기본적인 부분을 상세하게 설명하고 있습니다. 글꼴의 굵기, 패밀리, 스타일링의 설정, 글꼴의 일괄 지정, 텍스트의 배치 등의 효과, 행과 문자의 간격 설정 등을 포함합니다.
 

@@ -11,8 +11,8 @@ original_slug: Learn/Forms
 ## 항목
 
 1. [나의 첫 HTML 폼](/ko/docs/Web/Guide/HTML/%ED%8F%BC/My_first_HTML_form)
-2. [HTML 폼 구성 방법](/ko/docs/Learn/Forms/How_to_structure_a_web_form)
-3. [기본 폼 위젯](/ko/docs/Learn/Forms/Basic_native_form_controls)
+2. [HTML 폼 구성 방법](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+3. [기본 폼 위젯](/ko/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 4. CSS와 HTML 폼
 
    1. [HTML 폼 스타일](/ko/docs/Learn/Forms/Styling_web_forms)
