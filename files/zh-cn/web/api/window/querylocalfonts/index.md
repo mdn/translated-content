@@ -2,7 +2,7 @@
 title: Window：queryLocalFonts() 方法
 slug: Web/API/Window/queryLocalFonts
 l10n:
-  sourceCommit: d7143e171b5f18fb37a686a7d4947db417fd74f3
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Local Font Access API")}}{{SeeCompatTable}}{{SecureContext_Header}}

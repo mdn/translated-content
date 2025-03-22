@@ -2,7 +2,7 @@
 title: NavigatorUAData：brands 属性
 slug: Web/API/NavigatorUAData/brands
 l10n:
-  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
