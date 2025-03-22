@@ -1,9 +1,8 @@
 ---
 title: 重ね合わせコンテキスト
 slug: Web/CSS/CSS_positioned_layout/Stacking_context
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 l10n:
-  sourceCommit: 9a06522ff323403f707ddad2cb45e27b53cee41e
+  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
 {{CSSRef}}
@@ -12,7 +11,7 @@ l10n:
 
 ## 解説
 
-この記事の前の部分である [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index)では、ある要素の描画順はそれらの `z-index` の値に影響を受けていました。これは、要素が*重ね合わせコンテキスト*を生じさせる特別なプロパティを持っていたからです。
+この記事の前の部分である [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index)では、ある要素の描画順はそれらの `z-index` の値に影響を受けていました。これは、要素が「重ね合わせコンテキスト」を生じさせる特別なプロパティを持っていたからです。
 
 重ね合わせコンテキストは以下のような場面で、文書の随所に様々な要素によって構成されます。
 
@@ -22,11 +21,14 @@ l10n:
 - {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のために `size` または `inline-size` に設定されているもの。
 - [フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - グリッド ({{cssxref("grid")}}) コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
-- {{cssxref("opacity")}} の値が `1` 未満である要素（[不透明度の仕様](https://www.w3.org/TR/css-color-3/#transparency)をご覧ください）。
+- {{cssxref("opacity")}} の値が `1` 未満である要素。
 - {{cssxref("mix-blend-mode")}} の値が `normal` 以外の要素。
 - 以下のプロパティのいずれかが `none` 以外の値を持つ要素。
 
   - {{cssxref("transform")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - {{cssxref("translate")}}
   - {{cssxref("filter")}}
   - {{cssxref("backdrop-filter")}}
   - {{cssxref("perspective")}}
@@ -34,9 +36,10 @@ l10n:
   - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
 
 - {{cssxref("isolation")}} の値が `isolate` である要素。
-- {{cssxref("will-change")}} の値が、初期値以外で重ね合わせコンテキストを作成する任意のプロパティを指定している要素（[この記事](https://dev.opera.com/articles/ja/css-will-change-property/)を参照）。
+- {{cssxref("will-change")}} の値が、初期値以外で重ね合わせコンテキストを作成する任意のプロパティを指定している要素。
 - {{cssxref("contain")}} の値が `layout` または `paint` であるか、これらのどちらかを含む複合値（すなわち `contain: strict`, `contain: content`）を持つ要素。
-- [最上位レイヤー](/ja/docs/Glossary/Top_layer)に配置され、対応する {{cssxref("::backdrop")}} がある要素。例えば[全画面](/ja/docs/Web/API/Fullscreen_API)や[ポップオーバー](/ja/docs/Web/API/Popover_API)の要素を含みます。
+- [最上位レイヤー](/ja/docs/Glossary/Top_layer)に配置され、対応する {{cssxref("::backdrop")}} がある要素。例えば[全画面](/ja/docs/Web/API/Fullscreen_API)や[ポップオーバー](/ja/docs/Web/API/Popover_API)の要素を含む。
+- 重ね合わせコンテキストを作成するプロパティ（`opacity` など）を持つ要素が、 {{cssxref("@keyframes")}} を使用してアニメーションし、 [`animation-fill-mode`](/ja/docs/Web/CSS/animation-fill-mode) が [`forwards`](/ja/docs/Web/CSS/animation-fill-mode#forwards) に設定されている場合。
 
 重ね合わせコンテキストの内部で、子要素は前に説明した規則に従って重ね合わせられます。重要なのは、子要素の `z-index` 値は、その親要素に対してのみ意味を持つということです。重ね合わせコンテキストは、その親の重ね合わせコンテキストでは不可分な一つの固まりとして扱われます。
 
@@ -79,12 +82,12 @@ Z 軸方向に重なった要素の描画順序の簡単な計算方法は、そ
 
 - ルート要素
 
-  - DIV #2 - z-index は 2
-  - DIV #3 - z-index は 4
+  - DIV #2: (`z-index`: 2)
+  - DIV #3: (`z-index`: 4)
 
-    - DIV #5 - z-index は 1、描画順は 4.1 なので、 z-index が 4 である要素の下に重なる
-    - DIV #6 - z-index は 3、描画順は 4.3 なので、 z-index が 4 である要素の下に重なる
-    - DIV #4 - z-index は 6、描画順は 4.6 なので、 z-index が 4 である要素の下に重なる
+    - DIV #5: (`z-index`: 1)、描画順は 4.1 なので、 (`z-index`: 4) である要素の下に重なる
+    - DIV #6: (`z-index`: 3)、描画順は 4.3 なので、 (`z-index`: 4) である要素の下に重なる
+    - DIV #4: (`z-index`: 6)、描画順は 4.6 なので、 (`z-index`: 4) である要素の下に重なる
 
   - DIV #1: (`z-index`: 5)
 
@@ -219,10 +222,10 @@ h1 {
 
 ## 関連情報
 
-- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動要素が重ね合わせでどのように扱われるか
+- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
+- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
 - [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
 - [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
+- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全階層の `z-index`
 - [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`
 - [最上位レイヤー](/ja/docs/Glossary/Top_layer)
