@@ -5469,6 +5469,7 @@
 /ja/docs/Web/SVG/Attribute/Styling	/ja/docs/Web/SVG/Reference/Attribute
 /ja/docs/Web/SVG/Attribute/accent-height	/ja/docs/Web/SVG/Reference/Attribute/accent-height
 /ja/docs/Web/SVG/Attribute/alignment-baseline	/ja/docs/Web/SVG/Reference/Attribute/alignment-baseline
+/ja/docs/Web/SVG/Attribute/baseline-shift	/ja/docs/Web/SVG/Reference/Attribute/baseline-shift
 /ja/docs/Web/SVG/Attribute/color	/ja/docs/Web/SVG/Reference/Attribute/color
 /ja/docs/Web/SVG/Attribute/color-interpolation	/ja/docs/Web/SVG/Reference/Attribute/color-interpolation
 /ja/docs/Web/SVG/Attribute/color-interpolation-filters	/ja/docs/Web/SVG/Reference/Attribute/color-interpolation-filters
@@ -5476,6 +5477,8 @@
 /ja/docs/Web/SVG/Attribute/cx	/ja/docs/Web/SVG/Reference/Attribute/cx
 /ja/docs/Web/SVG/Attribute/cy	/ja/docs/Web/SVG/Reference/Attribute/cy
 /ja/docs/Web/SVG/Attribute/d	/ja/docs/Web/SVG/Reference/Attribute/d
+/ja/docs/Web/SVG/Attribute/display	/ja/docs/Web/SVG/Reference/Attribute/display
+/ja/docs/Web/SVG/Attribute/dominant-baseline	/ja/docs/Web/SVG/Reference/Attribute/dominant-baseline
 /ja/docs/Web/SVG/Attribute/dx	/ja/docs/Web/SVG/Reference/Attribute/dx
 /ja/docs/Web/SVG/Attribute/dy	/ja/docs/Web/SVG/Reference/Attribute/dy
 /ja/docs/Web/SVG/Attribute/end	/ja/docs/Web/SVG/Reference/Attribute/end
@@ -5484,6 +5487,7 @@
 /ja/docs/Web/SVG/Attribute/fill-rule	/ja/docs/Web/SVG/Reference/Attribute/fill-rule
 /ja/docs/Web/SVG/Attribute/filter	/ja/docs/Web/SVG/Reference/Attribute/filter
 /ja/docs/Web/SVG/Attribute/filterUnits	/ja/docs/Web/SVG/Reference/Attribute/filterUnits
+/ja/docs/Web/SVG/Attribute/font-size	/ja/docs/Web/SVG/Reference/Attribute/font-size
 /ja/docs/Web/SVG/Attribute/height	/ja/docs/Web/SVG/Reference/Attribute/height
 /ja/docs/Web/SVG/Attribute/id	/ja/docs/Web/SVG/Reference/Attribute/id
 /ja/docs/Web/SVG/Attribute/lengthAdjust	/ja/docs/Web/SVG/Reference/Attribute/lengthAdjust
@@ -5494,6 +5498,7 @@
 /ja/docs/Web/SVG/Attribute/points	/ja/docs/Web/SVG/Reference/Attribute/points
 /ja/docs/Web/SVG/Attribute/preserveAspectRatio	/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio
 /ja/docs/Web/SVG/Attribute/r	/ja/docs/Web/SVG/Reference/Attribute/r
+/ja/docs/Web/SVG/Attribute/rotate	/ja/docs/Web/SVG/Reference/Attribute/rotate
 /ja/docs/Web/SVG/Attribute/scale	/ja/docs/Web/SVG/Reference/Attribute/scale
 /ja/docs/Web/SVG/Attribute/stop-color	/ja/docs/Web/SVG/Reference/Attribute/stop-color
 /ja/docs/Web/SVG/Attribute/stroke	/ja/docs/Web/SVG/Reference/Attribute/stroke
@@ -5504,6 +5509,7 @@
 /ja/docs/Web/SVG/Attribute/stroke-miterlimit	/ja/docs/Web/SVG/Reference/Attribute/stroke-miterlimit
 /ja/docs/Web/SVG/Attribute/stroke-width	/ja/docs/Web/SVG/Reference/Attribute/stroke-width
 /ja/docs/Web/SVG/Attribute/text-anchor	/ja/docs/Web/SVG/Reference/Attribute/text-anchor
+/ja/docs/Web/SVG/Attribute/textLength	/ja/docs/Web/SVG/Reference/Attribute/textLength
 /ja/docs/Web/SVG/Attribute/transform	/ja/docs/Web/SVG/Reference/Attribute/transform
 /ja/docs/Web/SVG/Attribute/vector-effect	/ja/docs/Web/SVG/Reference/Attribute/vector-effect
 /ja/docs/Web/SVG/Attribute/viewBox	/ja/docs/Web/SVG/Reference/Attribute/viewBox

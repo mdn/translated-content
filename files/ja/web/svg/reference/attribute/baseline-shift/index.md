@@ -1,6 +1,7 @@
 ---
 title: baseline-shift
-slug: Web/SVG/Attribute/baseline-shift
+slug: Web/SVG/Reference/Attribute/baseline-shift
+original_slug: Web/SVG/Attribute/baseline-shift
 l10n:
   sourceCommit: 892a7fb41030e07dfd8daaa57d874239be1ecc8a
 ---

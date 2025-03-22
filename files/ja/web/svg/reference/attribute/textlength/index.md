@@ -1,6 +1,7 @@
 ---
 title: textLength
-slug: Web/SVG/Attribute/textLength
+slug: Web/SVG/Reference/Attribute/textLength
+original_slug: Web/SVG/Attribute/textLength
 l10n:
   sourceCommit: 01b8471b84e1d157cbddbb3ffaf560a86b082070
 ---
