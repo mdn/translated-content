@@ -3,18 +3,17 @@ title: TypeScript
 slug: Glossary/TypeScript
 l10n:
   sourceCommit: 8005d92738cb5678d9b1e434f02ddebaa15c1eaa
-
 ---
 
 {{GlossarySidebar}}
 
-TypeScript is a programming language that adds {{glossary("static_typing", "static type checking")}} to JavaScript.
+TypeScript は、JavaScript に{{glossary("static_typing", "静的型チェック")}}を追加したプログラミング言語です。
 
-TypeScript is a superset of JavaScript, meaning that everything available in JavaScript is also available in TypeScript, and that every JavaScript program is a syntactically legal TypeScript program. Also, the runtime behavior of TypeScript and JavaScript is identical.
+TypeScript は JavaScript のスーパーセットです。つまり、JavaScript で使用できるものはすべて TypeScript でも使用でき、すべての JavaScript プログラムは構文的に正しい TypeScript プログラムです。また、TypeScript と JavaScript の実行時の動作は同一です。
 
-However, TypeScript adds compile time type checking, implementing rules about how different types can be used and combined. This catches a wide variety of programming errors that in JavaScript are only encountered at runtime.
+ただし、TypeScript ではコンパイル時の型チェックが追加され、さまざまな型の使用方法と組み合わせ方法に関するルールが実装されます。これにより、JavaScript では実行時にのみ発生するさまざまなプログラミング エラーが検出されます。
 
-Some typing rules are inferred from JavaScript. For example, in the code below, TypeScript infers that `myVariable` is a string, and will not allow it to be reassigned to a different type:
+いくつかの型付けルールは JavaScript から推測されます。例えば、以下のコードでは TypeScript は次のように推測します。 `myVariable` 文字列であり、別の型に再割り当てすることはできません。
 
 ```js
 let myVariable = "Hello World";
@@ -23,7 +22,7 @@ myVariable = 1;
 // Type 'number' is not assignable to type 'string'.
 ```
 
-TypeScript also enables the programmer to annotate their code, to indicate, for example, the types of parameters to a function or the properties of an object:
+TypeScript を使用すると、プログラマーはコードに注釈を付けて、たとえば関数のパラメーターの型やオブジェクトのプロパティを示すこともできます。
 
 ```ts
 function add(left: number, right: number): number {
@@ -35,8 +34,8 @@ add("hello", "world");
 // Argument of type 'string' is not assignable to parameter of type 'number'.
 ```
 
-After compilation, type annotations are removed, making the compiled output just JavaScript, meaning it can be executed in any JavaScript runtime.
+コンパイル後、型注釈は削除され、コンパイルされた出力は JavaScript のみになり、任意の JavaScript ランタイムで実行できるようになります。
 
-## See also
+## 関連情報
 
 - [TypeScript website](https://www.typescriptlang.org/)
