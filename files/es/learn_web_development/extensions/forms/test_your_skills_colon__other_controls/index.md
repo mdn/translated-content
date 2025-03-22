@@ -6,7 +6,7 @@ original_slug: Learn/Forms/Test_your_skills:_Other_controls
 
 {{learnsidebar}}
 
-El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro artículo [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls).
+El objetivo de esta prueba de habilidad es evaluar si has comprendido nuestro artículo [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls).
 
 > [!NOTE]
 > Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
