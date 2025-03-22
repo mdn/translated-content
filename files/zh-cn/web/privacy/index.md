@@ -1,8 +1,8 @@
 ---
-title: Privacy on the web
+title: 网上隐私
 slug: Web/Privacy
 l10n:
-    sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 人们使用网站来完成多种重要任务，例如银行业务、购物、娱乐和纳税。在此过程中，他们被要求向这些网站提供个人信息。用户对他们共享数据的网站寄予一定程度的信任。如果这些信息落入不法分子之手，可能会被用来危害用户，例如分析用户行为、向他们推送不需要的广告，甚至盗取他们的身份或财产。
@@ -75,7 +75,7 @@ l10n:
 
 浏览器厂商意识到保护用户隐私的需求以及跟踪、指纹识别等对用户体验的负面影响。为此，他们实施了多种隐私保护功能，以增强隐私保护，或减轻威胁。这个部分介绍了浏览器自动应用的不同类别的隐私保护。
 
-### 默认使用HTTPS
+### 默认使用 HTTPS
 
 [传输层安全性（TLS）](/zh-CN/docs/Web/Security/Transport_Layer_Security)通过在网络传输过程中加密数据提供安全性和隐私保护，它是 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 协议背后的技术。TLS 对隐私有益，因为它可以阻止第三方截取传输的数据并恶意使用，例如进行追踪。
 
@@ -86,13 +86,13 @@ l10n:
 - [证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)
   - : 一种开放标准，用于监控和审核证书，创建一个公共日志数据库，用于帮助识别不正确或恶意的证书。
 - [HTTP 严格传输安全（HSTS）](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
-  - : HSTS 由服务器使用，允许网站告知客户端它们只能使用HTTPS与服务器通信，由此帮助它们防止协议降级和 cookie 劫持攻击。
+  - : HSTS 由服务器使用，允许网站告知客户端它们只能使用 HTTPS 与服务器通信，由此帮助它们防止协议降级和 cookie 劫持攻击。
 - [HTTP/2](/zh-CN/docs/Glossary/HTTP_2)
   - : 虽然 HTTP/2 从技术上讲不必使用加密，但大多数浏览器开发者仅在使用 HTTPS 时支持它；因此，在某种程度上，它可以被视为一种增强安全性/隐私的功能。
 
 ### “强大功能”的选用
 
-所谓的“强大” Web API 功能，允许使用仅限[安全环境](/zh-CN/docs/Web/Security/Secure_Contexts)的潜在敏感数据和操作，基本上意味着仅限 HTTPS。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 Web 支付等功能。
+所谓的“强大”Web API 功能，允许使用仅限[安全环境](/zh-CN/docs/Web/Security/Secure_Contexts)的潜在敏感数据和操作，基本上意味着仅限 HTTPS。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 Web 支付等功能。
 
 ### 防追踪技术
 
@@ -157,8 +157,7 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
 
 允许用户选择何时删除重要的部分数据是一种非常有力的方式，它能够建立信任，但也可能有一些数据你希望自己来处理删除。例如，某些数据可能仅在用户登录会话期间使用几小时或几分钟，然后就会被删除。
 
-> [!NOTE]
-> {{httpheader("Clear-Site-Data")}} HTTP 响应头对于清除短期用户数据非常有用——它指示浏览器清除其缓存和/或 Cookies 和/或存储（例如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 数据）。例如，你可以让服务器在“注销确认”页面中发送此响应头，这样一旦用户注销，他们的数据就会被安全地删除。
+> [!NOTE] > {{httpheader("Clear-Site-Data")}} HTTP 响应头对于清除短期用户数据非常有用——它指示浏览器清除其缓存和/或 Cookies 和/或存储（例如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 数据）。例如，你可以让服务器在“注销确认”页面中发送此响应头，这样一旦用户注销，他们的数据就会被安全地删除。
 
 ## 减少追踪
 
@@ -195,7 +194,7 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
   > [!NOTE]
   > 另请参见 [Referer 标头：隐私和安全问题](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)。
 
-- 使用 {{httpheader("Permissions-Policy")}} HTTP 标头来控制 API “强大功能”（如通知、地理位置数据、访问摄像头的媒体流等）的访问。这对于隐私非常有用，因为它可以防止第三方网站意外使用这些功能，并且用户不想被不必要的权限提示轰炸，而这些提示他们可能无法理解。你还可以通过在 `<iframe>` 元素本身的 `allow` 属性中指定权限策略，来控制嵌入在 {{htmlelement("iframe")}} 元素中的第三方网站对“强大功能”的使用。
+- 使用 {{httpheader("Permissions-Policy")}} HTTP 标头来控制 API“强大功能”（如通知、地理位置数据、访问摄像头的媒体流等）的访问。这对于隐私非常有用，因为它可以防止第三方网站意外使用这些功能，并且用户不想被不必要的权限提示轰炸，而这些提示他们可能无法理解。你还可以通过在 `<iframe>` 元素本身的 `allow` 属性中指定权限策略，来控制嵌入在 {{htmlelement("iframe")}} 元素中的第三方网站对“强大功能”的使用。
 
   > [!NOTE]
   > 另请参见我们的 [Permissions-Policy 指南](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)获取更多信息和示例，及 [permissionspolicy.com](https://www.permissionspolicy.com/) 提供的有用工具，包括一个策略生成器。
