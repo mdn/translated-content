@@ -238,7 +238,7 @@ BigInt を期待する多くの組み込み演算は、まず引数を BigInt �
 - 文字列は整数リテラルを含むかのように解析され、変換される。解析に失敗すると {{jsxref("SyntaxError")}} が発生する。
 - [数値](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number)は {{jsxref("TypeError")}} を発生させ、精度の低下を引き起こす意図しない暗黙の変換を防ぐ。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} を発生させる。
-- オブジェクトはまず、[`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントに指定）、`valueOf()`、`toString()` の順にメソッドを呼び出して[プリミティブ変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)される。その結果のプリミティブは BigInt に変換される。
+- オブジェクトはまず、[`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) （`"number"` をヒントに指定）、`valueOf()`、`toString()` の順にメソッドを呼び出して[プリミティブ変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)される。その結果のプリミティブは BigInt に変換される。
 
 JavaScript でほぼ同じ効果を得る最良の方法は、[`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 関数を使うことです。`BigInt(x)` は同じアルゴリズムを使って `x` を変換しますが、[数値](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number)が {{jsxref("TypeError")}} を発生させず、整数であれば BigInt に変換される点が異なります。
 
@@ -262,7 +262,7 @@ BigInt を期待する組み込み演算は、変換後に BigInt を固定幅�
 
 - {{jsxref("Object/constructor", "BigInt.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数。`BigInt` インスタンスの場合、初期値は {{jsxref("BigInt/BigInt", "BigInt")}} コンストラクターです。
-- `BigInt.prototype[@@toStringTag]`
+- `BigInt.prototype[Symbol.toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"BigInt"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使われます。ただし、 `BigInt` も独自の [`toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) メソッドをもつので、`thisArg` として BigInt を指定して [`Object.prototype.toString.call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call) を呼び出さないかぎりこのプロパティは使われません。
 
 ## インスタンスメソッド

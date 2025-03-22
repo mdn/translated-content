@@ -70,7 +70,7 @@ l10n:
 ### JavaScript
 
 - ES2015 の {{jsxref("Proxy")}} のトラップである {{jsxref("Global_Objects/Proxy/Proxy/getPrototypeOf", "getPrototypeOf()")}} および {{jsxref("Global_Objects/Proxy/Proxy/setPrototypeOf", "setPrototypeOf()")}} を実装しました ([Firefox バグ 888969](https://bugzil.la/888969))。
-- ES2015 の {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}、{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}、{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}、{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}} メソッドおよび {{jsxref("RegExp.Symbol.species", "RegExp[Symbol.species]")}} getter を実装しました ([Firefox バグ 887016](https://bugzil.la/887016))。
+- ES2015 の {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[Symbol.match]()")}}、{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[Symbol.replace]()")}}、{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[Symbol.search]()")}}、{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[Symbol.split]()")}} メソッドおよび {{jsxref("RegExp.Symbol.species", "RegExp[Symbol.species]")}} getter を実装しました ([Firefox バグ 887016](https://bugzil.la/887016))。
 - 非推奨かつ非標準である、`String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} の `flags` 引数を廃止しました ([Firefox バグ 1108382](https://bugzil.la/1108382))。
 - Google Chrome ブラウザーとの相互運用性を高めるため {{jsxref("Date.parse()")}} で、2 桁で表す年の処理を変更しました ([Firefox バグ 1265136](https://bugzil.la/1265136))。
 

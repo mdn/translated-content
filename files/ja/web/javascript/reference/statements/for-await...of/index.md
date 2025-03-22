@@ -43,7 +43,7 @@ for await (variable of iterable)
 
 ## 解説
 
-`for await...of` ループが反復可能オブジェクトを反復処理する場合、最初に反復可能オブジェクトの [`[@@asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) メソッドを取得してそれを呼び出すと、[非同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)が返されます。`@asyncIterator` メソッドが存在しない場合は、次に [`[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドを探し、[同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)を返します。次に、 `next()`、`return()`、`throw()` メソッドから返されるすべてのオブジェクトを解決済みまたは拒否済みのプロミスにラップし、`value` プロパティがプロミスであれば解決済みにすることで、返された同期イテレーターを非同期イテレーターにラップします。ループは、最終的な非同期イテレーターの `next()` メソッドを繰り返し呼び出して、返されるプロミスを待ち、`variable` に代入される一連の値を生成します。
+`for await...of` ループが反復可能オブジェクトを反復処理する場合、最初に反復可能オブジェクトの [`[Symbol.asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) メソッドを取得してそれを呼び出すと、[非同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)が返されます。`@asyncIterator` メソッドが存在しない場合は、次に [`[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) メソッドを探し、[同期イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol)を返します。次に、 `next()`、`return()`、`throw()` メソッドから返されるすべてのオブジェクトを解決済みまたは拒否済みのプロミスにラップし、`value` プロパティがプロミスであれば解決済みにすることで、返された同期イテレーターを非同期イテレーターにラップします。ループは、最終的な非同期イテレーターの `next()` メソッドを繰り返し呼び出して、返されるプロミスを待ち、`variable` に代入される一連の値を生成します。
 
 `for await...of` ループが早期に終了した場合（例えば、`break` 文に遭遇したり、エラーが throw された場合）、クリーンアップを実行するためにイテレーターの [`return()`](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) メソッドが呼び出されます。返されたプロミスは、ループが終了する前に待機されます。
 

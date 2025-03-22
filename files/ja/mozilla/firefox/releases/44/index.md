@@ -80,7 +80,7 @@ l10n:
 
 #### 新規 API
 
-- {{jsxref("Symbol.toPrimitive")}}、{{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}、{{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} を実装しました ([Firefox バグ 1054756](https://bugzil.la/1054756))。
+- {{jsxref("Symbol.toPrimitive")}}、{{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[Symbol.toPrimitive]")}}、{{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[Symbol.toPrimitive]")}} を実装しました ([Firefox バグ 1054756](https://bugzil.la/1054756))。
 
 #### 変更点
 

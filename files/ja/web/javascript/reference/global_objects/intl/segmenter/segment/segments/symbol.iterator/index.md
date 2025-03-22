@@ -1,12 +1,12 @@
 ---
-title: Intl.Segments.prototype[@@iterator]()
+title: Intl.Segments.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
 ---
 
 {{JSRef}}
 
-**`[@@iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
+**`[Symbol.iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。
 
 {{InteractiveExample("JavaScript Demo: Segments.prototype[Symbol.iterator]()")}}
 
@@ -78,4 +78,4 @@ while (!result.done) {
 ## 関連情報
 
 - [Iteration protocols](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
+- [`Array.prototype[Symbol.iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
