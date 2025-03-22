@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
+**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
 {{InteractiveExample("CSS Demo: conic-gradient()")}}
 
@@ -165,7 +165,7 @@ background-size: 25% 25%;
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要なことで、スクリーンリーダーはその存在を告知しないため、ユーザーに何も伝えられません。扇形グラデーションを使って円グラフや市松模様などの効果を出すことは可能ですが、 CSS 画像は代替テキストを割り当てるネイティブな方法を提供していないため、扇形グラデーションで表現された画像はスクリーンリーダーのユーザーが認知することはできません。ページの全体的な目的を理解するために重要な情報が画像に含まれている場合は、文書内で意味的に記述する方が良いでしょう。
 
-- [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 例

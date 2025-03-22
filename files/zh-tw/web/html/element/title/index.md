@@ -125,4 +125,4 @@ slug: Web/HTML/Element/title
 
 ## 參見
 
-- SVG [`<title>`](/zh-TW/docs/Web/SVG/Element/title) 元素
+- SVG [`<title>`](/zh-TW/docs/Web/SVG/Reference/Element/title) 元素

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`414 URI Too Long`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、クライアントがリクエストした URI が、サーバーが解釈しようとするものよりも長いことを示します。
+HTTP の **`414 URI Too Long`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、クライアントがリクエストした URI が、サーバーが解釈しようとするものよりも長いことを示します。
 
 これが発生する可能性がある条件はわずかです。
 
@@ -61,5 +61,5 @@ Content-Length: 1234
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{Glossary("URI")}}

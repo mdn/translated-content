@@ -85,7 +85,7 @@ li:hover:after {
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-もっと深い HTML のデータ属性の使用については、[データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)を参照してください。
+もっと深い HTML のデータ属性の使用については、[データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)を参照してください。
 
 ## 仕様書
 
@@ -99,4 +99,4 @@ li:hover:after {
 
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - これらの値を読み書きできる {{domxref("HTMLElement.dataset")}} プロパティ
-- [データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)
+- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

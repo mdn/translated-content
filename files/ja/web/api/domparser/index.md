@@ -41,7 +41,7 @@ HTML 文書の場合、{{domxref("Element.innerHTML")}} や {{domxref("Element.o
 
 ## 関連情報
 
-- [XML の解釈とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)
+- [XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 文書での同様のページ

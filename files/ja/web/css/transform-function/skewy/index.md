@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`skewY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を 2D 平面上で垂直方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`skewY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を 2D 平面上で垂直方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS Demo: skewY()")}}
 

@@ -22,20 +22,20 @@ l10n:
 
 ARIA `tooltip` ロールの使用は、通常のブラウザのツールチップの動作を補足するものです。ネイティブブラウザーにおけるツールチップの例としては、一部のウェブブラウザーが要素にマウスを長く当てると [`title` 属性](/ja/docs/Web/HTML/Global_attributes/title) を表示するものがあります。キーボードのフォーカスやタッチ操作によってこの機能を有効にすることはできません。ツールチップやタイトルとして記載するほど重要な情報であれば、可視テキストに含めることを検討してください。
 
-`tooltip` ロールを持つ要素は、ツールチップが表示される前または表示されるときに [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) を使用して参照する必要があります。 `aria-describedby` 属性はツールチップではなく、自分自身で要素に指定します。
+`tooltip` ロールを持つ要素は、ツールチップが表示される前または表示されるときに [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を使用して参照する必要があります。 `aria-describedby` 属性はツールチップではなく、自分自身で要素に指定します。
 
 ツールチップは、自分自身の要素の [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) プロパティではポップアップとはみなされません。
 
 ツールチップは現れたり消えたりしますが、その出現は自動的に行われ、ユーザーが意図的に制御するものではないので、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) ロールは対応していません。
 
-ツールチップのアクセシブル名は、コンテンツから決まります。理論的には、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) から使用することができますが、ほとんどの場合、アクセシブル名を持つツールチップを提供するために ARIA プロパティを使用することは推奨されません。
+ツールチップのアクセシブル名は、コンテンツから決まります。理論的には、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) から使用することができますが、ほとんどの場合、アクセシブル名を持つツールチップを提供するために ARIA プロパティを使用することは推奨されません。
 
-ツールチップは追加情報を提供します。一般的に、ツールチップ自身は直接操作できません。ツールチップは通常、主要素の `id` を持つ [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) を介して定義するコンテンツと関連付けられます。そのため、ツールチップにアクセシブル名が明示的に設定されている場合、その名前はツールチップのコンテンツではなく、主要素の説明として公開されます。
+ツールチップは追加情報を提供します。一般的に、ツールチップ自身は直接操作できません。ツールチップは通常、主要素の `id` を持つ [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を介して定義するコンテンツと関連付けられます。そのため、ツールチップにアクセシブル名が明示的に設定されている場合、その名前はツールチップのコンテンツではなく、主要素の説明として公開されます。
 
 ### 関連する WAI-ARIA ロール、状態、プロパティ
 
 - ツールチップのコンテナーとなる要素には `role="tooltip"` が設定されています。
-- ツールチップを発生させる要素は、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) でツールチップ要素を参照します。
+- ツールチップを発生させる要素は、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) でツールチップ要素を参照します。
 
 ### キーボード操作
 
@@ -102,7 +102,7 @@ ARIA `tooltip` ロールの使用は、通常のブラウザのツールチッ�
 
 ツールチップを表示するほど重要な情報なら、常に表示しなければならないほど重要ではないでしょうか。
 
-ツールチップは、技術的には所有している要素の外にマウスが移動したとしても、マウスを当てた時には開いたままでなければなりません。マウスを当てたときに現れるコンテンツは、ユーザーがマウスポインターをトリガーの上に置いておく必要がある場合、知覚することが困難または不可能になる可能性があるため、 [WCAG 1.4.13](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする) では、可視化されたコンテンツは永続的であるべきであり、ユーザー操作なしに消えてはならないと示しています。
+ツールチップは、技術的には所有している要素の外にマウスが移動したとしても、マウスを当てた時には開いたままでなければなりません。マウスを当てたときに現れるコンテンツは、ユーザーがマウスポインターをトリガーの上に置いておく必要がある場合、知覚することが困難または不可能になる可能性があるため、 [WCAG 1.4.13](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする) では、可視化されたコンテンツは永続的であるべきであり、ユーザー操作なしに消えてはならないと示しています。
 
 ## ベストプラクティス
 
@@ -114,7 +114,7 @@ ARIA `tooltip` ロールの使用は、通常のブラウザのツールチッ�
 
 ## 関連情報
 
-- [`dialog` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [`dialog` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)
 - [CSS: `:focus` 擬似クラス](/ja/docs/Web/CSS/:focus)
 - [Tooltips & Toggletips](https://inclusive-components.design/tooltips-toggletips/) by Heydon Pickering
 - [Understanding SC 1.4.13:Content on Hover or Focus (WCAG Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html)

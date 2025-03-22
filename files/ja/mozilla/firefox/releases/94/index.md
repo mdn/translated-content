@@ -39,7 +39,7 @@ l10n:
 
 ### HTTP
 
-- [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) レスポンスヘッダーの `cache` ディレクティブは既定では無効になっています。
+- [`Clear-Site-Data`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) レスポンスヘッダーの `cache` ディレクティブは既定では無効になっています。
   これは環境設定 `privacy.clearsitedata.cache.enabled` ([Firefox bug 1729291](https://bugzil.la/1729291)) を使って有効にできます。
 
 ## アドオン開発者向けの変更点一覧

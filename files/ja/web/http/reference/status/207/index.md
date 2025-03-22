@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`207 Multi-Status`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、レスポンスが混在していることを示します。
+HTTP の **`207 Multi-Status`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、レスポンスが混在していることを示します。
 このレスポンスは、ウェブ分散オーサリングおよびバージョン管理 ({{Glossary("WebDAV")}}) のコンテキストでのみ使用されています。
 
 レスポンス本体は `text/xml` または `application/xml` の HTTP エンティティであり、 `multistatus` ルート要素に個々のレスポンスコードが列挙されています。
@@ -72,5 +72,5 @@ Content-Length: 1241
 
 - {{HTTPStatus("204")}}
 - {{HTTPStatus("403")}}
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)

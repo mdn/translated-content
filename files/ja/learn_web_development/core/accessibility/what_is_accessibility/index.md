@@ -172,12 +172,12 @@ l10n:
 
 ## 関連情報
 
-- [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
-  - [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  - [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  - [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  - [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  - [知覚可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
+  - [操作可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  - [理解可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  - [堅牢](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
 
 - [Google Chrome released an auto-captioning extension](https://blog.google/products/chrome/live-caption-chrome/)
 

@@ -8,13 +8,13 @@ l10n:
 
 {{XsltSidebar}}
 
-この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XPath) を使うためのインターフェイスについて解説します。 Mozilla は [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/) のかなりの部分を実装しており、 HTML 文書と XML 文書のどちらに対しても XPath 式を実行することができます。
+この文書では、拡張機能やウェブサイトから JavaScript 内で [XPath](/ja/docs/Web/XML/XPath) を使うためのインターフェイスについて解説します。 Mozilla は [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/) のかなりの部分を実装しており、 HTML 文書と XML 文書のどちらに対しても XPath 式を実行することができます。
 
 XPath を使用するための主となるインターフェイスは [document](/ja/docs/Web/API/Document) オブジェクトの [evaluate](/ja/docs/Web/API/Document/evaluate) 関数です。
 
 ## document.evaluate()
 
-このメソッドは [XPath](/ja/docs/Web/XPath) 式を [XML](/ja/docs/Glossary/XML) ベースの文書 ( HTML を含む) に対して評価し、 [`XPathResult`](/ja/docs/Web/API/XPathResult) オブジェクトを返します。これは単一のノード、もしくはノードの集合になります。このメソッドの既存のドキュメントは [document.evaluate](/ja/docs/Web/API/Document/evaluate) ですが、このメソッドの解説のためには内容が薄いため、以下でさらに詳しく説明します。
+このメソッドは [XPath](/ja/docs/Web/XML/XPath) 式を [XML](/ja/docs/Glossary/XML) ベースの文書 ( HTML を含む) に対して評価し、 [`XPathResult`](/ja/docs/Web/API/XPathResult) オブジェクトを返します。これは単一のノード、もしくはノードの集合になります。このメソッドの既存のドキュメントは [document.evaluate](/ja/docs/Web/API/Document/evaluate) ですが、このメソッドの解説のためには内容が薄いため、以下でさらに詳しく説明します。
 
 ```js
 const xpathResult = document.evaluate(
@@ -74,7 +74,7 @@ const nsResolver = xpEvaluator.createNSResolver(
 
 ### メモ
 
-任意の DOM ノードを名前空間の解決に適応させると、 [XPath](/ja/docs/Web/XPath) 式が文書内に現れたノードのコンテキストに関連して簡単に評価できるようになります。このアダプターは、ノード上の DOM Level 3 メソッド `lookupNamespaceURI` と同様に動作し、 `lookupNamespaceURI` が呼び出された時点でノードの階層で利用可能な現在の情報を使用して、指定された接頭辞から `namespaceURI` を解決します。また、暗黙の `xml` 接頭辞も正しく解決します。
+任意の DOM ノードを名前空間の解決に適応させると、 [XPath](/ja/docs/Web/XML/XPath) 式が文書内に現れたノードのコンテキストに関連して簡単に評価できるようになります。このアダプターは、ノード上の DOM Level 3 メソッド `lookupNamespaceURI` と同様に動作し、 `lookupNamespaceURI` が呼び出された時点でノードの階層で利用可能な現在の情報を使用して、指定された接頭辞から `namespaceURI` を解決します。また、暗黙の `xml` 接頭辞も正しく解決します。
 
 ### 返値の型の指定
 
@@ -96,7 +96,7 @@ const nsResolver = xpEvaluator.createNSResolver(
 
 ##### 例
 
-下の例では XPath 式 [`count(//p)`](/ja/docs/Web/XPath/Functions/count) によって HTML 文書内の `<p>` 要素の数を取得しています。
+下の例では XPath 式 [`count(//p)`](/ja/docs/Web/XML/XPath/Reference/Functions/count) によって HTML 文書内の `<p>` 要素の数を取得しています。
 
 ```js
 const paragraphCount = document.evaluate(
@@ -386,7 +386,7 @@ null ではない名前空間の既定の要素に一致させる (そして名�
 
 名前空間の要素や属性を見つける際に特定の接頭辞を必ずしも必要とせず、 (意図的に) 名前空間に柔軟性を持たせたい場合は、特別な手法を用いなければなりません。
 
-上の節のアプローチを応用して、選択された接頭辞に関係なく名前空間の要素をテストすることは ([`local-name()`](/ja/docs/Web/XPath/Functions/local-name) と [`namespace-uri()`](/ja/docs/Web/XPath/Functions/namespace-uri) を組み合わせて [`name()`](/ja/docs/Web/XPath/Functions/name) の代わりに使用すれば) 可能ですが、特定の名前空間属性を持つ要素を述語の中に取り込みたい場合には、より困難な状況が発生します (XPath 1.0 には実装に依存しない変数が存在しないため)。
+上の節のアプローチを応用して、選択された接頭辞に関係なく名前空間の要素をテストすることは ([`local-name()`](/ja/docs/Web/XML/XPath/Reference/Functions/local-name) と [`namespace-uri()`](/ja/docs/Web/XML/XPath/Reference/Functions/namespace-uri) を組み合わせて [`name()`](/ja/docs/Web/XML/XPath/Reference/Functions/name) の代わりに使用すれば) 可能ですが、特定の名前空間属性を持つ要素を述語の中に取り込みたい場合には、より困難な状況が発生します (XPath 1.0 には実装に依存しない変数が存在しないため)。
 
 たとえば、次のように namespaced 属性を持つ要素を取得しようとすると、 (間違って) `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];` となります。
 
@@ -418,7 +418,7 @@ let thisitemEl = thislevel.iterateNext();
 
 ## 関連情報
 
-- [XPath](/ja/docs/Web/XPath)
+- [XPath](/ja/docs/Web/XML/XPath)
 - [XML Path Language](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info) from _[What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)_ by G. Ken Holman
 
 ## 原著情報

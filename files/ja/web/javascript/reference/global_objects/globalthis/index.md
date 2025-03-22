@@ -39,7 +39,7 @@ console.log(canMakeHTTPRequest());
 
 ### 異なる環境間でグローバルの検索
 
-`globalThis` 以前は、その環境のグローバルオブジェクトを取得する信頼性の高い方法は `Function('return this')()` だけでした。ただし、これは設定によっては [CSP](/ja/docs/Web/HTTP/CSP) 違反が発生するため、[es6-shim](https://github.com/paulmillr/es6-shim) では次のようなチェックを使用します。
+`globalThis` 以前は、その環境のグローバルオブジェクトを取得する信頼性の高い方法は `Function('return this')()` だけでした。ただし、これは設定によっては [CSP](/ja/docs/Web/HTTP/Guides/CSP) 違反が発生するため、[es6-shim](https://github.com/paulmillr/es6-shim) では次のようなチェックを使用します。
 
 ```js
 var getGlobal = function () {

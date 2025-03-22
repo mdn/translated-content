@@ -12,7 +12,7 @@ l10n:
 
 要素やコンテンツの編集中にユーザーが入力する可能性のあるデータの種類を示すヒントを提供するものです。これにより、ブラウザーは適切な仮想キーボードを表示することができます。
 
-これは主に {{HTMLElement("input")}} 要素で使用されますが、どの要素でも [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) モードであれば使用できます。
+これは主に {{HTMLElement("input")}} 要素で使用されますが、どの要素でも [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) モードであれば使用できます。
 
 ## 値
 
@@ -53,4 +53,4 @@ l10n:
 
 ## 関連情報
 
-- [inputmode](/ja/docs/Web/HTML/Global_attributes#inputmode) 属性
+- [inputmode](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性

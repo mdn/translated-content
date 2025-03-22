@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaColCount`** は {{domxref("Element")}} インターフェイスのプロパティで、テーブル、グリッド、ツリーグリッドの列数を定義する [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性の値を反映します。
+**`ariaColCount`** は {{domxref("Element")}} インターフェイスのプロパティで、テーブル、グリッド、ツリーグリッドの列数を定義する [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性の値を反映します。
 
 ## 値
 
@@ -73,4 +73,4 @@ console.log(el.ariaColCount); // 3
 
 {{Compat}}
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM XPath")}}
 
-**`evaluate()`** は {{domxref("XPathExpression")}} インターフェイスのメソッドで、指定されたノードまたは文書に対して [XPath](/ja/docs/Web/XPath) 式を実行し、{{domxref("XPathResult")}} を返します。
+**`evaluate()`** は {{domxref("XPathExpression")}} インターフェイスのメソッドで、指定されたノードまたは文書に対して [XPath](/ja/docs/Web/XML/XPath) 式を実行し、{{domxref("XPathResult")}} を返します。
 
 ## 構文
 

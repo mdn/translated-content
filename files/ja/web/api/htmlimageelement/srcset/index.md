@@ -98,7 +98,7 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("Examples", 640, 320)}}
 
-それ以外の例については、[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)のガイドを参照してください。
+それ以外の例については、[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)のガイドを参照してください。
 
 ## 仕様書
 
@@ -110,6 +110,6 @@ window.addEventListener("load", () => {
 
 ## 関連情報
 
-- [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)
+- [HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
+- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)

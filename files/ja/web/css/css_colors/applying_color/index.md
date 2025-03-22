@@ -27,7 +27,7 @@ l10n:
 
 - {{cssxref("color")}}
 
-  - : テキストと[テキスト装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (下線や上線、打ち消し線などを付加するもの) に使用する色です。
+  - : テキストと[テキスト装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (下線や上線、打ち消し線などを付加するもの) に使用する色です。
 
 - {{cssxref("background-color")}}
 
@@ -35,7 +35,7 @@ l10n:
 
 - {{cssxref("text-shadow")}}
 
-  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows)を参照してください。
+  - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows)を参照してください。
 
 - {{cssxref("text-decoration-color")}}
 
@@ -71,12 +71,12 @@ l10n:
 
 - {{cssxref("outline-color")}}
 
-  - : 要素の外側に輪郭を描画する際に使用する色です。この輪郭は、文書内の補助的な空間を確保しないという点で、ボーダーとは異なります。輪郭は[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)には参加せず、他のコンテンツと重複します。輪郭は一般的にフォーカスインジケーターとして使用され、現在どの要素がフォーカスを持っており、キーボード入力イベントを受信するかを示します。
+  - : 要素の外側に輪郭を描画する際に使用する色です。この輪郭は、文書内の補助的な空間を確保しないという点で、ボーダーとは異なります。輪郭は[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)には参加せず、他のコンテンツと重複します。輪郭は一般的にフォーカスインジケーターとして使用され、現在どの要素がフォーカスを持っており、キーボード入力イベントを受信するかを示します。
 
 ### 境界線
 
-あらゆる要素で、周囲に[境界線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
-基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル設定](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) を参照してください。
+あらゆる要素で、周囲に[境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
+基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) を参照してください。
 
 {{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/border-width)、[線種](/ja/docs/Web/CSS/border-style)（実線、破線など) などの特性も含んだ）すべての設定をこれ一つで行えます。
 
@@ -212,5 +212,5 @@ CSS が唯一の色を付けるためのウェブ技術ではありません。�
 - [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)ガイド
 - [賢い色の使用](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [ウェブのグラフィック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブ上のその他のグラフィック)
+- [グラフィックの描画](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
+- [ウェブのグラフィック](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブ上のその他のグラフィック)

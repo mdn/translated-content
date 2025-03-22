@@ -37,6 +37,6 @@ reportValidity()
 - {{domxref("HTMLTextAreaElement.checkValidity()")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
 - CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス

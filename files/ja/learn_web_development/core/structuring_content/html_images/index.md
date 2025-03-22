@@ -84,7 +84,7 @@ l10n:
 
 ![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" と書かれています](basic-image.png)
 
-> **メモ:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/Replaced_element)を参照してください。
+> **メモ:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)を参照してください。
 
 > [!NOTE]
 > この節で仕上げた例は、 [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)ことができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)も参照してください）。

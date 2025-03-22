@@ -1,7 +1,6 @@
 ---
 title: Контрольный список по мобильной доступности
 slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
-original_slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
 
 {{AccessibilitySidebar}}

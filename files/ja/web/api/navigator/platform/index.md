@@ -12,7 +12,7 @@ l10n:
 **`platform`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、ユーザーのブラウザーが動作しているプラットフォームを特定する文字列を返します。
 
 > [!NOTE]
-> 一般的に、このようなメソッドやプロパティを使用してユーザー環境の情報を探そうとするコードを書くことは可能な限り避け、代わりに[機能検出](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)を行うコードを書くべきです。
+> 一般的に、このようなメソッドやプロパティを使用してユーザー環境の情報を探そうとするコードを書くことは可能な限り避け、代わりに[機能検出](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)を行うコードを書くべきです。
 
 ## 値
 
@@ -20,7 +20,7 @@ l10n:
 
 ## 例
 
-`navigator.platform` は常に避けて、[機能検出](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)を使うべきです。しかし、使用できる選択肢の中で、 `navigator.platform` が最悪の選択肢ではない場合があります。キーボードショートカットの修飾キーが（アップル以外のシステムで使用されている） `⌃` コントロールキーではなく、（アップルのシステムで使用されている） `⌘` コマンドキーであるというアドバイスをユーザーに表示させる必要がある場合です。
+`navigator.platform` は常に避けて、[機能検出](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)を使うべきです。しかし、使用できる選択肢の中で、 `navigator.platform` が最悪の選択肢ではない場合があります。キーボードショートカットの修飾キーが（アップル以外のシステムで使用されている） `⌃` コントロールキーではなく、（アップルのシステムで使用されている） `⌘` コマンドキーであるというアドバイスをユーザーに表示させる必要がある場合です。
 
 ```js
 let modifierKeyPrefix = "^"; // コントロールキー

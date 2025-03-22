@@ -156,7 +156,7 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   - **ページの構成を見なおす**。ページがその[ページの種類](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)に応じて適切に構成されているか確認してください。すべての節が存在し、適切なコンテンツがあることを調べてください。
   - **完全性を確保する**。すべての節が完全で、最新の情報が含まれていることを確認してください。すべての引数がリストアップされ、説明されているか。例外がカバーされていることを確認してください（これは特にコンテンツが欠けていることが多い場所です)。
   - **すべての概念が完全に具体化されていることを確認する**。すべての項目が詳細に説明されているかどうか。簡単な説明をするのは簡単ですが、すべてのニュアンスが含まれているかどうかを確認してください。特別なケースはありますか？読者が知っておくべき既知の制限はありますか？
-  - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
+  - **例を追加する**。すべての引数、あるいは少なくとも初級から中級レベルのユーザーが使用する可能性のある引数（またはプロパティや属性）と、追加の説明が必要な高度な引数を網羅した例を用意する必要があります。それぞれの例の前には、その例が何をするのか、それを理解するためにはどのような知識が必要なのかなどの概要を示す必要があります。例の後（または例の一部の間）には、コードがどのように動作するかを説明する文章が必要です。例の詳細やエラー処理についても手を抜いてはいけません。読者は例をコピー＆ペーストして自分のプロジェクトで使用するでしょうから、そのコードが本番サイトで使用されることになるでしょう。より有用な情報は、[サンプルコードのガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)を参照してください。
   - **使用例を説明する**。説明されている機能について、特に一般的な使用例がある場合は、それについて話してください。一般的な開発上の問題を解決するために文書化された方法を読者が理解すると仮定するのではなく、実際にその利用例についての節を追加し、例とその例がどのように機能するかを説明するテキストを追加してください。
   - **画像情報を追加する**。すべての画像や図に適切な [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストを入れてください。このテキストは、表などのキャプションと同様に重要です。スパイダーは画像をクロールすることができないため、 [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストによって、埋め込まれたメディアに含まれるコンテンツを検索エンジンのクローラーに伝えることができます。
 
@@ -439,7 +439,7 @@ MDN Web Docs のページには、1 つ以上のサンプルコードを含め�
 - 大きなサンプルコードを作成している場合、それを小さな論理的な部分に分割して、個別に記述できるようにすることが理にかなっている場合があります。
 - [ライブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples)を追加する際、サンプルを含む領域の {{HTMLElement("pre")}} ブロックは、サンプルを実行する前にすべて連結されることを知っておくと役に立ちます。 HTML、CSS、JavaScript の一部または全部を複数の部分に分割し、それぞれに説明や見出しなどを任意に設定することができます。これにより、コードの文書化が非常に強力かつ柔軟になります。
 
-MDN Web Docs のサンプルコードをどのようにスタイルまたは整形するかについては、[サンプルコードのスタイル設定のガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。<!--リンク修正予定-->
+MDN Web Docs のサンプルコードをどのようにスタイルまたは整形するかについては、[サンプルコードのスタイル設定のガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)を参照してください。<!--リンク修正予定-->
 
 ### 相互参照（リンク）
 
@@ -450,7 +450,7 @@ MDN で他のページやページの節のタイトルで参照する場合、�
 
 次のように、ページの節にリンクする場合も同様のスタイル設定を行ってください。
 
-- **正**: 詳しくは、_メモリー管理_ ページの [JavaScript での割り当て](/ja/docs/Web/JavaScript/Memory_management#javascript_での割り当て)の節を参照してください。
+- **正**: 詳しくは、_メモリー管理_ ページの [JavaScript での割り当て](/ja/docs/Web/JavaScript/Guide/Memory_management#javascript_での割り当て)の節を参照してください。
 
 リンク先の節が同じページにある場合は、「上記」 (above) や「下記」 (below) の言葉を用いて、その節の場所を示唆することができます。
 
@@ -592,8 +592,8 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 
 #### リンクテキスト
 
-- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [ARIA](/ja/docs/Web/Accessibility/ARIA/Attributes) ページのページタイトル「ARIA の状態とプロパティ」へのリンクテキストは次のようになります。
-  - **正**: [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Attributes)
+- リンクテキストはリンク先のページや節のタイトルと同じでなければなりません。例えば、この [ARIA](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes) ページのページタイトル「ARIA の状態とプロパティ」へのリンクテキストは次のようになります。
+  - **正**: [ARIA の状態とプロパティ](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)
 - リンクテキストは大文字小文字は、リンク先のページタイトルやセクションタイトルと異なっていても、文の大文字小文字を使用してください。ページや節のタイトルで使用している用途が正しくない可能性があります。例えば、 [Quirks Mode](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) ページへのリンクテキストを正しい大文字小文字で書くと、次のようになります。
   - **正**: [Quirks mode](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
 - 外部リンクの場合も、対象とする記事ページのケーシングが異なっていても、文の大文字小文字を使用してください。これは MDN Web Docs 全体の一貫性を確実に保持するためです。書籍名等は例外です。
@@ -632,7 +632,7 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 - [JavaScript/Guide](/ja/docs/Web/JavaScript/Guide) – メインの目次となるページ
 - [JavaScript/Guide/JavaScript Overview](/ja/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/Guide/Functions](/ja/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/Guide/Details of the Object Model](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 記事を階層の一番上に置くと、サイトの動作が遅くなり、検索やサイトのナビゲーションが効かなくなるので、なるべく避けましょう。
 
@@ -673,11 +673,11 @@ MDN Web Docs 全体の一貫性を保つため、関連情報の節を追加ま�
 
 ## 関連情報
 
-- [サンプルコードを書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
-- [HTML コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [CSS コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [JavaScript コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [シェルプロンプトコードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [サンプルコードを書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide)
+- [HTML コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [CSS コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [JavaScript コードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [シェルプロンプトコードの例を書くガイドライン](/ja/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## その他の情報
 

@@ -92,4 +92,4 @@ l10n:
 ## 関連情報
 
 - [ウェブパフォーマンス](/ja/docs/Web/Performance)
-- [学習: ウェブパフォーマンス](/ja/docs/Learn/Performance)
+- [学習: ウェブパフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance)

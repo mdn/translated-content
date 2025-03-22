@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSImportRule`** は {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)を表します。
+**`CSSImportRule`** は {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
 
 {{InheritanceDiagram}}
 

@@ -53,5 +53,5 @@ console.log(obj.canPlayType("video/mp4")); // "maybe"
 - {{domxref("HTMLMediaElement")}}: `HTMLMediaElement.canPlayType()` メソッドを定義しているインターフェイス
 - {{domxref("MediaCapabilities")}}
 - [ウェブコンテンツのメディア対応に関する問題への対応](/ja/docs/Web/Media/Formats/Support_issues)
-- [メディア種別と形式のガイド](/ja/docs/Web/Media/Formats)
+- [メディア種別と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 - [よくあるメディア種別のコーデック](/ja/docs/Web/Media/Formats/codecs_parameter)

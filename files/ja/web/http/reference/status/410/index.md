@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`410 Gone`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
+HTTP の **`410 Gone`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、元のサーバーで利用できなくなっている対象リソースにアクセスしていることを示します。この状態は永久的です。
 410 レスポンスは既定でキャッシュ可能です。
 
 クライアントは、 410 レスポンスを返すリソースへのリクエストを繰り返すべきではなく、ウェブサイト所有者は、このコードを返すリンクを除去または置き換えるべきです。
@@ -53,6 +53,6 @@ Content-Length: 212
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus(404)}}
 - [410 gone](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#410)

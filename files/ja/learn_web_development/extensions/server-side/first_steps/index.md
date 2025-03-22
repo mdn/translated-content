@@ -16,7 +16,7 @@ l10n:
 
 しかしながら、"ウェブがどのように動作するか" を理解する必要があります。まず以下のトピックスを読むことをお勧めします:
 
-- [ウェブサーバーとは](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [ウェブサーバーとは](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
 - [ウェブサーバーにファイルをアップロードするには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
 
@@ -24,17 +24,17 @@ l10n:
 
 ## ガイド
 
-- [サーバーサイドの概要](/ja/docs/Learn/Server-side/First_steps/Introduction)
+- [サーバーサイドの概要](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction)
   - : MDN のサーバーサイドプログラミング入門コースにようこそ！この最初の記事では、「これは何？」「クライアントサイドプログラミングとどう違うの？」「なぜ便利なの？」という質問に答えながら、ハイレベルな視点からサーバーサイドプログラミングを見ていきます。この記事を読めば、サーバーサイドコーディングを行うことで、 ウェブサイトにどんな機能を加えることができるか、理解できるようになります。
-- [クライアント・サーバーの概要](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview)
+- [クライアント・サーバーの概要](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview)
   - : サーバーサイドプログラミングの目的と潜在的な利点を知ったので、サーバーがブラウザーから "動的リクエスト" を受け取ったときに起こることを詳細に検討します。ほとんどのウェブサイトのサーバーサイドコードは同様の方法でリクエストとレスポンスを処理するので、これは自身のコードの大部分を書くときに何が必要かを理解するのに役立ちます
-- [サーバーサイドウェブフレームワーク](/ja/docs/Learn/Server-side/First_steps/Web_frameworks)
+- [サーバーサイドウェブフレームワーク](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks)
   - : 前の記事では、ウェブクライアントとサーバー間の通信、HTTP リクエストとレスポンスの性質、およびウェブブラウザーからのリクエストにレスポンスするためにサーバーサイドウェブアプリケーションが実行する必要があることについて説明しました。この知識をもとに、ウェブフレームワークがどのようにこれらのタスクを単純化できるかを探り、最初のサーバーサイドウェブアプリケーションのためのフレームワークをどのように選択するかを考えてみましょう。
-- [ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)
+- [ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
   - : ウェブサイトのセキュリティでは、ウェブサイトのデザインと使用方法のあらゆる面で警戒が必要です。この入門記事ではウェブサイトのセキュリティの第一人者にはなりませんが、脅威がどこから発生するのか、そして最も一般的な攻撃に対してウェブアプリケーションを強化するために何ができるのかを理解するのに役立ちます。
 
 > [!NOTE]
-> このトピックでは、サーバーサイドフレームワークと、それらを使用してウェブサイトを作成する方法について説明します。クライアントサイドの JavaScript フレームワークの情報を探している場合は、[クライアントサイドの JavaScript フレームワークを理解する](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)を参照してください。
+> このトピックでは、サーバーサイドフレームワークと、それらを使用してウェブサイトを作成する方法について説明します。クライアントサイドの JavaScript フレームワークの情報を探している場合は、[クライアントサイドの JavaScript フレームワークを理解する](/ja/docs/Learn_web_development/Core/Frameworks_libraries)を参照してください。
 
 ## 課題
 

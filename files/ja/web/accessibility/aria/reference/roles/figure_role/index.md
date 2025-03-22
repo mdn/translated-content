@@ -128,4 +128,4 @@ TBD
 - [HTML \<figure> 要素](/ja/docs/Web/HTML/Element/figure)
 - [HTML \<figcaption> 要素](/ja/docs/Web/HTML/Element/figcaption)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

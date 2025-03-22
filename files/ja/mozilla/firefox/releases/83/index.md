@@ -20,7 +20,7 @@ slug: Mozilla/Firefox/Releases/83
 ### HTML/XML
 
 - `<link rel=icon>` で `crossorigin` 属性をサポートしました ([Firefox バグ 1661075](https://bugzil.la/1661075))。
-- `displaystyle` [属性](/ja/docs/Web/MathML/Attribute) をすべての MathML 要素に実装しました ([Firefox バグ 1666075](https://bugzil.la/1666075))。
+- `displaystyle` [属性](/ja/docs/Web/MathML/Reference/Attribute) をすべての MathML 要素に実装しました ([Firefox バグ 1666075](https://bugzil.la/1666075))。
 
 ### CSS
 

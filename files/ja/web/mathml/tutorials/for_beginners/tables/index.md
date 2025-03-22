@@ -271,19 +271,19 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn_web_development/Core/Stru
 
 {{ EmbedLiveSample('Usage_for_advanced_layout', 700, 200, "", "") }}
 
-> **警告:** [`<mtable>` の記事](/ja/docs/Web/MathML/Element/mtable)では、配置や空間などの特別な属性によって、より高度なレイアウトオプションを提供しています。これらは CSS の相当するものよりも前に生まれ、元々は CSS を意識していないレンダラーのために設計されました。しかし、これらの属性はすべてのブラウザーで実装されているとは限りません。将来的には、 `<mtable>` の（実際の行列のようなオブジェクトではない）レイアウトのみの目的での使用は、 CSS ベースの代替手段に置き換えられる可能性があります。
+> **警告:** [`<mtable>` の記事](/ja/docs/Web/MathML/Reference/Element/mtable)では、配置や空間などの特別な属性によって、より高度なレイアウトオプションを提供しています。これらは CSS の相当するものよりも前に生まれ、元々は CSS を意識していないレンダラーのために設計されました。しかし、これらの属性はすべてのブラウザーで実装されているとは限りません。将来的には、 `<mtable>` の（実際の行列のようなオブジェクトではない）レイアウトのみの目的での使用は、 CSS ベースの代替手段に置き換えられる可能性があります。
 
 ## まとめ
 
 この記事では、テーブル用の HTML 要素に相当する `<mtable>`、`<mtr>`、`<mtd>` 要素について確認しました。行列のようなオブジェクトを表すために使用する方法や、高度なレイアウトのために使用する方法について見てきました。
 
-このモジュールはまもなく完了します。あと 1 つだけ指定されたことがあります。[三大有名数式の評価](/ja/docs/Web/MathML/Guides/Three_famous_mathematical_formulas)では、新しい知識を使用して HTML と MathML を使用して小さな数学の記事を書き直します。
+このモジュールはまもなく完了します。あと 1 つだけ指定されたことがあります。[三大有名数式の評価](/ja/docs/Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas)では、新しい知識を使用して HTML と MathML を使用して小さな数学の記事を書き直します。
 
 ## 関連情報
 
 - [HTML テーブルについての学習](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
-- [`<mtable>` 要素](/ja/docs/Web/MathML/Element/mtable)
-- [`<mtr>` 要素](/ja/docs/Web/MathML/Element/mtr)
-- [`<mtd>` 要素](/ja/docs/Web/MathML/Element/mtd)
+- [`<mtable>` 要素](/ja/docs/Web/MathML/Reference/Element/mtable)
+- [`<mtr>` 要素](/ja/docs/Web/MathML/Reference/Element/mtr)
+- [`<mtd>` 要素](/ja/docs/Web/MathML/Reference/Element/mtd)
 
 {{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}

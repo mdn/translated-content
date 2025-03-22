@@ -39,9 +39,9 @@ l10n:
 - `extension-element-prefixes`
   - : この文書における拡張要素の名前空間接頭辞をすべて、空白区切りのリストで指定します。
 - `default-collation`
-  - : この要素を祖先とする属性またはテキスト値のテンプレートに現れるすべての {{Glossary("XPath")}} 式で、内部の要素の別な `default-collation` 属性で上書きされた場合を除き、使用される既定の照合を指定します。これは特定の XSLT の構築 ([`<xsl:key>`](/ja/docs/Web/XSLT/Element/key) および [`<xsl:for-each-group>`](/ja/docs/Web/XSLT/Element/for-each-group) などの) も指定します。
+  - : この要素を祖先とする属性またはテキスト値のテンプレートに現れるすべての {{Glossary("XPath")}} 式で、内部の要素の別な `default-collation` 属性で上書きされた場合を除き、使用される既定の照合を指定します。これは特定の XSLT の構築 ([`<xsl:key>`](/ja/docs/Web/XML/XSLT/Reference/Element/key) および [`<xsl:for-each-group>`](/ja/docs/Web/XSLT/Element/for-each-group) などの) も指定します。
 - `default-mode`
-  - : `mode` 属性の既定値を、スコープ内におけるすべての [`<xsl:template>`](/ja/docs/Web/XSLT/Element/template) および [`<xsl:apply-templates>`](/ja/docs/Web/XSLT/Element/apply-templates) 要素について定義します。
+  - : `mode` 属性の既定値を、スコープ内におけるすべての [`<xsl:template>`](/ja/docs/Web/XML/XSLT/Reference/Element/template) および [`<xsl:apply-templates>`](/ja/docs/Web/XML/XSLT/Reference/Element/apply-templates) 要素について定義します。
 - `default-validation`
   - : スコープ内に現れるすべての関連する指示について `validation` 属性の既定値を定義します。
 - `expand-text`

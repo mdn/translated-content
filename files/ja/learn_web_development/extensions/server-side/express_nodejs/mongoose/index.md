@@ -6,11 +6,11 @@ original_slug: Learn/Server-side/Express_Nodejs/mongoose
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
-この記事ではデータベースと、それらを Node/Express アプリケーションで使用する方法について簡単に紹介します。続いて、[Mongoose](https://mongoosejs.com/) を使用して[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)ウェブサイトへのデータベースアクセスを提供する方法を説明します。 オブジェクトスキーマとモデルの宣言方法、主なフィールドタイプ、および基本的な検証について説明します。また、モデルデータにアクセスするための主な方法についても簡単に説明します。
+この記事ではデータベースと、それらを Node/Express アプリケーションで使用する方法について簡単に紹介します。続いて、[Mongoose](https://mongoosejs.com/) を使用して[地域図書館](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)ウェブサイトへのデータベースアクセスを提供する方法を説明します。 オブジェクトスキーマとモデルの宣言方法、主なフィールドタイプ、および基本的な検証について説明します。また、モデルデータにアクセスするための主な方法についても簡単に説明します。
 
-| 前提条件: | [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website) |
-| --------- | ------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | Mongoose を使用して独自のモデルを設計および作成できるようになる。                                                         |
+| 前提条件: | [Express チュートリアル Part 2: スケルトンウェブサイトの作成](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website) |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目標:     | Mongoose を使用して独自のモデルを設計および作成できるようになる。                                                                                    |
 
 ## 概要
 
@@ -63,7 +63,7 @@ NPM パッケージマネージャのサイトには、多数の ODM/ORM ソリ�
 
 > **メモ:** **Tip:** Mongoose を使用するために MongoDB を知っている必要はありませんが、[Mongoose のドキュメント](http://mongoosejs.com/docs/guide.html)の一部は、MongoDB に慣れている方が使いやすく理解しやすいものです。
 
-このチュートリアルの残りの部分では、[ローカルライブラリーウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)の例の Mongoose スキーマとモデルを定義してアクセスする方法を示します。
+このチュートリアルの残りの部分では、[ローカルライブラリーウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)の例の Mongoose スキーマとモデルを定義してアクセスする方法を示します。
 
 ## ローカルライブラリーモデルの設計
 
@@ -531,7 +531,7 @@ You have now created the database, and have an URL (with username and password) 
 
 ## Install Mongoose
 
-Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/ja/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
 npm install mongoose

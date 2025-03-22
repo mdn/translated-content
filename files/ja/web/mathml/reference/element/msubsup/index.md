@@ -14,14 +14,14 @@ l10n:
 
 ## 属性
 
-この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)の他、以下の非推奨属性があります。
+この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他、以下の非推奨属性があります。
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)として、下付き文字を式のベースラインより下にシフトするための最小量。
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage)として、上付き文字を式のベースラインより上にシフトするための最小量。
 
-> **メモ:** `subscriptshift` および `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
+> **メモ:** `subscriptshift` および `superscriptshift` 属性については、ブラウザーによっては[古い MathML の長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れられるかもしれません。
 
 ## 例
 

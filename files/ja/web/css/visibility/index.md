@@ -88,7 +88,7 @@ visibility: unset;
 
 ## アクセシビリティの考慮
 
-要素の `visibility` の値に `hidden` を使用すると、 [アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。
+要素の `visibility` の値に `hidden` を使用すると、 [アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。これは要素及びその子孫要素が読み上げ技術でアナウンスされない結果になります。
 
 ## 補間
 

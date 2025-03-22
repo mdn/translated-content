@@ -46,7 +46,7 @@ viewport は機能と値のペアをカンマで区切ったリストです。�
 - `interactive-widget`
   - : 仮想キーボードなどの対話型 UI ウィジェットがページのビューポートに及ぼす効果を指定します。有効な値は `resizes-visual`、`resizes-content`、`overlays-content` です。既定値は `resizes-visual` です。
 
-> **警告:** `user-scalable=no` を使用すると、弱視などの視覚的な障碍を持つユーザーに対して、アクセシビリティの問題を発生させる可能性があります。[WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする) では少なくとも 2 倍まで拡大するように要求していますが、 5 倍の拡大を可能にすることが最善の習慣とされています。
+> **警告:** `user-scalable=no` を使用すると、弱視などの視覚的な障碍を持つユーザーに対して、アクセシビリティの問題を発生させる可能性があります。[WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする) では少なくとも 2 倍まで拡大するように要求していますが、 5 倍の拡大を可能にすることが最善の習慣とされています。
 
 ## 画面の密度
 
@@ -85,7 +85,7 @@ viewport は機能と値のペアをカンマで区切ったリストです。�
 <meta name="viewport" content="interactive-widget=resizes-content" />
 ```
 
-{{Glossary("viewport", "ビューポート")}}がリサイズされると、初期の[包含ブロック](/ja/docs/Web/CSS/Containing_block)もリサイズされ、[ビューポート単位](/ja/docs/Web/CSS/length#ビューポートに基づく相対的な長さの単位)の計算されたサイズに影響を与えます。
+{{Glossary("viewport", "ビューポート")}}がリサイズされると、初期の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)もリサイズされ、[ビューポート単位](/ja/docs/Web/CSS/length#ビューポートに基づく相対的な長さの単位)の計算されたサイズに影響を与えます。
 
 ## モバイル端末とタブレット端末の一般的なビューポートサイズ
 

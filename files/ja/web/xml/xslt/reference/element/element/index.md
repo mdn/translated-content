@@ -28,7 +28,7 @@ l10n:
 - `namespace`
   - : 出力要素の名前空間を指定します。
 - `use-attribute-sets`
-  - : `element` 要素の出力要素に適用される [`attribute-set` 要素](/ja/docs/Web/XSLT/Element/attribute-set)名のスペース区切りのリスト。適用された属性は、ネストされた属性要素によってオーバーライドできます。
+  - : `element` 要素の出力要素に適用される [`attribute-set` 要素](/ja/docs/Web/XML/XSLT/Reference/Element/attribute-set)名のスペース区切りのリスト。適用された属性は、ネストされた属性要素によってオーバーライドできます。
 
 ### 種類
 

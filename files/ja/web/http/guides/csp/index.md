@@ -1,7 +1,7 @@
 ---
 title: コンテンツセキュリティポリシー (CSP)
 slug: Web/HTTP/Guides/CSP
-original_slug: Web/HTTP/CSP
+original_slug: Web/HTTP/Guides/CSP
 l10n:
   sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
@@ -43,7 +43,7 @@ CSP に対応したブラウザーは、サーバーから指定された許可�
 
 取得するコンテンツのドメインを制限することに加えて、サーバーは通信に使うプロトコルを指定することも可能です。
 例えば、（セキュリティの観点からはこれが理想的ですが）すべてのコンテンツを HTTPS で取得されるようにサーバーから指定することが出来ます。
-データ通信におけるセキュリティ戦略を完全なものとするには、HTTPS 通信を強制するだけではなく、すべての [Cookie に secure フラグ](/ja/docs/Web/HTTP/Cookies) を付けたり、HTTP ページから対応する HTTPS ページへの自動リダイレクトを整備することも必要です。
+データ通信におけるセキュリティ戦略を完全なものとするには、HTTPS 通信を強制するだけではなく、すべての [Cookie に secure フラグ](/ja/docs/Web/HTTP/Guides/Cookies) を付けたり、HTTP ページから対応する HTTPS ページへの自動リダイレクトを整備することも必要です。
 また、ブラウザーが暗号化された通信路のみを用いてサイトに接続することを保証するため、{{HTTPHeader("Strict-Transport-Security")}} HTTP ヘッダーを利用することも可能です。
 
 ## CSP の適用
@@ -71,7 +71,7 @@ Content-Security-Policy: policy
 さらに、{{HTMLElement("style")}} 要素や `style` 属性によるインラインスタイルの適用を防ぐには {{CSP("default-src")}} や {{CSP("style-src")}} の指定が必要となります。
 さまざまな種別のアイテムに対して特定のディレクティブが存在します。フォント、フレーム、画像、音声・動画、スクリプト、ワーカーなど、各々の種別に固有のポリシーを持たせることができます。
 
-ポリシーディレクティブの一覧については [Content-Security-Policy ヘッダー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)を参照してください。
+ポリシーディレクティブの一覧については [Content-Security-Policy ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)を参照してください。
 
 ## 一般的な適用例
 
@@ -220,6 +220,6 @@ CSP 違反が発生すると、ブラウザーはレポートを JSON オブジ�
 - HTTP の {{HTTPHeader("Content-Security-Policy")}} ヘッダー
 - HTTP の {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダー
 - [WebExtensions のコンテンツセキュリティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [ウェブワーカーでの CSP](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ワーカー内の_csp)
+- [ウェブワーカーでの CSP](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ワーカー内の_csp)
 - [プライバシー、許可、情報セキュリティ](/ja/docs/Web/Privacy)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy

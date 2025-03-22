@@ -38,7 +38,7 @@ figure {
   - : 論理属性。指定された場合、音声ファイル全体のダウンロードの完了を待たずに、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
     > [!NOTE]
-    > 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)には autoplay の正しい使い方についての追加情報があります。
+    > 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)には autoplay の正しい使い方についての追加情報があります。
 
 - `controls`
 
@@ -88,7 +88,7 @@ figure {
     > - 仕様書は、ブラウザーがこの属性の値に従うことを強制していません。これは単なるヒントです。
 
 - `src`
-  - : 埋め込む音声コンテンツの URL を指定します。この属性は [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS)に従います。これはオプションです。代わりに {{htmlelement("source")}} 要素を audio ブロック内で使用して、埋め込む音声を指定することもできます。
+  - : 埋め込む音声コンテンツの URL を指定します。この属性は [HTTP アクセス制御](/ja/docs/Web/HTTP/Guides/CORS)に従います。これはオプションです。代わりに {{htmlelement("source")}} 要素を audio ブロック内で使用して、埋め込む音声を指定することもできます。
 
 ## イベント
 
@@ -243,7 +243,7 @@ figure {
 
 ## 使用上の注意
 
-ブラウザーはすべてが同じ[ファイル形式](/ja/docs/Web/Media/Formats/Containers)や[音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)に対応しているわけではありません。内部に含められた {{htmlelement("source")}} 要素で複数のソースを提供することができ、ブラウザーは理解できる最初のものを使用します。
+ブラウザーはすべてが同じ[ファイル形式](/ja/docs/Web/Media/Guides/Formats/Containers)や[音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)に対応しているわけではありません。内部に含められた {{htmlelement("source")}} 要素で複数のソースを提供することができ、ブラウザーは理解できる最初のものを使用します。
 
 ```html
 <audio controls>
@@ -256,7 +256,7 @@ figure {
 </audio>
 ```
 
-音声ソースには、有効な [URL](/ja/docs/Web/URI) を設定することができます。これには HTTP(S) の URL や[データ URL](/ja/docs/Web/URI/Schemes/data) を含みます。 HTTP(S) の URL を使用する場合、ブラウザーのキャッシュ動作が、サーバーからファイルがリクエストされる頻度に影響することに注意してください。データ URL は音声データを直接 HTML に埋め込みます。これは小さな音声ファイルの場合には有益な使用することができますが、大きな音声ファイルの場合には HTML ファイルサイズが大きくなるため、推奨されません。
+音声ソースには、有効な [URL](/ja/docs/Web/URI) を設定することができます。これには HTTP(S) の URL や[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を含みます。 HTTP(S) の URL を使用する場合、ブラウザーのキャッシュ動作が、サーバーからファイルがリクエストされる頻度に影響することに注意してください。データ URL は音声データを直接 HTML に埋め込みます。これは小さな音声ファイルの場合には有益な使用することができますが、大きな音声ファイルの場合には HTML ファイルサイズが大きくなるため、推奨されません。
 
 また、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を使用することで、既存の音声ファイルをストリーミングするのではなく、 JavaScript コードから直接音声ストリームを生成し、操作することができます。 JavaScript で [`srcObject`](/ja/docs/Web/API/HTMLMediaElement/srcObject) を {{domxref("MediaStream")}} オブジェクトに設定することができます。これはライブ音声ストリームやリアルタイム音声処理に使用するのが一般的です。
 
@@ -274,7 +274,7 @@ navigator.mediaDevices
 
 なお、 `MediaStream` ソースには制限があることに注意してください。 `MediaStream` ソースはシークすることができず、限られたコーデック設定にしか対応していません。
 
-私たちは大量の綿密な[メディアファイル形式](/ja/docs/Web/Media/Formats)と[その中で使用することができる音声コーデックのガイド](/ja/docs/Web/Media/Formats/Audio_codecs)を提供しています。また、[動画で対応しているコーデックのガイド](/ja/docs/Web/Media/Formats/Video_codecs)も利用することができます。
+私たちは大量の綿密な[メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)と[その中で使用することができる音声コーデックのガイド](/ja/docs/Web/Media/Formats/Audio_codecs)を提供しています。また、[動画で対応しているコーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)も利用することができます。
 
 他の使用上のメモ:
 
@@ -369,7 +369,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 
 - [Web Video Text Tracks Format (WebVTT)](/ja/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.2_—_タイムベースト・メディアのための代替テキストの提供)
+- [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.2_—_タイムベースト・メディアのための代替テキストの提供)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -386,7 +386,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 </audio>
 ```
 
-いつ自動再生が動作するのか、自動再生を使用する許可の取得方法、いつどのように自動再生を使用するのが適切であるのかについては、[自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)をご覧ください。
+いつ自動再生が動作するのか、自動再生を使用する許可の取得方法、いつどのように自動再生を使用するのが適切であるのかについては、[自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)をご覧ください。
 
 ### \<source> 要素を伴う \<audio> 要素
 
@@ -473,7 +473,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
 
-  - [メディアコンテナー形式 (ファイル形式)](/ja/docs/Web/Media/Formats/Containers)
+  - [メディアコンテナー形式 (ファイル形式)](/ja/docs/Web/Media/Guides/Formats/Containers)
   - [ウェブで使用される音声コーデックのガイド](/ja/docs/Web/Media/Formats/Audio_codecs)
 
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)

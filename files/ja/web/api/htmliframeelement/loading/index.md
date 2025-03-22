@@ -67,6 +67,6 @@ frameDiv.appendChild(iframe);
 ## 関連情報
 
 - {{HTMLElement("iframe")}} 要素
-- [ウェブパフォーマンス](/ja/docs/Learn/Performance) （MDN 学習領域）
-- [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) （MDN ウェブパフォーマンスガイド）
+- [ウェブパフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance) （MDN 学習領域）
+- [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading) （MDN ウェブパフォーマンスガイド）
 - [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading) (web.dev)

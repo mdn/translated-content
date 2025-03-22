@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は数多くの CSS プロパティや記述子で使用することができます。例えば {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} プロパティや {{cssxref("@counter-style/range", "range")}} 記述子などです。
+**`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は数多くの CSS プロパティや記述子で使用することができます。例えば {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} プロパティや {{cssxref("@counter-style/range", "range")}} 記述子などです。
 
 ## 構文
 

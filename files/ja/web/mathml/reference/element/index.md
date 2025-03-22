@@ -143,4 +143,4 @@ l10n:
 ## 関連情報
 
 - [MathML](/ja/docs/Web/MathML)
-- [MathML 属性リファレンス](/ja/docs/Web/MathML/Attribute)
+- [MathML 属性リファレンス](/ja/docs/Web/MathML/Reference/Attribute)

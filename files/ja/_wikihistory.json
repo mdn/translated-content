@@ -2006,6 +2006,15 @@
       "dskmori"
     ]
   },
+  "Glossary/Layout_mode": {
+    "modified": "2019-03-23T23:31:15.394Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Glossary/Lazy_load": {
     "modified": "2020-06-27T00:26:39.086Z",
     "contributors": [
@@ -5720,6 +5729,32 @@
       "Kozawa"
     ]
   },
+  "MDN/Writing_guidelines/Code_style_guide": {
+    "modified": "2020-09-30T15:30:25.414Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
+  "MDN/Writing_guidelines/Code_style_guide/CSS": {
+    "modified": "2020-10-01T14:47:46.429Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "shuheiy2000",
+      "silverskyvicto"
+    ]
+  },
+  "MDN/Writing_guidelines/Code_style_guide/HTML": {
+    "modified": "2020-09-30T15:30:25.212Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Uemmra3",
+      "hamasaki",
+      "dskmori",
+      "kenji-yamasaki"
+    ]
+  },
   "MDN/Writing_guidelines/Experimental_deprecated_obsolete": {
     "modified": "2020-09-30T15:30:24.078Z",
     "contributors": [
@@ -5865,32 +5900,6 @@
     "modified": "2019-03-18T21:21:46.339Z",
     "contributors": [
       "silverskyvicto"
-    ]
-  },
-  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide": {
-    "modified": "2020-09-30T15:30:25.414Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS": {
-    "modified": "2020-10-01T14:47:46.429Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "shuheiy2000",
-      "silverskyvicto"
-    ]
-  },
-  "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML": {
-    "modified": "2020-09-30T15:30:25.212Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Uemmra3",
-      "hamasaki",
-      "dskmori",
-      "kenji-yamasaki"
     ]
   },
   "Mozilla": {
@@ -24839,6 +24848,17 @@
       "mfuji09"
     ]
   },
+  "Web/CSS/CSS_display/Visual_formatting_model": {
+    "modified": "2020-09-05T23:17:45.192Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "uint256_t",
+      "mokeke",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
   "Web/CSS/CSS_filter_effects": {
     "modified": "2020-10-15T22:11:38.008Z",
     "contributors": [
@@ -25268,6 +25288,13 @@
       "mfuji09"
     ]
   },
+  "Web/CSS/CSS_scroll_anchoring/Scroll_anchoring": {
+    "modified": "2020-10-15T22:16:02.146Z",
+    "contributors": [
+      "mfuji09",
+      "myakura"
+    ]
+  },
   "Web/CSS/CSS_scroll_snap": {
     "modified": "2019-03-18T21:30:31.785Z",
     "contributors": [
@@ -25286,6 +25313,15 @@
       "mfuji09",
       "silverskyvicto",
       "Eai"
+    ]
+  },
+  "Web/CSS/CSS_selectors/Privacy_and_the_visited_selector": {
+    "modified": "2020-12-01T21:03:57.973Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "ethertank",
+      "sosleepy"
     ]
   },
   "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
@@ -25551,15 +25587,6 @@
       "Wind1808"
     ]
   },
-  "Web/CSS/Layout_mode": {
-    "modified": "2019-03-23T23:31:15.394Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
   "Web/CSS/Length": {
     "modified": "2020-10-15T21:14:25.961Z",
     "contributors": [
@@ -25611,15 +25638,6 @@
       "sii",
       "lv7777",
       "ethertank"
-    ]
-  },
-  "Web/CSS/Privacy_and_the_:visited_selector": {
-    "modified": "2020-12-01T21:03:57.973Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/CSS/Pseudo-classes": {
@@ -25700,17 +25718,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Visual_formatting_model": {
-    "modified": "2020-09-05T23:17:45.192Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "uint256_t",
-      "mokeke",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/CSS/WebKit_Extensions": {
@@ -28397,13 +28404,6 @@
     "contributors": [
       "mfuji09",
       "Marsf"
-    ]
-  },
-  "Web/CSS/overflow-anchor/Guide_to_scroll_anchoring": {
-    "modified": "2020-10-15T22:16:02.146Z",
-    "contributors": [
-      "mfuji09",
-      "myakura"
     ]
   },
   "Web/CSS/overflow-block": {
@@ -41879,7 +41879,13 @@
       "Shimono"
     ]
   },
-  "Web/SVG/Applying_SVG_effects_to_HTML_content": {
+  "Web/SVG/Attribute/onclick": {
+    "modified": "2020-10-15T22:30:36.187Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/SVG/Guides/Applying_SVG_effects_to_HTML_content": {
     "modified": "2019-03-24T00:10:10.765Z",
     "contributors": [
       "shuuji3",
@@ -41889,7 +41895,68 @@
       "yiwasaki"
     ]
   },
-  "Web/SVG/Attribute": {
+  "Web/SVG/Guides/Content_type": {
+    "modified": "2019-03-23T23:19:31.639Z",
+    "contributors": [
+      "wbamberg",
+      "SphinxKnight",
+      "manzyun"
+    ]
+  },
+  "Web/SVG/Guides/Namespaces_crash_course": {
+    "modified": "2019-03-23T23:49:34.244Z",
+    "contributors": [
+      "ethertank",
+      "Marsf",
+      "Taken",
+      "Taken Bot"
+    ]
+  },
+  "Web/SVG/Guides/Namespaces_crash_course/Example": {
+    "modified": "2019-03-23T23:49:27.768Z",
+    "contributors": [
+      "ethertank",
+      "Marsf",
+      "Taken"
+    ]
+  },
+  "Web/SVG/Guides/SVG_animation_with_SMIL": {
+    "modified": "2019-03-24T00:12:22.914Z",
+    "contributors": [
+      "fscholz",
+      "ethertank",
+      "yyss"
+    ]
+  },
+  "Web/SVG/Guides/SVG_as_an_image": {
+    "modified": "2020-12-07T08:35:23.954Z",
+    "contributors": [
+      "mfuji09",
+      "YujiSoftware",
+      "ethertank"
+    ]
+  },
+  "Web/SVG/Guides/SVG_in_HTML": {
+    "modified": "2020-05-04T11:17:58.371Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "jigs12",
+      "Marsf",
+      "Okome",
+      "Taken Bot",
+      "Shimono"
+    ]
+  },
+  "Web/SVG/Guides/Scripting": {
+    "modified": "2019-01-16T15:49:40.860Z",
+    "contributors": [
+      "ethertank",
+      "Marsf",
+      "Taken"
+    ]
+  },
+  "Web/SVG/Reference/Attribute": {
     "modified": "2020-06-10T08:33:58.156Z",
     "contributors": [
       "mfuji09",
@@ -41899,20 +41966,20 @@
       "kscarfone"
     ]
   },
-  "Web/SVG/Attribute/accent-height": {
+  "Web/SVG/Reference/Attribute/accent-height": {
     "modified": "2020-10-15T22:28:50.166Z",
     "contributors": [
       "n-oshiro"
     ]
   },
-  "Web/SVG/Attribute/alignment-baseline": {
+  "Web/SVG/Reference/Attribute/alignment-baseline": {
     "modified": "2020-10-16T10:40:10.316Z",
     "contributors": [
       "mfuji09",
       "yofu"
     ]
   },
-  "Web/SVG/Attribute/cx": {
+  "Web/SVG/Reference/Attribute/cx": {
     "modified": "2020-03-29T20:34:11.148Z",
     "contributors": [
       "n-oshiro",
@@ -41920,13 +41987,13 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Attribute/cy": {
+  "Web/SVG/Reference/Attribute/cy": {
     "modified": "2020-03-29T20:35:44.109Z",
     "contributors": [
       "n-oshiro"
     ]
   },
-  "Web/SVG/Attribute/d": {
+  "Web/SVG/Reference/Attribute/d": {
     "modified": "2020-04-17T14:04:21.194Z",
     "contributors": [
       "Satachito",
@@ -41936,7 +42003,7 @@
       "Shunter1112"
     ]
   },
-  "Web/SVG/Attribute/dx": {
+  "Web/SVG/Reference/Attribute/dx": {
     "modified": "2019-09-11T03:19:45.022Z",
     "contributors": [
       "SphinxKnight",
@@ -41944,105 +42011,99 @@
       "piyo-ko"
     ]
   },
-  "Web/SVG/Attribute/end": {
+  "Web/SVG/Reference/Attribute/end": {
     "modified": "2020-03-17T14:17:14.299Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/SVG/Attribute/fill": {
+  "Web/SVG/Reference/Attribute/fill": {
     "modified": "2020-10-15T22:24:58.855Z",
     "contributors": [
       "monman53"
     ]
   },
-  "Web/SVG/Attribute/fill-opacity": {
+  "Web/SVG/Reference/Attribute/fill-opacity": {
     "modified": "2020-10-15T22:28:48.011Z",
     "contributors": [
       "n-oshiro"
     ]
   },
-  "Web/SVG/Attribute/filterUnits": {
+  "Web/SVG/Reference/Attribute/filterUnits": {
     "modified": "2019-03-23T22:46:59.675Z",
     "contributors": [
       "sundaycrafts"
     ]
   },
-  "Web/SVG/Attribute/id": {
+  "Web/SVG/Reference/Attribute/id": {
     "modified": "2020-10-15T22:31:43.259Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/SVG/Attribute/lengthAdjust": {
+  "Web/SVG/Reference/Attribute/lengthAdjust": {
     "modified": "2019-03-18T21:44:58.545Z",
     "contributors": [
       "piyo-ko"
     ]
   },
-  "Web/SVG/Attribute/marker-mid": {
+  "Web/SVG/Reference/Attribute/marker-mid": {
     "modified": "2020-10-15T22:28:49.124Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/SVG/Attribute/onclick": {
-    "modified": "2020-10-15T22:30:36.187Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/SVG/Attribute/points": {
+  "Web/SVG/Reference/Attribute/points": {
     "modified": "2020-11-16T07:59:59.493Z",
     "contributors": [
       "h.itoh"
     ]
   },
-  "Web/SVG/Attribute/r": {
+  "Web/SVG/Reference/Attribute/r": {
     "modified": "2019-03-18T21:25:24.345Z",
     "contributors": [
       "piyo-ko"
     ]
   },
-  "Web/SVG/Attribute/scale": {
+  "Web/SVG/Reference/Attribute/scale": {
     "modified": "2020-10-15T22:28:49.673Z",
     "contributors": [
       "n-oshiro"
     ]
   },
-  "Web/SVG/Attribute/stroke": {
+  "Web/SVG/Reference/Attribute/stroke": {
     "modified": "2019-03-18T21:34:23.671Z",
     "contributors": [
       "N.Wada"
     ]
   },
-  "Web/SVG/Attribute/stroke-dasharray": {
+  "Web/SVG/Reference/Attribute/stroke-dasharray": {
     "modified": "2020-11-16T20:18:48.153Z",
     "contributors": [
       "koj"
     ]
   },
-  "Web/SVG/Attribute/stroke-dashoffset": {
+  "Web/SVG/Reference/Attribute/stroke-dashoffset": {
     "modified": "2020-11-16T20:45:58.430Z",
     "contributors": [
       "koj"
     ]
   },
-  "Web/SVG/Attribute/stroke-linecap": {
+  "Web/SVG/Reference/Attribute/stroke-linecap": {
     "modified": "2019-03-18T21:36:04.538Z",
     "contributors": [
       "dskmori",
       "smellman"
     ]
   },
-  "Web/SVG/Attribute/stroke-linejoin": {
+  "Web/SVG/Reference/Attribute/stroke-linejoin": {
     "modified": "2019-03-18T21:36:05.342Z",
     "contributors": [
       "dskmori",
       "smellman"
     ]
   },
-  "Web/SVG/Attribute/transform": {
+  "Web/SVG/Reference/Attribute/transform": {
     "modified": "2020-04-18T13:11:33.141Z",
     "contributors": [
       "mfuji09",
@@ -42053,45 +42114,37 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Attribute/viewBox": {
+  "Web/SVG/Reference/Attribute/viewBox": {
     "modified": "2019-03-18T21:35:31.942Z",
     "contributors": [
       "tarunama"
     ]
   },
-  "Web/SVG/Attribute/writing-mode": {
+  "Web/SVG/Reference/Attribute/writing-mode": {
     "modified": "2020-12-03T14:41:34.058Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/SVG/Attribute/x": {
+  "Web/SVG/Reference/Attribute/x": {
     "modified": "2019-03-23T23:14:28.353Z",
     "contributors": [
       "manzyun"
     ]
   },
-  "Web/SVG/Attribute/x1": {
+  "Web/SVG/Reference/Attribute/x1": {
     "modified": "2019-03-18T21:10:26.382Z",
     "contributors": [
       "piyo-ko"
     ]
   },
-  "Web/SVG/Attribute/y": {
+  "Web/SVG/Reference/Attribute/y": {
     "modified": "2019-03-23T23:14:33.653Z",
     "contributors": [
       "manzyun"
     ]
   },
-  "Web/SVG/Content_type": {
-    "modified": "2019-03-23T23:19:31.639Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "manzyun"
-    ]
-  },
-  "Web/SVG/Element": {
+  "Web/SVG/Reference/Element": {
     "modified": "2020-10-30T06:26:59.367Z",
     "contributors": [
       "rigani",
@@ -42104,7 +42157,7 @@
       "ethertank"
     ]
   },
-  "Web/SVG/Element/a": {
+  "Web/SVG/Reference/Element/a": {
     "modified": "2020-10-15T21:26:59.042Z",
     "contributors": [
       "mfuji09",
@@ -42115,7 +42168,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/animate": {
+  "Web/SVG/Reference/Element/animate": {
     "modified": "2020-10-15T21:26:57.647Z",
     "contributors": [
       "n-oshiro",
@@ -42128,7 +42181,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/animateMotion": {
+  "Web/SVG/Reference/Element/animateMotion": {
     "modified": "2020-11-12T07:13:36.041Z",
     "contributors": [
       "mfuji09",
@@ -42138,7 +42191,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/animateTransform": {
+  "Web/SVG/Reference/Element/animateTransform": {
     "modified": "2020-10-15T21:27:03.149Z",
     "contributors": [
       "8845musign",
@@ -42147,7 +42200,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/circle": {
+  "Web/SVG/Reference/Element/circle": {
     "modified": "2020-10-15T21:26:58.426Z",
     "contributors": [
       "fscholz",
@@ -42157,7 +42210,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/defs": {
+  "Web/SVG/Reference/Element/defs": {
     "modified": "2020-10-15T21:31:05.408Z",
     "contributors": [
       "takenspc",
@@ -42167,7 +42220,7 @@
       "Shunter1112"
     ]
   },
-  "Web/SVG/Element/desc": {
+  "Web/SVG/Reference/Element/desc": {
     "modified": "2020-10-15T21:26:59.631Z",
     "contributors": [
       "fscholz",
@@ -42177,7 +42230,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/ellipse": {
+  "Web/SVG/Reference/Element/ellipse": {
     "modified": "2020-10-15T21:26:59.559Z",
     "contributors": [
       "dskmori",
@@ -42188,27 +42241,27 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/feColorMatrix": {
+  "Web/SVG/Reference/Element/feColorMatrix": {
     "modified": "2020-12-06T03:21:31.378Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/SVG/Element/feDropShadow": {
+  "Web/SVG/Reference/Element/feDropShadow": {
     "modified": "2020-12-06T04:50:22.193Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/SVG/Element/foreignObject": {
+  "Web/SVG/Reference/Element/foreignObject": {
     "modified": "2020-10-15T21:49:52.776Z",
     "contributors": [
       "takenspc",
       "momdo"
     ]
   },
-  "Web/SVG/Element/g": {
+  "Web/SVG/Reference/Element/g": {
     "modified": "2020-10-15T21:25:53.688Z",
     "contributors": [
       "n-oshiro",
@@ -42218,7 +42271,7 @@
       "twe"
     ]
   },
-  "Web/SVG/Element/image": {
+  "Web/SVG/Reference/Element/image": {
     "modified": "2020-10-15T21:49:54.463Z",
     "contributors": [
       "mfuji09",
@@ -42228,7 +42281,7 @@
       "momdo"
     ]
   },
-  "Web/SVG/Element/line": {
+  "Web/SVG/Reference/Element/line": {
     "modified": "2020-10-15T21:27:00.385Z",
     "contributors": [
       "mfuji09",
@@ -42241,7 +42294,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/linearGradient": {
+  "Web/SVG/Reference/Element/linearGradient": {
     "modified": "2020-10-15T21:27:02.413Z",
     "contributors": [
       "takenspc",
@@ -42251,13 +42304,13 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/mask": {
+  "Web/SVG/Reference/Element/mask": {
     "modified": "2020-10-15T22:17:16.460Z",
     "contributors": [
       "silverskyvicto"
     ]
   },
-  "Web/SVG/Element/metadata": {
+  "Web/SVG/Reference/Element/metadata": {
     "modified": "2020-10-15T21:27:02.818Z",
     "contributors": [
       "takenspc",
@@ -42266,7 +42319,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/mpath": {
+  "Web/SVG/Reference/Element/mpath": {
     "modified": "2020-10-15T21:48:32.619Z",
     "contributors": [
       "takenspc",
@@ -42274,7 +42327,7 @@
       "tkuro11"
     ]
   },
-  "Web/SVG/Element/path": {
+  "Web/SVG/Reference/Element/path": {
     "modified": "2020-10-15T21:20:22.299Z",
     "contributors": [
       "n-oshiro",
@@ -42284,13 +42337,13 @@
       "ethertank"
     ]
   },
-  "Web/SVG/Element/pattern": {
+  "Web/SVG/Reference/Element/pattern": {
     "modified": "2020-10-15T22:24:59.776Z",
     "contributors": [
       "monman53"
     ]
   },
-  "Web/SVG/Element/polygon": {
+  "Web/SVG/Reference/Element/polygon": {
     "modified": "2020-10-15T21:27:02.474Z",
     "contributors": [
       "FumioNonaka",
@@ -42299,7 +42352,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/polyline": {
+  "Web/SVG/Reference/Element/polyline": {
     "modified": "2020-10-15T21:26:59.721Z",
     "contributors": [
       "takenspc",
@@ -42309,7 +42362,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/radialGradient": {
+  "Web/SVG/Reference/Element/radialGradient": {
     "modified": "2020-10-15T21:27:05.349Z",
     "contributors": [
       "takenspc",
@@ -42319,7 +42372,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/rect": {
+  "Web/SVG/Reference/Element/rect": {
     "modified": "2020-10-15T21:27:03.241Z",
     "contributors": [
       "takenspc",
@@ -42329,7 +42382,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/script": {
+  "Web/SVG/Reference/Element/script": {
     "modified": "2020-11-24T11:35:16.125Z",
     "contributors": [
       "pcw",
@@ -42337,7 +42390,7 @@
       "momdo"
     ]
   },
-  "Web/SVG/Element/set": {
+  "Web/SVG/Reference/Element/set": {
     "modified": "2020-10-15T21:27:03.074Z",
     "contributors": [
       "takenspc",
@@ -42347,7 +42400,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/svg": {
+  "Web/SVG/Reference/Element/svg": {
     "modified": "2020-10-15T21:25:51.866Z",
     "contributors": [
       "n-oshiro",
@@ -42358,13 +42411,13 @@
       "twe"
     ]
   },
-  "Web/SVG/Element/switch": {
+  "Web/SVG/Reference/Element/switch": {
     "modified": "2020-10-15T22:30:14.393Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/SVG/Element/text": {
+  "Web/SVG/Reference/Element/text": {
     "modified": "2020-10-15T21:52:36.228Z",
     "contributors": [
       "takenspc",
@@ -42372,7 +42425,7 @@
       "lakiryt"
     ]
   },
-  "Web/SVG/Element/title": {
+  "Web/SVG/Reference/Element/title": {
     "modified": "2020-10-15T21:27:07.102Z",
     "contributors": [
       "takenspc",
@@ -42382,7 +42435,7 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/tspan": {
+  "Web/SVG/Reference/Element/tspan": {
     "modified": "2020-12-06T04:01:15.348Z",
     "contributors": [
       "mfuji09",
@@ -42390,7 +42443,7 @@
       "lakiryt"
     ]
   },
-  "Web/SVG/Element/use": {
+  "Web/SVG/Reference/Element/use": {
     "modified": "2020-12-06T04:36:04.631Z",
     "contributors": [
       "mfuji09",
@@ -42401,48 +42454,14 @@
       "teoli"
     ]
   },
-  "Web/SVG/Namespaces_Crash_Course": {
-    "modified": "2019-03-23T23:49:34.244Z",
+  "Web/SVG/Tutorial/SVG_Fonts": {
+    "modified": "2019-03-23T23:39:35.285Z",
     "contributors": [
-      "ethertank",
-      "Marsf",
-      "Taken",
-      "Taken Bot"
-    ]
-  },
-  "Web/SVG/Namespaces_Crash_Course/Example": {
-    "modified": "2019-03-23T23:49:27.768Z",
-    "contributors": [
-      "ethertank",
-      "Marsf",
-      "Taken"
-    ]
-  },
-  "Web/SVG/SVG_animation_with_SMIL": {
-    "modified": "2019-03-24T00:12:22.914Z",
-    "contributors": [
-      "fscholz",
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/SVG_as_an_Image": {
-    "modified": "2020-12-07T08:35:23.954Z",
-    "contributors": [
-      "mfuji09",
-      "YujiSoftware",
-      "ethertank"
-    ]
-  },
-  "Web/SVG/Scripting": {
-    "modified": "2019-01-16T15:49:40.860Z",
-    "contributors": [
-      "ethertank",
-      "Marsf",
-      "Taken"
-    ]
-  },
-  "Web/SVG/Tutorial": {
+  "Web/SVG/Tutorials/SVG_from_scratch": {
     "modified": "2019-10-15T10:56:59.977Z",
     "contributors": [
       "cmplstofB",
@@ -42454,42 +42473,42 @@
       "Taken"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Shapes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes": {
     "modified": "2019-01-16T12:52:52.901Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Transformations": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations": {
     "modified": "2019-03-24T00:17:20.537Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Clipping_and_masking": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking": {
     "modified": "2019-03-23T23:39:43.832Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Fills_and_Strokes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes": {
     "modified": "2019-04-21T03:19:28.543Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Filter_effects": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects": {
     "modified": "2019-01-16T16:31:00.025Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Getting_Started": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Getting_started": {
     "modified": "2020-03-26T05:29:02.408Z",
     "contributors": [
       "mfuji09",
@@ -42501,7 +42520,7 @@
       "STT"
     ]
   },
-  "Web/SVG/Tutorial/Gradients": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Gradients": {
     "modified": "2019-10-16T09:24:50.701Z",
     "contributors": [
       "cmplstofB",
@@ -42509,7 +42528,15 @@
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Introduction": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Image_element": {
+    "modified": "2019-11-30T13:58:51.949Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "yyss"
+    ]
+  },
+  "Web/SVG/Tutorials/SVG_from_scratch/Introduction": {
     "modified": "2019-03-24T00:18:28.761Z",
     "contributors": [
       "ethertank",
@@ -42519,14 +42546,14 @@
       "STT"
     ]
   },
-  "Web/SVG/Tutorial/Other_content_in_SVG": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG": {
     "modified": "2019-01-16T21:10:10.225Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Paths": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Paths": {
     "modified": "2020-07-12T09:00:56.201Z",
     "contributors": [
       "5064",
@@ -42537,7 +42564,7 @@
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Patterns": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Patterns": {
     "modified": "2019-07-06T07:27:17.605Z",
     "contributors": [
       "H1Gdev",
@@ -42545,48 +42572,21 @@
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Positions": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Positions": {
     "modified": "2019-03-24T00:18:23.971Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/SVG_Fonts": {
-    "modified": "2019-03-23T23:39:35.285Z",
-    "contributors": [
-      "ethertank",
-      "yyss"
-    ]
-  },
-  "Web/SVG/Tutorial/SVG_Image_Tag": {
-    "modified": "2019-11-30T13:58:51.949Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "yyss"
-    ]
-  },
-  "Web/SVG/Tutorial/SVG_In_HTML_Introduction": {
-    "modified": "2020-05-04T11:17:58.371Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "jigs12",
-      "Marsf",
-      "Okome",
-      "Taken Bot",
-      "Shimono"
-    ]
-  },
-  "Web/SVG/Tutorial/Texts": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Texts": {
     "modified": "2019-03-24T00:17:04.482Z",
     "contributors": [
       "ethertank",
       "yyss"
     ]
   },
-  "Web/SVG/Tutorial/Tools_for_SVG": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG": {
     "modified": "2019-01-16T16:31:54.113Z",
     "contributors": [
       "ethertank",

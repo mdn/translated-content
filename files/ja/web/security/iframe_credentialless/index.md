@@ -13,7 +13,7 @@ l10n:
 
 例えば、{{jsxref("SharedArrayBuffer")}} や {{domxref("DOMHighResTimeStamp", "high-resolution timers", "", "nocode")}} などの様々なウェブ API の機能が、オリジン間分離を選択しているサイトでのみ使用できます。 これは、このような機能が [Spectre 攻撃](https://spectreattack.com/spectre.pdf)で悪用され、被害者の機密情報がサイドチャネル経由で流出し、攻撃者に捕捉される危険性があるためです。
 
-オリジン間分離を採用するためには、リソースは {{httpheader("Cross-Origin-Opener-Policy")}} の値が `same-origin` （攻撃者からオリジンを保護）、{{httpheader("Cross-Origin-Embedder-Policy")}} が `credentialless` または `require-corp` （被害者からオリジンを保護）で提供する必要があります。後者は、{{httpheader("Cross-Origin-Resource-Policy")}} または[オリジン間リソース共有](/ja/docs/Web/HTTP/CORS) を用いて明示的に文書を許可していない、資格情報のある別オリジンのあらゆるリソースを文書が読み込むのを防止します。
+オリジン間分離を採用するためには、リソースは {{httpheader("Cross-Origin-Opener-Policy")}} の値が `same-origin` （攻撃者からオリジンを保護）、{{httpheader("Cross-Origin-Embedder-Policy")}} が `credentialless` または `require-corp` （被害者からオリジンを保護）で提供する必要があります。後者は、{{httpheader("Cross-Origin-Resource-Policy")}} または[オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS) を用いて明示的に文書を許可していない、資格情報のある別オリジンのあらゆるリソースを文書が読み込むのを防止します。
 
 オリジン間分離の採用を制限する主要な課題は、`Cross-Origin-Embedder-Policy` が再帰的に適用されることです。`Cross-Origin-Embedder-Policy` が設定された文書内の `<iframe>` に読み込まれるサードパーティーのコンテンツは、埋め込みに成功するために `Cross-Origin-Embedder-Policy` を展開している必要があります。これは、サードパーティーのコンテンツ（広告ネットワークコンテンツなど）をアプリに埋め込む開発者にとって、一般的に制御することができないため問題となります。今までは、サードパーティーのコンテンツプロバイダーが `Cross-Origin-Embedder-Policy` を実装するのを待つしかなかったからです。
 
@@ -49,7 +49,7 @@ iframeElem.src =
 
 > **メモ:** {{domxref("Window.credentialless")}} プロパティは、`<iframe>` に埋め込まれた文書が、無信頼のコンテキストで実行されているかどうかを調べるために、問い合わせることができます。値が `true` の場合、埋め込まれている `<iframe>` が無信頼であることを意味します。
 
-この結果、無信頼の `<iframe>` 内の文書は、新しい、一時的なコンテキストを使用して読み込まれることになります。それらのコンテキストは、そのオリジンに関連するデータ、例えば[クッキー](/ja/docs/Web/HTTP/Cookies)や[ローカルストレージ](/ja/docs/Web/API/Window/localStorage)にアクセスすることはできません。無信頼のストレージは、最上位の文書ごとに 1 回設定されるノンス ("number used once") 値で変更されたストレージキーで別個に分割されます。したがって、ある無信頼の `<iframe>` に設定されたクッキーは、同じ最上位の文書の下に埋め込まれた他の同じオリジンの無信頼の `<iframe>` からしかアクセスできなくなります。
+この結果、無信頼の `<iframe>` 内の文書は、新しい、一時的なコンテキストを使用して読み込まれることになります。それらのコンテキストは、そのオリジンに関連するデータ、例えば[クッキー](/ja/docs/Web/HTTP/Guides/Cookies)や[ローカルストレージ](/ja/docs/Web/API/Window/localStorage)にアクセスすることはできません。無信頼のストレージは、最上位の文書ごとに 1 回設定されるノンス ("number used once") 値で変更されたストレージキーで別個に分割されます。したがって、ある無信頼の `<iframe>` に設定されたクッキーは、同じ最上位の文書の下に埋め込まれた他の同じオリジンの無信頼の `<iframe>` からしかアクセスできなくなります。
 
 ノンスは、同じ最上位文書の子孫であるすべての無信頼の iframe で共有されるが、ユーザーが移動したそれぞれの異なる最上位の文書では異なり、ユーザーが移動した後はもうアクセスできません。無信頼の iframe は異なるページ間でストレージを共有しません。上記のクッキーを返すと、文書を再読み込みした際、異なるコンテキストで無信頼の `<iframe>` が読み込まれるため、前回設定したクッキーはどれも利用できません。
 
@@ -81,6 +81,6 @@ iframeElem.src =
 - {{httpheader("Cross-Origin-Opener-Policy")}}
 - {{httpheader("Cross-Origin-Embedder-Policy")}}
 - {{httpheader("Cross-Origin-Resource-Policy")}}
-- [オリジン間リソース共有](/ja/docs/Web/HTTP/CORS)
+- [オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS)
 - `<iframe>` の [`credentialless`](/ja/docs/Web/HTML/Element/iframe#credentialless) 属性
 - {{domxref("HTMLIFrameElement.credentialless")}}
