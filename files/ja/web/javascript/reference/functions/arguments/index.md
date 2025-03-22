@@ -102,7 +102,7 @@ console.log(typeof arguments[0]); // 最初の引数の型を返す
   - : 個の引数が所属する、現在実行中の関数を参照します。厳格モードでは禁止されています。
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : 関数に渡された引数の数を示します。
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
+- {{jsxref("Functions/arguments/@@iterator", "arguments[Symbol.iterator]")}}
   - : 新しい{{jsxref("Array/@@iterator", "配列イテレーター", "", 0)}}オブジェクトで、 `arguments` のそれぞれの要素の値を含みます。
 
 ## 例
