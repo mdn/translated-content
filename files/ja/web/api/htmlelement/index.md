@@ -22,7 +22,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.anchorElement")}} {{ReadOnlyInline}}&nbsp;{{non-standard_inline}} {{experimental_inline}}
   - : 要素のアンカー要素への参照を返すか、アンカー要素がない場合は `null` を返します。
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の宣言を表します。
+  - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性の宣言を表します。
 - {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
   - : ユーザー入力に対する要素の大文字小文字の動作を表す文字列。有効な値は `none`、`off`、`on`、`characters`、`words`、`sentences`　です。
 - {{domxref("HTMLElement.autofocus")}}
@@ -30,7 +30,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("DOMStringMap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) を表します。
+  - : {{DOMxRef("DOMStringMap")}} で、スクリプトが読み書きできる要素の[カスタムデータ属性](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) (`data-*`) を表します。
 - {{DOMxRef("HTMLElement.dir")}}
   - : 文字列で、要素の書字方向を表す `dir` グローバル属性を反映します。利用可能な値は、`"ltr"` および `"rtl"`、`"auto"` です。
 - {{DOMxRef("HTMLElement.draggable")}}
@@ -74,7 +74,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : 論理値で、[スペルチェック](/ja/docs/Web/HTML/Global_attributes/spellcheck) のヒントを制御します。これはすべての HTML 要素で利用できますが、すべての要素に効果があるとは限りません。
 - {{DOMxRef("HTMLElement.style")}}
-  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の宣言を表します。
+  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性の宣言を表します。
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : `long` 値で、タブ順内の要素の位置を表します。
 - {{DOMxRef("HTMLElement.title")}}

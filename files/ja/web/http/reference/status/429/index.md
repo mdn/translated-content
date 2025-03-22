@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`429 Too Many Requests`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードは、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
+HTTP の **`429 Too Many Requests`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、クライアントが指定時間内にたくさんリクエストを送信しすぎたことを示します。
 リクエストの速度を落とすようにクライアントに依頼するこの仕組みは、一般に「{{glossary("Rate limit", "速度制限")}}」と呼ばれています。
 
 新しいリクエストを行う前にどのくらい待つかを示す {{HTTPHeader("Retry-After")}} ヘッダーをこのレスポンスに含めることができます。
@@ -58,6 +58,6 @@ Retry-After: 3600
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Retry-After")}}
 - Python での解決策: [How to avoid HTTP error 429 python](https://stackoverflow.com/questions/22786068/how-to-avoid-http-error-429-too-many-requests-python)

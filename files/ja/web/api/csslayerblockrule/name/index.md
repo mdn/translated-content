@@ -73,4 +73,4 @@ item2.textContent = `2 つ目の CSSLayerBlockRule は  "${anonymous.name}" と�
 ## 関連情報
 
 - {{cssxref("@layer")}} の宣言文は {{domxref("CSSLayerStatementRule")}} で表されます。
-- CSS における[名前付きカスケードレイヤーの作成](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers#カスケードレイヤーの作成)方法
+- CSS における[名前付きカスケードレイヤーの作成](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#カスケードレイヤーの作成)方法

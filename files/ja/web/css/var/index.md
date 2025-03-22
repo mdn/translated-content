@@ -108,4 +108,4 @@ body {
 ## 関連情報
 
 - {{cssxref("env()","env(…)")}} – ユーザーエージェントによって制御される読み取り専用環境変数
-- [CSS 変数の利用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS 変数の利用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

@@ -142,7 +142,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [\<g> 要素](/ja/docs/Web/SVG/Element/g)
+- [\<g> 要素](/ja/docs/Web/SVG/Reference/Element/g)
 
 #### テンプレート
 
@@ -191,7 +191,7 @@ MDN ページの種類を明確に識別するために、フロントマター�
 
 #### 例
 
-- [Cache-Control ヘッダー](/ja/docs/Web/HTTP/Headers/Cache-Control)
+- [Cache-Control ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control)
 
 #### テンプレート
 
@@ -259,4 +259,4 @@ MDNの「[ウェブ開発の学習](/ja/docs/Learn_web_development)」の章は�
 ## 関連情報
 
 - [ページのコンポーネント](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#ページの構成要素)
-- [Markdown でのコードサンプルの作成](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+- [Markdown でのコードサンプルの作成](/ja/docs/MDN/Writing_guidelines/Code_style_guide)

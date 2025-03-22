@@ -34,7 +34,7 @@ l10n:
 
 ### API
 
-- Chromium ブラウザーの制限に合わせて、[Data URL](/ja/docs/Web/URI/Schemes/data) のサイズの上限を 32MB から 512MB に拡張しました ([Firefox bug 1911300](https://bugzil.la/1911300))。
+- Chromium ブラウザーの制限に合わせて、[Data URL](/ja/docs/Web/URI/Reference/Schemes/data) のサイズの上限を 32MB から 512MB に拡張しました ([Firefox bug 1911300](https://bugzil.la/1911300))。
 - [Cookie Store API](/ja/docs/Web/API/Cookie_Store_API) は新しい {{glossary("asynchronous, "非同期")}} な {{jsxref("Promise")}} ベースの Cookie 管理方法で、メインスレッドと [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) の両方で使用できます。
   Cookie Store API のサブセットを実装しました ([Firefox bug 1937477](https://bugzil.la/1937477))。以下のプロパティが含まれます:
 
@@ -87,7 +87,7 @@ l10n:
   {{jsxref("Error.captureStackTrace()")}} 静的メソッドは、{{jsxref("Error.stack")}} プロパティとして与えられたオブジェクトにスタックトレース情報をインストールします。
   主な用途は、{{jsxref("Error")}} インターフェイスから派生していない独自のエラーオブジェクトにスタックトレースをインストールすることです ([Firefox bug 1886820](https://bugzil.la/1886820))。
 - **Clear-Site-Data: cache**: `privacy.clearSiteDataHeader.cache.enabled`。
-  [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) ヘッダーは [`cache`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data#cache) および `*` ディレクティブと合わせて、ブラウザーのキャッシュを消去するために使用できます ([Firefox bug 1942272](https://bugzil.la/1942272))。
+  [`Clear-Site-Data`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) ヘッダーは [`cache`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) および `*` ディレクティブと合わせて、ブラウザーのキャッシュを消去するために使用できます ([Firefox bug 1942272](https://bugzil.la/1942272))。
 - **SVG アニメーション用の SVG `<discard>` 要素**: `svg.discard.enabled`。
   {{svgelement("discard")}} SVG 要素は、SVG が DOM に読み込まれてから経過した時間や特定のアニメーションが終了したなど、指定した要素とその子孫を DOM から削除すべききっかけを開発者が指定できるようにします。これは、不要になったアニメーション要素を破棄することで SVG ビューアーがメモリーを節約できます ([Firefox bug 1069931](https://bugzil.la/1069931))。
 - **SVG パス API のメソッド**: `dom.svg.pathSegment.enabled`。

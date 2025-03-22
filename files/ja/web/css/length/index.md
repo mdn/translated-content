@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
+**`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
 
 > **メモ:** {{cssxref("&lt;percentage&gt;")}} 値も `<length>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<length>` 値と同じものではありません。 {{cssxref("&lt;length-percentage&gt;")}} を参照してください。
 
@@ -18,7 +18,7 @@ l10n:
 > [!NOTE]
 > 負の `<length>` 値を許容するプロパティとそうでないプロパティがあります。
 
-長さの[指定値](/ja/docs/Web/CSS/specified_value) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/computed_value) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
+長さの[指定値](/ja/docs/Web/CSS/CSS_cascade/specified_value) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
 
 `<length>` の単位には相対的なものと絶対的なものがあります。相対的な長さは、他の距離から見た長さを表します。単位によって、この距離は特定の文字の大きさであったり、[行の高さ](/ja/docs/Web/CSS/line-height)であったり、{{Glossary("viewport", "ビューポート")}}の大きさであったりします。
 相対的な長さの単位を使用するスタイルシートは、ある出力環境から別の出力環境へ、より簡単に変倍することができます。
@@ -104,20 +104,20 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
     > [!NOTE]
     > 例えば、あるブラウザーは既定で高さのビューポートパーセント値の単位 (`vh`) を実装しているかもしれませんが、これは大ビューポートパーセント値の高さ単位 (`lvh`) と同じです。といった具合に、ブラウザーインターフェイスが展開されている間、全ページ表示のコンテンツが見えなくなる可能性があります。
 
-ビューポートパーセント値の長さは、 `<length>` を初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)のサイズに対するパーセント値で定義し、この値は{{Glossary("viewport", "ビューポート")}}またはページ領域、つまり文書内の可視部分のサイズに基づいています。初期包含ブロックの高さや幅が変更されると、それに基づいてサイズ調整される要素はそれに応じて変倍されます。下記のように、ビューポートサイズのそれぞれに対応するビューポートパーセント値の長さの単位が変化します。
+ビューポートパーセント値の長さは、 `<length>` を初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のサイズに対するパーセント値で定義し、この値は{{Glossary("viewport", "ビューポート")}}またはページ領域、つまり文書内の可視部分のサイズに基づいています。初期包含ブロックの高さや幅が変更されると、それに基づいてサイズ調整される要素はそれに応じて変倍されます。下記のように、ビューポートサイズのそれぞれに対応するビューポートパーセント値の長さの単位が変化します。
 
 > [!NOTE]
 > ビューポートの長さは {{cssxref("@page")}} 宣言ブロックでは無効になります。
 
 - `vh`
 
-  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)の高さのパーセント値を表します。 `1vh` はビューポートの高さの 1% です。例えば、ビューポートの高さが `300px` の場合、プロパティで `70vh` の値を指定すると `210px` になります。
+  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の高さのパーセント値を表します。 `1vh` はビューポートの高さの 1% です。例えば、ビューポートの高さが `300px` の場合、プロパティで `70vh` の値を指定すると `210px` になります。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svh`、`lvh`、`dvh` です。 `vh` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vw`
 
-  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)の幅のパーセント値を表します。 `1vw` はビューポートの幅の 1% です。例えば、ビューポートの幅が `800px` の場合、プロパティで `50vw` の値を指定すると `400px` になります。
+  - : ビューポートの初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の幅のパーセント値を表します。 `1vw` はビューポートの幅の 1% です。例えば、ビューポートの幅が `800px` の場合、プロパティで `50vw` の値を指定すると `400px` になります。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svw`、`lvw`、`dvw` です。
     `vw` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
@@ -138,14 +138,14 @@ CSS の相対的な長さの単位は、フォント、コンテナー、ビュ�
 
 - `vb`
 
-  - : 初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
+  - : 初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svb`, `lvb`, `dvb` です。
     `vb` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
 
 - `vi`
 
-  - : 初期[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
+  - : 初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline)方向のパーセント値を表します。
 
     小、大、動的ビューポートサイズのそれぞれのビューポートパーセント値の単位は `svi`, `lvi`, `dvi` です。
     `vi` はブラウザー既定ビューポートサイズに基づくビューポートパーセント値の長さの単位を表します。
@@ -324,6 +324,6 @@ inputElem.addEventListener("change", () => {
 
 ## 関連情報
 
-- [CSS 値と単位チュートリアル](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 値と単位チュートリアル](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [CSS 値と単位リファレンス](/ja/docs/Web/CSS/CSS_Values_and_Units)
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)

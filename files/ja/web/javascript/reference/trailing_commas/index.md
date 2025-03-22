@@ -108,7 +108,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ### 分割代入での末尾のカンマ
 
-末尾のカンマは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)の左辺でも使用できます。
+末尾のカンマは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)の左辺でも使用できます。
 
 ```js-nolint
 // 末尾のカンマ付きで配列を分割代入

@@ -8,12 +8,12 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`103 Early Hints`** は[情報レスポンス](/ja/docs/Web/HTTP/Status#情報レスポンス)ステータスコードで、サーバーが最終的なレスポンスがリンクする予定のサイトやリソースに関するヒントを記載したレスポンスを準備している間に送信される場合があります。
+HTTP の **`103 Early Hints`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、サーバーが最終的なレスポンスがリンクする予定のサイトやリソースに関するヒントを記載したレスポンスを準備している間に送信される場合があります。
 これにより、サーバーが最終的なレスポンスを準備し送信する前に、ブラウザーがサイトに[事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect)したり、リソースの[事前読み込み](/ja/docs/Web/HTML/Attributes/rel/preload)を開始したりすることができます。
 早期ヒントで示された先読みされたリソースは、ヒントが受信されるとすぐにクライアントによって取得されます。
 
 早期ヒントレスポンスは、主に読み込まれたリソースを示す {{HTTPHeader("Link")}} ヘッダーと使用することを意図しています。
-また、早期ヒントの処理中に強制される [`Content-Security-Policy`](/ja/docs/Web/HTTP/CSP) ヘッダーが格納されている場合もあります。
+また、早期ヒントの処理中に強制される [`Content-Security-Policy`](/ja/docs/Web/HTTP/Guides/CSP) ヘッダーが格納されている場合もあります。
 
 サーバーは、例えばリダイレクトに続く複数の `103` レスポンスを送信することがあります。
 ブラウザーは最初の早期ヒントレスポンスのみを処理し、リクエストがオリジン間リダイレクトの結果である場合は、このレスポンスを破棄しなければなりません。
@@ -45,7 +45,7 @@ Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=
 この例では、`https://cdn.example.com` に 2 回事前接続します。
 
 - 最初の接続は、 CORS を使用せずに取得できるリソース（画像など）を読み込むために使用することができます。
-- 2 つ目の接続には [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が含まれており、フォントなどの [CORS](/ja/docs/Web/HTTP/CORS) で保護されたリソースを読み込むために使用されます。
+- 2 つ目の接続には [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が含まれており、フォントなどの [CORS](/ja/docs/Web/HTTP/Guides/CORS) で保護されたリソースを読み込むために使用されます。
 
 CORS で保護されたリソースは、完全に別個の接続でフェッチする必要があります。元から 1 つのリソース型だけが必要な場合は、事前接続は 1 回だけで済みます。
 
@@ -124,8 +124,8 @@ Content-Type: text/html
 ## 関連情報
 
 - {{HTTPHeader("Link")}}
-- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
-- [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP)
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
+- [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP)
 - [`rel="preconnect"`](/ja/docs/Web/HTML/Attributes/rel/preconnect) （{{htmlelement("link")}} の属性）
 - [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload) （{{htmlelement("link")}} の属性）
 - [`fetchpriority`](/ja/docs/Web/HTML/Element/link#fetchpriority) （{{htmlelement("link")}} の属性）

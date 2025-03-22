@@ -5,7 +5,7 @@ slug: Web/CSS/::first-line
 
 {{CSSRef}}
 
-**`::first-line`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックレベル要素](/ja/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes)の最初の行にスタイルを適用します。なお、最初の行の長さは要素の幅、文書の幅、文字列のフォントの大きさなど、様々な要因に左右されます。
+**`::first-line`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックレベル要素](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes)の最初の行にスタイルを適用します。なお、最初の行の長さは要素の幅、文書の幅、文字列のフォントの大きさなど、様々な要因に左右されます。
 
 ```css
 /* <p> の最初の行を選択 */

@@ -15,7 +15,7 @@ l10n:
 
 ## 属性
 
-この要素の属性には[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)があります。
+この要素の属性には[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)があります。
 
 - `close`
   - : 閉じ記号の文字列です。既定値は `")"` です。ホワイトスペースはすべて削除されます。

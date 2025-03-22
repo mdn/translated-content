@@ -83,7 +83,7 @@ Windows 10 オペレーティングシステムでは、ユーザーはアニメ
 ## 関連情報
 
 - [アクセシビリティ](/ja/docs/Web/Accessibility)
-- [アクセシビリティ学習パス](/ja/docs/Learn/Accessibility)
+- [アクセシビリティ学習パス](/ja/docs/Learn_web_development/Core/Accessibility)
 - [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Seizure_disorders)
 - [Color vision simulation](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html)
 - 議論: "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)"

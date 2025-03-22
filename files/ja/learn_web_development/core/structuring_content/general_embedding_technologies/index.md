@@ -293,7 +293,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 #### CSP ディレクティブの設定
 
-{{Glossary("CSP")}} は **[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)** の略で、HTML 文書のセキュリティを強化するために設計された[一連の HTTP ヘッダー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)（ウェブサーバーから配信されたときにウェブページとともに送信されるメタデータ）を提供します。`<iframe>` を保護する場合、[適切な X-Frame-Options ヘッダーを送信するようにサーバーを構成](/ja/docs/Web/HTTP/Headers/X-Frame-Options)できます。これにより、他のウェブサイトがそのウェブページにあなたのコンテンツを埋め込むのを防ぐことができます（[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)や他の攻撃のホストを可能にする）。以前に見たように、これはまさに MDN 開発者が行ったことです。
+{{Glossary("CSP")}} は **[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)** の略で、HTML 文書のセキュリティを強化するために設計された[一連の HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)（ウェブサーバーから配信されたときにウェブページとともに送信されるメタデータ）を提供します。`<iframe>` を保護する場合、[適切な X-Frame-Options ヘッダーを送信するようにサーバーを構成](/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options)できます。これにより、他のウェブサイトがそのウェブページにあなたのコンテンツを埋め込むのを防ぐことができます（[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)や他の攻撃のホストを可能にする）。以前に見たように、これはまさに MDN 開発者が行ったことです。
 
 > [!NOTE]
 > Frederik Braun 氏の投稿 [X-Frame-Options セキュリティヘッダーについて](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)（英語）で、このトピックの背景情報を読むことができます。明らかに、これは、この記事の説明の範囲外です。

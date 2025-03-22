@@ -65,7 +65,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 #### Web Workers
 
 - [Workers](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2) 内で `XMLHttpRequest.responseType` 属性および `XMLHttpRequest.response` 属性が利用可能になりました。
-- [`Worker()`](</ja/docs/DOM/Worker#Worker()> "DOM/Worker#Worker()") コンストラクターが [data URIs](/ja/docs/Web/URI/Schemes/data) を受け入れるようになりました。
+- [`Worker()`](</ja/docs/DOM/Worker#Worker()> "DOM/Worker#Worker()") コンストラクターが [data URIs](/ja/docs/Web/URI/Reference/Schemes/data) を受け入れるようになりました。
 
 #### IndexedDB
 

@@ -243,7 +243,7 @@ th {
 
 ## 関連情報
 
-- SVG の [`writing-mode`](/ja/docs/Web/SVG/Attribute/writing-mode) 属性
+- SVG の [`writing-mode`](/ja/docs/Web/SVG/Reference/Attribute/writing-mode) 属性
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

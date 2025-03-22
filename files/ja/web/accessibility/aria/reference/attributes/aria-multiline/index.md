@@ -12,7 +12,7 @@ l10n:
 
 <kbd>Enter</kbd> または <kbd>Return</kbd> キーの既定での動作は、単一行のテキストフィールドと複数行のテキストフィールドで異なります。ユーザーのフォーカスが単一の行の `{{htmlelement("input/text", '&lt;input type="text"&gt;')}}` にあるとき、通常 <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すとフォームを送信します。
 
-ユーザーのフォーカスが複数行 {{HTMLElement('textarea')}} にあるとき、キー入力は改行を挿入します。 [`textbox`](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role) ロールが設定された要素にのみ受け入れられ、 `aria-multiline` 属性は、テキストボックスが複数行の入力を受け入れるか、単一の行のみを受け入れるかを支援技術に示し、入力するデータの型やキーストロークが何をするかを設定します。
+ユーザーのフォーカスが複数行 {{HTMLElement('textarea')}} にあるとき、キー入力は改行を挿入します。 [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) ロールが設定された要素にのみ受け入れられ、 `aria-multiline` 属性は、テキストボックスが複数行の入力を受け入れるか、単一の行のみを受け入れるかを支援技術に示し、入力するデータの型やキーストロークが何をするかを設定します。
 
 > [!NOTE]
 > 可能な場合は、 HTML の {{HTMLElement('input')}} または {{HTMLElement('textarea')}} を使用してください。これらは意味づけと動作が組み込まれており、 ARIA 属性やスクリプトを必要とせず、キーボード対応が組み込まれているからです。
@@ -41,7 +41,7 @@ l10n:
 
 使用するロール:
 
-- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role)
+- [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 
 継承先のロール:
 
@@ -53,7 +53,7 @@ l10n:
 
 ## 関連情報
 
-- ARIA [`textbox`](/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role) ロール
+- ARIA [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) ロール
 - ARIA [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role) ロール
 
 <section id="Quick_links">

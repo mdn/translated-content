@@ -132,7 +132,7 @@ Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/
 API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > [!NOTE]
-> You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Storage).
+> You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 
 ## ローカルアプリでファイルを処理する
 

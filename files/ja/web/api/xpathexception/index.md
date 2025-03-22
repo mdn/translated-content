@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM XPath")}}{{Deprecated_Header}}
 
-[DOM XPath API](/ja/docs/Web/XPath) において、 **XPathException`** インターフェイスは XPath の演算処理中に遭遇する例外条件を表します。
+[DOM XPath API](/ja/docs/Web/XML/XPath) において、 **XPathException`** インターフェイスは XPath の演算処理中に遭遇する例外条件を表します。
 
 ## インスタンスプロパティ
 

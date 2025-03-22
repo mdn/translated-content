@@ -241,5 +241,5 @@ console.log(copy);
 
 - [`Object.assign` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object) で利用できます
 - {{jsxref("Object.defineProperties()")}}
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [オブジェクトリテラルでのスプレッド構文の使用](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

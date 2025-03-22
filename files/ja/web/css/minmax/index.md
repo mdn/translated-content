@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`minmax()`** は [CSS の関数](/ja/docs/Web/CSS/CSS_Functions)で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)で使用されます。
+**`minmax()`** は [CSS の関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)で使用されます。
 
 {{InteractiveExample("CSS Demo: minmax()")}}
 

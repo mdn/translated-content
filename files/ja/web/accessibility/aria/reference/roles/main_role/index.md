@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Reference/Roles/main_role
 original_slug: Web/Accessibility/ARIA/Roles/main_role
 ---
 
-メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書の主要なコンテンツを示すために使用します。 メインコンテンツ領域は、文書の中心的な話題やアプリケーションの中心的な機能と直接関連したり、それらを拡張するコンテンツで構成されます。
+メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書の主要なコンテンツを示すために使用します。 メインコンテンツ領域は、文書の中心的な話題やアプリケーションの中心的な機能と直接関連したり、それらを拡張するコンテンツで構成されます。
 
 ```html
 <div id="main" role="main">
@@ -17,7 +17,7 @@ original_slug: Web/Accessibility/ARIA/Roles/main_role
 
 ## 説明
 
-メイン (`main`) ロールは、文書のメインコンテンツを識別する、ナビゲーションに関する[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)です。 ランドマークは、支援技術によって、文書の大きなセクションをすばやく識別してナビゲートするために使用できます。 ページのセクションを分類およびラベル付けすることにより、レイアウトを通じて視覚的に伝えられる構造情報をプログラムで表現することができます。 スクリーンリーダーは、ランドマークロールを使用して、ページの重要なセクションへのキーボードナビゲーションを提供します。 ランドマークロールを介してナビゲートする場合、メインロールは「メインコンテンツへスキップする (Skip to main content) 」リンクの代わりになります。 メイン (`main`) ランドマークロールは、文書ごとに 1 つだけあるべきです。
+メイン (`main`) ロールは、文書のメインコンテンツを識別する、ナビゲーションに関する[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)です。 ランドマークは、支援技術によって、文書の大きなセクションをすばやく識別してナビゲートするために使用できます。 ページのセクションを分類およびラベル付けすることにより、レイアウトを通じて視覚的に伝えられる構造情報をプログラムで表現することができます。 スクリーンリーダーは、ランドマークロールを使用して、ページの重要なセクションへのキーボードナビゲーションを提供します。 ランドマークロールを介してナビゲートする場合、メインロールは「メインコンテンツへスキップする (Skip to main content) 」リンクの代わりになります。 メイン (`main`) ランドマークロールは、文書ごとに 1 つだけあるべきです。
 
 [`<main>` 要素](/ja/docs/Web/HTML/Element/main)は、メイン (`main`) ロールを持ちます。 開発者は、ARIA を使用するよりも、正しい意味論の HTML 要素を使用することを常に好むべきです。
 
@@ -42,7 +42,7 @@ original_slug: Web/Accessibility/ARIA/Roles/main_role
 
 ### 文書ごとに `main` ロールを 1 つのみ使用する
 
-メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)は、文書ごとに 1 回のみ使用するべきです。
+メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書ごとに 1 回のみ使用するべきです。
 
 JavaScript によってトリガーされたときにページコンテンツを更新するなどで、文書に 2 つのメイン (`main`) ロールが含まれている場合、[`hidden` 属性](/ja/docs/Web/HTML/Global_attributes/hidden)をトグルするなどの手法によって、アクティブでないメイン (`main`) ロールの存在を支援技術から取り除くべきです。
 
@@ -103,9 +103,9 @@ TBD
 - [\<main>: メイン要素](/ja/docs/Web/HTML/Element/main)
 - [main (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#main)
 - [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
-- [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
+- [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

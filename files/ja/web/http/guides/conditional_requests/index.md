@@ -1,7 +1,7 @@
 ---
 title: HTTP 条件付きリクエスト
 slug: Web/HTTP/Guides/Conditional_requests
-original_slug: Web/HTTP/Conditional_requests
+original_slug: Web/HTTP/Guides/Conditional_requests
 l10n:
   sourceCommit: fc577878fa29a23248fba29e14eb67beb54aaaa2
 ---

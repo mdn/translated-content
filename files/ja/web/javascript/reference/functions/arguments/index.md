@@ -157,7 +157,7 @@ let listHTML = list("u", "One", "Two", "Three");
 
 ### 残余引数、デフォルト引数、分割引数
 
-`arguments` オブジェクトを[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)と組み合わせて使用できます。
+`arguments` オブジェクトを[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)と組み合わせて使用できます。
 
 ```js
 function foo(...args) {

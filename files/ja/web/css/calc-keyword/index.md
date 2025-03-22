@@ -7,11 +7,11 @@ l10n:
 
 {{CSSRef}}
 
-**`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
+**`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
 
 ## 構文
 
-`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)で使用される数値の定数を定義します。
+`<calc-keyword>` 型は、 [CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)で使用される数値の定数を定義します。
 
 ### 値
 
@@ -58,7 +58,7 @@ l10n:
 
 ## 解説
 
-数学定数は [CSS 数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
+数学定数は [CSS 数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)の内部でのみ計算に使用することができます。数学定数は CSS キーワードではありませんが、計算以外で使用する場合は他のキーワードと同様に扱われます。
 例えば、次のようになります。
 
 - `animation-name: pi;` は "pi" という名前のアニメーションを表し、数学定数の `pi` にはなりません。

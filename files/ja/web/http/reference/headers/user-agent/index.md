@@ -11,7 +11,7 @@ l10n:
 **User-Agent** {{Glossary("request header", "リクエストヘッダー")}}は、サーバーやネットワークピアがアプリケーション、オペレーティングシステム、ベンダーや、リクエストしている{{Glossary("user agent", "ユーザーエージェント")}}のバージョン等を識別できるようにする特性文字列です。
 
 > [!WARNING]
-> ブラウザーによって異なるウェブページやサービスを提供することが、通常は悪い考えである理由については、[ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)をお読みください。
+> ブラウザーによって異なるウェブページやサービスを提供することが、通常は悪い考えである理由については、[ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)をお読みください。
 
 <table class="properties">
   <tbody>
@@ -49,7 +49,7 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 ## Firefox の UA 文字列
 
-Firefox や Gecko ベースのユーザーエージェント文字列の詳細については、 [Firefox のユーザーエージェント文字列リファレンス](/ja/docs/Web/HTTP/Headers/User-Agent/Firefox)を参照してください。 Firefox の UA 文字列は 4 つの部分に分解されます。
+Firefox や Gecko ベースのユーザーエージェント文字列の詳細については、 [Firefox のユーザーエージェント文字列リファレンス](/ja/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox)を参照してください。 Firefox の UA 文字列は 4 つの部分に分解されます。
 
 ```plain
 Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version
@@ -150,6 +150,6 @@ PostmanRuntime/7.26.5
 ## 関連情報
 
 - [User-Agent detection, history and checklist](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
-- [Firefox ユーザーエージェント文字列リファレンス](/ja/docs/Web/HTTP/Headers/User-Agent/Firefox)
-- [ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)
-- [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)
+- [Firefox ユーザーエージェント文字列リファレンス](/ja/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox)
+- [ユーザーエージェント文字列を用いたブラウザーの判定](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
+- [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)

@@ -79,7 +79,7 @@ l10n:
 
 [Git](https://git-scm.com/) は、最近ほとんどの人が使用しているソースコード管理システムです。 主にコマンド ラインからアクセスしますが、使いやすいユーザー インターフェイスからアクセスすることもできます。 コードを git リポジトリーに格納すると、それを独自のサーバーインスタンスにプッシュしたり、[GitHub](https://github.com/)、[GitLab](https://about.gitlab.com/)、[BitBucket](https://bitbucket.org/product/features) などのホストされたソース管理ウェブサイトを使用したりできます。
 
-このモジュールでは GitHub を使用します。 詳細については、[Git および GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を参照してください。
+このモジュールでは GitHub を使用します。 詳細については、[Git および GitHub](/ja/docs/Learn_web_development/Core/Version_control) を参照してください。
 
 #### コードフォーマッター
 
@@ -99,7 +99,7 @@ l10n:
 
 ウェブアプリのライフサイクルのこの段階では、通常、「将来のコード」（ブラウザーでネイティブサポートされていない可能性のある最新の CSS や JavaScript 機能など）でコーディングするか、 [TypeScript](https://www.typescriptlang.org/) などの別の言語を完全に使用してコーディングすることができます。 変換ツールは、ブラウザーと互換性のあるコードを生成して、本番環境で使用できるようにします。
 
-一般にウェブ開発は、[HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、[JavaScript](/ja/docs/Learn/JavaScript) の 3 つの言語と考えられており、これらすべての言語に変換ツールがあります。 変換には、(とりわけ) 2 つの主な利点があります。
+一般にウェブ開発は、[HTML](/ja/docs/Learn_web_development/Core/Structuring_content)、[CSS](/ja/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/ja/docs/Learn_web_development/Core/Scripting) の 3 つの言語と考えられており、これらすべての言語に変換ツールがあります。 変換には、(とりわけ) 2 つの主な利点があります。
 
 1. 最新の言語機能を使用してコードを記述し、日常の端末で動作するコードに変換する能力。 たとえば、最先端の新しい言語機能を使用して JavaScript を記述したい場合がありますが、それらの機能をサポートしていない古いブラウザーでも最終的な製品コードを動作させることができます。 ここでの良い例は次のとおりです。
 

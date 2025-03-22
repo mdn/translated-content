@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
+**`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
 `@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/@charset) や [@layer](/ja/docs/Web/CSS/@layer)）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
 
 ## 構文
@@ -61,7 +61,7 @@ l10n:
 /* more styles */
 ```
 
-`@import` ルールは[入れ子になる文](/ja/docs/Web/CSS/Syntax#入れ子の文)ではありません。従って、[条件付きアットルールグループ](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中で使うことはできません。
+`@import` ルールは[入れ子になる文](/ja/docs/Web/CSS/CSS_syntax/Syntax#入れ子の文)ではありません。従って、[条件付きアットルールグループ](/ja/docs/Web/CSS/CSS_syntax/At-rule#条件付きグループルール)の中で使うことはできません。
 
 {{glossary("user agent", "ユーザーエージェント")}}は未知のメディア種別のリソースを受け取ることを拒否することができるので、特定のメディアに依存した `@import` ルールを指定することができます。これらの条件付きインポートは、 URL の後でカンマ区切りの[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で指定します。メディアクエリーがないと、インポートは無条件で行われます。メディアに `all` を指定しても同じ効果になります。
 

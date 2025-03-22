@@ -294,7 +294,7 @@ input:valid + span::after {
 
 ## アクセシビリティの考慮
 
-`<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう考えてください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
+`<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう考えてください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
 
 また、 [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を使用して、ユーザーがよりすばやく、エラーの可能性を低くしてフォームを記入できるようにすることも検討してください。例えば、郵便番号のフィールドで自動補完を有効にするには、 `autocomplete="postal-code"` と設定してください。
 

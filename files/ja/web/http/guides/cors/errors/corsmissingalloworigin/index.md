@@ -1,7 +1,7 @@
 ---
 title: "Reason: CORS header 'Access-Control-Allow-Origin' missing"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
-original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
+original_slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
@@ -57,6 +57,6 @@ add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 
 ## 関連情報
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors)
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors)
 - 用語集: {{Glossary("CORS")}}
-- [CORS 入門](/ja/docs/Web/HTTP/CORS)
+- [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)

@@ -56,7 +56,7 @@ a:visited {
 - [`<link>`](/ja/docs/Web/HTML/Element/link) 要素は `:visited` に一致することはありません。
 
 > [!NOTE]
-> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)を参照してください。
+> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)を参照してください。
 
 ## 構文
 
@@ -108,5 +108,5 @@ a:visited {
 
 ## 関連情報
 
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
 - リンク関連の擬似クラス: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

@@ -321,7 +321,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 <div data-message="This is from the third button">こちらも！</div>
 ```
 
-しかし、このようなコードを使用することはお勧めできません。{{htmlelement("button")}} 要素を使用した場合に得られるはずだった、ネイティブのキーボードアクセシビリティを直ちに失い、さらにボタンが取得する既定の CSS スタイル設定も得られません。ボタン以外の要素をボタンに使用する必要がある場合は、[`button` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)を使用し、キーボードとマウスボタンの対応を含む、すべての既定のボタン動作を実装してください。
+しかし、このようなコードを使用することはお勧めできません。{{htmlelement("button")}} 要素を使用した場合に得られるはずだった、ネイティブのキーボードアクセシビリティを直ちに失い、さらにボタンが取得する既定の CSS スタイル設定も得られません。ボタン以外の要素をボタンに使用する必要がある場合は、[`button` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)を使用し、キーボードとマウスボタンの対応を含む、すべての既定のボタン動作を実装してください。
 
 #### キーボードアクセシビリティを呼び戻すように盛り込む
 
@@ -339,7 +339,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 </div>
 ```
 
-基本的に、[`tabindex`](/ja/docs/Web/HTML/Global_attributes#tabindex) 属性は、タブ移動可能な要素に、単に既定のソース順でタブ処理されるのではなく、独自のタブ順序（正の値の順序で指定されます）を持たせるためのものです。これは大きな混乱を発生させる可能性があるため、常に悪い考えです。本当に必要な場合にのみ使用してください。例えば、レイアウトがソースコードとはまったく異なる形で視覚的に物を示していて、より論理的に作業させたい場合などです。`tabindex` のオプションは、他にも 2 種類あります。
+基本的に、[`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性は、タブ移動可能な要素に、単に既定のソース順でタブ処理されるのではなく、独自のタブ順序（正の値の順序で指定されます）を持たせるためのものです。これは大きな混乱を発生させる可能性があるため、常に悪い考えです。本当に必要な場合にのみ使用してください。例えば、レイアウトがソースコードとはまったく異なる形で視覚的に物を示していて、より論理的に作業させたい場合などです。`tabindex` のオプションは、他にも 2 種類あります。
 
 - `tabindex="0"` — 上記のとおり、この値によって、普通ならタブキーでの移動が可能ではない要素が、タブキーでの移動が可能となります。これは、`tabindex` の一番有益な値です。
 - `tabindex="-1"` — これによって、普通ならタブキーでの移動が可能ではない要素が、（たとえば JavaScript を介して）プログラム的にフォーカスを得たり、あるいはリンクのターゲットとしてフォーカスを得たりすることが可能となります。
@@ -517,7 +517,7 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 
 この場合、`alt` 属性をまったく使っていません。その代わり、画像についての説明を通常のテキスト段落として提示し、その段落に `id` を与え、そして、その `id` を参照するための `aria-labelledby` 属性を用いました。こうすると、スクリーンリーダーに、その段落をその画像についての代替テキスト / ラベルとして使わせることになります。これは、複数の画像に対して同じテキストをラベルとして使いたい場合に、とりわけ有用です（これは、`alt` ではできません）。
 
-> **メモ:** [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
+> **メモ:** [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
 
 ### figure と figcaption
 
@@ -535,7 +535,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 </figure>
 ```
 
-スクリーンリーダーによる図のキャプションとその図の関連付けの対応はまちまちですが、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) や [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) は、もしキャプションがなければその関連を作成してくれるものです。とは言え、この要素構造は CSS スタイル設定に有益であり、加えてソース中の画像の横に説明文を配置する方法を提供します。
+スクリーンリーダーによる図のキャプションとその図の関連付けの対応はまちまちですが、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) や [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) は、もしキャプションがなければその関連を作成してくれるものです。とは言え、この要素構造は CSS スタイル設定に有益であり、加えてソース中の画像の横に説明文を配置する方法を提供します。
 
 ### 空の alt 属性
 
@@ -548,7 +548,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 ページのデザインに画像が含まれることがありますが、その主な目的は視覚的な装飾です。上のサンプルコードでは、画像の `alt` 属性が空であることにお気づきでしょう。これは、スクリーンリーダーに画像を認識させるためですが、画像を説明しようとはしません（代わりに、「画像」または同様の表現をするだけです）。
 
-`alt` を含めないようにする代わりに空の `alt` を用いる理由は、`alt` が与えられていない場合には多くのスクリーンリーダーが画像の URL を丸々全部発声するからです。上記の例において画像は、その画像が結びつけられている見出しに対する視覚的装飾として機能しています。このような場合、および、画像が単に装飾にすぎず中身の価値がない場合には、空の `alt` を `img` 要素に入れるべきです。別の選択肢は、[`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) という ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles) 属性を使うことです。こうすることによっても、スクリーンリーダーに代替テキスト（`alt` テキスト）を読み上げるのをやめさせることができます。
+`alt` を含めないようにする代わりに空の `alt` を用いる理由は、`alt` が与えられていない場合には多くのスクリーンリーダーが画像の URL を丸々全部発声するからです。上記の例において画像は、その画像が結びつけられている見出しに対する視覚的装飾として機能しています。このような場合、および、画像が単に装飾にすぎず中身の価値がない場合には、空の `alt` を `img` 要素に入れるべきです。別の選択肢は、[`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) という ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 属性を使うことです。こうすることによっても、スクリーンリーダーに代替テキスト（`alt` テキスト）を読み上げるのをやめさせることができます。
 
 > [!NOTE]
 > もし可能なら、単なる修飾であるような画像を表示するのには CSS を使うべきです。
@@ -561,7 +561,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 既定では、リンクは色と [text-decoration](/ja/docs/Web/CSS/text-decoration) の両方で他のテキストと視覚的に異なります。既定ではリンクは青で下線、閲覧済みでは紫で下線、キーボードフォーカスを受けると [focus-ring](/ja/docs/Web/CSS/:focus) が付きます。
 
-色は、リンクとそうでないコンテンツを判別する唯一の方法として使用すべきではありません。リンクテキストの色は、すべてのテキストと同様に、背景色と大きく異なっていなければなりません（[a 4.5:1 contrast](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)）。さらにリンクは、リンクしていないテキストと視覚的に大きく異なる必要があり、リンクテキストと周囲のテキスト、既定値、訪問済み、フォーカス/アクティブの各状態間のコントラストは最低 3:1、それらすべての状態と背景色のコントラストは 4.5:1 が要求されています。
+色は、リンクとそうでないコンテンツを判別する唯一の方法として使用すべきではありません。リンクテキストの色は、すべてのテキストと同様に、背景色と大きく異なっていなければなりません（[a 4.5:1 contrast](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)）。さらにリンクは、リンクしていないテキストと視覚的に大きく異なる必要があり、リンクテキストと周囲のテキスト、既定値、訪問済み、フォーカス/アクティブの各状態間のコントラストは最低 3:1、それらすべての状態と背景色のコントラストは 4.5:1 が要求されています。
 
 ### `onclick` イベント
 
@@ -594,7 +594,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 このようなリンクの動作を示すために、テキストの代わりにアイコンを使用する場合は、[代替テキスト](/ja/docs/Web/HTML/Element/img#alt)を必ず含めてください。
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN WCAG を理解する、ガイドライン 3.2 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN WCAG を理解する、ガイドライン 3.2 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: Opening new windows and tabs from a link only when necessary | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -606,7 +606,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN WCAG を理解する、ガイドライン 2.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN WCAG を理解する、ガイドライン 2.4 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 近接性

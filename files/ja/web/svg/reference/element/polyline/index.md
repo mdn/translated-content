@@ -36,10 +36,10 @@ svg {
 
 - {{SVGAttr('points')}}
   - : この属性は、連続線を描画するのに必要な点（x,y の絶対座標の組）のリストを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number)+ ; _既定値_: `""`; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)+ ; _既定値_: `""`; _アニメーション_: **可**
 - {{SVGAttr("pathLength")}}
   - : この属性は、パスの全長をユーザー単位で指定します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
 
 ## 使用可能な場所
 
@@ -55,5 +55,5 @@ svg {
 
 ## 関連情報
 
-- [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#プレゼンテーション属性)、{{SVGAttr("fill")}} や {{SVGAttr("stroke")}} など
+- [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#プレゼンテーション属性)、{{SVGAttr("fill")}} や {{SVGAttr("stroke")}} など
 - その他の SVG 基本図形: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, **{{ SVGElement('line') }}**, **{{ SVGElement('polygon') }}**, {{ SVGElement('rect') }}

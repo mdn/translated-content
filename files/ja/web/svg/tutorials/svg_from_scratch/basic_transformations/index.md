@@ -93,7 +93,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-[SVG 座標変換のドキュメントにおける具体例](/ja/docs/Web/SVG/Attribute/transform#行列)を参照してください。このプロパティに関する詳細情報は、[SVG 勧告](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)で得ることができます。
+[SVG 座標変換のドキュメントにおける具体例](/ja/docs/Web/SVG/Reference/Attribute/transform#行列)を参照してください。このプロパティに関する詳細情報は、[SVG 勧告](https://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined)で得ることができます。
 
 ## 座標系に与える効果
 

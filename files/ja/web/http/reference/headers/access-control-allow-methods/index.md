@@ -35,9 +35,9 @@ Access-Control-Allow-Methods: *
 ## ディレクティブ
 
 - \<method>
-  - : 許可された [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)のコンマ区切りリスト。
+  - : 許可された [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)のコンマ区切りリスト。
 - `*` (ワイルドカード)
-  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Cookies) や HTTP 認証情報のないリクエスト) の特殊なワイルドカードです。資格情報付きのリクエストでは、特別な意味のない "`*`" というメソッド名として扱われます。
+  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や HTTP 認証情報のないリクエスト) の特殊なワイルドカードです。資格情報付きのリクエストでは、特別な意味のない "`*`" というメソッド名として扱われます。
 
 ## 例
 

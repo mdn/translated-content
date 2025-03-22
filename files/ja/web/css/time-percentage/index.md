@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<time-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("time")}} または {{Cssxref("percentage")}} が取りうる値を表します。
+**`<time-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{Cssxref("time")}} または {{Cssxref("percentage")}} が取りうる値を表します。
 
 ## 構文
 

@@ -38,11 +38,11 @@ function evaluateXPath(aNode, aExpr) {
 
 ただし、`createNSResolver` は、XPath 式の名前空間接頭辞が問い合わせる文書の名前空間接頭辞と一致する（かつ既定の名前空間が使用されていない (回避策については [document.createNSResolver](/ja/docs/Web/API/Document/createNSResolver) を参照)）ことが確認されている場合にのみ使用する必要があります。それ以外の場合は、XPathNSResolver の独自の実装を提供する必要があります。
 
-[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) を使用してローカルまたはリモートの XML ファイルを DOM ツリー（[XML の解釈とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)を参照）に読み込む場合、`evaluateXPath()`の最初の引数は`req.responseXML`である必要があります。
+[XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) を使用してローカルまたはリモートの XML ファイルを DOM ツリー（[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)を参照）に読み込む場合、`evaluateXPath()`の最初の引数は`req.responseXML`である必要があります。
 
 #### 使用例
 
-次の XML ドキュメント（[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)と[XML の解釈とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)も参照してください）があるとします。
+次の XML ドキュメント（[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)と[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)も参照してください）があるとします。
 
 ##### 例: カスタム `evaluateXPath()` ユーティリティ関数と一緒に使用する XML 文書
 
@@ -153,9 +153,9 @@ function getXPathForElement(el, xml) {
 
 ### 資料
 
-- [XPath](/ja/docs/Web/XPath)
+- [XPath](/ja/docs/Web/XML/XPath)
 - [このトピックのフォーラムでの議論](https://forums.mozillazine.org/viewtopic.php?t=229106)
 
 ## 関連情報
 
-- [JavaScript での XPath の使用](/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [JavaScript での XPath の使用](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
