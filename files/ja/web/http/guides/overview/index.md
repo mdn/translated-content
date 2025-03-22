@@ -86,7 +86,7 @@ HTTP/2 で HTTP メッセージをフレームにカプセル化することに�
 
 ### HTTP は拡張可能
 
-HTTP/1.0 で導入された [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)によって、プロトコルの拡張や実験が容易になっています。
+HTTP/1.0 で導入された [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)によって、プロトコルの拡張や実験が容易になっています。
 新しい機能であっても、クライアントとサーバーが新たなヘッダーの意味について単純な合意があれば導入できます。
 
 ### HTTP はステートレスであるがセッションレスではない
@@ -121,7 +121,7 @@ HTTP の拡張性により時間をかけて、ウェブの制御性や機能性
 
 HTTP で制御できる一般的な機能は以下のとおりです。
 
-- _[キャッシュ](/ja/docs/Web/HTTP/Caching)_:
+- _[キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)_:
   文書をどのようにキャッシュするかを、 HTTP で制御できます。
   サーバーはプロキシーやクライアントに対して、何をどれだけの間キャッシュするかを指示できます。
   クライアントは中間のキャッシュプロキシーに対して、保存されている文書を無視するよう指示できます。
@@ -131,8 +131,8 @@ HTTP で制御できる一般的な機能は以下のとおりです。
   この制約はサーバーにとって負担になりますが、 HTTP ヘッダーでサーバー側の厳密な分割を緩和できます。これにより、さまざまなドメインを情報源とした情報の寄せ集めの文書を作成できます。ただし、このようにするセキュリティ上の理由があります。
 - _認証_:
   特定のユーザーしかアクセスできないように保護されたページがあるでしょう。
-  基本的な認証は HTTP が提供しており、 {{HTTPHeader("WWW-Authenticate")}} などのヘッダーを使用するか、 [HTTP Cookie](/ja/docs/Web/HTTP/Cookies) を使用した特別なセッションを設定するかします。
-- _[プロキシーとトンネリング](/ja/docs/Web/HTTP/Proxy_servers_and_tunneling)_:
+  基本的な認証は HTTP が提供しており、 {{HTTPHeader("WWW-Authenticate")}} などのヘッダーを使用するか、 [HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies) を使用した特別なセッションを設定するかします。
+- _[プロキシーとトンネリング](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling)_:
   サーバーやクライアントがイントラネット内に配置されて、他のコンピューターから本当の IP アドレスが見えなくなっていることがよくあります。
   このネットワーク境界を渡るため、 HTTP リクエストはプロキシーを通過します。
   すべてのプロキシーが HTTP プロキシーであるとは限りません。
@@ -197,11 +197,11 @@ HTTP リクエストの例です。
 
 リクエストは以下の要素で構成されます。
 
-- HTTP [メソッド](/ja/docs/Web/HTTP/Methods)。通常、クライアントが実行したい操作を定義する {{HTTPMethod("GET")}} や {{HTTPMethod("POST")}} のような動詞か、{{HTTPMethod("OPTIONS")}} や {{HTTPMethod("HEAD")}} のような名詞です。
-  一般的にクライアントはリソースを取り込む（`GET` を使用）か [HTML フォーム](/ja/docs/Learn/Forms) の値を送信する（`POST` を使用）ことを望みますが、場合によってはほかの操作が必要になります。
+- HTTP [メソッド](/ja/docs/Web/HTTP/Reference/Methods)。通常、クライアントが実行したい操作を定義する {{HTTPMethod("GET")}} や {{HTTPMethod("POST")}} のような動詞か、{{HTTPMethod("OPTIONS")}} や {{HTTPMethod("HEAD")}} のような名詞です。
+  一般的にクライアントはリソースを取り込む（`GET` を使用）か [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms) の値を送信する（`POST` を使用）ことを望みますが、場合によってはほかの操作が必要になります。
 - 取り込むリソースのパス。状況から明らかであればリソースの URL はこの要素から取り除かれます。たとえば{{Glossary("protocol","プロトコル")}} (`http://`)、{{Glossary("domain","ドメイン")}}（ここでは `developer.mozilla.org`）、TCP {{Glossary("port","ポート")}}（ここでは `80`）が取り除かれます。
 - HTTP プロトコルのバージョン。
-- サーバーに追加の情報を与える任意の[ヘッダー](/ja/docs/Web/HTTP/Headers)。
+- サーバーに追加の情報を与える任意の[ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)。
 - `POST` のようなメソッドではレスポンスと同様に、送信するリソースを包含した本体があります。
 
 ### レスポンス
@@ -213,9 +213,9 @@ HTTP リクエストの例です。
 レスポンスは以下の要素で構成されます。
 
 - 準拠する HTTP プロトコルのバージョン。
-- [ステータスコード](/ja/docs/Web/HTTP/Status)。リクエストが成功したか否か、およびその理由を示します。
+- [ステータスコード](/ja/docs/Web/HTTP/Reference/Status)。リクエストが成功したか否か、およびその理由を示します。
 - ステータスメッセージ。ステータスコードの簡単な説明ですが、権威はありません。
-- リクエストと同様の HTTP [ヘッダー](/ja/docs/Web/HTTP/Headers)。
+- リクエストと同様の HTTP [ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)。
 - （省略可）リソースを含む本体。
 
 ## HTTP に基づく API

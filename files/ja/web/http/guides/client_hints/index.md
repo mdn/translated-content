@@ -1,17 +1,17 @@
 ---
 title: HTTP クライアントヒント
 slug: Web/HTTP/Guides/Client_hints
-original_slug: Web/HTTP/Client_hints
+original_slug: Web/HTTP/Guides/Client_hints
 l10n:
   sourceCommit: 48c0135f31d11eebde3e5bc3899811ddc69d2538
 ---
 
 {{HTTPSidebar}}
 
-**クライアントヒント** (Client hints) は、サーバーがクライアントに積極的にリクエストすることで、端末、ネットワーク、ユーザー、およびユーザーエージェント固有の環境設定に関する情報を取得することができる [HTTP リクエストヘッダー](/ja/docs/Web/HTTP/Headers) フィールド群です。
+**クライアントヒント** (Client hints) は、サーバーがクライアントに積極的にリクエストすることで、端末、ネットワーク、ユーザー、およびユーザーエージェント固有の環境設定に関する情報を取得することができる [HTTP リクエストヘッダー](/ja/docs/Web/HTTP/Reference/Headers) フィールド群です。
 サーバーは、クライアントが提供することを選んだ情報に基づいて、送信するリソースを決定することができます。
 
-一連の「ヒント」ヘッダーは、 [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers#クライアントヒント) のトピックに挙げられている他、[下記にもまとめています](#hint_types)。
+一連の「ヒント」ヘッダーは、 [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers#クライアントヒント) のトピックに挙げられている他、[下記にもまとめています](#hint_types)。
 
 ## 概要
 
@@ -47,7 +47,7 @@ Vary: Accept, Width, ECT
 
 値が頻繁に変更されるクライアントヒントヘッダについては、 {{HTTPHeader("Vary")}} を指定しないか、 他の方法を使用したほうがよいでしょう。これは、リソースを効果的にキャッシュできなくしてしまうからです。( それぞれの固有の値に対して、新しいキャッシュ項目が作成されます)。
 これは特に {{HTTPHeader("Downlink")}} や {{HTTPHeader("RTT")}} のようなネットワーククライアントヒントに当てはまります。
-詳細な情報は、[HTTP キャッシュ > レスポンスの変化](/ja/docs/Web/HTTP/Caching#vary) を参照してください。
+詳細な情報は、[HTTP キャッシュ > レスポンスの変化](/ja/docs/Web/HTTP/Guides/Caching#vary) を参照してください。
 
 ## ヒントの期限
 
@@ -132,8 +132,8 @@ Sec-CH-Prefers-Reduced-Motion: "reduce"
 
 ## 関連情報
 
-- [クライアントヒントのヘッダー](/ja/docs/Web/HTTP/Headers#クライアントヒント)
-- [`Vary` HTTP ヘッダー](/ja/docs/Web/HTTP/Headers/Vary)
+- [クライアントヒントのヘッダー](/ja/docs/Web/HTTP/Reference/Headers#クライアントヒント)
+- [`Vary` HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)（英語）
 - [ユーザーエージェントクライアントヒント API](/ja/docs/Web/API/User-Agent_Client_Hints_API)
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)（英語）

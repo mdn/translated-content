@@ -20,7 +20,7 @@ l10n:
 - {{domxref("Badging API", "バッジ API", "", "nocode")}}
 - {{domxref("Barcode Detection API", "バーコード検出 API", "", "nocode")}}
 - {{domxref("Battery Status API", "バッテリー状態 API", "", "nocode")}}
-- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Headers/Cache-Control)
+- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control)
 - {{domxref("Contact Picker API", "連絡先ピッカー API", "", "nocode")}}
 - {{domxref("Content Index API", "コンテンツインデックス API", "", "nocode")}}
 - {{domxref("Cookie Store API", "クッキーストア API", "", "nocode")}}

@@ -94,7 +94,7 @@ MIME タイプは大文字と小文字を区別しませんが、伝統的に小
 **マルチパート**タイプは、ふつうそれぞれ異なる MIME タイプを持つ複数の部品に分割される文書のカテゴリーを示します。
 これらは、特に電子メールにおいて、同じトランザクションの一部である複数の別々のファイルを表すためにも使用されます。これらは**複合文書**を表します。
 
-HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn/Forms)の {{HTTPMethod("POST")}} メソッドで使用されたり、 `multipart/byteranges` が文書の一部を送信するために {{HTTPStatus("206")}} `Partial Content` で使用されたりする例外を除いて、 HTTP はマルチパート文書を特別な方法で扱いません。
+HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)の {{HTTPMethod("POST")}} メソッドで使用されたり、 `multipart/byteranges` が文書の一部を送信するために {{HTTPStatus("206")}} `Partial Content` で使用されたりする例外を除いて、 HTTP はマルチパート文書を特別な方法で扱いません。
 メッセージは（おそらく文書をインラインで表示する方法がわからず、「名前を付けて保存」をすることを提案されるでしょうが）ブラウザーへ送信されます。
 
 マルチパートタイプは 2 種類があります。
@@ -168,33 +168,33 @@ MIME タイプが `image` であるファイルは、画像データを含んで
 
 以下の画像タイプは、ウェブページを使用する際に安全である程度に一般的に使用されています。
 
-- [`image/apng`](/ja/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics): APNG (Animated Portable Network Graphics)
-- [`image/avif`](/ja/docs/Web/Media/Formats/Image_types#avif_image) : AVIF (AV1 Image File Format)
-- [`image/gif`](/ja/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format): GIF (Graphics Interchange Format)
-- [`image/jpeg`](/ja/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image): JPEG (Joint Photographic Expert Group image)
-- [`image/png`](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics): PNG (Portable Network Graphics)
-- [`image/svg+xml`](/ja/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics): SVG (Scalable Vector Graphics)
-- [`image/webp`](/ja/docs/Web/Media/Formats/Image_types#webp_image): WEBP (Web Picture format)
+- [`image/apng`](/ja/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics): APNG (Animated Portable Network Graphics)
+- [`image/avif`](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) : AVIF (AV1 Image File Format)
+- [`image/gif`](/ja/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format): GIF (Graphics Interchange Format)
+- [`image/jpeg`](/ja/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image): JPEG (Joint Photographic Expert Group image)
+- [`image/png`](/ja/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics): PNG (Portable Network Graphics)
+- [`image/svg+xml`](/ja/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics): SVG (Scalable Vector Graphics)
+- [`image/webp`](/ja/docs/Web/Media/Guides/Formats/Image_types#webp_image): WEBP (Web Picture format)
 
-[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types#common_image_file_types)では、さまざまな画像形式を使用する場合の情報と推奨事項を提供しています。
+[画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types#common_image_file_types)では、さまざまな画像形式を使用する場合の情報と推奨事項を提供しています。
 
 ### 音声と動画のタイプ
 
 画像の場合と同様に、 HTML はウェブブラウザーが {{HTMLElement("audio")}} と {{HTMLElement("video")}} 要素が特定のファイルタイプやコーデックに対応することを義務づけていないので、メディアに使用するファイルタイプやコーデックを選択する際には、ターゲット層と彼らが使用しているであろうブラウザーの範囲（およびそれらのバージョン）を考慮しておくことが重要です。
 
-[メディアコンテナー形式のガイド](/ja/docs/Web/Media/Formats/Containers)では、ウェブブラウザーが一般的に対応しているファイルタイプの一覧を、その特殊な使用例や持っている欠点、互換性情報などの詳細とともに紹介しています。
+[メディアコンテナー形式のガイド](/ja/docs/Web/Media/Guides/Formats/Containers)では、ウェブブラウザーが一般的に対応しているファイルタイプの一覧を、その特殊な使用例や持っている欠点、互換性情報などの詳細とともに紹介しています。
 
-[音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)および[映像コーデック](/ja/docs/Web/Media/Formats/Video_codecs)ガイドでは、ウェブブラウザーがよく対応しているさまざまなコーデックをリストアップし、互換性の詳細とともに、対応している音声チャネル数、使用されている圧縮方式、有効なビットレートなどの技術的な情報を提供しています。
+[音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)および[映像コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs)ガイドでは、ウェブブラウザーがよく対応しているさまざまなコーデックをリストアップし、互換性の詳細とともに、対応している音声チャネル数、使用されている圧縮方式、有効なビットレートなどの技術的な情報を提供しています。
 [WebRTC で使用されるコーデック](/ja/docs/Web/Media/Formats/WebRTC_codecs)ガイドではさらに、主要なウェブブラウザーで対応しているコーデックに特化して、対応したいブラウザーの範囲に応じた最適なコーデックを選ぶことができます。
 
 音声ファイルや動画ファイルの MIME タイプに関しては、通常、コンテナー形式（ファイルタイプ）を指定します。
 オプションの[コーデック引数](/ja/docs/Web/Media/Formats/codecs_parameter)を MIME タイプに追加すると、使用するコーデックと、コーデックプロファイル、レベルなど、メディアのエンコードに使用したオプションをさらに指定することができます。
 
-よくあるメディア型についての詳しい情報は、[よくある MIME タイプ](/ja/docs/Web/HTTP/MIME_types/Common_types)ページを参照してください。
+よくあるメディア型についての詳しい情報は、[よくある MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)ページを参照してください。
 
 ### multipart/form-data
 
-`multipart/form-data` タイプは、入力済みの [HTML フォーム](/ja/docs/Learn/Forms) の内容をブラウザーからサーバーに送信するときに使用することができます。
+`multipart/form-data` タイプは、入力済みの [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms) の内容をブラウザーからサーバーに送信するときに使用することができます。
 
 これはマルチパート文書形式として複数の部分から成り、境界（二重ダッシュ `--` で始まる文字列）によって区切られます。
 それぞれの部分は固有のエンティティであり、固有の HTTP ヘッダーとして {{HTTPHeader("Content-Disposition")}} やファイルアップロードのフィールドには {{HTTPHeader("Content-Type")}} を持ちます。
@@ -305,7 +305,7 @@ Content-Range: bytes 300-400/1270
   この場合、サーバーが `application/x-rar-compressed` を送信するように設定してください。
 - 音声および動画。
   正しい MIME タイプを持つリソースだけが、 {{HTMLElement("video")}} または {{HTMLElement("audio")}} 要素で再生されます。
-  [音声および動画の MIME タイプ](/ja/docs/Web/Media/Formats)を正しく使用するよう注意してください。
+  [音声および動画の MIME タイプ](/ja/docs/Web/Media/Guides/Formats)を正しく使用するよう注意してください。
 - 独自のファイル型。
   `application/vnd.mspowerpoint` のような特定の型ならば、ユーザーがそのようなファイルを自動的に選択したプレゼンテーションソフトウェアで開くことができます。
 
@@ -330,5 +330,5 @@ MIME タイプは、文書の種類の情報を伝える唯一の方法ではあ
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [ウェブ上で使用されるメディア形式のガイド](/ja/docs/Web/Media/Formats)
-- [サーバーの MIME タイプを正しく構成する](/ja/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [ウェブ上で使用されるメディア形式のガイド](/ja/docs/Web/Media/Guides/Formats)
+- [サーバーの MIME タイプを正しく構成する](/ja/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)

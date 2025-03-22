@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`contain-intrinsic-size`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素が[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ拘束)の対象である場合に、ブラウザーがレイアウトに使用する要素のサイズを設定します。
+**`contain-intrinsic-size`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素が[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ拘束)の対象である場合に、ブラウザーがレイアウトに使用する要素のサイズを設定します。
 
 ## 構成要素のプロパティ
 

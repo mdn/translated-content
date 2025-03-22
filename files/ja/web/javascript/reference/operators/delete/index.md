@@ -54,7 +54,7 @@ delete object["property"];
 
 ## 解説
 
-一般的に信じられていることとは異なり (おそらく [C++ における delete](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Memory_management)を参照してください。
+一般的に信じられていることとは異なり (おそらく [C++ における delete](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)を参照してください。
 
 **`delete`** 演算子は指定したプロパティをオブジェクトから取り除きます。削除に成功すると `true` を返し、そうでなければ `false` を返します。
 

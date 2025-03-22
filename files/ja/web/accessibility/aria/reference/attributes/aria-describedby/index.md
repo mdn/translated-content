@@ -12,11 +12,11 @@ l10n:
 
 ## 解説
 
-`aria-describedby` 属性は、オブジェクトを説明する要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を列挙します。これは、ウィジェットやグループとそれらを説明するテキストとの関係を確立するために使用します。
+`aria-describedby` 属性は、オブジェクトを説明する要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を列挙します。これは、ウィジェットやグループとそれらを説明するテキストとの関係を確立するために使用します。
 
-`aria-describedby` 属性はあるフォームコントロールに限ったものではありません。ウィジェットや要素のグループ、見出しのある領域、定義などに静的テキストを関連付けるためにも使用することができます。 `aria-describedby` 属性は、意味づけされた HTML 要素や ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles) を持つ要素で使用することができます。
+`aria-describedby` 属性はあるフォームコントロールに限ったものではありません。ウィジェットや要素のグループ、見出しのある領域、定義などに静的テキストを関連付けるためにも使用することができます。 `aria-describedby` 属性は、意味づけされた HTML 要素や ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) を持つ要素で使用することができます。
 
-`aria-describedby` 属性は [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性ととても似ています。 `aria-labelledby` がオブジェクトの本質を記述するラベルや要素の `id` を掲載しているのに対して、 `aria-describedby` はユーザーが必要とするかもしれないより詳細な情報を提供する記述や要素の `id` を掲載しています。 `aria-labelledby` と `aria-describedby` はどちらもテキストの代替を計算するために他の要素を参照しますが、ラベルは簡潔であるべきであるのに対し、説明はより詳細な情報を提供することを意図しています。ラベルはオブジェクトの本質を記述するのに対し、説明文はユーザーが必要とするかもしれないより多くの情報を提供します。
+`aria-describedby` 属性は [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性ととても似ています。 `aria-labelledby` がオブジェクトの本質を記述するラベルや要素の `id` を掲載しているのに対して、 `aria-describedby` はユーザーが必要とするかもしれないより詳細な情報を提供する記述や要素の `id` を掲載しています。 `aria-labelledby` と `aria-describedby` はどちらもテキストの代替を計算するために他の要素を参照しますが、ラベルは簡潔であるべきであるのに対し、説明はより詳細な情報を提供することを意図しています。ラベルはオブジェクトの本質を記述するのに対し、説明文はユーザーが必要とするかもしれないより多くの情報を提供します。
 
 `aria-describedby` によってリンクされた要素は表示されている必要はありません。要素が非表示であっても参照することは可能です。例えば、あるフォームコントロールは既定値では非表示の説明を持つことができ、「詳細情報」アイコンのような開示ウィジェットを使用してリクエストに応じて表示されます。視覚ユーザーはアイコンをクリックします。支援技術のユーザーは、 `aria-describedby` で直接そのフォームフィールドから説明を参照します。
 
@@ -50,7 +50,7 @@ l10n:
 ## 関連情報
 
 - {{HTMLElement('label')}}
-- [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
 - [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)

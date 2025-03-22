@@ -17,7 +17,7 @@ not(expression )
 ### 引数
 
 - `expression`
-  - : この式は [boolean()](/ja/docs/Web/XPath/Functions/boolean) 関数の引数として渡された場合とまったく同じように評価されます。
+  - : この式は [boolean()](/ja/docs/Web/XML/XPath/Reference/Functions/boolean) 関数の引数として渡された場合とまったく同じように評価されます。
 
 ### 返値
 
@@ -25,7 +25,7 @@ false と評価できる式に対しては true を返し、true と評価でき
 
 ### 注
 
-- この関数は [boolean()](/ja/docs/Web/XPath/Functions/boolean) 関数と同様のふるまいをしますが、返される値はその逆です。
+- この関数は [boolean()](/ja/docs/Web/XML/XPath/Reference/Functions/boolean) 関数と同様のふるまいをしますが、返される値はその逆です。
 - 要素に一部の属性がないことを検査することができます。
 
 ```

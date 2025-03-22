@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Cross-Origin-Embedder-Policy
 
 {{HTTPSidebar}}
 
-HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](</ja/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>) または [CORS](/ja/docs/Web/HTTP/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
+HTTP の **`Cross-Origin-Embedder-Policy`** (COEP) レスポンスヘッダーは、（[CORP](/ja/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy) または [CORS](/ja/docs/Web/HTTP/Guides/CORS) を使用して）文書に明示的に許可を与えていない外部オリジンのリソースが、文書に読み込まれることを防止するものです。
 
 <table class="properties">
   <tbody>
@@ -60,7 +60,7 @@ if (crossOriginIsolated) {
 
 ### CORS による COEP の遮断の回避
 
-`require-corp` を使用して COEP を有効にし、読み込む必要があるクロスオリジンリソースがある場合、それは [CORS](/ja/docs/Web/HTTP/CORS) に対応する必要があり、 COEP によるブロックを回避するには、他のオリジンからロード可能であると明示的にマークする必要があります。例えば、サードパーティーサイトから読み込むこの画像には、[`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を使用することができます。
+`require-corp` を使用して COEP を有効にし、読み込む必要があるクロスオリジンリソースがある場合、それは [CORS](/ja/docs/Web/HTTP/Guides/CORS) に対応する必要があり、 COEP によるブロックを回避するには、他のオリジンからロード可能であると明示的にマークする必要があります。例えば、サードパーティーサイトから読み込むこの画像には、[`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を使用することができます。
 
 ```html
 <img src="https://thirdparty.com/img.png" crossorigin />

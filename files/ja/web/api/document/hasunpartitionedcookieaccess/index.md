@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Storage Access API")}}
 
-**`hasUnpartitionedCookieAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、論理値を返すプロミス ({{jsxref("Promise")}}) を返します。これはこの文書が[サードパーティ](/ja/docs/Web/HTTP/Cookies#third-party_cookies)の[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセス権があるかどうかを示します。
+**`hasUnpartitionedCookieAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、論理値を返すプロミス ({{jsxref("Promise")}}) を返します。これはこの文書が[サードパーティ](/ja/docs/Web/HTTP/Guides/Cookies#third-party_cookies)の[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセス権があるかどうかを示します。
 
 このメソッドは[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の一部です。
 

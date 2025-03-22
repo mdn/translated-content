@@ -49,7 +49,7 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 <link href="print.css" rel="stylesheet" media="print" />
 ```
 
-いくらか [CSS の最適化](/ja/docs/Learn/Performance/CSS)をすることで、これを達成することができます。
+いくらか [CSS の最適化](/ja/docs/Learn_web_development/Extensions/Performance/CSS)をすることで、これを達成することができます。
 
 ### フォント
 

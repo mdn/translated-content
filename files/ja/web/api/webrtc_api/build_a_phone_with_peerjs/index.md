@@ -19,7 +19,7 @@ WebRTC の主な課題の 1 つが、使用したり開発したりするのが�
 
 - [バニラ JavaScript](/ja/docs/Web/JavaScript)
 - [Node](https://nodejs.org/ja/docs/)
-- [Express](/ja/docs/Learn/Server-side/Express_Nodejs)
+- [Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
 - [HTML](/ja/docs/Web/HTML)
 
 始める前に、 [node](https://nodejs.org/en/download/) と [Yarn](https://classic.yarnpkg.com/en/docs/install) がインストールされていることを確認してください（後の記事の説明では Yarn を想定していますが、推奨するなら [npm](https://docs.npmjs.com/getting-started/) や他のマネージャを使用するのも自由です）。

@@ -17,7 +17,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
   - : マイクロサマリジェネレーター (microsummary generator)の作り方のチュートリアル
 - [マイクロサマリ XML 文法リファレンス](/ja/docs/Microsummary_XML_grammar_reference)
   - : マイクロサマリジェネレーターで使われる XML 文法のリファレンスガイド
-- [Firefox 用 OpenSearch プラグインの作成](/ja/docs/Web/OpenSearch)
+- [Firefox 用 OpenSearch プラグインの作成](/ja/docs/Web/XML/Guides/OpenSearch)
   - : Firefox 2 は OpenSearch 検索エンジンフォーマットをサポートします。
 - [MozSearch プラグインの作成](/ja/docs/Creating_MozSearch_plugins)
   - : Firefox 2 は OpenSearch を元にした検索プラグインフォーマットの MozSearch をサポートしますが、しかし内部利用目的のみのものです。
@@ -42,7 +42,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
   - : 開発者が RSS および Atom フィードをアクセスおよびパースできる API。
 - [SAX サポート](/ja/docs/SAX)
   - : イベントベースの XML パーサー API.
-- [ウェブページから検索エンジンを追加する](/ja/docs/Web/OpenSearch)
+- [ウェブページから検索エンジンを追加する](/ja/docs/Web/XML/Guides/OpenSearch)
   - : JavaScript コードは Firefox に新しい検索プラグインをインストールするように命令することができます。OpenSearch か Sherlock フォーマットのどちらかを利用して検索プラグインを書くことができます。
 - [XUL でのスペルチェック](/ja/docs/Using_spell_checking_in_XUL)
   - : コードから単語のスペルをチェックしたり、スペルの候補リストを得る方法。

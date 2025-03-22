@@ -14,7 +14,7 @@ l10n:
 
 `term` ロールは、作成者によって定義が提供された、またはユーザーによって提供されることが期待されている単語または語句を明示的に識別するために使用します。既存の定義、または定義を入力するフォームやフォームコントロールがある場合、作者は [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details) を設定し、関連の要素を指すようにすべきです (SHOULD)。
 
-`role="term"` をリンクのような対話的要素に使用しないでください。支援技術ユーザーが要素と対話するのを妨害する可能性があるからです。また、用語そのものがアクセシビリティ名なので、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) は使用しないでください。
+`role="term"` をリンクのような対話的要素に使用しないでください。支援技術ユーザーが要素と対話するのを妨害する可能性があるからです。また、用語そのものがアクセシビリティ名なので、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は使用しないでください。
 
 > [!WARNING]
 > アクセシブル名は用語そのものでなければなりませんので、`aria-label` や `aria-labelledby` は使用しないでください。
@@ -91,7 +91,7 @@ l10n:
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles)
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
 
    {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
 

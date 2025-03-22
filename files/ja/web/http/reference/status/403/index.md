@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`403 Forbidden`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードは、サーバーがリクエストを理解したものの、処理を拒否したことを示します。
+HTTP の **`403 Forbidden`** [クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードは、サーバーがリクエストを理解したものの、処理を拒否したことを示します。
 このステータスは {{HTTPStatus("401")}} と似ていますが、 **`403 Forbidden`** レスポンスが異なるのは、認証または再認証を行っても違いがないことです。
 リクエストの失敗は、リソースに対するその権限の不足やアクションなどのアプリケーションロジックに関連したものです。
 
@@ -26,7 +26,7 @@ HTTP の **`403 Forbidden`** [クライアントエラーレスポンス](/ja/do
 ### リクエストが権限が不十分なため失敗
 
 次の例のリクエストは、ユーザー管理用の API に対して行われます。
-リクエストには {{HTTPHeader("Authorization")}} ヘッダーが含まれており、アクセストークンを含む `Bearer` [認証スキーム](/ja/docs/Web/HTTP/Authentication#認証スキーム)を使用しています。
+リクエストには {{HTTPHeader("Authorization")}} ヘッダーが含まれており、アクセストークンを含む `Bearer` [認証スキーム](/ja/docs/Web/HTTP/Guides/Authentication#認証スキーム)を使用しています。
 
 ```http
 DELETE /users/123 HTTP/1.1
@@ -54,6 +54,6 @@ Content-Length: 88
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("401")}}
 - [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.403)

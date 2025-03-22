@@ -5,7 +5,7 @@ slug: Web/CSS/clamp
 
 {{CSSRef}}
 
-**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、値を上限と下限の間に制限します。 `clamp()` によって、定義された最大値と最小値の間の値を選択することができます。最小値、推奨値、最大値の3つの引数を取ります。 `clamp()` 関数は {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} のいずれでも使用することができます。
+**`clamp()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、値を上限と下限の間に制限します。 `clamp()` によって、定義された最大値と最小値の間の値を選択することができます。最小値、推奨値、最大値の3つの引数を取ります。 `clamp()` 関数は {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} のいずれでも使用することができます。
 
 `clamp(MIN, VAL, MAX)` は `{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))` と同等です。
 
@@ -137,4 +137,4 @@ p {
 - {{CSSxRef("calc()")}}
 - {{CSSxRef("max()")}}
 - {{CSSxRef("min()")}}
-- [CSS 値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

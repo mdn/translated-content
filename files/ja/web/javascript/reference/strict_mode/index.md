@@ -50,7 +50,7 @@ function myNotStrictFunction() {
 }
 ```
 
-`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。 `"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)となります。
+`"use strict"` ディレクティブは、単純な引数を持つ関数の本体にのみ使用することができます。 `"use strict"` を[残余](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のある関数で使用すると、[構文エラー](/ja/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params)となります。
 
 ```js-nolint example-bad
 function sum(a = 1, b = 2) {

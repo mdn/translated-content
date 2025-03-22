@@ -72,4 +72,4 @@ controller.addEventListener("input", (e) => {
 
 ## 関連情報
 
-- HTML の [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes#autocapitalize) グローバル属性
+- HTML の [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) グローバル属性

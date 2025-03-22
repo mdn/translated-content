@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`421 Misdirected Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、リクエストがレスポンスを生成できないサーバーに送られたことを示します。
+HTTP の **`421 Misdirected Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストがレスポンスを生成できないサーバーに送られたことを示します。
 これは、リクエスト URI に含まれない[スキーム](/ja/docs/Web/URI/Reference/Schemes)と[オーソリティ](/ja/docs/Web/URI/Reference/Authority)の組み合わせに対するレスポンスを生成するように構成されていないサーバーから送信される可能性があります。
 
 クライアントは、別な接続でリクエストを再試行することができます。
@@ -44,7 +44,7 @@ Server: Apache/2.4.1 (Unix)
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - [Multiple hosts and misdirected requests](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache Server documentation
 - [TLS 1.3](/ja/docs/Web/Security/Transport_Layer_Security#tls_1.3)
 - [Server Name Indication (SNI)](https://ja.wikipedia.org/wiki/Server_Name_Indication)

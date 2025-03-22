@@ -10,7 +10,7 @@ l10n:
 
 プログラミング言語には、どれにも組み込みデータ構造がありますが、ふつうは言語ごとに異なります。この記事では、JavaScript で使用可能な組み込みデータ構造の一覧と、他のデータ構造の構築にも使えるように、それらがどのような性質を持ち合わせているかについて述べることにします。
 
-[言語概要](/ja/docs/Web/JavaScript/Language_overview)では、一般的なデータ型を同様にまとめていますが、もっと他の言語との比較も行っています。
+[言語概要](/ja/docs/Web/JavaScript/Guide/Language_overview)では、一般的なデータ型を同様にまとめていますが、もっと他の言語との比較も行っています。
 
 ## 動的かつ弱い型付け
 
@@ -67,7 +67,7 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 - 初期化を伴わない変数宣言 (`let x;`) は、暗黙的にその変数を `undefined` に初期化します。
 - {{jsxref("Array.prototype.find()")}} や {{jsxref("Map.prototype.get()")}} など、多くのメソッドは要素が見つからないと `undefined` を返します。
 
-コア言語では、`null` が使用される頻度はかなり低くなっています。最も重要な場所は、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)の終わりです。その後、{{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} など、プロトタイプとやりとりするメソッドは `undefined` に代わり `null` を受け入れるか返します。
+コア言語では、`null` が使用される頻度はかなり低くなっています。最も重要な場所は、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)の終わりです。その後、{{jsxref("Object.getPrototypeOf()")}}、{{jsxref("Object.create()")}} など、プロトタイプとやりとりするメソッドは `undefined` に代わり `null` を受け入れるか返します。
 
 `null` は[キーワード](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)ですが、`undefined` は通常の[識別子](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#識別子)で、たまたまグローバルプロパティであると見なされます。実際には、`undefined` は再定義されたり、シャドウ化されたりすることはないので、この違いは小さいです。
 
@@ -171,7 +171,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 - `writable`
   - : プロパティに代入することで変更可能かどうかを示す論理値です。
 - `enumerable`
-  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)も参照してください。
+  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)も参照してください。
 - `configurable`
   - : 論理値で、プロパティの削除、アクセサプロパティへの変更、属性の変更が可能かどうかを示します。
 
@@ -189,11 +189,11 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 - `set`
   - : 割り当てる値を格納した引数で呼び出される関数です。指定したプロパティを変更しようとしたときに実行されます。[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)も参照してください。`undefined` にすることができます。
 - `enumerable`
-  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)も参照してください。
+  - : プロパティが [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで列挙可能かどうかを示す論理値です。列挙可能性が他の機能や構文とどのようにやり取りするかについては、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)も参照してください。
 - `configurable`
   - : 論理値で、プロパティの削除、アクセサプロパティへの変更、属性の変更が可能かどうかを示します。
 
-オブジェクトの[プロトタイプ](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)は、他のオブジェクトや `null` を指しています。これは概念的にはオブジェクトの隠しプロパティで、一般的には `[[Prototype]]` として表されます。オブジェクトの `[[Prototype]]` のプロパティは、オブジェクト自身にもアクセスすることができます。
+オブジェクトの[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)は、他のオブジェクトや `null` を指しています。これは概念的にはオブジェクトの隠しプロパティで、一般的には `[[Prototype]]` として表されます。オブジェクトの `[[Prototype]]` のプロパティは、オブジェクト自身にもアクセスすることができます。
 
 オブジェクトはアドホックなキーと値のペアであるため、マップとしてよく使用されます。しかし、人間工学、セキュリティ、パフォーマンスの課題がある場合があります。任意のデータを格納するためには、代わりに {{jsxref("Map")}} を使用してください。[`Map` のリファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Map#object_と_map_の比較)には、キーと値の関連性を格納するためのプレーンオブジェクトとマップの間のメリットとデメリットについてより詳しい議論が含まれています。
 
@@ -217,7 +217,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 
 通常、DOM ノードにデータをバインドするには、オブジェクトに直接プロパティを設定するか、 `data-*` 属性を使用します。これらの手法は同じコンテクストで実行されるあらゆるスクリプトからデータの利用が可能であるため、不都合な面を持ち合わせていました。 `Map` や `WeakMap` を使うと、オブジェクトへの*プライベート*なデータバインドを簡単に行うことができます。
 
-`WeakMap` および `WeakSet` では、キーとしてオブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)のいずれかであるガベージコレクターで回収可能な値のみが許可され、キーがコレクション内に残っていても、キーが回収される場合があります。これらは、[メモリー使用の最適化](/ja/docs/Web/JavaScript/Memory_management#%e3%83%a1%e3%83%a2%e3%83%aa%e3%83%bc%e7%ae%a1%e7%90%86%e3%82%92%e6%94%af%e6%8f%b4%e3%81%99%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0)に固有の仕様として使用します。
+`WeakMap` および `WeakSet` では、キーとしてオブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)のいずれかであるガベージコレクターで回収可能な値のみが許可され、キーがコレクション内に残っていても、キーが回収される場合があります。これらは、[メモリー使用の最適化](/ja/docs/Web/JavaScript/Guide/Memory_management#%e3%83%a1%e3%83%a2%e3%83%aa%e3%83%bc%e7%ae%a1%e7%90%86%e3%82%92%e6%94%af%e6%8f%b4%e3%81%99%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0)に固有の仕様として使用します。
 
 ### 構造化データ: JSON
 

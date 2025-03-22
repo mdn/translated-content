@@ -19,18 +19,18 @@ ARIA の状態とプロパティには、4 つのカテゴリーがあります�
 
 1. ### ウィジェット属性
 
-   - [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
-   - [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-   - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-   - [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+   - [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
+   - [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
+   - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
+   - [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
    - [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
    - [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-   - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+   - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
    - [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-   - [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-   - [`aria-level`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-level)
+   - [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+   - [`aria-level`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
    - [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-   - [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
+   - [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline)
    - [`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
    - [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
    - [`aria-placeholder`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
@@ -46,29 +46,29 @@ ARIA の状態とプロパティには、4 つのカテゴリーがあります�
 
 2. ### ライブリージョン属性
 
-   - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-   - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+   - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+   - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
    - [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-   - [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+   - [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 
 3. ### ドラッグ＆ドロップ属性
 
    - [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-   - [`aria-grabbed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
+   - [`aria-grabbed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
 
 4. ### リレーションシップ属性
 
-   - [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-   - [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-   - [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-   - [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-   - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-   - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+   - [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
+   - [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
+   - [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
+   - [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
+   - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
+   - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
    - [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description)
    - [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-   - [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+   - [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
    - [`aria-flowto`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-   - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+   - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
    - [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
    - [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
    - [`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
@@ -82,30 +82,30 @@ ARIA の状態とプロパティには、4 つのカテゴリーがあります�
 
 上記の属性の多くはグローバルで、特に禁止されていない限り、どの要素にも含めることができます。
 
-- [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
-- [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-- [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-- [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-current)
-- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
+- [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
+- [`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current)
+- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-- [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+- [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
 - [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-- [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+- [`aria-errormessage`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
 - [`aria-flowto`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-- [`aria-grabbed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
+- [`aria-grabbed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
 - [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-- [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+- [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
 - [`aria-invalid`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-keyshortcuts`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts)
-- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
+- [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
 - [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
 - [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-「特に禁止」とは、上記の属性がすべてグローバルであることを意味します。ただし、`aria-label` および `aria-labelledby` プロパティは、ロール [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) またはその同義語 [`none`](/ja/docs/Web/Accessibility/ARIA/Roles/none_role) ロールでは禁止されています。
+「特に禁止」とは、上記の属性がすべてグローバルであることを意味します。ただし、`aria-label` および `aria-labelledby` プロパティは、ロール [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) またはその同義語 [`none`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role) ロールでは禁止されています。
 
 ## MDN で定義する状態とプロパティ
 
@@ -115,11 +115,11 @@ ARIA の状態とプロパティには、4 つのカテゴリーがあります�
 
 ## 関連情報
 
-- [ARIA の使用: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [ARIA の使用: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques)
 
 <section id="Quick_links">
 
-1. [**<abbr>WAI-ARIA</abbr> attributes**](/ja/docs/Web/Accessibility/ARIA/Attributes)
+1. [**<abbr>WAI-ARIA</abbr> attributes**](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)
 
    {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Attributes")}}
 

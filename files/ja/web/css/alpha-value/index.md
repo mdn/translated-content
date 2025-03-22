@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<alpha-value>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)であり、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} によって色の **{{Glossary("alpha", "アルファチャネル")}}** または **透過性** を表します。
+**`<alpha-value>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)であり、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} によって色の **{{Glossary("alpha", "アルファチャネル")}}** または **透過性** を表します。
 
 ## 構文
 
@@ -53,7 +53,7 @@ shape-image-threshold: 0.7;
 
 ## 関連情報
 
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [CSS データ型](/ja/docs/Web/CSS/CSS_Types)
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS 色](/ja/docs/Web/CSS/CSS_colors)
 - [`<color>`](/ja/docs/Web/CSS/color_value)

@@ -109,7 +109,7 @@ XML ページに見た目を持たせる方法の一つは、`xml-stylesheet` �
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 
-XML を表示するもう 1 つのより強力な方法もあります。XSL を HTML などの他の言語に変換するために使用できる Extensible Stylesheet Language Transformation ([XSLT](/ja/docs/Web/XSLT)) です。 これにより、XML は非常に用途が広くなります。
+XML を表示するもう 1 つのより強力な方法もあります。XSL を HTML などの他の言語に変換するために使用できる Extensible Stylesheet Language Transformation ([XSLT](/ja/docs/Web/XML/XSLT)) です。 これにより、XML は非常に用途が広くなります。
 
 ```xml
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>

@@ -65,7 +65,7 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/Replaced_element)（[`<img>`](/ja/docs/Web/HTML/Element/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
+このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)（[`<img>`](/ja/docs/Web/HTML/Element/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
 
 要素が置換要素でない場合は、指定された `ratio` が使用されます。
 
@@ -73,7 +73,7 @@ aspect-ratio: unset;
 
 - `auto`
 
-  - : 内在的なアスペクト比がある[置換要素](/ja/docs/Web/CSS/Replaced_element)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
+  - : 内在的なアスペクト比がある[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
 
 - {{cssxref("&lt;ratio&gt;")}}
 

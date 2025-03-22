@@ -158,7 +158,7 @@ ARIA では、開発者が要素の意味づけの役割を宣言することが
 ### 非同期のコンテンツ変更
 
 > [!NOTE]
-> 作成中です。[ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) もご覧ください。
+> 作成中です。[ライブリージョン](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) もご覧ください。
 
 ## キーボード操作
 
@@ -174,11 +174,11 @@ ARIA では、開発者が要素の意味づけの役割を宣言することが
 - フォーム内で、スペースキーはコントロールの選択やアクティブ化を、Enter キーはフォームの既定のアクションの実行を行えるようにすべきです。
 - 迷った場合は作成するコントロールの、デスクトップにおける標準的な動作を模倣しましょう。
 
-従って、前出のタブウィジェットの例では、ユーザーが Tab および Shift+Tab キーを使用してウィジェットのコンテナー（マークアップにおける {{HTMLElement('ol')}}）に出入りする操作を行えるとよいでしょう。キーボードのフォーカスがコンテナー内に入ったら、矢印キーで各々のタブ（{{HTMLElement('li')}} 要素）を行き来できるとよいでしょう。ここからは、プラットフォームによって慣習が異なります。 Windows では、ユーザーが矢印キーを押すと自動的に次のタブがアクティブ化されます。 macOS では、ユーザーは次のタブをアクティブ化するために Enter またはスペースキーを押します。[キーボードで操作可能な JavaScript ウィジェット](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)作成の包括的なチュートリアルで、このような動作を JavaScript で実装する方法を説明します。
+従って、前出のタブウィジェットの例では、ユーザーが Tab および Shift+Tab キーを使用してウィジェットのコンテナー（マークアップにおける {{HTMLElement('ol')}}）に出入りする操作を行えるとよいでしょう。キーボードのフォーカスがコンテナー内に入ったら、矢印キーで各々のタブ（{{HTMLElement('li')}} 要素）を行き来できるとよいでしょう。ここからは、プラットフォームによって慣習が異なります。 Windows では、ユーザーが矢印キーを押すと自動的に次のタブがアクティブ化されます。 macOS では、ユーザーは次のタブをアクティブ化するために Enter またはスペースキーを押します。[キーボードで操作可能な JavaScript ウィジェット](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)作成の包括的なチュートリアルで、このような動作を JavaScript で実装する方法を説明します。
 
 ## 関連情報
 
 - [ARIA](/ja/docs/Web/Accessibility/ARIA)
-- [キーボードで操作可能な JavaScript ウィジェットを書く](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [キーボードで操作可能な JavaScript ウィジェットを書く](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

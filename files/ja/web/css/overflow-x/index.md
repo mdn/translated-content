@@ -167,4 +167,4 @@ overflow-x: unset;
 
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

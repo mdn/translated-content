@@ -90,7 +90,7 @@ _このインターフェイスは、{{domxref("EventTarget")}} インターフ�
 - {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
   - : {{jsxref("Promise")}} の拒否イベントが処理された際に発行されます。
 - {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}}
-  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
+  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)に違反したときに発生します。
 - {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
   - : {{jsxref("Promise")}} の拒否イベントが処理されなかったときに発行されます。
 

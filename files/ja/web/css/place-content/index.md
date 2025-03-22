@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などのレイアウトシステムにおいて、一度に指定することができます。
+**`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などのレイアウトシステムにおいて、一度に指定することができます。
 
 {{InteractiveExample("CSS Demo: place-content")}}
 

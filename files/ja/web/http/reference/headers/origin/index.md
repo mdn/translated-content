@@ -67,7 +67,7 @@ Origin: <scheme>://<hostname>:<port>
 - オリジン間のリダイレクト。
 - iframeのサンドボックス属性が値 `allow-same-origin` を含んでいない場合。
 - ネットワークエラーとなったレスポンス。
-- [`Referrer-Policy`](/ja/docs/Web/HTTP/Headers/Referrer-Policy) が `no-referrer` に設定され、`cors` 以外のリクエストモードが設定された場合（単純な形式の投稿など）。
+- [`Referrer-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy) が `no-referrer` に設定され、`cors` 以外のリクエストモードが設定された場合（単純な形式の投稿など）。
 
 > **メモ:** `null` を返す可能性のあるケースについて、より詳しいリストが Stack Overflow の [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) に掲載されています。
 

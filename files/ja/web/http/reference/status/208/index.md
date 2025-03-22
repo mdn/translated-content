@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`208 Already Reported`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、容量を節約し、競合を防ぐため、{{HTTPStatus("207", "207 Multi-Status")}} レスポンスで用いられます。
+HTTP の **`208 Already Reported`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、容量を節約し、競合を防ぐため、{{HTTPStatus("207", "207 Multi-Status")}} レスポンスで用いられます。
 このレスポンスは、ウェブ分散オーサリングおよびバージョン管理 ({{Glossary("WebDAV")}}) のコンテキストでのみ使用されています。
 
 同じリソースが（たとえばコレクションの一部として）異なるパスで複数回要求された場合、最初のもののみ {{HTTPStatus("200")}} で報告されます。
@@ -85,5 +85,5 @@ Content-Length: 1241
 
 - {{HTTPStatus("200")}}
 - {{HTTPStatus("508", "508 Loop Detected")}}
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)

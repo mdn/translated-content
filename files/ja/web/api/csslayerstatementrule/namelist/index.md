@@ -62,4 +62,4 @@ item.textContent = `@layer は ${layer.nameList.join(
 
 - {{DOMXRef("CSSLayerBlockRule.name")}}
 - {{CSSXref("@layer")}}
-- [名前付きレイヤーのための @layer 文のアットルール](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers#名前付きレイヤーのための_layer_文のアットルール)
+- [名前付きレイヤーのための @layer 文のアットルール](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#名前付きレイヤーのための_layer_文のアットルール)

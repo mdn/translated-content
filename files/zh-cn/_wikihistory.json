@@ -1600,6 +1600,14 @@
       "maicss"
     ]
   },
+  "Glossary/Layout_mode": {
+    "modified": "2019-03-23T22:27:53.945Z",
+    "contributors": [
+      "wh1msy",
+      "xgqfrms-GitHub",
+      "xgqfrms"
+    ]
+  },
   "Glossary/Ligature": {
     "modified": "2020-11-26T05:27:21.294Z",
     "contributors": [
@@ -24067,6 +24075,20 @@
       "xunzhonglee"
     ]
   },
+  "Web/CSS/CSS_display/Visual_formatting_model": {
+    "modified": "2019-03-18T21:10:31.376Z",
+    "contributors": [
+      "guangzai",
+      "ssttii",
+      "qw8880000",
+      "Terry.Qiao",
+      "ziyunfei",
+      "zhanglun",
+      "teoli",
+      "sunnylost",
+      "yan"
+    ]
+  },
   "Web/CSS/CSS_flexible_box_layout": {
     "modified": "2019-09-20T14:46:03.892Z",
     "contributors": [
@@ -24349,6 +24371,12 @@
       "anjianshi"
     ]
   },
+  "Web/CSS/CSS_inline_layout/Inline_formatting_context": {
+    "modified": "2020-07-05T02:58:59.465Z",
+    "contributors": [
+      "ylc395"
+    ]
+  },
   "Web/CSS/CSS_lists/Consistent_list_indentation": {
     "modified": "2019-03-23T23:22:24.362Z",
     "contributors": [
@@ -24582,6 +24610,13 @@
       "wy-ei"
     ]
   },
+  "Web/CSS/CSS_selectors/Privacy_and_the_visited_selector": {
+    "modified": "2019-03-23T23:07:40.024Z",
+    "contributors": [
+      "tiansh",
+      "599316527"
+    ]
+  },
   "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
     "modified": "2019-03-23T22:52:16.056Z",
     "contributors": [
@@ -24761,12 +24796,6 @@
       "alimon"
     ]
   },
-  "Web/CSS/Inline_formatting_context": {
-    "modified": "2020-07-05T02:58:59.465Z",
-    "contributors": [
-      "ylc395"
-    ]
-  },
   "Web/CSS/Layout_cookbook": {
     "modified": "2020-11-06T10:41:23.256Z",
     "contributors": [
@@ -24818,14 +24847,6 @@
       "HareInWeed"
     ]
   },
-  "Web/CSS/Layout_mode": {
-    "modified": "2019-03-23T22:27:53.945Z",
-    "contributors": [
-      "wh1msy",
-      "xgqfrms-GitHub",
-      "xgqfrms"
-    ]
-  },
   "Web/CSS/Next-sibling_combinator": {
     "modified": "2020-10-15T21:22:13.249Z",
     "contributors": [
@@ -24838,13 +24859,6 @@
       "fscholz",
       "teoli",
       "alimon"
-    ]
-  },
-  "Web/CSS/Privacy_and_the_:visited_selector": {
-    "modified": "2019-03-23T23:07:40.024Z",
-    "contributors": [
-      "tiansh",
-      "599316527"
     ]
   },
   "Web/CSS/Pseudo-classes": {
@@ -24953,20 +24967,6 @@
       "iwillbe",
       "teoli",
       "ziyunfei"
-    ]
-  },
-  "Web/CSS/Visual_formatting_model": {
-    "modified": "2019-03-18T21:10:31.376Z",
-    "contributors": [
-      "guangzai",
-      "ssttii",
-      "qw8880000",
-      "Terry.Qiao",
-      "ziyunfei",
-      "zhanglun",
-      "teoli",
-      "sunnylost",
-      "yan"
     ]
   },
   "Web/CSS/WebKit_Extensions": {
