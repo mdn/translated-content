@@ -1,18 +1,17 @@
 ---
 title: オリジン間リソース共有 (CORS)
 slug: Web/HTTP/Guides/CORS
-original_slug: Web/HTTP/Guides/CORS
 l10n:
-  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
+  sourceCommit: cb8143261f5cd54788285574ab0c427ba3f01a04
 ---
 
 {{HTTPSidebar}}
 
-オリジン間リソース共有 (Cross-Origin Resource Sharing, {{Glossary("CORS")}}) は、追加の {{Glossary("HTTP")}} ヘッダーを使用して、ある{{glossary("origin", "オリジン")}}で動作しているウェブアプリケーションに、異なるオリジンにある選択されたリソースへのアクセス権を与えるようブラウザーに指示するための仕組みです。ウェブアプリケーションは、自分とは異なるオリジン (ドメイン、プロトコル、ポート番号) にあるリソースをリクエストするとき、オリジン間 HTTP リクエストを実行します。
+オリジン間リソース共有 (Cross-Origin Resource Sharing, {{Glossary("CORS")}}) は、 {{Glossary("HTTP")}} ヘッダーベースの仕組みを使用して、ある{{glossary("Origin", "オリジン")}}で動作しているウェブアプリケーションに、異なるオリジンにある選択されたリソースへのアクセス権を与えるようブラウザーに指示するための仕組みです。ウェブアプリケーションは、自分とは異なるオリジン (ドメイン、プロトコル、ポート番号) にあるリソースをリクエストするとき、オリジン間 HTTP リクエストを実行します。
 
-オリジン間リクエストとは、例えば `https://domain-a.com` で提供されているウェブアプリケーションのフロントエンド JavaScript コードが {{domxref("Window/fetch", "fetch()")}} を使用して `https://domain-b.com/data.json` へリクエストを行うような場合です。
+オリジン間リクエストとは、例えば `https://domain-a.com` で提供されているウェブアプリケーションのフロントエンド JavaScript コードが {{domxref("Window/fetch", "fetch()")}} を使用して `https://domain-b.com/data.json` へリクエストを行うようなものです。
 
-セキュリティ上の理由から、ブラウザーは、スクリプトによって開始されるオリジン間 HTTP リクエストを制限しています。例えば、`fetch()` や {{domxref("XMLHttpRequest")}} は[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) (same-origin policy) に従います。つまり、これらの API を使用するウェブアプリケーションは、そのアプリケーションが読み込まれたのと同じオリジンに対してのみリソースのリクエストを行うことができ、それ以外のオリジンからの場合は正しい CORS ヘッダーを含んでいることが必要です。
+セキュリティ上の理由から、ブラウザーは、スクリプトによって開始されるオリジン間 HTTP リクエストを制限しています。例えば、 `fetch()` や {{domxref("XMLHttpRequest")}} は[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy) (same-origin policy) に従います。つまり、これらの API を使用するウェブアプリケーションは、そのアプリケーションが読み込まれたのと同じオリジンに対してのみリソースのリクエストを行うことができ、それ以外のオリジンからの場合は正しい CORS ヘッダーを含んでいることが必要です。
 
 ![CORS の仕組みの図式化](fetching-page-cors.svg)
 
@@ -26,15 +25,15 @@ CORS の仕組みは、安全なオリジン間のリクエストとブラウザ
 - ウェブフォント（CSS の `@font-face` で別ドメインのフォントを利用するため）。[これによりサーバーは、許可したウェブサイトのみからオリジンをまたがって読み込んで利用できる TrueType フォントを提供することができます。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL テクスチャ](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} を使用してキャンバスへ描かれた画像や映像のフレーム
-- [画像から生成した CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
+- [画像から生成する CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)。
 
 この記事では、 HTTP ヘッダーの要件を含むオリジン間リソース共有の全般的な説明を行います。
 
 ## 機能概要
 
-オリジン間リソース共有の仕様は、ウェブブラウザーから情報を読み取ることを許可されているオリジンをサーバーが記述することができる、新たな [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)を追加することで作用します。加えて仕様書では、サーバーの情報に副作用を引き起こすことがある HTTP のリクエストメソッド (特に {{HTTPMethod("GET")}} 以外の HTTP メソッドや、特定の [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)を伴う {{HTTPMethod("POST")}}) のために、ブラウザーが HTTP の {{HTTPMethod("OPTIONS")}} リクエストメソッドを用いて、あらかじめリクエストの「プリフライト」 (サーバーから対応するメソッドの一覧を収集すること) を行い、サーバーの「認可」のもとに実際のリクエストを送信することを指示しています。サーバーはリクエスト時に「資格情報」 ([Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)など) を送信するべきかをクライアントに伝えることもできます。
+オリジン間リソース共有の仕様は、新たな [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)を追加して、あるウェブブラウザーから情報を読み取ることを許可されているオリジンをサーバーが記述することで作用します。加えて、サーバーのデータに副作用を引き起こす可能性がある HTTP のリクエストメソッド（特に {{HTTPMethod("GET")}} 以外の HTTP メソッドや、特定の [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)を持つ {{HTTPMethod("POST")}}）のために、仕様書では、ブラウザーがあらかじめリクエストの「プリフライト」（サーバーから対応するメソッドの一覧を収集すること）を HTTP の {{HTTPMethod("OPTIONS")}} リクエストメソッドを用いて行い、サーバーの「認可」のもとに実際のリクエストを送信することを指示しています。サーバーはリクエスト時に「資格情報」（[Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)など）を送信するべきかをクライアントに伝えることもできます。
 
-CORS は様々なエラーで失敗することがありますが、セキュリティ上の理由から、エラーについて *JavaScript から知ることができない*よう定められています。コードからはエラーが発生したということしか分かりません。何が悪かったのかを具体的に知ることができる唯一の方法は、ブラウザーのコンソールで詳細を見ることです。
+CORS は様々なエラーで失敗することがありますが、セキュリティ上の理由から、エラーについて JavaScript から知ることができないよう定められています。コードからはエラーが発生したということしか分かりません。何が悪かったのかを具体的に知ることができる唯一の方法は、ブラウザーのコンソールで詳細を見ることです。
 
 以降の節ではシナリオの説明に加え、 HTTP ヘッダーの使い方の詳細も提供します。
 
@@ -44,11 +43,11 @@ CORS は様々なエラーで失敗することがありますが、セキュリ
 
 ### 単純リクエスト
 
-リクエストによっては {{Glossary("Preflight_request","CORS プリフライト")}}を発生させません。これをこの記事では古い [CORS 仕様書](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)に倣って*単純リクエスト*と呼んでいますが、 (現在 CORS を定義している) [Fetch 仕様書](https://fetch.spec.whatwg.org/) ではこの用語を使用していません。
+リクエストによっては {{Glossary("Preflight_request","CORS プリフライト")}}を発生させません。これをこの記事では古い [CORS 仕様書](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)に倣って「単純リクエスト」と呼んでいますが、（現在 CORS を定義している） [Fetch 仕様書](https://fetch.spec.whatwg.org/) ではこの用語を使用していません。
 
-その動機は、HTML 4.0 からの {{HTMLElement("form")}} 要素（サイト間 {{domxref("Window/fetch", "fetch()")}} と {{domxref("XMLHttpRequest")}} に先行する）は、どのオリジンにでも単純なリクエストを送信できるので、サーバーを書く人はすでに {{Glossary("CSRF", "cross-site request forgery")}} (CSRF) から保護していなければならないからです。この仮定の下では、 CSRF の脅威はフォーム送信の脅威よりも悪くないので、サーバーはフォーム送信のように見えるすべてのリクエストを受け取ることを（プリフライトリクエストに応答することによって）オプトインする必要はないのです。しかし、サーバーは {{HTTPHeader("Access-Control-Allow-Origin")}} を使用して、レスポンスをスクリプトと共有することを選択する必要があります。
+その動機は、HTML 4.0 からの {{HTMLElement("form")}} 要素（サイト間 {{domxref("Window/fetch", "fetch()")}} と {{domxref("XMLHttpRequest")}} に先行する）は、どのオリジンにでも単純なリクエストを送信できるので、サーバーを書く人はすでに{{Glossary("CSRF", "クロスサイトリクエストフォージェリー")}} (CSRF) から保護していなければならないからです。この仮定の下では、 CSRF の脅威はフォーム送信の脅威よりも悪くないので、サーバーはフォーム送信のように見えるすべてのリクエストを受け取ることを（プリフライトリクエストに応答することによって）オプトインする必要はないのです。しかし、サーバーは {{HTTPHeader("Access-Control-Allow-Origin")}} を使用して、レスポンスをスクリプトと共有することを選択する必要があります。
 
-*単純リクエスト*は、**以下のすべての条件を満たす**ものです。
+単純リクエストは、**以下のすべての条件を満たす**ものです。
 
 - 許可されているメソッドのうちのいずれかであること。
 
@@ -56,7 +55,7 @@ CORS は様々なエラーで失敗することがありますが、セキュリ
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- ユーザーエージェントによって自動的に設定されたヘッダー (たとえば {{HTTPHeader("Connection")}}、 {{HTTPHeader("User-Agent")}}、 または [Fetch 仕様書で*禁止ヘッダー名*として定義されているヘッダー](https://fetch.spec.whatwg.org/#forbidden-header-name))を除いて、手動で設定できるヘッダーは、 [Fetch 仕様書で CORS セーフリストリクエストヘッダーとして定義されている](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)</a>以下のヘッダーだけです。
+- ユーザーエージェントによって自動的に設定されるヘッダー（たとえば {{HTTPHeader("Connection")}} や {{HTTPHeader("User-Agent")}} や{{glossary("Forbidden request header", "禁止リクエストヘッダー")}}）を除いて、 [CORS セーフリストリクエストヘッダー](/ja/docs/Glossary/CORS-safelisted_request_header)だけを手動で設定することができます。
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
@@ -82,7 +81,7 @@ CORS は様々なエラーで失敗することがありますが、セキュリ
 >
 > これは仕様の一部ではないので、他のブラウザーはこの追加の制限を実装していません。
 
-例えば、`https://foo.example` のウェブコンテンツが JSON コンテンツをドメイン `https://bar.other` から取得したいとします。 この種のコードは、`foo.example` で展開された JavaScript で使用される可能性があります。
+例えば、 `https://foo.example` のウェブコンテンツが JSON コンテンツをドメイン `https://bar.other` から取得したいとします。 この種のコードは、 `foo.example` で展開された JavaScript で使用される可能性があります。
 
 ```js
 const fetchPromise = fetch("https://bar.other");
@@ -134,7 +133,7 @@ Content-Type: application/xml
 Access-Control-Allow-Origin: *
 ```
 
-{{HTTPHeader("Origin")}} ヘッダーと {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーのこのパターンは、アクセス制御プロトコルのもっとも簡単な使い方です。 `https://bar.other` にあるリソースの所有者が、リソースへの制限を `https://foo.example` からのリクエスト*のみ*に制限したい (すなわち、 `https://foo.examle` 以外のドメインがオリジン間の作法でリソースにアクセスを許可しない) と考えていた場合は、以下のように送信します。
+{{HTTPHeader("Origin")}} ヘッダーと {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーのこのパターンは、アクセス制御プロトコルのもっとも簡単な使い方です。 `https://bar.other` にあるリソースの所有者が、リソースへの制限を `https://foo.example` からのリクエスト*のみ*に制限したい（すなわち、 `https://foo.examle` 以外のドメインがオリジン間の作法でリソースにアクセスを許可しない）と考えていた場合は、以下のように送信します。
 
 ```http
 Access-Control-Allow-Origin: https://foo.example
@@ -166,7 +165,7 @@ fetchPromise.then((response) => {
 
 上記の例では、 `POST` で送信する XML の本体を作成しています。また、標準外の `X-PINGOTHER` HTTP リクエストヘッダーを設定しています。このようなヘッダーは HTTP/1.1 プロトコルに含まれていませんが、ウェブアプリケーションでは一般的に便利なものです。リクエストで `Content-Type` に `text/xml` を使用しており、かつ独自のヘッダーを設定しているため、このリクエストではプリフライトを行います。
 
-![プリフライトされたリクエストのイメージ図](preflight-correct.svg)
+![プリフライトのあるリクエストのイメージ図](preflight-correct.svg)
 
 > [!NOTE]
 > 後述するように、実際の `POST` リクエストでは `Access-Control-Request-*` ヘッダーを含みません。`OPTIONS` リクエストのみで必要になります。
@@ -219,7 +218,7 @@ Access-Control-Max-Age: 86400
 
 またサーバーは、 `Access-Control-Allow-Headers` を `X-PINGOTHER, Content-Type` の値で送信し、実際のリクエストで使用されるヘッダーを承認しています。 `Access-Control-Allow-Methods` と同様に、 `Access-Control-Allow-Headers` は受け入れ可能なヘッダーをカンマ区切りのリストで表します。
 
-最後に {{HTTPHeader("Access-Control-Max-Age")}} は、プリフライトリクエストを再び送らなくてもいいように、プリフライトのレスポンスをキャッシュしてよい時間を秒数で与えます。既定値は 5 秒です。この例では 86400 秒、つまり 24 時間です。なお、ブラウザーはそれぞれ[内部的な上限値](/ja/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age)を持っており、 `Access-Control-Max-Age` を超えた場合に制限を行います。
+最後に {{HTTPHeader("Access-Control-Max-Age")}} は、プリフライトリクエストを再び送らなくてもいいように、プリフライトのレスポンスをキャッシュしてよい時間を秒数で与えます。既定値は 5 秒です。この例では 86400 秒（24 時間）です。なお、ブラウザーはそれぞれ[内部的な上限値](/ja/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age)を持っており、 `Access-Control-Max-Age` を超えた場合に制限を行います。
 
 プリフライトリクエストが完了したら、実際のリクエストを送ります。
 
@@ -271,8 +270,8 @@ Content-Type: text/plain
 
 これらの変更ができない場合は、次のような別な方法があります。
 
-1. [単純リクエスト](#単純リクエスト)を行い (Fetch API の {{domxref("Response.url")}} または {{domxref("XMLHttpRequest.responseURL")}} を使用する)、実際のプリフライトリクエストが転送される先を特定する。
-2. 最初のステップの `Response.url` または `XMLHttpRequest.responseURL` で得た URL を使用して、もう一つのリクエスト (*本当の*リクエスト) を行う。
+1. [単純リクエスト](#単純リクエスト)を行い（フェッチ API の {{domxref("Response.url")}} または {{domxref("XMLHttpRequest.responseURL")}} を使用する）、実際のプリフライトリクエストが転送される先を特定する。
+2. 最初のステップの `Response.url` または `XMLHttpRequest.responseURL` で得た URL を使用して、もう一つのリクエスト（「実際の」リクエスト）を行う。
 
 ただし、リクエストに `Authorization` ヘッダーが存在するためにプリフライトが発生するリクエストの場合、上記の手順を使用して制限を回避することはできません。リクエストが行われているサーバーを制御できない限り、まったく回避することはできません。
 
@@ -334,7 +333,7 @@ Content-Type: text/plain
 [text/plain コンテンツ]
 ```
 
-リクエストの `Cookie` ヘッダーには、`https://bar.other` のコンテンツを対象とした Cookie が含まれていますが、この例で示されているように、bar.other が {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` を返さなかった場合、レスポンスは無視され、ウェブコンテンツには利用できません。
+リクエストの `Cookie` ヘッダーには、`https://bar.other` のコンテンツを対象とした Cookie が含まれていますが、この例で示されているように、 bar.other が {{HTTPHeader("Access-Control-Allow-Credentials")}} で `true` の値を返さなかった場合、レスポンスは無視され、ウェブコンテンツには利用できなくなります。
 
 #### プリフライトリクエストと資格情報
 
@@ -343,7 +342,7 @@ CORS のプリフライトリクエストに資格情報を含めてはいけま
 > [!NOTE]
 > エンタープライズ認証サービスの中には、 [Fetch](https://fetch.spec.whatwg.org/#cors-protocol-and-credentials) 仕様書に反して、プリフライトリクエストで TLS クライアント証明書を送信することを要求するものがあります。
 >
-> Firefox 87 では、`network.cors_preflight.allow_client_cert` を `true` に設定することで、この準拠していない動作を有効にすることができます。([Firefox バグ 1511151](https://bugzil.la/1511151)). Chromium ベースのブラウザーでは現在、CORS プリフライトリクエストで TLS クライアント証明書を常に送信します ([Chrome バグ 775438](https://crbug.com/775438))。
+> Firefox 87 では、 `network.cors_preflight.allow_client_cert` を `true` に設定することで、この準拠していない動作を有効にすることができます（[Firefox バグ 1511151](https://bugzil.la/1511151)）。Chromium ベースのブラウザーでは現在、 CORS プリフライトリクエストで TLS クライアント証明書を常に送信します ([Chrome バグ 775438](https://crbug.com/775438))。
 
 #### 資格情報付きリクエストとワイルドカード
 
@@ -354,9 +353,9 @@ CORS のプリフライトリクエストに資格情報を含めてはいけま
 - サーバーは `Access-Control-Allow-Methods` ヘッダーで `*` ワイルドカードを指定**してはならず**、 `Access-Control-Allow-Methods: POST, GET` のように、明示的にメソッド名を指定しなければなりません。
 - サーバーは `Access-Control-Expose-Headers` ヘッダーで `*` ワイルドカードを指定**してはならず**、 `Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision` のように、明示的にメソッド名を指定しなければなりません。
 
-リクエストが資格情報 (多くの場合は `Cookie` ヘッダー) を含んでおり、そのレスポンスが `Access-Control-Allow-Origin: *` ヘッダー (つまりワイルドカード) を含んでいる場合、ブラウザーはレスポンスへのアクセスをブロックし、開発ツールのコンソールに CORS エラーを報告します。
+リクエストが資格情報（多くの場合は `Cookie` ヘッダー）を含んでおり、そのレスポンスが `Access-Control-Allow-Origin: *` ヘッダー（つまりワイルドカード）を含んでいる場合、ブラウザーはレスポンスへのアクセスをブロックし、開発ツールのコンソールに CORS エラーを報告します。
 
-ただし、リクエストが (`Cookie` ヘッダーのような) 資格情報を含んで行われ、そのレスポンスがワイルドカードではない実際のオリジンを含んでいる場合 (例えば `Access-Control-Allow-Origin: https://example.com` など)、ブラウザーは指定されたオリジンからのレスポンスへのアクセスを許可します。
+ただし、リクエストが（`Cookie` ヘッダーのような）資格情報を含んで行われ、そのレスポンスがワイルドカードではない実際のオリジンを含んでいる場合（例えば `Access-Control-Allow-Origin: https://example.com` など）、ブラウザーは指定されたオリジンからのレスポンスへのアクセスを許可します。
 
 また、レスポンス内の `Access-Control-Allow-Origin` レスポンスヘッダーの値が実際のオリジンではなく `*` ワイルドカードであった場合、クッキーは設定されません。
 
@@ -364,13 +363,13 @@ CORS のプリフライトリクエストに資格情報を含めてはいけま
 
 CORS のレスポンスに設定されたクッキーは、サードパーティークッキーに関する通常のポリシーに従うことに注意してください。上記の例では、ページは `foo.example` から読み込まれていますが、レスポンスの `Cookie` ヘッダーは `bar.other` から送られているので、ユーザーのブラウザーがサードパーティークッキーをすべて拒否するよう設定されていた場合は保存されません。
 
-リクエスト中のクッキー (10 行目) は、通常のサードパーティクッキーポリシーでも抑制されることがあります。したがって、クッキーポリシーが強制されていると、この章で説明されている機能が無効になり、事実上、認証されたリクエストを行うことができなくなるかもしれません。
+リクエスト中のクッキーは、通常のサードパーティクッキーポリシーでも抑制されることがあります。したがって、クッキーポリシーが強制されていると、この章で説明されている機能が無効になり、事実上、認証されたリクエストを行うことができなくなるかもしれません。
 
 [SameSite](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性に関するクッキーポリシーは適用されます。
 
 ## HTTP レスポンスヘッダー
 
-この節では、オリジン間リソース共有の仕様書で定義されている、アクセス制御のためにサーバーが返す HTTP レスポンスヘッダーを掲載します。前の章では、これらの実際の動作の概要を説明しました。
+この節では、オリジン間リソース共有の仕様書で定義されている、アクセス制御のためにサーバーが返す HTTP レスポンスヘッダーを掲載します。これらの実際の動作の概要についての説明は、前の節をご覧ください。
 
 ### Access-Control-Allow-Origin
 
@@ -389,7 +388,7 @@ Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-サーバーがワイルドカード `*` ではなく (ホワイトリストの一部としてリクエストするオリジンに基づいて動的に変更される可能性がある) 単一のオリジンを指定した場合は、サーバーは `Origin` を {{HTTPHeader("Vary")}} レスポンスヘッダーに含めて、サーバーのレスポンスが {{HTTPHeader("Origin")}} リクエストヘッダーの値によって変化することもクライアントに示してください。
+サーバーがワイルドカード `*` ではなく（許可リストの一部としてリクエストするオリジンに基づいて動的に変更される可能性がある）単一のオリジンを指定した場合は、サーバーは `Origin` を {{HTTPHeader("Vary")}} レスポンスヘッダーに含めて、サーバーのレスポンスが {{HTTPHeader("Origin")}} リクエストヘッダーの値によって変化することもクライアントに示してください。
 
 ### Access-Control-Expose-Headers
 
