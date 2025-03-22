@@ -38,12 +38,13 @@ original_slug: Web/CSS/specified_value
 ```css
 .fun {
   border: 1px dotted pink;
-  font-family: fantasy;
+  font-family: serif;
 }
 
 p {
   color: green;
 }
+
 ```
 
 ### 結果
