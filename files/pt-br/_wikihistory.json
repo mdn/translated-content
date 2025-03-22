@@ -644,6 +644,13 @@
       "LeoCrespi"
     ]
   },
+  "Glossary/Layout_mode": {
+    "modified": "2019-03-23T22:09:32.757Z",
+    "contributors": [
+      "lcchueri",
+      "Fernandolrs"
+    ]
+  },
   "Glossary/Localization": {
     "modified": "2019-03-23T23:25:17.486Z",
     "contributors": [
@@ -6707,6 +6714,12 @@
       "kelvyncosta"
     ]
   },
+  "Web/CSS/CSS_selectors/Privacy_and_the_visited_selector": {
+    "modified": "2019-04-15T23:34:22.131Z",
+    "contributors": [
+      "tadeubarbosa"
+    ]
+  },
   "Web/CSS/CSS_syntax/At-rule": {
     "modified": "2019-03-23T23:39:11.306Z",
     "contributors": [
@@ -6778,19 +6791,6 @@
     "modified": "2020-10-15T22:30:53.182Z",
     "contributors": [
       "SONSERVICE"
-    ]
-  },
-  "Web/CSS/Layout_mode": {
-    "modified": "2019-03-23T22:09:32.757Z",
-    "contributors": [
-      "lcchueri",
-      "Fernandolrs"
-    ]
-  },
-  "Web/CSS/Privacy_and_the_:visited_selector": {
-    "modified": "2019-04-15T23:34:22.131Z",
-    "contributors": [
-      "tadeubarbosa"
     ]
   },
   "Web/CSS/Pseudo-classes": {
@@ -13869,68 +13869,74 @@
       "Joshua-S"
     ]
   },
-  "Web/SVG/Applying_SVG_effects_to_HTML_content": {
+  "Web/SVG/Guides/Applying_SVG_effects_to_HTML_content": {
     "modified": "2019-03-23T22:45:26.414Z",
     "contributors": [
       "teoli",
       "takahan"
     ]
   },
-  "Web/SVG/Attribute": {
-    "modified": "2019-03-23T22:58:41.365Z",
-    "contributors": [
-      "averdion"
-    ]
-  },
-  "Web/SVG/Attribute/class": {
-    "modified": "2019-03-23T22:58:45.630Z",
-    "contributors": [
-      "caio"
-    ]
-  },
-  "Web/SVG/Attribute/fill": {
-    "modified": "2020-10-15T22:34:04.647Z",
-    "contributors": [
-      "littlebru"
-    ]
-  },
-  "Web/SVG/Attribute/keyTimes": {
-    "modified": "2020-10-15T22:29:23.505Z",
-    "contributors": [
-      "MarcosNakamine"
-    ]
-  },
-  "Web/SVG/Attribute/preserveAspectRatio": {
-    "modified": "2020-04-16T18:21:49.688Z",
-    "contributors": [
-      "MarcosNakamine"
-    ]
-  },
-  "Web/SVG/Attribute/stroke-dashoffset": {
-    "modified": "2019-03-23T22:07:45.957Z",
-    "contributors": [
-      "brunoalv-s"
-    ]
-  },
-  "Web/SVG/Attribute/style": {
-    "modified": "2019-03-23T22:58:27.562Z",
-    "contributors": [
-      "caio"
-    ]
-  },
-  "Web/SVG/Attribute/width": {
-    "modified": "2019-03-23T22:12:36.682Z",
-    "contributors": [
-      "webmasterdro"
-    ]
-  },
-  "Web/SVG/Content_type": {
+  "Web/SVG/Guides/Content_type": {
     "modified": "2019-03-23T22:58:44.489Z",
     "contributors": [
       "caio"
     ]
   },
-  "Web/SVG/Element": {
+  "Web/SVG/Guides/Namespaces_crash_course": {
+    "modified": "2019-03-18T21:37:37.311Z",
+    "contributors": [
+      "coloringa"
+    ]
+  },
+  "Web/SVG/Reference/Attribute": {
+    "modified": "2019-03-23T22:58:41.365Z",
+    "contributors": [
+      "averdion"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/class": {
+    "modified": "2019-03-23T22:58:45.630Z",
+    "contributors": [
+      "caio"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/fill": {
+    "modified": "2020-10-15T22:34:04.647Z",
+    "contributors": [
+      "littlebru"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/keyTimes": {
+    "modified": "2020-10-15T22:29:23.505Z",
+    "contributors": [
+      "MarcosNakamine"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/preserveAspectRatio": {
+    "modified": "2020-04-16T18:21:49.688Z",
+    "contributors": [
+      "MarcosNakamine"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/stroke-dashoffset": {
+    "modified": "2019-03-23T22:07:45.957Z",
+    "contributors": [
+      "brunoalv-s"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/style": {
+    "modified": "2019-03-23T22:58:27.562Z",
+    "contributors": [
+      "caio"
+    ]
+  },
+  "Web/SVG/Reference/Attribute/width": {
+    "modified": "2019-03-23T22:12:36.682Z",
+    "contributors": [
+      "webmasterdro"
+    ]
+  },
+  "Web/SVG/Reference/Element": {
     "modified": "2019-06-18T23:26:07.906Z",
     "contributors": [
       "wcqueiroz",
@@ -13939,7 +13945,7 @@
       "ethertank"
     ]
   },
-  "Web/SVG/Element/a": {
+  "Web/SVG/Reference/Element/a": {
     "modified": "2020-10-15T21:34:48.646Z",
     "contributors": [
       "MarcosNakamine",
@@ -13947,7 +13953,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/animate": {
+  "Web/SVG/Reference/Element/animate": {
     "modified": "2020-10-15T21:34:48.794Z",
     "contributors": [
       "MarcosNakamine",
@@ -13956,7 +13962,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/animateMotion": {
+  "Web/SVG/Reference/Element/animateMotion": {
     "modified": "2019-03-23T22:57:26.608Z",
     "contributors": [
       "wbamberg",
@@ -13964,14 +13970,14 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/animateTransform": {
+  "Web/SVG/Reference/Element/animateTransform": {
     "modified": "2019-03-23T22:57:23.127Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/circle": {
+  "Web/SVG/Reference/Element/circle": {
     "modified": "2019-03-23T22:57:10.633Z",
     "contributors": [
       "wbamberg",
@@ -13979,14 +13985,14 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/defs": {
+  "Web/SVG/Reference/Element/defs": {
     "modified": "2019-03-23T22:58:41.965Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/desc": {
+  "Web/SVG/Reference/Element/desc": {
     "modified": "2019-03-23T23:34:02.707Z",
     "contributors": [
       "Sebastianz",
@@ -13996,7 +14002,7 @@
       "pedrofsn"
     ]
   },
-  "Web/SVG/Element/ellipse": {
+  "Web/SVG/Reference/Element/ellipse": {
     "modified": "2019-03-23T22:57:25.451Z",
     "contributors": [
       "wbamberg",
@@ -14004,14 +14010,14 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/filter": {
+  "Web/SVG/Reference/Element/filter": {
     "modified": "2019-03-23T22:57:12.383Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/g": {
+  "Web/SVG/Reference/Element/g": {
     "modified": "2020-10-15T21:34:51.514Z",
     "contributors": [
       "MarcosNakamine",
@@ -14020,28 +14026,28 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/glyph": {
+  "Web/SVG/Reference/Element/glyph": {
     "modified": "2019-03-23T22:51:14.283Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/glyphRef": {
+  "Web/SVG/Reference/Element/glyphRef": {
     "modified": "2019-03-23T22:51:12.926Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/hkern": {
+  "Web/SVG/Reference/Element/hkern": {
     "modified": "2019-03-23T22:51:14.130Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/image": {
+  "Web/SVG/Reference/Element/image": {
     "modified": "2020-10-15T21:34:49.162Z",
     "contributors": [
       "MarcosNakamine",
@@ -14050,7 +14056,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/line": {
+  "Web/SVG/Reference/Element/line": {
     "modified": "2019-03-23T22:57:18.810Z",
     "contributors": [
       "wbamberg",
@@ -14058,7 +14064,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/linearGradient": {
+  "Web/SVG/Reference/Element/linearGradient": {
     "modified": "2019-03-23T23:12:58.688Z",
     "contributors": [
       "wbamberg",
@@ -14067,7 +14073,7 @@
       "eltonmesquita"
     ]
   },
-  "Web/SVG/Element/marker": {
+  "Web/SVG/Reference/Element/marker": {
     "modified": "2019-03-23T22:51:15.955Z",
     "contributors": [
       "wbamberg",
@@ -14075,7 +14081,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/mask": {
+  "Web/SVG/Reference/Element/mask": {
     "modified": "2019-03-23T22:51:15.170Z",
     "contributors": [
       "wbamberg",
@@ -14083,28 +14089,28 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/metadata": {
+  "Web/SVG/Reference/Element/metadata": {
     "modified": "2019-03-23T22:51:15.500Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/missing-glyph": {
+  "Web/SVG/Reference/Element/missing-glyph": {
     "modified": "2019-03-23T22:50:49.615Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/mpath": {
+  "Web/SVG/Reference/Element/mpath": {
     "modified": "2019-03-23T22:57:24.178Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/path": {
+  "Web/SVG/Reference/Element/path": {
     "modified": "2019-03-23T22:58:43.505Z",
     "contributors": [
       "Sebastianz",
@@ -14112,7 +14118,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/pattern": {
+  "Web/SVG/Reference/Element/pattern": {
     "modified": "2019-03-23T22:50:49.027Z",
     "contributors": [
       "wbamberg",
@@ -14120,7 +14126,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/polygon": {
+  "Web/SVG/Reference/Element/polygon": {
     "modified": "2019-03-23T22:57:10.306Z",
     "contributors": [
       "wbamberg",
@@ -14128,7 +14134,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/polyline": {
+  "Web/SVG/Reference/Element/polyline": {
     "modified": "2019-03-23T22:57:19.114Z",
     "contributors": [
       "wbamberg",
@@ -14136,7 +14142,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/radialGradient": {
+  "Web/SVG/Reference/Element/radialGradient": {
     "modified": "2019-03-23T22:51:15.349Z",
     "contributors": [
       "wbamberg",
@@ -14144,7 +14150,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/rect": {
+  "Web/SVG/Reference/Element/rect": {
     "modified": "2020-10-15T21:34:48.350Z",
     "contributors": [
       "MarcosNakamine",
@@ -14153,35 +14159,35 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/script": {
+  "Web/SVG/Reference/Element/script": {
     "modified": "2019-03-23T22:51:13.840Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/set": {
+  "Web/SVG/Reference/Element/set": {
     "modified": "2019-03-18T21:15:52.031Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/stop": {
+  "Web/SVG/Reference/Element/stop": {
     "modified": "2019-03-18T21:15:53.395Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/style": {
+  "Web/SVG/Reference/Element/style": {
     "modified": "2019-03-23T22:58:43.006Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/svg": {
+  "Web/SVG/Reference/Element/svg": {
     "modified": "2020-10-15T21:28:10.159Z",
     "contributors": [
       "MarcosNakamine",
@@ -14191,14 +14197,14 @@
       "Haroldohc"
     ]
   },
-  "Web/SVG/Element/switch": {
+  "Web/SVG/Reference/Element/switch": {
     "modified": "2019-03-23T22:50:51.303Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/symbol": {
+  "Web/SVG/Reference/Element/symbol": {
     "modified": "2019-03-23T22:52:08.134Z",
     "contributors": [
       "Sebastianz",
@@ -14206,7 +14212,7 @@
       "dayanyrec"
     ]
   },
-  "Web/SVG/Element/text": {
+  "Web/SVG/Reference/Element/text": {
     "modified": "2020-10-15T21:27:11.261Z",
     "contributors": [
       "MarcosNakamine",
@@ -14216,28 +14222,28 @@
       "unreleasedmix"
     ]
   },
-  "Web/SVG/Element/textPath": {
+  "Web/SVG/Reference/Element/textPath": {
     "modified": "2019-03-23T22:50:48.585Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/title": {
+  "Web/SVG/Reference/Element/title": {
     "modified": "2019-03-18T21:25:13.519Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/tref": {
+  "Web/SVG/Reference/Element/tref": {
     "modified": "2019-03-23T22:57:16.290Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Element/tspan": {
+  "Web/SVG/Reference/Element/tspan": {
     "modified": "2020-10-15T21:34:49.043Z",
     "contributors": [
       "MarcosNakamine",
@@ -14246,7 +14252,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/use": {
+  "Web/SVG/Reference/Element/use": {
     "modified": "2019-03-23T22:57:25.260Z",
     "contributors": [
       "ed1nh0",
@@ -14254,7 +14260,7 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/view": {
+  "Web/SVG/Reference/Element/view": {
     "modified": "2020-10-15T21:34:47.580Z",
     "contributors": [
       "MarcosNakamine",
@@ -14262,20 +14268,14 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/vkern": {
+  "Web/SVG/Reference/Element/vkern": {
     "modified": "2019-03-23T22:51:15.049Z",
     "contributors": [
       "Sebastianz",
       "caio"
     ]
   },
-  "Web/SVG/Namespaces_Crash_Course": {
-    "modified": "2019-03-18T21:37:37.311Z",
-    "contributors": [
-      "coloringa"
-    ]
-  },
-  "Web/SVG/Tutorial": {
+  "Web/SVG/Tutorials/SVG_from_scratch": {
     "modified": "2020-05-06T15:49:36.834Z",
     "contributors": [
       "gilmargn",
@@ -14283,7 +14283,7 @@
       "rogeralbinoi"
     ]
   },
-  "Web/SVG/Tutorial/Introduction": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Introduction": {
     "modified": "2019-03-18T20:34:25.046Z",
     "contributors": [
       "kafnjr",
