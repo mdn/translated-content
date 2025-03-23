@@ -7,7 +7,30 @@ slug: Web/HTML/Element/optgroup
 
 **HTML 元素 `<optgroup>` **为{{HTMLElement("select")}} 元素中的选项创建分组。
 
-{{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="dino-select">Choose a dinosaur:</label>
+<select id="dino-select">
+  <optgroup label="Theropods">
+    <option>Tyrannosaurus</option>
+    <option>Velociraptor</option>
+    <option>Deinonychus</option>
+  </optgroup>
+  <optgroup label="Sauropods">
+    <option>Diplodocus</option>
+    <option>Saltasaurus</option>
+    <option>Apatosaurus</option>
+  </optgroup>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 <table class="properties">
  <tbody>
@@ -29,7 +52,7 @@ slug: Web/HTML/Element/optgroup
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>

@@ -1,14 +1,15 @@
 ---
 title: レイアウトと包含ブロック
 slug: Web/CSS/CSS_display/Containing_block
-original_slug: Web/CSS/Containing_block
+l10n:
+  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
 {{CSSRef}}
 
-要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
+要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#コンテンツ領域)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
 
-ユーザーエージェント (ブラウザーなど) が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは４つの領域に分かれます。
+ユーザーエージェント（ブラウザーなど）が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは 4 つの領域に分かれます。
 
 1. コンテンツ領域
 2. パディング領域
@@ -31,16 +32,20 @@ original_slug: Web/CSS/Containing_block
 
 1. `position` プロパティが **`static`**, **`relative`**, **`sticky`** のいずれかの場合、包含ブロックは**ブロックコンテナー** (inline-block, block, list-item などの要素) または**整形コンテキストを確立する**要素 (表コンテナー、フレックスコンテナー、グリッドコンテナー、ブロックコンテナー自身など) である直近の祖先要素の<em>コンテンツボックス</em>の辺によって構成されます。
 2. `position` プロパティが **`absolute`** の場合、包含ブロックは `position` の値が `static` 以外 (`fixed`, `absolute`, `relative`, `sticky`) の直近の祖先要素における<em>パディングボックス</em>の辺によって構成されます。
-3. `position` プロパティが **`fixed`** の場合、包含ブロックは{{glossary("viewport", "ビューポート")}} (連続的なメディアの場合) またはページ領域 (ページメディアの場合) によって確立されます。
-4. `position` プロパティが **`absolute`** または **`fixed`** の場合、包含ブロックは以下の条件を持った直近の祖先要素における<em>パディングボックス</em>の辺によって構成されることがあります。
+3. `position` プロパティが **`fixed`** の場合、包含ブロックは{{glossary("Viewport", "ビューポート")}} （連続的なメディアの場合）またはページ領域（ページメディアの場合）によって確立されます。
+4. `position` プロパティが **`absolute`** または **`fixed`** の場合、包含ブロックは以下の条件を持った直近の祖先要素におけるパディングボックスの辺によって構成されることがあります。
 
-   1. {{cssxref("transform")}} または {{cssxref("perspective")}} の値が `none` 以外である
-   2. {{cssxref("will-change")}} の値が `transform` または `perspective` である
-   3. {{cssxref("filter")}} の値が `none` 以外、または `will-change` の値が `filter` の場合 (Firefox のみで動作)。
-   4. {{cssxref("contain")}} の値が `paint` の場合 (例 `contain: paint;`)
+   - {{cssxref("filter")}}、{{cssxref("backdrop-filter")}}、{{cssxref("transform")}}、{{cssxref("perspective")}} の値が `none` 以外である。
+   - {{cssxref("contain")}} の値が `layout`、`paint`、`strict`、`content` のいずれかである。（例 `contain: paint;`）
+   - {{cssxref("container-type")}} の値が `normal` 以外である。
+   - {{cssxref("will-change")}} 値で、包含ブロックを形成する初期値以外の値を持つプロパティ（`filter` や `transform` など）がある。
+   - {{cssxref("content-visibility")}} の値が `auto` である。
 
 > [!NOTE]
-> ルート要素 ({{HTMLElement("html")}}) が包含ブロックである場合、**初期包含ブロック**と呼ばれる矩形になります。これはビューポート (連続的なメディアの場合) またはページ領域 (ページメディアの場合) の寸法を持ちます。
+> ルート要素 ({{HTMLElement("html")}}) が包含ブロックである場合、**初期包含ブロック**と呼ばれる矩形になります。これはビューポート（連続的なメディアの場合）またはページ領域（ページメディアの場合）の寸法を持ちます。
+
+> [!NOTE]
+> 包含ブロックの形成に寄与する `perspective` と `filter` には、ブラウザー間の不整合があります。
 
 ## 包含ブロックからのパーセント値の計算
 
@@ -48,6 +53,8 @@ original_slug: Web/CSS/Containing_block
 
 1. {{cssxref("height")}}, {{cssxref("top")}}, {{cssxref("bottom")}} の各プロパティは、包含ブロックの `height` からパーセント値を計算します。
 2. {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, {{cssxref("margin")}} の各プロパティは、包含ブロックの `width` からパーセント値を計算します。
+
+> **メモ:** **ブロックコンテナー**（インラインブロック、ブロック、リストアイテムなどの要素など）は、インライン整形コンテキストに参加するインラインレベルボックスのみ、またはブロック整形コンテキストに参加するブロックレベルボックスのみを含みます。要素がブロックコンテナーとなるのは、ブロックレベルボックスまたはインラインレベルボックスを包含する場合のみです。
 
 ## いくつかの例
 
@@ -65,7 +72,7 @@ original_slug: Web/CSS/Containing_block
 
 ### 例 1
 
-この例では、段落が静的に配置されているため、包含ブロックはブロックコンテナーである直近の祖先である {{HTMLElement("section")}} になります。
+この例では、段落が静的に配置されているため、包含ブロックは {{HTMLElement("section")}} になります。直近の祖先がブロックコンテナーとなるためです（`display: block` など）。
 
 ```html hidden
 <body>
@@ -170,7 +177,7 @@ p {
 
 ### 例 4
 
-この例では、段落の `position` が `fixed` なので、包含ブロックは初期包含ブロック (画面の場合はビューポート) になります。従って、段落の寸法はブラウザーウィンドウの寸法に基づいて変化します。
+この例では、段落の `position` が `fixed` なので、包含ブロックは初期包含ブロック（画面の場合はビューポート）になります。従って、段落の寸法はブラウザーウィンドウの寸法に基づいて変化します。
 
 ```html hidden
 <body>
@@ -245,22 +252,19 @@ p {
 
 ## 関連情報
 
-- {{cssxref("all")}} プロパティは、すべての CSS 宣言を初期状態に初期化します
-- CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- {{cssxref("all")}} プロパティ
+- {{cssxref("contain")}} プロパティ
+- {{cssxref("aspect-ratio")}} プロパティ
+- {{cssxref("box-sizing")}} プロパティ
+- {{cssxref("min-content")}} および {{cssxref("max-content")}} のサイズ値
+- [学習: CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
+- [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{glossary("Intrinsic Size", "内在サイズ")}}

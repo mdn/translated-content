@@ -1,7 +1,6 @@
 ---
 title: 理解 JavaScript 前端框架
 slug: Learn_web_development/Core/Frameworks_libraries
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
 {{LearnSidebar}}

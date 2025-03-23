@@ -7,7 +7,42 @@ slug: Web/CSS/background-clip
 
 `background-clip` 设置元素的背景（背景图片或颜色）是否延伸到边框、内边距盒子、内容盒子下面。
 
-{{EmbedInteractiveExample("pages/css/background-clip.html")}}
+{{InteractiveExample("CSS Demo: background-clip")}}
+
+```css interactive-example-choice
+background-clip: border-box;
+```
+
+```css interactive-example-choice
+background-clip: padding-box;
+```
+
+```css interactive-example-choice
+background-clip: content-box;
+```
+
+```css interactive-example-choice
+background-clip: text;
+color: transparent;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 如果没有设置背景图片（{{cssxref("background-image")}}）或背景颜色（{{cssxref("background-color")}}），那么这个属性只有在边框（ {{cssxref("border")}}）被设置为非固实（soild）、透明或半透明时才能看到视觉效果（与 {{cssxref("border-style")}} 或 {{cssxref("border-image")}} 有关），否则，本属性产生的样式变化会被边框覆盖。
 

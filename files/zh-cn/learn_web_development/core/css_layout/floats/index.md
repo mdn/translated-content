@@ -1,7 +1,6 @@
 ---
 title: 浮动
 slug: Learn_web_development/Core/CSS_layout/Floats
-original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
@@ -234,7 +233,7 @@ body {
 
 {{EmbedLiveSample('让浮动效果可视化', '100%', 500)}}
 
-目标元素的[行内盒子](/zh-CN/docs/Web/CSS/Visual_formatting_model#line_boxes)已被缩短，故文字会排布在浮动元素周围，但是浮动元素从正常文档流移出，故段落的盒子仍然保持全部宽度。
+目标元素的[行内盒子](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#行内盒子)已被缩短，故文字会排布在浮动元素周围，但是浮动元素从正常文档流移出，故段落的盒子仍然保持全部宽度。
 
 ## 清除浮动
 

@@ -5,9 +5,59 @@ slug: Web/CSS/transition
 
 {{CSSRef}}
 
-**`transition`** [CSS](/zh-CN/docs/Web/CSS) 属性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+**`transition`** [CSS](/zh-CN/docs/Web/CSS) 属性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
-{{EmbedInteractiveExample("pages/css/transition.html")}}
+{{InteractiveExample("CSS Demo: transition")}}
+
+```css interactive-example-choice
+transition: margin-right 2s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s 0.5s;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out;
+```
+
+```css interactive-example-choice
+transition: margin-right 2s ease-in-out 0.5s;
+```
+
+```css interactive-example-choice
+transition:
+  margin-right 2s,
+  color 1s;
+```
+
+```css interactive-example-choice
+transition: all 1s ease-out;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 过渡可以为一个元素在不同状态之间切换的时候定义不同的过渡效果。比如在不同的伪元素之间切换，像是 {{cssxref(":hover")}}，{{cssxref(":active")}} 或者通过 JavaScript 实现的状态变化。
 

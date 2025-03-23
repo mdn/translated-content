@@ -141,7 +141,7 @@ Express は特定の HTTP 述語 (`GET`, `POST`, `SET` など) と URL パター
 
 最初に、標準の Express の [Hello World](https://expressjs.com/ja/starter/hello-world.html) の例を考えてみましょう (これについては、以下の各セクションで説明します)。
 
-> **メモ:** **Tip:** Node と Express がすでにインストールされている場合 (または[次の記事](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)のようにインストールする場合) は、このコードを **app.js** というテキストファイルに保存し、bash コマンドプロンプトで次のように呼び出して実行できます。
+> **メモ:** **Tip:** Node と Express がすでにインストールされている場合 (または[次の記事](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)のようにインストールする場合) は、このコードを **app.js** というテキストファイルに保存し、bash コマンドプロンプトで次のように呼び出して実行できます。
 >
 > **`node ./app.js`**
 

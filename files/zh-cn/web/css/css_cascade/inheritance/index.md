@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_cascade/Inheritance
 
 {{CSSRef}}
 
-在 css 中，每个[CSS 属性定义](/zh-CN/docs/Web/CSS/Reference)的概述都指出了这个属性是默认继承的 ("Inherited: Yes") 还是默认不继承的 ("Inherited: no")。这决定了当你没有为元素的属性指定值时该如何计算值。
+在 css 中，每个 [CSS 属性定义](/zh-CN/docs/Web/CSS/Reference)的概述都指出了这个属性是默认继承的 ("Inherited: Yes") 还是默认不继承的 ("Inherited: no")。这决定了当你没有为元素的属性指定值时该如何计算值。
 
 ## 继承属性
 
@@ -61,7 +61,7 @@ font {
 }
 ```
 
-这会将 {{cssxref("font")}} 属性的样式恢复为用户代理（浏览器）的默认值，除非存在用户样式表，在这种情况下使用该样式表。然后它将字体大小加倍并应用 {{cssxref("font-weight")}} 属性 为`"bold"`
+这会将 {{cssxref("font")}} 属性的样式恢复为用户代理（浏览器）的默认值，除非存在用户样式表，在这种情况下使用该样式表。然后它将字体大小加倍并应用 {{cssxref("font-weight")}} 属性为 `"bold"`
 
 ## 参见
 
@@ -74,10 +74,10 @@ font {
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
@@ -88,6 +88,5 @@ font {
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

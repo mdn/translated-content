@@ -9,7 +9,35 @@ l10n:
 
 **`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-last-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :last-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:last-of-type {
+  border: 2px solid orange;
+}
+```
+
+```html interactive-example
+<dl>
+  <dt>Vegetables:</dt>
+  <dd>1. Tomatoes</dd>
+  <dd>2. Cucumbers</dd>
+  <dd>3. Mushrooms</dd>
+  <dt>Fruits:</dt>
+  <dd>4. Apples</dd>
+  <dd>5. Mangos</dd>
+  <dd>6. Pears</dd>
+  <dd>7. Oranges</dd>
+</dl>
+```
 
 ## 構文
 

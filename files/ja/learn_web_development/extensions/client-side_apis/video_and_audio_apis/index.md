@@ -456,9 +456,9 @@ clearInterval(intervalFwd);
 
 - {{domxref("HTMLMediaElement")}}
 - [動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — `<video>` および `<audio>` の HTML の簡単なガイド
-- [音声と動画の配信](/ja/docs/Web/Media/Audio_and_video_delivery) — ブラウザーにメディアを配信するための詳細なガイドで、多くのヒント、トリック、さらに高度なチュートリアルへのリンクがあります。
-- [音声と動画の加工](/ja/docs/Web/Media/Audio_and_video_manipulation) — [キャンバス API](/ja/docs/Web/API/Canvas_API) や[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) など、音声や動画を操作するための詳しいガイドを掲載しています。
+- [音声と動画の配信](/ja/docs/Web/Media/Guides/Audio_and_video_delivery) — ブラウザーにメディアを配信するための詳細なガイドで、多くのヒント、トリック、さらに高度なチュートリアルへのリンクがあります。
+- [音声と動画の加工](/ja/docs/Web/Media/Guides/Audio_and_video_manipulation) — [キャンバス API](/ja/docs/Web/API/Canvas_API) や[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) など、音声や動画を操作するための詳しいガイドを掲載しています。
 - {{htmlelement("video")}} および {{htmlelement("audio")}} のリファレンスページ
-- [ウェブ上のメディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
+- [ウェブ上のメディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}

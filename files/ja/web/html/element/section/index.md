@@ -9,7 +9,33 @@ l10n:
 
 **`<section>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書の自立した一般的なセクション（区間）を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。少数の例外を除いて、セクションには見出しを置いてください。
 
-{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Choosing an Apple</h1>
+<section>
+  <h2>Introduction</h2>
+  <p>
+    This document provides a guide to help with the important task of choosing
+    the correct Apple.
+  </p>
+</section>
+
+<section>
+  <h2>Criteria</h2>
+  <p>
+    There are many different criteria to be considered when choosing an Apple —
+    size, color, firmness, sweetness, tartness...
+  </p>
+</section>
+```
+
+```css interactive-example
+h1,
+h2 {
+  margin: 0;
+}
+```
 
 ## 属性
 
@@ -194,5 +220,5 @@ l10n:
 
 - その他の区分化関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Region ロール](/ja/docs/Web/Accessibility/ARIA/Roles/region_role)
+- [ARIA: Region ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)
 - [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/), by Bruce Lawson

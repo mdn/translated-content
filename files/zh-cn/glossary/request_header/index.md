@@ -32,5 +32,5 @@ Cache-Control: max-age=0
 
 ## 参见
 
-- [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Headers)
+- [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - [RFC 9110，6.3 节：标头字段](https://httpwg.org/specs/rfc9110.html#header.fields)

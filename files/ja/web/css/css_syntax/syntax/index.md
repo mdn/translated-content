@@ -34,7 +34,7 @@ CSS 宣言ブロックは以下の図のように表すことができます。
 ![css syntax - declarations block.png](declaration-block.png)
 
 > [!NOTE]
-> 左中括弧と右中括弧を除いた、セミコロンで分割された宣言のリストである CSS 宣言ブロックの内容は、 HTML の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性の中に置くことができます。
+> 左中括弧と右中括弧を除いた、セミコロンで分割された宣言のリストである CSS 宣言ブロックの内容は、 HTML の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性の中に置くことができます。
 
 ## CSS のルールセット
 
@@ -46,7 +46,7 @@ CSS のルールセット (またはルール) は下記の図のように表現
 
 ![css syntax - ruleset.png](ruleset.png)
 
-ページの要素は複数のセレクターに一致する可能性があり、あるプロパティが複数のルールで異なる値で複数回現れる可能性があるため、 CSS 標準ではあるプロパティが他のプロパティより優先され、適用しなければならないことを定義しています。これを[カスケード](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)アルゴリズムと呼びます。
+ページの要素は複数のセレクターに一致する可能性があり、あるプロパティが複数のルールで異なる値で複数回現れる可能性があるため、 CSS 標準ではあるプロパティが他のプロパティより優先され、適用しなければならないことを定義しています。これを[カスケード](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)アルゴリズムと呼びます。
 
 > [!NOTE]
 > 単一のセレクターで構成されるルールセットを複数まとめて表記する方法の一つとして、ルールセットをセレクターの集合で記述することが挙げられますが、各ルールセットの妥当性を上手くまとめるものではない点に注意しましょう。
@@ -64,7 +64,7 @@ CSS のルールセット (またはルール) は下記の図のように表現
 文には二種類があります。
 
 - **ルールセット** (または*ルール*)。ここまで見てきたように、 CSS の宣言の集合を、[セレクター](/ja/docs/Web/CSS/CSS_selectors)によって記述された条件に関連付けています。
-- **アットルール**。アットマーク '`@`' (`U+0040 COMMERCIAL AT`) で始まり、識別子が後続し、ブロックの外のセミコロンまたは次のブロックの終わりに至るまで続きます。それぞれの種類の [アットルール](/ja/docs/Web/CSS/At-rule)は、識別子によって定義され、当然ながら独自の内部構文や意味を持つことがあります。アットルールはメタデータ情報 ({{ cssxref("@charset") }} や {{ cssxref("@import") }} など) を伝えたり、条件情報 ({{ cssxref("@media") }} や {{ cssxref("@document") }}) など) を伝えたり、記述的情報 ({{ cssxref("@font-face") }} など) を伝えたりするために使用します。
+- **アットルール**。アットマーク '`@`' (`U+0040 COMMERCIAL AT`) で始まり、識別子が後続し、ブロックの外のセミコロンまたは次のブロックの終わりに至るまで続きます。それぞれの種類の [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)は、識別子によって定義され、当然ながら独自の内部構文や意味を持つことがあります。アットルールはメタデータ情報 ({{ cssxref("@charset") }} や {{ cssxref("@import") }} など) を伝えたり、条件情報 ({{ cssxref("@media") }} や {{ cssxref("@document") }}) など) を伝えたり、記述的情報 ({{ cssxref("@font-face") }} など) を伝えたりするために使用します。
 
 ルールまたはアットルールではない文は、すべて妥当ではなく、無視されます。
 
@@ -75,20 +75,20 @@ CSS のルールセット (またはルール) は下記の図のように表現
 ## 関連情報
 
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
   - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

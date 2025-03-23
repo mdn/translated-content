@@ -7,7 +7,20 @@ slug: Web/HTML/Element/dfn
 
 **`<dfn>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示要定義的術語。`<dfn>` 元素應該在完整的定義語句中使用，其中 `<dfn>` 元素的祖先 {{HTMLElement("p")}} 元素、{{HTMLElement("dt")}}/{{HTMLElement("dd")}} 配對或 `<dfn>` 元素的最近 {{HTMLElement("section")}} 祖先被認為是該術語的完整定義。
 
-{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
+  errors in code or documents.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+dfn {
+}
+```
 
 ## 屬性
 
@@ -149,7 +162,7 @@ slug: Web/HTML/Element/dfn
     </tr>
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
-      <td><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
+      <td><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>

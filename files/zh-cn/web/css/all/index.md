@@ -5,9 +5,62 @@ slug: Web/CSS/all
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。
+[CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值或继承值。
 
-{{EmbedInteractiveExample("pages/css/all.html")}}
+{{InteractiveExample("CSS Demo: all")}}
+
+```css interactive-example-choice
+/*no all property*/
+```
+
+```css interactive-example-choice
+all: initial;
+```
+
+```css interactive-example-choice
+all: inherit;
+```
+
+```css interactive-example-choice
+all: unset;
+```
+
+```css interactive-example-choice
+all: revert;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container-bg">
+    <div class="example-container">
+      <p id="example-element">
+        This paragraph has a font size of 1.5rem and a color of gold. It also
+        has 1rem of vertical margin set by the user-agent. The parent of the
+        paragraph is a &lt;div&gt; with a dashed blue border.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  color: gold;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.example-container {
+  border: 2px dashed #2d5ae1;
+}
+
+.example-container-bg {
+  background-color: #77767b;
+  padding: 20px;
+}
+```
 
 ## 语法
 

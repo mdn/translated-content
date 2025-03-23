@@ -9,7 +9,55 @@ La propriété CSS **`justify-content`** indique la façon dont l'espace doit ê
 
 L'exemple suivant illustre le fonctionnement des valeurs de cette propriété au sein d'une grille CSS.
 
-{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+{{InteractiveExample("CSS Demo: justify-content")}}
+
+```css interactive-example-choice
+justify-content: start;
+```
+
+```css interactive-example-choice
+justify-content: center;
+```
+
+```css interactive-example-choice
+justify-content: space-between;
+```
+
+```css interactive-example-choice
+justify-content: space-around;
+```
+
+```css interactive-example-choice
+justify-content: space-evenly;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+<div class="example-container">
+<div class="transition-all" id="example-element">
+<div>One</div>
+<div>Two</div>
+<div>Three</div>
+</div>
+</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 220px;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  row-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 L'alignement est appliqué après que les longueurs et les marges automatiques ont été appliquées. Dans une disposition utilisant les boîtes flexibles, cela signifie que s'il existe au moins un élément flexible pour lequel {{cssxref("flex-grow")}} est différent de `0`, `justify-content` n'aura aucun effet car il n'y aura plus d'espace disponible.
 

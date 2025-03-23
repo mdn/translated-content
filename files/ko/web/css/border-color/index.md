@@ -7,7 +7,46 @@ slug: Web/CSS/border-color
 
 **`border-color`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 모든 면의 테두리 색상을 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-color.html")}}
+{{InteractiveExample("CSS Demo: border-color")}}
+
+```css interactive-example-choice
+border-color: red;
+```
+
+```css interactive-example-choice
+border-color: red #32a1ce;
+```
+
+```css interactive-example-choice
+border-color: red rgba(170, 50, 220, 0.6) green;
+```
+
+```css interactive-example-choice
+border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-color: red yellow green transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 각 면 테두리의 색상은 {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}}를 사용해 정할 수 있습니다. 아니면 쓰기 방향에 따라 달라지는 속성인 {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}, {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end-color")}}을 사용할 수도 있습니다.
 

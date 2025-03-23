@@ -149,8 +149,8 @@ margin-left: 3px;
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
-  - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
+  - [布局模式](/zh-CN/docs/Glossary/Layout_mode)
+  - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
@@ -161,6 +161,5 @@ margin-left: 3px;
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
-  - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
-  - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

@@ -1,18 +1,15 @@
 ---
 title: OpenSearch 記述形式
 slug: Web/XML/Guides/OpenSearch
-original_slug: Web/OpenSearch
 l10n:
-  sourceCommit: f5ced29119fa3495e8d5664247c2680330c9310f
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-{{AddonSidebar}}
+**[OpenSearch 記述形式](https://github.com/dewitt/opensearch)** を使用して、検索エンジンのウェブインターフェイスを記述することができます。これにより、ウェブサイトは自分自身のために検索エンジンを記述することができ、ブラウザーや他のクライアントアプリケーションがその検索エンジンを使用することができます。 OpenSearch は、（少なくとも） Firefox、Edge、Safari、Chrome が対応しています。（他のブラウザーのドキュメントへのリンクは[参考資料](#参考資料)をご覧ください。）
 
-**[OpenSearch 記述形式](https://github.com/dewitt/opensearch)** は、検索エンジンのウェブインターフェイスを記述するために使用することができます。これにより、ウェブサイトは自分自身のために検索エンジンを記述することができ、ブラウザーや他のクライアントアプリケーションがその検索エンジンを使用することができます。OpenSearch は、(少なくとも) Firefox、Edge、Internet Explorer、Safari、Chrome が対応しています。（他のブラウザーのドキュメントへのリンクは[参考資料](#参考資料)をご覧ください。）
+また、 Firefox では、検索候補など、OpenSearch 規格にない追加機能にも対応しています。この記事では、これらの Firefox の追加機能に対応した OpenSearch 互換の検索プラグインの作成に焦点を当てます。
 
-また、Firefox では、検索候補や `<SearchForm>` 要素など、OpenSearch 規格にない追加機能にも対応しています。この記事では、これらの Firefox の追加機能に対応した OpenSearch 互換の検索プラグインの作成に焦点を当てます。
-
-OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autodiscovery_of_search_plugins)で説明されているように通知することができます。
+OpenSearch 記述ファイルは、[検索プラグインの自動検出](#検索プラグインの自動検出)で説明されているように通知することができます。
 
 > [!WARNING]
 > OpenSearch プラグインは [addons.mozilla.org](https://addons.mozilla.org) (AMO) にアップロードできなくなりました。検索エンジン機能は `manifest.json` ファイルに[クローム設定](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)を指定して WebExtension API を使用する必要があります。
@@ -30,7 +27,6 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
   <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image>
   <Url type="text/html" template="[searchURL]"/>
   <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
-  <moz:SearchForm>[https://example.com/search]</moz:SearchForm>
 </OpenSearchDescription>
 ```
 
@@ -44,15 +40,15 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 
   - : 検索エンジンのアイコンの URL です。可能であれば、 16×16 の画像を `image/x-icon` 形式で (`/favicon.ico` など)、 および 64×64 の画像を `image/jpeg` または `image/png` 形式で含めてください。
 
-    この URL には [`data:` URL スキーム](/ja/docs/Web/URI/Schemes/data)を使用することもできます。 (`data:` URL はアイコンファイルから [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) で生成することができます。)
+    この URL には [`data:` URL スキーム](/ja/docs/Web/URI/Reference/Schemes/data)を使用することもできます。 (`data:` URL はアイコンファイルから [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) で生成することができます。)
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
       <!-- or -->
-    <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA … DAAA=</Image>
+    <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA…DAAA=</Image>
     ```
 
-    Firefox はアイコンを [base64](https://ja.wikipedia.org/wiki/Base64) `data:` URI としてキャッシュします (検索プラグインは[プロファイル](https://support.mozilla.org/ja/kb/profiles-where-firefox-stores-user-data)の `searchplugins/` フォルダーに格納されます)。これを行う際に、 `http:` および `https:` URL は `data:` URI に変換されます。
+    Firefox はアイコンを [base64](https://ja.wikipedia.org/wiki/Base64) `data:` URL としてキャッシュします (検索プラグインは[プロファイル](https://support.mozilla.org/ja/kb/profiles-where-firefox-stores-user-data)の `searchplugins/` フォルダーに格納されます)。これを行う際に、 `http:` および `https:` URL は `data:` URI に変換されます。
 
     > [!NOTE]
     > リモートからアイコンを読み込む際 (すなわち、 `data:` URI とは対照的に `https://` URI からの場合)、 Firefox は**10 KB**より大きなアイコンを拒否します。
@@ -83,8 +79,8 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 <link
   rel="search"
   type="application/opensearchdescription+xml"
-  title="searchTitle"
-  href="pluginURL" />
+  title="[searchTitle]"
+  href="[pluginURL]" />
 ```
 
 太字の項目を以下の説明のように置き換えてください。
@@ -113,7 +109,7 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 この方法で、著者とタイトルによる検索を行うプラグインをサイトで提供することができます。
 
 > [!NOTE]
-> Firefox では、検索プラグインで提供されたアイコンがある場合は、検索ボックスのアイコンが変化して示します。 (画像を参照。緑のプラスの記号です。) そのため、ユーザーのインターフェイスで検索ボックスが非表示になっている場合、これを示すことは*ありません*。_一般に、この動作はブラウザーによって異なります_。
+> Firefox では、検索プラグインで提供されたアイコンがある場合は、検索ボックスのアイコンが変化して示します。（画像を参照。緑のプラスの記号です。）そのため、ユーザーのインターフェイスで検索ボックスが非表示になっている場合、これを示すことは*ありません*。_一般に、この動作はブラウザーによって異なります_。
 
 ## OpenSearch プラグインの自動更新の対応
 
@@ -149,4 +145,4 @@ OpenSearch プラグインは自動的に更新することができます。 `U
 - [Microsoft Edge 開発ガイド: Search provider discovery](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search)
 - imdb.com には [動作する `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml) があります
-- [Ready2Search](https://ready.to/search/jp/) - OpenSearch プラグインの作成 (日本語可, GET メソッドのみ)。 [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
+- [Ready2Search](https://ready.to/search/jp/) - OpenSearch プラグインの作成。 [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

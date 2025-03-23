@@ -36,7 +36,7 @@ l10n:
 
 #### Media、WebRTC、Web Audio
 
-- [VP8 コーデック](/ja/docs/Web/Media/Formats/Video_codecs#vp8) を使用した画面共有動画の WebRTC サイマルキャストをサポートしました (ほかの動画ソースのサイマルキャストは以前から可能でした)。より正確には VP8 を使用しているときに、画面およびウィンドウのキャプチャー (たとえば {{domxref("MediaDevices.getDisplayMedia()")}}) の {{domxref("MediaStreamTrack")}} オブジェクトを複数のサイマルキャストレイヤーとしてエンコードできます ([Firefox bug 1692873](https://bugzil.la/1692873))。
+- [VP8 コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#vp8) を使用した画面共有動画の WebRTC サイマルキャストをサポートしました (ほかの動画ソースのサイマルキャストは以前から可能でした)。より正確には VP8 を使用しているときに、画面およびウィンドウのキャプチャー (たとえば {{domxref("MediaDevices.getDisplayMedia()")}}) の {{domxref("MediaStreamTrack")}} オブジェクトを複数のサイマルキャストレイヤーとしてエンコードできます ([Firefox bug 1692873](https://bugzil.la/1692873))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 
 ブックマークのインポートが開始した際に発火します。
 
-ブックマークをインポートしている間、{{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} が何度も発火する場合があります。`onCreated` に紐づけるリスナ関数の処理が重い場合には、`onImportBegan` と {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}} をリッスンし、`onImportEnded` が発火するまでは `onCreated` を無視してください。他のイベントは通常通り処理できます。
+ブックマークをインポートしている間、{{WebExtAPIRef("bookmarks.onCreated", "onCreated")}} が何度も発火する場合があります。`onCreated` に紐づけるリスナー関数の処理が重い場合には、`onImportBegan` と {{WebExtAPIRef("bookmarks.onImportEnded", "onImportEnded")}} をリッスンし、`onImportEnded` が発火するまでは `onCreated` を無視してください。他のイベントは通常通り処理できます。
 
 ## 構文
 
@@ -20,11 +20,11 @@ browser.bookmarks.onImportBegan.hasListener(listener)
 このイベントには 3 つのメソッドが用意されています。
 
 - `addListener(callback)`
-  - : イベントリスナを追加します。
+  - : イベントリスナーを追加します。
 - `removeListener(listener)`
-  - : イベントリスナを削除します。引数 `listener` には削除したいリスナを指定します。
+  - : イベントリスナーを削除します。引数 `listener` には削除したいリスナーを指定します。
 - `hasListener(listener)`
-  - : `listener` がイベントリスナとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
+  - : `listener` がイベントリスナーとして登録されているか確認します。登録されていれば `true` を、それ以外の場合は `false` を返します。
 
 ## addListener の構文
 

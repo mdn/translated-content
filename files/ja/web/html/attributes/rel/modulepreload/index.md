@@ -99,5 +99,5 @@ modules/
 
 ## 関連情報
 
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、`<link rel="modulepreload">` や他にも同様のパフォーマンス改善機能の比較ができます。
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、`<link rel="modulepreload">` や他にも同様のパフォーマンス改善機能の比較ができます。
 - [Preloading modules](https://web.dev/articles/modulepreload) (developer.chrome.com)

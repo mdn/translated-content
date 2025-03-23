@@ -1,7 +1,6 @@
 ---
 title: CSS 选择器
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
-original_slug: Learn/CSS/Building_blocks/Selectors
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}

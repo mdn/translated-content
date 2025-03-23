@@ -90,7 +90,7 @@ console.log(helperPath);
 
 ### ECMAScript の機能ではない
 
-`import.meta.resolve()` は JavaScript モジュールの [ECMAScript 仕様書](/ja/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)の一部として指定も文書化もされていません。その代わりに、この仕様書 [`import.meta` オブジェクト](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta)を定義していますが、[そのすべてのプロパティを "ホスト定義" のままにしています](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-hostgetimportmetaproperties)。 WHATWG HTML 標準は ECMAScript 標準が残したものをピックアップし、[モジュール指定子の解決](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier) を使って [`import.meta.resolve` を定義しています](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties)。
+`import.meta.resolve()` は JavaScript モジュールの [ECMAScript 仕様書](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)の一部として指定も文書化もされていません。その代わりに、この仕様書 [`import.meta` オブジェクト](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-ImportMeta)を定義していますが、[そのすべてのプロパティを "ホスト定義" のままにしています](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-hostgetimportmetaproperties)。 WHATWG HTML 標準は ECMAScript 標準が残したものをピックアップし、[モジュール指定子の解決](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier) を使って [`import.meta.resolve` を定義しています](https://html.spec.whatwg.org/multipage/webappapis.html#hostgetimportmetaproperties)。
 
 つまり、 `import.meta.resolve()` はすべての適合する JavaScript 実装で実装される必要はありません。しかし、 `import.meta.resolve()` はブラウザー以外の環境でも利用できるかもしれません：
 

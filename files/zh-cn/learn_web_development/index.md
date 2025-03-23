@@ -1,7 +1,6 @@
 ---
 title: 学习 Web 开发
 slug: Learn_web_development
-original_slug: Learn
 l10n:
   sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---

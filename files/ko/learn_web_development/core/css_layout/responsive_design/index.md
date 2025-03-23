@@ -71,7 +71,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 미디어 쿼리를 사용할 때 일반적인 접근 방식은 화면이 좁은 디바이스(예: 휴대폰)를 위해 간단한 단일 열 레이아웃을 만든 다음 화면이 더 넓은지 확인하고 화면 너비가 충분하다고 판단되면 다중 열 레이아웃을 구현하는 것입니다. 이를 **모바일 우선** 디자인이라고 합니다.
 
-분기점을 사용하는 경우, 개별 디바이스의 절대 크기보다는 [CSS 값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#상대_길이_단위)를 사용하여 미디어 쿼리 분기점을 정의하는 것이 모범 사례입니다.
+분기점을 사용하는 경우, 개별 디바이스의 절대 크기보다는 [CSS 값과 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#상대_길이_단위)를 사용하여 미디어 쿼리 분기점을 정의하는 것이 모범 사례입니다.
 
 미디어 쿼리 블록 내에 정의된 스타일에 대한 접근 방식은 브라우저 크기 범위에 따라 {{htmlelement("link")}} 스타일 시트에 미디어 쿼리를 사용하는 것부터 각 분기점과 관련된 값을 저장하기 위해 사용자 지정 속성 변수만 포함하는 것까지 다양합니다.
 
@@ -83,7 +83,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 유연한 그리드를 사용하면 기능을 변경하거나 분기점을 추가하여 콘텐츠가 보기 좋지 않게 보이는 지점에서 디자인을 변경할 수 있습니다. 예를 들어 화면 크기가 커짐에 따라 줄 길이가 읽기 힘들 정도로 길어지지 않도록 {{cssxref('columns')}}를 사용할 수 있으며, 상자가 좁아지면서 각 줄에 두 단어가 찌그러지는 경우 분기점을 설정할 수 있습니다.
 
-[다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/ko/docs/Learn/CSS/CSS_layout/Flexbox), [그리드](/ko/docs/Learn/CSS/CSS_layout/Grids) 등 여러 레이아웃 방식이 기본적으로 반응형입니다. 모두 사용자가 유연한 그리드를 만들려고 한다고 가정하고 더 쉬운 방법을 제공합니다.
+[다단 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [Flexbox](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox), [그리드](/ko/docs/Learn_web_development/Core/CSS_layout/Grids) 등 여러 레이아웃 방식이 기본적으로 반응형입니다. 모두 사용자가 유연한 그리드를 만들려고 한다고 가정하고 더 쉬운 방법을 제공합니다.
 
 ### 다단
 
@@ -109,7 +109,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 플렉스박스에서 플렉스 항목은 컨테이너의 공간에 따라 항목 사이의 공간을 분배하여 축소 또는 증가합니다. `flex-grow` 및 `flex-shrink` 값을 변경하여 주변에 공간이 많거나 적을 때 항목이 어떻게 동작할지 지정할 수 있습니다.
 
-아래 예시에서 플렉스 항목은 레이아웃 항목 [플렉스박스: 가변 항목의 가변 크기 조정](/ko/docs/Learn/CSS/CSS_layout/Flexbox#가변_항목의_가변_크기_조정)에 설명된 대로 `flex: 1`의 약어를 사용하여 플렉스 컨테이너에서 각각 동일한 공간을 차지합니다.
+아래 예시에서 플렉스 항목은 레이아웃 항목 [플렉스박스: 가변 항목의 가변 크기 조정](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox#가변_항목의_가변_크기_조정)에 설명된 대로 `flex: 1`의 약어를 사용하여 플렉스 컨테이너에서 각각 동일한 공간을 차지합니다.
 
 ```css
 .container {
@@ -126,7 +126,7 @@ HTML은 기본적으로 반응형 또는 유동적 입니다. CSS 없이 HTML만
 
 ### CSS 격자
 
-CSS 그리드 레이아웃에서 `fr` 단위는 그리드 트랙에 사용 가능한 공간을 분배할 수 있게 해줍니다. 다음 예제는 `1fr` 크기의 트랙 3개가 있는 그리드 컨테이너를 생성합니다. 이렇게 하면 컨테이너에서 사용 가능한 공간의 한 부분을 차지하는 세 개의 열 트랙이 생성됩니다. 그리드를 만드는 이 접근 방식에 대한 자세한 내용은 레이아웃 그리드 배우기 주제의 [fr 단위를 포함한 가변 격자](/ko/docs/Learn/CSS/CSS_layout/Grids#fr_단위를_포함하는_가변_격자) 아래에서 확인할 수 있습니다.
+CSS 그리드 레이아웃에서 `fr` 단위는 그리드 트랙에 사용 가능한 공간을 분배할 수 있게 해줍니다. 다음 예제는 `1fr` 크기의 트랙 3개가 있는 그리드 컨테이너를 생성합니다. 이렇게 하면 컨테이너에서 사용 가능한 공간의 한 부분을 차지하는 세 개의 열 트랙이 생성됩니다. 그리드를 만드는 이 접근 방식에 대한 자세한 내용은 레이아웃 그리드 배우기 주제의 [fr 단위를 포함한 가변 격자](/ko/docs/Learn_web_development/Core/CSS_layout/Grids#fr_단위를_포함하는_가변_격자) 아래에서 확인할 수 있습니다.
 
 ```css
 .container {
@@ -158,7 +158,7 @@ video {
 
 또한 다양한 크기로 사용되는 이미지를 직접 _art direct_ 하여 화면 크기에 따라 다른 자르기 또는 완전히 다른 이미지를 제공할 수도 있습니다.
 
-이곳 MDN 사이트의 [반응형 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)에서 자세한 안내서를 찾을 수 있습니다.
+이곳 MDN 사이트의 [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)에서 자세한 안내서를 찾을 수 있습니다.
 
 ## 반응형 타이포그래피
 

@@ -7,7 +7,34 @@ slug: Web/HTML/Element/input
 
 [HTML](/zh-CN/docs/Web/HTML) **`<input>`** 元素用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据。取决于设备和{{Glossary("user agent", "用户代理")}}不同，表单可以使用各种类型的输入数据和控件。`<input>` 元素是目前 HTML 中最强大、最复杂的元素之一，因为它有大量的输入类型和属性组合。
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## \<input> 类型
 
@@ -540,7 +567,7 @@ slug: Web/HTML/Element/input
 
 - `value`
 
-  - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox'、`radio`和`hidden` 来说，应该被认为是必须的。
+  - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox`、`radio` 和 `hidden` 来说，应该被认为是必须的。
 
 - `width`
 
@@ -849,7 +876,7 @@ input.custom {
 
 ### object-position 和 object-fit
 
-在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个[被替换的元素](/zh-CN/docs/Web/CSS/Replaced_element)。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
+在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个{{glossary("Replaced elements", "可替换元素")}}。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
 
 ### 赋予样式
 
@@ -909,7 +936,7 @@ input.custom {
 ### 客户端验证
 
 > [!WARNING]
-> 客户端验证是有用的，但它并*不能*保证服务器会收到有效的数据。如果数据必须是特定的格式，*总是*应该在服务器端进行验证，如果格式无效，则返回一个 [`400` HTTP 响应](/zh-CN/docs/Web/HTTP/Status/400)。
+> 客户端验证是有用的，但它并*不能*保证服务器会收到有效的数据。如果数据必须是特定的格式，*总是*应该在服务器端进行验证，如果格式无效，则返回一个 [`400` HTTP 响应](/zh-CN/docs/Web/HTTP/Reference/Status/400)。
 
 除了如上文 [UI 伪类](#ui_伪类)部分所述，使用 CSS 根据 {{cssxref(":valid")}} 或 {{cssxref(":invalid")}} 每个输入的当前状态来设计输入的样式之外，浏览器还在（试图）提交表单时提供了客户端验证。在表单提交时，如果有一个表单控件没有通过约束验证，支持的浏览器将在第一个无效的表单控件上显示一个错误信息；根据错误类型显示一个默认信息，或者由你设置的信息。
 

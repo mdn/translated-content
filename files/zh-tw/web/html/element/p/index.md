@@ -9,7 +9,27 @@ slug: Web/HTML/Element/p
 
 段落是[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)，特別是在解析了結束的 `</p>` 標記之前，如果解析了另一個區塊級元素，則段落會自動關閉。參見下面的「標籤省略」。
 
-{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  Geckos are a group of usually small, usually nocturnal lizards. They are found
+  on every continent except Antarctica.
+</p>
+
+<p>
+  Some species live in houses where they hunt insects attracted by artificial
+  light.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #999;
+}
+```
 
 ## 屬性
 
@@ -161,7 +181,7 @@ p {
     <tr>
       <th scope="row">隱含 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles"
           >paragraph</a
         >
       </td>

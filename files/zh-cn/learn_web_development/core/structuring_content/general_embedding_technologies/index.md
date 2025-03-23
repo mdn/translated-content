@@ -1,7 +1,6 @@
 ---
 title: 从 object 到 iframe——其他嵌入技术
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
-original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
   sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---
@@ -287,7 +286,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 #### 配置 CSP 指令
 
-{{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
+{{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/Guides/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Reference/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
 
 > [!NOTE]
 > 你可以阅读 Frederik Braun 的帖子[论 X-Frame-Options 安全性标头](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，其已经超出了本文所解释内容的范围。

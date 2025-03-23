@@ -21,7 +21,7 @@ l10n:
 
 `ArrayBuffer` オブジェクトは `maxByteLength` オプションを指定して {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} コンストラクターを呼び出すことで、サイズを変更することができるようになります。`ArrayBuffer` がサイズ変更可能かどうか、またその最大サイズを知るには、それぞれ {{jsxref("ArrayBuffer/resizable", "resizable")}} と {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} のプロパティにアクセスすれば分かります。サイズ変更可能な `ArrayBuffer` には、 {{jsxref("ArrayBuffer/resize", "resize()")}} を呼び出して新しいサイズを割り当てることができます。新しいバイトは 0 に初期化されます。
 
-これらの機能により、`ArrayBuffer` のサイズ変更がより効率的になります。そうしないと、新しいサイズのバッファーのコピーを持たなければなりません。また、この点で JavaScript が WebAssembly と同等になります（WASM のリニアメモリーは [`WebAssembly.Memory.prototype.grow()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/grow) でサイズ変更が可能です）。
+これらの機能により、`ArrayBuffer` のサイズ変更がより効率的になります。そうしないと、新しいサイズのバッファーのコピーを持たなければなりません。また、この点で JavaScript が WebAssembly と同等になります（WASM のリニアメモリーは [`WebAssembly.Memory.prototype.grow()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) でサイズ変更が可能です）。
 
 ## コンストラクター
 

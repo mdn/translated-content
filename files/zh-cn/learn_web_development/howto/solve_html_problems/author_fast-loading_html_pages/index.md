@@ -1,7 +1,6 @@
 ---
 title: 编写快速加载的 HTML 网页的技巧
 slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-original_slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Learn/HTML/Howto")}}
@@ -26,7 +25,7 @@ original_slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 
 减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的 [HTTP](/zh-CN/docs/Web/HTTP) 请求数量，从而减少这些请求的收发时间。
 
-根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 [`If-Modified-Since`](/zh-CN/docs/Web/HTTP/Headers/If-Modified-Since) 标头的请求给 web 服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。
+根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 [`If-Modified-Since`](/zh-CN/docs/Web/HTTP/Reference/Headers/If-Modified-Since) 标头的请求给 web 服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。
 
 如果你在 CSS 中经常使用背景图片，可以通过将图片合并为一张图片（即精灵图）来减少 HTTP 查找次数。然后，每次需要使用背景图片时，只需应用相同的图片，并适当调整 x/y 坐标即可。这种技术最适用于尺寸有限的元素，并不适用于所有背景图片的使用。不过，减少 HTTP 请求和单张图片缓存有助于缩短页面加载时间。
 

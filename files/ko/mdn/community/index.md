@@ -8,7 +8,7 @@ l10n:
 {{MDNSidebar}}
 
 👋 MDN Web Docs에 오신 걸 환영합니다. [HTML](/ko/docs/Web/HTML), [CSS](/ko/docs/Web/CSS), [JavaScript](/ko/docs/Web/JavaScript), [Web APIs](/ko/docs/Web/API)처럼 웹 플랫폼 기술을 오픈 소스로 문서화하는 협력 프로젝트입니다.
-MDN에서는 개발 입문자와 학생들을 위한 [학습 자료](/ko/docs/Learn)도 제공합니다.
+MDN에서는 개발 입문자와 학생들을 위한 [학습 자료](/ko/docs/Learn_web_development)도 제공합니다.
 
 귀하께서 저희의 프로젝트와 토론에 참여하시는 경우 [Mozilla 커뮤니티 참여 가이드라인](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)에 동의하신 것으로 간주합니다.
 
@@ -65,7 +65,7 @@ MDN Web Docs에 기여할 수 있는 방법 목록은 다음과 같습니다.
 안타깝게도 일반적인 지원 질문에는 답변드릴 수 없습니다.
 코드를 배우고 있다면 아래 자료를 참고하세요.
 
-- [Web 개발 학습하기](/ko/docs/Learn)
+- [Web 개발 학습하기](/ko/docs/Learn_web_development)
 - [MDN Web Docs 학습 게시판](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stackoverflow](https://stackoverflow.com/questions/)
 

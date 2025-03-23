@@ -7,7 +7,17 @@ slug: Web/HTML/Global_attributes/spellcheck
 
 **`spellcheck`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 맞춤법 검사 여부를 지정하는 열거형 특성입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+
+```html interactive-example
+<textarea spellcheck="true">
+This exampull will be checkd fur spellung when you try to edit it.</textarea
+>
+
+<textarea spellcheck="false">
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+>
+```
 
 가능한 값은 다음과 같습니다.
 

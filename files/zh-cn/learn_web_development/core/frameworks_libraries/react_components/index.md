@@ -1,7 +1,6 @@
 ---
 title: 组件化我们的 React App
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 ---
 
 {{LearnSidebar}}

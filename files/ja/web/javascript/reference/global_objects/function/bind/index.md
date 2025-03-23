@@ -102,7 +102,7 @@ console.log(new Base() instanceof BoundBase); // true
 - [`name`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : 対象となる関数の `name` に `"bound "` という接頭辞を加えたものです。
 
-バインド済み関数は、ターゲット関数の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)も引き継ぎます。しかし、他にターゲット関数の独自のプロパティ（ターゲット関数がクラスの場合は[静的プロパティ](/ja/docs/Web/JavaScript/Reference/Classes/static)など）を持つことはありません。
+バインド済み関数は、ターゲット関数の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)も引き継ぎます。しかし、他にターゲット関数の独自のプロパティ（ターゲット関数がクラスの場合は[静的プロパティ](/ja/docs/Web/JavaScript/Reference/Classes/static)など）を持つことはありません。
 
 ## 例
 

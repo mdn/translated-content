@@ -9,7 +9,36 @@ l10n:
 
 **`<fieldset>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 上記の例にあるように、`<fieldset>` 要素は HTML フォームの一部をグループ化し、内側の {{htmlelement("legend")}} 要素で `<fieldset>` のキャプションを提供します。いくつかの属性を取りますが、特に重要なものとして `form` は、同じページの {{htmlelement("form")}} の `id` を含むことができ、`<fieldset>` が `<form>` の中になくてもその一部として扱うことができたり、`disabled` は、`<fieldset>` およびその中身を一度に無効にすることができたりします。
 
@@ -20,7 +49,7 @@ l10n:
 - `disabled`
   - : この論理属性が設定されている場合、`<fieldset>` の子孫要素として配置したフォームコントロールはすべて無効になり、つまり編集したり {{htmlelement("form")}} と一緒に送信したりすることができなくなります。マウスクリックやフォーカス関連のイベントのような閲覧イベントを受け取らなくなります。既定では、ブラウザーはそのようなコントロールを灰色で表示します。なお、子孫の {{HTMLElement("legend")}} 要素内のフォーム要素は無効になりません。
 - `form`
-  - : {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を指定し、たとえ `<fieldset>` 要素がその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
+  - : {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性を指定し、たとえ `<fieldset>` 要素がその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
 - `name`
 
   - : グループに関連付けられた名前です。

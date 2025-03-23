@@ -15,7 +15,25 @@ l10n:
 - [グレゴリオ暦](https://ja.wikipedia.org/wiki/グレゴリオ暦)の正確な日付 (時刻やタイムゾーンを伴うことも可能)
 - [有効な期間](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string)
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 ## 属性
 

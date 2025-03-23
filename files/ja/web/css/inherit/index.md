@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-**`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/computed_value)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
+**`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
 
-[継承プロパティ](/ja/docs/Web/CSS/Inheritance#継承プロパティ)においては、既定の動作を推進するものであり、他のルールを上書きする場合にのみ必要です。
+[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)においては、既定の動作を推進するものであり、他のルールを上書きする場合にのみ必要です。
 
 親要素が包含ブロックではなかった場合であっても、常に文書ツリー内の親要素から継承が行われます。
 
@@ -49,7 +49,7 @@ div#current {
 
 ## 関連情報
 
-- [継承](/ja/docs/Web/CSS/Inheritance)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - {{cssxref("initial")}} を使用すると、プロパティを初期値に設定します。
 - {{cssxref("revert")}} キーワードを使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
 - {{cssxref("revert-layer")}} キーワードを使用すると、プロパティを直前のカスケードレイヤーで確立された値に戻します。

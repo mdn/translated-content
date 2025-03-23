@@ -1,7 +1,6 @@
 ---
 title: 网格
 slug: Learn_web_development/Core/CSS_layout/Grids
-original_slug: Learn/CSS/CSS_layout/Grids
 ---
 
 {{LearnSidebar}}

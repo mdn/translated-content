@@ -9,7 +9,55 @@ l10n:
 
 **`data-*`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[HTML](/ja/docs/Web/HTML) と、スクリプトによる [DOM](/ja/docs/Web/API/Document_Object_Model) 表現との間で、固有の情報を交換できるようにします。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Secret agents</h1>
+
+<ul>
+  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
+  <li data-id="97865">
+    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
+    "Goldeneye".
+  </li>
+  <li data-id="45732">
+    James Bond, 007: The main man; shaken but not stirred.
+  </li>
+</ul>
+```
+
+```css interactive-example
+h1 {
+  margin: 0;
+}
+
+ul {
+  margin: 10px 0 0;
+}
+
+li {
+  position: relative;
+  width: 200px;
+  padding-bottom: 10px;
+}
+
+li:after {
+  content: "Data ID: " attr(data-id);
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 2px;
+  border: 1px solid #eee;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+li:hover:after {
+  opacity: 1;
+}
+```
 
 すべてのカスタムデータは、属性を設定した要素の {{domxref("HTMLElement")}} インターフェイスを通して使用できます。 {{domxref("HTMLElement.dataset")}} プロパティがそれらへのアクセス手段を提供します。
 `*` は、 [XML 名の作成規則](https://www.w3.org/TR/REC-xml/#NT-Name)に加えて以下の制約に従う名前に置き換えることができます。
@@ -37,7 +85,7 @@ l10n:
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-もっと深い HTML のデータ属性の使用については、[データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)を参照してください。
+もっと深い HTML のデータ属性の使用については、[データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)を参照してください。
 
 ## 仕様書
 
@@ -51,4 +99,4 @@ l10n:
 
 - すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
 - これらの値を読み書きできる {{domxref("HTMLElement.dataset")}} プロパティ
-- [データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)
+- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

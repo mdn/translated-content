@@ -7,7 +7,37 @@ slug: Web/HTML/Element/footer
 
 **`<footer>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示其最近的[章節型內容](/zh-TW/docs/Web/HTML/Content_categories#章節型內容)或[章節根](/zh-TW/docs/Web/HTML/Element/Heading_Elements#章節根)元素的頁尾。`<footer>` 通常包含有關該章節作者的信息、版權數據或與相關文檔的鏈接。
 
-{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article>
+  <h1>How to be a wizard</h1>
+  <ol>
+    <li>Grow a long, majestic beard.</li>
+    <li>Wear a tall, pointed hat.</li>
+    <li>Have I mentioned the beard?</li>
+  </ol>
+  <footer>
+    <p>© 2018 Gandalf</p>
+  </footer>
+</article>
+```
+
+```css interactive-example
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
+```
 
 ## 屬性
 
@@ -104,8 +134,8 @@ footer {
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>。
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> 或
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>。
       </td>
     </tr>
     <tr>
@@ -127,4 +157,4 @@ footer {
 
 - 其他與節相關的元素: {{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("section")}}、{{HTMLElement("address")}}；
 - [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA：Contentinfo 角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/contentinfo_role)
+- [ARIA：Contentinfo 角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)

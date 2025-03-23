@@ -1,7 +1,6 @@
 ---
 title: 多媒体：图片
 slug: Learn_web_development/Extensions/Performance/Multimedia
-original_slug: Learn/Performance/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
@@ -47,7 +46,7 @@ original_slug: Learn/Performance/Multimedia
 
 ### 加载策略
 
-对于大多数网站来说，最大的改进之一是[延迟加载](/zh-CN/docs/Web/Performance/Lazy_loading)可视区域以下的图像，而不是在初始页面加载时，无论访客是否滚动查看，都下载所有这些内容。许多 JavaScript 库可以为你实现此功能，例如 [lazysizes](https://github.com/aFarkas/lazysizes)，浏览器供应商目前正在开发一种原生的 `lazyload` 属性，目前处于实验阶段。
+对于大多数网站来说，最大的改进之一是[懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)可视区域以下的图像，而不是在初始页面加载时，无论访客是否滚动查看，都下载所有这些内容。许多 JavaScript 库可以为你实现此功能，例如 [lazysizes](https://github.com/aFarkas/lazysizes)，浏览器供应商目前正在开发一种原生的 `lazyload` 属性，目前处于实验阶段。
 
 除了加载一部分图像之外，接下来你应该考虑图像本身的格式：
 

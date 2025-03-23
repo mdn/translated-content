@@ -7,7 +7,7 @@ l10n:
 
 イベントとは、ブラウザーや OS の環境の変化を知らせる信号で、ブラウザーのウィンドウ内で発行されます。プログラマーは、イベントが発行されたときに実行される*イベントハンドラー*のコードを作成することで、ウェブページが変化に適切に対応できるようになります。
 
-このページでは、イベントとイベントハンドラーの扱い方について、ごく簡単な「覚え書き」を提供しています。初めての方は、[イベント入門](/ja/docs/Learn/JavaScript/Building_blocks/Events)をお読みください。
+このページでは、イベントとイベントハンドラーの扱い方について、ごく簡単な「覚え書き」を提供しています。初めての方は、[イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)をお読みください。
 
 ## イベントでは何ができるのか
 
@@ -20,7 +20,7 @@ l10n:
 ハンドラーの登録には、推奨される方法が 2 つあります。イベントハンドラーのコードは、ターゲットとなる要素の対応する _onevent_ プロパティに割り当てて、イベントが起動されたときに実行されるようにするか、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用して、ハンドラーを要素のリスナーとして登録するかすることができます。いずれの場合も、ハンドラーは [`Event` インターフェイス](/ja/docs/Web/API/Event) (または[派生インターフェイス](/ja/docs/Web/API/Event#introduction)) に準拠したオブジェクトを受け取ります。主な違いは、イベントリスナーのメソッドを使うと、複数のイベントハンドラーを追加 (または削除) できることです。
 
 > [!WARNING]
-> 第 3 の方法として、 HTML の onevent 属性を使ってイベントハンドラーを設定する方法がありますが、お勧めしません。これはマークアップを膨張させ、可読性を低下させ、デバッグを困難にします。詳しくは、[インラインイベントハンドラー](/ja/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)を参照してください。
+> 第 3 の方法として、 HTML の onevent 属性を使ってイベントハンドラーを設定する方法がありますが、お勧めしません。これはマークアップを膨張させ、可読性を低下させ、デバッグを困難にします。詳しくは、[インラインイベントハンドラー](/ja/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these)を参照してください。
 
 ### onevent プロパティの使用
 
@@ -89,6 +89,6 @@ controller.abort(); // このコントローラーに関連付けられたすべ
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
+    <li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
   </ol>
 </section>

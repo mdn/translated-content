@@ -11,7 +11,7 @@ l10n:
 
 文档指令不将 {{CSP("default-src")}} 指令作为回退机制。
 
-参见[文档指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#文档指令_document_directives)获取一个完整的列表。
+参见[文档指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#文档指令_document_directives)获取一个完整的列表。
 
 ## 参见
 

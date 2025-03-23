@@ -7,7 +7,33 @@ slug: Web/CSS/filter-function/saturate
 
 La fonction CSS **`saturate()`** permet d'accentuer ou de réduire la saturation d'une image. La valeur obtenue par cette fonction est une valeur de type [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
-{{EmbedInteractiveExample("pages/css/function-saturate.html")}}
+{{InteractiveExample("CSS Demo: saturate()")}}
+
+```css interactive-example-choice
+filter: saturate(1);
+```
+
+```css interactive-example-choice
+filter: saturate(4);
+```
+
+```css interactive-example-choice
+filter: saturate(50%);
+```
+
+```css interactive-example-choice
+filter: saturate(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntaxe
 

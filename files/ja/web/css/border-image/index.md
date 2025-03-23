@@ -9,7 +9,53 @@ l10n:
 
 **`border-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された要素の周りに画像を描きます。これは要素の通常の[境界](/ja/docs/Web/CSS/border)を置き換えます。
 
-{{EmbedInteractiveExample("pages/css/border-image.html")}}
+{{InteractiveExample("CSS Demo: border-image")}}
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30 /
+  19px round;
+```
+
+```css interactive-example-choice
+border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+  fill / 30px / 30px space;
+```
+
+```css interactive-example-choice
+border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+```
+
+```css interactive-example-choice
+border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
+  60;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 > [!NOTE]
 > 境界画像の読み込みに失敗したときのために、 {{cssxref("border-style")}} を指定してください。仕様では厳密には要求されていませんが、{{cssxref("border-style")}} が `none` または {{cssxref("border-width")}} が `0` の場合、境界画像を描画しないブラウザーもあります。
@@ -49,7 +95,7 @@ border-image: unset;
 
 `border-image` プロパティは以下に挙げた 1 つから 5 つの値で指定します。
 
-> **メモ:** {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/computed_value) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
+> **メモ:** {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
 
 ### 値
 
@@ -68,7 +114,7 @@ border-image: unset;
 
 支援技術は境界画像を解釈することができません。画像にページ全体の目的を理解するために重要な情報が含まれている場合は、文書内に意味的に記述したほうがいいでしょう。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 公式定義

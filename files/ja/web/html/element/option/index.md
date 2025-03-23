@@ -9,7 +9,34 @@ l10n:
 
 **`<option>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("select")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("datalist")}} の各要素内で項目を定義するために使われます。したがって、`<option>` は HTML 文書でポップアップメニューのメニュー項目や、その他の項目の一覧を表すことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;option&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 ## 属性
 
@@ -26,7 +53,7 @@ l10n:
 
 ## CSS でのスタイル設定
 
-**`<option>`** 要素のスタイル設定は非常に制限されています。選択肢は親要素で設定したフォントを継承しません。Firefox では [`color`](/ja/docs/Web/CSS/color) と [`background-color`](/ja/docs/Web/CSS/background-color) のみが設定可能ですが、Safari では何もプロパティを設定することはできません。スタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/Learn/Forms/Advanced_form_styling)をご覧ください。
+**`<option>`** 要素のスタイル設定は非常に制限されています。選択肢は親要素で設定したフォントを継承しません。Firefox では [`color`](/ja/docs/Web/CSS/color) と [`background-color`](/ja/docs/Web/CSS/background-color) のみが設定可能ですが、Safari では何もプロパティを設定することはできません。スタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)をご覧ください。
 
 ## 例
 

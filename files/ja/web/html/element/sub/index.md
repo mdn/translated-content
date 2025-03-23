@@ -9,7 +9,23 @@ l10n:
 
 **`<sub>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で下付き文字として表示するべきインラインテキストを示します。下付き文字は普通、小さめのテキストを使用してベースラインよりも低く表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/sub.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sub&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  "caffeine."
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 ## 属性
 
@@ -141,5 +157,5 @@ l10n:
 ## 関連情報
 
 - 上付き文字を表現する HTML の {{HTMLElement("sup")}} 要素。sub 要素と同時に使用することはできません。化学式で上付き文字と下付き文字の両方が必要な場合には、[MathML](/ja/docs/Web/MathML) を用いる必要があります。
-- MathML 要素: [`<msub>`](/ja/docs/Web/MathML/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Element/msubsup)
+- MathML 要素: [`<msub>`](/ja/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/ja/docs/Web/MathML/Reference/Element/msup), [`<msubsup>`](/ja/docs/Web/MathML/Reference/Element/msubsup)
 - CSS の {{cssxref("vertical-align")}} プロパティ

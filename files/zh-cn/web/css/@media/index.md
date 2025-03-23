@@ -10,7 +10,34 @@ slug: Web/CSS/@media
 > [!NOTE]
 > 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-media.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+
+```css interactive-example
+abbr {
+  color: chocolate;
+}
+
+@media (hover: hover) {
+  abbr:hover {
+    color: limegreen;
+    transition-duration: 1s;
+  }
+}
+
+@media not all and (hover: hover) {
+  abbr::after {
+    content: " (" attr(title) ")";
+  }
+}
+```
+
+```html interactive-example
+<p>
+  <abbr title="National Aeronautics and Space Administration">NASA</abbr> is a
+  U.S. government agency that is responsible for science and technology related
+  to air and space.
+</p>
+```
 
 ## 语法
 
@@ -75,7 +102,7 @@ _媒体特性_（media feature）描述了{{glossary("user agent", "用户代理
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 输出设备渲染表面的宽度。于媒体查询第 4 版中被弃用。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
+  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : 用户代理和输出设备支持的亮度、对比度和色彩深度的组合。于媒体查询第 5 版中被添加。
 - {{cssxref("@media/forced-colors", "forced-colors")}}
@@ -137,7 +164,7 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 ### 用户代理客户端提示
 
-一些媒体查询有相应的[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)。这是请求特定媒体要求的预优化内容的 HTTP 标头，其包括 {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} 和 {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}。
+一些媒体查询有相应的[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)。这是请求特定媒体要求的预优化内容的 HTTP 标头，其包括 {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} 和 {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}。
 
 ## 无障碍考虑
 

@@ -11,7 +11,29 @@ l10n:
 
 > **メモ:** `lang` の既定値は `unknown` であるため、この属性には常に適切な値を指定することが推奨されます。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+
+```html interactive-example
+<p>This paragraph is English, but the language is not specifically defined.</p>
+
+<p lang="en-GB">This paragraph is defined as British English.</p>
+
+<p lang="fr">Ce paragraphe est défini en français.</p>
+```
+
+```css interactive-example
+p::before {
+  padding-right: 5px;
+}
+
+[lang="en-GB"]::before {
+  content: "(In British English) ";
+}
+
+[lang="fr"]::before {
+  content: "(In French) ";
+}
+```
 
 属性値が空文字列 (`lang=""`) の場合、言語は _unknown_ に設定されます。言語タグが BCP47 に準拠していない場合は、_invalid_ に設定されます。
 
@@ -142,5 +164,5 @@ WCAG 成功基準 3.1.2 は、異なる言語の**部分**があるページに�
 ## 関連情報
 
 - すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
-- [HTTP の `Content-Language` ヘッダー](/ja/docs/Web/HTTP/Headers/Content-Language)
-- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes#translate) 属性
+- [HTTP の `Content-Language` ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Content-Language)
+- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes/translate) 属性

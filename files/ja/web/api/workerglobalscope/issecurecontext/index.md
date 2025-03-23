@@ -24,4 +24,4 @@ l10n:
 
 ## 関連情報
 
-- [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)

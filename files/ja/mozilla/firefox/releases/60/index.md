@@ -19,7 +19,7 @@ Firefox 60 は、米国時間 2018 年 5 月 9 日にリリースされました
 
 - CSS ペインのルールビュー ([CSS の調査と編集](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) をご覧ください) で精密に値を増減する (0.1 ずつ増減) キーボードショートカットを、Linux および Windows で OS の既定のショートカットと衝突しないようにするため、 `Alt` + `Up`/`Down` to `Ctrl` + `Up`/`Down` に変更しました ([Firefox バグ 1413314](https://bugzil.la/1413314))。
 
-- CSS ペインのルールビューで、[CSS 変数名](/ja/docs/Web/CSS/Using_CSS_custom_properties) の自動補完が可能になりました ([Firefox バグ 1422635](https://bugzil.la/1422635))。プロパティの値に `var(` と入力してダッシュ (`-`) を押下すると、CSS で宣言した変数を自動補完のリストに表示します。
+- CSS ペインのルールビューで、[CSS 変数名](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) の自動補完が可能になりました ([Firefox バグ 1422635](https://bugzil.la/1422635))。プロパティの値に `var(` と入力してダッシュ (`-`) を押下すると、CSS で宣言した変数を自動補完のリストに表示します。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で、タッチのシミュレーションを切り替えたときやシミュレーションするユーザーエージェントを変更したときにページを自動的に再読み込みする機能を有効化/無効化できる、_Reload when..._ ドロップダウンメニューを追加しました。詳しくは [ページ再読み込みの動作を制御する](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-page-reload-behavior) をご覧ください ([Firefox バグ 1428816](https://bugzil.la/1428816))。
 - 設定項目 `view_source.tab` を削除しましたので、[ソース表示](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) モードを新しいタブか新しいウィンドウで選ぶことができなくなりました。ページのソースは、常に新しいタブで表示されます ([Firefox バグ 1418403](https://bugzil.la/1418403))。
 

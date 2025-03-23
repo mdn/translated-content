@@ -3657,13 +3657,13 @@
       "teoli"
     ]
   },
-  "Web/Accessibility/ARIA/ARIA_Techniques": {
+  "Web/Accessibility/ARIA/Guides/Techniques": {
     "modified": "2019-03-18T21:39:54.388Z",
     "contributors": [
       "oooooo"
     ]
   },
-  "Web/Accessibility/Mobile_accessibility_checklist": {
+  "Web/Accessibility/Guides/Mobile_accessibility_checklist": {
     "modified": "2019-03-18T21:32:14.782Z",
     "contributors": [
       "li-liam"
@@ -3766,6 +3766,14 @@
       "alk03073135"
     ]
   },
+  "Web/CSS/CSS_cascade/Shorthand_properties": {
+    "modified": "2019-03-23T23:05:17.353Z",
+    "contributors": [
+      "fscholz",
+      "irvinfly",
+      "wildsky"
+    ]
+  },
   "Web/CSS/CSS_colors/Color_picker_tool": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
@@ -3814,6 +3822,12 @@
       "1986slayer"
     ]
   },
+  "Web/CSS/CSS_images/Replaced_element_properties": {
+    "modified": "2019-03-23T22:59:51.482Z",
+    "contributors": [
+      "MashKao"
+    ]
+  },
   "Web/CSS/CSS_lists/Consistent_list_indentation": {
     "modified": "2019-03-24T00:14:02.326Z",
     "contributors": [
@@ -3829,7 +3843,7 @@
       "foxbrush"
     ]
   },
-  "Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1": {
+  "Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1": {
     "modified": "2019-03-23T22:55:03.379Z",
     "contributors": [
       "jackblackevo",
@@ -3866,20 +3880,6 @@
     "modified": "2019-03-23T22:25:22.712Z",
     "contributors": [
       "iigmir"
-    ]
-  },
-  "Web/CSS/Replaced_element": {
-    "modified": "2019-03-23T22:59:51.482Z",
-    "contributors": [
-      "MashKao"
-    ]
-  },
-  "Web/CSS/Shorthand_properties": {
-    "modified": "2019-03-23T23:05:17.353Z",
-    "contributors": [
-      "fscholz",
-      "irvinfly",
-      "wildsky"
     ]
   },
   "Web/CSS/Type_selectors": {
@@ -4266,14 +4266,14 @@
       "yyss"
     ]
   },
-  "Web/HTTP/Browser_detection_using_the_user_agent": {
+  "Web/HTTP/Guides/Browser_detection_using_the_user_agent": {
     "modified": "2020-09-21T11:14:16.789Z",
     "contributors": [
       "iigmir",
       "jwhitlock"
     ]
   },
-  "Web/HTTP/CORS": {
+  "Web/HTTP/Guides/CORS": {
     "modified": "2020-10-15T21:21:52.967Z",
     "contributors": [
       "kunyaoxu",
@@ -4290,18 +4290,24 @@
       "DESKTOP-H9V56N1"
     ]
   },
-  "Web/HTTP/Caching": {
+  "Web/HTTP/Guides/Caching": {
     "modified": "2019-09-07T05:43:44.819Z",
     "contributors": [
       "CPMoviePHil",
       "fadeawaygod"
     ]
   },
-  "Web/HTTP/Cookies": {
+  "Web/HTTP/Guides/Cookies": {
     "modified": "2019-03-18T21:43:21.294Z",
     "contributors": [
       "jackblackevo",
       "csiejoey"
+    ]
+  },
+  "Web/HTTP/Guides/Protocol_upgrade_mechanism": {
+    "modified": "2019-11-03T23:58:28.570Z",
+    "contributors": [
+      "nientsu"
     ]
   },
   "Web/HTTP/Headers": {
@@ -4310,44 +4316,44 @@
       "fscholz"
     ]
   },
-  "Web/HTTP/Headers/Accept": {
+  "Web/HTTP/Reference/Headers/Accept": {
     "modified": "2020-10-15T22:27:22.748Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Headers/DNT": {
+  "Web/HTTP/Reference/Headers/DNT": {
     "modified": "2020-10-15T22:01:54.641Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Headers/Server": {
+  "Web/HTTP/Reference/Headers/Server": {
     "modified": "2020-10-15T22:01:55.490Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Headers/Strict-Transport-Security": {
+  "Web/HTTP/Reference/Headers/Strict-Transport-Security": {
     "modified": "2020-10-15T22:23:24.512Z",
     "contributors": [
       "jasperlin1996",
       "r1235613"
     ]
   },
-  "Web/HTTP/Headers/User-Agent": {
+  "Web/HTTP/Reference/Headers/User-Agent": {
     "modified": "2020-10-15T21:52:25.725Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Headers/X-Forwarded-For": {
+  "Web/HTTP/Reference/Headers/X-Forwarded-For": {
     "modified": "2020-10-15T22:18:49.633Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Headers/X-Frame-Options": {
+  "Web/HTTP/Reference/Headers/X-Frame-Options": {
     "modified": "2019-06-17T05:41:08.405Z",
     "contributors": [
       "jackblackevo",
@@ -4356,31 +4362,25 @@
       "foxbrush"
     ]
   },
-  "Web/HTTP/Methods": {
+  "Web/HTTP/Reference/Methods": {
     "modified": "2020-10-15T22:04:23.999Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Methods/CONNECT": {
+  "Web/HTTP/Reference/Methods/CONNECT": {
     "modified": "2020-10-15T22:08:59.762Z",
     "contributors": [
       "flyinglimao"
     ]
   },
-  "Web/HTTP/Methods/GET": {
+  "Web/HTTP/Reference/Methods/GET": {
     "modified": "2020-10-15T22:16:59.594Z",
     "contributors": [
       "sheiun"
     ]
   },
-  "Web/HTTP/Protocol_upgrade_mechanism": {
-    "modified": "2019-11-03T23:58:28.570Z",
-    "contributors": [
-      "nientsu"
-    ]
-  },
-  "Web/HTTP/Status": {
+  "Web/HTTP/Reference/Status": {
     "modified": "2020-10-15T21:38:22.963Z",
     "contributors": [
       "gogo.sanak",
@@ -4399,118 +4399,118 @@
       "alk03073135"
     ]
   },
-  "Web/HTTP/Status/100": {
+  "Web/HTTP/Reference/Status/100": {
     "modified": "2020-10-15T22:17:55.422Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/101": {
+  "Web/HTTP/Reference/Status/101": {
     "modified": "2019-04-28T12:49:13.643Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/200": {
+  "Web/HTTP/Reference/Status/200": {
     "modified": "2020-10-15T22:02:32.760Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Status/201": {
+  "Web/HTTP/Reference/Status/201": {
     "modified": "2020-10-15T22:18:06.540Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/202": {
+  "Web/HTTP/Reference/Status/202": {
     "modified": "2019-05-04T10:35:23.469Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/203": {
+  "Web/HTTP/Reference/Status/203": {
     "modified": "2019-05-18T10:26:00.843Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/204": {
+  "Web/HTTP/Reference/Status/204": {
     "modified": "2020-10-15T22:18:45.174Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/205": {
+  "Web/HTTP/Reference/Status/205": {
     "modified": "2019-05-18T10:36:04.142Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/206": {
+  "Web/HTTP/Reference/Status/206": {
     "modified": "2020-10-15T22:19:35.757Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/300": {
+  "Web/HTTP/Reference/Status/300": {
     "modified": "2019-06-01T11:53:52.718Z",
     "contributors": [
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/301": {
+  "Web/HTTP/Reference/Status/301": {
     "modified": "2020-10-15T22:19:36.009Z",
     "contributors": [
       "iigmir",
       "Fu_revwigs"
     ]
   },
-  "Web/HTTP/Status/403": {
+  "Web/HTTP/Reference/Status/403": {
     "modified": "2020-10-15T22:18:46.702Z",
     "contributors": [
       "gamerslouis"
     ]
   },
-  "Web/HTTP/Status/404": {
+  "Web/HTTP/Reference/Status/404": {
     "modified": "2020-10-15T22:00:39.486Z",
     "contributors": [
       "bobo.debila",
       "iigmir"
     ]
   },
-  "Web/HTTP/Status/409": {
+  "Web/HTTP/Reference/Status/409": {
     "modified": "2019-06-23T09:33:36.008Z",
     "contributors": [
       "gamerslouis"
     ]
   },
-  "Web/HTTP/Status/411": {
+  "Web/HTTP/Reference/Status/411": {
     "modified": "2019-06-23T09:22:09.625Z",
     "contributors": [
       "gamerslouis"
     ]
   },
-  "Web/HTTP/Status/415": {
+  "Web/HTTP/Reference/Status/415": {
     "modified": "2019-06-23T09:29:51.676Z",
     "contributors": [
       "gamerslouis"
     ]
   },
-  "Web/HTTP/Status/418": {
+  "Web/HTTP/Reference/Status/418": {
     "modified": "2020-10-15T22:00:43.617Z",
     "contributors": [
       "iigmir",
       "dzamlo"
     ]
   },
-  "Web/HTTP/Status/451": {
+  "Web/HTTP/Reference/Status/451": {
     "modified": "2020-10-15T22:02:32.084Z",
     "contributors": [
       "iigmir"
     ]
   },
-  "Web/HTTP/Status/500": {
+  "Web/HTTP/Reference/Status/500": {
     "modified": "2020-10-15T22:00:42.137Z",
     "contributors": [
       "YagoZang",
@@ -4520,7 +4520,7 @@
       "slivenred"
     ]
   },
-  "Web/HTTP/Status/502": {
+  "Web/HTTP/Reference/Status/502": {
     "modified": "2020-10-15T22:22:34.836Z",
     "contributors": [
       "bobo.debila",
@@ -4528,7 +4528,7 @@
       "slivenred"
     ]
   },
-  "Web/HTTP/Status/503": {
+  "Web/HTTP/Reference/Status/503": {
     "modified": "2020-10-15T22:21:37.501Z",
     "contributors": [
       "iigmir",
@@ -4536,7 +4536,7 @@
       "katsmin"
     ]
   },
-  "Web/HTTP/Status/504": {
+  "Web/HTTP/Reference/Status/504": {
     "modified": "2020-11-05T06:35:40.877Z",
     "contributors": [
       "terrylinooo",
@@ -4574,46 +4574,6 @@
       "kourge"
     ]
   },
-  "Web/JavaScript/Closures": {
-    "modified": "2020-08-07T04:58:02.421Z",
-    "contributors": [
-      "vincent7293",
-      "shuboc",
-      "iigmir",
-      "roycrxtw",
-      "BigHeadDoggy",
-      "flyinglimao"
-    ]
-  },
-  "Web/JavaScript/Data_structures": {
-    "modified": "2020-08-01T13:14:09.974Z",
-    "contributors": [
-      "nannxnann",
-      "samzzz",
-      "iigmir",
-      "jackblackevo",
-      "eldisa"
-    ]
-  },
-  "Web/JavaScript/Equality_comparisons_and_sameness": {
-    "modified": "2020-03-12T19:44:59.221Z",
-    "contributors": [
-      "jsgao0",
-      "flyinglimao"
-    ]
-  },
-  "Web/JavaScript/Event_loop": {
-    "modified": "2020-03-12T19:44:52.158Z",
-    "contributors": [
-      "xuan0123",
-      "jackblackevo",
-      "roycrxtw",
-      "YuCheng",
-      "Snailpool",
-      "flyinglimao",
-      "enzoyaaaaa"
-    ]
-  },
   "Web/JavaScript/Guide": {
     "modified": "2020-10-12T05:01:38.453Z",
     "contributors": [
@@ -4626,6 +4586,17 @@
       "sycheng"
     ]
   },
+  "Web/JavaScript/Guide/Closures": {
+    "modified": "2020-08-07T04:58:02.421Z",
+    "contributors": [
+      "vincent7293",
+      "shuboc",
+      "iigmir",
+      "roycrxtw",
+      "BigHeadDoggy",
+      "flyinglimao"
+    ]
+  },
   "Web/JavaScript/Guide/Control_flow_and_error_handling": {
     "modified": "2020-03-12T19:44:28.801Z",
     "contributors": [
@@ -4636,6 +4607,23 @@
       "Yuki0916",
       "jwhitlock",
       "Kaiyeh"
+    ]
+  },
+  "Web/JavaScript/Guide/Data_structures": {
+    "modified": "2020-08-01T13:14:09.974Z",
+    "contributors": [
+      "nannxnann",
+      "samzzz",
+      "iigmir",
+      "jackblackevo",
+      "eldisa"
+    ]
+  },
+  "Web/JavaScript/Guide/Equality_comparisons_and_sameness": {
+    "modified": "2020-03-12T19:44:59.221Z",
+    "contributors": [
+      "jsgao0",
+      "flyinglimao"
     ]
   },
   "Web/JavaScript/Guide/Expressions_and_operators": {
@@ -4682,6 +4670,19 @@
       "titan.liu"
     ]
   },
+  "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-11-20T06:14:21.309Z",
+    "contributors": [
+      "tpps88206",
+      "pmc12thsuki",
+      "osk2",
+      "jackblackevo",
+      "iigmir",
+      "WellyHong",
+      "hiiamyes",
+      "Snailpool"
+    ]
+  },
   "Web/JavaScript/Guide/Introduction": {
     "modified": "2020-03-12T19:35:21.304Z",
     "contributors": [
@@ -4696,12 +4697,41 @@
       "sycheng"
     ]
   },
+  "Web/JavaScript/Guide/Language_overview": {
+    "modified": "2020-03-12T19:36:04.881Z",
+    "contributors": [
+      "kourge",
+      "locker_rj45",
+      "Q3Q",
+      "weihanglo",
+      "teoli",
+      "jackblackevo",
+      "TpWILovePanda",
+      "changyuheng",
+      "ArvinH",
+      "sailplaneTW",
+      "linhomeyeu",
+      "fillano",
+      "fscholz",
+      "Mgjbot",
+      "Smallwow",
+      "BobChao"
+    ]
+  },
   "Web/JavaScript/Guide/Loops_and_iteration": {
     "modified": "2020-03-12T19:44:25.077Z",
     "contributors": [
       "MartinChang0723",
       "jackblackevo",
       "AmamiyaLee"
+    ]
+  },
+  "Web/JavaScript/Guide/Memory_management": {
+    "modified": "2020-12-04T15:05:56.547Z",
+    "contributors": [
+      "chengr4",
+      "ballfish",
+      "mybaseball52"
     ]
   },
   "Web/JavaScript/Guide/Numbers_and_strings": {
@@ -4747,57 +4777,6 @@
     "contributors": [
       "HamiltonWang",
       "flyinglimao"
-    ]
-  },
-  "Web/JavaScript/Inheritance_and_the_prototype_chain": {
-    "modified": "2020-11-20T06:14:21.309Z",
-    "contributors": [
-      "tpps88206",
-      "pmc12thsuki",
-      "osk2",
-      "jackblackevo",
-      "iigmir",
-      "WellyHong",
-      "hiiamyes",
-      "Snailpool"
-    ]
-  },
-  "Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-03-12T19:35:23.439Z",
-    "contributors": [
-      "jackblackevo",
-      "fscholz",
-      "irvinfly",
-      "chiayuan"
-    ]
-  },
-  "Web/JavaScript/Language_overview": {
-    "modified": "2020-03-12T19:36:04.881Z",
-    "contributors": [
-      "kourge",
-      "locker_rj45",
-      "Q3Q",
-      "weihanglo",
-      "teoli",
-      "jackblackevo",
-      "TpWILovePanda",
-      "changyuheng",
-      "ArvinH",
-      "sailplaneTW",
-      "linhomeyeu",
-      "fillano",
-      "fscholz",
-      "Mgjbot",
-      "Smallwow",
-      "BobChao"
-    ]
-  },
-  "Web/JavaScript/Memory_management": {
-    "modified": "2020-12-04T15:05:56.547Z",
-    "contributors": [
-      "chengr4",
-      "ballfish",
-      "mybaseball52"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -4906,6 +4885,18 @@
       "andytwmvp",
       "iigmir",
       "kimi1111"
+    ]
+  },
+  "Web/JavaScript/Reference/Execution_model": {
+    "modified": "2020-03-12T19:44:52.158Z",
+    "contributors": [
+      "xuan0123",
+      "jackblackevo",
+      "roycrxtw",
+      "YuCheng",
+      "Snailpool",
+      "flyinglimao",
+      "enzoyaaaaa"
     ]
   },
   "Web/JavaScript/Reference/Functions/Arrow_functions": {
@@ -5628,6 +5619,15 @@
       "nyngwang"
     ]
   },
+  "Web/JavaScript/Reference/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:35:23.439Z",
+    "contributors": [
+      "jackblackevo",
+      "fscholz",
+      "irvinfly",
+      "chiayuan"
+    ]
+  },
   "Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2020-10-15T22:00:27.351Z",
     "contributors": [
@@ -5651,7 +5651,7 @@
       "liaocCM"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Destructuring_assignment": {
+  "Web/JavaScript/Reference/Operators/Destructuring": {
     "modified": "2020-10-15T21:51:08.444Z",
     "contributors": [
       "DexterLeung",
@@ -5899,15 +5899,6 @@
       "xsfishxs"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-11-18T03:32:37.890Z",
-    "contributors": [
-      "SphinxKnight",
-      "wifr1126q",
-      "t7yang",
-      "BwayCer"
-    ]
-  },
   "Web/MathML": {
     "modified": "2019-03-23T23:22:17.865Z",
     "contributors": [
@@ -5934,6 +5925,15 @@
       "iigmir"
     ]
   },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-11-18T03:32:37.890Z",
+    "contributors": [
+      "SphinxKnight",
+      "wifr1126q",
+      "t7yang",
+      "BwayCer"
+    ]
+  },
   "Web/SVG": {
     "modified": "2019-01-16T17:22:30.480Z",
     "contributors": [
@@ -5941,14 +5941,14 @@
       "happysadman"
     ]
   },
-  "Web/SVG/Attribute/stroke-dashoffset": {
+  "Web/SVG/Reference/Attribute/stroke-dashoffset": {
     "modified": "2019-03-20T22:42:12.300Z",
     "contributors": [
       "EnRico.Lam",
       "bing-Guo"
     ]
   },
-  "Web/SVG/Tutorial": {
+  "Web/SVG/Tutorials/SVG_from_scratch": {
     "modified": "2019-03-23T23:35:01.636Z",
     "contributors": [
       "Snailpool",
@@ -5958,7 +5958,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Shapes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes": {
     "modified": "2019-04-23T03:35:52.184Z",
     "contributors": [
       "jackblackevo",
@@ -5966,7 +5966,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Fills_and_Strokes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes": {
     "modified": "2019-03-23T23:34:13.639Z",
     "contributors": [
       "jackblackevo",
@@ -5974,7 +5974,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Getting_Started": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Getting_started": {
     "modified": "2019-03-23T23:34:51.093Z",
     "contributors": [
       "jackblackevo",
@@ -5983,7 +5983,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Gradients": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Gradients": {
     "modified": "2019-03-23T23:34:17.990Z",
     "contributors": [
       "jackblackevo",
@@ -5992,14 +5992,14 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Introduction": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Introduction": {
     "modified": "2019-03-23T23:34:52.348Z",
     "contributors": [
       "ethertank",
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Paths": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Paths": {
     "modified": "2019-05-06T13:50:22.523Z",
     "contributors": [
       "Snailpool",
@@ -6008,7 +6008,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Patterns": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Patterns": {
     "modified": "2019-03-23T23:34:09.915Z",
     "contributors": [
       "jackblackevo",
@@ -6016,7 +6016,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Positions": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Positions": {
     "modified": "2019-03-23T23:34:48.671Z",
     "contributors": [
       "Kustz",

@@ -1,7 +1,6 @@
 ---
 title: "Django Tutorial Part 6: Generic list and detail views"
 slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
-original_slug: Learn/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}

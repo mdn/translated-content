@@ -9,10 +9,39 @@ l10n:
 
 CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认是行级的。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-before.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
+
+```css interactive-example
+a {
+  color: #0000ff;
+  text-decoration: none;
+}
+
+a::before {
+  content: "🔗";
+}
+
+.local-link::before {
+  content: url("/shared-assets/images/examples/firefox-logo.svg");
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+```
+
+```html interactive-example
+<p>
+  Learning resources for web developers can be found all over the internet. Try
+  out
+  <a href="https://web.dev/">web.dev</a>,
+  <a href="https://www.w3schools.com/">w3schools.com</a> or our
+  <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.
+</p>
+```
 
 > [!NOTE]
-> 由 `::before` 和 `::after` 伪元素生成的盒子，就好像它们是应用它们的元素或“原始元素（originating element）”的直接子元素一样，因此不能应用在[_替换元素上_](/zh-CN/docs/Web/CSS/Replaced_element)，比如 {{htmlelement("img")}} 元素，其内容不在 CSS 格式化模型的范围内。
+> 由 `::before` 和 `::after` 伪元素生成的盒子，就好像它们是应用它们的元素或“原始元素（originating element）”的直接子元素一样，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/CSS_images/Replaced_element_properties)，比如 {{htmlelement("img")}} 元素，其内容不在 CSS 格式化模型的范围内。
 
 ## 语法
 

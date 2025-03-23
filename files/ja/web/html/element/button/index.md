@@ -7,11 +7,48 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<button>`** は [HTML](/ja/docs/Web/HTML) の要素で、マウス、キーボード、指、音声コマンド、その他の支援技術で起動することができる操作可能要素です。起動すると、[フォーム](/ja/docs/Learn/Forms)を送信したりダイアログを開いたりといった操作を実行します。
+**`<button>`** は [HTML](/ja/docs/Web/HTML) の要素で、マウス、キーボード、指、音声コマンド、その他の支援技術で起動することができる操作可能要素です。起動すると、[フォーム](/ja/docs/Learn_web_development/Extensions/Forms)を送信したりダイアログを開いたりといった操作を実行します。
 
 既定では、HTML のボタンは{{Glossary("user agent", "ユーザーエージェント")}}が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。
 
-{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<button class="favorite styled" type="button">Add to favorites</button>
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+```
 
 ## 属性
 
@@ -43,7 +80,7 @@ l10n:
 
 - `formmethod`
 
-  - : このボタンが送信ボタンである場合（`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、この属性はこのフォームを送信するのに使用される [HTTP メソッド](/ja/docs/Web/HTTP/Methods)を指定します。指定可能な値は以下の通りです。
+  - : このボタンが送信ボタンである場合（`<form>` の中にあるか関連付けられており、 `type="button"` が設定されていない場合）、この属性はこのフォームを送信するのに使用される [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)を指定します。指定可能な値は以下の通りです。
 
     - `post`: フォームのデータは、サーバーへ送信する際に HTTP リクエストの本文に含められます。フォームにパスワードなどの公開するべきではない情報が含まれている場合は、このメソッドを使用してください。
     - `get`: フォームのデータは、フォームの `action` の URL に、セパレーターとして '?' を使用して追加され、その結果となる URL をサーバーへ送信します。検索フォームのように、まったく[副作用がない](/ja/docs/Glossary/Idempotent)場合にのみ、このメソッドを使用してください。
@@ -53,7 +90,7 @@ l10n:
 
 - `formnovalidate`
 
-  - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/Learn/Forms/Form_validation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性より優先して使用されます。
+  - : 論理属性で、ボタンが送信ボタンである場合に、フォームデータ送信時に内容を[検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)しないように指定するものです。この属性が指定された場合、ボタンの属するフォームオーナーの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性より優先して使用されます。
 
     この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) 要素でも使用できます。
 
@@ -104,7 +141,7 @@ l10n:
 
 ボタンがサーバーにデータを送信するためのものでない場合は、 `type` 属性を `button` に設定することを忘れないでください。さもないと、フォームデータを送信して（存在しない）レスポンスを読み込み、文書の現在の状態を破棄してしまうおそれがあります。
 
-`<button type="button">` には既定の動作がありませんが、イベントハンドラーを記述して動作を起動することができます。起動されたボタンは [JavaScript](/ja/docs/Learn/JavaScript) を用いてプログラム可能なアクションを実行することができます。例えばアイテムをリストから削除するなどです。
+`<button type="button">` には既定の動作がありませんが、イベントハンドラーを記述して動作を起動することができます。起動されたボタンは [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) を用いてプログラム可能なアクションを実行することができます。例えばアイテムをリストから削除するなどです。
 
 ## 例
 
@@ -118,7 +155,7 @@ l10n:
 
 ### アイコンボタン
 
-アイコンのみを使って機能を表現するボタンは、*アクセシブル名*を持ちません。アクセシブル名はスクリーンリーダーのような支援技術で文書を解析し、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)を生成するときに、アクセスするためのプログラム的なフックを提供します。そのため、支援技術や移動やページコンテンツの操作にアクセシビリティツリーを使用します。
+アイコンのみを使って機能を表現するボタンは、*アクセシブル名*を持ちません。アクセシブル名はスクリーンリーダーのような支援技術で文書を解析し、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)を生成するときに、アクセスするためのプログラム的なフックを提供します。そのため、支援技術や移動やページコンテンツの操作にアクセシビリティツリーを使用します。
 
 アイコンボタンにアクセシブル名を与えるには、 `<button>` 要素でボタンの機能を簡潔に説明するテキスト文字列を提供してください。
 
@@ -142,7 +179,7 @@ l10n:
 しかし、ボタンのテキストを視覚的に見えるようにしておけば、アイコンの意味に慣れていない人がボタンの目的を理解できるようになります。これは特に、技術的に慣れていない人や、アイコンボタンが使用するアイコンの文化的解釈が異なる人に適しています。
 
 - [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
-- [MDN「WCAG を理解する ― ガイドライン 4.1 の解説」](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
+- [MDN「WCAG を理解する ― ガイドライン 4.1 の解説」](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
 - [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
 ### 大きさと近接性
@@ -165,7 +202,7 @@ l10n:
 
 ### ARIA 状態情報
 
-ボタンの状態を記述するために使用する正しい ARIA 属性は [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) であり、[`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked) や [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) ではありません。詳しくは、 [ARIA button ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)についての情報をご覧ください。
+ボタンの状態を記述するために使用する正しい ARIA 属性は [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) であり、[`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) や [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) ではありません。詳しくは、 [ARIA button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)についての情報をご覧ください。
 
 ### Firefox
 
@@ -176,7 +213,7 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
 色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxref("font-weight", "bold")}} の 18.66px 以上、または 24px 以上と定義されています。)
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### クリックとフォーカス

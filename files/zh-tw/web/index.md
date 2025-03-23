@@ -56,11 +56,11 @@ l10n:
   - : WebDriver 是一種透過模擬真人使用瀏覽器的操作來遠端控制瀏覽器的自動化機制。被廣泛用於 Web 應用程式的跨瀏覽器測試。
 - [Web 擴充功能](/zh-TW/docs/Mozilla/Add-ons/WebExtensions)
   - : Web 擴充功能是一種讓你在瀏覽器中為使用者提供增強功能的方式，例如阻擋廣告和其他內容、自訂頁面外觀等。
-- [Web 應用程式資訊清單](/zh-TW/docs/Web/Manifest)
+- [Web 應用程式資訊清單](/zh-TW/docs/Web/Progressive_web_apps/Manifest)
   - : Web 應用程式資訊清單（Web App Manifest）讓使用者能夠將 Web 應用程式安裝到他們的裝置主畫面上，並預先設定畫面方向（直向或橫向）和顯示模式（如全螢幕）等。
 - [漸進式 Web 應用程式](/zh-TW/docs/Web/Progressive_web_apps)
   - : 漸進式 Web 應用程式（Progressive Web App）提供使用者近似原生行動應用程式的體驗。
-- [OpenSearch](/zh-TW/docs/Web/OpenSearch)
+- [OpenSearch](/zh-TW/docs/Web/XML/Guides/OpenSearch)
   - : OpenSearch 允許網站為自身描述一個搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。
 - [XML](/zh-TW/docs/Web/XML)
   - : 可擴展標記語言是一種嚴格的[文件物件模型](/zh-TW/docs/Web/API/Document_Object_Model)序列化格式。

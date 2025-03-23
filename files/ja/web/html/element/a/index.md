@@ -11,7 +11,23 @@ l10n:
 
 `<a>` の内容は、リンク先を示すもの**であるべきです**。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
-{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 属性
 
@@ -48,7 +64,7 @@ l10n:
 
       - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
-      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
+      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
 
     - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
@@ -67,13 +83,13 @@ l10n:
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
     - SMS テキストメッセージを示す `sms:` URL
-    - [`javascript:` URL](/ja/docs/Web/URI/Schemes/javascript) による実行可能なコード
+    - [`javascript:` URL](/ja/docs/Web/URI/Reference/Schemes/javascript) による実行可能なコード
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
     他にも、次のようにして URL 機能でリソースの特定の部分を記載することができます。
 
     - ページの節を示すフラグメント URL
-    - [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)で指定されたテキストの部分
+    - [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)で指定されたテキストの部分
     - メディアファイルの一部を示すメディアフラグメント
 
 - `hreflang`
@@ -82,11 +98,11 @@ l10n:
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
 
-  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Headers/Referer)を送信するかです。
+  - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)を送信するかです。
 
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。
-    - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
+    - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
     - `origin-when-cross-origin`: 他のオリジンに送信されるリファラーは、スキーム、ホスト名、ポート番号に限定されます。同じオリジン内での移動の場合はパスが含まれます。
     - `same-origin`: リファラーは{{Glossary("Same-origin policy", "同じオリジン")}}には送られますが、オリジン間リクエストではリファラー情報が含まれません。
     - `strict-origin`: プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) は、文書のオリジンのみが送信されますが、安全性が下がる移動先 (HTTPS→HTTP) には送信しません。
@@ -126,7 +142,7 @@ l10n:
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
     > [!NOTE]
-    > 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してください。
+    > 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を使用してください。
 
 - `rev` {{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
@@ -220,7 +236,7 @@ l10n:
 {{EmbedLiveSample('Link to a non-HTML resource')}}
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -260,7 +276,7 @@ l10n:
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN / WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 大きさと近接性
@@ -346,7 +362,7 @@ a {
 
 {{EmbedLiveSample('Linking to an email address')}}
 
-件名や本文を含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#メールのリンク)または {{RFC(6068)}} をご覧ください。
+件名や本文を含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#メールのリンク)または {{RFC(6068)}} をご覧ください。
 
 ### 電話番号へのリンク
 
@@ -548,4 +564,4 @@ document
 - {{CSSxRef(":link")}} は CSS の擬似クラスで、 `<a>` 要素に有効な `href` 属性がついている場合に一致します。
 - {{CSSxRef(":visited")}} は CSS の擬似クラスで、`<a>` 要素の `href` 属性が、過去にユーザーが訪問したことのある URL である場合に一致します。
 - {{CSSxRef(":any-link")}} は CSS の擬似クラスで、`<a>` 要素に `href` 属性がある場合に一致します。
-- [テキストフラグメント](/ja/docs/Web/URI/Fragment/Text_fragments)は、URL に追加するユーザーエージェント指示で、コンテンツ作成者が ID を使用せずに、ページ上の固有のテキストにリンクすることを可能にするものです。
+- [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)は、URL に追加するユーザーエージェント指示で、コンテンツ作成者が ID を使用せずに、ページ上の固有のテキストにリンクすることを可能にするものです。

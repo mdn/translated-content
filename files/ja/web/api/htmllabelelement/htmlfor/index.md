@@ -31,4 +31,4 @@ l10n:
 - {{domxref("HTMLLabelElement.control")}}
 - {{domxref("HTMLElement")}}
 - {{HTMLElement("label")}}
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)

@@ -9,7 +9,30 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<ul>`** 元素表示无序的项目列表，通常渲染为项目符号列表。
 
-{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ul>
+  <li>Milk</li>
+  <li>
+    Cheese
+    <ul>
+      <li>Blue cheese</li>
+      <li>Feta</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css interactive-example
+li {
+  list-style-type: circle;
+}
+
+li li {
+  list-style-type: square;
+}
+```
 
 ## 属性
 
@@ -161,7 +184,7 @@ l10n:
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role"><code>tablist</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>

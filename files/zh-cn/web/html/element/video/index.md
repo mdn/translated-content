@@ -9,7 +9,21 @@ l10n:
 
 **`<video>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于在文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 `<video>` 标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。
 
-{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 上面的例子展示了 `<video>` 元素的简单用法。和 {{htmlelement("img")}} 元素的使用类似，在 `src` 属性里加入一个我们需要展示的视频地址，同时也可以用其他属性来指定视频的宽度和高度、是否自动或者循环播放、是否展示浏览器默认的视频控件等。
 
@@ -453,7 +467,7 @@ AddType video/webm .webm
 
 - [Web 视频文本轨格式（WebVTT）](/zh-CN/docs/Web/API/WebVTT_API)
 - [WebAIM：字幕、脚本和音频描述](https://webaim.org/techniques/captions/)
-- [MDN 理解 WCAG，指南 1.2 说明](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [MDN 理解 WCAG，指南 1.2 说明](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [了解成功标准 1.2.1 | W3C 对 WCAG 2.0 的理解](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [了解成功标准 1.2.2 | W3C 对 WCAG 2.0 的理解](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -502,7 +516,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>

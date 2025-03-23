@@ -1,7 +1,6 @@
 ---
 title: 存儲你需要的資訊 - 變數
 slug: Learn_web_development/Core/Scripting/Variables
-original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

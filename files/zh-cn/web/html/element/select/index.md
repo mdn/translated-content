@@ -7,7 +7,34 @@ slug: Web/HTML/Element/select
 
 **HTML `<select>` 元素**表示一个提供选项菜单的控件：
 
-{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 上述例子展示了 `<select>` 的典型用法。元素中设置了 `id` 属性以将其与 {{htmlelement("label")}} 元素关联在一起，提高可及性（accessibility）。`name` 属性表示提交到服务器的相关数据点的名字。每个菜单选项由 `<select>` 中的一个 {{htmlelement("option")}} 元素定义。
 
@@ -196,11 +223,11 @@ slug: Web/HTML/Element/select
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a></td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a> with <strong>no</strong> <code>multiple</code> attribute and <strong>no</strong> <code>size</code> attribute greater than 1, otherwise no <code>role</code> permitted</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>

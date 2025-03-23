@@ -1,7 +1,6 @@
 ---
 title: JavaScript 对象入门
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
-original_slug: Learn/JavaScript/Objects
 ---
 
 {{LearnSidebar}}
@@ -10,7 +9,7 @@ original_slug: Learn/JavaScript/Objects
 
 ## 预备知识
 
-开始这个模块之前，你应当已经对 HTML 和 CSS 有所了解。我们建议你通读 [HTML 入门](/zh-CN/docs/learn/HTML/Introduction_to_HTML)和 [CSS 入门](/zh-CN/docs/Learn_web_development/Core/Styling_basics)模块，再开始了解 JavaScript。
+开始这个模块之前，你应当已经对 HTML 和 CSS 有所了解。我们建议你通读 [HTML 入门](/zh-CN/docs/Learn_web_development/Core/Structuring_content)和 [CSS 入门](/zh-CN/docs/Learn_web_development/Core/Styling_basics)模块，再开始了解 JavaScript。
 
 详细了解 JavaScript 对象之前，你应当已经对 JavaScript 基础有所熟悉。尝试这个模块之前，请通读 [JavaScript 第一步](/zh-CN/docs/Learn_web_development/Core/Scripting) 和 [JavaScript 基础要件](/zh-CN/docs/Learn_web_development/Core/Scripting)
 

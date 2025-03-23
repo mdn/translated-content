@@ -62,7 +62,7 @@ client.onreadystatechange = () => {
 ## 関連情報
 
 - [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}
 - リクエストヘッダーの設定: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

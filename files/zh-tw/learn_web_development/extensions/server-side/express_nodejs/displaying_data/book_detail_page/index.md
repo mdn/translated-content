@@ -1,7 +1,6 @@
 ---
 title: 書本詳情頁面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
 
 *書本細節頁面*需要呈現一本指定書本(`Book`)的信息, 使用它的 `_id` 字段值(自動產生)做為識別，接著是圖書館中書本實例(`BookInstance`)的信息。無論我們在哪裡呈現一個作者、種類、或書本實例，都應該連結到它的細節頁面。

@@ -14,7 +14,42 @@ input:optional {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: :optional", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+.req {
+  color: red;
+}
+
+*:optional {
+  background-color: palegreen;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name: <span class="req">*</span></label>
+  <input id="name" name="name" type="text" required />
+
+  <label for="birth">Date of Birth:</label>
+  <input id="birth" name="birth" type="date" />
+
+  <label for="origin"
+    >How did you find out about us? <span class="req">*</span></label
+  >
+  <select id="origin" name="origin" required>
+    <option>Google</option>
+    <option>Facebook</option>
+    <option>Advertisement</option>
+  </select>
+  <p><span class="req">*</span> - Required field</p>
+</form>
+```
 
 この擬似クラスは。フォームを送信するにあたって必須ではない入力欄にスタイルを適用するのに便利です。
 
@@ -76,7 +111,7 @@ input:optional {
 
 必須の入力欄を視覚的に示すのに、色だけに依存しないようにしてください。通常、説明する文字列やアイコンが使用されます。
 
-- [MDN WCAG を理解する ― ガイドライン 3.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [MDN WCAG を理解する ― ガイドライン 3.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## 仕様書
@@ -90,4 +125,4 @@ input:optional {
 ## 関連情報
 
 - 他の検証関連の擬似クラス: {{ cssxref(":required") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)

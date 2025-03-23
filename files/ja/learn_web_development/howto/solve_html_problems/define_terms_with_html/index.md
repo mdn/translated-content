@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
 
 HTML は、インラインであろうと構造化された用語集であろうと、記述の意味を伝達するいくつかの方法を提供します。 この記事では、キーワードを定義する際に適切にマークアップする方法について説明します。
 
@@ -52,11 +52,11 @@ HTML は、インラインであろうと構造化された用語集であろう
 ```
 
 > [!NOTE]
-> 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)があります。
+> 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)があります。
 
 ### 特別な場合: 略語
 
-{{htmlelement("abbr")}} で[略語を特別にマーク](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#略語)することが最適です。 これにより、スクリーンリーダーが適切に読むことができ、すべての略語を統一的に操作できるようになります。 新しいキーワードの場合と同様に、初めて出現したときに略語を定義する必要があります。
+{{htmlelement("abbr")}} で[略語を特別にマーク](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#略語)することが最適です。 これにより、スクリーンリーダーが適切に読むことができ、すべての略語を統一的に操作できるようになります。 新しいキーワードの場合と同様に、初めて出現したときに略語を定義する必要があります。
 
 ```html-nolint
 <p>
@@ -69,7 +69,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 ### アクセシビリティの向上
 
-{{HTMLElement('dfn')}} は定義されたキーワードをマークし、現在の段落がキーワードを定義していることを示します。 言い換えれば、`<dfn>` 要素とそのコンテナーの間に暗黙の関係があります。 より正式な関係を望む場合、または定義が段落全体ではなく 1 つの文で構成されている場合は、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性を使用して、より正式に定義に関連付けることができます。
+{{HTMLElement('dfn')}} は定義されたキーワードをマークし、現在の段落がキーワードを定義していることを示します。 言い換えれば、`<dfn>` 要素とそのコンテナーの間に暗黙の関係があります。 より正式な関係を望む場合、または定義が段落全体ではなく 1 つの文で構成されている場合は、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性を使用して、より正式に定義に関連付けることができます。
 
 ```html-nolint
 <p>
@@ -81,7 +81,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 </p>
 ```
 
-支援技術は、この属性を使用して、指定された用語の代替テキストを見つけることができます。 `<dfn>` 要素だけでなく、キーワードを囲む任意のタグで `aria-describedby` を使用して定義できます。 `aria-describedby` は、説明を含む要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を参照します。
+支援技術は、この属性を使用して、指定された用語の代替テキストを見つけることができます。 `<dfn>` 要素だけでなく、キーワードを囲む任意のタグで `aria-describedby` を使用して定義できます。 `aria-describedby` は、説明を含む要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を参照します。
 
 ## 説明リストを作成する方法
 
@@ -140,4 +140,4 @@ dt {
 - {{htmlelement("dl")}}
 - {{htmlelement("dt")}}
 - {{htmlelement("dd")}}
-- [aria-describedby 属性の使用方法](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [aria-describedby 属性の使用方法](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)

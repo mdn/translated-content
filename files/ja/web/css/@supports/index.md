@@ -5,7 +5,7 @@ slug: Web/CSS/@supports
 
 {{CSSRef}}
 
-**`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、宣言をブラウザーが 1 つまたは複数の特定の CSS 機能に対応しているかによって、宣言を指定することができます。これは*機能クエリー*と呼ばれます。規則はコードの最上位または他の[条件付きグループアットルール](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の中に配置することができます。
+**`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、宣言をブラウザーが 1 つまたは複数の特定の CSS 機能に対応しているかによって、宣言を指定することができます。これは*機能クエリー*と呼ばれます。規則はコードの最上位または他の[条件付きグループアットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule#条件付きグループルール)の中に配置することができます。
 
 ```css
 @supports (display: grid) {
@@ -23,7 +23,35 @@ slug: Web/CSS/@supports
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @supports", "tabbed-standard")}}
+
+```css interactive-example
+.flex-container > * {
+  padding: 0.3em;
+  list-style-type: none;
+  text-shadow: 0 0 2px red;
+  float: left;
+}
+
+@supports (display: flex) {
+  .flex-container > * {
+    text-shadow: 0 0 2px blue;
+    float: none;
+  }
+
+  .flex-container {
+    display: flex;
+  }
+}
+```
+
+```html interactive-example
+<ul class="flex-container">
+  <li><a href="#">Index</a></li>
+  <li><a href="#">About me</a></li>
+  <li><a href="#">Contact</a></li>
+</ul>
+```
 
 JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
 

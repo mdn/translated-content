@@ -7,7 +7,39 @@ slug: Web/CSS/gradient
 
 **`<gradient>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) 是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，包含两种或多种颜色的过渡转变。
 
-{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
+{{InteractiveExample("CSS Demo: &amp;lt;gradient&amp;gt;")}}
+
+```css interactive-example-choice
+background: linear-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: radial-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: conic-gradient(#f69d3c, #3f87a6);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 CSS 渐变[没有内在尺寸](/zh-CN/docs/Web/CSS/image#描述)，也就是说，它没有固有或首选的尺寸，也没有首选的比例，其实际大小取决于所应用的元素的大小。
 

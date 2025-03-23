@@ -7,11 +7,45 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转、缩放、倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)的坐标空间实现的。
+[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转、缩放、倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)的坐标空间实现的。
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
 
-如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
 
 > [!WARNING]
 > 只能 `transform` 由盒模型定位的元素，也就是所有布局由 CSS 盒模型管理的元素，除了：[非替换的行内盒子](/zh-CN/docs/Glossary/Inline-level_content)、[表格列](/zh-CN/docs/Web/HTML/Element/col)和[表格列组](/zh-CN/docs/Web/HTML/Element/colgroup)。
@@ -74,7 +108,7 @@ transform: unset;
 
 了解更多信息：
 
-- [MDN 对 WCAG 的理解：对指南 2.3 的解读](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN 对 WCAG 的理解：对指南 2.3 的解读](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [理解成功标准 2.3.3 | W3C 对 WCAG 2.1 的解读](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## 形式定义

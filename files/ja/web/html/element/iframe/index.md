@@ -9,7 +9,24 @@ l10n:
 
 **`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="300"
+  height="200"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik">
+</iframe>
+```
+
+```css interactive-example
+iframe {
+  border: 1px solid black;
+  width: 100%; /* takes precedence over the width set with the HTML width attribute */
+}
+```
 
 それぞれの閲覧コンテキストにはそれぞれの[文書](/ja/docs/Web/API/Document)があり、URL ナビゲーションができます。それぞれの埋め込み閲覧コンテキストのナビゲーションは、最上位の閲覧コンテキストの[セッション履歴](/ja/docs/Web/API/History)で直線化されます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親閲覧コンテキスト_ と呼ばれます。_最上位_ の閲覧コンテキスト（親を持たないもの）は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
 
@@ -22,9 +39,9 @@ l10n:
 
 - `allow`
 
-  - : [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を `<iframe>` に指定します。このポリシーは、 `<iframe>` が利用可能な機能（例：マイク、カメラ、バッテリー、ウェブ共有 API へのアクセスなど）をリクエストのオリジンに基づいて定義します。
+  - : [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を `<iframe>` に指定します。このポリシーは、 `<iframe>` が利用可能な機能（例：マイク、カメラ、バッテリー、ウェブ共有 API へのアクセスなど）をリクエストのオリジンに基づいて定義します。
 
-    その例は、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Headers/Permissions-Policy#iframes) を参照してください。
+    その例は、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) を参照してください。
 
     > **メモ:** `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
 
@@ -52,7 +69,7 @@ l10n:
 
 - `csp` {{experimental_inline}}
 
-  - : 埋め込みリソースを制限する[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)です。詳しくは {{domxref("HTMLIFrameElement.csp")}} をご覧ください。
+  - : 埋め込みリソースを制限する[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)です。詳しくは {{domxref("HTMLIFrameElement.csp")}} をご覧ください。
 
 - `height`
   - : フレームの高さを CSS ピクセル数で示します。既定値は `150` です。
@@ -83,7 +100,7 @@ l10n:
     - `no-referrer-when-downgrade`
       - : {{HTTPHeader("Referer")}} ヘッダーは {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) のない{{Glossary("origin", "オリジン")}}には送信しません。
     - `origin`
-      - : 送信するリファラーを、参照しているページのオリジン（[スキーム](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host", "ホスト名")}}, {{Glossary("port", "ポート番号")}}）に限定します。
+      - : 送信するリファラーを、参照しているページのオリジン（[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host", "ホスト名")}}, {{Glossary("port", "ポート番号")}}）に限定します。
     - `origin-when-cross-origin`
       - : 他のオリジンへ送信されるリファラーは、スキーム、ホスト名、ポート番号のみにします。同一オリジンへの移動では、パスも含めます。
     - `same-origin`
@@ -188,13 +205,13 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 位置指定と表示倍率
 
-[置換要素](/ja/docs/Web/CSS/Replaced_element)なので、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
+[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)なので、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
 
 > **メモ:** {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
 
 ## `error` および `load` イベントの動作
 
-`<iframe>` で発生する `error` イベントと `load` イベントを使用すると、ローカルネットワークの HTTP サーバの URL 空間を推測することができる可能性があります。そのため、セキュリティ対策として、ユーザーエージェントは `<iframe>` に対して [error](/ja/docs/Web/API/HTMLElement/error_event) イベントを発生させず、`<iframe>` のコンテンツの読み込みに失敗しても、常に [load](/ja/docs/Web/API/HTMLElement/load_event) イベントが発生します。
+`<iframe>` で発生する `error` イベントと `load` イベントを使用すると、ローカルネットワークの HTTP サーバーの URL 空間を推測することができる可能性があります。そのため、セキュリティ対策として、ユーザーエージェントは `<iframe>` に対して [error](/ja/docs/Web/API/HTMLElement/error_event) イベントを発生させず、`<iframe>` のコンテンツの読み込みに失敗しても、常に [load](/ja/docs/Web/API/HTMLElement/load_event) イベントが発生します。
 
 ## アクセシビリティ
 
@@ -331,5 +348,5 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 関連情報
 
-- [CSP: frame-ancestors](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP: frame-ancestors](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [プライバシー、アクセス制限、情報セキュリティ](/ja/docs/Web/Privacy)

@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 添加文档内容
 slug: Learn_web_development/Howto/Solve_CSS_problems/Generated_content
-original_slug: Learn/CSS/Howto/Generated_content
 ---
 
 {{LearnSidebar}}

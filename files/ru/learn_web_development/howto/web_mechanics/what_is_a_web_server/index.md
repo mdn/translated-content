@@ -32,7 +32,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 
 ## Активное изучение
 
-_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Community/Getting_started)._
 
 ## Погружаемся глубже
 

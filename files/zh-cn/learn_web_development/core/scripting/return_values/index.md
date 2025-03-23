@@ -1,7 +1,6 @@
 ---
 title: 函数返回值
 slug: Learn_web_development/Core/Scripting/Return_values
-original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
@@ -176,7 +175,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 因此，我们让它 - 功能是有趣的，非常有用的，虽然有很多要谈论他们的语法和功能，相当容易理解的正确的文章学习。
 
-如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/docs/Learn#contact_us)寻求帮助。
+如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/docs/Learn_web_development#联系我们)寻求帮助。
 
 ## 参见
 

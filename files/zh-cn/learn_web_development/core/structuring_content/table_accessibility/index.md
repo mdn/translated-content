@@ -1,7 +1,6 @@
 ---
 title: HTML 表格进阶特性和无障碍
 slug: Learn_web_development/Core/Structuring_content/Table_accessibility
-original_slug: Learn/HTML/Tables/Advanced
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}

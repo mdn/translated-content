@@ -15,7 +15,7 @@ Web 上[隐私](/zh-CN/docs/Web/Privacy)和[安全](/zh-CN/docs/Web/Security)问
 
 嵌入文档还可以使用脚本从 `<iframe>` 中读取各种形式的信息，例如，通过读取 `src` 属性中的嵌入 URL，你可能会获取到重要的跟踪/指纹数据，特别是当 URL 包含 [URL 参数](/zh-CN/docs/Web/URI#query)时。`<iframe>` 还可以访问嵌入上下文的 DOM，反之亦然。
 
-大多数现代浏览器都在研究分区存储机制，以便 cookie 数据不再用于跟踪（有关示例请参见[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)或 [Firefox 状态分区](/zh-CN/docs/Web/Privacy/State_Partitioning)）。
+大多数现代浏览器都在研究分区存储机制，以便 cookie 数据不再用于跟踪（有关示例请参见[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)或 [Firefox 状态分区](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning)）。
 
 `<fencedframe>` 元素旨在解决这个问题的另一方面——它们在形式和功能上与 `<iframe>` 相似，但有以下不同：
 
@@ -88,10 +88,10 @@ Supports-Loading-Mode: fenced-frame
 
 围栏框架对 HTTP 标头字段的其他影响如下：
 
-- [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#用户代理客户端提示)在围栏框架中不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)委托，这可能会被用来泄露数据。
-- 对从封闭框架内部打开的新浏览上下文强制执行严格的 [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 设置，否则它们可能会被用来向其他源泄露信息。从围栏框架内部打开的任何新窗口都将设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 和`Cross-Origin-Opener-Policy: same-origin`，以确保 {{domxref("Window.opener")}} 返回 `null` 并将其置于自己的浏览上下文组中。
-- 添加 [`Content-Security-Policy: fenced-frame-src`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/fenced-frame-src) 来指定加载到 `<fencedframe>` 元素中的嵌套浏览上下文的有效来源。
-- 为了缓解隐私问题，[`Content-Security-Policy: sandbox`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) 自定义设置不能被围栏框架继承。要加载围栏框架，需要指定无 `sandbox` CSP（这意味着以下值），或者指定以下沙箱值：
+- [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#用户代理客户端提示)在围栏框架中不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)委托，这可能会被用来泄露数据。
+- 对从封闭框架内部打开的新浏览上下文强制执行严格的 [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 设置，否则它们可能会被用来向其他源泄露信息。从围栏框架内部打开的任何新窗口都将设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 和`Cross-Origin-Opener-Policy: same-origin`，以确保 {{domxref("Window.opener")}} 返回 `null` 并将其置于自己的浏览上下文组中。
+- 添加 [`Content-Security-Policy: fenced-frame-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src) 来指定加载到 `<fencedframe>` 元素中的嵌套浏览上下文的有效来源。
+- 为了缓解隐私问题，[`Content-Security-Policy: sandbox`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) 自定义设置不能被围栏框架继承。要加载围栏框架，需要指定无 `sandbox` CSP（这意味着以下值），或者指定以下沙箱值：
   - `allow-same-origin`
   - `allow-forms`
   - `allow-scripts`
@@ -121,7 +121,7 @@ Supports-Loading-Mode: fenced-frame
 
 ## 注册和本地测试
 
-某些创建 {{domxref("FencedFrameConfig")}} 的 API 特性，如 {{domxref("Navigator.runAdAuction()")}}（[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)）和 {{domxref("WindowSharedStorage.selectURL()")}}（[共享存储 API](/zh-CN/docs/Web/API/Shared_Storage_API)），以及其他特性如 {{domxref("Fence.reportEvent()")}}，要求你将你的网站注册到[隐私沙盒注册流程](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Enrollment)中。如果你不注册，API 调用将失败，并在控制台中显示警告。
+某些创建 {{domxref("FencedFrameConfig")}} 的 API 特性，如 {{domxref("Navigator.runAdAuction()")}}（[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)）和 {{domxref("WindowSharedStorage.selectURL()")}}（[共享存储 API](/zh-CN/docs/Web/API/Shared_Storage_API)），以及其他特性如 {{domxref("Fence.reportEvent()")}}，要求你将你的网站注册到[隐私沙盒注册流程](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)中。如果你不注册，API 调用将失败，并在控制台中显示警告。
 
 > [!NOTE]
 > 在 Chrome 中，你仍然可以在未注册情况下本地测试你的围栏框架代码。要允许本地测试，请启用以下 Chrome 开发者标志：

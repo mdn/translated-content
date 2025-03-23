@@ -7,7 +7,21 @@ slug: Web/HTML/Element/audio
 
 L'élément HTML **`<audio>`** est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut `src` ou l'élément [`<source>`](/fr/docs/Web/HTML/Element/source) : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un [`MediaStream`](/fr/docs/Web/API/MediaStream).
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 L'exemple qui précède illustre le fonctionnement simple d'un élément `<audio>`, à la façon de ce qui peut être fait pour une image avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) : on inclut un chemin vers la ressource grâce à l'attribut `src` et on peut ajouter d'autres attributs afin de fournir d'autres informations : lecture automatique, lecture en boucle, utilisation des contrôles par défaut du navigateur, etc.
 

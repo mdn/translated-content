@@ -9,12 +9,39 @@ l10n:
 
 **`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
 
-{{EmbedInteractiveExample("pages/css/hyphens.html")}}
+{{InteractiveExample("CSS Demo: hyphens")}}
+
+```css interactive-example-choice
+hyphens: none;
+```
+
+```css interactive-example-choice
+hyphens: manual;
+```
+
+```css interactive-example-choice
+hyphens: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+}
+```
 
 > [!NOTE]
 > 上記のデモでは、 "An extra­ordinarily long English word!" に非表示の `&shy;` （ソフトハイフン）の文字が含まれており、 `An extra&shy;­ordinarily long English word!` のようになっています。この文字は `hyphens: manual;` が指定された場合にハイフンを挿入することができる位置を示しています。
 
-ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Attribute/xml:lang) 属性を使用する必要があります。
+ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Reference/Attribute/xml:lang) 属性を使用する必要があります。
 
 > [!NOTE]
 > どのようにハイフネーションを行うかの規則は仕様書で明確に定義されていないため、厳密なハイフネーションの方式はブラウザーにより異なります。

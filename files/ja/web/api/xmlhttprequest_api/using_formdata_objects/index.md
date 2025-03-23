@@ -146,10 +146,10 @@ form.addEventListener("submit", async (event) => {
 ```
 
 > [!NOTE]
-> フォームへの参照を渡した場合は、 `open()` の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Methods)よりもフォームで指定したメソッドを優先します。
+> フォームへの参照を渡した場合は、 `open()` の呼び出しで指定した[リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)よりもフォームで指定したメソッドを優先します。
 
 > [!WARNING]
-> FormData を使用して、{{ domxref("XMLHttpRequest") }} または[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合（ファイルや Blob をサーバーにアップロードする場合など）、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
+> FormData を使用して、{{ domxref("XMLHttpRequest") }} または[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用して、 `multipart/form-data` の Content-Type で POST リクエストを送信する場合（ファイルや Blob をサーバーにアップロードする場合など）、リクエストの [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) ヘッダーを明示的に設定しないでください。そうすると、ブラウザーがリクエスト本文のフォームフィールドの区切りに使用する境界の表現で Content-Type ヘッダーを設定することができなくなります。
 
 以下のように、直接 {{ domxref("File") }} や {{ domxref("Blob") }} を {{ domxref("FormData") }} オブジェクトへ追加することもできます。
 

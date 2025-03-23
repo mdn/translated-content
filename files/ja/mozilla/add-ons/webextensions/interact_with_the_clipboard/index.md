@@ -29,7 +29,7 @@ l10n:
 
 ### Clipboard API を使用する
 
-Clipboard API は、拡張機能から任意のデータをクリップボードに書き込むものです。この API を使用するには、`manifest.json` ファイルに `"clipboardRead"` または `"clipboardWrite"` というパーミッションを設定する必要があります。この API は[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用可能であるため、`http:` ページで動作するコンテンツスクリプトからは使用できず、`https:` ページでのみ使用できます。
+Clipboard API は、拡張機能から任意のデータをクリップボードに書き込むものです。この API を使用するには、`manifest.json` ファイルに `"clipboardRead"` または `"clipboardWrite"` というパーミッションを設定する必要があります。この API は[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用可能であるため、`http:` ページで動作するコンテンツスクリプトからは使用できず、`https:` ページでのみ使用できます。
 
 ページスクリプトの場合、Web API の {{domxref("Permissions", "navigator.permissions")}} を使用して `"clipboard-write"` パーミッションを要求する必要があります。そのパーミッションは、{{domxref("Permissions.query", "navigator.permissions.query()")}} を使って確認することができます。
 
@@ -126,7 +126,7 @@ Firefox の場合:
 
 ### Clipboard API を使用する
 
-Clipboard API の {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} と {{domxref("Clipboard.read", "navigator.clipboard.read()")}} メソッドを使うと、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でクリップボードから任意のテキストまたはバイナリーデータを読み取ることができます。これにより、編集可能な要素に貼り付けることなく、クリップボードのデータにアクセスすることができます。
+Clipboard API の {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} と {{domxref("Clipboard.read", "navigator.clipboard.read()")}} メソッドを使うと、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でクリップボードから任意のテキストまたはバイナリーデータを読み取ることができます。これにより、編集可能な要素に貼り付けることなく、クリップボードのデータにアクセスすることができます。
 
 一度 [権限 API](/ja/docs/Web/API/Permissions_API) から `"clipboard-read"` パーミッションを取得すると、クリップボードから簡単に読み取ることができるようになります。例えば、このコードのスニペットはクリップボードからテキストを取得し、ID が `"outbox"` の要素の内容をそのテキストで置き換えます。
 
@@ -172,4 +172,4 @@ Firefox はバージョン 54 から `"clipboardRead"` [パーミッション](/
 - [Clipboard API](/ja/docs/Web/API/Clipboard_API)
 - [権限 API](/ja/docs/Web/API/Permissions_API)
 - [コンテンツを編集可能にする](/ja/docs/Web/HTML/Global_attributes/contenteditable)
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)
+- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable)

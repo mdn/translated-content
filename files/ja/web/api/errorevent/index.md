@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
 - {{domxref("ErrorEvent.message")}} {{ReadOnlyInline}}
-  - : 文字列で、関数を説明する人間が読むのに適したエラーメッセージが入ります。[`crossorigin`](/ja/docs/Web/HTML/Global_attributes#crossorigin) の設定がないと、エラーの記録が縮小されます。
+  - : 文字列で、関数を説明する人間が読むのに適したエラーメッセージが入ります。[`crossorigin`](/ja/docs/Web/HTML/Global_attributes/crossorigin) の設定がないと、エラーの記録が縮小されます。
 - {{domxref("ErrorEvent.filename")}} {{ReadOnlyInline}}
   - : 文字列で、エラーが発生したスクリプトファイルの名前が入ります。
 - {{domxref("ErrorEvent.lineno")}} {{ReadOnlyInline}}

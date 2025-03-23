@@ -7,7 +7,21 @@ slug: Web/HTML/Element/audio
 
 **`<audio>`** [HTML](/zh-TW/docs/Web/HTML) 元素是用來在文件中嵌入音訊內容。它可以包含一個或多個音訊來源，使用 `src` 屬性或 {{HTMLElement("source")}} 元素來表示：瀏覽器將選擇最適合的音訊來源。它還可以是串流媒體的目的地，使用 {{domxref("MediaStream")}}。
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 上面的範例展示了 `<audio>` 元素的簡單用法。與 {{htmlelement("img")}} 元素類似，我們在 `src` 屬性中包含要嵌入的媒體的路徑；我們可以包含其他屬性來指定信息，例如我們是否要自動播放和循環播放，是否要顯示瀏覽器的默認音訊控制項等。
 
@@ -74,7 +88,7 @@ slug: Web/HTML/Element/audio
     > - 規範並不強制要求瀏覽器遵循此屬性的值；它僅僅是一個提示。
 
 - `src`
-  - : 要嵌入的音訊的 URL。這受到 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)的限制。這是可選的；你可以在音訊塊中使用 {{htmlelement("source")}} 元素來指定要嵌入的音訊。
+  - : 要嵌入的音訊的 URL。這受到 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)的限制。這是可選的；你可以在音訊塊中使用 {{htmlelement("source")}} 元素來指定要嵌入的音訊。
 
 ## 事件
 
@@ -370,7 +384,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 
 - [Web Video Text Tracks Format (WebVTT)](/zh-TW/docs/Web/API/WebVTT_API)
 - [WebAIM：字幕、文字記錄和音訊描述](https://webaim.org/techniques/captions/)
-- [MDN 理解 WCAG，指南 1.2 說明](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [MDN 理解 WCAG，指南 1.2 說明](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
 - [理解成功標準 1.2.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [理解成功標準 1.2.2 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -416,7 +430,7 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
-      <td><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 介面</th>

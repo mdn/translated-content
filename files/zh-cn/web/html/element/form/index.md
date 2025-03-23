@@ -7,7 +7,43 @@ slug: Web/HTML/Element/form
 
 **HTML `<form>` 元素**表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 可以用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS 伪类来设置 `<form>` 元素的样式，此时样式的表现取决于表单中的 {{domxref("HTMLFormElement.elements", "elements")}} 是否有效。
 
@@ -140,15 +176,15 @@ slug: Web/HTML/Element/form
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>、<a
-          href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a
-        > 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/search_role">search</a></code>、<a
+          href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a
+        > 或 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

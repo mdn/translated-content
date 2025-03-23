@@ -32,10 +32,10 @@ _このインターフェイスは、 {{domxref("Crypto/getRandomValues", "Rando
 
 ## 使用上の注意
 
-ウェブ暗号 API は、安全でないコンテキスト上で使用するのは避けるべきです。 `Crypto` インターフェイスが安全でないコンテキスト上に存在しいたとしてもです。
-さらに、 `Crypto` の {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドは安全でないコンテキストでも使用できますが、 {{domxref("Crypto.subtle", "subtle")}} プロパティは使用できません。
+ウェブ暗号 API は、保護されていないコンテキスト上で使用するのは避けるべきです。 `Crypto` インターフェイスが保護されていないコンテキスト上に存在しいたとしてもです。
+さらに、 `Crypto` の {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドは保護されていないコンテキストでも使用できますが、 {{domxref("Crypto.subtle", "subtle")}} プロパティは使用できません。
 
-一般的には、 `Crypto` は安全なコンテキストでのみ使用できるものとして扱うべきでしょう。
+一般的には、 `Crypto` は保護されたコンテキストでのみ使用できるものとして扱うべきでしょう。
 
 ## 仕様書
 
@@ -48,7 +48,7 @@ _このインターフェイスは、 {{domxref("Crypto/getRandomValues", "Rando
 ## 関連情報
 
 - [ウェブセキュリティ](/ja/docs/Web/Security)
-- [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-- [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
 - [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
-- [Strict-Transport-Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)

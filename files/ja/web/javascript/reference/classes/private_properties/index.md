@@ -9,7 +9,7 @@ l10n:
 
 **プライベートプロパティ**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)やクラスメソッドなどに対するものです。プライベートプロパティはハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は JavaScript 自身によって強制されます。プライベートプロパティにアクセスするには、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ドット記法)を使用するしかなく、また、そのアクセスはプライベートプロパティを定義するクラス内でのみ可能です。
 
-プライベートのプロパティは、この構文が存在する以前はネイティブではありませんでした。プロトタイプ継承では、 [`WeakMap`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) オブジェクトや[クロージャ](/ja/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures)でその振る舞いをエミュレートすることができますが、使いやすさの面からは `#` 構文にはかないません。
+プライベートのプロパティは、この構文が存在する以前はネイティブではありませんでした。プロトタイプ継承では、 [`WeakMap`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) オブジェクトや[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures)でその振る舞いをエミュレートすることができますが、使いやすさの面からは `#` 構文にはかないません。
 
 ## 構文
 
@@ -113,7 +113,7 @@ console.log(C.getX({})); // "obj must be an instance of C"
 
 オブジェクトが現在のクラスのプライベートプロパティを 1 つでも持っていることが見つかった場合（`try...catch`または`in`チェックのいずれか）、他にもプライベートプロパティをすべて持っている必要があります。あるクラスのプライベートプロパティを持つオブジェクトは、一般的にそのクラスによって構築されたことを意味しています（[常にではありません](#オーバーライドしたオブジェクトの返却)）。
 
-プライベートプロパティは、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)にはありません。クラスが異なると、プライベートプロパティは同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{DOMxRef("Window.structuredClone", "structuredClone()")}} はプライベートプロパティを複製せず、 {{jsxref("Object.freeze()")}} や {{jsxref("Object.seal()")}} は、プライベートプロパティには影響しません。
+プライベートプロパティは、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)にはありません。クラスが異なると、プライベートプロパティは同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{DOMxRef("Window.structuredClone", "structuredClone()")}} はプライベートプロパティを複製せず、 {{jsxref("Object.freeze()")}} や {{jsxref("Object.seal()")}} は、プライベートプロパティには影響しません。
 
 プライベートフィールドがいつ、どのように初期化されるかについての詳細は、[プライベートクラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 

@@ -7,7 +7,27 @@ slug: Web/HTML/Element/i
 
 **`<i>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一段文字，由於某些原因與正常文字有所區分，例如成語、專業術語、分類設計等。歷史上，這些元素通常以斜體字來呈現，這也是這個元素被命名為 `<i>` 的原因。
 
-{{EmbedInteractiveExample("pages/tabbed/i.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;i&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I looked at it and thought <i>This can't be real!</i></p>
+
+<p>
+  <i>Musa</i> is one of two or three genera in the family <i>Musaceae</i>; it
+  includes bananas and plantains.
+</p>
+
+<p>
+  The term <i>bandwidth</i> describes the measure of how much information can
+  pass through a data connection in a given amount of time.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+i {
+}
+```
 
 ## 屬性
 
@@ -91,7 +111,7 @@ slug: Web/HTML/Element/i
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
+          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
             >generic</a
           ></code
         >

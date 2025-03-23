@@ -110,9 +110,9 @@ slug: Web/HTML/Element/title
 ```
 
 > [!NOTE]
-> 目前，動態更新頁面標題不會被螢幕閱讀器自動宣佈。如果要更新頁面標題以反映頁面狀態的重大變化，則可能需要使用 [ARIA Live Region](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)。
+> 目前，動態更新頁面標題不會被螢幕閱讀器自動宣佈。如果要更新頁面標題以反映頁面狀態的重大變化，則可能需要使用 [ARIA Live Region](/zh-TW/docs/Web/Accessibility/ARIA/Guides/Live_regions)。
 
-- [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN Understanding WCAG, Guideline 2.4 explanations](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
 
 ## 規範
@@ -125,4 +125,4 @@ slug: Web/HTML/Element/title
 
 ## 參見
 
-- SVG [`<title>`](/zh-TW/docs/Web/SVG/Element/title) 元素
+- SVG [`<title>`](/zh-TW/docs/Web/SVG/Reference/Element/title) 元素

@@ -9,7 +9,32 @@ l10n:
 
 **`<li>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于表示列表中的项目。它必须包含在一个父元素中：有序列表（{{HTMLElement("ol")}}）、无序列表（{{HTMLElement("ul")}}）或菜单（{{HTMLElement("menu")}}）。在菜单和无序列表中，列表项通常使用项目符号显示。在有序列表中，通常在左侧显示一个升序计数器，如数字或字母。
 
-{{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Apollo astronauts:</p>
+
+<ul>
+  <li>Neil Armstrong</li>
+  <li>Alan Bean</li>
+  <li>Peter Conrad</li>
+  <li>Edgar Mitchell</li>
+  <li>Alan Shepard</li>
+</ul>
+```
+
+```css interactive-example
+p,
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+```
 
 ## 属性
 
@@ -113,13 +138,13 @@ l10n:
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        如果是 <code><a href="/zh-CN/docs/Web/HTML/Element/ol">ol</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Element/ul">ul</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/menu">menu</a></code> 的子项，则为 <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role">listitem</a></code>
+        如果是 <code><a href="/zh-CN/docs/Web/HTML/Element/ol">ol</a></code>、<code><a href="/zh-CN/docs/Web/HTML/Element/ul">ul</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/menu">menu</a></code> 的子项，则为 <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role">listitem</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>

@@ -7,9 +7,49 @@ l10n:
 
 {{CSSRef}}
 
-**`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
+**`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
 
-{{EmbedInteractiveExample("pages/css/padding-inline.html")}}
+{{InteractiveExample("CSS Demo: padding-inline")}}
+
+```css interactive-example-choice
+padding-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline: 15px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline: 5% 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -44,7 +84,7 @@ padding-inline: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 

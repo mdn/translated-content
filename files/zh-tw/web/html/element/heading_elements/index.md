@@ -7,7 +7,46 @@ slug: Web/HTML/Element/Heading_Elements
 
 **`<h1>`** 到 **`<h6>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表六個級別的章節標題。`<h1>` 是最高的章節級別，`<h6>` 是最低的。默認情況下，所有標題元素在佈局中創建一個[區塊級](/zh-TW/docs/Glossary/Block-level_content)區域，從新行開始並佔據其包含區塊中可用的全部寬度。
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 ## 屬性
 
@@ -122,9 +161,9 @@ slug: Web/HTML/Element/Heading_Elements
 當標題嵌套時，關閉子節時可能會「跳過」標題級別。
 
 - [標題 • 頁面結構 • WAI Web 無障礙教學](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [MDN 了解 WCAG，第 1.3 條解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [MDN 了解 WCAG，第 1.3 條解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [理解成功標準 1.3.1 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN 了解 WCAG，第 2.4 條解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 了解 WCAG，第 2.4 條解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功標準 2.4.1 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [理解成功標準 2.4.6 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
 - [理解成功標準 2.4.10 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
@@ -159,7 +198,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 在這個例子中，螢幕閱讀技術會宣佈有兩個 `nav` 章節，一個叫「主導航」，一個叫「頁腳導航」。如果沒有提供標籤，使用螢幕閱讀軟體的人可能需要調查每個 `nav` 元素的內容來確定它們的目的。
 
-- [使用 aria-labelledby 屬性](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [使用 aria-labelledby 屬性](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [標記區域 • 頁面結構 • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 技術摘要
@@ -205,7 +244,7 @@ slug: Web/HTML/Element/Heading_Elements
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/heading_role"
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role"
           >heading</a
         >
       </td>
@@ -213,8 +252,8 @@ slug: Web/HTML/Element/Heading_Elements
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> 或
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

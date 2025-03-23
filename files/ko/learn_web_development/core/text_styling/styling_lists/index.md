@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-[목록](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
+[목록](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -202,7 +202,7 @@ ul {
 }
 ```
 
-그러나 이 속성은 글머리 기호의 위치, 크기 등을 제어하는 ​​측면에서 약간 제한됩니다. [스타일 지정 상자](/ko/docs/Learn/CSS/Building_blocks) 모듈에서 자세히 알아볼 {{cssxref("background")}} 속성 계열을 사용하는 것이 좋습니다. 지금은 맛보기가 있습니다!
+그러나 이 속성은 글머리 기호의 위치, 크기 등을 제어하는 ​​측면에서 약간 제한됩니다. [스타일 지정 상자](/ko/docs/Learn_web_development/Core/Styling_basics) 모듈에서 자세히 알아볼 {{cssxref("background")}} 속성 계열을 사용하는 것이 좋습니다. 지금은 맛보기가 있습니다!
 
 완성된 예제에서는 정렬되지 않은 목록의 스타일을 다음과 같이 지정했습니다.(위에서 이미 본 것 위에)
 

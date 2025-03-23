@@ -13,7 +13,7 @@ slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 
 - [异步剪贴板 API](/zh-CN/docs/Web/API/Clipboard)
 - [后台同步](https://wicg.github.io/BackgroundSync/spec/)（例如 {{domxref("SyncManager")}}）
-- [`Cache-Control: immutable`](/zh-CN/docs/Web/HTTP/Headers/Cache-Control)
+- [`Cache-Control: immutable`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cache-Control)
 - [凭据管理 API](/zh-CN/docs/Web/API/Credential_Management_API)
 - [设备方向 / 设备移动](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
 - [拾色器 API](/zh-CN/docs/Web/API/EyeDropper)

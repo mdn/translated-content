@@ -14,7 +14,51 @@ l10n:
 > [!NOTE]
 > 他にも、 {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} のような関数型擬似クラスは、引数として複合セレクターのリストを受け入れますが、 `:host()` は単一の複合セレクターを受け入れます。さらに、 `:is()` と `:not()` が引数の詳細度しか考慮しないのに対して、 `:host()` の詳細度は擬似クラスの詳細度**および**引数の詳細度の両方です。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-host_function.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :host()", "tabbed-shorter")}}
+
+```css interactive-example
+/* Following CSS is being applied inside the shadow DOM. */
+
+:host(h1) {
+  color: red;
+}
+
+:host(#shadow-dom-host) {
+  border: 2px dashed blue;
+}
+```
+
+```html interactive-example
+<!-- elements outside shadow dom -->
+<div id="container">
+  <h1 id="shadow-dom-host"></h1>
+</div>
+```
+
+```js interactive-example
+const shadowDom = init();
+
+// add a <span> element in the shadow DOM
+const span = document.createElement("span");
+span.textContent = "Inside shadow DOM";
+shadowDom.appendChild(span);
+
+// attach shadow DOM to the #shadow-dom-host element
+function init() {
+  const host = document.getElementById("shadow-dom-host");
+  const shadowDom = host.attachShadow({ mode: "open" });
+
+  const cssTab = document.querySelector("#css-output");
+  const shadowStyle = document.createElement("style");
+  shadowStyle.textContent = cssTab.textContent;
+  shadowDom.appendChild(shadowStyle);
+
+  cssTab.addEventListener("change", () => {
+    shadowStyle.textContent = cssTab.textContent;
+  });
+  return shadowDom;
+}
+```
 
 ```css
 /* セレクターの引数に一致する場合のみ、

@@ -294,7 +294,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
 - {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### yield 演算子
 
@@ -335,7 +335,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 ## 追加のリファレンスページ
 
 - {{JSxRef("Lexical_grammar", "字句文法", "", 1)}}
-- [データ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [データ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)
 - [エラー](/ja/docs/Web/JavaScript/Reference/Errors)

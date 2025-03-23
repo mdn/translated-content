@@ -7,7 +7,55 @@ slug: Web/HTML/Global_attributes/data-*
 
 **`data-*`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 **사용자 지정 데이터 특성**(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 [HTML](/ko/docs/Web/HTML)과 [DOM](/ko/docs/Web/API/Document_Object_Model) 사이에서 교환할 수 있는 방법입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Secret agents</h1>
+
+<ul>
+  <li data-id="10784">Jason Walters, 003: Found dead in "A View to a Kill".</li>
+  <li data-id="97865">
+    Alex Trevelyan, 006: Agent turned terrorist leader; James' nemesis in
+    "Goldeneye".
+  </li>
+  <li data-id="45732">
+    James Bond, 007: The main man; shaken but not stirred.
+  </li>
+</ul>
+```
+
+```css interactive-example
+h1 {
+  margin: 0;
+}
+
+ul {
+  margin: 10px 0 0;
+}
+
+li {
+  position: relative;
+  width: 200px;
+  padding-bottom: 10px;
+}
+
+li:after {
+  content: "Data ID: " attr(data-id);
+  position: absolute;
+  top: -22px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 2px;
+  border: 1px solid #eee;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+li:hover:after {
+  opacity: 1;
+}
+```
 
 모든 사용자 지정 데이터는 해당 데이터를 지정한 요소의 {{domxref("HTMLElement")}} 인터페이스, {{domxref("HTMLElement.dataset", "dataset")}} 속성을 통해 사용할 수 있습니다. `data-*`의 `*`은 [XML 이름 생성 규칙](https://www.w3.org/TR/REC-xml/#NT-Name)을 따르는 모든 이름으로 대체할 수 있습니다.
 
@@ -34,7 +82,7 @@ slug: Web/HTML/Global_attributes/data-*
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이터 특성 사용하기](/ko/docs/Learn/HTML/Howto/Use_data_attributes)를 확인하세요.
+HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)를 확인하세요.
 
 ## 명세
 
@@ -48,4 +96,4 @@ HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이�
 
 - 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
 - 데이터 특성 값에 접근하고 수정할 수 있는 {{domxref("HTMLElement.dataset")}} 속성.
-- [데이터 특성 사용하기](/ko/docs/Learn/HTML/Howto/Use_data_attributes)
+- [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
