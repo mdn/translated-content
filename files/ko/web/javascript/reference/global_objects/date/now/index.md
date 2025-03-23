@@ -32,7 +32,7 @@ setTimeout(() => {
 Date.now()
 ```
 
-### 인자
+### 매개변수
 
 없음
 
@@ -51,7 +51,7 @@ Date.now()
 ```js
 // Firefox 60에서 감소한 시간 정밀도 (2ms)
 Date.now();
-// 값은 아마도:
+// 값은 아마도 아래와 같습니다.
 // 1519211809934
 // 1519211810362
 // 1519211811670
@@ -90,7 +90,7 @@ console.log(`Time elapsed: ${Date.now() - start} ms`);
 
 ## 같이 보기
 
-- [Polyfill of `Date.now` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
+- [`core-js`의 `Date.now` 폴리필](https://github.com/zloirock/core-js#ecmascript-date)
 - {{domxref("Performance.now()")}}
 - {{domxref("console/time_static", "console.time()")}}
 - {{domxref("console/timeEnd_static", "console.timeEnd()")}}
