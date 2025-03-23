@@ -16,7 +16,7 @@ Google 的*隐私沙箱*项目是一系列提案，旨在无需第三方 cookie 
 - [围栏框架 API](/zh-CN/docs/Web/API/Fenced_frame_API)
   - : 提供控制嵌入 {{htmlelement("fencedframe")}} 元素中的内容的功能，这些元素允许嵌入内容同时解决 {{htmlelement("iframe")}} 的隐私问题。
 - [相关网站集](/zh-CN/docs/Web/API/Storage_Access_API/Related_website_sets)
-  - : 一种机制，允许公司声明不同网站之间的关系。支持的浏览器将允许在这些网站之间通过[存储访问 API](/en-US/docs/Web/API/Storage_Access_API) 进行特定目的的有限第三方 cookie 访问。
+  - : 一种机制，允许公司声明不同网站之间的关系。支持的浏览器将允许在这些网站之间通过[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 进行特定目的的有限第三方 cookie 访问。
 - [共享存储 API](/zh-CN/docs/Web/API/Shared_Storage_API)
   - : 一种客户端存储机制，可实现不分区的跨站点数据访问同时保护隐私（即不依赖跟踪 cookie）。
 - [主题 API](/zh-CN/docs/Web/API/Topics_API)
