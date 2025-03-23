@@ -6792,13 +6792,6 @@
       "lina_taso"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json": {
-    "modified": "2020-10-15T22:10:24.072Z",
-    "contributors": [
-      "Uemmra3",
-      "kenji-yamasaki"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs": {
     "modified": "2020-10-15T20:55:15.310Z",
     "contributors": [
@@ -44075,6 +44068,13 @@
     "contributors": [
       "chrisdavidmills",
       "dvincent"
+    ]
+  },
+  "conflicting/Mozilla/Add-ons/WebExtensions/manifest.json": {
+    "modified": "2020-10-15T22:10:24.072Z",
+    "contributors": [
+      "Uemmra3",
+      "kenji-yamasaki"
     ]
   },
   "conflicting/Web/API/Document": {

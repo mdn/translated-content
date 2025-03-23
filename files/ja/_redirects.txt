@@ -2599,6 +2599,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
+/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 /ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 /ja/docs/Mozilla/Add-ons/WebExtensions/Tips	/ja/docs/Mozilla/Add-ons/WebExtensions
