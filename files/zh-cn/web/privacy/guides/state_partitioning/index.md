@@ -39,7 +39,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 - [**网络分区**](#network_partitioning)：自 Firefox 85 起默认为所有用户启用。
 - [**动态分区**](#dynamic_partitioning)：自 Firefox 103 起默认为所有用户启用。在此之前：
-  - 自 Firefox 86 起：为启用了[“严格”隐私保护](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)的用户启用。
+  - 自 Firefox 86 起：为启用了[“严格”隐私保护](https:///kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)的用户启用。
   - 自 Firefox 90 起：在隐私浏览中启用。
 
 ## 静态分区
@@ -143,7 +143,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 ### 清除第三方存储访问权限
 
-如果第三方 iframe 被授予访问父上下文的存储权限，Firefox 会设置该权限。要撤销访问权限，你可以通过[站点信息面板](https://support.mozilla.org/en-US/kb/site-information-panel)中的权限部分下的“跨站点 cookie”来清除该权限。
+如果第三方 iframe 被授予访问父上下文的存储权限，Firefox 会设置该权限。要撤销访问权限，你可以通过[站点信息面板](https:///kb/site-information-panel)中的权限部分下的“跨站点 cookie”来清除该权限。
 
 ### 测试首选项
 
@@ -163,7 +163,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 #### 禁用启发式分析
 
-以下选项可以通过[配置编辑器](https://support.mozilla.org/en-US/kb/about-config-editor-firefox)单独禁用特定存储访问启发式算法：
+以下选项可以通过[配置编辑器](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)单独禁用特定存储访问启发式算法：
 
 - 启用/禁用[重定向启发式规则](#重定向启发式规则): `privacy.restrict3rdpartystorage.heuristic.recently_visited`, `privacy.restrict3rdpartystorage.heuristic.redirect`
 - 启用/禁用[开启者启发式方法](#开启者启发式方法): `privacy.restrict3rdpartystorage.heuristic.window_open`, `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
