@@ -2599,6 +2599,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
+/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json	/ja/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json
 /ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 /ja/docs/Mozilla/Add-ons/WebExtensions/Tips	/ja/docs/Mozilla/Add-ons/WebExtensions
@@ -4121,6 +4122,7 @@
 /ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements	/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 /ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index	/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index	/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index
+/ja/docs/Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring	/ja/docs/orphaned/Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS

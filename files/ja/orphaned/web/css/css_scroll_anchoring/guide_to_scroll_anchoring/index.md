@@ -1,6 +1,7 @@
 ---
 title: スクロール固定のガイド
-slug: Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring
+slug: orphaned/Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring
+original_slug: Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring
 l10n:
   sourceCommit: ad896488bf8fac04fc6fa144c441fdbfd880737c
 ---
