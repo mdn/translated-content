@@ -1,8 +1,8 @@
 ---
 title: translate
 slug: Web/CSS/translate
-page-type: css-property
-browser-compat: css.properties.translate
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
