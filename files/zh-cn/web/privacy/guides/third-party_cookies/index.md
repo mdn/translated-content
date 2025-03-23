@@ -2,7 +2,7 @@
 title: Third-party cookies
 slug: Web/Privacy/Guides/Third-party_cookies
 l10n:
-    sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}
@@ -21,10 +21,10 @@ l10n:
 
 当用户首次访问一个页面、点击内部链接跳转到同一站点的另一个页面，或请求位于同一站点的资源（如嵌入的图像、网络字体或 JavaScript 文件）时，可能会设置第一方 cookie。
 
-第三方 cookie 在以下常见情况下发送:
+第三方 cookie 在以下常见情况下发送：
 
 - 当用户点击一个站点上的链接跳转到另一个站点时。
-- 当一个页面嵌入来自其他站点的组件，如图像或嵌入在 {{htmlelement("iframe")}} 中的其他文档(通常称为*第三方内容*)。除了对组件的原始请求外，这些组件可能会生成更多设置第三方 cookie 的请求。
+- 当一个页面嵌入来自其他站点的组件，如图像或嵌入在 {{htmlelement("iframe")}} 中的其他文档（通常称为*第三方内容*）。除了对组件的原始请求外，这些组件可能会生成更多设置第三方 cookie 的请求。
 
 ## 第三方 Cookie 的用途
 
@@ -56,7 +56,7 @@ l10n:
 
 单独来看，这些情况已经足够糟糕，但问题更严重。第三方服务器可以结合在不同网站上设置的多个第三方 Cookie 中的信息，创建用户的浏览历史、兴趣、习惯和个人信息的详细档案。这可以用来创建令人不安的、侵入性的用户体验，欺诈用户，甚至实施身份盗窃。
 
-在这种情况下，第三方 Cookie 被称为 _跟踪 Cookie_。
+在这种情况下，第三方 Cookie 被称为*跟踪 Cookie*。
 
 > [!NOTE]
 > 通过不正当手段获得的用户信息通常也会被出售给其他第三方，从而进一步加剧问题。
@@ -67,7 +67,7 @@ l10n:
 
 浏览器厂商知道用户不喜欢上述行为，因此都开始默认阻止第三方 Cookie，同时在其源代码中包含例外和启发式方法，以解决与流行网站长期存在的第三方 Cookie 问题。
 
-- Mozilla 的[反追踪政策](https://wiki.mozilla.org/Security/Anti_tracking_policy)导致 Firefox 默认阻止已知追踪器的第三方 Cookie（参见 [Firefox 追踪保护](/en-US/docs/Web/Privacy/Guides/Firefox_tracking_protection) 和[增强追踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)。增强追踪保护可以设置为标准、严格或自定义。[标准模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_standard-enhanced-tracking-protection)启用 [完全 Cookie 保护](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)，为每个站点提供单独的 Cookie 罐，从而防止跨站点追踪。在[严格模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)中，Firefox 阻止所有第三方 Cookie。
+- Mozilla 的[反追踪政策](https://wiki.mozilla.org/Security/Anti_tracking_policy)导致 Firefox 默认阻止已知追踪器的第三方 Cookie（参见 [Firefox 追踪保护](/zh-CN/docs/Web/Privacy/Guides/Firefox_tracking_protection) 和[增强追踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)。增强追踪保护可以设置为标准、严格或自定义。[标准模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_standard-enhanced-tracking-protection)启用 [完全 Cookie 保护](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)，为每个站点提供单独的 Cookie 罐，从而防止跨站点追踪。在[严格模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)中，Firefox 阻止所有第三方 Cookie。
 - Apple 也有类似的[追踪防护政策](https://webkit.org/tracking-prevention-policy/)；遵循此政策导致一套类似的第三方 Cookie 保护措施默认启用；有关详细信息，请参见 [智能追踪防护](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP)。
 - 在撰写本文时，Google Chrome 默认仅在隐身模式下阻止第三方 Cookie，尽管用户可以通过 `chrome://settings` 设置始终阻止第三方 Cookie。Google 已开始对一小部分 Chrome 用户禁用第三方 Cookie，以测试这将产生的影响，同时开发技术以在不需要第三方 Cookie 的情况下启用关键用例。有关详细信息，请参见 [替代第三方 Cookie](#replacing_third-party_cookies)。
 - Edge 阻止来自未访问网站的追踪器，并默认阻止已知的有害追踪器。在撰写本文时，Microsoft 也开始探索在 Edge 中默认阻止第三方 Cookie 的可能性。有关更多信息，请参见 [追踪防护](https://learn.microsoft.com/zh-CN/microsoft-edge/web-platform/tracking-prevention)。
@@ -78,13 +78,13 @@ l10n:
 > [!NOTE]
 > 第三方 Cookie（或仅追踪 Cookie）也可能被浏览器扩展阻止。
 
-Cookie 阻止可能导致某些第三方组件（例如社交媒体小部件）无法按预期功能运行。随着浏览器对第三方 Cookie 施加进一步限制，开发人员应开始寻找减少对它们依赖的方法：请参见 [替代第三方 Cookie](#replacing_third-party_cookies)。
+Cookie 阻止可能导致某些第三方组件（例如社交媒体小部件）无法按预期功能运行。随着浏览器对第三方 Cookie 施加进一步限制，开发人员应开始寻找减少对它们依赖的方法：请参见[替代第三方 Cookie](#replacing_third-party_cookies)。
 
 ## 使用第三方 Cookie
 
 ### 使用 `SameSite` 启用第三方 Cookie
 
-[`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性允许服务器指定何时发送第三方 Cookie。如果在 `Set-Cookie` 头中未指定 `SameSite`，则使用默认值 `Lax`。这指示浏览器仅在用户从不同网站导航到 Cookie 的源网站时发送第三方 Cookie。这在用户从其他网站导航到你的网站时立即发送 Cookie 以个性化体验时非常有用。
+[`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性允许服务器指定何时发送第三方 Cookie。如果在 `Set-Cookie` 头中未指定 `SameSite`，则使用默认值 `Lax`。这指示浏览器仅在用户从不同网站导航到 Cookie 的源网站时发送第三方 Cookie。这在用户从其他网站导航到你的网站时立即发送 Cookie 以个性化体验时非常有用。
 
 然而，如果你希望在多个网站中嵌入跨站内容并依赖第三方 Cookie 的功能，例如在我们之前讨论的登录示例中，则这并不适用。在这种情况下，你需要显式设置 `SameSite=None` 以允许浏览器传递这些 Cookie：
 
@@ -92,24 +92,24 @@ Cookie 阻止可能导致某些第三方组件（例如社交媒体小部件）�
 Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 ```
 
-请注意，如果设置了 `SameSite=None`，则必须同时设置 `Secure` 属性——`SameSite=None` 需要一个_安全上下文_。在上面的示例中，我们还设置了 `HttpOnly` 属性，以禁用 JavaScript 访问该 Cookie（例如通过 {{domxref("Document.cookie")}}）。持久化敏感信息的 Cookie 应始终设置 `HttpOnly` 属性——使其可供 JavaScript 访问将非常不安全。这一预防措施有助于减轻跨站脚本攻击（[XSS](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)）的风险。
+请注意，如果设置了 `SameSite=None`，则必须同时设置 `Secure` 属性——`SameSite=None` 需要一个*安全上下文*。在上面的示例中，我们还设置了 `HttpOnly` 属性，以禁用 JavaScript 访问该 Cookie（例如通过 {{domxref("Document.cookie")}}）。持久化敏感信息的 Cookie 应始终设置 `HttpOnly` 属性——使其可供 JavaScript 访问将非常不安全。这一预防措施有助于减轻跨站脚本攻击（[XSS](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)）的风险。
 
 > [!NOTE]
-> 用于敏感信息的 Cookie 还应具有较短的 [生命周期](/en-US/docs/Web/HTTP/Guides/Cookies#removal_defining_the_lifetime_of_a_cookie)。
+> 用于敏感信息的 Cookie 还应具有较短的[生命周期](/zh-CN/docs/Web/HTTP/Guides/Cookies#removal_defining_the_lifetime_of_a_cookie)。
 
 ### 从第三方 Cookie 过渡
 
 有多种策略可以帮助网站在阻止第三方 Cookie 的浏览器中最小化故障：
 
-1. 审核你的第三方 Cookie 使用情况。Cookie 必须设置 `SameSite=None` 属性才能在跨站上下文中使用。因此，你可以通过在代码中搜索 `SameSite=None` 或在浏览器 DevTools 中检查存储的 `SameSite=None` Cookie 来识别第三方 Cookie，例如在 [Firefox 存储检查器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/) 中。Chrome 的 [问题面板](https://developer.chrome.google.cn/docs/devtools/issues/) 也 [报告了第三方 Cookie 阻止的问题](https://developers.google.cn/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools)，并列出了受影响的 Cookie。
+1. 审核你的第三方 Cookie 使用情况。Cookie 必须设置 `SameSite=None` 属性才能在跨站上下文中使用。因此，你可以通过在代码中搜索 `SameSite=None` 或在浏览器 DevTools 中检查存储的 `SameSite=None` Cookie 来识别第三方 Cookie，例如在 [Firefox 存储检查器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/) 中。Chrome 的[问题面板](https://developer.chrome.google.cn/docs/devtools/issues/)也[报告了第三方 Cookie 阻止的问题](https://developers.google.cn/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools)，并列出了受影响的 Cookie。
 2. 在阻止第三方 Cookie 的情况下测试你的功能，以查看哪些功能失效。你可能会发现某些 Cookie 不再需要。
-3. 起初，你可以使代码更具弹性，以便在没有第三方 Cookie 数据时提供较少个性化的体验，而不是完全中断。遵循 [优雅降级](/zh-CN/docs/Glossary/Graceful_degradation) 的原则。
+3. 起初，你可以使代码更具弹性，以便在没有第三方 Cookie 数据时提供较少个性化的体验，而不是完全中断。遵循[优雅降级](/zh-CN/docs/Glossary/Graceful_degradation)的原则。
 4. 通过用户调查或测验收集数据，或查看你已有的数据以推断趋势（例如，产品订单历史）。
 5. 使用替代的客户端存储机制，例如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 来持久化数据，或考虑服务器端解决方案。
-6. 如果你的第三方 Cookie 仅在少数相关的已知网站之间使用，你可以使用 [存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 和/或 [相关网站集](/zh-CN/docs/Web/API/Storage_Access_API/Related_website_sets) 仅允许这些特定网站的跨站 Cookie 访问。存储访问会提示用户为每个框架提供权限，以便网站使用第三方 Cookie。
+6. 如果你的第三方 Cookie 仅在少数相关的已知网站之间使用，你可以使用[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 和/或[相关网站集](/zh-CN/docs/Web/API/Storage_Access_API/Related_website_sets)仅允许这些特定网站的跨站 Cookie 访问。存储访问会提示用户为每个框架提供权限，以便网站使用第三方 Cookie。
    - 如果你已经为 Firefox 或 Safari 实现了使用存储访问 API 的解决方案，那么现在是检查你的实现与 Chrome 行为的好时机，Chrome 在版本 119 中更新以提供完全支持。
    - 相关网站集可以被视为存储访问 API 的渐进增强：该 API 可以以相同的方式使用，但集合中的网站将不会提示用户提供访问第三方 Cookie 的权限。
-7. 如果你的第三方 Cookie 与生成它们的顶级网站是一对一关系，你可以使用[具有独立分区状态的 Cookie](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)（CHIPS，即分区 Cookie），将你的 Cookie 选择加入分区存储，每个顶级网站都有一个单独的 Cookie 罐。这只需要向你现有的跨站 Cookie 添加 `partitioned` 属性。这样，它们可以不受限制地使用，但不能与其他网站共享。请注意，CHIPS 目前仅限于 Chromium。
+7. 如果你的第三方 Cookie 与生成它们的顶级网站是一对一关系，你可以使用[具有独立分区状态的 Cookie](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)（CHIPS，即分区 Cookie），将你的 Cookie 选择加入分区存储，每个顶级网站都有一个单独的 Cookie 桶。这只需要向你现有的跨站 Cookie 添加 `partitioned` 属性。这样，它们可以不受限制地使用，但不能与其他网站共享。请注意，CHIPS 目前仅限于 Chromium。
 
 ## 替换第三方 Cookie
 

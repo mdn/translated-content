@@ -67,24 +67,24 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 ### 网络 API
 
-- [HTTP 缓存](/en-US/docs/Web/HTTP/Guides/Caching)
+- [HTTP 缓存](/zh-CN/docs/Web/HTTP/Guides/Caching)
 - 图像缓存
 - favicon 缓存
 - 连接池
 - 样式表缓存
-- [DNS](/en-US/docs/Glossary/DNS)
+- [DNS](/zh-CN/docs/Glossary/DNS)
 - HTTP 身份验证
-- [Alt-Svc](/en-US/docs/Web/HTTP/Reference/Headers/Alt-Svc)
+- [Alt-Svc](/zh-CN/docs/Web/HTTP/Reference/Headers/Alt-Svc)
 - 预连接
 - 字体与字体缓存
-- [HSTS](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
+- [HSTS](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
 - OCSP
 - 中级 CA 缓存
 - TLS 客户端证书
 - TLS 会话标识符
 - 预获取
 - 预连接
-- [CORS-preflight](/en-US/docs/Glossary/Preflight_request) 预检缓存
+- [CORS-preflight](/zh-CN/docs/Glossary/Preflight_request) 预检缓存
 - WebRTC 设备 ID
 
 ## 动态分区
@@ -98,7 +98,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 ### 动态分区的 API
 
-- [Cookie](/en-US/docs/Web/API/Document/cookie)
+- [Cookie](/zh-CN/docs/Web/API/Document/cookie)
 
 ### 存储访问启发式规则
 
@@ -109,7 +109,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 #### 开启者启发式方法
 
-- 当一个分区的第三方打开一个可以访问原始文档的 [opener](/en-US/docs/Web/API/Window/opener) 的弹出窗口时，该第三方会在 30 天内被授予对其嵌入方的存储访问权限。
+- 当一个分区的第三方打开一个可以访问原始文档的 [opener](/zh-CN/docs/Web/API/Window/opener) 的弹出窗口时，该第三方会在 30 天内被授予对其嵌入方的存储访问权限。
 - 当一个第一方 `a.example` 打开第三方弹出窗口 `b.example` 时，`b.example` 被授予对 `a.example` 的第三方存储访问权限，为期 30 天。
 
 > [!NOTE]
@@ -122,7 +122,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 ## 存储访问 API
 
-第三方框架可以使用 [document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) 通过[存储访问 API](/en-US/docs/Web/API/Storage_Access_API) 请求对 cookie 的非分区访问。一旦获得授权，请求方将能够访问其所有的第一方 cookie（即，如果作为第一方访问时可以访问的 cookie）。
+第三方框架可以使用 [document.requestStorageAccess](/zh-CN/docs/Web/API/Document/requestStorageAccess) 通过[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 请求对 cookie 的非分区访问。一旦获得授权，请求方将能够访问其所有的第一方 cookie（即，如果作为第一方访问时可以访问的 cookie）。
 
 > [!WARNING]
 > 当存储访问被授予时，可能仍然存在对分区存储的引用。然而，网站不应依赖于同时使用分区和非分区 cookie 的能力。
@@ -135,11 +135,11 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 以下是与第三方上下文中的存储交互时记录到 Web 控制台的消息概述。在以下示例中，`a.example` 是顶级站点，嵌入第三方框架 `b.example`。
 
-| 原因                                                                                                        | 控制台消息                                                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 第三方框架的存储是分区的                                                                                    | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled.（为 “b.example” 提供了分区的 cookie 或存储访问，因为其在第三方上下文中加载并且启用了存储分区。） |
-| 通过[存储访问启发式方法](#存储访问启发式规则)授予对未分区 cookie 的访问权限                                 | Storage access automatically granted for First-Party isolation "b.example" on "a.example".（为“a.example”上的第一方隔离“b.example”自动授予存储访问权限。）                                                                                             |
-| 通过 [StorageAccessAPI](/en-US/docs/Web/API/Document/requestStorageAccess) 授予对未分区 cookie 的访问权限。 | Storage access granted for origin "b.example" on "a.example".（已为来源 "b.example" 授予在 "a.example" 上的存储访问权限。）                                                                                                                                                                                             |
+| 原因                                                                                                        | 控制台消息                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 第三方框架的存储是分区的                                                                                    | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled.（为“b.example”提供了分区的 cookie 或存储访问，因为其在第三方上下文中加载并且启用了存储分区。） |
+| 通过[存储访问启发式方法](#存储访问启发式规则)授予对未分区 cookie 的访问权限                                 | Storage access automatically granted for First-Party isolation "b.example" on "a.example".（为“a.example”上的第一方隔离“b.example”自动授予存储访问权限。）                                                                                           |
+| 通过 [StorageAccessAPI](/zh-CN/docs/Web/API/Document/requestStorageAccess) 授予对未分区 cookie 的访问权限。 | Storage access granted for origin "b.example" on "a.example".（已为来源 "b.example" 授予在 "a.example" 上的存储访问权限。）                                                                                                                          |
 
 ### 清除第三方存储访问权限
 
@@ -157,7 +157,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 该首选项禁用的功能包括：
 
 - [存储访问启发式规则](#存储访问启发式规则)：未分区的 cookie 访问只能通过 Storage Access API 获得。
-- 自动存储访问授权：[document.requestStorageAccess](/en-US/docs/Web/API/Document/requestStorageAccess) 将始终提示用户。
+- 自动存储访问授权：[document.requestStorageAccess](/zh-CN/docs/Web/API/Document/requestStorageAccess) 将始终提示用户。
 - [SmartBlock 的“用户选择加入后解除屏蔽”功能](https://blog.mozilla.org/security/2021/07/13/smartblock-v2/)，允许用户在与某些追踪器互动时启用这些追踪器。
 - 通过跳过列表机制授予网站的任何临时[反跟踪例外](https://wiki.mozilla.org/Security/Anti_tracking_policy#Temporary_Web_Compatibility_Interventions)。
 
@@ -176,11 +176,11 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 要为所有站点禁用动态存储分区，可以使用 `network.cookie.cookieBehavior` 选项：
 
-| 值 | 描述                    |
-| ----- | -------------------------- |
-| 5     | 拒绝（已知）跟踪器并分区第三方存储。 |
-| 4     | 仅拒绝跟踪器（存储分区已禁用）。   |
-| 0     | 允许所有。            |
+| 值  | 描述                                 |
+| --- | ------------------------------------ |
+| 5   | 拒绝（已知）跟踪器并分区第三方存储。 |
+| 4   | 仅拒绝跟踪器（存储分区已禁用）。     |
+| 0   | 允许所有。                           |
 
 #### 豁免特定来源的分区
 
