@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`min-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)が、`min-width` で指定した値を下回ることを防ぎます。
+**`min-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)が、`min-width` で指定した値を下回ることを防ぎます。
 
 {{InteractiveExample("CSS Demo: min-width")}}
 
