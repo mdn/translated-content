@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSLayerBlockRule`** は {{cssxref("@layer")}} ブロックルールを表します。 
+**`CSSLayerBlockRule`** は {{cssxref("@layer")}} ブロックルールを表します。
 
 {{InheritanceDiagram}}
 
