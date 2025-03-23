@@ -1,9 +1,8 @@
 ---
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
-original_slug: Web/JavaScript/Equality_comparisons_and_sameness
 l10n:
-  sourceCommit: 7b35a48ac0a10b67f9bd5270b082d40deff9c953
+  sourceCommit: 9c402dca732167ee04196c5e1785eaacbf4bb5f6
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -80,7 +79,7 @@ switch (NaN) {
    - 一方のオペランドがシンボルで、もう一方がそうでない場合は、`false` を返します。
    - 一方のオペランドが論理型で、もう一方がそうでない場合は、[論理値から数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)が行われます。`true` は 1 に変換され、`false` は 0 に変換されます。それから 2 つのオペランドを緩い等価性で比較します。
    - 数値から文字列へ: [文字列から数値へ変換します](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)。変換に失敗すると `NaN` となり、等価性が `false` となることが保証されています。
-   - 数値から長整数へ: 数値で比較します。数値が ±Infinity または `NaN` であれば、`false` を返します。
+   - 数値から長整数へ: 数学的な値で比較します。数値が ±Infinity または `NaN` であれば、`false` を返します。
    - 文字列から長整数へ: 文字列を [`BigInt()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) コンストラクターと同じアルゴリズムを使用して長整数へと変換します。変換に失敗した場合は、 `false` を返します。
 
 伝統的に、そして ECMAScript によれば、すべてのプリミティブとオブジェクトは `undefined` および `null` と緩い不等価であるとされています。しかし、ほとんどのブラウザーは、あるコンテキストにおいて、非常に狭いクラスのオブジェクト（具体的には、あらゆるページの `document.all` オブジェクト）が、あたかも `undefined` という値を持つかのように振る舞うことを許可しています。緩い等価性はそのようなコンテキストの 1 つです。`null == A` と `undefined == A` は、A が `undefined` をエミュレートするオブジェクトである場合にのみ真と評価されます。他に、オブジェクトが `undefined` や `null` と緩やかな等価性を持つことはありません。
@@ -183,7 +182,7 @@ function sameValueZero(x, y) {
 
 ### Object.is() と三重等号の使いどころ
 
-一般的に、{{jsxref("Object.is")}} のゼロに対する特別な動作が関心の対象になりえると思われるのは、ある種のメタプログラミング方式に則る時、特にプロパティ記述子に関して {{jsxref("Object.defineProperty")}} の特徴の一部を再現したい時に限られます。このような要件が必要ないのであれば、{{jsxref("Object.is")}} ではなく [`===`](/ja/docs/Web/JavaScript/Reference/Operators) を使用してください。2 つの {{jsxref("NaN")}} 値を比較した結果が `true` になることが必要な場合であっても、通常は、{{jsxref("NaN")}} をチェックして特別扱いする方が (前バージョンの ECMAScript からは {{jsxref("isNaN")}} メソッドを使えます) 、比較処理中に現れた全てのゼロについてその符号が周囲の処理からどう影響されるのか悩むよりも簡単です。
+一般的に、{{jsxref("Object.is")}} のゼロに対する特別な動作が関心の対象になりえると思われるのは、ある種のメタプログラミング方式に則る時、特にプロパティ記述子に関して {{jsxref("Object.defineProperty")}} の特徴の一部を再現したい時に限られます。このような要件が必要ないのであれば、{{jsxref("Object.is")}} ではなく [`===`](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality) を使用してください。2 つの {{jsxref("NaN")}} 値を比較した結果が `true` になることが必要な場合であっても、通常は、{{jsxref("NaN")}} をチェックして特別扱いする方が (前バージョンの ECMAScript からは {{jsxref("isNaN")}} メソッドを使えます) 、比較処理中に現れた全てのゼロについてその符号が周囲の処理からどう影響されるのか悩むよりも簡単です。
 
 すべてを網羅してはいませんが、`-0` と `+0` の区別が発生する可能性がある内蔵メソッドや演算子を以下に示します。コード中ではこれらを考慮して下さい:
 
@@ -198,9 +197,9 @@ function sameValueZero(x, y) {
     `obj.velocity` が `0` である (あるいは計算結果が `0` になる) とき、そこで `-0` が生成されて `stoppingForce` に伝播します。
 
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
-  - : 引数に `-0` が存在しなくても、場合によってはこれらのメソッドの戻り値として `-0` が式に取り込まれる可能性があります。例えば、負の値の累乗で {{jsxref("Infinity", "-Infinity")}} が発生するように {{jsxref("Math.pow")}} を使用したとき、奇数の指数は `-0` に評価されます。それぞれのメソッドのドキュメントを確認してください。
+  - : 引数に `-0` が存在しなくても、場合によってはこれらのメソッドの返値として `-0` が式に取り込まれる可能性があります。例えば、負の値の累乗で {{jsxref("Infinity", "-Infinity")}} が発生するように {{jsxref("Math.pow")}} を使用したとき、奇数の指数は `-0` に評価されます。それぞれのメソッドのドキュメントを確認してください。
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
-  - : 引数のひとつが `-0` である場合に、これらのメソッドから `-0` を戻り値として得る可能性があります。例えば、`Math.min(-0, +0)` は `-0` になります。それぞれのメソッドのドキュメントを確認してください。
+  - : 引数のひとつが `-0` である場合に、これらのメソッドから `-0` を返値として得る可能性があります。例えば、`Math.min(-0, +0)` は `-0` になります。それぞれのメソッドのドキュメントを確認してください。
 - [`~`](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT), [`<<`](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift), [`>>`](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift)
   - : これらの演算子は、内部で ToInt32 アルゴリズムを使用します。内部の 32 ビット整数型は 0 の表現が 1 種類しかないため、逆の演算を行った後に `-0` は戻らないでしょう。例えば `Object.is(~~(-0), -0)` や `Object.is(-0 << 2 >> 2, -0)` は、`false` になります。
 
@@ -226,4 +225,4 @@ console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ## 関連情報
 
-- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/) ([dorey](https://github.com/dorey))
