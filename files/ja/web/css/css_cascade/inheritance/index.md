@@ -106,8 +106,8 @@ em {
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-- [CSS の構文](/en-US/docs/Web/CSS/CSS_syntax/Syntax)ガイド
-- [CSS 構文](/en-US/docs/Web/CSS/CSS_syntax)モジュール
+- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)ガイド
+- [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
 - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
 - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
 - [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
