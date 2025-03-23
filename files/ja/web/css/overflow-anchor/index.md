@@ -155,4 +155,4 @@ overflow-anchor: unset;
 
 ## 関連情報
 
-- [スクロール固定のガイド](/ja/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring)
+- [スクロール固定のガイド](/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
