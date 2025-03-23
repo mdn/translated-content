@@ -27,7 +27,7 @@ original_slug: Learn/Front-end_web_developer
 
 이 강좌를 시작하기 위한 사전 지식은 필요하지 않습니다. 최신 웹 브라우저를 실행할 수 있는 컴퓨터, 인터넷 연결, 학습 의지만 있으면 됩니다.
 
-프론트 엔드 웹 개발이 자신에게 적합한지 확실하지 않거나, 더 길고 완전한 과정을 시작하기 전에 부드러운 소개를 원하면 먼저 [웹과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web) 를 읽어보세요.
+프론트 엔드 웹 개발이 자신에게 적합한지 확실하지 않거나, 더 길고 완전한 과정을 시작하기 전에 부드러운 소개를 원하면 먼저 [웹과 함께 시작하기](/ko/docs/Learn_web_development/Getting_started/Your_first_website) 를 읽어보세요.
 
 ## 도움말 얻기
 
@@ -72,9 +72,9 @@ original_slug: Learn/Front-end_web_developer
 
 #### 모듈
 
-- [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) (15–20 시간 읽기/평가)
-- [Multimedia 와 embedding](/ko/docs/Learn/HTML/Multimedia_and_embedding) (15–20 시간 읽기/학습)
-- [HTML tables](/ko/docs/Learn/HTML/Tables) (5–10 시간 읽기/학습)
+- [HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) (15–20 시간 읽기/평가)
+- [Multimedia 와 embedding](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) (15–20 시간 읽기/학습)
+- [HTML tables](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics) (5–10 시간 읽기/학습)
 
 ### CSS를 사용한 스타일링 및 레이아웃
 
@@ -82,7 +82,7 @@ original_slug: Learn/Front-end_web_developer
 
 #### 전제조건
 
-CSS를 배우기 전에 기본적인 HTML 지식을 갖고 있는 것이 좋습니다. 최소한 [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 를 먼저 공부해야 합니다.
+CSS를 배우기 전에 기본적인 HTML 지식을 갖고 있는 것이 좋습니다. 최소한 [HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) 를 먼저 공부해야 합니다.
 
 #### 앞으로 나아갈 준비가 되었는지 어떻게 알 수 있나요?
 
@@ -91,10 +91,10 @@ CSS를 배우기 전에 기본적인 HTML 지식을 갖고 있는 것이 좋습�
 
 #### 모듈
 
-- [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) (10–15 시간 읽기/학습)
-- [CSS 구성 블록](/ko/docs/Learn/CSS/Building_blocks) (35–45 시간 읽기/학습)
-- [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text) (15–20 시간 읽기/학습)
-- [CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout) (30–40 시간 읽기/학습)
+- [CSS 첫 번째 단계](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics) (10–15 시간 읽기/학습)
+- [CSS 구성 블록](/ko/docs/Learn_web_development/Core/Styling_basics) (35–45 시간 읽기/학습)
+- [텍스트 스타일링](/ko/docs/Learn_web_development/Core/Text_styling) (15–20 시간 읽기/학습)
+- [CSS 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout) (30–40 시간 읽기/학습)
 
 #### 추가 자료
 
@@ -106,7 +106,7 @@ CSS를 배우기 전에 기본적인 HTML 지식을 갖고 있는 것이 좋습�
 
 #### 전제 조건
 
-Javascript를 배우기 전에 기본적인 HTML 지식을 갖고 있는 것이 좋습니다. 최소한 [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 를 먼저 공부해야 합니다.
+Javascript를 배우기 전에 기본적인 HTML 지식을 갖고 있는 것이 좋습니다. 최소한 [HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) 를 먼저 공부해야 합니다.
 
 #### 앞으로 나아갈 준비가 되었는지 어떻게 알 수 있나요?
 
@@ -115,11 +115,11 @@ Javascript를 배우기 전에 기본적인 HTML 지식을 갖고 있는 것이 
 
 #### 모듈
 
-- [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps) (30–40 시간 읽기/평가)
-- [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks) (25–35 시간 읽기/평가)
-- [JavaScript 객체 소개](/ko/docs/Learn/JavaScript/Objects) (25–35 시간 읽기/평가)
-- [Client-side web APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs) (30–40 시간 읽기/평가)
-- [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous) (25–35 시간 읽기/평가)
+- [JavaScript 첫걸음](/ko/docs/conflicting/Learn_web_development/Core/Scripting) (30–40 시간 읽기/평가)
+- [JavaScript 구성 요소](/ko/docs/Learn_web_development/Core/Scripting) (25–35 시간 읽기/평가)
+- [JavaScript 객체 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) (25–35 시간 읽기/평가)
+- [Client-side web APIs](/ko/docs/Learn_web_development/Extensions/Client-side_APIs) (30–40 시간 읽기/평가)
+- [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS) (25–35 시간 읽기/평가)
 
 ### 웹 폼 — 유저 데이터 작업
 
@@ -136,7 +136,7 @@ Form에는 HTML, CSS, and JavaScript 지식이 필요합니다. Form 작업의 �
 
 #### 모듈
 
-- [HTML 폼 가이드](/ko/docs/Learn/Forms)(40–50 시간)
+- [HTML 폼 가이드](/ko/docs/Learn_web_development/Extensions/Forms)(40–50 시간)
 
 ### 모두를 위한 웹 작동 시키기
 
@@ -153,8 +153,8 @@ Form에는 HTML, CSS, and JavaScript 지식이 필요합니다. Form 작업의 �
 
 #### 모듈
 
-- [크로스 브라우저 테스팅](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30 시간 읽기/평가)
-- [접근성](/ko/docs/Learn/Accessibility) (20–25 시간 읽기/평가)
+- [크로스 브라우저 테스팅](/ko/docs/Learn_web_development/Extensions/Testing) (25–30 시간 읽기/평가)
+- [접근성](/ko/docs/Learn_web_development/Core/Accessibility) (20–25 시간 읽기/평가)
 
 ### 최신 도구
 
@@ -170,6 +170,6 @@ Form에는 HTML, CSS, and JavaScript 지식이 필요합니다. Form 작업의 �
 
 #### 모듈
 
-- [Git 과 GitHub](/ko/docs/Learn/Tools_and_testing/GitHub) (5 hour read)
-- [클라이언트 웹 개발 도구 이해하기](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools) (20–25 hour read)
-- [Javascript 클라이언트 프레임워크 이해하기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks) (30-60 hour read/exercises)
+- [Git 과 GitHub](/ko/docs/Learn_web_development/Core/Version_control) (5 hour read)
+- [클라이언트 웹 개발 도구 이해하기](/ko/docs/Learn_web_development/Extensions/Client-side_tools) (20–25 hour read)
+- [Javascript 클라이언트 프레임워크 이해하기](/ko/docs/Learn_web_development/Core/Frameworks_libraries) (30-60 hour read/exercises)

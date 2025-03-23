@@ -214,15 +214,15 @@ td {
 
 GitHub에서 [라이브 예제](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html)를 살펴보실 수도 있습니다! 한 가지 눈에 띄는 점은 표가 좀 더 가독성이 높아졌다는 것입니다. 이 페이지의 위 테이블에는 최소한의 스타일링이 적용된 반면, GitHub 버전에는 더 중요한 CSS가 적용되었기 때문입니다.
 
-웹에서 표를 효과적으로 사용하려면 [CSS](/ko/docs/Learn/CSS)로 스타일링 정보를 제공하고 HTML로 견고한 구조를 갖추셔야 합니다. 이번 과정에서는 HTML 부분에 초점을 맞추고 있으므로 CSS 부분에 대해 알아보시려면 이 과정을 마치신 후 [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables) 문서를 방문하시기 바랍니다.
+웹에서 표를 효과적으로 사용하려면 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)로 스타일링 정보를 제공하고 HTML로 견고한 구조를 갖추셔야 합니다. 이번 과정에서는 HTML 부분에 초점을 맞추고 있으므로 CSS 부분에 대해 알아보시려면 이 과정을 마치신 후 [표 스타일링](/ko/docs/Learn_web_development/Core/Styling_basics/Tables) 문서를 방문하시기 바랍니다.
 
 이번 과정에서는 CSS에 초점을 맞추지는 않겠지만, 스타일링 없이 제공되는 기본값보다 테이블을 더 가독성 있게 만들 수 있는 최소한의 CSS 스타일시트를 제공했습니다. [여기에서 스타일시트](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css)를 찾으실 수 있으며, 스타일시트를 적용하는 [HTML 템플릿](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html)도 찾을 수 있습니다.
 
 ### 언제 HTML 테이블을 사용하지 말아야 하나요?
 
-HTML 테이블은 표 형식의 데이터에 사용하셔야 합니다. 이것이 바로 HTML 테이블의 설계 목적입니다. 안타깝게도 많은 사람들이 웹 페이지를 레이아웃할 때 HTML 테이블을 사용하곤 했습니다. 예를 들어 한 행은 헤더를, 한 행은 콘텐츠 열을, 한 행은 푸터를 포함하는 식입니다. 자세한 내용과 예제는 [접근성 학습 과정](/ko/docs/Learn/Accessibility)의 [페이지 레이아웃](/ko/docs/Learn/Accessibility/HTML#page_layouts)에서 확인하실 수 있습니다. 예전에는 브라우저 전반의 CSS 지원이 형편없었기 때문에 테이블 레이아웃이 일반적으로 사용되었습니다. 요즘에는 테이블 레이아웃이 훨씬 덜 일반적이지만 웹의 일부 구석에서 여전히 볼 수 있습니다.
+HTML 테이블은 표 형식의 데이터에 사용하셔야 합니다. 이것이 바로 HTML 테이블의 설계 목적입니다. 안타깝게도 많은 사람들이 웹 페이지를 레이아웃할 때 HTML 테이블을 사용하곤 했습니다. 예를 들어 한 행은 헤더를, 한 행은 콘텐츠 열을, 한 행은 푸터를 포함하는 식입니다. 자세한 내용과 예제는 [접근성 학습 과정](/ko/docs/Learn_web_development/Core/Accessibility)의 [페이지 레이아웃](/ko/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts)에서 확인하실 수 있습니다. 예전에는 브라우저 전반의 CSS 지원이 형편없었기 때문에 테이블 레이아웃이 일반적으로 사용되었습니다. 요즘에는 테이블 레이아웃이 훨씬 덜 일반적이지만 웹의 일부 구석에서 여전히 볼 수 있습니다.
 
-요컨대, [CSS 레이아웃 기법](/ko/docs/Learn/CSS/CSS_layout) 대신 테이블을 레이아웃에 사용하시는 것은 좋지 않습니다. 주된 이유는 다음과 같습니다:
+요컨대, [CSS 레이아웃 기법](/ko/docs/Learn_web_development/Core/CSS_layout) 대신 테이블을 레이아웃에 사용하시는 것은 좋지 않습니다. 주된 이유는 다음과 같습니다:
 
 1. **레이아웃 테이블은 시각 장애가 있는 사용자의 접근성을 떨어뜨립니다:** 시각 장애인이 사용하는 [스크린 리더](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers)는 HTML 페이지에 존재하는 태그를 해석하여 사용자에게 내용을 읽어줍니다. 테이블은 레이아웃에 적합한 도구가 아니며 마크업이 CSS 레이아웃 기술보다 더 복잡하기 때문에 스크린 리더의 출력은 사용자에게 혼란을 줄 수 있습니다.
 2. **테이블에서 태그 수프 생성**: 위에서 언급했듯이 테이블 레이아웃은 일반적으로 적절한 레이아웃 기술보다 더 복잡한 마크업 구조를 포함합니다. 이로 인해 코드 작성, 유지 관리 및 디버깅이 더 어려워질 수 있습니다.
@@ -551,6 +551,6 @@ th {
 
 ## 요약
 
-이것으로 HTML 테이블의 기본 사항을 마무리했습니다. 다음 장에서는 조금 더 [고급 테이블 기능](/ko/docs/Learn/HTML/Tables/Advanced)을 살펴보고 시각 장애인이 테이블에 얼마나 쉽게 접근할 수 있는지 생각해 보겠습니다.
+이것으로 HTML 테이블의 기본 사항을 마무리했습니다. 다음 장에서는 조금 더 [고급 테이블 기능](/ko/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)을 살펴보고 시각 장애인이 테이블에 얼마나 쉽게 접근할 수 있는지 생각해 보겠습니다.
 
 {{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

@@ -3822,6 +3822,12 @@
       "1986slayer"
     ]
   },
+  "Web/CSS/CSS_images/Replaced_element_properties": {
+    "modified": "2019-03-23T22:59:51.482Z",
+    "contributors": [
+      "MashKao"
+    ]
+  },
   "Web/CSS/CSS_lists/Consistent_list_indentation": {
     "modified": "2019-03-24T00:14:02.326Z",
     "contributors": [
@@ -3874,12 +3880,6 @@
     "modified": "2019-03-23T22:25:22.712Z",
     "contributors": [
       "iigmir"
-    ]
-  },
-  "Web/CSS/Replaced_element": {
-    "modified": "2019-03-23T22:59:51.482Z",
-    "contributors": [
-      "MashKao"
     ]
   },
   "Web/CSS/Type_selectors": {
@@ -5941,14 +5941,14 @@
       "happysadman"
     ]
   },
-  "Web/SVG/Attribute/stroke-dashoffset": {
+  "Web/SVG/Reference/Attribute/stroke-dashoffset": {
     "modified": "2019-03-20T22:42:12.300Z",
     "contributors": [
       "EnRico.Lam",
       "bing-Guo"
     ]
   },
-  "Web/SVG/Tutorial": {
+  "Web/SVG/Tutorials/SVG_from_scratch": {
     "modified": "2019-03-23T23:35:01.636Z",
     "contributors": [
       "Snailpool",
@@ -5958,7 +5958,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Basic_Shapes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes": {
     "modified": "2019-04-23T03:35:52.184Z",
     "contributors": [
       "jackblackevo",
@@ -5966,7 +5966,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Fills_and_Strokes": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes": {
     "modified": "2019-03-23T23:34:13.639Z",
     "contributors": [
       "jackblackevo",
@@ -5974,7 +5974,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Getting_Started": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Getting_started": {
     "modified": "2019-03-23T23:34:51.093Z",
     "contributors": [
       "jackblackevo",
@@ -5983,7 +5983,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Gradients": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Gradients": {
     "modified": "2019-03-23T23:34:17.990Z",
     "contributors": [
       "jackblackevo",
@@ -5992,14 +5992,14 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Introduction": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Introduction": {
     "modified": "2019-03-23T23:34:52.348Z",
     "contributors": [
       "ethertank",
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Paths": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Paths": {
     "modified": "2019-05-06T13:50:22.523Z",
     "contributors": [
       "Snailpool",
@@ -6008,7 +6008,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Patterns": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Patterns": {
     "modified": "2019-03-23T23:34:09.915Z",
     "contributors": [
       "jackblackevo",
@@ -6016,7 +6016,7 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/Positions": {
+  "Web/SVG/Tutorials/SVG_from_scratch/Positions": {
     "modified": "2019-03-23T23:34:48.671Z",
     "contributors": [
       "Kustz",

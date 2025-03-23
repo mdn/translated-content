@@ -16,11 +16,11 @@ original_slug: Learn/JavaScript
 
 ## 전제 조건
 
-JavaScript 는 [HTML](/ko/docs/Learn/HTML) 이나 [CSS](/ko/docs/Learn/CSS) 와 같은 관련 기술들보다 배우기가 더 어렵습니다. JavaScript 에 입문하기 전에, 적어도 아래의 두가지 기술을 먼저 배우고, 아마도 다른 것들도 배우는 것이 좋습니다. 다음 과정들을 통해 시작하세요.
+JavaScript 는 [HTML](/ko/docs/Learn_web_development/Core/Structuring_content) 이나 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 와 같은 관련 기술들보다 배우기가 더 어렵습니다. JavaScript 에 입문하기 전에, 적어도 아래의 두가지 기술을 먼저 배우고, 아마도 다른 것들도 배우는 것이 좋습니다. 다음 과정들을 통해 시작하세요.
 
-- [Web과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web)
-- [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
-- [CSS 소개](/ko/docs/Learn/CSS/First_steps)
+- [Web과 함께 시작하기](/ko/docs/Learn_web_development/Getting_started/Your_first_website)
+- [HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content)
+- [CSS 소개](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics)
 
 다른 프로그래밍 언어를 배웠던 경험이 있다면 도움이 될 수도 있습니다.
 
@@ -33,20 +33,20 @@ JavaScript 의 기본적인 것들이 익숙해진 이후에, 여러분은 더 �
 
 이 주제에는 다음 과정들이 제안된 순서대로 포함되어 있습니다.
 
-- [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)
+- [JavaScript 첫걸음](/ko/docs/conflicting/Learn_web_development/Core/Scripting)
   - : JavaScript 과정에서, JavaScript를 이용해 첫번째 경험을 쌓기 이전에 "JavaScript 는 무엇인가요?", "어떻게 생겼나요?", 그리고 "그것으로 무엇을 할 수 있죠?" 와 같은 질문에 대답 할 수 있어야 합니다. 그 이후에, 변수, 문자열, 숫자 그리고 배열과 같은 JavaScript 의 기능에 대해 살펴봅시다.
-- [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks)
+- [JavaScript 구성 요소](/ko/docs/Learn_web_development/Core/Scripting)
   - : 이 과정에서는, 조건문, 반복문, 함수, 그리고 이벤트와 같이 일반적으로 쓰이며 괄호로 감싸여진 형태인 JavaScript 의 핵심적인 기본 기능들을 살펴볼 것입니다. 여러분은 이미 이것들에 대해 이미 보셨겟지만, 그저 지나쳤을 것이니, 우리는 이것에 대해 자세히 살펴볼 것입니다.
-- [JavaScript 객체 소개](/ko/docs/Learn/JavaScript/Objects)
+- [JavaScript 객체 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : JavaScript 에서는 문자열과 배열같은 핵심적인 JavaScript 기능부터 JavaScript 보다 위에 작성된 브라우저의 API 까지 거의 대부분이 객체입니다. 심지어 관련 함수와 변수들을 효율적인 패키지로 캡슐화하기 위해 객체를 만들 수도 있습니다. 여러분이 언어에 대한 이해도를 높이고 효율적으로 코드를 작성하기 위해서라면 JavaScript 의 객체 지향적인 특성을 이해하는 것이 중요합니다. 따라서 우리는 이 과정을 통해 여러분을 도와드릴 것입니다. 여기에서는 객체 이론과 문법에 대해 설명하고 어떻게 객체를 만들고, JSON 데이터가 무엇이고 어떻게 작동하는지에 대해 설명합니다.
-- [비동기적 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
+- [비동기적 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS)
   - : 이 부분에서 우리는 Javascript의 비동기적 실행이 왜 중요한지, 서버에서 리소스를 가져올 때와 같은 시간 지연을 유발하는 동작들을 어떻게 효과적으로 다룰지 등에 대해 살펴봅니다.
-- [Client-side web APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs)
+- [Client-side web APIs](/ko/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : 클라이언트측의 웹사이트나 응용프로그램을 위해 JavaScript 를 작성하는 경우, 여러분은 브라우저와 운영체제 또는 다른 웹사이트의 데이터를 위한 API를 사용하기 전에 이상한 길에 빠지지 않을 겁니다. 이번 과정에서는 API 가 무엇인지, 그리고 개발 도중 자주 접하게 될 가장 보편적인 API들을 사용하는 방법에 대해 알아 볼 것입니다.
 
 ## 일반적인 JavaScript 문제 해결
 
-[JavaScript 를 이용한 보편적인 문제 해결](/ko/docs/Learn/JavaScript/Howto) 은 웹페이지를 만들 때 발생하는 일반적인 문제들을 JavaScript 로 해결하는 방법에 대한 링크들을 제공합니다.
+[JavaScript 를 이용한 보편적인 문제 해결](/ko/docs/Learn_web_development/Howto/Solve_JavaScript_problems) 은 웹페이지를 만들 때 발생하는 일반적인 문제들을 JavaScript 로 해결하는 방법에 대한 링크들을 제공합니다.
 
 ## 관련 항목
 

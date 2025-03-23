@@ -200,4 +200,4 @@ label {
 
 ## 같이 보기
 
-- [HTML 양식 안내서](/ko/docs/Learn/Forms)
+- [HTML 양식 안내서](/ko/docs/Learn_web_development/Extensions/Forms)

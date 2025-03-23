@@ -102,6 +102,6 @@ CSS 2.1에 존재하는 규칙 외에도 새로운 수준의 CSS는 블록 및 �
 ## 참조 항목
 
 - [CSS 기본 상자 모델](/ko/docs/Web/CSS/CSS_box_model)
-- _[일반 대열](/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - 레이아웃 살펴보기
+- _[일반 대열](/ko/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)_ - 레이아웃 살펴보기
 - [인라인 요소](/ko/docs/Glossary/Inline-level_content)
 - [블락 수준 요소](/ko/docs/Glossary/Block-level_content)

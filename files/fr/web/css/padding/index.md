@@ -7,7 +7,50 @@ slug: Web/CSS/padding
 
 La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propriétés_des_boîtes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
 
-{{EmbedInteractiveExample("pages/css/padding.html")}}
+{{InteractiveExample("CSS Demo: padding")}}
+
+```css interactive-example-choice
+padding: 1em;
+```
+
+```css interactive-example-choice
+padding: 10% 0;
+```
+
+```css interactive-example-choice
+padding: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+padding: 10px 50px 30px 0;
+```
+
+```css interactive-example-choice
+padding: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu de l'élément et sa bordure. Les valeurs négatives ne sont pas autorisées.
 

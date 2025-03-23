@@ -78,7 +78,7 @@ var args = [...arguments];
   - : 현재 실행 중인 함수를 호출한 함수를 가리킵니다.
 - [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 함수에 전달된 인수의 수를 가리킵니다.
-- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
   - : arguments의 각 인덱스 값을 포함하는 새로운 Array Iterator 객체를 반환합니다.
 
 ## 예제

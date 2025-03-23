@@ -56,7 +56,7 @@ mask-clip: unset;
 - `stroke-box`
   - : 描画されるコンテンツは、オブジェクトの輪郭線ボックスで切り取られます。
 - `view-box`
-  - : 直近の SVG ビューポートを参照ボックスとして使用します。 [`viewBox`](/ja/docs/Web/SVG/Attribute/viewBox) 属性が SVG ビューポートを作成している要素に指定されると、参照ボックスは `viewBox` 属性で示された座標系の原点に配置され、参照ボックスの寸法は `viewBox` 属性の幅と高さに設定されます。
+  - : 直近の SVG ビューポートを参照ボックスとして使用します。 [`viewBox`](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性が SVG ビューポートを作成している要素に指定されると、参照ボックスは `viewBox` 属性で示された座標系の原点に配置され、参照ボックスの寸法は `viewBox` 属性の幅と高さに設定されます。
 - `no-clip`
   - : 描画されるコンテンツは切り取られません。
 - `border`{{non-standard_inline}}

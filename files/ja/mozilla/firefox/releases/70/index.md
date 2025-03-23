@@ -109,7 +109,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 - [強化型トラッキング防止機能](/ja/docs/Web/Privacy/Firefox_tracking_protection) が有効であるときの、サードパーティーのトラッキングリソースに対する既定のリファラーのポリシーが `strict-origin-when-cross-origin` になりました ([Firefox バグ 1569996](https://bugzil.la/1569996))。
 - {{httpheader("Referer")}} 要求ヘッダーのサイズが 4 KB (4,096 バイト) に制限されました。過大なリファラーが制限を超えた場合は、オリジンの部分のみ送信します ([Firefox バグ 1557346](https://bugzil.la/1557346))。
-- [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching) が、トップレベルドキュメントのオリジンごとに分割されました ([Firefox バグ 1536058](https://bugzil.la/1536058))。
+- [HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching) が、トップレベルドキュメントのオリジンごとに分割されました ([Firefox バグ 1536058](https://bugzil.la/1536058))。
 
 #### 廃止
 

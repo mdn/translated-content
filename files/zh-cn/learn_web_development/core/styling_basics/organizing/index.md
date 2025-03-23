@@ -45,7 +45,7 @@ slug: Learn_web_development/Core/Styling_basics/Organizing
 
 如果你在和一个小组共同协作完成一个已有的项目，需要检查的第一件事是这一项目是否已经有了 CSS 的代码风格规范。小组的代码风格规范应当总是优先于的个人喜好。做事情很多时候没有对错之分，但是统一是很重要的。
 
-例如你可以看下 [MDN 的 CSS 代码规范的示例](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)。
+例如你可以看下 [MDN 的 CSS 代码规范的示例](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/CSS)。
 
 ### 保持统一
 

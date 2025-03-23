@@ -64,7 +64,7 @@ l10n:
 
 ## 関連付けられたロール
 
-**すべて**のロールで使用されます（[`generic`](/ja/docs/Web/Accessibility/ARIA/Roles/generic_role) は除きます）。
+**すべて**のロールで使用されます（[`generic`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) は除きます）。
 
 ## 仕様書
 

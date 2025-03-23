@@ -78,13 +78,13 @@ original_slug: Web/Accessibility/ARIA/Roles/article_role
 
 ## 優先順位
 
-このロールは、HTML の {{htmlelement("article")}} 要素に対応し、可能な場合はその要素を代わりに使用するべきです。 このロールは、その子たちの間に具体的なロールが存在する必要はありません。 これは、フィード ([`feed`](/ja/docs/Web/Accessibility/ARIA/Roles/feed_role)) ロールを持つ要素の直接の子として許可される唯一のロールです。
+このロールは、HTML の {{htmlelement("article")}} 要素に対応し、可能な場合はその要素を代わりに使用するべきです。 このロールは、その子たちの間に具体的なロールが存在する必要はありません。 これは、フィード ([`feed`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role)) ロールを持つ要素の直接の子として許可される唯一のロールです。
 
 ## 関連情報
 
-- [feed ロール](/ja/docs/Web/Accessibility/ARIA/Roles/feed_role)
+- [feed ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role)
 - [section ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Section_Role)
 - {{htmlelement("article")}} 要素
 - [RSS](/ja/docs/Glossary/RSS)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

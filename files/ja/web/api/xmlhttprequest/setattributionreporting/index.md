@@ -36,7 +36,7 @@ setAttributionReporting(options)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 関連付けられた {{domxref("XMLHttpRequest")}} が{{domxref("XMLHttpRequest.open", "開かれる", "", "nocode")}}ための処理がまだ行われていない場合、またはすでに{{domxref("XMLHttpRequest.send", "送信済み", "", "nocode")}}である場合に発生します。
 - `TypeError` {{domxref("DOMException")}}
-  - : [帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) の使用が、 [`attribution-reporting`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting) の {{httpheader("Permissions-Policy")}} によってブロックされている場合に発生します。
+  - : [帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) の使用が、 [`attribution-reporting`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting) の {{httpheader("Permissions-Policy")}} によってブロックされている場合に発生します。
 
 ## 例
 

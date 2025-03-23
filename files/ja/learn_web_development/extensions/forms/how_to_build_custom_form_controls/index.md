@@ -1662,11 +1662,11 @@ window.addEventListener("load", () => {
 
 ### `role` 属性
 
-[ARIA](/ja/docs/Web/Accessibility/ARIA) で使用される主要な属性が、[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性です。[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
+[ARIA](/ja/docs/Web/Accessibility/ARIA) で使用される主要な属性が、[`role`](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques) 属性です。[`role`](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques) 属性は、要素を何に使用するかを定義する値を受け入れます。それぞれのロールは、自身の要件や動作を定義します。本記事の例では、ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) を使用します。これは "composite role" であり、このロールの要素は子要素を持ち、またそれぞれの子要素も特定のロールを持ちます (この例では、ロール `option` の子要素が少なくとも 1 つ)。
 
 また、ARIA は標準の HTML マークアップに既定で適用されるロールを定義することも特筆に値します。例えば、{{HTMLElement("table")}} 要素はロール `grid` に、{{HTMLElement("ul")}} 要素はロール `list` にマッチします。{{HTMLElement("ul")}} 要素を使用しているため、私たちのコントロールのロール `listbox` が、{{HTMLElement("ul")}} 要素のロール `list` を置き換えるようにしなければなりません。そのために、ロール `presentation` を使用します。このロールは要素に特別な意味はないことを示せるようにするためのものであり、単に情報を与えるために使用されます。これを {{HTMLElement("ul")}} 要素に適用します。
 
-ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role) に対応するため、HTML を以下のように更新する必要があります。
+ロール [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) に対応するため、HTML を以下のように更新する必要があります。
 
 ```html
 <!-- 最初の要素に role="listbox" 属性を追加します -->
@@ -1688,7 +1688,7 @@ window.addEventListener("load", () => {
 
 ### `aria-selected` 属性
 
-[`role`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques) を使用するだけでは不十分です。[ARIA](/ja/docs/Web/Accessibility/ARIA) は、状態や特性を表す多くの属性も提供します。これらをより多くまた適切に使用すると、コントロールが支援技術にもっと良く理解されるようになります。ここでは、使用する属性を 1 つに絞ります。 `aria-selected` です。
+[`role`](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques) を使用するだけでは不十分です。[ARIA](/ja/docs/Web/Accessibility/ARIA) は、状態や特性を表す多くの属性も提供します。これらをより多くまた適切に使用すると、コントロールが支援技術にもっと良く理解されるようになります。ここでは、使用する属性を 1 つに絞ります。 `aria-selected` です。
 
 `aria-selected` 属性は、どの選択肢が現在選択されているかを示すために使用します。これにより、支援技術はユーザーに現在何が選択されているかを伝えることができます。ここではユーザーが選択肢を選択するたびに、選択された選択肢を示すためにこの属性を JavaScript で動的に使用します。このために、`updateValue()` 関数の変更が必要です。
 

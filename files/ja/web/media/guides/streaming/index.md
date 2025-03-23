@@ -25,5 +25,5 @@ HLS ではプレイリストを利用して、ストリーミングするメデ�
 ## あわせて参照
 
 - [Web メディア技術](/ja/docs/Web/Media)
-- [Web 上のメディアタイプとフォーマットのガイド](/ja/docs/Web/Media/Formats)
+- [Web 上のメディアタイプとフォーマットのガイド](/ja/docs/Web/Media/Guides/Formats)
 - {{HTMLElement("audio")}} と {{HTMLElement("video")}}

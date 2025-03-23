@@ -58,6 +58,6 @@ l10n:
 
 ## 関連情報
 
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)
 - {{Glossary("prerender")}}
 - [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)

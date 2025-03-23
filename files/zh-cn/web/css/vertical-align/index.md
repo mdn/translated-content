@@ -97,7 +97,7 @@ vertical-align: unset;
 这些值使元素相对其父元素垂直对齐：
 
 - `baseline`
-  - : 使元素的基线与父元素的基线对齐。HTML 规范没有详细说明部分[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)的基线，如 {{HTMLElement("textarea")}}，这意味着这些元素使用此值的表现因浏览器而异。
+  - : 使元素的基线与父元素的基线对齐。HTML 规范没有详细说明部分{{glossary("Replaced elements", "可替换元素")}}的基线，如 {{HTMLElement("textarea")}}，这意味着这些元素使用此值的表现因浏览器而异。
 - `sub`
   - : 使元素的基线与父元素的下标基线对齐。
 - `super`

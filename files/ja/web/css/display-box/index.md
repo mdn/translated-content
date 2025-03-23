@@ -25,7 +25,7 @@ l10n:
 
 ## アクセシビリティの考慮
 
-多くのブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` である要素を削除します。これにより、その要素は — また、一部の版のブラウザーではその子孫要素も — 読み上げ技術で読み上げられなくなります。これは [CSSWG 仕様書](https://drafts.csswg.org/css-display/#the-display-properties)によれば、正しくない動作です。
+多くのブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` である要素を削除します。これにより、その要素は — また、一部の版のブラウザーではその子孫要素も — 読み上げ技術で読み上げられなくなります。これは [CSSWG 仕様書](https://drafts.csswg.org/css-display/#the-display-properties)によれば、正しくない動作です。
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)

@@ -93,5 +93,5 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
 - Proceed to final subarticle of part 5 : [BookInstance detail page and challenge](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge).

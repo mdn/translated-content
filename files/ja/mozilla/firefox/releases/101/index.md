@@ -70,7 +70,7 @@ slug: Mozilla/Firefox/Releases/101
 - [`"background"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) マニフェストキーの `"persistent"` を、設定項目による制御で `false` に設定できます。Manifest V2 の設定項目は <code>extensions.eventPages.enabled</code>、Manifest V3 の設定項目は <code>extensions.manifestV3.enabled</code> です。
 - [`"host_permissions"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) マニフェストキーを追加しました。これは Manifest V3 拡張機能で使用できます。
 - Manifest V3 拡張機能向けのコンテンツスクリプト実行環境を変更しました:
-  - コンテンツスクリプトのオリジン間リクエストが、ホストの許可に依存できなくなりました。コンテンツスクリプトのオリジン間リクエストは、[CORS](/ja/docs/Web/HTTP/CORS) で実行可能です。
+  - コンテンツスクリプトのオリジン間リクエストが、ホストの許可に依存できなくなりました。コンテンツスクリプトのオリジン間リクエストは、[CORS](/ja/docs/Web/HTTP/Guides/CORS) で実行可能です。
   - `content` オブジェクト (`content.fetch`、`content.XMLHttpRequest`、`content.WebSocket` で提供される) が、コンテンツスクリプトの実行環境から削除されました。
 
 ## 過去のバージョン

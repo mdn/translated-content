@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Forms
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-이 튜토리얼에서 우리는 Django에서 HTML Form 작업 방법을 보여주고 특히 model Instance를 생성,수정,제거 하는 Form을 작성하는 가장 쉬운 방법을 보여줄 것이다. 이 예제의 일부분으로 우리는 도서관직원이 (admin 앱을 이용하기 보다) 우리가 만든 form을 이용하여 책 대여기간을 연장하거나 작가 정보를 생성,수정,제거할 수 있도록 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트를 확장할 것이다.
+이 튜토리얼에서 우리는 Django에서 HTML Form 작업 방법을 보여주고 특히 model Instance를 생성,수정,제거 하는 Form을 작성하는 가장 쉬운 방법을 보여줄 것이다. 이 예제의 일부분으로 우리는 도서관직원이 (admin 앱을 이용하기 보다) 우리가 만든 form을 이용하여 책 대여기간을 연장하거나 작가 정보를 생성,수정,제거할 수 있도록 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 웹사이트를 확장할 것이다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -33,9 +33,9 @@ original_slug: Learn/Server-side/Django/Forms
 
 ## 개요
 
-[HTML 폼(Form)](/ko/docs/Learn/Forms) 은 웹 페이지상에서 한개 이상의 필드나 위젯들의 묶음을 말하며, 사용자로부터 정보를 수집하여 서버에 제출하는데 사용된다. 다양한 종류의 데이타 입력을 지원하는 위젯들( 텍스트 박스, 체크 박스, 라디오 버튼, 날짜 선택기 등등)이 많이 존재하기 때문에, 폼은 사용자 입력을 수집하는데 유연한 장치라고 할 수 있다. 폼은 또한, 교차 사이트 요청 위조 방지(CSRF protection, cross-site request forgery protection)와 함께 `POST`요청으로 데이타를 보낼수 있도록 지원하므로, 데이타를 서버와 공유하는데 있어서 비교적 안전한 방법이다.
+[HTML 폼(Form)](/ko/docs/Learn_web_development/Extensions/Forms) 은 웹 페이지상에서 한개 이상의 필드나 위젯들의 묶음을 말하며, 사용자로부터 정보를 수집하여 서버에 제출하는데 사용된다. 다양한 종류의 데이타 입력을 지원하는 위젯들( 텍스트 박스, 체크 박스, 라디오 버튼, 날짜 선택기 등등)이 많이 존재하기 때문에, 폼은 사용자 입력을 수집하는데 유연한 장치라고 할 수 있다. 폼은 또한, 교차 사이트 요청 위조 방지(CSRF protection, cross-site request forgery protection)와 함께 `POST`요청으로 데이타를 보낼수 있도록 지원하므로, 데이타를 서버와 공유하는데 있어서 비교적 안전한 방법이다.
 
-지금까지 이 튜토리얼에서 우리가 직접 폼을 생성한 적은 없지만, Django 관리 사이트에서 이미 경험해 보았다. 예를 들면, 아래 스크린 샷에서 [Book](/ko/docs/Learn/Server-side/Django/Models) 모델중 하나를 편집하는 폼을 보여주고 있는데, 몇개의 선택 목록과 텍스트 에디터를 볼 수 있다.
+지금까지 이 튜토리얼에서 우리가 직접 폼을 생성한 적은 없지만, Django 관리 사이트에서 이미 경험해 보았다. 예를 들면, 아래 스크린 샷에서 [Book](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Models) 모델중 하나를 편집하는 폼을 보여주고 있는데, 몇개의 선택 목록과 텍스트 에디터를 볼 수 있다.
 
 ![Admin Site - Book Add](admin_book_add.png)
 
@@ -45,7 +45,7 @@ original_slug: Learn/Server-side/Django/Forms
 
 ## HTML 폼(Form) 이란?
 
-첫번째로 [HTML 폼(Form](/ko/docs/Learn/Forms))에 대한 간단한 개요이다. 어떤 "team"의 이름을 입력하는 단일 텍스트 필드와 관련 라벨을 가진 간단한 HTML 폼을 생각해보자:
+첫번째로 [HTML 폼(Form](/ko/docs/Learn_web_development/Extensions/Forms))에 대한 간단한 개요이다. 어떤 "team"의 이름을 입력하는 단일 텍스트 필드와 관련 라벨을 가진 간단한 HTML 폼을 생각해보자:
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 

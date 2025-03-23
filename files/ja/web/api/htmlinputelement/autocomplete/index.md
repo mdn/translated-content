@@ -34,5 +34,5 @@ console.log(inputElement.autocomplete);
 - {{HTMLElement("input")}}
 - {{DOMxRef("HTMLInputElement.value")}}
 - HTML の [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性
-- ARIA の [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性
+- ARIA の [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性
 - [自動補完の無効化](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)

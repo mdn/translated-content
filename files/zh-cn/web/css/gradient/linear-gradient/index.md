@@ -71,7 +71,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : 插值提示，定义渐变色在相邻色标之间的渐变过程。其中的长度定义了渐变色应在两个色标之间的哪个点到达颜色过渡的中点。如果省略该值，颜色过渡的中点就是两个色标之间的中点。
 
-> **备注：** [CSS 渐变中的色标](#线性渐变的构成) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
+> **备注：** [CSS 渐变中的色标](#线性渐变的构成) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)中的色标遵循相同的规则。
 
 ## 描述
 

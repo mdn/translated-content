@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`column-rule`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さ、スタイル、色を設定します。
+**`column-rule`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さ、スタイル、色を設定します。
 
 {{InteractiveExample("CSS Demo: column-rule")}}
 

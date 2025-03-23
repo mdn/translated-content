@@ -7,7 +7,47 @@ slug: Web/CSS/border-collapse
 
 La propriété **`border-collapse`** détermine si les bordures d'un tableau sont séparées ou fusionnées. Quand elles sont séparées, chaque cellule du tableau a ses propres bordures, distinctes. Quand elles sont fusionnées, les bordures des cellules sont partagées.
 
-{{EmbedInteractiveExample("pages/css/border-collapse.html")}}
+{{InteractiveExample("CSS Demo: border-collapse")}}
+
+```css interactive-example-choice
+border-collapse: collapse;
+```
+
+```css interactive-example-choice
+border-collapse: separate;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue orange limegreen;
+  padding: 0.75rem;
+}
+```
 
 Le modèle des _bordures séparées_ est celui qui est traditionnellement utilisé par HTML. Les cellules adjacente ont des bordures distinctes et la distance entre ces bordures est définie par la propriété {{cssxref("border-spacing")}}.
 

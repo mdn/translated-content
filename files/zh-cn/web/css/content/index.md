@@ -5,9 +5,7 @@ slug: Web/CSS/content
 
 {{CSSRef}}
 
-## 概要
-
-CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用 `content` 属性插入的内容都是匿名的[_可替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)。
+CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用 `content` 属性插入的内容都是匿名的*{{glossary("Replaced elements", "可替换元素")}}*。
 
 ## 语法
 
@@ -277,4 +275,16 @@ li {
 
 ## 参见
 
-- {{ Cssxref("::after") }}, {{ Cssxref("::before") }}, {{ Cssxref("quotes") }}
+- {{Cssxref("::after")}}
+- {{Cssxref("::before")}}
+- {{Cssxref("::marker")}}
+- {{Cssxref("contain")}}
+- {{Cssxref("quotes")}}
+- {{cssxref("gradient", "&lt;gradient&gt;")}}
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{glossary("Replaced elements", "可替换元素")}}
+- [CSS 生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)模块
+- [CSS 列表和计数器](/zh-CN/docs/Web/CSS/CSS_lists)模块
+
+- 浏览器无障碍面板：[Firefox 无障碍检查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)、[Chrome 无障碍面板](https://developer.chrome.google.cn/docs/devtools/accessibility/reference#pane)和 [Safari 无障碍树](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

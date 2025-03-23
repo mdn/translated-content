@@ -29,7 +29,7 @@ MDN ウェブ開発学習（別名「学習」）の対象者は、フロント�
 
 ## アプローチ
 
-MDN のウェブ開発の学習コンテンツを新規作成したり更新したりするには、多くの点で、 MDN の他の部分と同じ手法に従う必要があります。一般的な[執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)、[コードスタイル](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)、[テクニック](/ja/docs/MDN/Writing_guidelines/Howto)についても同じものに従う必要があります。
+MDN のウェブ開発の学習コンテンツを新規作成したり更新したりするには、多くの点で、 MDN の他の部分と同じ手法に従う必要があります。一般的な[執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)、[コードスタイル](/ja/docs/MDN/Writing_guidelines/Code_style_guide)、[テクニック](/ja/docs/MDN/Writing_guidelines/Howto)についても同じものに従う必要があります。
 
 ただし、若干の違いもあります。
 

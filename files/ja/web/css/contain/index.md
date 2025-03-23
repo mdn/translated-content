@@ -84,8 +84,8 @@ CSS コンテナーには、サイズ、レイアウト、スタイル、描画�
 > [!NOTE]
 > (`paint`, `strict`, `content` のいずれかの値で) 適用された場合、このプロパティは以下のものを生成します。
 >
-> 1. 新しい[包含ブロック](/ja/docs/Web/CSS/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
-> 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。
+> 1. 新しい[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
+> 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。
 > 3. 新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)。
 
 ## 構文

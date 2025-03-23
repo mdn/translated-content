@@ -230,6 +230,6 @@ p {
 - [`!important`](/ko/docs/Web/CSS/important)
 - [`revert-layer`](/ko/docs/Web/CSS/revert-layer)
 - [Introducing the CSS cascade](/ko/docs/Web/CSS/Cascade)
-- [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [종속 계층](/ko/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [계단식 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [종속 계층](/ko/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)

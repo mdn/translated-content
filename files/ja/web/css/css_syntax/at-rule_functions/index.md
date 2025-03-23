@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-**[CSS](/ja/docs/Web/CSS) [アットルール](/ja/docs/Web/CSS/At-rule)関数**は、複雑なルールを表したり、特別なデータ処理や計算を呼び出すことができるアットルール文です。
+**[CSS](/ja/docs/Web/CSS) [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)関数**は、複雑なルールを表したり、特別なデータ処理や計算を呼び出すことができるアットルール文です。
 
 ## 構文
 

@@ -2,7 +2,7 @@
 title: 源私有文件系统
 slug: Web/API/File_System_API/Origin_private_file_system
 l10n:
-  sourceCommit: 2cba64f68aab9e233fecfc2bab8bea4118716c14
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -76,7 +76,7 @@ const existingDirectoryHandle =
 
 1. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 以返回一个 {{domxref("FileSystemFileHandle")}} 对象。
 2. 调用 {{domxref("FileSystemFileHandle.createWritable()")}} 方法返回一个 {{domxref("FileSystemWritableFileStream")}} 对象，这是一种特化的 {{domxref("WritableStream")}} 对象。
-3. 调用 {{domxref("FileSystemWritableFilestream.write()")}} 来向其写入内容。
+3. 调用 {{domxref("FileSystemWritableFileStream.write()")}} 来向其写入内容。
 4. 使用 {{domxref("WritableStream.close()")}} 关闭流。
 
 ### 删除文件或目录
@@ -128,7 +128,7 @@ Web Worker 不会阻塞主线程，这意味着你可以在其上下文中使用
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
-const fileHandle = await opfsRoot.getFileHandle("高速文件.txt", {
+const fileHandle = await opfsRoot.getFileHandle("my-high-speed-file.txt", {
   create: true,
 });
 const syncAccessHandle = await fileHandle.createSyncAccessHandle();

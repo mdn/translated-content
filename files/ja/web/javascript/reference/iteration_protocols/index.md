@@ -15,7 +15,7 @@ l10n:
 
 **反復可能プロトコル** (iterable protocol) によって、 JavaScript のオブジェクトは反復動作を定義またはカスタマイズすることができます。例えば、 {{jsxref("Statements/for...of", "for...of")}} 構造の中でどの値がループに使われるかです。一部の組み込み型は既定の反復動作を持つ[組み込み反復可能オブジェクト](#組み込み反復可能オブジェクト)で、これには {{jsxref("Array")}} や {{jsxref("Map")}} がありますが、他の型 ({{jsxref("Object")}} など) はそうではありません。
 
-**反復可能**であるために、オブジェクトは **`[Symbol.iterator]()`** メソッドを実装する必要があります。これはつまり、オブジェクト（または、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上のオブジェクトの一つ）が `[Symbol.iterator]` キー（{{jsxref("Symbol.iterator")}} 定数にて利用可）のプロパティを持つ必要があります。
+**反復可能**であるために、オブジェクトは **`[Symbol.iterator]()`** メソッドを実装する必要があります。これはつまり、オブジェクト（または、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上のオブジェクトの一つ）が `[Symbol.iterator]` キー（{{jsxref("Symbol.iterator")}} 定数にて利用可）のプロパティを持つ必要があります。
 
 - `[Symbol.iterator]()`
   - : [イテレータープロトコル](#イテレータープロトコル)に準拠するオブジェクトを返す、引数なしの関数。
@@ -173,7 +173,7 @@ new WeakSet(
 
 ### 反復可能オブジェクトを期待する構文
 
-一部の文や式は反復可能オブジェクトを期待します。例えば、 {{jsxref("Statements/for...of", "for...of")}} ループ、[配列と引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}}、[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)などです。
+一部の文や式は反復可能オブジェクトを期待します。例えば、 {{jsxref("Statements/for...of", "for...of")}} ループ、[配列と引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}}、[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)などです。
 
 ```js
 for (const value of ["a", "b", "c"]) {

@@ -97,10 +97,10 @@ JSON 構造は最上位のレベルに 1 つ以上のフィールドを格納し
         - 将来の Firefox 実装では、[Mozilla VPN](https://www.mozilla.org/ja/products/vpn/) 製品をベースにしたものを使用するかもしれません。
 
 - `"referrer_policy"` {{optional_inline}}
-  - : ルールで指定された URL をリクエストするときに使用する特定のリファラーポリシー文字列を表します - 使用可能な値については [`Referrer-Policy`](/ja/docs/Web/HTTP/Headers/Referrer-Policy) を参照してください。この目的は、参照するページが（既定で、または `Referrer-Policy` を使用して）既に保有しているポリシーよりも、投機的リクエストに特定の厳しいポリシーを設定することを許可することです。投機ルールで設定された緩いポリシーは、参照するページで設定された厳しいポリシーを上書きすることはありません。
+  - : ルールで指定された URL をリクエストするときに使用する特定のリファラーポリシー文字列を表します - 使用可能な値については [`Referrer-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy) を参照してください。この目的は、参照するページが（既定で、または `Referrer-Policy` を使用して）既に保有しているポリシーよりも、投機的リクエストに特定の厳しいポリシーを設定することを許可することです。投機ルールで設定された緩いポリシーは、参照するページで設定された厳しいポリシーを上書きすることはありません。
 
 > [!NOTE]
-> 投機ルールは `<script>` 要素を使用するので、サイトに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の [`script-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) ディレクティブが指定されている場合は、明示的に許可する必要があります。これは `"inline-speculation-rules"` 値を hash- または nonce-source で追加することで行われます。
+> 投機ルールは `<script>` 要素を使用するので、サイトに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) の [`script-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ディレクティブが指定されている場合は、明示的に許可する必要があります。これは `"inline-speculation-rules"` 値を hash- または nonce-source で追加することで行われます。
 
 ### さらなる例
 
@@ -211,5 +211,5 @@ if (
 ## 関連情報
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)
-- [投機的な読み込み](/ja/docs/Web/Performance/Speculative_loading)
+- [投機的な読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)
 - [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)

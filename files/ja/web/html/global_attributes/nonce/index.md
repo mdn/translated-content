@@ -8,17 +8,17 @@ l10n:
 {{HTMLSidebar("Global_attributes")}}
 
 **`nonce`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、
-これは暗号化ノンス ("number used once") を定義するコンテンツ属性で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP) が指定された要素に対してフェッチの実行を許可するかどうかを決定するために使用することができます。
+これは暗号化ノンス ("number used once") を定義するコンテンツ属性で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP) が指定された要素に対してフェッチの実行を許可するかどうかを決定するために使用することができます。
 
 ## 解説
 
 `nonce` 属性は、特定の要素、例えば特定のインラインスクリプトやスタイル要素を許可リスト化するのに有益なものです。
-[CSP](/ja/docs/Web/HTTP/CSP) の `unsafe-inline` ディレクティブの使用を避けることができ、すべてのインラインスクリプトまたはスタイルを許可リスト化することができます。
+[CSP](/ja/docs/Web/HTTP/Guides/CSP) の `unsafe-inline` ディレクティブの使用を避けることができ、すべてのインラインスクリプトまたはスタイルを許可リスト化することができます。
 
 > [!NOTE]
 > 安全でないインラインのスクリプトや スタイルのコンテンツを使用しない方法がない場合のみ、 `nonce` を使用してください。もし `nonce` が必要ないのであれば、使用しないでください。スクリプトが静的なものであれば、代わりに CSP ハッシュを使用することもできます。
-> （[安全でないインラインスクリプト](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script)の使用上の注意を参照してください。）
-> 常に [CSP](/ja/docs/Web/HTTP/CSP) の保護を最大限に活用し、ノンスや安全でないインラインスクリプトを可能な限り避けるようにしてください。
+> （[安全でないインラインスクリプト](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_inline_script)の使用上の注意を参照してください。）
+> 常に [CSP](/ja/docs/Web/HTTP/Guides/CSP) の保護を最大限に活用し、ノンスや安全でないインラインスクリプトを可能な限り避けるようにしてください。
 
 ### \<script> 要素を許可リスト化するためにノンスを使用
 
@@ -46,7 +46,7 @@ crypto.randomBytes(16).toString("base64");
 
 #### ノンス付きの CSP ヘッダーの送信
 
-最後に、ノンスの値を [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) ヘッダーで送る必要があります（`nonce-` を前に付ける）。
+最後に、ノンスの値を [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) ヘッダーで送る必要があります（`nonce-` を前に付ける）。
 
 ```http
 Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
@@ -85,5 +85,5 @@ script[nonce~="whatever"] {
 ## 関連情報
 
 - [`HTMLElement.nonce`](/ja/docs/Web/API/HTMLElement/nonce)
-- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)
-- CSP: [`script-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
+- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)
+- CSP: [`script-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)
