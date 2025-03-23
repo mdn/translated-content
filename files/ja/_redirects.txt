@@ -4122,7 +4122,6 @@
 /ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements	/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 /ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index	/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 /ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index	/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index
-/ja/docs/Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring	/ja/docs/Web/CSS/CSS_scroll_anchoring/Guide_to_scroll_anchoring
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_values_syntax	/ja/docs/Web/CSS
