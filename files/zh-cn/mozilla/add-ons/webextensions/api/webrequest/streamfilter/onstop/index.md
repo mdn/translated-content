@@ -2,7 +2,7 @@
 title: webRequest.StreamFilter.onstop
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstop
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 {{AddonSidebar}}
@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-下述示例会在响应中追加“额外的数据”：
+该示例会在响应中追加“额外的数据”：
 
 ```js
 function listener(details) {
@@ -23,7 +23,7 @@ function listener(details) {
   const encoder = new TextEncoder();
 
   filter.ondata = (event) => {
-    // 传过所有响应数据
+    // 传递所有响应数据
     filter.write(event.data);
   };
 
@@ -40,7 +40,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-Here's another version of the example above:
+上述示例也可以这样实现：
 
 ```js
 function listener(details) {
@@ -56,7 +56,7 @@ function listener(details) {
     for (const buffer of data) {
       filter.write(buffer);
     }
-    filter.write(encoder.encode("extra stuff"));
+    filter.write(encoder.encode("额外的数据"));
     filter.close();
   };
 }
