@@ -2,10 +2,12 @@
 title: Cómo crear, editar, mover o eliminar páginas
 short-title: Crear, editar, mover o eliminar páginas
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
+l10n:
+  sourceComimit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
 Este artículo describe cómo crear, mover, eliminar o editar una página.
-En todos estos casos, es una buena idea revisar nuestras directrices para [Lo que escribimos](/es/docs/MDN/Writing_guidelines/What_we_write) para confirmar si alguna de estas acciones debe ser tomada y discutirlo con el equipo en uno de los canales de comunicación de MDN Web Docs [canales de comunicación](/es/docs/MDN/Community/Communication_channels) antes de proceder.
+En todos estos casos, es una buena idea revisar nuestras directrices para [Lo que escribimos](/es/docs/MDN/Writing_guidelines/What_we_write) para confirmar si alguna de estas acciones debe ser tomada y discutirlo con el equipo en uno de los [canales de comunicación](/es/docs/MDN/Community/Communication_channels) de MDN Web Docs  antes de proceder.
 
 ## Crear páginas
 
@@ -16,7 +18,7 @@ Todas las páginas en MDN Web Docs están redactadas en formato Markdown. El con
 
 Hay muchos tipos diferentes de [tipos de páginas](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types) con estructuras específicas y plantillas de página compatibles para ellos, que puede copiar para empezar.
 
-El documento `index.md` del archivo debe comenzar con metadatos front matter que definen el `title`, `slug` y `page-type`. La mayor parte de esta información de metadatos se encuentra en las plantillas de página mencionadas anteriormente. Alternativamente, puede resultarle útil referirse a los metadatos front matter dentro de un documento similar `index.md`.
+El archivo `index.md` de un documento debe comenzar con metadatos al inicio que definen `title`, `slug` y `page-type`. La mayor parte de esta información de metadatos se encuentra en las plantillas de página mencionadas anteriormente. Alternativamente, puede resultarte útil referirte a los metadatos al inicio dentro de un documento similar `index.md`.
 
 El proceso general paso a paso para crear una página sería:
 
@@ -34,7 +36,7 @@ El proceso general paso a paso para crear una página sería:
 
 2. Crear uno o varios nuevos directorios de documentos, cada uno con su propio archivo `index.md`.
 
-3. Añadir y confirmar sus nuevos archivos así como subir su nueva rama a su fork.
+3. Añadir y confirmar sus nuevos archivos así como subir su nueva rama a su copia.
 
    ```bash
    git add files/en-us/folder/you/created
@@ -84,7 +86,7 @@ Por ejemplo, supongamos que desea mover todo el `/en-US/Web/HTTP/Authentication`
    node scripts/update-moved-file-links.js
    ```
 
-4. Añadir y confirmar todos los archivos eliminados, creados y modificados, así como enviar su rama a su fork.
+4. Añadir y confirmar todos los archivos eliminados, creados y modificados, así como enviar su rama a su copia.
 
    ```bash
    git add .
@@ -141,7 +143,7 @@ Por ejemplo, si desea eliminar todo el árbol `/en-US/Web/HTTP/Authentication`, 
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
-4. Añadir y confirmar todos los archivos eliminados, así como enviar su rama a su fork.
+4. Añadir y confirmar todos los archivos eliminados, así como enviar su rama a su copia.
 
    ```bash
    git commit -a
