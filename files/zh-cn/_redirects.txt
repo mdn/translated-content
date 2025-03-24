@@ -1504,6 +1504,7 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/剪切板	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/clipboard
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
+/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json	/zh-CN/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings

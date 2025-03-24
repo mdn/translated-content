@@ -1,6 +1,7 @@
 ---
 title: manifest.json 的浏览器兼容性
-slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
+slug: conflicting/Mozilla/Add-ons/WebExtensions/manifest.json
+original_slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
 ---
 
 {{AddonSidebar}}{{Compat}}
