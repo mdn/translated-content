@@ -5,7 +5,7 @@ slug: Web/CSS/angle
 
 {{ CSSRef() }}
 
-[Тип данных](/ru/docs/Web/CSS/CSS_Types) [CSS](/ru/docs/Web/CSS) **`<angle>`** представляет собой значение угла, выраженное в градусах, градах, радианах или оборотах. Он используется, например, в {{cssxref ("&lt;gradient&gt;")}} и в некоторых функциях {{cssxref ("transform")}}.
+[Тип данных](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/ru/docs/Web/CSS) **`<angle>`** представляет собой значение угла, выраженное в градусах, градах, радианах или оборотах. Он используется, например, в {{cssxref ("&lt;gradient&gt;")}} и в некоторых функциях {{cssxref ("transform")}}.
 
 {{InteractiveExample("CSS Demo: &amp;lt;angle&amp;gt;")}}
 

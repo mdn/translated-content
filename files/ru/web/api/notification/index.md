@@ -106,7 +106,7 @@ slug: Web/API/Notification
 
 ### Методы экземпляра
 
-Следующие методы доступны только для экземпляров объекта `Notification`, либо через его [`прототип`](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). Объект `Notification` также наследует методы интерфейса {{domxref("EventTarget")}}.
+Следующие методы доступны только для экземпляров объекта `Notification`, либо через его [`прототип`](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). Объект `Notification` также наследует методы интерфейса {{domxref("EventTarget")}}.
 
 - {{domxref("Notification.close()")}}
   - : Программно закрывает уведомление.

@@ -45,7 +45,7 @@ slug: Mozilla/Firefox/Releases/43
 
 - Более полное соответствие спецификации ES2015, [стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) больше не содержат свой собственный встроенный объект `arguments`. Объект `arguments` теперь прикреплён лексически (наследуется от внешней функции). В большинстве случаев, [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters) лучшая альтернатива `(...args) => args[i]`, смотри [Firefox bug 889158](https://bugzil.la/889158).
 - Объект [arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments) теперь разрешается использовать вместе с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters) ([Firefox bug 1133298](https://bugzil.la/1133298)).
-- Теперь, объект map [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments) в нестрогих функциях доступен только если функция не содержит другие [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [параметры по умолчанию или](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)[destructured parameters](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 1175394](https://bugzil.la/1175394)).
+- Теперь, объект map [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments) в нестрогих функциях доступен только если функция не содержит другие [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [параметры по умолчанию или](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)[destructured parameters](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring) ([Firefox bug 1175394](https://bugzil.la/1175394)).
 
 ### Interfaces/APIs/DOM
 

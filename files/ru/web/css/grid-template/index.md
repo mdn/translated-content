@@ -5,7 +5,7 @@ slug: Web/CSS/grid-template
 
 {{CSSRef}}
 
-[Сокращённое CSS-свойство](/ru/docs/Web/CSS/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
+[Сокращённое CSS-свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
 
 {{InteractiveExample("CSS Demo: grid-template")}}
 

@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/Scripting/Return_values
 
 Для нас в этом курсе имеется ещё один важный момент. Посмотрим внимательнее на возвращаемое значение функций. Некоторые функции не возвращают существенное значение после завершения, но некоторые возвращают, и важно понимать что это за значение и как использовать его в своём коде и как сделать так чтобы ваши собственные функции возвращали полезные значения. Мы объясним всё это ниже.
 
-| Необходимые навыки: | Базовая компьютерная грамотность, знание основ HTML и CSS, [JavaScript first steps](/ru/docs/Learn/JavaScript/First_steps), [Functions — reusable blocks of code](/ru/docs/Learn/JavaScript/Building_blocks/Functions). |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цели:               | Понять что такое возвращаемое значение функции и как его использовать.                                                                                                                                                  |
+| Необходимые навыки: | Базовая компьютерная грамотность, знание основ HTML и CSS, [JavaScript first steps](/ru/docs/conflicting/Learn_web_development/Core/Scripting), [Functions — reusable blocks of code](/ru/docs/Learn_web_development/Core/Scripting/Functions). |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цели:               | Понять что такое возвращаемое значение функции и как его использовать.                                                                                                                                                                          |
 
 ## Что из себя представляют возвращаемые значения?
 
@@ -155,7 +155,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 Функции очень полезны и несмотря на то, что об их синтаксисе и функциональности можно говорить долго, у нас есть довольно понятные статьи для дальнейшего обучения.
 
-Если в статье есть что-то что вы не поняли, не стесняйтесь перечитать статью ещё раз или [свяжитесь с нами](/ru/docs/Learn#contact_us) для получения помощи.
+Если в статье есть что-то что вы не поняли, не стесняйтесь перечитать статью ещё раз или [свяжитесь с нами](/ru/docs/Learn_web_development#contact_us) для получения помощи.
 
 ## Смотрите также
 
@@ -166,10 +166,10 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 ## In this module
 
-- [Making decisions in your code — conditionals](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/ru/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/ru/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/ru/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+- [Making decisions in your code — conditionals](/ru/docs/Learn_web_development/Core/Scripting/Conditionals)
+- [Looping code](/ru/docs/Learn_web_development/Core/Scripting/Loops)
+- [Functions — reusable blocks of code](/ru/docs/Learn_web_development/Core/Scripting/Functions)
+- [Build your own function](/ru/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
+- [Function return values](/ru/docs/Learn_web_development/Core/Scripting/Return_values)
+- [Introduction to events](/ru/docs/Learn_web_development/Core/Scripting/Events)
+- [Image gallery](/ru/docs/Learn_web_development/Core/Scripting/Image_gallery)
