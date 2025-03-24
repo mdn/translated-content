@@ -11,14 +11,14 @@ l10n:
 
 要对数据解码，请使用 {{domxref("TextDecoder")}} 或 {{domxref("Blob")}}。
 
-如果不使用 `ondata` 监听器，你将无法接收到原始响应主体，除非调用 {{WebEXTAPIRef("webRequest.StreamFilter.write", "write")}}，否则输出流将为空。
+如果不使用 `ondata` 监听器，你将无法接收到原始响应主体，并且除非调用 {{WebEXTAPIRef("webRequest.StreamFilter.write", "write")}}，否则输出流将为空。
 
 ## 示例
 
 该示例添加一个使用 {{jsxref("String.prototype.replaceAll()", "replaceAll()")}} 将响应中的“示例”替换为“WebExtension 示例”的 `ondata` 监听器。
 
 > [!NOTE]
-> 该示例仅可用于替换完全包含在一个数据块中的“示例”，而不适用于文字横跨两个块的情况（在大型文档中这可能会以 \~0.1% 概率发生）。此外，它仅能处理 UTF-8 编码的文档。实际实现将会更为复杂。
+> 该示例仅可用于替换在一个数据块中完整出现的“示例”两字，而不适用于文字横跨两个块的情况（在大型文档中这可能会以 \~0.1% 概率发生）。此外，它仅能处理 UTF-8 编码的文档。实际实现将会更为复杂。
 
 <!-- cSpell:ignore Examp -->
 
@@ -31,7 +31,7 @@ function listener(details) {
   filter.ondata = (event) => {
     let str = decoder.decode(event.data, { stream: true });
     // 只将 HTTP 响应中的任何示例更改为 WebExtension 示例。
-    // 请注意，这可能不会按预期工作，因为 str 的结尾也可以是 "<h1>Examp"（因为它不是完整的响应）。
+    // 请注意，这可能不会按预期工作，因为 str 的结尾也可以是“<h1>Examp”（因为它不是完整的响应）。
     // 因此，最好先获取完整的响应，然后再进行替换。
     str = str.replaceAll("示例", "WebExtension 示例");
     filter.write(encoder.encode(str));
@@ -120,7 +120,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-上述的示例可以这样写：
+上一示例也可以这样写：
 
 ```js
 function listener(details) {
