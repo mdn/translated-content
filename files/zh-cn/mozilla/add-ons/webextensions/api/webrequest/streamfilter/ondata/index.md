@@ -2,7 +2,7 @@
 title: webRequest.StreamFilter.ondata
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: acc6ec7d08ede0727a68cbc696e983c572940f62
 ---
 
 {{AddonSidebar}}
