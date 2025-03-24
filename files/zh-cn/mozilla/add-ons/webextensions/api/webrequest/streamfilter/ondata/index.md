@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-重复在当响应数据可用时调用的事件处理器。处理器会传递一个带有 `data` 属性的 [`Event` 对象](/zh-CN/docs/Web/API/Event)。`data` 属性包含以 {{jsxref("ArrayBuffer")}} 表示的响应数据的一个块。
+每当响应数据可用时都会被调用的事件处理器。处理器会传递一个包含 `data` 属性的 [`Event` 对象](/zh-CN/docs/Web/API/Event)。`data` 属性包含以 {{jsxref("ArrayBuffer")}} 表示的响应数据的一个块。
 
 要对数据解码，请使用 {{domxref("TextDecoder")}} 或 {{domxref("Blob")}}。
 
@@ -18,7 +18,7 @@ l10n:
 该示例添加一个使用 {{jsxref("String.prototype.replaceAll()", "replaceAll()")}} 将响应中的“示例”替换为“WebExtension 示例”的 `ondata` 监听器。
 
 > [!NOTE]
-> 该示例仅适用于完全包含在数据块中的“示例”出现，而不适用于跨两个块的情况（在大型文档中这可能会以 \~0.1% 概率发生）。此外，它仅处理 UTF-8 编码的文档。实际实现需要更复杂。
+> 该示例仅可用于替换完全包含在一个数据块中的“示例”，而不适用于文字横跨两个块的情况（在大型文档中这可能会以 \~0.1% 概率发生）。此外，它仅能处理 UTF-8 编码的文档。实际实现将会更为复杂。
 
 <!-- cSpell:ignore Examp -->
 
@@ -105,7 +105,7 @@ function listener(details) {
     for (const buffer of data) {
       str += decoder.decode(buffer, { stream: true });
     }
-    str += decoder.decode(); // end-of-stream
+    str += decoder.decode(); // 流的末尾
 
     str = str.replaceAll("示例", "WebExtension $&");
     filter.write(encoder.encode(str));
