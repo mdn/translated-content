@@ -2,7 +2,7 @@
 title: "Desafío: Diseñar la página de inicio de una escuela comunitaria"
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
 {{LearnSidebar}}
@@ -30,7 +30,7 @@ Se te ha proporcionado un HTML sin formato para la página de inicio de una univ
 
 Fuentes:
 
-- En primer lugar, descarga un par de fuentes de uso gratuito. Debido a que esto es una universidad, las fuentes deben elegirse para darle a la página una sensación bastante seria, formal y confiable: una fuente serif en todo el sitio para el texto general del cuerpo, junto con una sans-serif o slab serif para los encabezados podría ser agradable.
+- En primer lugar, descarga un par de fuentes tipográficas (tipografías) de uso gratuito. Debido a que esto es una universidad, las fuentes deben elegirse para darle a la página una sensación bastante seria, formal y confiable: una fuente serif en todo el sitio para el texto general del cuerpo, junto con una sans-serif o slab serif para los encabezados podría ser agradable.
 - Utiliza un servicio adecuado para generar código `@font-face` a prueba de balas para estas dos fuentes.
 - Aplica tu fuente del cuerpo a toda la página y tu fuente del encabezado a tus encabezados.
 
@@ -42,12 +42,12 @@ Estilo general del texto:
 - Centra tu encabezado de nivel superior en la página.
 - Dale a tus encabezados un poco de `letter-spacing` para que no estén demasiado apretados y permitir que las letras respiren un poco.
 - Dale a tu texto del cuerpo algo de `letter-spacing` y `word-spacing`, según corresponda.
-- Dale al primer párrafo después de cada encabezado en la `<section>` un poco de sangría de texto, digamos 20px.
+- Dale al primer párrafo después de cada encabezado en  `<section>` un poco de sangría de texto, digamos 20px.
 
 Enlaces:
 
-- Dale a los estados de enlace, visitado, enfocado y flotante algunos colores que combinen con el color de las barras horizontales en la parte superior e inferior de la página.
-- Haz que los enlaces estén subrayados de forma predeterminada, pero cuando los muevas o los enfoques, el subrayado desaparezca.
+- Dale a los estados de enlace, visitado, enfocado y sobre él algunos colores que combinen con el color de las barras horizontales en la parte superior e inferior de la página.
+- Haz que los enlaces estén subrayados de forma predeterminada, pero cuando estés sobre ellos o los enfoques, el subrayado desaparezca.
 - Elimina el contorno de enfoque predeterminado de TODOS los enlaces en la página.
 - Dale al estado activo un estilo notablemente diferente para que se destaque bien, pero haz que aún encaje con el diseño general de la página.
 - Haz que los enlaces _externos_ tengan el icono de enlace externo insertado junto a ellos.
@@ -64,7 +64,7 @@ Menú de navegación:
 ## Pistas y consejos
 
 - No necesitas editar el HTML de ninguna manera para este ejercicio.
-- No necesariamente tienes que hacer que el menú de navegación parezca botones, pero debe ser un poco más alto para que no se vea tonto en el lado de la página; también recuerda que debes hacer de este un menú de navegación vertical.
+- No necesariamente tienes que hacer que el menú de navegación parezca botones, pero debe ser un poco más alto para que no se vea sin sentido en el lado de la página; también recuerda que debes hacer de este un menú de navegación vertical.
 
 ## Ejemplo
 
