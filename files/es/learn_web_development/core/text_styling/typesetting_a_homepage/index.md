@@ -42,7 +42,7 @@ Estilo general del texto:
 - Centra tu encabezado de nivel superior en la página.
 - Dale a tus encabezados un poco de `letter-spacing` para que no estén demasiado apretados y permitir que las letras respiren un poco.
 - Dale a tu texto del cuerpo algo de `letter-spacing` y `word-spacing`, según corresponda.
-- Dale al primer párrafo después de cada encabezado en  `<section>` un poco de sangría de texto, digamos 20px.
+- Dale al primer párrafo después de cada encabezado en `<section>` un poco de sangría de texto, digamos 20px.
 
 Enlaces:
 
