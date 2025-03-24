@@ -30,7 +30,7 @@ l10n:
 
 ## 専用ワーカー
 
-前述のとおり、専用ワーカー (dedicated worker) には呼び出し元のスクリプトだけがアクセスできます。この節では[基本的な専用ワーカーのサンプル](https://github.com/mdn/simple-web-worker)にある JavaScript を見ていきます（[専用ワーカーを実行する](https://mdn.github.io/simple-web-worker/)）。これは、 2 つの数字を入力して掛け合わせることができるものです。数字は専用のワーカーに送られて掛け合わされ、その結果がページに戻されて表示されます。
+前述のとおり、専用ワーカー (dedicated worker) には呼び出し元のスクリプトだけがアクセスできます。この節では[基本的な専用ワーカーのサンプル](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker)にある JavaScript を見ていきます（[専用ワーカーを実行する](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）。これは、 2 つの数字を入力して掛け合わせることができるものです。数字は専用のワーカーに送られて掛け合わされ、その結果がページに戻されて表示されます。
 
 これはあまり面白みのないサンプルですが、基本的なワーカーの概念を紹介する間はシンプルに保とうと考えています。より高度な詳細情報は、この記事の後半で扱います。
 
