@@ -38,7 +38,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-下述示例为不使用 `"blocking"` 的情况。
+该示例则为不使用 `"blocking"` 的情况。
 
 ```js
 function listener(details) {
