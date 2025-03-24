@@ -3,7 +3,7 @@ title: Cómo crear, editar, mover o eliminar páginas
 short-title: Crear, editar, mover o eliminar páginas
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 l10n:
-  sourceComimit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
 Este artículo describe cómo crear, mover, eliminar o editar una página.
