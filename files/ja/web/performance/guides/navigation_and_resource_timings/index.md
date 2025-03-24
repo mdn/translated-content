@@ -300,7 +300,7 @@ performance.getEntriesByType("frame").forEach((frame) => {
 
 ## ナビゲーションタイミング
 
-ユーザーがウェブサイトやアプリケーションをリクエストすると、[ブラウザーに表示するために](/ja/docs/Web/Performance/How_browsers_work)、ユーザーエージェントは {{glossary('DNS')}} 参照、 {{glossary('TCP handshake', 'TCP ハンドシェイク')}}、 TLS ネゴシエーションを含む一連の手順を経て、ユーザーエージェントが実際のリクエストを行い、サーバーがリクエストされた資産を返します。その後、ブラウザーは受け取ったコンテンツを解釈し、DOM、CSSOM、アクセシビリティ、レンダリングツリーを構築し、最終的にページをレンダリングします。ユーザーエージェントが文書の解釈をやめると、ユーザーエージェントは文書の準備状態を _interactive_ に設定します。解釈する必要のある遅延スクリプトがある場合は、それを実行し、[DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) を発行します。これで文書は読み込み後のタスクを処理できるようになり、この時点で文書は完全に読み込まれたとみなされます。
+ユーザーがウェブサイトやアプリケーションをリクエストすると、[ブラウザーに表示するために](/ja/docs/Web/Performance/Guides/How_browsers_work)、ユーザーエージェントは {{glossary('DNS')}} 参照、 {{glossary('TCP handshake', 'TCP ハンドシェイク')}}、 TLS ネゴシエーションを含む一連の手順を経て、ユーザーエージェントが実際のリクエストを行い、サーバーがリクエストされた資産を返します。その後、ブラウザーは受け取ったコンテンツを解釈し、DOM、CSSOM、アクセシビリティ、レンダリングツリーを構築し、最終的にページをレンダリングします。ユーザーエージェントが文書の解釈をやめると、ユーザーエージェントは文書の準備状態を _interactive_ に設定します。解釈する必要のある遅延スクリプトがある場合は、それを実行し、[DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) を発行します。これで文書は読み込み後のタスクを処理できるようになり、この時点で文書は完全に読み込まれたとみなされます。
 
 ```js
 const navigationTimings = performance.getEntriesByType("navigation");

@@ -30,7 +30,7 @@ l10n:
 
 アクセシビリティ API が上記のライブリージョンへの変更を認識すると、属性の値に基づいてそのライブリージョンのコンテンツをアナウンスします。要素にはフォーカスが与えられ**ません**。
 
-ライブリージョンのコンテンツをすべて読み込ませたい場合は、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) を使用してください。ユーザーに再読み込みが必要な更新の部分だけを定義するには、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) を使用してください。更新中にアナウンスを行わないようにするには、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy) を使用してください。
+ライブリージョンのコンテンツをすべて読み込ませたい場合は、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) を使用してください。ユーザーに再読み込みが必要な更新の部分だけを定義するには、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) を使用してください。更新中にアナウンスを行わないようにするには、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) を使用してください。
 
 ### `aria-live` 値の選び方
 
@@ -48,7 +48,7 @@ l10n:
 
 完全に生成されるページも更新を行うことができます。例えば、リアルタイムのスポーツスコア、ニュースクローラー、株式市場のティッカーのようなコンテンツです。このような更新がページの主な機能でない限り、更新のたびにユーザーに通知する必要はありませんが、ウィジェットが更新されたことを通知したいでしょう。この場合、`aria-live="off"` を設定します。これらのシナリオでは、ユーザーがライブリージョンに集中していない限り、更新を通知する理由はありません。
 
-ライブ更新の中には、重要で時間に敏感なものがあります。例えば、コンサートのチケットを販売しており、ユーザーが購入できる時間が限られている場合、アクティビティが小康状態になるまで待って、時間が迫っている（または既に経過している）ことを指示したくありません。可能な限り早く情報を伝える必要がある場合は、`aria-live="assertive"`を設定します。更新された情報が[`alert`](/ja/docs/Web/Accessibility/ARIA/Roles/alert_role)である場合、`aria-live`属性は必要ありません。
+ライブ更新の中には、重要で時間に敏感なものがあります。例えば、コンサートのチケットを販売しており、ユーザーが購入できる時間が限られている場合、アクティビティが小康状態になるまで待って、時間が迫っている（または既に経過している）ことを指示したくありません。可能な限り早く情報を伝える必要がある場合は、`aria-live="assertive"`を設定します。更新された情報が[`alert`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)である場合、`aria-live`属性は必要ありません。
 
 この制限時間シナリオでは、アクセシビリティを確保するために、[ユーザーが利用できる時刻を延長したり、タイマーを完全にオフにする方法を提供する](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)必要もあります。
 
@@ -85,7 +85,7 @@ l10n:
 
 ## 関連情報
 
-- [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+- [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 - [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-- [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-- [`alert` role](/ja/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`alert` role](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)

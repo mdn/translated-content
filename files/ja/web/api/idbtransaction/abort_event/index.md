@@ -17,7 +17,7 @@ l10n:
 - I/O エラー (ディスクが取り外されたり、OS やハードウェアのその他の故障など、実際にディスクに書き込むのに失敗した)
 - 制限の超過
 
-これはキャンセル不可のイベントで、対応する {{domxref("IDBDatabase")}} オブジェクトに[バブリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)します。
+これはキャンセル不可のイベントで、対応する {{domxref("IDBDatabase")}} オブジェクトに[バブリング](/ja/docs/Learn_web_development/Core/Scripting/Events#イベントのバブリングとキャプチャリング)します。
 
 ## 構文
 
@@ -36,7 +36,7 @@ onabort = (event) => {};
 
 このイベントは {{domxref("IDBDatabase")}} にバブリングします。`event.target` プロパティは、バブリング元の {{domxref('IDBTransaction')}} オブジェクトへの参照です。
 
-詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)を参照してください。
+詳しくは、[イベントのバブリングとキャプチャリング](/ja/docs/Learn_web_development/Core/Scripting/Events#イベントのバブリングとキャプチャリング)を参照してください。
 
 ## 例
 

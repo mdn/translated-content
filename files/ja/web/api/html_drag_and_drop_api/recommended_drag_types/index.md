@@ -138,9 +138,9 @@ if ([...event.dataTransfer.types].includes("text/html")) {
 
 ## 画像のドラッグ
 
-画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に `text/uri-list` 型を使用します。データは、画像の URL、または画像が Web 上やディスク上に無い場合は [データ URL](/ja/docs/Web/URI/Schemes/data) である必要があります。
+画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に `text/uri-list` 型を使用します。データは、画像の URL、または画像が Web 上やディスク上に無い場合は [データ URL](/ja/docs/Web/URI/Reference/Schemes/data) である必要があります。
 
-リンクと同様に、`text/plain` 型のデータには URL も含まれている必要があります。しかし、[データ URL](/ja/docs/Web/URI/Schemes/data) は通常のテキストの内容には有用ではないので、このような状況では `text/plain` 型のデータを除外した方がよいでしょう。
+リンクと同様に、`text/plain` 型のデータには URL も含まれている必要があります。しかし、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) は通常のテキストの内容には有用ではないので、このような状況では `text/plain` 型のデータを除外した方がよいでしょう。
 
 Chrome などの特権的なコードでは、画像の種類に応じて、`image/jpeg`、`image/png`、`image/gif` のいずれかの形式を使用することもできます。データは `nsIInputStream` インターフェイスを実装したオブジェクトでなければなりません。このストリームが読み込まれる時には、そのファイル形式での画像のデータビットを提供しなければなりません。
 

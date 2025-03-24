@@ -372,4 +372,4 @@ nameField.addEventListener("input", (event) => {
 
 ### ガイド
 
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents): DOM を操作するための初心者向けガイド。
+- [文書の操作](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting): DOM を操作するための初心者向けガイド。

@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`503 Service Unavailable`** [サーバーエラーレスポンス](/ja/docs/Web/HTTP/Status#server_error_responses)ステータスコードは、サーバーがリクエストを処理する準備ができていないことを示します。
+HTTP の **`503 Service Unavailable`** [サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#server_error_responses)ステータスコードは、サーバーがリクエストを処理する準備ができていないことを示します。
 
 よくある原因としては、サーバーがメンテナンスのために停止しているか、過負荷状態であることが挙げられます。
 メンテナンス中は、サーバー管理者は一時的にすべてのトラフィックを `503` ページにリダイレクトすることがあります。また、ソフトウェアの更新中に自動的に発生することもあります。
@@ -69,5 +69,5 @@ Content-Length: 123
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPHeader("Retry-After")}}

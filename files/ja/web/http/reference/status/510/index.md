@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`510 Not Extended`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Status#サーバーエラーレスポンス)のステータスコードで、クライアントのリクエストで HTTP 拡張 ({{RFC("2774")}}) が宣言され、リクエストの処理に使用すべきであると指定されているにもかかわらず、その拡張に対応していない場合にコードが送信されます。
+HTTP の **`510 Not Extended`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、クライアントのリクエストで HTTP 拡張 ({{RFC("2774")}}) が宣言され、リクエストの処理に使用すべきであると指定されているにもかかわらず、その拡張に対応していない場合にコードが送信されます。
 
 ## ステータス
 
@@ -21,7 +21,7 @@ HTTP の **`510 Not Extended`** は[サーバーエラーレスポンス](/ja/do
 ### 拡張機能に対応していない場合
 
 次の例では、クライアントは `C-MAN` ヘッダーで必須の拡張子を指定したリクエストを送信します。
-{{HTTPHeader("Connection")}} ヘッダーは、これらの拡張機能を[ホップバイホップ](/ja/docs/Web/HTTP/Headers#hop-by-hop_headers)で処理することを指定します。
+{{HTTPHeader("Connection")}} ヘッダーは、これらの拡張機能を[ホップバイホップ](/ja/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers)で処理することを指定します。
 {{Glossary("Proxy_server", "プロキシー")}}は拡張リクエストを転送しますが、トランジション中に {{HTTPHeader("Connection")}} ヘッダーが削除されます。元のサーバーは `M-GET` メソッドに関する情報を取得しないため、 `510` をレスポンスとして送信します。
 
 ```http
@@ -41,4 +41,4 @@ HTTP/1.1 510 Not Extended
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)

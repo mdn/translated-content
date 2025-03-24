@@ -21,7 +21,7 @@ ARIA の `img` ロールは、ページコンテンツ内の複数の要素を�
 
 単一の画像として扱われるべきコンテンツ（画像、動画、音声、コードスニペット、絵文字、その他のコンテンツを含む）は、`role="img"` を使用して識別することができます。
 
-支援技術にコンテキストを伝えるために個々の画像の代替テキストを当てにしてはいけません。ほとんどの画面リーダーは、`role="img"` が設定された要素をブラックボックスのように扱い、その内部の個々の要素にアクセスしません。したがって、画像には包括的な全体的な説明的な代替テキストを提供する必要があります。代替テキストは、画像の周囲のテキストに記述するか、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用して記述します。画像が使用できない場合に、検索エンジンや視覚障害のあるユーザーがページにアクセスできるように、代替テキストを記述します。
+支援技術にコンテキストを伝えるために個々の画像の代替テキストを当てにしてはいけません。ほとんどの画面リーダーは、`role="img"` が設定された要素をブラックボックスのように扱い、その内部の個々の要素にアクセスしません。したがって、画像には包括的な全体的な説明的な代替テキストを提供する必要があります。代替テキストは、画像の周囲のテキストに記述するか、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を使用して記述します。画像が使用できない場合に、検索エンジンや視覚障害のあるユーザーがページにアクセスできるように、代替テキストを記述します。
 
 ```html
 <div role="img" aria-label="全体の画像の説明">
@@ -32,8 +32,8 @@ ARIA の `img` ロールは、ページコンテンツ内の複数の要素を�
 
 ページ上で表示される画像にキャプションやラベルを追加したい場合は、次のものを使用して追加することができます。
 
-- [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby): テキストが簡潔なラベルである場合。
-- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby): テキストが詳しい説明文の場合。
+- [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby): テキストが簡潔なラベルである場合。
+- [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby): テキストが詳しい説明文の場合。
 
 例を示します。
 
@@ -44,7 +44,7 @@ ARIA の `img` ロールは、ページコンテンツ内の複数の要素を�
 </div>
 ```
 
-画像が純粋に表現だけの目的で使用されている場合は、 [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) ロールを使用することを検討してください。
+画像が純粋に表現だけの目的で使用されている場合は、 [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ロールを使用することを検討してください。
 
 ### SVG と role="img"
 
@@ -84,7 +84,7 @@ ARIA の `img` ロールは、ページコンテンツ内の複数の要素を�
 
 ### すべての子孫は表現用
 
-ユーザーインターフェイス部分には、プラットフォームのアクセシビリティ API で表現するとテキストのみを含むことができるものもあります。アクセシビリティ API には、`img` に含まれるセマンティック要素を表現する方法がありません。この制限に対処するために、ブラウザーは、セマンティックな子要素に対応しない役割として、`img` 要素のすべての子孫要素に自動的に [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) ロールを適用します。
+ユーザーインターフェイス部分には、プラットフォームのアクセシビリティ API で表現するとテキストのみを含むことができるものもあります。アクセシビリティ API には、`img` に含まれるセマンティック要素を表現する方法がありません。この制限に対処するために、ブラウザーは、セマンティックな子要素に対応しない役割として、`img` 要素のすべての子孫要素に自動的に [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ロールを適用します。
 
 例えば、見出しのあるする次の `img` 要素を考えてみましょう。
 
@@ -132,6 +132,6 @@ ARIA の `img` ロールは、ページコンテンツ内の複数の要素を�
 - {{HTMLElement('picture')}} 要素
 - {{HTMLElement('audio')}} 要素
 - {{HTMLElement('video')}} 要素
-- [ARIA: `presentation` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role)
+- [ARIA: `presentation` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)（英語）
 - [HTML での ARIA](https://w3c.github.io/html-aria/)（英語）

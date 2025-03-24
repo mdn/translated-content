@@ -19,7 +19,7 @@ var range = selObj.getRangeAt(0);
 ```
 
 - `selObj` 被赋予一个 Selection 对象
-- `range` 被赋予一个 [Range](/zh-CN/docs/Web/API/range) 对象
+- `range` 被赋予一个 [Range](/zh-CN/docs/Web/API/Range) 对象
 
 调用 {{domxref("Selection.toString()","")}} 方法会返回被选中区域中的**纯文本**。要求变量为字符串的函数会自动对对象进行该处理，例如：
 

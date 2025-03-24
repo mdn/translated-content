@@ -64,5 +64,5 @@ HTML コメントはコンテンツとしてのみ許可されています。タ
 ## 関連情報
 
 - [JavaScript のコメント](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#コメント)
-- [CSS のコメント](/ja/docs/Web/CSS/Comments)
+- [CSS のコメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
 - {{domxref("Comment")}} API（`Comment` は {{domxref("Node")}} を継承）

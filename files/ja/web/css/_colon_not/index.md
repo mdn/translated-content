@@ -56,7 +56,7 @@ p > :not(strong, b.important) {
 `:not()` を使用する際のふつうではない効果や結果がいくつかありますので、使用する際には気を付けてください。
 
 - この擬似クラスを使用して無意味なセレクターを書くことができます。例えば、 `:not(*)` は要素ではないすべての要素を選択するので、ルールは適用されません。
-- この擬似クラスはルールの[詳細度](/ja/docs/Web/CSS/Specificity)を上げることができます。例えば、 `#foo:not(#bar)` は単純な `#foo` と同じ要素を選択しますが、2 つの `id` セレクターにより、詳細度はより高くなります。
+- この擬似クラスはルールの[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)を上げることができます。例えば、 `#foo:not(#bar)` は単純な `#foo` と同じ要素を選択しますが、2 つの `id` セレクターにより、詳細度はより高くなります。
 - 擬似クラス `:not()` の詳細度は、カンマで区切られたセレクターの引数の中で最も詳細なセレクターの詳細度に置き換えられます。[`:not(:is(argument))`](/ja/docs/Web/CSS/:is) と書かれた場合と同じ詳細度を提供します。
 - `:not(.foo)` は `.foo` ではないすべての要素を選択するため、{{HTMLElement("html")}} や {{HTMLElement("body")}} も選択します。
 - このセレクターは、「Xでない」ものすべてに一致します。これは、[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)と使用すると、対象とする要素を選択する経路が複数できるので、意外な動きをするかもしれません。例えば、`body :not(table) a` は {{HTMLElement("table")}} 内のリンクにも適用されます。{{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} などはすべて `:not(table)` の部分に一致するからです。これを回避するには、代わりに `body a:not(table a)` を使用すると、テーブルの子孫ではないリンクのみに適用されます。

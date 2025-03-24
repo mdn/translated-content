@@ -146,7 +146,7 @@ console.log(eval(s2.valueOf())); // 数値の 4 を返す
 - 数値は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) と同じアルゴリズムで変換されます。
 - [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) と同じアルゴリズムで変換されます。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} が発生します。
-- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)され、これは [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
+- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)され、これは [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
 
 JavaScript でほぼ同じ効果を得る方法はいくつかあります。
 
@@ -374,5 +374,5 @@ String(undefinedVar); // "undefined"
 
 ## 関連情報
 
-- [テキスト処理](/ja/docs/Web/JavaScript/Guide/Text_formatting)ガイド
+- [テキスト処理](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
 - {{jsxref("RegExp")}}

@@ -84,9 +84,9 @@ l10n:
   - : 色彩理論とリソース、例えばアクセシブルなカラーパレットを作成するために正しい色を探すこと、コントラスト、カラーで出力される印刷などです。
 - [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)
   - : この記事では、 CSS の相対色の構文について説明し、さまざまなオプションが何であるかを示し、いくつかの例を見ていきます。
-- [色と明るさの理解](/ja/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [色と明るさの理解](/ja/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : 色覚障碍（色盲）ユーザー、弱視ユーザー、前庭障碍やその他の神経障碍を持つユーザーを念頭に置いた色知覚と使用することです。
-- [WCAG 1.4.1: 色コントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [WCAG 1.4.1: 色コントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : 読みやすさを保証するために要求されるコンテンツの背景と前景のコントラストの説明です。
 
 ## 関連概念
@@ -108,12 +108,18 @@ l10n:
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - 他の仕様の一部である SVG 色プロパティ:
-  - [`fill`](/ja/docs/Web/SVG/Attribute/fill)
+  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
   - [`flood-color`](/ja/docs/Web/SVG/Attribute/flood-color)
   - [`lighting-color`](/ja/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/ja/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/ja/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/ja/docs/Web/SVG/Attribute/color) 属性
+  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/ja/docs/Web/SVG/Reference/Attribute/color) 属性
+  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/ja/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色相環")}}（用語）
 - {{glossary("Interpolation", "補間")}}（用語）
 - [`@font-palette-values`](/ja/docs/Web/CSS/@font-palette-values) アットルールの [`override-colors`](/ja/docs/Web/CSS/@font-palette-values/override-colors) 記述子
@@ -130,5 +136,5 @@ l10n:
 - [CSS 色調整](/ja/docs/Web/CSS/CSS_color_adjustment)モジュールと {{cssxref("print-color-adjust")}} プロパティ
 - [CSS 画像](/ja/docs/Web/CSS/CSS_images)モジュール（CSS [`<gradient>`](/ja/docs/Web/CSS/gradient) 画像を定義）
 - [`VideoColorSpace`](/ja/docs/Web/API/VideoColorSpace) インターフェイス
-- SVG の [`<feColorMatrix>`](/ja/docs/Web/SVG/Element/feColorMatrix) 要素
+- SVG の [`<feColorMatrix>`](/ja/docs/Web/SVG/Reference/Element/feColorMatrix) 要素
 - [キャンバス API: スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色)

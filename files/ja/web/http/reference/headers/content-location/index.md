@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
+**`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)の結果として送信されたリソースの URL を示すことです。
 
 {{HTTPHeader("Location")}} と `Content-Location` は異なります。
 `Location` はリダイレクトの URL を示し、`Content-Location` は今後のコンテンツネゴシエーションなしでリソースへのアクセスに使用する直接 URL を示します。 `Location` はレスポンスに関連付けられたヘッダーで、 `Content-Location` は返されたデータに関連付けられます。この区別は[例](#例)がないと抽象的に見えるかもしれません。
@@ -39,7 +39,7 @@ Content-Location: <url>
 ## ディレクティブ
 
 - \<url>
-  - : （リクエスト URL に対する）[相対](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL または[絶対](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL。
+  - : （リクエスト URL に対する）[相対](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL または[絶対](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#絶対_url_と相対_url) URL。
 
 ## 例
 
@@ -57,7 +57,7 @@ Content-Location: <url>
 
 その後クライアントはその特定の URL で JSON バージョンが利用可能であることを覚えて、次に文書を要求するときにコンテンツのネゴシエーションをスキップします。
 
-サーバーは {{HTTPHeader("Accept-Language")}} のような他の[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)ヘッダーを考慮することもあります。
+サーバーは {{HTTPHeader("Accept-Language")}} のような他の[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)ヘッダーを考慮することもあります。
 
 ### 新しい文書を指す (HTTP 201 Created)
 

@@ -31,7 +31,7 @@ HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에
 
 ## HTML head란?
 
-[HTML document we covered in the previous article](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)을 다시 봅시다.
+[HTML document we covered in the previous article](/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document)을 다시 봅시다.
 
 ```html
 <!doctype html>

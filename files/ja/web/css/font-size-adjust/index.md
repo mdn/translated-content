@@ -229,4 +229,4 @@ span {
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}} `@font-face` 記述子
-- [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

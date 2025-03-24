@@ -38,7 +38,7 @@ l10n:
   - : 論理属性です。この属性が指定された場合、データの読み込みが完了し、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
     > [!NOTE]
-    > 現行のブラウザーでは、音声（またはミュートされていない音声トラック付きの動画）が自動再生されないように設定されています。これは、自動的に音声が再生されるサイトはユーザーにとって不快な体験になり得るからです。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。</div>
+    > 現行のブラウザーでは、音声（またはミュートされていない音声トラック付きの動画）が自動再生されないように設定されています。これは、自動的に音声が再生されるサイトはユーザーにとって不快な体験になり得るからです。正しい自動再生の使い方についての追加情報は [autoplay ガイド](/ja/docs/Web/Media/Guides/Autoplay)を参照してください。</div>
 
     動画の自動再生を無効にするために `autoplay="false"` を指定しても機能しません。 `<video>` タグにこの属性があれば、動画が自動的に再生されます。自動再生を無効にするには、属性を完全に取り除くことが必要です。
 
@@ -285,18 +285,18 @@ l10n:
 </video>
 ```
 
-[メディアファイル形式](/ja/docs/Web/Media/Formats)や、[動画で対応しているコーデック](/ja/docs/Web/Media/Formats/Video_codecs)など、実質的かつ徹底したガイドを提供しています。また、[一緒に利用することができる音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)のガイドもあります。
+[メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)や、[動画で対応しているコーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs)など、実質的かつ徹底したガイドを提供しています。また、[一緒に利用することができる音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)のガイドもあります。
 
 その他の利用上の注意:
 
 - `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 - 動画（および音声）コンテンツを詳細に制御できるよう、 `HTMLMediaElement` はたくさんの種類の[イベント](/ja/docs/Web/API/HTMLMediaElement#events)を発行します。これらのイベントは、制御を可能にするだけでなく、メディアのダウンロードと再生の両方の進行状況や再生状態、再生位置を監視することができます。
 - {{cssxref("object-position")}} プロパティを用いて、要素の枠内での動画の位置を調整することができ、 {{cssxref("object-fit")}} プロパティを用いて動画の寸法がどのように枠内に合わせられるかを制御することができます。
-- 動画と同時に字幕を表示するには、 JavaScript と共に {{htmlelement("track")}} 要素と [WebVTT](/ja/docs/Web/API/WebVTT_API) を使用します。詳しくは、 [HTML 動画への字幕の追加](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。
+- 動画と同時に字幕を表示するには、 JavaScript と共に {{htmlelement("track")}} 要素と [WebVTT](/ja/docs/Web/API/WebVTT_API) を使用します。詳しくは、 [HTML 動画への字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。
 - `<video>` 要素を使って音声ファイルを再生することができます。例えば [WebVTT](/ja/docs/Web/API/WebVTT_API) の代替表記を伴う音声を再生したい場合などに、 {{HTMLElement("audio")}} 要素は WebVTT を使った字幕を許可していないため便利です。
 - 要素に対応しているブラウザーで代替コンテンツをテストするには、 `<video>` を `<notavideo>` のような実在しないタグに置き換えてください。
 
-HTML の `<video>` の使用について一般的な良い情報源として、[動画および音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)の初心者向けチュートリアルがあります。
+HTML の `<video>` の使用について一般的な良い情報源として、[動画および音声コンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)の初心者向けチュートリアルがあります。
 
 ### CSS でのスタイル付け
 
@@ -366,7 +366,7 @@ AddType video/webm .webm
 
 ## アクセシビリティ
 
-動画には、実際にコンテンツを説明する字幕と文字化情報 (transcript) を提供するべきです（実装方法について詳しくは [HTML 動画への字幕の追加](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください）。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
+動画には、実際にコンテンツを説明する字幕と文字化情報 (transcript) を提供するべきです（実装方法について詳しくは [HTML 動画への字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください）。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
 
 注目すべき点は、音声のみのメディアにキャプションを付けることはできますが、キャプションを表示するために要素の video 領域が使用されるため、 <code>&lt;video&gt;</code> 要素で音声を再生しないとキャプションを付けることができないということです。これは、 video 要素で音声を再生するのに便利な特別なシナリオの 1 つです。
 
@@ -396,7 +396,7 @@ AddType video/webm .webm
 
 - [Web Video Text Tracks Format (WebVTT)](/ja/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.2_—_タイムベースト・メディアのための代替テキストの提供)
+- [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.2_—_タイムベースト・メディアのための代替テキストの提供)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -463,9 +463,9 @@ AddType video/webm .webm
 
 {{EmbedLiveSample('Multiple sources', '', '400')}}
 
-はじめに AVI を試します。再生できない場合は、 [MP4](/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4) を試します。video 要素に対応していない場合は代替メッセージを表示しますが、すべてのソースに失敗した場合は表示しません。
+はじめに AVI を試します。再生できない場合は、 [MP4](/ja/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) を試します。video 要素に対応していない場合は代替メッセージを表示しますが、すべてのソースに失敗した場合は表示しません。
 
-メディアファイル形式によっては、ファイル形式文字列の一部として [`codecs`](/ja/docs/Web/Media/Formats/codecs_parameter) 引数を使用して、より具体的な情報を提供することができます。比較的簡単な例は `video/webm; codecs="vp8, vorbis"` であり、 [WebM](/ja/docs/Web/Media/Formats/Containers#webm) 映像であり、動画に [VP8](/ja/docs/Web/Media/Formats/Video_codecs#vp8)、音声に [Vorbis](/ja/docs/Web/Media/Formats/Audio_codecs#vorbis) を使用していることを示しています。
+メディアファイル形式によっては、ファイル形式文字列の一部として [`codecs`](/ja/docs/Web/Media/Formats/codecs_parameter) 引数を使用して、より具体的な情報を提供することができます。比較的簡単な例は `video/webm; codecs="vp8, vorbis"` であり、 [WebM](/ja/docs/Web/Media/Guides/Formats/Containers#webm) 映像であり、動画に [VP8](/ja/docs/Web/Media/Guides/Formats/Video_codecs#vp8)、音声に [Vorbis](/ja/docs/Web/Media/Formats/Audio_codecs#vorbis) を使用していることを示しています。
 
 ## 技術的概要
 
@@ -527,14 +527,14 @@ AddType video/webm .webm
 
 ## 関連情報
 
-- [ウェブ上のメディア種別と形式のガイド](/ja/docs/Web/Media/Formats)
+- [ウェブ上のメディア種別と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 
-  - [メディアコンテナー形式（ファイル形式）](/ja/docs/Web/Media/Formats/Containers)
-  - [ウェブの動画コーデックガイド](/ja/docs/Web/Media/Formats/Video_codecs)
+  - [メディアコンテナー形式（ファイル形式）](/ja/docs/Web/Media/Guides/Formats/Containers)
+  - [ウェブの動画コーデックガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)
   - [ウェブの音声コーデックガイド](/ja/docs/Web/Media/Formats/Audio_codecs)
 
 - フレーム内における画像の位置と寸法の設定: {{cssxref("object-position")}} および {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [HTML での動画や音声の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML での動画や音声の使用](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [canvas を用いた動画の操作](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Ogg メディアのサーバーの構成](/ja/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
+- [Ogg メディアのサーバーの構成](/ja/docs/Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media)

@@ -8,7 +8,7 @@ slug: Web/API/Document/startViewTransition
 
 {{domxref("View Transitions API", "View Transitions API", "", "nocode")}} 的 **`startViewTransition()`** 方法开始一个新的视图过渡，并返回一个 {{domxref("ViewTransition")}} 对象来表示它。
 
-当调用 `startViewTransition()` 时，将按照[视图过渡过程](/zh-CN/docs/Web/API/View_Transitions_API#视图过渡过程)中所述的步骤序列进行。
+当调用 `startViewTransition()` 时，将按照[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述的步骤序列进行。
 
 ## 语法
 

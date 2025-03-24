@@ -20,7 +20,7 @@ p {
 
 한 번 해봅시다. 텍스트 에디터의 새 파일에 위의 CSS 3줄을 복사해 붙여넣으세요. 그다음에 `styles` 디렉토리에 `style.css`로 파일을 저장하세요.
 
-아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files)와 [HTML 기본](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
+아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)와 [HTML 기본](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
 
 1. `index.html` 파일을 열고 head의 안쪽 어딘가(즉, `<head>`와 `</head>` 태그 사이)에 아래의 코드를 붙여 넣으세요:
 
@@ -43,7 +43,7 @@ p {
 - 선택자(selector)
   - : rule set의 맨 앞에 있는 HTML 요소 이름. 이것은 꾸밀 요소(들)을 선택합니다 (이 예에서는 p 요소). 다른 요소를 꾸미기 위해서는 선택자만 바꿔주세요.
 - 선언
-  - : `color: red`와 같은 단일 규칙; 여러분이 꾸미기 원하는 요소의 속성을 명시합니다.
+  - : `color: red;`와 같은 단일 규칙입니다. 여러분이 꾸미기 원하는 요소의 속성을 명시합니다.
 - 속성(property)
   - : 주어진 HTML 요소를 꾸밀 수 있는 방법입니다. (이 예에서, `color`는 p 요소의 속성입니다.) CSS에서, rule 내에서 영향을 줄 속성을 선택합니다.
 - 속성 값
@@ -89,7 +89,7 @@ h1 {
 | 속성 선택자                                       | 특정 속성을 갖는 페이지의 요소.                                                                  | `img[src]` `<img src="myimage.png">` 를 선택하지만 `<img>` 는 선택 안함  |
 | 수도(Pseudo) 클래스 선택자                        | 특정 요소이지만 특정 상태에 있을 때만, 예를 들면, hover over 상태일 때.                          | `a:hover` `<a>` 를 선택하지만, 마우스 포인터가 링크위에 있을 때만 선택함 |
 
-탐구할 더 많은 선택자가 있습니다. 더 자세한 목록은 [선택자 가이드](/ko/docs/Learn/CSS/Building_blocks/Selectors)에서 찾아보세요.
+탐구할 더 많은 선택자가 있습니다. 더 자세한 목록은 [선택자 가이드](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)에서 찾아보세요.
 
 ## 글꼴과 문자
 
@@ -98,7 +98,7 @@ h1 {
 > [!NOTE]
 > "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
 
-1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
+1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
 
    ```html
    <link
@@ -170,7 +170,7 @@ html {
 }
 ```
 
-이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#theme_color) 색으로 변경하세요.
+이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/ko/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#theme_color) 색으로 변경하세요.
 
 ### body 외부 정렬하기
 
@@ -241,6 +241,6 @@ img {
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)와 항상 비교해보세요.
 
-여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/ko/docs/Learn/CSS) 페이지로 가보세요.
+여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

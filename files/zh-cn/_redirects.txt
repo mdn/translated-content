@@ -54,7 +54,7 @@
 /zh-CN/docs/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context
 /zh-CN/docs/CSS/Universal_selectors	/zh-CN/docs/Web/CSS/Universal_selectors
 /zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-/zh-CN/docs/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/Visual_formatting_model
+/zh-CN/docs/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
 /zh-CN/docs/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/actual_value
 /zh-CN/docs/CSS/animation-direction	/zh-CN/docs/Web/CSS/animation-direction
 /zh-CN/docs/CSS/animation-duration	/zh-CN/docs/Web/CSS/animation-duration
@@ -1490,6 +1490,12 @@
 /zh-CN/docs/MDN/Structures/Macros/Other	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /zh-CN/docs/MDN/Writing_guidelines/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
 /zh-CN/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Sidebars
+/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion	/zh-CN/docs/MDN/Writing_guidelines/Criteria_for_inclusion
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/CSS
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/HTML
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript
+/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell	/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide/Shell
 /zh-CN/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/查询	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query
@@ -1498,6 +1504,7 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/剪切板	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/clipboard
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
+/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json#浏览器兼容性
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
@@ -2518,12 +2525,15 @@
 /zh-CN/docs/Web/CSS/General_sibling_combinator	/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator
 /zh-CN/docs/Web/CSS/General_sibling_selectors	/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator
 /zh-CN/docs/Web/CSS/Inheritance	/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance
+/zh-CN/docs/Web/CSS/Inline_formatting_context	/zh-CN/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context
 /zh-CN/docs/Web/CSS/Layout_cookbook/卡片	/zh-CN/docs/Web/CSS/Layout_cookbook/Card
 /zh-CN/docs/Web/CSS/Layout_cookbook/媒体对象	/zh-CN/docs/Web/CSS/Layout_cookbook/Media_objects
+/zh-CN/docs/Web/CSS/Layout_mode	/zh-CN/docs/Glossary/Layout_mode
 /zh-CN/docs/Web/CSS/Media_Queries	/zh-CN/docs/Web/CSS/CSS_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/CSS/Paged_Media	/zh-CN/docs/Web/CSS/CSS_paged_media
+/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector	/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
@@ -2543,6 +2553,7 @@
 /zh-CN/docs/Web/CSS/Using_CSS_variables	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /zh-CN/docs/Web/CSS/Viewport_concepts	/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts
+/zh-CN/docs/Web/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
 /zh-CN/docs/Web/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/actual_value
 /zh-CN/docs/Web/CSS/attr()	/zh-CN/docs/Web/CSS/attr
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
@@ -2733,7 +2744,7 @@
 /zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions	/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /zh-CN/docs/Web/Guide/CSS/Using_multi-column_layouts	/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /zh-CN/docs/Web/Guide/CSS/Using_the_:target_selector	/zh-CN/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
-/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/Visual_formatting_model
+/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model
 /zh-CN/docs/Web/Guide/CSS/媒体查询	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
 /zh-CN/docs/Web/Guide/Events/Touch_events	/zh-CN/docs/Web/API/Touch_events

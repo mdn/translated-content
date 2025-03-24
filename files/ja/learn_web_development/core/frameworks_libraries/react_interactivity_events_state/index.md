@@ -182,7 +182,7 @@ const [name, setName] = useState("Learn React");
 
 - `name` 定数を `"Learn React"` の名前で定義する。
 - `name` を変更する関数として `setName()` と名付けた関数を定義しています。
-- `useState()` はこれら 2 つのことを配列で返すので、[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を使用して、どちらも別個の変数に取得します。
+- `useState()` はこれら 2 つのことを配列で返すので、[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して、どちらも別個の変数に取得します。
 
 ### 状態の読み取り
 

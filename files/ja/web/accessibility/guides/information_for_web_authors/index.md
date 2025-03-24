@@ -20,7 +20,7 @@ l10n:
 
 3. [このサイトの ARIA](/ja/docs/Web/Accessibility/ARIA)
 
-   <abbr>MDN</abbr> はすべての [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Roles)と [ARIA プロパティ](/ja/docs/Web/Accessibility/ARIA/Attributes)のガイドで、最善の手法、関連のロールやプロパティ、例を記載しています。
+   <abbr>MDN</abbr> はすべての [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)と [ARIA プロパティ](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)のガイドで、最善の手法、関連のロールやプロパティ、例を記載しています。
 
 ## 方法論
 

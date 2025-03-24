@@ -54,7 +54,7 @@ l10n:
 
 ### HTTP
 
-- [`103 Early Hints`](/ja/docs/Web/HTTP/Status/103) HTTP [情報レスポンス](/ja/docs/Web/HTTP/Status#information_responses) ステータスコードが、(ページでリソースを読み込むことが必要と思われる) 特定のオリジンへの [事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect) に対して有効になりました。
+- [`103 Early Hints`](/ja/docs/Web/HTTP/Reference/Status/103) HTTP [情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#information_responses) ステータスコードが、(ページでリソースを読み込むことが必要と思われる) 特定のオリジンへの [事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect) に対して有効になりました。
   詳しくは [Firefox bug 1858712](https://bugzil.la/1858712) をご覧ください。
 - Firefox で [Global Privacy Control](https://globalprivacycontrol.org/) の {{HTTPHeader("Sec-GPC")}} リクエストヘッダーをサポートしました。これは、ウェブサイトやサービスが個人情報をサードパーティに販売あるいは共有することに同意しないことを示すために送信できます。
   ユーザーは (`about:config` で) 設定項目 `privacy.globalprivacycontrol.enabled` を `true` に設定することで、このヘッダーを通常のブラウジングとプライベートブラウジングの両方で有効化できます。

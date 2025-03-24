@@ -61,7 +61,7 @@ margin-top: 0;
 }
 ```
 
-このプロパティは、[置換要素](/ja/docs/Web/CSS/Replaced_element)ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
+このプロパティは、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
 
 ## 構文
 
@@ -89,7 +89,7 @@ margin-top: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
   - : ブラウザーが適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
 

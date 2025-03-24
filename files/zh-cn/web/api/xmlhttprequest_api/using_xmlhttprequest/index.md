@@ -38,7 +38,7 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 如果你使用 `XMLHttpRequest` 来获得一个远程的 XML 文档的内容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性将会是一个由 XML 文档解析而来的 DOM 对象，这很难被操作和分析。这里有五种主要的分析 XML 文档的方式：
 
 1. 使用 [XPath](/zh-CN/docs/Web/XML/XPath) 定位到文档的指定部分。
-2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML) 为字符串或对象。
+2. 手动[解析和序列化 XML](/zh-CN/docs/Web/XML/Guides/Parsing_and_serializing_XML) 为字符串或对象。
 3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 

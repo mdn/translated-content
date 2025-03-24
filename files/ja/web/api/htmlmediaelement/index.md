@@ -24,7 +24,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
   - : 論理値で、 HTML の [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性の値を反映し、中断なしに再生できるだけの十分なデータが揃った時点で自動的に再生を始めるかどうかを示します。
 
     > [!NOTE]
-    > ユーザーが期待していない、あるいは望んでいないときに自動的に音声を再生すると、ユーザーに不快な体験をさせることになるため、ほとんどの場合避けるべきですが、例外も存在します。詳しくは、[メディアとウェブオーディオ API のガイド](/ja/docs/Web/Media/Autoplay_guide)を参照してください。ブラウザーは自動再生要求を無視する可能性があることを念頭に置き、コードが自動再生の動作に依存していないことを確認する必要があります。
+    > ユーザーが期待していない、あるいは望んでいないときに自動的に音声を再生すると、ユーザーに不快な体験をさせることになるため、ほとんどの場合避けるべきですが、例外も存在します。詳しくは、[メディアとウェブオーディオ API のガイド](/ja/docs/Web/Media/Guides/Autoplay)を参照してください。ブラウザーは自動再生要求を無視する可能性があることを念頭に置き、コードが自動再生の動作に依存していないことを確認する必要があります。
 
 - {{domxref("HTMLMediaElement.buffered")}} {{ReadOnlyInline}}
   - : `buffered` プロパティにアクセスした時点で、ブラウザーがバッファリングしているメディアソースの範囲を（もしあれば） {{domxref("TimeRanges")}} オブジェクトで返します。
@@ -209,6 +209,6 @@ _親である {{domxref("HTMLElement")}} からイベントを継承していま
 ### ガイド
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- 学習領域: [動画および音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [メディア型と形式のガイド](/ja/docs/Web/Media/Formats)
+- 学習領域: [動画および音声コンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [メディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 - [ウェブコンテンツにおけるメディア対応の問題の扱い](/ja/docs/Web/Media/Formats/Support_issues)

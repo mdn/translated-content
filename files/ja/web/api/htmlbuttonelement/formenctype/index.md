@@ -37,4 +37,4 @@ btnEl.formEnctype = "application/x-www-form-urlencoded";
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formTarget")}}
 - {{domxref("HTMLFormElement.enctype")}}
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

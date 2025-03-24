@@ -87,7 +87,7 @@ l10n:
 
 ## 関連情報
 
-- [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+- [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
 - [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
 - [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
 - HTML [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性

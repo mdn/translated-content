@@ -167,7 +167,7 @@ Function.prototype.construct = function (aArgs) {
 > };
 > ```
 >
-> [クロージャ](/ja/docs/Web/JavaScript/Closures)を利用:
+> [クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を利用:
 >
 > ```js
 > Function.prototype.construct = function (aArgs) {

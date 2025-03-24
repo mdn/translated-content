@@ -1,7 +1,7 @@
 ---
 title: HTTP 認証
 slug: Web/HTTP/Guides/Authentication
-original_slug: Web/HTTP/Authentication
+original_slug: Web/HTTP/Guides/Authentication
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---

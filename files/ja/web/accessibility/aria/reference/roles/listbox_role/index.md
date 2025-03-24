@@ -22,9 +22,9 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 #### 関連するロール
 
-- [option](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [option](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
   - : 1 つ以上のネストされたオプションが必要です。 選択された全てのオプションでは、`aria-selected` が `true` に設定されています。 選択されていない全てのオプションでは、`aria-selected` が (訳注: 省略されるか) `false` に設定されています。 オプションが選択可能でない場合は、`aria-selected` を省略します (訳注: オプションでは、aria-selected のデフォルトは、false であり、変更できないことを示すなら、aria-disabled や aria-readonly があります) 。
-- [list](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [list](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
   - : リスト項目 (`listitem`) 要素を含むセクション。
 
 #### ステートとプロパティ
@@ -214,10 +214,10 @@ TBD
 - [HTML `<label>` 要素](/ja/docs/Web/HTML/Element/label)
 - [HTML `<option>` 要素](/ja/docs/Web/HTML/Element/option)
 - [ARIA: `combobox` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/list_role)
-- [ARIA: `listitem` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
+- [ARIA: `listitem` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)
 - [ARIA のベストプラクティス — リストボックス](https://www.w3.org/TR/wai-aria-practices/#Listbox) (英語)
 - [ARIA のロールモデル — リストボックス](https://www.w3.org/TR/wai-aria-1.1/#listbox) (英語)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

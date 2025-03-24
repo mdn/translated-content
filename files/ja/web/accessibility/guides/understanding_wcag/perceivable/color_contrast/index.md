@@ -136,6 +136,6 @@ div {
 
 ## 関連情報
 
-- [色とそのコントラスト](/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト)
-- [複数のラベル](/ja/docs/Learn/Forms/How_to_structure_a_web_form#複数のラベル)
+- [色とそのコントラスト](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とそのコントラスト)
+- [複数のラベル](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#複数のラベル)
 - [Understanding Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)（英語）

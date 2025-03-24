@@ -53,7 +53,7 @@ select {
 
 ## CSS でのスタイル設定
 
-**`<option>`** 要素のスタイル設定は非常に制限されています。選択肢は親要素で設定したフォントを継承しません。Firefox では [`color`](/ja/docs/Web/CSS/color) と [`background-color`](/ja/docs/Web/CSS/background-color) のみが設定可能ですが、Safari では何もプロパティを設定することはできません。スタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/Learn/Forms/Advanced_form_styling)をご覧ください。
+**`<option>`** 要素のスタイル設定は非常に制限されています。選択肢は親要素で設定したフォントを継承しません。Firefox では [`color`](/ja/docs/Web/CSS/color) と [`background-color`](/ja/docs/Web/CSS/background-color) のみが設定可能ですが、Safari では何もプロパティを設定することはできません。スタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)をご覧ください。
 
 ## 例
 

@@ -1,14 +1,14 @@
 ---
 title: HTTP Cookie の使用
 slug: Web/HTTP/Guides/Cookies
-original_slug: Web/HTTP/Cookies
+original_slug: Web/HTTP/Guides/Cookies
 l10n:
   sourceCommit: cb132bc83b660e51be8959de5336c00b08030104
 ---
 
 {{HTTPSidebar}}
 
-**Cookie**（ウェブ Cookie、ブラウザー Cookie とも呼ぶ）は、サーバーがユーザーのウェブブラウザーに送信する小さなデータです。ブラウザーは Cookie を保存したり、新しい Cookie を作成したり、既存の Cookie を変更したり、後でリクエストされたときに同じサーバーにそれらを送り返したりすることができます。 Cookie により、ウェブアプリケーションは限られた量のデータを格納し、状態についての情報を記憶することができます。HTTP プロトコルは既定では[ステートレス](/ja/docs/Web/HTTP/Overview#http_はステートレスであるがセッションレスではない)だからです。
+**Cookie**（ウェブ Cookie、ブラウザー Cookie とも呼ぶ）は、サーバーがユーザーのウェブブラウザーに送信する小さなデータです。ブラウザーは Cookie を保存したり、新しい Cookie を作成したり、既存の Cookie を変更したり、後でリクエストされたときに同じサーバーにそれらを送り返したりすることができます。 Cookie により、ウェブアプリケーションは限られた量のデータを格納し、状態についての情報を記憶することができます。HTTP プロトコルは既定では[ステートレス](/ja/docs/Web/HTTP/Guides/Overview#http_はステートレスであるがセッションレスではない)だからです。
 
 この記事では、Cookie の主な用途を調べ、使用する際の最善の手法を説明し、プライバシーとセキュリティへの影響を見ていきます。
 
@@ -115,7 +115,7 @@ document.cookie = "yummy_cookie=choco";
 document.cookie = "tasty_cookie=strawberry";
 ```
 
-また、[`HttpOnly`](/ja/docs/Web/HTTP/Headers/Set-Cookie#httponly) 属性が指定されていない既存の Cookie にアクセスし、新しい値を設定することもできます（作成した `Set-Cookie` ヘッダーで指定されている場合）。
+また、[`HttpOnly`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) 属性が指定されていない既存の Cookie にアクセスし、新しい値を設定することもできます（作成した `Set-Cookie` ヘッダーで指定されている場合）。
 
 ```js
 console.log(document.cookie);
@@ -163,7 +163,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   `Set-Cookie` ヘッダーで `Domain` 属性が指定されていない場合、Cookie はそれを設定したサーバーでは利用できますが、そのサブドメインでは利用できません。そのため、`Domain` を指定することは、それを除外するよりも制限が少なくなります。
   サーバーが `Domain` 属性を設定できるのは自分自身で管理するドメイン、または親ドメインのみであり、サブドメインや他にもドメインには設定できないことに注意してください。
   例えば、ドメインが `foo.example.com` のサーバーは、この属性を `example.com` または `foo.example.com` に設定することはできますが、`bar.foo.example.com` や `elsewhere.com` には設定できません（ただし、`bar.foo.example.com` などのサブドメインには Cookie が送信されます）。
-  詳細は[不正なドメイン](/ja/docs/Web/HTTP/Headers/Set-Cookie#不正なドメイン)を参照してください。
+  詳細は[不正なドメイン](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#不正なドメイン)を参照してください。
 
 - `Path` 属性は、 `Cookie` ヘッダーを送信するためにリクエストされた URL の中に含む必要がある URL のパスを示します。
 
@@ -186,7 +186,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 #### `SameSite` 属性によるサードパーティ Cookie の制御
 
-[`SameSite`](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性は、サーバーがサイト間リクエストとともに Cookie を送信するかどうか、すなわちサードパーティ Cookie を送信するかどうかを指定します。サイト間リクエストとは、{{Glossary("Site", "サイト")}}（登録されているドメイン）やスキーム（http または https）がユーザーが現在いるサイトと一致しないリクエストのことです。これには、他のサイト上のリンクがクリックされて自分のサイトに移動する際に送信されるリクエストや、埋め込みサードパーティコンテンツによって送信されるリクエストが含まれます。
+[`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性は、サーバーがサイト間リクエストとともに Cookie を送信するかどうか、すなわちサードパーティ Cookie を送信するかどうかを指定します。サイト間リクエストとは、{{Glossary("Site", "サイト")}}（登録されているドメイン）やスキーム（http または https）がユーザーが現在いるサイトと一致しないリクエストのことです。これには、他のサイト上のリンクがクリックされて自分のサイトに移動する際に送信されるリクエストや、埋め込みサードパーティコンテンツによって送信されるリクエストが含まれます。
 
 `SameSite` は、情報の漏洩を防止し、ユーザーの[プライバシー](#プライバシーと追跡)を保護し、{{Glossary("CSRF", "クロスサイトリクエストフォージェリー")}}攻撃に対していくらかの防御となります。取ることができる値は `Strict`, `Lax`, `None` の 3 つです。
 
@@ -229,7 +229,7 @@ Cookie の仕組みの設計上、サーバーは、Cookie が安全なオリジ
 > [!NOTE]
 > アプリケーションサーバー上では、ウェブアプリケーションは接頭辞を含む完全な Cookie 名をチェック*しなければなりません*。ユーザーエージェントは、リクエストの {{HTTPHeader("Cookie")}} ヘッダーを送信する前に Cookie から接頭辞を削除しません。
 
-Cookie の接頭辞とブラウザー対応の現在の状態については、 [Set-Cookie リファレンス記事の接頭辞の節](/ja/docs/Web/HTTP/Headers/Set-Cookie# Cookie の接頭辞)を参照してください。
+Cookie の接頭辞とブラウザー対応の現在の状態については、 [Set-Cookie リファレンス記事の接頭辞の節](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie# Cookie の接頭辞)を参照してください。
 
 ## プライバシーとトラッキング
 

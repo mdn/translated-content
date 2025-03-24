@@ -100,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Object の反復処理
 
-[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
+[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
 
 ```js
 // for...of ループの使用
@@ -126,7 +126,7 @@ Object.entries(obj).forEach(([key, value]) => {
 ## 関連情報
 
 - [`Object.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

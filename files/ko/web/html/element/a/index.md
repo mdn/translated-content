@@ -229,7 +229,7 @@ a {
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-제목과 본문 포함 등, `mailto:` URL에 관한 자세한 내용은 [이메일 링크](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#이메일_링크)와 {{RFC(6068)}}을 참고하세요.
+제목과 본문 포함 등, `mailto:` URL에 관한 자세한 내용은 [이메일 링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links#이메일_링크)와 {{RFC(6068)}}을 참고하세요.
 
 ### 전화번호로 연결
 

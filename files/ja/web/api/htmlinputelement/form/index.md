@@ -28,4 +28,4 @@ l10n:
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("input")}}
 - HTML の [`form`](/ja/docs/Web/HTML/Element/input#form) 属性
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)

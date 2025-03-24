@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`428 Precondition Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストを[条件付き](/ja/docs/Web/HTTP/Conditional_requests)にする必要があることを示します。
+HTTP の **`428 Precondition Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストを[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)にする必要があることを示します。
 
 通常、これは {{HTTPHeader("If-Match")}} のような必須の前提条件ヘッダーが**ない**ことを意味します。
 前提条件ヘッダーがサーバー側の状態と**一致しない**場合、レスポンスは {{HTTPStatus("412", "412 Precondition Failed")}} である必要があります。
@@ -54,7 +54,7 @@ Content-Type: application/json
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
-- [HTTP 条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
+- [HTTP 条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)
 - 条件付きヘッダー: {{HTTPHeader("If-Match")}}, {{HTTPHeader("If-None-Match")}}, {{HTTPHeader("If-Modified-Since")}}, {{HTTPHeader("If-Unmodified-Since")}}, {{HTTPHeader("If-Range")}}
 - {{HTTPStatus(412)}}

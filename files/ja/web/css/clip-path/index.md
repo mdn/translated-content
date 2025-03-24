@@ -162,7 +162,7 @@ clip-path: unset;
   - : クリッピングパスは作成されません。
 
 > [!NOTE]
-> 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
+> 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
 
 ## 公式定義
 
@@ -698,7 +698,7 @@ clipPathSelect.addEventListener("change", (evt) => {
 
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
 - CSS プロパティ: {{cssxref("mask")}}, {{cssxref("filter")}}
-- [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - SVG 属性:
 
   - {{SVGAttr("clip-path")}}
