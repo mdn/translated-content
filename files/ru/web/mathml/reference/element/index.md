@@ -102,4 +102,4 @@ slug: Web/MathML/Reference/Element
 ## Смотрите также
 
 - [MathML](/ru/docs/Web/MathML)
-- [MathML attribute reference](/ru/docs/Web/MathML/Attribute)
+- [MathML attribute reference](/ru/docs/Web/MathML/Reference/Attribute)

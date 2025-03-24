@@ -5,7 +5,7 @@ slug: Web/SVG/Reference/Attribute/stroke-width
 
 {{SVGRef}}
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
 
 Атрибут `stroke-width` указывает ширину контура текущего объекта. Его значение по умолчанию: 1. Если используется \<percentage>, значение представляет собой процент от текущего окна просмотра. Если используется значение 0, контур не будет нарисован.
 

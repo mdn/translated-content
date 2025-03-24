@@ -33,4 +33,4 @@ slug: Web/HTTP/Reference/Status/204
 
 ## Смотрите также
 
-- [HTTP request methods](/ru/docs/Web/HTTP/Methods)
+- [HTTP request methods](/ru/docs/Web/HTTP/Reference/Methods)
