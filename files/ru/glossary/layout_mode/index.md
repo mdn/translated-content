@@ -1,6 +1,6 @@
 ---
 title: Способ разметки
-slug: Web/CSS/Layout_mode
+slug: Glossary/Layout_mode
 ---
 
 {{CSSRef}}

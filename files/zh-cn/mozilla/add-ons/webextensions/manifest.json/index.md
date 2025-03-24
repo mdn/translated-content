@@ -160,8 +160,6 @@ browser.runtime.getManifest().version;
 
 ## 浏览器兼容性
 
-有关所有清单键及其子键的完整概览，请参阅[完整的 `manifest.json` 浏览器兼容性表](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)。
-
 {{Compat}}
 
 ## 参见

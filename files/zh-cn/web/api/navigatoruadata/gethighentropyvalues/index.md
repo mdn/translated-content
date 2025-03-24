@@ -2,7 +2,7 @@
 title: NavigatorUAData：getHighEntropyValues() 方法
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 l10n:
-  sourceCommit: 217e25f9d2c39d2031ecf50f891c27e7f5b96e06
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
