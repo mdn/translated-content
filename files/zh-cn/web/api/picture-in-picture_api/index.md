@@ -2,7 +2,7 @@
 title: 画中画 API
 slug: Web/API/Picture-in-Picture_API
 l10n:
-  sourceCommit: bb4d21e3c6e71db4e0ba983a450d6ed628e82670
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("Picture-in-Picture API")}}
