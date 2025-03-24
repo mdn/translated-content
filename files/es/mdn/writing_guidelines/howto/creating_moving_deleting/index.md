@@ -7,7 +7,7 @@ l10n:
 ---
 
 Este artículo describe cómo crear, mover, eliminar o editar una página.
-En todos estos casos, es una buena idea revisar nuestras directrices para [Lo que escribimos](/es/docs/MDN/Writing_guidelines/What_we_write) para confirmar si alguna de estas acciones debe ser tomada y discutirlo con el equipo en uno de los [canales de comunicación](/es/docs/MDN/Community/Communication_channels) de MDN Web Docs  antes de proceder.
+En todos estos casos, es una buena idea revisar nuestras directrices para [Lo que escribimos](/es/docs/MDN/Writing_guidelines/What_we_write) para confirmar si alguna de estas acciones debe ser tomada y discutirlo con el equipo en uno de los [canales de comunicación](/es/docs/MDN/Community/Communication_channels) de MDN Web Docs antes de proceder.
 
 ## Crear páginas
 
