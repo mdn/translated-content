@@ -477,7 +477,7 @@ para.onclick = function() {
 
 <p>
   请不要使用 <code>&lt;font&gt;</code> 、
-  <code>&lt;center&gt;</code> 等表象元素。
+  <code>&lt;center&gt;</code> 等表现元素。
 </p>
 
 <p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
