@@ -37,6 +37,6 @@ var decodedData = window.atob(encodedData); // декодирует строку
 ## Смотрите также
 
 - [Base64 encoding and decoding](/ru/docs/Glossary/Base64)
-- [`data` URIs](/ru/docs/Web/URI/Schemes/data)
+- [`data` URIs](/ru/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("btoa", "btoa()")}}
 - [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)

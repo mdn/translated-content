@@ -27,7 +27,7 @@ HTML принято сохранять с расширением `.htm` или `
 
 ### Изучаем HTML
 
-- [Наш учебник HTML](/ru/docs/Learn/HTML)
+- [Наш учебник HTML](/ru/docs/Learn_web_development/Core/Structuring_content)
 - [Онлайн курс на codecademy.com](https://www.codecademy.com/learn/learn-html)
 
 ### Техническая справка

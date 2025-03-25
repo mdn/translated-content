@@ -20,20 +20,17 @@
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json(c)?\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && yarn autocorrect --lint . && prettier -c \"**/*.md\"",
-    "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky || true"
+    "lint:yml": "prettier -c \"**/*.yml\""
   },
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
-    "autocorrect-node": "2.13.0",
+    "autocorrect-node": "2.13.3",
     "fdir": "^6.4.3",
     "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
     "html-to-text": "^9.0.5",
-    "husky": "9.1.7",
-    "lint-staged": "15.5.0",
     "markdown-it": "^14.1.0",
     "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
@@ -42,6 +39,9 @@
     "prettier": "3.5.3",
     "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "lefthook": "^1.11.3"
   },
   "packageManager": "yarn@1.22.22"
 }
