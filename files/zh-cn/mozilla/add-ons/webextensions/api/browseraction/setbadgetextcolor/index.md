@@ -28,7 +28,7 @@ browser.browserAction.setBadgeTextColor(
       - : 颜色，可以指定为以下之一：
 
         - 字符串：任何 CSS [\<color>](/zh-CN/docs/Web/CSS/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。如果字符串不是有效颜色，返回的 Promise 将被拒绝，并且文本颜色不会更改。
-        - `{{WebExtAPIRef('browserAction.ColorArray')}}` 对象。
+        - {{WebExtRef('browserAction.ColorArray')}} 对象。
         - `null`。如果指定了 `tabId`，则移除特定标签页的徽章文本颜色，使该标签页继承全局徽章文本颜色。否则将全局徽章文本颜色恢复为默认值。
 
     - `tabId` {{optional_inline}}

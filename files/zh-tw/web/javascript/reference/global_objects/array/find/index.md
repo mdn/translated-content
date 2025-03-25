@@ -41,7 +41,7 @@ arr.find(callback[, thisArg])
     - `array`{{optional_inline}}
       - : 呼叫 `find` 的陣列。
 
-- `thisArg` `{{Optional_inline}}`
+- `thisArg` `{{Optional_inline}}
   - : 執行 `callback` 函式時被當作 `this` 的物件。
 
 ### 回傳值

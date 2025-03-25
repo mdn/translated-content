@@ -135,7 +135,7 @@ animation-iteration-count: unset;
 
 - `infinite`
   - : 无限循环播放动画。
-- `{{cssxref("&lt;number&gt;")}}`
+- {{cssxref("&lt;number&gt;")}}
   - : 动画重复的次数；默认为 `1`。你可以指定非整数值以播放动画循环的一部分：例如，`0.5` 将播放动画循环的一半。负值是无效的。
 
 > [!NOTE]

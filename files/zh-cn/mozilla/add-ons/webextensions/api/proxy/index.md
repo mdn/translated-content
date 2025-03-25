@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/proxy
 > [!WARNING]
 > 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
 
-使用 proxy API 来代理 web 请求。你可以使用 **`{{WebExtAPIRef("proxy.onRequest")}}`** 事件监听器来拦截 web 请求，并且返回一个可以描述是否代理并且怎样代理它们的对象。
+使用 proxy API 来代理 web 请求。你可以使用 **{{WebExtRef("proxy.onRequest")}}** 事件监听器来拦截 web 请求，并且返回一个可以描述是否代理并且怎样代理它们的对象。
 
 {{WebExtAPIRef("proxy.onRequest")}}的好处在于，用于实现你拦截策略的代码在你的扩展的后台脚本运行，所以，它可以让 **`WebExtension APIs`** 能够完全的访问你的扩展 (举例来说，可以访问你扩展的`storage`和像 dns 等类似的网络 api)
 
