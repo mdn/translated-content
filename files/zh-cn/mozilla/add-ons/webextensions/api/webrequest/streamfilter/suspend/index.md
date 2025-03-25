@@ -2,12 +2,12 @@
 title: webRequest.StreamFilter.suspend()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 {{AddonSidebar}}
 
-暂停请求。调用此函数后一直到通过调用 {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} 恢复请求之前都不会再传递任何数据。
+暂停请求。在调用此函数后一直到通过调用 {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} 恢复请求之前都不会再传递更多数据。
 
 你只能在 {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} 事件触发后调用此函数。
 
@@ -31,7 +31,7 @@ filter.suspend()
 
 ## 示例
 
-下述示例使用 `suspend`/`resume` 来推迟一个网络请求。
+该示例使用 `suspend`/`resume` 来推迟一个网络请求。
 
 ```js
 function listener(details) {
