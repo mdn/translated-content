@@ -2,12 +2,12 @@
 title: 隐私沙盒
 slug: Web/Privacy/Guides/Privacy_sandbox
 l10n:
-  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
+  sourceCommit: 99975be75617c7ca640fd195d0aaffe430b1d42f
 ---
 
-Google 的*隐私沙箱*项目是一系列提案，旨在无需第三方 cookie 或其他跟踪机制的情况下满足跨站点使用案例，为未来没有第三方 cookie 的网络做好准备。主题包括身份和跟踪保护、更尊重隐私的广告解决方案、防止隐蔽跟踪以及在浏览上下文之间安全地共享数据。
+Google 的*隐私沙盒*项目是一系列提案，旨在无需第三方 cookie 或其他跟踪机制的情况下满足跨站点使用案例，为未来移除第三方 cookie 的网络做好准备。主题包括身份和跟踪保护、更尊重隐私的广告解决方案、防止隐蔽跟踪以及在浏览上下文之间安全地共享数据。
 
-## 隐私沙箱功能
+## 隐私沙盒特性
 
 - [归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API)
   - : 使开发人员能够测量转化率——例如，当用户在一个网站上点击嵌入的广告，然后在供应商的网站上购买该商品时——并访问这些转化的报告。它无需依赖第三方跟踪 cookie 即可实现这一点。
@@ -29,4 +29,4 @@ Google 的*隐私沙箱*项目是一系列提案，旨在无需第三方 cookie 
 
 ## 参见
 
-- [The Privacy Sandbox](https://developers.google.cn/privacy-sandbox)于 developers.google.cn
+- [隐私沙盒](https://developers.google.cn/privacy-sandbox)于 developers.google.cn
