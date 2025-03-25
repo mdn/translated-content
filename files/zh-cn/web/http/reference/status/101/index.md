@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`101 Switching Protocols`** [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应) 状态码表示服务器已切换到的协议。协议在从客户端接收到的 {{HTTPHeader("Upgrade")}} 请求标头中指定。
+HTTP **`101 Switching Protocols`** [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)状态码表示服务器已切换到的协议。协议在从客户端接收到的 {{HTTPHeader("Upgrade")}} 请求标头中指定。
 
 服务器在此响应中包含一个 {{HTTPHeader("Upgrade")}} 标头，以表示其同意切换到的协议。该过程在[协议升级机制](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)指南中有详细描述。
 
