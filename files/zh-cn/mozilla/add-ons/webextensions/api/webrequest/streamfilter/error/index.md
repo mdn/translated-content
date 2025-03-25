@@ -2,12 +2,12 @@
 title: webRequest.StreamFilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 {{AddonSidebar}}
 
-包含在 {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} 事件触发后的错误消息的字符串。
+在 {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} 事件触发后包含错误消息的字符串。
 
 ## 浏览器兼容性
 
