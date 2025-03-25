@@ -2,28 +2,28 @@
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{AddonSidebar}}
 
-为发出的 HTTP 请求（包括 `ws://` 和 `wss://` 的 websocket 请求）的不同阶段添加事件监听器。事件监听器接收有关请求的详细信息，并可以修改或取消请求。
+为发出的 HTTP 请求（包括 `ws://` 和 `wss://` 的 websocket 请求）添加针对不同阶段的事件监听器。事件监听器接收有关请求的详细信息，并可以修改或取消请求。
 
 每个事件都会在请求的特定阶段触发。事件的顺序大概是这样的：
 
-![请求的顺序是 onBeforeRequest, onBeforeSendHeader, onSendHeaders, onHeadersReceived, onResponseStarted, 和 onCompleted。onHeadersReceived 可能会引起 onBeforeRedirect 和 onAuthRequired。onHeadersReceived 引起的事件从 onBeforeRequest 开始。onAuthRequired 引起的事件从 onBeforeSendHeader 开始。](webrequest-flow.png)
+![请求的顺序是 onBeforeRequest、onBeforeSendHeader、onSendHeaders、onHeadersReceived、onResponseStarted 和 onCompleted。onHeadersReceived 可能会引起 onBeforeRedirect 和 onAuthRequired。onHeadersReceived 引起的事件从 onBeforeRequest 开始。onAuthRequired 引起的事件从 onBeforeSendHeader 开始。](webrequest-flow.png)
 
-但是，并非所有的事件都会在每个请求中触发。例如，当重定向目标不匹配事件的 `filter.urls` 属性时，`onBeforeRedirect` 可能不会被 `onBeforeRequest` 触发。这可能是因为过滤器中的 URL 定义得很严格，或者重定向目标不能被扩展观察到，比如当它重定向到一个 `data:` URL 时。
+但是，并非所有的事件都会在每个请求中触发。例如，当重定向目标不匹配事件的 `filter.urls` 属性时，`onBeforeRedirect` 可能不会被 `onBeforeRequest` 触发。这可能是因为过滤器中的 URL 定义得很严格，又或者重定向目标不能被扩展观察到（比如当它重定向到一个 `data:` URL 时）。
 
-在请求过程中的任意时间，{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 可以被触发。同时需要注意，有的时候事件的顺序可能会有所不同。例如，在 Firefox 中，当 [HSTS](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) 升级时，`onBeforeRedirect` 事件会在 `onBeforeRequest` 之后立即触发。如果 [Firefox 跟踪保护](<https://support.mozilla.org/zh-CN/kb/Firefox 桌面版的增强跟踪保护>) 阻止了一个请求，`onErrorOccurred` 也会被触发。
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 在请求过程中的任意时间都可以触发。同时需要注意，有的时候事件的顺序可能会有所不同。例如，在 Firefox 中，当 [HSTS](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) 升级时，`onBeforeRedirect` 事件会在 `onBeforeRequest` 之后立即触发。如果 [Firefox 跟踪保护](<https://support.mozilla.org/zh-CN/kb/Firefox 桌面版的增强跟踪保护>) 阻止了一个请求，`onErrorOccurred` 也会被触发。
 
 所有的事件（_除_ `onErrorOccurred` 事件）的 `addListener()` 都接受三个参数：
 
 - 监听器本身
-- {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你就可以只在对特定 URL 或特定资源类型请求时被通知
-- 一个可选的 `extraInfoSpec` 对象。你可以使用这个对象传递额外的事件特定指令。
+- {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，这样你就可以只在对特定 URL 或特定资源类型请求时被通知
+- 可选的 `extraInfoSpec` 对象。你可以使用这个对象传递额外的事件特定指令。
 
-监听器函数会接收一个包含有关请求的信息的 `details` 对象。这包括请求 ID，用于使插件能够关联与单个请求相关的事件。它在请求中是唯一的，即使在重定向和身份验证交换中也是如此。
+监听器函数会接收一个包含有关请求的信息的 `details` 对象。这包括用于让插件对一个事件与某一特定请求关联起来的请求 ID，并且这个值在请求中是唯一的，即使在重定向和身份验证交换中也是如此。
 
 要使用 `webRequest` API 来监听给定主机的请求，扩展必须具有该主机的 [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)和[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。要使用 `"blocking"` 功能，扩展还必须具有 `"webRequestBlocking"` API 权限。
 
@@ -52,13 +52,13 @@ l10n:
 
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-- 加入认证功能：
+- 提供认证凭据：
 
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 要做到这一点，你需要在事件的 `addListener()` 中的 `extraInfoSpec` 参数中传递一个值为 `"blocking"` 的选项。这将让监听器变为同步的。
 
-在监听器中，你可以返回一个 {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} 对象，该对象指示你需要进行的修改：例如，你想要发送的修改后的请求头。
+在监听器中，你可以返回指示你需要进行的修改的 {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} 对象：例如，你想要发送的修改后的请求头。
 
 ## 在浏览器启动时的请求
 
@@ -66,43 +66,43 @@ l10n:
 
 ## 推测性请求
 
-浏览器可以进行推测性连接，其中它确定可能很快会发出对 URI 的请求。这种类型的连接不提供有效的标签信息，因此请求的详细信息（例如 `tabId`、`frameId`、`parentFrameId` 等）是不准确的。这些连接的 {{WebExtAPIRef("webRequest.ResourceType")}} 是 `speculative`。
+浏览器可以进行推测性连接，即预测可能即将发生的 URI 请求。这种类型的连接不提供有效的标签信息，因此请求的详细信息（例如 `tabId`、`frameId`、`parentFrameId` 等）是不准确的。这些连接的 {{WebExtAPIRef("webRequest.ResourceType")}} 是 `speculative`。
 
 ## 访问安全信息
 
-在 {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 监听器中，你可以通过调用 {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}} 访问请求的 [TLS](/zh-CN/docs/Glossary/TLS) 属性。为了做到这一点，你还必须在事件的 `addListener()` 中的 `extraInfoSpec` 参数中传递一个值为 `"blocking"` 的选项。
+在 {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 监听器中，你可以通过调用 {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}} 访问请求的 [TLS](/zh-CN/docs/Glossary/TLS) 属性。为了做到这一点，你还必须在事件的 `addListener()` 中为 `extraInfoSpec` 参数传入 `"blocking"` 值。
 
 你可以读取 TLS 握手的详细信息，但不能修改它们或覆盖浏览器的信任决策。
 
 ## 修改响应
 
-要修改请求的 HTTP 响应体，调用 {{WebExtAPIRef("webRequest.filterResponseData")}}，传递请求的 ID。这将返回一个 {{WebExtAPIRef("webRequest.StreamFilter")}} 对象，你可以使用它来检查和修改数据，当浏览器接收到数据时。
+要修改请求的 HTTP 响应体，调用 {{WebExtAPIRef("webRequest.filterResponseData")}} 并传入请求的 ID。这将返回一个当浏览器接收到数据时可以用于来检查和修改数据 {{WebExtAPIRef("webRequest.StreamFilter")}} 对象。
 
 要做到这一点，你必须具有 `"webRequestBlocking"` API 权限以及相关主机的 `"webRequest"` [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)和[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 
 ## 类型
 
 - {{WebExtAPIRef("webRequest.BlockingResponse")}}
-  - : 事件监听器在其 `extraInfoSpec` 参数中设置了 `"blocking"` 的话，会返回这种类型的对象。通过在 `BlockingResponse` 中设置特定属性，监听器可以修改网络请求。
+  - : 若事件监听器在其 `extraInfoSpec` 参数中设置了 `"blocking"` 时会返回该类型的对象。通过在 `BlockingResponse` 中设置特定属性，监听器可以修改网络请求。
 - {{WebExtAPIRef("webRequest.CertificateInfo")}}
   - : 描述单个 X.509 证书的对象。
 - {{WebExtAPIRef("webRequest.HttpHeaders")}}
-  - : HTTP 头的数组。每个头都表示为一个对象，有两个属性：`name` 和 `value` 或 `binaryValue`。
+  - : HTTP 头的数组。每个头都是用包含两个属性 `name`、`value` 或 `binaryValue` 的对象表示。
 - {{WebExtAPIRef("webRequest.RequestFilter")}}
   - : 描述应用于 `webRequest` 事件的过滤器的对象。
 - {{WebExtAPIRef("webRequest.ResourceType")}}
-  - : 表示在 web 请求中获取的特定资源的一种类型。
+  - : 表示在 Web 请求中获取的特定资源的一种类型。
 - {{WebExtAPIRef("webRequest.SecurityInfo")}}
-  - : 描述特定 web 请求的安全属性的对象。
+  - : 描述特定 Web 请求的安全属性的对象。
 - {{WebExtAPIRef("webRequest.StreamFilter")}}
-  - : 一个对象，可以用来在接收到 HTTP 响应时监视和修改它们。
+  - : 可以用来在接收到 HTTP 响应时监视和修改它们的对象。
 - {{WebExtAPIRef("webRequest.UploadData")}}
   - : 包含在 URL 请求中上传的数据。
 
 ## 属性
 
 - {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : `WebRequest.handlerBehaviorChanged()` 可以在 10 分钟内被调用的最大次数。
+  - : {{WebExtAPIRef("WebRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} 可以在 10 分钟内被调用的最大次数。
 
 ## 方法
 
@@ -118,7 +118,7 @@ l10n:
 - {{WebExtAPIRef("webRequest.onBeforeRequest")}}
   - : 在请求发出之前，且在头部可用之前触发。如果你想取消或重定向请求，这是一个很好的监听位置。
 - {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}
-  - : 在发送任何 HTTP 数据之前触发，但在 HTTP 头部可用之后。如果你想修改 HTTP 请求头，这是一个很好的监听位置。
+  - : 在发送任何 HTTP 数据之前，但在 HTTP 头部可用之后触发。如果你想修改 HTTP 请求头，这是一个很好的监听位置。
 - {{WebExtAPIRef("webRequest.onSendHeaders")}}
   - : 在发送头部之前触发。如果你的插件或其他插件在 `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}` 中修改了头部，你会在这里看到修改后的版本。
 - {{WebExtAPIRef("webRequest.onHeadersReceived")}}
