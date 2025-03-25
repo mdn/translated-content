@@ -2,16 +2,16 @@
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 {{AddonSidebar}}
 
-`StreanFilter` 是可以用于监控与修改 HTTP 响应的对象。
+`StreanFilter` 是可用于监控与修改 HTTP 响应的对象。
 
-要创建 `StreamFilter`，请调用 {{WebExtAPIRef("webRequest.filterResponseData()")}} 并传递你想要过滤的 Web 请求的 ID。
+要创建 `StreamFilter`，请调用 {{WebExtAPIRef("webRequest.filterResponseData()")}} 并传入你想要过滤的 Web 请求的 ID。
 
-你可以认为流过滤器处于位于网络堆栈和浏览器渲染引擎之间。当 HTTP 响应数据从网络中传递到后将传递给过滤器。在继续将数据传递给渲染引擎供解析和渲染之前，过滤器可以检查和修改数据。过滤器对响应主体具有完全控制权，并且如果没有任何监听器或写调用时，它的默认行为是拥有一个没有内容且永不关闭的流。
+你可以认为流过滤器位于网络堆栈和浏览器渲染引擎之间。当 HTTP 响应数据从网络中传递到后将传递给过滤器。在继续将数据传递给渲染引擎供解析和渲染之前，过滤器可以检查和修改数据。过滤器对响应主体具有完全控制权，并且如果没有任何监听器或写调用时，它的默认行为是拥有一个没有内容且永不关闭的流。
 
 过滤器生成四种不同的事件：
 
@@ -34,7 +34,7 @@ filter.onstart = (event) => {
 
 如果你为过滤器的任何事件指派了监听器，那么传递给渲染引擎的所有响应数据都是通过你对 `write()` 的调用提供的。因此，如果你添加了监听器但没有调用 `write()`，那么渲染的页面将是空白的。
 
-当你完成与响应的交互后，请调用以下之一：
+当你完成与响应的交互后，请调用以下方法之一：
 
 - {{WebEXTAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}：这会断开过滤器与请求的连接，因此响应的其余部分会正常处理。
 - {{WebEXTAPIRef("webRequest.StreamFilter.close()", "close()")}}：这会关闭请求，因此不会处理任何额外的响应数据。
@@ -75,7 +75,7 @@ filter.onstart = (event) => {
 
 ## 示例
 
-下述代码监听 `onstart`、`ondata` 和 `onstop` 事件。它会记录这些事件以及以 {{jsxref("ArrayBuffer")}} 形式表示的响应数据本身：
+下面的代码会监听 `onstart`、`ondata` 和 `onstop` 事件。它会记录这些事件以及以 {{jsxref("ArrayBuffer")}} 形式表示的响应数据本身：
 
 ```js
 function listener(details) {
