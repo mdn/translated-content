@@ -2,7 +2,7 @@
 title: Allow
 slug: Web/HTTP/Reference/Headers/Allow
 l10n:
-  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -16,7 +16,7 @@ HTTP **`Allow`** {{Glossary("response header", "回應標頭")}}列出了資源�
       <td>{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>
