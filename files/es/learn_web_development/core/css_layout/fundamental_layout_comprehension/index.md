@@ -2,7 +2,7 @@
 title: "Desafío: Comprensión fundamental del diseño"
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
 {{LearnSidebar}}
