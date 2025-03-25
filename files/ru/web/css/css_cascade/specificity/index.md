@@ -257,8 +257,8 @@ h1 {
   - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
   - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
     - [начальные](/ru/docs/Web/CSS/CSS_cascade/initial_value)
