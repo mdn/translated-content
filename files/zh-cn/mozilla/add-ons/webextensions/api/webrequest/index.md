@@ -107,7 +107,7 @@ l10n:
 ## 方法
 
 - {{WebExtAPIRef("webRequest.handlerBehaviorChanged()")}}
-  - : 可以用来确保在页面在浏览器的内存缓存中时正确应用事件监听器。
+  - : 可以用来确保在页面在浏览器的内存缓存中事件监听器被正确地应用。
 - {{WebExtAPIRef("webRequest.filterResponseData()")}}
   - : 为给定请求返回一个 {{WebExtAPIRef("webRequest.StreamFilter")}} 对象。
 - {{WebExtAPIRef("webRequest.getSecurityInfo()")}}
@@ -120,7 +120,7 @@ l10n:
 - {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}
   - : 在发送任何 HTTP 数据之前，但在 HTTP 头部可用之后触发。如果你想修改 HTTP 请求头，这是一个很好的监听位置。
 - {{WebExtAPIRef("webRequest.onSendHeaders")}}
-  - : 在发送头部之前触发。如果你的插件或其他插件在 `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}` 中修改了头部，你会在这里看到修改后的版本。
+  - : 在发送头部之前触发。如果你的插件或其他插件在 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 中修改了头部，你会在这里看到修改后的版本。
 - {{WebExtAPIRef("webRequest.onHeadersReceived")}}
   - : 当与请求关联的 HTTP 响应头接收到时触发。你可以使用这个事件来修改 HTTP 响应头。
 - {{WebExtAPIRef("webRequest.onAuthRequired")}}
