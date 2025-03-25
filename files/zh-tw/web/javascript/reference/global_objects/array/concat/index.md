@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Array")}} 實例的 **`concat()`** 方法是用於合併兩個或更多的陣列。此方法不會改變原有的陣列，而是返回一個新的陣列。
+{{jsxref("Array")}} 實例的 **`concat()`** 方法用於合併兩個或更多的陣列。此方法不會改變原有的陣列，而是返回一個新的陣列。
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.concat()", "shorter")}}
 
@@ -44,9 +44,9 @@ concat(value1, value2, /* …, */ valueN)
 
 `concat()` 方法是[複製方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#複製方法與變異方法)。它不會改變 `this` 或任何作為引數傳入的陣列，而是返回一個[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，該複製包含與原始陣列相同的元素。
 
-`concat()` 方法會保留空槽，如果任一個來源陣列是[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏矩陣)。
+如果任一個來源陣列是[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏陣列)，`concat()` 方法會保留空槽。
 
-`concat()` 方法是[通用方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)。`this` 值的處理方式與其他引數相同（除了它會先被轉換為物件），意味著普通物件會被直接加到結果陣列的最前端，而具有真值 `[Symbol.isConcatSpreadable]` 的類陣列物件則會被展開並加入結果陣列。
+`concat()` 方法是[通用方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)。`this` 值的處理方式與其他引數相同（除了它會先被轉換為物件），意味著普通物件會被直接加到結果陣列的最前端，而具有 `[Symbol.isConcatSpreadable]` 為真值的類陣列物件則會被展開並加入結果陣列。
 
 ## 範例
 
@@ -78,9 +78,9 @@ console.log(numbers);
 // 結果為 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### 合併數值到陣列中
+### 合併值到陣列中
 
-以下程式碼將三個數值合併到陣列中：
+以下程式碼將三個值合併到陣列中：
 
 ```js
 const letters = ["a", "b", "c"];
@@ -93,7 +93,7 @@ console.log(alphaNumeric);
 
 ### 合併巢狀陣列
 
-以下程式碼將巢狀陣列合併，並展示如何保留參考：
+以下程式碼將巢狀陣列合併，並示範引用的保留：
 
 ```js
 const num1 = [[1]];
@@ -133,7 +133,7 @@ console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
 
 ### 在非陣列物件上調用 concat()
 
-如果 `this` 值不是陣列，則會將其轉換為物件並像處理其他引數一樣進行處理。在這種情況下，回傳值始終是新的陣列。
+如果 `this` 值不是陣列，則會將其轉換為物件並像處理 `concat()` 的其他引數一樣進行處理。在這種情況下，回傳值始終是新的陣列。
 
 ```js
 console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
