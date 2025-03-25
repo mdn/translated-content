@@ -2,12 +2,12 @@
 title: webRequest.StreamFilter.close()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 {{AddonSidebar}}
 
-关闭请求。在调用后，不会再有更多的响应数据传递给浏览器的渲染引擎，也不会再给扩展传递更多的过滤器事件。
+关闭请求。在调用后，后续的响应数据不再会传递给浏览器的渲染引擎，也不会再给扩展传递更多的过滤器事件。
 
 请注意此函数与 {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} 之间的区别。使用 `disconnect()` 后，浏览器将继续处理任何进一步的响应数据，但这些数据将无法通过过滤器访问。使用 `close()` 后，浏览器将忽略尚未传递到渲染引擎的任何响应数据。
 
