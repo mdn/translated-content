@@ -2,20 +2,22 @@
 title: Fundamentos de las media queries
 short-title: media queries
 slug: Learn_web_development/Core/CSS_layout/Media_queries
+l10n:
+  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
 {{learnsidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
 
-Las **media queries en CSS** te dan una forma de aplicar CSS solo cuando el navegador y el entorno del dispositivo coinciden con una regla que especifiques, por ejemplo, "el área de visualización es más ancha que 480 píxeles". Las media queries son una parte clave del diseño web adaptativo, ya que te permiten crear diferentes diseños según el tamaño del área de visualización, pero también se pueden utilizar para detectar otras cosas sobre el entorno en el que se está ejecutando tu sitio, por ejemplo, si el usuario está utilizando una pantalla táctil en lugar de un ratón.
+Las **media queries (consulta de medios) en CSS** te dan una forma de aplicar CSS solo cuando el navegador y el entorno del dispositivo coinciden con una regla que especifiques, por ejemplo, "el área de visualización es más ancha que 480 píxeles". Las media queries son una parte clave del diseño web adaptativo, ya que te permiten crear diferentes diseños según el tamaño del área de visualización, pero también se pueden utilizar para detectar otras cosas sobre el entorno en el que se está ejecutando tu sitio, por ejemplo, si el usuario está utilizando una pantalla táctil en lugar de un ratón.
 
 En esta lección, primero aprenderás sobre la sintaxis utilizada en las media queries, y luego pasarás a utilizarlas en ejemplos que muestran cómo un diseño básico podría hacerse adaptativo.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Requisitos Previos:</th>
+      <th scope="row">Requisitos previos:</th>
       <td>
         <a href="/es/docs/Learn_web_development/Core/Structuring_content"
           >Estructuración del contenido con HTML</a
@@ -32,8 +34,8 @@ En esta lección, primero aprenderás sobre la sintaxis utilizada en las media q
           <li>La sintaxis de las media queries.</li>
           <li>Los tipos comunes de media queries.</li>
           <li>Usar media queries de <code>width</code> y <code>height</code> para crear diseños adaptativos.</li>
-          <li>Elegir breakpoints.</li>
-          <li>Usar media queries para implementar un diseño Mobile First.</li>
+          <li>Elegir breakpoints (puntos de interrupción).</li>
+          <li>Usar media queries para implementar un diseño Mobile First (Centrado en móvil).</li>
         </ul>
       </td>
     </tr>
@@ -220,7 +222,7 @@ Si quieres mejorar la legibilidad de esto, puedes usar la sintaxis "range":
 
 Entonces, en este caso, los estilos se aplican cuando el ancho del área de visualización está entre `30em` y `50em`.
 
-## media queries más complejas
+## Media queries más complejas
 
 Con todas las diferentes media queries posibles, es posible que desees combinarlas o crear listas de consultas, cualquiera de las cuales podría coincidir.
 
@@ -326,7 +328,7 @@ El [Modo de diseño resposivo](https://firefox-source-docs.mozilla.org/devtools-
 
 ## Aprendizaje activo: diseño resposivo Mobile First
 
-En términos generales, puedes adoptar dos enfoques para un diseño resposivo. Puedes comenzar con tu escritorio o la vista más amplia y luego agregar breakpoints para mover las cosas a medida que el área de visualización se hace más pequeña, o puedes comenzar con la vista más pequeña y agregar diseño a medida que el área de visualización se hace más grande. Este segundo enfoque se describe como diseño resposivo **Mobile First** y, con bastante frecuencia, es el mejor enfoque a seguir.
+En términos generales, puedes adoptar dos enfoques para un diseño resposivo. Puedes comenzar con tu escritorio o la vista más amplia y luego agregar _breakpoints_ para mover las cosas a medida que el área de visualización se hace más pequeña, o puedes comenzar con la vista más pequeña y agregar diseño a medida que el área de visualización se hace más grande. Este segundo enfoque se describe como diseño resposivo **Mobile First** (centrado en móvil) y, con bastante frecuencia, es el mejor enfoque a seguir.
 
 La vista para los dispositivos más pequeños suele ser una simple columna única de contenido, tal como aparece en el flujo normal. Esto significa que probablemente no necesitas hacer mucho diseño para dispositivos pequeños — ¡ordena bien tu fuente y tendrás un diseño legible de forma predeterminada!
 
@@ -393,8 +395,8 @@ Nuestro punto de partida es un documento HTML con algo de CSS aplicado para agre
       </div>
       <aside class="related">
         <p>
-          All these veggies are brought to you by the
-          <a href="https://veggieipsum.com/">Veggie Ipsum generator</a>.
+          Todas estas verduras son traídas a usted por el
+          <a href="https://veggieipsum.com/">generador de Veggie Ipsum</a>.
         </p>
       </aside>
     </article>
