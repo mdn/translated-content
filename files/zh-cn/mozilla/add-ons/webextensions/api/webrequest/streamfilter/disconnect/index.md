@@ -2,7 +2,7 @@
 title: webRequest.StreamFilter.disconnect()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/disconnect
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 {{AddonSidebar}}
@@ -33,7 +33,7 @@ filter.disconnect()
 
 ## 示例
 
-该示例将在响应主体之前添加“前言文字”。然后它断开连接，因此原始响应主体将被正常加载：
+该示例将在响应主体之前添加“前言文字”然后它断开连接，因此原有的响应主体将被正常加载：
 
 ```js
 function listener(details) {
