@@ -2,7 +2,7 @@
 title: webRequest.StreamFilter.write()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 2de85adef3b988bf47549446b2254a7f533b7649
 ---
 
 {{AddonSidebar}}
@@ -34,7 +34,7 @@ filter.write(
 
 ## 示例
 
-该示例使用 `write()`，将响应的第一个数据块中的“示例”替换为“WebExtension 示例”。
+该示例使用 `write()` 将响应的第一个数据块中的“示例”替换为“WebExtension 示例”。
 
 ```js
 function listener(details) {
