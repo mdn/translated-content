@@ -153,8 +153,8 @@ div.menu-bar li:hover > ul {
 - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
 - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Объединение отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Модель визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-- [Слои](/ru/docs/Web/CSS/Layout_mode)
+- [Модель визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Слои](/ru/docs/Glossary/Layout_mode)
 
 ## DOM-CSS / CSSOM
 

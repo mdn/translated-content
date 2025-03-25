@@ -13,4 +13,4 @@ slug: Glossary/Block/CSS
 
 ### Общая информация
 
-- [Visual formatting model](/ru/docs/Web/CSS/Visual_formatting_model)
+- [Visual formatting model](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
