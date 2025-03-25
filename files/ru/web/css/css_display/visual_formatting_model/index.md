@@ -1,6 +1,6 @@
 ---
 title: Модель визуального форматирования
-slug: Web/CSS/Visual_formatting_model
+slug: Web/CSS/CSS_display/Visual_formatting_model
 ---
 
 {{CSSRef}}
@@ -144,7 +144,7 @@ The float positioning scheme for a box is selected, by setting the {{ cssxref("f
 
 ### Absolute positioning
 
-In the _absolute positioning scheme_, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their [containing block](/ru/docs/Web/CSS/Containing_block) using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
+In the _absolute positioning scheme_, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their [containing block](/ru/docs/Web/CSS/CSS_display/Containing_block) using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
 
 An element is absolutely positioned if the {{ cssxref("position") }} is set to `absolute` or `fixed`.
 

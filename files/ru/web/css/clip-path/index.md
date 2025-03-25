@@ -150,7 +150,7 @@ clip-path: unset;
   - : Область не создается.
 
 > [!NOTE]
-> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
+> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
 
 ## Формальное определение
 
@@ -683,7 +683,7 @@ clipPathSelect.addEventListener("change", (evt) => {
 ## Смотрите также
 
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - CSS-свойства:
   - {{cssxref("mask")}}
   - {{cssxref("filter")}}

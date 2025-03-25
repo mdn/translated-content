@@ -2,7 +2,7 @@
 title: Navigator：getBattery() 方法
 slug: Web/API/Navigator/getBattery
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
