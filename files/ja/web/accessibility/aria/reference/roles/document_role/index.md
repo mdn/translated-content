@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Reference/Roles/document_role
 original_slug: Web/Accessibility/ARIA/Roles/document_role
 ---
 
-複雑な複合[ウィジェット](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)や[アプリケーション](/ja/docs/Web/Accessibility/ARIA/Roles/application_role)で一般的に使用される文書 (`document`) ロールは、コンテキストを読み取りモードに切り替えることを支援技術を知らせることができます。 文書 (`document`) ロールは、読み取りモードまたは閲覧モードを持つ支援技術に、この要素に含まれるコンテンツを文書モードを使用して読み取るように指示します。
+複雑な複合[ウィジェット](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)や[アプリケーション](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)で一般的に使用される文書 (`document`) ロールは、コンテキストを読み取りモードに切り替えることを支援技術を知らせることができます。 文書 (`document`) ロールは、読み取りモードまたは閲覧モードを持つ支援技術に、この要素に含まれるコンテンツを文書モードを使用して読み取るように指示します。
 
 ```html
 <div role="dialog">
@@ -17,7 +17,7 @@ original_slug: Web/Accessibility/ARIA/Roles/document_role
 </div>
 ```
 
-この例は、いくつかのコントロールと、支援技術のユーザーがタブ移動で読むことができる情報テキストを含むセクションを備えた[ダイアログ](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)ウィジェットを示しています。
+この例は、いくつかのコントロールと、支援技術のユーザーがタブ移動で読むことができる情報テキストを含むセクションを備えた[ダイアログ](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role)ウィジェットを示しています。
 
 ## 説明
 
@@ -29,7 +29,7 @@ original_slug: Web/Accessibility/ARIA/Roles/document_role
 
 支援技術は、コンテキストを文書モードに戻すべきであり、場合によっては、親の動的コンテキスト用に配線されたコントロールから横取りすることで、<kbd>上矢印</kbd>や<kbd>下矢印</kbd>のキーボードイベントなどの標準入力イベントを再度有効にして、読み取りカーソルを制御します。
 
-記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Roles/article_role)) ロールとは対照的に、文書 (`document`) ロールは、文書ロールを持つ他の要素との関係はなく、単にそれ含む複合ウィジェットとの関係があるだけです。 記事は関連記事を持つことができます。
+記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)) ロールとは対照的に、文書 (`document`) ロールは、文書ロールを持つ他の要素との関係はなく、単にそれ含む複合ウィジェットとの関係があるだけです。 記事は関連記事を持つことができます。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
@@ -67,6 +67,6 @@ original_slug: Web/Accessibility/ARIA/Roles/document_role
 ## 関連情報
 
 - [ARIA: widget ロール](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)
-- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

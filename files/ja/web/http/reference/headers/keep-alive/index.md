@@ -76,4 +76,4 @@ Server: Apache
 ## 関連情報
 
 - {{HTTPHeader("Connection")}}
-- [HTTP/1.x のコネクション管理](/ja/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [HTTP/1.x のコネクション管理](/ja/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)

@@ -37,7 +37,7 @@ l10n:
 ### HTTP
 
 - {{HTTPHeader("Content-Security-Policy")}} のソースディレクティブ用の値 `'unsafe-hashes'` をサポートしました。
-  詳しくは [CSP unsafe-hashes](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox バグ 1343950](https://bugzil.la/1343950)) をご覧ください。
+  詳しくは [CSP unsafe-hashes](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox バグ 1343950](https://bugzil.la/1343950)) をご覧ください。
 
 ### API
 

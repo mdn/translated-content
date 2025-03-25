@@ -9,7 +9,7 @@ l10n:
 
 **スプレッド** (`...`) 構文を使うと、配列式や文字列などの反復可能オブジェクトを、0 個以上の引数（関数呼び出しの場合）や要素（配列リテラルの場合）を目的の場所に展開することができます。オブジェクトリテラルでは、スプレッド構文によりオブジェクトのプロパティを列挙し、作成するオブジェクトにキーと値の組を追加します。
 
-スプレッド構文は、残余構文とまったく同じように見えますが、ある意味では、スプレッド構文は残余構文の反対です。スプレッド構文は配列を要素に「展開」しますが、リスト構文は複数の要素を集合し、単一の要素に「圧縮」します。[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)と[残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#rest_property)を参照してください。
+スプレッド構文は、残余構文とまったく同じように見えますが、ある意味では、スプレッド構文は残余構文の反対です。スプレッド構文は配列を要素に「展開」しますが、リスト構文は複数の要素を集合し、単一の要素に「圧縮」します。[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)と[残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property)を参照してください。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
 
@@ -52,14 +52,14 @@ const obj = { key1: "value1" };
 const array = [...obj]; // TypeError: obj is not iterable
 ```
 
-一方、[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)での展開は、値自身のプロパティを[列挙](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties#traversing_object_properties)します。一般的な配列では、すべてのインデックスが列挙可能な自分自身のプロパティであるため、配列をオブジェクトに展開することができます。
+一方、[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)での展開は、値自身のプロパティを[列挙](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties#traversing_object_properties)します。一般的な配列では、すべてのインデックスが列挙可能な自分自身のプロパティであるため、配列をオブジェクトに展開することができます。
 
 ```js
 const array = [1, 2, 3];
 const obj = { ...array }; // { 0: 1, 1: 2, 2: 3 }
 ```
 
-すべての[プリミティブ](/ja/docs/Web/JavaScript/Data_structures#primitive_values)はオブジェクトに展開できます。 文字列のみ自分自身で列挙可能なプロパティを持っており、それ以外は何らかのプロパティを新しいオブジェクトに作成することなく展開できます。
+すべての[プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#primitive_values)はオブジェクトに展開できます。 文字列のみ自分自身で列挙可能なプロパティを持っており、それ以外は何らかのプロパティを新しいオブジェクトに作成することなく展開できます。
 
 ```js
 const obj = { ...true, ..."test", ...10 };
@@ -353,5 +353,5 @@ const mergedObj1 = merge(obj1, obj2);
 ## 関連情報
 
 - [残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-- [残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#rest_property)
+- [残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property)
 - {{jsxref("Function.prototype.apply()")}}

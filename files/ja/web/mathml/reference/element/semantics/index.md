@@ -32,7 +32,7 @@ l10n:
 
 ## 属性
 
-`<semantics>`、`<annotation>`、`<annotation-xml>` の各要素は[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)を受け入れます。さらに、`<annotation>` と `<annotation-xml>` 要素には、以下の属性を設定することができます。
+`<semantics>`、`<annotation>`、`<annotation-xml>` の各要素は[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)を受け入れます。さらに、`<annotation>` と `<annotation-xml>` 要素には、以下の属性を設定することができます。
 
 - `encoding`
   - : この注釈における意味的情報の符号化方法（例: `"MathML-Content"`, `"MathML-Presentation"`, `"application/openmath+xml"`, `"image/png"`）。

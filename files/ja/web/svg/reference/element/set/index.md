@@ -48,7 +48,7 @@ svg {
 
 - {{SVGAttr("to")}}
   - : この属性は、アニメーションの再生時間の間、対象とする属性に適用する値を定義します。値は、対象とする属性の要求と一致しなければなりません。
-    _値の型_: [**\<anything>**](/ja/docs/Web/SVG/Content_type#anything); _既定値_: none; _アニメーション_: **不可**
+    _値の型_: [**\<anything>**](/ja/docs/Web/SVG/Guides/Content_type#anything); _既定値_: none; _アニメーション_: **不可**
 
 ## 使用可能な場所
 
@@ -65,5 +65,5 @@ svg {
 ## 関連情報
 
 - {{SVGAttr("attributeName")}} 属性
-- [アニメーションタイミング属性](/ja/docs/Web/SVG/Attribute#アニメーションタイミング属性): {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+- [アニメーションタイミング属性](/ja/docs/Web/SVG/Reference/Attribute#アニメーションタイミング属性): {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
 - {{SVGElement("animate")}}

@@ -23,7 +23,7 @@ l10n:
   - : ウェブ業界のプロとして、自分のプロジェクトでは、ブレインストーミングによるアイディア出し、提案書の作成、コードの実装など、さまざまな段階で他の人々と協力して作業を行う必要があります。この記事では、他の人々とどのように連携して作業を進めるのかについて説明します。
 - [ワークフローとプロセス](/ja/docs/Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes)
   - : 初心者には、技術の特定の個々の側面に集中するあまり、自分のプロジェクトの全体像を見失いがちな人が多いようです。この記事では、その上位レベルの文脈の一部を提供します。
-- [採用面接で成功するために](/ja/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews)
+- [採用面接で成功するために](/ja/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job)
   - : 技術職の採用面接はとても厳しく、具体的な要求事項をかなり詳細にわたって持っている企業もあります。 そもそも、応募するのにふさわしい仕事を探すこと自体が難しい場合もあります。 この仕事では、手助けとなるヒントやリソースを提示しています。
 
 ## 関連情報

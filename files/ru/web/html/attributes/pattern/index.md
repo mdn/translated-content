@@ -76,7 +76,7 @@ Had we used [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) and [`maxlengt
 
 ### Specifying a pattern
 
-You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -150,5 +150,5 @@ While `title`s are used by some browsers to populate error messaging, because br
 ## Смотрите также
 
 - [Constraint validation](/ru/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/ru/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

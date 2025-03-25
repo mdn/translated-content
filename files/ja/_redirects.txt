@@ -264,14 +264,14 @@
 /ja/docs/CSS/Getting_Started/Why_use_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ja/docs/CSS/ID_selectors	/ja/docs/Web/CSS/ID_selectors
 /ja/docs/CSS/ID_selectors-redirect-1	/ja/docs/Web/CSS/ID_selectors
-/ja/docs/CSS/Layout_mode	/ja/docs/Web/CSS/Layout_mode
+/ja/docs/CSS/Layout_mode	/ja/docs/Glossary/Layout_mode
 /ja/docs/CSS/Length	/ja/docs/Web/CSS/length
 /ja/docs/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/CSS_media_queries
 /ja/docs/CSS/Multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /ja/docs/CSS/Other_Resources	/ja/docs/Web/CSS
-/ja/docs/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/Privacy_and_the_:visited_selector
+/ja/docs/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /ja/docs/CSS/Pseudo-classes	/ja/docs/Web/CSS/Pseudo-classes
 /ja/docs/CSS/Pseudo-elements	/ja/docs/Web/CSS/Pseudo-elements
 /ja/docs/CSS/Pseudo-elements-redirect-1	/ja/docs/Web/CSS/Pseudo-elements
@@ -308,7 +308,7 @@
 /ja/docs/CSS/Using_CSS_transitions	/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
 /ja/docs/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-/ja/docs/CSS/Visual_formatting_model	/ja/docs/Web/CSS/Visual_formatting_model
+/ja/docs/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ja/docs/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/actual_value
 /ja/docs/CSS/align-content	/ja/docs/Web/CSS/align-content
 /ja/docs/CSS/align-items	/ja/docs/Web/CSS/align-items
@@ -2490,10 +2490,10 @@
 /ja/docs/MDN/Contribute/GitHub_cheatsheet	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/Guidelines	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Guidelines/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
-/ja/docs/MDN/Contribute/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/General	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+/ja/docs/MDN/Contribute/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Code_style_guide
+/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS
+/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/General	/ja/docs/MDN/Writing_guidelines/Code_style_guide
+/ja/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML	/ja/docs/MDN/Writing_guidelines/Code_style_guide/HTML
 /ja/docs/MDN/Contribute/Guidelines/Conventions_definitions	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Guidelines/Does_this_belong_on_MDN	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Contribute/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
@@ -2548,10 +2548,10 @@
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Getting_started
 /ja/docs/MDN/Guidelines	/ja/docs/MDN/Writing_guidelines
-/ja/docs/MDN/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/ja/docs/MDN/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-/ja/docs/MDN/Guidelines/Code_guidelines/General	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/ja/docs/MDN/Guidelines/Code_guidelines/HTML	/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
+/ja/docs/MDN/Guidelines/Code_guidelines	/ja/docs/MDN/Writing_guidelines/Code_style_guide
+/ja/docs/MDN/Guidelines/Code_guidelines/CSS	/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS
+/ja/docs/MDN/Guidelines/Code_guidelines/General	/ja/docs/MDN/Writing_guidelines/Code_style_guide
+/ja/docs/MDN/Guidelines/Code_guidelines/HTML	/ja/docs/MDN/Writing_guidelines/Code_style_guide/HTML
 /ja/docs/MDN/Guidelines/Conventions_definitions	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Guidelines/Does_this_belong_on_MDN	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
@@ -2581,6 +2581,12 @@
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
+/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion	/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion
+/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide	/ja/docs/MDN/Writing_guidelines/Code_style_guide
+/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS	/ja/docs/MDN/Writing_guidelines/Code_style_guide/CSS
+/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML	/ja/docs/MDN/Writing_guidelines/Code_style_guide/HTML
+/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript	/ja/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript
+/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell	/ja/docs/MDN/Writing_guidelines/Code_style_guide/Shell
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Community
 /ja/docs/Map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Map
 /ja/docs/MathML	/ja/docs/Web/MathML
@@ -2593,6 +2599,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
+/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 /ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 /ja/docs/Mozilla/Add-ons/WebExtensions/Tips	/ja/docs/Mozilla/Add-ons/WebExtensions
@@ -4145,6 +4152,7 @@
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ja/docs/Web/CSS/Inheritance	/ja/docs/Web/CSS/CSS_cascade/Inheritance
+/ja/docs/Web/CSS/Layout_mode	/ja/docs/Glossary/Layout_mode
 /ja/docs/Web/CSS/List_of_Proprietary_CSS_Features	/ja/docs/Web/CSS/Reference
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
@@ -4155,6 +4163,7 @@
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_motion_path
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Paged_Media	/ja/docs/Web/CSS/CSS_paged_media
+/ja/docs/Web/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/Web/CSS
@@ -4188,6 +4197,7 @@
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts
+/ja/docs/Web/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
 /ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/actual_value
 /ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
@@ -4259,6 +4269,7 @@
 /ja/docs/Web/CSS/offset-block-start	/ja/docs/Web/CSS/inset-block-start
 /ja/docs/Web/CSS/offset-inline-end	/ja/docs/Web/CSS/inset-inline-end
 /ja/docs/Web/CSS/offset-inline-start	/ja/docs/Web/CSS/inset-inline-start
+/ja/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring	/ja/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring
 /ja/docs/Web/CSS/paint	/ja/docs/Web/CSS/image/paint
 /ja/docs/Web/CSS/paint()	/ja/docs/Web/CSS/image/paint
 /ja/docs/Web/CSS/path	/ja/docs/Web/CSS/basic-shape/path
@@ -5459,6 +5470,7 @@
 /ja/docs/Web/SVG/Attribute/Styling	/ja/docs/Web/SVG/Reference/Attribute
 /ja/docs/Web/SVG/Attribute/accent-height	/ja/docs/Web/SVG/Reference/Attribute/accent-height
 /ja/docs/Web/SVG/Attribute/alignment-baseline	/ja/docs/Web/SVG/Reference/Attribute/alignment-baseline
+/ja/docs/Web/SVG/Attribute/baseline-shift	/ja/docs/Web/SVG/Reference/Attribute/baseline-shift
 /ja/docs/Web/SVG/Attribute/color	/ja/docs/Web/SVG/Reference/Attribute/color
 /ja/docs/Web/SVG/Attribute/color-interpolation	/ja/docs/Web/SVG/Reference/Attribute/color-interpolation
 /ja/docs/Web/SVG/Attribute/color-interpolation-filters	/ja/docs/Web/SVG/Reference/Attribute/color-interpolation-filters
@@ -5466,6 +5478,8 @@
 /ja/docs/Web/SVG/Attribute/cx	/ja/docs/Web/SVG/Reference/Attribute/cx
 /ja/docs/Web/SVG/Attribute/cy	/ja/docs/Web/SVG/Reference/Attribute/cy
 /ja/docs/Web/SVG/Attribute/d	/ja/docs/Web/SVG/Reference/Attribute/d
+/ja/docs/Web/SVG/Attribute/display	/ja/docs/Web/SVG/Reference/Attribute/display
+/ja/docs/Web/SVG/Attribute/dominant-baseline	/ja/docs/Web/SVG/Reference/Attribute/dominant-baseline
 /ja/docs/Web/SVG/Attribute/dx	/ja/docs/Web/SVG/Reference/Attribute/dx
 /ja/docs/Web/SVG/Attribute/dy	/ja/docs/Web/SVG/Reference/Attribute/dy
 /ja/docs/Web/SVG/Attribute/end	/ja/docs/Web/SVG/Reference/Attribute/end
@@ -5474,6 +5488,7 @@
 /ja/docs/Web/SVG/Attribute/fill-rule	/ja/docs/Web/SVG/Reference/Attribute/fill-rule
 /ja/docs/Web/SVG/Attribute/filter	/ja/docs/Web/SVG/Reference/Attribute/filter
 /ja/docs/Web/SVG/Attribute/filterUnits	/ja/docs/Web/SVG/Reference/Attribute/filterUnits
+/ja/docs/Web/SVG/Attribute/font-size	/ja/docs/Web/SVG/Reference/Attribute/font-size
 /ja/docs/Web/SVG/Attribute/height	/ja/docs/Web/SVG/Reference/Attribute/height
 /ja/docs/Web/SVG/Attribute/id	/ja/docs/Web/SVG/Reference/Attribute/id
 /ja/docs/Web/SVG/Attribute/lengthAdjust	/ja/docs/Web/SVG/Reference/Attribute/lengthAdjust
@@ -5484,6 +5499,7 @@
 /ja/docs/Web/SVG/Attribute/points	/ja/docs/Web/SVG/Reference/Attribute/points
 /ja/docs/Web/SVG/Attribute/preserveAspectRatio	/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio
 /ja/docs/Web/SVG/Attribute/r	/ja/docs/Web/SVG/Reference/Attribute/r
+/ja/docs/Web/SVG/Attribute/rotate	/ja/docs/Web/SVG/Reference/Attribute/rotate
 /ja/docs/Web/SVG/Attribute/scale	/ja/docs/Web/SVG/Reference/Attribute/scale
 /ja/docs/Web/SVG/Attribute/stop-color	/ja/docs/Web/SVG/Reference/Attribute/stop-color
 /ja/docs/Web/SVG/Attribute/stroke	/ja/docs/Web/SVG/Reference/Attribute/stroke
@@ -5494,6 +5510,7 @@
 /ja/docs/Web/SVG/Attribute/stroke-miterlimit	/ja/docs/Web/SVG/Reference/Attribute/stroke-miterlimit
 /ja/docs/Web/SVG/Attribute/stroke-width	/ja/docs/Web/SVG/Reference/Attribute/stroke-width
 /ja/docs/Web/SVG/Attribute/text-anchor	/ja/docs/Web/SVG/Reference/Attribute/text-anchor
+/ja/docs/Web/SVG/Attribute/textLength	/ja/docs/Web/SVG/Reference/Attribute/textLength
 /ja/docs/Web/SVG/Attribute/transform	/ja/docs/Web/SVG/Reference/Attribute/transform
 /ja/docs/Web/SVG/Attribute/vector-effect	/ja/docs/Web/SVG/Reference/Attribute/vector-effect
 /ja/docs/Web/SVG/Attribute/viewBox	/ja/docs/Web/SVG/Reference/Attribute/viewBox

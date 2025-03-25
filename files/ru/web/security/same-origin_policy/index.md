@@ -61,7 +61,7 @@ document.domain = "company.com";
 
 The same-origin policy controls interactions between two different origins, such as when you use {{domxref("XMLHttpRequest")}} or an {{htmlelement("img")}} element. These interactions are typically placed into three categories:
 
-- Cross-origin _writes_ are typically allowed. Examples are links, redirects and form submissions. Certain rarely used HTTP requests require [preflight](/ru/docs/Web/HTTP/CORS#preflighted_requests).
+- Cross-origin _writes_ are typically allowed. Examples are links, redirects and form submissions. Certain rarely used HTTP requests require [preflight](/ru/docs/Web/HTTP/Guides/CORS#preflighted_requests).
 - Cross-origin _embedding_ is typically allowed. Examples are listed below.
 - Cross-origin _reads_ are typically not allowed, but read access is often leaked by embedding. For example, you can read the width and height of an embedded image, the actions of an embedded script, or the [availability of an embedded resource](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 
@@ -77,7 +77,7 @@ Here are some examples of resources which may be embedded cross-origin:
 
 ### How to allow cross-origin access
 
-Use [CORS](/ru/docs/Web/HTTP/CORS) to allow cross-origin access.
+Use [CORS](/ru/docs/Web/HTTP/Guides/CORS) to allow cross-origin access.
 
 ### How to block cross-origin access
 

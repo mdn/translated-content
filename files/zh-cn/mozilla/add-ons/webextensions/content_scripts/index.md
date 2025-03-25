@@ -21,7 +21,7 @@ Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它�
 你可以通过两种方法之一在一个页面加载 Content script：
 
 - **声明式**: 在你的 manifest.json 中使用 content_scripts 关键字，你可以要求浏览器每当加载一个与指定正则表达式匹配的网页时加载一个 Content Script。
-- **程序式**: 使用 [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
+- **程序式**: 使用 [`tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API, 你可以在任何你想要的时候加载一个 Content script 到一个指定的标签：比如，作为用户点击事件的回应。
 
 在每一个 extension 的每一个 frame 中，只有一个全局作用域。所以在一个 content script 中的变量可以被另外的 content script 访问到，而与 content script 如何被加载无关。
 

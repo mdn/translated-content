@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
+**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
 
 {{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
 
@@ -72,7 +72,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 ### シェイプ関数
 
-以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/Value_definition_syntax)で定義されます。
+以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)で定義されます。
 
 - `{{cssxref("basic-shape/inset","inset()")}}`
 
@@ -148,7 +148,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
 - `{{cssxref("path","path()")}}`
 
-  - : SVG の {{SVGAttr("fill-rule")}} と SVG の[パス定義](/ja/docs/Web/SVG/Attribute/d)を使用してシェイプを定義します。
+  - : SVG の {{SVGAttr("fill-rule")}} と SVG の[パス定義](/ja/docs/Web/SVG/Reference/Attribute/d)を使用してシェイプを定義します。
 
     ```css
     path( [ <fill-rule>, ]? <string> )
@@ -156,7 +156,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 
     省略可能な `<fill-rule>` は多角形の内部を決めるために使用される塗りつぶし規則 ({{SVGAttr("fill-rule")}}) を表します。指定可能な値は `nonzero` と `evenodd` です。省略時の既定値は `nonzero` です。
 
-    必須の \<string> は、引用符で囲まれた [SVG パス](/ja/docs/Web/SVG/Attribute/d)です。
+    必須の \<string> は、引用符で囲まれた [SVG パス](/ja/docs/Web/SVG/Reference/Attribute/d)です。
 
 上記で定義されていない引数は、以下のように定義されています。
 

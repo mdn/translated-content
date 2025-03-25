@@ -46,4 +46,4 @@ console.log(el.ariaSetSize); // 4
 
 ## 関連情報
 
-- [ARIA: tab ロール](/ja/docs/Web/Accessibility/ARIA/Roles/tab_role)
+- [ARIA: tab ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)

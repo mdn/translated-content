@@ -25,7 +25,7 @@ cd borderify
 
 ### manifest.json
 
-Используя удобный [текстовый редактор](/ru/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors), создайте в папке `borderify` новый файл с именем `manifest.json` и таким содержимым:
+Используя удобный [текстовый редактор](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors), создайте в папке `borderify` новый файл с именем `manifest.json` и таким содержимым:
 
 ```json
 {

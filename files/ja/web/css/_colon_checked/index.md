@@ -56,7 +56,7 @@ input:checked {
 ユーザーは要素をチェック/選択することでこの状態にすることができ、要素のチェックや選択を外すとこの状態から外れます。
 
 > [!NOTE]
-> ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/Replaced_element)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
+> ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
 
 ## 構文
 
@@ -223,7 +223,7 @@ option:checked {
 
 ## 関連情報
 
-- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn/Forms)
-- [ウェブフォームの整形](/ja/docs/Learn/Forms/Styling_web_forms)
+- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn_web_development/Extensions/Forms)
+- [ウェブフォームの整形](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - 関連する HTML 要素: [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio), {{HTMLElement("select")}}, {{HTMLElement("option")}}
-- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

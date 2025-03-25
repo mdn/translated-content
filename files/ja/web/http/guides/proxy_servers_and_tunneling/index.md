@@ -57,7 +57,7 @@ HTTP プロトコルは {{HTTPMethod("CONNECT")}} と呼ばれるリクエスト
 
 ## プロキシの自動設定 (PAC)
 
-[プロキシ自動設定 (PAC) ファイル](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>)は、ウェブブラウザーのリクエスト (HTTP、HTTPS、および FTP) を直接宛先に送信するか、ウェブプロキシサーバーに転送するかを決定する [JavaScript](/ja/docs/Web/JavaScript) 関数です。PAC ファイルに含まれる JavaScript 関数は、次の関数を定義します。
+[プロキシ自動設定 (PAC) ファイル](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file)は、ウェブブラウザーのリクエスト (HTTP、HTTPS、および FTP) を直接宛先に送信するか、ウェブプロキシサーバーに転送するかを決定する [JavaScript](/ja/docs/Web/JavaScript) 関数です。PAC ファイルに含まれる JavaScript 関数は、次の関数を定義します。
 
 auto-config ファイルは拡張子が `.pac` のファイルに保存する必要があります。
 
@@ -80,7 +80,7 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-他の例については[プロキシ自動設定 (PAC)](</ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file>) を参照してください。
+他の例については[プロキシ自動設定 (PAC)](/ja/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) を参照してください。
 
 ## 関連情報
 

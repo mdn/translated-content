@@ -72,4 +72,4 @@ console.log(el.ariaRowCount); // 101
 
 {{Compat}}
 
-- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

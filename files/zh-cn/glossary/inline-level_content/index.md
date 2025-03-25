@@ -46,5 +46,5 @@ body {
 
 - 相关术语条目：
   - [块级内容](/zh-CN/docs/Glossary/Block-level_content)
-- [行内格式上下文](/zh-CN/docs/Web/CSS/Inline_formatting_context)
+- [行内格式上下文](/zh-CN/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
 - {{cssxref("display")}}

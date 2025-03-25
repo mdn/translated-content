@@ -35,7 +35,7 @@ l10n:
 
 ### HTTP
 
-- `Content-Encoding` HTTP ヘッダーで [`zstd`](/ja/docs/Web/HTTP/Headers/Content-Encoding#zstd) ディレクティブをサポートしました。{{glossary("Zstandard compression")}} アルゴリズムでエンコードされた、サーバーから送信されるコンテンツをデコードできます ([Firefox bug 1871963](https://bugzil.la/1871963))。
+- `Content-Encoding` HTTP ヘッダーで [`zstd`](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding#zstd) ディレクティブをサポートしました。{{glossary("Zstandard compression")}} アルゴリズムでエンコードされた、サーバーから送信されるコンテンツをデコードできます ([Firefox bug 1871963](https://bugzil.la/1871963))。
 
 ### API
 

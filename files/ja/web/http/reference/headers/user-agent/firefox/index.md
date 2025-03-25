@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-この文書では、 Firefox 4 以降および Gecko 2.0 以降ベースのアプリケーションで用いられるユーザーエージェント文字列について説明します。 Gecko 2.0 での変更点について詳しくは [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)E (ブログ記事) をご覧ください。[ユーザーエージェントの検出](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)に関する文書や [Hacks の投稿](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)もご覧ください。
+この文書では、 Firefox 4 以降および Gecko 2.0 以降ベースのアプリケーションで用いられるユーザーエージェント文字列について説明します。 Gecko 2.0 での変更点について詳しくは [Final User Agent string for Firefox 4](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)E (ブログ記事) をご覧ください。[ユーザーエージェントの検出](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)に関する文書や [Hacks の投稿](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)もご覧ください。
 
 ## 全般的な形式
 
@@ -190,5 +190,5 @@ Firefox OS のバージョン番号は 4 つの数字があります: `X.X.X.Y`.
 
 ## 関連情報
 
-- [クロスブラウザー対応のための UA 文字列の推定](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent)における推奨事項
+- [クロスブラウザー対応のための UA 文字列の推定](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)における推奨事項
 - [window.navigator.userAgent](/ja/docs/Web/API/Window/navigator)

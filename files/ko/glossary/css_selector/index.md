@@ -61,7 +61,7 @@ div.warning {
 
 ## 같이 보기
 
-- CSS 소개에서 [CSS 선택자에 대해 더 알아보기](/ko/docs/Learn/CSS/Building_blocks/Selectors)
+- CSS 소개에서 [CSS 선택자에 대해 더 알아보기](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 기본 선택자
 
   - [타입 선택자](/ko/docs/Web/CSS/Type_selectors) `elementname`

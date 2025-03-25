@@ -30,8 +30,8 @@ l10n:
 
 - [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
-- [全 HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Headers)
-- [全 HTTP ヘッダーの一覧 > フェッチメタデータリクエストヘッダー](/ja/docs/Web/HTTP/Headers#フェッチメタデータリクエストヘッダー)
+- [全 HTTP ヘッダーの一覧](/ja/docs/Web/HTTP/Reference/Headers)
+- [全 HTTP ヘッダーの一覧 > フェッチメタデータリクエストヘッダー](/ja/docs/Web/HTTP/Reference/Headers#フェッチメタデータリクエストヘッダー)
 - 関連用語:
 
   - {{Glossary("Representation header", "表現ヘッダー")}}

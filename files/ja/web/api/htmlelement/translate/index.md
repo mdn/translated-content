@@ -60,4 +60,4 @@ controller.addEventListener("change", (e) => {
 
 ## 関連情報
 
-- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes#translate) グローバル属性
+- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes/translate) グローバル属性

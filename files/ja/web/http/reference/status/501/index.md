@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`501 Not Implemented`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Status#サーバーエラーレスポンス)のステータスコードで、サーバーがリクエストを履行するのに必要な機能に対応していないことを示します。
+HTTP の **`501 Not Implemented`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、サーバーがリクエストを履行するのに必要な機能に対応していないことを示します。
 
 このステータスは、指定された時点が経過した後であればリクエストを再試行できることを指示するために、 {{HTTPHeader("Retry-After")}} ヘッダーを送信することもできます。
 501 レスポンスは、その他のヘッダーのキャッシュの指示がない限り、既定でキャッシュ可能です。
@@ -33,7 +33,7 @@ HTTP の **`501 Not Implemented`** は[サーバーエラーレスポンス](/ja
 ### 拡張メソッドに対応していない場合
 
 次の HTTP 拡張フレームワークの例では、クライアントは `C-MAN` ヘッダーで必須の拡張を指定してリクエストを送信します。
-{{HTTPHeader("Connection")}} ヘッダーは、これらの拡張が[ホップバイホップ](/ja/docs/Web/HTTP/Headers#hop-by-hop_headers)で処理されることを指定します。
+{{HTTPHeader("Connection")}} ヘッダーは、これらの拡張が[ホップバイホップ](/ja/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers)で処理されることを指定します。
 プロキシーは `M-GET` メソッドの転送を拒否し、 `501` エラーを返します。
 
 ```http
@@ -53,6 +53,6 @@ HTTP/1.1 501 Not Implemented
 
 ## ブラウザーの互換性
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("510", "510 Not Extended")}}
 - [HTTP 501 errors](https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications) in Microsoft ASP.NET documentation

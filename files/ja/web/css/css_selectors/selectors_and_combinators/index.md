@@ -215,5 +215,5 @@ CSS [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は接頭辞としてコロ�
 
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
-- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS 入れ子モジュール](/ja/docs/Web/CSS/CSS_nesting)

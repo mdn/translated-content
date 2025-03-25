@@ -36,7 +36,7 @@ Allow: <http-methods>
 ## ディレクティブ
 
 - \<http-methods>
-  - : 許可されている [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)の一覧。
+  - : 許可されている [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)の一覧。
 
 ## 例
 

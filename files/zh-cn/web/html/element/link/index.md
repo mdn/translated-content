@@ -237,7 +237,7 @@ l10n:
     > 大多数的图标格式只能存储一个图标。因此绝大多数使用 [`sizes`](#sizes) 时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式可以在一个文件中存储多个图标尺寸。ICO 具有更好的浏览器支持，因此如果需要跨浏览器支持，应使用这种格式。
 
 - `title`
-  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)。
+  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)。
 - `type`
   - : 这个属性被用于定义链接的内容的类型。这个属性的值应该是类似于 **text/html**、**text/css** 这样的 MIME 类型。该属性的通常用法是定义被引用的样式表类型（如 **text/css**），但由于 CSS 是网络上使用的唯一样式表语言，因此不仅可以省略 `type` 属性，而且现在已成为推荐做法。它还用于 `rel="preload"` 链接类型，以确保浏览器只下载其支持的文件类型。
 
@@ -274,7 +274,7 @@ l10n:
 
 ### 提供替代样式表
 
-你也可以指定[替代外部样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)。
+你也可以指定[替代外部样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)。
 
 用户可以从**查看 > 页面样式**菜单中选择要使用的样式表。这样，用户就可以看到一个页面的多个版本。
 

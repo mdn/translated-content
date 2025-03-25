@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<hue>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、色の色相角を表します。
+**`<hue>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、色の色相角を表します。
 これは、色相を 1 つの値として受け入れる色関数、具体的には [`hsl()`](/ja/docs/Web/CSS/color_value/hsl)、 [`hwb()`](/ja/docs/Web/CSS/color_value/hwb)、[`lch()`](/ja/docs/Web/CSS/color_value/lch)、[`oklch()`](/ja/docs/Web/CSS/color_value/oklch) 関数記法で使用されます。
 
 ![sRGB 色相環](color_wheel.svg)

@@ -114,6 +114,6 @@ value2
 
 ## 関連情報
 
-- [HTML Forms](/ja/docs/Learn/Forms)
+- [HTML Forms](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTTPHeader("Content-Type")}}: マルチパート本文の境界を定義
 - {{domxref("FormData")}} インターフェイス: {{domxref("XMLHttpRequest")}} API でフォームデータを操作するために使用

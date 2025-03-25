@@ -43,13 +43,13 @@ getHighEntropyValues(hints)
 
 - `brands`
   - : ブラウザーのブランドとそのバージョン ({{domxref("NavigatorUAData.brands")}} が提供する情報と同じもの) を指定した `brand` と `version` を格納したオブジェクトの配列を返します。
-    なお、この情報は {{HTTPHeader("Sec-CH-UA")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）。
+    なお、この情報は {{HTTPHeader("Sec-CH-UA")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `mobile`
   - : ユーザーエージェントがモバイル端末で動作している場合、 `true` を返します（{{domxref("NavigatorUAData.mobile")}} が提供するのと同じ情報です）。
-    なお、この情報は {{HTTPHeader("Sec-CH-UA-Mobile")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）。
+    なお、この情報は {{HTTPHeader("Sec-CH-UA-Mobile")}} ヘッダーでサーバーへ送ることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `platform`
   - : `"Windows"`のようにユーザーエージェントが動作しているプラットフォームを記述した文字列を返します（{{domxref("NavigatorUAData.platform")}}が提供する情報と同じものです）。
-    なお、この情報は {{HTTPHeader("Sec-CH-UA-Platform")}} ヘッダーでサーバーに送信できることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)）。
+    なお、この情報は {{HTTPHeader("Sec-CH-UA-Platform")}} ヘッダーでサーバーに送信できることができます（[低エントロピークライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)）。
 - `architecture`
   - : プラットフォームアーキテクチャを格納した文字列。例えば `"x86"` です。
     なお、この情報は、 {{HTTPHeader("Sec-CH-UA-Arch")}} ヘッダーでサーバーが明示的にリクエストされた後に、 {{HTTPHeader("Accept-CH")}} へ送ることができることができます。
@@ -108,7 +108,7 @@ navigator.userAgentData
 ## 関連情報
 
 - これらの値は、 HTTP リクエストヘッダー経由でも利用できます。
-  - [低エントロピーのクライアントヒント](/ja/docs/Web/HTTP/Client_hints#低エントロピーヒント)は自動的に送信されます。
+  - [低エントロピーのクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#低エントロピーヒント)は自動的に送信されます。
     - {{HTTPHeader("Sec-CH-UA")}}
     - {{HTTPHeader("Sec-CH-UA-Mobile")}}
     - {{HTTPHeader("Sec-CH-UA-Platform")}}

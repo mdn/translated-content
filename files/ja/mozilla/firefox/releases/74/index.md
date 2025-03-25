@@ -68,7 +68,7 @@ _変更なし。_
 ### HTTP
 
 - Feature Policy をデフォルトで有効にしました! フレームの許可を設定するには {{HTMLElement("iframe")}} 要素の [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性 (および {{domxref("HTMLIFrameElement")}} の {{domxref("HTMLIFrameElement.allow", "allow")}} プロパティ) を使用してください ([Firefox バグ 1617219](https://bugzil.la/1617219))。
-- [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーをデフォルトで有効にしました ([Firefox バグ 1602363](https://bugzil.la/1602363))。
+- [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) ヘッダーをデフォルトで有効にしました ([Firefox バグ 1602363](https://bugzil.la/1602363))。
 
 ### セキュリティ
 

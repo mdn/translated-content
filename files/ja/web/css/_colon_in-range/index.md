@@ -130,4 +130,4 @@ input:out-of-range + label::after {
 ## 関連情報
 
 - {{cssxref(":out-of-range")}}
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)

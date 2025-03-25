@@ -113,7 +113,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 - {{HTTPStatus(405, "405 Method Not Allowed")}}
   - : サーバーがリクエストメソッドを理解しているものの、無効にされており使用することができません。例えば、 API がリソースを DELETE することを禁止できます。 `GET` および `HEAD` の 2 つは必須で、無効にすることができず、このエラーコードを返してはいけません。
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : このレスポンスは、ウェブサーバーが [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation#server-driven_negotiation) を行った結果、ユーザーエージェントから与えられた条件に合うコンテンツが見つからない場合に送信されます。
+  - : このレスポンスは、ウェブサーバーが [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#server-driven_negotiation) を行った結果、ユーザーエージェントから与えられた条件に合うコンテンツが見つからない場合に送信されます。
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : これは `401 Unauthorized` と似ていますが、プロキシーサーバーが認証を要求している点が異なります。
 - {{HTTPStatus(408, "408 Request Timeout")}}

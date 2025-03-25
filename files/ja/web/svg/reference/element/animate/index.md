@@ -44,12 +44,12 @@ svg {
 
 点滅や発光のアニメーションは、注意欠陥障碍 (ADHD) のような認知障碍を持つ人にとって問題になることがあります。加えて、このような動きは、前庭障害、てんかん、偏頭痛、光感受性障害の引き金になる可能性があります。
 
-アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#user-agent_client_hints)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
+アニメーションを一時停止したり無効にしたりする仕組みを提供したり、[動き軽減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)または同様の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} を使用して、アニメーションなしの利用を設定したユーザーに適した利用方法を作成するようにすることを検討してください。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 仕様書

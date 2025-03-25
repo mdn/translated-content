@@ -197,7 +197,7 @@ strong {
 
 {{EmbedLiveSample("line-box")}}
 
-ブロックボックスとインラインボックスの動作についての詳細は、[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)のガイドを参照してください。
+ブロックボックスとインラインボックスの動作についての詳細は、[視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)のガイドを参照してください。
 
 ## display プロパティとフローレイアウト
 

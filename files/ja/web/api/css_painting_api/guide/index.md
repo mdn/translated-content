@@ -321,7 +321,7 @@ CSS.paintWorklet.addModule("boxbg.js");
 
 ## より複雑にする
 
-これまでの例は、例えば装飾的に[生成されたコンテンツ](/ja/docs/Learn/CSS/Howto/Generated_content)を `::before` で配置したり、`background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` とするなど、既存の CSS プロパティを使用する方法で再現することができるので、あまり刺激的には見えないかもしれません。CSS 描画 API が面白くて強力なのは、変数を渡して自動的にサイズを変更する複雑な画像を作成できることです。
+これまでの例は、例えば装飾的に[生成されたコンテンツ](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)を `::before` で配置したり、`background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` とするなど、既存の CSS プロパティを使用する方法で再現することができるので、あまり刺激的には見えないかもしれません。CSS 描画 API が面白くて強力なのは、変数を渡して自動的にサイズを変更する複雑な画像を作成できることです。
 
 それではもっと複雑な例を見てみましょう。
 

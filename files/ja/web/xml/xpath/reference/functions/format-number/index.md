@@ -24,7 +24,7 @@ format-number(number, pattern, decimalFormat)
 - `pattern`
   - : Java の [DecimalFormat](https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html) クラスの書式の文字列。
 - `decimalFormat` (任意)
-  - : 使用する数値書式を定義する[`xsl:decimal-format`](/ja/docs/Web/XSLT/Element/decimal-format)要素の名前。省略すると、既定の 10 進形式が使用されます。
+  - : 使用する数値書式を定義する[`xsl:decimal-format`](/ja/docs/Web/XML/XSLT/Reference/Element/decimal-format)要素の名前。省略すると、既定の 10 進形式が使用されます。
 
 ### 返値
 

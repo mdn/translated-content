@@ -19,7 +19,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS 構成要素: コンテンツのオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS 構成要素: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
 - [スクロールスナップ](/ja/docs/Glossary/Scroll_snap)、[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#scroll_snap_container)を含む
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
 - [CSS オーバースクロール動作](/ja/docs/Web/CSS/CSS_overscroll_behavior)モジュール

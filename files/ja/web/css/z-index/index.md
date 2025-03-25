@@ -124,7 +124,7 @@ z-index: 7;
 
 位置指定されたボックス（つまり、`position` が `static` 以外のもの）では、`z-index` プロパティが以下のことを定義します。
 
-1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)におけるボックスの重ね合わせレベル
+1. 現在の[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)におけるボックスの重ね合わせレベル
 2. ボックスがローカルな重ね合わせコンテキストを作るかどうか
 
 ## 構文

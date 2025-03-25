@@ -10,10 +10,10 @@ The **`<image>`** は SVG の要素で、 SVG 文書内に画像を含めます�
 
 SVG ソフトウェアが対応する必要がある画像形式は {{glossary("JPEG")}}, {{glossary("PNG")}}, および他の SVG ファイルです。アニメーション {{glossary("GIF")}} の動作は未定義です。
 
-`<image>` で表示される SVG ファイルは[画像として扱われます](/ja/docs/Web/SVG/SVG_as_an_Image)。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは[適用されず](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。
+`<image>` で表示される SVG ファイルは[画像として扱われます](/ja/docs/Web/SVG/Guides/SVG_as_an_image)。外部リソースは読み込まれず、 {{cssxref(":visited")}} のスタイルは[適用されず](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)、ユーザーと対話することはできません。動的な SVG 要素を埋め込みたいのであれば、 {{SVGElement("use")}} を外部 URL で使用してください。 SVG ファイルを含めてその中でスクリプトを実行するのであれば、 {{HTMLElement("object")}} を {{SVGElement("foreignObject")}} の中で使用してください。
 
 > [!NOTE]
-> HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction) 内のみのものです。
+> HTML 仕様書は、解釈時に `<image>` を {{HTMLElement("img")}} の別名として定義しています。この仕様書の要素とその動作は SVG 文書または[インライン SVG](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction) 内のみのものです。
 
 ## 使用場所
 
@@ -23,11 +23,11 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 
 ### グローバル属性
 
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [コア属性](/ja/docs/Web/SVG/Attribute#core_attributes)
-- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#presentation_attributes)
-- [Xlink 属性](/ja/docs/Web/SVG/Attribute#xlink_attributes)
+- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#graphical_event_attributes)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)
+- [Xlink 属性](/ja/docs/Web/SVG/Reference/Attribute#xlink_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

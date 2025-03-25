@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`451 Unavailable For Legal Reasons`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、法的理由により利用できないリソースをユーザーがリクエストしたことを示します。例えば、訴訟が提起されたウェブページなどです。
+HTTP の **`451 Unavailable For Legal Reasons`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、法的理由により利用できないリソースをユーザーがリクエストしたことを示します。例えば、訴訟が提起されたウェブページなどです。
 
 ## ステータス
 
@@ -49,6 +49,6 @@ Content-Type: text/html
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - [ウィキペディア: HTTP 451](https://ja.wikipedia.org/wiki/HTTP_451)
 - [ウィキペディア: 華氏451度](https://ja.wikipedia.org/wiki/華氏451度)（このステータスコードの由来）

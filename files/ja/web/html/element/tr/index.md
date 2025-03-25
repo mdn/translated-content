@@ -79,7 +79,7 @@ caption {
 
 セルをどのように列に収める（または列にまたがる）かを制御できるようにするため、`<th>` および `<td>` で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性も使用できます。
 
-表を作成するとき、正しい表にするために少し経験が必要かもしれません。以下にいくつか[例](#例)がありますが、さらに多くの例や詳しいチュートリアルは、[ウェブ開発を学ぶ](/ja/docs/Learn)領域の [HTML 表](/ja/docs/Learn/HTML/Tables)シリーズをご覧ください。表形式のデータを正しいレイアウトに整形するため、 table 要素やその属性の使い方を学ぶことができます。
+表を作成するとき、正しい表にするために少し経験が必要かもしれません。以下にいくつか[例](#例)がありますが、さらに多くの例や詳しいチュートリアルは、[ウェブ開発を学ぶ](/ja/docs/Learn_web_development)領域の [HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)シリーズをご覧ください。表形式のデータを正しいレイアウトに整形するため、 table 要素やその属性の使い方を学ぶことができます。
 
 ## 属性
 
@@ -640,7 +640,7 @@ tbody > tr > td:last-of-type {
 
 ## 関連情報
 
-- [学習エリア: HTML の表](/ja/docs/Learn/HTML/Tables) `<tr>` を含む、表の使用について説明します。
+- [学習エリア: HTML の表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) `<tr>` を含む、表の使用について説明します。
 - {{DOMxRef("HTMLTableRowElement")}}: `<tr>` が準拠するインターフェイスです。
 - 他の表関連要素:
 

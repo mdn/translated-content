@@ -39,7 +39,7 @@ Access-Control-Allow-Headers: *
 - \<header-name>
   - : 対応しているリクエストヘッダーの名前です。ヘッダーはコンマで区切って、任意の数のリストにすることができます。
 - `*` (ワイルドカード)
-  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Cookies) や HTTP の認証情報のないリクエスト) の特殊なワイルドカード値です。認証情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。
+  - : "`*`" の値は、資格情報のないリクエスト ([HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies) や HTTP の認証情報のないリクエスト) の特殊なワイルドカード値です。認証情報付きのリクエストでは、特別な意味のない "`*`" というヘッダー名として扱われます。なお、 {{HTTPHeader("Authorization")}} ヘッダーはワイルドカードで表すことができず、常に明示的に列挙する必要があります。
 
 {{glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} は常に許可されており、このヘッダーで列挙する必要はありません。しかし、これらのヘッダーを `Access-Control-Allow-Headers` に列挙することで、これらのヘッダーでも追加の制約の適用を回避することができることに注意してください。
 

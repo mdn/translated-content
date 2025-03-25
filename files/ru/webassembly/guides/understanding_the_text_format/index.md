@@ -8,7 +8,7 @@ slug: WebAssembly/Guides/Understanding_the_text_format
 Чтобы люди могли читать и редактировать код WebAssembly, существует текстовое представление двоичного формата wasm. Это промежуточная форма, предназначенная для отображения в текстовых редакторах, средствах разработки браузеров и т. д. В этой статье объясняется, как работает этот текстовый формат с точки зрения синтаксиса, как он связан с байт-кодом, который он представляет и оболочками объектов wasm в JavaScript.
 
 > [!NOTE]
-> Ознакомление с данной статьёй может оказаться излишним, если вы веб-разработчик, который просто хочет загрузить модуль wasm на страницу и использовать его в своём коде (см. [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API)). Эта статья будет наиболее полезной, если вы хотите написать несколько модулей wasm для оптимизации производительности вашей библиотеки JavaScript или создать свой собственный компилятор WebAssembly.
+> Ознакомление с данной статьёй может оказаться излишним, если вы веб-разработчик, который просто хочет загрузить модуль wasm на страницу и использовать его в своём коде (см. [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API)). Эта статья будет наиболее полезной, если вы хотите написать несколько модулей wasm для оптимизации производительности вашей библиотеки JavaScript или создать свой собственный компилятор WebAssembly.
 
 ## S-выражения
 
@@ -32,7 +32,7 @@ slug: WebAssembly/Guides/Understanding_the_text_format
 
 Этот модуль полностью пуст, но является допустимым.
 
-Если мы сейчас преобразуем наш модуль в двоичный формат (см. [Перевод текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_Wasm)), мы увидим только 8-байтовый заголовок модуля, описанный в [двоичном формате](http://webassembly.org/docs/binary-encoding/#high-level-structure):
+Если мы сейчас преобразуем наш модуль в двоичный формат (см. [Перевод текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Guides/Text_format_to_Wasm)), мы увидим только 8-байтовый заголовок модуля, описанный в [двоичном формате](http://webassembly.org/docs/binary-encoding/#high-level-structure):
 
 ```
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -167,7 +167,7 @@ slug: WebAssembly/Guides/Understanding_the_text_format
 )
 ```
 
-Если вы хотите собственноручно скомпилировать пример, сохраните ранее написанный модуль в файле с именем `add.wat`, а затем преобразуйте его в двоичный файл с именем `add.wasm`, используя wabt (подробности смотрите в разделе [Перевод текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_Wasm)).
+Если вы хотите собственноручно скомпилировать пример, сохраните ранее написанный модуль в файле с именем `add.wat`, а затем преобразуйте его в двоичный файл с именем `add.wasm`, используя wabt (подробности смотрите в разделе [Перевод текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Guides/Text_format_to_Wasm)).
 
 Затем мы загрузим наш двоичный файл, скомпилируем, создадим его экземпляр и выполним нашу функцию `add` в коде JavaScript (теперь нам доступна функция `add()` в свойстве [`exports`](/ru/docs/WebAssembly/JavaScript_interface/Instance/exports) экземпляра модуля):
 
@@ -478,7 +478,7 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 > Этот пример можно найти на GitHub в файле [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) (смотрите это также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html))
 
 > [!NOTE]
-> Как и в случае с памятью, таблицы также можно создавать из кода JavaScript (см. [`WebAssembly.Table()`](/ru/docs/WebAssembly/JavaScript_interface/Table)).
+> Как и в случае с памятью, таблицы также можно создавать из кода JavaScript (см. [`WebAssembly.Table()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table)).
 
 ### Изменяющиеся таблицы и динамическое связывание
 

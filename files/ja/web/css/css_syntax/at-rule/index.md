@@ -6,7 +6,7 @@ original_slug: Web/CSS/At-rule
 
 {{CSSRef}}
 
-**アットルール**は [CSS の文](/ja/docs/Web/CSS/Syntax#css_statements)のうち、CSS の動作を既定するものです。アットルールはアットマーク、'`@`' (`U+0040 COMMERCIAL AT`) で始まり、それに続く識別子から、次のセミコロン、 '`;`' (`U+003B SEMICOLON`) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/Syntax#css_declarations_blocks)のどちらかが現れるまでの部分からなります。
+**アットルール**は [CSS の文](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_statements)のうち、CSS の動作を既定するものです。アットルールはアットマーク、'`@`' (`U+0040 COMMERCIAL AT`) で始まり、それに続く識別子から、次のセミコロン、 '`;`' (`U+003B SEMICOLON`) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_declarations_blocks)のどちらかが現れるまでの部分からなります。
 
 ## 構文
 
@@ -81,19 +81,19 @@ original_slug: Web/CSS/At-rule
 ## 関連情報
 
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
   - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

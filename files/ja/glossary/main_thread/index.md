@@ -11,7 +11,7 @@ slug: Glossary/Main_thread
 
 1. 関連情報
 
-   1. [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
+   1. [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
    2. [Web worker API](/ja/docs/Web/API/Web_Workers_API)
    3. [Service worker API](/ja/docs/Web/API/Service_Worker_API)
 

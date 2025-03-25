@@ -125,4 +125,4 @@ p:read-write {
 ## 関連情報
 
 - {{cssxref(":read-write")}}
-- HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性
+- HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性

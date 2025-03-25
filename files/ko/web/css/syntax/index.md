@@ -43,7 +43,7 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
 
 ![css syntax - ruleset.png](ruleset.png)
 
-페이지 요소는 여러 선택자로 그리고 결국 주어진 속성을 서로 다른 값으로 여러 번 포함하는 여러 규칙에 의해 일치될 수 있기에, CSS 표준은 어느 게 다른 것보다 우선하고 적용되어야 하는 지를 정의합니다: 이를 종속([cascade](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)) 알고리즘이라고 합니다.
+페이지 요소는 여러 선택자로 그리고 결국 주어진 속성을 서로 다른 값으로 여러 번 포함하는 여러 규칙에 의해 일치될 수 있기에, CSS 표준은 어느 게 다른 것보다 우선하고 적용되어야 하는 지를 정의합니다: 이를 종속([cascade](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)) 알고리즘이라고 합니다.
 
 > [!NOTE]
 > 비록 선택자 그룹에 의해 특징지어진 규칙집합이 규칙집합을 각각 단일 선택자로 대체하는 일종의 단축(shorthand)일지라도, 이는 규칙집합 자체의 유효성에 적용되지는 않는다는 점에 유의하는 것이 중요합니다.

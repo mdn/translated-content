@@ -150,25 +150,25 @@ margin: 10px 5px 10px 5px;
 
 CSS は全体の一括指定プロパティとして {{cssxref("all")}} を提供しており、値を文書中のすべてのプロパティに適用させます。これは、プロパティの継承モデルを変更するためのものです。
 
-CSS の継承がどのように動作するかについての詳細については、[カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)または [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)をご覧ください。
+CSS の継承がどのように動作するかについての詳細については、[カスケードと継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)または [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)をご覧ください。
 
 ## 関連情報
 
 - CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+  - [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+  - [コメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
+  - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+  - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
   - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - 一括指定プロパティ: {{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}

@@ -75,7 +75,7 @@ Firefox では、これには次のドメインが含まれます。
 
 ### 制限
 
-タブやフレーム全体を読み込むには、 [`data:` URI](/ja/docs/Web/URI/Schemes/data) や {{DOMxRef("URL.createObjectURL_static", "Blob")}} オブジェクト、その他同様のテクニックを使用して、タブやフレーム全体を読み込むことができます。このような特殊文書へのコンテンツスクリプトの挿入に対応しているかどうかはブラウザーによって異なります。詳細は [Firefox バグ #1411641 のコメント 41](https://bugzil.la/1411641#c41) を参照してください。
+タブやフレーム全体を読み込むには、 [`data:` URI](/ja/docs/Web/URI/Reference/Schemes/data) や {{DOMxRef("URL.createObjectURL_static", "Blob")}} オブジェクト、その他同様のテクニックを使用して、タブやフレーム全体を読み込むことができます。このような特殊文書へのコンテンツスクリプトの挿入に対応しているかどうかはブラウザーによって異なります。詳細は [Firefox バグ #1411641 のコメント 41](https://bugzil.la/1411641#c41) を参照してください。
 
 ## コンテンツスクリプト環境
 
@@ -213,9 +213,9 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します。よって拡張機能が `manifest.json` の [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。
 
 > [!NOTE]
-> Manifest V3 を使用する場合、出力先サーバーが [CORS](/ja/docs/Web/HTTP/CORS) を使用してオプトインするとき、コンテンツスクリプトはオリジン間リクエストを実行できます。ただし、コンテンツスクリプトではホスト権限は動作しませんが、通常の拡張ページではまだ動作しています。
+> Manifest V3 を使用する場合、出力先サーバーが [CORS](/ja/docs/Web/HTTP/Guides/CORS) を使用してオプトインするとき、コンテンツスクリプトはオリジン間リクエストを実行できます。ただし、コンテンツスクリプトではホスト権限は動作しませんが、通常の拡張ページではまだ動作しています。
 
-これは、コンテンツスクリプトでより特権的な XHR とフェッチインスタンスを公開することによって達成されます。これは、ページ自身からのリクエストのように、[`Origin`](/ja/docs/Web/HTTP/Headers/Origin) および [`Referer`](/ja/docs/Web/HTTP/Header/Referer) ヘッダーを設定しない副作用があります。これは、クロスオリジンの性質を明らかにしないリクエストを行うにはよく望ましいとされることです。
+これは、コンテンツスクリプトでより特権的な XHR とフェッチインスタンスを公開することによって達成されます。これは、ページ自身からのリクエストのように、[`Origin`](/ja/docs/Web/HTTP/Reference/Headers/Origin) および [`Referer`](/ja/docs/Web/HTTP/Header/Referer) ヘッダーを設定しない副作用があります。これは、クロスオリジンの性質を明らかにしないリクエストを行うにはよく望ましいとされることです。
 
 > [!NOTE]
 > マニフェスト V2 の Firefox では、コンテンツ自身によって送信されたかのように振る舞うリクエストを実行する必要がある拡張機能は、代わりに `content.XMLHttpRequest` と `content.fetch()` を使用することができます。
@@ -225,7 +225,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 > Manifest V3 では `content.XMLHttpRequest` と `content.fetch()` が利用できないため、このようなことは起こりえません。
 
 > [!NOTE]
-> Chrome ではバージョン 73 から、Firefox ではバージョン 101 からマニフェスト V3 を使用する場合、コンテンツスクリプトは、その中で実行されるページと同じ [CORS](/ja/docs/Web/HTTP/CORS) ポリシーが適用されるようになりました。バックエンドスクリプトのみ、昇格したクロスドメイン特権があります。[Chrome Extension コンテンツスクリプトにおける Cross-Origin Requests の変更点](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches)を参照してください。
+> Chrome ではバージョン 73 から、Firefox ではバージョン 101 からマニフェスト V3 を使用する場合、コンテンツスクリプトは、その中で実行されるページと同じ [CORS](/ja/docs/Web/HTTP/Guides/CORS) ポリシーが適用されるようになりました。バックエンドスクリプトのみ、昇格したクロスドメイン特権があります。[Chrome Extension コンテンツスクリプトにおける Cross-Origin Requests の変更点](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches)を参照してください。
 
 ## バックグラウンドスクリプトとの通信
 

@@ -159,4 +159,4 @@ input::placeholder {
 
 - {{cssxref(":placeholder-shown")}} 의사 클래스는 활성화된 플레이스홀더를 가진 요소를 스타일링합니다.
 - 연관된 HTML 요소들: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML 폼](/ko/docs/Learn/Forms)
+- [HTML 폼](/ko/docs/Learn_web_development/Extensions/Forms)

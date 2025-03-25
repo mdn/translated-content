@@ -5,7 +5,7 @@ slug: Web/SVG/Reference/Attribute/additive
 
 {{SVGRef}}
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
 
 Этот атрибут определяет, является ли анимация аддитивной.
 

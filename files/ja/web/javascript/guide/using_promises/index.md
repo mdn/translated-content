@@ -483,7 +483,7 @@ console.log(value); // 1 or 2?
 
 一方で、プロミスは[制御の反転](https://ja.wikipedia.org/wiki/制御の反転)という形です。コールバックが呼び出されるタイミングを API 実装者が制御することはありません。その代わりに、コールバックキューを維持し、いつコールバックを呼び出すかを決定する仕事はプロミスの実装に委ねられ、 API ユーザーと API 開発者の両方は、自動的に以下のような強力な意味づけ保証を得ることができます。
 
-- [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) で追加されたコールバックは、 JavaScript のイベントループの[現在の実行の完了](/ja/docs/Web/JavaScript/Event_loop#run-to-completion)より前に呼び出されることはありません。
+- [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) で追加されたコールバックは、 JavaScript のイベントループの[現在の実行の完了](/ja/docs/Web/JavaScript/Reference/Execution_model#run-to-completion)より前に呼び出されることはありません。
 - これらのコールバックは、プロミスが表す非同期処理の成功や失敗の後に追加されても呼び出されます。
 - [`then()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) を複数回呼び出すことで、複数のコールバックを追加することができます。これらは挿入された順に次々と呼び出されます。
 

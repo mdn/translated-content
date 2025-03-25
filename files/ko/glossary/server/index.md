@@ -19,5 +19,5 @@ l10n:
 
 ## 같이 보기
 
-- [서버 소개](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [서버 소개](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - 위키백과의 [서버 (컴퓨팅)](<https://en.wikipedia.org/wiki/Server_(computing)>)
