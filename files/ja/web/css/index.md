@@ -36,7 +36,7 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)、[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)、[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)、[実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)、[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)、[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)、[実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
 - [CSS 一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [CSS フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)レイアウト
 - [アニメーション](/ja/docs/Web/CSS/animation)、[トランジション](/ja/docs/Web/CSS/CSS_transitions)、[座標変換](/ja/docs/Web/CSS/CSS_transforms)

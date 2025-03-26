@@ -103,7 +103,7 @@ WebAssembly Threads の提案では、新しい[不可分](https://github.com/We
   - : 読み取り専用です。`SharedArrayBuffer` が成長可能な場合は `true` を、そうでない場合は `false` を返します。
 - {{jsxref("Object/constructor", "SharedArrayBuffer.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数です。SharedArrayBuffer`インスタンスの場合、初期値は{{jsxref("SharedArrayBuffer/SharedArrayBuffer", "SharedArrayBuffer")}}コンストラクターです。
-- `SharedArrayBuffer.prototype[@@toStringTag]`
+- `SharedArrayBuffer.prototype[Symbol.toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"SharedArrayBuffer"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
