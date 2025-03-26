@@ -24668,7 +24668,25 @@
       "sii"
     ]
   },
-  "Web/CSS/CSS_cascade/Value_processing": {
+  "Web/CSS/CSS_cascade/actual_value": {
+    "modified": "2020-07-14T09:14:56.040Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "sii"
+    ]
+  },
+  "Web/CSS/CSS_cascade/computed_value": {
+    "modified": "2020-08-10T14:02:33.669Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "sii",
+      "Mgjbot",
+      "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_cascade/initial_value": {
     "modified": "2019-03-23T23:52:49.170Z",
     "contributors": [
       "SphinxKnight",
@@ -24676,6 +24694,23 @@
       "ethertank",
       "teoli",
       "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_cascade/specified_value": {
+    "modified": "2020-08-11T01:05:33.608Z",
+    "contributors": [
+      "mfuji09",
+      "mpcjazz",
+      "ethertank",
+      "sii"
+    ]
+  },
+  "Web/CSS/CSS_cascade/used_value": {
+    "modified": "2019-10-02T00:12:10.056Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "sii"
     ]
   },
   "Web/CSS/CSS_cascading_variables": {
@@ -28723,6 +28758,12 @@
       "sosleepy",
       "ethertank",
       "Marsf"
+    ]
+  },
+  "Web/CSS/resolved_value": {
+    "modified": "2019-03-18T21:29:07.031Z",
+    "contributors": [
+      "sutara79"
     ]
   },
   "Web/CSS/right": {
