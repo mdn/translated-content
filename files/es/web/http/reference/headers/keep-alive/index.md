@@ -56,4 +56,4 @@ Server: Apache
 ## Mirar tambien
 
 - {{HTTPHeader("Connection")}}
-- [Connection management in HTTP/1.x](/es/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Connection management in HTTP/1.x](/es/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)

@@ -66,10 +66,10 @@ l10n:
 
 - {{cssxref("@import")}} アットルール
 - {{cssxref("important")}} フラグ
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
-- [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
-- [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
-- [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+- [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+- [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
 - [CSS 継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - {{Glossary("Property/CSS", "CSS プロパティ")}}
 

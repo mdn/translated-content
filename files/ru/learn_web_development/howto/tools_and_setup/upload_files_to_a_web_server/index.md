@@ -7,20 +7,20 @@ slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 
 Данная статья покажет, как можно опубликовать сайт в Интернет с помощью инструментов передачи файлов(file transfer tools).
 
-| Необходимые знания: | Вы должны знать [что такое веб-сервер](/ru/docs/Learn/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_%D0%B2%D0%B5%D0%B1_%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80) и [как работают доменные имена](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name). Также вы должны знать, [как установить базовую среду](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) и [как написать простую веб-страницу](/ru/docs/Learn/Getting_started_with_the_web). |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:               | Научиться передавать файлы на сервер используя различные доступные инструменты передачи файлов(file transfer tools).                                                                                                                                                                                                                                                                                                                                                                            |
+| Необходимые знания: | Вы должны знать [что такое веб-сервер](/ru/docs/Learn/%D0%A7%D1%82%D0%BE_%D1%82%D0%B0%D0%BA%D0%BE%D0%B5_%D0%B2%D0%B5%D0%B1_%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80) и [как работают доменные имена](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name). Также вы должны знать, [как установить базовую среду](/ru/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) и [как написать простую веб-страницу](/ru/docs/Learn_web_development/Getting_started/Your_first_website). |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:               | Научиться передавать файлы на сервер используя различные доступные инструменты передачи файлов(file transfer tools).                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ## Сводка
 
-Если вы создали простую веб-страницу (для примера смотрите [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)), вы, вероятно, захотите отобразить её онлайн, на веб-сервере. В данной статье мы обсудим как сделать это, используя различные доступные настройки, такие как SFTP клиенты, RSync и GitHub.
+Если вы создали простую веб-страницу (для примера смотрите [Основы HTML](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)), вы, вероятно, захотите отобразить её онлайн, на веб-сервере. В данной статье мы обсудим как сделать это, используя различные доступные настройки, такие как SFTP клиенты, RSync и GitHub.
 
 ## SFTP (Безопасный Протокол Передачи Файлов)
 
 Существуют различные варианты SFTP клиентов. В нашем примере мы будем использовать [FileZilla](https://filezilla-project.org/), тк он бесплатен и подходит для Windows, macOS и Linux. Чтобы установить менеджер перейдите на страницу загрузки [FileZilla downloads page](https://filezilla-project.org/download.php?type=client), нажмите на кнопку загрузки, затем установите пакет из установочного файла обычным способом.
 
 > [!NOTE]
-> Конечно, есть много других вариантов. Смотрите [Publishing tools](/ru/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#publishing_tools.3a_ftp_client) для других способов.
+> Конечно, есть много других вариантов. Смотрите [Publishing tools](/ru/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#publishing_tools.3a_ftp_client) для других способов.
 
 Откройте приложение FileZilla; вы должны увидеть что-то вроде этого:
 
@@ -133,7 +133,7 @@ Again, you would have to get the connection credentials from your hosting provid
 
 GitHub allows you to publish websites via [GitHub pages](https://pages.github.com/) (gh-pages).
 
-We've covered the basics of using this in the [Publishing your website](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website) article from our [Getting started with the Web](/ru/docs/Learn/Getting_started_with_the_web) guide, so we aren't going to repeat it all here.
+We've covered the basics of using this in the [Publishing your website](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) article from our [Getting started with the Web](/ru/docs/Learn_web_development/Getting_started/Your_first_website) guide, so we aren't going to repeat it all here.
 
 However, it is worth knowing that you can also host a website on GitHub, but use a custom domain with it. See [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) for a detailed guide.
 

@@ -8,7 +8,7 @@ slug: Web/MathML/Reference/Element/math
 Элементом верхнего уровня в [MathML](/ru/docs/Web/MathML) является тэг `<math>`, используемый для представления одной математической формулы. Он может находится в HTML-контенте, где разрешено [потоковое содержимое](/ru/docs/Web/HTML/Content_categories#фразовый_контент).
 
 > [!NOTE]
-> Посмотрите страницу [«Разработка MathML»](/ru/docs/Web/MathML/Authoring#using_mathml) с советами по правильной интеграции MathML-формул на ваши веб-страницы и [примеры использования MathML](/ru/docs/Web/MathML/Examples).
+> Посмотрите страницу [«Разработка MathML»](/ru/docs/Web/MathML/Guides/Authoring#using_mathml) с советами по правильной интеграции MathML-формул на ваши веб-страницы и [примеры использования MathML](/ru/docs/Web/MathML/Guides).
 
 ## Атрибуты
 

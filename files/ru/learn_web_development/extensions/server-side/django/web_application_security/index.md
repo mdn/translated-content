@@ -7,9 +7,9 @@ slug: Learn_web_development/Extensions/Server-side/Django/web_application_securi
 
 Защита пользовательских данных - важная часть проектирования любого веб-сайта.Ранее мы рассматривали некоторые наиболее распространённые угрозы безопасности в теме [Веб безопасность](/ru/docs/Web/Security). В данной статье будет представлена практическая демонстрация того, как встроенные механизмы защиты Django's обрабатывают подобные угрозы.
 
-| Требования: | Прочитайте тему [Веб безопасность](/ru/docs/Web/Security). Завершите изучение предыдущих частей руководства до [Руководство часть 9: Работа с формами](/ru/docs/Learn/Server-side/Django/Forms) включительно. |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:       | Понять, что нужно делать (или наоборот не делать), для обеспечения безопасности вашего веб-приложения.                                                                                                        |
+| Требования: | Прочитайте тему [Веб безопасность](/ru/docs/Web/Security). Завершите изучение предыдущих частей руководства до [Руководство часть 9: Работа с формами](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Forms) включительно. |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:       | Понять, что нужно делать (или наоборот не делать), для обеспечения безопасности вашего веб-приложения.                                                                                                                                   |
 
 ## Обзор
 
@@ -21,13 +21,13 @@ slug: Learn_web_development/Extensions/Server-side/Django/web_application_securi
 
 ## Распространённые угрозы/методы защиты
 
-Мы не будем дублировать документацию Django и в данной статье продемонстрируем некоторые основные методы обеспечения безопасности в контексте разрабатываемого в данном руководстве приложения [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+Мы не будем дублировать документацию Django и в данной статье продемонстрируем некоторые основные методы обеспечения безопасности в контексте разрабатываемого в данном руководстве приложения [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website).
 
 ### Межсайтовый скриптинг (XSS)
 
 XSS это термин, применяющийся для описания класса атак, позволяющего атакующему, через веб-сайт внедрить скрипты, которые будут выполнены на устройстве зашедшего на страницу пользователя. Часто это происходит через сохранение вредоносного кода в базе данных, откуда данный код будет возвращён и выполнен для запросившего некие данные пользователя (типичный пример - сохранение тега \<script> с вредоносным кодом в комментарии, который может увидеть другой пользователь). Другой вектор атаки - в том чтобы сгенерировать определённую ссылку, при клике на которую пользователь запустит выполнение некоего замаскированного кода JavaScript в своём браузере.
 
-Система шаблонов Django защищает от большинства XSS-атак, [экранируя определённые символы](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping), считающиеся "опасными" в HTML. Мы можем продемонстрировать это, попытавшись внедрить произвольный JavaScript-код в наше приложение LocalLibrary через форму добавления автора, созданную в [Руководство часть 9: Работа с формами](/ru/docs/Learn/Server-side/Django/Forms).
+Система шаблонов Django защищает от большинства XSS-атак, [экранируя определённые символы](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping), считающиеся "опасными" в HTML. Мы можем продемонстрировать это, попытавшись внедрить произвольный JavaScript-код в наше приложение LocalLibrary через форму добавления автора, созданную в [Руководство часть 9: Работа с формами](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Forms).
 
 1. Запустите веб-сайт, используя сервер разработки (`python3 manage.py runserver`).
 2. Откройте сайт в вашем браузере и войдите под аккаунтом супер-пользователя.
@@ -167,7 +167,7 @@ Django имеет методы обеспечения защиты от расп
 
 Это было очень краткое погружение в вопрос веб-безопасности. Мы крайне рекомендуем вам прочитать [Безопасность в Django](https://docs.djangoproject.com/en/2.0/topics/security/) для более глубокого понимания.
 
-Следующим и последним шагом в данном руководстве будет выполнение [самостоятельной работы](/ru/docs/Learn/Server-side/Django/django_assessment_blog).
+Следующим и последним шагом в данном руководстве будет выполнение [самостоятельной работы](/ru/docs/Learn_web_development/Extensions/Server-side/Django/django_assessment_blog).
 
 ## Смотрите также
 
@@ -179,18 +179,18 @@ Django имеет методы обеспечения защиты от расп
 
 ## In this module
 
-- [Django introduction](/ru/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ru/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ru/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ru/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ru/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ru/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ru/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ru/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ru/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ru/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ru/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ru/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ru/docs/Learn/Server-side/Django/django_assessment_blog)
+- [Django introduction](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Introduction)
+- [Setting up a Django development environment](/ru/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)
+- [Django Tutorial: The Local Library website](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)
+- [Django Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)
+- [Django Tutorial Part 3: Using models](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Models)
+- [Django Tutorial Part 4: Django admin site](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)
+- [Django Tutorial Part 5: Creating our home page](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Home_page)
+- [Django Tutorial Part 6: Generic list and detail views](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views)
+- [Django Tutorial Part 7: Sessions framework](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Sessions)
+- [Django Tutorial Part 8: User authentication and permissions](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Authentication)
+- [Django Tutorial Part 9: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Forms)
+- [Django Tutorial Part 10: Testing a Django web application](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Testing)
+- [Django Tutorial Part 11: Deploying Django to production](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Deployment)
+- [Django web application security](/ru/docs/Learn_web_development/Extensions/Server-side/Django/web_application_security)
+- [DIY Django mini blog](/ru/docs/Learn_web_development/Extensions/Server-side/Django/django_assessment_blog)

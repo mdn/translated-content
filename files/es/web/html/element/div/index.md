@@ -46,7 +46,7 @@ Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. E
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 > [!NOTE]
-> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) o [CSS Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
+> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) o [CSS Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
 
 ## Notas de uso
 

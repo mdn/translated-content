@@ -5,7 +5,7 @@ slug: Web/CSS/color_value
 
 {{CSSRef}}
 
-Тип **`<color>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_Types) предоставляет цвет в цветовом спектре [sRGB](https://en.wikipedia.org/wiki/SRGB). В `<color>` может включать значения прозрачности Альфа-канала ([alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing)), указывающие, как цвет [сочетается](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) с его фоном.
+Тип **`<color>`** [CSS](/ru/docs/Web/CSS) [data type](/ru/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) предоставляет цвет в цветовом спектре [sRGB](https://en.wikipedia.org/wiki/SRGB). В `<color>` может включать значения прозрачности Альфа-канала ([alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing)), указывающие, как цвет [сочетается](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) с его фоном.
 
 В `<color>` может быть определена любым из следующих способов can.
 
@@ -1317,7 +1317,7 @@ hsla(240 100% 50% / 5%)       /*  непрозрачный синий на 5% */
 
 ## Соображения доступности
 
-Некоторые люди с трудом различают цвета. Рекомендация [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) настоятельно рекомендует не использовать цвет в качестве единственного средства передачи определённого сообщения, действия или результата. Дополнительную информацию см. В [разделе цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast).
+Некоторые люди с трудом различают цвета. Рекомендация [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) настоятельно рекомендует не использовать цвет в качестве единственного средства передачи определённого сообщения, действия или результата. Дополнительную информацию см. В [разделе цвет и цветовой контраст](/ru/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast).
 
 ## Спецификации
 

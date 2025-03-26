@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_syntax/At-rule
 
 {{cssref}}
 
-**At-rules** (@-правила) это [CSS выражения](/ru/docs/Web/CSS/Syntax#css_statements), которые показывают CSS как себя вести. Они начинаются со знака '`@`' (`U+0040 КОММЕРЧЕСКОЕ AT`), сопровождается идентификатором, и включает в себя всё до следующей точки с запятой, '`;`' (`U+003B ТОЧКА С ЗАПЯТОЙ`), или до следующего [CSS блока](/ru/docs/Web/CSS/Syntax#блоки_объявлений_css), в зависимости от того, что наступит раньше.
+**At-rules** (@-правила) это [CSS выражения](/ru/docs/Web/CSS/CSS_syntax/Syntax#css_statements), которые показывают CSS как себя вести. Они начинаются со знака '`@`' (`U+0040 КОММЕРЧЕСКОЕ AT`), сопровождается идентификатором, и включает в себя всё до следующей точки с запятой, '`;`' (`U+003B ТОЧКА С ЗАПЯТОЙ`), или до следующего [CSS блока](/ru/docs/Web/CSS/CSS_syntax/Syntax#блоки_объявлений_css), в зависимости от того, что наступит раньше.
 
 ```css
 /* Общая структура */
@@ -49,20 +49,20 @@ slug: Web/CSS/CSS_syntax/At-rule
 ## Смотрите также
 
 - Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/Comments)
-  - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/computed_value)
-    - [используемые](/ru/docs/Web/CSS/used_value)
-    - [действительные](/ru/docs/Web/CSS/actual_value)
+    - [начальные](/ru/docs/Web/CSS/CSS_cascade/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/CSS_cascade/computed_value)
+    - [используемые](/ru/docs/Web/CSS/CSS_cascade/used_value)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/actual_value)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)

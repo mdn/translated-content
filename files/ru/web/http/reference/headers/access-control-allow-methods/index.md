@@ -29,7 +29,7 @@ Access-Control-Allow-Methods: <method>, <method>, ...
 ## Директивы
 
 - \<method>
-  - : Разделённый запятыми список доступных [методов HTTP запросов](/ru/docs/Web/HTTP/Methods).
+  - : Разделённый запятыми список доступных [методов HTTP запросов](/ru/docs/Web/HTTP/Reference/Methods).
 
 ## Примеры
 

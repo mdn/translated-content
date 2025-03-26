@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-Данный _справочник по CSS_ перечисляет все стандартные свойства, [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), [@-правила](/ru/docs/Web/CSS/At-rule), единицы измерения и селекторы [CSS](/ru/docs/Web/CSS) в алфавитном порядке. Справочник позволит вам быстро найти подробную информацию о каждом из них. Он не только перечисляет свойства CSS 1 и CSS 2.1, но является и справочником по CSS3 со ссылками на описание каждого стандартизированного или уже стабилизированного свойства [CSS3](/ru/docs/Web/CSS/CSS3). Также включает в себя краткое руководство [DOM-CSS / CSSOM](#DOM_CSS).
+Данный _справочник по CSS_ перечисляет все стандартные свойства, [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements), [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule), единицы измерения и селекторы [CSS](/ru/docs/Web/CSS) в алфавитном порядке. Справочник позволит вам быстро найти подробную информацию о каждом из них. Он не только перечисляет свойства CSS 1 и CSS 2.1, но является и справочником по CSS3 со ссылками на описание каждого стандартизированного или уже стабилизированного свойства [CSS3](/ru/docs/Web/CSS/CSS3). Также включает в себя краткое руководство [DOM-CSS / CSSOM](#DOM_CSS).
 
 Заметьте, что определения CSS-правил полностью (ASCII) [текста-ориентированы](https://www.w3.org/TR/css-syntax-3/#intro), в то время как определения правил DOM-CSS / CSSOM [объектно-ориентированы](https://www.w3.org/TR/cssom/#introduction).
 
@@ -36,11 +36,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Больше о примерах: [#1](/ru/docs/Learn/CSS/Building_blocks/Selectors#information_selectors), [#2](/ru/docs/Learn/CSS/Building_blocks/Selectors#action_using_selectors_based_on_relationships_and_pseudo-classes)
+Больше о примерах: [#1](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#information_selectors), [#2](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#action_using_selectors_based_on_relationships_and_pseudo-classes)
 
 ### @-правила
 
-Так как у них есть много различных структурных форматов, смотрите нужный синтаксис [@-правил](/ru/docs/Web/CSS/At-rule).
+Так как у них есть много различных структурных форматов, смотрите нужный синтаксис [@-правил](/ru/docs/Web/CSS/CSS_syntax/At-rule).
 
 ## Справочный указатель
 
@@ -137,24 +137,24 @@ div.menu-bar li:hover > ul {
 
 ## Концепции
 
-- [CSS синтаксис](/ru/docs/Web/CSS/Syntax)
-- [@-правила](/ru/docs/Web/CSS/At-rule)
-- [Комментарии](/ru/docs/Web/CSS/Comments)
-- [Специфичность](/ru/docs/Web/CSS/Specificity)
-- [Начальное значение](/ru/docs/Web/CSS/initial_value)
-- [Наследование](/ru/docs/Web/CSS/Inheritance)
-- [Указанное значение](/ru/docs/Web/CSS/specified_value)
-- [Высчитанное значение](/ru/docs/Web/CSS/computed_value)
-- [Используемое значение](/ru/docs/Web/CSS/used_value)
-- [Актуальное значение](/ru/docs/Web/CSS/actual_value)
+- [CSS синтаксис](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+- [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+- [Комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+- [Специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+- [Начальное значение](/ru/docs/Web/CSS/CSS_cascade/initial_value)
+- [Наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
+- [Указанное значение](/ru/docs/Web/CSS/CSS_cascade/specified_value)
+- [Высчитанное значение](/ru/docs/Web/CSS/CSS_cascade/computed_value)
+- [Используемое значение](/ru/docs/Web/CSS/CSS_cascade/used_value)
+- [Актуальное значение](/ru/docs/Web/CSS/CSS_cascade/actual_value)
 - [Вычисленное значение](/ru/docs/Web/CSS/resolved_value) (почти то же, что высчитанное)
 - [Box-модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Замещаемый элемент](/ru/docs/Web/CSS/Replaced_element)
+- [Замещаемый элемент](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
 - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-- [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
+- [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
 - [Объединение отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Модель визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-- [Слои](/ru/docs/Web/CSS/Layout_mode)
+- [Модель визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
+- [Слои](/ru/docs/Glossary/Layout_mode)
 
 ## DOM-CSS / CSSOM
 
