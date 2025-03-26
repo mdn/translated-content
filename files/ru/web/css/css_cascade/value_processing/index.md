@@ -1,11 +1,14 @@
 ---
-title: Решённое значение
-slug: Web/CSS/resolved_value
+title: Действительное значение
+slug: Web/CSS/CSS_cascade/Value_processing
+original_slug: Web/CSS/CSS_cascade/actual_value
 ---
 
-{{cssref}}
+{{CSSRef}}
 
-**Решённое значение** CSS-свойства - значение, возвращаемое {{domxref("Window.getComputedStyle", "getComputedStyle()")}}. Для многих свойств, это {{cssxref("computed_value", "вычисленное значение") }}, но для старых свойств (включая {{cssxref("width")}} и {{cssxref("height")}}), это {{cssxref("used_value", "используемое значение")}}. Смотрите ссылку спецификации ниже для дополнительной информации.
+## Описание
+
+**Действительное значение** CSS-свойства - используемое после всех приближений значение. Например, браузер может отображать рамки только с целым значением пикселей и будет принудительно округлять ширину.
 
 ## Спецификации
 
@@ -13,7 +16,7 @@ slug: Web/CSS/resolved_value
 
 ## Смотрите также
 
-- [Справка по CSS](/ru/docs/Web/CSS/Reference)
+- [Руководство по CSS](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
   - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
@@ -32,4 +35,3 @@ slug: Web/CSS/resolved_value
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
   - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- {{domxref("window.getComputedStyle")}}
