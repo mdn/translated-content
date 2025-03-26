@@ -1,13 +1,15 @@
 ---
-title: Function.name
+title: "Function: name"
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
+l10n:
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-{{jsxref("Function")}} オブジェクトの **`name`** プロパティは読み取り専用で、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` (空文字列) を返します。
+**`name`** は {{jsxref("Function")}} オブジェクトの読み取り専用プロパティで、作成時に付けられた関数の名前、もしくは無名関数の場合は `anonymous` または `''` （空文字列）を返します。
 
-{{InteractiveExample("JavaScript Demo: Function.name")}}
+{{InteractiveExample("JavaScript デモ: Function: name")}}
 
 ```js interactive-example
 const func1 = function () {};
@@ -17,83 +19,103 @@ const object = {
 };
 
 console.log(func1.name);
-// Expected output: "func1"
+// 期待される出力結果: "func1"
 
 console.log(object.func2.name);
-// Expected output: "func2"
+// 期待される出力結果: "func2"
 ```
 
-{{js_property_attributes(0,0,1)}}
+## 値
+
+数値です。
+
+{{js_property_attributes(0, 0, 1)}}
 
 > [!NOTE]
 > 標準外であった ES2015 以前の実装では、`configurable` 属性も `false` であることに注意してください。
 
-## JavaScript の圧縮とミニファイ
+## 解説
 
-> **警告:** `Function.name` を使用しているときに、 JavaScript の圧縮 (ミニファイ) や難読化のような変換を行う際には注意が必要です。これらのツールは JavaScript ビルドパイプラインの一部として、本番環境に設置する前にプログラムのサイズを縮小するためによく使用されます。それらの変換は、ビルド時に関数名を変更することがあります。
+関数の `name` プロパティは、デバッグツールやエラーメッセージで関数を識別するために使用することができます。言語自体には意味づけは存在しません。
 
-次のようなソースコードは、
-
-```js
-function Foo() {}
-let foo = new Foo();
-
-if (foo.constructor.name === "Foo") {
-  console.log("'foo' は 'Foo' のインスタンスである");
-} else {
-  console.log("おおっと！");
-}
-```
-
-このように圧縮されるかもしれません。
+`name` プロパティは読み取り専用のため、代入演算子で変更することはできません。
 
 ```js
-function a() {}
-let b = new a();
-if (b.constructor.name === "Foo") {
-  console.log("'foo' は 'Foo' のインスタンスである");
-} else {
-  console.log("おおっと！");
-}
+function someFunction() {}
+
+someFunction.name = "otherFunction";
+console.log(someFunction.name); // someFunction
 ```
 
-非圧縮版では、プログラムは真の方の分岐を実行し、「`'foo' は 'Foo' のインスタンスである`」と表示するのに対し、圧縮版は異なる振る舞いをし、偽の方の分岐を実行します。それゆえ、上述の例のように `Function.name` に依存するならば、ビルドパイプラインが関数名を変更しないようにするか、特定の関数名を想定しない構造にする必要があります。
+変更するには、 {{jsxref("Object.defineProperty()")}} を使用してください。
 
-## 例
+`name` プロパティは、関数が定義されている方法から通常推測されます。次の節では、それが推測されるさまざまな方法について記述します。
 
-### 関数文の名前
+### 関数宣言
 
-`name` プロパティは関数文の名前を返します。
+`name` プロパティは関数宣言の名前を返します。
 
 ```js
 function doSomething() {}
 doSomething.name; // "doSomething"
 ```
 
-### Function コンストラクターの名前
+### デフォルトエクスポートされた関数の宣言
 
-構文 `new Function(...)` または単に `Function(...)` で関数を作成すると、 {{jsxref("Function")}} オブジェクトが作成され、その名前は "anonymous" になります。
+[`export default`](/ja/docs/Web/JavaScript/Reference/Statements/export) 宣言は、関数を式ではなく宣言としてエクスポートします。宣言が無名関数である場合、名前は `"default"` となります。
+
+```js
+// -- someModule.js --
+export default function () {}
+
+// -- main.js --
+import someModule from "./someModule.js";
+
+someModule.name; // "default"
+```
+
+### Function コンストラクター
+
+[`Function()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) コンストラクターで作成された関数は、 "anonymous" の名前になります。
 
 ```js
 new Function().name; // "anonymous"
 ```
 
-### 無名関数式
+### 関数式
 
-`function` キーワードを使用して生成された関数式またはアロー関数は、名前が `""` (空文字列) になっています。
+関数式に名前が付いている場合、その名前が `name` プロパティとして使用されます。
+
+```js
+const someFunction = function someFunctionName() {};
+someFunction.name; // "someFunctionName"
+```
+
+`function` キーワードを使用して生成された関数式またはアロー関数は、名前が `""` （空文字列）になります。
 
 ```js
 (function () {}).name; // ""
 (() => {}).name; // ""
 ```
 
-### 関数名の推測
+しかし、そのようなケースはまれです。通常、他の場所で式を参照するために、関数式には作成時に識別子に添付します（変数宣言など）。そのような場合、次のいくつかの節で示すように、名前を推測することができます。
 
-変数とメソッドは、構文上の位置から無名関数の名前を推論できます (ECMAScript 2015 から)。
+名前付きであることが推測できない実用的な例としては、別の関数から返される関数があります。
 
 ```js
-let f = function () {};
-let object = {
+function getFoo() {
+  return () => {};
+}
+getFoo().name; // ""
+```
+
+### 変数宣言とメソッド
+
+変数とメソッドは、構文上の位置から無名関数の名前を推論できます。
+
+```js
+const f = function () {};
+const object = {
   someMethod: function () {},
 };
 
@@ -101,46 +123,46 @@ console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
 ```
 
-{{jsxref("Operators/Function", "関数式", "", 1)}} で名前を持つ関数を定義することができます。
+同じことが代入にも適用されます。
 
 ```js
-let object = {
-  someMethod: function object_someMethod() {},
-};
-console.log(object.someMethod.name); // "object_someMethod" と表示
+let f;
+f = () => {};
+f.name; // "f"
+```
 
-try {
-  object_someMethod;
-} catch (e) {
-  console.log(e);
+### 初期化子と既定値
+
+[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
+
+```js
+const [f = () => {}] = [];
+f.name; // "f"
+
+const { someMethod: m = () => {} } = {};
+m.name; // "m"
+
+function foo(f = () => {}) {
+  console.log(f.name);
 }
-// ReferenceError: object_someMethod is not defined
+foo(); // "f"
+
+class Foo {
+  static someMethod = () => {};
+}
+Foo.someMethod.name; // someMethod
 ```
 
-name プロパティは読み取り専用であり、代入演算子で変更することはできません。
+### 短縮メソッド
 
 ```js
-let object = {
-  // anonymous
-  someMethod: function () {},
-};
-
-object.someMethod.name = "otherMethod";
-console.log(object.someMethod.name); // someMethod
-```
-
-変更したければ、{{jsxref("Object.defineProperty()")}} を使ってください。
-
-### 短縮メソッドの名前
-
-```js
-var o = {
+const o = {
   foo() {},
 };
 o.foo.name; // "foo";
 ```
 
-### バインドされた関数の名前
+### バインドされた関数
 
 {{jsxref("Function.bind()")}} が関数を作成する時、その名前は "bound " とその関数名を合わせたものとなります。
 
@@ -154,12 +176,12 @@ foo.bind({}).name; // "bound foo"
 [`get`](/ja/docs/Web/JavaScript/Reference/Functions/get) と [`set`](/ja/docs/Web/JavaScript/Reference/Functions/set) を使う時は、 "get" や "set" が関数名に含まれます。
 
 ```js
-let o = {
+const o = {
   get foo() {},
   set foo(x) {},
 };
 
-var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+const descriptor = Object.getOwnPropertyDescriptor(o, "foo");
 descriptor.get.name; // "get foo"
 descriptor.set.name; // "set foo";
 ```
@@ -169,16 +191,63 @@ descriptor.set.name; // "set foo";
 `obj.constructor.name` でオブジェクトの「クラス」を知ることができます (ただし、下記の警告を確認してください)。
 
 ```js
-function Foo() {} // ES2015 構文の場合: class Foo {}
-
-var fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // "Foo" と表示
+class Foo {}
+Foo.name; // "Foo"
 ```
 
 > [!WARNING]
-> スクリプトインタープリターは、関数が自身の _name_ プロパティを持っていない場合に限り、組み込みの `Function.name` プロパティを設定します ([9.11.2. of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname) セクションをご覧ください)。しかし ES2015 では、_static_ キーワードを指定すると、その静的メソッドはクラスのコンストラクタ関数の OwnProperty として設定されます (ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation))。
+> JavaScript は、関数に `name` というプロパティが存在しない場合にのみ、関数の `name` プロパティを設定します。ただし、クラスの[静的メンバー](/ja/docs/Web/JavaScript/Reference/Classes/static)は、クラスコンストラクター関数のプロパティとして設定されるため、組み込みの `name` が適用されるのを防ぎます。下記の[例](#オブジェクトのコンストラクター名を示す)を参照してください。
 
-従って、`name()` という静的メソッドを持つクラスでは、事実上そのクラス名を取得することはできません:
+### 関数名としてのシンボル
+
+シンボル ({{jsxref("Symbol")}}) が関数名として使用されており、そのシンボルに説明が存在する場合、メソッドの名前は角カッコで囲まれた説明となります。
+
+```js
+const sym1 = Symbol("foo");
+const sym2 = Symbol();
+
+const o = {
+  [sym1]() {},
+  [sym2]() {},
+};
+
+o[sym1].name; // "[foo]"
+o[sym2].name; // "[]"
+```
+
+### プライベートプロパティ
+
+プライベートフィールドとプライベートメソッドは、ハッシュ記号 (`#`) が名前の一部に含まれます。
+
+```js
+class Foo {
+  #field = () => {};
+  #method() {}
+  getNames() {
+    console.log(this.#field.name);
+    console.log(this.#method.name);
+  }
+}
+
+new Foo().getNames();
+// "#field"
+// "#method"
+```
+
+## 例
+
+### オブジェクトのコンストラクター名を示す
+
+オブジェクトの「クラス」を調べるには、 `obj.constructor.name` を使用することができます。
+
+```js
+function Foo() {} // または class Foo {}
+
+const fooInstance = new Foo();
+console.log(fooInstance.constructor.name); // "Foo"
+```
+
+しかし、静的メンバーは自分自身でクラスのプロパティとなるため、静的メソッドプロパティ `name()` を持つほぼすべてのクラスについて、クラス名を取得することはできません。
 
 ```js
 class Foo {
@@ -187,45 +256,61 @@ class Foo {
 }
 ```
 
-`static name()` メソッドが存在する場合、`Foo.name` はクラス名ではなく、 `name()` 関数オブジェクトへの参照を持つことになります。Chrome や Firefox では、上記の ES2015 の構文によるクラス定義は、下記の ES5 構文のコードと同じような挙動をします:
+`static name()` メソッドが存在する場合、 `Foo.name` はクラス名ではなく、 `name()` 関数オブジェクトへの参照を持つことになります。 `fooInstance` のクラスを取得しようとして `fooInstance.constructor.name` を使用しても、まったくクラス名は得られず、代わりに静的クラスメソッドへの参照が返されます。 
 
 ```js
-function Foo() {}
-Object.defineProperty(Foo, "name", { writable: true });
-Foo.name = function () {};
+const fooInstance = new Foo();
+console.log(fooInstance.constructor.name); // ƒ name() {}
 ```
 
-`fooInstance.constructor.name` で `fooInstance` のクラスを取得しようとしても、得られるのはクラス名ではなく静的メソッドへの参照です。例えば:
+静的フィールドが存在するため、 `name` も関数ではない可能性があります。
 
 ```js
-let fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // 関数 name() を表示
+class Foo {
+  static name = 123;
+}
+console.log(new Foo().constructor.name); // 123
 ```
 
-先ほどの ES5 の構文の例では、Chrome や Firefox での `Foo.name` の静的な定義の際に _writable_ を指定しています。このような独自の手法を用いなければ、デフォルトでは _read-only_ となります:
+クラスに `name` という静的プロパティがある場合、「書き込み可能」にもなります。このような独自の手法を用いなければ、既定では「読み取り専用」となります。
 
 ```js
 Foo.name = "Hello";
-console.log(Foo.name); // Foo が static name() を持つ場合は "Hello"、そうでなければ "Foo" と表示する。
+console.log(Foo.name); // Foo に静的な "name" がある場合は "Hello"、そうでなければ "Foo" と表示
 ```
 
-従って、`Function.name` プロパティが常にクラス名を保持しているとは考えないほうがいいでしょう。
+したがって、組み込みの `name` プロパティに常にクラスの名前が格納されていることに頼っていると、期待通りに動作しない場合があります。
 
-### 関数名としての Symbol
+### JavaScript 圧縮ツールおよび最小化ツール
 
-{{jsxref("Symbol")}} を関数名として使用し、Symbol が description を持っている場合、関数名はブラケット `[ ]` 内の description となります。
+> **警告:** `name` プロパティを使用しているときに、 JavaScript の圧縮（ミニファイ）や難読化のような変換を行う際には注意が必要です。これらのツールは JavaScript ビルドパイプラインの一部として、本番環境に設置する前にプログラムのサイズを縮小するためによく使用されます。これらの変換は、ビルド時に関数名を変更することがあります。
+
+次のようなソースコードは、
 
 ```js
-let sym1 = Symbol("foo");
-let sym2 = Symbol();
-let o = {
-  [sym1]: function () {},
-  [sym2]: function () {},
-};
+function Foo() {}
+const foo = new Foo();
 
-o[sym1].name; // "[foo]"
-o[sym2].name; // ""
+if (foo.constructor.name === "Foo") {
+  console.log("'foo' は 'Foo' のインスタンスである");
+} else {
+  console.log("おおっと！");
+}
 ```
+
+このように圧縮されるかもしれません。
+
+```js
+function a() {}
+const b = new a();
+if (b.constructor.name === "Foo") {
+  console.log("'foo' は 'Foo' のインスタンスである");
+} else {
+  console.log("おおっと！");
+}
+```
+
+非圧縮版では、プログラムは "'foo' は 'Foo' のインスタンスである" とログ出力し、真値側の分岐を実行します。一方、圧縮版では動作が異なり、 else 側の分岐を実行します。例えば上記のように、 `name` プロパティに依存している場合は、ビルドパイプラインで関数名が変更されないようにするか、関数に具体的な名前があるとは仮定しないようにしてください。
 
 ## 仕様書
 
@@ -237,4 +322,6 @@ o[sym2].name; // ""
 
 ## 関連情報
 
+- [`Function: name` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-function)
+- [es-shims polyfill of `Function.prototype.name`](https://www.npmjs.com/package/function.prototype.name)
 - {{jsxref("Function")}}
