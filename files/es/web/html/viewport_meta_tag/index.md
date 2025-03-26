@@ -45,7 +45,7 @@ Los atributos básicos del elemento `<meta>` "viewport" incluyen:
   - : Especifica el efecto que tienen los widgets de la interfaz de usuario interactiva, como un teclado virtual, en los viewports de la página. Valores válidos: `resizes-visual`, `resizes-content` o `overlays-content`. Predeterminado: `resizes-visual`.
 
 > [!ADVERTENCIA]
-> Usar `user-scalable=no` puede causar problemas de accesibilidad para usuarios con discapacidades visuales, como baja visión. [WCAG](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#pauta_1.4_facilitar_a_los_usuarios_ver_y_o%C3%ADr_el_contenido_incluyendo_la_separaci%C3%B3n_entre_el_primer_plano_y_el_fondo) requiere un mínimo de escalado de 2×; sin embargo, la mejor práctica es permitir un zoom de 5×.
+> Usar `user-scalable=no` puede causar problemas de accesibilidad para usuarios con discapacidades visuales, como baja visión. [WCAG](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#pauta_1.4_facilitar_a_los_usuarios_ver_y_o%C3%ADr_el_contenido_incluyendo_la_separaci%C3%B3n_entre_el_primer_plano_y_el_fondo) requiere un mínimo de escalado de 2×; sin embargo, la mejor práctica es permitir un zoom de 5×.
 
 ## Densidad de pantalla
 

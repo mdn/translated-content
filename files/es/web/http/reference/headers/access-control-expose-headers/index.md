@@ -34,9 +34,9 @@ Access-Control-Expose-Headers: *
 ## Directivas
 
 - \<header-name>
-  - : Una lista de cabeceras expuestas que consiste en cero o mas [nombres de cabeceras](/es/docs/Web/HTTP/Headers) diferentes a {{Glossary("Simple response header", "simple response headers")}} que el recurso puede usar y pueden ser expuestas.
+  - : Una lista de cabeceras expuestas que consiste en cero o mas [nombres de cabeceras](/es/docs/Web/HTTP/Reference/Headers) diferentes a {{Glossary("Simple response header", "simple response headers")}} que el recurso puede usar y pueden ser expuestas.
 - `*` (_wildcard_, comodín)
-  - : El valor "`*`" solo funciona como comodín para peticiones sin credenciales (peticiones sin [HTTP cookies](/es/docs/Web/HTTP/Cookies) o autenticación HTTP). Para peticiones con credenciales, se trata como el literal "`*`", sin semánticas especiales.
+  - : El valor "`*`" solo funciona como comodín para peticiones sin credenciales (peticiones sin [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies) o autenticación HTTP). Para peticiones con credenciales, se trata como el literal "`*`", sin semánticas especiales.
     La cabecera {{HTTPHeader("Authorization")}} siempre se añadirá de manera explícita.
     _Vea cómo se añade en los ejemplos de más abajo_.
 

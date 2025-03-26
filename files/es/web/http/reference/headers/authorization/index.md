@@ -21,7 +21,7 @@ Authorization: <tipo> <credenciales>
 ## Directivas
 
 - \<tipo>
-  - : [Tipo de Autenticación](/es/docs/Web/HTTP/Authentication#authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Authentication#basic_authentication_scheme). Otros tipos:
+  - : [Tipo de Autenticación](/es/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Un tipo común es ["Basic"](/es/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). Otros tipos:
     - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 - \<credenciales>
@@ -37,7 +37,7 @@ Authorization: <tipo> <credenciales>
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-Ver también [HTTP authentication](/es/docs/Web/HTTP/Authentication) para ejemplos sobre cómo configurar servidores Apache o nginx para proteger su sitio con contraseña usando la autenticación básica HTTP.
+Ver también [HTTP authentication](/es/docs/Web/HTTP/Guides/Authentication) para ejemplos sobre cómo configurar servidores Apache o nginx para proteger su sitio con contraseña usando la autenticación básica HTTP.
 
 ## Especificaciones
 
@@ -48,7 +48,7 @@ Ver también [HTTP authentication](/es/docs/Web/HTTP/Authentication) para ejempl
 
 ## Ver también
 
-- [HTTP authentication](/es/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/es/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}
