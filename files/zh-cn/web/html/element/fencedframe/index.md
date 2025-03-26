@@ -2,7 +2,7 @@
 title: <fencedframe>：围栏框架元素
 slug: Web/HTML/Element/fencedframe
 l10n:
-  sourceCommit: 8964db8251cf2825fa81270309a45a475184aab1
+  sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -22,7 +22,7 @@ l10n:
 
 - `allow` {{experimental_inline}}
 
-  - : 为 `<fencedframe>` 指定[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)，该策略根据请求的来源定义 `<fencedframe>` 可用的特性。请参见[围栏框架可用的权限策略](#围栏框架可用的权限策略)了解在围栏框架上设置的策略来控制哪些特性的详细信息。
+  - : 为 `<fencedframe>` 指定[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)，该策略根据请求的来源定义 `<fencedframe>` 可用的特性。请参见[围栏框架可用的权限策略](#围栏框架可用的权限策略)了解在围栏框架上设置的策略来控制哪些特性的详细信息。
 
 - `height` {{experimental_inline}}
 
@@ -33,7 +33,7 @@ l10n:
 
 ## 围栏框架可用的权限策略
 
-从顶层上下文委托给围栏框架的权限，用于允许或拒绝可能会被用作通信渠道的特性，从而构成隐私威胁。因此，那些可通过[权限策略](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)（例如，[`camera`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/camera) 或[`geolocation`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)）控制其可用性的标准网页特性在围栏框架内是**不可用的**。
+从顶层上下文委托给围栏框架的权限，用于允许或拒绝可能会被用作通信渠道的特性，从而构成隐私威胁。因此，那些可通过[权限策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy)（例如，[`camera`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera) 或[`geolocation`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)）控制其可用性的标准网页特性在围栏框架内是**不可用的**。
 
 围栏框架内策略可以启用的唯一特性是设计用于围栏框架内的特定特性：
 
@@ -58,7 +58,7 @@ l10n:
 
 ## 定位和缩放
 
-作为[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，`<fencedframe>` 允许使用 {{cssxref("object-position")}} 属性调整嵌入文档在其框内的位置。
+作为{{glossary("replaced elements", "可替换元素")}}，`<fencedframe>` 允许使用 {{cssxref("object-position")}} 属性调整嵌入文档在其框内的位置。
 
 > **备注：** {{cssxref("object-fit")}} 属性对 `<fencedframe>` 元素无效。
 
@@ -135,11 +135,11 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a
-        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、<a
-        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>、<a
-        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a
-        href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a
+        href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
