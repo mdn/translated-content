@@ -78,7 +78,7 @@ console.log(o.d); // undefined
 // aucune propriété n'est trouvée, le moteur renvoie undefined.
 ```
 
-Lorsquon définit une propriété sur un objet, cela définit une propriété en propre. La seule exception se produit lorsqu'on définit [un accesseur et/ou un mutateur](</fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Définir_des_accesseurs_et_des_mutateurs_(getters_et_setters)>) sur une propriété héritée.
+Lorsquon définit une propriété sur un objet, cela définit une propriété en propre. La seule exception se produit lorsqu'on définit [un accesseur et/ou un mutateur](</fr/docs/Web/JavaScript/Guide/Working_with_objects#Définir_des_accesseurs_et_des_mutateurs_(getters_et_setters)>) sur une propriété héritée.
 
 ### Méthodes héritées
 
