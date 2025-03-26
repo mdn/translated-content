@@ -62,9 +62,9 @@ CSS はマージンの計算時や一部の `auto` 値の時など場合によ�
   - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
   - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)

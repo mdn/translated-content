@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`max-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)が、 `max-width` で指定した値を上回ることを防ぎます。
+**`max-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最大幅を設定します。これは {{Cssxref("width")}} プロパティの[使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)が、 `max-width` で指定した値を上回ることを防ぎます。
 
 {{InteractiveExample("CSS Demo: max-width")}}
 

@@ -1,5 +1,5 @@
 ---
-title: arguments[@@iterator]()
+title: arguments[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/Symbol.iterator
 original_slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
