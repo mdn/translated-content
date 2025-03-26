@@ -82,7 +82,7 @@ all: revert-layer;
 ### 値
 
 - {{cssxref("initial")}}
-  - : その要素のすべてのプロパティを[初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)に変更するべきであることを指定します。
+  - : その要素のすべてのプロパティを[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)に変更するべきであることを指定します。
 - {{cssxref("inherit")}}
   - : その要素のすべてのプロパティを[継承値](/ja/docs/Web/CSS/CSS_cascade/Inheritance)に変更するべきであることを指定します。
 - {{cssxref("unset")}}

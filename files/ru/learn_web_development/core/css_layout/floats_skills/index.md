@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/CSS_layout/Floats_skills
 
 {{LearnSidebar}}
 
-Цель этого задания - чтобы вы поработали со свойствами CSS {{CSSxRef("float")}} и {{CSSxRef("clear")}} которые описаны в нашем уроке [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.
+Цель этого задания - чтобы вы поработали со свойствами CSS {{CSSxRef("float")}} и {{CSSxRef("clear")}} которые описаны в нашем уроке [Floats](/ru/docs/Learn_web_development/Core/CSS_layout/Floats). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.
 
 > [!NOTE]
 > Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), или [Glitch](https://glitch.com/) чтобы проработать задания.

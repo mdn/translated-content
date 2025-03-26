@@ -278,7 +278,7 @@ Las citas en línea funcionan exactamente de la misma manera, excepto que usan e
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
   <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
-    >utiliza en para citas breves que no requieren saltos de párrafo.</q
+    >utiliza para citas breves que no requieren saltos de párrafo.</q
   >
 </p>
 ```

@@ -1,8 +1,8 @@
 ---
-title: CSS の z-index を理解する
+title: z-index を理解する
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 l10n:
-  sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
+  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
 {{CSSRef}}
@@ -22,12 +22,12 @@ l10n:
 ## 記事
 
 1. [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): 既定の重ね合わせ規則
-2. [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動要素が重ね合わせでどのように扱われるか
+2. [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
 3. [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
 4. [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
 
 ## 例
 
 1. [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-2. [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
+2. [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全階層の `z-index`
 3. [重ね合わせコンテキストの例 3](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3): 3 階層の HTML 構造、第 2 階層の `z-index`

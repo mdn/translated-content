@@ -7,7 +7,7 @@ slug: Web/SVG/Reference/Attribute/ry
 
 Атрибут **`ry`** определяет радиус круга по оси y.
 
-Два элемента используют этот атрибут: [`<ellipse>`](/ru/docs/Web/SVG/Element/ellipse) и [`<rect>`](/ru/docs/Web/SVG/Element/rect)
+Два элемента используют этот атрибут: [`<ellipse>`](/ru/docs/Web/SVG/Reference/Element/ellipse) и [`<rect>`](/ru/docs/Web/SVG/Reference/Element/rect)
 
 ## Пример
 

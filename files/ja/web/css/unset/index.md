@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#非継承プロパティ)の場合は {{cssxref("initial")}} キーワードのように動作します。
+**`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#非継承プロパティ)の場合は {{cssxref("initial")}} キーワードのように動作します。
 
 **`unset`** は一括指定の {{cssxref("all")}} を含む、あらゆる CSS プロパティに対して適用することができます。
 

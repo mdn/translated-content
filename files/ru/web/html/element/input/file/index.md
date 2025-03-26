@@ -5,7 +5,7 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn/Forms), или обработаны JavaScript и [File API](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
+{{HTMLElement("input")}} элемент с атрибутом **`type="file"`** позволяет пользователю выбрать один файл или более из файлового хранилища своего устройства. После выбора эти файлы могут быть загружены на сервер при помощи [формы](/ru/docs/Learn_web_development/Extensions/Forms), или обработаны JavaScript и [File API](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
@@ -93,7 +93,7 @@ Each `File` object contains the following information:
 - `size`
   - : The size of the file in bytes.
 - `type`
-  - : The file's [MIME type](/ru/docs/Web/HTTP/MIME_types).
+  - : The file's [MIME type](/ru/docs/Web/HTTP/Guides/MIME_types).
 - webkitRelativePath {{non-standard_inline}}
   - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](/ru/docs/Web/HTML/Element/input#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
 

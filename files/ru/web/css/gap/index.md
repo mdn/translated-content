@@ -5,7 +5,7 @@ slug: Web/CSS/gap
 
 {{CSSRef}}
 
-Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт {{glossary("gutters","отступы")}} между колонками и рядами. Является [сокращением](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}.
+Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт {{glossary("gutters","отступы")}} между колонками и рядами. Является [сокращением](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}.
 
 {{InteractiveExample("CSS Demo: gap")}}
 

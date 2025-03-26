@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 {{JSRef}}
 
-**`WeakMap`** — это коллекция пар ключ-значение. В качестве ключей могут быть использованы только объекты и [незарегистрированные символы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol#разделяемые_символы_в_глобальном_символьном_реестре), а значения могут быть произвольных [типов](/ru/docs/Web/JavaScript/Data_structures).
+**`WeakMap`** — это коллекция пар ключ-значение. В качестве ключей могут быть использованы только объекты и [незарегистрированные символы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol#разделяемые_символы_в_глобальном_символьном_реестре), а значения могут быть произвольных [типов](/ru/docs/Web/JavaScript/Guide/Data_structures).
 
 ## Описание
 

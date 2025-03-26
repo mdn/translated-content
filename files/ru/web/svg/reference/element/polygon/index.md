@@ -40,7 +40,7 @@ svg {
 
 ### Global attributes
 
-- [Основные атрибуты](/ru/docs/Web/SVG/Attribute)
+- [Основные атрибуты](/ru/docs/Web/SVG/Reference/Attribute)
   - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
 - [Атрибуты стилизации](/docs/Web/SVG/Attribute/Styling)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}

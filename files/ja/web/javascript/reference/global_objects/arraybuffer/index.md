@@ -30,7 +30,7 @@ l10n:
 
 ## 静的プロパティ
 
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
+- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[Symbol.species]")}}
   - : 派生オブジェクトを作成する際に使用するコンストラクター関数です。
 
 ## 静的メソッド
@@ -50,7 +50,7 @@ l10n:
   - : 読み取り専用。`ArrayBuffer` のサイズを変更できる場合は `true` を、変更できない場合は `false` を返します。
 - {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数。`ArrayBuffer` インスタンスの場合、初期値は {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} コンストラクターです。
-- `ArrayBuffer.prototype[@@toStringTag]`
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"ArrayBuffer"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
