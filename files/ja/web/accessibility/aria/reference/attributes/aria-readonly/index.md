@@ -36,9 +36,9 @@ l10n:
 ## 関連インターフェイス
 
 - {{domxref("Element.ariaReadOnly")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaReadOnly`](/ja/docs/Web/API/Element/ariaReadOnly) プロパティは、`aria-readonly` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaReadOnly`](/ja/docs/Web/API/Element/ariaReadOnly) プロパティは、`aria-readonly` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaReadOnly")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaReadOnly`](/ja/docs/Web/API/ElementInternals/ariaReadOnly) プロパティは、`aria-readonly` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaReadOnly`](/ja/docs/Web/API/ElementInternals/ariaReadOnly) プロパティは、`aria-readonly` 属性の値を反映します。
 
 ## 関連付けられたロール
 
