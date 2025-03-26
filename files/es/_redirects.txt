@@ -44,8 +44,8 @@
 /es/docs/CSS/Using_CSS_gradients	/es/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /es/docs/CSS/Using_CSS_transforms	/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /es/docs/CSS/Uso_de_CSS_transforms	/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
-/es/docs/CSS/Valor_calculado	/es/docs/Web/CSS/CSS_cascade/computed_value
-/es/docs/CSS/Valor_inicial	/es/docs/Web/CSS/CSS_cascade/initial_value
+/es/docs/CSS/Valor_calculado	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
+/es/docs/CSS/Valor_inicial	/es/docs/Web/CSS/CSS_cascade/Value_processing
 /es/docs/CSS/after	/es/docs/Web/CSS/::after
 /es/docs/CSS/animation	/es/docs/Web/CSS/animation
 /es/docs/CSS/animation-delay	/es/docs/Web/CSS/animation-delay
@@ -79,7 +79,7 @@
 /es/docs/CSS/capacidad_de_animacion_de_propiedades_CSS	/es/docs/Web/CSS
 /es/docs/CSS/clip	/es/docs/Web/CSS/clip
 /es/docs/CSS/color	/es/docs/Web/CSS/color
-/es/docs/CSS/computed_value	/es/docs/Web/CSS/CSS_cascade/computed_value
+/es/docs/CSS/computed_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
 /es/docs/CSS/content	/es/docs/Web/CSS/content
 /es/docs/CSS/cursor	/es/docs/Web/CSS/cursor
 /es/docs/CSS/direction	/es/docs/Web/CSS/direction
@@ -127,8 +127,8 @@
 /es/docs/CSS/width	/es/docs/Web/CSS/width
 /es/docs/CSS/z-index	/es/docs/Web/CSS/z-index
 /es/docs/CSS::default	/es/docs/Web/CSS/:default
-/es/docs/CSS:Valor_calculado	/es/docs/Web/CSS/CSS_cascade/computed_value
-/es/docs/CSS:Valor_inicial	/es/docs/Web/CSS/CSS_cascade/initial_value
+/es/docs/CSS:Valor_calculado	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
+/es/docs/CSS:Valor_inicial	/es/docs/Web/CSS/CSS_cascade/Value_processing
 /es/docs/CSS:after	/es/docs/Web/CSS/::after
 /es/docs/CSS:background	/es/docs/Web/CSS/background
 /es/docs/CSS:background-attachment	/es/docs/Web/CSS/background-attachment
@@ -151,7 +151,7 @@
 /es/docs/CSS:border-width	/es/docs/Web/CSS/border-width
 /es/docs/CSS:bottom	/es/docs/Web/CSS/bottom
 /es/docs/CSS:color	/es/docs/Web/CSS/color
-/es/docs/CSS:computed_value	/es/docs/Web/CSS/CSS_cascade/computed_value
+/es/docs/CSS:computed_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
 /es/docs/CSS:content	/es/docs/Web/CSS/content
 /es/docs/CSS:cursor	/es/docs/Web/CSS/cursor
 /es/docs/CSS:direction	/es/docs/Web/CSS/direction
@@ -2099,6 +2099,10 @@
 /es/docs/Web/CSS/CSS_Reglas_Condicionales	/es/docs/Web/CSS/CSS_conditional_rules
 /es/docs/Web/CSS/CSS_Types	/es/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types
 /es/docs/Web/CSS/CSS_animations/Tips	/es/docs/Web/API/Web_Animations_API/Tips
+/es/docs/Web/CSS/CSS_cascade/actual_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing
+/es/docs/Web/CSS/CSS_cascade/computed_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
+/es/docs/Web/CSS/CSS_cascade/initial_value	/es/docs/Web/CSS/CSS_cascade/Value_processing
+/es/docs/Web/CSS/CSS_cascade/specified_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
 /es/docs/Web/CSS/CSS_container_queries	/es/docs/Web/CSS/CSS_containment/Container_queries
 /es/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/es/docs/conflicting/Glossary/Flexbox
 /es/docs/Web/CSS/CSS_flow_layout	/es/docs/Web/CSS/CSS_display/Flow_layout
@@ -2150,10 +2154,10 @@
 /es/docs/Web/CSS/Using_CSS_custom_properties	/es/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /es/docs/Web/CSS/Using_CSS_transforms	/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /es/docs/Web/CSS/Using_CSS_variables	/es/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
-/es/docs/Web/CSS/Valor_calculado	/es/docs/Web/CSS/CSS_cascade/computed_value
-/es/docs/Web/CSS/Valor_inicial	/es/docs/Web/CSS/CSS_cascade/initial_value
+/es/docs/Web/CSS/Valor_calculado	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
+/es/docs/Web/CSS/Valor_inicial	/es/docs/Web/CSS/CSS_cascade/Value_processing
 /es/docs/Web/CSS/Value_definition_syntax	/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
-/es/docs/Web/CSS/actual_value	/es/docs/Web/CSS/CSS_cascade/actual_value
+/es/docs/Web/CSS/actual_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing
 /es/docs/Web/CSS/after	/es/docs/Web/CSS/::after
 /es/docs/Web/CSS/animacion-iteracion-cuenta	/es/docs/Web/CSS/animation-iteration-count
 /es/docs/Web/CSS/animacion-nombre	/es/docs/Web/CSS/animation-name
@@ -2161,7 +2165,7 @@
 /es/docs/Web/CSS/before	/es/docs/Web/CSS/::before
 /es/docs/Web/CSS/calc()	/es/docs/Web/CSS/calc
 /es/docs/Web/CSS/capacidad_de_animacion_de_propiedades_CSS	/es/docs/Web/CSS
-/es/docs/Web/CSS/computed_value	/es/docs/Web/CSS/CSS_cascade/computed_value
+/es/docs/Web/CSS/computed_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
 /es/docs/Web/CSS/cursor/Uso_de_URL_como_valor_de_la_propiedad_cursor	/es/docs/conflicting/Web/CSS/cursor
 /es/docs/Web/CSS/env()	/es/docs/Web/CSS/env
 /es/docs/Web/CSS/filter-function/blur()	/es/docs/Web/CSS/filter-function/blur
@@ -2171,7 +2175,7 @@
 /es/docs/Web/CSS/grid-column-gap	/es/docs/Web/CSS/column-gap
 /es/docs/Web/CSS/grid-gap	/es/docs/Web/CSS/gap
 /es/docs/Web/CSS/ime-mode	/es/docs/orphaned/Web/CSS/ime-mode
-/es/docs/Web/CSS/initial_value	/es/docs/Web/CSS/CSS_cascade/initial_value
+/es/docs/Web/CSS/initial_value	/es/docs/Web/CSS/CSS_cascade/Value_processing
 /es/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
 /es/docs/Web/CSS/min()	/es/docs/Web/CSS/min
 /es/docs/Web/CSS/minmax()	/es/docs/Web/CSS/minmax
@@ -2180,7 +2184,8 @@
 /es/docs/Web/CSS/porcentaje	/es/docs/Web/CSS/percentage
 /es/docs/Web/CSS/repeat()	/es/docs/Web/CSS/repeat
 /es/docs/Web/CSS/resolución	/es/docs/Web/CSS/resolution
-/es/docs/Web/CSS/specified_value	/es/docs/Web/CSS/CSS_cascade/specified_value
+/es/docs/Web/CSS/resolved_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4
+/es/docs/Web/CSS/specified_value	/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
 /es/docs/Web/CSS/transform-function/rotate()	/es/docs/Web/CSS/transform-function/rotate
 /es/docs/Web/CSS/transform-function/rotate3d()	/es/docs/Web/CSS/transform-function/rotate3d
 /es/docs/Web/CSS/transform-function/scale()	/es/docs/Web/CSS/transform-function/scale
