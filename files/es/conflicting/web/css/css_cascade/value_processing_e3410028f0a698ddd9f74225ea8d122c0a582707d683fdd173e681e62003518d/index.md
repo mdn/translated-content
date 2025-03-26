@@ -1,7 +1,7 @@
 ---
 title: Valor calculado
-slug: Web/CSS/CSS_cascade/computed_value
-original_slug: Web/CSS/computed_value
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d
+original_slug: Web/CSS/CSS_cascade/computed_value
 ---
 
 {{ CSSRef() }}

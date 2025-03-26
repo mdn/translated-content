@@ -1,14 +1,16 @@
 ---
-title: Valor real
-slug: Web/CSS/CSS_cascade/actual_value
-original_slug: Web/CSS/actual_value
+title: Valor especificado
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
+original_slug: Web/CSS/CSS_cascade/specified_value
 ---
 
 {{CSSRef}}
 
-## Resumen
+El **valor especificado** (**specified value**) de una propiedad CSS es establecido de una de las siguientes maneras:
 
-El **valor real** (**actual value**) de una propiedad CSS es el valor usado una vez que se aplican todas las aproximaciones. Por ejemplo, tal vez un agente usuario solo puede renderizar bordes con un valor de píxel entero, y se vería forzado a calcular la aproximación de la anchura del borde.
+1. Si la hoja de estilos del documento tiene un valor especificado para la propiedad, éste será usado. Por ejemplo, si la propiedad {{cssxref("color")}} es establecida con valor `green`, el color del texto del elemento que corresponda será verde.
+2. Si la hoja de estilos del documento no tiene un valor especificado para la propiedad, se heredará del elemento padre (si es posible). Por ejemplo, si tenemos un párrafo ({{HTMLElement("p")}}) dentro de un {{HTMLElement("div")}}, y el {{HTMLElement("div")}} tiene el valor de su propiedad `font` como "Arial", y el {{HTMLElement("p")}} no tiene definida la propiedad `font`, se heredará la fuente Arial.
+3. Si ninguna de las anteriores está disponible, se aplica el valor inicial del elemento segun la especificación CSS.
 
 ## Especificaciones
 
