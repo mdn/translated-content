@@ -1,7 +1,7 @@
 ---
 title: 指定値
-slug: Web/CSS/CSS_cascade/specified_value
-original_slug: Web/CSS/specified_value
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1
+original_slug: Web/CSS/CSS_cascade/specified_value
 ---
 
 {{CSSRef}}

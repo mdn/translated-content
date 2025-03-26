@@ -1,7 +1,7 @@
 ---
 title: 実効値
-slug: Web/CSS/CSS_cascade/actual_value
-original_slug: Web/CSS/actual_value
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing
+original_slug: Web/CSS/CSS_cascade/actual_value
 ---
 
 {{CSSRef}}
