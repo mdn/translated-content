@@ -46,7 +46,7 @@ Le premier index de l'élément dans le tableau ou -1 si la valeur n'est pas tro
 
 ## Description
 
-`indexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (la même méthode utilisée par l'opérateur `===`).
+`indexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (la même méthode utilisée par l'opérateur `===`).
 
 ## Exemples
 

@@ -1,15 +1,12 @@
 ---
-title: Указанное значение
-slug: Web/CSS/CSS_cascade/specified_value
+title: Решённое значение
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4
+original_slug: Web/CSS/resolved_value
 ---
 
-{{CSSRef}}
+{{cssref}}
 
-**Указанное значение** CSS-свойства может устанавливаться одним из 3 следующих способов.
-
-1. Если в таблице стилей документа указано значение свойства, которое будет использоваться. Например, если свойство {{cssxref("color")}} устанавливается в `green`, то цвет текста соответствующего элемента становится зелёным.
-2. Если в таблице стилей документа указано значение, которое может наследоваться от родительского элемента (если возможно). Например, у нас есть параграф ({{HTMLElement("p")}}) внутри {{HTMLElement("div")}}, а к {{HTMLElement("div")}} применено CSS-свойство `font` со значением "Arial", а у {{HTMLElement("p")}} не установлено свойство `font`, то он унаследует значение шрифта "Arial".
-3. Если не выполняется не то, не другое, начальное значение элемента применяется из CSS спецификации.
+**Решённое значение** CSS-свойства - значение, возвращаемое {{domxref("Window.getComputedStyle", "getComputedStyle()")}}. Для многих свойств, это {{cssxref("computed_value", "вычисленное значение") }}, но для старых свойств (включая {{cssxref("width")}} и {{cssxref("height")}}), это {{cssxref("used_value", "используемое значение")}}. Смотрите ссылку спецификации ниже для дополнительной информации.
 
 ## Спецификации
 
@@ -17,7 +14,7 @@ slug: Web/CSS/CSS_cascade/specified_value
 
 ## Смотрите также
 
-- [Руководство по CSS](/ru/docs/Web/CSS/Reference)
+- [Справка по CSS](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
   - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
@@ -36,3 +33,4 @@ slug: Web/CSS/CSS_cascade/specified_value
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
   - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{domxref("window.getComputedStyle")}}

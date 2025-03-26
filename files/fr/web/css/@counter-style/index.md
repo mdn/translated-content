@@ -127,6 +127,6 @@ Chaque `@counter-style` est identifié par un nom et possède un ensemble de des
 ## Voir aussi
 
 - [`list-style`](/fr/docs/Web/CSS/list-style), [`list-style-image`](/fr/docs/Web/CSS/list-style-image), [`list-style-position`](/fr/docs/Web/CSS/list-style-position), [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
-- [`symbols()`](</fr/docs/Web/CSS/symbols()>)&nbsp;: la notation fonctionnelle qui permet de créer des styles de compteur anonymes
-- Les fonctions CSS [`counter()`](</fr/docs/Web/CSS/counter()>) et [`counters()`](</fr/docs/Web/CSS/counters()>)
+- [`symbols()`](/fr/docs/Web/CSS/symbols)&nbsp;: la notation fonctionnelle qui permet de créer des styles de compteur anonymes
+- Les fonctions CSS [`counter()`](/fr/docs/Web/CSS/counter) et [`counters()`](/fr/docs/Web/CSS/counters)
 - [Démonstration pour les styles de compteur](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/master/counter-style-demo))

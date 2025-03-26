@@ -1,6 +1,7 @@
 ---
 title: Используемое значение
-slug: Web/CSS/CSS_cascade/used_value
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b
+original_slug: Web/CSS/CSS_cascade/used_value
 ---
 
 {{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/CSS_cascade/computed_value).
