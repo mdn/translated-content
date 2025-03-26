@@ -27,10 +27,10 @@ slug: Web/SVG/Reference/Element/circle
 
 ### Унаследованные
 
-- [Условные атрибуты](/ru/docs/Web/SVG/Attribute#conditional_processing_attributes) »
-- [Ключевые атрибуты](/ru/docs/Web/SVG/Attribute#core_attributes) »
-- [Атрибуты графических событий](/ru/docs/Web/SVG/Attribute#graphical_event_attributes) »
-- [Атрибуты представления](/ru/docs/Web/SVG/Attribute#presentation_attributes) »
+- [Условные атрибуты](/ru/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes) »
+- [Ключевые атрибуты](/ru/docs/Web/SVG/Reference/Attribute#core_attributes) »
+- [Атрибуты графических событий](/ru/docs/Web/SVG/Reference/Attribute#graphical_event_attributes) »
+- [Атрибуты представления](/ru/docs/Web/SVG/Reference/Attribute#presentation_attributes) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

@@ -32,4 +32,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Смотрите также
 
-- [HTTP аутентификация](/ru/docs/Web/HTTP/Authentication)
+- [HTTP аутентификация](/ru/docs/Web/HTTP/Guides/Authentication)

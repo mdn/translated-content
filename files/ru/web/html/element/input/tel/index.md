@@ -56,7 +56,7 @@ label {
 
 ## Смотрите также
 
-- [Руководство по HTML-формам](/ru/docs/Learn/Forms)
+- [Руководство по HTML-формам](/ru/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 
   - {{HTMLElement("input/text")}}

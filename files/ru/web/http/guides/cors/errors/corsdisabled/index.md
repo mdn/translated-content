@@ -21,4 +21,4 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
 
 - [CORS errors](/ru/docs/Web/HTTP/CORS/Errors)
 - Глоссарий: {{Glossary("CORS")}}
-- [CORS introduction](/ru/docs/Web/HTTP/CORS)
+- [CORS introduction](/ru/docs/Web/HTTP/Guides/CORS)

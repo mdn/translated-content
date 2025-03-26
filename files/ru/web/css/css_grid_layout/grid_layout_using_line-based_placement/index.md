@@ -130,7 +130,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ## Сокращения `grid-column` и `grid-row`
 
-Мы написали много кода, чтобы разместить каждый элемент. Неудивительно, что существует [краткая форма записи свойств](/ru/docs/Web/CSS/Shorthand_properties). {{cssxref("grid-column-start")}} и {{cssxref("grid-column-end")}} могут быть объединены в одном {{cssxref("grid-column")}}, а {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}} - в {{cssxref("grid-row")}}.
+Мы написали много кода, чтобы разместить каждый элемент. Неудивительно, что существует [краткая форма записи свойств](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties). {{cssxref("grid-column-start")}} и {{cssxref("grid-column-end")}} могут быть объединены в одном {{cssxref("grid-column")}}, а {{cssxref("grid-row-start")}} и {{cssxref("grid-row-end")}} - в {{cssxref("grid-row")}}.
 
 ```css hidden
 * {
