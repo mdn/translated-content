@@ -22,12 +22,16 @@ transform: skew(-0.06turn, 18deg);
 ```
 
 ```css interactive-example-choice
-transform: skew(.312rad);
+transform: skew(0.312rad);
 ```
 
 ```html interactive-example
 <section id="default-example">
-<img class="transition-all" id="example-element" src="/shared-assets/images/examples/firefox-logo.svg" width="200"/>
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
 </section>
 ```
 

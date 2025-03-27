@@ -27,7 +27,9 @@ height: auto;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-<div class="transition-all" id="example-element">This is a box where you can change the height.</div>
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
 </section>
 ```
 

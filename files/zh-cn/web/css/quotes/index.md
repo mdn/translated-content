@@ -31,7 +31,10 @@ quotes: "«" "»" "‹" "›";
 
 ```html interactive-example
 <section id="default-example">
-<q id="example-element">Show us the wonder-working <q>Brothers,</q> let them come out publicly—and we will believe in them!</q>
+  <q id="example-element"
+    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
+    we will believe in them!</q
+  >
 </section>
 ```
 
