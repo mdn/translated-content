@@ -39,7 +39,7 @@ CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而
 
 ## 什么是 CSS 的值？
 
-在 CSS 规范和 MDN 的属性页上，你将能够发现**值类型**（value types）的存在，它们被尖括号（`<`, `>`）包围，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 或 {{cssxref("length")}}。当你看到值类型 `<color>` 对特定属性有效时，这意味着你可以使用任何有效的颜色作为该属性的值，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 参考页面所列。
+在 CSS 规范和 MDN 的属性页上，你将能够发现**值类型**（value types）的存在，它们被尖括号（`<`、`>`）包围，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 或 {{cssxref("length")}}。当你看到值类型 `<color>` 对特定属性有效时，这意味着你可以使用任何有效的颜色作为该属性的值，如 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 参考页面所列。
 
 有时值类型和属性可能具有相同或相似的名称。例如，{{cssxref("color")}} 属性和[`<color>`](/zh-CN/docs/Web/CSS/color_value) 数据类型。你可以使用尖括号来区分每种情况下你所研究的具体对象。HTML 元素也使用尖括号，但从上下文应该能清楚你所查看的是哪一个。如果你不确定，可以尝试在 MDN 上搜索它。
 
