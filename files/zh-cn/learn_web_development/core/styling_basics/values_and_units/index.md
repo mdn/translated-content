@@ -11,7 +11,7 @@ CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而
 在本课中，我们将了解一些最常用的值类型、它们是什么以及如何起作用。
 
 > [!NOTE]
-> 每个[CSS 属性页面](/zh-CN/docs/Web/CSS/Reference#%E7%B4%A2%E5%BC%95)都有一个语法章节，其中列出了该属性可用的值类型。
+> 每个[CSS 属性页面](/zh-CN/docs/Web/CSS/Reference#索引)都有一个语法章节，其中列出了该属性可用的值类型。
 
 <table>
   <tbody>
