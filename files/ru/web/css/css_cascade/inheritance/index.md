@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_cascade/Inheritance
 
 ## Наследуемые свойства
 
-Когда никакого значения для **свойства, которое наследуется**, у элемента не установлено, элемент получает [вычисленное значение](/ru/docs/Web/CSS/computed_value) этого свойства от его родителя. Только корневой элемент документа получает [начальное значение](/ru/docs/Web/CSS/initial_value) из описания свойства.
+Когда никакого значения для **свойства, которое наследуется**, у элемента не установлено, элемент получает [вычисленное значение](/ru/docs/Web/CSS/CSS_cascade/computed_value) этого свойства от его родителя. Только корневой элемент документа получает [начальное значение](/ru/docs/Web/CSS/CSS_cascade/initial_value) из описания свойства.
 
 Типичный пример наследуемого свойства {{ Cssxref("color") }}. Стили:
 
@@ -31,7 +31,7 @@ p {
 
 ## Ненаследуемые свойства
 
-Когда значения **свойства** элемента, которое **не наследуется**, не указано(иногда называемое Mozilla - **сброшенное свойство**), элемент получает [начальное значение](/ru/docs/Web/CSS/initial_value) этого свойства (как указано в описании свойства).
+Когда значения **свойства** элемента, которое **не наследуется**, не указано(иногда называемое Mozilla - **сброшенное свойство**), элемент получает [начальное значение](/ru/docs/Web/CSS/CSS_cascade/initial_value) этого свойства (как указано в описании свойства).
 
 Пример ненаследуемого свойства {{ Cssxref("border") }}. Стили:
 
@@ -58,22 +58,22 @@ p {
 - [CSS документация](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
 
-  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/Comments)
-  - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
+  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
   - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/computed_value)
-    - [используемые](/ru/docs/Web/CSS/used_value)
-    - [действительные](/ru/docs/Web/CSS/actual_value)
+    - [начальные](/ru/docs/Web/CSS/CSS_cascade/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/CSS_cascade/computed_value)
+    - [используемые](/ru/docs/Web/CSS/CSS_cascade/used_value)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/actual_value)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
 
 - {{ Cssxref("inherit") }}

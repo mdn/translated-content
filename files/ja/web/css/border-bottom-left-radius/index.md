@@ -57,7 +57,7 @@ background-clip: content-box;
 背景は、画像または単色ですが、丸みがあっても境界で切り取られます。切り取られる正確な位置は、 {{cssxref("background-clip")}} プロパティの値で定義されます。
 
 > [!NOTE]
-> このプロパティの値が `border-bottom-left-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)によって初期値にリセットされます。
+> このプロパティの値が `border-bottom-left-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)によって初期値にリセットされます。
 
 ## 構文
 

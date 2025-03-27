@@ -1,7 +1,6 @@
 ---
 title: Обзор JavaScript
 slug: Web/JavaScript/Reference/JavaScript_technologies_overview
-original_slug: Web/JavaScript/JavaScript_technologies_overview
 ---
 
 {{JsSidebar("Introductory")}}
@@ -14,13 +13,13 @@ original_slug: Web/JavaScript/JavaScript_technologies_overview
 
 ## JavaScript, базовый язык программирования (ECMAScript)
 
-Базовый язык JavaScript стандартизирован комитетом ECMA TC-39 как язык программирования под названием [ECMAScript](/ru/docs/Web/JavaScript/JavaScript_technologies_overview).
+Базовый язык JavaScript стандартизирован комитетом ECMA TC-39 как язык программирования под названием [ECMAScript](/ru/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 Базовый язык также используется в не-браузерном окружении, например, в [node.js](https://nodejs.org/).
 
 ### Что попадает под понятие ECMAScript?
 
-Кроме прочего, [ECMAScript](/ru/docs/Web/JavaScript/JavaScript_technologies_overview) определяет:
+Кроме прочего, [ECMAScript](/ru/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) определяет:
 
 - Синтаксис языка (правила парсинга, ключевые слова, порядок выполнения, инициализацию объекта литерала...)
 - Механизм обработки ошибок (исключения, try/catch оператор,возможность создавать новые типы ошибок)

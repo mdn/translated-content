@@ -232,7 +232,7 @@ th {
 
 ## 参见
 
-- SVG [`writing-mode`](/zh-CN/docs/Web/SVG/Attribute/writing-mode) 属性
+- SVG [`writing-mode`](/zh-CN/docs/Web/SVG/Reference/Attribute/writing-mode) 属性
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

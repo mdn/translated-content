@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("Web Components")}}
 
-**`role`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、この要素の [WAI-ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Roles)を返します。例えば、チェックボックスは [`role="checkbox"`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role) を持つ可l脳性があります。
+**`role`** は {{domxref("ElementInternals")}} インターフェイスの読み取り専用プロパティで、この要素の [WAI-ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)を返します。例えば、チェックボックスは [`role="checkbox"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) を持つ可l脳性があります。
 
 ## 値
 
-ARIA ロールが入った文字列。ARIA ロールの完全なリストは [ARIA テクニックのページ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques)にあります。
+ARIA ロールが入った文字列。ARIA ロールの完全なリストは [ARIA テクニックのページ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques)にあります。
 
 ## 例
 

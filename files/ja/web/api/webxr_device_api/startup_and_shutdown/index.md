@@ -108,7 +108,7 @@ const xr = getXR("if-needed"); // navigator.xr がない場合にのみポリフ
 
 ### 権限とセキュリティ
 
-WebXR を中心に展開する多くのセキュリティ対策があります。 まず、ユーザーの世界観を完全に置き換える `immersive-vr` モードを使用するには、`xr-spatial-tracking` [機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を設定する必要があります。 それに加えて、ドキュメントは安全で現在フォーカスされている必要があります。 最後に、{{domxref("Element.click_event", "click")}} イベントのハンドラーなどのユーザーイベントハンドラーから {{domxref("XRSystem.requestSession", "requestSession()")}} を呼び出す必要があります。
+WebXR を中心に展開する多くのセキュリティ対策があります。 まず、ユーザーの世界観を完全に置き換える `immersive-vr` モードを使用するには、`xr-spatial-tracking` [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を設定する必要があります。 それに加えて、ドキュメントは安全で現在フォーカスされている必要があります。 最後に、{{domxref("Element.click_event", "click")}} イベントのハンドラーなどのユーザーイベントハンドラーから {{domxref("XRSystem.requestSession", "requestSession()")}} を呼び出す必要があります。
 
 安全な WebXR の活動と使用方法の詳細については、[WebXR の権限とセキュリティ](/ja/docs/Web/API/WebXR_Device_API/Permissions_and_security)の記事を参照してください。
 

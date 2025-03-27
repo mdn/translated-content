@@ -35,7 +35,7 @@ ARIA - это набор специальных атрибутов, которы
 
 ### ARIA для виджетов на JavaScript
 
-- [Навигация с помощью клавиатуры и фокус в виджетах на JavaScript](/ru/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Навигация с помощью клавиатуры и фокус в виджетах на JavaScript](/ru/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
   - : Первый шаг в создании доступных JavaScript виджетов, позволяющих производить навигацию с помощью клавиатуры. Статья описывает последовательные шаги по достижению цели. Ещё один хороший ресурс - [статья Yahoo! об управлении фокусом.](http://www.yuiblog.com/blog/2009/02/23/managing-focus/)
 - [Style Guide for Keyboard Navigation](http://access.aol.com/dhtml-style-guide-working-group/)
   - : В этом руководстве описываются способы управления самыми распространёнными виджетами с клавиатуры.
@@ -89,9 +89,9 @@ ARIA - это набор специальных атрибутов, которы
 
 - [Open AJAX Accessibility Task Force](http://www.openajax.org/member/wiki/Accessibility)
   - : The Open AJAX effort centers around developing tools, sample files, and automated tests for ARIA.
-- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Web/Accessibility/ARIA/Guides/Techniques)
   - : The community needs a complete set of WCAG techniques for WAI-ARIA + HTML, so that organizations can be comfortable claiming their ARIA-enabled content is WCAG compliant. This is important when regulations or policies are based on WCAG.
 
 ### Related Topics
 
-[Accessibility](/ru/docs/Web/Accessibility), [AJAX](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/ru/docs/Web/JavaScript)
+[Accessibility](/ru/docs/Web/Accessibility), [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/ru/docs/Web/JavaScript)

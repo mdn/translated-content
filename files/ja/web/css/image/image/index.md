@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`image()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 {{CSSxRef("&lt;image&gt;")}} を {{CSSxRef("url_function", "url()")}} 関数に似た様式で定義しますが、画像の書字方向を指定したり、メディアフラグメントで定義された画像の一部だけを表示したり、指定された画像がどれも描画できなかった場合の予備として単色を指定するなどの機能が追加されています。
+**`image()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 {{CSSxRef("&lt;image&gt;")}} を {{CSSxRef("url_function", "url()")}} 関数に似た様式で定義しますが、画像の書字方向を指定したり、メディアフラグメントで定義された画像の一部だけを表示したり、指定された画像がどれも描画できなかった場合の予備として単色を指定するなどの機能が追加されています。
 
 > [!NOTE]
 > CSS の `image()` 関数を {{DOMxRef("HTMLImageElement/Image", '<code>HTMLImageElement</code> のコンストラクターである <code>Image()</code>', '', 1)}} と混同しないでください。
@@ -63,7 +63,7 @@ xywh=percent:25,25,50,50    /* 50%x50% の画像を x=25% および y=25% の位
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要なことで、スクリーンリーダーはその存在を告知しないため、ユーザーに何も伝えません。画像に、ページ全体の目的を理解するために重要な情報が含まれている場合は、文書内で意味的に記述したほうがよいでしょう。
 
-- [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
+- [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 この機能は、画像の読み込みに失敗したときに予備の色を提供することで、アクセシビリティの向上に役立ちます。この機能は、すべての背景画像に背景色を含めることで実現できますが、 CSS の `image()` 関数では、画像の読み込みに失敗したときに背景色のみを含めることができます。つまり、透過 PNG/GIF/WebP の読み込みに失敗したときに、予備の色を追加することができます。

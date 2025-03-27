@@ -69,7 +69,7 @@ HTML 페이지가 반환 되면 웹 브라우저에 의해 렌더링 될 것입�
 
 #### The request
 
-각 라인의 요청들은 그것이 어떤 정보인지 포함 하고 있습니다. 이러한 첫 부분을 **header**라고 합니다, [HTML head](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)가 HTML 문서의 유용한 정보를 포함하는 것과 같은 방식으로 유용한 정보를 포함합니다. (실제로 본문에 있는 콘텐츠 자체는 아닙니다.):
+각 라인의 요청들은 그것이 어떤 정보인지 포함 하고 있습니다. 이러한 첫 부분을 **header**라고 합니다, [HTML head](/ko/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)가 HTML 문서의 유용한 정보를 포함하는 것과 같은 방식으로 유용한 정보를 포함합니다. (실제로 본문에 있는 콘텐츠 자체는 아닙니다.):
 
 ```
 GET https://developer.mozilla.org/en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1

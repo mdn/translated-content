@@ -121,6 +121,6 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.entries()")}}
 - [Iteration protocols](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)

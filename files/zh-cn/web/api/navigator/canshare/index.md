@@ -2,7 +2,7 @@
 title: Navigator：canShare() 方法
 slug: Web/API/Navigator/canShare
 l10n:
-  sourceCommit: 91907f1383139ec2bd1d309d02ffac30b4eee757
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Web Share API")}}{{securecontext_header}}

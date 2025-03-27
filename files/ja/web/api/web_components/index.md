@@ -64,7 +64,7 @@ l10n:
 
   - : 以下の拡張機能が定義されています。
 
-    - [`is`](/ja/docs/Web/HTML/Global_attributes#is) グローバル HTML 属性
+    - [`is`](/ja/docs/Web/HTML/Global_attributes/is) グローバル HTML 属性
       - : 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
     - {{domxref("Document.createElement()")}} メソッドの "is" オプション
       - : カスタム組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
@@ -90,7 +90,7 @@ l10n:
   - : カスタム要素に関連する擬似要素です。
 
     - {{cssxref("::part")}}
-      - : [シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つものを表します。
+      - : [シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes/part) 属性を持つものを表します。
 
 ### シャドウ DOM
 

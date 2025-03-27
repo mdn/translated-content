@@ -16,7 +16,7 @@ l10n:
 
 セキュリティ上の理由から、ユーザーエージェントによって値が制御される{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}がいくつかあります。フロントエンドの JavaScript コードからこれらのヘッダーの値を設定しようとすると、警告やエラーなしに無視されます。
 
-さらに、 HTTP の [`Authorization`](/ja/docs/Web/HTTP/Headers/Authorization) ヘッダーをリクエストに追加することができますが、そのリクエストがオリジン間でリダイレクトされたときには削除されます。
+さらに、 HTTP の [`Authorization`](/ja/docs/Web/HTTP/Reference/Headers/Authorization) ヘッダーをリクエストに追加することができますが、そのリクエストがオリジン間でリダイレクトされたときには削除されます。
 
 > [!NOTE]
 > カスタムフィールドについては、ドメインをまたがってリクエストを行うと、 "**not allowed by Access-Control-Allow-Headers in preflight response**" の例外に遭遇することがあります。

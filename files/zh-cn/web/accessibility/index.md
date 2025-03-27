@@ -46,4 +46,4 @@ MDN [无障碍学习区](/zh-CN/docs/Learn_web_development/Core/Accessibility)�
 ## 参见
 
 - [WAI 兴趣组](https://www.w3.org/WAI/about/groups/waiig/)
-- [开发者指南](/zh-CN/docs/Web/Guide)
+- [开发者指南](/zh-CN/docs/MDN/Guides)

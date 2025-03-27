@@ -21,9 +21,9 @@ l10n:
 - `action`
   - : ウェブ共有先の URL です。
 - `enctype` {{Optional_Inline}}
-  - : [`POST`](/ja/docs/Web/HTTP/Methods/POST) リクエストが用いられる場合の、共有データのエンコーディングです。[`GET`](/ja/docs/Web/HTTP/Methods/GET) リクエストでは無視されます。
+  - : [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) リクエストが用いられる場合の、共有データのエンコーディングです。[`GET`](/ja/docs/Web/HTTP/Reference/Methods/GET) リクエストでは無視されます。
 - `method` {{Optional_Inline}}
-  - : 使用する [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)です。[`GET`](/ja/docs/Web/HTTP/Methods/GET) または [`POST`](/ja/docs/Web/HTTP/Methods/POST) のいずれかを指定します。共有されるデータが画像などのバイナリーデータを含むか、対象のアプリケーションに変化を起こす (例えば、ブックマークなどのデータを生成する) 場合、`POST` を指定してください。
+  - : 使用する [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)です。[`GET`](/ja/docs/Web/HTTP/Reference/Methods/GET) または [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) のいずれかを指定します。共有されるデータが画像などのバイナリーデータを含むか、対象のアプリケーションに変化を起こす (例えば、ブックマークなどのデータを生成する) 場合、`POST` を指定してください。
 - `params`
   - : 共有の引数を設定するオブジェクトです。このオブジェクトのキーは [`navigator.share()` における `data` オブジェクト](/ja/docs/Web/API/Navigator/share#%E5%BC%95%E6%95%B0)に対応します。以下の値が指定でき、クエリー引数として用いられます。
     - `title` {{Optional_Inline}}: 共有される文書のタイトル用のクエリー引数の名前です。
@@ -65,7 +65,7 @@ const sharedLink = url.searchParams.get("link");
 
 ### 共有されたデータを POST で受け取る
 
-共有の要求が一つまたは複数のファイルを含むか、アプリケーションに副作用を及ぼす場合、 HTTP の [`POST`](/ja/docs/Web/HTTP/Methods/POST) メソッドを使用するべきです。例えば、アプリケーションが処理対象の画像を受け取ったり、共有されたリンクをブックマークとしてデータベースに保存する場合が該当します。
+共有の要求が一つまたは複数のファイルを含むか、アプリケーションに副作用を及ぼす場合、 HTTP の [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) メソッドを使用するべきです。例えば、アプリケーションが処理対象の画像を受け取ったり、共有されたリンクをブックマークとしてデータベースに保存する場合が該当します。
 
 ```json
 {
@@ -105,7 +105,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-処理後、ユーザーがページを再読み込みした場合などに `POST` リクエストが複数回送られるのを防ぐため、この `POST` リクエストには HTTP の [303 See Other](/ja/docs/Web/HTTP/Status/303) リダイレクトで応答するべきです。
+処理後、ユーザーがページを再読み込みした場合などに `POST` リクエストが複数回送られるのを防ぐため、この `POST` リクエストには HTTP の [303 See Other](/ja/docs/Web/HTTP/Reference/Status/303) リダイレクトで応答するべきです。
 
 ### 共有されたファイルを受け取る
 

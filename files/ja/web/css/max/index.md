@@ -5,7 +5,7 @@ slug: Web/CSS/max
 
 {{CSSRef}}
 
-**`max()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最大の (最も正である) 値を設定できます。 `max()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。
+**`max()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最大の (最も正である) 値を設定できます。 `max()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。
 
 {{InteractiveExample("CSS Demo: max()")}}
 
@@ -95,7 +95,7 @@ small {
 
 これにより、ページが拡大縮小されたときにテキストの大きさが拡大縮小され、最小サイズは _1rem_ になります。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 仕様書
@@ -111,4 +111,4 @@ small {
 - {{CSSxRef("calc()", "calc()")}}
 - {{CSSxRef("clamp()", "clamp()")}}
 - {{CSSxRef("min()", "min()")}}
-- [CSS 値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

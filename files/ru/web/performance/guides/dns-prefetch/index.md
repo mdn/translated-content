@@ -39,9 +39,9 @@ slug: Web/Performance/Guides/dns-prefetch
 
 Необходимо учитывать 3 вещи:
 
-**Во-первых,** `dns-prefetch` эффективен только для выполнения DNS запросов на сторонние [cross-origin](/ru/docs/Web/HTTP/CORS) домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.
+**Во-первых,** `dns-prefetch` эффективен только для выполнения DNS запросов на сторонние [cross-origin](/ru/docs/Web/HTTP/Guides/CORS) домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.
 
-**Во-вторых,** существует возможность добавить `dns-prefetch` (и другие подсказки) как [HTTP заголовок](/ru/docs/Web/HTTP/Headers) с помощью [HTTP Link field](/ru/docs/Web/HTTP/Headers/Link):
+**Во-вторых,** существует возможность добавить `dns-prefetch` (и другие подсказки) как [HTTP заголовок](/ru/docs/Web/HTTP/Reference/Headers) с помощью [HTTP Link field](/ru/docs/Web/HTTP/Headers/Link):
 
 ```
 Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
@@ -66,6 +66,6 @@ Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
 - [\<link>](/ru/docs/Web/HTML/Element/link)
 - [HTML атрибут: rel](/ru/docs/Web/HTML/Attributes/rel)
 - [crossorigin](/ru/docs/Web/HTML/Attributes/crossorigin)
-- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/CORS)
-- [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
+- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
+- [HTTP заголовки](/ru/docs/Web/HTTP/Reference/Headers)
 - [HTTP заголовок Link](/ru/docs/Web/HTTP/Headers/Link)

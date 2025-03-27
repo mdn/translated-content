@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<color-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{CSSXref("&lt;color&gt;")}} 値間の補間に使用する色空間を表します。これを使用すると、 {{CSSXref("color_value/color-mix", "color-mix()")}} や {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} のような色関連の関数記法における既定の補間色空間を上書きすることができます。
+**`<color-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{CSSXref("&lt;color&gt;")}} 値間の補間に使用する色空間を表します。これを使用すると、 {{CSSXref("color_value/color-mix", "color-mix()")}} や {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} のような色関連の関数記法における既定の補間色空間を上書きすることができます。
 
 `<color>` 値を補間する場合、補間色空間は Oklab が既定値です。
 

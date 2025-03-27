@@ -33,5 +33,5 @@ l10n:
 
 ## 같이 보기
 
-- [기본 네이티브 양식 컨트롤](/ko/docs/Learn/Forms/Basic_native_form_controls)
+- [기본 네이티브 양식 컨트롤](/ko/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [양식 데이터 제출하기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data)

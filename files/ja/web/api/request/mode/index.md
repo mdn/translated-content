@@ -28,7 +28,7 @@ l10n:
 
 - `cors`
 
-  - : このリクエストがオリジン間リクエストであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) の仕組みを使用します。
+  - : このリクエストがオリジン間リクエストであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) の仕組みを使用します。
 
 - `navigate`
 
@@ -62,5 +62,5 @@ const myMode = myRequest.mode; // 既定では "cors" を返す
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

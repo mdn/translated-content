@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border`** は [一括指定](/ja/docs/Web/CSS/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
+**`border`** は [一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
 {{InteractiveExample("CSS Demo: border")}}
 
@@ -96,7 +96,7 @@ border: unset;
 
 ## 解説
 
-他の一括指定プロパティと同様、省略された部分値は[初期値](/ja/docs/Web/CSS/initial_value)に設定されます。重要なことですが、 `border` は {{cssxref("border-image")}} のカスタム値を指定することができず、初期値、つまり `none` に設定します。
+他の一括指定プロパティと同様、省略された部分値は[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)に設定されます。重要なことですが、 `border` は {{cssxref("border-image")}} のカスタム値を指定することができず、初期値、つまり `none` に設定します。
 
 `border` による一括指定は、四辺をすべて同じに設定したい場合に特に便利です。しかし、それぞれが異なる場合は、それぞれの辺に異なる値を設定できる個別指定の {{cssxref("border-width")}}、 {{cssxref("border-style")}}、 {{cssxref("border-color")}} プロパティを使用してください。他に、一度に一つの境界線を対象とした、物理的 ({{cssxref("border-top")}} など) や論理的 ({{cssxref("border-block-start")}} など) な境界線プロパティを使用することもできます。
 

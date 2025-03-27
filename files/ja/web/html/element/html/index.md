@@ -79,11 +79,11 @@ l10n:
 
 ## アクセシビリティの考慮
 
-HTML では `<html>` 要素の開始タグと終了タグを指定する必要はありませんが、ウェブページの [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) を指定できるようにするために、作者はこれを指定することが重要です。 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} に従った有効な言語タグを持つ `lang` 属性を `<html>` 要素に提供すれば、画面の内側へアナウンスするための適切な言語を決定するのに役立ちます。識別言語タグは、ページのコンテンツの大部分で使用されている言語を記述する必要があります。これがないと、画面の内側へ、通常、オペレーティングシステムの設定された言語が既定値として適用され、誤読が発生する可能性があります。
+HTML では `<html>` 要素の開始タグと終了タグを指定する必要はありませんが、ウェブページの [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) を指定できるようにするために、作者はこれを指定することが重要です。 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} に従った有効な言語タグを持つ `lang` 属性を `<html>` 要素に提供すれば、画面の内側へアナウンスするための適切な言語を決定するのに役立ちます。識別言語タグは、ページのコンテンツの大部分で使用されている言語を記述する必要があります。これがないと、画面の内側へ、通常、オペレーティングシステムの設定された言語が既定値として適用され、誤読が発生する可能性があります。
 
 `<html>` 要素に妥当な `lang` を設定することで、ページで {{HTMLElement("head")}} に含まれる {{HTMLElement("title")}} などの重要なメタデータについても、正しくアナウンスすることができます。
 
-- [MDN "WCAG を理解する ― ガイドライン 3.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
+- [MDN "WCAG を理解する ― ガイドライン 3.1 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [Understanding Success Criterion 3.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 
 ## 仕様書

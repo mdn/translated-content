@@ -101,7 +101,7 @@ filter: unset;
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-你可以使用 `url()` 来引用 [SVG 滤镜元素](/zh-CN/docs/Web/SVG/Element/filter)。可以使用如下语法引用 SVG {{SVGElement("filter")}} 元素：
+你可以使用 `url()` 来引用 [SVG 滤镜元素](/zh-CN/docs/Web/SVG/Reference/Element/filter)。可以使用如下语法引用 SVG {{SVGElement("filter")}} 元素：
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -286,4 +286,4 @@ img:nth-of-type(2) {
 - CSS [合成和混合](/zh-CN/docs/Web/CSS/CSS_compositing_and_blending)模块，包括 CSS {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
 - CSS {{cssxref("mask")}} 属性
 - [SVG](/zh-CN/docs/Web/SVG)，包括 SVG {{SVGElement("filter")}} 元素以及 SVG {{SVGAttr("filter")}} 属性。
-- [将 SVG 效果应用于 HTML 内容](/zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [将 SVG 效果应用于 HTML 内容](/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

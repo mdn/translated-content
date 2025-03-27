@@ -105,7 +105,7 @@ console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
 ```
 
 > [!NOTE]
-> 유사 Set 프로토콜은 요소를 생성하기 위해 [`[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) 대신 `keys()` 메서드를 호출합니다. 이는 맵의 경우 반복자는 entries를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 Set 객체로 만들기 위해서입니다.
+> 유사 Set 프로토콜은 요소를 생성하기 위해 [`[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) 대신 `keys()` 메서드를 호출합니다. 이는 맵의 경우 반복자는 entries를 생성하지만 `has()` 메서드는 keys를 취하기 때문에 맵을 유효한 유시 Set 객체로 만들기 위해서입니다.
 
 [배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)은 `has()` 메서드나 `size` 속성이 없고 `keys()` 메서드가 요소 대신 인덱스를 생성하기 때문에 유사 Set이 아닙니다. {{jsxref("WeakSet")}} 객체 역시 `keys()` 메서드가 없기 때문에 유사 Set이 아닙니다.
 
@@ -197,7 +197,7 @@ interface GPUSupportedFeatures {
   - : 하나의 Set을 받아 이 Set과 주어진 Set 모두 혹은 하나만 속해있는 요소가 들어있는 새로운 Set을 반환합니다.
 - {{jsxref("Set.prototype.values()")}}
   - : `Set`객체 내의 각 요소의 값을 삽입 순서대로 yield하는 새로운 반복자 객체를 리턴합니다.
-- [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : `Set` 객체 내의 각 요소를 삽입 순서대로 yield하는 새로운 반복자 객체를 반환합니다.
 
 ## 예제

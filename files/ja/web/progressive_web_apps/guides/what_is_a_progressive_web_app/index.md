@@ -75,14 +75,14 @@ PWA はウェブサイトなので、他にもウェブサイトと同じ基本�
 
 それに加えて、PWA にはいくつかの追加機能があります。
 
-- [ウェブアプリマニフェスト](/ja/docs/Web/Manifest)ファイル。少なくとも、ブラウザーが PWA をインストールするために必要な情報（アプリ名やアイコンなど）を提供します。
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest)ファイル。少なくとも、ブラウザーが PWA をインストールするために必要な情報（アプリ名やアイコンなど）を提供します。
 - オプションとして、オフライン操作を提供する[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)。
 
 #### ウェブアプリマニフェスト
 
 PWA にはウェブアプリマニフェストが必要であり、[マニフェストにはブラウザーが PWA をインストールするのに十分な情報が記載されていなければなりません](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)。
 
-マニフェストでは、PWA の外見に関するその他の多くの側面を定義することができます。例えば[テーマ色](/ja/docs/Web/Manifest/theme_color)や[背景色](/ja/docs/Web/Manifest/background_color)、他のアプリからのデータの[共有対象として機能](/ja/docs/Web/Manifest/share_target)する機能や、[特定のファイル形式を処理](/ja/docs/Web/Manifest/file_handlers)する機能などです。
+マニフェストでは、PWA の外見に関するその他の多くの側面を定義することができます。例えば[テーマ色](/ja/docs/Web/Progressive_web_apps/Manifest/theme_color)や[背景色](/ja/docs/Web/Progressive_web_apps/Manifest/background_color)、他のアプリからのデータの[共有対象として機能](/ja/docs/Web/Progressive_web_apps/Manifest/share_target)する機能や、[特定のファイル形式を処理](/ja/docs/Web/Progressive_web_apps/Manifest/file_handlers)する機能などです。
 
 #### サービスワーカー
 

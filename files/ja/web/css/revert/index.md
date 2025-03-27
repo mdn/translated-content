@@ -20,11 +20,11 @@ l10n:
 revert は、リセットした要素の子に適用されているルールには影響しません（ただし、子に対する親のルールの効果は除去されます）。つまり、すべてのセクションに `color: green` を設定し、特定のセクションに `all: revert` を設定した場合、そのセクションの色は黒になります。しかし、すべての段落を赤にするルールがある場合、すべての段落はすべてのセクションで赤のままです。
 
 > [!NOTE]
-> revert は単なる値です。 `revert` の値は[詳細度](/ja/docs/Web/CSS/Specificity)を使用して上書きすることができます。
+> revert は単なる値です。 `revert` の値は[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)を使用して上書きすることができます。
 
-> **メモ:** `revert` キーワードは {{cssxref("initial")}} キーワードとは異なりますし、混同しないでください。これは CSS の仕様書でプロパティごとに定義された[初期値](/ja/docs/Web/CSS/initial_value)です。それに対して、既定値はユーザーエージェントのスタイルシートが CSS セレクターに基づいて定義しています。
+> **メモ:** `revert` キーワードは {{cssxref("initial")}} キーワードとは異なりますし、混同しないでください。これは CSS の仕様書でプロパティごとに定義された[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)です。それに対して、既定値はユーザーエージェントのスタイルシートが CSS セレクターに基づいて定義しています。
 >
-> 例えば、 [`display`](/ja/docs/Web/CSS/display#公式定義) プロパティの[初期値](/ja/docs/Web/CSS/initial_value)は `inline` ですが、普通のユーザーエージェントスタイルシートは、 {{cssxref("display")}} の既定値を {{HTMLElement("div")}} では `block`、 {{HTMLElement("table")}} では `table` というように設定します。
+> 例えば、 [`display`](/ja/docs/Web/CSS/display#公式定義) プロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)は `inline` ですが、普通のユーザーエージェントスタイルシートは、 {{cssxref("display")}} の既定値を {{HTMLElement("div")}} では `block`、 {{HTMLElement("table")}} では `table` というように設定します。
 
 ## 例
 

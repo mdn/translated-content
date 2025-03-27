@@ -1,7 +1,6 @@
 ---
 title: Цветовой контраст
 slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 ---
 
 {{AccessibilitySidebar}}
@@ -47,5 +46,5 @@ original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 
 ## Смотрите также
 
-- [Цвет и цветовой контраст](/ru/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
+- [Цвет и цветовой контраст](/ru/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
 - [Понимание нетекстового контраста](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

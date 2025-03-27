@@ -74,5 +74,5 @@ http://searchfox.org/mozilla-central/rev/48ea452803907f2575d81021e8678634e8067fc
 ## 같이 보기
 
 - [Web에서 리소스를 식별하기](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-- [URL이란 무엇인가?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [URL이란 무엇인가?](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [IANA URI 체계 목록](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:`은 [이곳에서 다룹니다](https://www.iana.org/assignments/uri-schemes/prov/resource))

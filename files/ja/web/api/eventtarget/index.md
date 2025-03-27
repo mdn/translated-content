@@ -41,5 +41,5 @@ l10n:
 ## 関連情報
 
 - [イベントリファレンス](/ja/docs/Web/Events) - プラットフォームで利用可能なイベント。
-- [イベント開発者ガイド](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [イベント開発者ガイド](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} インターフェイス

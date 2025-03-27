@@ -58,7 +58,7 @@ slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 Убедитесь, что вы использовали изображения, соответствующие ссылкам.
 
 > [!NOTE]
-> Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#useful_developer_tools).
+> Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/ru/docs/Web/HTML/Responsive_images#useful_developer_tools).
 
 ### Искусственно изменённая красная панда
 

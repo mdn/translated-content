@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Deployment
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-당신은 이제 놀라운 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트를 (테스트도 마치고) 만들었으니, 도서관 스태프나 회원들이 인터넷을 통해 이용할 수 있도록 공개된 웹 서버에 설치하길 원할 것이다. 이번 장에서는 웹사이트를 배포할수 있는 호스트를 살펴보는 방법에 대한 개요와 사이트를 실제 운운영하기위해 필요한 것들에 대해 설명한다.
+당신은 이제 놀라운 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 웹사이트를 (테스트도 마치고) 만들었으니, 도서관 스태프나 회원들이 인터넷을 통해 이용할 수 있도록 공개된 웹 서버에 설치하길 원할 것이다. 이번 장에서는 웹사이트를 배포할수 있는 호스트를 살펴보는 방법에 대한 개요와 사이트를 실제 운운영하기위해 필요한 것들에 대해 설명한다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -90,7 +90,7 @@ Django에 대한 지원이 활발하게 이루어지거나 Django가 잘 동작�
 
 ## 웹사이트에서 공개(publish)준비 하기
 
-django-admin과 manage.py 도구로 생성된 [Django 뼈대 웹사이트](/ko/docs/Learn/Server-side/Django/skeleton_website)는 개발환경에 최적화 되어 설정되었다. 개발환경이 아닌 운영환경에서는 ( **settings.py**에 설정되어 있는 ) Django 프로젝트 설정의 많은 부분이, 보안상 혹은 성능상 이유로, 변경되어야 한다.
+django-admin과 manage.py 도구로 생성된 [Django 뼈대 웹사이트](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)는 개발환경에 최적화 되어 설정되었다. 개발환경이 아닌 운영환경에서는 ( **settings.py**에 설정되어 있는 ) Django 프로젝트 설정의 많은 부분이, 보안상 혹은 성능상 이유로, 변경되어야 한다.
 
 > **참고:** **한가지 팁:** 운영환경용으로 별도의 **settings.py** 파일을 유지하고 민감한 설정들은 별도의 파일이나 시스템의 환경변수에 저장하는 것이 일반적이다. 소스코드의 다른 부분은 공개된 저장소에 보관하더라도, 이 파일은 격리되어 보호되어야 한다.
 
@@ -302,7 +302,7 @@ web: gunicorn locallibrary.wsgi --log-file -
 
 개발기간중에는 LocalLibrary 어플리케이션을 서비스하기 위해 Gunicorn을 필요로 하진 않겠지만, Heroku에서 원격 서버를 셋업하기 위한 [요구조건](#requirements) 의 일부이므로 Gunicorn을 설치할 것이다.
 
-아래와 같이 커맨드라인에서 pip를 이용하여 _Gunicorn_ 설치한다 (pip는 [개발 환경 구축하기](/ko/docs/Learn/Server-side/Django/development_environment) 단계에서 설치했다):
+아래와 같이 커맨드라인에서 pip를 이용하여 _Gunicorn_ 설치한다 (pip는 [개발 환경 구축하기](/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment) 단계에서 설치했다):
 
 ```bash
 pip3 install gunicorn
@@ -365,7 +365,7 @@ Django 웹 어플리케이션으로부터 분리하여 정적파일을 쉽게 �
 
 관련 설정 변수는 다음과 같다:
 
-- `STATIC_URL`: 이것은 베이스 URL 위치인데 이곳에서 정적 파일들이 지원된다. 예를 들면 CDN과 같은곳이다. 베이스 템플릿에서 접근하는 정적 템플릿 변수에 사용된다. ( [Django 튜토리얼 파트 5: 홈페이지 작성하기](/ko/docs/Learn/Server-side/Django/Home_page) 를 참고하라).
+- `STATIC_URL`: 이것은 베이스 URL 위치인데 이곳에서 정적 파일들이 지원된다. 예를 들면 CDN과 같은곳이다. 베이스 템플릿에서 접근하는 정적 템플릿 변수에 사용된다. ( [Django 튜토리얼 파트 5: 홈페이지 작성하기](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Home_page) 를 참고하라).
 - `STATIC_ROOT`: 이것은 Django의 "collectstatic" 도구로 템플릿에서 참조하는 모든 정적 파일을 모집하는 디렉토리로 가는 절대 경로이다. 일단 수집되면, 이것들은 파일이 어떤곳에서 호스팅되든지 단체로 업로드 될 수 있다.
 - `STATICFILES_DIRS`: 이것은 Django의 colletstatic 도구가 정적 파일을 탐색할 추가적인 디렉토리를 나열한다.
 

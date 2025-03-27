@@ -145,7 +145,7 @@ HTTP 메시지의 두 가지 타입인 요청(requests)과 응답(responses)은 
 
 ![HTTP 요청](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
-- HTTP [메서드](/ko/docs/Web/HTTP/Methods), 보통 클라이언트가 수행하고자 하는 동작을 정의한 {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 같은 동사나 {{HTTPMethod("OPTIONS")}}나 {{HTTPMethod("HEAD")}}와 같은 명사입니다. 일반적으로, 클라이언트는 리소스를 가져오거나(`GET`을 사용하여) [HTML 폼](/ko/docs/Learn/Forms)의 데이터를 전송(`POST`를 사용하여)하려고 하지만, 다른 경우에는 다른 동작이 요구될 수도 있습니다.
+- HTTP [메서드](/ko/docs/Web/HTTP/Methods), 보통 클라이언트가 수행하고자 하는 동작을 정의한 {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 같은 동사나 {{HTTPMethod("OPTIONS")}}나 {{HTTPMethod("HEAD")}}와 같은 명사입니다. 일반적으로, 클라이언트는 리소스를 가져오거나(`GET`을 사용하여) [HTML 폼](/ko/docs/Learn_web_development/Extensions/Forms)의 데이터를 전송(`POST`를 사용하여)하려고 하지만, 다른 경우에는 다른 동작이 요구될 수도 있습니다.
 - 가져오려는 리소스의 경로; 예를 들면 {{glossary("protocol", "프로토콜")}} (`http://`), {{glossary("domain", "도메인")}} (여기서는 `developer.mozilla.org`), 또는 TCP {{glossary("port", "포트")}} (여기서는 `80`)인 요소들을 제거한 리소스의 URL입니다.
 - HTTP 프로토콜의 버전.
 - 서버에 대한 추가 정보를 전달하는 선택적 [헤더들](/ko/docs/Web/HTTP/Headers).

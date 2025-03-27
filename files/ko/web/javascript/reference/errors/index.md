@@ -11,7 +11,7 @@ l10n:
 
 웹 콘솔에 표시되는 오류에는 코드의 문제를 빠르게 이해할 수 있도록 아래 해당 페이지로 연결되는 링크가 포함될 수 있습니다.
 
-JavaScript 오류 수정에 대한 초보자용 입문 튜토리얼은 [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)을 참조하세요.
+JavaScript 오류 수정에 대한 초보자용 입문 튜토리얼은 [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn_web_development/Core/Scripting/What_went_wrong)을 참조하세요.
 
 ## 오류 목록
 

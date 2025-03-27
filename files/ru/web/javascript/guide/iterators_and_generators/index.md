@@ -68,7 +68,7 @@ console.log(it.next().value); // 2
 
 Объект является итерируемым, если в нем определён способ перебора значений, то есть, например, как значения перебираются в конструкции {{jsxref("Statements/for...of", "for..of")}}. Некоторые встроенные типы, такие как {{jsxref("Array")}} или {{jsxref("Map")}}, по умолчанию являются итерируемыми, в то время как другие типы, как, например, {{jsxref("Object")}}, таковыми не являются.
 
-Чтобы быть итерируемым, объект обязан реализовать метод **@@iterator**, что означает, что он (или один из объектов выше по [цепочке прототипов](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) обязан иметь свойство с именем {{jsxref("Symbol.iterator")}}:
+Чтобы быть итерируемым, объект обязан реализовать метод **@@iterator**, что означает, что он (или один из объектов выше по [цепочке прототипов](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) обязан иметь свойство с именем {{jsxref("Symbol.iterator")}}:
 
 ### Пользовательские итерируемые объекты
 
@@ -90,7 +90,7 @@ myIterable[Symbol.iterator] = function* () {
 
 ### Синтаксис для итерируемых объектов
 
-Некоторые выражения работают с итерируемыми объектами, например, [`for-of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) циклы, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`yield*`](/ru/docs/Web/JavaScript/Reference/Operators/yield*), и [destructuring assignment](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Некоторые выражения работают с итерируемыми объектами, например, [`for-of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) циклы, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`yield*`](/ru/docs/Web/JavaScript/Reference/Operators/yield*), и [destructuring assignment](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```js
 for (let value of ["a", "b", "c"]) {

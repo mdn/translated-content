@@ -19,4 +19,4 @@ Webkit は Apple の商標であり、BSD ライセンスの下にあるフレ�
 
 ### 技術リファレンス
 
-- [WebKit CSS 拡張](/ja/docs/Web/CSS/Webkit_Extensions)
+- [WebKit CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)

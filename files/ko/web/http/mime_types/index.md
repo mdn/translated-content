@@ -93,7 +93,7 @@ multipart 타입은 여러 컴포넌트 조각으로 구성된 문서를 나타�
 
 **Multipart** 타입은 일반적으로 다른 MIME 타입들을 지닌 개별적인 파트들로 나누어지는 문서의 그룹을 나타냅니다. 종종 MIME 타입이 다른 부분은 특히 이메일 시나리오(모두 동일한 파일의 일부이며 여러 개의 각각의 파일을 나타냄(**복합 문서**를 의미))에서도 사용할 수 있습니다.
 
-[HTML Forms](/ko/docs/Learn/Forms) 의 {{HTTPMethod("POST")}} 메서드에서 사용되는 `multipart/form-data`와 문서 일부분을 보내기 위해 {{HTTPStatus("206")}} `Partial Content`를 사용하는 `multipart/byteranges`를 제외하면, HTTP는 다중부분 문서를 특별한 방식으로 처리하지 않습니다. 메시지가 브라우저로 전송됩니다(아마도 문서를 표시하는 방법을 모르는 경우 '다른 이름으로 저장'창을 표시함).
+[HTML Forms](/ko/docs/Learn_web_development/Extensions/Forms) 의 {{HTTPMethod("POST")}} 메서드에서 사용되는 `multipart/form-data`와 문서 일부분을 보내기 위해 {{HTTPStatus("206")}} `Partial Content`를 사용하는 `multipart/byteranges`를 제외하면, HTTP는 다중부분 문서를 특별한 방식으로 처리하지 않습니다. 메시지가 브라우저로 전송됩니다(아마도 문서를 표시하는 방법을 모르는 경우 '다른 이름으로 저장'창을 표시함).
 
 2개의 다중부분 타입이 있습니다.
 
@@ -216,7 +216,7 @@ WebP (`image/webp`) 추가에 대한 논의가 있지만 새로운 타입의 이
 
 ### `multipart/form-data`
 
-`multipart/form-data`은 브라우저에서 서버로 완성된 [HTML Form](/ko/docs/Learn/Forms)의 내용을 전송 시 사용할 수 있습니다.
+`multipart/form-data`은 브라우저에서 서버로 완성된 [HTML Form](/ko/docs/Learn_web_development/Extensions/Forms)의 내용을 전송 시 사용할 수 있습니다.
 
 다중부분 문서 형식으로써, 경계(이중 대시 `'--'` 로 시작되는 문자열)로 구분되어지는 다른 파트들로 구성됩니다. 각 파트는 그 자체로 개체이며 자신만의 HTTP 헤더를 가지는데, 파일 업로드 필드를 위한 헤더로는 {{HTTPHeader("Content-Disposition")}}, {{HTTPHeader("Content-Type")}}이 있습니다.
 

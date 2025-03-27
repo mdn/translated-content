@@ -53,7 +53,7 @@ label {
 
 - `accept` {{deprecated_inline}}
 
-  - : 伺服器接受的逗號分隔的[內容類型](/zh-TW/docs/Web/SVG/Content_type)。
+  - : 伺服器接受的逗號分隔的[內容類型](/zh-TW/docs/Web/SVG/Guides/Content_type)。
 
     > **備註：** **此屬性已被廢棄，不應再使用**。請改用 `<input type=file>` 元素上的 [`accept`](/zh-TW/docs/Web/HTML/Element/input#accept) 屬性。
 
