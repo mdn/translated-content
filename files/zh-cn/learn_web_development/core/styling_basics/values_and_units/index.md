@@ -845,9 +845,7 @@ CSS 支持[数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Func
 
 {{EmbedLiveSample("calc")}}
 
-CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs/Web/CSS/min)、[`max()`](/zh-CN/docs/Web/CSS/max) 和 [`clamp()`](/zh-CN/docs/Web/CSS/clamp)；它们分别允许你从一组值中选择最小、最大或中间值。
-你还可以使用 [三角函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0)，例如 [`sin()`](/zh-CN/docs/Web/CSS/sin)、[`cos()`](/zh-CN/docs/Web/CSS/cos) 和 [`tan()`](/zh-CN/docs/Web/CSS/tan)，来计算围绕某点旋转元素的角度，或选择以 [色相角度](/zh-CN/docs/Web/CSS/hue) 作为参数的颜色。
-[指数函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#exponential_functions) 也可用于动画和过渡，当你需要对某物的移动和外观进行非常精细的控制时。
+CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs/Web/CSS/min)、[`max()`](/zh-CN/docs/Web/CSS/max) 和 [`clamp()`](/zh-CN/docs/Web/CSS/clamp)；它们分别允许你从一组值中选择最小、最大或中间值。你还可以使用[三角函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#三角函数)，例如 [`sin()`](/zh-CN/docs/Web/CSS/sin)、[`cos()`](/zh-CN/docs/Web/CSS/cos) 和 [`tan()`](/zh-CN/docs/Web/CSS/tan)，来计算围绕某点旋转元素的角度，或选择以[色相角度](/zh-CN/docs/Web/CSS/hue)作为参数的颜色。当你需要对某物的移动和外观进行非常精细的控制时，[指数函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#指数函数)也可用于动画和过渡。
 
 了解 CSS 函数非常有用，这样当你看到它们时就能识别出来。你应该开始在项目中尝试使用它们 —— 它们将帮助你避免编写自定义或重复的代码来实现你可以通过常规 CSS 获得的结果。
 
