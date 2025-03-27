@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 {{InteractiveExample("JavaScript Demo: Date.setMonth()")}}
 
 ```js interactive-example
-const event = new Date('August 19, 1975 23:15:30');
+const event = new Date("August 19, 1975 23:15:30");
 
 event.setMonth(3);
 

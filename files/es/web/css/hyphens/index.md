@@ -21,7 +21,7 @@ hyphens: auto;
 
 ```html interactive-example
 <section id="default-example">
-<p id="example-element">An extra­ordinarily long English word!</p>
+  <p id="example-element">An extra­ordinarily long English word!</p>
 </section>
 ```
 

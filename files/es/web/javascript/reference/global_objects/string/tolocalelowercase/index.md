@@ -8,12 +8,12 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 {{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
 
 ```js interactive-example
-const dotted = 'İstanbul';
+const dotted = "İstanbul";
 
-console.log(`EN-US: ${dotted.toLocaleLowerCase('en-US')}`);
+console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
 // Expected output: "i̇stanbul"
 
-console.log(`TR: ${dotted.toLocaleLowerCase('tr')}`);
+console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
 // Expected output: "istanbul"
 ```
 

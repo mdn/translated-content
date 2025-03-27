@@ -10,7 +10,7 @@ El método **`match()`** devuelve todas las ocurrencias de una [expresión regul
 {{InteractiveExample("JavaScript Demo: String.match()", 'shorter')}}
 
 ```js interactive-example
-const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const paragraph = "The quick brown fox jumps over the lazy dog. It barked.";
 const regex = /[A-Z]/g;
 const found = paragraph.match(regex);
 
