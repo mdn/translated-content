@@ -316,7 +316,7 @@ p {
 </p>
 ```
 
-{{EmbedLiveSample("line_height_units", "100%", "370")}}
+{{EmbedLiveSample("行高单位", "100%", "370")}}
 
 ### 百分比
 
