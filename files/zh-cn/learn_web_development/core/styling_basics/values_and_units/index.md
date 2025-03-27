@@ -266,7 +266,7 @@ html {
 
 `lh` 和 `rlh` 是类似于 `em` 和 `rem` 的相对长度单位。`lh` 和 `rlh` 的区别在于，前者是相对于元素自身的行高，而后者是相对于根元素（通常是 `<html>`）的行高。
 
-使用这些单位，我们可以将盒子的装饰与文本精确对齐。在此示例中，我们通过用 [`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient)的方法，使用 `lh` 单位创建类似记事本的线条。无论文本的行高是多少，线条始终会从正确的位置开始。
+使用这些单位，我们可以将盒子的装饰与文本精确对齐。在此示例中，我们通过用 [`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient) 的方法，使用 `lh` 单位创建类似记事本的线条。无论文本的行高是多少，线条始终会从正确的位置开始。
 
 ```css hidden
 body {
