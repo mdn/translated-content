@@ -30,10 +30,10 @@ l10n:
 > ```
 >
 > - **title**
->   - : El título que se muestra en la parte superior de la página. Debe tener el formato _NombreDeLaCabecera_. Por ejemplo, la cabecera [Cache-Control](/es/docs/Web/HTTP/Headers/Cache-Control) tiene un _título_ de `Cache-Control`.
+>   - : El título que se muestra en la parte superior de la página. Debe tener el formato _NombreDeLaCabecera_. Por ejemplo, la cabecera [Cache-Control](/es/docs/Web/HTTP/Reference/Headers/Cache-Control) tiene un _título_ de `Cache-Control`.
 > - **slug**
 >   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](/es/docs/Web/HTTP/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
+>     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](/es/docs/Web/HTTP/Reference/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
 > - **page-type**
 >   - : Para cabeceras HTTP, debe ser `http-header`. Para otros valores HTTP de `page-type`, consulte la [sección HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) de la documentación para el metadato `page-type`.
 > - **status**

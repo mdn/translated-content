@@ -60,10 +60,10 @@ name=Juan%20Garcia&request=Envieme%20uno%20de%20sus%20catalogos
 
 ### Métodos de peticiones
 
-HTTP define un conjunto de [métodos de peticiones](/es/docs/Web/HTTP/Methods) en los que se indican las acciones que se piden realizar al recibir un conjunto de datos. A pesar de que pueden referirse como 'nombres', estos métodos de petición, son denominados a veces como 'verbos' de HTTP. La peticiones más comunes son `GET` y `POST`:
+HTTP define un conjunto de [métodos de peticiones](/es/docs/Web/HTTP/Reference/Methods) en los que se indican las acciones que se piden realizar al recibir un conjunto de datos. A pesar de que pueden referirse como 'nombres', estos métodos de petición, son denominados a veces como 'verbos' de HTTP. La peticiones más comunes son `GET` y `POST`:
 
 - El método {{HTTPMethod("GET")}} hace una petición de un recurso específico. Las peticiones con `GET` unicamente hacen peticiones de datos.
-- El método {{HTTPMethod("POST")}} envía datos al servidor de manera que este pueda cambiar su estado. Este es el método usado normalmente para enviar los datos de un [formulario HTML](/es/docs/Learn/Forms).
+- El método {{HTTPMethod("POST")}} envía datos al servidor de manera que este pueda cambiar su estado. Este es el método usado normalmente para enviar los datos de un [formulario HTML](/es/docs/Learn_web_development/Extensions/Forms).
 
 ## Estructura de la respuesta del servidor
 
@@ -134,7 +134,7 @@ Content-Type: text/html
 
 ### Códigos de estado de las respuestas
 
-Los [códigos de estado de las respuestas](/es/docs/Web/HTTP/Status) indican si una petición HTTP ha sido finalizada correctamente. Las respuestas se agrupan en cinco clases: respuestas informativas, respuestas de finalización correcta, redirecciones, errores del cliente y errores del servidor.
+Los [códigos de estado de las respuestas](/es/docs/Web/HTTP/Reference/Status) indican si una petición HTTP ha sido finalizada correctamente. Las respuestas se agrupan en cinco clases: respuestas informativas, respuestas de finalización correcta, redirecciones, errores del cliente y errores del servidor.
 
 - {{HTTPStatus(200)}}: OK. La petición ha sido procesada correctamente
 - {{HTTPStatus(301)}}: Datos movidos permanentemente. Este código de respuesta indica que la URI de los datos pedidos ha cambiado.
@@ -143,6 +143,6 @@ Los [códigos de estado de las respuestas](/es/docs/Web/HTTP/Status) indican si 
 ## Vea también
 
 - [Identificación de recursos en la Web](/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-- [Cabeceras HTTP](/es/docs/Web/HTTP/Headers)
-- [Métodos de petición HTTP](/es/docs/Web/HTTP/Methods)
-- [Códigos de estados de respuesta HTTP](/es/docs/Web/HTTP/Status)
+- [Cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers)
+- [Métodos de petición HTTP](/es/docs/Web/HTTP/Reference/Methods)
+- [Códigos de estados de respuesta HTTP](/es/docs/Web/HTTP/Reference/Status)

@@ -167,7 +167,7 @@ El estándar de HTML no ofrece una lista de formatos de imagen soportados, de mo
 
 ## Interacción con CSS
 
-Respecto a CSS, `una <img>` es un [elemento de reemplazo](/es/docs/Web/CSS/Replaced_element). No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: `baseline`, el bajo de la imagen se posa sobre la base del contenedor.
+Respecto a CSS, `una <img>` es un [elemento de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties). No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: `baseline`, el bajo de la imagen se posa sobre la base del contenedor.
 
 Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no necesariamente. Por ejempo, las imagenes SVG no tienen dimensiones intrínsecas.
 

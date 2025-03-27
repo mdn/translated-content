@@ -21,6 +21,6 @@ The {{Glossary("CORS")}} requiere verificación previa, la verificación previa 
 
 ## Véase también
 
-- [CORS errors](/es/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/es/docs/Web/HTTP/Guides/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/es/docs/Web/HTTP/CORS)
+- [CORS introduction](/es/docs/Web/HTTP/Guides/CORS)

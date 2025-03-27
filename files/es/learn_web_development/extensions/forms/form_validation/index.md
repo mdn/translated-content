@@ -32,7 +32,7 @@ Antes de enviar datos al servidor, es importante asegurarse de que se completan 
 
 La validación en el lado del cliente es una verificación inicial y una característica importante para garantizar una buena experiencia de usuario; mediante la detección de datos no válidos en el lado del cliente, el usuario puede corregirlos de inmediato. Si el servidor lo recibe y, a continuación, lo rechaza; se produce un retraso considerable en la comunicación entre el servidor y el cliente que insta al usuario a corregir sus datos.
 
-Sin embargo, ¡la validación en el lado del cliente _no debe considerarse_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario _en el lado del servidor_, **así como también** en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee [Seguridad en los sitios web](/es/docs/Learn/Server-side/First_steps/Website_security) para ver qué _podría_ suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.
+Sin embargo, ¡la validación en el lado del cliente _no debe considerarse_ una medida de seguridad exhaustiva! Tus aplicaciones siempre deben realizar comprobaciones de seguridad de los datos enviados por el formulario _en el lado del servidor_, **así como también** en el lado del cliente, porque la validación en el lado del cliente es demasiado fácil de evitar, por lo que los usuarios malintencionados pueden enviar fácilmente datos incorrectos a tu servidor. Lee [Seguridad en los sitios web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) para ver qué _podría_ suceder. Cómo implementar la validación en el lado del servidor está fuera del alcance de este módulo, pero debes tenerlo en cuenta.
 
 ## ¿Qué es la validación de formularios?
 
@@ -51,7 +51,7 @@ Queremos que completar formularios web sea lo más fácil posible. Entonces, ¿p
 
 - **Queremos obtener los datos correctos en el formato correcto.** Nuestras aplicaciones no funcionarán correctamente si los datos de nuestros usuarios se almacenan en el formato incorrecto, son incorrectos o se omiten por completo.
 - **Queremos proteger los datos de nuestros usuarios**. Obligar a nuestros usuarios a introducir contraseñas seguras facilita proteger la información de su cuenta.
-- **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn/Server-side/First_steps/Website_security)).
+- **Queremos protegernos a nosotros mismo**. Hay muchas formas en que los usuarios maliciosos puedan usar mal los formularios desprotegidos y dañar la aplicación (consulta [Seguridad del sitio web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
 
 > [!WARNING]
 > No confíes nunca en los datos que se pasan al servidor desde el cliente. Incluso si tu formulario se valida correctamente y evita la introducción de datos con formato incorrecto en el lado del cliente, un usuario malintencionado puede alterar la petición de red.
@@ -65,7 +65,7 @@ Hay dos tipos diferentes de validación por parte del cliente que encontrarás e
 
 ## Usar la validación de formulario incorporada
 
-Una de las características más importantes de los [controles de formulario de HTML5](/es/docs/Learn/Forms/HTML5_input_types) es la capacidad de validar la mayoría de los datos de usuario sin depender de JavaScript. Esto se realiza mediante el uso de atributos de validación en los elementos del formulario. Los hemos visto anteriormente en el curso, pero recapitulamos aquí:
+Una de las características más importantes de los [controles de formulario de HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types) es la capacidad de validar la mayoría de los datos de usuario sin depender de JavaScript. Esto se realiza mediante el uso de atributos de validación en los elementos del formulario. Los hemos visto anteriormente en el curso, pero recapitulamos aquí:
 
 - [`required`](/es/docs/Web/HTML/Attributes/required): Especifica si un campo de formulario debe completarse antes de que se pueda enviar el formulario.
 - [`minlength`](/es/docs/Web/HTML/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength): Especifican la longitud mínima y máxima de los datos de texto (cadenas).
@@ -160,7 +160,7 @@ Intenta enviar el formulario sin introducir ningún valor. Observa que la entrad
 La presencia del atributo `required` en cualquier elemento que admite este atributo significa que el elemento coincide con la pseudoclase {{cssxref(':required')}}, tenga o no un valor. Si en el elemento {{HTMLElement("input")}} no se ha introducido ningún valor, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
 
 > [!NOTE]
-> Para una buena experiencia de usuario, indica al usuario que campos de formulario se requieren. No solo es una buena experiencia de usuario, sino que lo exigen las pautas de [accesibilidad](/es/docs/Learn/Accessibility) de WCAG. Además, solo requiere que los usuarios introduzcan los datos que realmente necesitas: Por ejemplo, ¿por qué realmente necesitas saber el género o el tratamiento de alguien?
+> Para una buena experiencia de usuario, indica al usuario que campos de formulario se requieren. No solo es una buena experiencia de usuario, sino que lo exigen las pautas de [accesibilidad](/es/docs/Learn_web_development/Core/Accessibility) de WCAG. Además, solo requiere que los usuarios introduzcan los datos que realmente necesitas: Por ejemplo, ¿por qué realmente necesitas saber el género o el tratamiento de alguien?
 
 ### Validación de una expresión regular
 
@@ -377,7 +377,7 @@ Debes usar JavaScript si quieres controlar la apariencia de los mensajes de erro
 
 ### La API de validación de restricciones
 
-La mayoría de los navegadores admiten la [API de validación de restricciones](/es/docs/Learn/Forms/Form_validation), que consta de un conjunto de métodos y propiedades disponibles en las interfaces DOM de elementos de formulario siguientes:
+La mayoría de los navegadores admiten la [API de validación de restricciones](/es/docs/Learn_web_development/Extensions/Forms/Form_validation), que consta de un conjunto de métodos y propiedades disponibles en las interfaces DOM de elementos de formulario siguientes:
 
 - [`HTMLButtonElement`](/es/docs/Web/API/HTMLButtonElement) (representa un elemento [`<button>`](/es/docs/Web/HTML/Element/button))
 - [`HTMLFieldSetElement`](/es/docs/Web/API/HTMLFieldSetElement) (representa un elemento [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset))
@@ -418,7 +418,7 @@ Estos mensajes automatizados tienen dos inconvenientes:
 
 ![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](error-firefox-win7.png)
 
-La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Learn/Forms/Form_validation). Veamos un ejemplo simple de cómo hacer esto.
+La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Learn_web_development/Extensions/Forms/Form_validation). Veamos un ejemplo simple de cómo hacer esto.
 
 Comenzaremos con un HTML simple (siéntete libre de poner esto en un archivo HTML en blanco; usa una copia nueva de [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) como base, si lo deseas):
 
@@ -618,11 +618,11 @@ Este es el resultado:
 La API de validación de restricciones te proporciona una herramienta poderosa para manejar la validación de formularios, y te permite tener un control enorme sobre la interfaz de usuario más allá de lo que puedas hacer solo con HTML y CSS.
 
 > [!NOTE]
-> Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Learn/Forms/Form_validation).
+> Para obtener más información, consulta nuestra [guía de validación de restricciones](/es/docs/HTML/HTML5/Validacion_de_restricciones) y la referencia de [API de validación de restricciones](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 ### Validar formularios sin una API incorporada
 
-En algunos casos, como la compatibilidad heredada del navegador o los [controles personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls), no podrás o no querrás usar la API de validación de restricciones. Todavía puedes usar JavaScript para validar tu formulario, pero vas a tener que escribirlo.
+En algunos casos, como la compatibilidad heredada del navegador o los [controles personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls), no podrás o no querrás usar la API de validación de restricciones. Todavía puedes usar JavaScript para validar tu formulario, pero vas a tener que escribirlo.
 
 Antes de validar el formulario, hazte estas preguntas:
 
@@ -813,12 +813,12 @@ La validación de formularios en el lado del cliente a veces requiere JavaScript
 - Ser permisivo con el formato de entrada.
 - Señalar exactamente dónde se produce el error, especialmente en formularios extensos.
 
-Una vez que hayas verificado que el formulario se ha completado correctamente, puedes proceder a enviarlo. Vamos a exponer el [envío de los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data) en el próximo artículo.
+Una vez que hayas verificado que el formulario se ha completado correctamente, puedes proceder a enviarlo. Vamos a exponer el [envío de los datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) en el próximo artículo.
 
 {{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 ### Temas avanzados
 
-- [Cómo construir controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Cómo construir controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Enviar formularios por JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

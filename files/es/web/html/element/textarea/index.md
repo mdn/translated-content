@@ -86,7 +86,7 @@ textarea {
 
 ## Interacción con CSS
 
-En relación a CSS, un `<textarea>` es un [replaced element](/es/docs/Web/CSS/Replaced_element). La especificación HTML no define dónde está el punto de referencia de un `<textarea>`. Así que los diferentes navegadores lo sitúan en diferentes posiciones. En los navegadores basados en Gecko, ese punto de referencia del `<textarea>` se sitúa en el punto de referencia de la primera línea del `<textarea>`, en otro navegadores puede estár situado al final de la caja del `<textarea>` . Se recomienda no usar {{cssxref("vertical-align")}}`: baseline` , ya que obtendríamos un comportamiento no impredecible.
+En relación a CSS, un `<textarea>` es un [replaced element](/es/docs/Web/CSS/CSS_images/Replaced_element_properties). La especificación HTML no define dónde está el punto de referencia de un `<textarea>`. Así que los diferentes navegadores lo sitúan en diferentes posiciones. En los navegadores basados en Gecko, ese punto de referencia del `<textarea>` se sitúa en el punto de referencia de la primera línea del `<textarea>`, en otro navegadores puede estár situado al final de la caja del `<textarea>` . Se recomienda no usar {{cssxref("vertical-align")}}`: baseline` , ya que obtendríamos un comportamiento no impredecible.
 
 Un _textarea_ tiene dimensiones intrínsecas, como una imagen agrandada.
 

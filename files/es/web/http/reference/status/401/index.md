@@ -36,7 +36,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## Vea también
 
-- [HTTP authentication](/es/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/es/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

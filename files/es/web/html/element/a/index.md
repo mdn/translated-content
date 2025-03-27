@@ -89,8 +89,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     > [!NOTE]
     >
     > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
-    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
-    > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
+    > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Reference/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
+    > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Reference/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
     > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
 
 - `href`
@@ -106,7 +106,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   - : Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 - `referrerpolicy` {{experimental_inline}}
 
-  - : Indica que [referencia (_referer_)](/es/docs/Web/HTTP/Headers/Referer) enviar cuado la URL es recuperada:
+  - : Indica que [referencia (_referer_)](/es/docs/Web/HTTP/Reference/Headers/Referer) enviar cuado la URL es recuperada:
 
     - `'no-referrer'` significa `Referer:` el encabezado no será enviado.
     - `'no-referrer-when-downgrade'` significa sin `Referer:` el encabezado será enviado cuando se navega a un origen (`origin`) sin HTTPS. Este es un comportamiento por defecto.
@@ -138,7 +138,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/Character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
 
     > [!NOTE]
-    > Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Headers/Content-Type) en la URL enlazada.
+    > Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Reference/Headers/Content-Type) en la URL enlazada.
 
 - `coords` {{Deprecated_Inline}}
   - : Para utilizar con el siguiente atributo `shape`, este atributo utiliza una lista de números separada por comas para definir las coordenadas del enlace en la página.
@@ -208,7 +208,7 @@ Es común crear enlaces que abren el programa de correo del usuario para permiti
 
 [Envia un correo a: nowhere](mailto:nowhere@mozilla.org)
 
-Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) o {{RFC(6068)}}.
+Para detalles adicionales acerca del esquema de la URL `mailto`, tales como incluir el asunto, el cuerpo u otros contenidos predeterminados, consultar [Enlaces de correo (Email links)](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) o {{RFC(6068)}}.
 
 ### Creando un enlace a un número de teléfono
 
