@@ -9,7 +9,9 @@ slug: Web/HTML/Element/figcaption
 
 ```html interactive-example
 <figure>
-  <img src="/shared-assets/images/examples/elephant.jpg" alt="Elephant at sunset" />
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
   <figcaption>An elephant at sunset</figcaption>
 </figure>
 ```

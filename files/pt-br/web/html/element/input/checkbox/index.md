@@ -29,7 +29,7 @@ slug: Web/HTML/Element/input/checkbox
 p,
 label {
   font:
-    1rem 'Fira Sans',
+    1rem "Fira Sans",
     sans-serif;
 }
 

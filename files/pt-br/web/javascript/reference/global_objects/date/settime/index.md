@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 {{InteractiveExample("JavaScript Demo: Date.setTime()")}}
 
 ```js interactive-example
-const launchDate = new Date('July 1, 1999, 12:00:00');
+const launchDate = new Date("July 1, 1999, 12:00:00");
 const futureDate = new Date();
 futureDate.setTime(launchDate.getTime());
 

@@ -17,9 +17,10 @@ O atributo opcional [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) pode
 
 ```html interactive-example
 <p>
-  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language).
-  Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer
-  separate. This is called "separation of concerns."
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
 </p>
 ```
 
