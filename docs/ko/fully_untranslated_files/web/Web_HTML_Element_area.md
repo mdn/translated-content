@@ -7,7 +7,47 @@ slug: Web/HTML/Element/area
 
 **HTML `<area>` 요소**는 이미지의 핫스팟 영역을 정의하고 {{glossary("hyperlink", "하이퍼링크")}}를 추가할 수 있습니다. {{htmlelement("map")}} 요소 안에서만 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="129,0,260,95,129,138"
+    href="https://developer.mozilla.org/docs/Web/HTTP"
+    alt="HTTP" />
+  <area
+    shape="poly"
+    coords="260,96,209,249,130,138"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="209,249,49,249,130,139"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+  <area
+    shape="poly"
+    coords="48,249,0,96,129,138"
+    href="https://developer.mozilla.org/docs/Web/API"
+    alt="Web APIs" />
+  <area
+    shape="poly"
+    coords="0,95,128,0,128,137"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+</map>
+<img usemap="#infographic" src="/shared-assets/images/examples/mdn-info.png" alt="MDN infographic" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+}
+```
 
 <table class="properties">
   <tbody>
