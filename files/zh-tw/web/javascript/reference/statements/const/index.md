@@ -3,7 +3,9 @@ title: const
 slug: Web/JavaScript/Reference/Statements/const
 ---
 
-{{jsSidebar("Statements")}}Constants (常數) 有點像使用 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 所宣告的變數，具有區塊可視範圍。常數不能重複指定值，也不能重複宣告。{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{jsSidebar("Statements")}}Constants (常數) 有點像使用 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 所宣告的變數，具有區塊可視範圍。常數不能重複指定值，也不能重複宣告。
+
+{{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
 ## 語法
 

@@ -5,7 +5,9 @@ slug: Web/HTML/Element/area
 
 {{HTMLSidebar}}
 
-**HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
+**HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.
+
+{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
 | [Категории содержимого](/ru/docs/Web/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#flow_content), [фразового контента](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                            |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

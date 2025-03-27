@@ -3,7 +3,9 @@ title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
 
-{{JSRef}}O método **`setTime()`** atribui ao objecto {{jsxref("Date")}} a hora representada pelo número de milisegundos desde 1 de janeiro de 1970 as 00:00:00 UTC.{{EmbedInteractiveExample("pages/js/date-settime.html")}}
+{{JSRef}}O método **`setTime()`** atribui ao objecto {{jsxref("Date")}} a hora representada pelo número de milisegundos desde 1 de janeiro de 1970 as 00:00:00 UTC.
+
+{{EmbedInteractiveExample("pages/js/date-settime.html")}}
 
 ## Sintáxe
 

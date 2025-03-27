@@ -5,7 +5,9 @@ slug: Web/CSS/quotes
 
 {{CSSRef}}
 
-**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式。{{EmbedInteractiveExample("pages/css/quotes.html")}}
+**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式
+
+{{EmbedInteractiveExample("pages/css/quotes.html")}}
 
 ## 语法
 

@@ -5,7 +5,9 @@ slug: Web/CSS/shape-outside
 
 {{CSSRef}}
 
-**`shape-outside`** 的 [CSS](/zh-CN/docs/Web/CSS) 属性定义了一个可以是非矩形的形状，相邻的内联内容应围绕该形状进行包装。默认情况下，内联内容包围其边距框; `shape-outside`提供了一种自定义此包装的方法，可以将文本包装在复杂对象周围而不是简单的框中。{{EmbedInteractiveExample("pages/css/shape-outside.html")}}
+**`shape-outside`** 的 [CSS](/zh-CN/docs/Web/CSS) 属性定义了一个可以是非矩形的形状，相邻的内联内容应围绕该形状进行包装。默认情况下，内联内容包围其边距框; `shape-outside`提供了一种自定义此包装的方法，可以将文本包装在复杂对象周围而不是简单的框中。
+
+{{EmbedInteractiveExample("pages/css/shape-outside.html")}}
 
 ## 语法
 

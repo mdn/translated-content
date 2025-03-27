@@ -3,7 +3,9 @@ title: white-space
 slug: Web/CSS/white-space
 ---
 
-{{CSSRef}}Свойство **`white-space`** управляет тем, как обрабатываются {{Glossary("whitespace", "пробельные символы")}} внутри элемента.{{EmbedInteractiveExample("pages/css/white-space.html")}}
+{{CSSRef}}Свойство **`white-space`** управляет тем, как обрабатываются {{Glossary("whitespace", "пробельные символы")}} внутри элемента.
+
+{{EmbedInteractiveExample("pages/css/white-space.html")}}
 
 > [!NOTE]
 > Для управления переносами _внутри слов_ используйте {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}} или {{CSSxRef("hyphens")}}.
