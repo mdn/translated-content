@@ -7,7 +7,7 @@ slug: Learn_web_development/Core/Styling_basics/Values_and_units
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
-CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_%E5%A3%B0%E6%98%8E)，而声明又由属性和值组成。在 CSS 中使用的每个属性都有一个**值类型**，用于描述该属性允许拥有何种类型的值。
+CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而声明又由属性和值组成。在 CSS 中使用的每个属性都有一个**值类型**，用于描述该属性允许拥有何种类型的值。
 在本课中，我们将了解一些最常用的值类型、它们是什么以及如何起作用。
 
 > [!NOTE]
