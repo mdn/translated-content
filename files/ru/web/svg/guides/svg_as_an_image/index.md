@@ -37,4 +37,4 @@ slug: Web/SVG/Guides/SVG_as_an_image
 
 ## Смотрите также
 
-- [SVG в HTML. Введение](/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)
+- [SVG в HTML. Введение](/ru/docs/Web/SVG/Guides/SVG_in_HTML)

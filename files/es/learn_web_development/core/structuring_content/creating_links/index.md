@@ -193,7 +193,7 @@ Hay algunas buenas prácticas que debemos respetar cuando escribimos enlaces. Ve
 Es fácil rellenar de enlaces una página, sin más. Pero esto no basta. Hay que lograr que nuestros enlaces sean _accesibles_ para todo tipo de lectores, sin importar el contexto o las herramientas que prefieran. Por ejemplo:
 
 - Los usuarios de lectores de pantalla suelen saltar de enlace a enlace en la página y los leen todos sin contexto.
-- Los motores de búsqueda utilizan el texto de los enlaces para indizar los archivos buscados, por lo que es una buena idea incluir palabras clave al definir el texto de los enlaces para describir de forma efectiva el sitio al que apuntan.
+- Los motores de búsqueda utilizan el texto de los enlaces para indexar los archivos buscados, por lo que es una buena idea incluir palabras clave al definir el texto de los enlaces para describir de forma efectiva el sitio al que apuntan.
 - Los usuarios visuales suelen echar un vistazo rápido a la página y leen solo lo que les interesa, en lugar de leer todo el texto palabra por palabra, y sus miradas van directamente a las características destacadas de la página, como son los enlaces. Este tipo de usuarios encuentra útiles los textos descriptivos que estos contienen.
 
 Veamos un ejemplo concreto:

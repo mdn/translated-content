@@ -159,6 +159,6 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ## Voir aussi
 
-- Guide sur les grilles CSS : _[Concepts de bases pour le dimensionnement des pistes avec minmax()](</fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#track_sizing_and_minmax()>)_
+- Guide sur les grilles CSS : _[Concepts de bases pour le dimensionnement des pistes avec minmax()](</fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#track_sizing_and_minmax()>)_
 - [Valeurs logiques, modes d'écriture et grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - Tutoriel vidéo (en anglais) : [Introduction à minmax()](https://gridbyexample.com/video/series-minmax/)

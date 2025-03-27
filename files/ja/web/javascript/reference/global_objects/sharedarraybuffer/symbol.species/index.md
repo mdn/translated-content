@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`SharedArrayBuffer[@@species]`** アクセサープロパティは、`SharedArrayBuffer` の各メソッドから返される値を作成するために使用されるコンストラクター（種）を返します。
+**`SharedArrayBuffer[Symbol.species]`** アクセサープロパティは、`SharedArrayBuffer` の各メソッドから返される値を作成するために使用されるコンストラクター（種）を返します。
 
 > **警告:** `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
 
@@ -41,7 +41,7 @@ class SubArrayBuffer extends SharedArrayBuffer {}
 SubArrayBuffer[Symbol.species] === SubArrayBuffer; // true
 ```
 
-既存の配列を変更せず、新しい配列バッファーのインスタンスを返す配列バッファーのメソッド（例えば [`slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)）を呼び出すと、その配列の `constructor[@@species]` にアクセスすることになります。返されたコンストラクターは配列バッファーメソッドの返値を構築するために使用されます。
+既存の配列を変更せず、新しい配列バッファーのインスタンスを返す配列バッファーのメソッド（例えば [`slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)）を呼び出すと、その配列の `constructor[Symbol.species]` にアクセスすることになります。返されたコンストラクターは配列バッファーメソッドの返値を構築するために使用されます。
 
 ## 例
 

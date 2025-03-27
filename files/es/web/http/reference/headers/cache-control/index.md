@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Cache-Control
 
 {{HTTPSidebar}}
 
-El encabezado HTTP **`Cache-Control`** contiene _directivas_ (instrucciones) — tanto en peticiones como en respuestas — para controlar el almacenamiento temporal [(caching)](/es/docs/Web/HTTP/Caching) en navegadores y cachés compartidas (p. ej. Proxies, CDNs).
+El encabezado HTTP **`Cache-Control`** contiene _directivas_ (instrucciones) — tanto en peticiones como en respuestas — para controlar el almacenamiento temporal [(caching)](/es/docs/Web/HTTP/Guides/Caching) en navegadores y cachés compartidas (p. ej. Proxies, CDNs).
 
 <table class="properties">
   <tbody>
@@ -80,13 +80,13 @@ Los siguientes términos son usados en este documento; algunos provienen de la e
 - `Respuesta reutilizada`
   - : Reutiliza respuestas cacheadas para las subsiguientes peticiones.
 - `Revalidar respuesta`
-  - : Pregunta al servidor de origen si una respuesta almacenada sigue siendo reciente o no ([fresh o stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente se realiza a través de una petición condicionada.
+  - : Pregunta al servidor de origen si una respuesta almacenada sigue siendo reciente o no ([fresh o stale](/es/docs/Web/HTTP/Guides/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente se realiza a través de una petición condicionada.
 - `Respuesta reciente`
-  - : Indica que una respuesa es reciente ([fresh](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Esto normalmente significa que la respuesta puede ser reutilizada para las subsiguientes peticiones, dependiendo de las directivas de petición.
+  - : Indica que una respuesa es reciente ([fresh](/es/docs/Web/HTTP/Guides/Caching#estados_fresh_y_stale_según_la_edad)). Esto normalmente significa que la respuesta puede ser reutilizada para las subsiguientes peticiones, dependiendo de las directivas de petición.
 - `Respuesta obsoleta`
-  - : Indica que la respuestá está obsoleta ([stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente significa que la respuesta ya no puede ser reutilizada. El almacenamiento caché no requiere que las respuestas obsoletas sean eliminadas inmediatamente, por que la revalidación puede cambiar la respuesta de obsoleta a reciente de nuevo.
+  - : Indica que la respuestá está obsoleta ([stale](/es/docs/Web/HTTP/Guides/Caching#estados_fresh_y_stale_según_la_edad)). Normalmente significa que la respuesta ya no puede ser reutilizada. El almacenamiento caché no requiere que las respuestas obsoletas sean eliminadas inmediatamente, por que la revalidación puede cambiar la respuesta de obsoleta a reciente de nuevo.
 - `Edad`
-  - : El tiempo desde que una respuesta fue generada. Es un criterio para ver si una respuesta es reciente u obsoleta ([fresh o stale](/es/docs/Web/HTTP/Caching#estados_fresh_y_stale_según_la_edad)).
+  - : El tiempo desde que una respuesta fue generada. Es un criterio para ver si una respuesta es reciente u obsoleta ([fresh o stale](/es/docs/Web/HTTP/Guides/Caching#estados_fresh_y_stale_según_la_edad)).
 
 ## Directivas
 
@@ -446,7 +446,7 @@ Alternativamente, `Clear-Site-Data` puede borrar la memoria caché del navegador
 
 ## Véase también
 
-- [Caché en HTTP](/es/docs/Web/HTTP/Caching)
+- [Caché en HTTP](/es/docs/Web/HTTP/Guides/Caching)
 - [Tutorial de almacenamiento en caché para autores web y webmasters](https://www.mnot.net/cache_docs/)
 - [Prácticas recomendadas de almacenamiento en caché y trucos de edad máxima](https://jakearchibald.com/2016/caching-best-practices/)
 - [Control de caché para civiles](https://csswizardry.com/2019/03/cache-control-for-civilians/)

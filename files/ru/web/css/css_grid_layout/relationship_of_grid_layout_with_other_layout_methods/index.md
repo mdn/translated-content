@@ -593,5 +593,5 @@ slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_meth
 
 ## Смотрите также
 
-- [Руководства по Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Руководства по Flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox)
 - [Руководства по использованию многоколоночной разметки](/ru/docs/Web/CSS/CSS_multicol_layout)

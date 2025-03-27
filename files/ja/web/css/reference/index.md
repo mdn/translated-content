@@ -122,12 +122,12 @@ div.menu-bar li:hover > ul {
 
 ### 値
 
-- [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
-- [算出値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
-- [解決値](/ja/docs/Web/CSS/resolved_value)
-- [指定値](/ja/docs/Web/CSS/CSS_cascade/specified_value)
-- [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
+- [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+- [解決値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#解決値)
+- [指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)
+- [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
 
 ### レイアウト
 

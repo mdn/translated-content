@@ -59,7 +59,7 @@ margin-top: 0;
 }
 ```
 
-Это свойство не имеет эффекта на _незамещаемых (non-[replaced](/ru/docs/Web/CSS/Replaced_element))_ строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
+Это свойство не имеет эффекта на _незамещаемых (non-[replaced](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties))_ строковых (inline) элементах, таких как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
 
 ## Синтаксис
 

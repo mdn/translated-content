@@ -126,8 +126,8 @@ div {
 
 ## Voir aussi
 
-- [`scaleX()`](</fr/docs/Web/CSS/transform-function/scaleX()>)
-- [`scaleZ()`](</fr/docs/Web/CSS/transform-function/scaleZ()>)
+- [`scaleX()`](/fr/docs/Web/CSS/transform-function/scaleX)
+- [`scaleZ()`](/fr/docs/Web/CSS/transform-function/scaleZ)
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
 - [`transform-origin`](/fr/docs/Web/CSS/transform-origin)

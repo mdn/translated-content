@@ -23,8 +23,8 @@ l10n:
 
 - `Global.prototype.constructor`
   - : このオブジェクトのインスタンスを生成した関数を返します。既定では、これは [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) コンストラクターです。
-- `Global.prototype[@@toStringTag]`
-  - : [@@toStringTag](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値で、文字列値 "WebAssembly.Global" です。
+- `Global.prototype[Symbol.toStringTag]`
+  - : [Symbol.toStringTag](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値で、文字列値 "WebAssembly.Global" です。
 - `Global.prototype.value`
   - : グローバル変数の中に含まれている値です。これにより、グローバル値を直接設定および取得することができます。
 

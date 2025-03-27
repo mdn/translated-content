@@ -42,7 +42,7 @@ let moving = browser.tabs.move(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有移动的标签页都完成移动时其会兑现为一个 `{{WebExtAPIRef('tabs.Tab')}}` 对象或包含多个 `{{WebExtAPIRef('tabs.Tab')}}` 对象的数组，其中每个 `{{WebExtAPIRef('tabs.Tab')}}` 对象包含了已进行移动的标签页的详情。如果没有标签页被移动（例如，因为尝试将一个未固定标签页移动到一个固定标签页之前），则返回一个空数组。如果发生任何错误，promise 将会以错误信息拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在所有移动的标签页都完成移动时其会兑现为一个 {{WebExtAPIRef('tabs.Tab')}} 对象或包含多个 {{WebExtAPIRef('tabs.Tab')}} 对象的数组，其中每个 {{WebExtAPIRef('tabs.Tab')}} 对象包含了已进行移动的标签页的详情。如果没有标签页被移动（例如，因为尝试将一个未固定标签页移动到一个固定标签页之前），则返回一个空数组。如果发生任何错误，promise 将会以错误信息拒绝。
 
 ## 示例
 

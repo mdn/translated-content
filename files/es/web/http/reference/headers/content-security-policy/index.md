@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy
 
 La cabecera HTTP **`Content-Security-Policy`** en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
 
-Para mas información, ve también este articulo en [Content Security Policy (CSP)](/es/docs/Web/HTTP/CSP).
+Para mas información, ve también este articulo en [Content Security Policy (CSP)](/es/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">
   <tbody>
@@ -194,7 +194,7 @@ See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelin
 ## Mirar tambien
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Learn about: Content Security Policy](/es/docs/Web/HTTP/CSP)
+- [Learn about: Content Security Policy](/es/docs/Web/HTTP/Guides/CSP)
 - [Content Security in WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Display security and privacy policies In Firefox Developer Tools](/es/docs/Tools/GCLI/Display_security_and_privacy_policies)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

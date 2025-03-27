@@ -176,7 +176,7 @@ console.log(contacts.size); // 1
 
 ## Propriétés statiques
 
-- [`get Map[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species)
+- [`get Map[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : La fonction de construction utilisée pour créer les objets dérivés.
 
 ## Propriétés des instances
@@ -199,7 +199,7 @@ console.log(contacts.size); // 1
 
 ### Méthodes d'itération
 
-- [`Map.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+- [`Map.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Renvoie un nouvel objet itérateur qui contient **un tableau de `[cle, valeur]`** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
 - [`Map.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/keys)
   - : Renvoie un nouvel objet itérateur qui contient les **clés** pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
