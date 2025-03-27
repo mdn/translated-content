@@ -5,7 +5,91 @@ slug: Web/CSS/transform-function/rotate3d
 
 {{CSSRef}}Функция [CSS](/ru/docs/Web/CSS) **`rotate3d()`** трансформирует элемент без деформации, вращая его в трёхмерном пространстве вокруг зафиксированной оси. Её результатом является тип {{cssxref ("&lt;transform-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/rotate3d.html")}}
+{{InteractiveExample("CSS Demo: rotate3d()")}}
+
+```css interactive-example-choice
+transform: rotate3d(0);
+```
+
+```css interactive-example-choice
+transform: rotate3d(1, 1, 1, 45deg);
+```
+
+```css interactive-example-choice
+transform: rotate3d(2, -1, -1, -0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotate3d(0, 1, 0.5, 3.142rad);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 In 3D space, rotations have three degrees of liberty, which together describe a single axis of rotation. The axis of rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }} property). If, as specified, the vector is not _normalized_ (i.e., if the sum of the square of its three coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invaliding the whole CSS property.
 
