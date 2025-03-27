@@ -169,4 +169,4 @@ ul {
 - [`list-style`](/fr/docs/Web/CSS/list-style)
 - [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
 - [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-- La fonction [`url()`](</fr/docs/Web/CSS/url()>)
+- La fonction [`url()`](/fr/docs/Web/CSS/url_value)

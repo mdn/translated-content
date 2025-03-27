@@ -110,7 +110,7 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 {{CSSSyntax}}
 
 > [!NOTE]
-> Si on utilise plusieurs fonctions dont [`perspective()`](</fr/docs/Web/CSS/transform-function/perspective()>), celle-ci devra apparaître en premier.
+> Si on utilise plusieurs fonctions dont [`perspective()`](/fr/docs/Web/CSS/transform-function/perspective), celle-ci devra apparaître en premier.
 
 ## Exemples
 

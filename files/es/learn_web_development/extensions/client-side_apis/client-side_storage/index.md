@@ -10,13 +10,13 @@ original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Los navegadores web modernos admiten varias formas para que los sitios web almacenen datos en la computadora del usuario, con el permiso del usuario, y luego los recuperen cuando sea necesario. Esto te permite conservar los datos para el almacenamiento a largo plazo, guardar sitios o documentos para su uso sin conexión, conservar la configuración específica del usuario para tu sitio y más. Este artículo explica los conceptos básicos de cómo funcionan.
 
-| Prerrequisitos: | Conceptos básicos de JavaScript (consulta [primeros pasos](/es/docs/Learn/JavaScript/First_steps), [bloques de construcción](/es/docs/Learn/JavaScript/Building_blocks), [objetos JavaScript](/es/docs/Learn/JavaScript/Objects)), los [conceptos básicos de las APIs de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:       | Aprender a utilizar las APIs de almacenamiento de lado del cliente para almacenar datos de aplicaciones.                                                                                                                                                                                                                                                |
+| Prerrequisitos: | Conceptos básicos de JavaScript (consulta [primeros pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting), [bloques de construcción](/es/docs/Learn_web_development/Core/Scripting), [objetos JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)), los [conceptos básicos de las APIs de lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction) |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo:       | Aprender a utilizar las APIs de almacenamiento de lado del cliente para almacenar datos de aplicaciones.                                                                                                                                                                                                                                                                                                                        |
 
 ## ¿Almacenamiento de lado del cliente?
 
-En otra parte del área de aprendizaje de MDN, hablamos sobre la diferencia entre [sitios estáticos](/es/docs/Learn/Server-side/First_steps/Client-Server_overview#sitios_estaticos) y [sitios dinámicos](/es/docs/Learn/Server-side/First_steps/Client-Server_overview#sitios_dinamicos). La mayoría de los principales sitios web modernos son dinámicos: almacenan datos en el servidor utilizando algún tipo de base de datos (almacenamiento de lado del servidor) y luego ejecutan [de lado del servidor](/es/docs/Learn/Server-side) para recuperar los datos necesarios, insertarlos en plantillas de páginas estáticas y entregar el HTML resultante al cliente para que lo muestre el navegador del usuario.
+En otra parte del área de aprendizaje de MDN, hablamos sobre la diferencia entre [sitios estáticos](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#sitios_estaticos) y [sitios dinámicos](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#sitios_dinamicos). La mayoría de los principales sitios web modernos son dinámicos: almacenan datos en el servidor utilizando algún tipo de base de datos (almacenamiento de lado del servidor) y luego ejecutan [de lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side) para recuperar los datos necesarios, insertarlos en plantillas de páginas estáticas y entregar el HTML resultante al cliente para que lo muestre el navegador del usuario.
 
 El almacenamiento de lado del cliente funciona con principios similares, pero tiene diferentes usos. Consiste en una API de JavaScript que te permiten almacenar datos en el cliente (es decir, en la máquina del usuario) y luego recuperarlos cuando sea necesario. Esto tiene muchos usos distintos, como:
 
@@ -32,9 +32,9 @@ A menudo, el almacenamiento de lado del cliente y de lado del servidor se utiliz
 
 ### Vieja escuela: cookies
 
-El concepto de almacenamiento de lado del cliente existe desde hace mucho tiempo. Desde los primeros días de la web, los sitios han utilizado _[cookies](/es/docs/Web/HTTP/Cookies)_ para almacenar información y personalizar la experiencia del usuario en los sitios web. Son la forma más antigua de almacenamiento de lado del cliente que se usa comúnmente en la web.
+El concepto de almacenamiento de lado del cliente existe desde hace mucho tiempo. Desde los primeros días de la web, los sitios han utilizado _[cookies](/es/docs/Web/HTTP/Guides/Cookies)_ para almacenar información y personalizar la experiencia del usuario en los sitios web. Son la forma más antigua de almacenamiento de lado del cliente que se usa comúnmente en la web.
 
-En estos días, existen mecanismos más fáciles disponibles para almacenar datos de lado del cliente, por lo tanto, no te enseñaremos cómo usar las _cookies_ en este artículo. Sin embargo, esto no significa que las _cookies_ sean completamente inútiles en la web moderna; todavía se usan comúnmente para almacenar datos relacionados con la personalización y el estado del usuario, p. ej. ID de sesión y fragmentos de acceso. Para obtener más información sobre las _cookies_, consulta nuestro artículo [Uso de cookies HTTP](/es/docs/Web/HTTP/Cookies).
+En estos días, existen mecanismos más fáciles disponibles para almacenar datos de lado del cliente, por lo tanto, no te enseñaremos cómo usar las _cookies_ en este artículo. Sin embargo, esto no significa que las _cookies_ sean completamente inútiles en la web moderna; todavía se usan comúnmente para almacenar datos relacionados con la personalización y el estado del usuario, p. ej. ID de sesión y fragmentos de acceso. Para obtener más información sobre las _cookies_, consulta nuestro artículo [Uso de cookies HTTP](/es/docs/Web/HTTP/Guides/Cookies).
 
 ### Nueva escuela: almacenamiento web e `IndexedDB`
 
@@ -755,7 +755,7 @@ Eso es todo por ahora. Esperamos que hayas encontrado útil nuestro resumen de l
 
 - [API de almacenamiento Web](/es/docs/Web/API/Web_Storage_API)
 - [API IndexedDB](/es/docs/Web/API/IndexedDB_API)
-- [Cookies](/es/docs/Web/HTTP/Cookies)
+- [Cookies](/es/docs/Web/HTTP/Guides/Cookies)
 - [API del servicio worker](/es/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

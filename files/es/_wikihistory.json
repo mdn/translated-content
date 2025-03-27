@@ -9461,34 +9461,13 @@
       "Remohir"
     ]
   },
-  "Web/CSS/CSS_cascade/actual_value": {
-    "modified": "2019-03-23T22:16:54.955Z",
-    "contributors": [
-      "israel-munoz"
-    ]
-  },
-  "Web/CSS/CSS_cascade/computed_value": {
-    "modified": "2019-03-23T23:53:20.456Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Firewordy",
-      "HenryGR"
-    ]
-  },
-  "Web/CSS/CSS_cascade/initial_value": {
+  "Web/CSS/CSS_cascade/Value_processing": {
     "modified": "2019-01-16T15:32:31.295Z",
     "contributors": [
       "teoli",
       "Mgjbot",
       "Nathymig",
       "HenryGR"
-    ]
-  },
-  "Web/CSS/CSS_cascade/specified_value": {
-    "modified": "2019-03-23T22:16:53.752Z",
-    "contributors": [
-      "israel-munoz"
     ]
   },
   "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
@@ -11631,12 +11610,6 @@
       "Sebastianz",
       "Prinz_Rana",
       "Conradin88"
-    ]
-  },
-  "Web/CSS/resolved_value": {
-    "modified": "2019-03-23T22:16:57.498Z",
-    "contributors": [
-      "israel-munoz"
     ]
   },
   "Web/CSS/right": {
@@ -19865,6 +19838,33 @@
       "jigs12",
       "teoli",
       "Jorolo"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_cascade/Value_processing": {
+    "modified": "2019-03-23T22:16:54.955Z",
+    "contributors": [
+      "israel-munoz"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1": {
+    "modified": "2019-03-23T22:16:53.752Z",
+    "contributors": [
+      "israel-munoz"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4": {
+    "modified": "2019-03-23T22:16:57.498Z",
+    "contributors": [
+      "israel-munoz"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d": {
+    "modified": "2019-03-23T23:53:20.456Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Firewordy",
+      "HenryGR"
     ]
   },
   "conflicting/Web/CSS/cursor": {

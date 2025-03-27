@@ -110,7 +110,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 ## Cookies
 
 - {{HTTPHeader("Cookie")}}
-  - : Contiene [HTTP cookies](/es/docs/Web/HTTP/Cookies) enviadas previamente por el servidor con la cabecera {{HTTPHeader("Set-Cookie")}} .
+  - : Contiene [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies) enviadas previamente por el servidor con la cabecera {{HTTPHeader("Set-Cookie")}} .
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies desde el servidor al usuario.
 - {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
@@ -135,7 +135,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : Utilizada al lanzar una petición de validación, para permitir al servidor saber qué cabeceras HTTP se utilizarán cuando la petición en cuestión se lance.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Utilizada al enviar una solicitud de validación que permite al servidor saber qué [método HTTP](/es/docs/Web/HTTP/Methods) se utilizará cuando la petición en cuestión se lance.
+  - : Utilizada al enviar una solicitud de validación que permite al servidor saber qué [método HTTP](/es/docs/Web/HTTP/Reference/Methods) se utilizará cuando la petición en cuestión se lance.
 - {{HTTPHeader("Origin")}}
   - : Indica el punto de origen de una petición de recogida.
 - {{HTTPHeader("Timing-Allow-Origin")}}
@@ -195,7 +195,7 @@ La siguiente lista agrupa las cabeceras HTTP en categorías según su uso. Para 
 - {{HTTPHeader("Referrer-Policy")}}
   - : Establece la información del referer que deberá ser enviada en las peticiones que incluyan {{HTTPHeader("Referer")}}.
 - {{HTTPHeader("User-Agent")}}
-  - : Contiene un string característico que será examinado por el protocolo de red para identificar el tipo de aplicación, sistema operativo, proveedor de software o versión del software del agente de software que realiza la petición. Véase también [Firefox user agent string reference](/es/docs/Web/HTTP/Headers/User-Agent/Firefox).
+  - : Contiene un string característico que será examinado por el protocolo de red para identificar el tipo de aplicación, sistema operativo, proveedor de software o versión del software del agente de software que realiza la petición. Véase también [Firefox user agent string reference](/es/docs/Web/HTTP/Reference/Headers/User-Agent/Firefox).
 
 ## Contexto de respuesta
 

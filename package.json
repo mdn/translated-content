@@ -41,7 +41,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "lefthook": "^1.11.3"
+    "lefthook": "^1.11.5"
   },
   "packageManager": "yarn@1.22.22"
 }

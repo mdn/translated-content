@@ -1,9 +1,8 @@
 ---
 title: クロージャ
 slug: Web/JavaScript/Guide/Closures
-original_slug: Web/JavaScript/Closures
 l10n:
-  sourceCommit: 2463abc1ca0fb6588d182651f8f659ae0d618915
+  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
 ---
 
 {{jsSidebar("Intermediate")}}

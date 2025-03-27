@@ -22,5 +22,5 @@ Para resolver este problema, simplemente asegúrate de usar direciones HTTPS cua
 
 - Errores de CORS
 - Glosario: {{Glossary("CORS")}}
-- [Introducción a CORS](/es/docs/Web/HTTP/CORS)
-- [¿Qué es una direccion?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Introducción a CORS](/es/docs/Web/HTTP/Guides/CORS)
+- [¿Qué es una direccion?](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)

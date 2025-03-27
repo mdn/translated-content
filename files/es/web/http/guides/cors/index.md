@@ -32,7 +32,7 @@ Este es un artículo general sobre el uso compartido de recursos de origen cruza
 
 ## Resumen funcional
 
-El estándar para recursos compartidos de origen cruzado funciona añadiendo nuevas [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) que permiten a los servidores describir qué orígenes tienen permiso para leer esa información de un navegador web. Además, para los métodos de petición HTTP que pueden causar efectos secundarios en los datos del servidor (en particular los métodos HTTP distintos de {{HTTPMethod("GET")}} o {{HTTPMethod("POST")}} con determinados [tipos MIME](/es/docs/Web/HTTP/MIME_types)), la especificación exige que los navegadores "comprueben previamente" la petición, solicitando al servidor los métodos admitidos con el método de solicitud HTTP {{HTTPMethod("OPTIONS")}}, y entonces, tras la "aprobación" del servidor, enviando la solicitud real. Los servidores también pueden informar a los clientes de si deben enviar "credenciales" (como [cookies](/es/docs/Web/HTTP/Cookies) y [Autenticación HTTP](/es/docs/Web/HTTP/Authentication)) con las solicitudes.
+El estándar para recursos compartidos de origen cruzado funciona añadiendo nuevas [Cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) que permiten a los servidores describir qué orígenes tienen permiso para leer esa información de un navegador web. Además, para los métodos de petición HTTP que pueden causar efectos secundarios en los datos del servidor (en particular los métodos HTTP distintos de {{HTTPMethod("GET")}} o {{HTTPMethod("POST")}} con determinados [tipos MIME](/es/docs/Web/HTTP/Guides/MIME_types)), la especificación exige que los navegadores "comprueben previamente" la petición, solicitando al servidor los métodos admitidos con el método de solicitud HTTP {{HTTPMethod("OPTIONS")}}, y entonces, tras la "aprobación" del servidor, enviando la solicitud real. Los servidores también pueden informar a los clientes de si deben enviar "credenciales" (como [cookies](/es/docs/Web/HTTP/Guides/Cookies) y [Autenticación HTTP](/es/docs/Web/HTTP/Guides/Authentication)) con las solicitudes.
 
 Los fallos de CORS provocan errores, pero por razones de seguridad, los detalles del error _no están disponibles para JavaScript_. Todo lo que el código sabe es que se ha producido un error. La única forma de determinar específicamente qué salió mal, es mirar en la consola del navegador para obtener más detalles.
 
@@ -276,7 +276,7 @@ Sin embargo, si se trata de una solicitud que desencadena una verificación prev
 > [!NOTE]
 > Cuando se realicen peticiones con credenciales a un dominio diferente, se seguirán aplicando las políticas de cookies de terceros. La política siempre se aplica independientemente de cualquier configuración en el servidor y el cliente, como se describe en este capítulo.
 
-La capacidad más interesante expuesta por {{domxref("XMLHttpRequest")}} o [Fetch](/es/docs/Web/API/Fetch_API) y CORS es la capacidad de hacer peticiones "con credenciales" que son conscientes de las [cookies HTTP](/es/docs/Web/HTTP/Cookies) y de la información de autentificación HTTP. Por defecto, en las invocaciones `XMLHttpRequest` o [Fetch](/es/docs/Web/API/Fetch_API) de origen cruzado, los navegadores **no** enviarán credenciales. Debe establecerse un indicador específico en el objeto `XMLHttpRequest` o en el constructor {{domxref("Request")}} cuando se invoca.
+La capacidad más interesante expuesta por {{domxref("XMLHttpRequest")}} o [Fetch](/es/docs/Web/API/Fetch_API) y CORS es la capacidad de hacer peticiones "con credenciales" que son conscientes de las [cookies HTTP](/es/docs/Web/HTTP/Guides/Cookies) y de la información de autentificación HTTP. Por defecto, en las invocaciones `XMLHttpRequest` o [Fetch](/es/docs/Web/API/Fetch_API) de origen cruzado, los navegadores **no** enviarán credenciales. Debe establecerse un indicador específico en el objeto `XMLHttpRequest` o en el constructor {{domxref("Request")}} cuando se invoca.
 
 En este ejemplo, el contenido cargado originalmente desde `https://foo.example` hace una simple petición GET a un recurso en `https://bar.other` que establece Cookies. El contenido en foo.example podría contener JavaScript como este:
 
@@ -365,7 +365,7 @@ Tenga en cuenta que las Cookies establecidas en las respuestas CORS están sujet
 
 La Cookie en la solicitud anterior (línea 10) también puede ser suprimida en las políticas normales sobre Cookies de terceros. Por lo tanto, la política de Cookies aplicada puede anular la capacidad descrita en este capítulo, impidiéndole realizar solicitudes con credenciales.
 
-Se aplicaría la política de Cookies en torno al atributo [Cookies del mismo sitio](/es/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
+Se aplicaría la política de Cookies en torno al atributo [Cookies del mismo sitio](/es/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)
 
 ## Las cabeceras de respuesta HTTP
 
@@ -493,7 +493,7 @@ Puede encontrar ejemplos de este uso [arriba](#solicitudes_verificadas_previamen
 
 ## Véase también
 
-- [Errores CORS](/es/docs/Web/HTTP/CORS/Errors)
+- [Errores CORS](/es/docs/Web/HTTP/Guides/CORS/Errors)
 - [Habilitar CORS: Quiero añadir soporte CORS a mi servidor](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [API Fetch](/es/docs/Web/API/Fetch_API)

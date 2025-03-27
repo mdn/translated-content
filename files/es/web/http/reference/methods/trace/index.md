@@ -34,4 +34,4 @@ TRACE /index.html
 
 ## Ver también
 
-- [HTTP methods](/es/docs/Web/HTTP/Methods)
+- [HTTP methods](/es/docs/Web/HTTP/Reference/Methods)

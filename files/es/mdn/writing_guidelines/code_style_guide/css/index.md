@@ -26,7 +26,7 @@ Antes de sumergirte y escribir grandes fragmentos de CSS, planifica cuidadosamen
 
 ### Utiliza unidades flexibles/relativas
 
-Para obtener la máxima flexibilidad en la mayor cantidad posible de dispositivos, es una buena idea dimensionar contenedores, rellenos, etc., utilizando unidades relativas como ems y rems o porcentajes y unidades de la ventana gráfica (viewport units) si deseas que varíen según el ancho de la ventana gráfica. Puedes obtener más información sobre esto en nuestra [guía de valores y unidades CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units).
+Para obtener la máxima flexibilidad en la mayor cantidad posible de dispositivos, es una buena idea dimensionar contenedores, rellenos, etc., utilizando unidades relativas como ems y rems o porcentajes y unidades de la ventana gráfica (viewport units) si deseas que varíen según el ancho de la ventana gráfica. Puedes obtener más información sobre esto en nuestra [guía de valores y unidades CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
 
 ### No uses preprocesadores
 
@@ -127,7 +127,7 @@ En este ejemplo, el primer valor que se puede analizar como un [`<time>`](/es/do
 
 ## Media queries centradas en móviles
 
-En una hoja de estilo que contiene estilos de [_media queries_](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para diferentes tamaños de ventana gráfica de dispositivos, primero incluye el estilo para pantallas estrechas/móviles antes de encontrar cualquier otra _media query_. Agrega estilos para tamaños de ventana gráfica más amplios mediante _media queries_ sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de [Diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design).
+En una hoja de estilo que contiene estilos de [_media queries_](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para diferentes tamaños de ventana gráfica de dispositivos, primero incluye el estilo para pantallas estrechas/móviles antes de encontrar cualquier otra _media query_. Agrega estilos para tamaños de ventana gráfica más amplios mediante _media queries_ sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de [Diseño responsivo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Diseño CSS predeterminado para pantallas estrechas */

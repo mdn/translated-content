@@ -2,12 +2,12 @@
 title: revert
 slug: Web/CSS/revert
 l10n:
-  sourceCommit: 2b24680f81617bedf2c655bbc62988b7ce73bcb6
+  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
 {{CSSRef}}
 
-**`revert`** は CSS のキーワードで、現在の要素にカスケードされたプロパティの値を、現在の{{Glossary("style origin", "スタイルオリジン")}}が変更を行わなければそのプロパティが持っていたであろう値に戻します。したがって、プロパティは、ユーザーエージェント設定値、ユーザー設定値、継承値（継承可能な場合）、または初期値のいずれかにリセットされます。これは、 CSS の一括指定プロパティ {{cssxref("all")}} を含め、あらゆる CSS プロパティに適用することができます。
+**`revert`** は CSS のキーワードで、現在の要素にカスケードされたプロパティの値を、現在の{{Glossary("style origin", "<strong>スタイルオリジン</strong>")}}が変更を行わなければそのプロパティが持っていたであろう値に戻します。したがって、プロパティは、ユーザーエージェント設定値、ユーザー設定値、継承値（継承可能な場合）、または初期値のいずれかにリセットされます。これは、 CSS の一括指定プロパティ {{cssxref("all")}} を含め、あらゆる CSS プロパティに適用することができます。
 
 このキーワードは、ロールバックされるスタイルに到達するまで、オーバーライドされたすべてのスタイルをカスケードから削除します。
 
@@ -22,9 +22,9 @@ revert は、リセットした要素の子に適用されているルールに�
 > [!NOTE]
 > revert は単なる値です。 `revert` の値は[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)を使用して上書きすることができます。
 
-> **メモ:** `revert` キーワードは {{cssxref("initial")}} キーワードとは異なりますし、混同しないでください。これは CSS の仕様書でプロパティごとに定義された[初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)です。それに対して、既定値はユーザーエージェントのスタイルシートが CSS セレクターに基づいて定義しています。
+> **メモ:** `revert` キーワードは {{cssxref("initial")}} キーワードとは異なりますし、混同しないでください。これは CSS の仕様書でプロパティごとに定義された[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)です。それに対して、既定値はユーザーエージェントのスタイルシートが CSS セレクターに基づいて定義しています。
 >
-> 例えば、 [`display`](/ja/docs/Web/CSS/display#公式定義) プロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)は `inline` ですが、普通のユーザーエージェントスタイルシートは、 {{cssxref("display")}} の既定値を {{HTMLElement("div")}} では `block`、 {{HTMLElement("table")}} では `table` というように設定します。
+> 例えば、 [`display`](/ja/docs/Web/CSS/display#公式定義) プロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)は `inline` ですが、普通のユーザーエージェントスタイルシートは、 {{cssxref("display")}} の既定値を {{HTMLElement("div")}} では `block`、 {{HTMLElement("table")}} では `table` というように設定します。
 
 ## 例
 

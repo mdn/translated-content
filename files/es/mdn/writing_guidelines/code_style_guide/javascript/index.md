@@ -353,7 +353,7 @@ function hazlo() {
 
 ### Inicialización de bucle
 
-Cuando los [bucles](/es/docs/Learn/JavaScript/Building_blocks/Looping_code) son requeridos, elegir el apropiado entre [`for(;;)`](/es/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/es/docs/Web/JavaScript/Reference/Statements/while), etc.
+Cuando los [bucles](/es/docs/Learn_web_development/Core/Scripting/Loops) son requeridos, elegir el apropiado entre [`for(;;)`](/es/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/es/docs/Web/JavaScript/Reference/Statements/while), etc.
 
 - Al iterar a través de todos los elementos de la colección, evite usar el clásico bucle `for (;;)`; es preferible `for...of` o `forEach()`.
   Tenga en cuenta que si está utilizando una colección que no es un `Array`, tienes que comprobar que `for...of` es realmente compatible (requiere que la variable sea iterable), o que el método `forEach()` está realmente presente.

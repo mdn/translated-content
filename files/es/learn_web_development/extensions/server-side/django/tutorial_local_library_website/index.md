@@ -77,6 +77,6 @@ Si te quedas atascado, puedes encontrar la versión completamente desarrollada [
 
 ## Resumen
 
-Ahora que sabes un poco más sobre el sitio de la _BibliotecaLocal_ y lo que vas a aprender, es hora de empezar a crear el [esqueleto(estructura)](/es/docs/Learn/Server-side/Django/skeleton_website) de nuestro proyecto.
+Ahora que sabes un poco más sobre el sitio de la _BibliotecaLocal_ y lo que vas a aprender, es hora de empezar a crear el [esqueleto(estructura)](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) de nuestro proyecto.
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

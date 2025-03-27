@@ -11,7 +11,7 @@ slug: Web/CSS/background
 
 Свойство является [сокращением,](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
 
-Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/Web/CSS/CSS_cascade/initial_value).
+Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing).
 
 ## Синтаксис
 

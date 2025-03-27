@@ -33,4 +33,4 @@ El resultado exitoso de un método {{HTTPMethod("PUT")}} o uno {{HTTPMethod("DEL
 
 ## Ver también
 
-- [HTTP request methods](/es/docs/Web/HTTP/Methods)
+- [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods)
