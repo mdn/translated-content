@@ -9,7 +9,7 @@ l10n:
 
 **`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
 
-{{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
 
 ```css interactive-example-choice
 clip-path: inset(22% 12% 15px 35px);

@@ -21,7 +21,68 @@ l10n:
 
 > **メモ:** {{cssxref("animation-timeline")}} はリセット専用の値として {{cssxref("animation")}} 一括指定に含められます。これは、 `animation` を記載することで、前回宣言した `animation-timeline` の値を `auto` にリセットすることは意味していますが、 `animation` によって固有の値を設定することはできません。[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に、 `animation-timeline` を宣言しなければ、その値が有効になりません。
 
-<!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
+{{InteractiveExample("CSS Demo: animation-name")}}
+
+```css interactive-example-choice
+animation-name: none;
+```
+
+```css interactive-example-choice
+animation-name: slide;
+```
+
+```css interactive-example-choice
+animation-name: bounce;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+
+@keyframes bounce {
+  from {
+    background-color: orange;
+    color: black;
+    margin-top: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-top: 40%;
+  }
+}
+```
 
 ## 構文
 
