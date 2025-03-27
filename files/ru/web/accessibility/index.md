@@ -19,7 +19,7 @@ slug: Web/Accessibility
   - : Набор статей о том, как сделать HTML-файлы доступнее с помощью ARIA.
 - [Разработка вспомогательных технологий (технических средств реабилитации, ТСР)](/ru/docs/Accessibility/AT_Development)
   - : Набор статей для разработчиков ТСР.
-- [Mobile accessibility checklist](/ru/docs/Web/Accessibility/Mobile_accessibility_checklist)
+- [Mobile accessibility checklist](/ru/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist)
   - : Этот документ предоставляет краткий список требований к разработке специальных возможностей для мобильных приложений.
 
 ## Инструменты для веб-разработчиков

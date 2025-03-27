@@ -62,5 +62,5 @@ p::before {
 ## Смотрите также
 
 - Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
-- [HTTP заголовок `Content-Language`](/ru/docs/Web/HTTP/Headers/Content-Language)
+- [HTTP заголовок `Content-Language`](/ru/docs/Web/HTTP/Reference/Headers/Content-Language)
 - HTML [`translate`](/ru/docs/Web/HTML/Global_attributes#translate) attribute

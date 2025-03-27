@@ -30,7 +30,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking
 </svg>
 ```
 
-在 (100,100) 创建一个圆形，半径是 100。属性`clip-path`引用了一个带单个 rect 元素的`{{ SVGElement("clipPath") }}`元素。它内部的这个矩形将把画布的上半部分涂黑。注意，`clipPath`元素经常放在一个`defs`元素内。
+在 (100,100) 创建一个圆形，半径是 100。属性 `clip-path` 引用了一个带单个 `rect` 元素的 {{ SVGElement("clipPath") }} 元素。它内部的这个矩形将把画布的上半部分涂黑。注意，`clipPath` 元素经常放在一个 `defs` 元素内。
 
 然而，该 rect 不会被绘制。它的象素数据将用来确定：圆形的哪些像素需要最终呈现出来。因为矩形只覆盖了圆形的上半部分，所以下半部分将消失了：
 

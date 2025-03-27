@@ -397,6 +397,6 @@ After declaring a few variables, we add an event listener to the button to contr
 
 ## Смотрите также
 
-- [HTML forms guide](/ru/docs/Learn/Forms)
+- [HTML forms guide](/ru/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/ru/docs/Web/HTML/Element/input/tel)

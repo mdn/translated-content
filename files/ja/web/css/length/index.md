@@ -18,7 +18,7 @@ l10n:
 > [!NOTE]
 > 負の `<length>` 値を許容するプロパティとそうでないプロパティがあります。
 
-長さの[指定値](/ja/docs/Web/CSS/CSS_cascade/specified_value) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
+長さの[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値) (_specified length_) は、その量と単位で表します。長さの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) (_computed length_) は、指定した長さを絶対長に分解したもので、単位は判別されません。
 
 `<length>` の単位には相対的なものと絶対的なものがあります。相対的な長さは、他の距離から見た長さを表します。単位によって、この距離は特定の文字の大きさであったり、[行の高さ](/ja/docs/Web/CSS/line-height)であったり、{{Glossary("viewport", "ビューポート")}}の大きさであったりします。
 相対的な長さの単位を使用するスタイルシートは、ある出力環境から別の出力環境へ、より簡単に変倍することができます。

@@ -74,7 +74,7 @@ let getting = browser.cookies.getAll(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 `{{WebExtAPIRef('cookies.Cookie')}}` 对象数组，这些对象与 `details` 参数中给定的属性匹配。仅返回未过期的 Cookie。返回的 Cookie 将按路径长度排序，从最长到最短。如果多个 Cookie 的路径长度相同，则创建时间最早的将排在最前面。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef('cookies.Cookie')}} 对象数组，这些对象与 `details` 参数中给定的属性匹配。仅返回未过期的 Cookie。返回的 Cookie 将按路径长度排序，从最长到最短。如果多个 Cookie 的路径长度相同，则创建时间最早的将排在最前面。
 
 ## 浏览器兼容性
 

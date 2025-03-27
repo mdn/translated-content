@@ -80,4 +80,4 @@ Math.pow(-7, 1 / 3); // NaN
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.sqrt()")}}
-- [Opérateur d'exponentiation](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Exponentiation_(**)>) {{experimental_inline}}
+- [Opérateur d'exponentiation](</fr/docs/Web/JavaScript/Reference/Operators#Exponentiation_(**)>) {{experimental_inline}}

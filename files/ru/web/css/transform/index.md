@@ -5,7 +5,7 @@ slug: Web/CSS/transform
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`transform`** позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент. Оно модифицирует координатное пространство для CSS [визуальной форматируемой модели](/ru/docs/Web/CSS/Visual_formatting_model).
+[CSS](/ru/docs/Web/CSS)-свойство **`transform`** позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент. Оно модифицирует координатное пространство для CSS [визуальной форматируемой модели](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model).
 
 {{InteractiveExample("CSS Demo: transform")}}
 
@@ -43,10 +43,10 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
+Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/CSS_display/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
 
 > [!WARNING]
-> Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
+> Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
 
 ## Синтаксис
 

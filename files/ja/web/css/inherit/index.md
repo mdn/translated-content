@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
+**`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
 
 [継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)においては、既定の動作を推進するものであり、他のルールを上書きする場合にのみ必要です。
 
