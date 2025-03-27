@@ -293,7 +293,7 @@ Los navegadores que admiten el tipo de entrada `email` automáticamente proporci
 [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
-Para obtener más información sobre cómo funciona la validación de formularios y cómo aprovechar las propiedades de CSS {{CSSxRef(":valid")}} e {{CSSxRef(":invalid")}} para estilizar la entrada en función de si el el valor actual es válido, consulta [validación de datos de formulario](/es/docs/Learn/Forms/Form_validation).
+Para obtener más información sobre cómo funciona la validación de formularios y cómo aprovechar las propiedades de CSS {{CSSxRef(":valid")}} e {{CSSxRef(":invalid")}} para estilizar la entrada en función de si el el valor actual es válido, consulta [validación de datos de formulario](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
 > Existen problemas de especificación conocidos relacionados con los nombres de dominio internacionales y la validación de direcciones de correo electrónico en HTML. Consulta el [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489).
@@ -417,7 +417,7 @@ Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer 
 
 ## Véase también
 
-- [Guía sobre formularios HTML](/es/docs/Learn/Forms)
+- [Guía sobre formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel)
 - [`<input type="url">`](/es/docs/Web/HTML/Element/input/url)

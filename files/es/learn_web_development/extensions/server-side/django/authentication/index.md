@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Authentication
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
+En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
 
 <table>
   <tbody>
@@ -31,12 +31,12 @@ En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu
 
 ## Introducción
 
-Django proporciona un sistema de autenticación y autorización ("permisos"), construido sobre el framework de sesión discutido en el [tutorial anterior](/es/docs/Learn/Server-side/Django/Sessions), que le permite verificar credenciales de usuario y definir que acciones puede realizar cada usuario. El framework incluye modelos para `Users` y `Groups` (una forma genérica de aplicar permisos a más de un usuario a la vez), permisos/indicadores (permissions/flags) que designan si un usuario puede realizar una tarea, formularios y vistas para iniciar sesión en los usuarios, y view tools para restringir el contenido.
+Django proporciona un sistema de autenticación y autorización ("permisos"), construido sobre el framework de sesión discutido en el [tutorial anterior](/es/docs/Learn_web_development/Extensions/Server-side/Django/Sessions), que le permite verificar credenciales de usuario y definir que acciones puede realizar cada usuario. El framework incluye modelos para `Users` y `Groups` (una forma genérica de aplicar permisos a más de un usuario a la vez), permisos/indicadores (permissions/flags) que designan si un usuario puede realizar una tarea, formularios y vistas para iniciar sesión en los usuarios, y view tools para restringir el contenido.
 
 > [!NOTE]
 > Según Django el sistema de autenticación pretende ser muy genérico, y, por lo tanto, no proporciona algunas características proporcinadas en otros sistemas de autenticación web. Las soluciones para algunos problemas están disponibles como paquetes de terceros. Por ejemplo, regulación de intentos de inicio de sesión y autenticación frente a terceros (por ej. OAuth).
 
-En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
+En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
 
 El sistema de autenticación es muy flexible, y puedes crear tus URLs, formularios, vistas y plantillas desde el inicio si quieres, simplemente llamando a la API provista para loguear al usuario. Sin embargo, en este artículo vamos a usar las vistas y formularios de autenticación "en stock" de Django para nuestras páginas de login y logout. De todos modos necesitaremos crear algunas plantillas, pero eso es bastante fácil.
 
@@ -44,7 +44,7 @@ Te mostraremos también cómo crear permisos, y revisar el estado de login y per
 
 ## Habilitanto la autenticación
 
-La autenticación fue habilitada automáticamente cuando [creamos el sitio web esqueleto](/es/docs/Learn/Server-side/Django/skeleton_website) (en el tutorial 2), así que no necesitas hacer nada más en este punto.
+La autenticación fue habilitada automáticamente cuando [creamos el sitio web esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (en el tutorial 2), así que no necesitas hacer nada más en este punto.
 
 > [!NOTE]
 > Toda la configuración necesaria fue hecha por nosotros cuando creamos la aplicación usando el comando `django-admin startproject`. Las tablas de base de datos para los usuarios y permisos de modelo fueron creados la primera vez que ejecutamos `python manage.py migrate`.
@@ -68,7 +68,7 @@ MIDDLEWARE = [
 
 ## Creando usuarios y grupos
 
-Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site) en el tutorial 4 (fue un superusuario, creado con el comando `python manage.py createsuperuser`). Nuestro superusuario ya está autenticado y tiene todos los permisos, así que necesitaremos crear un usuario de prueba que represente un usuario normal del sitio. Estaremos usando el sitio de administración para crear los grupos y logins de nuestro sitio web _BibliotecaLocal_, ya que es una de las formas más rápidas de hacerlo.
+Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) en el tutorial 4 (fue un superusuario, creado con el comando `python manage.py createsuperuser`). Nuestro superusuario ya está autenticado y tiene todos los permisos, así que necesitaremos crear un usuario de prueba que represente un usuario normal del sitio. Estaremos usando el sitio de administración para crear los grupos y logins de nuestro sitio web _BibliotecaLocal_, ya que es una de las formas más rápidas de hacerlo.
 
 > [!NOTE]
 > Puedes también crear usuarios mediante programación, como se muestra abajo. Tendrías que hacerlo, por ejemplo, si estuvieras desarrollando una interfaz para permitir a los usuarios crear sus propios logins (no deberías dar a los usuarios acceso al sito de administración).

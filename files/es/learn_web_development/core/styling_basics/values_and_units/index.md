@@ -122,7 +122,7 @@ Después de seguir las instrucciones anteriores, juega un poco más con los valo
 
 #### ems y rems
 
-`em` y `rem` son las dos longitudes relativas que es probable que encuentres con mayor frecuencia al cambiar el tamaño de cualquier cosa, de cajas a texto. Vale la pena entender cómo funcionan y las diferencias entre ellos, especialmente cuando comienzas a abordar temas más complejos como [aplicar estilos a texto](/es/docs/Learn/CSS/Styling_text) o [compaginar con CSS](/es/docs/Learn/CSS/CSS_layout). El ejemplo siguiente te proporciona una muestra.
+`em` y `rem` son las dos longitudes relativas que es probable que encuentres con mayor frecuencia al cambiar el tamaño de cualquier cosa, de cajas a texto. Vale la pena entender cómo funcionan y las diferencias entre ellos, especialmente cuando comienzas a abordar temas más complejos como [aplicar estilos a texto](/es/docs/Learn_web_development/Core/Text_styling) o [compaginar con CSS](/es/docs/Learn_web_development/Core/CSS_layout). El ejemplo siguiente te proporciona una muestra.
 
 El HTML es un conjunto de listas anidadas: hay tres listas en total y ambos ejemplos tienen el mismo HTML. La única diferencia es que el primero tiene una clase _ems_ y el segundo una clase _rems_.
 
@@ -257,7 +257,7 @@ En el ejemplo siguiente hemos colocado una imagen de fondo a 40px de la parte su
 
 En los ejemplos anteriores hemos visto casos en que se usan palabras clave como valores (por ejemplo, palabras clave para `<color>`, como `red`, `black`, `rebeccapurple` y `goldenrod`). Estas palabras clave normalmente se describen como _identificadores_, un valor especial que el CSS entiende. Como tales, no se escriben entre comillas (es decir, no se tratan como cadenas).
 
-Hay casos en el CSS en que debes usar cadenas, por ejemplo, [al especificar el contenido que generas](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generar_contenido_con_before_y_after). En este caso, el valor se escribe entre comillas para mostrar que se trata de una cadena de caracteres. En el ejemplo siguiente hemos usado palabras clave para el color, sin entrecomillar, y también una cadena caracteres, de contenido generado, entrecomillada.
+Hay casos en el CSS en que debes usar cadenas, por ejemplo, [al especificar el contenido que generas](/es/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#generar_contenido_con_before_y_after). En este caso, el valor se escribe entre comillas para mostrar que se trata de una cadena de caracteres. En el ejemplo siguiente hemos usado palabras clave para el color, sin entrecomillar, y también una cadena caracteres, de contenido generado, entrecomillada.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
 

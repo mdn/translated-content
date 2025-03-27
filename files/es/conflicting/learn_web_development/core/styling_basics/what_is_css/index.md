@@ -35,7 +35,7 @@ Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets)
   </tbody>
 </table>
 
-En el módulo [Introducción al HTML](/es/docs/Learn/HTML/Introduction_to_HTML), exponemos qué es el HTML y cómo se usa para definir documentos destinados a leerse en un navegador web. Los títulos se verán más grandes que el texto y los párrafos empezarán en una línea nueva y habrá un espacio entre ellos. Los enlaces aparecerán en un color diferente y subrayados para distinguirlos del resto del texto. Vienen predeterminados por el navegador y, en la práctica, son estilos muy básicos que el navegador aplica al HTML para asegurarse, básicamente, de que sean legibles incluso si el autor de la página no especifica un estilo explícito.
+En el módulo [Introducción al HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content), exponemos qué es el HTML y cómo se usa para definir documentos destinados a leerse en un navegador web. Los títulos se verán más grandes que el texto y los párrafos empezarán en una línea nueva y habrá un espacio entre ellos. Los enlaces aparecerán en un color diferente y subrayados para distinguirlos del resto del texto. Vienen predeterminados por el navegador y, en la práctica, son estilos muy básicos que el navegador aplica al HTML para asegurarse, básicamente, de que sean legibles incluso si el autor de la página no especifica un estilo explícito.
 
 ![Los estilos predeterminados utilizados por el navegador](html-example.png)
 
@@ -71,7 +71,7 @@ La regla se abre con un {{Glossary("CSS Selector", "selector")}}. Este _seleccio
 
 Luego tenemos un conjunto de llaves `{ }`. Entre estas habrá una o más **declaraciones**, que tomarán la forma de pares de **propiedad** y **valor**. Cada par especifica cada una de las propiedades de los elementos seleccionados y el valor que queremos dar a esa propiedad.
 
-Antes de los dos puntos, tenemos la propiedad; y después, el valor. Las {{Glossary("property/CSS", "propiedades")}} CSS admiten diferentes valores, dependiendo de qué propiedad se esté especificando. En el ejemplo anterior, tenemos la propiedad `color`, que puede tomar varios [valores de color](/es/docs/Learn/CSS/Building_blocks/Values_and_units#color). También tenemos la propiedad de `font-size`, que puede tomar varias [unidades de tamaño](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS#N%C3%BAmeros_longitudes_y_porcentajes) como valor.
+Antes de los dos puntos, tenemos la propiedad; y después, el valor. Las {{Glossary("property/CSS", "propiedades")}} CSS admiten diferentes valores, dependiendo de qué propiedad se esté especificando. En el ejemplo anterior, tenemos la propiedad `color`, que puede tomar varios [valores de color](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). También tenemos la propiedad de `font-size`, que puede tomar varias [unidades de tamaño](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#N%C3%BAmeros_longitudes_y_porcentajes) como valor.
 
 Una hoja de estilo CSS contendrá muchas de estas reglas, escritas una tras otra.
 
@@ -111,12 +111,12 @@ Como recién llegado al CSS, es probable que encuentres las especificaciones abr
 
 ## Compatibilidad con navegadores
 
-Una vez se ha especificado el CSS, solo es útil en el desarrollo de páginas web si uno o más navegadores lo han implementado. Esto significa que el código se ha escrito para convertir las instrucciones que se especifican en nuestro archivo CSS en algo que se pueda mostrar en pantalla. Veremos este proceso más en profundidad en el artículo [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works). Es inusual que todos los navegadores puedan implementar una misma característica al mismo tiempo, por lo que suele haber una brecha en la que se pueden usar algunas partes del CSS en algunos navegadores pero no en otros. Por este motivo, es útil poder verificar el estado de implementación. En cada una de las páginas de propiedades que hay en la MDN se puede ver el estado de la propiedad de interés, por lo que se puede saber si será posible utilizarla en un sitio web.
+Una vez se ha especificado el CSS, solo es útil en el desarrollo de páginas web si uno o más navegadores lo han implementado. Esto significa que el código se ha escrito para convertir las instrucciones que se especifican en nuestro archivo CSS en algo que se pueda mostrar en pantalla. Veremos este proceso más en profundidad en el artículo [Cómo funciona el CSS](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS). Es inusual que todos los navegadores puedan implementar una misma característica al mismo tiempo, por lo que suele haber una brecha en la que se pueden usar algunas partes del CSS en algunos navegadores pero no en otros. Por este motivo, es útil poder verificar el estado de implementación. En cada una de las páginas de propiedades que hay en la MDN se puede ver el estado de la propiedad de interés, por lo que se puede saber si será posible utilizarla en un sitio web.
 
 Lo que sigue es el gráfico de datos de compatibilidad para la propiedad CSS [`font-family`](/es/docs/Web/CSS/font-family).
 
 ## ¿Qué viene ahora?
 
-Ahora que comprendes mínimamente qué es el CSS, pasemos a [Comenzar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started), donde puedes empezar a escribir algo de CSS tú mismo.
+Ahora que comprendes mínimamente qué es el CSS, pasemos a [Comenzar con CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started), donde puedes empezar a escribir algo de CSS tú mismo.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}

@@ -79,6 +79,6 @@ Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayud
 
 ## ¿Qué sigue?
 
-Felicitaciones por completar este primer modulo!. Deberías tener un buen entendimiento general de CSS, y ser capaz de comprender bastante de los que está sucediendo en una hoja de estilo. En el módulo siguiente, [bloques de construccion CSS](/es/docs/Learn/CSS/Building_blocks), revisaremos en profundidad algunas áreas clave.
+Felicitaciones por completar este primer modulo!. Deberías tener un buen entendimiento general de CSS, y ser capaz de comprender bastante de los que está sucediendo en una hoja de estilo. En el módulo siguiente, [bloques de construccion CSS](/es/docs/Learn_web_development/Core/Styling_basics), revisaremos en profundidad algunas áreas clave.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

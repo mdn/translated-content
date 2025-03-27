@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Forms
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
+En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
 
 <table>
   <tbody>
@@ -34,9 +34,9 @@ En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y
 
 ## Visión General
 
-Un [Formulario HTML](/es/docs/Learn/Forms) es un conjunto de uno o más campos/widgets en una página web, que pueden ser usados para recolectar información de los usuarios para el envío a un servidor. Los formularios son un mecanismo flexible para recolectar datos de entrada porque son widgets adecuados para ingresar diferentes tipos de datos, incluyendo campos de texto, checkboxes, radio buttons, selector de fechas, etc. Los formularios son también una forma relativamente segura de compartir datos con el servidor, ya que permiten enviar información en peticiones `POST` con protección de falsificación de solicitud entre sitios.
+Un [Formulario HTML](/es/docs/Learn_web_development/Extensions/Forms) es un conjunto de uno o más campos/widgets en una página web, que pueden ser usados para recolectar información de los usuarios para el envío a un servidor. Los formularios son un mecanismo flexible para recolectar datos de entrada porque son widgets adecuados para ingresar diferentes tipos de datos, incluyendo campos de texto, checkboxes, radio buttons, selector de fechas, etc. Los formularios son también una forma relativamente segura de compartir datos con el servidor, ya que permiten enviar información en peticiones `POST` con protección de falsificación de solicitud entre sitios.
 
-Si bien nosotros aún no hemos creado ningún formulario en este tutorial todavia, ya lo hemos encontrado en el sitio de administración de Django; por ejemplo, la captura de pantalla de abajo muestra un formulario para editar uno de nuestros modelos de [Libro](/es/docs/Learn/Server-side/Django/Models), compuesto de un número de listas de selección y editores de texto.
+Si bien nosotros aún no hemos creado ningún formulario en este tutorial todavia, ya lo hemos encontrado en el sitio de administración de Django; por ejemplo, la captura de pantalla de abajo muestra un formulario para editar uno de nuestros modelos de [Libro](/es/docs/Learn_web_development/Extensions/Server-side/Django/Models), compuesto de un número de listas de selección y editores de texto.
 
 ![Admin Site - Book Add](admin_book_add.png)
 
@@ -46,7 +46,7 @@ En este tutorial vamos a mostrarle algunas de las formas de crear y trabajar con
 
 ## Formularios HTML
 
-Primero, una breve revisión de [Formularios HTML](/es/docs/Learn/Forms). Considere un simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:
+Primero, una breve revisión de [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms). Considere un simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -304,7 +304,7 @@ Si el formulario es válido, entonces podemos comenzar a usar los datos, accedie
 > [!WARNING]
 > Si bien también puede acceder a los datos del formulario directamente a través de la solicitud (por ejemplo `request.POST['renewal_date']` o `request.GET['renewal_date']` (si se esta usando una solicitud GET) esto NO es recomendable. Los datos limpios se desinfectan, validan y convierten en tipos compatibles con Python.
 
-El paso final en la parte de manejo de formularios de la vista es redirigir a otra página, generalmente una página de "éxito". En este caso usamos `HttpResponseRedirect` y `reverse()` para redirigir a la vista llamada `'all-borrowed'`(esto fue creado como el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/Authentication#challenge_yourself)).Si no creó esa página, considere redirigir a la página de inicio en la URL '/').
+El paso final en la parte de manejo de formularios de la vista es redirigir a otra página, generalmente una página de "éxito". En este caso usamos `HttpResponseRedirect` y `reverse()` para redirigir a la vista llamada `'all-borrowed'`(esto fue creado como el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#challenge_yourself)).Si no creó esa página, considere redirigir a la página de inicio en la URL '/').
 
 Eso es todo lo necesario para el manejo del formulario en sí, pero aún debemos restringir el acceso a la vista a los bibliotecarios. Probablemente deberíamos crear un nuevo permiso en `BookInstance` ("`can_renew`"),pero para simplificar las cosas aquí solo usamos la funcion decorator `@permission_required` con nuestro existente permiso `can_mark_returned`.
 
@@ -442,7 +442,7 @@ Para obtener más ejemplos de cómo reproducir manualmente los formularios en pl
 
 ### Probando la página
 
-Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/Authentication#challenge_yourself) tendrá una lista de todos los libros prestados en la biblioteca, que solo es visible para el personal de la biblioteca. Podemos agregar un enlace a nuestra página de renovación al lado de cada artículo usando el código de plantilla a continuación.
+Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#challenge_yourself) tendrá una lista de todos los libros prestados en la biblioteca, que solo es visible para el personal de la biblioteca. Podemos agregar un enlace a nuestra página de renovación al lado de cada artículo usando el código de plantilla a continuación.
 
 ```django
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}

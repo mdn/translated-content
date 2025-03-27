@@ -44,7 +44,7 @@ Lo primero que veremos son los tres métodos para aplicar CSS a un documento.
 
 ### Hoja de estilo externa
 
-En [Empezar con el CSS](/es/docs/Learn/CSS/First_steps/Getting_started), vinculamos una hoja de estilo externa a nuestra página. Este es el método más común y útil para adjuntar CSS a un documento, porque puedes vincular el CSS a varias páginas y dar estilo a todas ellas con la misma hoja de estilo. En la mayoría de los casos, las diferentes páginas de un sitio web se verán más o menos iguales, de modo que puedes usar el mismo conjunto de reglas para el aspecto y la interacción básicos.
+En [Empezar con el CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started), vinculamos una hoja de estilo externa a nuestra página. Este es el método más común y útil para adjuntar CSS a un documento, porque puedes vincular el CSS a varias páginas y dar estilo a todas ellas con la misma hoja de estilo. En la mayoría de los casos, las diferentes páginas de un sitio web se verán más o menos iguales, de modo que puedes usar el mismo conjunto de reglas para el aspecto y la interacción básicos.
 
 Una hoja de estilo externa significa que el CSS está escrito en un archivo independiente con una extensión `.css` y que lo vinculas desde un elemento `<link>` de HTML:
 
@@ -189,7 +189,7 @@ Si no estás en un sistema donde puedas crear archivos fácilmente, puedes utili
 
 ## Selectores
 
-No se puede hablar de CSS sin mencionar los selectores, de los cuales ya hemos descubierto varios tipos diferentes en la lección [Empezar con el CSS](/es/docs/Learn/CSS/First_steps/Getting_started). Un selector es, como determinamos, un elemento de nuestro documento HTML para aplicarle estilo. Si los estilos no se aplican correctamente, es probable que el selector no coincida con lo que crees que debería coincidir.
+No se puede hablar de CSS sin mencionar los selectores, de los cuales ya hemos descubierto varios tipos diferentes en la lección [Empezar con el CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started). Un selector es, como determinamos, un elemento de nuestro documento HTML para aplicarle estilo. Si los estilos no se aplican correctamente, es probable que el selector no coincida con lo que crees que debería coincidir.
 
 Cada regla CSS comienza con un selector o una lista de selectores que indican al navegador a qué elemento o elementos deben aplicarse dichas reglas. Todos los siguientes son ejemplos de selectores válidos o listas de selectores.
 
@@ -207,7 +207,7 @@ h1, h2, .intro
 **Prueba a crear algunas reglas CSS que usen los selectores anteriores y algo de HTML sin estilos. Si no conoces alguna de las sintaxis anteriores, ¡prueba a buscarla en MDN!**
 
 > [!NOTE]
-> Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre [selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) de la próxima lección.
+> Aprenderás mucho más sobre los selectores en nuestros tutoriales sobre [selectores CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) de la próxima lección.
 
 ### Especificidad
 
@@ -245,7 +245,7 @@ Sin embargo, en el caso de nuestro primer bloque, que contiene un selector de cl
 
 **Prueba el ejemplo anterior: añade el HTML a tu experimento, luego pon las dos reglas `p { ... }` a tu hoja de estilo. A continuación, cambia el primer selector `p` por `.special` para ver cómo cambia el estilo.**
 
-Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más fáciles de entender a medida que se van adquiriendo conocimientos de CSS. En nuestro artículo sobre [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), que abordaremos en la próxima lección, se explicará en detalle, incluyendo cómo calcular la especificidad. Por ahora, solo has de saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un elemento es el primer paso para solucionar estos problemas.
+Las reglas de especificidad y de cascada pueden parecer un poco complicadas al principio. Son más fáciles de entender a medida que se van adquiriendo conocimientos de CSS. En nuestro artículo sobre [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), que abordaremos en la próxima lección, se explicará en detalle, incluyendo cómo calcular la especificidad. Por ahora, solo has de saber que existe y que a veces el CSS no se aplica como esperas porque algo más en la hoja de estilo tiene una mayor especificidad. El hecho de identificar que más de una regla podría aplicarse a un elemento es el primer paso para solucionar estos problemas.
 
 ## Propiedades y valores
 
@@ -344,7 +344,7 @@ El resultado del código anterior se ve así:
 
 ## @rules
 
-Las [`@rules`](/es/docs/Web/CSS/At-rule) (leído "at-rules" en inglés) dan al CSS algunas instrucciones sobre cómo comportarse. Algunas `@rules` son simples, con el nombre de la regla y un valor. Por ejemplo, para importar una hoja de estilo adicional a tu hoja de estilo CSS principal, puedes usar `@import`:
+Las [`@rules`](/es/docs/Web/CSS/CSS_syntax/At-rule) (leído "at-rules" en inglés) dan al CSS algunas instrucciones sobre cómo comportarse. Algunas `@rules` son simples, con el nombre de la regla y un valor. Por ejemplo, para importar una hoja de estilo adicional a tu hoja de estilo CSS principal, puedes usar `@import`:
 
 ```css
 @import "styles2.css";
@@ -585,6 +585,6 @@ Debes asegurarte siempre de separar los valores distintos entre sí por al menos
 
 ## ¿Qué sigue?
 
-Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo ([Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)) veremos ese proceso.
+Resulta útil entender un poco cómo el navegador toma tu HTML y tu CSS y los convierte en una página web, razón por la cual en el próximo artículo ([Cómo funciona el CSS](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)) veremos ese proceso.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
