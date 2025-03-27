@@ -2,7 +2,7 @@
 title: all
 slug: Web/CSS/all
 l10n:
-  sourceCommit: 9e521726ed1d605756b73a788eaa55498d540821
+  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
 {{CSSRef}}
@@ -12,7 +12,7 @@ l10n:
 {{InteractiveExample("CSS Demo: all")}}
 
 ```css interactive-example-choice
-/*no all property*/
+/* all プロパティなし */
 ```
 
 ```css interactive-example-choice
@@ -31,14 +31,12 @@ all: unset;
 all: revert;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div class="example-container-bg">
     <div class="example-container">
       <p id="example-element">
-        This paragraph has a font size of 1.5rem and a color of gold. It also
-        has 1rem of vertical margin set by the user-agent. The parent of the
-        paragraph is a &lt;div&gt; with a dashed blue border.
+        この段落はフォントサイズが 1.5rem で、色は金色です。また、ユーザーエージェントによって 1rem の縦マージンが設定されています。この段落の親要素は、青い破線の境界線を持つ &lt;div&gt; です。
       </p>
     </div>
   </div>
@@ -91,9 +89,9 @@ all: revert-layer;
   - : その要素のすべてのプロパティを、既定値が inherit のものは継承値に、そうでなければ初期値に変更するべきであることを指定します。
 - {{cssxref("revert")}}
   - : 宣言が所属するスタイルシートの出所に応じて動作を指定します。
-    - [作者オリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#%E4%BD%9C%E6%88%90%E8%80%85%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%BC%E3%83%88)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)をユーザーのレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)は、作者レベルのルールが指定されていないかのように計算されます。 `revert` の用途では、作者オリジンはオーバーライドおよびアニメーションのオリジンも含まれます。
-    - [ユーザーオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%BC%E3%83%88)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)をユーザーエージェントレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)は、作者レベルまたはユーザーレベルのルールが指定されていないかのように計算されます。
-    - [ユーザーエージェントオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%B7%E3%83%BC%E3%83%88)では、 `revert` の値は `unset` と同様に動作します。
+    - [作成者オリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#作成者スタイルシート)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)をユーザーのレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)は、作成者レベルのルールが指定されていないかのように計算されます。 `revert` の用途では、作成者オリジンはオーバーライドおよびアニメーションのオリジンも含まれます。
+    - [ユーザーオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザースタイルシート)に所属するルールの場合、 `revert` の値で[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)をユーザーエージェントレベルまでロールバックし、その要素の[指定値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値)は、作成者レベルまたはユーザーレベルのルールが指定されていないかのように計算されます。
+    - [ユーザーエージェントオリジン](/ja/docs/Web/CSS/CSS_cascade/Cascade#ユーザーエージェントスタイルシート)では、 `revert` の値は `unset` と同様に動作します。
 - {{cssxref("revert-layer")}}
   - : その要素のすべてのプロパティを、直前の[カスケードレイヤー](/ja/docs/Web/CSS/@layer)が存在すれば、そこまでカスケードをロールバックすることを指定します。 他にカスケードレイヤーが存在しない場合、要素のプロパティは、現在のレイヤーに一致するルールが存在する場合はそのルール、または直前の[スタイルオリジン](/ja/docs/Glossary/Style_origin)にロールバックします。
 
