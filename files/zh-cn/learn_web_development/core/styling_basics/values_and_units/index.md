@@ -819,8 +819,7 @@ CSS 也有 [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 如果你希望这些值基于其他值发生变化，则需要进行一些数学计算。
 你可以计算某个值的百分比或将一个数字与另一个数字相加，然后使用结果更新你的 CSS。
 
-CSS 支持 [数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0)，它允许我们执行计算，而不是依赖于静态值或在 JavaScript 中进行计算。
-最常见的数学函数之一是 [`calc()`](/zh-CN/docs/Web/CSS/calc)，它允许你执行加法、减法、乘法和除法等操作。
+CSS 支持[数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学函数)，它允许我们执行计算，而不是依赖于静态值或在 JavaScript 中进行计算。最常见的数学函数之一是 [`calc()`](/zh-CN/docs/Web/CSS/calc)，它允许你执行加法、减法、乘法和除法等操作。
 
 例如，假设我们希望将某个元素的宽度设置为其父容器宽度的 20% 加上 100px。
 我们无法使用静态值指定此宽度 —— 如果父容器使用百分比宽度（或诸如 `em` 或 `rem` 之类的相对单位），则它会根据使用环境以及其他因素（例如用户的设备或浏览器窗口宽度）而变化。
