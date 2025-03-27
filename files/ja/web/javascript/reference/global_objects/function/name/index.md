@@ -256,7 +256,7 @@ class Foo {
 }
 ```
 
-`static name()` メソッドが存在する場合、 `Foo.name` はクラス名ではなく、 `name()` 関数オブジェクトへの参照を持つことになります。 `fooInstance` のクラスを取得しようとして `fooInstance.constructor.name` を使用しても、まったくクラス名は得られず、代わりに静的クラスメソッドへの参照が返されます。 
+`static name()` メソッドが存在する場合、 `Foo.name` はクラス名ではなく、 `name()` 関数オブジェクトへの参照を持つことになります。 `fooInstance` のクラスを取得しようとして `fooInstance.constructor.name` を使用しても、まったくクラス名は得られず、代わりに静的クラスメソッドへの参照が返されます。
 
 ```js
 const fooInstance = new Foo();
