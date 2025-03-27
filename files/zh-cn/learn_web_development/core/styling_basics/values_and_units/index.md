@@ -59,7 +59,7 @@ h1 {
 
 让我们来看看你可能经常遇到的一些值和单位类型，并提供一些示例，以便你尝试使用各种值的可能性。
 
-## 数字、长度和百分比
+## 数值、长度和百分比
 
 你可能会发现自己在 CSS 中使用了各种数值数据类型。以下全部归类为数值：
 
@@ -128,13 +128,13 @@ h1 {
 
 | 单位 | 名称         | 等价换算                 |
 | ---- | ------------ | ------------------------ |
-| `cm` | 厘米         | 1cm = 37.8px = 25.2/64in |
-| `mm` | 毫米         | 1mm = 1/10th of 1cm      |
-| `Q`  | 四分之一毫米 | 1Q = 1/40th of 1cm       |
-| `in` | 英寸         | 1in = 2.54cm = 96px      |
-| `pc` | 派卡         | 1pc = 1/6th of 1in       |
-| `pt` | 磅           | 1pt = 1/72th of 1in      |
-| `px` | 像素         | 1px = 1/96th of 1in      |
+| `cm` | 厘米         | 1cm = 37.8px |
+| `mm` | 毫米         | 1mm = 3.78px      |
+| `Q`  | 四分之一毫米 | 1Q = 0.945px = 0.25mm      |
+| `in` | 英寸         | 1in = 96px = 2.54cm      |
+| `pc` | 派卡         | 1pc = 16px ≈ 0.4233cm       |
+| `pt` | 磅           | 1pt = 4/3 px ≈ 0.3527mm      |
+| `px` | 像素         | 1px ≈ 0.2646mm      |
 
 这些单位大多在用于印刷而非屏幕输出时更有用。例如，我们通常不在屏幕上使用 `cm`（厘米）。你唯一应该常用的值是 `px`（像素） 。
 
@@ -286,7 +286,7 @@ body {
     border-radius: 4px;
     background-color: tomato;
     color: white;
-    content: "You browser doesn't support lh unit just yet";
+    content: "你的浏览器还不支持 lh 单位";
   }
 }
 ```
@@ -304,15 +304,11 @@ p {
 
 ```html
 <p style="line-height: 2em">
-  Summer is a time for adventure, and this year was no exception. I had many
-  exciting experiences, but two of my favorites were my trip to the beach and my
-  week at summer camp.
+  蝉鸣拉开盛夏序章，记忆里总藏着几帧特别的画面。若要将今夏浓缩成两个片段，该是山间溯溪的清凉，与老城茶肆的烟火。竹影婆娑的碎石小径上，还留着前夜骤雨打落的合欢花。
 </p>
 
 <p style="line-height: 4em">
-  At the beach, I spent my days swimming, collecting shells, and building
-  sandcastles. I also went on a boat ride and saw dolphins swimming alongside
-  us.
+  踩着溪石逆流而上，水花在膝间绽成碎玉。偶遇深潭便纵身跃入，惊起白鹭掠过崖壁青苔。暮色里寻到半山茶铺，粗陶碗中沉浮的野茶，混着柴火灶的焦香，竟比龙井更沁脾腑。藤编矮凳上的裂纹在月光下蜿蜒，竟与白日里溯溪的河道有几分相似。
 </p>
 ```
 
@@ -608,14 +604,6 @@ li {
 
 ### HSL
 
-另一种指定颜色的方法是 HSL 颜色模型。`hsl()` 函数不接受红、绿、蓝值，而是接受色相、饱和度和亮度值，这些值用于区分 1670 万种颜色，但方式不同：
-
-- **色调**：颜色的底色。这个值在 0 和 360 之间，表示 {{glossary("color wheel")}} 周围的角度。
-- **饱和度**：颜色有多饱和？它的值为 0–100%，其中 0 为无颜色（它将显示为灰色阴影），100% 为全色饱和度
-- **亮度**：颜色有多亮？它从 0–100% 中获取一个值，其中 0 表示没有光（它将完全显示为黑色），100% 表示完全亮（它将完全显示为白色）
-
-我们可以更新 RGB 的例子来使用 HSL 颜色，就像这样：
-
 与 `hwb()` 函数类似的是 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数，它也指定了一个 `srgb()` 颜色。HSL 使用**色相**，以及**饱和度**和**亮度**：
 
 - **色相（Hue）**
@@ -784,16 +772,9 @@ li {
 
 ## 函数
 
-我们将查看的最后一种类型的值是一组称为函数的值。在编程中，函数是一段可重用的代码，可以多次运行，以完成重复的任务，对开发人员和计算机都是如此。函数通常与 JavaScript、Python 或 C++ 等语言相关联，但它们也以属性值的形式存在于 CSS 中。我们已经在颜色部分看到了函数的作用——`rgb()`、`hsl()` 等。用于从文件返回图像的值——`url()`——也是一个函数。
-
-`calc()` CSS 函数的行为更像你在传统编程语言中可能找到的东西。这个函数使你能够在 CSS 中进行简单的计算。如果你想计算一些你在编写项目的 CSS 时无法定义的数值，并且需要浏览器在运行时为你计算，那么它特别有用。
-
-例如，下面我们使用 `calc()` 使框宽为 `20% + 100px`。20% 是根据父容器 `.wrapper` 的宽度来计算的，因此如果宽度改变，它也会改变。我们不能事先做这个计算，因为我们不知道父类的 20% 是多少，所以我们使用 `calc()` 来告诉浏览器为我们做这个计算。
-
 在编程中，函数是一段执行特定任务的代码。函数非常有用，因为你可以编写一次代码，然后多次重复使用它，而不必一遍又一遍地编写相同的逻辑。大多数编程语言不仅支持函数，还提供了方便的常用内置函数，因此你不必从头开始自己编写这些函数。
 
-CSS 也有 [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)，其工作方式与其他语言中的函数类似。
-事实上，我们在上面的 [颜色](#color) 部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数。
+CSS 也有 [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)，其工作方式与其他语言中的函数类似。事实上，我们在上面的 [颜色](#颜色) 部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数。
 
 除了应用颜色之外，你还可以使用 CSS 函数来完成许多其他任务。例如，[变换函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#transform_functions)是一种常见的在页面上移动、旋转和缩放元素的方式。你可能会看到 [`translate()`](/zh-CN/docs/Web/CSS/transform-function/translate) 用于水平或垂直移动某物，[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 用于旋转某物，或者 [`scale()`](/zh-CN/docs/Web/CSS/transform-function/scale) 用于放大或缩小某物。
 
