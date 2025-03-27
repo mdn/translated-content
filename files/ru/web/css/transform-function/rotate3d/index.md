@@ -25,14 +25,14 @@ transform: rotate3d(0, 1, 0.5, 3.142rad);
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-<div class="transition-all" id="example-element">
-<div class="face front">1</div>
-<div class="face back">2</div>
-<div class="face right">3</div>
-<div class="face left">4</div>
-<div class="face top">5</div>
-<div class="face bottom">6</div>
-</div>
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
 </section>
 ```
 

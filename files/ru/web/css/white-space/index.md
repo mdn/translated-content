@@ -37,12 +37,13 @@ white-space: preserve nowrap;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-<div id="example-element">
-<p>
-        But ere she from the church-door stepped She smiled and told us why: 'It was a wicked woman's curse,' Quoth she,
-        'and what care I?' She smiled, and smiled, and passed it off Ere from the door she stept—
-      </p>
-</div>
+  <div id="example-element">
+    <p>
+      But ere she from the church-door stepped She smiled and told us why: 'It
+      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
+      smiled, and passed it off Ere from the door she stept—
+    </p>
+  </div>
 </section>
 ```
 

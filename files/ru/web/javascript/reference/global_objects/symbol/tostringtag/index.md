@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ```js interactive-example
 class ValidatorClass {
   get [Symbol.toStringTag]() {
-    return 'Validator';
+    return "Validator";
   }
 }
 
