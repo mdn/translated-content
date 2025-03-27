@@ -23,7 +23,7 @@ function Food(name, price) {
 }
 
 console.log(new Food("cheese", 5).name);
-// Expected output: "cheese"
+// 期待される出力結果: "cheese"
 ```
 
 ## 構文
