@@ -18,7 +18,7 @@ box-shadow: 60px -16px teal;
 ```
 
 ```css interactive-example-choice
-box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 ```
 
 ```css interactive-example-choice
@@ -26,14 +26,16 @@ box-shadow: inset 5em 1em gold;
 ```
 
 ```css interactive-example-choice
-box-shadow: 3px 3px red, -1em 0 .4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 ```
 
 ```html interactive-example
 <section id="default-example">
-<div class="transition-all" id="example-element">
-<p>This is a box with a box-shadow around it.</p>
-</div>
+  <div class="transition-all" id="example-element">
+    <p>This is a box with a box-shadow around it.</p>
+  </div>
 </section>
 ```
 

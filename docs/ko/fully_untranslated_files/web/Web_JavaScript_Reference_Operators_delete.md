@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 ```js interactive-example
 const Employee = {
-  firstname: 'Maria',
-  lastname: 'Sanchez',
+  firstname: "Maria",
+  lastname: "Sanchez",
 };
 
 console.log(Employee.firstname);

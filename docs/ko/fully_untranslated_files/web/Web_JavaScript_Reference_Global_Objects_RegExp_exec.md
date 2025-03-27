@@ -16,8 +16,8 @@ JavaScript {{jsxref("RegExp")}} 객체는 {{jsxref("RegExp.global", "global")}} 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
 
 ```js interactive-example
-const regex1 = RegExp('foo*', 'g');
-const str1 = 'table football, foosball';
+const regex1 = RegExp("foo*", "g");
+const str1 = "table football, foosball";
 let array1;
 
 while ((array1 = regex1.exec(str1)) !== null) {

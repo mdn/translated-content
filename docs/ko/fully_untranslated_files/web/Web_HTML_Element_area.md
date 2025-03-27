@@ -37,7 +37,10 @@ slug: Web/HTML/Element/area
     href="https://developer.mozilla.org/docs/Web/CSS"
     alt="CSS" />
 </map>
-<img usemap="#infographic" src="/shared-assets/images/examples/mdn-info.png" alt="MDN infographic" />
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info.png"
+  alt="MDN infographic" />
 ```
 
 ```css interactive-example

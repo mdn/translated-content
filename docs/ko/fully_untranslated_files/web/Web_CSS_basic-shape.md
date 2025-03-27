@@ -22,16 +22,27 @@ clip-path: ellipse(115px 55px at 50% 40%);
 ```
 
 ```css interactive-example-choice
-clip-path: polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%, 50% 81.3%, 80.9% 97.6%, 75% 63.1%, 100% 38.8%, 65.5% 33.8%);
+clip-path: polygon(
+  50% 2.4%,
+  34.5% 33.8%,
+  0% 38.8%,
+  25% 63.1%,
+  19.1% 97.6%,
+  50% 81.3%,
+  80.9% 97.6%,
+  75% 63.1%,
+  100% 38.8%,
+  65.5% 33.8%
+);
 ```
 
 ```css interactive-example-choice
-clip-path: path('M 50,245 A 160,160 0,0,1 360,120 z')
+clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-<div class="transition-all" id="example-element"></div>
+  <div class="transition-all" id="example-element"></div>
 </section>
 ```
 

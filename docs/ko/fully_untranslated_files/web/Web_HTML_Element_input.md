@@ -12,14 +12,21 @@ slug: Web/HTML/Element/input
 ```html interactive-example
 <label for="name">Name (4 to 8 characters):</label>
 
-<input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" />
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
 ```
 
 ```css interactive-example
 label {
   display: block;
   font:
-    1rem 'Fira Sans',
+    1rem "Fira Sans",
     sans-serif;
 }
 
