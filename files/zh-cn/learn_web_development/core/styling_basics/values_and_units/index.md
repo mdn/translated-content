@@ -549,8 +549,7 @@ li {
 > [!NOTE]
 > 在颜色上设置 alpha 通道与使用我们前面看到的 {{cssxref("opacity")}} 属性有一个关键区别。当你使用不透明度时，你让元素和它里面的所有东西都不透明，而使用 RGB 与 alpha 参数的颜色只让你指定的颜色不透明。
 
-在下面的示例中，我们为彩色盒子的容器块添加了背景图像。然后，我们将这些盒子设置为不同的不透明度值 —— 请注意，当 alpha 通道值较小时，背景会更多地显示出来。
-在此示例中，尝试更改 alpha 通道值，看看它如何影响颜色输出。
+在下面的示例中，我们为彩色盒子的容器块添加了背景图像。然后，我们将这些盒子设置为不同的不透明度值 —— 请注意，当 alpha 通道值较小时，背景会更多地显示出来。在此示例中，尝试更改 alpha 通道值，看看它如何影响颜色输出。
 
 ```html live-sample___color-rgba
 <div class="wrapper">
@@ -591,20 +590,17 @@ li {
 
 `sRGB` 颜色空间定义了**红**（r）、**绿**（g）和**蓝**（b）颜色空间中的颜色。
 
-### 使用色调来指定颜色
+### 使用色相来指定颜色
 
-如果你不满足于仅使用关键字、十六进制和 `rgb()` 来定义颜色，可以尝试使用 [`<hue>`](/zh-CN/docs/Web/CSS/hue)。
-色相是让我们能够区分或比较颜色（如红色、橙色、黄色、绿色、蓝色等）的属性。
-关键在于，你可以使用 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 来指定色相，因为大多数颜色模型都使用 {{glossary("color wheel")}} 来描述色相。
+如果你不满足于仅使用关键字、十六进制和 `rgb()` 来定义颜色，可以尝试使用 [`<hue>`](/zh-CN/docs/Web/CSS/hue)。色相是让我们能够区分或比较颜色（如红色、橙色、黄色、绿色、蓝色等）的属性。关键在于，你可以使用 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 来指定色相，因为大多数颜色模型都使用{{glossary("color wheel", "色环")}}来描述色相。
 
 有几种颜色函数包含 [`<hue>`](/zh-CN/docs/Web/CSS/hue) 组件，例如 `hsl()`、`hwb()` 和 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch)。其他颜色函数，如 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)，则基于人类视觉定义颜色。
 
-如果你想了解更多关于这些函数和颜色空间的信息，请参阅 [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color) 指南、列出了 CSS 中所有颜色使用方式的 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 参考文档，以及提供 CSS 中所有颜色类型和使用颜色值的属性概述的 [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)。
+如果你想了解更多关于这些函数和颜色空间的信息，请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)指南、列出了 CSS 中所有颜色使用方式的 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 参考文档，以及提供 CSS 中所有颜色类型和使用颜色值的属性概述的 [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)。
 
 ### HWB
 
-在 CSS 中使用色相的一个很好的起点是 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 函数，它指定了一个 `srgb()` 颜色。
-该函数的三个部分分别是：
+在 CSS 中使用色相的一个很好的起点是 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 函数，它指定了一个 `srgb()` 颜色。该函数的三个部分分别是：
 
 - **色相（Hue）**：颜色的基本色调。它接受一个介于 0 到 360 之间的 [`<hue>`](/zh-CN/docs/Web/CSS/hue) 值，表示色轮上的角度。
 - **白度（Whiteness）**：颜色中有多少白色？它接受一个从 `0%`（无白色）到 `100%`（完全白色）的值。
@@ -620,8 +616,7 @@ li {
 
 我们可以更新 RGB 的例子来使用 HSL 颜色，就像这样：
 
-与 `hwb()` 函数类似的是 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数，它也指定了一个 `srgb()` 颜色。
-HSL 使用**色相**，以及**饱和度**和**亮度**：
+与 `hwb()` 函数类似的是 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数，它也指定了一个 `srgb()` 颜色。HSL 使用**色相**，以及**饱和度**和**亮度**：
 
 - **色相（Hue）**
 - **饱和度（Saturation）**：颜色的饱和度是多少？它接受一个 0–100% 的值，其中 0 表示无颜色（会显示为灰色），100% 表示完全饱和的颜色。
@@ -740,8 +735,7 @@ HSL 使用**色相**，以及**饱和度**和**亮度**：
 
 一个典型的位置值由两个值组成。第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 `center`。
 
-在以下示例中，我们使用关键字将背景图像定位在容器顶部右侧 40px 处。
-尝试调整这些值，看看如何移动图像的位置。
+在以下示例中，我们使用关键字将背景图像定位在容器顶部右侧 40px 处。尝试调整这些值，看看如何移动图像的位置。
 
 ```html live-sample___position
 <div class="box"></div>
@@ -764,9 +758,9 @@ HSL 使用**色相**，以及**饱和度**和**亮度**：
 
 ## 字符串和标识符
 
-在上面的示例中，我们已经看到了一些使用关键字作为值的地方（例如 `<color>` 关键字，如 `red`、`black`、`rebeccapurple` 和 `goldenrod`）。这些关键字更准确地描述为 _标识符_，即 CSS 能理解的特殊值。因此，它们不需要加引号 —— 它们不会被当作字符串处理。
+在上面的示例中，我们已经看到了一些使用关键字作为值的地方（例如 `<color>` 关键字，如 `red`、`black`、`rebeccapurple` 和 `goldenrod`）。这些关键字更准确地描述为*标识符*，即 CSS 能理解的特殊值。因此，它们不需要加引号 —— 它们不会被当作字符串处理。
 
-在某些情况下，你会在 CSS 中使用字符串。例如，[在指定生成的内容时](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#%E7%94%9F%E6%88%90%E5%B8%A6%E6%9C%89before_%E5%92%8Cafter_%E7%9A%84%E5%86%85%E5%AE%B9)。在这种情况下，值会被加上引号以表明它是一个字符串。在下面的示例中，我们使用了不加引号的颜色关键字以及加了引号的生成内容字符串。
+在某些情况下，你会在 CSS 中使用字符串。例如，[在指定生成的内容时](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#生成带有before_和after_的内容)。在这种情况下，值会被加上引号以表明它是一个字符串。在下面的示例中，我们使用了不加引号的颜色关键字以及加了引号的生成内容字符串。
 
 ```html live-sample___strings-idents
 <div class="box"></div>
@@ -796,9 +790,7 @@ HSL 使用**色相**，以及**饱和度**和**亮度**：
 
 例如，下面我们使用 `calc()` 使框宽为 `20% + 100px`。20% 是根据父容器 `.wrapper` 的宽度来计算的，因此如果宽度改变，它也会改变。我们不能事先做这个计算，因为我们不知道父类的 20% 是多少，所以我们使用 `calc()` 来告诉浏览器为我们做这个计算。
 
-在编程中，函数是一段执行特定任务的代码。
-函数非常有用，因为你可以编写一次代码，然后多次重复使用它，而不必一遍又一遍地编写相同的逻辑。
-大多数编程语言不仅支持函数，还提供了方便的常用内置函数，因此你不必从头开始自己编写这些函数。
+在编程中，函数是一段执行特定任务的代码。函数非常有用，因为你可以编写一次代码，然后多次重复使用它，而不必一遍又一遍地编写相同的逻辑。大多数编程语言不仅支持函数，还提供了方便的常用内置函数，因此你不必从头开始自己编写这些函数。
 
 CSS 也有 [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)，其工作方式与其他语言中的函数类似。
 事实上，我们在上面的 [颜色](#color) 部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数。
