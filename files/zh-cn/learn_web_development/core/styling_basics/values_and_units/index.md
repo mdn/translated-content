@@ -18,10 +18,10 @@ CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而
     <tr>
       <th scope="row">前提：</th>
       <td>
-        HTML 基础 (学习
+        HTML 基础（学习
         <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >基础 HTML 语法</a
-        >), <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics/Getting_started">CSS 基础语法</a>, <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">CSS 选择器</a>.
+        >）、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics/Getting_started">CSS 基础语法</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">CSS 选择器</a>。
       </td>
     </tr>
     <tr>
