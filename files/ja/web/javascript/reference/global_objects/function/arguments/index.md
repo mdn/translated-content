@@ -7,8 +7,7 @@ l10n:
 
 {{JSRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-> [!NOTE]
-> {{jsxref("Function")}} オブジェクトの `arguments` プロパティは非推奨です。推奨される `arguments` オブジェクトへのアクセス方法は、関数内で利用できる変数 {{jsxref("Functions/arguments", "arguments")}} を利用することです。
+> **メモ:** {{jsxref("Function")}} オブジェクトの `arguments` プロパティは非推奨です。推奨される `arguments` オブジェクトへのアクセス方法は、関数内で利用できる変数 {{jsxref("Functions/arguments", "arguments")}} を利用することです。
 
 **`arguments`** は {{jsxref("Function")}} インスタンスのアクセサープロパティで、この関数に渡された引数を返します。[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)、アロー関数、非同期関数、ジェネレーター関数では、 `arguments` プロパティにアクセスすると {{jsxref("TypeError")}} が発生します。
 
