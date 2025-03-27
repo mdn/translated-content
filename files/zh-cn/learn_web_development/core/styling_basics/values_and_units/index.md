@@ -803,9 +803,7 @@ HSL 使用**色相**，以及**饱和度**和**亮度**：
 CSS 也有 [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)，其工作方式与其他语言中的函数类似。
 事实上，我们在上面的 [颜色](#color) 部分已经看到了 CSS 函数，例如 [`rgb()`](/zh-CN/docs/Web/CSS/color_value/rgb) 和 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 函数。
 
-除了应用颜色之外，你还可以使用 CSS 函数来完成许多其他任务。
-例如，[变换函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#transform_functions) 是一种常见的在页面上移动、旋转和缩放元素的方式。
-你可能会看到 [`translate()`](/zh-CN/docs/Web/CSS/transform-function/translate) 用于水平或垂直移动某物，[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 用于旋转某物，或者 [`scale()`](/zh-CN/docs/Web/CSS/transform-function/scale) 用于放大或缩小某物。
+除了应用颜色之外，你还可以使用 CSS 函数来完成许多其他任务。例如，[变换函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#transform_functions)是一种常见的在页面上移动、旋转和缩放元素的方式。你可能会看到 [`translate()`](/zh-CN/docs/Web/CSS/transform-function/translate) 用于水平或垂直移动某物，[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate) 用于旋转某物，或者 [`scale()`](/zh-CN/docs/Web/CSS/transform-function/scale) 用于放大或缩小某物。
 
 ### 数学函数
 
