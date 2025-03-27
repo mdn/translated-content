@@ -5,7 +5,18 @@ slug: Web/HTML/Global_attributes/accesskey
 
 {{HTMLSidebar("Global_attributes")}}L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`accesskey`** fournit une indication afin de générer un raccourci clavier pour l'élément courant. La valeur de cet attribut est une liste de caractères (un caractère étant ici un seul point de code Unicode) séparés par des espaces. Le navigateur utilisera le premier caractère qui est disponible selon la disposition du clavier utilisée.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
+
+```html interactive-example
+<p>If you need to relax, press the <b>S</b>tress reliever!</p>
+<button accesskey="s">Stress reliever</button>
+```
+
+```css interactive-example
+b {
+  text-decoration: underline;
+}
+```
 
 La combinaison de touches utilisée pour le raccourci clavier dépend du navigateur et du système d'exploitation utilisés.
 
