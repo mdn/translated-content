@@ -37,7 +37,7 @@ animation-name: bounce;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-<div class="animating" id="example-element"></div>
+  <div class="animating" id="example-element"></div>
 </section>
 ```
 
