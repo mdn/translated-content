@@ -5,7 +5,31 @@ slug: Web/CSS/transform-function/skew
 
 {{CSSRef}}
 
-**`skew()`** 函数定义了一个元素在二维平面上的倾斜转换。它的结果是一个{{cssxref("&lt;transform-function&gt;")}} 数据类型{{EmbedInteractiveExample("pages/css/function-skew.html")}}
+**`skew()`** 函数定义了一个元素在二维平面上的倾斜转换。它的结果是一个{{cssxref("&lt;transform-function&gt;")}} 数据类型
+
+{{InteractiveExample("CSS Demo: skew()")}}
+
+```css interactive-example-choice
+transform: skew(0);
+```
+
+```css interactive-example-choice
+transform: skew(15deg, 15deg);
+```
+
+```css interactive-example-choice
+transform: skew(-0.06turn, 18deg);
+```
+
+```css interactive-example-choice
+transform: skew(.312rad);
+```
+
+```html interactive-example
+<section id="default-example">
+<img class="transition-all" id="example-element" src="/shared-assets/images/examples/firefox-logo.svg" width="200"/>
+</section>
+```
 
 这种转换是一种剪切映射 (横切)，它在水平和垂直方向上将单元内的每个点扭曲一定的角度。每个点的坐标根据指定的角度以及到原点的距离，进行成比例的值调整；因此，一个点离原点越远，其增加的值就越大。
 
