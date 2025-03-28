@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar si has comprendido nuestro artículo [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
+El objetivo de esta prueba de habilidad es evaluar si has comprendido nuestro artículo [Creando hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 
 > [!NOTE]
 > Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.

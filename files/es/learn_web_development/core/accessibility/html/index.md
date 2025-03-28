@@ -384,7 +384,7 @@ y esto es un mal texto de enlace:
 ```
 
 > [!NOTE]
-> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). También encontrarás buenos y malos ejemplos en [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links). También encontrarás buenos y malos ejemplos en [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Las etiquetas de formulario también son importantes, para darte una pista sobre lo que necesita introducir en cada campo de formulario. El siguiente parece un ejemplo bastante razonable:
 
@@ -451,7 +451,7 @@ Ahora echa un vistazo a nuestro [ejemplo de tabla de bandas punk](https://github
 Consulte nuestro artículo sobre funciones avanzadas y accesibilidad de tablas HTML para obtener más detalles sobre las tablas de datos accesibles.
 
 > [!NOTE]
-> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced) para ver más detalles sobre tablas de datos accesibles.
+> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) para ver más detalles sobre tablas de datos accesibles.
 
 ## Alternativas de texto
 
@@ -491,7 +491,7 @@ Esto resalta la importancia de no solo usar nombres de archivo significativos en
 Una cosa a considerar es si tus imágenes tienen significado dentro del contenido, o si son puramente para decoración visual, por lo que no tienen significado. Si son decorativas, es mejor incluirlas en la página como imágenes de fondo CSS.
 
 > [!NOTE]
-> Lee [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) y [Responsive images](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obtener mucha más información sobre la implementación de imágenes y buenas prácticas asociadas.
+> Lee [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images) y [Responsive images](/es/docs/Web/HTML/Responsive_images) para obtener mucha más información sobre la implementación de imágenes y buenas prácticas asociadas.
 
 Si deseas proporcionar información contextual adicional, deberías colocarla en el texto que rodea la imagen o dentro de un atributo `title`, como se muestra a continuación. En este caso, la mayoría de los lectores de pantalla leerán el texto alternativo, el atributo del título y el nombre del archivo. Además, los navegadores muestran el texto del título como información cuando se pasa por encima con el ratón.
 
@@ -558,7 +558,7 @@ Los enlaces (el elemento `<a>` con un atributo `href`), según cómo se utilicen
 
 De forma predeterminada, los enlaces son visualmente diferentes de otros textos tanto en el color como en la decoración del texto, con enlaces azules y subrayados de forma predeterminada, morados y subrayados si se visitan, y con un anillo de enfoque cuando reciben el foco del teclado.
 
-El color no debe usarse como el único método para distinguir los enlaces del contenido que no enlaza. El color del texto del enlace, como todo el texto, debe ser significativamente diferente del color de fondo ([un contraste de 4.5:1](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)). Además, los enlaces deben ser visualmente significativamente diferentes del texto sin enlaces. Con un requisito de contraste mínimo de 3:1 entre el texto del enlace y el texto circundante y entre los estados predeterminado, visitado y de enfoque / activo, y un contraste de 4:5 entre todos esos colores de estado y el color de fondo.
+El color no debe usarse como el único método para distinguir los enlaces del contenido que no enlaza. El color del texto del enlace, como todo el texto, debe ser significativamente diferente del color de fondo ([un contraste de 4.5:1](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)). Además, los enlaces deben ser visualmente significativamente diferentes del texto sin enlaces. Con un requisito de contraste mínimo de 3:1 entre el texto del enlace y el texto circundante y entre los estados predeterminado, visitado y de enfoque / activo, y un contraste de 4:5 entre todos esos colores de estado y el color de fondo.
 
 ### Eventos onclick
 
