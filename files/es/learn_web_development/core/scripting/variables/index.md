@@ -14,7 +14,7 @@ Después de leer los últimos artículos, deberías saber qué es JavaScript, qu
 
 ## Herramientas que necesitas
 
-A lo largo de este artículo, se te pedirá que escribas líneas de código para probar tu comprensión del contenido. Si estás utilizando un navegador de escritorio, el mejor lugar para escribir tu código de ejemplo es la consola JavaScript de tu navegador (consulta [¿Qué son las herramientas para el desarrollador del navegador?](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para obtener más información sobre cómo acceder a esta herramienta).
+A lo largo de este artículo, se te pedirá que escribas líneas de código para probar tu comprensión del contenido. Si estás utilizando un navegador de escritorio, el mejor lugar para escribir tu código de ejemplo es la consola JavaScript de tu navegador (consulta [¿Qué son las herramientas para el desarrollador del navegador?](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) para obtener más información sobre cómo acceder a esta herramienta).
 
 ## ¿Qué es una variable?
 
@@ -284,7 +284,7 @@ myNumberArray[2]; // debe devolver 40
 
 Los corchetes especifican un valor de índice correspondiente a la posición del valor que deseas devolver. Posiblemente hayas notado que los arreglos en JavaScript tienen índice cero: el primer elemento está en el índice 0.
 
-Aprenderás mucho más sobre los arreglos en [un futuro artículo](/es/docs/Learn/JavaScript/First_steps/Arrays).
+Aprenderás mucho más sobre los arreglos en [un futuro artículo](/es/docs/Learn_web_development/Core/Scripting/Arrays).
 
 ### Objetos
 
@@ -302,7 +302,7 @@ Para recuperar la información almacenada en el objeto, puedes utilizar la sigui
 dog.name;
 ```
 
-Por ahora, no veremos más objetos. Puedes obtener más información sobre ellos en [un futuro módulo](/es/docs/Learn/JavaScript/Objects).
+Por ahora, no veremos más objetos. Puedes obtener más información sobre ellos en [un futuro módulo](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects).
 
 ## Tipado dinámico
 
@@ -345,7 +345,7 @@ daysInWeek = 8;
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: variables](/es/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar más pruebas para verificar que has retenido esta información antes de continuar — consulta [Pon a prueba tus habilidades: variables](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
 
 ## Resumen
 

@@ -86,7 +86,7 @@ input[type="file"]::file-selector-button:hover {
 
 Ejemplo con respaldo para navegadores antiguos que admiten los prefijos `-webkit` y `-ms`. Tenga en cuenta que, como selector, deberá escribir el bloque de código completo dos veces, ya que un selector no reconocido invalida toda la lista.
 
-Tenga en cuenta que `::file-selector-button` es un elemento completo y, como tal, coincide con las reglas de la hoja de estilo del [_User-Agent_](/es/docs/Web/HTTP/Headers/User-Agent). En particular, las fuentes y los colores no heredarán necesariamente del elemento `input`.
+Tenga en cuenta que `::file-selector-button` es un elemento completo y, como tal, coincide con las reglas de la hoja de estilo del [_User-Agent_](/es/docs/Web/HTTP/Reference/Headers/User-Agent). En particular, las fuentes y los colores no heredarán necesariamente del elemento `input`.
 
 ### Ejemeplo con respaldo
 

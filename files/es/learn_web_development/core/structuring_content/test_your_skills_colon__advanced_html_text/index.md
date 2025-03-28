@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_t
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [formato de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) articulo.
+El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [formato de texto avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features) articulo.
 
 > [!NOTE]
 > Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
@@ -27,7 +27,7 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 En esta tarea, queremos que agregue algo de semántica al HTML proporcionado de la siguiente manera:
 
-- Convierta el segundo párrafo en una cita a nivel de bloque e indique semánticamente que la cita se toma de [Accesibilidad](/es/docs/Learn/Accessibility).
+- Convierta el segundo párrafo en una cita a nivel de bloque e indique semánticamente que la cita se toma de [Accesibilidad](/es/docs/Learn_web_development/Core/Accessibility).
 - Marque semánticamente "HTML" y "CSS" como acrónimos, proporcionando expansiones como información sobre herramientas.
 - Asocia semánticamente fechas legibles por máquina con las fechas en el texto.
 - Utilice subíndice y superíndice para proporcionar la semántica correcta para las fórmulas químicas y fechas, y hacer que se muestren correctamente.
