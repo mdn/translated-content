@@ -1,6 +1,7 @@
 ---
 title: 解析值
-slug: Web/CSS/resolved_value
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4
+original_slug: Web/CSS/resolved_value
 ---
 
 {{CSSRef}}

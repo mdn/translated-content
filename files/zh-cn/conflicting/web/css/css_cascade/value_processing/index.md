@@ -1,6 +1,7 @@
 ---
 title: 计算值
-slug: Web/CSS/CSS_cascade/computed_value
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing
+original_slug: Web/CSS/CSS_cascade/computed_value
 ---
 
 {{CSSRef}}

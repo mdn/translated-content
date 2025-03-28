@@ -1,6 +1,7 @@
 ---
 title: 初始值
-slug: Web/CSS/CSS_cascade/initial_value
+slug: conflicting/Web/CSS/CSS_cascade/Value_processing_bcdd1173c035d5a1f45a73ceb7da30cc58d8ff6e84066662a7d88acaf52fcc37
+original_slug: Web/CSS/CSS_cascade/initial_value
 ---
 
 {{CSSRef}}

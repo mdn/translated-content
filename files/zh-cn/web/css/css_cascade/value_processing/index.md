@@ -1,6 +1,7 @@
 ---
 title: 实际值
-slug: Web/CSS/CSS_cascade/actual_value
+slug: Web/CSS/CSS_cascade/Value_processing
+original_slug: Web/CSS/CSS_cascade/actual_value
 ---
 
 {{CSSRef}}
