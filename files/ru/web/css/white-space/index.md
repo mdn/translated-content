@@ -3,7 +3,9 @@ title: white-space
 slug: Web/CSS/white-space
 ---
 
-{{CSSRef}}Свойство **`white-space`** управляет тем, как обрабатываются {{Glossary("whitespace", "пробельные символы")}} внутри элемента.
+{{CSSRef}}
+
+[CSS](/ru/docs/Web/CSS)-свойство **`white-space`** управляет тем, как обрабатываются {{Glossary("whitespace", "пробельные символы")}} внутри элемента.
 
 {{InteractiveExample("CSS Demo: white-space")}}
 
@@ -39,9 +41,8 @@ white-space: preserve nowrap;
 <section class="default-example" id="default-example">
   <div id="example-element">
     <p>
-      But ere she from the church-door stepped She smiled and told us why: 'It
-      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
-      smiled, and passed it off Ere from the door she stept—
+      В самом деле, что было бы с нами, если бы вместо общеудобного правила: чин чина почитай, ввелось в употребление другое, например: ум ума почитай?
+      Какие возникли бы споры! и слуги с кого бы начинали кушанье подавать?
     </p>
   </div>
 </section>

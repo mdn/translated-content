@@ -3,7 +3,9 @@ title: position
 slug: Web/CSS/position
 ---
 
-{{CSSRef}}Свойство {{cssxref('','CSS')}} **`position`** указывает, как элемент позиционируется в документе. {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} определяют конечное местоположение позиционированных элементов.
+{{CSSRef}}
+
+[CSS](/ru/docs/Web/CSS)-свойство **`position`** указывает, как элемент позиционируется в документе. Свойства {{cssxref('top')}}, {{cssxref('right')}}, {{cssxref('bottom')}} и {{cssxref('left')}} определяют конечное местоположение позиционируемых элементов.
 
 {{InteractiveExample("CSS Demo: position")}}
 
