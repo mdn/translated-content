@@ -79,7 +79,7 @@ border-top: medium dashed green;
   - : 请参阅 {{Cssxref("border-top-width")}}.
 - `<br-style>`
   - : 请参阅 {{Cssxref("border-top-style")}}.
-- `{{cssxref("&lt;color&gt;")}}`
+- {{cssxref("&lt;color&gt;")}}
   - : 请参阅 {{Cssxref("border-top-color")}}.
 
 ### 形式语法

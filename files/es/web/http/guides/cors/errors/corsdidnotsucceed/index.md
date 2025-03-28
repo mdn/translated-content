@@ -29,6 +29,6 @@ Otras causas posibles:
 
 ## Véase también
 
-- [Errores CORS](/es/docs/Web/HTTP/CORS/Errors)
+- [Errores CORS](/es/docs/Web/HTTP/Guides/CORS/Errors)
 - Glosario: {{Glossary("CORS")}}
-- [Introducción a CORS](/es/docs/Web/HTTP/CORS)
+- [Introducción a CORS](/es/docs/Web/HTTP/Guides/CORS)

@@ -1,6 +1,8 @@
 ---
 title: CSSGroupingRule
 slug: Web/API/CSSGroupingRule
+l10n:
+  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
 {{ APIRef("CSSOM") }}
@@ -9,14 +11,14 @@ slug: Web/API/CSSGroupingRule
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスには {{domxref("CSSRule")}} から継承したプロパティもあります。_
 
-- {{domxref("CSSGroupingRule.cssRules")}}{{readonlyinline}}
+- {{domxref("CSSGroupingRule.cssRules")}} {{ReadOnlyInline}}
   - : {{domxref("CSSRuleList")}} で、このメディアルールの CSS ルールを返します。
 
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスには {{domxref("CSSRule")}} から継承したメソッドもあります。_
 

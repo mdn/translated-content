@@ -127,9 +127,9 @@ background-size: unset;
 ### 属性值
 
 - `<length>`
-  - : `{{cssxref("&lt;length&gt;")}}` 值，指定背景图片大小，不能为负值。
+  - : {{cssxref("&lt;length&gt;")}} 值，指定背景图片大小，不能为负值。
 - `<percentage>`
-  - : `{{cssxref("&lt;percentage&gt;")}}` 值，指定背景图片相对背景区（background positioning area）的百分比。背景区由{{cssxref("background-origin")}}设置，默认为盒模型的内容区与内边距，也可设置为只有内容区，或者还包括边框。如果{{cssxref("background-attachment","attachment")}} 为`fixed`，背景区为浏览器可视区（即视口），不包括滚动条。不能为负值。
+  - : {{cssxref("&lt;percentage&gt;")}} 值，指定背景图片相对背景区（background positioning area）的百分比。背景区由{{cssxref("background-origin")}}设置，默认为盒模型的内容区与内边距，也可设置为只有内容区，或者还包括边框。如果{{cssxref("background-attachment","attachment")}} 为`fixed`，背景区为浏览器可视区（即视口），不包括滚动条。不能为负值。
 - `auto`
   - : 以背景图片的比例缩放背景图片。
 - `cover`

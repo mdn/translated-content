@@ -106,7 +106,7 @@ Por ejemplo, si se establece `Path=/docs` estas rutas coincidirán:
 
 Las cookies `SameSite` permiten a los servidores requerir que una cookie no sea enviada con solicitudes cross-site (donde {{Glossary("Site")}} es definido por el dominio registrabe), lo que proporciona algo de protección contra ataques cross-site request forgery ({{Glossary("CSRF")}}).
 
-Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility).
+Las cookies `SameSite` son relativamente nuevas y [soportadas por los principales navegadores](/es/docs/Web/HTTP/Reference/Headers/Set-Cookie#browser_compatibility).
 
 Aquí hay un ejemplo:
 

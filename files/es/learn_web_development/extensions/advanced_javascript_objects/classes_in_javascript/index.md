@@ -10,7 +10,7 @@ l10n:
 
 En el último artículo, se introdujeron algunos de los conceptos básicos de la [programación orientada a objetos](/es/docs/Learn/JavaScript/Objects/Object-oriented_programming) (POO), y discutimos un ejemplo donde usamos principios de la POO para modelar los profesores y alumnos de una escuela.
 
-También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn/JavaScript/Objects/Object_prototypes) y [constructores](/es/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) para implementar un modelo como éste, además, vimos que Javascript también proporciona características que se asemejan más a los conceptos de la POO clásica.
+También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes) y [constructores](/es/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors) para implementar un modelo como éste, además, vimos que Javascript también proporciona características que se asemejan más a los conceptos de la POO clásica.
 
 <table>
   <tbody>
@@ -57,7 +57,7 @@ La declaración `name;` es opcional y puedes omitirla, ya que la línea `this.na
 
 Cuando declaras una propiedad, también puedes inicializarla con un valor por defecto con una línea como `name = '';`.
 
-El constructor se define utilizando la palabra clave {{jsxref("Classes/constructor", "constructor")}}. Al igual que un [constructor fuera de una clase](/es/docs/Learn/JavaScript/Objects/Basics#introducing_constructors), se encargará de:
+El constructor se define utilizando la palabra clave {{jsxref("Classes/constructor", "constructor")}}. Al igual que un [constructor fuera de una clase](/es/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors), se encargará de:
 
 - crear un nuevo objeto
 - asociar `this` al nuevo objeto, para que puedas hacer referencia a `this` dentro de tu código en el constructor

@@ -11,7 +11,7 @@ Une page Option vous permet de définir des préférences pour votre WebExtensio
 
 La façon dont les utilisateurs accèdent à la page et la manière dont elle est intégrée à l'interface utilisateur du navigateur varient d'un navigateur à l'autre.
 
-Vous pouvez ouvrir la page en programmant en appelant [`runtime.openOptionsPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/Runtime/openOptionsPage).
+Vous pouvez ouvrir la page en programmant en appelant [`runtime.openOptionsPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage).
 
 Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails.
 
@@ -38,7 +38,7 @@ Pour créer une page d'options, écrivez un fichier HTML définissant la page. C
 </html>
 ```
 
-JavaScript en cours d'exécution dans la page peut utiliser toutes les [APIs des WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) auxquelles l'extension a des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). En particulier, vous pouvez utiliser l'API [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/Storage) pour conserver les préférences.
+JavaScript en cours d'exécution dans la page peut utiliser toutes les [APIs des WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) auxquelles l'extension a des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). En particulier, vous pouvez utiliser l'API [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage) pour conserver les préférences.
 
 Insérez les fichiers de la page dans votre extension.
 
