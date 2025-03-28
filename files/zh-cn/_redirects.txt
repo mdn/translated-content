@@ -2617,7 +2617,7 @@
 /zh-CN/docs/Web/CSS/动画	/zh-CN/docs/Web/CSS/animation
 /zh-CN/docs/Web/CSS/右上角边框半径	/zh-CN/docs/Web/CSS/border-top-right-radius
 /zh-CN/docs/Web/CSS/媒体查询	/zh-CN/docs/Web/CSS/CSS_media_queries
-/zh-CN/docs/Web/CSS/实际值	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing
+/zh-CN/docs/Web/CSS/实际值	/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值
 /zh-CN/docs/Web/CSS/开始/Content	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /zh-CN/docs/Web/CSS/开始/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
 /zh-CN/docs/Web/CSS/开始/媒体	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
