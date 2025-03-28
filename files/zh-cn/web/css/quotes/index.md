@@ -5,7 +5,44 @@ slug: Web/CSS/quotes
 
 {{CSSRef}}
 
-**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式。{{EmbedInteractiveExample("pages/css/quotes.html")}}
+**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式
+
+{{InteractiveExample("CSS Demo: quotes")}}
+
+```css interactive-example-choice
+quotes: none;
+```
+
+```css interactive-example-choice
+quotes: initial;
+```
+
+```css interactive-example-choice
+quotes: "'" "'";
+```
+
+```css interactive-example-choice
+quotes: "„" "“" "‚" "‘";
+```
+
+```css interactive-example-choice
+quotes: "«" "»" "‹" "›";
+```
+
+```html interactive-example
+<section id="default-example">
+  <q id="example-element"
+    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
+    we will believe in them!</q
+  >
+</section>
+```
+
+```css interactive-example
+q {
+  font-size: 1.2rem;
+}
+```
 
 ## 语法
 
