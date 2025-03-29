@@ -7,7 +7,7 @@ slug: Web/CSS/gradient
 
 **`<gradient>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) 是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，包含两种或多种颜色的过渡转变。
 
-{{InteractiveExample("CSS Demo: &amp;lt;gradient&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
 
 ```css interactive-example-choice
 background: linear-gradient(#f69d3c, #3f87a6);
