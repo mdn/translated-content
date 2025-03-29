@@ -14,7 +14,7 @@ Bem-vindas ao centro de desenvolvimento de jogos MDN! Nesta área da página ofe
 Também incluímos uma seção de referências para que você possa, facilmente, encontrar informações sobre todas APIs mais usadas no desenvolvimento de jogos, acompanhadas de uma lista de [ferramentas e engines](/pt-BR/docs/Games/Tools) úteis e, [exemplos de jogos](/pt-BR/docs/Games/Examples).
 
 > [!NOTE]
-> Você já deve ter um conhecimento básico sobre as principais tecnologias web — tais como HTML, CSS e Javascript — antes de tentar criar jogos web. A [Área de aprendizado](/pt-BR/docs/Learn) é o melhor para você, se você for completamente principiante.
+> Você já deve ter um conhecimento básico sobre as principais tecnologias web — tais como HTML, CSS e Javascript — antes de tentar criar jogos web. A [Área de aprendizado](/pt-BR/docs/Learn_web_development) é o melhor para você, se você for completamente principiante.
 
 ## Leve jogos nativos para a Web
 

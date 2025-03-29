@@ -60,7 +60,7 @@ Quaisquer elementos dinâmicos que requeiram que a página complete seu carregam
 
 ### Reduza o número de scripts _inline_
 
-Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
+Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
 
 ### Use CSS moderno e marcação validada
 

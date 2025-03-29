@@ -52,7 +52,7 @@ X-Cache-Info: cached
 
 2. Referência Técnica
 
-   1. [Lista de todos os cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
+   1. [Lista de todos os cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers)
 
 3. [Glossário](/pt-BR/docs/Glossary)
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide
 
 {{jsSidebar("JavaScript Guide")}}
 
-O Guia JavaScript mostra como usar [JavaScript](/pt-BR/docs/Web/JavaScript) e dá uma visão geral da linguagem. Se você quer começar com JavaScript ou programação em geral, consulte os artigos na [área de aprendizagem](/pt-BR/docs/Learn/JavaScript). Se você precisar de informações mais aprofundadas sobre algum recurso da linguagem, consulte a [referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
+O Guia JavaScript mostra como usar [JavaScript](/pt-BR/docs/Web/JavaScript) e dá uma visão geral da linguagem. Se você quer começar com JavaScript ou programação em geral, consulte os artigos na [área de aprendizagem](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308). Se você precisar de informações mais aprofundadas sobre algum recurso da linguagem, consulte a [referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
 
 ## Capítulos
 
@@ -55,21 +55,21 @@ Este guia está dividido em vários capítulos:
   [Atribuição](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [comparações](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
   [Operadores aritméticos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
   [Operadores lógicos](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [bit a bit](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
-  [Operador condicional (Ternário)](</pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_(ternary)_operator>)
+  [Operador condicional (Ternário)](</pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators#Conditional_(ternary)_operator>)
 
-- [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates)
-  [Números](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#numbers)
+- [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_strings)
+  [Números](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_strings#numbers)
 
-  [Objeto de números](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#number_object)
-  [Objeto Math](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#math_object)
-  [Objeto Data](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates#date_object)
+  [Objeto de números](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_strings#number_object)
+  [Objeto Math](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_strings#math_object)
+  [Objeto Data](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_strings#date_object)
 
-- [Formatação de texto](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting)
+- [Formatação de texto](/pt-BR/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 
-  [Strings](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#string_literals)
-  [Objetos de strings](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
-  [Modelos de strings](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_strings)
-  [Internacionalização](/pt-BR/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
+  [Strings](/pt-BR/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#string_literals)
+  [Objetos de strings](/pt-BR/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#string_objects)
+  [Modelos de strings](/pt-BR/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#multi-line_template_strings)
+  [Internacionalização](/pt-BR/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#internationalization)
 
 - [Expressões Regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions)
 

@@ -48,7 +48,7 @@ Também temos outros tutoriais e material de referência abrangente disponível 
 
 Se você está mais familiarizado com o lado musical das coisas, está familiarizado com os conceitos de teoria musical, quer começar a construir instrumentos, então você pode ir em frente e começar a construir coisas com o tutorial avançado e outros como um guia (o tutorial linkado acima cobre agendando notas, criando osciladores e envelopes sob medida, bem como um LFO entre outras coisas.)
 
-Se você não estiver familiarizado com o básico de programação, você pode querer consultar alguns tutoriais JavaScript para iniciantes e depois voltar aqui - veja nosso [módulo de aprendizado JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript) para um ótimo lugar para começar.
+Se você não estiver familiarizado com o básico de programação, você pode querer consultar alguns tutoriais JavaScript para iniciantes e depois voltar aqui - veja nosso [módulo de aprendizado JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308) para um ótimo lugar para começar.
 
 ## Interfaces da API de áudio da Web
 
@@ -229,4 +229,4 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 ### Tópicos relacionados
 
 - [Tecnologias de mídia da Web](/pt-BR/docs/Web/Media)
-- [Guia para tipos e formatos de mídia na web](/pt-BR/docs/Web/Media/Formats)
+- [Guia para tipos e formatos de mídia na web](/pt-BR/docs/Web/Media/Guides/Formats)

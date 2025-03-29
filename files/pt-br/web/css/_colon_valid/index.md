@@ -35,4 +35,4 @@ Veja {{cssxref(":invalid")}} para um exemplo.
 ## Veja também
 
 - Outras pseudo-classe relacionada com validação: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}
-- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)
+- [Form data validation](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)
