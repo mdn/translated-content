@@ -65,7 +65,7 @@ Specification 定义了三种新的权限：
 
 有意思的是，可以使用带有 Alpha 通道的图像来创建（形状的）路径——文本将会围绕不透明的图像部分。这个特性允许文本覆盖图像，有时候可以将文本围绕于一幅不可见的图像，达到一种多边形文本显示的效果。
 
-需要注意的是，这种方式必须是 [CORS compatible](/zh-CN/docs/Web/HTTP/CORS) 的，否则 `shape-outside` 相当于 `none` ，你将不会得到任何形状。
+需要注意的是，这种方式必须是 [CORS compatible](/zh-CN/docs/Web/HTTP/Guides/CORS) 的，否则 `shape-outside` 相当于 `none` ，你将不会得到任何形状。
 
 在下面的例子中，我们有一幅全透明的图像，使用如下 URL，并且指定 `shape-outside`. 属性，创建出一个模糊的形状：一幅气球图像。
 

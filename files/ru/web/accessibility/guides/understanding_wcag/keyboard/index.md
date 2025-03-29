@@ -1,7 +1,6 @@
 ---
 title: Русский
 slug: Web/Accessibility/Guides/Understanding_WCAG/Keyboard
-original_slug: Web/Accessibility/Understanding_WCAG/Keyboard
 ---
 
 {{AccessibilitySidebar}}

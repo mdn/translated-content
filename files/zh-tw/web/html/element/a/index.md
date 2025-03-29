@@ -70,7 +70,7 @@ li {
   - : URL 的空格分隔列表。當點擊連結時，瀏覽器將向這些 URL 發送 {{HTTPMethod("POST")}} 請求，內容為 `PING`。通常用於跟蹤。
 - `referrerpolicy`
 
-  - : 跟隨連結時發送的[引用者](/zh-TW/docs/Web/HTTP/Headers/Referer)的程度。
+  - : 跟隨連結時發送的[引用者](/zh-TW/docs/Web/HTTP/Reference/Headers/Referer)的程度。
 
     - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
     - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。

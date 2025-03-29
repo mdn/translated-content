@@ -1,7 +1,6 @@
 ---
 title: 如何建構 HTML 表單
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
-original_slug: Learn/Forms/How_to_structure_a_web_form
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}

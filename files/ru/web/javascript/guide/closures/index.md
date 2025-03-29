@@ -1,7 +1,6 @@
 ---
 title: Замыкания
 slug: Web/JavaScript/Guide/Closures
-original_slug: Web/JavaScript/Closures
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -376,6 +375,6 @@ function MyObject(name, message) {
 }).call(MyObject.prototype);
 ```
 
-В обоих примерах выше методы определяются один раз — в прототипе. И все объекты, использующие данный прототип, будут использовать это определение без дополнительного расхода вычислительных ресурсов. Смотрите подробное описание в статье [Подробнее об объектной модели](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+В обоих примерах выше методы определяются один раз — в прототипе. И все объекты, использующие данный прототип, будут использовать это определение без дополнительного расхода вычислительных ресурсов. Смотрите подробное описание в статье [Подробнее об объектной модели](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 {{PreviousNext("Web/JavaScript/Equality_comparisons_and_sameness")}}

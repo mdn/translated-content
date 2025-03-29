@@ -11,7 +11,7 @@ l10n:
 
 所有的指令的值都会回落到 {{CSP("default-src")}}。也就是说，如果某个 fetch 指令在 CSP 标头中未定义，那么用户代理就会寻找 `default-src` 指令的值来替代。
 
-查看 [Fetch 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_指令)以获取完整列表。
+查看 [Fetch 指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_指令)以获取完整列表。
 
 ## 参见
 

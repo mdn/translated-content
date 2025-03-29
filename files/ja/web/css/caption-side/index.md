@@ -7,7 +7,71 @@ slug: Web/CSS/caption-side
 
 **`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
 
-{{EmbedInteractiveExample("pages/css/caption-side.html")}}
+{{InteractiveExample("CSS Demo: caption-side")}}
+
+```css interactive-example-choice
+caption-side: top;
+```
+
+```css interactive-example-choice
+caption-side: bottom;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <caption>
+      Famous animals
+    </caption>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Giraffe</td>
+      <td>Africa</td>
+    </tr>
+    <tr>
+      <td>Penguin</td>
+      <td>Antarctica</td>
+    </tr>
+    <tr>
+      <td>Sloth</td>
+      <td>South America</td>
+    </tr>
+    <tr>
+      <td>Tiger</td>
+      <td>Asia</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #000;
+}
+
+th,
+td {
+  padding: 0.2rem 1rem;
+}
+
+caption {
+  background: #fc3;
+  padding: 0.5rem 1rem;
+}
+
+tr {
+  background: #eee;
+}
+
+tr:nth-child(even) {
+  background: #ccc;
+}
+```
 
 ## 構文
 

@@ -9,7 +9,46 @@ slug: Web/CSS/inline-size
 
 書字方向が垂直方向であった場合、 `inline-size` の値は要素の高さに対応し、水平方向であった場合は要素の幅に対応します。関連プロパティの {{cssxref("block-size")}} が要素のもう一方の寸法を定義します。
 
-{{EmbedInteractiveExample("pages/css/inline-size.html")}}
+{{InteractiveExample("CSS Demo: inline-size")}}
+
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the inline-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 

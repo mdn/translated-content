@@ -57,7 +57,7 @@ _无变化。_
 #### Service workers
 
 - The {{domxref("Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 
 #### Media、Web Audio 和 WebRTC
 

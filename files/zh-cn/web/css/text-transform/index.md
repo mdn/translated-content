@@ -7,7 +7,57 @@ slug: Web/CSS/text-transform
 
 **text-transform** CSS 属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作。
 
-{{EmbedInteractiveExample("pages/css/text-transform.html")}}
+{{InteractiveExample("CSS Demo: text-transform")}}
+
+```css interactive-example-choice
+text-transform: capitalize;
+```
+
+```css interactive-example-choice
+text-transform: uppercase;
+```
+
+```css interactive-example-choice
+text-transform: lowercase;
+```
+
+```css interactive-example-choice
+text-transform: none;
+```
+
+```css interactive-example-choice
+text-transform: full-width;
+```
+
+```css interactive-example-choice
+text-transform: full-size-kana;
+```
+
+```css interactive-example-choice
+text-transform: math-auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      LONDON. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall.
+    </p>
+    <p lang="el">
+      Σ is a Greek letter and appears in ΟΔΥΣΣΕΥΣ. Θα πάμε στο "Θεϊκό φαΐ" ή στη
+      "Νεράιδα"
+    </p>
+    <p lang="ja">ァィゥェ ォヵㇰヶ</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.2em;
+}
+```
 
 `text-transform` 属性考虑特定于语言的案例映射规则，如：
 
@@ -18,7 +68,7 @@ slug: Web/CSS/text-transform
 - 在希腊语中（`el`），小写的西格玛字符有两种形式：`σ` 和 `ς`。`ς` 只在西格玛结束一个词的时候使用。当对大写西格玛（`Σ`）应用 `text-transform: lowercase` 时，浏览器需要根据上下文选择正确的小写形式。
 - 在爱尔兰语中（`ga`），某些前缀字母在基本首字母大写时仍为小写，因此，例如 `text-transform: uppercase` 会将 `ar aon tslí` 变为 `AR AON tSLÍ`，而不是像人们所期望的那样，变为 `AR AON TSLÍ`（仅在 Firefox）。在某些情况下，大写字母也会被删除：`an t-uisce` 转换为 `AN tUISCE`（并且连字符被 `text-transform: lowercase` 正确地重新插入）。
 
-语言由 HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性或 XML [`xml:lang`](/zh-CN/docs/Web/SVG/Attribute/xml:lang) 属性定义。
+语言由 HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性或 XML [`xml:lang`](/zh-CN/docs/Web/SVG/Reference/Attribute/xml:lang) 属性定义。
 
 > [!NOTE]
 > 特定情况的支持因浏览器而异，因此请检查[浏览器兼容性表格](#浏览器兼容性)。

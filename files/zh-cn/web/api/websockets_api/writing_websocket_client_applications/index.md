@@ -62,7 +62,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 
 一旦连接建立了（也就是说 `readyState` 是 `OPEN`） `exampleSocket.protocol` 就会告诉你服务器选择了哪个协议。
 
-上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
+上面的例子中 `ws` 替代了 `http`，同样地 `wss 也会替代 https`. 建立 WebSocket 链接有赖于 [HTTP Upgrade mechanism](/zh-CN/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism), 所以当我们使用 `ws://www.example.com`或者 `wss://www.example.com`来访问 HTTP 服务器的时候协议会隐式地升级。
 
 ## 向服务器发送数据
 

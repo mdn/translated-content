@@ -7,7 +7,87 @@ slug: Web/CSS/animation-timing-function
 
 [CSS](/ru/docs/Web/CSS) свойство **`animation-timing-function`** задаёт как происходит анимация в течении длительности каждого цикла.
 
-{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}
+{{InteractiveExample("CSS Demo: animation-timing-function")}}
+
+```css interactive-example-choice
+animation-timing-function: linear;
+```
+
+```css interactive-example-choice
+animation-timing-function: ease-in-out;
+```
+
+```css interactive-example-choice
+animation-timing-function: steps(5, end);
+```
+
+```css interactive-example-choice
+animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+  <button id="play-pause">Play</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: slide;
+  animation-play-state: paused;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#play-pause {
+  font-size: 2rem;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const button = document.getElementById("play-pause");
+
+  button.addEventListener("click", () => {
+    if (el.classList.contains("running")) {
+      el.classList.remove("running");
+      button.textContent = "Play";
+    } else {
+      el.classList.add("running");
+      button.textContent = "Pause";
+    }
+  });
+});
+```
 
 Достаточно удобно использовать сокращённое свойство {{cssxref("animation")}} для того, чтобы установить все свойства для анимации одновременно.
 

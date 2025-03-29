@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Las [listas](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
+Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 
 <table>
   <tbody>
@@ -95,7 +95,7 @@ El HTML para nuestro ejemplo de lista se ve así:
 </dl>
 ```
 
-Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las [herramientas de desarrollador del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), observarás un par de valores de estilo predeterminados:
+Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las [herramientas de desarrollador del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), observarás un par de valores de estilo predeterminados:
 
 - Los elementos {{htmlelement("ul")}} y {{htmlelement("ol")}} tienen un {{cssxref("margin")}} superior e inferior de `16px` (`1em`) y un {{cssxref("padding-left")}} de `40px` (`2.5em`.)
 - Los elementos de lista {{htmlelement("li")}} no tienen valores de espacio predeterminados.
@@ -203,7 +203,7 @@ ul {
 }
 ```
 
-Sin embargo, esta propiedad es un poco limitada por lo que respecta al control de la posición, el tamaño, etc., de las viñetas. Es más conveniente usar la familia de propiedades {{cssxref("background")}}, de la cual aprenderás mucho más en el módulo [Aplicar diseño a las cajas](/es/docs/Learn/CSS/Building_blocks).
+Sin embargo, esta propiedad es un poco limitada por lo que respecta al control de la posición, el tamaño, etc., de las viñetas. Es más conveniente usar la familia de propiedades {{cssxref("background")}}, de la cual aprenderás mucho más en el módulo [Aplicar diseño a las cajas](/es/docs/Learn_web_development/Core/Styling_basics).
 
 En nuestro ejemplo terminado, hemos aplicado estilo a la lista no ordenada de este modo (encima de lo que ya has visto arriba):
 

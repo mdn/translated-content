@@ -123,7 +123,7 @@ if (elem.requestFullscreen) {
 
 私たちが実装する点は以下です:
 
-- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#attr-draggable) 属性を `true` にセットします。
+- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes/draggable) 属性を `true` にセットします。
 - [`dragstart`](/ja/docs/Web/API/HTMLElement/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
 > **メモ:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
@@ -132,7 +132,7 @@ if (elem.requestFullscreen) {
 
 一般に、ユーザーからデータを収集するには、 {{HTMLElement("form")}} 内の {{HTMLElement("textarea")}} または適切な {{HTMLElement("input")}} 型を、 {{HTMLElement("form")}} 内で説明用の {{HTMLElement("label")}} とともに使用すべきです。しかし、これらの要素がニーズを満たさない場合もあります。例えば、リッチテキストエディターは、イタリック体、太字、通常文字を収集できますが、リッチテキストを収集できるフォームコントロールは存在しません。このようなケースでは、スタイル設定や編集が可能なカスタムコントロールを作成する必要があります。そのための属性があります。
 
-どの DOM 要素も、 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#attr-contenteditable) 属性を使うことで、直接編集することができるようになります。
+どの DOM 要素も、 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を使うことで、直接編集することができるようになります。
 
 ```css hidden
 div {
@@ -150,7 +150,7 @@ div {
 
 使い勝手を良くするためには、作成するカスタムフォームコントロールは、アクセシビリティがあり、ネイティブのフォームコントロールと同じ機能を持つ必要があります。
 
-- 要素の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles)、[ラベル](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)、[説明](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) を ARIA で追加する必要があります。
+- 要素の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)、[ラベル](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)、[説明](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を ARIA で追加する必要があります。
 - すべてのユーザー入力方法、たとえば[キーボード](#キーボード)、[マウス](#マウス)、[タッチ](#指でのタッチ)、[ポインター](#ポインターイベント)の各イベントに対応する必要があります。
 - ユーザーが更新したコンテンツの[検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)、[送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)、[保存](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)などの機能を処理するには、 JavaScript が必要です。
 

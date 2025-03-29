@@ -325,7 +325,7 @@ const allComputedStyles = document.querySelector("button").computedStyleMap();
 
 ### CSSUnparsedValue
 
-{{domxref('CSSUnparsedValue')}} は[カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)を表しています。
+{{domxref('CSSUnparsedValue')}} は[カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を表しています。
 
 ```js
 // CSSUnparsedValue

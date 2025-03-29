@@ -68,7 +68,7 @@ console.log(window.btoa(notOK)); // エラー
 ## 関連情報
 
 - [`btoa` のポリフィル](https://github.com/zloirock/core-js#base64-utility-methods) は [`core-js`](https://github.com/zloirock/core-js) で利用できます。
-- [`data` URL](/ja/docs/Web/URI/Schemes/data)
+- [`data` URL](/ja/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("WorkerGlobalScope.btoa()")}}: 同様のメソッドですが、ワーカースコープのものです。
 - {{domxref("Window.atob()")}}
 - {{Glossary("Base64")}}

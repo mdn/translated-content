@@ -9,7 +9,49 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`justify-self`** プロパティは、配置コンテナーの適切な軸に沿って内部でボックスの位置合わせをする方法を設定します。
 
-{{EmbedInteractiveExample("pages/css/justify-self.html")}}
+{{InteractiveExample("CSS Demo: justify-self")}}
+
+```css interactive-example-choice
+justify-self: stretch;
+```
+
+```css interactive-example-choice
+justify-self: center;
+```
+
+```css interactive-example-choice
+justify-self: start;
+```
+
+```css interactive-example-choice
+justify-self: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 220px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 このプロパティの効果は、現在のレイアウトモードに依存します。
 

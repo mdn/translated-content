@@ -7,7 +7,69 @@ slug: Web/CSS/contain
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`contain`** 标示了元素及其内容尽可能独立于文档树的其余部分。局限使 DOM 的一部分得以被隔离，且通过将布局、样式、绘制、尺寸或其任意组合的计算限制于 DOM 子树而非整个页面使性能受益。局限也可用于限制 CSS 计数器和引号的作用域。
 
-{{EmbedInteractiveExample("pages/css/contain.html")}}
+{{InteractiveExample("CSS Demo: contain")}}
+
+```css interactive-example-choice
+contain: none;
+```
+
+```css interactive-example-choice
+contain: size;
+```
+
+```css interactive-example-choice
+contain: layout;
+```
+
+```css interactive-example-choice
+contain: paint;
+```
+
+```css interactive-example-choice
+contain: strict;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="card" id="example-element">
+    <h2>Element with '<code>contain</code>'</h2>
+    <p>
+      The Goldfish is a species of domestic fish best known for its bright
+      colors and patterns.
+    </p>
+    <div class="fixed"><p>Fixed right 4px</p></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+h2 {
+  margin-top: 0;
+}
+
+#default-example {
+  text-align: left;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.card {
+  text-align: left;
+  border: 3px dotted;
+  padding: 20px;
+  margin: 10px;
+  width: 85%;
+  min-height: 150px;
+}
+
+.fixed {
+  position: fixed;
+  border: 3px dotted;
+  right: 4px;
+  padding: 4px;
+  margin: 4px;
+}
+```
 
 有四种类型的 CSS 局限——尺寸、布局、样式和绘制，且均设置在容器上。此属性为五个标准值的子集或两个简写值之一构成的以空格分隔的列表。在容器内对被局限属性的修改不会传播到被局限元素外的页面的其余部分。局限的主要益处在于浏览器无需经常重渲 DOM 或页面布局，由此在静态页面的渲染中带来小幅性能收益，在更动态的应用中带来更多的性能收益。
 

@@ -17,7 +17,7 @@ l10n:
 - 创建一个“面板”样式（没有任何浏览器 UI（如地址栏、工具栏等））的窗口。
 - 设置窗口的多种属性，如获得焦点或设为隐私窗口。
 
-这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步方法。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 

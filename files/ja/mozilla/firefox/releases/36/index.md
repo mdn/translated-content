@@ -111,8 +111,8 @@ _変更なし。_
 
 - RC4 は安全でないとみなすようになり、すべての UI インジケータがそのように対応します。また SSLv3 は Firefox 34 からデフォルトで無効になっていますが、何が起きているかをユーザーが理解しやすくなるように UI を変更しました ([Firefox バグ 1093595](https://bugzil.la/1093595))。
 - TLS の初期ハンドシェイクで RC4 を提示しないようになりました ([Firefox バグ 1088915](https://bugzil.la/1088915))。
-- CSP 1.1 の [`form-action`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#form-action) ディレクティブをサポートしました ([Firefox バグ 529697](https://bugzil.la/529697))。
-- Firefox のオプションで、[Do not track](/ja/docs/Web/HTTP/Headers/DNT) の設定ウィジェットを有効/無効の切り替えに戻しました ([Firefox バグ 1071747](https://bugzil.la/1071747))。
+- CSP 1.1 の [`form-action`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#form-action) ディレクティブをサポートしました ([Firefox バグ 529697](https://bugzil.la/529697))。
+- Firefox のオプションで、[Do not track](/ja/docs/Web/HTTP/Reference/Headers/DNT) の設定ウィジェットを有効/無効の切り替えに戻しました ([Firefox バグ 1071747](https://bugzil.la/1071747))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

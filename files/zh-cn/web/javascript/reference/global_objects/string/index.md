@@ -270,8 +270,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
     对于大多数语言，这将返回与 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 相同的结果。
 
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
 
   - : 字符串中的字符将转换为大写，同时尊重当前语言环境。
 

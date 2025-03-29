@@ -2,12 +2,12 @@
 title: NavigateEvent：formData 属性
 slug: Web/API/NavigateEvent/formData
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("NavigateEvent")}} 接口的 **`formData`** 只读属性在导航为 [`POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 表单提交导航的情况下返回表示提交的数据的 {{domxref("FormData")}} 对象，否则返回 `null`。
+{{domxref("NavigateEvent")}} 接口的 **`formData`** 只读属性在导航为 [`POST`](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 表单提交导航的情况下返回表示提交的数据的 {{domxref("FormData")}} 对象，否则返回 `null`。
 
 ## 值
 

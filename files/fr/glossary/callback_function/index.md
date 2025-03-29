@@ -24,7 +24,7 @@ processUserInput(salutation);
 
 L' exemple ci-dessus est un rappel {{glossary("synchronous","synchrone")}} et il est exécuté immédiatement.
 
-Notez cependant que les rappels sont souvent utilisés pour continuer l'exécution de code après l'achèvement d'une opération {{glossary("asynchronous","asynchrone")}} — ceux-ci sont appelés les rappels asynchrones. Dans l'exemple [xhr-async-callback](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html) ([voir aussi en direct](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html)), on utilise la fonction `displayImage` comme une fonction de rappel pour la fonction `loadAsset` (cette dernière récupère l'image via une requête [XHR](</fr/docs/Glossaire/XHR_(XMLHttpRequest)>)).
+Notez cependant que les rappels sont souvent utilisés pour continuer l'exécution de code après l'achèvement d'une opération {{glossary("asynchronous","asynchrone")}} — ceux-ci sont appelés les rappels asynchrones. Dans l'exemple [xhr-async-callback](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html) ([voir aussi en direct](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html)), on utilise la fonction `displayImage` comme une fonction de rappel pour la fonction `loadAsset` (cette dernière récupère l'image via une requête [XHR](/fr/docs/Glossary/XMLHttpRequest)).
 
 Exécuté de cette façon, asynchrone via l'API Web [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le chargement de l'image ne bloque pas le reste du contenu.
 

@@ -47,7 +47,7 @@ Web Audio API는 [futurelibrary.no](https://www.futurelibrary.no/)에서와 같�
 
 만약에 프로그래밍보다는 음악이 친숙하고, 음악 이론에 익숙하며, 악기를 만들고 싶으시다면 바로 상급자용 튜토리얼부터 시작하여 여러가지를 만들기 시작하시면 됩니다. 위의 튜토리얼은 음표를 배치하는 법, 저주파 발진기 등 맞춤형 Oscillator(발진기)와 Envelope를 설계하는 법 등을 설명하고 있으니, 이를 읽으며 사이드바의 자료를 참고하시면 될 것입니다.
 
-프로그래밍에 전혀 익숙하지 않으시다면 JavaScript 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. Mozilla의 [JavaScript 기초](/ko/docs/Learn/JavaScript)만큼 좋은 자료도 몇 없죠.
+프로그래밍에 전혀 익숙하지 않으시다면 JavaScript 기초 튜토리얼을 먼저 읽고 이 문서를 다시 읽으시는 게 나을 수도 있습니다. Mozilla의 [JavaScript 기초](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)만큼 좋은 자료도 몇 없죠.
 
 ## Web Audio API 인터페이스
 

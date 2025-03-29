@@ -2,7 +2,7 @@
 title: File：lastModified 属性
 slug: Web/API/File/lastModified
 l10n:
-  sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -20,7 +20,7 @@ l10n:
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" multiple />
+<input type="file" id="file-picker" name="fileList" multiple />
 <output id="output"></output>
 ```
 
@@ -35,9 +35,9 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
   const now = new Date();
   output.textContent = "";

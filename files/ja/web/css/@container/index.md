@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
+**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
 スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
 この条件は、コンテナーのサイズまたは [`<style-feature>`](#container_style_queries) の値が変更されたときに評価されます。
 
@@ -258,7 +258,7 @@ span {
 }
 ```
 
-それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/Syntax#css_declarations)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/var#values) のいずれかです。
+それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_declarations)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/var#values) のいずれかです。
 
 ```css
 @container style(--themeBackground),
@@ -304,4 +304,4 @@ span {
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)

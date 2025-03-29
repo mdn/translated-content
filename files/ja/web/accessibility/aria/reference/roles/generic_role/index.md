@@ -14,11 +14,11 @@ l10n:
 
 ARIA は主に意味づけを表現するために使用されますが、支援技術に意味づけ名を公開すべきではない要素もあります。 `generic` ロールは、要素のロールが意味づけされていない {{HTMLElement('div')}} や {{HTMLElement('span')}} 要素と同等であることを示します。
 
-`generic` ロールは、ホスト言語の一般的な要素の暗黙的なロールとして、ユーザーエージェントのみが使用することを意図しています。代わりに、暗黙的なアクセシビリティの意味づけを除去するには、 [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) や `none`、意味づけのない {{HTMLElement('div')}} 要素や {{HTMLElement('span')}} 要素を使用してください、 または [`group`](/ja/docs/Web/Accessibility/ARIA/Roles/group_role) のような意味づけされたコンテナーロールにより、名前付きコンテナー内の子孫を意味づけしてグループ化します。
+`generic` ロールは、ホスト言語の一般的な要素の暗黙的なロールとして、ユーザーエージェントのみが使用することを意図しています。代わりに、暗黙的なアクセシビリティの意味づけを除去するには、 [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) や `none`、意味づけのない {{HTMLElement('div')}} 要素や {{HTMLElement('span')}} 要素を使用してください、 または [`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) のような意味づけされたコンテナーロールにより、名前付きコンテナー内の子孫を意味づけしてグループ化します。
 
-要素に `presentation` ロールが付いた場合と同様に、`role="generic"` を持つ要素は、[`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性のように、その子孫にアクセス可能なステートやプロパティを制限付きで提供することができます。しかし、 `presentation` ロールを持つ要素とは異なり、 `generic` 要素はアクセシビリティ API で公開されるので、支援する技術はレイアウトや境界などの特定のプロパティを収集することができます。
+要素に `presentation` ロールが付いた場合と同様に、`role="generic"` を持つ要素は、[`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性のように、その子孫にアクセス可能なステートやプロパティを制限付きで提供することができます。しかし、 `presentation` ロールを持つ要素とは異なり、 `generic` 要素はアクセシビリティ API で公開されるので、支援する技術はレイアウトや境界などの特定のプロパティを収集することができます。
 
-一般的なロールは名前がないので、[`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性は禁止されています。ロールは一般的なので、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) と [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) 属性も禁止されています。
+一般的なロールは名前がないので、[`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性は禁止されています。ロールは一般的なので、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) と [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) 属性も禁止されています。
 
 > **メモ:** `role="generic"` を持つ要素は、アクセシブル名やロールの記述を持つべきではありません。
 
@@ -37,12 +37,12 @@ ARIA は主に意味づけを表現するために使用されますが、支援
 ## 関連情報
 
 - HTML {{HTMLElement('div')}} および {{HTMLElement('span')}} 要素
-- [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) ロール
-- [`group`](/ja/docs/Web/Accessibility/ARIA/Roles/group_role) ロール
+- [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ロール
+- [`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) ロール
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles)
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
 
    {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles", 1)}}
 

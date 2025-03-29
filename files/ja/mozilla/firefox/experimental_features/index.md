@@ -772,7 +772,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 #### AVIF 準拠の厳格性
 
-`image.avif.compliance_strictness` 環境設定は [AVIF](/ja/docs/Web/Media/Formats/Image_types#avif_image) 画像を処理するときに適用する _厳格性_ を制御するために使うことができます。
+`image.avif.compliance_strictness` 環境設定は [AVIF](/ja/docs/Web/Media/Guides/Formats/Image_types#avif_image) 画像を処理するときに適用する _厳格性_ を制御するために使うことができます。
 これにより、 Firefox ユーザーは、他のいくつかのブラウザーでレンダリングされる画像を、たとえ厳密に準拠していなくても表示することができます。
 
 許可される値は以下の通りです。
@@ -819,7 +819,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 #### Android 版 Firefox の AV1 対応
 
-Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Formats/Video_codecs#av1)を利用できるようになります。この機能は、 Android 版 Firefox 81 以降で有効な Nightly ビルドで利用できます。既定では有効になっています。
+Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1)を利用できるようになります。この機能は、 Android 版 Firefox 81 以降で有効な Nightly ビルドで利用できます。既定では有効になっています。
 
 <table>
   <thead>
@@ -1660,7 +1660,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### 機能ポリシー
 
-[機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
+[機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
 
 > **メモ:** `Feature-Policy` ヘッダーは、仕様書では `Permissions-Policy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
 
@@ -1704,7 +1704,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### Clear-Site-Data の "cache" ディレクティブ
 
-[`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
+[`Clear-Site-Data`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
 
 > [!NOTE]
 > これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。

@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-Los elementos {{HTMLElement("input")}} con **`type="file"`** permiten al usuario elegir uno o más archivos desde el almacenamiento de su dispositivo. Una vez seleccionados, los archivos pueden ser subidos a un servidor usando el [envío de formularios](/es/docs/Learn/Forms), o manipulados utilizando código JavaScript y la [API de archivos (File API)](/es/docs/Web/API/File_API/Using_files_from_web_applications).
+Los elementos {{HTMLElement("input")}} con **`type="file"`** permiten al usuario elegir uno o más archivos desde el almacenamiento de su dispositivo. Una vez seleccionados, los archivos pueden ser subidos a un servidor usando el [envío de formularios](/es/docs/Learn_web_development/Extensions/Forms), o manipulados utilizando código JavaScript y la [API de archivos (File API)](/es/docs/Web/API/File_API/Using_files_from_web_applications).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
@@ -139,7 +139,7 @@ Cada objeto `File` contiene la siguiente información:
 - `size`
   - : El tamaño del archivo en bytes.
 - `type`
-  - : El [tipo MIME](/es/docs/Web/HTTP/MIME_types) del archivo.
+  - : El [tipo MIME](/es/docs/Web/HTTP/Guides/MIME_types) del archivo.
 - `webkitRelativePath` {{non-standard_inline}}
   - : Una cadena que especifica la ruta del archivo relativa al directorio base seleccionado en un selector de directorios (es decir, un _input_ de tipo `file` en el que se establece el atributo [`webkitdirectory`](#webkitdirectory)). _Esto no es estándar y debe usarse con precaución_.
 

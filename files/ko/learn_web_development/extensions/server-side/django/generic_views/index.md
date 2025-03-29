@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Generic_views
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
-이 튜토리얼은 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) website에 책과 저자의 목록과 세부 페이지를 추가 하여 확장할 것입니다. 이 글에서 우리는 제네릭 클래스-기반 뷰(generic class-based views)에 대해 배울 것이며, 그것이 일반적인 사용 사례를 위해 작성해야 하는 코드들을 줄이는 방법을 보여줄 것입니다. 우리는 또한 URL 처리에 대해 더 세부적으로 알아볼 것이며, 기본 패턴 매칭(basic pattern matching)을 수행하는 방법을 보여줄 것입니다.
+이 튜토리얼은 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website에 책과 저자의 목록과 세부 페이지를 추가 하여 확장할 것입니다. 이 글에서 우리는 제네릭 클래스-기반 뷰(generic class-based views)에 대해 배울 것이며, 그것이 일반적인 사용 사례를 위해 작성해야 하는 코드들을 줄이는 방법을 보여줄 것입니다. 우리는 또한 URL 처리에 대해 더 세부적으로 알아볼 것이며, 기본 패턴 매칭(basic pattern matching)을 수행하는 방법을 보여줄 것입니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -31,7 +31,7 @@ original_slug: Learn/Server-side/Django/Generic_views
 
 ## 개요
 
-이 튜토리얼에서 우리는 책과 저자에 대한 목록과 세부 페이지(detail page)를 추가하여 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트의 첫 번째 버전을 완성할 것입니다(더 정확하게는, 우리는 책 페이지들을 구현하는 방법을 보여주고, 저자 페이지는 스스로 완성하도록 할 것입니다!)
+이 튜토리얼에서 우리는 책과 저자에 대한 목록과 세부 페이지(detail page)를 추가하여 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 웹사이트의 첫 번째 버전을 완성할 것입니다(더 정확하게는, 우리는 책 페이지들을 구현하는 방법을 보여주고, 저자 페이지는 스스로 완성하도록 할 것입니다!)
 
 이 과정은 이전 튜토리얼에서 보여준, 색인 페이지(index page)를 만드는 과정과 비슷합니다. 우리는 여전히 URL 맵들, view들, 그리고 탬플릿들을 만들어야 합니다. 주요한 차이점은 세부 페이지(detail pages)에서, 우리는 URL 안의 패턴에서 정보를 추출해서 view로 전달하는 추가적인 도전을 가진다는 점입니다.
 

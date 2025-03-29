@@ -7,7 +7,60 @@ slug: Web/CSS/order
 
 **`order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナーやグリッドコンテナーの中で、アイテムを並べる順序を設定します。コンテナー内のアイテムは `order` の値の昇順に配置され、さらにソースコード内の順序で配置されます。
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+{{InteractiveExample("CSS Demo: order")}}
+
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Box 1:</div>
+  <div style="order: 1">Box 2: <code>order: 1;</code></div>
+  <div style="order: 2">Box 3: <code>order: 2;</code></div>
+  <div style="order: 2">Box 4: <code>order: 2;</code></div>
+  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 ## 構文
 
@@ -36,7 +89,7 @@ order: unset;
 
 - [Flexbox & the keyboard navigation disconnect — Tink](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [Source Order Matters | Adrian Roselli](https://adrianroselli.com/2015/09/source-order-matters.html)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## 公式定義

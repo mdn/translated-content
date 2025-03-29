@@ -115,7 +115,7 @@ MPEG-DASH を取り扱うための良いソフトウェアは [Dash Encoder](htt
 > Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
 
 > [!NOTE]
-> If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video).
+> If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming).
 
 エンコードされるとファイル構造はこのようになります。
 
@@ -269,7 +269,7 @@ Further resources on adaptive streaming.
 
 - [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
 - [MPEG-DASH and streaming reference and resources (MSDN)](<http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx>)
-- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
 
 ### MPEG-DASH tools

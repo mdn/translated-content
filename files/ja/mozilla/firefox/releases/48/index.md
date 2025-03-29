@@ -68,7 +68,7 @@ l10n:
 #### 新規 API
 
 - {{jsxref("String.prototype.padStart()")}} および {{jsxref("String.prototype.padEnd()")}} メソッドを実装しました ([Firefox バグ 1260509](https://bugzil.la/1260509))。
-- ES2015 (ES6) の {{jsxref("Symbol.unscopables")}} および {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} プロパティを実装しました ([Firefox バグ 1054759](https://bugzil.la/1054759) および [Firefox バグ 1258163](https://bugzil.la/1258163))。
+- ES2015 (ES6) の {{jsxref("Symbol.unscopables")}} および {{jsxref("Array.@@unscopables", "Array.prototype[Symbol.unscopables]")}} プロパティを実装しました ([Firefox バグ 1054759](https://bugzil.la/1054759) および [Firefox バグ 1258163](https://bugzil.la/1258163))。
 - ES2015 (ES6) の {{jsxref("Symbol.isConcatSpreadable")}} シンボルを実装しました ([Firefox バグ 1041586](https://bugzil.la/1041586))。
 - ES2015 (ES6) の {{jsxref("Array.Symbol.species", "Array[Symbol.species]")}} getter を実装しました ([Firefox バグ 1165052](https://bugzil.la/1165052))。
 - ES2015 (ES6) の {{jsxref("ArrayBuffer.Symbol.species", "ArrayBuffer[Symbol.species]")}} getter および {{jsxref("TypedArray.Symbol.species", "%TypedArray%[Symbol.species]")}} getter を実装しました ([Firefox バグ 1165053](https://bugzil.la/1165053))。

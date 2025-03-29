@@ -19,27 +19,27 @@ original_slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned
 
 最上位の文書の場合、 2 つのヘッダーを設定する必要があります。
 
-- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) の値は `same-origin` です（攻撃からオリジンを守ります）。
-- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) 値は `require-corp` （オリジンから犠牲者を保護する）です。
+- [`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) の値は `same-origin` です（攻撃からオリジンを守ります）。
+- [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) 値は `require-corp` （オリジンから犠牲者を保護する）です。
 
 この 2 つのヘッダーを設定すると、 `postMessage()` は `SharedArrayBuffer` オブジェクトを使用しても例外が発生しなくなり、スレッド間での共有メモリーが利用できるようになります。
 
-ネストされた文書と専用ワーカーは、 [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) ヘッダーも同じ値で設定する必要があります。ネストされた文書とサブリソースが同一オリジンであれば、これ以上の変更は必要ありません。ネストされた文書とサブリソースが同じサイト（ただし別オリジン）であった場合は、 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーに `same-site` を値として設定する必要があります。そして、それらのオリジン間（およびサイト青だ）の対応するものは、 `cross-origin` を値とした同ヘッダーを設定する必要があります。 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーに `same-origin` 以外の値を設定すると、潜在的にリソースが [Spectre](https://ja.wikipedia.org/wiki/Spectre) などの攻撃にさらされてしまうので注意してください。
+ネストされた文書と専用ワーカーは、 [`Cross-Origin-Embedder-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) ヘッダーも同じ値で設定する必要があります。ネストされた文書とサブリソースが同一オリジンであれば、これ以上の変更は必要ありません。ネストされた文書とサブリソースが同じサイト（ただし別オリジン）であった場合は、 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) ヘッダーに `same-site` を値として設定する必要があります。そして、それらのオリジン間（およびサイト青だ）の対応するものは、 `cross-origin` を値とした同ヘッダーを設定する必要があります。 [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) ヘッダーに `same-origin` 以外の値を設定すると、潜在的にリソースが [Spectre](https://ja.wikipedia.org/wiki/Spectre) などの攻撃にさらされてしまうので注意してください。
 
-[`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) ヘッダーは、ポップアップへの参照を保持する能力を制限することに注意してください。2 つの最上位ウィンドウコンテキスト間の直接アクセスは、基本的に同一オリジンであり、同じ 2 つの値を持つ同じ 2 つのヘッダーを運ぶ場合にのみ機能します。
+[`Cross-Origin-Opener-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) ヘッダーは、ポップアップへの参照を保持する能力を制限することに注意してください。2 つの最上位ウィンドウコンテキスト間の直接アクセスは、基本的に同一オリジンであり、同じ 2 つの値を持つ同じ 2 つのヘッダーを運ぶ場合にのみ機能します。
 
 ## API の変更
 
 この新しく必要とされる環境の結果として、いくつかの API の影響があります。
 
 - `Atomics` オブジェクトは常に利用可能です。
-- `SharedArrayBuffer` オブジェクトは原則的に常に利用可能ですが、残念ながらウェブコンテンツとの互換性のために、上記の 2 つのヘッダーが設定されていない限り、グローバルオブジェクトのコンストラクターは非公開になります。将来的には、この制限が取り除かれる可能性があります。　[`WebAssembly.Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) はまだインスタンスを取得するために使用することができます。
+- `SharedArrayBuffer` オブジェクトは原則的に常に利用可能ですが、残念ながらウェブコンテンツとの互換性のために、上記の 2 つのヘッダーが設定されていない限り、グローバルオブジェクトのコンストラクターは非公開になります。将来的には、この制限が取り除かれる可能性があります。　[`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) はまだインスタンスを取得するために使用することができます。
 - 上記の 2 つのヘッダーが設定されていない限り、さまざまな `postMessage()` API は `SharedArrayBuffer` オブジェクトを使用すると例外が発生します。これら設定されていれば、`Window` オブジェクトと専用ワーカーの `postMessage()` が機能し、メモリ共有が可能になります。
 - `postMessage()` が例外を発生させるかどうかをチェックする必要がないように、 [`self.crossOriginIsolated`](/ja/docs/Web/API/Window/crossOriginIsolated) が標準化されつつあります（論理値を返すゲッターであり、 `true` はヘッダーが設定されていることを示します）。ウィンドウとワーカーのコンテキストで利用可能です。
 
 ## WebAssembly の共有メモリー
 
-WebAssembly の[スレッド](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md)の提案により、 [`WebAssembly.Memory`](/ja/docs/WebAssembly/JavaScript_interface/Memory) オブジェクトは新しいコンストラクターのフラグである [`shared`](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#javascript-api-changes) を指定することがで作成することができるようになりました。このフラグを `true` に設定すると、構築された `Memory` オブジェクトは `SharedArrayBuffer` と同様に `postMessage()` によってワーカー間で共有できるようになり、`Memory` オブジェクトのバッキング [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) は `SharedArrayBuffer` となります。したがって、上記の `SharedArrayBuffer` をワーカー間で共有するための要件は、 `WebAssembly.Memory` を共有する場合にも当てはまります。
+WebAssembly の[スレッド](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md)の提案により、 [`WebAssembly.Memory`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory) オブジェクトは新しいコンストラクターのフラグである [`shared`](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#javascript-api-changes) を指定することがで作成することができるようになりました。このフラグを `true` に設定すると、構築された `Memory` オブジェクトは `SharedArrayBuffer` と同様に `postMessage()` によってワーカー間で共有できるようになり、`Memory` オブジェクトのバッキング [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) は `SharedArrayBuffer` となります。したがって、上記の `SharedArrayBuffer` をワーカー間で共有するための要件は、 `WebAssembly.Memory` を共有する場合にも当てはまります。
 
 WebAssembly スレッドの提案では、新しい[不可分](https://github.com/WebAssembly/threads/blob/master/proposals/threads/Overview.md#atomic-memory-accesses)命令のセットも定義しています。ちょうど `SharedArrayBuffer` とそのメソッドが無条件に有効であるように（そしてスレッド間の共有のみが新しいヘッダーでゲートされます）、WebAssembly の不可分命令も無条件に許可されます。
 

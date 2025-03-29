@@ -96,7 +96,7 @@ slug: Web/HTML/Element/picture
 
 ### `type` 属性
 
-`type` 属性允许你为 {{HTMLElement("source")}} 元素的 `srcset` 属性指向的资源指定一个 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)。如果用户代理不支持指定的类型，那么这个 {{HTMLElement("source")}} 元素会被跳过。
+`type` 属性允许你为 {{HTMLElement("source")}} 元素的 `srcset` 属性指向的资源指定一个 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)。如果用户代理不支持指定的类型，那么这个 {{HTMLElement("source")}} 元素会被跳过。
 
 ```html
 <picture>

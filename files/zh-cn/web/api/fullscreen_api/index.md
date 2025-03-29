@@ -2,7 +2,7 @@
 title: 全屏 API
 slug: Web/API/Fullscreen_API
 l10n:
-  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -54,7 +54,7 @@ _全屏 API 没有自己的接口。相反，它通过增强多个其他接口�
 
 ## 控制访问
 
-可以使用[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)控制全屏模式的可用性。全屏模式特性由字符串 `"fullscreen"` 标识，默认允许列表值为 `"self"`，这意味着在顶级文档上下文中以及从与最顶层文档相同的来源加载的嵌套浏览上下文中允许全屏模式。
+可以使用[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)控制全屏模式的可用性。全屏模式特性由字符串 `"fullscreen"` 标识，默认允许列表值为 `"self"`，这意味着在顶级文档上下文中以及从与最顶层文档相同的来源加载的嵌套浏览上下文中允许全屏模式。
 
 ## 使用说明
 

@@ -102,7 +102,7 @@ console.log(typeof arguments[0]); // 最初の引数の型を返す
   - : 個の引数が所属する、現在実行中の関数を参照します。厳格モードでは禁止されています。
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : 関数に渡された引数の数を示します。
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
+- {{jsxref("Functions/arguments/@@iterator", "arguments[Symbol.iterator]")}}
   - : 新しい{{jsxref("Array/@@iterator", "配列イテレーター", "", 0)}}オブジェクトで、 `arguments` のそれぞれの要素の値を含みます。
 
 ## 例
@@ -157,7 +157,7 @@ let listHTML = list("u", "One", "Two", "Three");
 
 ### 残余引数、デフォルト引数、分割引数
 
-`arguments` オブジェクトを[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)と組み合わせて使用できます。
+`arguments` オブジェクトを[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割引数](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)と組み合わせて使用できます。
 
 ```js
 function foo(...args) {

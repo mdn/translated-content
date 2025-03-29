@@ -30,4 +30,4 @@ l10n:
 - [ARIA 역할](/ko/docs/Web/Accessibility/ARIA/Roles)
 - [ARIA 속성](/ko/docs/Web/Accessibility/ARIA/Attributes)
 - [접근성](/ko/docs/Web/Accessibility)
-- [접근성 배우기](/ko/docs/Learn/Accessibility)
+- [접근성 배우기](/ko/docs/Learn_web_development/Core/Accessibility)

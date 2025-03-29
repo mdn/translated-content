@@ -13,7 +13,7 @@ original_slug: WebAssembly/JavaScript_interface/Table
 
 ## コンストラクター
 
-- [`WebAssembly.Table()`](/ja/docs/WebAssembly/JavaScript_interface/Table/Table)
+- [`WebAssembly.Table()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/Table)
   - : 新しい `Table` オブジェクトを生成します。
 
 ## インスタンスプロパティ
@@ -77,5 +77,5 @@ var importObj = {
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

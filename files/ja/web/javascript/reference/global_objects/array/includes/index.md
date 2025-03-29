@@ -49,7 +49,7 @@ includes(searchElement, fromIndex)
 
 ## 解説
 
-`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
+`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
 
 [疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で使用する場合、 `includes()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 

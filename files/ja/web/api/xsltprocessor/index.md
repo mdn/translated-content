@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("XSLT")}}
 
-**`XSLTProcessor`** は、[XSLT](/ja/docs/Web/XSLT) スタイルシート変換を XML 文書に適用して、新しい XML 文書を出力として生成します。 XSLT スタイルシートをロードし、 `<xsl:param>` 引数の値を操作し、変換処理を文書に適用するメソッドを持っています。
+**`XSLTProcessor`** は、[XSLT](/ja/docs/Web/XML/XSLT) スタイルシート変換を XML 文書に適用して、新しい XML 文書を出力として生成します。 XSLT スタイルシートをロードし、 `<xsl:param>` 引数の値を操作し、変換処理を文書に適用するメソッドを持っています。
 
 ## コンストラクター
 
@@ -101,7 +101,7 @@ const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
 ### 基本的な例
 
-この基本的な例では、 XML ファイルを読み込み、 XSL 変換を適用します。これらは、 [HTML を生成](/ja/docs/Web/API/XSLTProcessor/Generating_HTML)する例で使用したのと同じファイルです。 XML ファイルには記事が記述されており、 XSL ファイルは表示用の情報を書式化します。
+この基本的な例では、 XML ファイルを読み込み、 XSL 変換を適用します。これらは、 [HTML を生成](/ja/docs/Web/API/Document_Object_Model/Transforming_with_XSLT)する例で使用したのと同じファイルです。 XML ファイルには記事が記述されており、 XSL ファイルは表示用の情報を書式化します。
 
 #### XML
 
@@ -326,7 +326,7 @@ async function sort() {
 
 ## 関連情報
 
-- [XSLT](/ja/docs/Web/XSLT)
+- [XSLT](/ja/docs/Web/XML/XSLT)
 - [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) ([IBM developer](https://developer.ibm.com/))
 - [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) ([zvon.org](https://zvon.org/))
 - [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) ([zvon.org](https://zvon.org/))

@@ -7,9 +7,43 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转、缩放、倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)的坐标空间实现的。
+[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转、缩放、倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)的坐标空间实现的。
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
+
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
 

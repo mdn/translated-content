@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/skew
 
 [CSS](/ru/docs/Web/CSS) функция **`skew()`** трансформирует элемент, наклоняя его в 2D-пространстве.
 
-{{EmbedInteractiveExample("pages/css/function-skew.html")}}
+{{InteractiveExample("CSS Demo: skew()")}}
+
+```css interactive-example-choice
+transform: skew(0);
+```
+
+```css interactive-example-choice
+transform: skew(15deg, 15deg);
+```
+
+```css interactive-example-choice
+transform: skew(-0.06turn, 18deg);
+```
+
+```css interactive-example-choice
+transform: skew(0.312rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 Данная трансформация является линейным преобразованием векторного пространства (трансвекция или [shear mapping](https://en.wikipedia.org/wiki/Shear_mapping)), которое деформирует каждую точку элемента на определённый угол по горизонтали или вертикали. Координаты каждой точки изменяются на величину, пропорциональную указанному углу и расстоянию до точки, относительно которой выполняется трансформация (origin); таким образом, чем больше расстояние до смещаемой точки элемента, тем больше она будет смещена по горизонтали или вертикали.
 

@@ -9,7 +9,7 @@ slug: Glossary/Document_directive
 
 文書ディレクティブは {{CSP("default-src")}} ディレクティブで代替されることはありません。
 
-完全な一覧は[文書ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#document_directives)を参照してください。
+完全な一覧は[文書ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#document_directives)を参照してください。
 
 ## 関連情報
 

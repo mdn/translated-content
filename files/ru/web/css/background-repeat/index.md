@@ -7,7 +7,45 @@ slug: Web/CSS/background-repeat
 
 Свойство **`background-repeat`** устанавливает, как фоновые изображения будет повторяться. Они могут повторяться по горизонтальной и вертикальной оси или не повторяться вовсе.
 
-{{EmbedInteractiveExample("pages/css/background-repeat.html")}}
+{{InteractiveExample("CSS Demo: background-repeat")}}
+
+```css interactive-example-choice
+background-repeat: repeat-x;
+```
+
+```css interactive-example-choice
+background-repeat: repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space;
+```
+
+```css interactive-example-choice
+background-repeat: round;
+```
+
+```css interactive-example-choice
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: #ccc url("/shared-assets/images/examples/moon.jpg") center / 120px;
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста, клонируйте <https://github.com/mdn/interactive-examples> и отправьте нам запрос на извлечение.
 
