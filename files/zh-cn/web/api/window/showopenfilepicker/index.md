@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 接口的 **`showOpenFilePicker()`** 方法用于显示一个文件选择器，以允许用户选择一个或多个文件并返回这些文件的句柄。
+{{domxref("Window")}} 接口的 **`showOpenFilePicker()`** 方法用于显示一个允许用户选择一个或多个文件的文件选择器，并返回这些文件的句柄。
 
 ## 语法
 
@@ -25,7 +25,7 @@ showOpenFilePicker(options)
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : 布尔值，默认为 `false`。默认情况下，选择器应包含一个不应用任何文件类型过滤器的选项（通过下面的类型选项启动）。将此选项设置为 `true` 意味着该选项*不*可用。
     - `id` {{Optional_Inline}}
-      - : 通过指定 ID，浏览器可以为不同的 ID 记住不同的目录。如果相同的 ID 用于另一个选择器，则该选择器将在同一目录中打开。
+      - : 通过指定 ID，浏览器可以记住不同 ID 所对应的目录。如果在另一个选择器中使用了相同的 ID，则选择器将在同一目录中打开。
     - `multiple` {{Optional_Inline}}
       - : 布尔值，默认为 `false`。当设置为 `true` 时，可以选择多个文件。
     - `startIn` {{Optional_Inline}}

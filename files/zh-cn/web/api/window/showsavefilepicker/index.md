@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 接口的 **`showSaveFilePicker()`** 方法用于显示一个文件选择器，以允许用户保存一个文件。可以选择一个已有文件覆盖保存，也可以输入名字新建一个文件。
+{{domxref("Window")}} 接口的 **`showSaveFilePicker()`** 方法用于显示允许用户保存一个文件的文件选择器。用户可以选择一个已有文件覆盖保存，也可以输入名字新建一个文件。
 
 ## 语法
 
@@ -25,7 +25,7 @@ showSaveFilePicker(options)
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : 布尔值，默认为 `false`。默认情况下，选择器应包含一个不应用任何文件类型过滤器的选项（通过下面的类型选项启动）。将此选项设置为 `true` 意味着该选项*不*可用。
     - `id` {{Optional_Inline}}
-      - : 通过指定 ID，浏览器可以为不同的 ID 记住不同的目录。如果相同的 ID 用于另一个选择器，则该选择器将在同一目录中打开。
+      - : 通过指定 ID，浏览器可以记住不同 ID 所对应的目录。如果在另一个选择器中使用了相同的 ID，则选择器将在同一目录中打开。
     - `startIn` {{Optional_Inline}}
       - : 一个 {{domxref("FileSystemHandle")}} 对象或一个众所周知的目录（`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"` 或 `"videos"`）以指定打开选择器的起始目录。
     - `suggestedName` {{Optional_Inline}}

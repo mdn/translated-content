@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
-{{domxref("Window")}} 接口的 **`showDirectoryPicker()`** 方法用于显示一个目录选择器，以允许用户选择一个目录。
+{{domxref("Window")}} 接口的 **`showDirectoryPicker()`** 方法用于显示一个允许用户选择一个目录的目录选择器。
 
 ## 语法
 
@@ -23,9 +23,9 @@ showDirectoryPicker(options)
   - : 选项对象，包含以下属性：
 
     - `id` {{optional_inline}}
-      - : 通过指定 ID，浏览器可以为不同的 ID 记住不同的目录。如果相同的 ID 用于另一个选择器，则该选择器将在同一目录中打开。
+      - : 通过指定 ID，浏览器可以记住不同 ID 所对应的目录。如果在另一个选择器中使用了相同的 ID，则选择器将在同一目录中打开。
     - `mode` {{optional_inline}}
-      - : 字符串，默认为 `"read"`，用于只读访问，或 `"readwrite"` 用于读写访问。
+      - : 字符串，默认为 `"read"`，用于只读访问，或 `"readwrite"`，用于读写访问。
     - `startIn` {{optional_inline}}
       - : 一个 {{domxref("FileSystemHandle")}} 对象或者代表某个众所周知的目录的字符串（如：`"desktop"`、`"documents"`、`"downloads"`、`"music"`、`"pictures"`、`"videos"`），用于指定选择器的起始目录。
 
