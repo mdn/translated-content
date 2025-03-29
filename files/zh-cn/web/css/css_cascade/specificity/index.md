@@ -356,12 +356,12 @@ h1 {
   - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

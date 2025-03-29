@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)大于 `max-width` 指定的值。
+**`max-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素的最大宽度。它可防止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)大于 `max-width` 指定的值。
 
 {{InteractiveExample("CSS Demo: max-width")}}
 

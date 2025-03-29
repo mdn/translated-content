@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-`min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)小于 `min-width` 指定的值。
+`min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)小于 `min-width` 指定的值。
 
 {{InteractiveExample("CSS Demo: min-width")}}
 
