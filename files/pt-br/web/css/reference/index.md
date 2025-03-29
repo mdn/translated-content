@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-Use esta **referência de CSS** para navegar por um índice alfabético das propriedades padrão do [CSS](/pt-BR/docs/Web/CSS), [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes), [pseudo-elementos](/pt-BR/docs/CSS/Pseudo-elements), tipos de dados e [@-rules](/pt-BR/docs/Web/CSS/At-rule).
+Use esta **referência de CSS** para navegar por um índice alfabético das propriedades padrão do [CSS](/pt-BR/docs/Web/CSS), [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes), [pseudo-elementos](/pt-BR/docs/CSS/Pseudo-elements), tipos de dados e [@-rules](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule).
 
 Esta referência lista não somente as propriedades do CSS1 e CSS2.1, mas também referências para qualquer propriedade, conceito padronizado ou estabilizado do CSS3.
 
@@ -53,9 +53,9 @@ Veja também [Extensões CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Exte
 ## Conceitos
 
 - [Sintaxe do CSS](/pt-BR/docs/CSS/Syntax)
-- [Regra At](/pt-BR/docs/Web/CSS/At-rule)
+- [Regra At](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule)
 - [Comentários](/pt-BR/docs/CSS/Comments)
-- [Especificidade](/pt-BR/docs/Web/CSS/Specificity)
+- [Especificidade](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity)
 - [Valor inicial](/pt-BR/docs/CSS/initial_value)
 - [Herança](/pt-BR/docs/CSS/inheritance)
 - [Valor especificado](/pt-BR/docs/CSS/specified_value)

@@ -18,7 +18,7 @@ O **Elemento HTML _\<link>_** especifica as relações entre o documento atual e
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `as`
-  - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
+  - : Esse atributo é usado apenas quando `rel="preload"` foi enviado no elemento `<link>`. Especifica o tipo de conteúdo carregado pelo `<link>`, que é necessário para a priorização do conteúdo, solicitação de correspondência, aplicação de [política de segurança de conteúdo](/pt-BR/docs/Web/HTTP/Guides/CSP) correta, e configuração do cabeçalho de pedido {{httpheader("Accept")}} correta.
 - `charset`
 
   - : Este atributo define a codificação de caracteres do recurso vinculado. O valor é umespaço e/ou lista delimitada por vírgulas de conjuntos de caracteres, conformedefinido na RFC 2045. O valor padrão é ISO-8859-1.

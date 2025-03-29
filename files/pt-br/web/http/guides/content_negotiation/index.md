@@ -14,8 +14,8 @@ Um documento específico é denominado _recurso_. Quando um cliente quer obtê-l
 
 A determinação da representação mais adequada é feita através de um dos dois mecanismos:
 
-- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) específicos pelo cliente (_negociação com base no servidor_ ou _negociação pró-ativa_)
-- [Os códigos de resposta](/pt-BR/docs/Web/HTTP/Status) do servidor {HTTPStatus("300")}} (Múltiplas escolhas) or {{HTTPStatus("406")}} (Não aceitável) (_negociação baseada no agente_ ou _negociação reativa_), que são usados como mecanimos de reserva (_fallback_).
+- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers) específicos pelo cliente (_negociação com base no servidor_ ou _negociação pró-ativa_)
+- [Os códigos de resposta](/pt-BR/docs/Web/HTTP/Reference/Status) do servidor {HTTPStatus("300")}} (Múltiplas escolhas) or {{HTTPStatus("406")}} (Não aceitável) (_negociação baseada no agente_ ou _negociação reativa_), que são usados como mecanimos de reserva (_fallback_).
 
 Ao longo dos anos, outras propostas de negociação de conteúdo, como _negociação de conteúdo transparente_ e o cabeçalho `Alternates` foram propostas. Elas falharam em ganhar apoio e foram abandonadas.
 
@@ -25,7 +25,7 @@ Na _negociação baseada no servidor_, ou negociação proativa, o navegador (ou
 
 ![](httpnegoserver.png)
 
-O padrão HTTP/1.1 define uma lista de cabeçalhos-padrão que iniciam a negociação baseada no servidor ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Apesar do {{HTTPHeader("User-Agent")}} não estar formalmente na lista, ele é, às vezes, também usado para enviar uma representação específica do recurso requisitado, apesar disso não ser considerado uma boa prática. O servidor usa o cabeçalho {{HTTPHeader("Vary")}} para indicar quais cebeçalhos de fato foram usados na negociação do conteúdo (ou, mais precisamente, nos cabeçahos de resposta associados), de forma que [caches](/pt-BR/docs/Web/HTTP/Caching) possam funcionar de forma otimizada.
+O padrão HTTP/1.1 define uma lista de cabeçalhos-padrão que iniciam a negociação baseada no servidor ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Apesar do {{HTTPHeader("User-Agent")}} não estar formalmente na lista, ele é, às vezes, também usado para enviar uma representação específica do recurso requisitado, apesar disso não ser considerado uma boa prática. O servidor usa o cabeçalho {{HTTPHeader("Vary")}} para indicar quais cebeçalhos de fato foram usados na negociação do conteúdo (ou, mais precisamente, nos cabeçahos de resposta associados), de forma que [caches](/pt-BR/docs/Web/HTTP/Guides/Caching) possam funcionar de forma otimizada.
 
 Além desses, existe uma proposta experimental para adicionar mais cabeçalhos à lista dos disponíveis, as chamadas _sugestões do cliente_. Sugestões do cliente indicam qual é o tipo do dispositivo em que o agente do usuário roda (por-exemplo, se é um computador de mesa ou um dispositivo móvel).
 
@@ -39,7 +39,7 @@ Mesmo sendo a negociação com base no servidor a forma mais comum de concordar 
 
 The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that the agent is willing to process. It is comma-separated lists of MIME types, each combined with a quality factor, a parameter indicating the relative degree of preference between the different MIME types.
 
-The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/pt-BR/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
+The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) is available.
 
 ### The `Accept-CH` header {{experimental_inline}}
 

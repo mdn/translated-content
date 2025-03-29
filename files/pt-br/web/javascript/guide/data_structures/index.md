@@ -171,7 +171,7 @@ As propriedades de dados associam uma chave a um valor. Pode ser descrito pelos 
 - `gravável`
   - : Um valor booleano que indica se a propriedade pode ser alterada com uma atribuição.
 - `enumerável`
-  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
+  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
 - `configurável`
   - : Um valor booleano que indica se a propriedade pode ser excluída, pode ser alterada para uma propriedade acessora e pode ter seus atributos alterados.
 
@@ -189,7 +189,7 @@ Uma propriedade do acessor tem os seguintes atributos:
 - `definir`
   - : Uma função chamada com um argumento que contém o valor atribuído. Executado sempre que se tenta alterar uma propriedade especificada. Consulte também [setters](/pt-BR/docs/Web/JavaScript/Reference/Functions/set). Pode ser `indefinido`.
 - `enumerável`
-  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
+  - : Um valor booleano que indica se a propriedade pode ser enumerada por um loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in). Consulte também [Enumerabilidade e propriedade de propriedades](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) para saber como a enumerabilidade interage com outras funções e sintaxes.
 - `configurável`
   - : Um valor booleano que indica se a propriedade pode ser excluída, pode ser alterada para uma propriedade de dados e pode ter seus atributos alterados.
 

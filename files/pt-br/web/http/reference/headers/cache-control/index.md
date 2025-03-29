@@ -147,7 +147,7 @@ Cache-Control: public, max-age=31536000
 
 ## Veja também
 
-- [HTTP Caching FAQ](/pt-BR/docs/Web/HTTP/Caching)
+- [HTTP Caching FAQ](/pt-BR/docs/Web/HTTP/Guides/Caching)
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

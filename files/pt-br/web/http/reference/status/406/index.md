@@ -43,4 +43,4 @@ A informação mostrada abaixo foi buscada do MDN's GitHub (<https://github.com/
 - {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
-- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) HTTP
+- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation) HTTP
