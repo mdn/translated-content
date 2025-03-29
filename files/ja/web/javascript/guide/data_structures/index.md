@@ -1,9 +1,8 @@
 ---
 title: JavaScript のデータ型とデータ構造
 slug: Web/JavaScript/Guide/Data_structures
-original_slug: Web/JavaScript/Data_structures
 l10n:
-  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
+  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
 ---
 
 {{jsSidebar("More")}}
@@ -199,7 +198,7 @@ JavaScript では、オブジェクトはプロパティの集合として見る
 
 ### 日付
 
-日付を表現する場合は、JavaScript に組み込まれた [`Date`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) ユーティリティを使用するのが最適です。
+JavaScript で日付を表すために指定された API は 2 種類あります。古くからある {{jsxref("Date")}} オブジェクトと、現行の {{jsxref("Temporal")}} オブジェクトです。 `Date` は望ましくない設計上の選択を多く保有しており、新しいコードでは実現可能であれば避けるべきです。
 
 ### 添字付きコレクション: 配列および型付き配列
 

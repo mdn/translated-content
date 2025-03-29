@@ -2,7 +2,7 @@
 title: "@layer"
 slug: Web/CSS/@layer
 l10n:
-  sourceCommit: 3c33463072905e81ac620dd9780313369029b498
+  sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
 {{CSSRef}}
@@ -33,16 +33,19 @@ l10n:
 ```
 
 ```html interactive-example
-<p class="alert">Beware of the zombies</p>
+<p class="alert">ゾンビに注意</p>
 ```
 
 ## 構文
 
 ```css
-@layer layer-name {rules}
+/* 文のアットルール */
 @layer layer-name;
 @layer layer-name, layer-name, layer-name;
+
+/* ブロックのアットルール */
 @layer {rules}
+@layer layer-name {rules}
 ```
 
 ここで次のようになります。
@@ -54,11 +57,20 @@ l10n:
 
 ## 解説
 
-カスケードレイヤー内のルールは、一緒にカスケードされ、ウェブ開発者がカスケードをより制御できるようにします。レイヤーの中にないスタイルは一斉に集められ、宣言されたレイヤー、名前付きまたは無名のレイヤーのすべて後に来る単一の無名のレイヤーに配置されます。この意味は、レイヤーの外で宣言されたスタイルは、レイヤーの中で宣言されたスタイルよりも優先されるということです。
+カスケードレイヤー内のルールは一緒にカスケードされ、ウェブ開発者はカスケードをより制御できるようになります。レイヤー内で定義されていないスタイルは、常に名前付きまたは無名のレイヤーで宣言されたスタイルを上書きします。
 
-`@layer` アットルールは 3 つの方法のいずれかでカスケードレイヤーを作成するために使用します。
+次の図は、 1, 2, ..., N の順に宣言されたレイヤーの優先順位を示しています。
 
-最初の方法は、次のようにして名前付きカスケードレイヤーを作成し、 CSS ルールをその中に入れることです。
+![カスケードレイヤーの優先順位を示す図](layer-cascade.svg)
+
+上記の図に示されているように、 `!important` フラグ付きの重要な宣言は、通常の宣言、つまり `!important` フラグのない通常の宣言よりも優先されます。重要なルール間の優先順位は、通常のルールの順序と逆になります。トランジションが最も優先順位が高くなります。次に優先順位が高いのは、重要な{{glossary("user agent", "ユーザーエージェント")}}宣言、重要なユーザー宣言、重要な作成者宣言の順です。ユーザーは、ブラウザーの環境設定、オペレーティングシステムの環境設定、またはブラウザーの拡張機能を使用してスタイルを指定することができます。これらの重要な宣言は、作成者、つまりウェブ開発者が書いた重要な宣言よりも優先されます。
+
+作成者スタイル内では、CSSレイヤー内で宣言されたすべての重要な宣言は、レイヤー外で宣言された重要な宣言を引き継ぎますが、CSSレイヤー内で宣言されたすべての通常の宣言は、レイヤー外で宣言された宣言よりも優先順位が低くなります。
+宣言の順序は重要です。最初に宣言されたレイヤーは最も低い優先順位となり、最後に宣言されたレイヤーは最も高い順位となります。ただし、 [`!important`](/ja/docs/Web/CSS/important) フラグが使用された場合は優先順位が逆転します。
+
+`@layer` アットルールは、 3 つの方法のいずれかでカスケードレイヤーを作成するために使用します。
+
+最初の方法は、 `@layer` ブロックアットルールを使用して名前付きカスケードレイヤーを作成し、 CSS ルールをその中に入れることです。
 
 ```css
 @layer utilities {
@@ -72,7 +84,8 @@ l10n:
 }
 ```
 
-2 つ目は、スタイルを割り当てずに名前付きのカスケードレイヤーを作成する方法です。これは下記のように単一のレイヤーとすることができます。
+2 つ目の方法は、 `@layer` 文アットルールを使用して、
+スタイルを割り当てずに名前付きのカスケードレイヤーを作成する方法です。これは下記のように単一のレイヤーとすることができます。
 
 ```css
 @layer utilities;
@@ -91,7 +104,7 @@ l10n:
 > [!NOTE]
 > レイヤー名を宣言して順番を決めたら、名前を宣言し直してレイヤーに CSS ルールを追加してください。すると、スタイルがレイヤーに追加され、レイヤーの順序は変更されません。
 
-3 つ目は、次のように名前のないカスケードレイヤーを作成する方法です。
+3 つ目の方法は、 `@layer` ブロックアットルールを使用して名前のないカスケードレイヤーを作成する方法です。
 
 ```css
 @layer {
@@ -136,7 +149,7 @@ l10n:
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
 次の例では、 2 つの CSS ルールが作成されています。 1 つはレイヤーの外にある {{htmlelement("p")}} 要素に対して、もう一つは `.box p` に対して `type` というレイヤーの内側にあります。
 
@@ -170,7 +183,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Basic_example")}}
 
 ### 既存のレイヤーにルールを割り当てる
 
@@ -178,11 +191,9 @@ p {
 
 #### HTML
 
-```html
+```html-nolint
 <div class="item">
-  I am displayed in <code>color: rebeccapurple</code> because the
-  <code>special</code> layer comes after the <code>base</code> layer. My green
-  border, font-size, and padding come from the <code>base</code> layer.
+  これは、 <code>base</code> レイヤーの後に <code>special</code> レイヤーが来るため、 <code>color: rebeccapurple</code> で表示されます。緑色の境界線、フォントサイズ、パディングは、 <code>base</code> レイヤーで決まります。
 </div>
 ```
 
@@ -227,6 +238,6 @@ p {
 - [`!important`](/ja/docs/Web/CSS/important)
 - [`revert-layer`](/ja/docs/Web/CSS/revert-layer)
 - [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
-- [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) (bram.us (2021))

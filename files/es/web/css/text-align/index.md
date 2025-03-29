@@ -114,7 +114,7 @@ La propiedad `text-align` se especifica de una de las siguientes maneras:
 
 El espaciado incoherente entre palabras que crea el texto justificado puede ser problemático para personas con problemas cognitivos como la dislexia.
 
-- [MDN Comprender las WCAG, Explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+- [MDN Comprender las WCAG, Explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
 - [Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Definición formal

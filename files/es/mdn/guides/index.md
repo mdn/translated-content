@@ -6,13 +6,13 @@ original_slug: Web/Guide
 
 Este artículo proporciona información para ayudarte a hacer uso de tecnologías y APIs.
 
-- [Área de aprendizaje HTML](/es/docs/Learn/HTML)
+- [Área de aprendizaje HTML](/es/docs/Learn_web_development/Core/Structuring_content)
   - : **HyperText Markup Language** (lenguaje de marcas de hipertexto) es el lenguaje principal de prácticamente todo el contenido web. La mayoría de las cosas que ves en en la pantalla de tu navegador están escritas, fundamentalmente, utilizando HTML.
-- [Guía del Desarrollador: CSS](/es/docs/Learn/CSS)
+- [Guía del Desarrollador: CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
   - : CSS (hojas de estilo en cascada) es un lenguaje usado para describir la presentación gráfica de un documento escrito en HTML.
 - [Guía de Eventos](/es/docs/Web/Events)
   - : El término "Eventos" se refiere tanto al patrón de diseño usado para el manejo asíncrono de sucesos que ocurren durante el tiempo de vida de una página web como al nombramiento, caracterización y uso de grandes cantidades de sucesos de diferentes tipos.
-- [AJAX](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
   - : AJAX es el término utilizado para definir un conjunto de tecnologías que permiten a las aplicaciones web hacer rápidamente actualizaciones incrementales a la interfaz de usuario sin la necesidad de recargar toda la página web. Esto permite que las aplicaciones web sean más rápidas y más responsivas a las acciones de los usuarios.
 - [Elementos Gráficos en la Web](/es/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
   - : Las páginas web y aplicaciones modernas a menudo necesitan presentar elementos gráficos (2D, 3D o video).
@@ -33,9 +33,9 @@ Este artículo proporciona información para ayudarte a hacer uso de tecnología
   - : Las aplicaciones web progresivas usan APIs Web modernas junto con mejoras progresivas estratégicas para crear aplicaciones multi-plataforma. Estas aplicaciones funcionan donde sea y proporcionan muchas características que brindan la misma experiencia de usuario que una aplicación nativa. Este conjunto de documentos y guías te indican sobre todo lo que debes saber de las PWAs.
 - [Optimización y Rendimiento](/es/docs/conflicting/Web/Performance)
   - : Cuando creamos modernas Web apps y páginas web, es importante hacer que tu contenido rinda bien. Eso es, hacer que funcione de forma rápida y eficiente. Esto permite trabajar de forma más efectiva tanto a los usuarios de potentes equipos de sobremesa como a los que utilizan dispositivos portátiles con menos potencia.
-- [Mapeo y Serialización XML](/es/docs/Web/XML/Parsing_and_serializing_XML)
+- [Mapeo y Serialización XML](/es/docs/Web/XML/Guides/Parsing_and_serializing_XML)
   - : La Plataforma Web provee los diferentes métodos de parseo y serialización, cada uno con sus pros y contras.
-- [SVG-in-OpenType](/es/docs/Web/Guide)
+- [SVG-in-OpenType](/es/docs/MDN/Guides)
   - : El SVG-in-OpenType está actualmente en manos del [MPEG group](http://mpeg.chiariglione.org/). Una vez listos para una más amplia adopción de información desde [wiki.mozilla.org](https://wiki.mozilla.org/SVGOpenTypeFonts) nos trasladaremos aquí, actualizados y expandidos.
 - [El Web Open Font Format (WOFF)](/es/docs/Web/CSS/CSS_fonts/WOFF)
   - : **WOFF** ( **Web Open Font Format**) es un formato de tipografías para páginas web desarrollado por Mozilla en conjunto con Type Supply, LettError y otras organizaciones.

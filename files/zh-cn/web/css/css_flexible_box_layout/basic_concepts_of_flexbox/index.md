@@ -73,7 +73,28 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 这会让你的元素呈线形排列，并且把自己的大小作为主轴上的大小。如果有太多元素超出容器，它们会溢出而不会换行。如果一些元素比其他元素高，那么元素会沿交叉轴被拉伸来填满它的大小。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/the-flex-container.html", '100%', 480)}}
+```html live-sample___the-flex-container
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css live-sample___the-flex-container
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+```
+
+{{EmbedLiveSample("the-flex-container")}}
 
 ### 更改 flex 方向 flex-direction
 
@@ -83,7 +104,29 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 下面的例子中，`flex-direction` 值为 `row-reverse`。尝试使用其他的值 `row` ，`column`，`column-reverse`，看看内容会发生什么改变。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-direction.html", '100%', 350)}}
+```html live-sample___flex-direction
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___flex-direction
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
+
+{{EmbedLiveSample("flex-direction")}}
 
 ## 用 flex-wrap 实现多行 Flex 容器
 
@@ -91,7 +134,31 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 为了实现多行效果，请为属性{{cssxref("flex-wrap")}}添加一个属性值`wrap`。现在，如果你的项目太大而无法全部显示在一行中，则会换行显示。下面的实时例子包含已给出宽度的项目，对于`flex`容器，项目的子元素总宽度大于容器最大宽度。由于`flex-wrap`的值设置为`wrap`，所以项目的子元素换行显示。若将其设置为`nowrap`，这也是初始值，它们将会缩小以适应容器，因为它们使用的是允许缩小的初始`Flexbox`值。如果项目的子元素无法缩小，使用`nowrap`会导致溢出，或者缩小程度还不够小。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
+```html live-sample___flex-wrap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___flex-wrap
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 200px;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+
+{{EmbedLiveSample("flex-wrap")}}
 
 参见[掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)指南，以了解更多有关弹性物件包装的信息。
 
@@ -101,7 +168,31 @@ Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型�
 
 在下面的例子中，尝试将第一个值修改为 `flex-direction` 的允许取值之一，即 `row`, `row-reverse`, `column` 或 `column-reverse`, 并尝试将第二个指定值修改为 `wrap` 或 `nowrap`。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-flow.html", '100%', 400)}}
+```html live-sample___flex-flow
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___flex-flow
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 200px;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+{{EmbedLiveSample("flex-flow")}}
 
 ## flex 元素上的属性
 
@@ -150,7 +241,40 @@ flex-grow 属性可以按比例分配空间。如果第一个元素 `flex-grow` 
 
 你可以在下面的实例中尝试把 flex 简写形式中的数值更改为不同数值，但要记得第一个数值是 `flex-grow`。赋值为正数的话是让元素增加所占空间。第二个数值是`flex-shrink` — 正数可以让它缩小所占空间，但是只有在 flex 元素总和超出主轴才会生效。最后一个数值是 `flex-basis`；flex 元素是在这个基准值的基础上缩放的。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-properties.html", '100%', 510)}}
+```html live-sample___flex-properties
+<div class="box">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+</div>
+```
+
+```css live-sample___flex-properties
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.one {
+  flex: 1 1 auto;
+}
+
+.two {
+  flex: 1 1 auto;
+}
+
+.three {
+  flex: 1 1 auto;
+}
+```
+
+{{EmbedLiveSample("flex-properties")}}
 
 大多数情况下可以用预定义的简写形式。在这个教程中你可能经常会看到这种写法，许多情况下你都可以这么使用。下面是几种预定义的值：
 
@@ -169,7 +293,40 @@ flex-grow 属性可以按比例分配空间。如果第一个元素 `flex-grow` 
 
 尝试在下面的实例中应用这些简写值。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/flex-shorthands.html", '100%', 510)}}
+```html live-sample___flex-shorthands
+<div class="box">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+</div>
+```
+
+```css live-sample___flex-shorthands
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.one {
+  flex: 1;
+}
+
+.two {
+  flex: 1;
+}
+
+.three {
+  flex: 1;
+}
+```
+
+{{EmbedLiveSample("flex-shorthands")}}
 
 ## 元素间的对齐和空间分配
 
@@ -188,7 +345,31 @@ Flexbox 的一个关键特性是能够设置 flex 元素沿主轴方向和交叉
 - `flex-end`
 - `center`
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/align-items.html", '100%', 520)}}
+```html live-sample___align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css live-sample___align-items
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  width: 500px;
+  height: 130px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: flex-start;
+}
+```
+
+{{EmbedLiveSample("align-items")}}
 
 ### `justify-content`
 
@@ -205,7 +386,29 @@ Flexbox 的一个关键特性是能够设置 flex 元素沿主轴方向和交叉
 - `space-around`
 - `space-between`
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}
+```html live-sample___justify-content
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___justify-content
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  justify-content: flex-start;
+}
+```
+
+{{EmbedLiveSample("justify-content")}}
 
 在以后的文章中，为了更好的理解它们怎么使用，我们会更深入的探索这些属性。然而，这些简单的例子对大多数应用都很有帮助。
 

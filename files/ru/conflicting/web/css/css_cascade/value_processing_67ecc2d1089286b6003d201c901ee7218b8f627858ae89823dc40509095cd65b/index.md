@@ -4,7 +4,7 @@ slug: conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c9
 original_slug: Web/CSS/CSS_cascade/used_value
 ---
 
-{{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/Web/CSS/CSS_cascade/computed_value).
+{{cssref}}**Используемое значение** - [CSS](/ru/docs/Web/CSS) свойство, которое используется, когда все вычисления уже выполнены, смотрите [вычисленное значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d).
 
 После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
@@ -109,10 +109,10 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
   - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/CSS_cascade/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/CSS_cascade/computed_value)
-    - [используемые](/ru/docs/Web/CSS/CSS_cascade/used_value)
-    - [действительные](/ru/docs/Web/CSS/CSS_cascade/actual_value)
+    - [начальные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+    - [вычисленные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [используемые](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/Value_processing)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
   - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)

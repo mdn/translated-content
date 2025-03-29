@@ -150,7 +150,7 @@ En dependencia de cómo responda estas preguntas, su sitio pudiera costar miles 
 
 ## Próximos pasos
 
-Ahora que entiende que cantidad de dinero su sitio puede costarle, es tiempo de comenzar a diseñar un sitio web y [preparar su entorno de trabajo](/es/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+Ahora que entiende que cantidad de dinero su sitio puede costarle, es tiempo de comenzar a diseñar un sitio web y [preparar su entorno de trabajo](/es/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 - Lea sobre [cómo seleccionar e instalar un editor de texto](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
-- SI está más enfocado en diseño, eche una mirada a la [anatomía de una página web](/es/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts).
+- SI está más enfocado en diseño, eche una mirada a la [anatomía de una página web](/es/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).

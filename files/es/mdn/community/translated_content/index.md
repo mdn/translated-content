@@ -15,7 +15,7 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 ## Localizaciones activas
 
 > [!NOTE]
-> Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+> Si desea contribuir a una de las localizaciones activas existentes, póngase en contacto con alguno de los miembros activos que figuran a continuación o [póngase en contacto con nosotros para solicitar ayuda](/es/docs/MDN/Community/Getting_started#step_4_ask_for_help).
 
 ### Portugués brasileño (pt-BR)
 

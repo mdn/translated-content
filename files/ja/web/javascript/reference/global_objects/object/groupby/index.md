@@ -14,7 +14,25 @@ l10n:
 
 このメソッドは、グループ名が文字列で表現できる場合に使用します。任意の値をキーとして要素をグループ化する必要がある場合は、代わりに {{jsxref("Map.groupBy()")}} を使用してください。
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 構文
 

@@ -11,7 +11,7 @@ El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (s
 
 ## Figuras posibles
 
-Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/Value_definition_syntax).
+Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax).
 
 - `inset()`
 

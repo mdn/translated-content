@@ -78,6 +78,6 @@ Si aun asi sigues atasaco, puedes encontrar la version completamente desarrollad
 
 ## Resumen
 
-Ahora que sabes un poco mas del sitio web _LocalLIbrary_ y lo que vas a aprender, es tiempo de comenzar a crear un [skeleton project](/es/docs/Learn/Server-side/Express_Nodejs/skeleton_website)o para contener nuestro ejemplo.
+Ahora que sabes un poco mas del sitio web _LocalLIbrary_ y lo que vas a aprender, es tiempo de comenzar a crear un [skeleton project](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)o para contener nuestro ejemplo.
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}

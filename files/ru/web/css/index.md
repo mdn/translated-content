@@ -31,7 +31,7 @@ slug: Web/CSS
   - [Блоковая модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) и [схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [Содержащий блок](/ru/docs/Web/CSS/CSS_display/Containing_block)
   - [Контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) и [блочный контекст форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [Начальное](/ru/docs/Web/CSS/CSS_cascade/initial_value), [вычисленное](/ru/docs/Web/CSS/CSS_cascade/computed_value), [используемое](/ru/docs/Web/CSS/CSS_cascade/used_value) и [действительное](/ru/docs/Web/CSS/CSS_cascade/actual_value) значения
+  - [Начальное](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing), [вычисленное](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [используемое](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) и [действительное](/ru/docs/Web/CSS/CSS_cascade/Value_processing) значения
   - [Краткая форма записи CSS свойств](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [Флексбокс-раскладка в CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout)
   - [Грид-раскладка в CSS](/ru/docs/Web/CSS/CSS_grid_layout)

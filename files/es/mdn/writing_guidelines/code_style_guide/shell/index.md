@@ -42,4 +42,4 @@ Al escribir un bloque de código de shell:
 
 ## Véase también
 
-[Documentos de desarrollo del lado del servidor de Django](/es/docs/Learn/Server-side/Django) muestran una presentación de buenas prácticas de los comandos de la consola de shell.
+[Documentos de desarrollo del lado del servidor de Django](/es/docs/Learn_web_development/Extensions/Server-side/Django) muestran una presentación de buenas prácticas de los comandos de la consola de shell.

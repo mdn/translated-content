@@ -111,7 +111,7 @@ Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos n
 </video>
 ```
 
-Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+Para obtener más ejemplos, consulte [Uso de audio y video en Firefox](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
 ## Especificaciones
 

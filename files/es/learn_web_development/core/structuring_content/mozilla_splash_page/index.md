@@ -78,7 +78,7 @@ En cada caso, (excepto uno que es inherentemente receptivo) queremos que el nave
 ¡Asegúrate de hacer coincidir las imágenes correctas con los enlaces correctos!
 
 > [!NOTE]
-> Para probar correctamente los ejemplos `srcset`/`sizes` necesitarás cargar tu sitio a un servidor (usar [Github pages](/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) es una solución fácil y gratis), y desde allí puedes probar si funcionan correctamente usando herramientas de desarrollo del navegador como Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+> Para probar correctamente los ejemplos `srcset`/`sizes` necesitarás cargar tu sitio a un servidor (usar [Github pages](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) es una solución fácil y gratis), y desde allí puedes probar si funcionan correctamente usando herramientas de desarrollo del navegador como Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
 
 ### Un "red-panda" con arte dirigido
 

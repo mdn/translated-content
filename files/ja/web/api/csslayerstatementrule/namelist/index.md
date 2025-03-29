@@ -3,7 +3,7 @@ title: "CSSLayerStatementRule: nameList プロパティ"
 short-title: nameList
 slug: Web/API/CSSLayerStatementRule/nameList
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("CSSOM")}}
