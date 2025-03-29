@@ -23,7 +23,7 @@ HTTP **`Server`** {{Glossary("response header", "回應標頭")}}描述了處理
       <td>{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止請求的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>否</td>
     </tr>
   </tbody>
