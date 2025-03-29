@@ -44,11 +44,11 @@ l10n:
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
-- 修改请求头：
+- 修改请求标头：
 
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
-- 修改响应头：
+- 修改响应标头：
 
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
@@ -58,7 +58,7 @@ l10n:
 
 要做到这一点，你需要在事件的 `addListener()` 中的 `extraInfoSpec` 参数中传递一个值为 `"blocking"` 的选项。这将让监听器变为同步的。
 
-在监听器中，你可以返回指示你需要进行的修改的 {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} 对象：例如，你想要发送的修改后的请求头。
+在监听器中，你可以返回指示你需要进行的修改的 {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} 对象：例如，你想要发送的修改后的请求标头。
 
 ## 在浏览器启动时的请求
 
@@ -87,7 +87,7 @@ l10n:
 - {{WebExtAPIRef("webRequest.CertificateInfo")}}
   - : 描述单个 X.509 证书的对象。
 - {{WebExtAPIRef("webRequest.HttpHeaders")}}
-  - : HTTP 头的数组。每个头都是用包含两个属性 `name`、`value` 或 `binaryValue` 的对象表示。
+  - : HTTP 标头的数组。每个标头都是用包含两个属性 `name`、`value`（或 `binaryValue`）的对象表示。
 - {{WebExtAPIRef("webRequest.RequestFilter")}}
   - : 描述应用于 `webRequest` 事件的过滤器的对象。
 - {{WebExtAPIRef("webRequest.ResourceType")}}
@@ -116,17 +116,17 @@ l10n:
 ## 事件
 
 - {{WebExtAPIRef("webRequest.onBeforeRequest")}}
-  - : 在请求发出之前，且在头部可用之前触发。如果你想取消或重定向请求，这是一个很好的监听位置。
+  - : 在请求发出之前，且在标头可用之前触发。如果你想取消或重定向请求，这是一个很好的监听位置。
 - {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}
-  - : 在发送任何 HTTP 数据之前，但在 HTTP 头部可用之后触发。如果你想修改 HTTP 请求头，这是一个很好的监听位置。
+  - : 在发送任何 HTTP 数据之前，但在 HTTP 标头可用之后触发。如果你想修改 HTTP 请求标头，这是一个很好的监听位置。
 - {{WebExtAPIRef("webRequest.onSendHeaders")}}
-  - : 在发送头部之前触发。如果你的插件或其他插件在 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 中修改了头部，你会在这里看到修改后的版本。
+  - : 在发送标头之前触发。如果你的插件或其他插件在 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 中修改了标头，你会在这里看到修改后的版本。
 - {{WebExtAPIRef("webRequest.onHeadersReceived")}}
-  - : 当与请求关联的 HTTP 响应头接收到时触发。你可以使用这个事件来修改 HTTP 响应头。
+  - : 当与请求关联的 HTTP 响应标头接收到时触发。你可以使用这个事件来修改 HTTP 响应标头。
 - {{WebExtAPIRef("webRequest.onAuthRequired")}}
   - : 当服务器要求客户端提供身份验证凭据时触发。监听器可以什么都不做，取消请求，或提供身份验证凭据。
 - {{WebExtAPIRef("webRequest.onResponseStarted")}}
-  - : 当接收到响应体的第一个字节时触发。对于 HTTP 请求，这意味着状态行和响应头可用。
+  - : 当接收到响应体的第一个字节时触发。对于 HTTP 请求，这意味着状态行和响应标头可用。
 - {{WebExtAPIRef("webRequest.onBeforeRedirect")}}
   - : 当服务器发起的重定向即将发生时触发。
 - {{WebExtAPIRef("webRequest.onCompleted")}}
