@@ -24,11 +24,11 @@ l10n:
 
 AT は ARIA ロールの名前をカスタマイズおよびローカライズできます。ロール名をユーザーに対して表示する方法を変更するために `aria-roledescription` を使用している場合は、ローカライズを処理することを忘れないでください。ページがローカライズされるときに、値を翻訳する必要があります。
 
-ロールがユーザーに提示される方法を変更しても、要素の機能には影響しません。例えば、要素に [`region`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/region_role) または [`button`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) のロールがあり、AT が次のリージョンまたはボタンに移動するための機能を提供する場合、`aria-roledescription` をそれぞれ `continent` および `escape` に設定しても、AT は引き続きそれらの機能を使用してリージョンやボタンに移動することを許可します。
+ロールがユーザーに提示される方法を変更しても、要素の機能には影響しません。例えば、要素に [`region`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role) または [`button`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) のロールがあり、AT が次のリージョンまたはボタンに移動するための機能を提供する場合、`aria-roledescription` をそれぞれ `continent` および `escape` に設定しても、AT は引き続きそれらの機能を使用してリージョンやボタンに移動することを許可します。
 
 繰り返しますが、`aria-roledescription` の使用は避けてください。この例では、`escape` はユーザーにとって意味を持ちませんが、`button` のラベルとして「escape」を使用すると意味を持ちます。
 
-`aria-roledescription` を使用する場合は、適用される要素に有効な ARIA [`role`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) があること、または暗黙的なロールセマンティクスがあること、また値自体が空でなく、空白文字以外の文字が含まれていることも確認してください。
+`aria-roledescription` を使用する場合は、適用される要素に有効な ARIA [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) があること、または暗黙的なロールセマンティクスがあること、また値自体が空でなく、空白文字以外の文字が含まれていることも確認してください。
 
 `aria-brailleroledescription` を使用する場合は `aria-roledescription` が必要です。一般に `aria-brailleroledescription` は、点字でレンダリングすると `aria-roledescription` が過度に冗長になるという稀な場合にのみ使用してください。
 
@@ -57,9 +57,9 @@ AT は ARIA ロールの名前をカスタマイズおよびローカライズ�
 ## 関連インターフェイス
 
 - {{domxref("Element.ariaRoleDescription")}}
-  - : {{domxref("Element")}} インターフェイスの一部である [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaRoleDescription`](/ja/docs/Web/API/Element/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaRoleDescription")}}
-  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaRoleDescription`](/en-US/docs/Web/API/ElementInternals/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaRoleDescription`](/ja/docs/Web/API/ElementInternals/ariaRoleDescription) プロパティは、`aria-roledescription` 属性の値を反映します。
 
 ## 関連付けられたロール
 
@@ -71,4 +71,4 @@ AT は ARIA ロールの名前をカスタマイズおよびローカライズ�
 
 ## 関連情報
 
-- [ARIA ロール](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
+- [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
