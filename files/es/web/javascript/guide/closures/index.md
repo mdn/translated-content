@@ -573,4 +573,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para obtener más información.
+En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) para obtener más información.
