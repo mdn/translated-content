@@ -19,7 +19,7 @@ l10n:
 
 `aria-valuetext` と `aria-valuenow` の両方が含まれている場合は、`aria-valuetext` がアナウンスされます。`aria-valuetext` 属性がない場合、支援技術は現在の値の `aria-valuenow` 属性をアナウンスします。
 
-## 解説
+## 値
 
 - `<string>`
   - : `aria-valuenow` 値の人間が判読可能な代替テキスト。
