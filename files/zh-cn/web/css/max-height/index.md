@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`max-height`** 设置元素的最大高度。它防止 {{cssxref("height")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)大于 `max-height` 指定的值。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`max-height`** 设置元素的最大高度。它防止 {{cssxref("height")}} 属性的[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)大于 `max-height` 指定的值。
 
 {{InteractiveExample("CSS Demo: max-height")}}
 

@@ -113,7 +113,7 @@ background-color: hsl(0deg 100% 50%);
 
 颜色插值会发生在[渐变](/zh-CN/docs/Web/CSS/gradient)、[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)和[动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)中。
 
-当对 `<color>` 值进行插值时，它们首先会转换成指定的色彩空间，然后颜色分量的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值色彩空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
+当对 `<color>` 值进行插值时，它们首先会转换成指定的色彩空间，然后颜色分量的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值色彩空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
 
 ### 带有缺失分量时的插值
 

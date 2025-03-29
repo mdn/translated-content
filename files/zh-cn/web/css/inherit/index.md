@@ -5,7 +5,7 @@ slug: Web/CSS/inherit
 
 {{CSSRef}}
 
-**`inherit`** 关键字使得元素获取其父元素的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)。它可以应用于任何 CSS 属性，包括 CSS 简写 {{cssxref("all")}}。
+**`inherit`** 关键字使得元素获取其父元素的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)。它可以应用于任何 CSS 属性，包括 CSS 简写 {{cssxref("all")}}。
 
 对于[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)属性，inherit 关键字只是增强了属性的默认行为，通常只在覆盖原有的值的时候使用。
 

@@ -119,11 +119,11 @@ div.menu-bar li:hover > ul {
 
 ### 值
 
-- [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-- [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-- [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-- [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-- [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+- [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
+- [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
+- [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
+- [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
+- [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
 - [使用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
 
 ### 布局

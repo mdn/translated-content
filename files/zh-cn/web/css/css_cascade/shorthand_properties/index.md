@@ -165,10 +165,10 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 

@@ -32,12 +32,12 @@ slug: Glossary/Layout_mode
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
-    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
+    - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)

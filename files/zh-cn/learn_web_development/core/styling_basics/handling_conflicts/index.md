@@ -183,7 +183,7 @@ CSS 为控制继承提供了五个特殊的通用属性值。每个 CSS 属性�
 - {{cssxref("inherit")}}
   - : 设置该属性会使子元素属性和父元素相同。实际上，就是“开启继承”。
 - {{cssxref("initial")}}
-  - : 将应用于选定元素的属性值设置为该属性的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)。
+  - : 将应用于选定元素的属性值设置为该属性的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
 - {{cssxref("revert")}}
   - : 将应用于选定元素的属性值重置为浏览器的默认样式，而不是应用于该属性的默认值。在许多情况下，此值的作用类似于 {{cssxref("unset")}}。
 - {{cssxref("revert-layer")}}

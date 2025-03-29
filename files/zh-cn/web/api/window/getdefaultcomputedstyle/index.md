@@ -5,7 +5,7 @@ slug: Web/API/Window/getDefaultComputedStyle
 
 {{APIRef("CSSOM")}}{{Non-standard_header}}
 
-`getDefaultComputedStyle()` 给出元素的所有 CSS 属性的默认[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing)，忽略作者样式。也就是说，只考虑用户代理和用户风格。
+`getDefaultComputedStyle()` 给出元素的所有 CSS 属性的默认[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)，忽略作者样式。也就是说，只考虑用户代理和用户风格。
 
 ## 语法及参数说明
 
