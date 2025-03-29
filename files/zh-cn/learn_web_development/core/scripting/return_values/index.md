@@ -3,9 +3,9 @@ title: 函数返回值
 slug: Learn_web_development/Core/Scripting/Return_values
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting")}}
 
-函数返回值 - 是本章中最后一个基础概念，让我们一起来瞧瞧.。有些函数在执行完毕后不会返回一个有用的值，但有些会，重要的是理解返回的是什么，怎样使用这些值在你的代码中，我们将在下面讨论这些。
+函数返回值 - 是本章中最后一个基础概念，让我们一起来瞧瞧.。有些函数在执行完毕后不会返回一个有用的值，但有些会，重要的是理解返回的是什么，怎样在你的代码中使用这些值，我们将在下面讨论这些。
 
 <table>
   <tbody>
@@ -32,28 +32,31 @@ slug: Learn_web_development/Core/Scripting/Return_values
 
 ## 什么是返回值？
 
-返回值意如其名，是指函数执行完毕后返回的值。你已经多次遇见过返回值，尽管你可能没有明确的考虑过他们。让我们一起回看一些熟悉的代码：
+返回值意如其名，是指函数执行完毕后返回的值。你已经多次遇见过返回值，尽管你可能没有明确的考虑过他们。让我们回顾一个熟悉的例子（来自本系列之前的[一篇文章](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions#浏览器内置函数)）：
 
 ```js
-var myText = "I am a string";
-var newString = myText.replace("string", "sausage");
+const myText = "我是一个字符串";
+const newString = myText.replace("字符串", "香肠");
 console.log(newString);
-// the replace() string function takes a string,
-// replaces one substring with another, and returns
-// a new string with the replacement made
+// replace() 字符串函数接受源字符串和目标字符串，
+// 将源字符串替换为目标字符串，并返回新形成的字符串
 ```
 
-在第一篇函数文章中，我们确切地看到了这一块代码。我们对 `myText` 字符串调用 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 功能，并通过这两个参数的字符串查找，和子串替换它。当这个函数完成（完成运行）后，它返回一个值，这个值是一个新的字符串，它具有替换的功能。在上面的代码中，我们保存这个返回值，以作为`newString`变量的内容。
+我们对 `myText` 字符串调用 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数，并接收两个参数：
+- 要查找的字符串(`"字符串"`)
+- 用于替换的字符串(`"香肠"`)
 
-如果你看看替换功能 MDN 参考页面，你会看到一个[返回值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value)。知道和理解函数返回的值是非常有用的，因此我们尽可能地包含这些信息。
+当这个函数完成（完成运行）后，它返回一个值，这个值是一个新的字符串，它具有替换的功能。在上面的代码中，我们保存这个返回值，以作为`newString`变量的内容。
 
-一些函数没有返回值就像 (在我们的参考页中，返回值在这种情况下被列出为空值 `void` 或未定义值 `undefined` 。).例如，我们在前面文章中创建的 [displayMessage() function](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) , 由于调用的函数的结果，没有返回特定的值。它只是让一个提示框出现在屏幕的某个地方——就是这样！
+如果您查看MDN文档中 replace() 函数的页面，你会看到一个[返回值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value)的章节。理解函数的返回值非常关键，因此我们尽可能在文档中提供此类信息。
 
-通常，返回值是用在函数在计算某种中间步骤。你想得到最终结果，其中包含一些值。那些值需要通过一个函数计算得到，然后返回结果可用于计算的下一个阶段。
+一些函数不返回任何值 (在我们的参考页中，这类函数的返回值在文档中标记为空值 `void` 或未定义值 `undefined` 。).例如，前一篇文章中编写的 [displayMessage() function](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) , 函数在被调用时不会返回特定值，它仅负责在屏幕上显示一个弹窗。
+
+一般来说，返回值用于函数作为计算的中间步骤。假设您需要得到一个最终结果，而该结果依赖于某些需要通过函数计算的值。函数计算完成后，可以通过返回值将结果存储在变量中，供后续计算使用。
 
 ### 在自定义的函数中使用返回值
 
-要从自定义函数返回值，你需要使用…等待它… [return](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 关键字。我们最近在[random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)示例中看到了这一点。我们的 `draw()` 函数绘制 100 随机圆在 HTML 的{{htmlelement("canvas")}}:
+要从自定义函数返回值，你需要使用[return](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 关键字。我们最近在[random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)示例中见过此用法。我们的 `draw()` 会在{{htmlelement("canvas")}}上随机绘制100个圆圈:
 
 ```js
 function draw() {
@@ -67,7 +70,7 @@ function draw() {
 }
 ```
 
-在每个循环迭代，`random()`函数调用了三次，分别生成当前圆的 x 坐标，一个随机值 Y 坐标和半径。`random()`函数接受一个参数 - 一个整数，返回 0 到这个整数之间的随机数。看起来像这样：
+在每次循环中，random() 函数被调用了三次，分别生成圆圈的x坐标、y坐标和半径的随机值。random() 函数接收一个整数参数，并返回一个介于0到该参数的随机整数：
 
 ```js
 function randomNumber(number) {
@@ -75,7 +78,7 @@ function randomNumber(number) {
 }
 ```
 
-这也可以写成下面这样：
+这个函数也可以写成这样：
 
 ```js
 function randomNumber(number) {
@@ -84,28 +87,29 @@ function randomNumber(number) {
 }
 ```
 
-但是第一个版本写得更快，而且更紧凑。
+但是第一个版本写起来更快，而且更简洁。
 
-我们每次调用函数都返回`Math.floor(Math.random()*number)`计算的数学结果。这个返回值出现在调用函数的位置上，并且代码继续。例如，如果我们运行下面的行：
+我们每次调用函数都返回`Math.floor(Math.random()*number)`的计算结果。该返回值会直接出现在函数被调用的位置，代码随后继续执行后续逻辑。
+例如，当执行以下代码时：
 
 ```js
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ```
 
-这三次`random()`调用分别返回值 500, 200 和 35，实际上这一行这样运行：
+假设三次 random() 调用分别返回 500、200 和 35，则这行代码实际等价于：
 
 ```js
 ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 ```
 
-在运行该行之前，首先运行该行上的函数调用，并用其返回值替换该函数调用。
+该行代码中，首先会调用（random(WIDTH)、random(HEIGHT)、random(50)）函数，每个函数的返回值会作为对应位置的参数值被传入 ctx.arc() 方法并执行绘图操作。
 
 ## 主动学习：我们自己的返回值函数
 
 让我们着手编写具有我们自己的返回值的函数。
 
-1. 首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
-2. 让我们添加一些有用的函数。在现有的两行 JavaScript 下面，添加以下函数定义：
+1. 首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本框和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在其中用两个变量预存了对两个 HTML 元素的引用。这个页面允许你在文本框中输入一个数字，并在下方显示与该数字相关的不同数字。
+2. {{htmlelement("script")}}元素中已有的两行代码下方，插入这三个函数：
 
    ```js
    function squared(num) {
@@ -126,9 +130,9 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
    }
    ```
 
-   `squared()` 和 `cubed()` 功能是相当明显的 - 他们的平方或立方的数作为一个参数返回。factorial() 函数返回给定数字的阶乘。
+   `squared()` 和 `cubed()` 函数如其名称所示，返回它们参数的平方和立方。factorial() 函数返回参数的阶乘。
 
-3. 接下来，我们将包括一种打印输入到文本输入中的数字的信息的方法。在现有函数下面输入以下事件处理程序：
+3. 在现有函数下方，添加以下事件处理程序，实现打印文本输入框中数字信息的功能：
 
    ```js
    input.onchange = function () {
@@ -153,33 +157,35 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
    };
    ```
 
-   这里我们创建一个`onchange`事件处理程序，当文本框上面的 change 事件被触发的之后，事件处理程序就会运行 - 就是说，一个新的值被输入到文本框并且被提交（就比如，输入一个值，然后按 Tab）。当这个匿名函数运行时，输入框中的值将被存储在`num`变量中。
+通过监听 change 事件，当文本输入框的值发生变化并提交时（例如输入值后，通过按 <kbd>Tab</kbd> 或 <kbd>Return</kbd> 移出输入焦点），该匿名函数会执行。函数运行时，输入框的值会被存入常量 num。
 
-   接下来，我们进行条件测试——如果输入的值不是数字，则在段落中打印错误消息。if 语句判断[isNaN(num)](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN)表达式是否返回 true。我们用`isNaN()`函数测试`num`的值是否不是一个数字 - 如果不是数字，就返回`true`，否则返回`false`。
+if 语句在输入值非数字时显示错误信息。条件判断使用 isNaN(num) 检测 —— 若返回 true 表示 num 不是数字。isNaN() 函数专门用于检测值是否为非数字。
 
-   如果测试返回 false，则数值是一个数字，所以我们在段落元素中打印出一个句子，说明数字的平方、立方体和阶乘是什么。这句话叫 squared()，cubed()，和 factorial() 函数来获得所需的值。
+若条件返回 false，则 num 是有效数字，函数会在段落元素中输出该数字的平方、立方和阶乘值。这些值通过调用 squared()、cubed() 和 factorial() 函数计算得出。。
 
-4. 保存你的代码，将其加载到浏览器中，然后尝试。
+4.保存代码，在浏览器中加载并测试。
 
 > [!NOTE]
-> 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
+> 若示例运行失败，可对比[GitHub上的完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)（或查看[实时演示](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），也可联系我们寻求帮助。
+## 轮到你了！
+现在，尝试编写自己的函数并添加到函数库中。比如计算平方根、立方根，或给定半径的圆周长？
 
-在这一点上，我们希望你编写一个自己的几个函数，并将它们添加到库中。这个数的平方根或立方根，或一个圆的周长和半径是多少？
+附加函数编写建议：
 
-这个练习提出了一些重要的观点，除了研究如何使用返回语句之外。此外，我们还有：
+学习其他函数的错误处理示例。建议验证必要参数，并为可选参数提供默认值，以减少程序报错。
 
-- 查看另一个将错误处理写入函数的示例。它是否提供了任何必要的参数通常是一个好主意，另一方面对可选参数提供默认值。这样，你的程序就不太可能出错了。
-- 关于创建函数库思想的思考。随着你深入到你的编程生涯，你将开始一次又一次地做同样的事情。这是一个好主意，开始保持你自己的实用工具库，你经常使用 - 你可以把它们复制到你的新代码，甚至只是把它应用到任何你需要的 HTML 页面。
+考虑创建函数库。随着编程经验积累，你会重复使用某些功能。建立自己的工具函数库是高效的选择，可轻松移植到新项目或直接应用于 HTML 页面。
+## 技能测试
+本文已结束，你是否掌握了核心知识？可通过[函数测试](https://en-us/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)检验成果。
+## 总结
 
-## 结论
+函数既有趣又实用。尽管涉及大量语法和功能细节，但其核心概念易于理解。
 
-因此，我们让它 - 功能是有趣的，非常有用的，虽然有很多要谈论他们的语法和功能，相当容易理解的正确的文章学习。
+如有疑问，可随时重读本文或[联系我们](/zh-CN/docs/Learn_web_development#联系我们)寻求帮助。
 
-如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/docs/Learn_web_development#联系我们)寻求帮助。
+## 延伸阅读
 
-## 参见
-
-- [Functions in-depth](/zh-CN/docs/Web/JavaScript/Reference/Functions) — 详细介绍更多高级功能相关信息的指南。
-- [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一个常见的 JavaScript 模式是把一个函数传递给另一个函数作为参数，然后在第一个函数中调用它。这有点超出了这门课的范围，但值得学习很久。
+- [Functions in-depth](/zh-CN/docs/Web/JavaScript/Reference/Functions) — 涵盖高阶函数知识的详细指南。
+- [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 常见模式是将函数作为参数传入另一函数并在内部调用。此内容虽稍超当前范围，但值得后续学习。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
