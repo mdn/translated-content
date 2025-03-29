@@ -11,7 +11,61 @@ slug: Web/CSS/CSS_flexible_box_layout
 
 下例的容器已經設為 `display: flex`、意味著三個子元素變成了彈性項目（flex item）。`justify-content` 值也設成了 `space-between` 以便將項目均勻地分佈在主軸上。每個物品之間放置相等數量的空間，左右項目與彈性容器（flex container）的邊緣齊平。你可能也發現到各項目在切軸（cross axis）上伸展。那是因為 `align-items` 的值是 `stretch`。項目伸展為彈性容器的高度、令它們看起来都如同最高的項目一般高。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 500)}}
+```html live-sample___simple-example
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```html live-sample___simple-example
+<div class="box">
+  <img
+    alt="A red star"
+    src="https://mdn.github.io/shared-assets/images/examples/star-shape.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___simple-example
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  justify-content: space-between;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 1em;
+}
+```
+
+```css live-sample___simple-example
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+img {
+  float: left;
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+}
+```
 
 ## 參考
 
