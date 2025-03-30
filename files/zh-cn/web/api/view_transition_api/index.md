@@ -5,7 +5,7 @@ l10n:
   sourceCommit: ad896488bf8fac04fc6fa144c441fdbfd880737c
 ---
 
-{{DefaultAPISidebar("View Transitions API")}}
+{{DefaultAPISidebar("View Transition API")}}
 
 **视图过渡 API**（View Transitions API）提供了一种轻松地创建不同网站视图之间的动画过渡的机制。这包括在单页应用（SPA）中的 DOM 状态之间设置动画，以及在多页应用（MPA）中的文档之间的导航设置动画。
 
