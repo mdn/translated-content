@@ -52,7 +52,7 @@ l10n:
 - 查看在不同网站上设置的多个[第三方 Cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)，以了解用户的各种信息点。
 - 查看 {{httpheader("Referer")}} 标头，以了解用户从哪个网站跳转而来。
 - 在 URL 中包含参数的方式（例如嵌入广告链接到产品页面，或营销邮件中）可以告诉目标网站链接的来源，营销活动的标识，点击该链接的用户的电子邮件地址或其他标识符等。这一过程称为**链接装饰**，生成的链接 URL 通常像这样：`https://example.com/article/?id=62yhgt1a&campaign=902`。
-- 重定向跟踪，指的是跟踪器将用户瞬间（且不显眼地）重定向到其网站，通过使用第一方存储跨网站跟踪用户。这允许跟踪器绕过第三方 Cookie 被阻止的限制。例如，如果你先阅读了产品评测并点击链接想要购买，你可能不知情地先跳转到重定向跟踪器，然后才是零售商。这意味着跟踪器作为第一方加载，能够将跟踪数据与它们存储的第一方 Cookie 中的标识符关联，然后再将你转发到零售商网站。
+- 重定向跟踪，指的是跟踪器将用户瞬间（且不显眼地）重定向到其网站，通过使用第一方存储跨网站跟踪用户。这允许跟踪器绕过第三方 Cookie 被阻止的限制。例如，如果你先阅读了产品评测并点击链接想要购买，你可能不知情地先跳转到重定向跟踪器，*然后*才是零售商。这意味着跟踪器作为第一方加载，能够将跟踪数据与它们存储的第一方 Cookie 中的标识符关联，然后再将你转发到零售商网站。
 
 跟踪数据可以用来建立用户的个人资料以及他们的兴趣和偏好，这通常是不好的，并且在各种程度上可能会让人感到烦恼。例如：
 
@@ -62,7 +62,7 @@ l10n:
 
 ### 指纹提取
 
-与跟踪密切相关的一个过程是**指纹提取**（fingerprinting）：这专指通过收集关于用户的数据点来识别用户，这些数据点可以将他们与其他用户区分开来。这可能是从 cookie 内容到他们使用的浏览器以及本地安装的字体等任何信息。
+与跟踪密切相关的一个过程是**指纹提取**（fingerprinting）：这具体指通过建立用户的数据存储来*识别*用户，从而将用户与其他用户区分开来。这可能是从 cookie 内容到他们使用的浏览器以及本地安装的字体等任何信息。
 
 现代浏览器采取了一些措施来帮助防止基于指纹提取的攻击，通常通过不允许访问某些信息，或者在信息必须提供的情况下，加入变化或“噪声”，以防止它们被用于用户身份识别。
 
@@ -90,18 +90,18 @@ l10n:
 - [HTTP/2](/zh-CN/docs/Glossary/HTTP_2)
   - : 虽然 HTTP/2 从技术上讲不必使用加密，但大多数浏览器开发者仅在使用 HTTPS 时支持它；因此，在某种程度上，它可以被视为一种增强安全性/隐私的功能。
 
-### “强大功能”的选用
+### “强大特性”的选用
 
-所谓的“强大”Web API 功能，允许使用仅限[安全环境](/zh-CN/docs/Web/Security/Secure_Contexts)的潜在敏感数据和操作，基本上意味着仅限 HTTPS。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 Web 支付等功能。
+所谓的“强大”Web API 特性，允许使用仅限[安全环境](/zh-CN/docs/Web/Security/Secure_Contexts)的潜在敏感数据和操作，基本上意味着仅限 HTTPS。此外，这些网页功能被用户权限系统所限制。用户必须明确选择加入，才能使用诸如允许通知、访问地理位置数据、将浏览器切换到全屏模式、访问来自摄像头的媒体流、使用 Web 支付等功能。
 
 ### 防追踪技术
 
-浏览器已实现多种防追踪功能，自动增强其用户的隐私保护。许多浏览器会阻止或限制第三方网站嵌入的 {{htmlelement("iframe")}} 访问顶级域设置的 cookie、运行追踪脚本等。
+浏览器已实现多种防追踪特性，自动增强其用户的隐私保护。许多浏览器会阻止或限制第三方网站嵌入的 {{htmlelement("iframe")}} 访问顶级域设置的 cookie、运行追踪脚本等。
 
 - {{httpheader("Set-Cookie")}} 标头的 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性的默认值已更新为 `Lax`，以提供更好的保护，防止追踪和 {{glossary("CSRF")}} 攻击。有关更多信息，请参见[控制第三方 cookie 的 SameSite](/zh-CN/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)。
 - 浏览器默认开始阻止第三方 cookie。有关更多信息，请参见[浏览器如何处理第三方 cookie？](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies)。
 - 浏览器正在实现技术，仅在不会损害隐私的某些情况下允许第三方 cookie，或者以其他方式实现当前需要第三方 cookie 的常见用例。有关更多信息，请参见[从第三方 cookie 过渡](/zh-CN/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies)和[替代第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies)。
-- 若干浏览器会剥离已知的追踪参数，例如 Firefox、Safari 和 Brave。浏览器扩展也有助于实现这一功能，例如 [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/)。
+- 若干浏览器会剥离已知的追踪参数，例如 Firefox、Safari 和 Brave。浏览器扩展也有助于实现这一功能，例如 [ClearURLs](https://addons.mozilla.org/zh-CN/firefox/addon/clearurls/)。
 - 浏览器已实现[重定向追踪保护](/zh-CN/docs/Web/Privacy/Guides/Redirect_tracking_protection)。
 
 ## 客户端开发者的隐私考虑
@@ -131,7 +131,7 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
 
 ### 不要收集超过必要的数据
 
-开发者往往会有收集大量数据的冲动，认为这些数据将来可能会用到。然而，每收集一条额外的数据，就增加了用户隐私泄露的风险，增加他们放弃正在进行的步骤（无论是填写调查问卷还是注册服务）的可能性
+开发者往往会有收集大量数据的冲动，认为这些数据将来可能会用到。然而，每收集一条额外的数据，就增加了用户隐私泄露的风险，增加他们放弃正在进行的步骤（无论是填写调查问卷还是注册服务）的可能性。
 
 匿名化数据是一个好方法。你还应该考虑是否可以通过减少数据请求的粒度来获得所需信息。例如，你可以让用户选择更广泛的类别，而不是询问他们最喜欢的具体产品。
 
@@ -153,7 +153,7 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
 
 ### 数据使用完后删除数据
 
-在之前的内容中，我们提到过要为用户提供查看他们数据并在需要时删除它的方式。你可以将此功能与用户删除帐户的功能结合起来（他们的数据也会随之删除），或者将它们设置为两个独立的选项。无论哪种方式，选项都应该容易找到。
+在之前的内容中，我们提到过要为用户提供查看他们数据并在需要时删除它的方式。你可以将此功能与用户删除账户的功能结合起来（他们的数据也会随之删除），或者将它们设置为两个独立的选项。无论哪种方式，选项都应该容易找到。
 
 允许用户选择何时删除重要的部分数据是一种非常有力的方式，它能够建立信任，但也可能有一些数据你希望自己来处理删除。例如，某些数据可能仅在用户登录会话期间使用几小时或几分钟，然后就会被删除。
 
@@ -194,15 +194,15 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
   > [!NOTE]
   > 另请参见 [Referer 标头：隐私和安全问题](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)。
 
-- 使用 {{httpheader("Permissions-Policy")}} HTTP 标头来控制 API“强大功能”（如通知、地理位置数据、访问摄像头的媒体流等）的访问。这对于隐私非常有用，因为它可以防止第三方网站意外使用这些功能，并且用户不想被不必要的权限提示轰炸，而这些提示他们可能无法理解。你还可以通过在 `<iframe>` 元素本身的 `allow` 属性中指定权限策略，来控制嵌入在 {{htmlelement("iframe")}} 元素中的第三方网站对“强大功能”的使用。
+- 使用 {{httpheader("Permissions-Policy")}} HTTP 标头来控制 API“强大特性”（如通知、地理位置数据、访问摄像头的媒体流等）的访问。这对于保护隐私非常有用，因为它可以防止第三方网站利用这些特性做一些意想不到的事情，并且用户不想被不必要的权限提示轰炸，因为这些提示他们可能无法理解。你还可以通过在 `<iframe>` 元素本身的 `allow` 属性中指定权限策略，来控制嵌入在 {{htmlelement("iframe")}} 元素中的第三方网站对“强大特性”的使用。
 
   > [!NOTE]
-  > 另请参见我们的 [Permissions-Policy 指南](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)获取更多信息和示例，及 [permissionspolicy.com](https://www.permissionspolicy.com/) 提供的有用工具，包括一个策略生成器。
+  > 另请参见我们的 [Permissions-Policy 指南](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)获取更多信息和示例，以及 [permissionspolicy.com](https://www.permissionspolicy.com/) 提供的包括策略生成器的实用工具。
 
-- 使用 {{htmlelement("iframe")}} `sandbox` 属性来允许或禁止嵌入在 `<iframe>` 中的内容使用某些功能——包括下载、表单提交、模态框和脚本等。
+- 使用 {{htmlelement("iframe")}} `sandbox` 属性来允许或禁止嵌入在 `<iframe>` 中的内容使用某些特性——包括下载、表单提交、模态框和脚本等。
 
 > [!NOTE]
-> 另请参见 web.dev 上的[第三方资源](https://web.developers.google.cn/learn/privacy/third-parties/)获取更多有用的审计信息和其他内容。
+> 另请参见 web.developers.google.cn 上的[第三方资源](https://web.developers.google.cn/learn/privacy/third-parties/)获取更多有用的审计信息和其他内容。
 
 ## 保护用户数据
 
@@ -212,7 +212,7 @@ Web 开发者可以采取多种措施来提高用户的隐私保护。以下部�
 
 - 安全性很难做到完美。当实施一个涉及数据收集的安全解决方案时——特别是涉及敏感数据（如登录凭证）时，选择一个来自信誉良好的供应商的解决方案是明智之举。例如，任何值得信赖的服务器端框架都会内置保护功能，以防止常见的安全漏洞。你也可以考虑使用专门的产品来满足你的需求——例如身份提供者解决方案，或安全的在线调查提供商。
 - 如果你想推出自己的数据收集解决方案，确保你了解自己在做什么。聘请经验丰富的服务器端开发人员和/或安全工程师来实施系统，并确保进行彻底的测试。使用多因素认证（MFA）来提供更好的保护。考虑使用专用的 API，例如 [Web Authentication](/zh-CN/docs/Web/API/Web_Authentication_API) 或 [Federated Credential Management](/zh-CN/docs/Web/API/FedCM_API) 来简化客户端的实现。
-- 在收集用户注册信息时，强制要求使用强密码，以确保用户的帐户信息不容易被猜到。弱密码是安全漏洞的主要原因之一。鼓励用户使用密码管理器生成并存储复杂密码；这样，他们就不必担心记住密码，或因写下来而引发安全风险。
+- 在收集用户注册信息时，强制要求使用强密码，以确保用户的账户信息不容易被猜到。弱密码是安全漏洞的主要原因之一。鼓励用户使用密码管理器生成并存储复杂密码；这样，他们就不必担心记住密码，或因写下来而引发安全风险。
 - 不要将敏感数据包含在 URL 中——如果第三方拦截了 URL（例如通过 {{httpheader("Referer")}} 标头），他们可能会窃取这些信息。应使用 `POST` 请求而不是 `GET` 请求来避免这种情况。
 - 考虑使用像[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)和[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)这样的工具，来限制使用网站上的功能，从而使引入漏洞变得更加困难。进行此类操作时要小心——如果你阻止了某个第三方脚本依赖的功能，可能会导致你网站的功能故障。这是你在审计第三方资源时可以考虑的内容（请参见[仔细管理第三方资源](#仔细管理第三方资源)）。
 
