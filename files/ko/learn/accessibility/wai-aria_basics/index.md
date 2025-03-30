@@ -2,7 +2,7 @@
 title: WAI-ARIA 기본
 slug: Learn/Accessibility/WAI-ARIA_basics
 l10n:
-  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
+  sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
