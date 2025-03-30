@@ -91,7 +91,7 @@ WAI-ARIA 속성의 중요한 점은 브라우저의 접근성 API(스크린 리�
 다음으로, 해당 브라우저에서 ARIA 기능을 지원하고 API를 통해 해당 기능을 노출하는지, 스크린 리더가 해당 정보를 인식하여 사용자에게 유용한 방식으로 표시하는지 여부도 고려해야 합니다.
 
 1. 브라우저 지원은 거의 보편화되었습니다.
-2. ARIA 기능에 대한 스크린리더 지원은 아직 보편적이라고 할 수는 없지만 가장 대중적인 몇 개의 스크린리더는 이 수준에 거의 도달했습니다. Powermapper의 [스크린 리더 호환성  (WAI-ARIA Screen reader compatibility)](https://www.powermapper.com/tests/screen-readers/aria/) 문서를 참고하면 지원 수준에 대해 알아볼 수 있습니다.
+2. ARIA 기능에 대한 스크린리더 지원은 아직 보편적이라고 할 수는 없지만 가장 대중적인 몇 개의 스크린리더는 이 수준에 거의 도달했습니다. Powermapper의 [스크린 리더 호환성 (WAI-ARIA Screen reader compatibility)](https://www.powermapper.com/tests/screen-readers/aria/) 문서를 참고하면 지원 수준에 대해 알아볼 수 있습니다.
 
 이 글에서 모든 WAI-ARIA 기능과 정확한 지원 세부 사항을 다루지는 않습니다. 대신 사용자가 알아야 하는 가장 중요한 WAI-ARIA 기능들을 다루는데, 지원과 관련된 세부 정보가 언급되지 않을 때는 해당 기능이 잘 지원되는 것으로 간주해도 무방합니다. 지원에 대한 예외 사항이 있을 경우에는 명확하게 언급하고 넘어가겠습니다.
 
