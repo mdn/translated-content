@@ -76,3 +76,22 @@ WAI-ARIA 속성의 중요한 점은 브라우저의 접근성 API(스크린 리�
 > 모든 ARIA 역할과 및 용도에 관한 유용한 목록과 추가 정보 링크는 WAI-ARIA 사양 - [역할 정의](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 페이지에서 찾을 수 있습니다. [ARIA 역할](/en-US/docs/Web/Accessibility/ARIA/Roles) 참고하세요.
 >
 > 이 사양 목록에는 모든 속성 및 상태에 관한 추가 정보 링크가 포함되어 있습니다. [Definitions of States and Properties (all `aria-*` attributes)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)를 참고하세요.
+
+### WAI-ARIA는 어디에서 지원되나요?
+
+이 질문에 대답하기는 쉽지 않습니다. WAI-ARIA의 어떤 기능이 어디에서 사용 가능한지 대한 결정적인 자료를 찾기가 어렵기 때문입니다.
+
+1. WAI-ARIA 사양에는 아주 많은 기능이 포함되어 있습니다.
+2. 수많은 운영 체제, 브라우저 및 스크린리더의 조합을 고려해야 합니다.
+
+마지막 사항이 핵심입니다. 스크린 리더를 사용하기 위해서는 우선 운영체제가 스크린리더 작동에 필요한 정보를 필수 접근성 API를 갖춘 브라우저를 실행해야 합니다. 대부분의 인기 있는 OS에는 스크린리더가 사용할 수 있는 한두 개의 브라우저가 갖추어져 있습니다. Paciello Group은 이에 대한 데이터를 제공하는 최신 게시물을 보유하고 있습니다. [Rough Guide: browsers, operating systems and screen reader support updated](https://www.tpgi.com/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/)를 참고하세요.
+
+다음으로, 해당 브라우저에서 ARIA 기능을 지원하고 API를 통해 해당 기능을 노출하는지, 스크린 리더가 해당 정보를 인식하여 사용자에게 유용한 방식으로 표시하는지 여부도 고려해야 합니다.
+
+1. 브라우저 지원은 거의 보편화되었습니다.
+2. ARIA 기능에 대한 스크린리더 지원은 아직 보편적이라고 할 수는 없지만 가장 대중적인 몇 개의 스크린리더는 이 수준에 거의 도달했습니다. Powermapper의 [스크린 리더 호환성  (WAI-ARIA Screen reader compatibility)](https://www.powermapper.com/tests/screen-readers/aria/) 문서를 참고하면 지원 수준에 대해 알아볼 수 있습니다.
+
+이 글에서 모든 WAI-ARIA 기능과 정확한 지원 세부 사항을 다루지는 않습니다. 대신 사용자가 알아야 하는 가장 중요한 WAI-ARIA 기능들을 다루는데, 지원과 관련된 세부 정보가 언급되지 않을 때는 해당 기능이 잘 지원되는 것으로 간주해도 무방합니다. 지원에 대한 예외 사항이 있을 경우에는 명확하게 언급하고 넘어가겠습니다.
+
+> [!NOTE]
+> 일부 자바스크립트 라이브러리는 복잡한 양식 컨트롤과 같은 UI 기능을 만들 때 ARIA 속성을 추가하는 WAI-ARIA를 지원합니다. 빠른 UI 개발을 위한 타사 자바스크립트 솔루션을 찾고 있다면, UI 위젯의 접근성을 중요한 선택 요소로 고려해야 합니다. 좋은 예시로는 jQuaery UI ([About jQuery UI: Deep accessibility support](https://jqueryui.com/about/#deep-accessibility-support)를 참고하세요), [ExtJS](https://www.sencha.com/products/extjs/), 그리고 [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html) 등이 있습니다.
