@@ -118,7 +118,7 @@ IANA は[認証方式の一覧](https://www.iana.org/assignments/http-authscheme
 
 ### Apache と Basic 認証によるアクセス制限
 
-Apache サーバー上のディレクトリをパスワードで保護するには、 `.htaccess` ファイルと `.htpasswd` ファイルが必要です。
+Apache サーバー上のディレクトリーをパスワードで保護するには、 `.htaccess` ファイルと `.htpasswd` ファイルが必要です。
 
 `.htaccess` ファイルは通常、次のようになります。
 

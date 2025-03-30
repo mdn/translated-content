@@ -74,6 +74,6 @@ Web ブラウザーでは、メッセージは、イベントが発生し、そ�
 
 ## ブロッキング不可
 
-イベントループモデルの非常に興味深い特性は、他の多くの言語とは異なり、JavaScript は決してブロックしないことです。I/O の取り扱いは、通常、イベントとコールバックを介して行われます。そのため、アプリケーションは[IndexedDB](/ja/docs/Web/API/IndexedDB_API)のクエリや[XHR](/ja/docs/Web/API/XMLHttpRequest)リクエストが返るのを待っている時も、ユーザ入力のような他のことを処理することができます。
+イベントループモデルの非常に興味深い特性は、他の多くの言語とは異なり、JavaScript は決してブロックしないことです。I/O の取り扱いは、通常、イベントとコールバックを介して行われます。そのため、アプリケーションは[IndexedDB](/ja/docs/Web/API/IndexedDB_API)のクエリーや[XHR](/ja/docs/Web/API/XMLHttpRequest)リクエストが返るのを待っている時も、ユーザ入力のような他のことを処理することができます。
 
 `alert`か同期 XHR のようにレガシーな例外が存在しますが、それらを避けることは良い慣習とされています。[例外に対する例外は存在する](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311)ことに気をつけてください(と言っても、たいていは他の何かというよりはむしろ実装のバグですが)。

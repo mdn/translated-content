@@ -107,7 +107,7 @@ async function hashTheseFiles(e) {
   +++ if (checksum = correctCheckSum) return true;
   ```
 
-価値がある可能性がある場面の一つは、自分の制御下にないサードパーティのダウンロード元から取得したファイルを検査したい場合です。これは、ファイルをユーザーに提供する前にスキャンできるようにする [CORS](/ja/docs/Glossary/CORS) ヘッダがダウンロード元で有効になっている場合は成立します。残念ながら、CORS がデフォルトで有効になっているサーバーは多くありません。
+価値がある可能性がある場面の一つは、自分の制御下にないサードパーティのダウンロード元から取得したファイルを検査したい場合です。これは、ファイルをユーザーに提供する前にスキャンできるようにする [CORS](/ja/docs/Glossary/CORS) ヘッダーがダウンロード元で有効になっている場合は成立します。残念ながら、CORS がデフォルトで有効になっているサーバーは多くありません。
 
 ## 「ハッシュにソルトを加える」とは？
 
@@ -198,7 +198,7 @@ async function hashTheseFiles(e) {
 
 {{EmbedLiveSample("how-git-stores-files")}}
 
-もとの ArrayBuffer に連結してハッシュ化する文字列を生成するためのヘッダを生成するために [Encoding API](/ja/docs/Web/API/Encoding_API) を使っている方法に注目しましょう。
+もとの ArrayBuffer に連結してハッシュ化する文字列を生成するためのヘッダーを生成するために [Encoding API](/ja/docs/Web/API/Encoding_API) を使っている方法に注目しましょう。
 
 ## Git がコミットハッシュを生成する方法
 

@@ -7,7 +7,7 @@ slug: Web/API/Window/matchMedia
 
 ## 概要
 
-指定された [メディアクエリ](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)文字列のパース結果を表す、新しい {{domxref("MediaQueryList")}} オブジェクトを返します。
+指定された [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)文字列のパース結果を表す、新しい {{domxref("MediaQueryList")}} オブジェクトを返します。
 
 ## 構文
 
@@ -15,7 +15,7 @@ slug: Web/API/Window/matchMedia
 mql = window.matchMedia(mediaQueryString)
 ```
 
-`mediaQueryString` は、新しい {{domxref("MediaQueryList")}} オブジェクトを返すための、メディアクエリ文字列です。
+`mediaQueryString` は、新しい {{domxref("MediaQueryList")}} オブジェクトを返すための、メディアクエリー文字列です。
 
 ## 例
 
@@ -29,7 +29,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 このコードでは、ウィンドウが非常に狭いときに、何か別の処理を行うことができます。
 
-他にも『[コード内でのメディアクエリの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)』にいくつか例があります。
+他にも『[コード内でのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)』にいくつか例があります。
 
 ## 仕様書
 
@@ -41,7 +41,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 ## 関連記事
 
-- [メディアクエリ](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [コード内でのメディアクエリの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [コード内でのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

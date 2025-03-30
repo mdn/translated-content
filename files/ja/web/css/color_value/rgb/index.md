@@ -95,7 +95,7 @@ rgb(from <color> R G B[ / A])
 > **メモ:** `rgba()` エイリアスも相対色の出力や起点色の指定に使用できます。`rgba()` を使用して相対色を出力する場合、カンマのないモダン構文を使用する必要があります。
 
 > [!NOTE]
-> 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリすると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されます。
+> 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリーすると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されます。
 
 #### 相対色出力チャネル成分の定義
 
