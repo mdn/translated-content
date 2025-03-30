@@ -15,7 +15,7 @@ l10n:
       <th scope="row">전제 조건:</th>
       <td>
         HTML, CSS 및 자바스크립트에 대한 기초적인 이해.
-        <a href="/ko/docs/Learn/Accessibility"
+        <a href="/ko/docs/Learn_web_development/Core/Accessibility"
           >강좌의 이전 글</a
         >에 대한 이해.
       </td>
@@ -67,7 +67,7 @@ l10n:
 
 - 속성
 
-  - : 이는 요소의 속성을 정의하며, 요소에 추가적인 의미나 의미를 부여하는 데 사용됩니다. 예를 들어 `aria-required="true"` 입력 양식이 유효하기 위해서는 필수로 값이 작성되어야 함을 지정합니다. 한편, `aria-labelledby="label"` 를 사용하면 특정 요소에 아이디를 지정하여 해당 요소가 다른 요소의 라벨로 참조되도록 할 수 있는데, 이는 `<label for="input">`을 사용할 경우 불가능한 것입니다. `aria-labelledby` 의 용례로는 {{htmlelement("div")}}에 속한 주요 설명을 여러 표의 라벨로 지정하거나 이미지의 대체 텍스트로서 사용하여 페이지 내에 이미 존재하는 정보의 중복을 피하는 등이 있습니다. 이에 대한 예시는 [대체 텍스트](/ko/docs/Learn/Accessibility/HTML#text_alternatives)에서 확인할 수 있습니다.
+  - : 이는 요소의 속성을 정의하며, 요소에 추가적인 의미나 의미를 부여하는 데 사용됩니다. 예를 들어 `aria-required="true"` 입력 양식이 유효하기 위해서는 필수로 값이 작성되어야 함을 지정합니다. 한편, `aria-labelledby="label"` 를 사용하면 특정 요소에 아이디를 지정하여 해당 요소가 다른 요소의 라벨로 참조되도록 할 수 있는데, 이는 `<label for="input">`을 사용할 경우 불가능한 것입니다. `aria-labelledby` 의 용례로는 {{htmlelement("div")}}에 속한 주요 설명을 여러 표의 라벨로 지정하거나 이미지의 대체 텍스트로서 사용하여 페이지 내에 이미 존재하는 정보의 중복을 피하는 등이 있습니다. 이에 대한 예시는 [대체 텍스트](/ko/docs/Learn_web_development/Core/Accessibility/HTML#대체_텍스트)에서 확인할 수 있습니다.
 
 - 상태
   - : 입력 양식이 현재 비활성화 되어 있음을 뜻하는 `aria-disabled="true"`등과 같이 요소의 현재 상태를 지정하여 스크린리더기에 전달하는 특수 속성입니다. 속성은 앱의 수명 주기 동안 변경되지 않는 반면 상태는 일반적으로 자바스크립트를 통해 프로그래밍 방식으로 변화시킬 수 있다는 점에서 속성과 차이가 있습니다.
