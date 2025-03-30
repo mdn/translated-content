@@ -15,13 +15,13 @@ l10n:
 
 但是，在 Web 上创建视图过渡历来很困难：
 
-- 在单页应用程序（SPA）中，状态之间的过渡往往需要编写大量的 CSS 和 JavaScript 来：
+- 在单页应用程序（SPA）中，状态之间的过渡往往需要编写大量的 CSS 和 JavaScript 来实现：
   - 处理新旧内容的加载和定位。
   - 为新旧状态添加动画以创建过渡。
   - 防止用户与旧内容的意外交互而导致的问题。
   - 完成过渡后删除旧内容。
     也可能由于新旧内容同时存在于 DOM 中而导致像阅读位置丢失、焦点混乱和实时区域宣告的奇怪行为等无障碍问题
-- 跨文档视图转换（即 MPA 中不同页面之间的导航）在历史上是不可能的。
+- 跨文档视图过渡（即 MPA 中不同页面之间的导航）在历史上是不可能的。
 
 视图过渡 API 为上述两种用例提供了一种简单的方法来处理所需的视图更改和过渡动画。
 
@@ -32,7 +32,7 @@ l10n:
 ## 接口
 
 - {{domxref("ViewTransition")}}
-  - : 表示视图过渡，并提供了在过渡到达不同状态时运行代码（例如，准备运行动画或动画完成），或跳过视图过渡的功能。
+  - : 表示视图过渡，并提供了在过渡到达不同状态时运行代码（例如，准备运行动画或动画完成）或跳过视图过渡的功能。
 
 ## 对其他接口的扩展
 
@@ -43,14 +43,14 @@ l10n:
 - {{domxref("PageSwapEvent")}}
   - : {{domxref("Window.pageswap_event", "pageswap")}} 事件的事件对象。在跨文档导航过程中，如果导航触发了视图过渡，它允许你从正在导航*来源*的文档操纵相关的视图过渡（提供对相关 {{domxref("ViewTransition")}} 对象的访问）。它还提供对导航类型以及当前和目标文档历史条目信息的访问。
 - {{domxref("Window")}} {{domxref("Window.pagereveal_event", "pagereveal")}} 事件
-  - :当文档首次渲染时触发，无论是从网络加载新文档还是激活文档（从[后退/前进缓存](/zh-CN/docs/Glossary/bfcache)（bfcache）或 [prerender](/zh-CN/docs/Glossary/prerender)）。
+  - : 当文档首次渲染时触发，无论是从网络加载新文档还是激活文档（从[后退/前进缓存](/zh-CN/docs/Glossary/bfcache)（bfcache）或 [prerender](/zh-CN/docs/Glossary/prerender)）。
 - {{domxref("Window")}} {{domxref("Window.pageswap_event", "pageswap")}} 事件
   - : 当文档因导航而即将卸载时触发。
 
 ## HTML 扩展
 
 - [`<link rel="expect">`](/zh-CN/docs/Web/HTML/Attributes/rel#expect)
-  - : 为用户的页面初始视图标识关联文档中最关键的内容。在解析关键内容之前，文档呈现将被阻止，以确保在所有支持的浏览器上进行一致的首次绘制，从而实现视图过渡。
+  - : 为用户的页面初始视图标识关联文档中最关键的内容。在解析关键内容之前，文档呈现将被阻碍，以确保在所有支持的浏览器上进行一致的首次绘制，从而实现视图过渡。
 
 ## CSS 扩展
 
