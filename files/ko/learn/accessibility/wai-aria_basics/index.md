@@ -62,6 +62,7 @@ l10n:
 [WAI-ARIA](https://www.w3.org/TR/wai-aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications)는 W3C에서 작성한 사양으로, 요소에 추가적인 의미를 제공하고 접근성을 개선하는 일련의 추가적인 HTML 속성을 정의합니다. 이 사양에는 세 가지 주요 기능이 정의되어 있습니다.
 
 - [역할](/ko/docs/Web/Accessibility/ARIA/Roles)
+
   - : 역할은 요소가 무엇인지 또는 어떠한 기능을 하는지 정의합니다. 이들 중 다수는 소위 랜드마크 역할로, `role="navigation"` ({{htmlelement("nav")}}) 또는 `role="complementary"` ({{htmlelement("aside")}}) 처럼 구조 요소의 의미를 중복합니다. `role="banner"`, `role="search"`, `role="tablist"` 등 다른 역할들은 UI 패턴에서 흔히 보이는 페이지 구조를 설명합니다.
 
 - 속성
