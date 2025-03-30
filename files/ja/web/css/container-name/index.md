@@ -105,7 +105,7 @@ container-name: unset;
 }
 ```
 
-コンテナクエリーの書き方については、[CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のページを参照してください。
+コンテナークエリーの書き方については、[CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のページを参照してください。
 
 ### 複数のコンテナー名の使用
 
@@ -119,7 +119,7 @@ container-name: unset;
 ```
 
 これにより、 {{cssxref("@container")}} アットルールでどちらかの名前を使用してコンテナーをターゲットすることができます。
-これは、複数のコンテナクエリーで同じコンテナーを対象としたい場合に有益です。
+これは、複数のコンテナークエリーで同じコンテナーを対象としたい場合に有益です。
 
 ```css
 @container meta (max-width: 500px) {
