@@ -14,7 +14,7 @@ slug: Web/CSS/CSS_flexible_box_layout
 ```html live-sample___simple-example
 <div class="box">
   <div>一</div>
-  <div>二div>
+  <div>二</div>
   <div>三<br />具有<br />額外的<br />文字</div>
 </div>
 ```
