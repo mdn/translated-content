@@ -7,7 +7,7 @@ l10n:
 
 ## 什么是跟踪保护？
 
-Firefox 桌面版和 Firefox for Android 包含内置跟踪保护功能。在隐私浏览窗口（Firefox for Android 中是隐私浏览标签页），Firefox 将阻止跨站点跟踪用户的域加载的内容（例如通过[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)）。
+Firefox 桌面版和 Firefox for Android 包含内置跟踪保护功能。在隐私浏览窗口（Firefox for Android 中的隐私浏览标签页）中，Firefox 将阻止跨站点跟踪用户的域加载的内容（例如通过[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies) 跟踪用户）。
 
 如果被阻止的内容是页面布局的一部分，用户可能会注意到被阻止加载的地方出现布局问题。如果页面网格设计使得其他页面元素滑动填补被阻止元素留下的空白，用户可能完全不会注意到。
 
@@ -29,13 +29,13 @@ The resource at "http://some/url" was blocked because tracking protection is ena
 
 你可以点击“管理内容屏蔽”来更改屏蔽设置：
 
-![共有 3 级跟踪保护，标准、严格和自定义，可以设置成总是开启，或者仅在 firefox 被设置成阻止已知追踪器时开启。](content_blocking.png)
+![共有标准、严格和自定义 3 级跟踪保护，并且这些保护可以设置成总是开启或者仅在 firefox 被设置成阻止已知追踪器时开启。](content_blocking.png)
 
 ## Firefox 如何选择要屏蔽的内容？
 
 根据加载内容的域来屏蔽内容。
 
-Firefox 随附了一份已识别出从事跨站点跟踪用户的站点列表。启用跟踪保护时，Firefox 会屏蔽列表中站点的内容。
+Firefox 随附了一份已识别出会跨站点跟踪用户的站点列表。启用跟踪保护时，Firefox 会屏蔽列表中站点的内容。
 
 跟踪用户的站点主要是第三方广告和分析站点。
 
@@ -46,7 +46,7 @@ Firefox 随附了一份已识别出从事跨站点跟踪用户的站点列表。
 - 由第三方跟踪器提供的内容将对用户不可见。
 - 你的网站将无法使用从事跟踪的第三方广告服务或分析服务。
 
-更为微妙的是，如果网站的其他部分依赖于跟踪器的加载，那么在启用跟踪保护时这些部分也会出现问题。例如，如果你的网站包含一个回调函数，该函数在加载来自跟踪站点的内容时运行，则该回调函数将不会执行。
+更为微妙的是，如果网站的其他部分依赖于跟踪器的加载，那么在启用跟踪保护时这些部分也会出现问题。例如，如果你的网站包含一个在加载来自跟踪站点的内容时运行的回调函数，则该回调函数将不会执行。
 
 例如，你不应该以以下方式使用 Google Analytics：
 
@@ -54,7 +54,7 @@ Firefox 随附了一份已识别出从事跨站点跟踪用户的站点列表。
 <a
   href="http://www.example.com"
   onclick="trackLink('http://www.example.com', event);">
-  Visit example.com
+  访问 example.com
 </a>
 
 <script>
@@ -70,13 +70,13 @@ Firefox 随附了一份已识别出从事跨站点跟踪用户的站点列表。
 </script>
 ```
 
-相反，你应该处理 Google Analytics 缺失的情况，通过检查 ga 对象是否已初始化：
+相反，你应该通过检查 ga 对象是否已初始化处理 Google Analytics 缺失的情况：
 
 ```html example-good
 <a
   href="http://www.example.com"
   onclick="trackLink('http://www.example.com', event);">
-  Visit example.com
+  访问 example.com
 </a>
 
 <script>
@@ -96,7 +96,7 @@ Firefox 随附了一份已识别出从事跨站点跟踪用户的站点列表。
 </script>
 ```
 
-关于此技术的更多信息，请参阅 [Google Analytics, Privacy, and Event Tracking](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/)。
+关于此技术的更多信息，参见 [Google Analytics, Privacy, and Event Tracking](https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/)。
 
 > [!NOTE]
 > 以这种方式依赖第三方并不是一个好的做法，因为如果第三方响应慢或不可用，或者追踪器被某个插件阻止，你的网站可能会受到影响。
