@@ -231,7 +231,7 @@ Content-Security-Policy: script-src 'self'
 
 特に、これは [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) を使用したスクリプトを防ぎます。しかし、スクリプトがワーカーを構築した場合、ワーカーのコンテキストで実行中のコードは `eval()` を使用することができます。
 
-ワーカーのコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が配信されたリクエストの [Content-Security-Policy](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) レスポンスヘッダーで設定してください。
+ワーカーのコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が配信されたリクエストの [Content-Security-Policy](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) レスポンスヘッダーで設定してください。
 
 ワーカースクリプトのオリジンがグローバルに一意な識別子である場合（例えば、 URL のスキームが data や blob であった場合）は例外です。この場合、ワーカーは文書の CSP またはそれを作成したワーカーを継承します。
 

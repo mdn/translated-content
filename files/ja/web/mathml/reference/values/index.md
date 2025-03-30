@@ -10,7 +10,7 @@ l10n:
 
 ## MathML 固有の型
 
-[CSS データ型](/ja/docs/Web/CSS/CSS_Types)に加え、一部の MathML 属性は以下の型を受け入れます。
+[CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)に加え、一部の MathML 属性は以下の型を受け入れます。
 
 - `<unsigned-integer>`: [`<integer>`](/ja/docs/Web/CSS/integer) で、最初の文字が U+002D HYPHEN-MINUS character (-) でも U+002B PLUS SIGN (+) でもないものです。例えば `1234` です。
 - `<boolean>`: `true` または `false` の文字列で、論理値を表します。

@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 
 In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
 
-| Prerequisites: | Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, an understanding of the [previous articles in the course](/ru/docs/Learn/Accessibility). |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objective:     | To test basic knowledge of accessibility fundamentals.                                                                                                                |
+| Prerequisites: | Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, an understanding of the [previous articles in the course](/ru/docs/Learn_web_development/Core/Accessibility). |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objective:     | To test basic knowledge of accessibility fundamentals.                                                                                                                                     |
 
 ## Starting point
 

@@ -134,7 +134,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
   - : 심볼 설명을 담은 문자열을 반환합니다. {{jsxref("Object.prototype.toString()")}} 메서드를 재정의합니다.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : 심볼을 반환합니다. {{jsxref("Object.prototype.valueOf()")}} 메서드를 재정의합니다.
-- [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
+- [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
   - : 심볼을 반환합니다.
 
 ## 예제

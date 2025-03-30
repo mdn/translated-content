@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 メディアクエリーは以下の用途で使用されます。
 
-- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)により、条件付きでスタイルを適用する。
+- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)により、条件付きでスタイルを適用する。
 - {{HTMLElement("link")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性を付けて特定のメディアを対象とする。
 - [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
 

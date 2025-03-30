@@ -62,7 +62,7 @@ l10n:
 Теперь, всё что нужно чтобы запустить полученный `hello.html` в браузере, это поддержка WebAssembly. Она включёна по умолчанию в Firefox 52+, Chrome 57+, Edge 57+, Opera 44+.
 
 > [!NOTE]
-> Если просто открыть полученный HTML-файл `hello.html`, то будет возникать ошибка с примерно таким сообщением: _`both async and sync fetching of the wasm failed`_. Необходимо запускать файл через HTTP-сервер (`http://`), информацию об этом можно найти в статье [Как настроить локальный сервер для тестирования?](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+> Если просто открыть полученный HTML-файл `hello.html`, то будет возникать ошибка с примерно таким сообщением: _`both async and sync fetching of the wasm failed`_. Необходимо запускать файл через HTTP-сервер (`http://`), информацию об этом можно найти в статье [Как настроить локальный сервер для тестирования?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 Если всё сделано правильно, то на открывшейся веб-странице вы должны увидеть вывод "Hello World" в консоли Emscripten и в JavaScript-консоли браузера. Поздравляем, вы только что скомпилировали программу на C в WebAssembly и запустили её в своём браузере!
 ![image](helloworld.png)

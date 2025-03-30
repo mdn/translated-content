@@ -215,7 +215,7 @@ El ejemplo que encontrarás a continuación incluye las dos reglas anteriores. I
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
 > [!NOTE]
-> Como puedes ver, el CSS nos ofrece varias formas de seleccionar elementos, y hasta ahora solo hemos arañado la superficie. Examinaremos todos estos selectores y muchos más en los artículos correspondientes a [Selectores](/es/docs/Learn/CSS/Building_blocks/Selectors) que encontrarás más adelante.
+> Como puedes ver, el CSS nos ofrece varias formas de seleccionar elementos, y hasta ahora solo hemos arañado la superficie. Examinaremos todos estos selectores y muchos más en los artículos correspondientes a [Selectores](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que encontrarás más adelante.
 
 ## Dar formato según el estado
 
@@ -246,7 +246,7 @@ En el ejemplo que encontrarás a continuación, puedes jugar con diferentes valo
 Hemos eliminado el subrayado del enlace cuando el ratón se pasa por encima, y se puede eliminar de todos los estados de un enlace. Sin embargo, vale la pena recordar que en una página web real deberás asegurarte de que los visitantes sepan reconocer que se trata de un enlace. Que aparezca subrayado puede ser una pista importante para que las personas se den cuenta de que pueden hacer clic en una palabra dentro del párrafo, ya que es a lo que están acostumbrados. Al igual que con todo en CSS, existe la posibilidad de que tus cambios resten accesibilidad al documento. Intentaremos resaltar estas posibles dificultades en los lugares apropiados.
 
 > [!NOTE]
-> A menudo verás que se menciona la [accesibilidad](/es/docs/Learn/Accessibility) en estas lecciones y en MDN. Cuando hablamos de accesibilidad nos referimos al requisito de que nuestras páginas web sean comprensibles y usables para todas las personas.
+> A menudo verás que se menciona la [accesibilidad](/es/docs/Learn_web_development/Core/Accessibility) en estas lecciones y en MDN. Cuando hablamos de accesibilidad nos referimos al requisito de que nuestras páginas web sean comprensibles y usables para todas las personas.
 >
 > Puede que tu visitante acceda a la página desde un ordenador con ratón o trackpad, o un teléfono inteligente con pantalla táctil. O puede que use un lector de pantalla que lea el contenido del documento, así como puede que necesite un tamaño de texto más grande o navegar por la página usando solo el teclado.
 >

@@ -8,12 +8,12 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-colindextext` 属性は、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) の数値を人間が判読可能な代替テキストとして定義するものです。
+`aria-colindextext` 属性は、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) の数値を人間が判読可能な代替テキストとして定義するものです。
 
 ## 解説
 
 非常に大きい表の場合、または意図的に表の一部だけを表示したい場合、全ての列が DOM に存在しない場合があります。
-このような場合は、整数値の [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性を使用して、全ての列が存在する場合に表（またはグリッド）に含まれる列の数を定義し、各列に [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性を追加して、全ての列が表示されている場合の表内の列インデックスに関する情報を提供します。
+このような場合は、整数値の [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount) 属性を使用して、全ての列が存在する場合に表（またはグリッド）に含まれる列の数を定義し、各列に [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性を追加して、全ての列が表示されている場合の表内の列インデックスに関する情報を提供します。
 
 次の HTML スニペットでは、表に 8 つの列がありますが、表示されているのは 4 つだけです。 "City" 列は、`aria-colindex="5"` で定義されているように、大きな表の 5 番目の列です。
 
@@ -64,14 +64,14 @@ l10n:
 `aria-colindex` の提供または計算された値が意味をなさないか、表示されたインデックスを反映しない場合にのみ `aria-colindextext` を使用します。`aria-colindextext` を含める場合は常に `aria-colindex` も使用するようにしてください。これは、一部の支援技術ではユーザーの位置を追跡し、代替表ナビゲーションを提供するために数値列インデックスに依存しているためです。
 
 > [!NOTE]
-> 存在するすべての列が連続している場合、連続した値を推測できるため、`aria-colindex` を行に追加できますが、`aria-colindextext` は [`row`](/ja/docs/Web/Accessibility/ARIA/Roles/row_role) でサポートされているプロパティではありません。
+> 存在するすべての列が連続している場合、連続した値を推測できるため、`aria-colindex` を行に追加できますが、`aria-colindextext` は [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) でサポートされているプロパティではありません。
 
 関連する [`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) を参照してください。
 
 ## 値
 
 - `<string>`
-  - : 数値 [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) の人間が判読可能な代替テキスト
+  - : 数値 [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) の人間が判読可能な代替テキスト
 
 ## 関連インターフェース
 
@@ -84,7 +84,7 @@ l10n:
 
 使用するロール:
 
-- [`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 
 継承先のロール:
 
@@ -98,9 +98,9 @@ l10n:
 ## 関連情報
 
 - [`Element.ariaColIndexText`](/ja/docs/Web/API/Element/ariaColIndexText)
-- [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+- [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
 - [`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)
-- [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-- [`cell` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role)
+- [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
+- [`cell` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role)
 - [`columnheader` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)

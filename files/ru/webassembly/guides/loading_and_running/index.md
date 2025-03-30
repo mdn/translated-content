@@ -80,7 +80,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 ```
 
 > [!NOTE]
-> Для получения дополнительной информации о том, как работает экспорт из модуля WebAssembly, ознакомьтесь с разделами [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Using_the_JavaScript_API), и [Понимание текстового формата WebAssembly](/ru/docs/WebAssembly/Understanding_the_text_format).
+> Для получения дополнительной информации о том, как работает экспорт из модуля WebAssembly, ознакомьтесь с разделами [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API), и [Понимание текстового формата WebAssembly](/ru/docs/WebAssembly/Guides/Understanding_the_text_format).
 
 ## Используя XMLHttpRequest
 

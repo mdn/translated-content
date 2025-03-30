@@ -66,7 +66,7 @@ div:focus {
 
 キーボード入力で対話的にフォーカスを設定できるようにするために、 [対話型コンテンツ](/ja/docs/Web/HTML/Content_categories#対話型コンテンツ)ではないものに `tabindex` 属性を組み合わせて使用することは避けてください。例えば、 {{HTMLElement("button")}} 要素を使用する代わりに {{HTMLElement("div")}} 要素を使用してボタンを記述する場合などです。
 
-対話的要素でないものを使用して対話的コンポーネントを記述すると、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#アクセシビリティの_api_群)に掲載されません。これは、支援技術によって移動や操作を行うことを阻害します。このようなコンテンツは、代わりに（{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("details")}}、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} などの）対話型要素を使用して意味的に記述するべきです。これらの要素には、 [ARIA](/ja/docs/Web/Accessibility/ARIA) によって管理しなければならないアクセシビリティにステータスを伝える、組み込みのロールと状態があります。
+対話的要素でないものを使用して対話的コンポーネントを記述すると、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)に掲載されません。これは、支援技術によって移動や操作を行うことを阻害します。このようなコンテンツは、代わりに（{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("details")}}、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} などの）対話型要素を使用して意味的に記述するべきです。これらの要素には、 [ARIA](/ja/docs/Web/Accessibility/ARIA) によって管理しなければならないアクセシビリティにステータスを伝える、組み込みのロールと状態があります。
 
 - [Using the tabindex attribute | The Paciello Group](https://www.tpgi.com/using-the-tabindex-attribute/)
 

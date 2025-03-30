@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`anchor()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、**アンカー位置指定**要素の[インセットプロパティ](#properties_that_accept_anchor_function_values)値内で使用することができ、関連付けられたアンカー要素の端の位置に対する長さの値を返します。
+**`anchor()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、**アンカー位置指定**要素の[インセットプロパティ](#properties_that_accept_anchor_function_values)値内で使用することができ、関連付けられたアンカー要素の端の位置に対する長さの値を返します。
 
 ## 構文
 
@@ -57,7 +57,7 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
     - `left`
       - : このアンカー要素の左辺です。
     - `start`
-      - : アンカー要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)の、この `anchor()` 関数が設定されているインセットプロパティの軸の論理的な先頭側です。
+      - : アンカー要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の、この `anchor()` 関数が設定されているインセットプロパティの軸の論理的な先頭側です。
     - `end`
       - : アンカー要素の包含ブロックの、この `anchor()` 関数が設定されているインセットプロパティの軸の論理的な末尾側です。
     - `self-start`
@@ -82,7 +82,7 @@ anchor(<anchor-name> <anchor-side>, <length-percentage>)
 
 `anchor()` 関数により、アンカー要素の辺に関連した要素の位置指定をすることができます。これは、絶対位置指定または固定位置指定要素に設定された{{glossary("inset properties", "インセットプロパティ")}}値でのみ有効です。
 
-これは `<length>` 値で、インセット値で指定されたアンカー配置要素側と、選択された `<anchor-side>` 値で指定されたアンカー要素側との間の距離を指定する値を返します。 `<length>` を返すため、長さの値を受け入れる[他の CSS 関数](/ja/docs/Web/CSS/CSS_Functions)内、例えば {{cssxref("calc()")}}、{{cssxref("clamp()")}} などで使用することができます。
+これは `<length>` 値で、インセット値で指定されたアンカー配置要素側と、選択された `<anchor-side>` 値で指定されたアンカー要素側との間の距離を指定する値を返します。 `<length>` を返すため、長さの値を受け入れる[他の CSS 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)内、例えば {{cssxref("calc()")}}、{{cssxref("clamp()")}} などで使用することができます。
 
 `<anchor-name>` で指定された名前がついたアンカーが存在しない場合、または、位置指定要素に（{{cssxref("position-anchor")}} プロパティを介して）関連付けられたアンカーがない場合、最初の引数は不正なものと見なされ、利用できる場合は、代替の `<length-percentage>` 値が使用されます。例えば、位置指定要素に `top: anchor(bottom, 50px)` が指定されていたものの、その要素に関連付けられたアンカーがなかった場合、代替値が使用されるため、 `top` は `50px` という計算値になります。
 

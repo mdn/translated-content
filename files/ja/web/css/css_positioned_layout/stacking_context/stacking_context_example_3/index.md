@@ -1,9 +1,8 @@
 ---
 title: 重ね合わせコンテキストの例 3
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
-original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3
 l10n:
-  sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
+  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
 ---
 
 {{CSSRef}}
@@ -16,7 +15,7 @@ l10n:
 
 もし 3 つのメニュー階層が部分的に重なると、重なりの管理が問題になるかもしれません。
 
-第 1 階層のメニューは relative で位置指定されているだけなので、重ね合わせコンテキストは作られません。
+第 1 階層のメニューは相対位置指定されているだけなので、重ね合わせコンテキストは作られません。
 
 第 2 階層のメニューは、親要素内で絶対位置指定されています。これを第 1 階層のすべてのメニューより上に置くために、`z-index` が使われています。問題は第 2 階層のメニューそれぞれに重ね合わせコンテキストが作られることと、第 3 階層のメニューが自分の親要素に属していることです。
 
@@ -51,7 +50,7 @@ l10n:
 
 ### HTML
 
-```html
+```html live-sample___example
 <div class="lev1">
   <span class="bold">LEVEL #1</span>
 
@@ -101,7 +100,7 @@ l10n:
 
 ### CSS
 
-```css
+```css live-sample___example
 div {
   font: 12px Arial;
 }
@@ -155,16 +154,16 @@ div.lev3 {
 
 ## 結果
 
-{{ EmbedLiveSample('例', '320', '330') }}
+{{ EmbedLiveSample('Example', '320', '330') }}
 
 ## 関連情報
 
-- [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
-- [浮動ブロックの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements): 浮動要素が重ね合わせでどのように扱われるか
-- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context): 重ね合わせコンテキストについてのメモ
-- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
-- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2 階層の HTML 構造、全レベルの `z-index`
+- [`z-index` なしの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index): `z-index` が使用されなかった場合に適用される既定の重ね合わせ規則
+- [浮動ボックスの重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements): 浮動ボックスが重ね合わせでどのように扱われるか
+- [z-index の使用](/ja/docs/Web/CSS/CSS_positioned_layout/Using_z-index): `z-index` を使って既定の重ね合わせ変更する方法
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context): 重ね合わせコンテキストについてのメモ
+- [重ね合わせコンテキストの例 1](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1): 2 階層の HTML 構造で、最終階層の `z-index`
+- [重ね合わせコンテキストの例 2](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2): 2 階層の HTML 構造、全階層の `z-index`
 
 > [!NOTE]
 > 実は、サンプル画像は間違っているようです。第 2 階層の 2 つ目が第 3 階層に重複しているのは、第 2 階層が半透明であるため、新しい重ね合わせコンテキストが作成されるからです。基本的に、このサンプルページ全体が誤っており、誤解を招きます。

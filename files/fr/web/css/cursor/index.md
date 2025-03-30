@@ -95,7 +95,7 @@ cursor:
 ### Valeurs
 
 - `<url>`
-  - : Une `url(…)` ou une liste d'URL séparées par des virgules `url(…), url(…), …` pointant vers un fichier image. On peut utiliser plusieurs [`url()`](</fr/docs/Web/CSS/url()>), au cas où certains types d'images ne sont pas pris en charge. Il est _obligatoire_ qu'une valeur non-URL soit présente à la fin de cette liste.
+  - : Une `url(…)` ou une liste d'URL séparées par des virgules `url(…), url(…), …` pointant vers un fichier image. On peut utiliser plusieurs [`url()`](/fr/docs/Web/CSS/url_value), au cas où certains types d'images ne sont pas pris en charge. Il est _obligatoire_ qu'une valeur non-URL soit présente à la fin de cette liste.
 - `<x>` `<y>` {{experimental_inline}}
   - : Des coordonnées en abscisses et en ordonnées sans unité, inférieures à 32.
 - Valeurs utilisant un mot-clé

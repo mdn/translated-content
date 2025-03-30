@@ -13,4 +13,4 @@ slug: Glossary/TCP
 
 ### Общая информация
 
-- [Обзор протокола HTTP](/ru/docs/Web/HTTP/Overview)
+- [Обзор протокола HTTP](/ru/docs/Web/HTTP/Guides/Overview)

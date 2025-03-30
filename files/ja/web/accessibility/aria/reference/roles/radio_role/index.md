@@ -70,13 +70,13 @@ l10n:
 </fieldset>
 ```
 
-ネイティブ HTML のラジオフォームコントロール ([`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)) は 2 つの状態（"checked" と "not checked"）を持ちます。同様に、 `role="radio"` の要素は、 [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked) 属性で 2 つの状態を公開することができます。 `true` はチェックされた状態を表し、 `false` はチェックされていない状態を表します。 `aria-checked` の値である `mixed` は、ラジオボタンには使用しません。
+ネイティブ HTML のラジオフォームコントロール ([`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)) は 2 つの状態（"checked" と "not checked"）を持ちます。同様に、 `role="radio"` の要素は、 [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 属性で 2 つの状態を公開することができます。 `true` はチェックされた状態を表し、 `false` はチェックされていない状態を表します。 `aria-checked` の値である `mixed` は、ラジオボタンには使用しません。
 
 ラジオボタンがチェックされる場合、 radio 要素は `aria-checked` を設定するには `true` を保有します。チェックされていない場合、 `aria-checked` は `false` に設定されます。
 
 各ラジオボタン要素は `radio` というロールを保有します。 radio ロールは常に `radiogroup` 内で他にも関連する radio と一緒に入っている必要があります。ラジオボタンをラジオグループ内に入れることができない場合、グループ化されていないラジオボタンの `id` をスペース区切りのリスト値として `radiogroup` 要素の [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性の値として使用し、 `radiogroup` とそのラジオメンバーとの関係を示します。
 
-各 radio 要素はそのコンテンツによってラベル付けされるか、 `aria-labelledby` によって参照される可視ラベルを持つか、または `aria-label` で指定するラベルを持ちます。格納する `radiogroup` 要素は `aria-labelledby` で参照する可視ラベルを持つか、`aria-label` で指定するラベルを持つ必要があります。ラジオグループまたは各ラジオボタンに関する追加の情報を提供する要素が存在する場合、それらの要素は [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) プロパティを持つ `radiogroup` 要素または radio 要素によって参照されなければなりません。
+各 radio 要素はそのコンテンツによってラベル付けされるか、 `aria-labelledby` によって参照される可視ラベルを持つか、または `aria-label` で指定するラベルを持ちます。格納する `radiogroup` 要素は `aria-labelledby` で参照する可視ラベルを持つか、`aria-label` で指定するラベルを持つ必要があります。ラジオグループまたは各ラジオボタンに関する追加の情報を提供する要素が存在する場合、それらの要素は [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) プロパティを持つ `radiogroup` 要素または radio 要素によって参照されなければなりません。
 
 `radio` は操作可能なコントロールなので、フォーカス可能でキーボードアクセス可能でなければなりません。もしこのロールがフォーカス可能でない要素に適用されている場合は、 [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を使用して変更してください。ラジオを有効にするキーボードショートカットは <kbd>Space</kbd> キーです。 JavaScript を使用して、ラジオがチェックされたときに `aria-checked` 属性を `true` に切り替え、同時にグループ内の他のすべてのラジオの役割が `aria-checked="false"` に設定されるようにしてください。
 
@@ -84,7 +84,7 @@ l10n:
 
 ### 子孫はすべて表示用
 
-プラットフォームのアクセシビリティ API で表すと、テキストしか格納できないユーザーインターフェイスコンポーネントの型があります。アクセシビリティ API は `radio` に格納された意味づけ要素を表す方法を持っていません。この制限に対応するために、ブラウザーは `radio` 要素の子孫要素すべてに自動的にロール [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) を適用します。
+プラットフォームのアクセシビリティ API で表すと、テキストしか格納できないユーザーインターフェイスコンポーネントの型があります。アクセシビリティ API は `radio` に格納された意味づけ要素を表す方法を持っていません。この制限に対応するために、ブラウザーは `radio` 要素の子孫要素すべてに自動的にロール [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) を適用します。
 
 例えば、見出しを含む次の `radio` 要素を考えてみましょう。
 
@@ -110,7 +110,7 @@ l10n:
 
   - : ラジオボタンは `radiogroup` というロールを持つ要素に格納されているか、自分自身で所有しています。マークアップ内で `radiogroup` 内に入れ子にすることができない場合、 `radiogroup` の `aria-owns` 属性はグループ内の入れ子になっていないラジオボタンの `id` 値を格納します。
 
-- [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+- [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
 
   - : `aria-checked` の値は radio の状態を定義します。 radio 要素で使用する場合、この属性は 2 つの取りうる値のうちの一つを保有します。
 
@@ -299,8 +299,8 @@ ARIA の最初のルールは、ネイティブの HTML 要素や属性に要求
 - [HTML `<input type="radio">` ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)
 - [HTML `tabindex` 属性](/ja/docs/Web/HTML/Global_attributes/tabindex)
 - [ARIA: `radiogroup` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
-- [ARIA: `checkbox` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [ARIA: `checkbox` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [ARIA: `menuitem` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
 - [ARIA: `menuitemradio` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [ARIA: `menuitemradio` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/option_role)
+- [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)

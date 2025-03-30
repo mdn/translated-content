@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-margin
 
 {{CSSRef}}
 
-**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど `margin` プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
+**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど `margin` プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
 
 {{InteractiveExample("CSS Demo: scroll-margin")}}
 

@@ -6,13 +6,13 @@ original_slug: Web/HTTP/Headers/WWW-Authenticate
 
 {{HTTPSidebar}}
 
-HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへのアクセス権を得るために使われる [HTTP 認証](/ja/docs/Web/HTTP/Authentication)メソッド (「チャレンジ」) を定義します。</p>
+HTTP の **`WWW-Authenticate`** レスポンスヘッダーは、リソースへのアクセス権を得るために使われる [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)メソッド (「チャレンジ」) を定義します。</p>
 
 > [!NOTE]
-> このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)で使用することができます。
+> このヘッダーは、[一般的な HTTP 認証の枠組み](/ja/docs/Web/HTTP/Guides/Authentication#一般的な_http_認証の枠組み)の一部であり、多くの[認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で使用することができます。
 > それぞれの「チャレンジ」には、サーバーが対応している方式と、その方式型に定義されている追加引数が記載されています。
 
-[HTTP 認証](/ja/docs/Web/HTTP/Authentication)を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
+[HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)を使用するサーバーは、保護されたリソースへのリクエストに対して {{HTTPStatus("401")}} `Unauthorized` レスポンスを返します。このレスポンスには、1 つ以上の `WWW-Authenticate` ヘッダーと 1 つ以上の{{Glossary("challenge", "チャレンジ")}}が含まれていなければならず、リソースへのアクセスにどのような認証方式が使用できるか (およびそれぞれの方式が必要とする追加データ) を示します。
 
 1 つの `WWW-Authenticate` ヘッダーには複数のチャレンジが許され、1 つのレスポンスには複数の `WWW-Authenticate` ヘッダーが許されます。
 サーバーは、他のレスポンスメッセージに `WWW-Authenticate` ヘッダーを含めることで、資格情報を提供することがレスポンスに影響を与える可能性があることを示すこともできます。
@@ -62,7 +62,7 @@ WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ...
 WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
 ```
 
-例えば、[Basic 認証](/ja/docs/Web/HTTP/Authentication#basic_認証方式)では任意で `realm` および `charset` キーを指定することができますが、`token68` には対応していません。
+例えば、[Basic 認証](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式)では任意で `realm` および `charset` キーを指定することができますが、`token68` には対応していません。
 
 ```http
 WWW-Authenticate: Basic
@@ -74,10 +74,10 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 
 - `<auth-scheme>`
 
-  - : [認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)です。有名なものとしては、 [`Basic`](/ja/docs/Web/HTTP/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります (大文字小文字の区別なし)。
+  - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)です。有名なものとしては、 [`Basic`](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります (大文字小文字の区別なし)。
 
     > [!NOTE]
-    > 詳しい情報やオプションについては、[HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)を参照してください。
+    > 詳しい情報やオプションについては、[HTTP 認証 > 認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)を参照してください。
 
 - **realm=**\<realm> {{optional_inline}}
   - : 保護領域を説明する文字列です。
@@ -87,7 +87,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
   - : 方式によっては役立つ可能性のあるトークンです。このトークンでは、66 種類の予約されていない URI 文字に加えて、いくつかの文字を使用できます。
     仕様書によれば、 base64、base64url、base32、base16 (16 進数) の各エンコード方式のいずれかを、パディングの有無にかかわらず、ホワイトスーペースを除いて保持することができます。
 
-`<auth-scheme>` とキー `realm` 以外の認証引数は、それぞれの[認証方式](/ja/docs/Web/HTTP/Authentication#認証方式)に固有のものです。
+`<auth-scheme>` とキー `realm` 以外の認証引数は、それぞれの[認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)に固有のものです。
 通常、これらについては関連する仕様を確認する必要があります (一部のスキームのキーを以下に示します)。
 
 ### Basic
@@ -152,7 +152,7 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 `"Basic"` 認証では、資格情報はまず、ユーザー名とパスワードをコロンで結合し (`aladdin:opensesame`)、その結果の文字列を [`base64`](/ja/docs/Glossary/Base64) でエンコードすることで構築します (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
 > [!NOTE]
-> Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保護する方法の例については、 <a href="/ja/docs/Web/HTTP/Authentication">HTTP 認証</a> を参照してください。
+> Apache や nginx サーバーで HTTP Basic 認証を使用してサイトを保護する方法の例については、 <a href="/ja/docs/Web/HTTP/Guides/Authentication">HTTP 認証</a> を参照してください。
 
 ### SHA-256 と MD5 を使用した Digest 認証
 
@@ -223,7 +223,7 @@ Authorization: Digest username="Mufasa",
 
 ## 関連情報
 
-- [HTTP 認証](/ja/docs/Web/HTTP/Authentication)
+- [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

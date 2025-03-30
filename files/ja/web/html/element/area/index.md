@@ -98,7 +98,7 @@ img {
 
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーを送信しません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーを{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信しません。
-    - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
+    - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
     - `origin-when-cross-origin`: 他のオリジンに送信されるリファラーは、スキーム、ホスト名、ポート番号に限定されます。同一オリジン内での移動の場合はパスが含まれます。
     - `same-origin`: リファラーは{{Glossary("Same-origin policy", "同一オリジン")}}には送られますが、オリジン間リクエストではリファラー情報が含まれません。
     - `strict-origin`: プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) は、文書のオリジンのみが送信されますが、安全性が下がる移動先 (HTTPS→HTTP) には送信しません。

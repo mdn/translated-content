@@ -28,5 +28,5 @@ JavaScript で、列挙可能なプロパティとは、内部の列挙可能フ
 ## 関連情報
 
 - [論理型](/ja/docs/Glossary/Boolean)
-- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
 - HTML 標準の [enumerated attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)

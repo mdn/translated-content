@@ -62,7 +62,7 @@ get(options)
 
 - `sameSite`
 
-  - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
+  - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
 
     - `"strict"`
       - : Cookie はファーストパーティのコンテキストにのみ送られ、サードパーティのウェブサイトに対するリクエストには送られません。

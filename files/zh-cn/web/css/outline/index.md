@@ -46,7 +46,7 @@ border-radius: 2rem;
 }
 ```
 
-与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)。
+与其他简写属性一样，忽略的子属性会被设为 [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
 
 ### border 和 outline
 

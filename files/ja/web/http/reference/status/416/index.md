@@ -8,8 +8,8 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の **`416 Range Not Satisfiable`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)のステータスコードで、サーバーがリクエストされた範囲を提供できないことを示します。
-最も可能性の高い理由は、文書にそのような[範囲](/ja/docs/Web/HTTP/Range_requests)が含まれていないか、または {{HTTPHeader("Range")}} ヘッダー値が構文的には正しいものの、意味をなさないということです。
+HTTP の **`416 Range Not Satisfiable`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、サーバーがリクエストされた範囲を提供できないことを示します。
+最も可能性の高い理由は、文書にそのような[範囲](/ja/docs/Web/HTTP/Guides/Range_requests)が含まれていないか、または {{HTTPHeader("Range")}} ヘッダー値が構文的には正しいものの、意味をなさないということです。
 
 `416` レスポンスメッセージには {{HTTPHeader("Content-Range")}} が含まれ、未解決の範囲 (`'*'`) とそれに続く `'/'` とリソースの現在の長さ、例えば `Content-Range: bytes */12777` を示します。
 
@@ -48,8 +48,8 @@ Content-Range: bytes */800
 
 ## 関連情報
 
-- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("206", "206 Partial Content")}}
-- [HTTP 範囲リクエスト](/ja/docs/Web/HTTP/Range_requests)
+- [HTTP 範囲リクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Range")}}

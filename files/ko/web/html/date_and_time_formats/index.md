@@ -426,6 +426,6 @@ Y10K 문제는 왜 걱정해야 할까요? 그것이 여러 세기가 지나고 
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} 와 {{HTMLElement("del")}}: {{HTMLElement("ins")}}와 {{HTMLElement("del")}}: `datetime` 속성에 대해 알아보세요. 이 속성은 콘텐츠가 삽입되거나 삭제된 날짜 또는 지역 날짜 및 시간을 지정합니다.
 - [ISO 8601 명세](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [JavaScript 가이드](/ko/docs/Web/JavaScript/Guide)의 [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates)를 참조하세요.
+- [JavaScript 가이드](/ko/docs/Web/JavaScript/Guide)의 [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings)를 참조하세요.
 - JavaScript {{jsxref("Date")}} 객체
 - 주어진 로케일에 대해 날짜와 시간을 형식화하는 [`Intl.DateTimeFormat`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 객체 입니다.

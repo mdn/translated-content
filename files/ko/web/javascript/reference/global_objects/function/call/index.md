@@ -162,4 +162,4 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [객체 지향 JavaScript 소개](/ko/docs/Learn/JavaScript/Objects)
+- [객체 지향 JavaScript 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

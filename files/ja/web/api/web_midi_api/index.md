@@ -36,7 +36,7 @@ Web MIDI API は、Musical Instrument Digital Interface (MIDI) デバイスに�
 この API へのアクセスは、{{domxref("navigator.requestMIDIAccess()")}} メソッドを用いて要求します。
 
 - このメソッドは[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
-- アクセスは [`midi`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/ja/docs/Web/HTTP/Permissions_Policy) により制限される可能性があります。
+- アクセスは [`midi`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) により制限される可能性があります。
 - ユーザーがユーザーエージェント固有のメカニズムによりこの API を用いる許可を明示的に与えるか、既に許可が与えられている必要があります。
   なお、アクセスが Permission Policy により拒否された場合は、ユーザーがアクセスを許可することはできません。
 

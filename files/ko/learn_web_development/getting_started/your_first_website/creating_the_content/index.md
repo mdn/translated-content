@@ -79,7 +79,7 @@ My cat is very grumpy
 
 ### HTML 문서 해부
 
-각 HTML 요소의 기본적인 내용들은 살펴봤지만, 그것만으로는 별로 유용하지 않습니다. 이제 각 요소들이 어떻게 전체 HTML 페이지를 구성하는지 살펴볼 차례입니다. `index.html` 예제([파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 편에서 처음 봤던)에 넣은 코드를 다시 살펴봅시다.
+각 HTML 요소의 기본적인 내용들은 살펴봤지만, 그것만으로는 별로 유용하지 않습니다. 이제 각 요소들이 어떻게 전체 HTML 페이지를 구성하는지 살펴볼 차례입니다. `index.html` 예제([파일 다루기](/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) 편에서 처음 봤던)에 넣은 코드를 다시 살펴봅시다.
 
 ```html
 <!doctype html>
@@ -149,7 +149,7 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 지금 한번 해보세요, 여러분의 HTML 페이지에 있는 {{htmlelement("img")}} 요소 위에 적당한 제목을 추가합시다.
 
 > [!NOTE]
-> 당신은 당신의 heading level 1이 암묵적인 스타일을 가진다는 것을 볼 수 있을 것입니다. heading 요소를 문자를 크게 혹은 굵게 만드려고 사용하지 마세요, 왜냐하면 그들은 [접근](/ko/docs/Learn/Accessibility/HTML#text_content)과 [SEO와 같은 다른 이유](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure)에 사용되기 때문입니다. 단계를 건너뛰지 않고 페이지에 의미 있는 heading 순서를 만들어보세요.
+> 당신은 당신의 heading level 1이 암묵적인 스타일을 가진다는 것을 볼 수 있을 것입니다. heading 요소를 문자를 크게 혹은 굵게 만드려고 사용하지 마세요, 왜냐하면 그들은 [접근](/ko/docs/Learn_web_development/Core/Accessibility/HTML#text_content)과 [SEO와 같은 다른 이유](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure)에 사용되기 때문입니다. 단계를 건너뛰지 않고 페이지에 의미 있는 heading 순서를 만들어보세요.
 
 ### 문단
 
@@ -159,7 +159,7 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 <p>This is a single paragraph</p>
 ```
 
-간단한 문자 ([_웹사이트의 외관은 어떻게 할까요?_](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)에서 보셨을겁니다)를 하나 또는 몇 개의 문단에 추가하고, {{htmlelement("img")}} 요소 바로 아래 둡시다.
+간단한 문자 ([_웹사이트의 외관은 어떻게 할까요?_](/ko/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)에서 보셨을겁니다)를 하나 또는 몇 개의 문단에 추가하고, {{htmlelement("img")}} 요소 바로 아래 둡시다.
 
 ### 목록
 
@@ -235,6 +235,6 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 
 잘 안 된다면 여러분의 코드를 Github에 있는 저희의 [완성된 예제 코드](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html)와 비교해 볼 수 있습니다.
 
-여기서 우리는 HTML 맛보기를 하였습니다. 더 알아보기 위해, [HTML 배우기](/ko/docs/Learn/HTML) 페이지로 가보세요.
+여기서 우리는 HTML 맛보기를 하였습니다. 더 알아보기 위해, [HTML 배우기](/ko/docs/Learn_web_development/Core/Structuring_content) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

@@ -48,9 +48,9 @@ l10n:
 
 ### 関連する ARIA のプロパティ
 
-- [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 属性
+- [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性
   - : その値として、ID は DOM のフォーカスを持つ要素の子孫であるか、または [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性で指定された論理的子孫であり、[`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role) などの複合ウィジェットの一部であるときに、その要素にフォーカスがあるときを示します。 たとえば、コンボボックスでは、テキストボックスにフォーカスが残ることがありますが、テキストボックス要素の `aria-activedescendant` の値は、テキストボックスによって制御されるポップアップリストボックスの子孫を参照します。 この属性は、フォーカスが変更されるとプログラムで更新する必要があります。
-- [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) 属性
+- [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性
 
   - : フィールドへのユーザーの入力が、意図した値の予測の表示をトリガーできるかどうか、およびその方法を示します。 これは以下の値に対応しています。
 
@@ -59,9 +59,9 @@ l10n:
     - `both`: 予測されたテキストは、値の集まりとして提示され、補完に必要なテキストの 1 つの値がキャレットの後に挿入されます。
     - `none`（既定値）: 予測されたテキストは提供されません。
 
-    `list` または `both` が設定されている場合は、 [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-controls) および [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性も含める必要があります。 `aria-controls` の値は、提案値のリストを含む要素の ID です。 さらに、テキストボックスまたは `combobox` ロールを含む包含要素のいずれかに、提案値のリストを含む要素のロールに一致する `aria-haspopup` の値を持ちます。
+    `list` または `both` が設定されている場合は、 [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) および [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性も含める必要があります。 `aria-controls` の値は、提案値のリストを含む要素の ID です。 さらに、テキストボックスまたは `combobox` ロールを含む包含要素のいずれかに、提案値のリストを含む要素のロールに一致する `aria-haspopup` の値を持ちます。
 
-- [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) 属性
+- [`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性
 
   - : `aria-multiline="true"` が設定されている場合、支援技術は、テキストボックスが複数行入力に対応していることをユーザーに知らせます。 <kbd>Enter</kbd> や <kbd>Return</kbd> はフォームを送信するのではなく改行を入力します。 ARIA は要素の動作を変更しません。むしろ、この機能は開発者が制御しなければなりません。 `false` が設定されている場合、または属性が省略されていて `false` の既定値になった場合、ユーザーはコントロールが単一行のテキストボックスであり、 <kbd>Enter</kbd> や <kbd>Return</kbd> がフォームを送信することを期待しています。
 
@@ -125,11 +125,11 @@ l10n:
 
 ## 関連情報
 
-- [ARIA: search ロール](/ja/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA: search ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles)
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
 
    {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles", 1)}}
 

@@ -71,7 +71,7 @@ labeled-checkbox:state(checked) {
 
 この例では、カスタム要素の `:state()` 擬似クラスを[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)を対象として使用できることを示しています。
 
-シャドウパーツは、[`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を使用して定義し、名前を付けます。
+シャドウパーツは、[`part`](/ja/docs/Web/HTML/Global_attributes/part) 属性を使用して定義し、名前を付けます。
 例えば、`<question-box>` という名前のカスタム要素が、`<labeled-checkbox>` カスタム要素を `checkbox` という名前のシャドウパーツとして使用しているとします。
 
 ```js
@@ -105,5 +105,5 @@ question-box::part(checkbox):state(checked) {
 
 - [`CustomStateSet`](/ja/docs/Web/API/CustomStateSet)
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-- [擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [カスタム状態と CSS のカスタム状態擬似クラスセレクター](/ja/docs/Web/API/Web_components/Using_custom_elements#カスタム状態と_css_のカスタム状態擬似クラスセレクター)（[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)）

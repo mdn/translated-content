@@ -181,7 +181,7 @@ Estos elementos son usados para crear y manejar datos tabulados.
 
 ## Formularios
 
-HTML provee un número de elementos que pueden usarse conjuntamente para crear formularios los cuales el usuario puede completar y enviar al sitio Web o a una aplicación. Hay una gran cantidad de información acerca de ésto disponible en la [HTML forms guide](/es/docs/Learn/Forms).
+HTML provee un número de elementos que pueden usarse conjuntamente para crear formularios los cuales el usuario puede completar y enviar al sitio Web o a una aplicación. Hay una gran cantidad de información acerca de ésto disponible en la [HTML forms guide](/es/docs/Learn_web_development/Extensions/Forms).
 
 | Elemento                    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

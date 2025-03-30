@@ -131,7 +131,7 @@ logIterable(123);
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`TypedArray.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
-- [`String.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- [`String.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
 - {{jsxref("Symbol.iterator")}}
 - [순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)

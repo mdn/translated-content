@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Reference/Roles/switch_role
 original_slug: Web/Accessibility/ARIA/Roles/switch_role
 ---
 
-ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)) ロールと機能的に同じですが、かなり一般的な意味を持つ「チェックされた」状態と「チェックされていない」状態を表す代わりに、スイッチ (`switch`) ロールは「オン」と「オフ」の状態を表す点が異なります。
+ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)) ロールと機能的に同じですが、かなり一般的な意味を持つ「チェックされた」状態と「チェックされていない」状態を表す代わりに、スイッチ (`switch`) ロールは「オン」と「オフ」の状態を表す点が異なります。
 
 この例では、ウィジェットを作成し、それに ARIA のスイッチ (`switch`) ロールを割り当てています。
 
@@ -23,7 +23,7 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 
 ## 説明
 
-ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)) ロールと同じですが、「チェックされた」や「チェックされていない」ではなく、「オン」と「オフ」のどちらかになります。 チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)) ロールと同様に、`aria-checked` 属性が必須です。 可能な値は `true` と `false` の 2 つです。 `<checkbox>` やチェックボックスロール (`role="checkbox"`) とは異なり、不確定な状態 (`indeterminate`) や混在した状態 (`mixed`) はありません。 スイッチ (`switch`) ロールは、`aria-checked` 属性に `mixed` という値をサポートしていません。 スイッチ (`switch`) に `mixed` という値を割り当てると、代わりに値が `false` に設定されます。
+ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)) ロールと同じですが、「チェックされた」や「チェックされていない」ではなく、「オン」と「オフ」のどちらかになります。 チェックボックス ([`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)) ロールと同様に、`aria-checked` 属性が必須です。 可能な値は `true` と `false` の 2 つです。 `<checkbox>` やチェックボックスロール (`role="checkbox"`) とは異なり、不確定な状態 (`indeterminate`) や混在した状態 (`mixed`) はありません。 スイッチ (`switch`) ロールは、`aria-checked` 属性に `mixed` という値をサポートしていません。 スイッチ (`switch`) に `mixed` という値を割り当てると、代わりに値が `false` に設定されます。
 
 支援技術では、スイッチのオン/オフの概念を反映するために、スイッチ (`switch`) ウィジェットを特別な表現で表すことを選択できます。
 
@@ -165,7 +165,7 @@ label.switch {
 
 ## 関連情報
 
-- [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+- [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
 - [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

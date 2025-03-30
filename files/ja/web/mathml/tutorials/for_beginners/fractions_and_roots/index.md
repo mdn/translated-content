@@ -14,7 +14,7 @@ l10n:
 
 ## \<mfrac>, \<msqrt>, \<mroot> のサブツリー
 
-[MathML を始めよう](/ja/docs/Web/MathML/Guides/Getting_started)の記事で、分数を記述するための `<mfrac>` 要素をすでに紹介しました。ここでは、根号を表す新しい要素（`<msqrt>` と `<mroot>`）を追加した基本的な例を考えてみましょう。
+[MathML を始めよう](/ja/docs/Web/MathML/Tutorials/For_beginners/Getting_started)の記事で、分数を記述するための `<mfrac>` 要素をすでに紹介しました。ここでは、根号を表す新しい要素（`<msqrt>` と `<mroot>`）を追加した基本的な例を考えてみましょう。
 
 ```html
 <math>
@@ -46,7 +46,7 @@ l10n:
 ![mfrac, msqrt, mroot のスクリーンショット](mfrac-msqrt-mroot.png)
 
 - すでに `<mfrac>` 要素が分数として描画されることは知っていますね。最初の子要素（分子）は横棒で区切られた 2 つ目の子要素（分母）の上に描画されます。
-- `<msqrt>`は平方根としてレンダリングされます。子要素は [`<mrow>`](/ja/docs/Web/MathML/Guides/Getting_started#mrow_要素でのグループ化) のように並べられ、ルート記号 √ が先頭に付き、完全に上付き線で覆われます。
+- `<msqrt>`は平方根としてレンダリングされます。子要素は [`<mrow>`](/ja/docs/Web/MathML/Tutorials/For_beginners/Getting_started#mrow_要素でのグループ化) のように並べられ、ルート記号 √ が先頭に付き、完全に上付き線で覆われます。
 - 最後に、 `<mroot>` 要素は n 乗根としてレンダリングされます。最初の要素は根号に覆われ、 2 つ目の要素はルートの次数として使用され、前置上付き文字としてレンダリングされます。
 
 ### アクティブラーニング: 異なる要素を入れ子にする
@@ -266,7 +266,7 @@ checkboxes.forEach((checkbox) => {
 {{ EmbedLiveSample('Stretchy_radical_symbols', 700, 200, "", "") }}
 
 > [!WARNING]
-> 伸縮を可能にするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Fonts)が必要です。前回の例は[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)を使用しています。
+> 伸縮を可能にするには、一般に特別な[数学フォント](/ja/docs/Web/MathML/Guides/Fonts)が必要です。前回の例は[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)を使用しています。
 
 ## 線のない分数
 
@@ -304,12 +304,12 @@ checkboxes.forEach((checkbox) => {
 
 ## まとめ
 
-今回は `<mfrac>`、`<msqrt>`、`<mroot>` 要素を使用して分数と根号を作る方法を見てきました。これらの要素には、分数と根号という特別な機能があることがわかりました。また、 `linethickness` 属性を使用して、分数を棒なしで描画する方法も見てきました。次の記事では、基本的な数学の記法を続け、[添字](/ja/docs/Web/MathML/Guides/Scripts)について考えます。
+今回は `<mfrac>`、`<msqrt>`、`<mroot>` 要素を使用して分数と根号を作る方法を見てきました。これらの要素には、分数と根号という特別な機能があることがわかりました。また、 `linethickness` 属性を使用して、分数を棒なしで描画する方法も見てきました。次の記事では、基本的な数学の記法を続け、[添字](/ja/docs/Web/MathML/Tutorials/For_beginners/Scripts)について考えます。
 
 ## 関連情報
 
-- [`<mfrac>` 要素](/ja/docs/Web/MathML/Element/mfrac)
-- [`<msqrt>` 要素](/ja/docs/Web/MathML/Element/msqrt)
-- [`<mroot>` 要素](/ja/docs/Web/MathML/Element/mroot)
+- [`<mfrac>` 要素](/ja/docs/Web/MathML/Reference/Element/mfrac)
+- [`<msqrt>` 要素](/ja/docs/Web/MathML/Reference/Element/msqrt)
+- [`<mroot>` 要素](/ja/docs/Web/MathML/Reference/Element/mroot)
 
 {{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}

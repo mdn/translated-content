@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 - [컨테이닝 블록의 모든 것](/ko/docs/Web/CSS/Containing_block)
 - [종속](/ko/docs/Web/CSS/Cascade)
-- [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [계단식 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 - CSS 주요 개념:
 

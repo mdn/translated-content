@@ -37,7 +37,7 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 - {{domxref("XMLHttpRequest.responseXML")}} {{ReadOnlyInline}}
   - : {{domxref("Document")}} でリクエストに対するレスポンスが入ったを返すか、またはリクエストが成功しなかった場合、まだ送信されていない場合、 XML または HTML として解釈できなかった場合は `null` を返します。[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)では利用できません。
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
-  - : リクエストの [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)を返します。
+  - : リクエストの [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)を返します。
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
 
   - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（`"OK"` のような）レスポンスメッセージの完全な文が含まれています。

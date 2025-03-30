@@ -5,7 +5,7 @@ slug: Web/CSS/max-height
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
+Свойство [CSS](/ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
 
 {{InteractiveExample("CSS Demo: max-height")}}
 

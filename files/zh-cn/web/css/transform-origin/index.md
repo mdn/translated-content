@@ -186,7 +186,7 @@ transform-origin: initial;
 transform-origin: unset;
 ```
 
-`transform-origin`属性可以使用一个，两个或三个值来指定，其中每个值都表示一个偏移量。没有明确定义的偏移将重置为其对应的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)。
+`transform-origin`属性可以使用一个，两个或三个值来指定，其中每个值都表示一个偏移量。没有明确定义的偏移将重置为其对应的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
 
 如果定义了两个或更多值并且没有值的关键字，或者唯一使用的关键字是`center`，则第一个值表示水平偏移量，第二个值表示垂直偏移量。
 

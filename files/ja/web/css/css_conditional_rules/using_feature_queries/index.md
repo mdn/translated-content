@@ -83,7 +83,7 @@ CSS の機能クエリーは [CSS 条件付きルールモジュール](https://
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
-ブラウザーは CSS のプロパティや値を理解できない場合、それを無視します。そこで、 CSS グリッドを使ってレイアウトを強化することから始めるとよいでしょう。グリッドに対応していないブラウザーは、 `display` プロパティの `grid` の値を無視します。浮動アイテムがグリッドアイテムになると、浮動は取り除かれます。詳細は、[古いブラウザーの対応](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)を参照してください。そのため、グリッド版は浮動のものを上書きすればよいのです。
+ブラウザーは CSS のプロパティや値を理解できない場合、それを無視します。そこで、 CSS グリッドを使ってレイアウトを強化することから始めるとよいでしょう。グリッドに対応していないブラウザーは、 `display` プロパティの `grid` の値を無視します。浮動アイテムがグリッドアイテムになると、浮動は取り除かれます。詳細は、[古いブラウザーの対応](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)を参照してください。そのため、グリッド版は浮動のものを上書きすればよいのです。
 
 しかし、浮動されたアイテムを 3 列で表示するために使用した `width` プロパティが原因で問題が発生しました。これは、現在、浮動の場合のようにコンテナーの幅ではなく、カラムトラックの幅としてグリッドに解釈されます。
 
@@ -108,6 +108,6 @@ CSS の機能クエリーは [CSS 条件付きルールモジュール](https://
 ### 関連情報
 
 - [@supports](/ja/docs/Web/CSS/@supports) ルール
-- レイアウトの学習: [古いブラウザーの対応](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- レイアウトの学習: [古いブラウザーの対応](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
 - [CSS での機能クエリーの使用](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

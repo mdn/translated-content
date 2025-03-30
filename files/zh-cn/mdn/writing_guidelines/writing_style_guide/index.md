@@ -519,7 +519,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
 MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章的结尾处包含一个*参见*部分。这是一个参考部分，包含了 MDN 内相关主题的交叉引用，有时还包含了相关外部文章的链接。例如，这是 `@layer` 页面的[“参见”部分](/zh-CN/docs/Web/CSS/@layer#参见)。
 
-一般来说，在“参见”部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn)区域，“参见”部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
+一般来说，在“参见”部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn_web_development)区域，“参见”部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
 
 为了保持整个 MDN Web 文档的一致性，在添加或更新“参见”部分时，请记住以下准则。
 

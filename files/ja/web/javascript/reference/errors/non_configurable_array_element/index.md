@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 
 {{jsSidebar("Errors")}}
 
-JavaScript の例外 "can't delete non-configurable array element" は、配列を[短縮](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length#配列の短縮)しようとしたときに配列の要素の 1 つが[設定不可](/ja/docs/Web/JavaScript/Data_structures#プロパティ)であった場合に発生します。
+JavaScript の例外 "can't delete non-configurable array element" は、配列を[短縮](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length#配列の短縮)しようとしたときに配列の要素の 1 つが[設定不可](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)であった場合に発生します。
 
 ## エラーメッセージ
 
@@ -20,7 +20,7 @@ TypeError: Cannot delete property '2' of [object Array] (Chrome)
 
 ## エラーの原因
 
-配列を[短縮](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length#配列の短縮)しようとしていますが、配列の要素が[変更不可](/ja/docs/Web/JavaScript/Data_structures#プロパティ)です。配列の短縮をするとき、新しい配列の長さを超える要素は削除されますが、このシチュエーションでは失敗します。
+配列を[短縮](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length#配列の短縮)しようとしていますが、配列の要素が[変更不可](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)です。配列の短縮をするとき、新しい配列の長さを超える要素は削除されますが、このシチュエーションでは失敗します。
 
 `configurable` 属性はプロパティをオブジェクトから削除できるかどうか、および (`writable` 以外の) 変更できるかどうかを制御します。
 
@@ -81,7 +81,7 @@ copy.length = 1;
 
 ## 関連項目
 
-- [\[\[Configurable\]\]](/ja/docs/Web/JavaScript/Data_structures#プロパティ)
+- [\[\[Configurable\]\]](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)
 - {{jsxref("Array.length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

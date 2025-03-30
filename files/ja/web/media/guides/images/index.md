@@ -6,7 +6,7 @@ original_slug: Web/Media/images
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 
-{{Glossary("HTML")}} の {{HTMLElement("img")}} 要素で HTML 文書に画像を埋め込むことができ、 {{HTMLElement("picture")}} 要素を使用すると[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)を使用することができます。このガイドでは、ウェブサイトへの画像の追加を扱うリソースへのリンクを紹介します。
+{{Glossary("HTML")}} の {{HTMLElement("img")}} 要素で HTML 文書に画像を埋め込むことができ、 {{HTMLElement("picture")}} 要素を使用すると[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)を使用することができます。このガイドでは、ウェブサイトへの画像の追加を扱うリソースへのリンクを紹介します。
 
 ## リファレンス
 
@@ -22,9 +22,9 @@ original_slug: Web/Media/images
 ### CSS
 
 - {{cssxref("object-fit")}}
-  - : **`object-fit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[置換要素](/ja/docs/Web/CSS/Replaced_element)、例えば [`<img>`](/ja/docs/Web/HTML/Element/img) や [`<video>`](/ja/docs/Web/HTML/Element/video) の中身をコンテナーに合わせるために、どのようにリサイズする可を設定します。
+  - : **`object-fit`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)、例えば [`<img>`](/ja/docs/Web/HTML/Element/img) や [`<video>`](/ja/docs/Web/HTML/Element/video) の中身をコンテナーに合わせるために、どのようにリサイズする可を設定します。
 - {{cssxref("object-position")}}
-  - : **`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のボックス内で選択された[置換要素](/ja/docs/Web/CSS/Replaced_element)内のコンテンツの配置を指定します。ボックス内の領域のうちで置換要素のオブジェクトに覆われていない部分には、要素の背景が表示されます。
+  - : **`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のボックス内で選択された[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)内のコンテンツの配置を指定します。ボックス内の領域のうちで置換要素のオブジェクトに覆われていない部分には、要素の背景が表示されます。
 - {{cssxref("background-image")}}
   - : **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 つまたは複数の要素の背景画像を設定します。
 
@@ -32,14 +32,14 @@ original_slug: Web/Media/images
 
 これらの記事では、画像の種類を選択して構成するためのガイダンスを提供しています。
 
-- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Formats/Image_types)
+- [画像ファイルの種類と形式ガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)
   - : ウェブブラウザーが一般的に対応ている様々な画像ファイルの種類について、それぞれの使用例、機能、互換性の要素などの詳細を含めて解説しています。さらに、この記事では、与えられた状況に最適な画像ファイルタイプを選択するためのガイダンスを提供します。
-- [メディアのコンテナー要素の width および height 属性をアスペクト比に対応付ける](/ja/docs/Learn/Performance/Multimedia)
+- [メディアのコンテナー要素の width および height 属性をアスペクト比に対応付ける](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia)
   - : これにより、ブラウザーが画像を読み込む方法が変更され、アスペクト比がブラウザーによって初期段階で計算され、後で読み込まれる前に画像の表示サイズを修正することができます。
 
 ## その他のトピック
 
 興味がありそうな関連トピック
 
-- [HTML の学習: レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [HTML の学習: レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
   - : この記事ではレスポンシブ画像の概念、つまり画面サイズや解像度などが大きく異なる端末でも動作する画像について学び、レスポンシブ画像を実装するために HTML が提供するツールについて見ていきます。

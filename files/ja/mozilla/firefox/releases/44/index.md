@@ -80,7 +80,7 @@ l10n:
 
 #### 新規 API
 
-- {{jsxref("Symbol.toPrimitive")}}、{{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}、{{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} を実装しました ([Firefox バグ 1054756](https://bugzil.la/1054756))。
+- {{jsxref("Symbol.toPrimitive")}}、{{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[Symbol.toPrimitive]")}}、{{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[Symbol.toPrimitive]")}} を実装しました ([Firefox バグ 1054756](https://bugzil.la/1054756))。
 
 #### 変更点
 
@@ -99,7 +99,7 @@ l10n:
 #### DOM & HTML DOM
 
 - 既存のサイトとの互換性を確保するため、 `Document.charset` を {{domxref("Document.characterSet")}} の別名として実装しました ([Firefox バグ 647621](https://bugzil.la/647621))。
-- ウェブページから Sherlock プラグインをインストールすることを可能にする [`window.sidebar.addSearchEngine()`](/ja/docs/Web/OpenSearch#installing_sherlock_plugins) メソッドの対応を廃止して、ウェブコンソールに警告を出力するようになりました ([Firefox バグ 862148](https://bugzil.la/862148))。
+- ウェブページから Sherlock プラグインをインストールすることを可能にする [`window.sidebar.addSearchEngine()`](/ja/docs/Web/XML/Guides/OpenSearch#installing_sherlock_plugins) メソッドの対応を廃止して、ウェブコンソールに警告を出力するようになりました ([Firefox バグ 862148](https://bugzil.la/862148))。
 - 望まないポップアップに対抗するため、対話がないページでは {{domxref("Window/beforeunload_event", "beforeunload")}} イベントで要求されたプロンプトを表示しないようになりました ([Firefox バグ 636905](https://bugzil.la/636905))。
 - 非推奨メソッド {{domxref("MessageEvent.initMessageEvent()")}} を、後方互換性のために再実装しました ([Firefox バグ 949376](https://bugzil.la/949376))。
 - 廃止した `DocumentType.internalSubset` プロパティを削除しました ([Firefox バグ 801545](https://bugzil.la/801545))。
@@ -183,7 +183,7 @@ _変更なし。_
 
 ## HTTP
 
-- [Brotli](https://en.wikipedia.org/wiki/Brotli) アルゴリズムに対応しました。また、 [`Accept-Encoding`](/ja/docs/Web/HTTP/Content_negotiation#the_accept-encoding_header) および [`Content-Encoding`](/ja/docs/Web/HTTP/Headers/Content-Encoding) ヘッダーで値 `br` に対応しました ([Firefox バグ 366559](https://bugzil.la/366559) および [Firefox バグ 1211916](https://bugzil.la/1211916))。
+- [Brotli](https://en.wikipedia.org/wiki/Brotli) アルゴリズムに対応しました。また、 [`Accept-Encoding`](/ja/docs/Web/HTTP/Guides/Content_negotiation#the_accept-encoding_header) および [`Content-Encoding`](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding) ヘッダーで値 `br` に対応しました ([Firefox バグ 366559](https://bugzil.la/366559) および [Firefox バグ 1211916](https://bugzil.la/1211916))。
 - 改行 (`'/n'`) を含む HTTP/2 ヘッダーについて、HTTP/1 とは異なり仕様書で許可されていないため、誤って対応していた箇所を削除しました ([Firefox バグ 1197847](https://bugzil.la/1197847))。
 
 ## ネットワーク

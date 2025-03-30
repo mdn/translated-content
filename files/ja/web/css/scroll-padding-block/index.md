@@ -5,7 +5,7 @@ slug: Web/CSS/scroll-padding-block
 
 {{CSSRef}}
 
-`scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のブロック軸のスクロールパディングを設定します。
+`scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のブロック軸のスクロールパディングを設定します。
 
 {{InteractiveExample("CSS Demo: scroll-padding-block")}}
 

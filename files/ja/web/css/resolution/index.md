@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types) で、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の[解像度](/ja/docs/Web/CSS/@media/resolution)を記述するのに使われ、出力機器のピクセル密度である解像度を表します。
+**`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) で、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の[解像度](/ja/docs/Web/CSS/@media/resolution)を記述するのに使われ、出力機器のピクセル密度である解像度を表します。
 
 画面では、長さは物理的な値ではなく、 _CSS_ のインチ、センチメートル、またはピクセルと関連づけられます。
 

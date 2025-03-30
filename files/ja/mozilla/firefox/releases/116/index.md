@@ -22,7 +22,7 @@ l10n:
 
 ### Accessibility (ARIA)
 
-- [`image`](/ja/docs/Web/Accessibility/ARIA/Roles/img_role) ロールを `img` の同義語としてサポートしました。
+- [`image`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) ロールを `img` の同義語としてサポートしました。
   これにより、完全な単語または完全な単語を連結したものである多くのロール名との一貫性が保たれます ([Firefox bug 1829269](https://bugzil.la/1829269))。
 
 ### JavaScript
@@ -33,11 +33,11 @@ l10n:
 
 ### SVG
 
-- [長さの単位](/ja/docs/Web/SVG/Content_type#length) `q` (`1q = 1cm の 40 分の 1`) をサポートしました ([Firefox bug 1836995](https://bugzil.la/1836995))。
+- [長さの単位](/ja/docs/Web/SVG/Guides/Content_type#length) `q` (`1q = 1cm の 40 分の 1`) をサポートしました ([Firefox bug 1836995](https://bugzil.la/1836995))。
 
 ### HTTP
 
-- [Content-Security-Policy](/ja/docs/Web/HTTP/CSP) の構成で、[ハッシュを使用して外部 JavaScript ファイルをホワイトリストに登録する](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#whitelisting_external_scripts_using_hashes) 指定方法をサポートしました。以前は、インラインスクリプトに限りハッシュを使用してホワイトリストに登録できました ([Firefox bug 1409200](https://bugzil.la/1409200))。
+- [Content-Security-Policy](/ja/docs/Web/HTTP/Guides/CSP) の構成で、[ハッシュを使用して外部 JavaScript ファイルをホワイトリストに登録する](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#whitelisting_external_scripts_using_hashes) 指定方法をサポートしました。以前は、インラインスクリプトに限りハッシュを使用してホワイトリストに登録できました ([Firefox bug 1409200](https://bugzil.la/1409200))。
 
 ### API
 
@@ -50,7 +50,7 @@ l10n:
 
 - [Audio Output Devices API](/ja/docs/Web/API/Audio_Output_Devices_API) を、Android を除くすべてのプラットフォームでサポートしました。
   この API は、ウェブアプリケーションがブラウザーや OS が既定で使用すべきデバイスでなく、許可された Bluetooth ヘッドセット、スピーカーフォン、あるいは他のデバイスへ音声出力をリダイレクトすることを可能にします。
-  影響を受ける API には {{domxref("MediaDevices.selectAudioOutput()")}}、{{domxref("MediaDevices.enumerateDevices()")}}、[`HTMLMediaElement.setSinkId()`](/ja/docs/Web/API/HTMLMediaElement/setSinkId)、[`HTMLMediaElement.sinkId`](/ja/docs/Web/API/HTMLMediaElement/sinkId) および [`Permissions-Policy: speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) 許可ポリシーが含まれます ([Firefox bug 1498512](https://bugzil.la/1498512))。
+  影響を受ける API には {{domxref("MediaDevices.selectAudioOutput()")}}、{{domxref("MediaDevices.enumerateDevices()")}}、[`HTMLMediaElement.setSinkId()`](/ja/docs/Web/API/HTMLMediaElement/setSinkId)、[`HTMLMediaElement.sinkId`](/ja/docs/Web/API/HTMLMediaElement/sinkId) および [`Permissions-Policy: speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) 許可ポリシーが含まれます ([Firefox bug 1498512](https://bugzil.la/1498512))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

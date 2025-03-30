@@ -7,19 +7,19 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## HTML
 
-- [HTML로 웹 구조화하기](/ko/docs/Learn/HTML)
+- [HTML로 웹 구조화하기](/ko/docs/Learn_web_development/Core/Structuring_content)
 
   - : HTML 학습 영역은 처음부터 HTML을 배우는 데 도움이 되는 자습서를
     제공합니다.
 
-- [HTML 기본](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [HTML 기본](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
 
   - : 이 글은 HTML에 대한 기본적인 이해를 제공합니다. 이 가이드를 따른 후 HTML
     학습 영역에서 자료를 더 탐색할 수 있습니다.
 
 ## CSS
 
-- [CSS를 이용한 HTML 스타일링 익히기](/ko/docs/Learn/CSS)
+- [CSS를 이용한 HTML 스타일링 익히기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
 
   - : 전체 CSS 자습서는 텍스트 스타일 지정, 레이아웃 만들기 등 첫걸음을 뗄 수 있도록 도와줄 것입니다.
 
@@ -36,11 +36,11 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## JavaScript
 
-- [JavaScript 학습영역](/ko/docs/Learn/JavaScript)
+- [JavaScript 학습영역](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)
 
   - : 당신이 완전한 초보자이든 기술을 다시 배우고 싶든, 이 문서가 출발점이 될 수 있습니다.
 
-- [AJAX](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [AJAX](/ko/docs/Learn_web_development/Core/Scripting/Network_requests)
 
   - : AJAX는 웹 애플리케이션이 전체 브라우저 페이지를 다시 로드하지 않고도
     사용자 인터페이스에 빠르고 점진적으로 업데이트할 수 있도록 하는 기술
@@ -103,7 +103,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
 
 ## Mobile web development
 
-- [모바일 웹 개발](/ko/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [모바일 웹 개발](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 
   - : 이 문서에서는 모바일 장치에서 잘 작동하는 웹 사이트를 디자인하는 데 필요한 몇 가지 주요 기술에 대한 개요를 제공합니다.
 

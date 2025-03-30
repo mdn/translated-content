@@ -17,7 +17,7 @@ HTTP の **`X-XSS-Protection`** レスポンスヘッダーは Internet Explorer
 >
 > - Chrome は [XSS Auditor を削除](https://chromestatus.com/feature/5021976655560704)しました。
 > - Firefox は対応しておらず、 [`X-XSS-Protection` を今後も実装しません](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
-> - Edge は [XSS filter を廃止しました](https://blogs.windows.com/windows-insider/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)。つまり、古いブラウザーに対応する必要がない場合は、代わりに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) を使用し `unsafe-inline` を許可しないことをお勧めします。
+> - Edge は [XSS filter を廃止しました](https://blogs.windows.com/windows-insider/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)。つまり、古いブラウザーに対応する必要がない場合は、代わりに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) を使用し `unsafe-inline` を許可しないことをお勧めします。
 
 <table class="properties">
   <tbody>

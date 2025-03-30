@@ -105,6 +105,6 @@ input:default + label {
 
 ## 関連情報
 
-- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn/Forms)
-- [ウェブフォームのスタイル付け](/ja/docs/Learn/Forms/Styling_web_forms)
+- [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn_web_development/Extensions/Forms)
+- [ウェブフォームのスタイル付け](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - 関連する HTML 要素: {{htmlelement("button")}}, [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio), {{htmlelement("option")}}

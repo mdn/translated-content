@@ -34,7 +34,7 @@ JavaScript を活用して、あなたのウェブページを次のレベルに
 {{Glossary("JavaScript")}} はウェブページをインタラクティブにするための、主にクライアントサイドで使われるプログラミング言語です。 JavaScript を使わなくてもすばらしいウェブページを作ることが*できます*が、JavaScript は全く新しいレベルの可能性を開きます。
 
 > [!NOTE]
-> この記事では、 JavaScript が効果を発揮するために必要な HTML コードに取り組みます。 JavaScript そのものを学びたい場合は、 [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)の記事から始めることができます。JavaScript についてすでに知っている場合や、他にもプログラミング言語の経験がある場合は、[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)に直接進むことをお勧めします。
+> この記事では、 JavaScript が効果を発揮するために必要な HTML コードに取り組みます。 JavaScript そのものを学びたい場合は、 [JavaScript の基本](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)の記事から始めることができます。JavaScript についてすでに知っている場合や、他にもプログラミング言語の経験がある場合は、[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)に直接進むことをお勧めします。
 
 ## HTML から JavaScript を起動する方法
 

@@ -1,9 +1,8 @@
 ---
 title: クロージャ
 slug: Web/JavaScript/Guide/Closures
-original_slug: Web/JavaScript/Closures
 l10n:
-  sourceCommit: 2463abc1ca0fb6588d182651f8f659ae0d618915
+  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -565,4 +564,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-上の 2 つの例では、プロトタイプが継承されて全てのオブジェクトによって共有されるため、オブジェクトが作成されるたびにメソッドが定義されずに済みます。詳しくは[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を参照して下さい。
+上の 2 つの例では、プロトタイプが継承されて全てのオブジェクトによって共有されるため、オブジェクトが作成されるたびにメソッドが定義されずに済みます。詳しくは[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を参照して下さい。
