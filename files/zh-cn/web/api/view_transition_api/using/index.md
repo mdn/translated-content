@@ -217,8 +217,7 @@ figcaption {
 
 第二组伪元素的存在允许将单独的视图过渡样式仅应用于 `<figcaption>` 元素。不同的旧视图捕获和新视图捕获彼此分开处理。
 
-> [!NOTE]
-> `view-transition-name` 的值可以是你想要的任何值，除了 `none` 以外——`none` 值明确表示元素不会参与视图过渡。
+> **备注：** `view-transition-name` 的值可以是你想要的任何值，除了 `none` 以外——`none` 值明确表示元素不会参与视图过渡。
 >
 > `view-transition-name` 值也必须是唯一的。如果两个渲染的元素同时具有相同的 `view-transition-name`，{{domxref("ViewTransition.ready")}} 将拒绝并跳过过渡。
 
@@ -286,8 +285,7 @@ figcaption {
 
 这之所以有效，是因为默认情况下，`::view-transition-group` 以平滑的比例在新旧视图之间转换 `width` 和 `height`。我们只需要在这两个状态上设置一个固定的 `height` 来使其正常工作。
 
-> [!NOTE]
-> [使用视图过渡 API 实现平滑过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)包含其他几个自定义示例。
+> **备注：** [使用视图过渡 API 实现平滑过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)包含其他几个自定义示例。
 
 ## 使用 JavaScript 控制视图过渡
 
@@ -301,7 +299,7 @@ figcaption {
    - 当文档由于导航而即将卸载时，将触发 {{domxref("Window.pageswap_event", "pageswap")}} 事件。其事件对象（{{domxref("PageSwapEvent")}}）通过 {{domxref("PageSwapEvent.viewTransition")}} 属性提供对 `ViewTransition` 对象的访问，以及通过 {{domxref("PageSwapEvent.activation")}} 提供对 {{domxref("NavigationActivation")}} 的访问，其中包含导航类型以及当前和目标文档的历史记录条目。
      > [!NOTE]
      > 如果导航在重定向链中的任意位置具有跨源 URL，则 `activation` 属性返回 `null`。
-   - 首次渲染文档时，会触发 {{domxref("Window.pagereveal_event", "pagereveal")}} 事件，无论是从网络加载新文档还是激活文档（从[后退/前进缓存](/zh-CN/docs/Glossary/bfcache)（bfcache）或[预渲染](/zh-CN/docs/Glossary/Prerender)））。其事件对象（{{domxref("PageRevealEvent")}}） 通过 {{domxref("PageRevealEvent.viewTransition")}} 属性提供对 `ViewTransition` 对象的访问。
+   - 首次渲染文档时，会触发 {{domxref("Window.pagereveal_event", "pagereveal")}} 事件，无论是从网络加载新文档还是激活文档（从[后退/前进缓存](/zh-CN/docs/Glossary/bfcache)（bfcache）或[预渲染](/zh-CN/docs/Glossary/Prerender)））。其事件对象（{{domxref("PageRevealEvent")}}）通过 {{domxref("PageRevealEvent.viewTransition")}} 属性提供对 `ViewTransition` 对象的访问。
 
 让我们看一些示例代码来展示如何使用这些功能。
 
