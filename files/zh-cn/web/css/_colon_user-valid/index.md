@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`:user-valid`** CSS [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 伪类表示已验证的表单元素，其值是根据验证约束来进行正确验证的。然而，不同于 {{cssxref(":valid")}}，它只在用户与它进行交互后才匹配。
+**`:user-valid`** CSS [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示已验证的表单元素，其值是根据验证约束来进行正确验证的。然而，不同于 {{cssxref(":valid")}}，它只在用户与它进行交互后才匹配。
 
 如果表单控件有效且发生下列情况之一，则应用该伪类。
 
