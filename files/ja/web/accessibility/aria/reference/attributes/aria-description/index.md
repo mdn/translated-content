@@ -36,10 +36,10 @@ l10n:
 - `<string>`
   - : 値は、支援技術のユーザーに伝えることを目的とした、制約のない文字列値です。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaDescription")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaDescription`](/ja/docs/Web/API/Element/ariaDescription) プロパティは、現在の要素を説明または注釈する文字列値を定義する `aria-description` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaDescription`](/ja/docs/Web/API/Element/ariaDescription) プロパティは、現在の要素を説明または注釈する文字列値を定義する `aria-description` 属性の値を反映します。
 
 ## 関連付けられたロール
 

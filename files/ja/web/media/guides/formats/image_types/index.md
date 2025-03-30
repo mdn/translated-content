@@ -90,7 +90,7 @@ original_slug: Web/Media/Formats/Image_types
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
       <td>
-        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェース要素、アイコン、図などに最適です。<br>
+        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェイス要素、アイコン、図などに最適です。<br>
         <strong>対応:</strong> Chrome, Edge, Firefox, IE, Opera, Safari
       </td>
     </tr>
@@ -150,7 +150,7 @@ original_slug: Web/Media/Formats/Image_types
 
 > [!NOTE]
 > Safari 11.1では、アニメーション GIF の代替として、動画形式を使用する機能が追加されました。
-> 他のブラウザは対応していません。
+> 他のブラウザーは対応していません。
 > 詳しくは、 [Chromium のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=791658)、[Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=895131)を参照してください。
 
 ## 画像ファイルの種類の詳細

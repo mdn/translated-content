@@ -32,7 +32,7 @@ if (frameEl) {
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

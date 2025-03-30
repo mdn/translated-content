@@ -72,7 +72,7 @@ new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
