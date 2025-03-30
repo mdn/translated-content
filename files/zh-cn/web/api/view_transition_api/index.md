@@ -68,7 +68,7 @@ l10n:
 
 - {{cssxref("::view-transition")}}
   - : 视图过渡叠加层的根元素，它包含所有视图过渡且位于所有其他页面内容的顶部。
--{{cssxref("::view-transition-group", "::view-transition-group()")}}
+- {{cssxref("::view-transition-group", "::view-transition-group()")}}
   - : 单个视图过渡的根元素。
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
   - : 视图过渡的旧视图和新视图的容器——过渡前和过渡后。
