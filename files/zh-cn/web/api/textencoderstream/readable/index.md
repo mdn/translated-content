@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-以下示例演示了如何从 `TextEncoderStream` 对象返回一个 `ReadableStream`。
+该示例演示了如何从 `TextEncoderStream` 对象返回一个 `ReadableStream`。
 
 ```js
 const stream = new TextEncoderStream();
