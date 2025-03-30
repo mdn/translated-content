@@ -134,4 +134,4 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 - {{DOMxRef("Window.getDefaultComputedStyle()")}}
 - {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
-- [解析值](/zh-CN/docs/Web/CSS/resolved_value)
+- [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)
