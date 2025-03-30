@@ -65,6 +65,7 @@ l10n:
   - : 역할은 요소가 무엇인지 또는 어떠한 기능을 하는지 정의합니다. 이들 중 다수는 소위 랜드마크 역할로, `role="navigation"` ({{htmlelement("nav")}}) 또는 `role="complementary"` ({{htmlelement("aside")}}) 처럼 구조 요소의 의미를 중복합니다. `role="banner"`, `role="search"`, `role="tablist"` 등 다른 역할들은 UI 패턴에서 흔히 보이는 페이지 구조를 설명합니다.
 
 - 속성
+
   - : 이는 요소의 속성을 정의하며, 요소에 추가적인 의미나 의미를 부여하는 데 사용됩니다. 예를 들어 `aria-required="true"` 입력 양식이 유효하기 위해서는 필수로 값이 작성되어야 함을 지정합니다. 한편, `aria-labelledby="label"` 를 사용하면 특정 요소에 아이디를 지정하여 해당 요소가 다른 요소의 라벨로 참조되도록 할 수 있는데, 이는 `<label for="input">`을 사용할 경우 불가능한 것입니다. `aria-labelledby` 의 용례로는 {{htmlelement("div")}}에 속한 주요 설명을 여러 표의 라벨로 지정하거나 이미지의 대체 텍스트로서 사용하여 페이지 내에 이미 존재하는 정보의 중복을 피하는 등이 있습니다. 이에 대한 예시는 [대체 텍스트](/ko/docs/Learn/Accessibility/HTML#text_alternatives)에서 확인할 수 있습니다.
 
 - 상태
@@ -73,7 +74,7 @@ l10n:
 WAI-ARIA 속성의 중요한 점은 브라우저의 접근성 API(스크린 리더가 정보를 얻는 곳)에 의해 노출되는 정보를 제외하고는 웹 페이지에 영향을 주지 않는다는 것입니다. WAI-ARIA 속성은 CSS로 요소를 선택하는 데 유용할 수 있지만 웹 페이지 구조, DOM 등에는 영향을 미치지 않습니다.
 
 > [!NOTE]
-> 모든 ARIA 역할과 및 용도에 관한 유용한 목록과 추가 정보 링크는 WAI-ARIA 사양 - [역할 정의](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 페이지에서 찾을 수 있습니다. [ARIA 역할](/en-US/docs/Web/Accessibility/ARIA/Roles) 참고하세요.
+> 모든 ARIA 역할과 및 용도에 관한 유용한 목록과 추가 정보 링크는 WAI-ARIA 사양 - [역할 정의](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 페이지에서 찾을 수 있습니다. [ARIA 역할](/ko/docs/Web/Accessibility/ARIA/Roles) 참고하세요.
 >
 > 이 사양 목록에는 모든 속성 및 상태에 관한 추가 정보 링크가 포함되어 있습니다. [Definitions of States and Properties (all `aria-*` attributes)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)를 참고하세요.
 
