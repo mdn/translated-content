@@ -1,7 +1,6 @@
 ---
 title: Ajax
 slug: Learn_web_development/Core/Scripting/Network_requests
-original_slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
 <section id="Quick_links">

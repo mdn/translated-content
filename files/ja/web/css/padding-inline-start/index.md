@@ -9,7 +9,47 @@ l10n:
 
 **`padding-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
 
-{{EmbedInteractiveExample("pages/css/padding-inline-start.html")}}
+{{InteractiveExample("CSS Demo: padding-inline-start")}}
+
+```css interactive-example-choice
+padding-inline-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline-start: 5em;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 
@@ -34,7 +74,7 @@ padding-inline-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 

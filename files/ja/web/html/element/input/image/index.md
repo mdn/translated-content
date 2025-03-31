@@ -138,7 +138,7 @@ input[type="image"] {
 
 ## image 入力の使用
 
-`<input type="image">` 要素は[置換要素](/ja/docs/Web/CSS/Replaced_element)（CSS レイヤーによって内容が生成されたり、直接管理されたりしない要素）で、大部分は通常の {{htmlelement("img")}} 要素と同じ動きをしますが、[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)の機能を持っています。
+`<input type="image">` 要素は[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)（CSS レイヤーによって内容が生成されたり、直接管理されたりしない要素）で、大部分は通常の {{htmlelement("img")}} 要素と同じ動きをしますが、[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)の機能を持っています。
 
 ### 基本的な input 入力の機能
 

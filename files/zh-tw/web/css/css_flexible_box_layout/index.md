@@ -11,7 +11,34 @@ slug: Web/CSS/CSS_flexible_box_layout
 
 下例的容器已經設為 `display: flex`、意味著三個子元素變成了彈性項目（flex item）。`justify-content` 值也設成了 `space-between` 以便將項目均勻地分佈在主軸上。每個物品之間放置相等數量的空間，左右項目與彈性容器（flex container）的邊緣齊平。你可能也發現到各項目在切軸（cross axis）上伸展。那是因為 `align-items` 的值是 `stretch`。項目伸展為彈性容器的高度、令它們看起来都如同最高的項目一般高。
 
-{{EmbedGHLiveSample("css-examples/flexbox/basics/simple-example.html", '100%', 500)}}
+```html live-sample___simple-example
+<div class="box">
+  <div>一</div>
+  <div>二</div>
+  <div>三<br />具有<br />額外的<br />文字</div>
+</div>
+```
+
+```css live-sample___simple-example
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  justify-content: space-between;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 1em;
+}
+```
+
+{{EmbedLiveSample("simple-example")}}
 
 ## 參考
 

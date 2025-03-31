@@ -5,7 +5,7 @@ slug: Web/CSS/grid
 
 {{CSSRef}}
 
-La propiedad CSS **`grid`** es un [shorthand](/es/docs/Web/CSS/Shorthand_properties) que permite definir todas las propiedades _grid_ explícitas ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, y {{cssxref("grid-template-areas")}}), implícitas ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, y {{cssxref("grid-auto-flow")}}), y relativas a _gutter_ ({{cssxref("grid-column-gap")}} y {{cssxref("grid-row-gap")}}) en una sola declaración.
+La propiedad CSS **`grid`** es un [shorthand](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) que permite definir todas las propiedades _grid_ explícitas ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, y {{cssxref("grid-template-areas")}}), implícitas ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, y {{cssxref("grid-auto-flow")}}), y relativas a _gutter_ ({{cssxref("grid-column-gap")}} y {{cssxref("grid-row-gap")}}) en una sola declaración.
 
 ```css
 /* <'grid-template'> values */

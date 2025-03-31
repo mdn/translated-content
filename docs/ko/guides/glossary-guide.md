@@ -49,6 +49,7 @@
 | Description            | 설명            | [링크][Array]                                                                                                                           |
 | Example                | 예제            | [링크][target]                                                                                                                          |
 | Examples               | 예제            | [링크](https://github.com/mdn/translated-content/blob/main/files/ko/web/javascript/reference/global_objects/proxy/proxy/apply/index.md) |
+| Exceptions             | 예외            |                                                                                                                                         |
 | Guides                 | 안내서          |                                                                                                                                         |
 | In this module         | 이번 과정에서는 | [링크][React_getting_started]                                                                                                           |
 | Instance properties    | 인스턴스 속성   |                                                                                                                                         |

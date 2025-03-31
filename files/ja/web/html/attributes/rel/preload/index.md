@@ -51,7 +51,7 @@ l10n:
 `preload` には他の利点もあります。 `as` によって事前読み込みされるコンテンツの種類をブラウザーに指示することで、以下のようなことが実現できます。
 
 - 可能であれば、将来のリクエストのためにキャッシュに格納してリソースを再利用できる。
-- リソースに対して正しく[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)を適用できる。
+- リソースに対して正しく[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)を適用できる。
 - 正しい {{HTTPHeader("Accept")}} リクエストヘッダーを設定できる。
 
 ### 事前読み込みできるコンテンツの種類
@@ -100,7 +100,7 @@ l10n:
 
 ## CORS を使用した取得
 
-[CORS](/ja/docs/Web/HTTP/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
+[CORS](/ja/docs/Web/HTTP/Guides/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
 
 上記のように、これが当てはまる興味深いケースの 1 つが、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります（[Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)参照）。
 
@@ -216,5 +216,5 @@ document.body.appendChild(preloadedScript);
 
 ## 関連情報
 
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、 `<link rel="preload">` をはじめとする同様のパフォーマンス向上機能の比較ができます。
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、 `<link rel="preload">` をはじめとする同様のパフォーマンス向上機能の比較ができます。
 - [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss

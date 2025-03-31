@@ -5,13 +5,53 @@ slug: Web/CSS/background
 
 {{CSSRef}}
 
-Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.{{EmbedInteractiveExample("pages/css/background.html")}}
+Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.
+
+{{InteractiveExample("CSS Demo: background")}}
+
+```css interactive-example-choice
+background: green;
+```
+
+```css interactive-example-choice
+background: content-box radial-gradient(crimson, skyblue);
+```
+
+```css interactive-example-choice
+background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background: left 5% / 15% 60% repeat-x
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background:
+  center / contain no-repeat
+    url("/shared-assets/images/examples/firefox-logo.svg"),
+  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста клонируйте <https://github.com/mdn/interactive-examples> и отправьте нам запрос на извлечение..
 
-Свойство является [сокращением,](/ru/docs/Web/CSS/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
+Свойство является [сокращением,](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
 
-Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/Web/CSS/initial_value).
+Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing).
 
 ## Синтаксис
 

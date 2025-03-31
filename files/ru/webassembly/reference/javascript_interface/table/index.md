@@ -17,7 +17,7 @@ slug: WebAssembly/Reference/JavaScript_interface/Table
 
 ## Экземпляры `Table`
 
-Все экземпляры `Table` наследуются от [прототипа конструктора](/ru/docs/WebAssembly/JavaScript_interface/Table) `Table()`, следовательно изменения прототипа затронут все экземпляры `Table`.
+Все экземпляры `Table` наследуются от [прототипа конструктора](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table) `Table()`, следовательно изменения прототипа затронут все экземпляры `Table`.
 
 ### Свойства экземпляра
 
@@ -56,7 +56,7 @@ var importObj = {
 };
 ```
 
-После этого, мы создаём экземпляр модуля wasm (table2.wasm) используя метод {{jsxref("WebAssembly.instantiateStreaming()")}}. Модуль table2.wasm содержит две функции, одна возвращает 42, а вторая - 83) и сохраняет эти функции под индексами 0 и 1 в импортированную таблицу (смотри [текстовую версию](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Таким образом, после создания wasm-модуля, таблица имеет туже длину, но элементы таблицы стали [функциями экспортированными из WebAssembly](/ru/docs/WebAssembly/Exported_functions) которые можно вызывать из JS.
+После этого, мы создаём экземпляр модуля wasm (table2.wasm) используя метод {{jsxref("WebAssembly.instantiateStreaming()")}}. Модуль table2.wasm содержит две функции, одна возвращает 42, а вторая - 83) и сохраняет эти функции под индексами 0 и 1 в импортированную таблицу (смотри [текстовую версию](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Таким образом, после создания wasm-модуля, таблица имеет туже длину, но элементы таблицы стали [функциями экспортированными из WebAssembly](/ru/docs/WebAssembly/Guides/Exported_functions) которые можно вызывать из JS.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
@@ -83,5 +83,5 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 ## Смотрите также
 
 - Обзор [WebAssembly](/ru/docs/WebAssembly)
-- [Концепция WebAssembly](/ru/docs/WebAssembly/Concepts)
-- [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Using_the_JavaScript_API)
+- [Концепция WebAssembly](/ru/docs/WebAssembly/Guides/Concepts)
+- [Использование JavaScript API WebAssembly](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API)

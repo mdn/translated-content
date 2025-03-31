@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 - 创建一个面板样式的窗口，它没有浏览器的默认样式（地址栏，工具栏等）
 - 设置窗口的多种属性，像是获得焦点或是为隐私窗口。
 
-这是一个异步的方法返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 

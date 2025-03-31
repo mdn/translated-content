@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar si has entendido nuestro artículo [Almacenando la información que necesitas — Variables](/es/docs/Learn/JavaScript/First_steps/Variables).
+El objetivo de esta prueba de habilidad es evaluar si has entendido nuestro artículo [Almacenando la información que necesitas — Variables](/es/docs/Learn_web_development/Core/Scripting/Variables).
 
 > **Nota**: Puedes probar las soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >

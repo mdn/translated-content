@@ -6,7 +6,7 @@ original_slug: Learn/Forms/Test_your_skills:_HTML5_controls
 
 {{learnsidebar}}
 
-El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [Los tipos de entrada de HTML5](/es/docs/Learn/Forms/HTML5_input_types).
+El objetivo de esta prueba es evaluar si has comprendido nuestro artículo [Los tipos de entrada de HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
 
 > [!NOTE]
 > Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.

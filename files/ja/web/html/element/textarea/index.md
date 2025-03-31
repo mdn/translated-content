@@ -132,9 +132,9 @@ label {
 
 ## CSS でのスタイル付け
 
-`<textarea>` は[置換要素](/ja/docs/Web/CSS/Replaced_element)です。ラスター画像のように内在サイズを持っています。既定では、 {{cssxref("display")}} の値は `inline-block` です。ボックスモデル、フォント、カラースキームが、普通の CSS を使用して簡単に操作できるので、他のフォーム要素と比較して、スタイル付けは比較的容易です。
+`<textarea>` は[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)です。ラスター画像のように内在サイズを持っています。既定では、 {{cssxref("display")}} の値は `inline-block` です。ボックスモデル、フォント、カラースキームが、普通の CSS を使用して簡単に操作できるので、他のフォーム要素と比較して、スタイル付けは比較的容易です。
 
-[ウェブフォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)に、 `<textarea>` をスタイル付けするためのいくつかの有益なコツがあります。
+[ウェブフォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)に、 `<textarea>` をスタイル付けするためのいくつかの有益なコツがあります。
 
 ### ベースラインの不整合
 

@@ -1,18 +1,15 @@
 ---
 title: 継承とプロトタイプチェーン
 slug: Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
 ---
 
 {{jsSidebar("Advanced")}}
 
-JavaScript は動的であり、固定的な型がないことから、クラスベースの言語（Java や C++ など）を経験した開発者にとっては少し分かりにくいものです。
+プログラミングにおいて、「継承」とは親から子へと特性を渡すことを指し、新しいコードが既存のコードの機能を再利用し、その上に構築できるようにします。 JavaScript では、[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)を用いて継承が実装されています。それぞれのオブジェクトは、プロトタイプと呼ばれる別のオブジェクトへの内部リンクを保持しています。そのプロトタイプオブジェクトは、さらに自身のプロトタイプを持っており、 `null` をプロトタイプとして持つオブジェクトに到達するまで、このプロセスが繰り返されます。定義上、 `null` にはプロトタイプが存在せず、**プロトタイプチェーン**の最終リンクとして機能します。プロトタイプチェーンのメンバーを変更したり、実行時にプロトタイプを入れ替えたりすることも可能であるため、 JavaScript では[静的呼び出し](https://en.wikipedia.org/wiki/Static_dispatch)のような概念は存在しません。
 
-継承において、 JavaScript が持っている構成要素はただひとつ、オブジェクトだけです。それぞれのオブジェクトは、その**プロトタイプ**と呼ばれる別のオブジェクトへのリンクを持つプライベートプロパティを持っています。そのプロトタイプオブジェクト自身もプロトタイプを持ち、 `null` をプロトタイプとするオブジェクトに到達するまで続きます。定義上、 `null` はプロトタイプを持たず、この**プロトタイプチェーン**の最後のリンクとして機能します。プロトタイプチェーンのどのメンバーも、実行時に変更したり交換したりすることが可能なので、[静的呼び出し](https://en.wikipedia.org/wiki/Static_dispatch)という概念は、 JavaScript には存在しません。
-
-この混乱はしばしば JavaScript の弱点のひとつとみなされますが、プロトタイプ継承モデルそのものは、実際には古典的なモデルよりも強力なものです。例えば、プロトタイプモデルの上に古典的なモデルを構築するのはかなり手軽です。[クラス](/ja/docs/Web/JavaScript/Reference/Classes)はこうやって実装されているのです。
+JavaScript はクラスベースの言語（Java や C++ など）を経験した開発者にとっては、[動的](/ja/docs/Web/JavaScript/Guide/Data_structures#動的かつ弱い型付け)であり、固定的な型がないことから、少し分かりにくいものです。この混乱はしばしば JavaScript の弱点のひとつとみなされますが、プロトタイプ継承モデルそのものは、実際には古典的なモデルよりも強力なものです。例えば、プロトタイプモデルの上に古典的なモデルを構築するのはかなり手軽です。[クラス](/ja/docs/Web/JavaScript/Reference/Classes)はこうやって実装されているのです。
 
 クラスは現在広く採用され、 JavaScript の新しいパラダイムとなっていますが、クラスが新しい継承パターンをもたらすわけではありません。クラスはプロトタイプのメカニズムのほとんどを抽象化してしまいますが、プロトタイプがその下でどのように動作するかを理解することは、今でも有用だと言えます。
 
@@ -68,7 +65,7 @@ console.log(o.d); // undefined
 // 'd' という自身のプロパティが o にあるでしょうか？いいえ、そのプロトタイプを確認します。
 // 'd' という自身のプロパティが o.[[Prototype]] にあるでしょうか？いいえ、そのプロトタイプを確認します。
 // o.[[Prototype]].[[Prototype]] は Object.prototype であり、既定では 'd' というプロパティはありません。そのプロトタイプを確認します。
-// o.[[Prototype]].[[Prototype]].[[Prototype]]  は null であるため探索を中止し、
+// o.[[Prototype]].[[Prototype]].[[Prototype]] は null であるため探索を中止し、
 // プロパティが見つからなかったため undefined を返します。
 ```
 
@@ -137,26 +134,11 @@ console.log(child.method()); // 5
 
 プロトタイプの威力は、特にメソッドの場合、すべてのインスタンスに存在する必要がある場合に、プロパティのセットを再利用できることです。例えば、いくつかのボックスを作成し、それぞれのボックスが `getValue` 関数でアクセス可能な値を含むオブジェクトであるとします。素朴な実装は次のようになります。
 
-```js
+```js-nolint
 const boxes = [
-  {
-    value: 1,
-    getValue() {
-      return this.value;
-    },
-  },
-  {
-    value: 2,
-    getValue() {
-      return this.value;
-    },
-  },
-  {
-    value: 3,
-    getValue() {
-      return this.value;
-    },
-  },
+  { value: 1, getValue() { return this.value; } },
+  { value: 2, getValue() { return this.value; } },
+  { value: 3, getValue() { return this.value; } },
 ];
 ```
 
@@ -193,7 +175,7 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-`new Box(1)` は `Box` コンストラクター関数から生成された「インスタンス」と言います。 `Box.prototype` は前回作成した `boxPrototype` オブジェクトと大きな違いはなく、ただのオブジェクトです。コンストラクター関数から作成されたインスタンスは、自動的にコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを `[[Prototype]]` として保有します。つまり、 `Object.getPrototypeOf(new Box()) === Box.prototype` となります。 `Constructor.prototype` は既定で [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) という自身のプロパティを 1 つ持ち、これがコンストラクター関数自身を参照します。つまり、 `Box.prototype.constructor === Box` になります。これにより、あらゆるインスタンスから元のコンストラクターにアクセスできるようになります。
+`new Box(1)` は `Box` コンストラクター関数から生成された「インスタンス」と言います。 `Box.prototype` は前回作成した `boxPrototype` オブジェクトと大きな違いはなく、ただのオブジェクトです。コンストラクター関数から作成されたインスタンスは、自動的にコンストラクターの [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを `[[Prototype]]` として保有します。つまり、 `Object.getPrototypeOf(new Box()) === Box.prototype` となります。 `Constructor.prototype` は既定で [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) という自身のプロパティを 1 つ持ち、これがコンストラクター関数自身を参照します。つまり、 `Box.prototype.constructor === Box` になります。これにより、あらゆるインスタンスから元のコンストラクターにアクセスできるようになります。
 
 > [!NOTE]
 > コンストラクター関数からプリミティブでない値が返された場合、その値が `new` 式の結果となります。この場合、`[[Prototype]]`は正しく結び付けられていないかもしれませんが、実際にはあまり起こらないはずです。
@@ -326,13 +308,13 @@ const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
 ```
 
-また、古いコードで [`Object.create`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) を使用しているものを見かけることがあります。しかし、これは `prototype` プロパティを再割り当てするため、以前にここで説明した理由から、悪しき習慣と言えます。
+また、継承チェーンを構築するために、 {{jsxref("Object.create()")}} を使用する古いコードも見られるかもしれません。しかし、これは `prototype` プロパティを再代入し、 [`constructor`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) プロパティを削除するため、エラーの可能性が高くなります。一方、コンストラクターがまだインスタンスを作成していない場合、パフォーマンスの向上は明らかではないかもしれません。
 
 ```js example-bad
 function Base() {}
 function Derived() {}
-// `Derived.prototype` に `Base.prototype` を `[[Prototype]]` とした
-// 新しいオブジェクトを再代入う
+// `Derived.prototype` に新しいオブジェクトの再代入し、
+// `Base.prototype` を `[[Prototype]]` とする。
 // これは使わないでください。 — 代わりに Object.setPrototypeOf で変更してください。
 Derived.prototype = Object.create(Base.prototype);
 ```
@@ -341,7 +323,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 その裏側で何が起こっているのか、もう少し詳しく見てみましょう。
 
-JavaScript では、前述したように、関数はプロパティを持つことができます。すべての関数は `prototype` という名前の特別なプロパティがあります。以下のコードは独立したものであることに注意してください（このウェブページには、以下のコード以外に他の JavaScript は存在しないと考えてよいでしょう）。最高の学習体験をするためには、コンソールを開き、「コンソール」タブに移動して、以下の JavaScript コードをコピー＆ペーストし、 Enter/Return キーを押して実行することを強くお勧めします。（コンソールは、ほとんどのウェブブラウザーの開発者ツールに記載されています。詳しい情報は [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 開発者ツール](https://developer.chrome.com/docs/devtools/)、[Edge 開発者ツール](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)を参照してください。
+JavaScript では、前述したように、関数はプロパティを持つことができます。すべての関数は `prototype` という名前の特別なプロパティがあります。以下のコードは独立したものであることに注意してください（このウェブページには、以下のコード以外に他の JavaScript は存在しないと考えてよいでしょう）。最高の学習体験をするためには、コンソールを開き、「コンソール」タブに移動して、以下の JavaScript コードをコピー＆ペーストし、 Enter/Return キーを押して実行することを強くお勧めします。（コンソールは、ほとんどのウェブブラウザーの開発者ツールに記載されています。詳しい情報は [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 開発者ツール](https://developer.chrome.com/docs/devtools/)、[Edge 開発者ツール](https://learn.microsoft.com/ja/archive/microsoft-edge/legacy/developer/)を参照してください。
 
 ```js
 function doSomething() {}
@@ -356,7 +338,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 
 上で見たように、`doSomething()` は既定で `prototype` プロパティを所持しており、コンソールに表示されているようになります。このコードの実行後、コンソールにはこのようなオブジェクトが表示されているはずです。
 
-```
+```plain
 {
   constructor: ƒ doSomething(),
   [[Prototype]]: {
@@ -372,7 +354,7 @@ console.log(doSomethingFromArrowFunction.prototype);
 ```
 
 > [!NOTE]
-> Chrome のコンソールでは、 `[[Prototype]]` を使用してオブジェクトのプロトタイプを示しており、仕様の用語に従っています。Firefoxでは `<prototype>` を使用しています。一貫性を保つために、ここでは `[[Prototype]]` を使用します。
+> Chrome のコンソールでは、 `[[Prototype]]` を使用してオブジェクトのプロトタイプを示しており、仕様の用語に従っています。 Firefoxでは `<prototype>` を使用しています。一貫性を保つために、ここでは `[[Prototype]]` を使用します。
 
 以下のように、 `doSomething()` のプロトタイプにプロパティを追加することができます。
 
@@ -384,7 +366,7 @@ console.log(doSomething.prototype);
 
 結果は次の通りです。
 
-```
+```plain
 {
   foo: "bar",
   constructor: ƒ doSomething(),
@@ -414,7 +396,7 @@ console.log(doSomeInstancing);
 
 この結果、以下のような出力が得られます。
 
-```
+```plain
 {
   prop: "some value",
   [[Prototype]]: {
@@ -499,25 +481,7 @@ const p = { b: 2, __proto__: o };
 // p ---> o ---> Object.prototype ---> null
 ```
 
-<table class="standard-table">
-  <caption>
-    <code>__proto__</code> キーを<a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a>で使用する方法の長所と短所
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">長所</th>
-      <td>
-        現代のすべてのエンジンで対応しています。オブジェクトでないものを <code>__proto__</code> キーで指しても、例外を発生させずに暗黙に失敗するだけです。 {{jsxref("Object/proto", "Object.prototype.__proto__")}} セッターとは対照的に、オブジェクトリテラル初期化子の <code>__proto__</code> は標準化、最適化されており、 {{jsxref("Object.create")}} よりもパフォーマンスが高くなることさえあります。オブジェクトの作成時に自分自身で追加のプロパティを宣言することは、 {{jsxref("Object.create")}} よりも人間工学的に優れています。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">短所</th>
-      <td>
-        IE10 以下では対応していません。 {{jsxref("Object/proto", "Object.prototype.__proto__")}} アクセサーと混同しやすいので、違いを知らない人は注意してください。
-      </td>
-    </tr>
-  </tbody>
-</table>
+`__proto__` キーを[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)で使用する場合、 `__proto__` キーをオブジェクトではないものに設定すると、例外は発生せず、エラーも表示されません。 [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) のセッターとは異なり、オブジェクトリテラル初期化子での `__proto__` は標準化および最適化されており、 {{jsxref("Object.create")}} よりもパフォーマンスが向上することもあります。オブジェクトの作成時に独自のプロパティを追加で宣言した方が、 {{jsxref("Object.create")}} よりも人間工学的に優れています。
 
 ### コンストラクター関数で
 
@@ -536,29 +500,7 @@ const g = new Graph();
 // g.[[Prototype]] は Graph.prototype の new Graph() が実行されたときの値です。
 ```
 
-<table class="standard-table">
-  <caption>
-    コンストラクター関数を使用する方法の長所と短所
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">長所</th>
-      <td>
-        IE 5.5 までさかのぼり、すべてのエンジンにおいて対応しています。また、とても高速で、とても標準的であり、とても JIT で最適化できます。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">短所</th>
-      <td>
-        <ul>
-          <li>このメソッドを使用するためには、当該関数を初期化する必要があります。この初期化の際に、コンストラクターはオブジェクトごとに生成する必要がある固有の情報を格納することがあります。この固有の情報は一度しか生成されないため、問題が発生する可能性があります。</li>
-          <li>コンストラクターの初期化により、不要なメソッドがオブジェクトに搭載される可能性があります。</li>
-        </ul>
-        <p>どちらも、実際には一般的に問題になることはありません。</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+コンストラクター関数は、初期の JavaScript から利用できる機能でした。そのため、とても高速で、標準的で、JIT コンパイラによる最適化も可能です。しかし、この方法で追加されたメソッドは既定では列挙可能であるため、「適切に」行うのは難しいです。これは、クラス構文や組み込みメソッドの動作と一致しません。また、前述のとおり、長い継承チェーンはエラーの可能性が高くなります。
 
 ### Object.create() で
 
@@ -581,78 +523,40 @@ console.log(d.hasOwnProperty);
 // undefined。 Object.prototype を継承していないため
 ```
 
-<table class="standard-table">
-  <caption>
-    {{jsxref("Object.create")}} の長所と短所
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">長所</th>
-      <td>
-        現代のすべてのエンジンで対応しています。オブジェクトの作成時に <code>[[Prototype]]</code> を直接設定することができ、ランタイムがオブジェクトをさらに最適化することを可能にします。また、<code>Object.create(null)</code>を使用して、プロトタイプを持たないオブジェクトの作成も可能です。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">短所</th>
-      <td>
-        IE8 以下では対応していません。しかし、 Microsoft は IE8 以下を搭載したシステムの拡張サポートを終了しているため、ほとんどのアプリケーションでは気にする必要はないでしょう。さらに、 2 つ目の引数を使用した場合、オブジェクト記述子のプロパティがそれぞれ別個の記述子オブジェクトを持つため、オブジェクトの初期化が遅くなり、パフォーマンスのブラックホールとなる可能性があります。オブジェクトの形成する形で何十万ものオブジェクト記述子を扱う場合、その遅延時間は深刻な問題になるかもしれません。
-      </td>
-    </tr>
-  </tbody>
-</table>
+オブジェクト初期化子における `__proto__` キーと同様に、`Object.create()` を使用すると、オブジェクトの作成時にプロトタイプを直接設定することができ、実行時にオブジェクトをさらなる最適化することが可能になります。また、プロトタイプを `null` とする `Object.create(null)` を使用して、オブジェクトを作成することもできます。 `Object.create()` の 2 番目の引数を使用すると、新しいオブジェクトの各プロパティの属性を正確に指定することができますが、これは諸刃の剣となります。
+
+- オブジェクト作成時に、オブジェクトリテラルでは実現不可能な、列挙不可能なプロパティなどを作成することができます。
+- オブジェクトリテラルよりもはるかに冗長的で、エラーの可能性が高くなります。
+- 特に多くのプロパティを作成する場合には、オブジェクトリテラルよりも時間がかかる場合があります。
 
 ### クラスで
 
 ```js
-class Polygon {
+class Rectangle {
   constructor(height, width) {
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
 }
 
-class Square extends Polygon {
-  constructor(sideLength) {
-    super(sideLength, sideLength);
-  }
-
-  get area() {
-    return this.height * this.width;
-  }
-
-  set sideLength(newLength) {
-    this.height = newLength;
-    this.width = newLength;
+class FilledRectangle extends Rectangle {
+  constructor(height, width, color) {
+    super(height, width);
+    this.name = "Filled rectangle";
+    this.color = color;
   }
 }
 
-const square = new Square(2);
-// square ---> Square.prototype ---> Polygon.prototype ---> Object.prototype ---> null
+const filledRectangle = new FilledRectangle(5, 10, "blue");
+// filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-<table class="standard-table">
-  <caption>
-    クラスの長所と短所
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">長所</th>
-      <td>
-        現代のすべてのエンジンで対応しています。とても高い可読性と保守性。<a href="/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields">プライベートプロパティ</a>は、プロトタイプ継承において些細な置き換えのない機能です。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">短所</th>
-      <td>
-        クラス、特にプライベートプロパティを持つクラスは、従来のものに比べて最適化されていません（ただし、エンジンの実装者はこの点を改善するよう作業しています）。古い環境では対応しておらず、実運用でクラスを使用するためには通常トランスパイラーが必要です。
-      </td>
-    </tr>
-  </tbody>
-</table>
+クラスは、複雑な継承構造を定義する際に、最高の読みやすさと保守性を実現します。 プロトタイプ継承には、プライベートプロパティという機能に代わるものはいくつかあります。 しかし、クラスは従来のコンストラクター関数よりも最適化されておらず、古い環境では対応していません。
 
 ### Object.setPrototypeOf() で
 
-上記のすべてのメソッドはオブジェクト生成時にプロトタイプチェーンを設定するのに対し、 [`Object.setPrototypeOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) は既存のオブジェクトの `[[Prototype]]` 内部プロパティを変更することができます。
+上記のすべてのメソッドはオブジェクト生成時にプロトタイプチェーンを設定するのに対し、 [`Object.setPrototypeOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) は既存のオブジェクトの `[[Prototype]]` 内部プロパティを変更することができます。さらに、 `Object.create(null)` で作成したプロトタイプのないオブジェクトにプロトタイプを強制的に設定したり、オブジェクトのプロトタイプを `null` に設定することで除去することもできます。
 
 ```js
 const obj = { a: 1 };
@@ -661,25 +565,7 @@ Object.setPrototypeOf(obj, anotherObj);
 // obj ---> anotherObj ---> Object.prototype ---> null
 ```
 
-<table class="standard-table">
-  <caption>
-    {{jsxref("Object.setPrototypeOf")}} の長所と短所
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">長所</th>
-      <td>
-        現代のすべてのエンジンで対応しています。オブジェクトのプロトタイプを動的に操作することができ、<code>Object.create(null)</code> で作成したプロトタイプのないオブジェクトにプロトタイプを強制的に作成することもできます。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">短所</th>
-      <td>
-        パフォーマンスが悪い。オブジェクト生成時にプロトタイプを設定することが可能であれば、避けるべきです。多くのエンジンはプロトタイプを最適化し、インスタンスを呼び出すときにメモリー上のメソッドの位置を事前に推測しようとします。しかし、プロトタイプを動的に設定すると、これらの最適化がすべて中断されます。これは、エンジンによっては、コードを仕様通りに動作させるために、最適化を解除して再コンパイルするような事態を発生させるかもしれません。IE8 以前は対応していません。
-      </td>
-    </tr>
-  </tbody>
-</table>
+しかし、プロトタイプを動的に設定すると、プロトタイプチェーンに対してエンジンが行った最適化をすべて無効にしてしまうため、可能であれば作成中にプロトタイプを設定すべきです。これにより、エンジンによっては、最適化を解除してコードを再コンパイルし、仕様通りに動作させる必要が生じる可能性があります。
 
 ### \_\_proto\_\_ アクセサーで
 
@@ -696,25 +582,7 @@ console.log(obj.fooProp);
 console.log(obj.barProp);
 ```
 
-<table class="standard-table">
-  <caption>
-    {{jsxref("Object/proto","__proto__")}} プロパティの設定の長所と短所
-  </caption>
-  <tbody>
-    <tr>
-      <th scope="row">長所</th>
-      <td>
-        現代のすべてのエンジンで対応しています。{{jsxref("Object/proto","__proto__")}} をオブジェクトでないものに設定すると、暗黙に失敗するだけです。例外は発生しません。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">短所</th>
-      <td>
-        非公認かつ非推奨です。多くのエンジンはプロトタイプを最適化し、インスタンスを呼び出すときにメモリー内のメソッドの位置を事前に推測しようとします。しかし、プロトタイプを動的に設定すると、これらの最適化をすべて中断し、一部のエンジンでは、コードを最適化しないように再コンパイルして、仕様どおりに動作するように強制することさえあります。 IE10 以下では対応していません。 {{jsxref("Object/proto","__proto__")}} セッターは、通常は省略可能なので、すべてのプラットフォームで動作するわけではありません。代わりに、常に {{jsxref("Object.setPrototypeOf")}} を使用してください。
-      </td>
-    </tr>
-  </tbody>
-</table>
+`Object.setPrototypeOf` と比較すると、オブジェクトではないものに `__proto__` を設定すると、例外が発せられることなく、静かに失敗します。 また、若干ですが、ブラウザーの対応も優れています。 しかし、これは非標準であり、非推奨のものです。 ほとんどの場合、代わりに `Object.setPrototypeOf` を使用しましょう。
 
 ## パフォーマンス
 
@@ -723,29 +591,31 @@ console.log(obj.barProp);
 また、オブジェクトのプロパティを反復処理するときに、プロトタイプチェーン上にある**すべての** 列挙可能なプロパティが列挙されることになります。オブジェクトがプロトタイプチェーンのどこかではなく、\_自分自身に定義されたプロパティを持っているかどうかを調べるには、 [`hasOwnProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) または [`Object.hasOwn`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) メソッドを使用しなければいけません。 `[[Prototype]]` として `null` を持つオブジェクトを除くすべてのオブジェクトは、 [`hasOwnProperty`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) を `Object.prototype` から継承ししています。ただし、プロトタイプチェーンのさらに下でオーバーライドされている場合を除きます。具体的な例を挙げるために、上記のグラフの例のようなコードを使って説明しましょう。
 
 ```js
-console.log(g.hasOwnProperty("vertices"));
-// true
+function Graph() {
+  this.vertices = [];
+  this.edges = [];
+}
 
-console.log(Object.hasOwn(g, "vertices"));
-// true
+Graph.prototype.addVertex = function (v) {
+  this.vertices.push(v);
+};
 
-console.log(g.hasOwnProperty("nope"));
-// false
+const g = new Graph();
+// g ---> Graph.prototype ---> Object.prototype ---> null
 
-console.log(Object.hasOwn(g, "nope"));
-// false
+g.hasOwnProperty("vertices"); // true
+Object.hasOwn(g, "vertices"); // true
 
-console.log(g.hasOwnProperty("addVertex"));
-// false
+g.hasOwnProperty("nope"); // false
+Object.hasOwn(g, "nope"); // false
 
-console.log(Object.hasOwn(g, "addVertex"));
-// false
+g.hasOwnProperty("addVertex"); // false
+Object.hasOwn(g, "addVertex"); // false
 
-console.log(Object.getPrototypeOf(g).hasOwnProperty("addVertex"));
-// true
+Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 ```
 
-注: あるプロパティが [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) であるかどうかを調べるだけでは十分では**ありません**。プロパティがしっかり存在していて、たまたま `undefined` に設定されているだけかもしれないからです。
+メモ: あるプロパティが [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) であるかどうかを調べるだけでは十分では**ありません**。プロパティがしっかり存在していて、たまたま `undefined` に設定されているだけかもしれないからです。
 
 ## まとめ
 

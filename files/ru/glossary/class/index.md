@@ -13,7 +13,7 @@ slug: Glossary/Class
 
 ### Общие знания
 
-- [Языки, основанные на классах против прототипно-ориентированных](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [Классы в JavaScript](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [Языки, основанные на классах против прототипно-ориентированных](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Классы в JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
 - [Class-based programming](https://en.wikipedia.org/wiki/Class-based_programming) в Википедии (англ.)
 - [Объектно-ориентированное программирование](https://ru.wikipedia.org/wiki/Объектно-ориентированное_программирование) в Википедии

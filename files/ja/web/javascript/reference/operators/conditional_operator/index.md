@@ -111,5 +111,5 @@ function example() {
 - [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [オプショナルチェーン (`?.`)](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)ガイド

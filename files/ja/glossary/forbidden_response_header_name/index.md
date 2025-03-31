@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-禁止レスポンスヘッダー名は、プログラムから変更することができない [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)の名前 (`Set-Cookie`) です。
+禁止レスポンスヘッダー名は、プログラムから変更することができない [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)の名前 (`Set-Cookie`) です。
 
 ## 関連情報
 

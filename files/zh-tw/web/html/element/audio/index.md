@@ -88,7 +88,7 @@ figure {
     > - 規範並不強制要求瀏覽器遵循此屬性的值；它僅僅是一個提示。
 
 - `src`
-  - : 要嵌入的音訊的 URL。這受到 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)的限制。這是可選的；你可以在音訊塊中使用 {{htmlelement("source")}} 元素來指定要嵌入的音訊。
+  - : 要嵌入的音訊的 URL。這受到 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)的限制。這是可選的；你可以在音訊塊中使用 {{htmlelement("source")}} 元素來指定要嵌入的音訊。
 
 ## 事件
 

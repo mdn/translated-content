@@ -32,7 +32,7 @@ SVG 可和 HTML、CSS 及 JavaScript 一同運作。使用 SVG 增強普通 HTML
 ## 範例
 
 - [SVG 創作指南](https://jwatt.org/svg/authoring/)
-- [作為圖片的 SVG](/zh-TW/docs/Web/SVG/SVG_as_an_Image)
-- [使用 SMIL 的 SVG 動畫](/zh-TW/docs/Web/SVG/SVG_animation_with_SMIL)
+- [作為圖片的 SVG](/zh-TW/docs/Web/SVG/Guides/SVG_as_an_image)
+- [使用 SMIL 的 SVG 動畫](/zh-TW/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
 - [SVG 教學：降臨節日曆](https://svg-tutorial.com)
 - [D3](https://d3js.org)（JavaScript 資料視覺化庫，運用 HTML、SVG 和 CSS 展示數據）

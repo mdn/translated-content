@@ -126,7 +126,7 @@ iframe {
 
 在这个示例中，这个 SVG 的视口长宽比被设置为了 3:4，默认情况下宽为 400 像素，高为 300 像素。
 
-SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Attribute/viewBox) 属性，内置了一个与视口无关的坐标系。
+SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Reference/Attribute/viewBox) 属性，内置了一个与视口无关的坐标系。
 
 如果你在你的 HTML 文档中使用了 SVG，这个 SVG 的视口默认为包含它的块级容器或者 SVG 容器上所设置的宽度和高度大小。当你使用 {{CSSxRef("@media")}} 来对 SVG 进行媒体查询时，其参照的高度和宽度取决于包裹着 SVG 的容器，而不是整个浏览器视口。
 

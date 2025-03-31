@@ -7,7 +7,43 @@ slug: Web/CSS/background-image
 
 [CSS](/zh-CN/docs/Web/CSS) **`background-image`** 属性用于为一个元素设置一个或者多个背景图像。
 
-{{EmbedInteractiveExample("pages/css/background-image.html")}}
+{{InteractiveExample("CSS Demo: background-image")}}
+
+```css interactive-example-choice
+background-image: url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/lizard.png"),
+  url("/shared-assets/images/examples/star.png");
+```
+
+```css interactive-example-choice
+background-image:
+  url("/shared-assets/images/examples/star.png"),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```css interactive-example-choice
+background-image:
+  linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url("/shared-assets/images/examples/lizard.png");
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 在绘制时，图像以 z 方向堆叠的方式进行。先指定的图像会在之后指定的图像上面绘制。因此指定的第一个图像“最接近用户”。
 

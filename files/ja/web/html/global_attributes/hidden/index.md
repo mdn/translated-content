@@ -65,7 +65,7 @@ hidden` 属性には、 _hidden_ 状態と _hidden until found_ 状態の2つの
 
 隠された要素は隠されていない要素からリンクすべきではありません。隠された要素の子孫である要素はまだアクティブであり、スクリプト要素はまだ実行でき、フォーム要素はまだ送信できることを意味します。しかし、要素とスクリプトは、他の文脈で隠された要素を参照することがあります。
 
-しかし、ARIA の [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性を使用して、それ自身が隠されている記述を参照することは問題ないでしょう。記述を隠すことは、それ自身は有用でないことを意味しますが、それらが記述された要素から参照されるという固有の文脈で有用であるように書くことができます。
+しかし、ARIA の [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性を使用して、それ自身が隠されている記述を参照することは問題ないでしょう。記述を隠すことは、それ自身は有用でないことを意味しますが、それらが記述された要素から参照されるという固有の文脈で有用であるように書くことができます。
 
 同様に、`hidden` 属性のついたキャンバス要素はスクリプト化されたグラフィックエンジンによってオフスクリーンバッファーとして使用することができ、フォームコントロールはその form 属性を使用して隠されたフォーム要素を参照することができます。
 
@@ -185,5 +185,5 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 - {{DOMxRef("HTMLElement.hidden")}}
 - すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
-- [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) 属性
+- [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性
 - [`beforematch`](/ja/docs/Web/API/Element/beforematch_event) イベント

@@ -147,7 +147,7 @@ doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
 
 ## 参见
 
-- [Parsing and serializing XML](/zh-CN/docs/Web/XML/Parsing_and_serializing_XML)
+- [Parsing and serializing XML](/zh-CN/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - counterpart for {{jsxref("JSON")}} documents.

@@ -2,7 +2,7 @@
 title: Keyboard：getLayoutMap() 方法
 slug: Web/API/Keyboard/getLayoutMap
 l10n:
-  sourceCommit: 165d921f6f96711117be2b6513944ce36c70703f
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
@@ -26,7 +26,7 @@ getLayoutMap()
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止，则抛出此异常。
+  - : 如果调用被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止，则抛出此异常。
 
 ## 示例
 

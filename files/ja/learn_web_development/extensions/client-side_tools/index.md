@@ -12,17 +12,17 @@ l10n:
 
 ## 前提条件
 
-ここで紹介しているツールを使う前に、まずはコアの[HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、[JavaScript](/ja/docs/Learn/JavaScript)の基礎を学習することをお勧めします。
+ここで紹介しているツールを使う前に、まずはコアの[HTML](/ja/docs/Learn_web_development/Core/Structuring_content)、[CSS](/ja/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/ja/docs/Learn_web_development/Core/Scripting)の基礎を学習することをお勧めします。
 
 ## ガイド
 
-- [1. クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
+- [1. クライアントサイドツールの概要](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Overview)
   - : この記事では、最新のウェブツールの概要、どのような種類のツールがあるのか、どこでウェブアプリ開発のライフサイクルを見つけるのか、そして個々のツールのヘルプを見つける方法について説明します。
-- [2. コマンドライン集中コース](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
+- [2. コマンドライン集中コース](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
   - : 開発プロセスにおいて、端末（または「コマンドライン」、これらは実質的に同じものを指します）で何らかのコマンドを実行する必要があることは間違いありません。この記事では、端末の紹介、端末に入力する基本的なコマンド、コマンドを連鎖させる方法、独自のコマンドラインインターフェイス (CLI) ツールを追加する方法について説明します。
-- [3. パッケージ管理の基本](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
+- [3. パッケージ管理の基本](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)
   - : この記事では、プロジェクトツールの依存関係をインストールしたり、最新の状態に保つなど、自分のプロジェクトでどのようにパッケージマネージャを使用できるかを理解するために、パッケージマネージャーについて詳しく説明していきます。
-- [4. ツールチェーンの紹介](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
+- [4. ツールチェーンの紹介](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain)
   - : このシリーズの最後の数記事では、サンプルケーススタディツールチェーンを構築するプロセスを紹介することで、ツールの知識を固めます。理にかなった開発環境を設定し、その場所に変換ツールを置くところから、実際に Netlify にアプリを展開するところまで、すべて説明します。この記事では、ケーススタディを紹介し、開発者ツールを設定し、コード変換ツールを設定します。
-- [5. アプリのデプロイ](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)
+- [5. アプリのデプロイ](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Deployment)
   - : シリーズの最終回では、前回の記事で構築したツールチェーンの例を使い、サンプルアプリをデプロイできるようにしていきます。コードを GitHub にプッシュし、 Netlify を使ってデプロイし、簡単なテストを組み込む方法も紹介します。

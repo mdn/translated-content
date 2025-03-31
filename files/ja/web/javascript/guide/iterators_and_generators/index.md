@@ -98,7 +98,7 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 オブジェクトは、 {{jsxref("Statements/for...of", "for...of")}} 構文でループされる値など反復動作を定義する場合、**反復可能**です。{{jsxref("Array")}} や {{jsxref("Map")}} のような組み込み型の中には既定の反復動作を持つものがありますが、他の型 ({{jsxref("Object")}} など) は持っていません。
 
-**反復可能**にするには、オブジェクトは `[Symbol.iterator]()`メソッドを実装する必要があります。つまり、オブジェクト (または[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)上のオブジェクトのうちの 1 つ) に {{jsxref("Symbol.iterator")}} キーを持つプロパティが必要です 。
+**反復可能**にするには、オブジェクトは `[Symbol.iterator]()`メソッドを実装する必要があります。つまり、オブジェクト (または[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)上のオブジェクトのうちの 1 つ) に {{jsxref("Symbol.iterator")}} キーを持つプロパティが必要です 。
 
 反復可能オブジェクトは 1 回だけでも 2 回以上でも反復することができます。どちらが当てはまるかは、プログラマに任されています。
 

@@ -7,7 +7,33 @@ slug: Web/CSS/text-underline-offset
 
 La propriété CSS **`text-underline-offset`** définit le décalage de la ligne de décoration du texte par rapport à sa position originale.
 
-{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
+{{InteractiveExample("CSS Demo: text-underline-offset")}}
+
+```css interactive-example-choice
+text-underline-offset: auto;
+```
+
+```css interactive-example-choice
+text-underline-offset: 8px;
+```
+
+```css interactive-example-choice
+text-underline-offset: -0.5rem;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">And after all we are only ordinary</p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+  text-decoration-line: underline;
+  text-decoration-color: #ff0000;
+}
+```
 
 > **Note :** `text-underline-offset` n'est pas une propriété détaillée de {{cssxref('text-decoration')}}. Bien qu'un élément puisse avoir plusieurs lignes décoratives, `text-underline-offset` n'aura qu'un impact sur le soulignage (et pas sur les autres lignes telles que celles fournies par {{cssxref('text-decoration-line')}} avec `overline` ou `line-through`).
 

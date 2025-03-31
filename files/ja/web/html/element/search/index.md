@@ -159,4 +159,4 @@ l10n:
 ## 関連情報
 
 - 他の検索に関する要素: {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, {{HTMLElement("form")}}
-- [ARIA: Search ロール](/ja/docs/Web/Accessibility/ARIA/Roles/search_role)
+- [ARIA: Search ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role)

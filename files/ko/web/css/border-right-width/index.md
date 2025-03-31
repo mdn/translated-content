@@ -7,7 +7,46 @@ slug: Web/CSS/border-right-width
 
 [CSS](/ko/docs/Web/CSS) **`border-right-width`** 속성은 요소의 오른쪽 테두리 너비를 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-right-width.html")}}
+{{InteractiveExample("CSS Demo: border-right-width")}}
+
+```css interactive-example-choice
+border-right-width: thick;
+```
+
+```css interactive-example-choice
+border-right-width: 2em;
+```
+
+```css interactive-example-choice
+border-right-width: 4px;
+```
+
+```css interactive-example-choice
+border-right-width: 2ex;
+```
+
+```css interactive-example-choice
+border-right-width: 0;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구문
 

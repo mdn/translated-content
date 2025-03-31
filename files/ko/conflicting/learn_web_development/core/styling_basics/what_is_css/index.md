@@ -12,11 +12,11 @@ l10n:
 
 **{{Glossary("CSS")}}** (Cascading Style Sheets) 를 사용하면 멋진 웹 페이지를 만들 수 있지만, 어떻게 작동할까요? 이 기사에서는 간단한 구문 예제를 통해 CSS가 무엇인지 설명하고 CSS에 대한 몇 가지 주요 용어를 다룹니다.
 
-| 전제조건: | 컴퓨터 기본 활용 능력, [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software), [파일 작업](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에 대한 기본 지식 및 HTML 기본 사항 ([HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 학습) |
+| 전제조건: | 컴퓨터 기본 활용 능력, [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software), [파일 작업](/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) 에 대한 기본 지식 및 HTML 기본 사항 ([HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) 학습) |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **목적:** | CSS가 무엇인지 배우기.                                                                                                                                                                                                                                                                             |
 
-[HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)단원에서는 HTML이 무엇인지, 그리고 문서를 마크 업하는 데 사용되는 방법에 대해 설명했습니다. 이 문서는 웹 브라우저에서 읽을 수 있습니다. 제목은 일반 텍스트보다 크게 보이며, 단락은 줄바꿈이 되고 공백이 있습니다. 링크는 텍스트의 나머지 부분과 구분하기 위해 색상과 밑줄이 표시됩니다. 현재 보고 있는 것은 브라우저의 기본 스타일입니다. 페이지 작성자가 명시적인 스타일을 지정하지 않은 경우에도 기본적으로 읽을 수 있도록 브라우저가 HTML에 적용하는 매우 기본적인 스타일입니다.
+[HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content)단원에서는 HTML이 무엇인지, 그리고 문서를 마크 업하는 데 사용되는 방법에 대해 설명했습니다. 이 문서는 웹 브라우저에서 읽을 수 있습니다. 제목은 일반 텍스트보다 크게 보이며, 단락은 줄바꿈이 되고 공백이 있습니다. 링크는 텍스트의 나머지 부분과 구분하기 위해 색상과 밑줄이 표시됩니다. 현재 보고 있는 것은 브라우저의 기본 스타일입니다. 페이지 작성자가 명시적인 스타일을 지정하지 않은 경우에도 기본적으로 읽을 수 있도록 브라우저가 HTML에 적용하는 매우 기본적인 스타일입니다.
 
 ![The default styles used by a browser](html-example.png)
 
@@ -62,7 +62,7 @@ h1 {
 - 중괄호 안에는 **속성**과 **값** 쌍의 형태를 취하는 하나 이상의 **선언**이 있습니다. 콜론 앞에 속성(위의 예시에서 `color`)을 명시합니다. 그리고 콜론 뒤에 속성의 값(위의 예시에서는 `red`)을 명시합니다.
 - 이 예시에는 `color`와 `font-size`라는 두가지 선언이 포함되어 있습니다. 각각의 쌍은 우리가 선택하려는 요소의 속성(이 경우 {{htmlelement("Heading_Elements", "h1")}})을 명시합니다. 그리고 해당 속성에 부여할 값을 지정합니다.
 
-CSS {{Glossary("property/CSS","속성")}}은 지정되는 속성에 따라 허용되는 값이 다릅니다. 이 예제에서는 다양한 [색상 값](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#color) 을 사용 할 수 있는 `color` 속성이 있습니다. 또한 `font-size` 속성도 있습니다. 이 속성은 다양한 [크기 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages) 를 값으로 사용 할 수 있습니다.
+CSS {{Glossary("property/CSS","속성")}}은 지정되는 속성에 따라 허용되는 값이 다릅니다. 이 예제에서는 다양한 [색상 값](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color) 을 사용 할 수 있는 `color` 속성이 있습니다. 또한 `font-size` 속성도 있습니다. 이 속성은 다양한 [크기 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numbers_lengths_and_percentages) 를 값으로 사용 할 수 있습니다.
 
 CSS 스타일 시트에는 차례로 작성된 여러 규칙이 포함됩니다.
 
@@ -105,7 +105,7 @@ CSS를 처음 접하는 사람들은, CSS 명세가 압도적이라고 생각할
 
 ## 브라우저 지원
 
-CSS가 지정되면 하나 이상의 브라우저가 이를 구현한 경우에만 웹 페이지를 개발하는 데 유용합니다. 이것은 CSS 파일의 명령을 화면에 출력할 수 있는 것으로 바꾸도록 코드가 작성되었음을 의미합니다. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works) 수업에서 이것에 대해 자세히 살펴보겠습니다. 모든 브라우저가 동시에 기능을 구현하는 것은 드문 일이므로 일반적으로 일부 브라우저에서는 CSS의 일부를 사용할 수 있고, 다른 브라우저에서는 사용할 수 없는 경우가 있습니다. 이러한 이유로, 구현 상태를 확인할 수 있는 것이 유용합니다. MDN 의 각 속성 페이지에서 관심있는 속성의 상태를 볼 수 있으므로 웹 사이트에서 해당 속성을 사용할 수 있는지 알 수 있습니다.
+CSS가 지정되면 하나 이상의 브라우저가 이를 구현한 경우에만 웹 페이지를 개발하는 데 유용합니다. 이것은 CSS 파일의 명령을 화면에 출력할 수 있는 것으로 바꾸도록 코드가 작성되었음을 의미합니다. [CSS 작동 방식](/ko/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) 수업에서 이것에 대해 자세히 살펴보겠습니다. 모든 브라우저가 동시에 기능을 구현하는 것은 드문 일이므로 일반적으로 일부 브라우저에서는 CSS의 일부를 사용할 수 있고, 다른 브라우저에서는 사용할 수 없는 경우가 있습니다. 이러한 이유로, 구현 상태를 확인할 수 있는 것이 유용합니다. MDN 의 각 속성 페이지에서 관심있는 속성의 상태를 볼 수 있으므로 웹 사이트에서 해당 속성을 사용할 수 있는지 알 수 있습니다.
 
 브라우저 지원 상태는 모든 MDN CSS 속성 페이지에 "브라우저 호환성" 이라는 이름을 가진 표에 표시됩니다. 해당 표를 이용해서 속성을 당신의 웹사이트에서 사용할 수 있는지 확인하세요. [CSS `font-family` 속성을 위한 브라우저 호환성](/ko/docs/Web/CSS/font-family#브라우저_호환성)에서 예시를 확인할 수 있습니다.
 
@@ -113,6 +113,6 @@ CSS가 지정되면 하나 이상의 브라우저가 이를 구현한 경우에�
 
 ## 다음은 뭐죠
 
-CSS가 무엇인지 이해했으니, 이제 [CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started) 로 넘어가서 CSS를 직접 작성할 수 있습니다.
+CSS가 무엇인지 이해했으니, 이제 [CSS 시작하기](/ko/docs/Learn_web_development/Core/Styling_basics/Getting_started) 로 넘어가서 CSS를 직접 작성할 수 있습니다.
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}

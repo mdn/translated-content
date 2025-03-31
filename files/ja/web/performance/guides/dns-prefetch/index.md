@@ -12,9 +12,9 @@ l10n:
 
 ## なぜ dns-prefetch を使用するのか
 
-ブラウザーが（サードパーティの）サーバーにリソースをリクエストする場合、ブラウザーがリクエストを発行する前に、その[別オリジン](/ja/docs/Web/HTTP/CORS)のドメイン名を IP アドレスに解決する必要があります。このプロセスは DNS 解決と呼ばれています。 DNS キャッシュはこの待ち時間を縮小するのに役立ちますが、 DNS 解決はリクエストに大きな待ち時間を追加する可能性があります。多くのサードパーティへの接続を開くためのウェブサイトでは、この待ち時間が読み込みパフォーマンスを大幅に縮小する可能性があります。
+ブラウザーが（サードパーティの）サーバーにリソースをリクエストする場合、ブラウザーがリクエストを発行する前に、その[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメイン名を IP アドレスに解決する必要があります。このプロセスは DNS 解決と呼ばれています。 DNS キャッシュはこの待ち時間を縮小するのに役立ちますが、 DNS 解決はリクエストに大きな待ち時間を追加する可能性があります。多くのサードパーティへの接続を開くためのウェブサイトでは、この待ち時間が読み込みパフォーマンスを大幅に縮小する可能性があります。
 
-`dns-prefetch` は開発者が DNS 解決の遅延をマスクするのに役立ちます。 [HTML の `<link>` 要素](/ja/docs/Web/HTML/Element/link)は [`rel` 属性](/ja/docs/Web/HTML/Attributes/rel) の値 `dns-prefetch` によってこの機能を提供します。[別オリジン](/ja/docs/Web/HTTP/CORS)のドメインは、 [href 属性](/ja/docs/Web/HTML/Attributes)で指定します。
+`dns-prefetch` は開発者が DNS 解決の遅延をマスクするのに役立ちます。 [HTML の `<link>` 要素](/ja/docs/Web/HTML/Element/link)は [`rel` 属性](/ja/docs/Web/HTML/Attributes/rel) の値 `dns-prefetch` によってこの機能を提供します。[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメインは、 [href 属性](/ja/docs/Web/HTML/Attributes)で指定します。
 
 ## 構文
 
@@ -44,15 +44,15 @@ l10n:
 
 留意すべきことは主に 3 つあります。
 
-**第一**に、`dns-prefetch`は[別オリジン](/ja/docs/Web/HTTP/CORS)のドメインの DNS 検索にのみ有効なので、自分のサイトや ドメインを指すのに使用するのは避けてください。ブラウザーがヒントを見る時点で、自分のサイトのドメインの背後にある IP はすでに解決されているからです。
+**第一**に、`dns-prefetch`は[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメインの DNS 検索にのみ有効なので、自分のサイトや ドメインを指すのに使用するのは避けてください。ブラウザーがヒントを見る時点で、自分のサイトのドメインの背後にある IP はすでに解決されているからです。
 
-**第二**に、 `dns-prefetch` （および他のリソースヒント）を [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)の [HTTP の Link フィールド](/ja/docs/Web/HTTP/Headers/Link)を使用することで指定することも可能です。
+**第二**に、 `dns-prefetch` （および他のリソースヒント）を [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)の [HTTP の Link フィールド](/ja/docs/Web/HTTP/Reference/Headers/Link)を使用することで指定することも可能です。
 
 ```http
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 ```
 
-**第三**に、 `dns-prefetch` は DNS 検索を行うだけですが、 `preconnect` はサーバーへの接続を確立します。このプロセスには、 DNS 解決、 TCP 接続の確立、 [TLS](/ja/docs/Glossary/TLS) ハンドシェイク（サイトが HTTPS で提供されている場合）が含まれます。 `preconnect` を用いることで、[オリジン間リクエスト](/ja/docs/Web/HTTP/CORS)の遅延を縮小することができます。 [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)で [HTTP の Link フィールド](/ja/docs/Web/HTTP/Headers/Link)を用いることで使用することができます。
+**第三**に、 `dns-prefetch` は DNS 検索を行うだけですが、 `preconnect` はサーバーへの接続を確立します。このプロセスには、 DNS 解決、 TCP 接続の確立、 [TLS](/ja/docs/Glossary/TLS) ハンドシェイク（サイトが HTTPS で提供されている場合）が含まれます。 `preconnect` を用いることで、[オリジン間リクエスト](/ja/docs/Web/HTTP/Guides/CORS)の遅延を縮小することができます。 [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)で [HTTP の Link フィールド](/ja/docs/Web/HTTP/Reference/Headers/Link)を用いることで使用することができます。
 
 ```http
 Link: <https://fonts.googleapis.com/>; rel=preconnect
@@ -76,6 +76,6 @@ Link: <https://fonts.googleapis.com/>; rel=preconnect
 - [\<link>](/ja/docs/Web/HTML/Element/link)
 - [HTML 属性: rel](/ja/docs/Web/HTML/Attributes/rel)
 - [crossorigin](/ja/docs/Web/HTML/Attributes/crossorigin)
-- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
-- [HTTP の Link ヘッダー](/ja/docs/Web/HTTP/Headers/Link)
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
+- [HTTP の Link ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Link)

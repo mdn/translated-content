@@ -77,5 +77,5 @@ Reproduce el fichero de audio adjunto a este artículo.
 - [`HTMLAudioElement`](/es/docs/Web/API/HTMLAudioElement)
 - [`nsIDOMHTMLMediaElement`](/en-US/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [`video`](/es/docs/Web/HTML/Element/video)
-- [Usar audio y video en Firefox](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Usar audio y video en Firefox](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [The `audio` element](https://www.whatwg.org/specs/web-apps/current-work/#audio) (HTML 5 specification)

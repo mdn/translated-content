@@ -7,7 +7,48 @@ slug: Web/CSS/text-overflow
 
 La propriété **`text-overflow`** définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (_clipping_), afficher une ellipse ('`…`', `U+2026 Horizontal Ellipsis`) ou afficher une chaîne de caractères choisie.
 
-{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
+{{InteractiveExample("CSS Demo: text-overflow")}}
+
+```css interactive-example-choice
+text-overflow: clip;
+```
+
+```css interactive-example-choice
+text-overflow: ellipsis;
+```
+
+```css interactive-example-choice
+text-overflow: "-";
+```
+
+```css interactive-example-choice
+text-overflow: "";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-container">
+    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-container {
+  width: 100%;
+  max-width: 18em;
+}
+
+#example-element {
+  line-height: 50px;
+  border: 1px solid #c5c5c5;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  padding: 0 0.5em;
+  text-align: left;
+}
+```
 
 Le rognage se fera à la bordure de la boîte. Afin que le rognage se fasse plus tôt, à la limite des caractères, on peut utiliser la chaîne vide (`''`).
 

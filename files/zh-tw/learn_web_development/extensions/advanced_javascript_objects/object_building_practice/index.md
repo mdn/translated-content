@@ -1,7 +1,6 @@
 ---
 title: 物件建構實作
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
-original_slug: Learn/JavaScript/Objects/Object_building_practice
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

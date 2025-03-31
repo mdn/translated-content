@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar tu entendimiento sobre las [imágenes y como incrustarlas en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+El objetivo de esta prueba de habilidad es evaluar tu entendimiento sobre las [imágenes y como incrustarlas en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 > [!NOTE]
 > Puedes experimentar tus soluciones en los editores interactivos de abajo. No obstante, sería de gran ayuda que descargues el código y que usaras una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las actividades.

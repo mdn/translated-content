@@ -7,7 +7,45 @@ slug: Web/CSS/background-color
 
 [CSS](/ru/docs/Web/CSS)-свойство **`background-color`** [CSS](/ru/docs/Web/CSS) устанавливает цвет фона элемента.
 
-{{EmbedInteractiveExample("pages/css/background-color.html")}}
+{{InteractiveExample("CSS Demo: background-color")}}
+
+```css interactive-example-choice
+background-color: brown;
+```
+
+```css interactive-example-choice
+background-color: #74992e;
+```
+
+```css interactive-example-choice
+background-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+background-color: rgba(255, 255, 128, 0.5);
+```
+
+```css interactive-example-choice
+background-color: hsl(50, 33%, 25%);
+```
+
+```css interactive-example-choice
+background-color: hsla(50, 33%, 25%, 0.75);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## Синтаксис
 

@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("video")}} 要素が実装している **`HTMLVideoElement`** インターフェイスは、動画ブジェクトを操作するための特別なプロパティとメソッドを提供します。また、 {{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} のプロパティとメソッドを継承しています。
 
-[対応しているメディア形式](/ja/docs/Web/Media/Formats)のリストは、ブラウザーによって異なります。動画を提供する際には、関連するすべてのブラウザーが対応している単一の形式で提供するか、対応する必要のあるすべてのブラウザーをカバーするように、異なる形式で複数の動画ソースを提供するかしてください。
+[対応しているメディア形式](/ja/docs/Web/Media/Guides/Formats)のリストは、ブラウザーによって異なります。動画を提供する際には、関連するすべてのブラウザーが対応している単一の形式で提供するか、対応する必要のあるすべてのブラウザーをカバーするように、異なる形式で複数の動画ソースを提供するかしてください。
 
 {{InheritanceDiagram}}
 
@@ -82,4 +82,4 @@ _親である {{domxref("HTMLMediaElement")}} およびその祖先である {{d
 ## 関連情報
 
 - このインターフェイスを実装している HTML 要素: {{HTMLElement("video")}}
-- [対応しているメディア形式](/ja/docs/Web/Media/Formats)
+- [対応しているメディア形式](/ja/docs/Web/Media/Guides/Formats)

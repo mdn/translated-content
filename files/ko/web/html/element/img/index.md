@@ -31,7 +31,7 @@ slug: Web/HTML/Element/img
 
 - [Referrer](/ko/docs/Web/HTTP/Headers/Referrer-Policy) {{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
 - Setting an {{glossary("intrinsic size")}} using [`width`](#width), [`height`](#height), and [`intrinsicsize`](#intrinsicsize): this sets the space taken up by an image to ensure the page layout is stable before it loads.
-- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/ko/docs/Web/HTML/Responsive_images) tutorial).
 
 ## 지원하는 이미지 형식
 
@@ -150,7 +150,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
     같은 `srcset` 특성에 너비와 픽셀 밀도 서술자를 함께 사용하거나, 동일한 서술자를 두 개 이상 사용하는건 유효하지 않습니다.
 
-    사용자 에이전트 스스로 가능한 소스 중 하나를 선택합니다. 따라서 사용자 에이전트는 사용자의 개인 설정 또는 대역폭 상황에 따라 선택을 조절할 수 있는 상당한 여지를 가집니다. [반응형 이미지 자습서](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)를 방문해 예제를 살펴보세요.
+    사용자 에이전트 스스로 가능한 소스 중 하나를 선택합니다. 따라서 사용자 에이전트는 사용자의 개인 설정 또는 대역폭 상황에 따라 선택을 조절할 수 있는 상당한 여지를 가집니다. [반응형 이미지 자습서](/ko/docs/Web/HTML/Responsive_images)를 방문해 예제를 살펴보세요.
 
 - `width`
   - : 이미지의 픽셀 기준 고유 너비. 단위 없는 정수여야 합니다.

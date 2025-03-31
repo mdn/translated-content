@@ -23,8 +23,7 @@ l10n:
       <td>아니오</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Simple response header", "CORS-safelisted
-        response-header")}}</th>
+      <th scope="row">{{Glossary("Simple response header", "CORS-safelisted response-header")}}</th>
       <td>아니오</td>
     </tr>
     <tr>

@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 {{learnsidebar}}
 
-이 기량 테스트의 목적은 당신이 우리의 [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables) 문서를 이해했는지를 평가하기 위함입니다.
+이 기량 테스트의 목적은 당신이 우리의 [필요한 정보를 저장하기 — 변수](/ko/docs/Learn_web_development/Core/Scripting/Variables) 문서를 이해했는지를 평가하기 위함입니다.
 
 > [!NOTE]
 > You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.

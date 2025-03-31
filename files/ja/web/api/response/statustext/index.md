@@ -17,7 +17,7 @@ l10n:
 文字列で、レスポンスに関連する HTTP ステータスメッセージを保持します。
 既定値は "" です。
 
-コードと関連するステータスメッセージの一覧は、 [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)を参照してください。
+コードと関連するステータスメッセージの一覧は、 [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)を参照してください。
 なお、 HTTP/2 はステータスメッセージに[対応していません](https://fetch.spec.whatwg.org/#concept-response-status-message)。
 
 ## 例
@@ -53,5 +53,5 @@ fetch(myRequest)
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

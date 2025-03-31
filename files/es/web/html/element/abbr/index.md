@@ -11,7 +11,7 @@ El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una
 <p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>
 ```
 
-El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations) es una guía para aprender a usar `<abbr>` y elementos relacionados.
+El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations) es una guía para aprender a usar `<abbr>` y elementos relacionados.
 
 | Interfaz DOM                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                             |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -46,5 +46,5 @@ El propósito de este elemento es puramente para la conveniencia del autor y por
 
 ## Ver también
 
-- [Utilizando el elemento \<abbr>](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)
+- [Utilizando el elemento \<abbr>](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations)
 - Otros elementos de nivel semántico de texto: {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.

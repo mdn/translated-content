@@ -9,9 +9,59 @@ l10n:
 
 **`margin-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-{{EmbedInteractiveExample("pages/css/margin-top.html")}}
+{{InteractiveExample("CSS Demo: margin-top")}}
 
-このプロパティは、[置換要素](/ja/docs/Web/CSS/Replaced_element)ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
+```css interactive-example-choice
+margin-top: 1em;
+```
+
+```css interactive-example-choice
+margin-top: 10%;
+```
+
+```css interactive-example-choice
+margin-top: 10px;
+```
+
+```css interactive-example-choice
+margin-top: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
+
+このプロパティは、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)ではないインライン要素、例えば {{HTMLElement("span")}} や {{HTMLElement("code")}} には効果がありません。
 
 ## 構文
 
@@ -39,7 +89,7 @@ margin-top: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
   - : ブラウザーが適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
 

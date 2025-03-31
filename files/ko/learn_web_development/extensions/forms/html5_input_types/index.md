@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-[이전 글](/ko/docs/Learn/Forms/Basic_native_form_controls)에서는 초기 HTML 시대부터 사용 가능한 `type` 속성의 원래 값을 사용하여 {{htmlelement("input")}} 요소를 살펴보았습니다. 이제 HTML5에서 추가된 특정 유형의 데이터 수집을 허용하기 위해 추가된 몇 가지 새로운 입력 유형을 포함하여 더 많은 폼 컨트롤의 기능에 대해 자세히 살펴보겠습니다.
+[이전 글](/ko/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)에서는 초기 HTML 시대부터 사용 가능한 `type` 속성의 원래 값을 사용하여 {{htmlelement("input")}} 요소를 살펴보았습니다. 이제 HTML5에서 추가된 특정 유형의 데이터 수집을 허용하기 위해 추가된 몇 가지 새로운 입력 유형을 포함하여 더 많은 폼 컨트롤의 기능에 대해 자세히 살펴보겠습니다.
 
 <table>
   <tbody>

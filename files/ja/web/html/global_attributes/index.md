@@ -14,7 +14,7 @@ l10n:
 基本的な HTML グローバル属性に加えて、以下のグローバル属性も存在します。
 
 - `xml:lang` と `xml:base`。これらは XHTML 仕様から継承したもので非推奨ですが、互換性のために残されています。
-- アクセシビリティを確保するために使用される、 ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles) 属性および複数の [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Attributes) 状態およびプロパティ。
+- アクセシビリティを確保するために使用される、 ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 属性および複数の [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes) 状態およびプロパティ。
 - [イベントハンドラー](/ja/docs/Web/HTML/Attributes#イベントハンドラー)属性: `onabort`, `onautocomplete`, `onautocompleteerror`, `onblur`, `oncancel`, `oncanplay`, `oncanplaythrough`, `onchange`, `onclick`, `onclose`, `oncontextmenu`, `oncuechange`, `ondblclick`, `ondrag`, `ondragend`, `ondragenter`, `ondragleave`, `ondragover`, `ondragstart`, `ondrop`, `ondurationchange`, `onemptied`, `onended`, `onerror`, `onfocus`, `oninput`, `oninvalid`, `onkeydown`, `onkeypress`, `onkeyup`, `onload`, `onloadeddata`, `onloadedmetadata`, `onloadstart`, `onmousedown`, `onmouseenter`, `onmouseleave`, `onmousemove`, `onmouseout`, `onmouseover`, `onmouseup`, `onmousewheel`, `onpause`, `onplay`, `onplaying`, `onprogress`, `onratechange`, `onreset`, `onresize`, `onscroll`, `onseeked`, `onseeking`, `onselect`, `onshow`, `onsort`, `onstalled`, `onsubmit`, `onsuspend`, `ontimeupdate`, `ontoggle`, `onvolumechange`, `onwaiting`
 
 ## グローバル属性の一覧
@@ -87,12 +87,12 @@ l10n:
 - [`lang`](/ja/docs/Web/HTML/Global_attributes/lang)
   - : 要素の言語を定義します。編集不可能な要素を記述している言語、または編集可能な要素に記述されるべき言語を定義します。この属性の値は、 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定義された形式の「言語タグ」（ハイフン区切りの「言語サブタグ」列）です。 `xml:lang` はこの要素より優先します。
 - [`nonce`](/ja/docs/Web/HTML/Global_attributes/nonce)
-  - : 暗号化ノンス ("number user once") で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)が取得を許可するかどうかを決定するために使用することがあります。
+  - : 暗号化ノンス ("number user once") で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)が取得を許可するかどうかを決定するために使用することがあります。
 - [`part`](/ja/docs/Web/HTML/Global_attributes/part)
   - : 要素のパート名の空白区切りによるリストです。パート名を利用すると、 CSS がシャドウツリー内にある特定の要素を {{CSSxRef("::part")}} 擬似要素を使用することで選択し、スタイル付けすることができます。
 - [`popover`](/ja/docs/Web/HTML/Global_attributes/popover)
   - : 要素をポップオーバー要素として指定するために使用します（{{domxref("Popover API", "ポップオーバーAPI", "", "nocode")}} 参照）。ポップオーバー要素は、呼び出す/コントロール要素（すなわち、[`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget)属性を持つ `<button>` や `<input type="button">`）、または {{domxref("HTMLElement.showPopover()")}} 呼び出しによって開かれるまで、 `display: none` によって非表示になります。
-- [`role`](/ja/docs/Web/Accessibility/ARIA/Roles)
+- [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
   - : ロールはコンテンツの意味づけを定義し、スクリーンリーダーや他のツールが、その種類のオブジェクトに対するユーザーの期待に沿った方法でオブジェクトを表示し、対話を支援することを可能にします。ロールは `role="role_type"` を使って HTML 要素に追加します。ここで `role_type` は ARIA 仕様書でのロールの名前です。
 - [`slot`](/ja/docs/Web/HTML/Global_attributes/slot)
   - : [シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウツリー内のスロットを、要素に割り当てます。`slot` 属性を持つ要素は、 `slot` 属性の値と一致する [`name`](/ja/docs/Web/HTML/Element/slot#name) 属性の値を持つ {{HTMLElement("slot")}} 要素が生成したスロットに割り当てられます。

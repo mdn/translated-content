@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`light-dark()`** は [CSS](/ja/docs/Web/CSS) の [`<color>` 関数](/ja/docs/Web/CSS/CSS_Functions#color_functions)で、プロパティに 2 つの色を設定することができます。開発者が明色カラースキームまたは暗色カラースキームを設定したか、ユーザーがライト色またはダーク色のテーマをリクエストしたか検出することによって、 2 つの色の選択肢のいずれかを返します。テーマ色を [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) [メディア特性](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features)クエリーに入れる必要はありません。
+**`light-dark()`** は [CSS](/ja/docs/Web/CSS) の [`<color>` 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions)で、プロパティに 2 つの色を設定することができます。開発者が明色カラースキームまたは暗色カラースキームを設定したか、ユーザーがライト色またはダーク色のテーマをリクエストしたか検出することによって、 2 つの色の選択肢のいずれかを返します。テーマ色を [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) [メディア特性](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#targeting_media_features)クエリーに入れる必要はありません。
 ユーザーは O Sの設定（ライトモードやダークモードなど）やユーザーエージェントの設定を通じて、環境設定を推奨することができます。 `light-dark()` 関数は、任意の `<color>` 値が受け入れられる場合に、 2 つの色の値を指定することができます。 CSS の `light-dark()` 色関数は、ユーザーの環境設定が `light` に設定されている場合、または何も設定されていない場合に最初の値を返し、ユーザーの環境設定が `dark` に設定されている場合に 2 つ目の値を返します。
 
 `light-dark()` 色の関数の対応を有効にするには、{{CSSXref("color-scheme")}} に `light dark` という値がなければなりません。ふつうはこれを {{CSSXref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)に設定します。

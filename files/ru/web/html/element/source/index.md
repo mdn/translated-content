@@ -49,7 +49,7 @@ This example demonstrates how to offer a video in Ogg format for users whose bro
 </video>
 ```
 
-For more examples, see [Using audio and video in Firefox](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+For more examples, see [Using audio and video in Firefox](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
 ## Спецификации
 

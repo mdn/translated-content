@@ -30,7 +30,7 @@ l10n:
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。
 >     書式は **<**_NameOfTheElement_**>** です。
->     例えば "[g](/ja/docs/Web/SVG/Element/g)" 要素の _title_ は `<g>` となります。
+>     例えば "[g](/ja/docs/Web/SVG/Reference/Element/g)" 要素の _title_ は `<g>` となります。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/SVG/Element/NameOfTheElement` のような形式になります。
@@ -81,10 +81,10 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 ### グローバル属性
 
-- [条件処理属性](/ja/docs/Web/SVG/Attribute#条件処理属性)
-- [コア属性](/ja/docs/Web/SVG/Attribute#コア属性)
-- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#プレゼンテーション属性)
+- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute#条件処理属性)
+- [コア属性](/ja/docs/Web/SVG/Reference/Attribute#コア属性)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#プレゼンテーション属性)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("transform")}}

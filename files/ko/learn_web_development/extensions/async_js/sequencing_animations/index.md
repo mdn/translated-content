@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
-이 평가에서는 일련의 애니메이션을 순서대로 재생하도록 페이지를 업데이트할 것입니다. 이를 진행하기 위해 [프로미스 사용 방법](/ko/docs/Learn/JavaScript/Asynchronous/Promises)에서 배운 몇 가지 기술을 사용할 예정입니다.
+이 평가에서는 일련의 애니메이션을 순서대로 재생하도록 페이지를 업데이트할 것입니다. 이를 진행하기 위해 [프로미스 사용 방법](/ko/docs/Learn_web_development/Extensions/Async_JS/Promises)에서 배운 몇 가지 기술을 사용할 예정입니다.
 
 <table>
   <tbody>
@@ -85,11 +85,11 @@ alice1.animate(aliceTumbling, aliceTiming);
 
 여러분이 이를 구현하기 위한 몇 가지 다른 방법들을 시도해 보시고, 프로미스를 사용하는 다른 방법들을 보강해주셨으면 합니다.
 
-1. 먼저, [콜백 사용에 대한 논의](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks)에서 보았던 "콜백 지옥(callback hell)"으로 프로미스를 구현합니다.
+1. 먼저, [콜백 사용에 대한 논의](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing#callbacks)에서 보았던 "콜백 지옥(callback hell)"으로 프로미스를 구현합니다.
 
-2. 다음으로 [프로미스 체인](/ko/docs/Learn/JavaScript/Asynchronous/Promises#chaining_promises)으로 구현합니다. [화살표 함수](/ko/docs/Learn/JavaScript/Building_blocks/Functions#arrow_functions) 대신 다른 것을 사용할 수 있기 때문에 코드는 여러 가지 방법으로 작성할 수 있음을 알아두세요. 다양한 방법을 시도해보세요. 어느 것이 가장 간결하고 읽기 쉬운가요?
+2. 다음으로 [프로미스 체인](/ko/docs/Learn_web_development/Extensions/Async_JS/Promises#chaining_promises)으로 구현합니다. [화살표 함수](/ko/docs/Learn_web_development/Core/Scripting/Functions#arrow_functions) 대신 다른 것을 사용할 수 있기 때문에 코드는 여러 가지 방법으로 작성할 수 있음을 알아두세요. 다양한 방법을 시도해보세요. 어느 것이 가장 간결하고 읽기 쉬운가요?
 
-3. 마지막으로 [`async`와 `await`](/ko/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await)로 구현해보세요.
+3. 마지막으로 [`async`와 `await`](/ko/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await)로 구현해보세요.
 
 `element.animate()`는 프로미스를 반환하지 _않는다_ 는것을 기억하세요. 프로미스인 `finished` 속성을 가진 `Animation` 객체를 반환합니다.
 

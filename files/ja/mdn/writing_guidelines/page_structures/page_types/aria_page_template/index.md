@@ -11,7 +11,7 @@ l10n:
 
 ### title と slug
 
-ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
+ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
 
 ### 先頭のマクロ
 

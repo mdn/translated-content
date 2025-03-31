@@ -34,8 +34,7 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
   - : 변수나 매개변수가 유효한 자료형이 아님을 나타내는 오류 인스턴스를
     생성합니다.
 - {{jsxref("URIError")}}
-  - : {{jsxref("encodeURI", "encodeURI()")}}나 {{jsxref("decodeURI",
-    "decodeURl()")}} 함수에 부적절한 매개변수를 제공했을 때 발생하는 오류의
+  - : {{jsxref("encodeURI", "encodeURI()")}}나 {{jsxref("decodeURI", "decodeURl()")}} 함수에 부적절한 매개변수를 제공했을 때 발생하는 오류의
     인스턴스를 생성합니다.
 - {{JSxRef("AggregateError")}}
   - : 하나의 동작이 여러 개의 오류 발생시키는 경우(예:
@@ -86,9 +85,7 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 
 ### 일반적인 오류 던지기
 
-`Error` 객체를 생성한 후엔 대개 {{jsxref("Statements/throw",
-  "throw")}} 키워드를 이용해 던집니다. {{jsxref("Statements/try...catch",
-  "try...catch")}} 구문을 이용하여 오류를 처리할 수 있습니다.
+`Error` 객체를 생성한 후엔 대개 {{jsxref("Statements/throw", "throw")}} 키워드를 이용해 던집니다. {{jsxref("Statements/try...catch", "try...catch")}} 구문을 이용하여 오류를 처리할 수 있습니다.
 
 ```js
 try {
@@ -102,8 +99,7 @@ try {
 
 오류의 {{jsxref("Object.prototype.constructor", "constructor")}} 속성을 이용해
 유형을 판별, 특정 오류만 처리할 수 있습니다. 만약 최신 Javascript 엔진에서
-동작하는 코드를 작성한다면 {{jsxref("Operators/instanceof",
-  "instanceof")}} 키워드를 이용할 수도 있습니다.
+동작하는 코드를 작성한다면 {{jsxref("Operators/instanceof", "instanceof")}} 키워드를 이용할 수도 있습니다.
 
 ```js
 try {
