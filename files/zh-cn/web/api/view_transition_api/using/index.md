@@ -289,7 +289,7 @@ figcaption {
 
 ## 使用 JavaScript 控制视图过渡
 
-视图过渡有一个关联的 {{domxref("ViewTransition")}} 对象实例，该实例包含多个 promise 成员，允许你运行 JavaScript 以响应所达到的过渡的不同状态。例如，{{domxref("ViewTransition.ready")}} 在创建伪元素树且动画即将开始时执行，而 {{domxref("ViewTransition.finished")}} 在动画完成后执行，并且新的页面视图对用户可见且具有交互性。
+视图过渡有一个关联的 {{domxref("ViewTransition")}} 对象实例，该实例包含多个 promise 成员，允许你运行 JavaScript 以响应所达到的过渡的不同状态。例如，{{domxref("ViewTransition.ready")}} 在创建伪元素树且动画即将开始时兑现，而 {{domxref("ViewTransition.finished")}} 在动画完成后兑现，并且新的页面视图对用户可见且具有交互性。
 
 可以像这样访问 `ViewTransition`：
 
@@ -501,11 +501,11 @@ window.addEventListener("pagereveal", async (e) => {
     <!-- 将关键脚本标记为渲染阻塞将确保它们在激活视图过渡之前运行 -->
     <script async href="layout.js" blocking="render"></script>
 
-    <!-- 使用 rel="expect" 和 blocking="render" 确保在激活过渡之前，#lead 内容元素可见并被完全解析 -->
+    <!-- 使用 rel="expect" 和 blocking="render" 确保在激活过渡之前，#lead-content 元素可见并被完全解析 -->
     <link rel="expect" href="#lead-content" blocking="render" />
   </head>
   <body>
-    <h1>Page title</h1>
+    <h1>页面标题</h1>
     <nav>...</nav>
     <div id="lead-content">
       <section id="first-section">第一部分</section>
