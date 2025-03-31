@@ -28,7 +28,7 @@ l10n:
 
 ### Chrome
 
-- 指南：[注册隐私沙箱](https://github.com/privacysandbox/attestation/blob/main/how-to-enroll.md)。
+- 指南：[注册隐私沙盒](https://github.com/privacysandbox/attestation/blob/main/how-to-enroll.md)。
 - 测试：你无需注册即可在本地测试隐私沙盒功能。为了允许本地测试，请启用 `chrome://flags/#privacy-sandbox-enrollment-overrides` 开发者标志。
 
 ## 参见
