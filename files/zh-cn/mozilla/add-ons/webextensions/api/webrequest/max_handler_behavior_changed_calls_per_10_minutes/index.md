@@ -2,7 +2,7 @@
 title: webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 5ebacde5e3e3500a851a2c49c7d02a7a5c6604ce
 ---
 
 {{AddonSidebar}}
