@@ -2,7 +2,7 @@
 title: webRequest.BlockingResponse
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 803693373b182fe77dbb7873c0ec4cdf33f9defb
 ---
 
 {{AddonSidebar}}
@@ -30,16 +30,16 @@ l10n:
   - : `boolean`。若为 `true`，则请求被取消。你只能在 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}、{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}、{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 和 {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}} 中设置该属性。
 - `redirectUrl` {{optional_inline}}
 
-  - : `string`。这是一个 URL。如果设置，则原始请求将被重定向到该 URL。你只能在 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 或 {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 中设置该属性。
+  - : `string`。如果设置，则原始请求将被重定向到该 URL。你只能在 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 或 {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 中设置该属性。
 
     你可以重定向到非 HTTP 方案（例如 `data:`）。重定向将使用与原始请求相同的请求方法，除非是从 `onHeadersReceived` 阶段发起的，此时重定向将使用 GET 方法。
 
-    如果扩展想要将公共（例如 HTTPS）URL 重定向到 [扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)，则扩展的 manifest.json 文件必须包含列出了扩展页面的 URL 的 [web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 键。
+    如果扩展想要将公共（例如 HTTPS）URL 重定向到[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)，则扩展的 manifest.json 文件必须包含列出了扩展页面的 URL 的 [web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 键。
 
 - `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。这是一个 {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}} 对象（一个数组，其中各对象都表示一个标头）。如果设置，则请求将使用这些标头而不是原始标头。你只能在 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 中设置该属性。
 - `responseHeaders` {{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。这是一个 {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}} 对象（一个数组，其中各对象都表示一个标头）。如果设置，则将认为服务器以这些响应标头而非原始标头响应了请求。你只能在 {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 中设置该属性。如果多个扩展尝试设置同一标头（例如 `Content-Security-Policy`），则只有其中一项更改会成功。
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。这是一个 {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}} 对象（一个数组，其中各对象都表示一个标头）。如果设置，则将认为服务器以这些响应标头而非原始标头响应了请求。你只能在 {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} 中设置该属性。如果多个扩展尝试设置同一标头（例如 `Content-Security-Policy`），则只有其中一次更改会成功。
 - `upgradeToSecure` {{optional_inline}}
   - : `boolean`。若设为 `true` 并且原始请求是一个 HTTP 请求，则这会阻止原始请求的发送，而是发起一个安全的（HTTPS）请求。如果任何扩展在 `onBeforeRequest` 中返回 `redirectUrl`，则 `upgradeToSecure` 将被忽略。你只能在 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 中设置该属性。
 
