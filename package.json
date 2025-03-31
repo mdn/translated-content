@@ -21,7 +21,7 @@
     "lint:json": "prettier -c \"**/*.json(c)?\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && node ./scripts/check-url-locale.js files && yarn autocorrect --lint . && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "engines": {
     "node": ">=20"
