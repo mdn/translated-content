@@ -1,6 +1,7 @@
 ---
 title: Cryptographic hash function (暗号学的ハッシュ関数)
-slug: Glossary/Cryptographic_hash_function
+slug: Glossary/Hash_function
+original_slug: Glossary/Cryptographic_hash_function
 ---
 
 {{GlossarySidebar}}

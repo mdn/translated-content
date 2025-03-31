@@ -1,6 +1,7 @@
 ---
 title: Digest
-slug: Glossary/Digest
+slug: conflicting/Glossary/Hash_function
+original_slug: Glossary/Digest
 ---
 
 {{GlossarySidebar}}
