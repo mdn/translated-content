@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar si has entendido nuestros artículos [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings) y [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods).
+El objetivo de esta prueba de habilidad es evaluar si has entendido nuestros artículos [Manejo de texto — cadenas en JavaScript](/es/docs/Learn_web_development/Core/Scripting/Strings) y [Métodos de cadena útiles](/es/docs/Learn_web_development/Core/Scripting/Useful_string_methods).
 
 > [!NOTE]
 > Puedes probar las soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
