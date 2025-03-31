@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/digest
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`digest()`** 方法生成给定数据的{{Glossary("digest", "摘要")}}。摘要是从一些可变长的输入生成的短且具有固定长度的值。密码摘要应表现出抗冲突性，这意味着很难构造出具有相同摘要值的两个不同的输入。
+{{domxref("SubtleCrypto")}} 接口的 **`digest()`** 方法使用指定的{{glossary("hash function", "散列函数“)}}生成给定数据的*摘要*。摘要是从一些可变长的输入生成的短且具有固定长度的值。密码学摘要应表现出抗冲突性，这意味着很难构造出具有相同摘要值的两个不同的输入。
 
 它以使用的摘要算法的标识符和计算摘要的数据为参数。并返回一个 {{jsxref("Promise")}}，会兑现数据的摘要值。
 
@@ -32,7 +32,7 @@ digest(algorithm, data)
 
 ## 支持的算法
 
-摘要算法（也称为[加密哈希函数](/zh-CN/docs/Glossary/Cryptographic_hash_function)）将任意长度的数据块转换为固定长度的输出（通常比输入短得多）。其在密码学中有多种应用。
+摘要算法（也称为{{glossary("hash function", "散列函数")}}）将任意长度的数据块转换为固定长度的输出（通常比输入短得多）。其在密码学中有多种应用。
 
 <table class="standard-table">
   <tbody>

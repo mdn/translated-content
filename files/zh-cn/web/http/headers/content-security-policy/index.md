@@ -191,10 +191,10 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 ### '\<hash_algorithm>-<hash_value>'
 
-该值由标识哈希算法的字符串、`-`和一个表示哈希值的 {{glossary("Base64", "base64 编码")}}字符串组成。
+该值由标识散列算法的字符串、`-`和一个表示散列值的 {{glossary("Base64", "base64 编码")}}字符串组成。
 
-- 哈希算法标识符必须是 `sha256`、`sha384` 或 `sha512` 之一。
-- 哈希值是使用以下哈希函数之一计算的 `<script>` 或 `<style>` 资源的{{glossary("Cryptographic_hash_function", "哈希")}}值的 base64 编码：SHA-256、SHA-384 或 SHA-512。
+- 散列算法标识符必须是 `sha256`、`sha384` 或 `sha512` 之一。
+- 散列值是使用以下散列函数之一计算的 `<script>` 或 `<style>` 资源的{{glossary("hash function", "散列")}}值的 base64 编码：SHA-256、SHA-384 或 SHA-512。
 
 例如：
 
@@ -202,16 +202,16 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 'sha256-cd9827ad...'
 ```
 
-当浏览器接收文档时，它会对所有 `<script>` 和 `<style>` 元素的内容进行哈希计算，将结果与 CSP 指令中的任何哈希值进行比较，仅在匹配时加载资源。
+当浏览器接收文档时，它会对所有 `<script>` 和 `<style>` 元素的内容进行散列计算，将结果与 CSP 指令中的任何散列值进行比较，仅在匹配时加载资源。
 
 如果元素加载外部资源（例如，通过 [`src`](/zh-CN/docs/Web/HTML/Element/script#src) 属性），则元素还必须设置 [`integrity`](/zh-CN/docs/Web/HTML/Element/script#integrity) 属性。
 
-如果指令中同时包含哈希和 `unsafe-inline`，浏览器会忽略 `unsafe-inline`。
+如果指令中同时包含散列和 `unsafe-inline`，浏览器会忽略 `unsafe-inline`。
 
-有关更多用法信息，请参阅 CSP 指南中的[哈希值](/zh-CN/docs/Web/HTTP/CSP#hash)。
+有关更多用法信息，请参阅 CSP 指南中的[散列值](/zh-CN/docs/Web/HTTP/CSP#hash)。
 
 > [!NOTE]
-> 哈希来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
+> 散列来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
 
 ### \<host-source>
 
@@ -297,13 +297,13 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则内联事件处理程序属性（如 `onclick`）和内联 `style` 属性不允许执行。
 
-`'unsafe-hashes'` 表达式允许浏览器对内联事件处理程序和 `style` 属性使用[哈希表达式](#hash_algorithm-hash_value)。例如，一个 CSP 指令可能包含以下内容：
+`'unsafe-hashes'` 表达式允许浏览器对内联事件处理程序和 `style` 属性使用[散列表达式](#hash_algorithm-hash_value)。例如，一个 CSP 指令可能包含以下内容：
 
 ```http
 script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 ```
 
-如果哈希值与内联事件处理程序属性值或 `style` 属性值的哈希值匹配，则允许代码执行。
+如果散列值与内联事件处理程序属性值或 `style` 属性值的散列值匹配，则允许代码执行。
 
 > **警告：** `'unsafe-hashes'` 值是不安全的。
 >
