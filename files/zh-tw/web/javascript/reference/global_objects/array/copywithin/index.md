@@ -44,7 +44,7 @@ copyWithin(target, start, end)
     - 若 `start < -array.length`，則使用 `0`。
     - 若 `start >= array.length`，則不會複製任何內容。
 - `end` {{optional_inline}}
-  - : 要結束複製元素的以零為基底的索引，會[轉換為整數](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#整數換換)。`copyWithin()` 會複製至 `end` 之前的元素，但不包含 `end`。
+  - : 要結束複製元素的以零為基底的索引，會[轉換為整數](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#整數轉換)。`copyWithin()` 會複製至 `end` 之前的元素，但不包含 `end`。
     - 負數索引會從陣列末尾開始計算 — 若 `-array.length <= end < 0`，則使用 `end + array.length`。
     - 若 `end < -array.length`，則使用 `0`。
     - 若 `end >= array.length` 或未提供 `end`，則使用 `array.length`，使其複製至結尾。
