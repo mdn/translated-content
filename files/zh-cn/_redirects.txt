@@ -516,12 +516,15 @@
 /zh-CN/docs/Glossary/502	/zh-CN/docs/Web/HTTP/Reference/Status/502
 /zh-CN/docs/Glossary/Bézier_curve	/zh-CN/docs/Glossary/Bezier_curve
 /zh-CN/docs/Glossary/Clickjacking	/zh-CN/docs/Web/Security/Attacks/Clickjacking
+/zh-CN/docs/Glossary/Cryptographic_hash_function	/zh-CN/docs/Glossary/Hash_function
 /zh-CN/docs/Glossary/DOS_attack	/zh-CN/docs/Glossary/Denial_of_Service
 /zh-CN/docs/Glossary/Descriptor_(CSS)	/zh-CN/docs/Glossary/CSS_Descriptor
+/zh-CN/docs/Glossary/Digest	/zh-CN/docs/Glossary/Hash_function
 /zh-CN/docs/Glossary/Empty_element	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/Forbidden_header_name	/zh-CN/docs/Glossary/Forbidden_request_header
 /zh-CN/docs/Glossary/Grid_Rows	/zh-CN/docs/Glossary/Grid_Row
 /zh-CN/docs/Glossary/Guard	/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
+/zh-CN/docs/Glossary/Hash	/zh-CN/docs/Glossary/Hash_function
 /zh-CN/docs/Glossary/Header	/zh-CN/docs/Glossary/HTTP_header
 /zh-CN/docs/Glossary/I18N	/zh-CN/docs/Glossary/Internationalization
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
