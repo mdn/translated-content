@@ -47,7 +47,7 @@ l10n:
 </script>
 ```
 
-如果网站包含了使用 `<script>` 标签的推测规则，那么其必须被 {{httpheader("Content-Security-Policy")}} 的 `script-src` 指令明确允许。可通过添加 `'inline-speculation-rules'` 来源、哈希来源（hash-source）或 nonce 来源（nonce-source）来实现。
+如果网站包含了使用 `<script>` 标签的推测规则，那么其必须被 {{httpheader("Content-Security-Policy")}} 的 `script-src` 指令明确允许。可通过添加 `'inline-speculation-rules'` 来源、散列来源（hash-source）或 nonce 来源（nonce-source）来实现。
 
 一个 HTTP 标头的例子：
 

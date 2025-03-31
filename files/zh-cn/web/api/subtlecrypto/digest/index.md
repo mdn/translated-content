@@ -18,7 +18,7 @@ digest(algorithm, data)
 ### 参数
 
 - `algorithm`
-  - : 可以是一个字符串或一个仅有 `name` 字符串属性的对象。该字符串为使用的哈希函数的名称。支持的值有：
+  - : 可以是一个字符串或一个仅有 `name` 字符串属性的对象。该字符串为使用的散列函数的名称。支持的值有：
     - `"SHA-1"`（请不要在加密应用程序中使用它）
     - `"SHA-256"`
     - `"SHA-384"`
@@ -123,7 +123,7 @@ const text =
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message); // 编码为（utf-8）Uint8Array
-  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // 计算消息的哈希值
+  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // 计算消息的散列值
   const hashArray = Array.from(new Uint8Array(hashBuffer)); // 将缓冲区转换为字节数组
   const hashHex = hashArray
     .map((b) => b.toString(16).padStart(2, "0"))

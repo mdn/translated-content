@@ -28,7 +28,7 @@ slug: Web/URI/Reference/Fragment/Text_fragments
 
 ## 语法
 
-与文档片段行为类似，文本片段被附加到 URL 的哈希符号（`#`）后。但语法有轻微不同：
+与文档片段行为类似，文本片段被附加到 URL 的散列符号（`#`）后。但语法有轻微不同：
 
 ```url
 https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
