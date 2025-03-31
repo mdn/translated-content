@@ -1,6 +1,7 @@
 ---
 title: 密码散列函数
-slug: Glossary/Cryptographic_hash_function
+slug: conflicting/Glossary/Hash_function
+original_slug: Glossary/Cryptographic_hash_function
 l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---

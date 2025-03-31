@@ -1,6 +1,7 @@
 ---
 title: 散列
-slug: Glossary/Hash
+slug: conflicting/Glossary/Hash_function_3097209ba1840fd21a5674e950742f0f46fa7eda3af44a3eeb313cd360fdbff2
+original_slug: Glossary/Hash
 l10n:
   sourceCommit: 2e580d06b14ddba04f17c19e1809513e60b558ad
 ---
