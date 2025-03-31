@@ -2,14 +2,14 @@
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
 {{AddonSidebar}}
 
 描述一项 [X.509 证书](https://datatracker.ietf.org/doc/html/rfc5280) 的对象。
 
-{{WebExtAPIRef("webRequest.getSecurityInfo()")}} API 返回的 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象包含是该对象数组的 `certificates` 属性。
+{{WebExtAPIRef("webRequest.getSecurityInfo()")}} API 返回的 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象包含该对象数组的 `certificates` 属性。
 
 ## 类型
 
@@ -25,18 +25,20 @@ l10n:
       - : `String`。证书的 DER 编码的 SHA-256 哈希值。
 
 - `isBuiltInRoot`
-  - : `Boolean`。如果证书是在浏览器中安装的信任根证书之一则为 `true`，否则为 `false`。
+  - : `Boolean`。当证书是在浏览器中安装的信任根证书之一时为 `true`，否则为 `false`。
 - `issuer`
 
-  - : `String`。颁发此证书的组织名称，表示为一个区分名称，并格式化为逗号分隔的相对区分名称的列表，其中各项的形式都是 "type=value"。
+  - : `String`。颁发此证书的组织名称，表示为一个专有名称，并格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是 "type=value"。
+
+  例如，"CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US"。
 
 - `rawDER`
-  - : `Number` 的数组（`Array`）。若果 [`webRequest.getSecurityInfo()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo) 被调用时包含 `rawDER` 选项并设置为 `true`，则该项包含证书的 DER 编码。
+  - : `Number` 的数组（`Array`）。若 [`webRequest.getSecurityInfo()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo) 被调用时包含 `rawDER` 选项并设置为 `true`，则该属性将包含证书的 DER 编码。
 - `serialNumber`
   - : `String`。证书的[序列号](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2).
 - `subject`
 
-  - : `String`。签发给该证书的组织名称，表示为一个区分名称，并格式化为逗号分隔的相对区分名称的列表，其中各项的形式都是 "type=value"。
+  - : `String`。签发给该证书的组织名称，表示为一个专有名称，并格式化为逗号分隔的相专有名称的列表，其中各项的形式都是 "type=value"。
 
     例如：`"CN=*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US"`。
 
