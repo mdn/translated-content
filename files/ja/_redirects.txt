@@ -1335,14 +1335,14 @@
 /ja/docs/Glossary/DOS_attack	/ja/docs/Glossary/Denial_of_Service
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Descriptor_(CSS)	/ja/docs/Glossary/CSS_Descriptor
-/ja/docs/Glossary/Digest	/ja/docs/conflicting/Glossary/Hash_function
+/ja/docs/Glossary/Digest	/ja/docs/Glossary/Hash_function
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
 /ja/docs/Glossary/First_interactive	/ja/docs/Glossary/First_CPU_idle
 /ja/docs/Glossary/Forbidden_header_name	/ja/docs/Glossary/Forbidden_request_header
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
 /ja/docs/Glossary/Guard	/ja/docs/Web/API/Fetch_API/Using_Fetch
-/ja/docs/Glossary/Hash	/ja/docs/conflicting/Glossary/Hash_function_3097209ba1840fd21a5674e950742f0f46fa7eda3af44a3eeb313cd360fdbff2
+/ja/docs/Glossary/Hash	/ja/docs/Glossary/Hash_function
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/I18N	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/Index	/ja/docs/Glossary

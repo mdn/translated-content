@@ -1001,6 +1001,14 @@
       "Wind1808"
     ]
   },
+  "Glossary/Cryptographic_hash_function": {
+    "modified": "2019-12-18T10:37:52.515Z",
+    "contributors": [
+      "Uemmra3",
+      "mfuji09",
+      "Wind1808"
+    ]
+  },
   "Glossary/Cryptography": {
     "modified": "2020-02-21T15:02:05.871Z",
     "contributors": [
@@ -1085,6 +1093,13 @@
     "contributors": [
       "Uemmra3",
       "szk0u"
+    ]
+  },
+  "Glossary/Digest": {
+    "modified": "2019-12-15T08:02:33.274Z",
+    "contributors": [
+      "Uemmra3",
+      "OtsukaNoboru"
     ]
   },
   "Glossary/Digital_certificate": {
@@ -1664,12 +1679,11 @@
       "kadokura"
     ]
   },
-  "Glossary/Hash_function": {
-    "modified": "2019-12-18T10:37:52.515Z",
+  "Glossary/Hash": {
+    "modified": "2019-03-18T21:42:58.281Z",
     "contributors": [
-      "Uemmra3",
-      "mfuji09",
-      "Wind1808"
+      "Wind1808",
+      "Uemmra3"
     ]
   },
   "Glossary/Head": {
@@ -43755,20 +43769,6 @@
       "mfuji09",
       "dskmori",
       "kadokura"
-    ]
-  },
-  "conflicting/Glossary/Hash_function": {
-    "modified": "2019-12-15T08:02:33.274Z",
-    "contributors": [
-      "Uemmra3",
-      "OtsukaNoboru"
-    ]
-  },
-  "conflicting/Glossary/Hash_function_3097209ba1840fd21a5674e950742f0f46fa7eda3af44a3eeb313cd360fdbff2": {
-    "modified": "2019-03-18T21:42:58.281Z",
-    "contributors": [
-      "Wind1808",
-      "Uemmra3"
     ]
   },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
