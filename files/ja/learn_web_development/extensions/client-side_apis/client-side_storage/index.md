@@ -52,9 +52,9 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn_web_develo
 
 ### 古い流儀: クッキー
 
-クライアント側ストレージの概念は、昔からありました。ウェブの初期から、サイトは[クッキー](/ja/docs/Web/HTTP/Cookies)を使用して、ウェブサイトでのユーザー操作をパーソナライズするために情報を格納してきました。これは、ウェブで一般的に使用されているクライアント側ストレージの最も初期の形態です。
+クライアント側ストレージの概念は、昔からありました。ウェブの初期から、サイトは[クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を使用して、ウェブサイトでのユーザー操作をパーソナライズするために情報を格納してきました。これは、ウェブで一般的に使用されているクライアント側ストレージの最も初期の形態です。
 
-最近では、クライアント側のデータを格納するために利用できるより簡単な仕組みがあるため、この記事ではクッキーを使用する方法を教えません。しかし、これはクッキーが現代のウェブで完全に無用であるという意味ではありません。クッキーは、セッション ID やアクセストークンのような、ユーザーの個人設定や状態に関連するデータを格納するために、今でも一般的に使用されています。クッキーについての詳細情報は、 [HTTP クッキーの使用](/ja/docs/Web/HTTP/Cookies)の記事を参照してください。
+最近では、クライアント側のデータを格納するために利用できるより簡単な仕組みがあるため、この記事ではクッキーを使用する方法を教えません。しかし、これはクッキーが現代のウェブで完全に無用であるという意味ではありません。クッキーは、セッション ID やアクセストークンのような、ユーザーの個人設定や状態に関連するデータを格納するために、今でも一般的に使用されています。クッキーについての詳細情報は、 [HTTP クッキーの使用](/ja/docs/Web/HTTP/Guides/Cookies)の記事を参照してください。
 
 ### 新しい流儀: ウェブストレージと IndexedDB
 
@@ -769,7 +769,7 @@ self.addEventListener("fetch", (e) => {
 
 - [ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/ja/docs/Web/API/IndexedDB_API)
-- [クッキー](/ja/docs/Web/HTTP/Cookies)
+- [クッキー](/ja/docs/Web/HTTP/Guides/Cookies)
 - [ウェブワーカー API](/ja/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

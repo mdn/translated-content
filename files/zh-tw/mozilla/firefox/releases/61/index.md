@@ -65,7 +65,7 @@ _無變動。_
 
 ### HTTP
 
-- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie) 及 [HTTP cookie](/zh-TW/docs/Web/HTTP/Cookies)。（[Firefox bug 795346](https://bugzil.la/795346)）
+- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie) 及 [HTTP cookie](/zh-TW/docs/Web/HTTP/Guides/Cookies)。（[Firefox bug 795346](https://bugzil.la/795346)）
 
 ### 安全性
 

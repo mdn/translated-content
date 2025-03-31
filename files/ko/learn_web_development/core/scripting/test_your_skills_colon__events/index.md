@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Events
 
 {{learnsidebar}}
 
-이 실력 테스트의 목적은 여러분이 우리의 [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events) 문서를 이해했는지 평가하기 위함입니다.
+이 실력 테스트의 목적은 여러분이 우리의 [이벤트 입문](/ko/docs/Learn_web_development/Core/Scripting/Events) 문서를 이해했는지 평가하기 위함입니다.
 
 > [!NOTE]
 > 아래의 인터랙티브 에디터에서 해답을 시도해 볼 수도 있지만, 과제를 하기 위해 코드를 다운로드하고 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인 툴(tool)을 사용하는 것이 도움이 될 지도 모릅니다.

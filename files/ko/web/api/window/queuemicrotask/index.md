@@ -72,4 +72,4 @@ MyElement.prototype.loadData = function (url) {
 
 - `core-js`의 [`queueMicrotask` 폴리필](https://github.com/zloirock/core-js#queuemicrotask)
 - [JavaScript의 queueMicrotask()와 함께 마이크로태스크 사용하기](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
+- [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS)

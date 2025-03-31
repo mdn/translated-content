@@ -1,7 +1,6 @@
 ---
 title: 伺服端網站程式設計
 slug: Learn_web_development/Extensions/Server-side
-original_slug: Learn/Server-side
 ---
 
 {{LearnSidebar}}

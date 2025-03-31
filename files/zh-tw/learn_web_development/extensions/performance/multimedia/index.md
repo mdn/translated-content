@@ -1,7 +1,6 @@
 ---
 title: 多媒體：圖像跟影片
 slug: Learn_web_development/Extensions/Performance/Multimedia
-original_slug: Learn/Performance/Multimedia
 ---
 
 {{LearnSidebar}}

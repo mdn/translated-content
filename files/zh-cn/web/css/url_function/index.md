@@ -77,7 +77,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
         如果选择不使用引号编写 URL，请在 URL 中的任何括号、空白字符、单引号（`'`）和双引号（`"`）前使用反斜线（`\`）。
 
     - path
-      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)或 [SVG 滤镜](/zh-CN/docs/Web/SVG/Element/filter)的 ID。
+      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)或 [SVG 滤镜](/zh-CN/docs/Web/SVG/Reference/Element/filter)的 ID。
 
 - `<url-modifier>`
   - : 将来，`url()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。

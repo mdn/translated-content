@@ -34,7 +34,7 @@ button ロールは、スクリーンリーダーなどの支援技術に対し�
 
 ### すべての子孫が表示用途になる
 
-プラットフォームのアクセシビリティ API で表わす際に、ユーザーインターフェイスのコンポーネントの種類によっては、テキストしか含むことができないことがあります。アクセシビリティ API には、 `button` に含まれる意味づけされた要素を表現する方法がありません。この制限に対応するため、ブラウザーでは、`button` 要素のすべての子孫要素に自動的に [`presentation`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) ロールを適用します。これは、意味的な子をサポートしていないロールであるためです。
+プラットフォームのアクセシビリティ API で表わす際に、ユーザーインターフェイスのコンポーネントの種類によっては、テキストしか含むことができないことがあります。アクセシビリティ API には、 `button` に含まれる意味づけされた要素を表現する方法がありません。この制限に対応するため、ブラウザーでは、`button` 要素のすべての子孫要素に自動的に [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) ロールを適用します。これは、意味的な子をサポートしていないロールであるためです。
 
 例えば、見出しを含む以下の `button` 要素を考えてみましょう。
 
@@ -63,7 +63,7 @@ button ロールは、スクリーンリーダーなどの支援技術に対し�
 
 ### 基本的なボタン
 
-ボタンには常にアクセス可能な名前を付ける必要があります。 ほとんどのボタンでは、この名前はボタン内のテキストと同じになります。 場合によっては、例えばアイコンで表されるボタンの場合、アクセス可能な名前は [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性から提供される場合があります。
+ボタンには常にアクセス可能な名前を付ける必要があります。 ほとんどのボタンでは、この名前はボタン内のテキストと同じになります。 場合によっては、例えばアイコンで表されるボタンの場合、アクセス可能な名前は [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性から提供される場合があります。
 
 ### トグルボタン
 
@@ -298,7 +298,7 @@ function toggleButton(element) {
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles)
+1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)
 
    {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
 

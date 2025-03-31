@@ -42,7 +42,7 @@ CSS부터 살펴봅시다.
 
 ### 올바른 의미론적 표현과 사용자 경험
 
-CSS를 사용하여 HTML 요소를 원하는 대로 보이게 만들 수 있지만, 항상 그렇게 해야 하는 것은 아닙니다. [HTML: 접근성을 위한 좋은 기초](/ko/docs/Learn/Accessibility/HTML) 문서에서 자주 말했듯이, 가능한 경우 적절한 의미론적 요소를 사용해야 합니다. 그렇지 않으면 모두에게 혼란과 사용성 문제가 발생할 수 있으며, 특히 장애를 가진 사용자에게는 더 큰 문제가 될 수 있습니다. 올바른 의미론적 요소를 사용하는 것은 사용자 경험과 많은 관련이 있습니다. 요소는 기능에 따라 특정한 방식으로 보이고 동작하며, 이러한 일반적인 규칙은 사용자에게 기대됩니다.
+CSS를 사용하여 HTML 요소를 원하는 대로 보이게 만들 수 있지만, 항상 그렇게 해야 하는 것은 아닙니다. [HTML: 접근성을 위한 좋은 기초](/ko/docs/Learn_web_development/Core/Accessibility/HTML) 문서에서 자주 말했듯이, 가능한 경우 적절한 의미론적 요소를 사용해야 합니다. 그렇지 않으면 모두에게 혼란과 사용성 문제가 발생할 수 있으며, 특히 장애를 가진 사용자에게는 더 큰 문제가 될 수 있습니다. 올바른 의미론적 요소를 사용하는 것은 사용자 경험과 많은 관련이 있습니다. 요소는 기능에 따라 특정한 방식으로 보이고 동작하며, 이러한 일반적인 규칙은 사용자에게 기대됩니다.
 
 예를 들어, 스크린 리더 사용자는 개발자가 콘텐츠를 마크업할 때 적절한 제목 요소를 사용하지 않으면 페이지를 제목 요소를 통해 탐색할 수 없습니다. 마찬가지로, 제목은 제목처럼 보이지 않도록 스타일을 변경하면 시각적인 목적을 읽게 됩니다.
 
@@ -83,7 +83,7 @@ li {
 - 제목은 본문 텍스트와 구분되도록 일반적으로 기본 스타일과 같이 크고 굵게 보이도록 해야 합니다. 목록은 목록처럼 보여야 합니다.
 - 텍스트 색상은 배경 색상과 잘 대비되어야 합니다.
 
-자세한 내용은 [HTML 텍스트 기본 사항](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)와 [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)을 참고하세요.
+자세한 내용은 [HTML 텍스트 기본 사항](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)와 [텍스트 스타일링](/ko/docs/Learn_web_development/Core/Text_styling)을 참고하세요.
 
 #### 텍스트 강조
 
@@ -106,7 +106,7 @@ em {
 }
 ```
 
-그러나 강조할 요소를 의미 있는 방식으로 스타일을 지정할 경우는 거의 없을 것입니다. 굵은 글꼴과 기울임 꼴 텍스트의 표준 규칙은 쉽게 알아볼 수 있으며 스타일을 변경하면 혼란이 발생할 수 있습니다. 강조에 대한 자세한 내용은 [강조 및 중요성](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)를 참고하세요.
+그러나 강조할 요소를 의미 있는 방식으로 스타일을 지정할 경우는 거의 없을 것입니다. 굵은 글꼴과 기울임 꼴 텍스트의 표준 규칙은 쉽게 알아볼 수 있으며 스타일을 변경하면 혼란이 발생할 수 있습니다. 강조에 대한 자세한 내용은 [강조 및 중요성](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#emphasis_and_importance)를 참고하세요.
 
 #### 약어
 
@@ -127,7 +127,7 @@ abbr {
 }
 ```
 
-약어에 대해 인정된 스타일링 규칙은 점선 밑줄이며, 이에 크게 벗어나는 것은 현명하지 않습니다. 약어에 대한 더 많은 것은 [약어](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#약어)를 참고하세요.
+약어에 대해 인정된 스타일링 규칙은 점선 밑줄이며, 이에 크게 벗어나는 것은 현명하지 않습니다. 약어에 대한 더 많은 것은 [약어](/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#약어)를 참고하세요.
 
 #### 링크
 
@@ -203,7 +203,7 @@ a:active {
 
 ### 요소 숨기기
 
-시각적 디자인에서 모든 콘텐츠가 한 번에 표시되지 않도록 요구하는 경우가 많이 있습니다. 예를 들어, [탭 정보 상자 예시](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([소스 코드](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))에는 세가지 정보 패널이 있지만, 우리는 그것들을 서로의 위에 [배치](/ko/docs/Learn/CSS/CSS_layout/Positioning)하고 클릭하여 각각을 표시할 수 있는 탭을 제공하고 있습니다. (Tab 키와 Enter/Return을 사용하여 키보드로 액세스할 수도 있습니다.)
+시각적 디자인에서 모든 콘텐츠가 한 번에 표시되지 않도록 요구하는 경우가 많이 있습니다. 예를 들어, [탭 정보 상자 예시](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([소스 코드](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))에는 세가지 정보 패널이 있지만, 우리는 그것들을 서로의 위에 [배치](/ko/docs/Learn_web_development/Core/CSS_layout/Positioning)하고 클릭하여 각각을 표시할 수 있는 탭을 제공하고 있습니다. (Tab 키와 Enter/Return을 사용하여 키보드로 액세스할 수도 있습니다.)
 
 ![탭 1이 선택된 3개의 탭 인터페이스는 해당 탭의 내용만 표시됩니다. 다른 탭의 내용은 숨깁니다. 탭을 선택하면 텍스트 색상이 검은색에서 흰색으로 바뀌고 배경 색상이 주황색에서 빨간색으로 바뀝니다.](tabbed-info-box.png)
 
@@ -228,12 +228,12 @@ JavaScript는 어떻게 사용하냐에 따라 접근성을 깨뜨릴 수 있습
 
 최신 JavaScript는 강력한 언어이며, 오늘날 간단한 콘텐츠 및 UI 업데이트부터 완전한 2D 및 3D 게임까지 많은 작업을 수행할 수 있습니다. 모든 콘텐츠가 모든 사람에게 100% 접근 가능해야 한다는 규칙은 없습니다. 단지 할 수 있는 일을 하고 앱을 가능한 한 접근 가능하게 만들기만 하면 됩니다.
 
-간단한 콘텐츠와 기능은 쉽게 액세스할 수 있습니다. 예를 들어, 텍스트, 이미지, 표, 양식, 기능을 활성화하는 푸시 버튼 등이 있습니다. [HTML: 접근성을 위한 좋은 기반](/ko/docs/Learn/Accessibility/HTML) 문서에서 살펴본 것처럼 주요 고려 사항은 다음과 같습니다.
+간단한 콘텐츠와 기능은 쉽게 액세스할 수 있습니다. 예를 들어, 텍스트, 이미지, 표, 양식, 기능을 활성화하는 푸시 버튼 등이 있습니다. [HTML: 접근성을 위한 좋은 기반](/ko/docs/Learn_web_development/Core/Accessibility/HTML) 문서에서 살펴본 것처럼 주요 고려 사항은 다음과 같습니다.
 
 - 좋은 의미론: 올바른 작업에 적합한 요소를 사용합니다. 예를 들어, 제목과 단락, {{htmlelement("button")}} 및 {{htmlelement("a")}} 요소를 사용하는지 확인하세요.
-- 콘텐츠가 직접 텍스트 콘텐츠, 양식 요소에 적합한 텍스트 레이블 또는 [대체 텍스트](/ko/docs/Learn/Accessibility/HTML#대체_텍스트)(예: 이미지 대체 텍스트)로 제공되는지 확인하세요.
+- 콘텐츠가 직접 텍스트 콘텐츠, 양식 요소에 적합한 텍스트 레이블 또는 [대체 텍스트](/ko/docs/Learn_web_development/Core/Accessibility/HTML#대체_텍스트)(예: 이미지 대체 텍스트)로 제공되는지 확인하세요.
 
-또한 JavaScript를 사용하여 누락된 기능을 구축하는 방법에 대한 예도 살펴보았습니다. [키보드 접근성 다시 구축](/ko/docs/Learn/Accessibility/HTML#키보드_접근성_다시_구축하기)을 참조하세요. 이는 이상적이지는 않지만, 어떤 이유로 사용되는 마크업을 제어할 수 없는 상황에서는 가능하다는 것을 보여줍니다. 비의미론적 JavaScript 기반 위젯에 대한 접근성을 향상시키는 또 다른 방법은 WAI-ARIA를 사용하여 스크린 리더 사용자에게 추가적인 의미론을 제공하는 것입니다. 다음 문서에서도 이 문제를 자세히 다룰 것입니다.
+또한 JavaScript를 사용하여 누락된 기능을 구축하는 방법에 대한 예도 살펴보았습니다. [키보드 접근성 다시 구축](/ko/docs/Learn_web_development/Core/Accessibility/HTML#키보드_접근성_다시_구축하기)을 참조하세요. 이는 이상적이지는 않지만, 어떤 이유로 사용되는 마크업을 제어할 수 없는 상황에서는 가능하다는 것을 보여줍니다. 비의미론적 JavaScript 기반 위젯에 대한 접근성을 향상시키는 또 다른 방법은 WAI-ARIA를 사용하여 스크린 리더 사용자에게 추가적인 의미론을 제공하는 것입니다. 다음 문서에서도 이 문제를 자세히 다룰 것입니다.
 
 3D 게임과 같은 복잡한 기능은 접근하기 쉽지 않습니다. [WebGL](/ko/docs/Web/API/WebGL_API)을 사용하여 만든 복잡한 3D 게임은 현재로서는 중증 시각 장애인이 활용할 수 있는 정보인 대체 텍스트나 다른 정보를 제공할 수 있는 기능이 없는 {{htmlelement("canvas")}} 요소에서 렌더링됩니다. 이러한 게임에는 실제로 중증 시각 장애인 그룹의 사람들이 주요 대상 청중의 일부로 포함되어 있지 않으며 시각 장애인이 100% 접근할 수 있도록 기대하는 것은 비합리적입니다. 그러나, [키보드 제어](/ko/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)를 구현하여 마우스가 아닌 사용자도 사용할 수 있도록 하고 색약이 있는 사용자도 사용할 수 있을 만큼 색 구성표를 충분히 대비되게 만들 수 있습니다.
 
@@ -353,7 +353,7 @@ imgThumb.onblur = hideImg;
 
 처음 두 줄은 각각 마우스 포인터를 썸네일 위로 가져갈 때와 멈추었을 때 기능을 실행합니다. 하지만 키보드로 확대/축소된 보기에 액세스할 수는 없습니다. 이를 허용하기 위해 이미지에 초점이 맞춰지고 흐려질 때(초점이 멈출 때) 기능을 실행하는 마지막 두 줄을 포함했습니다. 이것은 이미지 위에 `tabindex="0"`을 포함시켰기 때문에 이미지 위에 탭을 눌러 수행할 수 있습니다.
 
-[click](/ko/docs/Web/API/Element/click_event) 이벤트는 흥미롭습니다. 마우스에 의존하는 것처럼 보이지만 대부분의 브라우저는 초점이 있는 링크나 양식 요소에서 Enter/Return을 누른 후 또는 터치 스크린 장치에서 이러한 요소를 탭할 때 [onclick](/ko/docs/Web/API/Element/click_event) 이벤트 핸들러를 활성화합니다. 그러나 tabindex를 사용하여 기본 초점 가능 이벤트가 아닌 이벤트에 초점을 두는 경우에는 기본적으로 동작하지 않습니다. 이러한 경우 정확한 키를 눌렀을 때 특별히 감지해야 합니다([키보드 접근성 다시 구축](/ko/docs/Learn/Accessibility/HTML#키보드_접근성_다시_구축하기)를 참고하세요.).
+[click](/ko/docs/Web/API/Element/click_event) 이벤트는 흥미롭습니다. 마우스에 의존하는 것처럼 보이지만 대부분의 브라우저는 초점이 있는 링크나 양식 요소에서 Enter/Return을 누른 후 또는 터치 스크린 장치에서 이러한 요소를 탭할 때 [onclick](/ko/docs/Web/API/Element/click_event) 이벤트 핸들러를 활성화합니다. 그러나 tabindex를 사용하여 기본 초점 가능 이벤트가 아닌 이벤트에 초점을 두는 경우에는 기본적으로 동작하지 않습니다. 이러한 경우 정확한 키를 눌렀을 때 특별히 감지해야 합니다([키보드 접근성 다시 구축](/ko/docs/Learn_web_development/Core/Accessibility/HTML#키보드_접근성_다시_구축하기)를 참고하세요.).
 
 ## 실력을 시험해 보세요!
 

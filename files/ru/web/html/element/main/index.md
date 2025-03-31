@@ -88,7 +88,7 @@ header {
 
 ### Ориентир
 
-Элемент `<main>` ведёт себя как [роль-ориентир `main`](/ru/docs/Web/Accessibility/ARIA/Roles/Main_role). [Ориентиры](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) могут использоваться вспомогательными технологиями для быстрой идентификации и навигации по большим разделам документа. Предпочтительно использовать элемент `<main>` вместо объявления `role="main"`, если не нужна [поддержка старых браузеров](/ru/docs/Web/HTML/Element/main#%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0_%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0%D0%BC%D0%B8).
+Элемент `<main>` ведёт себя как [роль-ориентир `main`](/ru/docs/Web/Accessibility/ARIA/Roles/Main_role). [Ориентиры](/ru/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) могут использоваться вспомогательными технологиями для быстрой идентификации и навигации по большим разделам документа. Предпочтительно использовать элемент `<main>` вместо объявления `role="main"`, если не нужна [поддержка старых браузеров](/ru/docs/Web/HTML/Element/main#%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0_%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0%D0%BC%D0%B8).
 
 ### Пропуск навигации
 

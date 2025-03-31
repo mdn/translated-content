@@ -41,4 +41,4 @@ _该接口实现的方法定义在 {{domxref("Crypto/getRandomValues", "RandomSo
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
 - [仅限于安全上下文的特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
 - [传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security)
-- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)

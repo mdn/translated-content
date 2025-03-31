@@ -41,6 +41,6 @@ l10n:
 
 ## 같이 보기
 
-- [URL이란 무엇인가요](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [URL이란 무엇인가요](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - {{Glossary("Origin")}}
 - [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)

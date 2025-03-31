@@ -34,7 +34,7 @@ showSaveFilePicker()
         - `description`
           - : 許可されるファイル形式のカテゴリーの説明で、省略可能です。
         - `accept`
-          - : キーを [MIME タイプ](/ja/docs/Web/HTTP/MIME_types/Common_types)に、値をファイルの拡張子の{{jsxref('Array', '配列')}}に設定した {{jsxref('Object')}} です。(例は以下を参照してください)
+          - : キーを [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)に、値をファイルの拡張子の{{jsxref('Array', '配列')}}に設定した {{jsxref('Object')}} です。(例は以下を参照してください)
 
 ### 返値
 

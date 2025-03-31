@@ -412,7 +412,7 @@ Si intentas enviar el formulario con menos de 4 caracteres, se te dará un mensa
 
 ### Especificación de un patrón
 
-Puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en [Validación con una expresión regular](/es/docs/Learn/Forms/Form_validation#validaci%c3%b3n_con_una_expresi%c3%b3n_regular) sobre el uso de expresiones regulares para validar entradas).
+Puedes utilizar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en [Validación con una expresión regular](/es/docs/Learn_web_development/Extensions/Forms/Form_validation#validaci%c3%b3n_con_una_expresi%c3%b3n_regular) sobre el uso de expresiones regulares para validar entradas).
 
 El siguiente ejemplo restringe el valor a 4-8 caracteres y requiere que contenga solo letras minúsculas.
 
@@ -473,7 +473,7 @@ Esto se renderiza así:
 
 ## Ejemplos
 
-Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos [Mi primer formulario HTML](/es/docs/Learn/Forms/Your_first_form) y [Cómo estructurar un formulario HTML](/es/docs/Learn/Forms/How_to_structure_a_web_form).
+Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos [Mi primer formulario HTML](/es/docs/Learn_web_development/Extensions/Forms/Your_first_form) y [Cómo estructurar un formulario HTML](/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form).
 
 ## Especificaciones
 
@@ -485,7 +485,7 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 ## Ve también
 
-- [Formularios HTML](/es/docs/Learn/Forms)
+- [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Campo de entrada de texto multilínea

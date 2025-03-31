@@ -10,7 +10,7 @@ ARIA ライブリージョンにおいて、グローバルな `aria-atomic` 属
 
 ## 解説
 
-ライブリージョンとは、ユーザーの操作の有無にかかわらず、ユーザーのフォーカスが他の場所にあるときに更新されるウェブページの部分のことです。ユーザーのフォーカスの外側で更新されるため、スクリーンリーダーなどの支援技術は、ユーザーに更新を報告するために更新を「見る」ことができません。 WAI-ARIA には、開発者がこれらのライブ領域を識別し、支援技術に処理方法を指示するためのプロパティとして、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live)、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy)、`aria-atomic` の 4 つがあります。
+ライブリージョンとは、ユーザーの操作の有無にかかわらず、ユーザーのフォーカスが他の場所にあるときに更新されるウェブページの部分のことです。ユーザーのフォーカスの外側で更新されるため、スクリーンリーダーなどの支援技術は、ユーザーに更新を報告するために更新を「見る」ことができません。 WAI-ARIA には、開発者がこれらのライブ領域を識別し、支援技術に処理方法を指示するためのプロパティとして、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)、`aria-atomic` の 4 つがあります。
 
 ライブリージョンのコンテンツが変更されると、 DOM は変更された要素からその祖先を走査し、 `aria-atomic` が設定された最初の要素を探します。これがユーザーに表示するコンテンツを決定します。
 
@@ -25,7 +25,7 @@ ARIA ライブリージョンにおいて、グローバルな `aria-atomic` 属
 
 ## 関連付けられたロール
 
-**すべての**[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)で使用されます。
+**すべての**[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)で使用されます。
 
 ## 仕様書
 
@@ -37,7 +37,7 @@ ARIA ライブリージョンにおいて、グローバルな `aria-atomic` 属
 
 <section id="Quick_links">
 
-1. [**WAI-ARIA 状態とプロパティ**](/ja/docs/Web/Accessibility/ARIA/Attributes)
+1. [**WAI-ARIA 状態とプロパティ**](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)
 
    {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Attributes")}}
 

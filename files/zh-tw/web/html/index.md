@@ -31,7 +31,7 @@ HTML 元素通過「標籤」與文件中的其他文本區分開來，標籤由
 - [啟用 CORS 的圖像](/zh-TW/docs/Web/HTML/CORS_enabled_image)
   - : [`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) 屬性與適當的 {{glossary("CORS")}} 標頭結合使用，允許由 {{HTMLElement("img")}} 元素定義的圖像從外部來源加載，並在 {{HTMLElement("canvas")}} 元素中使用，就像它們是從當前來源加載的一樣。
 - [CORS 設定屬性](/zh-TW/docs/Web/HTML/Attributes/crossorigin)
-  - : 一些支援 [CORS](/zh-TW/docs/Web/HTTP/CORS) 的 HTML 元素，例如 {{HTMLElement("img")}} 或 {{HTMLElement("video")}}，具有 `crossorigin` 屬性（`crossOrigin` 屬性），允許你配置元素提取數據的 CORS 請求。
+  - : 一些支援 [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS) 的 HTML 元素，例如 {{HTMLElement("img")}} 或 {{HTMLElement("video")}}，具有 `crossorigin` 屬性（`crossOrigin` 屬性），允許你配置元素提取數據的 CORS 請求。
 - [使用 rel="preload" 預加載內容](/zh-TW/docs/Web/HTML/Attributes/rel/preload)
   - : {{HTMLElement("link")}} 元素的 [`rel`](/zh-TW/docs/Web/HTML/Element/link#rel) 屬性的 `preload` 值允許你在 HTML {{HTMLElement("head")}} 中編寫聲明式提取請求，指定頁面加載後不久將需要的資源，因此你希望在頁面加載生命週期的早期開始預加載它們，這樣可以確保它們更早可用，並且不太可能阻塞頁面的首次渲染，從而提高性能。這篇文章提供了 `preload` 的基本指南。
 - [響應式圖像](/zh-TW/docs/Web/HTML/Responsive_images)

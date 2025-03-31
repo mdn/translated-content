@@ -34,7 +34,7 @@ values()
 
 ## 설명
 
-`Array.prototype.values()`는 [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)의 기본 구현체입니다.
+`Array.prototype.values()`는 [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)의 기본 구현체입니다.
 
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true

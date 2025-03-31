@@ -69,7 +69,7 @@ Chromium 系のブラウザー:
   単発の活性化は要求されません。
 - 書き込みには `clipboard-read` 権限または単発の活性化が要求されます。
   権限が付与された場合、その権限は維持され、それ以上の単発の活性化は要求されません。
-- クリップボードにアクセスする {{HTMLElement("iframe")}} 要素には、HTTP の[Permissions-Policy](/ja/docs/Web/HTTP/Headers/Permissions-Policy) の `clipboard-read` と `clipboard-write` の権限を許可しなければなりません。
+- クリップボードにアクセスする {{HTMLElement("iframe")}} 要素には、HTTP の[Permissions-Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) の `clipboard-read` と `clipboard-write` の権限を許可しなければなりません。
 - ブラウザーや OS の「貼り付け要素」によって読み取り処理が発生した場合、持続的な貼り付けプロンプトは表示されません。
 
 Firefox および Safari:

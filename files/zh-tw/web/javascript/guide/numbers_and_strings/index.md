@@ -1,7 +1,6 @@
 ---
 title: 數字與日期
 slug: Web/JavaScript/Guide/Numbers_and_strings
-original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}

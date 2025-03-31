@@ -7,14 +7,14 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`nonce`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是定义了密码学 nonce（“只使用一次的数字”）的内容属性，[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)可以使用它来确定是否允许对给定元素进行获取。
+**`nonce`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是定义了密码学 nonce（“只使用一次的数字”）的内容属性，[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)可以使用它来确定是否允许对给定元素进行获取。
 
 ## 描述
 
-`nonce` 属性可用于允许对特定资源的获取，如内联脚本或样式元素。它可以帮助你避免使用 [CSP](/zh-CN/docs/Web/HTTP/CSP) `unsafe-inline` 指令，该指令会允许你获取*所有*的内联脚本或样式资源。
+`nonce` 属性可用于允许对特定资源的获取，如内联脚本或样式元素。它可以帮助你避免使用 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) `unsafe-inline` 指令，该指令会允许你获取*所有*的内联脚本或样式资源。
 
 > [!NOTE]
-> 只有在无法使用不安全的内联脚本或样式内容时，才使用 `nonce`。如果不需要 `nonce`，就不要使用。如果脚本是静态的，也可以使用 CSP 散列值来代替。（请参阅[不安全内联脚本](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#不安全内联脚本)中的使用说明）。始终尽量充分利用 [CSP](/zh-CN/docs/Web/HTTP/CSP) 保护，并尽可能避免使用 nonce 或不安全的内联脚本。
+> 只有在无法使用不安全的内联脚本或样式内容时，才使用 `nonce`。如果不需要 `nonce`，就不要使用。如果脚本是静态的，也可以使用 CSP 散列值来代替。（请参阅[不安全内联脚本](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#不安全内联脚本)中的使用说明）。始终尽量充分利用 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 保护，并尽可能避免使用 nonce 或不安全的内联脚本。
 
 ### 使用 nonce 以允许一个 \<script> 元素
 
@@ -42,7 +42,7 @@ crypto.randomBytes(16).toString("base64");
 
 #### 发送带有 CSP 标头的 nonce
 
-最后，你需要在 [`Content-Security-Policy`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy) 标头中发送 nonce 值（需要在此值前面附加 `nonce-`）：
+最后，你需要在 [`Content-Security-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) 标头中发送 nonce 值（需要在此值前面附加 `nonce-`）：
 
 ```http
 Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
@@ -81,5 +81,5 @@ script[nonce~="whatever"] {
 ## 参见
 
 - [`HTMLElement.nonce`](/zh-CN/docs/Web/API/HTMLElement/nonce)
-- [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)
-- CSP：[`script-src`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)
+- [内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)
+- CSP：[`script-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)

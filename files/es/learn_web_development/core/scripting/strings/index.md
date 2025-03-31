@@ -22,7 +22,7 @@ Casi todos los programas que hemos mostrado hasta ahora en el curso han involucr
 
 ## Cadenas — las bases
 
-A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveremos de una aquí abajo (o utilice la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
+A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveremos de una aquí abajo (o utilice la [consola de desarrollador de navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
 
 ```html hidden
 <!doctype html>
@@ -294,7 +294,7 @@ Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()"
 
 ## Prueba tus habilidades
 
-Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
+Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
 
 ## Conclusión
 

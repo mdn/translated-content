@@ -20,7 +20,7 @@ l10n:
 - JavaScript では
   - : カスタムデータ属性のプロパティ名は、同じ HTML 属性の名前から `data-` の接頭辞を除いたものですが、そのプロパティの{{Glossary("camel_case", "キャメルケース")}}の名前であり、単一のダッシュ (`-`) を除いたものです。
 
-以下の情報に加えて、[データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)の記事に、HTML データ属性の使用方法に関するガイドがあります。
+以下の情報に加えて、[データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)の記事に、HTML データ属性の使用方法に関するガイドがあります。
 
 ### 名前の変換
 
@@ -49,7 +49,7 @@ l10n:
 - 属性は dataset のオブジェクトプロパティのようにキャメルケース名（キー）を使用して、 `element.dataset.keyname` のように設定したり読み取ったりすることができます。
 - 属性はブラケット構文を使用して、 `element.dataset['keyname']` のように設定したり読み取ったりすることもできます。
 - [`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)を `'keyname' in element.dataset` のように使用すると、特定の属性が存在するかどうかを確認できます。
-  これは `dataset` の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を走査することになり、プロトタイプチェーンを汚染する可能性のある外部コードを持っている場合には安全ではないことに注意してください。例えば {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}} や、単に `element.dataset.keyname !== undefined` かどうかを調べる方法などがあります。
+  これは `dataset` の[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を走査することになり、プロトタイプチェーンを汚染する可能性のある外部コードを持っている場合には安全ではないことに注意してください。例えば {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}} や、単に `element.dataset.keyname !== undefined` かどうかを調べる方法などがあります。
 
 ### 値の設定
 
@@ -105,5 +105,5 @@ if (el.dataset.someDataAttr === undefined) {
 ## 関連情報
 
 - HTML の [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) クラスのグローバル属性
-- [データ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)
+- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} および {{DOMxRef("Element.setAttribute()")}}

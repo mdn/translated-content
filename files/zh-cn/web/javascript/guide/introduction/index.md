@@ -21,11 +21,11 @@ l10n:
 
 MDN 上的 JavaScript 文档包括以下内容：
 
-- [学习 Web 开发](/zh-CN/docs/Learn)为初学者提供信息，并介绍一些关于编程和互联网的基本概念。
+- [学习 Web 开发](/zh-CN/docs/Learn_web_development)为初学者提供信息，并介绍一些关于编程和互联网的基本概念。
 - [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)（即本指南）提供 JavaScript 这门语言及其目标的概述。
 - [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)提供关于 JavaScript 的详细参考资料。
 
-如果你刚开始学习 JavaScript，先从[学习区](/zh-CN/docs/Learn)和 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)的文章开始。你一旦掌握了 JavaScript 基础知识，就可以通过 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)来了解有关单个对象和语句的更多细节。
+如果你刚开始学习 JavaScript，先从[学习区](/zh-CN/docs/Learn_web_development)和 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)的文章开始。你一旦掌握了 JavaScript 基础知识，就可以通过 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference)来了解有关单个对象和语句的更多细节。
 
 ## 什么是 JavaScript?
 

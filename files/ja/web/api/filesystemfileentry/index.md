@@ -5,7 +5,7 @@ slug: Web/API/FileSystemFileEntry
 
 {{APIRef("File and Directory Entries API")}}
 
-**`FileSystemFileEntry`** は[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) のインターフェイスで、ファイルシステム内のファイルを表します。このファイルの属性を記述するプロパティと、そのファイルを読み出すために使用する {{domxref("File")}} オブジェクトを生成する {{domxref("FileSystemFileEntry.file", "file()")}} メソッドを提供します。
+**`FileSystemFileEntry`** は[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_System_API) のインターフェイスで、ファイルシステム内のファイルを表します。このファイルの属性を記述するプロパティと、そのファイルを読み出すために使用する {{domxref("File")}} オブジェクトを生成する {{domxref("FileSystemFileEntry.file", "file()")}} メソッドを提供します。
 
 {{InheritanceDiagram}}
 
@@ -29,4 +29,4 @@ _親インターフェイス {{domxref("FileSystemEntry")}} のプロパティ�
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)

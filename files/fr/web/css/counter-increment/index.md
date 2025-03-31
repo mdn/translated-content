@@ -7,7 +7,40 @@ slug: Web/CSS/counter-increment
 
 La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur d'un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) d'une valeur donnée.
 
-{{EmbedInteractiveExample("pages/css/counter-increment.html")}}
+{{InteractiveExample("CSS Demo: counter-increment")}}
+
+```css interactive-example-choice
+counter-increment: example-counter;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 0;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter 5;
+```
+
+```css interactive-example-choice
+counter-increment: example-counter -5;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Counter value:</div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  text-align: left;
+  counter-reset: example-counter;
+}
+
+#example-element::after {
+  content: counter(example-counter);
+}
+```
 
 > [!NOTE]
 > La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.

@@ -58,7 +58,7 @@ nav {
 ## 使用上の注意
 
 - すべてのリンクを `<nav>` 要素に入れる必要はありません。`<nav>` はナビゲーションリンクの主要なブロックのみに用います。{{HTMLElement("footer")}} にもよくリンクのリストが設置されますが、{{HTMLElement("nav")}} 要素の中に入れる必要はありません。
-- {{HTMLElement("nav")}} 要素は文書内に複数設定することができます。例えば、サイトナビゲーションを一つ、ページ内ナビゲーションを一つなどです。このような場合、アクセシビリティを強化するために、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) を使用することができます。[例](/ja/docs/Web/HTML/Element/Heading_Elements#labeling_section_content)をご覧ください。
+- {{HTMLElement("nav")}} 要素は文書内に複数設定することができます。例えば、サイトナビゲーションを一つ、ページ内ナビゲーションを一つなどです。このような場合、アクセシビリティを強化するために、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) を使用することができます。[例](/ja/docs/Web/HTML/Element/Heading_Elements#labeling_section_content)をご覧ください。
 - スクリーンリーダーのような障碍者向けのユーザーエージェントは、この要素を使用してナビゲーション用のコンテンツを初期読み上げから省略するかを判断するために使用することがあります。
 
 ## 例
@@ -176,4 +176,4 @@ nav {
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
 - [HTML 文書のセクションとアウトライン](/ja/docs/Web/HTML/Element/Heading_Elements)
-- [ARIA: Navigation ロール](/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role)
+- [ARIA: Navigation ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)

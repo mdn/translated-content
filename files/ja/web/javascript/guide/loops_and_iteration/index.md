@@ -361,7 +361,7 @@ for (const i of arr) {
 // Logs: 3 5 7
 ```
 
-`for...of` および `for...in` 文は、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)でも使用することができます。例えば、 {{jsxref("Object.entries()")}} を使用して、オブジェクトのキーと値を同時に反復処理することができます。
+`for...of` および `for...in` 文は、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でも使用することができます。例えば、 {{jsxref("Object.entries()")}} を使用して、オブジェクトのキーと値を同時に反復処理することができます。
 
 ```js
 const obj = { foo: 1, bar: 2 };

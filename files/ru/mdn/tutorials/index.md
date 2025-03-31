@@ -9,7 +9,7 @@ slug: MDN/Tutorials
 
 ### Вводный уровень
 
-- [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)
+- [Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : Что такое HTML, что он делает, его краткая история, и что представляет собой структура HTML документа. В последующих статьях мы подробнее рассмотрим отдельные части HTML.
 - [Базовая структура веб-страницы](https://reference.sitepoint.com/html/page-structure) (SitePoint)
   - : Узнайте как HTML элементы сочетаются в общую картину.
@@ -20,7 +20,7 @@ slug: MDN/Tutorials
 
 ### Продвинутый уровень
 
-- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
   - : Оптимизация веб-страниц, для большей адаптивности сайта и снижения нагрузки на веб-сервера и подключение к Интернету
 - [HTML5 Tutorials](https://www.html5rocks.com/tutorials/) (HTML5 Rocks)
   - : Совершите экскурсию в код, который использует возможности HTML5.
@@ -37,18 +37,18 @@ slug: MDN/Tutorials
 
 ### Вводный уровень
 
-- **[JavaScript First Steps](/ru/docs/Learn/JavaScript/First_steps)**
-  - : JavaScript руководство, написанное как часть MDN [Learning Area](/ru/docs/Learn).
+- **[JavaScript First Steps](/ru/docs/conflicting/Learn_web_development/Core/Scripting)**
+  - : JavaScript руководство, написанное как часть MDN [Learning Area](/ru/docs/Learn_web_development).
 - [Codecademy](https://www.codecademy.com/) (Codecademy)
   - : Codecademy это простой способ изучить JavaScript. Он интерактивный, и вы можете делать это вместе с друзьями
-- [Getting Started with JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Getting Started with JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : Что такое JavaScript и как он может пригодиться вам?
 - [JavaScript Best Practices](https://dev.opera.com/articles/view/javascript-best-practices/) (WebPlatform.org)
   - : Узнайте о некоторых из очевидных (и не очень очевидных) лучших практиках для написания кода на JavaScript.
 
 ### Средний уровень
 
-- [A Re-Introduction to JavaScript](/ru/docs/Web/JavaScript/Language_overview)
+- [A Re-Introduction to JavaScript](/ru/docs/Web/JavaScript/Guide/Language_overview)
   - : Повторение языка программирования JavaScript для разработчиков среднего уровня.
 - [Eloquent JavaScript](https://eloquentjavascript.net/contents.html)
   - : Полное руководство по "средним" и "продвинутым" методикам JavaScript.
@@ -56,7 +56,7 @@ slug: MDN/Tutorials
   - : Введение в основы шаблонов проектирования JavaScript.
 - [The JavaScript Programming Language](http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/) (YUI Blog)
   - : Douglas Crockford исследует язык, какой он есть сегодня, и как он пришёл, чтобы быть.
-- [Introduction to Object-Oriented JavaScript](/ru/docs/Learn/JavaScript/Objects)
+- [Introduction to Object-Oriented JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : Узнайте об ООП в JavaScript.
 - **[Speaking JavaScript](http://speakingjs.com/es5/) (Dr. Axel Rauschmayer)**
   - : Для тех программистов, кто хочет быстро и хорошо выучить JavaScript, а так же для тех, кто хочет углубить свои навыки или же изучить какие-то специфические темы.
@@ -92,7 +92,7 @@ slug: MDN/Tutorials
 
 ### Вводный уровень
 
-- [CSS Getting Started](/ru/docs/Learn/CSS/First_steps)
+- [CSS Getting Started](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : Этот учебник познакомит вас с каскадными таблицами стилей (CSS). Он проведёт вас через основные особенности CSS и предложит практические примеры, которые можно попробовать на вашем компьютере.
 - [CSS Selector Classes](https://en.wikiversity.org/wiki/Web_Design/CSS_Classes) (Wikiversity)
   - : Что такое классы в CSS?
@@ -100,9 +100,9 @@ slug: MDN/Tutorials
   - : Использование CSS из внешних источников.
 - [Adding a Touch of Style](https://www.w3.org/MarkUp/Guide/Style) (W3C)
   - : Краткое руководство для начинающих по стилизации веб-страниц с помощью CSS.
-- [Common CSS Questions](/ru/docs/Learn/CSS/Howto/CSS_FAQ)
+- [Common CSS Questions](/ru/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ)
   - : Общие вопросы и ответы для начинающих.
-- [CSS Selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+- [CSS Selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
   - : Введение в CSS селекторы.
 
 ### Средний уровень

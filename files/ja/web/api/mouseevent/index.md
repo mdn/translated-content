@@ -35,9 +35,9 @@ _このインターフェイスは、親インターフェイスである {{domx
 - {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに <kbd>alt</kbd> キーが押下されていれば `true` を返します。
 - {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
-  - : マウスイベントが発行されたときに押下されたボタンの番号 (もしあれば) です。
+  - : マウスイベントが発行されたときに押されたまたは離されたボタンの番号です。(関連するイベントのみ)
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
-  - : マウスイベントが発行されたときに離されていたボタンの番号 (もしあれば) です。
+  - : マウスイベントが発行されたときに押されていたボタンの番号 (もしあれば) です。
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
   - : ローカル (DOM コンテンツ) 座標における、マウスポインターの X 座標です。
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}

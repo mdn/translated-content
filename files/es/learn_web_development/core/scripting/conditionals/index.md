@@ -10,9 +10,9 @@ original_slug: Learn/JavaScript/Building_blocks/conditionals
 
 En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si el el numero de vidas del jugador es 0, entonces se termina el juego. En una aplicación del clima, si se observa en la mañana, se despliega una gráfica del amanecer; muestra estrellas y una luna si es de noche. En este artículo, exploraremos cómo las llamadas declaraciones condicionales funcionan en JavaScript.
 
-| Prerequisitos: | Conocimientos básicos de informática, básico entendimiento de HTML y CSS, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps). |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:      | Entender como se usan las extructuras condicionales en JavaScript.                                                                            |
+| Prerequisitos: | Conocimientos básicos de informática, básico entendimiento de HTML y CSS, [JavaScript primeros pasos](/es/docs/conflicting/Learn_web_development/Core/Scripting). |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo:      | Entender como se usan las extructuras condicionales en JavaScript.                                                                                                |
 
 ## Puedes hacerlo en una condición..!
 
@@ -41,7 +41,7 @@ if (condición) {
 Aquí tenemos:
 
 1. La palabra clave `if` seguida de unos paréntesis.
-2. Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/es/docs/Learn/JavaScript/First_steps/Math#comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
+2. Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/es/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
 3. Un conjunto de llaves, en las cuales tenemos algún código — puede ser cualquier código que deseemos, código que se ejecutará sólamente si la condición retorna `true`.
 4. La palabra clave `else`.
 5. Otro conjunto de llaves, dentro de las cuales tendremos otro código — puede ser cualquier código que deseemos, y sólo se ejecutará si la condición no es `true`.
@@ -146,7 +146,7 @@ function establecerClima() {
 
 ### Una nota en los operadores de comparación
 
-Los operadores de comparación son usados para probar las condiciones dentro de nuestra declaración condicional. Vimos estos operadores en el artículo [Matématica básica en JavaScript — Números y operadores](/es/docs/Learn/JavaScript/First_steps/Math#comparison_operators). Nuestras opciones son:
+Los operadores de comparación son usados para probar las condiciones dentro de nuestra declaración condicional. Vimos estos operadores en el artículo [Matématica básica en JavaScript — Números y operadores](/es/docs/Learn_web_development/Core/Scripting/Math#comparison_operators). Nuestras opciones son:
 
 - `===` y `!==` — prueba si un valor es exactamente igual a otro, o sino es indentico a otro valor.
 - `<` y `>` — prueba si un valor es menor o mayor que otro.
@@ -791,11 +791,11 @@ textarea.onkeyup = function () {
 
 ## Conclusión
 
-¡Y eso es todo lo que necesitas saber sobre estructuras condicionales en Javascript ahora mismo! Estoy seguro que habrás entendido estos conceptos y trabajado en los ejemplos con facilidad; si hay algo que no entendiste, sientete libre de repasar este artículo de nuevo, o [contáctanos](/es/docs/Learn#contact_us) para solicitar ayuda.
+¡Y eso es todo lo que necesitas saber sobre estructuras condicionales en Javascript ahora mismo! Estoy seguro que habrás entendido estos conceptos y trabajado en los ejemplos con facilidad; si hay algo que no entendiste, sientete libre de repasar este artículo de nuevo, o [contáctanos](/es/docs/Learn_web_development#contact_us) para solicitar ayuda.
 
 ## Revisa también
 
-- [Operadores de comparación](/es/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [Operadores de comparación](/es/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)
 - [Declaraciones condicionales en detalle](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [Referencia if...else](/es/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Referencia de operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

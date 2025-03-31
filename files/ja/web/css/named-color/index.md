@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<named-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 `red`, `blue`, `black`, `lightseagreen` のような色の名前です。文法的には、 `<named-color>` は [`<ident>`](/ja/docs/Web/CSS/ident) の一種です。
+**`<named-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 `red`, `blue`, `black`, `lightseagreen` のような色の名前です。文法的には、 `<named-color>` は [`<ident>`](/ja/docs/Web/CSS/ident) の一種です。
 
 `<named-color>` 値は [`<color>`](/ja/docs/Web/CSS/color_value) が使用できる場所ならどこでも使用できます。
 

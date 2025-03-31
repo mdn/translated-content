@@ -64,7 +64,7 @@ Emscripten SDK를 설치하기 위해, 아래 설명을 참고하세요.
 이제 WebAssembly를 지원하는 브라우저에서 `hello.html`을 로드해야합니다. Firefox 52, Chrome 57, Edge 57, Opera 44에서 기본적으로 활성화됩니다.
 
 > [!NOTE]
-> 생성된 HTML 파일 (`hello.html`) 을 로컬 하드 드라이브(예: `file://your_path/hello.html`)에서 직접 열려고 하면 오류가 발생합니다(`Wasm의 동기, 비동기 가져오기가 모두 실패했습니다`라는 메시지가 표시됩니다). HTTP 서버(`http://`)로 HTML 파일을 실행해야 합니다. [로컬 테스팅 서버를 설정하는 방법](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)을 참고하세요.
+> 생성된 HTML 파일 (`hello.html`) 을 로컬 하드 드라이브(예: `file://your_path/hello.html`)에서 직접 열려고 하면 오류가 발생합니다(`Wasm의 동기, 비동기 가져오기가 모두 실패했습니다`라는 메시지가 표시됩니다). HTTP 서버(`http://`)로 HTML 파일을 실행해야 합니다. [로컬 테스팅 서버를 설정하는 방법](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)을 참고하세요.
 
 모든 것이 계획대로 작동했다면, Emscripten 콘솔의 "Hello world" 출력이 웹 페이지와 브라우저의 JavaScript 콘솔에 나타나야 합니다. 축하합니다. WebAssembly로 C를 컴파일하고 브라우저에서 실행했습니다!
 ![image](helloworld.png)

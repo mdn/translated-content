@@ -134,7 +134,7 @@ background-size: contain;
 
 与上文所述的 `<img>` 方法一样，使用 CSS 背景图片插入 SVG 意味着 SVG 无法使用 JavaScript 进行操作，并且同样受到相同的 CSS 限制。
 
-如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，[这篇文章](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started#关于_web_服务器上_.svgz_文件的小提示)将为你指出正确方向。
+如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，[这篇文章](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#关于_web_服务器上_.svgz_文件的小提示)将为你指出正确方向。
 
 ### 如何在 HTML 中引入 SVG 代码
 
@@ -149,7 +149,7 @@ background-size: contain;
 #### 优点
 
 - 将 SVG 内联会减少 HTTP 请求，可以减少加载时间。
-- 你可以为 SVG 元素分配 `class` 和 `id`，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，你可以使用任何 [SVG 外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation_attributes) 作为 CSS 属性。
+- 你可以为 SVG 元素分配 `class` 和 `id`，并使用 CSS 修改样式，无论是在 SVG 中，还是 HTML 文档中的 CSS 样式规则。实际上，你可以使用任何 [SVG 外观属性](/zh-CN/docs/Web/SVG/Reference/Attribute#presentation_attributes) 作为 CSS 属性。
 - 内联 SVG 是唯一可以让你在 SVG 图像上使用 CSS 交互（如 `:focus`）和 CSS 动画的方法（即使在常规样式表中）。
 - 你可以通过将 SVG 标记包在 {{htmlelement("a")}} 元素中，使其成为超链接。
 
@@ -181,7 +181,7 @@ background-size: contain;
 
 ## 动手学习：使用 SVG
 
-在本动手学习部分中，我们希望你能够体验一下 SVG 的乐趣。在下面的*输入*部分，你会看到我们已经提供了一些样例供你使用。你还可以访问 [SVG 元素参考](/zh-CN/docs/Web/SVG/Element)，了解更多 SVG 可以把玩的细节，当然也可以尝试一下。本部分都是为了锻炼你的研究技巧，并且有一些乐趣。
+在本动手学习部分中，我们希望你能够体验一下 SVG 的乐趣。在下面的*输入*部分，你会看到我们已经提供了一些样例供你使用。你还可以访问 [SVG 元素参考](/zh-CN/docs/Web/SVG/Reference/Element)，了解更多 SVG 可以把玩的细节，当然也可以尝试一下。本部分都是为了锻炼你的研究技巧，并且有一些乐趣。
 
 如果你遇到了困难，无法使你的代码工作，你可以随时使用*重置*按钮进行重置。
 
@@ -326,7 +326,7 @@ textarea.onkeyup = function () {
 
 ## 参见
 
-- MDN [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started)
+- MDN [SVG 教程](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
 - [Sara Soueidan 的响应式 SVG 图像教程](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [SVG 在无障碍方面的好处](https://www.w3.org/TR/SVG-access/)
 - [如何缩放 SVG](https://css-tricks.com/scale-svg/)（它不像位图那么简单！）

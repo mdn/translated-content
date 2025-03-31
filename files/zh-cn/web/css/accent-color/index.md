@@ -7,7 +7,49 @@ slug: Web/CSS/accent-color
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`accent-color`** 为某些元素所生成的用户界面控件设置了{{Glossary("accent", "强调色")}}。
 
-{{EmbedInteractiveExample("pages/css/accent-color.html")}}
+{{InteractiveExample("CSS Demo: accent-color")}}
+
+```css interactive-example-choice
+accent-color: red;
+```
+
+```css interactive-example-choice
+accent-color: #74992e;
+```
+
+```css interactive-example-choice
+accent-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+accent-color: hsl(250, 100%, 34%);
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <input checked="" id="example-element" type="checkbox" />
+    <label for="example-element" id="example-label">Example Label</label>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container > div {
+  display: flex;
+  align-items: center;
+}
+
+#example-element {
+  width: 40px;
+  height: 40px;
+}
+
+#example-label {
+  margin-left: 10px;
+  font-size: x-large;
+}
+```
 
 支持 `accent-color` 属性的浏览器目前将其应用于下列 HTML 元素：
 

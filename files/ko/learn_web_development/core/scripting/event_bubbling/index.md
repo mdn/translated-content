@@ -396,7 +396,7 @@ button.addEventListener("click", handleClick);
 
 ## 스킬 테스트!
 
-이 문서의 마지막까지 왔습니다. 그런데 가장 중요한 정보를 기억하고 있나요? 계속하기 전에 이 정보를 기억했는지 확인하려면 [스킬 테스트: 이벤트](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events)를 참조하세요.
+이 문서의 마지막까지 왔습니다. 그런데 가장 중요한 정보를 기억하고 있나요? 계속하기 전에 이 정보를 기억했는지 확인하려면 [스킬 테스트: 이벤트](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events)를 참조하세요.
 
 ## 요약
 

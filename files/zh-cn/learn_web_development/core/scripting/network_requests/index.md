@@ -181,7 +181,7 @@ fetch("products.json")
 
 在此函数中，我们：
 
-- 检查服务器是否返回错误（例如 [`404 Not Found`](/zh-CN/docs/Web/HTTP/Status/404)）。如果返回了错误，我们抛出一个错误。
+- 检查服务器是否返回错误（例如 [`404 Not Found`](/zh-CN/docs/Web/HTTP/Reference/Status/404)）。如果返回了错误，我们抛出一个错误。
 - 对响应调用 {{domxref("Response.json","json()")}}。它会将数据检索为 [JSON 对象](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON)。然后我们返回 `response.json()` 返回的 promise。
 
 接着，我们将一个函数传递给返回的 Promise 的 `then()` 方法。该函数会被传入一个包含 JSON 格式的响应数据的对象，我们将这个对象传递给 `initialize()` 函数。该函数会开始在用户界面中显示所有产品的过程。
@@ -259,7 +259,7 @@ try {
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [使用 JSON 数据](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON)
-- [HTTP 概述](/zh-CN/docs/Web/HTTP/Overview)
+- [HTTP 概述](/zh-CN/docs/Web/HTTP/Guides/Overview)
 - [服务器端网页编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

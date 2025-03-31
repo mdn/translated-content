@@ -12,7 +12,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 ### セキュリティ
 
 - Mixed content のブロック。Firefox はセキュアな (https) ページでセキュアでない (http) リソースを読み込みません ([Firefox バグ 834836](https://bugzil.la/834836))。
-- [CSP](/ja/docs/Web/HTTP/CSP) 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
+- [CSP](/ja/docs/Web/HTTP/Guides/CSP) 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
 
 ### 開発者ツール
 

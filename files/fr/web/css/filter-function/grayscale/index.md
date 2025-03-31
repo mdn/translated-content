@@ -7,7 +7,33 @@ slug: Web/CSS/filter-function/grayscale
 
 La fonction CSS **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
-{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}
+{{InteractiveExample("CSS Demo: grayscale()")}}
+
+```css interactive-example-choice
+filter: grayscale(0);
+```
+
+```css interactive-example-choice
+filter: grayscale(0.2);
+```
+
+```css interactive-example-choice
+filter: grayscale(60%);
+```
+
+```css interactive-example-choice
+filter: grayscale(1);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntaxe
 
@@ -41,12 +67,12 @@ grayscale(100%)  /* Uniquement en niveaux de gris */
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
-  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
-  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
-  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
-  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
-  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
-  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
-  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
-  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)
+  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
+  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
+  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
+  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
+  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
+  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
+  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
+  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
+  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)

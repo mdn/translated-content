@@ -94,7 +94,7 @@ slug: Web/HTML/Element/picture
 
 ### type 屬性
 
-`type` 屬性為 {{HTMLElement("source")}} 元素中 `srcset` 屬性的資源 URL 指定 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)。如果 user agent 不支援該類型的話，此 {{HTMLElement("source")}} 元素會被略過。
+`type` 屬性為 {{HTMLElement("source")}} 元素中 `srcset` 屬性的資源 URL 指定 [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)。如果 user agent 不支援該類型的話，此 {{HTMLElement("source")}} 元素會被略過。
 
 ```html
 <picture>

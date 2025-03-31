@@ -8,7 +8,7 @@ slug: Web/Security/Subresource_Integrity
 **子资源完整性**（Subresource Integrity，SRI）是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的散列值是否和你提供的散列值一样来判断资源是否被篡改。
 
 > [!NOTE]
-> 对于从嵌入文件以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
+> 对于从嵌入文件以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
 
 ## SRI 如何工作
 
@@ -77,7 +77,7 @@ pause
 
 ## 跨源资源共享和子资源完整性
 
-对于从嵌入文档以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。因此，资源必须使用 [`Access-Control-Allow-Origin`](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) 标头来提供，以允许资源与请求方共享；例如：
+对于从嵌入文档以外的来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。因此，资源必须使用 [`Access-Control-Allow-Origin`](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) 标头来提供，以允许资源与请求方共享；例如：
 
 ```http
 Access-Control-Allow-Origin: *
@@ -107,7 +107,7 @@ Access-Control-Allow-Origin: *
 
 1. 当浏览器在 {{HTMLElement("script")}} 或者 {{HTMLElement("link")}} 标签中遇到 `integrity` 属性之后，会在执行脚本或者应用样式表之前对比所加载文件的散列值和期望的散列值。
 
-   对于从其他来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
+   对于从其他来源提供的资源的子资源完整性验证，浏览器还使用[跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)检查资源，以确保提供资源的来源允许它与请求来源共享。
 
 2. 如果脚本或样式表不符合其相关的 `integrity` 值，浏览器必须拒绝执行该脚本或拒绝应用该样式表，并且必须返回一个网络错误，表明该脚本或样式表的获取失败。
 
@@ -121,7 +121,7 @@ Access-Control-Allow-Origin: *
 
 ## 相关资料
 
-- [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)
+- [内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)
 - HTTP 标头 {{httpheader("Content-Security-Policy")}}
 - [一个不能对你进行 XSS 的 CDN：使用 SRI](https://frederik-braun.com/using-subresource-integrity.html)
 - [来自 W3C 的 SRI 测试](https://w3c-test.org/subresource-integrity/subresource-integrity.html)

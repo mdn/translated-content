@@ -76,5 +76,5 @@ fetch('simple.wasm').then(response =>
 ## Ver también
 
 - [Vista General de WebAssembly](/es/docs/WebAssembly)
-- [Conceptos de WebAssembly](/es/docs/WebAssembly/Concepts)
+- [Conceptos de WebAssembly](/es/docs/WebAssembly/Guides/Concepts)
 - [Uso de la API de JavaScript de WebAssembly](/es/docs/WebAssembly/Using_the_JavaScript_API)

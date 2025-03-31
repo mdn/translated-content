@@ -7,7 +7,7 @@ slug: Web/Tutorials
 
 ## 웹입문자를 위하여
 
-- [시작해 볼까요?](/ko/docs/Learn/Getting_started_with_the_web)
+- [시작해 볼까요?](/ko/docs/Learn_web_development/Getting_started/Your_first_website)
   - : 시작해 볼까요? 는 웹개발의 실제를 소개하는 간결한 안내서입니다. 간단한 코딩을 통해 자신만의 웹페이지를 구축할 수 있는 도구들을 준비할 수 있도록 돕습니다.
 
 <table class="topicpage-table">

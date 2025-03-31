@@ -1,7 +1,6 @@
 ---
 title: "Django Tutorial Part 9: Working with forms"
 slug: Learn_web_development/Extensions/Server-side/Django/Forms
-original_slug: Learn/Server-side/Django/Forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}

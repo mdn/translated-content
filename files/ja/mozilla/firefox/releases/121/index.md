@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `<iframe>` 要素の [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading) をサポートしました。特定の `<iframe>` 要素が、表示されたときに限り読み込まれるべきであると開発者が示すことができます。これはページを読み込むときに取得しなければならないリソースを削減する (一部の `<iframe>` 要素を取得する必要がない) ことで、最初の読み込み時間を短縮できます。
+- `<iframe>` 要素の [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading) をサポートしました。特定の `<iframe>` 要素が、表示されたときに限り読み込まれるべきであると開発者が示すことができます。これはページを読み込むときに取得しなければならないリソースを削減する (一部の `<iframe>` 要素を取得する必要がない) ことで、最初の読み込み時間を短縮できます。
   このヒントは [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素の [`loading`](/ja/docs/Web/HTML/Element/iframe#loading) 属性か、JavaScript で {{domxref("HTMLIFrameElement.loading")}} を使用して提供できます ([Firefox bug 1622090](https://bugzil.la/1622090))。
 
 ### CSS

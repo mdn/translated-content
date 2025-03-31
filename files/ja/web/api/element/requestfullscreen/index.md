@@ -51,7 +51,7 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
     - その要素を含む文書が完全にアクティブでない、つまり、現在のアクティブ文書でない。
     - その要素が文書内に含まれていない。
-    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
+    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
     - 要素とその文書が同じノードである。
     - この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)であり、既に {{domxref("HTMLElement.showPopover()")}} で表示されている。
 

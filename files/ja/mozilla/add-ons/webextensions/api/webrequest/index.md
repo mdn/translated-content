@@ -11,7 +11,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 ![](webRequest-flow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
 
 `onErrorOccurred` を除くすべてのイベントは `addListener()` への次の 3 つの引数を取ります:
 

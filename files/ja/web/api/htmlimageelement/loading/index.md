@@ -85,5 +85,5 @@ function addImageToList(url) {
 ## 関連情報
 
 - {{HTMLElement("img")}} 要素
-- [ウェブパフォーマンス](/ja/docs/Learn/Performance)（MDN 学習領域）
-- [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading)（MDN ウェブパフォーマンスガイド）
+- [ウェブパフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance)（MDN 学習領域）
+- [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading)（MDN ウェブパフォーマンスガイド）

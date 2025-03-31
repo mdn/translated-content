@@ -52,7 +52,7 @@ Puede ver un ejemplo completo de como podría ser en la sección [Examples](#exa
 
 Hidden inputs también son usados para almacenar y enviar token de seguirdad o secretos (_secrets)_, con el propósito de mejorar la seguridad del sitio web. La idea básica es que si un usuario esta rellenando un formulario con información sensible, como un formulario en un sitio web bancario para transferir dinero a otra cuenta, el secreto que proporciona demostraría que son quienes dicen ser y que estan usando el formulario correcto para enviar la solicitud de transferencia.
 
-Esto evitaría que un usuario malicioso creara un formulario falso, fingiendo ser un banco y enviando el formulario por correo electrónico a usuarios desprevenidos para engañarlos y que transfieran dinero al lugar equivocado. Este tipo de ataque es llamado como [Cross Site Request Forgery (CSRF)](</es/docs/Learn/Server-side/First_steps/Website_security#Cross_Site_Request_Forgery_(CSRF)>); prácticamente cualquier marco de trabajo que goce de buena reputación utiliza secretos ocultos para evitar tales ataques.
+Esto evitaría que un usuario malicioso creara un formulario falso, fingiendo ser un banco y enviando el formulario por correo electrónico a usuarios desprevenidos para engañarlos y que transfieran dinero al lugar equivocado. Este tipo de ataque es llamado como [Cross Site Request Forgery (CSRF)](</es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#Cross_Site_Request_Forgery_(CSRF)>); prácticamente cualquier marco de trabajo que goce de buena reputación utiliza secretos ocultos para evitar tales ataques.
 
 > [!NOTE]
 > Como se menciono anteriormenre, colocando el secreto en un hidden input no lo hace inherentemente seguro. La composición y codificación de la llave haría eso. El valor del hidden input es que mantiene el secreto asociado con la información y automáticamente lo incluye cuando el formulario es enviado al servidor. Se necesita usar secretos bien diseñados para realmente mantener seguro el sitio web.
@@ -151,5 +151,5 @@ A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen
 
 ## Ver también
 
-- [HTML forms guide](/es/docs/Learn/Forms)
+- [HTML forms guide](/es/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} y la interfaz {{domxref("HTMLInputElement")}} en la que se basa

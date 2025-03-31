@@ -146,7 +146,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 ### insertText の使用
 
-この例では、2 つの非常に基本的な HTML エディターを示しています。{{HTMLElement("textarea")}} 要素を用いたものと、 {{HTMLElement("pre")}} 要素に [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性を設定したものを用いたものです。
+この例では、2 つの非常に基本的な HTML エディターを示しています。{{HTMLElement("textarea")}} 要素を用いたものと、 {{HTMLElement("pre")}} 要素に [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を設定したものを用いたものです。
 
 "Bold" または "Italic" ボタンをクリックすると、要素に適切なタグが挿入され、`insertText` を使用して編集履歴が保存されるので、ユーザーは操作を元に戻すことができます。
 

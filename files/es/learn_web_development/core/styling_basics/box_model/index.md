@@ -66,14 +66,14 @@ El tipo de caja que se aplica a un elemento está definido por los valores de pr
 
 En este punto, será mejor que también expliquemos los tipos de visualización **interna** y **externa**. Como se mencionó anteriormente, las cajas en CSS tienen un tipo de visualización _externa_, que define si se trata de una caja en bloque o en línea.
 
-Sin embargo, las cajas también tienen un tipo de visualización _interna_, que determina cómo se disponen los elementos dentro de esa caja. De forma predeterminada, los elementos dentro de una caja se presentan en **[flujo normal](/es/docs/Learn/CSS/CSS_layout/Normal_Flow)**, lo que significa que se comportan como otros elementos de tipo en bloque o en línea (como se explicó anteriormente).
+Sin embargo, las cajas también tienen un tipo de visualización _interna_, que determina cómo se disponen los elementos dentro de esa caja. De forma predeterminada, los elementos dentro de una caja se presentan en **[flujo normal](/es/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)**, lo que significa que se comportan como otros elementos de tipo en bloque o en línea (como se explicó anteriormente).
 
-Sin embargo, podemos cambiar el tipo de visualización interna utilizando valores de `display`, como `flex`. Si en un elemento establecemos `display: flex;`, el tipo de visualización externa es de tipo bloque (`block`), pero el tipo de visualización interna cambia a flexible (`flex`). Cualquier elemento que sea hijo directo de esta caja pasará a comportarse como un elemento de tipo flex, de acuerdo con las reglas que se establecen en la especificación de [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox), tema que veremos más adelante.
+Sin embargo, podemos cambiar el tipo de visualización interna utilizando valores de `display`, como `flex`. Si en un elemento establecemos `display: flex;`, el tipo de visualización externa es de tipo bloque (`block`), pero el tipo de visualización interna cambia a flexible (`flex`). Cualquier elemento que sea hijo directo de esta caja pasará a comportarse como un elemento de tipo flex, de acuerdo con las reglas que se establecen en la especificación de [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox), tema que veremos más adelante.
 
 > [!NOTE]
 > Para obtener más información acerca de los valores de visualización y el modo como funcionan las cajas en las disposiciones en bloque y en línea, echa un vistazo a la guía [Disposiciones en bloque y en línea](/es/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) de MDN.
 
-A medida que vayas aprendiendo más detalles sobre el diseño CSS, te irás encontrando con el valor `flex` y con otros valores internos que puedan presentar tus cajas, por ejemplo, [`grid`](/es/docs/Learn/CSS/CSS_layout/Grids).
+A medida que vayas aprendiendo más detalles sobre el diseño CSS, te irás encontrando con el valor `flex` y con otros valores internos que puedan presentar tus cajas, por ejemplo, [`grid`](/es/docs/Learn_web_development/Core/CSS_layout/Grids).
 
 Sin embargo, la disposición en bloque y en línea es la forma predeterminada cómo se comportan las cosas en la web; como ya dijimos, a veces esto se conoce como _flujo normal_, porque nuestras cajas se dispondrán en bloque o en línea, si no reciben ninguna otra instrucción.
 
@@ -184,7 +184,7 @@ En el ejemplo siguiente puedes ver dos cajas. Ambas tienen una clase `.box`, lo 
 
 ### Utilizar las DevTools del navegador para ver el modelo de cajas
 
-Las [herramientas del desarrollador de tu navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.
+Las [herramientas del desarrollador de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.
 
 ![Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools](box-model-devtools.png)
 
@@ -317,6 +317,6 @@ Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más
 
 Eso es lo que hay que entender sobre el modelo de cajas. Es posible que en el futuro desees volver a este artículo si alguna vez te lías con los tamaños de las cajas en la disposición de tu página web.
 
-En el artículo siguiente veremos cómo se pueden usar los [fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) para hacer que tus simples cajas presenten un aspecto más interesante.
+En el artículo siguiente veremos cómo se pueden usar los [fondos y bordes](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) para hacer que tus simples cajas presenten un aspecto más interesante.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
