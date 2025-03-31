@@ -50,7 +50,7 @@ copyWithin(target, start, end)
     - 若 `end >= array.length` 或未提供 `end`，則使用 `array.length`，使其複製至結尾。
     - 若 `end` 所對應的位置在 `start` 所對應的位置之前或相同，則不會複製任何內容。
 
-### 返回值
+### 回傳值
 
 被修改的陣列。
 
