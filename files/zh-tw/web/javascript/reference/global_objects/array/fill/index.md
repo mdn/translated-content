@@ -2,7 +2,7 @@
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 8166ab356cccb30af5e0ad912815d19100249e17
 ---
 
 {{JSRef}}
@@ -47,10 +47,10 @@ fill(value, start, end)
   - : 從零開始的索引，指定填充的結束位置，會[轉換為整數](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#整數轉換)。`fill()` 會填充到 `end` 之前的位置（不包含 `end`）。
     - 負數索引表示從陣列末尾開始計算——如果 `-array.length <= end < 0`，則會使用 `end + array.length`。
     - 若 `end < -array.length`，則會使用 `0`。
-    - 若 `end >= array.length` 或省略 `end`，則會使用 `array.length`，使所有元素都被填充。
+    - 若 `end >= array.length`、`end` 省略或 `undefined`，則會使用 `array.length`，使所有元素都被填充。
     - 若 `end` 指定的位置早於或等於 `start` 指定的位置，則不會填充任何元素。
 
-### 返回值
+### 回傳值
 
 修改後的陣列，填充了 `value`。
 
@@ -63,11 +63,11 @@ fill(value, start, end)
 `fill()` 方法是[通用的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)，它只要求 `this` 物件具有 `length` 屬性。雖然字串具有類似陣列的特性，但因為字串是不可變的，無法對其使用此方法。
 
 > [!NOTE]
-> 如果對長度為 0 的空陣列 (`length = 0`) 使用 `Array.prototype.fill()`，則不會產生任何變化，因為陣列內沒有任何元素可供修改。若要在宣告陣列時使用 `Array.prototype.fill()`，請確保陣列的 `length` 為非零值。[參見範例](#使用_fill_來填充空陣列)。
+> 如果對長度為 0 的空陣列（`length = 0`）使用 `Array.prototype.fill()`，則不會產生任何變化，因為陣列內沒有任何元素可供修改。若要在宣告陣列時使用 `Array.prototype.fill()`，請確保陣列的 `length` 為非零值。[參見範例](#使用_fill_來填充空陣列)。
 
 ## 範例
 
-### 使用 `fill()`
+### 使用 fill()
 
 ```js
 console.log([1, 2, 3].fill(4)); // [4, 4, 4]
@@ -85,7 +85,7 @@ const arr = Array(3).fill({}); // [{}, {}, {}]
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
 
-### 使用 `fill()` 建立全為 1 的矩陣
+### 使用 fill() 建立全為 1 的矩陣
 
 此範例展示如何建立一個全為 1 的矩陣，類似於 Octave 或 MATLAB 的 `ones()` 函式。
 
@@ -100,7 +100,7 @@ console.log(arr[1][0]); // 1
 console.log(arr[2][0]); // 1
 ```
 
-### 使用 `fill()` 來填充空陣列
+### 使用 fill() 來填充空陣列
 
 此範例展示如何填充一個陣列，使所有元素都設為特定值。`end` 參數不是必須的。
 
@@ -110,7 +110,7 @@ const tempGirls = Array(5).fill("girl", 0);
 
 請注意，該陣列最初是一個[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏陣列)，但 `fill()` 仍然能夠填充此陣列。
 
-### 在非陣列物件上調用 `fill()`
+### 在非陣列物件上調用 fill()
 
 `fill()` 方法會讀取 `this` 的 `length` 屬性，並將 `start` 到 `end` 之間的所有整數鍵屬性設定為 `value`。
 
