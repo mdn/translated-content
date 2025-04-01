@@ -20,7 +20,7 @@ JavaScript por sí solo es bastante compacto aunque muy flexible, y los desarrol
 - APIs de terceros, que permiten a los desarrolladores incorporar funcionalidades en sus sitios de otros proveedores de contenidos como Twitter o Facebook.
 - Marcos de trabajo y librerías de terceros que puedes aplicar a tu HTML para que puedas construir y publicar rápidamente sitios y aplicaciones.
 
-Ya que se supone que este artículo es solo una introducción ligera a JavaScript, la intención no es confundirte en esta etapa hablando en detalle sobre cuál es la diferencia entre el núcleo del lenguaje JavaScript y las diferentes herramientas listadas arriba. Puedes aprender todo eso en detalle más tarde, en el [Área de Aprendizaje en MDN](/es/docs/Learn/JavaScript), y en el resto de MDN.
+Ya que se supone que este artículo es solo una introducción ligera a JavaScript, la intención no es confundirte en esta etapa hablando en detalle sobre cuál es la diferencia entre el núcleo del lenguaje JavaScript y las diferentes herramientas listadas arriba. Puedes aprender todo eso en detalle más tarde, en el [Área de Aprendizaje en MDN](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792), y en el resto de MDN.
 
 Debajo se presentan algunos aspectos del núcleo del lenguaje y también jugarás con unas pocas características de la API del navegador. ¡Diviértete!
 
@@ -53,7 +53,7 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
 > [!NOTE]
 > La razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
 >
-> Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#estrategias_de_carga_de_scripts).
+> Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#estrategias_de_carga_de_scripts).
 
 ### ¿Qué ha ocurrido?
 
@@ -69,7 +69,7 @@ Después de eso, estableciste el valor de la propiedad {{domxref("Node.textConte
 Ahora se explicarán algunas de las funciones básicas del lenguaje JavaScript para que puedas comprender mejor cómo funciona todo. Mejor aún, estas características son comunes para todos los lenguajes de programación. Si puedes entender esos fundamentos, deberías ser capaz de comenzar a programar en casi cualquier cosa.
 
 > [!WARNING]
-> En este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+> En este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -89,7 +89,7 @@ let nombreDeLaVariable;
 > JavaScript distingue entre mayúsculas y minúsculas. `miVariable` es una variable distinta a `mivariable`. Si estás teniendo problemas en tu código, revisa las mayúsculas y minúsculas.
 
 > [!NOTE]
-> Para más detalles sobre la diferencia entre `var` y `let`, vea [Diferencia entre var y let](/es/docs/Learn/JavaScript/First_steps/Variables#diferencia_entre_var_y_let).
+> Para más detalles sobre la diferencia entre `var` y `let`, vea [Diferencia entre var y let](/es/docs/Learn_web_development/Core/Scripting/Variables#diferencia_entre_var_y_let).
 
 Tras declarar una variable, puedes asignarle un valor:
 
@@ -116,7 +116,7 @@ let nombreDeLaVariable = "Bob";
 nombreDeLaVariable = "Steve";
 ```
 
-Advierte que las variables tienen distintos [tipos de datos](/es/docs/Web/JavaScript/Data_structures):
+Advierte que las variables tienen distintos [tipos de datos](/es/docs/Web/JavaScript/Guide/Data_structures):
 
 <table>
   <thead>
@@ -483,7 +483,7 @@ Aquí solo has rozado la superficie de JavaScript. Si has disfrutado aprendiendo
 
 ## Ve también
 
-- [JavaScript](/es/docs/Learn/JavaScript)
+- [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)
   - : Sumérgete en JavaScript con mucho más detalle.
 - [Aprende JavaScript](https://learnjavascript.online/)
   - : ¡Este es un excelente material para los aspirantes a desarrolladores web! Aprende JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiadas por una evaluación automatizada. Las primeras 40 lecciones son gratis. El curso completo está disponible por un pequeño pago único (en inglés).

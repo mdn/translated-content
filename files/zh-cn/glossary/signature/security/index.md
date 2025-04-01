@@ -23,4 +23,4 @@ l10n:
 - 维基百科上的[数字签名](https://zh.wikipedia.org/wiki/數位簽章)
 - 相关术语：
   - {{glossary("Hash function", "散列函数")}}
-  - {{glossary("encryption", "加密")}}
+  - {{glossary("Encryption", "加密")}}

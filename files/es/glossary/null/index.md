@@ -13,7 +13,7 @@ En {{Glossary("JavaScript")}}, null es uno de los {{Glossary("Primitivo", "valor
 
 ### Referencia técnica
 
-- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
 - {{jsxref("null", "Referencia JavaScript para los valores null")}}
 
 ### Conocimientos generales
