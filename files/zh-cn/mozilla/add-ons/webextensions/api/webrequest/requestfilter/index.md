@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-描述应用于 webRequest 事件的过滤器。
+描述应用于 webRequest 事件的过滤器的对象。
 
 ## 类型
 
@@ -16,11 +16,11 @@ l10n:
 - `urls`
   - : `string` 的数组（`array`）。一个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组。只有目标与给定模式匹配的请求才会触发监听器。只有使用 HTTP 或 HTTPS 发出的请求才会触发事件，其他与模式匹配的协议（如 data: 和 file:）则不会触发事件。`view-source:` 请求可能会根据其内部 URL 进行匹配。
 - `types` {{optional_inline}}
-  - : `{{WebExtAPIRef('webRequest.ResourceType')}}` 的数组（`array`）。用于表示资源类型的列表（例如样式表、图像、脚本）。只有请求的资源类型是给定类型之一时，事件才会被触发。
+  - : {{WebExtAPIRef('webRequest.ResourceType')}} 的数组（`array`）。用于表示资源类型的列表（例如样式表、图像、脚本）。只有请求的资源类型是给定类型之一时，事件才会被触发。
 - `tabId` {{optional_inline}}
-  - : `integer`。只有来自具有此 ID 的{{WebExtAPIRef("tabs.Tab", "标签")}}的请求才会触发事件。
+  - : `integer`。只有来自具有此 ID 的{{WebExtAPIRef("tabs.Tab", "标签", "", 1)}}的请求才会触发事件。
 - `windowId` {{optional_inline}}
-  - : `integer`。只有来自具有此 ID 的{{WebExtAPIRef("windows.Window", "窗口")}}的请求才会触发事件。
+  - : `integer`。只有来自具有此 ID 的{{WebExtAPIRef("windows.Window", "窗口", "", 1)}}的请求才会触发事件。
 - `incognito` {{optional_inline}}
   - : `boolean`。若提供，则不匹配隐身状态（`true` 或 `false`）的请求将被过滤。
 
