@@ -33,7 +33,7 @@ entries()
 
 無。
 
-### 返回值
+### 回傳值
 
 一個新的[可迭代迭代器物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
