@@ -33,14 +33,14 @@ filter.disconnect()
 
 ## 示例
 
-该示例将在响应主体之前添加“前言文字”然后它断开连接，因此原有的响应主体将被正常加载：
+该示例将在响应主体之前添加“前言文字”。然后它将断开连接，因此原有的响应主体将被正常加载：
 
 ```js
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
   filter.onstart = (event) => {
-    console.log("开始接收数据");
+    console.log("开始");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("前言文字"));
     filter.disconnect();
