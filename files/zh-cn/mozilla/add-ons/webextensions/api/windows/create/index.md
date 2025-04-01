@@ -45,7 +45,7 @@ let creating = browser.windows.create(
     - `focused` {{optional_inline}}
       - : `boolean`。如果为 `true`，新窗口将获得焦点。如果为 `false`，新窗口将在后台打开，当前获得焦点的窗口将保持焦点。默认为 `true`。
     - `height` {{optional_inline}}
-      - : `integer`。新窗口的像素高度，包含框架。如果未指定，则默认使用自然高度。
+      - : `integer`。新窗口的像素高度，包含框架。如果未指定，则默认使用固有高度。
     - `incognito` {{optional_inline}}
       - : `boolean`。设置新窗口是否应为隐私窗口。请注意，如果指定了 `incognito` 和 `tabId`，则指定的标签页 ID 必须指向是隐私标签——你不能将非隐私标签页移动到隐私窗口中。
     - `left` {{optional_inline}}
@@ -63,7 +63,7 @@ let creating = browser.windows.create(
     - `url` {{optional_inline}}
       - : `string` 或其数组（`array`）。要在窗口中打开的 URL 或 URL 数组。完全限定 URL 必须包含方案（即 `http://www.google.com`，而不是 `www.google.com`）。相对 URL 将相对于扩展中的当前页面。默认为新标签页。
     - `width` {{optional_inline}}
-      - : `integer`。新窗口的宽度，包含框架。如果未指定，则默认使用自然宽度。
+      - : `integer`。新窗口的宽度，包含框架。如果未指定，则默认使用固有宽度。
 
 ### 返回值
 
