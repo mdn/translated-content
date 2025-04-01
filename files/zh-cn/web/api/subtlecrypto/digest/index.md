@@ -32,7 +32,7 @@ digest(algorithm, data)
 
 ## 支持的算法
 
-摘要算法（也称为[加密哈希函数](/zh-CN/docs/Glossary/Hash_function)）将任意长度的数据块转换为固定长度的输出（通常比输入短得多）。其在密码学中有多种应用。
+摘要算法（也称为{{glossary("Hash function", "哈希函数")}}）将任意长度的数据块转换为固定长度的输出（通常比输入短得多）。其在密码学中有多种应用。
 
 <table class="standard-table">
   <tbody>
