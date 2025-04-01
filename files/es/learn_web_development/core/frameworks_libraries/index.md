@@ -23,7 +23,7 @@ Después de esto, proveeremos algunos tutoriales que cubren los aspectos básico
 
 ## Prerrequisitos
 
-Antes de intentar aprender sobre los frameworks del lado del cliente, es recomendable que conozcamos los conceptos básicos de los principales lenguajes de la web: [HTML](/es/docs/Learn/HTML), [CSS](/es/docs/Learn/CSS), y —especialmente— [JavaScript](/es/docs/Learn/JavaScript).
+Antes de intentar aprender sobre los frameworks del lado del cliente, es recomendable que conozcamos los conceptos básicos de los principales lenguajes de la web: [HTML](/es/docs/Learn_web_development/Core/Structuring_content), [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1), y —especialmente— [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792).
 
 Como resultado, tu código será más consistente y profesional, por lo que podrás solucionar problemas con mayor confianza si comprende las características fundamentales de la plataforma web sobre las que se basan los frameworks.
 
@@ -39,11 +39,11 @@ Como resultado, tu código será más consistente y profesional, por lo que podr
 > [!NOTE]
 > Los tutoriales de React se probaron por última vez en mayo de 2020, con React/ReactDOM 16.13.1 y create-react-app 3.4.1.Si necesitas comparar tu código con nuestra versión, puedes encontrar una versión terminada de la muestra del código de la aplicación React en nuestro [repositorio todo-react](https://github.com/mdn/todo-react). Para una versión en vivo, consulta <https://mdn.github.io/todo-react-build/>.
 
-- [1. Primeros pasos en React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. Primeros pasos en React](/es/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : En este artículo conoceremos React. Descubriremos algunos detalles sobre su trasfondo y casos de uso, configuraremos una cadena básica de herramientas para React en nuestra computadora local, crearemos y jugaremos con una aplicación inicial sencilla, mientras aprendemos —durante el proceso— un poco acerca de cómo funciona React.
 - [2. Comenzando con nuestra lista de tareas de React](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - : Digamos que se nos ha encomendado la tarea de crear una prueba de concepto (Proof of Concept — PoC) en React: una aplicación que permita a los usuarios agregar, editar y eliminar tareas en las que se quiera trabajar, pero que también permita marcar las tareas como completadas sin eliminarlas. Este artículo te guiará en la organización de la estructura y los estilos básicos del componente App, de manera que esté listo para la definición e interactividad de componentes individuales, los cuales agregaremos más adelante.
-- [3. Basando nuestra aplicación React en componentes](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+- [3. Basando nuestra aplicación React en componentes](/es/docs/Learn_web_development/Core/Frameworks_libraries/React_components)
   - : Hasta este momento, nuestra aplicación no hace gran cosa. Antes de que podamos hacerla funcionar, tenemos que dividirla en componentes descriptivos y manejables. React no tiene reglas estrictas para lo que, se considera o no, un componente, ¡eso depende de ti! En este artículo, te mostraremos una forma raznoable de dividir nuestra aplicación en componentes.
 - [4. Interactividad en React: eventos y estado](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - : Habiendo elaborado nuestro plan de componentes, es hora de comenzar a actualizar nuestra aplicación, para que pase de ser una interfaz de usuario completamente estática a una que nos permita, realmente, interactuar y cambiar las cosas. Es eso mismo lo que haremos en este artículo, profundizando en los eventos y el estado a medida que avancemos.

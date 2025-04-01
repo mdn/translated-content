@@ -2,7 +2,7 @@
 title: "Function: prototype"
 slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
 ---
 
 {{JSRef}}

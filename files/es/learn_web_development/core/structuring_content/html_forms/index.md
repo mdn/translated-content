@@ -166,7 +166,7 @@ Debido a la forma en que funciona MDN, puede ingresar texto en los campos de ent
 Como dijimos anteriormente, el elemento {{htmlelement("form")}} actúa como el contenedor exterior del formulario, agrupando todos los controles del formulario dentro de él. Cuando se presiona el `<button>`, todos los datos representados por los controles del formulario se enviarán al servidor. El elemento `<form>` puede tener muchos atributos, pero los dos más importantes, que hemos incluido aquí, son los siguientes:
 
 - `action`: Contiene una ruta a la página a la que queremos enviar los datos del formulario enviados para que sean procesados. Más adelante, después de enviar el formulario, verá `/submit_page` incluido en la URL. También obtendrá una respuesta de error {{HTTPStatus("404")}} porque la página no existe en realidad, pero está bien por ahora.
-- `method`: Especifica el [método](/es/docs/Web/HTTP/Methods) de transmisión de datos que desea utilizar para enviar los datos del formulario al servidor. No se preocupe demasiado por esto por ahora; el valor `get` hace que los datos se envíen como parámetros adjuntos al final de la URL.
+- `method`: Especifica el [método](/es/docs/Web/HTTP/Reference/Methods) de transmisión de datos que desea utilizar para enviar los datos del formulario al servidor. No se preocupe demasiado por esto por ahora; el valor `get` hace que los datos se envíen como parámetros adjuntos al final de la URL.
 
 > [!CALLOUT]
 >

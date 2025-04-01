@@ -49,7 +49,7 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
   - [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)、[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)、[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)和[实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
+  - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)、[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)、[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)和[实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
   - [CSS 简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
