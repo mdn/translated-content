@@ -43,7 +43,7 @@ l10n:
 - {{domxref("PageSwapEvent")}}
   - : {{domxref("Window.pageswap_event", "pageswap")}} 事件的事件对象。在跨文档导航过程中，如果导航触发了视图过渡，它允许你从正在导航*来源*的文档操纵相关的视图过渡（提供对相关 {{domxref("ViewTransition")}} 对象的访问）。它还提供对导航类型以及当前和目标文档历史条目信息的访问。
 - {{domxref("Window")}} {{domxref("Window.pagereveal_event", "pagereveal")}} 事件
-  - : 当文档首次渲染时触发，无论是从网络加载新文档还是激活文档（从[后退/前进缓存](/zh-CN/docs/Glossary/bfcache)（bfcache）或 [prerender](/zh-CN/docs/Glossary/prerender)）。
+  - : 当文档首次渲染时触发，无论是从网络加载新文档还是激活文档（从[后退/前进缓存](/zh-CN/docs/Glossary/bfcache)（bfcache）或 [prerender](/zh-CN/docs/Glossary/Prerender)）。
 - {{domxref("Window")}} {{domxref("Window.pageswap_event", "pageswap")}} 事件
   - : 当文档因导航而即将卸载时触发。
 
