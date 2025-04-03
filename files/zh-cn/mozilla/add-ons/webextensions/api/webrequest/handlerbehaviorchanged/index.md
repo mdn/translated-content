@@ -16,9 +16,9 @@ l10n:
 - 扩展的模式被更新，并且不再允许某项资源资源。
 - 用户重新加载页面。
 
-因为页面将从内存缓存中重新加载，所以事件监听器可能不会再次被调用，并且尽管扩展的新策略不允许，某一请求仍将被加载。
+因为页面将从内存缓存中重新加载，所以事件监听器可能不会再次被调用。因而尽管扩展的新策略不允许某请求，该请求仍将被加载。
 
-`handlerBehaviorChanged()` 函数旨在解决此问题。它将刷新内存缓存，从而页面的重新加载会再次触发事件监听器。
+`handlerBehaviorChanged()` 函数旨在解决此问题。它将刷新内存缓存，这样页面的重新加载就会再次触发事件监听器。
 
 因为 `handlerBehaviorChanged()` 会刷新缓存，该操作可能比较昂贵且对性能有不良影响。webRequest 模块定义了一个只读属性 {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}：在 10 分钟内调用该函数超过此数字将不再有效果。
 
