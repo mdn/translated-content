@@ -36,7 +36,7 @@ let nome1 = valor1, nome2, /* ..., */ nomeN = valorN;
 ### Parâmetros
 
 - `nomeN`
-  - : O nome da variável a ser declarada. Deve ser um [identificador](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) Javascript válido ou uma [atribuição por desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring).
+  - : O nome da variável a ser declarada. Deve ser um [identificador](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) Javascript válido ou uma [atribuição por desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring).
 - `valorN` {{optional_inline}}
   - : Valor inicial da variável. Pode ser qualquer expressão válida. O valor padrão é `undefined`.
 
