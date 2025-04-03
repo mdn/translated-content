@@ -15,7 +15,7 @@ l10n:
 
 ## 类型
 
-该类型的取值是包含下列属性的对象：
+该类型的取值是一个对象。其包含以下属性：
 
 - `authCredentials` {{optional_inline}}
 
