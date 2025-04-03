@@ -32,7 +32,39 @@ box 值还支持 `border-radius` 值，这意味着你的页面中可以有带�
 
 在下面的示例中，我们有一个圆形的紫色项，它是一个带有高度、宽度和背景色的 {{htmlelement("div")}} 项。通过设置 `border-radius` 属性为 `border-radius: 50%` 属性，创建了一个圆形。由于元素具有外边距，你可以看到内容围绕圆形流动，并且应用了圆形的外边距。
 
-{{EmbedGHLiveSample("css-examples/shapes/box/margin-box.html", '100%', 800)}}
+```html live-sample___margin-box
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___margin-box
+body {
+  font: 1.2em sans-serif;
+}
+
+.shape {
+  background-color: rebeccapurple;
+  height: 80px;
+  width: 80px;
+  padding: 20px;
+  margin: 20px;
+  border: 10px solid black;
+  border-radius: 50%;
+  float: left;
+  shape-outside: margin-box;
+}
+```
+
+{{EmbedLiveSample("margin-box", "", "200px")}}
 
 ### border-box
 
@@ -40,19 +72,124 @@ box 值还支持 `border-radius` 值，这意味着你的页面中可以有带�
 
 在下面的示例中，你可以看到文本现在是如何遵循由边框创建的行的。改变边框大小，内容也会随之改变。
 
-{{EmbedGHLiveSample("css-examples/shapes/box/border-box.html", '100%', 800)}}
+```html hidden live-sample___border-box
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___border-box
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  width: 70%;
+}
+
+.shape {
+  background-color: rebeccapurple;
+  height: 80px;
+  width: 80px;
+  padding: 20px;
+  margin: 20px;
+  border: 10px solid black;
+  border-radius: 50%;
+  float: left;
+  shape-outside: border-box;
+}
+```
+
+{{EmbedLiveSample("border-box", "", "240px")}}
 
 ### padding-box
 
 `padding-box` 值定义由外边距边缘包围的形状。此形状遵循边框内部的所有常规边框半径形状规则。如果没有外边距，则 `padding-box` 与 `content-box` 相同。
 
-{{EmbedGHLiveSample("css-examples/shapes/box/padding-box.html", '100%', 800)}}
+```html hidden live-sample___padding-box
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___padding-box
+body {
+  font: 1.2em / 1.2 sans-serif;
+}
+.box {
+  width: 70%;
+}
+
+.shape {
+  background-color: rebeccapurple;
+  height: 80px;
+  width: 80px;
+  padding: 20px;
+  margin: 20px;
+  border: 10px solid black;
+  border-radius: 50%;
+  float: left;
+  shape-outside: padding-box;
+}
+```
+
+{{EmbedLiveSample("padding-box", "", "260px")}}
 
 ### content-box
 
 `content-box` 值定义由外部内容边缘包围的形状。此框的每个角半径都是 0 或 border-radius、border-width、padding 中的较大值。这意味着这里不可能有负值。
 
-{{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
+```html hidden live-sample___content-box
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___content-box
+body {
+  font: 1.2em / 1.2 sans-serif;
+}
+.box {
+  width: 70%;
+}
+
+.shape {
+  background-color: rebeccapurple;
+  height: 80px;
+  width: 80px;
+  padding: 20px;
+  margin: 20px;
+  border: 10px solid black;
+  border-radius: 50%;
+  float: left;
+  shape-outside: content-box;
+}
+```
+
+{{EmbedLiveSample("content-box", "", "250px")}}
 
 ## 什么时候使用 box 值
 
@@ -60,6 +197,50 @@ box 值还支持 `border-radius` 值，这意味着你的页面中可以有带�
 
 不过，只需使用这种简单的技术，你就能创造出一些有趣的效果。在本节的最后一个示例中，我左右浮动了两个元素，在最靠近文字的方向上，每个元素的边框半径都是 100%。
 
-{{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
+```html live-sample___bottom-margin-box
+<div class="box">
+  <div class="shape-left"></div>
+  <div class="shape-right"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___bottom-margin-box
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.box {
+  text-align: justify;
+}
+
+.shape-left,
+.shape-right {
+  height: 100px;
+  width: 100px;
+}
+
+.shape-left {
+  margin: 0 20px 20px 0;
+  border-bottom-right-radius: 100%;
+  float: left;
+  shape-outside: margin-box;
+}
+.shape-right {
+  margin: 0 20px 20px;
+  border-bottom-left-radius: 100%;
+  float: right;
+  shape-outside: margin-box;
+}
+```
+
+{{EmbedLiveSample("bottom-margin-box", "", "240px")}}
 
 对于更复杂的形状，你需要使用[基本形状](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)中的一种作为值，或者根据本节其他指南中涉及的图像定义你的形状。
