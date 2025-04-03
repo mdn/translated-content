@@ -47,7 +47,7 @@ fill(value, start, end)
   - : 從零開始的索引，指定填充的結束位置，會[轉換為整數](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#整數轉換)。`fill()` 會填充到 `end` 之前的位置（不包含 `end`）。
     - 負數索引表示從陣列末尾開始計算——如果 `-array.length <= end < 0`，則會使用 `end + array.length`。
     - 若 `end < -array.length`，則會使用 `0`。
-    - 若 `end >= array.length`、`end` 省略或 `undefined`，則會使用 `array.length`，使所有元素都被填充。
+    - 若 `end >= array.length`、`end` 省略或為 `undefined`，則會使用 `array.length`，使所有元素都被填充。
     - 若 `end` 指定的位置早於或等於 `start` 指定的位置，則不會填充任何元素。
 
 ### 回傳值
