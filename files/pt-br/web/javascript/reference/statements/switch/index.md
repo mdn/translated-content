@@ -5,21 +5,21 @@ slug: Web/JavaScript/Reference/Statements/switch
 
 {{jsSidebar("Statements")}}A condicional **switch** avalia uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators), combinando o valor da expressão para um cláusula **case**, e executa as [instruções](/pt-BR/docs/Web/JavaScript/Reference/Statements) associadas ao **case**.
 
-{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+{{InteractiveExample("Demonstração Javascript: Instrução Switch")}}
 
 ```js interactive-example
-const expr = "Papayas";
+const expr = "Mamão";
 switch (expr) {
-  case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
+  case "Laranja":
+    console.log("Laranjas custam R$3,32 o quilo.");
     break;
-  case "Mangoes":
-  case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
-    // Expected output: "Mangoes and papayas are $2.79 a pound."
+  case "Manga":
+  case "Mamão":
+    console.log("Mangas and Mamões custam R$15 o quilo.");
+    // Resultado esperado: "Mangas and Mamões custam R$15 o quilo."
     break;
   default:
-    console.log(`Sorry, we are out of ${expr}.`);
+    console.log(`Desculpe, estamos sem ${expr} em estoque.`);
 }
 ```
 
@@ -142,8 +142,6 @@ switch (Animal) {
 
 Esse é um exemplo de múltiplas operações squenciais usando a instrução `switch`, onde, dependendo do número inteiro, você poderá receber outputs diferentes. Isso mostra que você pode alterar a ordem que você insere as instruções de `case`, e isso não precisa ser uma sequência numérica. Em JavaScript, você pode até mesmo misturar definições de strings dentro desses `cases`.
 
-This is an example of a multiple-operation sequential switch statement, where, depending on the provided integer, you can receive different output. This shows you that it wil traverse in the order that you put the case statements, and it does not have to be numerically sequential. In JavaScript, you can even mix in definitions of strings into these case statements as well.
-
 ```js
 var foo = 1;
 var output = "Output: ";
@@ -166,21 +164,21 @@ switch (foo) {
     alert(output);
     break;
   default:
-    alert("Favor escolher um número de 0 à 6!");
+    alert("Favor escolher um número de 0 à 5, ou 10!");
 }
 ```
 
 Output para esse exemplo:
 
-| Value                                  | Alert Text                         |
-| -------------------------------------- | ---------------------------------- |
-| foo é NaN ou não é 1, 2, 3, 4, 5 ou 10 | Favor escolher um número de 0 à 6! |
-| 10                                     | Output: Então Qual É O Seu Nome?   |
-| 1                                      | Output: Qual É O Seu Nome?         |
-| 2                                      | Output: Seu Nome?                  |
-| 3                                      | Output: Nome?                      |
-| 4                                      | Output: ?                          |
-| 5                                      | Output: !                          |
+| Value                                  | Alert Text                                |
+| -------------------------------------- | ----------------------------------------- |
+| foo é NaN ou não é 1, 2, 3, 4, 5 ou 10 | Favor escolher um número de 0 à 1, ou 10! |
+| 10                                     | Output: Então Qual É O Seu Nome?          |
+| 1                                      | Output: Qual É O Seu Nome?                |
+| 2                                      | Output: Seu Nome?                         |
+| 3                                      | Output: Nome?                             |
+| 4                                      | Output: ?                                 |
+| 5                                      | Output: !                                 |
 
 ## Especificações
 
