@@ -170,9 +170,9 @@ switch (foo) {
 
 Output para esse exemplo:
 
-| Value                                  | Alert Text                                |
+| Valor                                  | Texto do alerta                           |
 | -------------------------------------- | ----------------------------------------- |
-| foo é NaN ou não é 1, 2, 3, 4, 5 ou 10 | Favor escolher um número de 0 à 1, ou 10! |
+| foo é NaN ou não é 1, 2, 3, 4, 5 ou 10 | Favor escolher um número de 0 à 5, ou 10! |
 | 10                                     | Output: Então Qual É O Seu Nome?          |
 | 1                                      | Output: Qual É O Seu Nome?                |
 | 2                                      | Output: Seu Nome?                         |
