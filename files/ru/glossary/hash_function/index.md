@@ -1,6 +1,7 @@
 ---
 title: Хеш
-slug: Glossary/Hash
+slug: Glossary/Hash_function
+original_slug: Glossary/Hash
 ---
 
 {{GlossarySidebar}}
