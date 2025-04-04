@@ -1,6 +1,8 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
+l10n:
+  sourceCommit: dcbc205255423e6ea7bcd394afa91c438dbdcfe3
 ---
 
 {{jsSidebar("Statements")}}A condicional **switch** avalia uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators), combinando o valor da expressão para um cláusula **case**, e executa as [instruções](/pt-BR/docs/Web/JavaScript/Reference/Statements) associadas ao **case**.
