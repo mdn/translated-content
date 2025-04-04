@@ -21975,12 +21975,6 @@
       "Tortik217"
     ]
   },
-  "conflicting/Web/API/console": {
-    "modified": "2019-03-18T21:20:36.516Z",
-    "contributors": [
-      "AndreiSoroka"
-    ]
-  },
   "conflicting/Web/CSS/CSS_cascade/Value_processing": {
     "modified": "2019-03-23T22:46:29.428Z",
     "contributors": [
