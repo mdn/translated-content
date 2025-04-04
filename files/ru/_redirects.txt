@@ -84,6 +84,7 @@
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Forbidden_header_name	/ru/docs/Glossary/Forbidden_request_header
+/ru/docs/Glossary/Hash	/ru/docs/Glossary/Hash_function
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
 /ru/docs/Glossary/Self-Executing_Anonymous_Function	/ru/docs/Glossary/IIFE
 /ru/docs/Glossary/Simple_header	/ru/docs/Glossary/CORS-safelisted_request_header
@@ -1648,7 +1649,7 @@
 /ru/docs/Словарь/Элемент	/ru/docs/Glossary/Element
 /ru/docs/Словарь/пустой_элемент	/ru/docs/Glossary/Void_element
 /ru/docs/Словарь/функция_обратного_вызова	/ru/docs/Glossary/Callback_function
-/ru/docs/Словарь/хеш	/ru/docs/Glossary/Hash
+/ru/docs/Словарь/хеш	/ru/docs/Glossary/Hash_function
 /ru/docs/Справочник_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Reference
 /ru/docs/Справочник_по_JavaScript_1.5/Глобальные_объекты	/ru/docs/Web/JavaScript/Reference/Global_Objects
 /ru/docs/Справочник_по_JavaScript_1.5/Глобальные_объекты/Array	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
