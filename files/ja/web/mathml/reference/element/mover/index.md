@@ -55,7 +55,7 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </m
 
 {{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

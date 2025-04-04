@@ -35,7 +35,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

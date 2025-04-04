@@ -84,10 +84,10 @@ l10n:
 - `id` list
   - : 現在の要素によって制御されている要素を参照する 1 つ以上の ID 値のスペース区切りのリスト
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaControlsElements")}}
-  - : `ariaControlsElements` プロパティは各要素のインターフェースの一部です。その値は、`aria-controls` 属性で指定された ID 値に対応する {{domxref("Element")}} のリストです。
+  - : `ariaControlsElements` プロパティは各要素のインターフェイスの一部です。その値は、`aria-controls` 属性で指定された ID 値に対応する {{domxref("Element")}} のリストです。
 
 ## 関連付けられたロール
 
