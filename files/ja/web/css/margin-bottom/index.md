@@ -93,7 +93,7 @@ margin-bottom: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
-  - : ブラウザー―が適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
+  - : ブラウザーが適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
 
 ## 公式定義
 

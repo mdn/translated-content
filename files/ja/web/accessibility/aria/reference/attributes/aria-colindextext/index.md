@@ -73,12 +73,12 @@ l10n:
 - `<string>`
   - : 数値 [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) の人間が判読可能な代替テキスト
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaColIndexText")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaColIndexText`](/ja/docs/Web/API/Element/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaColIndexText`](/ja/docs/Web/API/Element/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaColIndexText")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaColIndexText`](/ja/docs/Web/API/ElementInternals/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaColIndexText`](/ja/docs/Web/API/ElementInternals/ariaColIndexText) プロパティは、`aria-colindextext` 属性の値を反映します。
 
 ## 関連付けられたロール
 

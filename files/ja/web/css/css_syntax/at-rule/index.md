@@ -35,7 +35,7 @@ original_slug: Web/CSS/At-rule
 
 入れ子になった文のサブセットになります。スタイルシートの文としてだけではなく、条件付きグループルールの内部で使用されます。
 
-- {{cssxref("@media")}} — *メディアクエリ*の条件を満たす端末で読み込まれた場合にこれの中身が適用される、条件付きグループルールです。
+- {{cssxref("@media")}} — *メディアクエリー*の条件を満たす端末で読み込まれた場合にこれの中身が適用される、条件付きグループルールです。
 - {{cssxref("@supports")}} — ブラウザーが指定の条件を満たす場合にこれの中身が適用される、条件付きグループルールです。
 - {{cssxref("@document")}} {{deprecated_inline}} — このスタイルシートが適用される文書が、与えられた条件を満たす場合に、これの中身が適用される条件付きグループルールです。 _(CSS Level 4 仕様に先送り)_
 - {{cssxref("@page")}} — 文書印刷の際に適用されるレイアウト変更に関する指定を記述します。
@@ -90,10 +90,10 @@ original_slug: Web/CSS/At-rule
   - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
   - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

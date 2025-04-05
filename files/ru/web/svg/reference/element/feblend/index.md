@@ -87,4 +87,4 @@ slug: Web/SVG/Reference/Element/feBlend
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [SVG tutorial: Filter effects](/ru/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG tutorial: Filter effects](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)

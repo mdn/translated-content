@@ -21,7 +21,7 @@ Access-Control-Allow-Methods: <method>, <method>, ...
 ## Directivas
 
 - \<método>
-  - : Comma-delimited list of the allowed [HTTP request methods](/es/docs/Web/HTTP/Methods).
+  - : Comma-delimited list of the allowed [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods).
 
 ## Ejemplos
 

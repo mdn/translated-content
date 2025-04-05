@@ -12,7 +12,7 @@ Las herramientas del lado del cliente (_client-side_ en inglés) pueden ser inti
 
 ## Requisitos previos
 
-Debes aprender el núcleo básico de los lenguajes [HTML](/es/docs/Learn/HTML), [CSS](/es/docs/Learn/CSS) y [JavaScript](/es/docs/Learn/JavaScript), antes de intentar usar las herramientas aquí descritas.
+Debes aprender el núcleo básico de los lenguajes [HTML](/es/docs/Learn_web_development/Core/Structuring_content), [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) y [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792), antes de intentar usar las herramientas aquí descritas.
 
 > [!CALLOUT]
 >

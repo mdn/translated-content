@@ -12,10 +12,10 @@ Las pautas descritas en este artículo se aplican al estilo y formato de los eje
 
 Para pautas específicas de tecnología, consulta los siguientes artículos:
 
-- [Directrices HTML](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML)
-- [Directrices CSS](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)
-- [Directrices de JavaScript](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
-- [Directrices de la interfaz de línea de comandos (Shell)](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell)
+- [Directrices HTML](/es/docs/MDN/Writing_guidelines/Code_style_guide/HTML)
+- [Directrices CSS](/es/docs/MDN/Writing_guidelines/Code_style_guide/CSS)
+- [Directrices de JavaScript](/es/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript)
+- [Directrices de la interfaz de línea de comandos (Shell)](/es/docs/MDN/Writing_guidelines/Code_style_guide/Shell)
 
 ## Mejores prácticas generales
 

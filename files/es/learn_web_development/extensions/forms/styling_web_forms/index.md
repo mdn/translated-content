@@ -76,14 +76,14 @@ Una vez más, describiremos lo que se puede hacer en términos de estilo de esto
 
 El verdadero problema con todos estos controles es que tienen una estructura muy compleja, y más allá de algunos estilos básicos (como cambiar el ancho o el margen del control), generalmente no tiene la capacidad de diseñar los componentes internos de los controles (como el calendario del selector de fecha, o el botón en `<select>` que hace que se muestre la lista de opciones) que conforman esos controles.
 
-Si desea personalizar a fondo esos controles, realmente tiene que crear los suyos usando HTML, CSS y JavaScript. Esto está más allá del alcance de los artículos de formularios principales, pero lo analizamos en un artículo avanzado [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls).
+Si desea personalizar a fondo esos controles, realmente tiene que crear los suyos usando HTML, CSS y JavaScript. Esto está más allá del alcance de los artículos de formularios principales, pero lo analizamos en un artículo avanzado [Cómo crear controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
 > [!NOTE]
 > Hay algunos pseudoelementos CSS propietarios disponibles que le permiten diseñar componentes internos de estos controles de formulario, como {{cssxref('::-moz-range-track')}}, pero estos no son consistentes entre los navegadores , por lo que no se puede confiar. También los mencionaremos más adelante.
 
 ## Lo bueno
 
-Para diseñar controles de formulario que son fáciles de diseñar con CSS, no debería tener mucha dificultad, ya que en su mayoría se comportan como cualquier otro elemento HTML. Ya vimos algunos estilos de formularios simples en [Su primer formulario](/es/docs/Learn/Forms/Your_first_form), y el módulo de [bloques de construcción de CSS](/es/docs/Learn/CSS/Building_blocks) también contiene algunos [elementos esenciales de estilo de formulario útiles](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements#form_elements).
+Para diseñar controles de formulario que son fáciles de diseñar con CSS, no debería tener mucha dificultad, ya que en su mayoría se comportan como cualquier otro elemento HTML. Ya vimos algunos estilos de formularios simples en [Su primer formulario](/es/docs/Learn_web_development/Extensions/Forms/Your_first_form), y el módulo de [bloques de construcción de CSS](/es/docs/Learn_web_development/Core/Styling_basics) también contiene algunos [elementos esenciales de estilo de formulario útiles](/es/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#form_elements).
 
 Además de las herramientas básicas de CSS mencionadas anteriormente, también se nos han proporcionado varios selectores (pseudoclases de interfaz de usuario) que permiten diseñar según el estado actual de la interfaz de usuario. Los cubrimos en detalle en el siguiente artículo, [pseudoclases de interfaz de usuario](/es/docs/Learn/Forms/UI_pseudo-classes).
 
@@ -174,7 +174,7 @@ Si desea continuar con este ejemplo, haga una copia local de [postcard-start.htm
 
 ### HTML
 
-El HTML es solo un poco más complicado que el ejemplo que usamos en [el primer artículo de esta guía](/es/docs/Learn/Forms/Your_first_form); solo tiene algunos IDs adicionales y un encabezado.
+El HTML es solo un poco más complicado que el ejemplo que usamos en [el primer artículo de esta guía](/es/docs/Learn_web_development/Extensions/Forms/Your_first_form); solo tiene algunos IDs adicionales y un encabezado.
 
 ```html
 <form>
@@ -216,7 +216,7 @@ Tus fuentes necesitan más procesamiento antes de comenzar:
 1. Vaya al [generador de fuentes web fontsquirrel](https://www.fontsquirrel.com/tools/webfont-generator).
 2. Usando el formulario, cargue sus dos archivos de fuente y genere un kit de fuente web. Descargue el kit a su computadora.
 3. Descomprima el archivo zip descargado.
-4. Dentro del contenido descomprimido encontrará algunos archivos de fuentes (al momento de escribir este artículo, dos archivos `.woff` y dos archivos `.woff2`; pueden variar en el futuro). Copie estos archivos en un directorio llamado `fonts`, en el mismo directorio que antes. Estamos usando dos archivos diferentes para cada fuente para maximizar la compatibilidad del navegador; consulte nuestro artículo de [fuentes web](/es/docs/Learn/CSS/Styling_text/Web_fonts) para obtener mucha más información.
+4. Dentro del contenido descomprimido encontrará algunos archivos de fuentes (al momento de escribir este artículo, dos archivos `.woff` y dos archivos `.woff2`; pueden variar en el futuro). Copie estos archivos en un directorio llamado `fonts`, en el mismo directorio que antes. Estamos usando dos archivos diferentes para cada fuente para maximizar la compatibilidad del navegador; consulte nuestro artículo de [fuentes web](/es/docs/Learn_web_development/Core/Text_styling/Web_fonts) para obtener mucha más información.
 
 ### CSS
 
@@ -398,6 +398,6 @@ Como puede ver, siempre que queramos crear formularios con solo campos de texto 
 
 ### Temas avanzados
 
-- [Cómo crear controles de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Cómo crear controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Envío de formularios a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
 - [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

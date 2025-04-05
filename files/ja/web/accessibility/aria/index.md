@@ -2,37 +2,15 @@
 title: ARIA
 slug: Web/Accessibility/ARIA
 l10n:
-  sourceCommit: 86125702142b74e1e767019e371fb2e5c667e761
+  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Annotations">ARIA アノテーション</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA ライブリージョン</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA スクリーンリーダー実装者向けガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA の使用: ロール、状態、プロパティ</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Multipart_labels">マルチパートラベル</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">ARIA 関連のバグ報告方法</a></li>
-    <li class="toggle">
-      <details><summary>ARIA 状態とプロパティ</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA ロール</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
-
-Accessible Rich Internet Applications **(ARIA)** は[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)や[属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)の集合で、ウェブコンテンツやウェブアプリケーション（特に JavaScript で開発するもの）を、ハンディキャップを持つ人々にとってよりアクセシブルにする方法を定義します。
+Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** は[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)や[属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)の集合で、ウェブコンテンツやウェブアプリケーション（特に JavaScript で開発するもの）を、ハンディキャップを持つ人々にとってよりアクセシブルにする方法を定義します。
 
 ARIA は、アプリケーションで一般的に使用されている対話操作やウィジェットを、他のメカニズムがない場合に支援技術に渡すことができるように HTML を補完します。例えば ARIA は、アクセシビリティのある JavaScript ウィジェット、フォームのヒント、エラーメッセージ、ライブコンテンツ更新などを可能にします。
 
 > [!WARNING]
-> これらのウィジェットの多くは、代のブラウザーで完全に対応しています。意味的に正しい HTML 要素が存在するのであれば、 **ARIA を使用するよりも、その要素を使用したほうがいいでしょう**。例えば、ネイティブな要素には[キーボードのアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)やロール、状態が組み込まれています。しかし、 ARIA を使用する場合は、スクリプトで（同等の）ブラウザーの動作を模倣する責任があります。
+> これらのウィジェットの多くは、現代のブラウザーで完全に対応しています。意味的に正しい HTML 要素が存在するのであれば、 **ARIA を使用するよりも、その要素を使用したほうがいいでしょう**。例えば、ネイティブな要素には[キーボードのアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)やロール、状態が組み込まれています。しかし、 ARIA を使用する場合は、スクリプトで（同等の）ブラウザーの動作を模倣する責任があります。
 
 [ARIA の最初のルール](https://www.w3.org/TR/using-aria/#rule1) は、「要素を再利用し、それをアクセシブルにするために ARIA のロール、状態、プロパティを追加する代わりに、要求される意味づけと動作がすでに組み込まれているネイティブの HTML 要素または属性を使用することができるなら、そうすること」です。
 
@@ -75,7 +53,7 @@ function updateProgress(percentComplete) {
 
 代わりにネイティブの {{HTMLElement('progress')}} 要素を使用した方がずっと簡単でしょう。
 
-```HTML
+```html
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 

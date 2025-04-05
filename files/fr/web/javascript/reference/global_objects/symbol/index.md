@@ -102,7 +102,7 @@ La méthode [`Object.getOwnPropertySymbols()`](/fr/docs/Web/JavaScript/Reference
   - : Renvoie une chaîne de caractères contenant la description du symbole. Il s'agit d'une surcharge de la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
 - [`Symbol.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/valueOf)
   - : Renvoie le symbole. Il s'agit d'une surcharge de la méthode [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf).
-- [`Symbol.prototype[@@toPrimitive]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
+- [`Symbol.prototype[@@toPrimitive]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
   - : Renvoie le symbole.
 
 ## Exemples

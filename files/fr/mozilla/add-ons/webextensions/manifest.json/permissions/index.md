@@ -117,7 +117,7 @@ Les mots clés suivants sont actuellement disponibles:
 Dans la plupart des cas, la permission accorde uniquement l'accès à l'API, avec les exceptions suivantes :
 
 - `tabs` vous permet d'accéder aux [parties privilégiées des API de l'onglet](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs) : `Tab.url`, `Tab.title`, et `Tab.faviconUrl`. Dans Firefox, vous avez également besoin de `tabs` si vous souhaitez inclure `url` dans le paramètre `queryInfo` dans [`tabs.query()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). Le reste de l'API `tabs` peut être utilisé sans demander aucune permission.
-- `webRequestBlocking` vous permet d'utiliser l'argument "blocage", afin que vous puissiez [modifier et annuler les requêtes](/fr/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).
+- `webRequestBlocking` vous permet d'utiliser l'argument "blocage", afin que vous puissiez [modifier et annuler les requêtes](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
 - `downloads.open` vous permet d'utiliser l'API {{WebExtAPIRef("downloads.open()")}}.
 - `tabHide` vous permet d'utiliser l'API {{WebExtAPIRef("tabs.hide()")}}.
 

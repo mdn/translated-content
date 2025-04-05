@@ -6,7 +6,7 @@ original_slug: Web/MathML/Attribute
 
 {{MathMLRef}}
 
-Esta es una lista alfabetica de atributos de MathML. Más detalles de cada atributo está disponible en cada [página de los elementos](/es/docs/Web/MathML/Element).
+Esta es una lista alfabetica de atributos de MathML. Más detalles de cada atributo está disponible en cada [página de los elementos](/es/docs/Web/MathML/Reference/Element).
 
 Notas:
 

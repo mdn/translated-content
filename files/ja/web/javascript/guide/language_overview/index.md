@@ -1,9 +1,8 @@
 ---
 title: JavaScript 言語概要
 slug: Web/JavaScript/Guide/Language_overview
-original_slug: Web/JavaScript/Language_overview
 l10n:
-  sourceCommit: e822af5fc37c5cd436a58b05656cc82e18cf7d63
+  sourceCommit: 8cf6d8c10adf3ce5370f8a3f180bec11112d4d44
 ---
 
 {{jsSidebar}}
@@ -28,7 +27,7 @@ JavaScript はマルチパラダイムの動的言語であり、型や演算子
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
-- {{jsxref("Date")}}
+- {{jsxref("Map")}}
 - {{jsxref("RegExp")}}
 - {{jsxref("Error")}}
 
@@ -746,9 +745,9 @@ JavaScript は本質的に単一スレッドです。[並列処理](https://ja.w
 
 JavaScript で非同期コードを書く慣用的な方法は 3 つあります。
 
-- コールバックベース（[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) など）
-- プロミス ([`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)) ベース
-- プロミスの糖衣構文である [`async`](/ja/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/ja/docs/Web/JavaScript/Reference/Operators/await)
+- コールバックベース（{{domxref("Window.setTimeout", "setTimeout()")}} など）
+- プロミス ({{jsxref("Global_Objects/Promise", "Promise")}}) ベース
+- プロミスの糖衣構文である {{jsxref("Statements/async_function", "async")}}/{{jsxref("Operators/await", "await")}}
 
 例えば、 JavaScript でファイル読み込み処理をすると次のようになります：
 

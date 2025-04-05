@@ -73,7 +73,7 @@ Para utilizarlos:
 - El elemento `<tfoot>` delimita la parte de la tabla correspondiente al pie de página; esta podría ser una fila final con elementos en las filas anteriores. Puedes incluir el pie de página de la tabla justo en la parte inferior de la tabla, donde esperarías que esté, o justo debajo del encabezado (y el navegador lo mostrará aun así en la parte inferior de la tabla).
 - El elemento `<tbody>` delimita las otras partes del contenido de la tabla que no están en el encabezado o en el pie de página de la tabla. Aparecerá debajo del encabezado de la tabla o, a veces, en el pie de página, según cómo hayas decidido estructurarlo.
 
-> **Nota:** `<tbody>` se incluye siempre en todas las tablas de forma implícita si no lo especificas en tu código. Para comprobarlo, abre uno de tus ejemplos anteriores que no incluya `<tbody>` y mira el código HTML en las [herramientas de desarrollo de tu navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools); verás que el navegador ha añadido esta etiqueta. Quizás te preguntes por qué deberías molestarte en incluirlo. Debes hacerlo para tener más control sobre la estructura y el estilo de la tabla.
+> **Nota:** `<tbody>` se incluye siempre en todas las tablas de forma implícita si no lo especificas en tu código. Para comprobarlo, abre uno de tus ejemplos anteriores que no incluya `<tbody>` y mira el código HTML en las [herramientas de desarrollo de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools); verás que el navegador ha añadido esta etiqueta. Quizás te preguntes por qué deberías molestarte en incluirlo. Debes hacerlo para tener más control sobre la estructura y el estilo de la tabla.
 
 ### Aprendizaje activo: Añadir estructura a la tabla
 
@@ -100,7 +100,7 @@ Pongamos en acción estos elementos nuevos.
 7. Guarda, actualiza, y échale un vistazo al resultado. Si los elementos `<tbody>` y `<tfoot>` no estuvieran en su lugar, tendrías que escribir selectores/reglas mucho más complicados para obtener la misma aplicación de estilo.
 
 > [!NOTE]
-> No esperamos que comprendas completamente el CSS en este momento. Aprenderás más sobre el tema cuando llegues a nuestros módulos CSS ([Introducción al CSS](/es/docs/Learn/CSS/First_steps) es un buen lugar para comenzar; también tenemos un artículo específico sobre [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)).
+> No esperamos que comprendas completamente el CSS en este momento. Aprenderás más sobre el tema cuando llegues a nuestros módulos CSS ([Introducción al CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics) es un buen lugar para comenzar; también tenemos un artículo específico sobre [Aplicar estilo a las tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables)).
 
 Tu tabla final debería tener un aspecto similar al siguiente:
 
@@ -455,6 +455,6 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 
 ## Resumen
 
-Podrías aprender algo más sobre las tablas en HTML, pero en realidad te hemos proporcionado toda la información que necesitas saber en este momento. En este punto, es posible que desees ir y aprender sobre la aplicación de estilo a tablas HTML: consulta [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables).
+Podrías aprender algo más sobre las tablas en HTML, pero en realidad te hemos proporcionado toda la información que necesitas saber en este momento. En este punto, es posible que desees ir y aprender sobre la aplicación de estilo a tablas HTML: consulta [Aplicar estilo a las tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables).
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

@@ -25,7 +25,37 @@ Specification 定义了三种新的权限：
 
 下面的例子中，左侧有一幅浮动的图像，然后使用`shape-outside` 权限定义一个`circle(50%)`属性。结果为文字环绕于图像，并且图像不显示为矩形，而显示为圆形。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
+```html live-sample___circle
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___circle
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: circle(50%);
+}
+```
+
+{{EmbedLiveSample("circle", "", "280px")}}
 
 正如这个级别的元素必须被浮动化才能适用`<basic-shape>` 一样，有时候在创建依赖时就会发生副作用。如果在浏览器中不支持形状，那么用户就会看到文本围绕在矩形的图片周围。有了形状支持之后，视觉效果就增强了。
 
@@ -57,7 +87,41 @@ Specification 定义了三种新的权限：
 
 在下面的例子中你可以改变 `border-box` 参数，然后查看形状靠近或者远离 Box 的效果。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
+```html live-sample___box
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___box
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+.shape {
+  background-color: rebeccapurple;
+  height: 150px;
+  width: 150px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50%;
+  float: left;
+  shape-outside: border-box;
+}
+```
+
+{{EmbedLiveSample("box", "", "320px")}}
 
 详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values)。
 
@@ -69,7 +133,37 @@ Specification 定义了三种新的权限：
 
 在下面的例子中，我们有一幅全透明的图像，使用如下 URL，并且指定 `shape-outside`. 属性，创建出一个模糊的形状：一幅气球图像。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/image.html", '100%', 800)}}
+```html live-sample___image
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___image
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/round-balloon.png);
+}
+```
+
+{{EmbedLiveSample("image", "", "280px")}}
 
 #### `shape-image-threshold`
 
@@ -77,7 +171,49 @@ Specification 定义了三种新的权限：
 
 如果我们使用图像来创建形状，那么你可以看到阈值在起作用。在这么多例子中，如果你改变了阈值大小，形状会随之变化。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
+```html live-sample___threshold
+<div class="box">
+  <div class="shape"></div>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___threshold
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+.shape {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(
+    45deg,
+    rebeccapurple,
+    transparent 80%,
+    transparent
+  );
+  shape-outside: linear-gradient(
+    45deg,
+    rebeccapurple,
+    transparent 80%,
+    transparent
+  );
+  shape-image-threshold: 0.4;
+}
+```
+
+{{EmbedLiveSample("threshold", "", "280px")}}
 
 下面我们进入更深层次的[Shapes from Images](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_from_images)学习。
 
@@ -87,7 +223,37 @@ Specification 定义了三种新的权限：
 
 在下面的例子中，我们在基本形状中加入了 `shape-margin` 属性。改变边框的宽度可以将文本的距离增大。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/shape-margin.html", '100%', 800)}}
+```html live-sample___shape-margin
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___shape-margin
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+img {
+  float: left;
+  shape-outside: circle(50%);
+  shape-margin: 5px;
+}
+```
+
+{{EmbedLiveSample("shape-margin", "", "280px")}}
 
 ## 将创建的元素作为浮动元素
 
@@ -95,7 +261,41 @@ Specification 定义了三种新的权限：
 
 在下面的例子中，我们在创建好的内容中插入一个宽高为 150px 的内容。然后，我们可以使用基本基本形状，Box 参数甚至是 Alpha 通道去创建图形，使得文本可以环绕这个图形。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/generated-content.html", '100%', 850)}}
+```html live-sample___generated-content
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___generated-content
+body {
+  font: 1.2em sans-serif;
+}
+
+.box::before {
+  content: "";
+  display: block;
+  height: 150px;
+  width: 150px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50%;
+  float: left;
+  shape-outside: border-box;
+}
+```
+
+{{EmbedLiveSample("generated-content", "", "260px")}}
 
 ## 和`clip-path`的关系
 
@@ -103,7 +303,38 @@ Specification 定义了三种新的权限：
 
 下面的图像是一个蓝色背景的方形图像，使用 `shape-outside: ellipse(40% 50%);` 和 `clip-path: ellipse(40% 50%);` 参数去剪去相同的区域，这个区域被定义为形状。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/clip-path.html", '100%', 800)}}
+```html live-sample___clip-path
+<div class="box">
+  <img
+    alt="An orange hot air balloon as seen from below"
+    src="https://mdn.github.io/shared-assets/images/examples/balloon-small.jpg" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___clip-path
+body {
+  font: 1.2em / 1.4 sans-serif;
+}
+
+img {
+  float: left;
+  shape-outside: ellipse(40% 50%);
+  clip-path: ellipse(40% 50%);
+}
+```
+
+{{EmbedLiveSample("clip-path", "", "280px")}}
 
 ## 形状的开发工具
 

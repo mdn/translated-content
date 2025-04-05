@@ -94,6 +94,7 @@
 /zh-TW/docs/Glossary/502	/zh-TW/docs/Web/HTTP/Reference/Status/502
 /zh-TW/docs/Glossary/DOS_attack	/zh-TW/docs/Glossary/Denial_of_Service
 /zh-TW/docs/Glossary/Empty_element	/zh-TW/docs/Glossary/Void_element
+/zh-TW/docs/Glossary/Hash	/zh-TW/docs/Glossary/Hash_function
 /zh-TW/docs/Glossary/Routers	/zh-TW/docs/Glossary/Router
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character

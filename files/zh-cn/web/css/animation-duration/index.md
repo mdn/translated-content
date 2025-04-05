@@ -109,7 +109,7 @@ animation-duration: unset;
 
 ### 值
 
-- `{{cssxref("&lt;time&gt;")}}`
+- {{cssxref("&lt;time&gt;")}}
 
   - : 动画完成一个周期所需的时间。可以用秒（`s`）或毫秒（`ms`）指定。值必须是正数或零，单位是必需的。
 

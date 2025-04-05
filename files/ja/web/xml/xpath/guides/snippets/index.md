@@ -8,7 +8,7 @@ l10n:
 
 {{XsltSidebar}}
 
-この記事ではいくつか XPath コードスニペットを提供します。それは XPath 機能を JavaScript コードに公開する [DOM Level 3 XPath 仕様](https://www.w3.org/TR/DOM-Level-3-XPath/)の標準インタフェースに基づく簡単な**ユーティリティ関数**の簡単な例です。スニペットは実際に自身のコードの中で使用できる関数です。
+この記事ではいくつか XPath コードスニペットを提供します。それは XPath 機能を JavaScript コードに公開する [DOM Level 3 XPath 仕様](https://www.w3.org/TR/DOM-Level-3-XPath/)の標準インターフェイスに基づく簡単な**ユーティリティ関数**の簡単な例です。スニペットは実際に自身のコードの中で使用できる関数です。
 
 ### ノード指定の評価関数
 

@@ -45,9 +45,7 @@ HTML ファイルにインライン SVG を記述するには、 SVG ファイ�
 特筆すべきは 3 つの属性と 1 つの入れ子要素です。
 
 1. [`viewBox`](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性は、 SVG 画像の座標が相対的である論理座標系を確立します。この場合、画像は 100 x 100 のビューポートに配置されます。
-1. [`viewBox`](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性は、 SVG 画像の座標が相対的である論理座標系を確立します。この場合、画像は 100 x 100 のビューポートに配置されます。
 
-2. [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性は、利用できるサイズで画像を中央に配置し、高さや幅の最大値まで変倍し、はみ出した部分をカットすることで、アスペクト比を保持することを指定します。
 2. [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性は、利用できるサイズで画像を中央に配置し、高さや幅の最大値まで変倍し、はみ出した部分をカットすることで、アスペクト比を保持することを指定します。
 
 3. [`role="img"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) を記載することで、支援技術が SVG を画像として処理することを保証します。

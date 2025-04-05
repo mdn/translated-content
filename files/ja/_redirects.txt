@@ -309,7 +309,7 @@
 /ja/docs/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /ja/docs/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
-/ja/docs/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/actual_value
+/ja/docs/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
 /ja/docs/CSS/align-content	/ja/docs/Web/CSS/align-content
 /ja/docs/CSS/align-items	/ja/docs/Web/CSS/align-items
 /ja/docs/CSS/align-self	/ja/docs/Web/CSS/align-self
@@ -391,8 +391,8 @@
 /ja/docs/CSS/column-span	/ja/docs/Web/CSS/column-span
 /ja/docs/CSS/column-width	/ja/docs/Web/CSS/column-width
 /ja/docs/CSS/columns	/ja/docs/Web/CSS/columns
-/ja/docs/CSS/computed_value	/ja/docs/Web/CSS/CSS_cascade/computed_value
-/ja/docs/CSS/computed_value-redirect-1	/ja/docs/Web/CSS/CSS_cascade/computed_value
+/ja/docs/CSS/computed_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値
+/ja/docs/CSS/computed_value-redirect-1	/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値
 /ja/docs/CSS/content	/ja/docs/Web/CSS/content
 /ja/docs/CSS/counter-increment	/ja/docs/Web/CSS/counter-increment
 /ja/docs/CSS/counter-reset	/ja/docs/Web/CSS/counter-reset
@@ -423,8 +423,8 @@
 /ja/docs/CSS/inherit	/ja/docs/Web/CSS/inherit
 /ja/docs/CSS/inheritance	/ja/docs/Web/CSS/CSS_cascade/Inheritance
 /ja/docs/CSS/initial	/ja/docs/Web/CSS/initial
-/ja/docs/CSS/initial_value	/ja/docs/Web/CSS/CSS_cascade/initial_value
-/ja/docs/CSS/initial_value-redirect-1	/ja/docs/Web/CSS/CSS_cascade/initial_value
+/ja/docs/CSS/initial_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing
+/ja/docs/CSS/initial_value-redirect-1	/ja/docs/Web/CSS/CSS_cascade/Value_processing
 /ja/docs/CSS/integer	/ja/docs/Web/CSS/integer
 /ja/docs/CSS/justify-content	/ja/docs/Web/CSS/justify-content
 /ja/docs/CSS/left	/ja/docs/Web/CSS/left
@@ -476,7 +476,7 @@
 /ja/docs/CSS/resolution	/ja/docs/Web/CSS/resolution
 /ja/docs/CSS/right	/ja/docs/Web/CSS/right
 /ja/docs/CSS/shape	/ja/docs/Web/CSS/shape
-/ja/docs/CSS/specified_value	/ja/docs/Web/CSS/CSS_cascade/specified_value
+/ja/docs/CSS/specified_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値
 /ja/docs/CSS/string	/ja/docs/Web/CSS/string
 /ja/docs/CSS/tab-size	/ja/docs/Web/CSS/tab-size
 /ja/docs/CSS/table-layout	/ja/docs/Web/CSS/table-layout
@@ -499,7 +499,7 @@
 /ja/docs/CSS/transition-timing-function	/ja/docs/Web/CSS/transition-timing-function
 /ja/docs/CSS/unicode-bidi	/ja/docs/Web/CSS/unicode-bidi
 /ja/docs/CSS/uri	/ja/docs/Web/CSS/url_value
-/ja/docs/CSS/used_value	/ja/docs/Web/CSS/CSS_cascade/used_value
+/ja/docs/CSS/used_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値
 /ja/docs/CSS/user-ident	/ja/docs/Web/CSS/custom-ident
 /ja/docs/CSS/vertical-align	/ja/docs/Web/CSS/vertical-align
 /ja/docs/CSS/visibility	/ja/docs/Web/CSS/visibility
@@ -540,10 +540,10 @@
 /ja/docs/CSS:Media:Visual	/ja/docs/Web/CSS/@media
 /ja/docs/CSS:Other_Resources	/ja/docs/Web/CSS
 /ja/docs/CSS:color	/ja/docs/Web/CSS/color
-/ja/docs/CSS:computed_value	/ja/docs/Web/CSS/CSS_cascade/computed_value
+/ja/docs/CSS:computed_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値
 /ja/docs/CSS:font	/ja/docs/Web/CSS/font
 /ja/docs/CSS:inheritance	/ja/docs/Web/CSS/CSS_cascade/Inheritance
-/ja/docs/CSS:initial_value	/ja/docs/Web/CSS/CSS_cascade/initial_value
+/ja/docs/CSS:initial_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing
 /ja/docs/CSS:min-width	/ja/docs/Web/CSS/min-width
 /ja/docs/CSS_Reference	/ja/docs/Web/CSS/Reference
 /ja/docs/CSS_Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
@@ -1331,15 +1331,18 @@
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Guides/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
+/ja/docs/Glossary/Cryptographic_hash_function	/ja/docs/Glossary/Hash_function
 /ja/docs/Glossary/DOS_attack	/ja/docs/Glossary/Denial_of_Service
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Descriptor_(CSS)	/ja/docs/Glossary/CSS_Descriptor
+/ja/docs/Glossary/Digest	/ja/docs/Glossary/Hash_function
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
 /ja/docs/Glossary/First_interactive	/ja/docs/Glossary/First_CPU_idle
 /ja/docs/Glossary/Forbidden_header_name	/ja/docs/Glossary/Forbidden_request_header
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
 /ja/docs/Glossary/Guard	/ja/docs/Web/API/Fetch_API/Using_Fetch
+/ja/docs/Glossary/Hash	/ja/docs/Glossary/Hash_function
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/I18N	/ja/docs/Glossary/Internationalization
 /ja/docs/Glossary/Index	/ja/docs/Glossary
@@ -2599,6 +2602,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
+/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 /ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 /ja/docs/Mozilla/Add-ons/WebExtensions/Tips	/ja/docs/Mozilla/Add-ons/WebExtensions
@@ -4103,6 +4107,11 @@
 /ja/docs/Web/CSS/CSS_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/CSS_Variables	/ja/docs/Web/CSS/CSS_cascading_variables
 /ja/docs/Web/CSS/CSS_animations/Tips	/ja/docs/Web/API/Web_Animations_API/Tips
+/ja/docs/Web/CSS/CSS_cascade/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
+/ja/docs/Web/CSS/CSS_cascade/computed_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値
+/ja/docs/Web/CSS/CSS_cascade/initial_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値
+/ja/docs/Web/CSS/CSS_cascade/specified_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値
+/ja/docs/Web/CSS/CSS_cascade/used_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
 /ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
@@ -4197,7 +4206,7 @@
 /ja/docs/Web/CSS/Value_definition_syntax	/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /ja/docs/Web/CSS/Viewport_concepts	/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts
 /ja/docs/Web/CSS/Visual_formatting_model	/ja/docs/Web/CSS/CSS_display/Visual_formatting_model
-/ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/actual_value
+/ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
 /ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
 /ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media/aural
@@ -4217,7 +4226,7 @@
 /ja/docs/Web/CSS/color_value/hexadecimal_rgb	/ja/docs/orphaned/Web/CSS/color_value/hexadecimal_rgb
 /ja/docs/Web/CSS/color_value/hsla	/ja/docs/Web/CSS/color_value/hsl
 /ja/docs/Web/CSS/color_value/rgba	/ja/docs/Web/CSS/color_value/rgb
-/ja/docs/Web/CSS/computed_value	/ja/docs/Web/CSS/CSS_cascade/computed_value
+/ja/docs/Web/CSS/computed_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値
 /ja/docs/Web/CSS/conic-gradient	/ja/docs/Web/CSS/gradient/conic-gradient
 /ja/docs/Web/CSS/conic-gradient()	/ja/docs/Web/CSS/gradient/conic-gradient
 /ja/docs/Web/CSS/counter()	/ja/docs/Web/CSS/counter
@@ -4253,7 +4262,7 @@
 /ja/docs/Web/CSS/image/image()	/ja/docs/Web/CSS/image/image
 /ja/docs/Web/CSS/image/image-set()	/ja/docs/Web/CSS/image/image-set
 /ja/docs/Web/CSS/image/paint()	/ja/docs/Web/CSS/image/paint
-/ja/docs/Web/CSS/initial_value	/ja/docs/Web/CSS/CSS_cascade/initial_value
+/ja/docs/Web/CSS/initial_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing
 /ja/docs/Web/CSS/justify-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/linear-gradient	/ja/docs/Web/CSS/gradient/linear-gradient
 /ja/docs/Web/CSS/linear-gradient()	/ja/docs/Web/CSS/gradient/linear-gradient
@@ -4279,8 +4288,9 @@
 /ja/docs/Web/CSS/repeating-linear-gradient()	/ja/docs/Web/CSS/gradient/repeating-linear-gradient
 /ja/docs/Web/CSS/repeating-radial-gradient	/ja/docs/Web/CSS/gradient/repeating-radial-gradient
 /ja/docs/Web/CSS/repeating-radial-gradient()	/ja/docs/Web/CSS/gradient/repeating-radial-gradient
+/ja/docs/Web/CSS/resolved_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#解決値
 /ja/docs/Web/CSS/single-transition-timing-function	/ja/docs/Web/CSS/easing-function
-/ja/docs/Web/CSS/specified_value	/ja/docs/Web/CSS/CSS_cascade/specified_value
+/ja/docs/Web/CSS/specified_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#指定値
 /ja/docs/Web/CSS/symbols()	/ja/docs/Web/CSS/symbols
 /ja/docs/Web/CSS/timing-function	/ja/docs/Web/CSS/easing-function
 /ja/docs/Web/CSS/transform-function/matrix()	/ja/docs/Web/CSS/transform-function/matrix
@@ -4307,7 +4317,7 @@
 /ja/docs/Web/CSS/uri	/ja/docs/Web/CSS/url_value
 /ja/docs/Web/CSS/url	/ja/docs/Web/CSS/url_value
 /ja/docs/Web/CSS/url()	/ja/docs/Web/CSS/url_function
-/ja/docs/Web/CSS/used_value	/ja/docs/Web/CSS/CSS_cascade/used_value
+/ja/docs/Web/CSS/used_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値
 /ja/docs/Web/CSS/user-ident	/ja/docs/Web/CSS/custom-ident
 /ja/docs/Web/CSS/var()	/ja/docs/Web/CSS/var
 /ja/docs/Web/CSS/visible	/ja/docs/Web/CSS/visibility

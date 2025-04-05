@@ -60,7 +60,7 @@ var y =
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

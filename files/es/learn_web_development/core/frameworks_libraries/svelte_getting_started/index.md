@@ -427,7 +427,7 @@ npm install
 npm run dev
 ```
 
-Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn/Tools_and_testing/GitHub).
+Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn_web_development/Core/Version_control).
 
 > [!NOTE]
 > Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.

@@ -35,7 +35,7 @@ En el primer artículo del módulo, exploramos las características básicas del
 
 ## Resumen de las familias de tipos de letra
 
-Como observamos en el artículo [Texto y tipos de letra](/es/docs/Learn/CSS/Styling_text/Fundamentals), puedes controlar los tipos de letra que aplicas a tu HTML con la propiedad {{cssxref ("font-family")}}. Este atributo toma uno o más nombres de familia de tipos de letra y el navegador recorre esta lista hasta que encuentra un tipo de letra disponible en el sistema en el que se ejecuta:
+Como observamos en el artículo [Texto y tipos de letra](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals), puedes controlar los tipos de letra que aplicas a tu HTML con la propiedad {{cssxref ("font-family")}}. Este atributo toma uno o más nombres de familia de tipos de letra y el navegador recorre esta lista hasta que encuentra un tipo de letra disponible en el sistema en el que se ejecuta:
 
 ```css
 p {
@@ -43,7 +43,7 @@ p {
 }
 ```
 
-Este sistema funciona bien, pero las opciones de tipo de letra tradicionales de los desarrolladores web eran limitadas. Solo hay un puñado de tipos de letra que puedes garantizar que están disponibles en todos los sistemas comunes: las llamadas [fuentes seguras para la web](/es/docs/Learn/CSS/Styling_text/Fundamentals#familia_de_tipos_de_letras). Puedes usar la lista de tipos de letra para especificar cuáles prefieres, seguido de alternativas seguras para la web y del tipo de letra predeterminado del sistema. El problema es que esto añade trabajo extra en términos de pruebas para asegurarte de que tus diseños se ven bien con cada tipo de letra, etc.
+Este sistema funciona bien, pero las opciones de tipo de letra tradicionales de los desarrolladores web eran limitadas. Solo hay un puñado de tipos de letra que puedes garantizar que están disponibles en todos los sistemas comunes: las llamadas [fuentes seguras para la web](/es/docs/Learn_web_development/Core/Text_styling/Fundamentals#familia_de_tipos_de_letras). Puedes usar la lista de tipos de letra para especificar cuáles prefieres, seguido de alternativas seguras para la web y del tipo de letra predeterminado del sistema. El problema es que esto añade trabajo extra en términos de pruebas para asegurarte de que tus diseños se ven bien con cada tipo de letra, etc.
 
 ## Tipografías web
 

@@ -40,11 +40,65 @@ slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 
 在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如[应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
+```html live-sample___float
+<div class="box">
+  <div class="float">I am a floated box!</div>
+  <p>I am content inside the container.</p>
+</div>
+```
+
+```css live-sample___float
+body {
+  font: 1.2em sans-serif;
+}
+
+.box {
+  background-color: rgb(224 206 247);
+  border: 5px solid rebeccapurple;
+}
+
+.float {
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("float")}}
 
 创建一个新的 BFC 将包含该浮动。在过去，一种典型的方法是设置 `overflow: auto` 或设置其他不是 `overflow: visible` 的值。
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-overflow.html", '100%', 720)}}
+```html hidden live-sample___bfc-overflow
+<div class="box">
+  <div class="float">I am a floated box!</div>
+  <p>I am content inside the container.</p>
+</div>
+```
+
+```css live-sample___bfc-overflow
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  background-color: rgb(224 206 247);
+  border: 5px solid rebeccapurple;
+  overflow: auto;
+}
+
+.float {
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("bfc-overflow", "", "220px")}}
 设置 `overflow: auto` 会自动创建包含浮动的新 BFC。现在，我们的 DIV 在布局中变成了一个迷你布局。任何子元素都将包含在其中。
 
 使用 `overflow` 创建新的 BFC 的问题在于， `overflow` 属性用于告诉浏览器你希望如何处理溢出的内容。在某些情况下，当你纯粹使用此属性创建 BFC 时，你会发现不需要的滚动条或剪切阴影。另外，对于未来的开发人员来说，它可能不太可读，因为不能显式地表明为什么要使用溢出来实现这一目的。如果你使用了这个方法，最好对代码进行注释以便他人理解。
@@ -53,7 +107,36 @@ slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 
 使用 `display: flow-root` （或 `display: flow-root list-item`）将创建一个新的 BFC，而不会产生任何其他潜在的问题副作用。
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-flow-root.html", '100%', 720)}}
+```html hidden live-sample___bfc-flow-root
+<div class="box">
+  <div class="float">I am a floated box!</div>
+  <p>I am content inside the container.</p>
+</div>
+```
+
+```css live-sample___bfc-flow-root
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  background-color: rgb(224 206 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
+}
+```
+
+```css hidden live-sample___bfc-flow-root
+.float {
+  float: left;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("bfc-flow-root")}}
 
 使用 {{HTMLElement("div")}}上的 `display: flow-root` ，该容器内的所有内容都参与该容器的块格式上下文，并且浮动不会从元素底部弹出。
 
@@ -65,7 +148,29 @@ slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 
 box model 不完全适用于参与内联格式上下文。在水平书写模式行中，水平填充、边框和边距将应用于元素，并左右移动文本。但是，元素上方和下方边距将不适用。应用垂直填充和边框可能会在内容的上方和下方重叠，因为在内联格式上下文中，填充和边框不会将行框撑开。
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/inline.html", '100%', 720)}}
+```html live-sample___inline
+<p>
+  Before that night—<strong>a memorable night</strong>, as it was to
+  prove—hundreds of millions of people had watched the rising smoke-wreaths of
+  their fires without drawing any special inspiration from the fact.
+</p>
+```
+
+```css live-sample___inline
+body {
+  font: 1.2em sans-serif;
+}
+p {
+  margin-top: 2em;
+}
+strong {
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("inline")}}
 
 ## 其他格式上下文
 

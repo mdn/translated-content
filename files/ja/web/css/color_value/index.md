@@ -113,7 +113,7 @@ background-color: hsl(0deg 100% 50%);
 
 色の補間は[グラデーション](/ja/docs/Web/CSS/gradient)、[トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)、[アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)で発生します。
 
-`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/easing-function)で定められます。
+`<color>` 値を補完する場合、まずは色が指定された色空間へ変換され、その[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)のそれぞれの成分が直線状に補間され、補間の速度はトランジションやアニメーションでは[イージング関数](/ja/docs/Web/CSS/easing-function)で定められます。
 補間色空間の既定値は Oklab ですが、一部の色関連の関数記法では {{CSSXref("&lt;color-interpolation-method&gt;")}} で上書きできます。
 
 ### 成分が欠落した補間

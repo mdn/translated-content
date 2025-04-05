@@ -2,7 +2,7 @@
 title: CookieChangeEvent：changed 属性
 slug: Web/API/CookieChangeEvent/changed
 l10n:
-  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}

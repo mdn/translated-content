@@ -5,7 +5,7 @@ slug: Web/SVG/Reference/Element
 
 {{SVGRef}}
 
-« [SVG](/ru/docs/Web/SVG) / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute) »
+« [SVG](/ru/docs/Web/SVG) / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute) »
 
 ## SVG элементы
 
@@ -222,6 +222,6 @@ V — Z
 
 ## Смотрите также
 
-- [Ссылка на атрибут SVG](/ru/docs/Web/SVG/Attribute)
-- [Учебник SVG](/ru/docs/Web/SVG/Tutorial)
+- [Ссылка на атрибут SVG](/ru/docs/Web/SVG/Reference/Attribute)
+- [Учебник SVG](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [Ссылка на интерфейс SVG](/ru/docs/Web/API/Document_Object_Model#svg_interfaces)

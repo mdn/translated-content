@@ -70,7 +70,7 @@ Estas son reglas generales que puedes aprovechar. Desde luego, existen diseños 
 
 ## Aprendizaje activo
 
-_Aún no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
+_Aún no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Getting_started)._
 
 ## Profundización
 

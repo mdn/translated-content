@@ -465,7 +465,7 @@ También considera usar el atributo [`autocomplete`](/es/docs/Web/HTML/Attribute
 
 ## Véase también
 
-- [Guía de formularios HTML](/es/docs/Learn/Forms)
+- [Guía de formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel)
 - [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

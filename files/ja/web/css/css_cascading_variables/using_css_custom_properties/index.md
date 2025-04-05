@@ -464,7 +464,7 @@ p {
 残念ながら、これらの有効な値は、`var()` 関数記法によって、意味をなさない可能性のあるコンテキストで使用されてしまうことがあります。
 プロパティとカスタム変数は、無効な CSS 文につながる可能性があり、「計算時に有効」という概念につながります。
 
-ブラウザが無効な `var()` 置換に遭遇した場合は、プロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)または[継承値](/ja/docs/Web/CSS/CSS_cascade/Inheritance)が使用されます。
+ブラウザーが無効な `var()` 置換に遭遇した場合は、プロパティの[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)または[継承値](/ja/docs/Web/CSS/CSS_cascade/Inheritance)が使用されます。
 この例は、カスタムプロパティを使用している点を除いて、最後の例と同じです。
 
 期待通りに、ブラウザーは `--text-color` の値で `var(--text-color)` の場所を置き換えようとしますが、 `16px` は {{cssxref("color")}} に妥当なプロパティ値ではありません。

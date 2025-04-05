@@ -20,7 +20,7 @@ p {
 
 Vas a probarlo: pega estas tres líneas de CSS en un nuevo archivo en tu editor de texto y guarda este archivo como `style.css` en tu directorio `styles` (estilos).
 
-Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS no cambiará cómo tu navegador muestra el documento HTML. (Si no has seguido nuestro proyecto, lee [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files) y [HTML básico](/es/docs/Learn/Getting_started_with_the_web/HTML_basics) para averiguar qué necesitas hacer primero.)
+Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS no cambiará cómo tu navegador muestra el documento HTML. (Si no has seguido nuestro proyecto, lee [Manejo de archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) y [HTML básico](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) para averiguar qué necesitas hacer primero.)
 
 1. Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
 
@@ -89,13 +89,13 @@ Existen muchos tipos diferentes de selectores. Antes, solo viste los **selectore
 | Selector de atributo                                                     | Los elementos en una página con el atributo especificado.                                                                  | `img[src]`<br> Selecciona `<img src="mimagen.png">` pero no `<img>`               |
 | Selector de pseudoclase                                                  | Los elementos especificados, pero solo cuando esté en el estado especificado, por ejemplo cuando el puntero esté sobre él. | `a:hover`<br> Selecciona `<a>`, pero solo cuando el puntero esté sobre el enlace. |
 
-Existen muchos más selectores para explorar, y podrás encontrar una lista más detallada en la [guía de Selectores](/es/docs/Learn/CSS/Building_blocks/Selectors).
+Existen muchos más selectores para explorar, y podrás encontrar una lista más detallada en la [guía de Selectores](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Fuentes y texto
 
 Ahora que has explorado lo básico de CSS, empieza por añadir información y algunas reglas más a tu archivo `style.css` para que tu ejemplo se vea bonito. Primero, haz que tus fuentes y texto luzcan un poco mejor.
 
-1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
+1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
 
    ```html
    <link
@@ -105,7 +105,7 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
    ```
 
 2. Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
-3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
+3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
 
    ```css
    html {
@@ -170,7 +170,7 @@ html {
 }
 ```
 
-Esta regla asigna un color de fondo a la página entera. Puedes cambiar el código de color por cualquiera [como el que elegiste usar en tu proyecto](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#color_de_tema).
+Esta regla asigna un color de fondo a la página entera. Puedes cambiar el código de color por cualquiera [como el que elegiste usar en tu proyecto](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#color_de_tema).
 
 ### Dar estilo al cuerpo del documento
 
@@ -243,6 +243,6 @@ Si has seguido las instrucciones de esta publicación, deberías terminar con un
 
 Si te atoraste, puedes comparar tu trabajo con el [código del ejemplo finalizado en GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-Aquí, solo has arañado la superficie de CSS. Si quieres encontrar más, puedes ir a la [página de aprendizaje de CSS](/es/docs/Learn/CSS).
+Aquí, solo has arañado la superficie de CSS. Si quieres encontrar más, puedes ir a la [página de aprendizaje de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics","Learn/Getting_started_with_the_web")}}
