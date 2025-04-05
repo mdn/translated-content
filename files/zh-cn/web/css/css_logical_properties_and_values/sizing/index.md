@@ -30,7 +30,49 @@ slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 
 在下面的运行实例里，我把书写模式设置成了 `horizontal-tb`。把它改成 `vertical-rl`，你会看到第一个例子——用的 `width` 和 `height`——尽管文本变成竖排，但是在每个方向上的尺寸保持不变。第二个例子——用的 `inline-size` 和 `block-size`——会跟着文本的方向变化，就像旋转了整个块。
 
-{{EmbedGHLiveSample("css-examples/logical/size-inline-block.html", '100%', 500)}}
+```html live-sample___size-inline-block
+<div class="container">
+  <div class="physical box">I have a width of 200px and a height of 100px.</div>
+
+  <div class="logical box">
+    I have an inline-size of 200px and a block-size of 100px.
+  </div>
+</div>
+```
+
+```css hidden live-sample___size-inline-block
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.container {
+  display: flex;
+}
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  margin: 10px;
+}
+```
+
+```css live-sample___size-inline-block
+.box {
+  writing-mode: horizontal-tb;
+}
+
+.physical {
+  width: 200px;
+  height: 100px;
+}
+
+.logical {
+  inline-size: 200px;
+  block-size: 100px;
+}
+```
+
+{{EmbedLiveSample("size-inline-block")}}
 
 ## 最小宽度和最小高度的示例
 
@@ -38,13 +80,95 @@ slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 
 试试把下面的例子像第一个例子一样改成 `vertical-rl` 看看效果。我在第一个例子里用了 `min-height`，在第二个里用了 `min-block-size`。
 
-{{EmbedGHLiveSample("css-examples/logical/size-min.html", "100%", 500)}}
+```html live-sample___size-min
+<div class="container">
+  <div class="physical box">
+    I have a width of 200px and a min-height of 5em.
+  </div>
+
+  <div class="logical box">
+    I have an inline-size of 200px and a min-block-size of 5em.
+  </div>
+</div>
+```
+
+```css hidden live-sample___size-min
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.container {
+  display: flex;
+}
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  margin: 10px;
+}
+```
+
+```css live-sample___size-min
+.box {
+  writing-mode: horizontal-tb;
+}
+
+.physical {
+  width: 200px;
+  min-height: 5em;
+}
+
+.logical {
+  inline-size: 200px;
+  min-block-size: 5em;
+}
+```
+
+{{EmbedLiveSample("size-min")}}
 
 ## 最大宽度和最大高度的示例
 
 最后你可以用逻辑属性 {{CSSXref("max-inline-size")}} 和 {{CSSXref("max-block-size")}} 替代 {{CSSXref("max-width")}} 和 {{CSSXref("max-height")}}。用和之前一样的方式玩玩下面的例子。
 
-{{EmbedGHLiveSample("css-examples/logical/size-max.html", "100%", 500)}}
+```html live-sample___size-max
+<div class="container">
+  <div class="physical box">I have a max-width of 200px.</div>
+
+  <div class="logical box">I have an max-inline-size of 200px.</div>
+</div>
+```
+
+```css hidden live-sample___size-max
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.container {
+  display: flex;
+}
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  margin: 10px;
+}
+```
+
+```css live-sample___size-max
+.box {
+  writing-mode: horizontal-tb;
+}
+
+.physical {
+  max-width: 200px;
+}
+
+.logical {
+  max-inline-size: 200px;
+}
+```
+
+{{EmbedLiveSample("size-max")}}
 
 ## 用于 resize 的逻辑关键词
 
@@ -52,4 +176,53 @@ slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 
 无论你按实体还是按逻辑理解，`resize` 属性的关键词值 `both` 的效果都一样。这个值同时设置两个方向的尺度。玩玩下面的例子。
 
-{{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
+```html live-sample___size-resize
+<div class="container">
+  <div class="physical box">
+    I have a width of 200px and a height of 100px. I can be resized
+    horizontally.
+  </div>
+
+  <div class="logical box">
+    I have an inline-size of 200px and a block-size of 100px. I can be resized
+    in the inline direction.
+  </div>
+</div>
+```
+
+```css hidden live-sample___size-resize
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.container {
+  display: flex;
+}
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  margin: 10px;
+}
+```
+
+```css live-sample___size-resize
+.box {
+  writing-mode: horizontal-tb;
+  overflow: scroll;
+}
+
+.physical {
+  width: 200px;
+  height: 100px;
+  resize: horizontal;
+}
+
+.logical {
+  inline-size: 200px;
+  block-size: 100px;
+  resize: inline;
+}
+```
+
+{{EmbedLiveSample("size-resize")}}
