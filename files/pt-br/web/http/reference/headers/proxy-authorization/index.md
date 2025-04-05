@@ -30,7 +30,7 @@ Proxy-Authorization: <type> <credentials>
 ## Diretivas
 
 - \<type>
-  - : [Tipo de autentação](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). Veja também o [registro IANA de esquemas de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autentação](/pt-BR/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Um tipo comum é ["Basic"](/pt-BR/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). Veja também o [registro IANA de esquemas de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - \<credentials>
 
   - : As credenciais são construídas assim:
@@ -56,7 +56,7 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## Veja também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
+- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Proxy-Authenticate")}}
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}

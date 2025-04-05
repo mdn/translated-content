@@ -44,9 +44,9 @@ Embora trabalhar com esta lição possa parecer menos relevante imediatamente e 
 
 CSS significa **Folhas de Estilo em Cascata**, e a primeira palavra _cascading_ é incrivelmente importante de se entender — a maneira como a cascata se comporta é a chave para entender o CSS.
 
-Em algum momento, você estará trabalhando em um projeto e descobrirá que o CSS que você pensou que deveria ser aplicado a um elemento não está funcionando. Muitas vezes, o problema é que você cria duas regras que aplicam valores diferentes da mesma propriedade ao mesmo elemento. [**Cascata**](/pt-BR/docs/Web/CSS/Cascade) e o conceito intimamente relacionado de [**especificidade**](/pt-BR/docs/Web/CSS/Specificity) são mecanismos que controlam qual regra se aplica quando há tal conflito. A regra que está estilizando seu elemento pode não ser a que você espera, então você precisa entender como esses mecanismos funcionam.
+Em algum momento, você estará trabalhando em um projeto e descobrirá que o CSS que você pensou que deveria ser aplicado a um elemento não está funcionando. Muitas vezes, o problema é que você cria duas regras que aplicam valores diferentes da mesma propriedade ao mesmo elemento. [**Cascata**](/pt-BR/docs/Web/CSS/Cascade) e o conceito intimamente relacionado de [**especificidade**](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity) são mecanismos que controlam qual regra se aplica quando há tal conflito. A regra que está estilizando seu elemento pode não ser a que você espera, então você precisa entender como esses mecanismos funcionam.
 
-Também significativo aqui é o conceito de [**herança**](/pt-BR/docs/Web/CSS/Inheritance), o que significa que algumas propriedades CSS por padrão herdam valores definidos no elemento pai do elemento atual e algumas não. Isso também pode causar algum comportamento inesperado.
+Também significativo aqui é o conceito de [**herança**](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance), o que significa que algumas propriedades CSS por padrão herdam valores definidos no elemento pai do elemento atual e algumas não. Isso também pode causar algum comportamento inesperado.
 
 Vamos começar dando uma olhada rápida nas principais coisas com as quais estamos lidando, depois veremos cada uma delas e veremos como elas interagem umas com as outras e com seu CSS. Estes podem parecer um conjunto complicado de conceitos para entender. À medida que você pratica escrever CSS a maneira como ele funciona se tornará mais óbvia para você.
 
@@ -60,7 +60,7 @@ No exemplo abaixo, temos duas regras que podem ser aplicadas ao {{glossary("elem
 
 ### Especificidade
 
-[Especificidade](/pt-BR/docs/Web/CSS/Specificity) é o algoritmo que o navegador usa para decidir qual valor de propriedade é aplicado a um elemento. Se vários blocos de estilo tiverem seletores diferentes que configuram a mesma propriedade com valores diferentes e visam o mesmo elemento, a especificidade decide o valor da propriedade que será aplicado ao elemento. A especificidade é basicamente uma medida de quão específica será a seleção de um seletor:
+[Especificidade](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity) é o algoritmo que o navegador usa para decidir qual valor de propriedade é aplicado a um elemento. Se vários blocos de estilo tiverem seletores diferentes que configuram a mesma propriedade com valores diferentes e visam o mesmo elemento, a especificidade decide o valor da propriedade que será aplicado ao elemento. A especificidade é basicamente uma medida de quão específica será a seleção de um seletor:
 
 - Um seletor de elemento é menos específico; ele selecionará todos os elementos desse tipo que aparecem em uma página, por isso tem menos peso. Os seletores de pseudoelementos têm a mesma especificidade que os seletores de elementos regulares.
 - Um seletor de classe é mais específico; ele selecionará apenas os elementos em uma página que tenham um valor de atributo `class` específico, portanto, terá mais peso. Seletores de atributo e pseudoclasses têm o mesmo peso que uma classe.
@@ -111,7 +111,7 @@ O {{glossary("CSS")}} fornece cinco valores de propriedades universais especiais
 - {{cssxref("inherit")}}
   - : define o valor da propriedade aplicada a um elemento selecionado para ser igual ao de seu elemento pai. Efetivamente, isso "ativa a herança".
 - {{cssxref("initial")}}
-  - : define o valor da propriedade aplicada a um elemento selecionado para o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) dessa propriedade.
+  - : define o valor da propriedade aplicada a um elemento selecionado para o [valor inicial](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) dessa propriedade.
 - {{cssxref("revert")}}
   - : redefine o valor da propriedade aplicado a um elemento selecionado para o estilo padrão do navegador, em vez dos padrões aplicados a essa propriedade. Esse valor age como {{cssxref("unset")}} em muitos casos.
 - {{cssxref("revert-layer")}}

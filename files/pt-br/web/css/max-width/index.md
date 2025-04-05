@@ -5,7 +5,7 @@ slug: Web/CSS/max-width
 
 {{CSSRef}}
 
-A propriedade **`max-width`** do [CSS](/pt-BR/docs/Web/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/Web/CSS/used_value) da propriedade {{cssxref("width")}} se torne maior que o valor especificado por `max-width`.
+A propriedade **`max-width`** do [CSS](/pt-BR/docs/Web/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/Web/CSS/CSS_cascade/used_value) da propriedade {{cssxref("width")}} se torne maior que o valor especificado por `max-width`.
 
 {{InteractiveExample("CSS Demo: max-width")}}
 

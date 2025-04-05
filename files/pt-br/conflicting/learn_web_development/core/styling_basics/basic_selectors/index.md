@@ -112,6 +112,6 @@ Um seletor de ID começa com um `#` em vez de um caractere de ponto, mas é usad
 
 ## Resumo
 
-Isso encerra os seletores de tipo, classe e ID. Continuaremos explorando seletores observando [seletores de atributos](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
+Isso encerra os seletores de tipo, classe e ID. Continuaremos explorando seletores observando [seletores de atributos](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

@@ -58,7 +58,7 @@ No entanto, familiarizar-se com JavaScript é mais desafiador do que familiariza
 > [!NOTE]
 > A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que o navegador lê o código na ordem em que aparece no arquivo.
 >
-> Se o JavaScript carregar primeiro e supostamente afetar o HTML que ainda não foi carregado, pode haver problemas. Colocar JavaScript perto da parte inferior de uma página HTML é uma maneira de acomodar essa dependência. Para saber mais sobre abordagens alternativas, consulte [Estratégias de carregamento de script](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies).
+> Se o JavaScript carregar primeiro e supostamente afetar o HTML que ainda não foi carregado, pode haver problemas. Colocar JavaScript perto da parte inferior de uma página HTML é uma maneira de acomodar essa dependência. Para saber mais sobre abordagens alternativas, consulte [Estratégias de carregamento de script](/pt-BR/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies).
 
 ### O que aconteceu?
 
@@ -74,7 +74,7 @@ Em seguida, o código define o valor da propriedade {{domxref("Node.textContent"
 Para entender melhor como o JavaScript funciona, vamos explicar alguns dos principais recursos da linguagem. Vale a pena notar que esses recursos são comuns a todas as linguagens de programação. Se você dominar esses fundamentos, terá uma vantagem inicial na codificação em outras linguagens também!
 
 > [!WARNING]
-> neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+> neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variáveis
 
@@ -115,7 +115,7 @@ let myVariable = "Bob";
 myVariable = "Steve";
 ```
 
-Observe que as variáveis podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Data_structures):
+Observe que as variáveis podem conter valores que têm diferentes [tipos de dados](/pt-BR/docs/Web/JavaScript/Guide/Data_structures):
 
 <table class="standard-table">
   <thead>
@@ -471,7 +471,7 @@ Acabamos de arranhar a superfície do JavaScript. Se você gostou de jogar e des
 
 ## Veja também
 
-- [Scripting dinâmico do lado do cliente com JavaScript](/pt-BR/docs/Learn/JavaScript)
+- [Scripting dinâmico do lado do cliente com JavaScript](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308)
   - : Mergulhe no JavaScript com muito mais detalhes.
 - [Aprenda JavaScript](https://learnjavascript.online/)
   - : Este é um excelente recurso para aspirantes a desenvolvedores da web! Aprenda JavaScript em um ambiente interativo, com aulas curtas e testes interativos, guiados por uma avaliação automatizada. As primeiras 40 aulas são gratuitas. O curso completo está disponível por um pequeno pagamento único.

@@ -10,7 +10,7 @@ Este guia tem uma série de artigos que vão ajudar você a ficar craque em HTML
 
 ## Pré-requisitos
 
-Antes de iniciar este guia, você deve estar familiarizado com os conceitos da nossa [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
+Antes de iniciar este guia, você deve estar familiarizado com os conceitos da nossa [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content).
 
 > **Nota:** **Dica**: Se você está usando um computador/tablet/outro aparelho onde você não pode criar seus próprios arquivos, você pode testar (a maior parte) dos códigos de exemplo em uma ferramenta online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
@@ -18,15 +18,15 @@ Antes de iniciar este guia, você deve estar familiarizado com os conceitos da n
 
 Os seguintes guias te ensinarão todo o básico de formulários HTML, alcançando alguns tópicos ligeiramente mais avançados no caminho.
 
-- [Meu primeiro formulário HTML](/pt-BR/docs/Learn/Forms/Your_first_form)
+- [Meu primeiro formulário HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms/Your_first_form)
   - : O primeiro artigo na série te instruirá em sua primeira vez criando um formulário HTML, incluindo o projeto/desenho de um formulário simples, implementação usando os elementos HTML corretos, estilização bem básica com CSS, e como os dados são enviados para um servidor.
-- [Como estruturar um formulário HTML](/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form)
+- [Como estruturar um formulário HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
   - : Agora que o básico não é mais problema, daremos uma olhada mais aprofundada nos elementos usados para dar estrutura e significado para as diferentes partes de um formulário.
 - [Os form widgets nativos](/pt-BR/docs/Learn/Forms/Basic_native_form_controls)
   - : Veremos a funcionalidade de diferentes form widgets em detalhe, observando quais opções estão disponíveis para coletar diferentes tipos de dados.
-- [Enviando e recuperando dados](/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Enviando e recuperando dados](/pt-BR/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
   - : Este artigo mostra o que acontece quando um usuário submete (envia) um formulário — para onde os dados vão, e o que fazer quando ele chegar lá? Também algumas das preocupações com segurança envolvida ao enviar dados em um formulário.
-- [Validação de dados nos formulários HTML](/pt-BR/docs/Learn/Forms/Form_validation)
+- [Validação de dados nos formulários HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)
   - : Enviar os dados não é o suficiente — também precisamos garantir que os dados que o usuário preenche num formulário está no formato correto que precisamos para processá-los com sucesso, e que não quebre nossas aplicações. Também queremos ajudar nossos usuários a preencher os formulários corretamente e não se sentirem frustrados ao usar nossos apps. Validação de dados nos ajuda a alcançar esses objetivos — este artigo te diz o que precisa saber.
 
 ## Guias avançados
@@ -39,12 +39,12 @@ Estes guias passam por algumas técnicas mais avançadas, que você achará úti
   - : Este artigo mostra formas de usar um formulário para montar um HTTP request e enviá-lo via JavaScript personalizado, em vez da forma de submissão padrão. Também apresenta razões pelas quais você quereria fazer isso, e as implicações de fazer dessa forma. (Veja também Usando o objeto FormData.)
 - [Formulários HTML para browsers antigos](/pt-BR/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
   - : Aborda detecção de funcionalidades, etc. Deveria ser movido para o módulo de testes multi-browser, já que a mesma coisa é abordada lá.
-- [Novidades em formulários no HTML5](/pt-BR/docs/Learn/Forms)
+- [Novidades em formulários no HTML5](/pt-BR/docs/Learn_web_development/Extensions/Forms)
   - : Este artigo provê uma referência às novas adições aos formulários HTML na especificação HTML5.
 
 ## Guias de estilização de formulários
 
-Estes guias para estilizar formulários com CSS realmente deveriam estar nos tópicos sobre [CSS](/pt-BR/docs/Learn/CSS), mas estamos mantendo-os aqui por enquanto até uma oportunidade apropriada de movê-los.
+Estes guias para estilizar formulários com CSS realmente deveriam estar nos tópicos sobre [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics), mas estamos mantendo-os aqui por enquanto até uma oportunidade apropriada de movê-los.
 
 - [Estilizando formulários HTML](/pt-BR/docs/Learn/Forms/Advanced_form_styling)
   - : Este artigo fornece uma introdução à personalização de estilos de formulário com CSS, incluindo todo o básico que você precisa para tarefas básicas de estilização.
