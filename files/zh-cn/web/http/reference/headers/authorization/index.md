@@ -79,7 +79,7 @@ Authorization: Digest username=<username>,
 - \<response>
   - : 证明用户知道该密码，它是该密码的十六进制数字字符串形式。该算法对用户名和密码、realm、cnonce、qop、nc 等进行编码。它在规范中进行了详细描述。
 - `username`
-  - : 带引号的字符串，其中包含指定 `realm` 的用户名，可以是纯文本，也可以是十六进制表示的哈希编码。如果名称包含字段中不允许的字符，则可以使用 `username*` 替换它（而不是“同时包含两者”）。
+  - : 带引号的字符串，其中包含指定 `realm` 的用户名，可以是纯文本，也可以是十六进制表示的散列编码。如果名称包含字段中不允许的字符，则可以使用 `username*` 替换它（而不是“同时包含两者”）。
 - `username*`
   - : 使用 RFC5987 中定义的扩展符号格式化的用户名。只有当名称无法在 `username` 中编码并且 `userhash` 设置为 `"false"` 时，才应使用此字段。
 - `uri`
@@ -99,7 +99,7 @@ Authorization: Digest username=<username>,
 - `nc`
   - : 随机数。客户端发送当前 `cnonce` 值（包括当前请求）的请求的十六进制计数。服务器可以使用重复的 `nc` 值来识别重放请求。
 - `userhash` {{optional_inline}}
-  - : 如果用户名已经被哈希运算，则为 `"true"`。默认情况下是 `"false"`。
+  - : 如果用户名已经被散列运算，则为 `"true"`。默认情况下是 `"false"`。
 
 ## 示例
 

@@ -133,8 +133,8 @@ if (Regex.IsMatch(data, "^GET")) {
 
 1. 获取请求头中"Sec-WebSocket-Key"字段的值，这个字段值不能有任何的前导和后继空格字符
 2. 将它与"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"(一个 RFC 6455 中规定的特殊的 GUID ) 拼接起来
-3. 计算新的值的 SHA-1 和 Base64 哈希值
-4. 将哈希值写回到一个 HTTP 响应头，作为"Sec-WebSocket-Accept"字段的值
+3. 计算新的值的 SHA-1 和 Base64 散列值
+4. 将散列值写回到一个 HTTP 响应头，作为"Sec-WebSocket-Accept"字段的值
 
 ```cpp
 

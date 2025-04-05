@@ -16,7 +16,7 @@ l10n:
 _该接口实现的属性定义在 {{domxref("Crypto/getRandomValues", "RandomSource")}} 中。_
 
 - {{domxref("Crypto.subtle")}} {{ReadOnlyInline}} {{SecureContext_inline}}
-  - : 返回一个 {{domxref("SubtleCrypto")}} 对象，用来访问公共的密码学原语，例如哈希、签名、加密以及解密。
+  - : 返回一个 {{domxref("SubtleCrypto")}} 对象，用来访问公共的密码学原语，例如散列、签名、加密以及解密。
 
 ## 实例方法
 
