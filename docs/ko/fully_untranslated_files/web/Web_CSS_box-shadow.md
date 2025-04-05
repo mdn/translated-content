@@ -7,7 +7,47 @@ slug: Web/CSS/box-shadow
 
 `box-shadow` CSS 속성은 요소의 테두리를 감싼 그림자 효과를 추가합니다. 쉼표로 구문해서 여러 그림자 효과를 입힐 수 있습니다. 박스 그림자는 요소에서의 수평수직 거리(오프셋), 흐릿함과 확산 정도, 색상으로 이루어집니다.
 
-{{EmbedInteractiveExample("pages/css/box-shadow.html")}}
+{{InteractiveExample("CSS Demo: box-shadow")}}
+
+```css interactive-example-choice
+box-shadow: 10px 5px 5px red;
+```
+
+```css interactive-example-choice
+box-shadow: 60px -16px teal;
+```
+
+```css interactive-example-choice
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+```
+
+```css interactive-example-choice
+box-shadow: inset 5em 1em gold;
+```
+
+```css interactive-example-choice
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>This is a box with a box-shadow around it.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  margin: 20px auto;
+  padding: 0;
+  border: 2px solid #333;
+  width: 80%;
+  text-align: center;
+}
+```
 
 `box-shadow` 속성은 거의 모든 요소의 테두리에서 그림자를 드리울 수 있도록 도와줍니다. {{cssxref("border-radius")}}가 요소에 함께 적용됐다면 박스 그림자의 모서리도 똑같이 둥근 모서리를 갖게 됩니다. 여러 그림자의 z축 순서는 {{cssxref("text-shadow")}}와 동일하게 처음 그림자일수록 위로 올라옵니다.
 
