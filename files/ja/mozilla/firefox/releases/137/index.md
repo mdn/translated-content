@@ -47,8 +47,7 @@ Firefox 137 は、米国時間 [2025 年 4 月 1 日](https://whattrainisitnow.c
 #### WebDriver BiDi
 
 - 新たに `webExtension.install` ([Firefox bug 1934551](https://bugzil.la/1934551)) および `webExtension.uninstall` ([Firefox bug 1934553](https://bugzil.la/1934553)) コマンドを実装しました。これらは、クライアントがブラウザーにウェブ拡張機能をインストールおよびアンインストールできるようにします。
-- `sessions.subscribe` コマンドで引数 `userContexts` をサポートしました。これは、(Firefox コンテナーとしても知られる) ユーザーコンテキストの一覧をクライアントが監視できるようにします 
-  ([Firefox bug 1938604](https://bugzil.la/1938604))。
+- `sessions.subscribe` コマンドで引数 `userContexts` をサポートしました。これは、(Firefox コンテナーとしても知られる) ユーザーコンテキストの一覧をクライアントが監視できるようにします ([Firefox bug 1938604](https://bugzil.la/1938604))。
 - `script.addPreloadScript` コマンドに引数 `contexts` と `userContexts` の両方が渡されたときに、`invalid argument` エラーが発生するように更新しました ([Firefox bug 1945554](https://bugzil.la/1945554))。
 - 引数 `wait` が `none` であり、また beforeunload プロンプトが開く場合に、`browsingContext.navigate` コマンドが直ちに返らないようになりました。これは引数 `wait` が `none` である場合のロジックを更新する最初のステップです ([Firefox bug 1948700](https://bugzil.la/1948700))。
 
