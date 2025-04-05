@@ -77,7 +77,7 @@ l10n:
 - [`background` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) に `preferred_environment` プロパティを追加しました。これは、ブラウザーがバックグラウンドのスクリプトをドキュメントまたはサービスワーカーとして実行することを、拡張機能が要求できるようにします ([Firefox bug 1798655](https://bugzil.la/1798655))。
 - {{WebExtAPIRef("menus.update")}}、{{WebExtAPIRef("menus.remove")}} およびそれらの別名である {{WebExtAPIRef("contextMenus.update")}}、{{WebExtAPIRef("contextMenus.remove")}} が、メニュー項目が存在しないときにエラーで拒否するようになりました。以前は、エラーが無視されてプロミスが履行状態になりました ([Firefox bug 1688743](https://bugzil.la/1688743))。
 - 新しいバージョンの {{WebExtAPIRef("userScripts")}} API が、デスクトップ版の Firefox で使用可能になりました。このバージョンの API は Manifest V3 拡張機能で使用するもので、ブラウザーごとに [許可の仕組み](/ja/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) が異なりますが Chrome との広範囲な互換性を提供します ([Firefox bug 1943050](https://bugzil.la/1943050))。
-- `NETWORK_FAILED` でダウンロードが失敗したときに、{{WebExtAPIRef("downloads.DownloadItem")} の `canResume` プロパティが `true` に設定されるようになりました。これはネットワークエラーのために失敗したダウンロードを、{{WebExtAPIRef("downloads.resume","downloads.resume()")}} を使用して再開可能にします ([Firefox bug 1694049](https://bugzil.la/1694049))。
+- `NETWORK_FAILED` でダウンロードが失敗したときに、{{WebExtAPIRef("downloads.DownloadItem")}} の `canResume` プロパティが `true` に設定されるようになりました。これはネットワークエラーのために失敗したダウンロードを、{{WebExtAPIRef("downloads.resume","downloads.resume()")}} を使用して再開可能にします ([Firefox bug 1694049](https://bugzil.la/1694049))。
 
 ## 実験的なウェブ機能
 
