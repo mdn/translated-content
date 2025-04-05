@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-每当响应数据可用时都会被调用的事件处理器。处理器会传递一个包含 `data` 属性的 [`Event` 对象](/zh-CN/docs/Web/API/Event)。`data` 属性包含以 {{jsxref("ArrayBuffer")}} 表示的响应数据的一个块。
+每当响应数据可用时都会被调用的事件处理器。处理器会传递一个包含 `data` 属性的 [`Event` 对象](/zh-CN/docs/Web/API/Event)。`data` 属性包含以 {{jsxref("ArrayBuffer")}} 表示的一个响应数据分块。
 
 要对数据解码，请使用 {{domxref("TextDecoder")}} 或 {{domxref("Blob")}}。
 
@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-该示例添加一个使用 {{jsxref("String.prototype.replaceAll()", "replaceAll()")}} 将响应中的“示例”替换为“WebExtension 示例”的 `ondata` 监听器。
+该示例添加一个 `ondata` 监听器，其会使用 {{jsxref("String.prototype.replaceAll()", "replaceAll()")}} 将响应中的“示例”替换为“WebExtension 示例”。
 
 > [!NOTE]
 > 该示例仅可用于替换在一个数据块中完整出现的“示例”两字，而不适用于文字横跨两个块的情况（在大型文档中这可能会以 \~0.1% 概率发生）。此外，它仅能处理 UTF-8 编码的文档。实际实现将会更为复杂。
@@ -35,8 +35,8 @@ function listener(details) {
     // 因此，最好先获取完整的响应，然后再进行替换。
     str = str.replaceAll("示例", "WebExtension 示例");
     filter.write(encoder.encode(str));
-    // 在此处调用 filter.disconnect(); 会使我们仅处理第一个块，并让其余的块保持不变。
-    // 需要注意的是，这会破坏出现在块边界上的多字节字符！
+    // 在此处调用 filter.disconnect(); 会使我们仅处理第一个分块，并让其余的块保持不变。
+    // 需要注意的是，这会破坏出现在分块边界上的多字节字符！
   };
 
   filter.onstop = (event) => {
@@ -279,7 +279,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-该示例则展示如何检测响应中的最后一个块：
+该示例则展示如何检测响应中的最后一个分块：
 
 ```js
 function listener(details) {
