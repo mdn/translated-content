@@ -1,23 +1,22 @@
 ---
 title: JavaScript のサンプルコードの作成ガイドライン
+short-title: JavaScript の例
 slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
 l10n:
-  sourceCommit: f845422a4b52c149e87846242d26b3cdf2705376
+  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
-
-{{MDNSidebar}}
 
 以下のガイドラインは MDN Web Docs の JavaScript のサンプルコードの書き方について述べたものです。この記事は、可能な限り多くの人が理解できるような簡潔な例を書くためのルールをまとめたものです。
 
 ## JavaScript サンプルコードに関する一般的なガイドライン
 
-この節では、　JavaScript　のサンプルコードを書く際に留意すべき一般的なガイドラインを説明します。後の節では、より具体的な詳細について説明します。
+この節では、 JavaScript のサンプルコードを書く際に留意すべき一般的なガイドラインを説明します。後の節では、より具体的な詳細について説明します。
 
 ### 書式の選択
 
 正しいインデント、ホワイトスペース、行の長さに関する意見は常に論争の的となってきました。このようなトピックに関するディスカッションは、コンテンツを作成したり維持したりすることの妨げになります。
 
-MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては [設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json) を参照し、 [Prettier のドキュメント](https://prettier.io/docs/en/index.html)を読んでください。
+MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては[設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json)を参照し、 [Prettier のドキュメント](https://prettier.io/docs/index.html)を読んでください。
 
 Prettier はすべてのコードを書式化し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
 
@@ -115,7 +114,7 @@ pets[pets.length] = "cat";
 
 単一行のコメントは `//` でマークされ、ブロックコメントは `/* … */` で囲まれます。
 
-一般的に、コードをコメントを書くには単一の行のコメントを使用します。コメントアウトされたコードを視覚的に認識しやすくするためです。さらに、この慣例により、デバッグ中に `/* … */` を使用してコードの部分をコメントアウトすることができます。
+一般的に、コードをコメントを書くには単一の行のコメントを使用します。コメントアウトされたコードを視覚的に認識しやすくするためです。さらに、この慣例により、デバッグ中に `/* … */` を使用してコードの一部をコメントアウトすることができます。
 
 - スラッシュとコメントの間には空白を入れてください。文のように大文字で始めますが、コメントをピリオドで終わらせないでください。
 
@@ -189,7 +188,7 @@ pets[pets.length] = "cat";
 
 例を短くするために、省略記号 (…) を使用して冗長なコードを省略することは必要です。しかし、開発者はコードに例をコピー＆ペーストすることが多いので、書き手は慎重に行うべきです。
 
-JavaScriptでは、省略記号 (…) はコメントに書くべきです。可能な場合は、このスニペットを再利用する人がどのようなアクションを追加するのかを示してください。
+JavaScript では、省略記号 (`…`) はコメントに書くべきです。可能な場合は、このスニペットを再利用する人がどのようなアクションを追加するのかを示してください。
 
 省略記号 (…) にコメントを使用することで、より明示的になり、開発者がサンプルコードをコピー＆ペーストしたときのエラーを防ぐことができます。次のように書いてください。
 
@@ -275,7 +274,7 @@ function doIt() {
   const sum = array1.reduce((a, b) => a + b);
   ```
 
-  次のように書く代わりです。
+  次のように書かないでください。
 
   ```js example-bad
   const array1 = [1, 2, 3, 4];
@@ -284,7 +283,7 @@ function doIt() {
   });
   ```
 
-- 識別子に関数を割り当てるためにアロー関数を使用することは避けてください。具体的な例としては、メソッドにアロー関数を使用しないでください。キーワード `function` を用いた関数宣言を使用してください。
+- アロー関数を使用して、関数を識別子に代入することは避けてください。具体的には、メソッドにアロー関数を使用しないでください。キーワード `function` を用いた関数宣言を使用してください。
 
   ```js example-good
   function x() {
@@ -300,7 +299,7 @@ function doIt() {
   };
   ```
 
-- アロー関数を用いる場合は、可能な限り[暗黙の返値](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) （_式本体_ とも呼ばれます）を使用してください。
+- アロー関数を用いる場合は、可能な限り[暗黙の返値](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions#関数の本体) （_式本体_ とも呼ばれます）を使用してください。
 
   ```js example-good
   arr.map((e) => e.id);
@@ -320,7 +319,7 @@ function doIt() {
 
 [ループ](/ja/docs/Learn_web_development/Core/Scripting/Loops)が必要な場合は、利用可能なループ（[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) など）の中から、適切なループを選択してください。
 
-- コレクションの要素をすべて反復処理する場合は、古典的な `for (;;)` ループの使用を避け、`for...of` または `forEach()` を推奨します。配列 `Array` 以外のコレクションを使用している場合は、`for...of` が実際に対応しているか（反復可能な変数であることが要求される）、`forEach()` メソッドが実際に存在しているかを調べる必要があることに注意してください。
+- コレクションの要素をすべて反復処理する場合は、古典的な `for (;;)` ループの使用を避け、`for...of` または `forEach()` を推奨します。配列 `Array` 以外のコレクションを使用している場合は、`for...of` が実際に対応しているか（反復可能な変数であることが要求される）、 `forEach()` メソッドが実際に存在しているかを調べる必要があることに注意してください。
 
   `for...of` を使用してください。
 
@@ -349,7 +348,7 @@ function doIt() {
   }
   ```
 
-- `for...of` には `const` キーワードを、他にもループには `let` キーワードを使用して、初期化子を適切に定義してください。省略しないでください。この例は正しいです。
+- `for...of` には `const` キーワードを、他のループには `let` キーワードを使用して、初期化子を適切に定義してください。省略しないでください。この例は正しいです。
 
   ```js example-good
   const cats = ["Athena", "Luna"];
@@ -391,13 +390,13 @@ function doIt() {
 
 > **警告:** `for...in` を配列や文字列に使用しないでください。
 
-> **メモ:** `for`ループをまったく使用しないことを検討してください。 [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) （または一部の操作においては [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)）使用している場合は、代わりに [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`every()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`findIndex()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)、[`find()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、その他多数のような、より意味づけされた反復処理メソッドを使用することを検討してください。
+> **メモ:** `for`ループをまったく使用しないようにすることを検討してください。 [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) （または一部の操作においては [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)）使用している場合は、代わりに [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)、[`every()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/every)、[`findIndex()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)、[`find()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/find)、[`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)、その他多数のような、より意味づけされた反復処理メソッドを使用することを検討してください。
 
 ### 制御文
 
-`if...else` 制御文には注意すべきケースがあります。もし `if` 文が `return` で終わっている場合は、`else` 文を追加しないでください。
+`if...else` 制御文には注意すべきケースがあります。もし `if` 文が `return` で終わっている場合は、 `else` 文を追加しないでください。
 
-if`文のすぐ後に続けてください。次のように書いてください。
+`if` 文のすぐ後に続けてください。次のように書いてください。
 
 ```js example-good
 if (test) {
@@ -445,7 +444,7 @@ for (const car of storedCars) car.paint("red");
 
 switch 文は少し厄介です。
 
-- 特定のケースでは `return` 文の後に `break` 文を追加しないでください。その代わりに、`return`文を次のように書いてください。
+- それぞれの case では `return` 文の後に `break` 文を追加しないでください。その代わりに、 `return` 文を次のように書いてください。
 
   ```js example-good
   switch (species) {
@@ -553,31 +552,31 @@ const object = new Object();
 
 ### オブジェクトクラス
 
-オブジェクトには、旧来のコンストラクターではなく、 ES クラス構文を使用してください。
+- オブジェクトには、旧来のコンストラクターではなく、 ES クラス構文を使用してください。
 
-例えば、これが推奨される方法です。
+  例えば、これが推奨される方法です。
 
-```js example-good
-class Person {
-  constructor(name, age, pronouns) {
-    this.name = name;
-    this.age = age;
-    this.pronouns = pronouns;
+  ```js example-good
+  class Person {
+    constructor(name, age, pronouns) {
+      this.name = name;
+      this.age = age;
+      this.pronouns = pronouns;
+    }
+
+    greeting() {
+      console.log(`Hi! I'm ${this.name}`);
+    }
   }
+  ```
 
-  greeting() {
-    console.log(`Hi! I'm ${this.name}`);
+- 継承には `extends` を使用してください。
+
+  ```js example-good
+  class Teacher extends Person {
+    // …
   }
-}
-```
-
-継承には `extends` を使用してください。
-
-```js example-good
-class Teacher extends Person {
-  // …
-}
-```
+  ```
 
 ### メソッド
 
@@ -610,7 +609,7 @@ const obj = {
 ### オブジェクトプロパティ
 
 - [`Object.prototype.hasOwnProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) メソッドは非推奨となり、 [`Object.hasOwn()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) に置き換えられました。
-- 可能な限り、プロパティ識別子の重複を避けるために一括指定を使用してください。次のように書いてください。
+- 可能な限り、プロパティ識別子の重複を避けるために短縮形を使用してください。次のように書いてください。
 
   ```js example-good
   function createObject(name, age) {
@@ -632,7 +631,7 @@ const obj = {
 
 ### 条件演算子
 
-条件に応じてリテラルを変数に格納するためには、 `if...else` 文の代わりに[条件（三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)を使用します。このルールは返値を返すときにも適用されます。次のように書いてください。
+条件に応じてリテラルを変数に格納するためには、[条件（三項）演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)を `if...else` 文の代わりに使用します。このルールは返値を返すときにも適用されます。次のように書いてください。
 
 ```js example-good
 const x = condition ? 1 : 2;
@@ -705,9 +704,11 @@ age != 25;
 
 理解しやすいコードのためには、優れた変数名が不可欠です。
 
+<!-- cSpell:ignore acclmtr -->
+
 - 短い識別子を使用し、一般的でない略語は避けてください。良い変数名は通常 3 文字から 10 文字の長さですが、あくまでヒントです。例えば、 `accelerometer` は文字数のために `acclmtr` と略すよりも説明的です。
 - 各変数に明確な意味づけがあるような、実世界に関連した例を使用するようにしてください。 `foo` や `bar` のようなプレースホルダーの名前に戻るのは、例が単純で作為的な場合だけにしてください。
-- [ハンガリー記法](https://ja.wikipedia.org/wiki/ハンガリアン記法)は使用しないでください。変数名の接頭辞に型を付けないでください。例えば、`bought = oCar.sBuyer != null` ではなく `bought = car.buyer !== null` と書いたり、`sName = "John Doe"` ではなく `name = "John Doe"` と書いたりします。
+- [ハンガリー記法](https://ja.wikipedia.org/wiki/ハンガリアン記法)は使用しないでください。変数名の接頭辞に型を付けないでください。例えば、`bBought = oCar.sBuyer != null` ではなく `bought = car.buyer !== null` と書いたり、`sName = "John Doe"` ではなく `name = "John Doe"` と書いたりします。
 - 集合の場合、リスト、配列、キューなどの型を名前に入力することは避けてください。コンテンツ名は複数形で使用します。例えば、車の配列の場合は `carArray` や `carList` ではなく `cars` を使用します。具体的なアプリケーションのコンテキストなしで機能の抽象的な形を表示させたい場合など、例外があるかもしれません。
 - プリミティブ値には、小文字から始まる _camelCase_ を使用します。と:`_` は使用しないでください。適切な場合には、簡潔で読みやすく、意味づけされた名前を使用してください。例えば、 `currency_name` ではなく `currencyName` を使用してください。
 - 冠詞や所有格を使用することは避けてください。例えば、 `myCar` や `aCar` の代わりに `car` を使用します。実用的なコンテキストがなく、一般的な機能を記述する場合などは例外があるかもしれません。
@@ -756,11 +757,11 @@ age != 25;
 
 この例では、再代入される変数に `const` を使用しています。再代入されるとエラーが発生します。
 
-```js example-bad
-const age = 40;
-age++;
-console.log("Happy birthday!");
-```
+  ```js example-bad
+  const age = 40;
+  age++;
+  console.log("Happy birthday!");
+  ```
 
 - 下記の例では `var` を使用しており、グローバルスコープを汚染しています。
 
