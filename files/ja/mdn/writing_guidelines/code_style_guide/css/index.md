@@ -1,23 +1,22 @@
 ---
 title: CSS のサンプルコードの作成ガイドライン
+short-title: CSS の例
 slug: MDN/Writing_guidelines/Code_style_guide/CSS
 l10n:
-  sourceCommit: 4680281518d584657960f984b3b720d79b3119ab
+  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
 
-{{MDNSidebar}}
-
-次のガイドラインでは、MDN コードの例として CSS を記述する方法について説明します。
+以下のガイドラインでは、MDN Web Docs の CSS サンプルコードを記述する方法について説明します。
 
 ## CSS のサンプルコードのための全般的なガイドライン
 
 ### 書式の選択
 
-正しいインデント、ホワイトスペース、行の長さに関する意見は常に論争の的となってきました。このようなトピックに関するディスカッションは、コンテンツを作成したり維持したりすることの妨げになります。
+正しいインデント、ホワイトスペース、行の長さに関する意見は常に論争の的となってきました。このようなトピックに関する議論は、コンテンツを作成したり維持したりすることの妨げになります。
 
-MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては [設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json) を参照し、 [Prettier のドキュメント](https://prettier.io/docs/en/index.html)を読んでください。
+MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては[設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json)を参照し、 [Prettier のドキュメント](https://prettier.io/docs/index.html)を読んでください。
 
-Prettier はすべてのコードを書式化し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
+Prettier はすべてのコードを整形し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
 
 ### CSS を計画する
 
@@ -29,7 +28,7 @@ CSS を大量に書き込む前に、スタイルを慎重に計画しましょ�
 
 ### プリプロセッサーを使用しない
 
-MDN のサンプル コードでは、[Sass](https://sass-lang.com/), [Less](https://lesscss.org/), [Stylus](http://stylus-lang.com/) などのプリプロセッサー構文を使用しないでください。MDN はバニラ CSS 言語を文書化しており、プリプロセッサーを使うことは、例を理解するためのハードルを上げるだけであり、読者を混乱させる可能性があります。
+MDN のサンプル コードでは、[Sass](https://sass-lang.com/), [Less](https://lesscss.org/), [Stylus](https://stylus-lang.com/) などのプリプロセッサー構文を使用しないでください。MDN はバニラ CSS 言語を文書化しており、プリプロセッサーを使うことは、例を理解するためのハードルを上げるだけであり、読者を混乱させる可能性があります。
 
 ### 特定の CSS の方法論を使わない
 
@@ -41,9 +40,9 @@ MDN のサンプル コードでは、[Sass](https://sass-lang.com/), [Less](htt
 
 もし本当にリセットを使う必要があると感じたら、[Nicolas Gallagher による normalize.css](https://necolas.github.io/normalize.css/) の使用を検討してください。これは、ブラウザー間でより一貫したものにし、いつも削除している既定の厄介なもの（例えば `<body>` 上のマージン）を取り除き、いくつかのバグを修正することだけを目的としています。
 
-### !important は使わない
+## !important
 
-`!important` は最後の手段で、何かを上書きする必要があり、他に方法がないときだけ使用します。これは悪しき習慣であり、可能な限り避けるべきです。
+`!important` は最後の手段で、何かを上書きする必要があり、他に方法がないときだけ使用します。 `!important` を使用することは悪しき習慣であり、可能な限り避けるべきです。
 
 ```css example-bad
 .bad-code {
@@ -51,7 +50,7 @@ MDN のサンプル コードでは、[Sass](https://sass-lang.com/), [Less](htt
 }
 ```
 
-### CSS のコメント
+## CSS のコメント
 
 自己文書化されていないコードにコメントを付けるには、 CSS 形式のコメントを使用してください。
 
@@ -81,7 +80,7 @@ h3 {
 }
 ```
 
-### 一括指定と個別指定のルール
+### 個別指定と一括指定のルール
 
 通常、 CSS 構文の詳細を教える場合、簡潔な一括指定よりも個別指定のプロパティを使用した方が明確でわかりやすいです（もちろん、簡潔な一括指定を教えることがその例のポイントである場合は除きます）。 MDN の例のポイントは、人に教えることであって、賢いやり方でも効率的でもないことを覚えておいてください。ここでは、個別指定で書くことを推奨する理由を説明します。
 
@@ -114,12 +113,12 @@ h3 {
   - {{cssxref("column-gap")}}: `normal`
   - {{cssxref("row-gap")}}: `normal`
 
-- 一部の一括指定は、様々な値の構成要素を特定の順序で入れないと期待通りに動作しません。例えば CSS アニメーションでは、次のようになります。
+- 一部の一括指定は、さまざまな値の成分を特定の順序で記述しないと期待通りに動作しません。これは CSS アニメーションの場合です。下記の例では、期待通りの順序がコメントとして記載されています。
 
   ```css
   /* duration | timing-function | delay | iteration-count
     direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  animation: 3s ease-in 1s 2 reverse both paused slide-in;
   ```
 
   例として、 [`<time>`](/ja/docs/Web/CSS/time) として解釈できる最初の値は [`animation-duration`](/ja/docs/Web/CSS/animation-duration) に割り当てられ、 2 つ目の値は [`animation-delay`](/ja/docs/Web/CSS/animation-delay) に割り当てられます。詳しくは、 [animation の構文](/ja/docs/Web/CSS/animation#構文)の詳細をご覧ください。
@@ -173,4 +172,4 @@ border: 0;
 
 ## 関連情報
 
-[CSS のキーワード索引](/ja/docs/Web/CSS/Reference#index)から探して参照してみてください。そこにあるインタラクティブな例は、一般的に上記のガイドラインに沿って書かれていますが、ガイドラインが新しく書かれる前に書かれたものがほとんどなので、場所によってはそうではない場合があることに注意してください。
+[CSS のキーワード索引](/ja/docs/Web/CSS/Reference#索引)から探して参照してみてください。そこにあるインタラクティブな例は、一般的に上記のガイドラインに沿って書かれていますが、ガイドラインが新しく書かれる前に書かれたものがほとんどなので、場所によってはそうではない場合があることに注意してください。

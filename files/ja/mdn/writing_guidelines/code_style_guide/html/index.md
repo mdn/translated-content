@@ -1,12 +1,10 @@
 ---
 title: HTML のサンプルコードの作成ガイドライン
+short-title: HTML の例
 slug: MDN/Writing_guidelines/Code_style_guide/HTML
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 l10n:
-  sourceCommit: 6aa664dc5ccb5edf0897f99ad5feb59325dff831
+  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
-
-{{MDNSidebar}}
 
 以下のガイドラインでは、MDN Web Docs のコードの例で HTML をどのように記述するのかを扱います。
 
@@ -16,18 +14,18 @@ l10n:
 
 正しいインデント、ホワイトスペース、行の長さに関する意見は常に論争の的となってきました。このようなトピックに関するディスカッションは、コンテンツを作成したり維持したりすることの妨げになります。
 
-MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては [設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json) を参照し、 [Prettier のドキュメント](https://prettier.io/docs/en/index.html)を読んでください。
+MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては[設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json)を参照し、 [Prettier のドキュメント](https://prettier.io/docs/index.html)を読んでください。
 
-Prettier はすべてのコードを書式化し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
+Prettier はすべてのコードを整形し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
 
 ## 完全な HTML 文書
 
 > [!NOTE]
-> この章のガイドラインは、完全な HTML 文書を表示する必要がある場合にのみ適用されます。通常、機能を示すにはスニペットで十分です。 [EmbedLiveSample マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#従来型ライブサンプル)を使用している場合、 HTML スニペットを載せるだけで、表示時に自動的に完全な HTML 文書の中に挿入されます。
+> この章のガイドラインは、完全な HTML 文書を表示する必要がある場合にのみ適用されます。通常、機能を示すにはスニペットで十分です。 [EmbedLiveSample マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples#ライブサンプル)を使用している場合、 HTML スニペットを載せるだけで、表示時に自動的に完全な HTML 文書の中に挿入されます。
 
 ### 文書型宣言
 
-HTML5 の文書型宣言を使ってください。短く、覚えやすく、後方互換性があります。
+HTML5 の {{Glossary("Doctype", "doctype")}} を使ってください。
 
 ```html example-good
 <!doctype html>
@@ -51,7 +49,7 @@ HTML5 の文書型宣言を使ってください。短く、覚えやすく、�
 <meta charset="utf-8" />
 ```
 
-UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用してください。文書内のどの言語を使用しているかに関係なく、すべての文字ニーズに応じた対応が可能です。
+特別な理由がない限り、 UTF-8 を使用してください。文書内のどの言語を使用しているかに関係なく、すべての文字ニーズに応じた対応が可能です。
 
 ### ビューポートメタタグ
 
@@ -65,7 +63,7 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 
 ## 属性
 
-すべての属性の値は二重引用符で囲まなければなりません。 HTML5 でクオートの省略が許されるようになり、広まっていますが、取り入れるとマークアップが綺麗になり読みやすくなります。例えば、こちらは良い例です。
+すべての属性の値は二重引用符で囲むべきです。 HTML5 で引用符の省略が許されるようになり、広まっていますが、入れた方がマークアップが綺麗になり読みやすくなります。例えば、こちらは良い例です。
 
 ```html example-good
 <img src="images/logo.jpg" alt="A circular globe icon" class="no-border" />
@@ -77,9 +75,9 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 <img src=images/logo.jpg alt=A circular globe icon class=no-border>
 ```
 
-上記の例では、 `alt` 属性は複数の属性として解釈されます。なぜなら、 "A circular globe icon" が 1 つの属性値であることを示す引用符が存在しないからです。
+引用符を省略すると、問題になることもあります。上記の例では、 `alt` 属性は複数の属性として解釈されます。なぜなら、 "A circular globe icon" が 1 つの属性値であることを示す引用符が存在しないからです。
 
-### 論理属性
+## 論理属性
 
 論理属性には値を含めないでください（{{glossary("enumerated", "列挙型")}}属性には値を含めることができます）。設定するには属性名を書くだけです。例えば、次のように書きます。
 
@@ -87,22 +85,22 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 <input required />
 ```
 
-これは完全に理解できますし、うまく動作します。論理値の HTML 属性が存在する場合、値は true です。値を記載しても動作しますが、それは必要ではなく、間違っています。
+これは完全に理解できますし、うまく動作します。 HTML の論理属性は、存在する場合に値が真になります。値を記載しても動作しますが、それは必要ではなく、間違っています。
 
 ```html example-bad
 <input required="required" />
 ```
 
-### 小文字を使う
+## MDN における大文字小文字の使い分け
 
-すべての要素の名前と属性の名前/値に小文字を使ってください、綺麗に見えますし、マークアップをより早く書くことができます。
+大文字小文字の区別がないもの、例えば文書型宣言や要素名、属性名と値には小文字を使用してください。これにより外見が統一され、マークアップをより早く書くことができます。
 
 ```html example-good
-<p class="nice">This looks nice and neat</p>
+<p class="nice">これはきれいで丁寧に見えます</p>
 ```
 
 ```html-nolint example-bad
-<P CLASS="WHOA-THERE">Why is my markup shouting?</P>
+<P CLASS="WHOA-THERE">マークアップが何かを叫ぼうとしている？</P>
 ```
 
 ### クラスと ID の名前
@@ -117,9 +115,9 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 <p class="bigRedBox">Blah blah blah</p>
 ```
 
-### 実体参照
+## 実体参照
 
-実体参照を必要以上に使わないでください。可能であれば、リテラル文字を使いましょう（角括弧や引用符のような記号は、エスケープが必要です）。
+{{glossary("character reference", "文字参照")}}を必要以上に使わないでください。可能であれば、リテラル文字を使いましょう（角括弧や引用符のような記号は、エスケープが必要です）。
 
 以下の例のように書くことができます。
 
@@ -137,8 +135,8 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 
 MDN Web Docs では、HTML 要素について書くためのいくつかのルールがあります。これらのルールに従うことで、要素やその構成要素について一貫した記述ができ、また、詳細な文書化への正しいリンクが確保されます。
 
-- **要素名**: [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) マクロを使用すると、その要素の MDN Web Docs ページへのリンクを作成します。例えば、`{HTMLElement("title")}}` と書くと "{{HTMLElement("title")}}" が生成されます。
-  リンクを作成しない場合は、**名前を山括弧で囲み**、「インラインコード」スタイル（例：`<title>`）を使用してください。
+- **要素名**: [`HTMLElement`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs) マクロを使用すると、その要素の MDN Web Docs ページへのリンクを作成します。例えば、`\{{HTMLElement("title")}}` と書くと "{{HTMLElement("title")}}" が生成されます。
+  リンクを作成しない場合は、**名前を山括弧で囲み**、「インラインコード」スタイルを使用してください（例：`<title>`）。
 - **属性名**: 「インラインコード」スタイルを使用して、属性名を `code font` で表示します。
   さらに、その属性が何をするものであるかの説明と関連して言及されるとき、またはページで初めて使用されるときは、 **`太字`** で記述してください。
 - **属性値**: 属性値に「インラインコード」スタイルを使用して `<code>` を適用し、コードサンプルの構文で必要な場合を除き、文字列の値を引用符で囲まないでください。例: 「`<input>` 要素の `type` 属性に `email` または `tel` を設定したとき ...」とします。
