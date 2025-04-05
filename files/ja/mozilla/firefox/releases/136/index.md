@@ -2,7 +2,7 @@
 title: Firefox 136 for developers
 slug: Mozilla/Firefox/Releases/136
 l10n:
-  sourceCommit: 79be2656c0b4f807b1ab102f0bf96471183a03a3
+  sourceCommit: 48d5355da68a986ba2434d275b7d1ddcc0d5d207
 ---
 
 {{FirefoxSidebar}}
@@ -74,8 +74,10 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
+- [`background` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) に `preferred_environment` プロパティを追加しました。これは、ブラウザーがバックグラウンドのスクリプトをドキュメントまたはサービスワーカーとして実行することを、拡張機能が要求できるようにします ([Firefox bug 1798655](https://bugzil.la/1798655))。
 - {{WebExtAPIRef("menus.update")}}、{{WebExtAPIRef("menus.remove")}} およびそれらの別名である {{WebExtAPIRef("contextMenus.update")}}、{{WebExtAPIRef("contextMenus.remove")}} が、メニュー項目が存在しないときにエラーで拒否するようになりました。以前は、エラーが無視されてプロミスが履行状態になりました ([Firefox bug 1688743](https://bugzil.la/1688743))。
-- 新しいバージョンの {{WebExtAPIRef("userScripts")}} API が使用可能になりました。このバージョンの API は Manifest V3 拡張機能で使用するもので、ブラウザーごとに [許可の仕組み](/ja/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) が異なりますが Chrome との広範囲な互換性を提供します ([Firefox bug 1943050](https://bugzil.la/1943050))。
+- 新しいバージョンの {{WebExtAPIRef("userScripts")}} API が、デスクトップ版の Firefox で使用可能になりました。このバージョンの API は Manifest V3 拡張機能で使用するもので、ブラウザーごとに [許可の仕組み](/ja/docs/Mozilla/Add-ons/WebExtensions/API/userScripts#permissions) が異なりますが Chrome との広範囲な互換性を提供します ([Firefox bug 1943050](https://bugzil.la/1943050))。
+- `NETWORK_FAILED` でダウンロードが失敗したときに、{{WebExtAPIRef("downloads.DownloadItem")}} の `canResume` プロパティが `true` に設定されるようになりました。これはネットワークエラーのために失敗したダウンロードを、{{WebExtAPIRef("downloads.resume","downloads.resume()")}} を使用して再開可能にします ([Firefox bug 1694049](https://bugzil.la/1694049))。
 
 ## 実験的なウェブ機能
 
@@ -91,7 +93,7 @@ l10n:
 - **SVG アニメーション用の SVG `<discard>` 要素**: `svg.discard.enabled`。
   {{svgelement("discard")}} SVG 要素は、SVG が DOM に読み込まれてから経過した時間や特定のアニメーションが終了したなど、指定した要素とその子孫を DOM から削除すべききっかけを開発者が指定できるようにします。これは、不要になったアニメーション要素を破棄することで SVG ビューアーがメモリーを節約できます ([Firefox bug 1069931](https://bugzil.la/1069931))。
 - **SVG パス API のメソッド**: `dom.svg.pathSegment.enabled`。
-  `SVGPathSegment` インターフェイスで `getPathData()`、`setPathData()`、`getPathSegmentAtLength()` メソッドをサポートしました。これらのメソッドは、生の文字列データを解析することに代わって SVG のパスデータを処理する便利な手段を提供します ([Firefox bug 1934525](https://bugzil.la/1934525))。
+  {{domxref("SVGPathElement")}} インターフェイスの {{domxref("SVGPathElement/getPathData", "getPathData()")}}、{{domxref("SVGPathElement/setPathData", "setPathData()")}}、{{domxref("SVGPathElement/getPathSegmentAtLength", "getPathSegmentAtLength()")}} メソッドをサポートしました。これらのメソッドは、生の文字列データを解析することに代わって SVG のパスデータを処理する便利な手段を提供します ([Firefox bug 1934525](https://bugzil.la/1934525))。
 
 ## 過去のバージョン
 
