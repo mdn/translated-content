@@ -37,7 +37,7 @@ l10n:
 ## 추가 읽기 및 학습 자료
 
 - [오픈 소스 프로젝트 기본 예의](/ko/docs/MDN/Community/Open_source_etiquette): 오픈 소스 프로젝트에 처음 기여하는 경우 이 문서를 읽어보는 것이 좋습니다.
-- [웹 개발 학습](/ko/docs/Learn): HTML, CSS, JavaScript를 처음 배우는 분들을 위한 유용한 자료가 준비되어 있습니다.
+- [웹 개발 학습](/ko/docs/Learn_web_development): HTML, CSS, JavaScript를 처음 배우는 분들을 위한 유용한 자료가 준비되어 있습니다.
 - [풀 리퀘스트로 협업하기](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests): 협업에 필요한 내용들에 대한 심화 학습을 제공합니다.
 
 영어에 대한 기본적인 이해가 필요한 작성 작업도 일부 있습니다. 완벽하지 않아도 충분히 기여할 수 있으며, 문법이 부족하더라도 걱정하지 마세요. MDN의 콘텐츠가 최고 수준이 되도록 돕는 팀이 있습니다. 여러분의 작업이 깔끔하고 잘 다듬어질 수 있도록 도와줄 사람이 항상 있을 것입니다.

@@ -1,7 +1,6 @@
 ---
 title: 书籍详细信息页面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
 
 *书籍详细信息页面*需要呈现指定书籍（`Book`，使用自动生成的 `_id` 字段值进行标识）的信息，以及图书馆中每一个关联的副本（`BookInstance`）的信息。无论我们在哪里呈现一个作者、种类，或书籍实例，都应该链接到关联的详细信息页面。

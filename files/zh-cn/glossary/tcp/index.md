@@ -14,7 +14,7 @@ TCP 的作用是确保数据包的可靠传输和无误。TCP 实现了[拥塞�
 ### 参见
 
 - 维基百科上的[传输控制协议](https://zh.wikipedia.org/wiki/传输控制协议)
-- [HTTP 概述](/zh-CN/docs/Web/HTTP/Overview)
+- [HTTP 概述](/zh-CN/docs/Web/HTTP/Guides/Overview)
 - [浏览器工作原理](/zh-CN/docs/Web/Performance/Guides/How_browsers_work)
 - 相关术语：
 

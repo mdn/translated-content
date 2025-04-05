@@ -52,4 +52,4 @@ console.log(el.ariaMultiSelectable); // "false"
 
 ## 関連情報
 
-- [ARIA: listbox ロール](/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role)
+- [ARIA: listbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)

@@ -38,7 +38,7 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
   >
   > - 相反する複数のポリシーが定義されている場合は、 `no-referrer` ポリシーが適用されます。
 
-- [`theme-color`](/ja/docs/Web/HTML/Element/meta/name/theme-color): ユーザーエージェントがページの表示や周辺のユーザーインターフェースをカスタマイズするために使用すべき推奨色を示します。 `content` 属性には、有効な CSS の {{cssxref("&lt;color&gt;")}} が含まれます。
+- [`theme-color`](/ja/docs/Web/HTML/Element/meta/name/theme-color): ユーザーエージェントがページの表示や周辺のユーザーインターフェイスをカスタマイズするために使用すべき推奨色を示します。 `content` 属性には、有効な CSS の {{cssxref("&lt;color&gt;")}} が含まれます。
 - `color-scheme`: 文書と互換性のある 1 つ以上の複数のカラースキームを指定します。
 
   ブラウザーは、この情報をユーザーのブラウザーや端末の設定と合わせて使用し、背景や前景、フォームコントロールやスクロールバーなど、あらゆるものに使用する色を決定します。 `<meta name="color-scheme">` の主な用途は、ライトモードとダークモードの互換性と優先順位を示すことです。
@@ -86,7 +86,7 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
 
 `user-scalable` を `no` に設定して拡大縮小機能を無効にすると、弱視の人がページの内容を読んだり理解したりすることができなくなります。
 
-- [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ### その他のメタデータ名

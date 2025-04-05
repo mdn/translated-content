@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSSupportsRule`** インターフェイスは、1 個の CSS {{cssxref("@supports")}} [アット規則](/ja/docs/Web/CSS/At-rule) を表すオブジェクトを表します。
+**`CSSSupportsRule`** インターフェイスは、1 個の CSS {{cssxref("@supports")}} [アット規則](/ja/docs/Web/CSS/CSS_syntax/At-rule) を表すオブジェクトを表します。
 
 {{InheritanceDiagram}}
 
@@ -21,7 +21,7 @@ _祖先である {{domxref("CSSConditionRule")}}, {{domxref("CSSGroupingRule")}}
 
 ## 例
 
-この CSS には CSS 機能クエリーとして {{cssxref("@supports")}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用しており、その中にスタイルルールを 1 つ含んでいます。これは `document.styleSheets[0].cssRules` が最初に返す CSSRule になります。
+この CSS には CSS 機能クエリーとして {{cssxref("@supports")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用しており、その中にスタイルルールを 1 つ含んでいます。これは `document.styleSheets[0].cssRules` が最初に返す CSSRule になります。
 したがって、 `myRules[0]` は {{domxref("CSSSupportsRule")}} オブジェクトを返します。
 
 ```css

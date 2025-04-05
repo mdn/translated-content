@@ -119,7 +119,7 @@ counter();
 
 ### 函式回傳
 
-請參見[閉包](/zh-TW/docs/Web/JavaScript/Closures)。
+請參見[閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)。
 
 ```js
 function magic(x) {
@@ -143,4 +143,4 @@ answer(1337); // 56154
 ## 參見
 
 - [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
-- [閉包](/zh-TW/docs/Web/JavaScript/Closures)
+- [閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)

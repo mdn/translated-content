@@ -7,7 +7,53 @@ slug: Web/CSS/color
 
 CSS の **`color`** プロパティは、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/color_value)を設定し、 {{cssxref("color_value#currentcolor_keyword", "currentcolor")}} の値を設定します。`currentcolor` は*他の*プロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
 
-{{EmbedInteractiveExample("pages/css/color.html")}}
+{{InteractiveExample("CSS Demo: color")}}
+
+```css interactive-example-choice
+color: rebeccapurple;
+```
+
+```css interactive-example-choice
+color: #00a400;
+```
+
+```css interactive-example-choice
+color: rgb(214, 122, 127);
+```
+
+```css interactive-example-choice
+color: hsl(30deg 82% 43%);
+```
+
+```css interactive-example-choice
+color: hsla(237deg 74% 33% / 61%);
+```
+
+```css interactive-example-choice
+color: hwb(152deg 0% 58% / 70%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <p id="example-element">
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall. Implacable November weather.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5em;
+}
+
+.example-container {
+  background-color: white;
+  padding: 10px;
+}
+```
 
 HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)をご覧ください。
 
@@ -68,7 +114,7 @@ color: unset;
 色のコントラスト比は、テキストおよび背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、[太字](/ja/docs/Web/CSS/font-weight)ならば 18.66px 以上、または 24px 以上と定義されています。
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## 公式定義

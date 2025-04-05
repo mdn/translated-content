@@ -1,7 +1,6 @@
 ---
 title: 在代碼中做出決定 - 條件
 slug: Learn_web_development/Core/Scripting/Conditionals
-original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

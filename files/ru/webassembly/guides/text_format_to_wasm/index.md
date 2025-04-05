@@ -60,8 +60,8 @@ wat2wasm simple.wat -v
 
 ## Смотрите также
 
-- [Описание текстового формата WebAssembly](/ru/docs/WebAssembly/Understanding_the_text_format) — подробное объяснение синтаксиса текстового формата.
-- [Компиляция кода C/C++ в WebAssembly](/ru/docs/WebAssembly/C_to_Wasm) — описание инструментов Binaryen/Emscripten, которые компилируют ваш исходный код в wasm и создают код API, необходимый для запуска модуля в контексте JavaScript. Узнайте больше о том, как их использовать.
-- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Using_the_JavaScript_API) — прочтите это, если хотите узнать больше о том, как работает код WebAssembly API.
+- [Описание текстового формата WebAssembly](/ru/docs/WebAssembly/Guides/Understanding_the_text_format) — подробное объяснение синтаксиса текстового формата.
+- [Компиляция кода C/C++ в WebAssembly](/ru/docs/WebAssembly/Guides/C_to_Wasm) — описание инструментов Binaryen/Emscripten, которые компилируют ваш исходный код в wasm и создают код API, необходимый для запуска модуля в контексте JavaScript. Узнайте больше о том, как их использовать.
+- [Использование WebAssembly JavaScript API](/ru/docs/WebAssembly/Guides/Using_the_JavaScript_API) — прочтите это, если хотите узнать больше о том, как работает код WebAssembly API.
 - [Описание текстового формата](https://webassembly.github.io/spec/core/text/index.html) — детальная спецификация текстового формата WebAssembly в GitHub репозитории.
 - [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — загрузчик текстового формата WebAssembly для webpack.

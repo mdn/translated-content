@@ -1,7 +1,6 @@
 ---
 title: 函数——可复用的代码块
 slug: Learn_web_development/Core/Scripting/Functions
-original_slug: Learn/JavaScript/Building_blocks/Functions
 l10n:
   sourceCommit: d36a0f08f71bc7e17a013da81ed63144a96f7699
 ---
@@ -158,7 +157,7 @@ const newString = myText.replace("字符串", "香肠");
 const myArray = ["我", "爱", "巧克力", "青蛙"];
 const madeAString = myArray.join(" ");
 console.log(madeAString);
-// 返回 '我爱巧克力青蛙'
+// 返回“我 爱 巧克力 青蛙”
 
 const madeAnotherString = myArray.join();
 console.log(madeAnotherString);

@@ -166,7 +166,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 
 ### 互換性に関する注記
 
-ブラウザだけでなく、GPU も機能をサポートしていなければなりません。よって、例えば S3 Texture Compression (S3TC) は Tegra ベースのタブレットでしか使用できません。ほとんどのブラウザーでは WebGL コンテキストを、コンテキスト名 `webgl` で作成しますが、古いブラウザーでは `experimental-webgl` も必要です。さらに将来の [WebGL 2](/ja/docs/Web/API/WebGL2RenderingContext) では完全な下位互換性があり、コンテキスト名 `webgl2` を持ちます。
+ブラウザーだけでなく、GPU も機能をサポートしていなければなりません。よって、例えば S3 Texture Compression (S3TC) は Tegra ベースのタブレットでしか使用できません。ほとんどのブラウザーでは WebGL コンテキストを、コンテキスト名 `webgl` で作成しますが、古いブラウザーでは `experimental-webgl` も必要です。さらに将来の [WebGL 2](/ja/docs/Web/API/WebGL2RenderingContext) では完全な下位互換性があり、コンテキスト名 `webgl2` を持ちます。
 
 ### Gecko に関するメモ
 

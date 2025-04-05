@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS 解決常見問題
 slug: Learn_web_development/Howto/Solve_CSS_problems
-original_slug: Learn/CSS/Howto
 ---
 
 {{LearnSidebar}}

@@ -23,6 +23,6 @@ l10n:
 
 ## 같이 보기
 
-- [웹 배우기](/ko/docs/Learn)
+- [웹 배우기](/ko/docs/Learn_web_development)
 - 위키백과의 [World Wide Web](https://en.wikipedia.org/wiki/World_Wide_Web)
 - [W3C 웹사이트](https://www.w3.org/)

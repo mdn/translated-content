@@ -110,7 +110,7 @@ bold && <length>
 
 ### 二重バー
 
-2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)の値定義に使われます。
+2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の値定義に使われます。
 
 ```css
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -447,14 +447,14 @@ bold smaller#{2}
   - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
   - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
   - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+  - [レイアウトモード](/ja/docs/Glossary/Layout_mode)
+  - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
-    - [初期値](/ja/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算値](/ja/docs/Web/CSS/CSS_cascade/computed_value)
-    - [使用値](/ja/docs/Web/CSS/CSS_cascade/used_value)
-    - [実効値](/ja/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)
+    - [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)
+    - [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値)
+    - [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
   - **値定義構文**
-  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)

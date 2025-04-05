@@ -22,7 +22,7 @@ JavaScript 그 자체는 상당히 작지만 아주 유연합니다. 개발자�
 - 제3자 (third-party) API를 활용해 개발자는 트위터나 페이스북 같은 다른 컨텐츠 공급사부터 제공되는 기능을 자신의 사이트에 통합할 수 있습니다.
 - 써드파티 프레임워크와 라이브러리를 여러분의 HTML에 적용함으로써 사이트와 어플리케이션을 빠르게 구축할 수 있습니다.
 
-이 글은 JavaScript를 가볍게 설명하기 위한 목적으로 작성되어, 지금 단계에서는 여러분을 혼란스럽게 만들지 않기 위해 코어 JavaScript 언어와 위에 나열된 다른 도구 사이에 어떤 차이가 있는지 상세하게 언급하지 않을 것입니다. 이와 관련해서는 MDN의 나머지 글이나 [JavaScript 학습 영역(JavaScript learning area)](/ko/docs/Learn/JavaScript)에서 자세하게 배울 수 있습니다.
+이 글은 JavaScript를 가볍게 설명하기 위한 목적으로 작성되어, 지금 단계에서는 여러분을 혼란스럽게 만들지 않기 위해 코어 JavaScript 언어와 위에 나열된 다른 도구 사이에 어떤 차이가 있는지 상세하게 언급하지 않을 것입니다. 이와 관련해서는 MDN의 나머지 글이나 [JavaScript 학습 영역(JavaScript learning area)](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)에서 자세하게 배울 수 있습니다.
 
 ## "Hello world" 예시
 
@@ -83,7 +83,7 @@ let myVariable;
 > [!NOTE]
 > JavaScript는 대소문자를 구분합니다 — `myVariable`은 `myvariable`과는 다른 변수입니다. 만약 코드에 문제가 생겼다면, 대소문자를 확인해보세요!
 
-> **참고:** `var` 와 `let` 의 차이에 대한 자세한 사항은 [The difference between var and let](/ko/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)를 참고하세요.
+> **참고:** `var` 와 `let` 의 차이에 대한 자세한 사항은 [The difference between var and let](/ko/docs/Learn_web_development/Core/Scripting/Variables#the_difference_between_var_and_let)를 참고하세요.
 
 변수를 선언한 후에, 값을 할당할 수 있습니다:
 
@@ -352,6 +352,6 @@ function setUserName() {
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js)와 항상 비교해보세요.
 
-여기서, 우리는 JavaScript의 겉을 살짝 맛봤습니다. 즐겁게 배우셨고, 더 깊게 학습하고 싶으시다면, [JavaScript 안내서](/ko/docs/Learn/JavaScript) 페이지로 가보세요.
+여기서, 우리는 JavaScript의 겉을 살짝 맛봤습니다. 즐겁게 배우셨고, 더 깊게 학습하고 싶으시다면, [JavaScript 안내서](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

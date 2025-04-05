@@ -45,7 +45,7 @@ API は以下の要素のタイミング情報に対応しています。
 - {{domxref("PerformanceElementTiming.element")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 情報を返す要素を表す {{domxref("Element")}} です。
 - {{domxref("PerformanceElementTiming.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) である文字列です。
+  - : 要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) である文字列です。
 - {{domxref("PerformanceElementTiming.identifier")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 要素の [`elementtiming`](/ja/docs/Web/HTML/Attributes/for) 属性の値である文字列です。
 - {{domxref("PerformanceElementTiming.intersectionRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}

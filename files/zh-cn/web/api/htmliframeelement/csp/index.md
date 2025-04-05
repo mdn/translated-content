@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`csp`** 属性指定了嵌入文档必须同意对自己执行的[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。
+{{domxref("HTMLIFrameElement")}} 接口的 **`csp`** 属性指定了嵌入文档必须同意对自己执行的[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)。
 
 ## 值
 

@@ -70,7 +70,7 @@ open(url, target, windowFeatures)
         `noopener` を使用した場合、 `_top`, `_self`, `_parent` 以外の空でないターゲット名は、新しい閲覧コンテキストを開くかどうかの判断において、 `_blank` と同様に扱われます。
 
     - `noreferrer`
-      - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Attributes/rel/noreferrer) を参照してください。
+      - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Reference/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Attributes/rel/noreferrer) を参照してください。
 
 > [!NOTE]
 > 要求する位置 (`top`, `left`)、要求する寸法 (`width`, `height`) の値が `windowFeatures` で指定された場合、ブラウザーのポップアップ全体がユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に配置することはできません。
@@ -264,7 +264,7 @@ console.log(sameOriginContext.origin);
 - 最近のブラウザーは、ポップアップブロック機能を備えています。
 - 最近のブラウザーはタブブラウジングを提供しており、タブブラウジングのユーザーはほとんどの状況で新しいウィンドウを開くよりも新しいタブを開くことを好みます。
 - ユーザーは、ブラウザーに組み込まれた機能や拡張機能を使用して、リンクを新しいウィンドウで開くか、同じウィンドウで開くか、新しいタブで開くか、同じタブで開くか、バックグラウンドで開くかを選ぶことができます。 `window.open()` を使用し、特定の方法で開くことを強制すると、ユーザーを混乱させ、その習慣を無視することになります。
-- ポップアップにはメニューツールバーがありませんが、新しいタブはブラウザーウィンドウのユーザーインターフェースを使用します。したがって、多くのユーザーはインターフェースが安定しているため、タブブラウジングを好みます。
+- ポップアップにはメニューツールバーがありませんが、新しいタブはブラウザーウィンドウのユーザーインターフェイスを使用します。したがって、多くのユーザーはインターフェイスが安定しているため、タブブラウジングを好みます。
 
 ### window.open() を HTML のインラインで使用しない
 
@@ -289,7 +289,7 @@ console.log(sameOriginContext.origin);
 極端なコンテキストの変化が起こる前に、明示的に識別することができれば、ユーザーは先に進むかどうかを判断でき、変化に備えることができます。ユーザーは混乱したり方向感覚を失ったりしないだけでなく、経験豊富なユーザーであれば、そうしたリンクを開く方法（新しいウィンドウで開くかどうか、同じウィンドウ、新しいタブ、「バックグラウンド」かどうか）を適切に判断することができます。
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
+- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
 - [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 

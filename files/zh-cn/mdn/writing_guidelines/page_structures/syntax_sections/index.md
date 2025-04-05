@@ -285,7 +285,7 @@ If-None-Match: *
 
 ### HTTP 请求方法
 
-请求方法的语法非常简单，只包含一个使用“语法框”样式的语法块，显示方法语法的结构。[GET 方法](/zh-CN/docs/Web/HTTP/Methods/GET)的语法如下：
+请求方法的语法非常简单，只包含一个使用“语法框”样式的语法块，显示方法语法的结构。[GET 方法](/zh-CN/docs/Web/HTTP/Reference/Methods/GET)的语法如下：
 
 ```http
 GET /index.html

@@ -1,7 +1,6 @@
 ---
 title: 技能测试：面向对象的 Javascript
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
-original_slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript
 ---
 
 {{learnsidebar}}

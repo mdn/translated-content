@@ -10,7 +10,7 @@ l10n:
 最近のブラウザーにはパワフルな開発者ツールが入っています。開発者ツールでは、現在の HTML や CSS、JavaScript の状態を検証したり、ページがどういった資産にアクセスし、どれだけ時間がかかったかといった多様なことができます。この記事ではブラウザーの開発者ツールの使い方について説明します。
 
 > [!NOTE]
-> 下のサンプルを実行していく前に、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)の記事の中で作りあげる、[初心者向けウェブサイトの例](https://mdn.github.io/beginner-html-site-scripted/)を開いてください。後ほどこれを使って説明します。
+> 下のサンプルを実行していく前に、[ウェブ入門](/ja/docs/Learn_web_development/Getting_started/Your_first_website)の記事の中で作りあげる、[初心者向けウェブサイトの例](https://mdn.github.io/beginner-html-site-scripted/)を開いてください。後ほどこれを使って説明します。
 
 ## ブラウザーの開発者ツールの開き方
 

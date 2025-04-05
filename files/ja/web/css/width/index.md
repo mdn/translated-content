@@ -9,7 +9,42 @@ l10n:
 
 **`width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の幅を設定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#コンテンツ領域)の幅を設定しますが、 {{cssxref("box-sizing")}} を `border-box` に設定すると、[境界領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#境界領域)の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/width.html")}}
+{{InteractiveExample("CSS Demo: width")}}
+
+```css interactive-example-choice
+width: 150px;
+```
+
+```css interactive-example-choice
+width: 20em;
+```
+
+```css interactive-example-choice
+width: 75%;
+```
+
+```css interactive-example-choice
+width: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 `width` に指定された値は、その値が {{cssxref("min-width")}} および {{cssxref("max-width")}} で定義された値内にある限り、コンテンツ領域に適用されます。
 
@@ -52,7 +87,7 @@ width: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 距離の値で幅を定義します。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 親となる[包含ブロック](/ja/docs/Web/CSS/Containing_block)の幅に対するパーセント値で定義します。
+  - : 親となる[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の幅に対するパーセント値で定義します。
 - `auto`
   - : 指定された要素の幅をブラウザーが計算して決めます。
 - `max-content`
@@ -65,7 +100,7 @@ width: unset;
   - : 利用可能な空間に対して fit-content 式を使用し、指定された引数に置き換えられます。すなわち `min(max-content, max(min-content, <length-percentage>))` です。
 - `stretch`
 
-  - : 要素の[マージンボックス](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスの構成)の幅を、[包含ブロック](/ja/docs/Web/CSS/Containing_block#包含ブロックの識別)の幅に設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
+  - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の幅を、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)の幅に設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
 
     > [!NOTE]
     > ブラウザーが `stretch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
@@ -74,7 +109,7 @@ width: unset;
 
 ページを拡大してテキストサイズを大きくしたときに、 `width` を設定した要素が切り捨てられたり、他のコンテンツが見えなくなったりしないようにしてください。
 
-- [MDN WCAG の理解、 ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN WCAG の理解、 ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 公式定義

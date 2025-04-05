@@ -94,4 +94,4 @@ T
 - [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
-- [CSS 構成要素: 擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [CSS 構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

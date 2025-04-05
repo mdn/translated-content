@@ -2,7 +2,7 @@
 title: NavigatorUAData：getHighEntropyValues() 方法
 slug: Web/API/NavigatorUAData/getHighEntropyValues
 l10n:
-  sourceCommit: 217e25f9d2c39d2031ecf50f891c27e7f5b96e06
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
@@ -38,11 +38,11 @@ getHighEntropyValues(hints)
 一个 {{jsxref("Promise")}}，其兑现为包含以下部分或全部值的对象（基于请求的提示）：
 
 - `brands`
-  - : 返回包含 `brand` 和 `version` 属性的对象数组，指定浏览器品牌及其版本（与 {{domxref("NavigatorUAData.brands")}} 提供的信息相同）。请注意，此信息可以在 {{HTTPHeader("Sec-CH-UA")}} 标头中发送到服务器（一个[低熵客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#低熵提示)）。
+  - : 返回包含 `brand` 和 `version` 属性的对象数组，指定浏览器品牌及其版本（与 {{domxref("NavigatorUAData.brands")}} 提供的信息相同）。请注意，此信息可以在 {{HTTPHeader("Sec-CH-UA")}} 标头中发送到服务器（一个[低熵客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#低熵提示)）。
 - `mobile`
-  - : 如果用户代理在移动设备上运行，则返回 `true`（与 {{domxref("NavigatorUAData.mobile")}} 提供的信息相同）。请注意，此信息可以在 {{HTTPHeader("Sec-CH-UA-Mobile")}} 标头中发送到服务器（一个[低熵客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#低熵提示)）。
+  - : 如果用户代理在移动设备上运行，则返回 `true`（与 {{domxref("NavigatorUAData.mobile")}} 提供的信息相同）。请注意，此信息可以在 {{HTTPHeader("Sec-CH-UA-Mobile")}} 标头中发送到服务器（一个[低熵客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#低熵提示)）。
 - `platform`
-  - : 返回一个描述用户代理的运行平台的字符串，例如 `"Windows"`（与 {{domxref("NavigatorUAData.platform")}} 提供的信息相同）。请注意，此信息可以在 {{HTTPHeader("Sec-CH-UA-Platform")}} 标头中发送到服务器（一个[低熵客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#低熵提示)）。
+  - : 返回一个描述用户代理的运行平台的字符串，例如 `"Windows"`（与 {{domxref("NavigatorUAData.platform")}} 提供的信息相同）。请注意，此信息可以在 {{HTTPHeader("Sec-CH-UA-Platform")}} 标头中发送到服务器（一个[低熵客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#低熵提示)）。
 - `architecture`
   - : 一个包含平台架构的字符串。例如，`"x86"`。请注意，当服务器在 {{HTTPHeader("Accept-CH")}} 标头中显式请求该信息后，可以在 {{HTTPHeader("Sec-CH-UA-Arch")}} 标头中将该信息发送到服务器。
 - `bitness`
@@ -91,7 +91,7 @@ navigator.userAgentData
 ## 参见
 
 - 这些值也可以通过 HTTP 请求标头获得：
-  - [低熵客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#low_entropy_hints)会自动发送：
+  - [低熵客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints)会自动发送：
     - {{HTTPHeader("Sec-CH-UA")}}
     - {{HTTPHeader("Sec-CH-UA-Mobile")}}
     - {{HTTPHeader("Sec-CH-UA-Platform")}}

@@ -42,7 +42,7 @@ l10n:
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
 
 ## より深く掘り下げる
 

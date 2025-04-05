@@ -30,7 +30,7 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 아래의 라이브 편집기에서 작업하거나 , [시작점을 다운로드](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) 하여 자신의 편집기에서 작업할 수 있습니다. 이 페이지는 HTML 과 문서 head 의 시작점 CSS 가 포함된 단일 페이지 입니다. 원하는 경우 로컬 컴퓨터에서 예제를 만들 때, 이 CSS 를 별도의 파일로 옮길수 있습니다. 또는 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 도구를 사용하여 작업을 수행하십시오.
 
 > [!NOTE]
-> 문제가 발생하면, 도움을 요청하십시오 — 이 페이지 하단의 [평가 또는 추가 도움말](/ko/docs/Learn/CSS/First_steps/Styling_a_biography_page#assessment_or_further_help) 섹션을 참조하십시오.
+> 문제가 발생하면, 도움을 요청하십시오 — 이 페이지 하단의 [평가 또는 추가 도움말](/ko/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page#assessment_or_further_help) 섹션을 참조하십시오.
 
 ## CSS 를 사용한 작업
 
@@ -77,6 +77,6 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 
 ## 다음은 뭐죠?
 
-첫 번째 강의를 완료한 것을 축하합니다. 이제 CSS 에 대해 잘 이해하고 스타일 시트에서 발생하는 많은 부분을 이해할 수 있어야 합니다. 다음 강의인 [CSS building blocks](/ko/docs/Learn/CSS/Building_blocks) 에서는 여러 가지 주요 영역을 자세히 살펴보겠습니다.
+첫 번째 강의를 완료한 것을 축하합니다. 이제 CSS 에 대해 잘 이해하고 스타일 시트에서 발생하는 많은 부분을 이해할 수 있어야 합니다. 다음 강의인 [CSS building blocks](/ko/docs/Learn_web_development/Core/Styling_basics) 에서는 여러 가지 주요 영역을 자세히 살펴보겠습니다.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

@@ -79,7 +79,7 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
 ## アドオン開発者向けの変更点
 
 - {{WebExtAPIRef("browsingData.removeCache")}} および {{WebExtAPIRef("browsingData.removePluginData")}} が、ホスト名による削除をサポートしました ([Firefox バグ 1636784](https://bugzil.la/1636784))。
-- [`proxy.onRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest) を使用するとき、タブやウィンドウの ID に基づいて制限するフィルターが正しく適用されるようになりました。これは、プロキシの機能をひとつのウィンドウだけに提供したいアドオンで役に立つでしょう。
+- [`proxy.onRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest) を使用するとき、タブやウィンドウの ID に基づいて制限するフィルターが正しく適用されるようになりました。これは、プロキシーの機能をひとつのウィンドウだけに提供したいアドオンで役に立つでしょう。
 - "すべてのタブ" ドロップダウンから [コンテキストメニューでクリックするとき](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked)、適切なタブオブジェクトが渡されるようになりました。以前は、誤ってアクティブなタブが渡されていました。
 - [`downloads.download`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download) に saveAs オプションをつけて使用したとき、最近使用したディレクトリーを記憶するようになりました。この情報は開発者が使用できませんでしたが、ユーザーにはとても便利でした。
 

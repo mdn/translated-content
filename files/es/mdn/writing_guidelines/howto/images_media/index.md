@@ -39,7 +39,7 @@ Veamos un ejemplo:
    yarn filecheck files/es/web/css/mi-imagen-genial.png
    ```
 
-4. Referencia tu imagen en el documento usando la sintaxis de Markdown para imágenes, proporcionando [texto descriptivo para el atributo `alt`](/es/docs/Learn/Accessibility/HTML#text_alternatives) entre corchetes que describan la imagen, o incluye un elemento {{htmlelement("img")}} con atributo `alt` dentro de `files/es/web/css/index.md`:
+4. Referencia tu imagen en el documento usando la sintaxis de Markdown para imágenes, proporcionando [texto descriptivo para el atributo `alt`](/es/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) entre corchetes que describan la imagen, o incluye un elemento {{htmlelement("img")}} con atributo `alt` dentro de `files/es/web/css/index.md`:
 
    ```md
    ![Mi genial imagen](mi-imagen-genial.png)

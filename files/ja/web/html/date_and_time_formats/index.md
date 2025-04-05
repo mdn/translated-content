@@ -392,6 +392,6 @@ HTML の日付の目的上、年は常に 4 桁以上の長さになります。
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} および {{HTMLElement("del")}}: datetime`属性を参照してください。この属性は、コンテンツが挿入または削除された日付またはローカル日時を指定します。
 - [The ISO 8601 specification](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates) ([JavaScript ガイド](/ja/docs/Web/JavaScript/Guide))
+- [数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings) ([JavaScript ガイド](/ja/docs/Web/JavaScript/Guide))
 - JavaScript の {{jsxref("Date")}} オブジェクト
 - [`Intl.DateTimeFormat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) オブジェクト（指定されたロケールで日時を書式化）

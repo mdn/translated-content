@@ -8,7 +8,42 @@ slug: Web/CSS/background-size
 A propriedade **`background-size`** do [CSS](/pt-BR/docs/Web/CSS) define o tamanho da imagem de fundo do elemento.
 A imagem pode ser deixada no seu tamanho natural, estendida ou comprimida para caber no espaço disponível.
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 Espaços não cobertos por uma imagem de fundo são preenchidos com a propriedade {{cssxref("background-color")}}, e a cor do fundo ficará visível atrás das imagens de fundo que têm transparência/translucidez.
 

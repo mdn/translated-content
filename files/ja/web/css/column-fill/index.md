@@ -9,7 +9,33 @@ l10n:
 
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
 
-{{EmbedInteractiveExample("pages/css/column-fill.html")}}
+{{InteractiveExample("CSS Demo: column-fill")}}
+
+```css interactive-example-choice
+column-fill: auto;
+```
+
+```css interactive-example-choice
+column-fill: balance;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 100%;
+  height: 90%;
+  columns: 3;
+  text-align: left;
+}
+```
 
 ## 構文
 
@@ -93,7 +119,7 @@ p.fill-balance {
 {{Compat}}
 
 > [!WARNING]
-> 仕様上の未解決の問題により、 `column-fill` にはブラウザ－間の相互運用性の問題やバグがあることに注意してください。
+> 仕様上の未解決の問題により、 `column-fill` にはブラウザー間の相互運用性の問題やバグがあることに注意してください。
 >
 > 特に、 `column-fill: auto` を使用して連続的に段を埋める場合、 Chrome では、段組みコンテナーにブロック方向の寸法（例: 横書きモードならば高さ）がある場合にのみこの値を参照します。 Firefox は常にこのプロパティを参照するため、寸法がない場合は最初の段をすべてのコンテンツで埋めます。
 

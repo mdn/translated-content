@@ -9,7 +9,55 @@ l10n:
 
 **`margin-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-{{EmbedInteractiveExample("pages/css/margin-left.html")}}
+{{InteractiveExample("CSS Demo: margin-left")}}
+
+```css interactive-example-choice
+margin-left: 1em;
+```
+
+```css interactive-example-choice
+margin-left: 10%;
+```
+
+```css interactive-example-choice
+margin-left: 10px;
+```
+
+```css interactive-example-choice
+margin-left: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col"></div>
+    <div class="col transition-all" id="example-element"></div>
+    <div class="col"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #5b6dcd 10px;
+  background-color: rgba(229, 232, 252, 0.6);
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffc129;
+  background-color: rgba(255, 244, 219, 0.6);
+}
+```
 
 2 つの隣り合うボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)と呼ばれています。
 
@@ -41,7 +89,7 @@ margin-left: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
 
   - : 左マージンは未使用の水平方向の余白を共有します。これは主に使用されているレイアウトモードによって決定されます。 `margin-left` と `margin-right` の両方が `auto` の場合は、両方に均等に割り当てられます。それ以外の場合は以下の表のとおりです。

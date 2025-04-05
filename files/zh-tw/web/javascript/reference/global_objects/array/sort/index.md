@@ -72,7 +72,7 @@ function compareNumbers(a, b) {
 }
 ```
 
-`sort` 方法可以直接使用{{jsxref("Operators/function", "函式運算式", "", 1)}}（以及[閉包（closures）](/zh-TW/docs/Web/JavaScript/Closures)）：
+`sort` 方法可以直接使用{{jsxref("Operators/function", "函式運算式", "", 1)}}（以及[閉包（closures）](/zh-TW/docs/Web/JavaScript/Guide/Closures)）：
 
 ```js
 var numbers = [4, 2, 5, 1, 3];

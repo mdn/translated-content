@@ -47,7 +47,7 @@ a:visited {
 
 ## プライバシー上の制約
 
-プライバシー上の理由から、ブラウザ―はこの擬似クラスを使って適用できるスタイルに厳しい制限をかけています。使い方は以下の通りです。
+プライバシー上の理由から、ブラウザーはこの擬似クラスを使って適用できるスタイルに厳しい制限をかけています。使い方は以下の通りです。
 
 - 利用できる CSS プロパティは、 {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("column-rule-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("text-decoration-color") }}, {{ cssxref("text-emphasis-color") }} です。
 - 利用できる SVG 属性は {{SVGAttr("fill")}} と {{SVGAttr("stroke")}} です。
@@ -56,7 +56,7 @@ a:visited {
 - [`<link>`](/ja/docs/Web/HTML/Element/link) 要素は `:visited` に一致することはありません。
 
 > [!NOTE]
-> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)を参照してください。
+> これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)を参照してください。
 
 ## 構文
 
@@ -108,5 +108,5 @@ a:visited {
 
 ## 関連情報
 
-- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
 - リンク関連の擬似クラス: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

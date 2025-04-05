@@ -104,7 +104,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 #### Networking
 
-- [Controles de acceso cross-site para HTTP](/es/docs/Web/HTTP/CORS)
+- [Controles de acceso cross-site para HTTP](/es/docs/Web/HTTP/Guides/CORS)
   - : En Firefox 3.5, es ahora posible en las peticiones HTTP, incluyendo aquellas hechas por [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest), trabajar entre dominios si el servidor lo permite.
 - [Eventos de progreso para](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)[`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
   - : Ahora se ofrecen eventos de progreso para que las extensiones puedan monitorizar el progreso de las peticiones.
@@ -126,7 +126,7 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
 
 #### Nuevas funcionalidades SVG
 
-- [Aplicar efectos SVG al contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Aplicar efectos SVG al contenido HTML](/es/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : Ahora puedes aplicar efectos SVG a contenido HTML y XHTML; este artículo describe cómo.
 
 #### Otras nuevas funcionalidades

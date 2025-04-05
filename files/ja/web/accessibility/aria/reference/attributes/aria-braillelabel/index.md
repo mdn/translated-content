@@ -12,7 +12,7 @@ l10n:
 
 ## 解説
 
-グローバルな `aria-braillelabel` 属性は、現在の要素にラベル付けする文字列の値を定義するという点で、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) に似ています。`aria-label` はスクリーンリーダーによって読み取られる一方で、`aria-braillelabel` 属性の内容は点字に変換され、ユーザーには点字で認識可能なオブジェクトの名前が提供されます。
+グローバルな `aria-braillelabel` 属性は、現在の要素にラベル付けする文字列の値を定義するという点で、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) に似ています。`aria-label` はスクリーンリーダーによって読み取られる一方で、`aria-braillelabel` 属性の内容は点字に変換され、ユーザーには点字で認識可能なオブジェクトの名前が提供されます。
 
 `aria-braillelabel` 属性の目的は、支援技術が要素のアクセシブル名を点字でローカライズして表現する方法を上書きすることです。この属性がなければアクセシブル名が点字に変換されたときに望ましいユーザーエクスペリエンスにならない場合にのみ、使用してください。
 
@@ -54,5 +54,5 @@ l10n:
 ## 関連情報
 
 - {{domxref("Element.ariaBrailleLabel")}}
-- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-- [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)
+- [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription)

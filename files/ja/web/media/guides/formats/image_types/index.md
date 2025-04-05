@@ -90,7 +90,7 @@ original_slug: Web/Media/Formats/Image_types
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
       <td>
-        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェース要素、アイコン、図などに最適です。<br>
+        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェイス要素、アイコン、図などに最適です。<br>
         <strong>対応:</strong> Chrome, Edge, Firefox, IE, Opera, Safari
       </td>
     </tr>
@@ -150,7 +150,7 @@ original_slug: Web/Media/Formats/Image_types
 
 > [!NOTE]
 > Safari 11.1では、アニメーション GIF の代替として、動画形式を使用する機能が追加されました。
-> 他のブラウザは対応していません。
+> 他のブラウザーは対応していません。
 > 詳しくは、 [Chromium のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=791658)、[Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=895131)を参照してください。
 
 ## 画像ファイルの種類の詳細
@@ -577,7 +577,7 @@ GIF は単純な画像やアニメーションに適していますが、フル�
 ### ICO (Microsoft Windows icon)
 
 ICO (Microsoft Windows icon) ファイル形式は、 Windows システムのデスクトップアイコン用に Microsoft が設計しました。
-しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#サイトに自分の好きなアイコンを追加)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
+しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#サイトに自分の好きなアイコンを追加)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
 
 ICO ファイルには、複数のアイコンを含むことができ、それぞれの詳細が記載されたディレクトリーから始まります。
 ディレクトリーの後に、アイコンのデータが続きます。
@@ -994,7 +994,7 @@ SVG ファイルはテキストファイルで、解釈されると希望する�
 
 SVG はウェブコンテンツで 2 通りの使い方ができます。
 
-1. {{SVGElement("svg")}} 要素を HTML に直接書き、その中に [SVG 要素](/ja/docs/Web/SVG/Element)を入れて画像を描く。
+1. {{SVGElement("svg")}} 要素を HTML に直接書き、その中に [SVG 要素](/ja/docs/Web/SVG/Reference/Element)を入れて画像を描く。
 2. 他のいずれかの画像種別で使用することができるあらゆる場所で表示する。 {{HTMLElement("img")}} や {{HTMLElement("picture")}} 要素、 CSS の {{cssxref("background-image")}} プロパティなどです。
 
 SVG は、一連の描画コマンドで表現できる画像に最適です。特に、画像が描画されるサイズが不明であったり、変動する可能性がある場合、 SVG は希望するサイズに滑らかに拡大縮小するので、最適な選択と言えます。
@@ -1067,7 +1067,7 @@ SVG は、一連の描画コマンドで表現できる画像に最適です。�
     <tr>
       <th scope="row">圧縮</th>
       <td>
-        SVG ソースは転送中に <a href="/ja/docs/Web/HTTP/Compression">HTTP 圧縮</a>技術を使用したり、ディスク上で <code>.svgz</code> ファイルを使用したりすることで圧縮できます。
+        SVG ソースは転送中に <a href="/ja/docs/Web/HTTP/Guides/Compression">HTTP 圧縮</a>技術を使用したり、ディスク上で <code>.svgz</code> ファイルを使用したりすることで圧縮できます。
       </td>
     </tr>
     <tr>
@@ -1530,9 +1530,9 @@ JPEG や非可逆 WebP のような非可逆形式を選択する場合は、テ
 
 ## 関連情報
 
-- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
+- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [ウェブで使用される動画コーデックのガイド](/ja/docs/Web/Media/Formats/Video_codecs)
+- [ウェブで使用される動画コーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)
 - {{Glossary("HTML")}} の {{HTMLElement("img")}} および {{HTMLElement("picture")}} 要素
 - CSS の {{cssxref("background-image")}} プロパティ
 - {{domxref("HTMLImageElement.Image()")}} コンストラクターと {{domxref("HTMLImageElement")}} インターフェイス

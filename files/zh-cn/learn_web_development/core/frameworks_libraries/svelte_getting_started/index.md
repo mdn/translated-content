@@ -1,7 +1,6 @@
 ---
 title: Svelte 入门
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 ---
 
 {{LearnSidebar}}

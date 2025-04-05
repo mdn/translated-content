@@ -876,7 +876,7 @@ input.custom {
 
 ### object-position 和 object-fit
 
-在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个[被替换的元素](/zh-CN/docs/Web/CSS/Replaced_element)。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
+在某些情况下（通常涉及非文本输入和专门的界面），`<input>` 元素是一个{{glossary("Replaced elements", "可替换元素")}}。当它为替换元素时，该元素在其框架内的位置和大小可以使用 CSS {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 属性来调整。
 
 ### 赋予样式
 
@@ -936,7 +936,7 @@ input.custom {
 ### 客户端验证
 
 > [!WARNING]
-> 客户端验证是有用的，但它并*不能*保证服务器会收到有效的数据。如果数据必须是特定的格式，*总是*应该在服务器端进行验证，如果格式无效，则返回一个 [`400` HTTP 响应](/zh-CN/docs/Web/HTTP/Status/400)。
+> 客户端验证是有用的，但它并*不能*保证服务器会收到有效的数据。如果数据必须是特定的格式，*总是*应该在服务器端进行验证，如果格式无效，则返回一个 [`400` HTTP 响应](/zh-CN/docs/Web/HTTP/Reference/Status/400)。
 
 除了如上文 [UI 伪类](#ui_伪类)部分所述，使用 CSS 根据 {{cssxref(":valid")}} 或 {{cssxref(":invalid")}} 每个输入的当前状态来设计输入的样式之外，浏览器还在（试图）提交表单时提供了客户端验证。在表单提交时，如果有一个表单控件没有通过约束验证，支持的浏览器将在第一个无效的表单控件上显示一个错误信息；根据错误类型显示一个默认信息，或者由你设置的信息。
 

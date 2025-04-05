@@ -7,7 +7,38 @@ slug: Web/CSS/gradient/linear-gradient
 
 **`linear-gradient()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)创建一个由两种或多种颜色沿一条直线进行线性过渡的图像，其结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 数据类型。
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: linear-gradient()")}}
+
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## 语法
 
@@ -40,7 +71,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : 插值提示，定义渐变色在相邻色标之间的渐变过程。其中的长度定义了渐变色应在两个色标之间的哪个点到达颜色过渡的中点。如果省略该值，颜色过渡的中点就是两个色标之间的中点。
 
-> **备注：** [CSS 渐变中的色标](#线性渐变的构成) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
+> **备注：** [CSS 渐变中的色标](#线性渐变的构成) 的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)中的色标遵循相同的规则。
 
 ## 描述
 

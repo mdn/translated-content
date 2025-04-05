@@ -9,7 +9,37 @@ l10n:
 
 **`rgb()`** 関数記法は、赤、緑、青の成分によって色を表現します。オプションのアルファ成分は、色の透明度を表します。
 
-{{EmbedInteractiveExample("pages/css/function-rgb.html")}}
+{{InteractiveExample("CSS Demo: rgb()")}}
+
+```css interactive-example-choice
+background: rgb(31 120 50);
+```
+
+```css interactive-example-choice
+background: rgb(30% 20% 50%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 80%);
+```
+
+```css interactive-example-choice
+background: rgb(255 122 127 / 0.2);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## 構文
 
@@ -65,11 +95,11 @@ rgb(from <color> R G B[ / A])
 > **メモ:** `rgba()` エイリアスも相対色の出力や起点色の指定に使用できます。`rgba()` を使用して相対色を出力する場合、カンマのないモダン構文を使用する必要があります。
 
 > [!NOTE]
-> 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリすると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されます。
+> 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリーすると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されます。
 
 #### 相対色出力チャネル成分の定義
 
-`rgb()` 関数内で相対色構文を使用する場合、ブラウザは起点色を等価のRGB色に変換します（すでにそのように指定されていない場合）。色は3つの異なる色チャネル値 - `r`（赤）、`g`（緑）、`b`（青）- およびアルファチャネル値（`alpha`）として定義されます。これらのチャネル値は、出力色チャネル値を定義する際に関数内で使用できます：
+`rgb()` 関数内で相対色構文を使用する場合、ブラウザーは起点色を等価のRGB色に変換します（すでにそのように指定されていない場合）。色は3つの異なる色チャネル値 - `r`（赤）、`g`（緑）、`b`（青）- およびアルファチャネル値（`alpha`）として定義されます。これらのチャネル値は、出力色チャネル値を定義する際に関数内で使用できます：
 
 - `r`, `g` および `b` の値はそれぞれ `0` から `255` の `<number>` に解決されます。
 - `alpha` チャネルは `0` から `1` の `<number>` に解決されます。

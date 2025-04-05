@@ -35,7 +35,7 @@ l10n:
 
 ### HTTP
 
-- 现已支持新的 `Content-Encoding` HTTP 标头的指令 [`zstd`](/zh-CN/docs/Web/HTTP/Headers/Content-Encoding#zstd)，允许解码服务器发送的、使用 {{glossary("Zstandard compression", "Zstandard 压缩")}}算法编码的内容（[Firefox bug 1871963](https://bugzil.la/1871963)）。
+- 现已支持新的 `Content-Encoding` HTTP 标头的指令 [`zstd`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Encoding#zstd)，允许解码服务器发送的、使用 {{glossary("Zstandard compression", "Zstandard 压缩")}}算法编码的内容（[Firefox bug 1871963](https://bugzil.la/1871963)）。
 
 ### API
 

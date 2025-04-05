@@ -7,7 +7,37 @@ slug: Web/CSS/filter-function/opacity
 
 La fonction CSS **`opacity()`** permet de modifier la transparence de l'image. Le résultat obtenu par cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
-{{EmbedInteractiveExample("pages/css/function-opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity()")}}
+
+```css interactive-example-choice
+filter: opacity(1);
+```
+
+```css interactive-example-choice
+filter: opacity(80%);
+```
+
+```css interactive-example-choice
+filter: opacity(50%);
+```
+
+```css interactive-example-choice
+filter: opacity(0.2);
+```
+
+```css interactive-example-choice
+filter: opacity(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 > [!NOTE]
 > Cette fonction est proche de la propriété [`opacity`](/fr/docs/Web/CSS/opacity) mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
@@ -45,12 +75,12 @@ opacity(1);    /* Aucun effet */
 
 - La propriété CSS [`opacity`](/fr/docs/Web/CSS/opacity)
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`blur()`](</fr/docs/Web/CSS/filter-function/blur()>)
-  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
-  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
-  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
-  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
-  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
-  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
-  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
-  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)
+  - [`blur()`](/fr/docs/Web/CSS/filter-function/blur)
+  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
+  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
+  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
+  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
+  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
+  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
+  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
+  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)

@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/CSS_layout/Multicol_skills
 
 {{LearnSidebar}}
 
-Цель этого задания — чтобы вы поработали с CSS свойствами {{CSSxRef("column-count")}}, {{CSSxRef("column-width")}}, {{CSSxRef("column-gap")}}, {{CSSxRef("column-span")}} и {{CSSxRef("column-rule")}} и со значениями которые описаны в нашем уроке [Макет с несколькими столбцами](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.
+Цель этого задания — чтобы вы поработали с CSS свойствами {{CSSxRef("column-count")}}, {{CSSxRef("column-width")}}, {{CSSxRef("column-gap")}}, {{CSSxRef("column-span")}} и {{CSSxRef("column-rule")}} и со значениями которые описаны в нашем уроке [Макет с несколькими столбцами](/ru/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.
 
 > [!NOTE]
 > Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезным загрузить код и использовать онлайн инструменты такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) чтобы проработать задания.

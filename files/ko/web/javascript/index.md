@@ -36,17 +36,17 @@ JavaScript 사양과 관련 기술에 대한 자세한 내용은 [JavaScript 기
 
 ### 입문자용
 
-JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이전 경험이 없는 경우 [JavaScript 주제에 대한 학습 영역](/ko/docs/Learn/JavaScript)을 방문하세요. 전체 과정은 다음과 같습니다.
+JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이전 경험이 없는 경우 [JavaScript 주제에 대한 학습 영역](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)을 방문하세요. 전체 과정은 다음과 같습니다.
 
-- [JavaScript 첫 걸음](/ko/docs/Learn/JavaScript/First_steps)
+- [JavaScript 첫 걸음](/ko/docs/conflicting/Learn_web_development/Core/Scripting)
   - : 변수, 문자열, 숫자 및 배열과 같은 주요 JavaScript 기능에 대해 논의하면서 "JavaScript 는 무엇인가요?", "어떤 모습인가요?", "무엇을 할 수 있나요?"와 같은 몇 가지 기본적인 질문에 답합니다.
-- [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks)
+- [JavaScript 구성 요소](/ko/docs/Learn_web_development/Core/Scripting)
   - : JavaScript의 핵심 기본 기능에 대한 이해를 넓히기 위해 조건문, 반복문, 함수, 이벤트와 같이 흔히 찾을 수 코드 블록의 형태에 대해서 알아봅니다.
-- [JavaScript 객체 소개](/ko/docs/Learn/JavaScript/Objects)
+- [JavaScript 객체 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : JavaScript의 객체 지향적 특성에 대한 이해는 언어의 이해도를 높이며 효율적인 코드를 작성하려는 경우 중요하므로, 이 과정이 도움이 될 것입니다.
-- [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
+- [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS)
   - : 비동기 JavaScript가 중요한 이유와, 비동기적 코드를 사용해 서버에서 리소스 가져오기 등 블록킹 연산을 효율적으로 처리하는 방법에 대해 알아봅니다.
-- [클라이언트측 웹 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs)
+- [클라이언트측 웹 API](/ko/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : API란 무엇인지 탐색해보고, 개발 작업에서 자주 접하게 될 가장 일반적인 API를 사용하는 방법을 알아봅니다.
 
 ### JavaScript 안내서
@@ -56,7 +56,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 
 ### 중급
 
-- [클라이언트 측 JavaScript 프레임워크 이해](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [클라이언트 측 JavaScript 프레임워크 이해](/ko/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript 프레임워크는 현대 프런트 엔드 웹 개발의 필수 부분으로, 개발자에게 확장 가능한 상호작용형 웹 응용 프로그램을 구축하기위한 입증된 도구를 제공합니다. 이 과정에서는 오늘날 가장 인기있는 일부 프레임워크를 다루는 자습서 시리즈로 이동하기 전에 클라이언트 측 프레임워크가 작동하는 방식과 도구 집합에 맞는 방식에 대한 기본적인 배경 지식을 제공합니다.
 - [JavaScript 개요](/ko/docs/Web/JavaScript/Language_overview)
   - : 다른 프로그래밍 언어에서 넘어 온 사람들이 빨리 배울 수 있는 JavaScript의 기본 구문과 의미 체계에 대한 개요입니다.

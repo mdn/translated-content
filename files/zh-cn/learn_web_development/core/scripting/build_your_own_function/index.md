@@ -1,7 +1,6 @@
 ---
 title: 创建你自己的函数
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
-original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}

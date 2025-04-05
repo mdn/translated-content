@@ -14,7 +14,7 @@ Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre 
 ### HTML
 
 - El atributo `value` de {{ HTMLElement("li") }} ahora puede ser negativo. Los valores negativos anteriores se convertian a 0.
-- Ahora puede [especificar la hora de inicio y finalización de los medios](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) en la URI de los medios cuando usa los elementos {{ HTMLElement("audio") }} y {{ HTMLElement("video") }}.
+- Ahora puede [especificar la hora de inicio y finalización de los medios](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) en la URI de los medios cuando usa los elementos {{ HTMLElement("audio") }} y {{ HTMLElement("video") }}.
 - Los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} [ahora respetan el valor del atributo `lang`](/es/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) al invocar el corrector ortográfico.
 - Firefox en Android ahora permite a los usuarios tomar fotos con la cámara de su teléfono sin salir del navegador cuando se usa el elemento {{ HTMLElement("input") }} con `type="file"` y `accept="image/*"` .
 - Las imágenes PNG ICO de estilo Windows Vista ahora son compatibles.

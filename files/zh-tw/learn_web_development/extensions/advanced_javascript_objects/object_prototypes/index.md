@@ -1,7 +1,6 @@
 ---
 title: 物件原型
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

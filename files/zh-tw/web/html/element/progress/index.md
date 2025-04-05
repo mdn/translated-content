@@ -51,7 +51,7 @@ label {
 
 ### 標記
 
-在使用 `<progress>` 時，通常應提供無障礙的標籤。雖然可以使用標準的 ARIA 標記屬性 [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 或 [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-label)，就像對任何具有 `role="progressbar"` 的元素一樣，但在使用 `<progress>` 時，你還可以使用 {{htmlelement("label")}} 元素。
+在使用 `<progress>` 時，通常應提供無障礙的標籤。雖然可以使用標準的 ARIA 標記屬性 [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 或 [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)，就像對任何具有 `role="progressbar"` 的元素一樣，但在使用 `<progress>` 時，你還可以使用 {{htmlelement("label")}} 元素。
 
 > [!NOTE]
 > 放置在元素標籤之間的文本不是可訪問的標籤，它只建議作為不支持該元素的舊瀏覽器的後備。
@@ -76,7 +76,7 @@ label {
 
 ## 描述特定區域
 
-如果 `<progress>` 元素描述頁面的某個區域的載入進度，請使用 [`aria-describedby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 指向狀態，並在正在更新的部分上設置 [`aria-busy="true"`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-busy)，在載入完成後刪除 `aria-busy` 屬性。
+如果 `<progress>` 元素描述頁面的某個區域的載入進度，請使用 [`aria-describedby`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 指向狀態，並在正在更新的部分上設置 [`aria-busy="true"`](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)，在載入完成後刪除 `aria-busy` 屬性。
 
 #### 範例
 
@@ -124,7 +124,7 @@ label {
     </tr>
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
-      <td><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></td>
+      <td><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></td>
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>

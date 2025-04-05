@@ -99,7 +99,7 @@ En esta sección, veremos las diferentes formas en las que puede agregar gráfic
 
 ### La forma rápida: {{htmlelement("img")}}
 
-Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo necesita hacer referencia a él en el atributo src como es de esperar. Necesitará un atributo de altura o ancho (o ambos si su SVG no tiene una relación de aspecto inherente). Si aún no lo ha hecho, lea [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo necesita hacer referencia a él en el atributo src como es de esperar. Necesitará un atributo de altura o ancho (o ambos si su SVG no tiene una relación de aspecto inherente). Si aún no lo ha hecho, lea [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 ```html
 <img
@@ -142,7 +142,7 @@ background-size: contain;
 
 Al igual que el método `<img>` descrito anteriormente, la inserción de SVG con imágenes de fondo CSS significa que el SVG no se puede manipular con JavaScript y también está sujeto a las mismas limitaciones de CSS.
 
-Si sus SVG no se muestran en absoluto, podría deberse a que su servidor no está configurado correctamente. Si ese es el problema, este [artículo le indicará la dirección correcta](/es/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_webservers).
+Si sus SVG no se muestran en absoluto, podría deberse a que su servidor no está configurado correctamente. Si ese es el problema, este [artículo le indicará la dirección correcta](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_webservers).
 
 ### Cómo incluir código SVG dentro de su HTML
 
@@ -170,7 +170,7 @@ También puede abrir el archivo SVG en un editor de texto, copiar el código SVG
 
 ### Cómo incrustar un SVG con un {{htmlelement("iframe")}}
 
-Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+Puede abrir imágenes SVG en su navegador al igual que las páginas web. Entonces, incrustar un documento SVG con un `<iframe>` se realiza tal como lo estudiamos en [De \<object> a \<iframe> — otras tecnologías de incrustación](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
 
 Aquí hay una revisión rápida:
 
@@ -189,7 +189,7 @@ Este definitivamente no es el mejor método para elegir:
 
 ## Aprendizaje activo: jugar con SVG
 
-En esta sección de aprendizaje activo, nos gustaría que simplemente probaras a jugar con algunos SVG por diversión. En la entrada a continuación, verá que ya le hemos proporcionado algunas muestras para que pueda comenzar. También puedes ir a la [Referencia de Elementos SVG](/es/docs/Web/SVG/Element), descubrir más detalles sobre otros juguetes que puedes usar en SVG y probarlos también. Esta sección trata sobre cómo practicar sus habilidades de investigación y divertirse.
+En esta sección de aprendizaje activo, nos gustaría que simplemente probaras a jugar con algunos SVG por diversión. En la entrada a continuación, verá que ya le hemos proporcionado algunas muestras para que pueda comenzar. También puedes ir a la [Referencia de Elementos SVG](/es/docs/Web/SVG/Reference/Element), descubrir más detalles sobre otros juguetes que puedes usar en SVG y probarlos también. Esta sección trata sobre cómo practicar sus habilidades de investigación y divertirse.
 
 Si se queda atascado y no puede hacer que su código funcione, siempre puede restablecerlo con el _botón Restablecer_.
 
@@ -336,7 +336,7 @@ En el próximo artículo de este módulo, exploraremos las imágenes adaptables 
 
 ## Vea también
 
-- [Tutorial de SVG](/es/docs/Web/SVG/Tutorial/Getting_Started) en MDN
+- [Tutorial de SVG](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) en MDN
 - [Consejos rápidos para SVGs adaptables](http://thenewcode.com/744/Making-SVG-Responsive)
 - [Tutorial de Sara Soueidan sobre imágenes SVG adaptables](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Beneficios de accesibilidad de SVG](https://www.w3.org/TR/SVG-access/)

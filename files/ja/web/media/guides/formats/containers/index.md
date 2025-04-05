@@ -678,7 +678,7 @@ QuickTime ファイルは主に macOS で対応していますが、何年か前
 ただし、 Windows Media Player はこれで QuickTime バージョン 2.0 以前のファイルに統合的に対応しており、それ以降のバージョンの QuickTime に対応するにはサードパーティによる追加が必要です。
 
 Mac OS では、 QuickTime フレームワークは QuickTime 形式の動画ファイルおよびコーデックに対応しているだけでなく、一般的および特殊な音声および動画コーデック、さらに静止画形式にも幅広く対応しています。
-QuickTime を通じて、 Mac アプリケーション（QuickTime プラグインや QuickTime との直接統合によるウェブブラウザを含む）は、 AAC、AIFF、MP3、PCM、Qualcomm PureVoice などの音声形式、AVI、DV、Pixlet、ProRes、FLAC、Cinepak、3GP、H.261からH.265、MJPEG、MPEG-1とMPEG-4 Part 2、Sorenson などの動画形式の読み取りや書き込みを行うことができたのである。
+QuickTime を通じて、 Mac アプリケーション（QuickTime プラグインや QuickTime との直接統合によるウェブブラウザーを含む）は、 AAC、AIFF、MP3、PCM、Qualcomm PureVoice などの音声形式、AVI、DV、Pixlet、ProRes、FLAC、Cinepak、3GP、H.261からH.265、MJPEG、MPEG-1とMPEG-4 Part 2、Sorenson などの動画形式の読み取りや書き込みを行うことができたのである。
 
 さらに、 QuickTime 用のサードパーティ製コンポーネントも多数利用でき、その中には、追加のコーデックに対応しているものもあります。
 
@@ -691,7 +691,7 @@ Apple 社自身も、これで一般的に動画に MP4 を使用するように
 | `video/quicktime` |
 
 `video/quicktime` の MIME タイプは、 QuickTime メディアコンテナーを入力するための基本的な型です。
-QuickTime (Mac OS 上のメディアフレームワーク) はさまざまなコンテナとコーデックに対応、実際には他の多くの MIME タイプをサポートしていることはメモしておく価値があります。
+QuickTime (Mac OS 上のメディアフレームワーク) はさまざまなコンテナーとコーデックに対応、実際には他の多くの MIME タイプをサポートしていることはメモしておく価値があります。
 
 MIME タイプ文字列に [`codecs` 引数を追加](/ja/docs/Web/Media/Formats/codecs_parameter#iso-bmff) して、音声トラックやビデオトラックにどのコーデックを使用するかを指定したり、プロファイル、レベル、その他コーデック構成の詳細に関するオプションを提供したりすることが可能です。
 

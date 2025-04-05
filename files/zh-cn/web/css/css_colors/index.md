@@ -84,9 +84,9 @@ l10n:
   - : 色彩理论及资源，包括找到合适的颜色以创建无障碍的调色板、对比度以及彩色打印。
 - [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
   - : 本文解释了相对 CSS 颜色语法，展示了不同的选项，并给出了一些说明性的示例。
-- [理解颜色和亮度](/zh-CN/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [理解颜色和亮度](/zh-CN/docs/Web/Accessibility/Guides/Colors_and_Luminance)
   - : 色彩感知以及考虑到色弱（色盲）用户、视力减退用户以及患有前庭障碍或其他神经障碍的用户如何使用色彩。
-- [WCAG 1.4.1：颜色对比度](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+- [WCAG 1.4.1：颜色对比度](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
   - : 解释背景与前景内容之间的对比度要求，以确保可读性。
 
 ## 相关概念
@@ -108,12 +108,12 @@ l10n:
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - 属于其他规范的 SVG 颜色属性：
-  - [`fill`](/zh-CN/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/zh-CN/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/zh-CN/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/zh-CN/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/zh-CN/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/zh-CN/docs/Web/SVG/Attribute/color) 属性
+  - [`fill`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill)
+  - [`flood-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/flood-color)
+  - [`lighting-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - [`stop-color`](/zh-CN/docs/Web/SVG/Reference/Attribute/stop-color)
+  - [`stroke`](/zh-CN/docs/Web/SVG/Reference/Attribute/stroke)
+- SVG [`color`](/zh-CN/docs/Web/SVG/Reference/Attribute/color) 属性
 - {{glossary("Color wheel", "色环")}}术语
 - {{glossary("Interpolation", "插值")}}术语
 - [`@font-palette-values`](/zh-CN/docs/Web/CSS/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/@font-palette-values/override-colors) 描述符
@@ -130,5 +130,5 @@ l10n:
 - [CSS 颜色调整](/zh-CN/docs/Web/CSS/CSS_color_adjustment)模块和 {{cssxref("print-color-adjust")}} 属性。
 - [CSS 图像](/zh-CN/docs/Web/CSS/CSS_images)模块，其中定义了 CSS [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 图像。
 - [`VideoColorSpace`](/zh-CN/docs/Web/API/VideoColorSpace) 接口
-- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Element/feColorMatrix) SVG 元素
+- [`<feColorMatrix>`](/zh-CN/docs/Web/SVG/Reference/Element/feColorMatrix) SVG 元素
 - [Canvas API：应用样式及颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#色彩)

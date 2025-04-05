@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Deployment
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
+Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
 
 <table>
   <tbody>
@@ -95,7 +95,7 @@ Muchos proveedores disponen también de un nivel "básico" que proporciona nivel
 
 ## Preparando tu sitio web para hacerlo público
 
-La [Django skeleton website](/es/docs/Learn/Server-side/Django/skeleton_website) creada usando las herramientas _django-admin_ y _manage.py_ están configuradas para hacer más sencillo el desarrollo. Muchos de los ajustes del proyecto Django (especificados en **settings.py**) deberían ser distintos en producción, por razones tanto de seguridad como de rendimiento.
+La [Django skeleton website](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) creada usando las herramientas _django-admin_ y _manage.py_ están configuradas para hacer más sencillo el desarrollo. Muchos de los ajustes del proyecto Django (especificados en **settings.py**) deberían ser distintos en producción, por razones tanto de seguridad como de rendimiento.
 
 > [!NOTE]
 > Es bastante común disponer de un archivo **settings.py** separado en producción, e importar los ajustes sensibles desde un archivo aparte o desde una variable de entorno. Este archivo debería, por tanto, estar protegido, aún cuando el resto del código fuente esté disponible en un repositorio público.
@@ -310,7 +310,7 @@ La palabra "`web:`" le dice a Heroku que se trata de una web dyno y puede ser en
 
 Aunque no necesitaremos _Gunicorn_ para servir nuestra aplicación LocalLibrary durante el desarrollo, lo instalaremos de manera que sean parte de nuestros [requerimientos](#requirements) de Heroku para instalar en el servidor remoto.
 
-Instala _Gunicorn_ localmente usando _pip_ en la línea de comandos (que instalamos en [configurar el entorno de desarrollo](/es/docs/Learn/Server-side/Django/development_environment)):
+Instala _Gunicorn_ localmente usando _pip_ en la línea de comandos (que instalamos en [configurar el entorno de desarrollo](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)):
 
 ```bash
 pip3 install gunicorn
@@ -374,7 +374,7 @@ Para facilitar el alojamiento de archivos estáticos de forma separada de la apl
 
 Las variables de configuración más relevantes son:
 
-- `STATIC_URL`: Es la localización URL base desde la cual se servirán los archivos estáticos, por ejemplo en una CDN. Se usa para variables de plantilla estáticas a las que se acceden en nuestra plantilla base (ver [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)).
+- `STATIC_URL`: Es la localización URL base desde la cual se servirán los archivos estáticos, por ejemplo en una CDN. Se usa para variables de plantilla estáticas a las que se acceden en nuestra plantilla base (ver [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn_web_development/Extensions/Server-side/Django/Home_page)).
 - `STATIC_ROOT`: Es la ruta absoluta a un directorio en el que la herramienta "collectstatic" de Django reunirá todos los archivos estáticos referenciados en nuestras plantillas. Una vez recopilados, podrán ser cargados como un grupo a donde hayan de ser alojados.
 - `STATICFILES_DIRS`: Relaciona directorios adicionales en los que la herramienta collestatic de Django debería buscar archivos estáticos.
 

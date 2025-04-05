@@ -1,7 +1,6 @@
 ---
 title: 媒体查询入门指南
 slug: Learn_web_development/Core/CSS_layout/Media_queries
-original_slug: Learn/CSS/CSS_layout/Media_queries
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}

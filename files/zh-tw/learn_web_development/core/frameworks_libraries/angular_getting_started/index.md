@@ -1,7 +1,6 @@
 ---
 title: Angular 新手入門
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

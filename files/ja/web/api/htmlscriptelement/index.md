@@ -9,7 +9,7 @@ l10n:
 
 HTML の {{HTMLElement("script")}} 要素は **`HTMLScriptElement`** インターフェイスを公開しています。これは `<script>` 要素の動作や実行を操作するための特別なプロパティやメソッドを（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて）提供します。
 
-JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)で提供されます。しかし、ブラウザーは寛大であり、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("HTMLElement/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
+JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)で提供されます。しかし、ブラウザーは寛大であり、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("HTMLElement/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
 
 {{InheritanceDiagram}}
 

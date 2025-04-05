@@ -12,8 +12,7 @@ l10n:
 **`setInterval()`** 메서드는 각 호출 사이에 고정된 시간 지연으로
 함수를 반복적으로 호출하거나 코드 스니펫을 실행합니다.
 
-이 메서드는 간격(interval)을 고유하게 식별할 수 있는 interval ID를 반환하므로 나중에 {{domxref("clearInterval",
-  "clearInterval()")}} 함수를 호출하여 제거할 수 있습니다.
+이 메서드는 간격(interval)을 고유하게 식별할 수 있는 interval ID를 반환하므로 나중에 {{domxref("clearInterval", "clearInterval()")}} 함수를 호출하여 제거할 수 있습니다.
 
 ## 구문
 

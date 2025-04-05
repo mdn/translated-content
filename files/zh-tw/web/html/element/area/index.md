@@ -161,7 +161,7 @@ img {
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        當存在 <a href="/zh-TW/docs/Web/HTML/Element/area#href"><code>href</code></a> 屬性時，為<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>，否則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        當存在 <a href="/zh-TW/docs/Web/HTML/Element/area#href"><code>href</code></a> 屬性時，為<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>

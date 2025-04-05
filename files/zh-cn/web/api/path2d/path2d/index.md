@@ -5,7 +5,7 @@ slug: Web/API/Path2D/Path2D
 
 {{APIRef("Canvas API")}}{{seeCompatTable}}
 
-**`Path2D()`** 构造函数返回一个新的 `Path2D` 对象的实例，可以选择另一条路径作为参数（创建一个拷贝），或者选择 [SVG path](/zh-CN/docs/Web/SVG/Tutorial/Paths) 数据构成的字符串。
+**`Path2D()`** 构造函数返回一个新的 `Path2D` 对象的实例，可以选择另一条路径作为参数（创建一个拷贝），或者选择 [SVG path](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) 数据构成的字符串。
 
 ## 语法
 
@@ -20,7 +20,7 @@ new Path2D(d)
 - `path` {{optional_inline}}
   - : 当调用另一个 `Path2D` 对象时，会创建一个 `path` 变量的拷贝。
 - `d` {{optional_inline}}
-  - : 当调用 [SVG path](/zh-CN/docs/Web/SVG/Tutorial/Paths) 数据构成的字符串时，会根据描述创建一个新的路径。
+  - : 当调用 [SVG path](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) 数据构成的字符串时，会根据描述创建一个新的路径。
 
 ## 示例
 
@@ -50,7 +50,7 @@ ctx.stroke(path2);
 
 ### 使用 SVG 路径
 
-这是一段简单的代码片段，使用 [SVG path data](/zh-CN/docs/Web/SVG/Tutorial/Paths) 创建一个 `Path2D` 路径。路径将会移动到点 (`M10 10`) ，然后向右侧水平移动 80 个点 (`h 80`)，然后向下 80 个点 (`v 80`)，然后向左 80 个点 (`h -80`)，最后回到起始点 (`z`)。
+这是一段简单的代码片段，使用 [SVG path data](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) 创建一个 `Path2D` 路径。路径将会移动到点 (`M10 10`) ，然后向右侧水平移动 80 个点 (`h 80`)，然后向下 80 个点 (`v 80`)，然后向左 80 个点 (`h -80`)，最后回到起始点 (`z`)。
 
 ```html hidden
 <canvas id="canvas"></canvas>

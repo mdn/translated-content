@@ -7,9 +7,57 @@ l10n:
 
 {{CSSRef}}
 
-**`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)コンテナーに適用します。
+**`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)コンテナーに適用します。
 
-{{EmbedInteractiveExample("pages/css/gap.html")}}
+{{InteractiveExample("CSS Demo: gap")}}
+
+```css interactive-example-choice
+gap: 0;
+```
+
+```css interactive-example-choice
+gap: 10%;
+```
+
+```css interactive-example-choice
+gap: 1em;
+```
+
+```css interactive-example-choice
+gap: 10px 20px;
+```
+
+```css interactive-example-choice
+gap: calc(20px + 10%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -190,7 +238,7 @@ gap: unset;
 
 ### パーセント値の gap 値と明示的なコンテナーサイズ
 
-コンテナーに固定されたサイズが設定されている場合、すき間のパーセント値の計算はコンテナーのサイズに基づいて行われます。したがって、すき間の動作はすべてのレイアウトで一貫しています。次の例では、2 種類のコンテナーがあり、1 つはグリッドレイアウト、もう 1 つはフレックスレイアウトです。コンテナーには 20x20px の赤色の子が 5 つあります。どちらのコンテナも明示的に `height: 200px` を用いて高さを 200px に設定し、 `gap: 12.5% 0` を用いてすき間を設定します。
+コンテナーに固定されたサイズが設定されている場合、すき間のパーセント値の計算はコンテナーのサイズに基づいて行われます。したがって、すき間の動作はすべてのレイアウトで一貫しています。次の例では、2 種類のコンテナーがあり、1 つはグリッドレイアウト、もう 1 つはフレックスレイアウトです。コンテナーには 20x20px の赤色の子が 5 つあります。どちらのコンテナーも明示的に `height: 200px` を用いて高さを 200px に設定し、 `gap: 12.5% 0` を用いてすき間を設定します。
 
 ```html live-sample___explicit_container_size
 <span>Grid</span>

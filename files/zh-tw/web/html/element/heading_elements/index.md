@@ -161,9 +161,9 @@ h4 {
 當標題嵌套時，關閉子節時可能會「跳過」標題級別。
 
 - [標題 • 頁面結構 • WAI Web 無障礙教學](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [MDN 了解 WCAG，第 1.3 條解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [MDN 了解 WCAG，第 1.3 條解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [理解成功標準 1.3.1 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN 了解 WCAG，第 2.4 條解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 了解 WCAG，第 2.4 條解釋](/zh-TW/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功標準 2.4.1 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [理解成功標準 2.4.6 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
 - [理解成功標準 2.4.10 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
@@ -198,7 +198,7 @@ h4 {
 
 在這個例子中，螢幕閱讀技術會宣佈有兩個 `nav` 章節，一個叫「主導航」，一個叫「頁腳導航」。如果沒有提供標籤，使用螢幕閱讀軟體的人可能需要調查每個 `nav` 元素的內容來確定它們的目的。
 
-- [使用 aria-labelledby 屬性](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [使用 aria-labelledby 屬性](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [標記區域 • 頁面結構 • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 技術摘要
@@ -244,7 +244,7 @@ h4 {
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/heading_role"
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role"
           >heading</a
         >
       </td>
@@ -252,8 +252,8 @@ h4 {
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> 或
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

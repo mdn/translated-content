@@ -92,7 +92,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 使用箭头函数和解构
 
-前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#解构对象)重写如下：
+前面的示例可以使用箭头函数和[对象解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring#解构对象)重写如下：
 
 ```js
 const inventory = [

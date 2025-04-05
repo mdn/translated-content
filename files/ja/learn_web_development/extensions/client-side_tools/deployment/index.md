@@ -103,7 +103,7 @@ GitHub のコードリポジトリーを更新するたびに、 Netlify がそ�
 
 ## GitHub への変更のコミット
 
-このセクションでは、コードを git リポジトリーに保存するまでの手順を説明しますが、これは git チュートリアルとは程遠いものです。優れたチュートリアルや書籍が数多く提供されており、 [Git and GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) ページから始めるのが適しています。
+このセクションでは、コードを git リポジトリーに保存するまでの手順を説明しますが、これは git チュートリアルとは程遠いものです。優れたチュートリアルや書籍が数多く提供されており、 [Git and GitHub](/ja/docs/Learn_web_development/Core/Version_control) ページから始めるのが適しています。
 
 先ほど作業ディレクトリーを git 作業ディレクトリーとして初期化しました。これを簡単に確認するには、次のコマンドを実行します。
 
@@ -226,7 +226,7 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 - エンドツーエンドのテスト。訪問者が何かをクリックすると、別のことが起こります。
 - 統合テスト。基本的には、「あるコードブロックが別のブロックに接続されても機能するかどうか」をテストします。
 - ユニットテスト。機能の小さな特定のビットをテストして、期待どおりに動作するかどうかを確認します。
-- [その他にも多くの種類](https://en.wikipedia.org/wiki/Functional_testing)テストがあります。また多数の有用なテスト情報については、[クロスブラウザーテストモジュール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を参照してください。
+- [その他にも多くの種類](https://en.wikipedia.org/wiki/Functional_testing)テストがあります。また多数の有用なテスト情報については、[クロスブラウザーテストモジュール](/ja/docs/Learn_web_development/Extensions/Testing)を参照してください。
 
 また、テストは JavaScript に限定されないことにも注意してください。テストはレンダリングされた DOM 、ユーザーインタラクション、 CSS 、さらにはページの外観に対して実行できます。
 

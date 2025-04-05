@@ -31,7 +31,7 @@ browser.action.setBadgeTextColor(
       - : 颜色，指定为一下之一：
 
         - 字符串：任意 CSS [\<color>](/zh-CN/docs/Web/CSS/color_value) 值，例如 `"red"`、`"#FF0000"` 或 `"rgb(255 0 0)"`。若字符串不是一个正确的颜色，则 Promise 会被拒绝且背景颜色不会被更改。
-        - `{{WebExtAPIRef('action.ColorArray')}}` 对象。
+        - {{WebExtAPIRef('action.ColorArray')}} 对象。
         - `null`，若指定了 `tabId`，则会移除该标签页的徽章文本颜色，让标签页继承全局徽章文本颜色；反之，会撤销对全局徽章文本颜色的修改使之变回默认取值。
 
     - `tabId` {{optional_inline}}
@@ -78,7 +78,7 @@ browser.action.onClicked.addListener((tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setBadgeBackgroundColor) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setBadgeBackgroundColor) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

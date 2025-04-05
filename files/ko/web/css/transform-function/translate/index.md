@@ -10,7 +10,49 @@ l10n:
 **`translate()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions) 는 요소의 위치를 수평 또는 수직 방향으로 변경하거나, 수평 및 수직 방향으로 변경합니다.
 실행 결과로 {{cssxref("&lt;transform-function&gt;")}} 데이터 유형을 반환합니다.
 
-{{EmbedInteractiveExample("pages/css/function-translate.html")}}
+{{InteractiveExample("CSS Demo: translate()")}}
+
+```css interactive-example-choice
+transform: translate(0);
+```
+
+```css interactive-example-choice
+transform: translate(42px, 18px);
+```
+
+```css interactive-example-choice
+transform: translate(-2.1rem, -2ex);
+```
+
+```css interactive-example-choice
+transform: translate(3ch, 3mm);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="static-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+```css interactive-example
+#static-element {
+  opacity: 0.4;
+  position: absolute;
+}
+
+#example-element {
+  position: absolute;
+}
+```
 
 이 변환은 2차원 벡터의 특징을 가집니다. 벡터의 좌표들은 요소가 각 방향으로 얼마나 이동하는지를 정의합니다.
 

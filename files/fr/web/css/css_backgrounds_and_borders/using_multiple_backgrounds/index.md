@@ -19,7 +19,7 @@ Cela fonctionne aussi bien avec la propriété raccourcie [`background`](/fr/doc
 
 ## Exemples
 
-Dans cet exemple, on cumule trois arrière-plans&nbsp;: le logo de Firefox, une image de bulles et un dégradé linéaire (cf. [`linear-gradient`](</fr/docs/Web/CSS/gradient/linear-gradient()>)).
+Dans cet exemple, on cumule trois arrière-plans&nbsp;: le logo de Firefox, une image de bulles et un dégradé linéaire (cf. [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)).
 
 ### HTML
 

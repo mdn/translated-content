@@ -1,7 +1,6 @@
 ---
 title: JavaScript 对象基础
 slug: Learn_web_development/Core/Scripting/Object_basics
-original_slug: Learn/JavaScript/Objects/Basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}

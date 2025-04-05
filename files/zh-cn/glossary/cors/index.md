@@ -28,7 +28,7 @@ l10n:
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : 用于发起一个预检请求，告知服务器正式请求会使用哪些 HTTP 标头。
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : 用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)。
+  - : 用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)。
 - {{HTTPHeader("Origin")}}
   - : 指示获取资源的请求是从什么源发起的。
 - {{HTTPHeader("Timing-Allow-Origin")}}
@@ -36,6 +36,6 @@ l10n:
 
 ## 参见
 
-- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - 维基百科上的[跨源资源共享](https://zh.wikipedia.org/wiki/跨來源資源共享)
 - [Fetch 规范](https://fetch.spec.whatwg.org)

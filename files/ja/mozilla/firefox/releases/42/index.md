@@ -120,7 +120,7 @@ _変更なし。_
 
 ## ネットワーク
 
-- CSP の [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#upgrade-insecure-requests) ディレクティブを実装しました ([Firefox バグ 1139297](https://bugzil.la/1139297))。
+- CSP の [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#upgrade-insecure-requests) ディレクティブを実装しました ([Firefox バグ 1139297](https://bugzil.la/1139297))。
 
 ## セキュリティ
 

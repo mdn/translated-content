@@ -39,9 +39,9 @@ iframe {
 
 - `allow`
 
-  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些特性（例如，访问麦克风、摄像头、电池、web 共享等）。
+  - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些特性（例如，访问麦克风、摄像头、电池、web 共享等）。
 
-    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#iframe)。
+    示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframe)。
 
     > [!NOTE]
     > 通过 `allow` 属性指定的权限策略会在 {{httpheader("Permissions-Policy")}} 标头指定的策略基础上进一步地限制。它不会替换原有策略。
@@ -65,7 +65,7 @@ iframe {
 - `credentialless` {{Experimental_Inline}}
   - : 设置为 `true` 可以将 `<iframe>` 设为无凭据模式，这意味着将内容加载到新的临时上下文中。它无法访问与其来源相关的网络、cookie 和存储数据。它使用一个新上下文（生命周期局限于顶层文档的生命周期）。作为补偿，可以解除 {{httpheader("Cross-Origin-Embedder-Policy")}}（COEP）嵌入规则的限制，所以设置了 COEP 的文档可以嵌入未设置的第三方文档。更多信息请参见 [iFrame 无凭据模式](/zh-CN/docs/Web/Security/IFrame_credentialless)。
 - `csp` {{experimental_inline}}
-  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
+  - : 对嵌入的资源配置[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)。查看 {{domxref("HTMLIFrameElement.csp")}} 获取详情。
 - `height`
   - : 以 CSS 像素格式指定框架的高度。默认值为 `150`。
 - `loading`
@@ -199,7 +199,7 @@ iframe {
 
 ## 定位和缩放
 
-作为一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 来调整 `<iframe>` 元素内嵌入的文档的位置。
+作为一个{{glossary("Replaced elements", "可替换元素")}}，可以使用 {{cssxref("object-position")}} 来调整 `<iframe>` 元素内嵌入的文档的位置。
 
 > **备注：** {{cssxref("object-fit")}} 属性对 `<iframe>` 元素没有影响。
 
@@ -321,7 +321,7 @@ iframe {
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
       <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"><code>img</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -341,5 +341,5 @@ iframe {
 
 ## 参见
 
-- [CSP：frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
+- [CSP：frame-ancestors](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)

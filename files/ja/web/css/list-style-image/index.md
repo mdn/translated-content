@@ -11,7 +11,66 @@ l10n:
 
 ふつうは一括指定の {{ cssxref("list-style") }} を使ったほうが便利です。
 
-{{EmbedInteractiveExample("pages/css/list-style-image.html")}}
+{{InteractiveExample("CSS Demo: list-style-image")}}
+
+```css interactive-example-choice
+list-style-image: url("/shared-assets/images/examples/rocket.svg");
+```
+
+```css interactive-example-choice
+list-style-image: none;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div>
+    <p>NASA Notable Missions</p>
+    <ul class="transition-all unhighlighted" id="example-element">
+      <li>Apollo</li>
+      <li>Hubble</li>
+      <li>Chandra</li>
+      <li>Cassini-Huygens</li>
+      <li>Spitzer</li>
+    </ul>
+  </div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  font-size: 1.2rem;
+}
+
+#example-element {
+  width: 100%;
+  background: #be094b;
+  color: white;
+}
+
+section {
+  text-align: left;
+  flex-direction: column;
+}
+
+hr {
+  width: 50%;
+  color: lightgray;
+  margin: 0.5em;
+}
+
+.note {
+  font-size: 0.8rem;
+}
+
+.note a {
+  color: #009e5f;
+}
+
+@counter-style space-counter {
+  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+  suffix: " ";
+}
+```
 
 > [!NOTE]
 > このプロパティはリストアイテム、つまり、`{{cssxref("display")}}: list-item;` が指定された要素に対して適用されます。[既定では](https://html.spec.whatwg.org/multipage/rendering.html#lists)、 {{HTMLElement("li")}} 要素を含みます。このプロパティは継承されるので、親要素 (通常は {{HTMLElement("ol")}} や {{HTMLElement("ul")}}) に設定することで、すべてのリストアイテムに適用することができます。

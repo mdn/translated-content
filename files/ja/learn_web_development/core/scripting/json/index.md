@@ -357,6 +357,6 @@ myString;
 - [JSON リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [フェッチ API の概要](/ja/docs/Web/API/Fetch_API)
 - [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}

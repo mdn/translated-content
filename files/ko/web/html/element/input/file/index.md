@@ -5,7 +5,7 @@ slug: Web/HTML/Element/input/file
 
 {{HTMLSidebar}}
 
-**`file`** 유형의 {{htmlelement("input")}} 요소에는 저장 장치의 파일을 하나 혹은 여러 개 선택할 수 있습니다. 그 후, [양식을 제출](/ko/docs/Learn/Forms)해 서버로 전송하거나, [File API](/ko/docs/Web/API/File_API/Using_files_from_web_applications)를 사용한 JavaScript 코드로 조작할 수 있습니다.
+**`file`** 유형의 {{htmlelement("input")}} 요소에는 저장 장치의 파일을 하나 혹은 여러 개 선택할 수 있습니다. 그 후, [양식을 제출](/ko/docs/Learn_web_development/Extensions/Forms)해 서버로 전송하거나, [File API](/ko/docs/Web/API/File_API/Using_files_from_web_applications)를 사용한 JavaScript 코드로 조작할 수 있습니다.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
