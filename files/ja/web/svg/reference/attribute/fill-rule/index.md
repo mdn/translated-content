@@ -1,17 +1,14 @@
 ---
 title: fill-rule
 slug: Web/SVG/Reference/Attribute/fill-rule
-original_slug: Web/SVG/Attribute/fill-rule
 l10n:
-  sourceCommit: cd840e78b6027a391fe1f11b745564cf3ebfb8e7
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`fill-rule`** 属性はプレゼンテーション属性で、図形の内部を決定するために使用するアルゴリズムを定義します。
 
 > [!NOTE]
-> プレゼンテーション属性なので、 `fill-rule` は CSS プロパティとして使用することができます。
+> プレゼンテーション属性であるため、 `fill-rule` には対応する CSS プロパティ {{cssxref("fill-rule")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -35,17 +32,17 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Default value for fill-rule -->
+  <!-- fill-rule の既定値 -->
   <polygon
     fill-rule="nonzero"
     stroke="red"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  The center of the shape has two
-  path segments (shown by the red stroke)
-  between it and infinity. It is therefore
-  considered outside the shape, and not filled.
+  図形の中心は、無限大との間に 2 つの
+  パス線分（赤いストロークで表示）があります。
+  したがって、図形の外側にあると見なされ、
+  塗りつぶされません。
   -->
   <polygon
     fill-rule="evenodd"
@@ -93,32 +90,32 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of nonzero fill rule on crossing path segments -->
+  <!-- 交差するパスの区間に対する非ゼロ塗りつぶしルールの効果 -->
   <polygon
     fill-rule="nonzero"
     stroke="red"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Effect of nonzero fill rule on a shape inside a shape
-  with the path segment moving in the same direction
-  (both squares drawn clockwise, to the "right")
+  パスの区間が同じ方向に移動する図形内の図形に対する、
+  塗りつぶしルールが非ゼロの場合の効果（どちらの正方形も
+  時計回りに描画し、「右」方向に移動する）
   -->
   <path
     fill-rule="nonzero"
     stroke="red"
-    d="M110,0 h90 v90 h-90 z
+    d="M110,0  h90 v90 h-90 z
            M130,20 h50 v50 h-50 z" />
 
   <!--
-  Effect of nonzero fill rule on a shape inside a shape
-  with the path segment moving in the opposite direction
-  (one square drawn clockwise, the other anti-clockwise)
+  パスセグメントが反対方向に移動する図形内の図形に対する、
+  塗りつぶしルールが非ゼロの場合の効果（1 つの正方形は
+  時計回りに、もう一方は反時計回りに描画する）
   -->
   <path
     fill-rule="nonzero"
     stroke="red"
-    d="M210,0 h90 v90 h-90 z
+    d="M210,0  h90 v90 h-90 z
            M230,20 v50 h50 v-50 z" />
 </svg>
 ```
@@ -141,32 +138,32 @@ svg {
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of evenodd fill rule on crossing path segments -->
+  <!-- 交差するパスセグメントに対する偶奇塗りつぶしルールの効果 -->
   <polygon
     fill-rule="evenodd"
     stroke="red"
     points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
-  Effect of evenodd fill rule on a shape inside a shape
-  with the path segment moving in the same direction
-  (both squares drawn clockwise, to the "right")
+  パスセグメントが反対方向に移動する図形内の図形に対する、
+  塗りつぶしルールが非ゼロの場合の効果（両方の正方形が
+  時計回りに、「右」に描画する）
   -->
   <path
     fill-rule="evenodd"
     stroke="red"
-    d="M110,0 h90 v90 h-90 z
+    d="M110,0  h90 v90 h-90 z
            M130,20 h50 v50 h-50 z" />
 
   <!--
-  Effect of evenodd fill rule on a shape inside a shape
-  with the path segment moving in opposite direction
-  (one square drawn clockwise, the other anti-clockwise)
+  パスセグメントが反対方向に移動する図形内の図形に対する
+  偶奇塗りつぶしルールの効果（1 つの正方形は時計回りに、
+  もう一方は反時計回りに描画する）
   -->
   <path
     fill-rule="evenodd"
     stroke="red"
-    d="M210,0 h90 v90 h-90 z
+    d="M210,0  h90 v90 h-90 z
            M230,20 v50 h50 v-50 z" />
 </svg>
 ```
@@ -180,3 +177,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("fill-rule")}} プロパティ
