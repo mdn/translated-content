@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-**状态分区**是 Mozilla 发起的一项广泛努力，旨在重新设计 Firefox 如何管理客户端状态（即存储在浏览器中的数据），以减少网站通过滥用状态进行跨站点跟踪的能力，例如通过[第三方 Cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)。
+**状态分区**是 Mozilla 发起的一项广泛努力，旨在重新设计 Firefox 如何管理客户端状态（即存储在浏览器中的数据），以减少网站通过滥用状态进行跨站点跟踪的能力，例如通过[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)。
 
 该努力旨在通过为用户访问的每个网站提供一个隔离的存储位置来实现这一目标。本文档概述了该机制，列出了受影响的 API，并解释了如何调试受影响的网站。
 
@@ -15,13 +15,13 @@ l10n:
 
 ## 使用共享状态跨站点跟踪
 
-浏览器传统上根据资源的源（或有时是注册域）来键（标识）客户端状态。例如，从 `https://example.com/hello.html` 加载的 iframe 可用的 cookies、localStorage 对象和缓存将由 example.com 键入。无论浏览器当前是从该域加载*第一方*资源还是嵌入的*第三方*资源，都是如此。跟踪器利用这种跨站点状态来存储用户标识符，并跨多个网站访问。下面的示例说明了 example.com 如何使用其跨站点状态（这里是 cookies）在其自身以及 A.example 和 B.example 之间跟踪用户。
+浏览器传统上根据资源的源（或有时是注册域）来键（标识）客户端状态。例如，从 `https://example.com/hello.html` 加载的 iframe 可用的 cookie、localStorage 对象和缓存将由 example.com 键入。无论浏览器当前是从该域加载*第一方*资源还是嵌入的*第三方*资源，都是如此。跟踪器利用这种跨站点状态来存储用户标识符，并跨多个网站访问。下面的示例说明了 example.com 如何使用其跨站点状态（这里是 cookie）在其自身以及 A.example 和 B.example 之间跟踪用户。
 
 ![跨站点状态示例](example-cross-site-state.png)
 
 ### 过去阻止跨站点跟踪的方法
 
-Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Cookie 和 localStorage）的访问来缓解跟踪问题，这些策略在特定条件下对特定域进行限制。例如，我们的“阻止所有第三方 Cookie”策略将阻止所有域在第三方上下文中访问某些存储 API。我们当前[默认的 Cookie 策略](/zh-CN/docs/Web/Privacy/Guides/Storage_Access_Policy)仅在第三方上下文中阻止被分类为跟踪器的域访问。
+Firefox 过去的 cookie 策略试图通过阻止某些存储 API（例如，cookie 和 localStorage）的访问来缓解跟踪问题，这些策略在特定条件下对特定域进行限制。例如，我们的“阻止所有第三方 cookie”策略将阻止所有域在第三方上下文中访问某些存储 API。我们当前[默认的 cookie 策略](/zh-CN/docs/Web/Privacy/Guides/Storage_Access_Policy)仅在第三方上下文中阻止被分类为跟踪器的域访问。
 
 ## 状态分区
 
@@ -89,7 +89,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 ## 动态分区
 
-一般来说，如果可访问存储按顶级站点分区，只要支持 Storage Access API，仍然可以授予第三方未分区 Cookie 的访问权限：
+一般来说，如果可访问存储按顶级站点分区，只要支持 Storage Access API，仍然可以授予第三方未分区 cookie 的访问权限：
 
 - 使用[存储访问 API](#存储访问_api)。
 - 自动进行，例如为第三方提供联合登录。
@@ -98,11 +98,11 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 ### 动态分区的 API
 
-- [Cookie](/zh-CN/docs/Web/API/Document/cookie)
+- [cookie](/zh-CN/docs/Web/API/Document/cookie)
 
 ### 存储访问启发式规则
 
-为了提高网页兼容性，Firefox 当前包括一些启发式方法，自动授予用户交互的第三方无分区访问 cookies 的权限。这些启发式方法旨在允许网络上一些常见的第三方集成继续运行。
+为了提高网页兼容性，Firefox 当前包括一些启发式方法，自动授予用户交互的第三方无分区访问 cookie 的权限。这些启发式方法旨在允许网络上一些常见的第三方集成继续运行。
 
 > [!WARNING]
 > 存储访问启发式方法是一种过渡功能，旨在防止网站损坏。它们不应被当前和未来的网络开发依赖。
