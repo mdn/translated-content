@@ -15,7 +15,7 @@ l10n:
 
 ## 使用共享状态跨站点跟踪
 
-浏览器传统上根据资源的源（或有时是注册域）来键（标识）客户端状态。例如，从 `https://example.com/hello.html` 加载的 iframe 可用的 cookie、localStorage 对象和缓存将由 example.com 键入。无论浏览器当前是从该域加载*第一方*资源还是嵌入的*第三方*资源，都是如此。跟踪器利用这种跨站点状态来存储用户标识符，并跨多个网站访问。下面的示例说明了 example.com 如何使用其跨站点状态（这里是 cookie）在其自身以及 A.example 和 B.example 之间跟踪用户。
+浏览器传统上根据资源的源（或有时是注册域）来作键标识客户端状态。例如，从 `https://example.com/hello.html` 加载的 iframe 可用的 cookie、localStorage 对象和缓存将由 example.com 作键标识。无论浏览器当前是从该域加载*第一方*资源还是嵌入的*第三方*资源，都是如此。跟踪器利用这种跨站点状态来存储用户标识符，并跨多个网站访问。下面的示例说明了 `example.com` 如何使用其跨站点状态（这里是 cookie）在其自身以及 `A.example` 和 `B.example` 之间跟踪用户。
 
 ![跨站点状态示例](example-cross-site-state.png)
 
@@ -25,9 +25,9 @@ Firefox 过去的 cookie 策略试图通过阻止某些存储 API（例如，coo
 
 ## 状态分区
 
-状态分区是防止跨站点跟踪的不同方法。Firefox 不是通过在第三方上下文中阻止访问特定状态 API 来实现这一点，而是为每个顶级网站提供嵌入资源的单独存储桶。更具体地说，Firefox 使用资源加载的[源](https://html.spec.whatwg.org/multipage/browsers.html#origin)和顶级[站点](https://html.spec.whatwg.org/multipage/browsers.html#site)双键（共同标记）所有客户端状态。在大多数情况下，顶级站点是用户访问的顶级页面的协议和 {{Glossary("eTLD", "eTLD+1")}}。
+状态分区是防止跨站点跟踪的不同方法。Firefox 不是通过在第三方上下文中阻止访问特定状态 API 来实现这一点，而是为每个顶级网站提供嵌入资源的单独存储桶。更具体地说，Firefox 使用资源加载的[源](https://html.spec.whatwg.org/multipage/browsers.html#origin)和顶级[站点](https://html.spec.whatwg.org/multipage/browsers.html#site)共同标记所有客户端状态。在大多数情况下，顶级站点是用户访问的顶级页面的协议和 {{Glossary("eTLD", "eTLD+1")}}。
 
-在下面的例子中，`example.com` 嵌入在 `A.example` 和 `B.example` 中。然而，由于存储被分区，存在三个不同的存储桶（而不是一个）。跟踪器仍然可以访问存储，但由于每个存储桶都在顶级站点下另外键入，它在 A 上可以访问的数据将与 B 上的不同。这将阻止跟踪器在直接访问时在其 cookie 中存储标识符，然后在嵌入其他网站时检索该标识符。
+在下面的例子中，`example.com` 嵌入在 `A.example` 和 `B.example` 中。然而，由于存储被分区，存在三个不同的存储桶（而不是一个）。跟踪器仍然可以访问存储，但由于每个存储桶以不同的顶级站点标识，它在 A 上可以访问的数据将与 B 上的不同。这将阻止跟踪器在直接访问时在其 cookie 中存储标识符，然后在嵌入其他网站时检索该标识符。
 
 ![状态分区示例](example-state-partitioning.png)
 
@@ -139,11 +139,11 @@ Firefox 过去的 cookie 策略试图通过阻止某些存储 API（例如，coo
 | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 第三方框架的存储是分区的                                                                                    | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled.（为“b.example”提供了分区的 cookie 或存储访问，因为其在第三方上下文中加载并且启用了存储分区。） |
 | 通过[存储访问启发式方法](#存储访问启发式规则)授予对未分区 cookie 的访问权限                                 | Storage access automatically granted for First-Party isolation "b.example" on "a.example".（为“a.example”上的第一方隔离“b.example”自动授予存储访问权限。）                                                                                           |
-| 通过 [StorageAccessAPI](/zh-CN/docs/Web/API/Document/requestStorageAccess) 授予对未分区 cookie 的访问权限。 | Storage access granted for origin "b.example" on "a.example".（已为来源“b.example”授予在“a.example”上的存储访问权限。）                                                                                                                          |
+| 通过 [StorageAccessAPI](/zh-CN/docs/Web/API/Document/requestStorageAccess) 授予对未分区 cookie 的访问权限。 | Storage access granted for origin "b.example" on "a.example".（已为来源“b.example”授予在“a.example”上的存储访问权限。）                                                                                                                              |
 
 ### 清除第三方存储访问权限
 
-如果第三方 iframe 被授予访问父上下文的存储权限，Firefox 会设置该权限。要撤销访问权限，你可以通过[站点信息面板](https:///kb/site-information-panel)中的权限部分下的“跨站点 cookie”来清除该权限。
+如果第三方 iframe 被授予访问父上下文的存储权限，Firefox 会设置该权限。要撤销访问权限，你可以通过[站点信息面板](https://support.mozilla.org/zh-CN/kb/site-information-panel)中的权限部分下的“跨站点 cookie”来清除该权限。
 
 ### 测试首选项
 
