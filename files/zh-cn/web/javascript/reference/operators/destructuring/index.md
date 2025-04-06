@@ -107,7 +107,7 @@ const {
 
 ```js
 const obj = { a: 1, b: { c: 2 } };
-const { a } = obj; // a 未常量
+const { a } = obj; // a 为常量
 let {
   b: { c: d },
 } = obj; // d 可被重新赋值
