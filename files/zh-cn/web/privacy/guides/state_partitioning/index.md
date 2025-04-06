@@ -2,7 +2,7 @@
 title: 状态分区
 slug: Web/Privacy/Guides/State_Partitioning
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 **状态分区**是 Mozilla 发起的一项广泛努力，旨在重新设计 Firefox 如何管理客户端状态（即存储在浏览器中的数据），以减少网站通过滥用状态进行跨站点跟踪的能力，例如通过[第三方 Cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)。
@@ -17,7 +17,7 @@ l10n:
 
 浏览器传统上根据资源的源（或有时是注册域）来键（标识）客户端状态。例如，从 `https://example.com/hello.html` 加载的 iframe 可用的 cookies、localStorage 对象和缓存将由 example.com 键入。无论浏览器当前是从该域加载*第一方*资源还是嵌入的*第三方*资源，都是如此。跟踪器利用这种跨站点状态来存储用户标识符，并跨多个网站访问。下面的示例说明了 example.com 如何使用其跨站点状态（这里是 cookies）在其自身以及 A.example 和 B.example 之间跟踪用户。
 
-![跨站点状态一例](example-cross-site-state.png)
+![跨站点状态示例](example-cross-site-state.png)
 
 ### 过去阻止跨站点跟踪的方法
 
@@ -29,7 +29,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 在下面的例子中，`example.com` 嵌入在 `A.example` 和 `B.example` 中。然而，由于存储被分区，存在三个不同的存储桶（而不是一个）。跟踪器仍然可以访问存储，但由于每个存储桶都在顶级站点下另外键入，它在 A 上可以访问的数据将与 B 上的不同。这将阻止跟踪器在直接访问时在其 cookie 中存储标识符，然后在嵌入其他网站时检索该标识符。
 
-![状态分区一例](example-state-partitioning.png)
+![状态分区示例](example-state-partitioning.png)
 
 ## 标准化
 
@@ -55,8 +55,8 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 - [DOM Cache](/zh-CN/docs/Web/API/Cache)
 - [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)
 - [Broadcast Channel](/zh-CN/docs/Web/API/BroadcastChannel)
-- [Shared Workers](/zh-CN/docs/Web/API/SharedWorker)
-- [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API)
+- [Shared Worker](/zh-CN/docs/Web/API/SharedWorker)
+- [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API)
 
 ### 网络分区
 
@@ -91,7 +91,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 一般来说，如果可访问存储按顶级站点分区，只要支持 Storage Access API，仍然可以授予第三方未分区 Cookie 的访问权限：
 
-- 使用[存储访问 API](#storage_access_api)。
+- 使用[存储访问 API](#存储访问_api)。
 - 自动进行，例如为第三方提供联合登录。
 
 关于自动授权的详细信息请参阅[存储访问启发式规则](#存储访问启发式规则)部分。
@@ -139,7 +139,7 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 第三方框架的存储是分区的                                                                                    | Partitioned cookie or storage access was provided to "b.example" because it is loaded in the third-party context and storage partitioning is enabled.（为“b.example”提供了分区的 cookie 或存储访问，因为其在第三方上下文中加载并且启用了存储分区。） |
 | 通过[存储访问启发式方法](#存储访问启发式规则)授予对未分区 cookie 的访问权限                                 | Storage access automatically granted for First-Party isolation "b.example" on "a.example".（为“a.example”上的第一方隔离“b.example”自动授予存储访问权限。）                                                                                           |
-| 通过 [StorageAccessAPI](/zh-CN/docs/Web/API/Document/requestStorageAccess) 授予对未分区 cookie 的访问权限。 | Storage access granted for origin "b.example" on "a.example".（已为来源 "b.example" 授予在 "a.example" 上的存储访问权限。）                                                                                                                          |
+| 通过 [StorageAccessAPI](/zh-CN/docs/Web/API/Document/requestStorageAccess) 授予对未分区 cookie 的访问权限。 | Storage access granted for origin "b.example" on "a.example".（已为来源“b.example”授予在“a.example”上的存储访问权限。）                                                                                                                          |
 
 ### 清除第三方存储访问权限
 
@@ -165,8 +165,8 @@ Firefox 过去的 Cookie 策略试图通过阻止某些存储 API（例如，Coo
 
 以下选项可以通过[配置编辑器](https://support.mozilla.org/zh-CN/kb/about-config-editor-firefox)单独禁用特定存储访问启发式算法：
 
-- 启用/禁用[重定向启发式规则](#重定向启发式规则): `privacy.restrict3rdpartystorage.heuristic.recently_visited`, `privacy.restrict3rdpartystorage.heuristic.redirect`
-- 启用/禁用[开启者启发式方法](#开启者启发式方法): `privacy.restrict3rdpartystorage.heuristic.window_open`, `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
+- 启用/禁用[重定向启发式规则](#重定向启发式规则)：`privacy.restrict3rdpartystorage.heuristic.recently_visited`、`privacy.restrict3rdpartystorage.heuristic.redirect`
+- 启用/禁用[开启者启发式方法](#开启者启发式方法)：`privacy.restrict3rdpartystorage.heuristic.window_open`、`privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
 
 #### 禁用网络分区
 

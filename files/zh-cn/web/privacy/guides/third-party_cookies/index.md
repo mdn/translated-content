@@ -2,10 +2,8 @@
 title: Third-party cookies
 slug: Web/Privacy/Guides/Third-party_cookies
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: a6c32a2d0add510c95ef74e85bd8e17551d508b6
 ---
-
-{{QuicklinksWithSubPages("Web/Privacy")}}
 
 这篇文章解释了什么是第三方 cookie，描述了与之相关的问题，并解释了如何解决这些问题。
 
@@ -17,7 +15,7 @@ l10n:
 - 如果域名和协议不同，则该 cookie 不被认为是来自同一站点的，称为*第三方 cookie*。
 
 > [!NOTE]
-> 第三方 cookie 有时也被称为*跨站 cookie*。这可能是一个更准确的名称，因为*第三方 cookie*意味着由第三方公司或组织拥有。但是，无论是否拥有所有涉及的站点，其行为和潜在问题都是一样的。例如，一个站点可能会从不同的域名访问资源，如嵌入的图像、网络字体或 JavaScript 文件。
+> 第三方 cookie 有时也被称为*跨站 cookie*。这可能是一个更准确的名称，因为*第三方 cookie*意味着由第三方公司或组织拥有。但是，无论是否拥有所有涉及的站点，其行为和潜在问题都是一样的。例如，一个站点可能会从不同的域名访问资源，如嵌入的图像、web 字体或 JavaScript 文件。
 
 当用户首次访问一个页面、点击内部链接跳转到同一站点的另一个页面，或请求位于同一站点的资源（如嵌入的图像、网络字体或 JavaScript 文件）时，可能会设置第一方 cookie。
 
@@ -68,7 +66,7 @@ l10n:
 浏览器厂商知道用户不喜欢上述行为，因此都开始默认阻止第三方 Cookie，同时在其源代码中包含例外和启发式方法，以解决与流行网站长期存在的第三方 Cookie 问题。
 
 - Mozilla 的[反追踪政策](https://wiki.mozilla.org/Security/Anti_tracking_policy)导致 Firefox 默认阻止已知追踪器的第三方 Cookie（参见 [Firefox 追踪保护](/zh-CN/docs/Web/Privacy/Guides/Firefox_tracking_protection) 和[增强追踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)。增强追踪保护可以设置为标准、严格或自定义。[标准模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_standard-enhanced-tracking-protection)启用 [完全 Cookie 保护](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)，为每个站点提供单独的 Cookie 罐，从而防止跨站点追踪。在[严格模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)中，Firefox 阻止所有第三方 Cookie。
-- Apple 也有类似的[追踪防护政策](https://webkit.org/tracking-prevention-policy/)；遵循此政策导致一套类似的第三方 Cookie 保护措施默认启用；有关详细信息，请参见 [智能追踪防护](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP)。
+- Apple 也有类似的[追踪防护政策](https://webkit.org/tracking-prevention-policy/)；遵循此政策导致一套类似的第三方 Cookie 保护措施默认启用；有关详细信息，请参见[智能追踪防护](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP)。
 - 在撰写本文时，Google Chrome 默认仅在隐身模式下阻止第三方 Cookie，尽管用户可以通过 `chrome://settings` 设置始终阻止第三方 Cookie。Google 已开始对一小部分 Chrome 用户禁用第三方 Cookie，以测试这将产生的影响，同时开发技术以在不需要第三方 Cookie 的情况下启用关键用例。有关详细信息，请参见 [替代第三方 Cookie](#replacing_third-party_cookies)。
 - Edge 阻止来自未访问网站的追踪器，并默认阻止已知的有害追踪器。在撰写本文时，Microsoft 也开始探索在 Edge 中默认阻止第三方 Cookie 的可能性。有关更多信息，请参见 [追踪防护](https://learn.microsoft.com/zh-CN/microsoft-edge/web-platform/tracking-prevention)。
 - [Brave 浏览器](https://brave.com/) 默认阻止追踪 Cookie。
