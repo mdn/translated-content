@@ -1,10 +1,9 @@
 ---
 title: color
 slug: Web/SVG/Reference/Attribute/color
-original_slug: Web/SVG/Attribute/color
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`color`** 属性は、間接的な値の候補である `currentcolor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。
 
@@ -35,7 +34,7 @@ original_slug: Web/SVG/Attribute/color
   </tbody>
 </table>
 
-<h2 id="Example">例</h2>
+## 例
 
 ```css hidden
 html,
@@ -69,3 +68,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("color")}} プロパティ
