@@ -20,7 +20,27 @@ slug: Learn_web_development/Core/Styling_basics/Images_tasks
 
 在下面的例子中看看你能否能符合上面的图片
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/images/object-fit.html", '100%', 1000)}}
+```html live-sample___object-fit
+<div class="box">
+  <img
+    alt="Hot air balloons flying in clear sky, and a crowd of people in the foreground"
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+</div>
+```
+
+```css live-sample___object-fit
+.box {
+  border: 5px solid #000;
+  width: 400px;
+  height: 200px;
+}
+
+img {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("object-fit", "", "400px")}}
 
 > [!NOTE]
 > 为了为了评估或进一步完成任务，请[下载此任务的起点](https://github.com/mdn/css-examples/blob/master/learn/tasks/images/object-fit-download.html)，以便在你自己的编辑器或在线编辑器中工作。
@@ -38,7 +58,27 @@ slug: Learn_web_development/Core/Styling_basics/Images_tasks
 
 尝试更改下面的实时代码以重新创建图像中显示的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/images/form.html", '100%', 600)}}
+```html live-sample___form
+<form action="" class="my-form" method="post">
+  <div>
+    <label for="fldSearch">Keywords</label>
+    <input id="fldSearch" name="keywords" type="search" />
+    <input name="btnSubmit" type="submit" value="Search" />
+  </div>
+</form>
+```
+
+```css live-sample___form
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.my-form {
+  border: 2px solid #000;
+  padding: 5px;
+}
+```
+
+{{EmbedLiveSample("form")}}
 
 > [!NOTE]
 > 为了为了评估或进一步完成任务，请[下载此任务的起点](https://github.com/mdn/css-examples/blob/master/learn/tasks/images/form-download.html)，以便在你自己的编辑器或在线编辑器中工作。

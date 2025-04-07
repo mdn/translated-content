@@ -20,7 +20,34 @@ slug: Learn_web_development/Core/CSS_layout/Grid_skills
 
 尝试更新下面的实时代码以复现上面的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}
+```html live-sample___grid1
+<div class="grid">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css hidden live-sample___grid1
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.grid > * {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+```css live-sample___grid1
+.grid {
+}
+```
+
+{{EmbedLiveSample("grid1", "", "200px")}}
 
 > [!NOTE]
 > 评估或进一步的工作目的，可以[下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html)在你自己的编辑器或使用线编辑器。
@@ -33,7 +60,50 @@ slug: Learn_web_development/Core/CSS_layout/Grid_skills
 
 尝试更新下面的实时代码以复现上面的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 800)}}
+```html live-sample___grid2
+<div class="grid">
+  <div class="item1">One</div>
+  <div class="item2">Two</div>
+</div>
+```
+
+```css hidden live-sample___grid2
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.grid > * {
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 0.5em;
+}
+
+.item1 {
+  background-color: rgb(74 102 112 / 70%);
+  border: 5px solid rgb(74 102 112 / 100%);
+}
+
+.item2 {
+  background-color: rgb(214 162 173 / 70%);
+  border: 5px solid rgb(214 162 173 / 100%);
+}
+```
+
+```css live-sample___grid2
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px;
+  gap: 10px;
+}
+
+.item1 {
+}
+
+.item2 {
+}
+```
+
+{{EmbedLiveSample("grid2", "", "340px")}}
 
 附加问题：
 
@@ -50,7 +120,37 @@ slug: Learn_web_development/Core/CSS_layout/Grid_skills
 
 尝试更新下面的实时代码以复现上面的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid3.html", '100%', 800)}}
+```html live-sample___grid3
+<div class="grid">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+  <div class="four">Four</div>
+</div>
+```
+
+```css hidden live-sample___grid3
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.grid > * {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+```css live-sample___grid3
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+```
+
+{{EmbedLiveSample("grid3", "", "200px")}}
 
 > [!NOTE]
 > 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html) 在你自己的编辑器或使用线编辑器。
@@ -63,7 +163,97 @@ slug: Learn_web_development/Core/CSS_layout/Grid_skills
 
 尝试更新下面的实时代码以复现上面的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
+```html live-sample___grid4
+<div class="container">
+  <div class="card">
+    <img
+      alt="a single red balloon"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg" />
+    <ul class="tags">
+      <li>balloon</li>
+      <li>red</li>
+      <li>sky</li>
+      <li>blue</li>
+      <li>Hot air balloon</li>
+    </ul>
+  </div>
+  <div class="card">
+    <img
+      alt="balloons over some houses"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg" />
+    <ul class="tags">
+      <li>balloons</li>
+      <li>houses</li>
+      <li>train</li>
+      <li>harborside</li>
+    </ul>
+  </div>
+  <div class="card">
+    <img
+      alt="close-up of balloons inflating"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
+    <ul class="tags">
+      <li>balloons</li>
+      <li>inflating</li>
+      <li>green</li>
+      <li>blue</li>
+    </ul>
+  </div>
+  <div class="card">
+    <img
+      alt="a balloon in the sun"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg" />
+    <ul class="tags">
+      <li>balloon</li>
+      <li>sun</li>
+      <li>sky</li>
+      <li>summer</li>
+      <li>bright</li>
+    </ul>
+  </div>
+</div>
+```
+
+```css hidden live-sample___grid4
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.card {
+  display: grid;
+  grid-template-rows: 200px min-content;
+}
+
+.card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags > * {
+  background-color: #999;
+  color: #fff;
+  padding: 0.2em 0.8em;
+  border-radius: 0.2em;
+  font-size: 80%;
+  margin: 5px;
+}
+```
+
+```css live-sample___grid4
+.container {
+}
+
+.tags {
+}
+```
+
+{{EmbedLiveSample("grid4", "", "400px")}}
 
 > [!NOTE]
 > 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html) 在你自己的编辑器或使用线编辑器。

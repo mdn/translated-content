@@ -26,7 +26,36 @@ slug: Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and
 
 尝试更新下面的实时代码，重现完成的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/backgrounds/backgrounds1.html", '100%', 700)}}
+```html live-sample___backgrounds1
+<div class="box">
+  <h2>Backgrounds & Borders</h2>
+</div>
+```
+
+```css hidden live-sample___backgrounds1
+body {
+  padding: 1em;
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.box {
+  padding: 0.5em;
+}
+```
+
+```css live-sample___backgrounds1
+.box {
+  /* Add styles here */
+}
+
+h2 {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("backgrounds1", "", "200px")}}
 
 > [!CALLOUT]
 >
@@ -46,7 +75,37 @@ slug: Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and
 
 尝试更新下面的实时代码，重现完成的示例：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/backgrounds/backgrounds2.html", '100%', 700)}}
+```html live-sample___backgrounds2
+<div class="box">
+  <h2>Backgrounds & Borders</h2>
+</div>
+```
+
+```css hidden live-sample___backgrounds2
+body {
+  padding: 1em;
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.box {
+  width: 300px;
+  padding: 0.5em;
+}
+```
+
+```css live-sample___backgrounds2
+.box {
+  /* Add styles here */
+}
+
+h2 {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("backgrounds2", "", "220px")}}
 
 > [!CALLOUT]
 >

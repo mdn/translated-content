@@ -25,7 +25,91 @@ slug: Learn_web_development/Core/Styling_basics/Tables_tasks
 
 ![A table with striped rows.](mdn-table-bands.png)
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/tables/table.html", '100%', 1000)}}
+```html live-sample___table
+<table>
+  <caption>
+    A summary of the UK's most famous punk bands
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Buzzcocks</th>
+      <td>1976</td>
+      <td>9</td>
+      <td>Ever fallen in love (with someone you shouldn't've)</td>
+    </tr>
+    <tr>
+      <th scope="row">The Clash</th>
+      <td>1976</td>
+      <td>6</td>
+      <td>London Calling</td>
+    </tr>
+    <tr>
+      <th scope="row">The Damned</th>
+      <td>1976</td>
+      <td>10</td>
+      <td>Smash it up</td>
+    </tr>
+    <tr>
+      <th scope="row">Sex Pistols</th>
+      <td>1975</td>
+      <td>1</td>
+      <td>Anarchy in the UK</td>
+    </tr>
+    <tr>
+      <th scope="row">Sham 69</th>
+      <td>1976</td>
+      <td>13</td>
+      <td>If the kids are united</td>
+    </tr>
+    <tr>
+      <th scope="row">Siouxsie and the Banshees</th>
+      <td>1976</td>
+      <td>11</td>
+      <td>Hong Kong Garden</td>
+    </tr>
+    <tr>
+      <th scope="row">Stiff Little Fingers</th>
+      <td>1977</td>
+      <td>10</td>
+      <td>Suspect Device</td>
+    </tr>
+    <tr>
+      <th scope="row">The Stranglers</th>
+      <td>1974</td>
+      <td>17</td>
+      <td>No More Heroes</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="2" scope="row">Total albums</th>
+      <td colspan="2">77</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+```css hidden live-sample___table
+body {
+  padding: 1em;
+  font: 1.2em / 1.5 sans-serif;
+  font-size: 80%;
+}
+```
+
+```css live-sample___table
+/* Add styles here */
+```
+
+{{EmbedLiveSample("table", "", "400px")}}
 
 > [!NOTE]
 > For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/tables/table-download.html) to work in your own editor or in an online editor.
