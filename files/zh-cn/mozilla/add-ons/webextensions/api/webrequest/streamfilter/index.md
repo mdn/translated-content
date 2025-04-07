@@ -39,7 +39,7 @@ filter.onstart = (event) => {
 - {{WebEXTAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}：这会断开过滤器与请求的连接，因此响应的其余部分会正常处理。
 - {{WebEXTAPIRef("webRequest.StreamFilter.close()", "close()")}}：这会关闭请求，因此不会处理任何额外的响应数据。
 
-过滤器还提供了函数来 {{WebEXTAPIRef("webRequest.StreamFilter.suspend()", "suspend()（暂停）")}}和 {{WebEXTAPIRef("webRequest.StreamFilter.resume()", "resume()（恢复）")}}请求。
+过滤器还提供了函数来 {{WebEXTAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}（暂停）和 {{WebEXTAPIRef("webRequest.StreamFilter.resume()", "resume()")}}（恢复）请求。
 
 ## 方法
 
@@ -95,7 +95,7 @@ function listener(details) {
     filter.disconnect();
   };
 
-  //return {}; // 不需要返回任何内容
+  //return {}; // 不需要
 }
 
 browser.webRequest.onBeforeRequest.addListener(
