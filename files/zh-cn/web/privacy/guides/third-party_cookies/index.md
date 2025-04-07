@@ -9,15 +9,15 @@ l10n:
 
 ## 什么是第三方 cookie？
 
-[cookie](/zh-CN/docs/Web/HTTP/Cookies) 与特定的域名和协议（通常是 `https`）相关联，也可能与子域名相关联，如果设置了 {{HTTPHeader("Set-Cookie")}} `Domain` 属性。
+[cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies) 与特定的域名和方案（通常是 `https`）相关联，也可能与子域名相关联，如果设置了 {{HTTPHeader("Set-Cookie")}} `Domain` 属性。
 
-- 如果 cookie 的域名和协议与用户当前查看的页面（地址栏中显示的 URL）相匹配，则该 cookie 被认为是来自同一站点的，称为*第一方 cookie*。
-- 如果域名和协议不同，则该 cookie 不被认为是来自同一站点的，称为*第三方 cookie*。
+- 如果 cookie 的域名和方案与用户当前查看的页面（地址栏中显示的 URL）相匹配，则该 cookie 被认为是来自同一站点的，称为*第一方 cookie*。
+- 如果域名和方案不同，则该 cookie 不被认为是来自同一站点的，称为*第三方 cookie*。
 
 > [!NOTE]
-> 第三方 cookie 有时也被称为*跨站 cookie*。这可能是一个更准确的名称，因为*第三方 cookie*意味着由第三方公司或组织拥有。但是，无论是否拥有所有涉及的站点，其行为和潜在问题都是一样的。例如，一个站点可能会从不同的域名访问资源，如嵌入的图像、web 字体或 JavaScript 文件。
+> 第三方 cookie 有时也被称为*跨站 cookie*。这可能是一个更准确的名称，因为*第三方 cookie* 意味着由第三方公司或组织拥有。但是，无论是否拥有所有涉及的站点，其行为和潜在问题都是一样的。例如，一个站点可能会从不同的域名访问资源（如图像）。
 
-当用户首次访问一个页面、点击内部链接跳转到同一站点的另一个页面，或请求位于同一站点的资源（如嵌入的图像、网络字体或 JavaScript 文件）时，可能会设置第一方 cookie。
+当用户首次访问一个页面、点击内部链接跳转到同一站点的另一个页面，或请求位于同一站点的资源（如嵌入的图像、Web 字体或 JavaScript 文件）时，可能会设置第一方 cookie。
 
 第三方 cookie 在以下常见情况下发送：
 
@@ -28,7 +28,7 @@ l10n:
 
 当点击链接到其他网站时设置的第三方 cookie 用于多种目的。例如，你可能有一个指向合作伙伴网站的联盟链接，并在用户跟随该链接时设置一个 cookie，以便在购买某个产品时显示奖励横幅或向推荐者支付佣金。
 
-设置 cookie 的第三方内容也有许多不同的用途。例如，你可能在多个不同但相关的网站上嵌入了一个登录小部件，该小部件在所有网站之间共享一个 cookie，以确认用户已登录，因此他们不必在每个网站上再次登录。
+设置 cookie 的第三方内容也有许多不同的用途。例如，你可能在多个不同但相关的网站上嵌入了一个登录微件，其在所有网站之间共享一个 cookie，以确认用户已登录，因此他们不必在每个网站上再次登录。
 
 第三方 cookie 的其他用例包括：
 
@@ -36,9 +36,9 @@ l10n:
 - 在多个网站上收集分析数据。
 - 计算广告展示次数，并记录用户兴趣，以使广告技术平台能够提供更相关的广告。
 
-让我们进一步说明上述提到的登录小部件示例，假设有一个虚构公司，它为其在线商店（`shop.site`）、社区讨论论坛（`forum.site`）和客户服务与退货（`service.site`）设置了不同的域名。
+让我们进一步说明上述提到的登录微件示例，假设有一个虚构公司，它为其在线商店（`shop.site`）、社区讨论论坛（`forum.site`）和客户服务与退货（`service.site`）设置了不同的域名。
 
-这三个网站都有一个嵌入的登录小部件，托管在 `auth.site`，以在网站之间保持登录状态。用户可以在任何一个网站上登录，创建一个在浏览器中为 `auth.site` 设置的 cookie，包含会话 ID。当用户访问其他网站时，嵌入的 `auth.site` 实例将能够访问在用户首次登录时设置的会话 ID cookie。它可以将其发送到服务器，检查其是否仍然有效，并立即在该网站上登录。
+这三个网站都有一个嵌入的登录微件，托管在 `auth.site`，以在网站之间保持登录状态。用户可以在任何一个网站上登录，创建一个在浏览器中为 `auth.site` 设置的 cookie，包含会话 ID。当用户访问其他网站时，嵌入的 `auth.site` 实例将能够访问在用户首次登录时设置的会话 ID cookie。它可以将其发送到服务器，检查其是否仍然有效，并立即在该网站上登录。
 
 ![上述第三方登录系统描述的可视化表示](https://mdn.github.io/shared-assets/images/diagrams/http/cookies/3pc-example.png)
 
@@ -65,18 +65,18 @@ l10n:
 
 浏览器厂商知道用户不喜欢上述行为，因此都开始默认阻止第三方 cookie，同时在其源代码中包含例外和启发式方法，以解决与流行网站长期存在的第三方 cookie 问题。
 
-- Mozilla 的[反追踪政策](https://wiki.mozilla.org/Security/Anti_tracking_policy)导致 Firefox 默认阻止已知追踪器的第三方 cookie（参见 [Firefox 追踪保护](/zh-CN/docs/Web/Privacy/Guides/Firefox_tracking_protection) 和[增强追踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)。增强追踪保护可以设置为标准、严格或自定义。[标准模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_standard-enhanced-tracking-protection)启用 [完全 cookie 保护](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)，为每个站点提供单独的 cookie 罐，从而防止跨站点追踪。在[严格模式](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection)中，Firefox 阻止所有第三方 cookie。
-- Apple 也有类似的[追踪防护政策](https://webkit.org/tracking-prevention-policy/)；遵循此政策导致一套类似的第三方 cookie 保护措施默认启用；有关详细信息，请参见[智能追踪防护](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP)。
-- 在撰写本文时，Google Chrome 默认仅在隐身模式下阻止第三方 cookie，尽管用户可以通过 `chrome://settings` 设置始终阻止第三方 cookie。Google 已开始对一小部分 Chrome 用户禁用第三方 cookie，以测试这将产生的影响，同时开发技术以在不需要第三方 cookie 的情况下启用关键用例。有关详细信息，请参见 [替代第三方 cookie](#replacing_third-party_cookies)。
-- Edge 阻止来自未访问网站的追踪器，并默认阻止已知的有害追踪器。在撰写本文时，Microsoft 也开始探索在 Edge 中默认阻止第三方 cookie 的可能性。有关更多信息，请参见 [追踪防护](https://learn.microsoft.com/zh-CN/microsoft-edge/web-platform/tracking-prevention)。
-- [Brave 浏览器](https://brave.com/) 默认阻止追踪 cookie。
+- Mozilla 的[反追踪政策](https://wiki.mozilla.org/Security/Anti_tracking_policy)导致 Firefox 默认阻止已知追踪器的第三方 cookie（参见 [Firefox 追踪保护](/zh-CN/docs/Web/Privacy/Guides/Firefox_tracking_protection) 和[增强追踪保护](https://support.mozilla.org/zh-CN/kb/Firefox%20桌面版的增强跟踪保护)。增强追踪保护可以设置为标准、严格或自定义。[标准模式](https://support.mozilla.org/zh-CN/kb/Firefox%20桌面版的增强跟踪保护#w_biao-zhun-zeng-qiang-xing-yin-si-bao-hu)启用[完全 cookie 保护](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)，为每个站点提供单独的 cookie 容器，从而防止跨站点追踪。在[严格模式](https://support.mozilla.org/zh-CN/kb/Firefox%20桌面版的增强跟踪保护#w_yan-ge-zeng-qiang-xing-yin-si-bao-hu)中，Firefox 阻止所有第三方 cookie。
+- Apple 也有类似的[追踪防护政策](https://webkit.org/tracking-prevention-policy/)；遵循此政策导致一套类似的第三方 cookie 保护措施默认启用；有关详细信息，请参见[智能追踪防护](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp)（ITP）。
+- 在撰写本文时，Google Chrome 默认仅在隐身模式下阻止第三方 cookie，尽管用户可以通过 `chrome://settings` 设置始终阻止第三方 cookie。Google 已开始对一小部分 Chrome 用户禁用第三方 cookie，以测试这将产生的影响，同时开发技术以在不需要第三方 cookie 的情况下启用关键用例。有关详细信息，请参见[替换第三方 cookie](#替换第三方_cookie)。
+- Edge 阻止来自未访问网站的追踪器，并默认阻止已知的有害追踪器。在撰写本文时，Microsoft 也开始探索在 Edge 中默认阻止第三方 cookie 的可能性。有关更多信息，请参见[追踪防护](https://learn.microsoft.com/zh-CN/microsoft-edge/web-platform/tracking-prevention)。
+- [Brave 浏览器](https://brave.com/)默认阻止追踪 cookie。
 
-在 Firefox 中，可以通过浏览器设置逐个允许使用第三方 cookie。然而，在 Safari 中，控制更为有限——你可以关闭跨站点追踪防护，但每个框架允许访问第三方 cookie 只能通过代码级别进行，即通过 [存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API)。
+在 Firefox 中，可以通过浏览器设置逐个允许使用第三方 cookie。然而，在 Safari 中，控制更为有限——你可以关闭跨站点追踪防护，但每个框架允许访问第三方 cookie 只能通过代码级别进行，即通过[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API)。
 
 > [!NOTE]
 > 第三方 cookie（或仅追踪 cookie）也可能被浏览器扩展阻止。
 
-cookie 阻止可能导致某些第三方组件（例如社交媒体小部件）无法按预期功能运行。随着浏览器对第三方 cookie 施加进一步限制，开发人员应开始寻找减少对它们依赖的方法：请参见[替代第三方 cookie](#replacing_third-party_cookies)。
+cookie 阻止可能导致某些第三方组件（例如社交媒体微件）无法按预期功能运行。随着浏览器对第三方 cookie 施加进一步限制，开发人员应开始寻找减少对它们依赖的方法：请参见[替换第三方 cookie](#替换第三方_cookie)。
 
 ## 使用第三方 cookie
 
@@ -84,26 +84,26 @@ cookie 阻止可能导致某些第三方组件（例如社交媒体小部件）�
 
 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性允许服务器指定何时发送第三方 cookie。如果在 `Set-Cookie` 头中未指定 `SameSite`，则使用默认值 `Lax`。这指示浏览器仅在用户从不同网站导航到 cookie 的源网站时发送第三方 cookie。这在用户从其他网站导航到你的网站时立即发送 cookie 以个性化体验时非常有用。
 
-然而，如果你希望在多个网站中嵌入跨站内容并依赖第三方 cookie 的功能，例如在我们之前讨论的登录示例中，则这并不适用。在这种情况下，你需要显式设置 `SameSite=None` 以允许浏览器传递这些 cookie：
+然而，如果你希望在 `<iframe>` 中嵌入多个站点的跨站内容并依赖第三方 cookie 的功能，例如在我们之前讨论的登录示例中，则这并不适用。在这种情况下，你需要显式设置 `SameSite=None` 以允许浏览器传递这些 cookie：
 
 ```http
 Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 ```
 
-请注意，如果设置了 `SameSite=None`，则必须同时设置 `Secure` 属性——`SameSite=None` 需要一个*安全上下文*。在上面的示例中，我们还设置了 `HttpOnly` 属性，以禁用 JavaScript 访问该 cookie（例如通过 {{domxref("Document.cookie")}}）。持久化敏感信息的 cookie 应始终设置 `HttpOnly` 属性——使其可供 JavaScript 访问将非常不安全。这一预防措施有助于减轻跨站脚本攻击（[XSS](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)）的风险。
+请注意，如果设置了 `SameSite=None`，则必须同时设置 `Secure` 属性——`SameSite=None` 需要一个*安全上下文*。在上面的示例中，我们还设置了 `HttpOnly` 属性，以禁用 JavaScript 访问该 cookie（例如通过 {{domxref("Document.cookie")}}）。持久化敏感信息的 cookie 应始终设置 `HttpOnly` 属性——使其可供 JavaScript 访问将非常不安全。这一预防措施有助于减轻跨站脚本攻击（[XSS](/zh-CN/docs/Web/Security/Types_of_attacks#跨站脚本（xss）)）的风险。
 
 > [!NOTE]
-> 用于敏感信息的 cookie 还应具有较短的[生命周期](/zh-CN/docs/Web/HTTP/Guides/Cookies#removal_defining_the_lifetime_of_a_cookie)。
+> 用于敏感信息的 cookie 还应具有较短的[生命周期](/zh-CN/docs/Web/HTTP/Guides/Cookies#移除：定义_cookie_的生命周期)。
 
 ### 从第三方 cookie 过渡
 
 有多种策略可以帮助网站在阻止第三方 cookie 的浏览器中最小化故障：
 
-1. 审核你的第三方 cookie 使用情况。cookie 必须设置 `SameSite=None` 属性才能在跨站上下文中使用。因此，你可以通过在代码中搜索 `SameSite=None` 或在浏览器 DevTools 中检查存储的 `SameSite=None` cookie 来识别第三方 cookie，例如在 [Firefox 存储检查器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/) 中。Chrome 的[问题面板](https://developer.chrome.google.cn/docs/devtools/issues/)也[报告了第三方 cookie 阻止的问题](https://developers.google.cn/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools)，并列出了受影响的 cookie。
+1. 审核你的第三方 cookie 使用情况。cookie 必须设置 `SameSite=None` 属性才能在跨站上下文中使用。因此，你可以通过在代码中搜索 `SameSite=None` 或在浏览器 DevTools 中检查存储的 `SameSite=None` cookie 来识别第三方 cookie，例如在 [Firefox 存储检查器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/)中。Chrome 的[议题面板](https://developer.chrome.google.cn/docs/devtools/issues/)也[报告了第三方 cookie 阻止的议题](https://developers.google.cn/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools)，并列出了受影响的 cookie。
 2. 在阻止第三方 cookie 的情况下测试你的功能，以查看哪些功能失效。你可能会发现某些 cookie 不再需要。
 3. 起初，你可以使代码更具弹性，以便在没有第三方 cookie 数据时提供较少个性化的体验，而不是完全中断。遵循[优雅降级](/zh-CN/docs/Glossary/Graceful_degradation)的原则。
 4. 通过用户调查或测验收集数据，或查看你已有的数据以推断趋势（例如，产品订单历史）。
-5. 使用替代的客户端存储机制，例如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 来持久化数据，或考虑服务器端解决方案。
+5. 使用替代的客户端存储机制，例如 [Web Sto 存储](/zh-CN/docs/Web/API/Web_Storage_API)来持久化数据，或考虑服务器端解决方案。
 6. 如果你的第三方 cookie 仅在少数相关的已知网站之间使用，你可以使用[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API) 和/或[相关网站集](/zh-CN/docs/Web/API/Storage_Access_API/Related_website_sets)仅允许这些特定网站的跨站 cookie 访问。存储访问会提示用户为每个框架提供权限，以便网站使用第三方 cookie。
    - 如果你已经为 Firefox 或 Safari 实现了使用存储访问 API 的解决方案，那么现在是检查你的实现与 Chrome 行为的好时机，Chrome 在版本 119 中更新以提供完全支持。
    - 相关网站集可以被视为存储访问 API 的渐进增强：该 API 可以以相同的方式使用，但集合中的网站将不会提示用户提供访问第三方 cookie 的权限。
@@ -116,12 +116,12 @@ Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 你可以开始探索 Google 的[隐私沙盒](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox)项目中可用的不同功能，以查看它们是否适合你的用例（这些功能目前处于实验阶段，仅限 Chromium）：
 
 - [联合凭证管理](/zh-CN/docs/Web/API/FedCM_API)（FedCM）API：启用联合身份服务，允许用户登录多个网站和服务。
-- [私有状态令牌](https://developers.google.cn/privacy-sandbox/protections/private-state-tokens)：通过跨站点交换有限的、非识别性的信息来实现反欺诈和反垃圾邮件。
+- [私有状态令牌](https://privacysandbox.google.com/protections/private-state-tokenss)：通过跨站点交换有限的、非识别性的信息来实现反欺诈和反垃圾邮件。
 - [主题 API](/zh-CN/docs/Web/API/Topics_API)：启用基于兴趣的广告和内容个性化。
-- [受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)：使用来自一个应用或网站的数据来帮助选择用户在访问另一个应用或网站时的广告。
-- [归因报告 API](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting)：启用广告展示和转化的测量。
+- [受保护的受众 API](https://privacysandbox.google.com/private-advertising/protected-audience)：使用来自一个应用或网站的数据来帮助选择用户在访问另一个应用或网站时的广告。
+- [归因报告 API](https://privacysandbox.google.com/private-advertising/attribution-reporting)：启用广告展示和转化的测量。
 
-## 另见
+## 参见
 
 - [HTTP cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)
-- [网上隐私](/zh-CN/docs/Web/Privacy)
+- [Web 隐私](/zh-CN/docs/Web/Privacy)
