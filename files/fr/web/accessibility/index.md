@@ -46,8 +46,7 @@ La documentation MDN [Accessibilité](/fr/docs/Web/Accessibility) contient des t
 
 ## Autres ressources
 
+- [RGGA : Référentiel général d’amélioration de l’accessibilité](https://accessibilite.numerique.gouv.fr/) 
 - [Liste des lecteurs d'écran](https://support.mozilla.org/kb/accessibility-features-firefox-make-firefox-and-we)
 - [OpenWeb](http://openweb.eu.org/) — Très bon site offrant à la fois un regard expert sur le web et des exemples concrets d'utilisation des normes du W3C.
 - [Opquast.com](http://opquast.com/) — Bonnes pratiques qualité pour les services en ligne.
-- [AccessiWeb](http://www.accessiweb.org/index.php/accessiweb_2.2_liste_generale.html) — Référentiel AccessiWeb pour l'accessibilité.
-- [AcceDe Web](http://accede-web.com/fr/projet-accede-web/) — Documents adaptés aux principaux intervenants d'un projet web.
