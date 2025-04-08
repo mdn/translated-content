@@ -88,7 +88,7 @@ SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('c
 </math>
 <!-- prettier-ignore-end -->
 
- これは、前の座標系から新しい座標系への座標の写像を次の行列の等式によって行うものです。
+これは、前の座標系から新しい座標系への座標の写像を次の行列の等式によって行うものです。
 
 <!-- prettier-ignore-start -->
 <math display="block">
