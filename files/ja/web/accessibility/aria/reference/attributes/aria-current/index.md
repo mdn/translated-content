@@ -69,12 +69,12 @@ l10n:
 - `false` (規定値)
   - : セット内の現在の項目を表すものではありません。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaCurrent")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaCurrent`](/ja/docs/Web/API/Element/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaCurrent`](/ja/docs/Web/API/Element/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaCurrent")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaCurrent`](/ja/docs/Web/API/ElementInternals/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaCurrent`](/ja/docs/Web/API/ElementInternals/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
 
 ## 関連付けられたロール
 

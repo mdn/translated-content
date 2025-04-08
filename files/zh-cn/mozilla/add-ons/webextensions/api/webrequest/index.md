@@ -15,7 +15,7 @@ l10n:
 
 但是，并非所有的事件都会在每个请求中触发。例如，当重定向目标不匹配事件的 `filter.urls` 属性时，`onBeforeRedirect` 可能不会被 `onBeforeRequest` 触发。这可能是因为过滤器中的 URL 定义得很严格，又或者重定向目标不能被扩展观察到（比如当它重定向到一个 `data:` URL 时）。
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 在请求过程中的任意时间都可以触发。同时需要注意，有的时候事件的顺序可能会有所不同。例如，在 Firefox 中，当 [HSTS](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) 升级时，`onBeforeRedirect` 事件会在 `onBeforeRequest` 之后立即触发。如果 [Firefox 跟踪保护](<https://support.mozilla.org/zh-CN/kb/Firefox 桌面版的增强跟踪保护>) 阻止了一个请求，`onErrorOccurred` 也会被触发。
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 在请求过程中的任意时间都可以触发。同时需要注意，有的时候事件的顺序可能会有所不同。例如，在 Firefox 中，当 [HSTS](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) 升级时，`onBeforeRedirect` 事件会在 `onBeforeRequest` 之后立即触发。如果 [Firefox 跟踪保护](<https://support.mozilla.org/zh-CN/kb/Firefox 桌面版的增强跟踪保护>) 阻止了一个请求，`onErrorOccurred` 也会被触发。
 
 所有的事件（_除_ `onErrorOccurred` 事件）的 `addListener()` 都接受三个参数：
 

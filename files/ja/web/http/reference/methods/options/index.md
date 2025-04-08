@@ -68,7 +68,7 @@ Server: EOS (lax004/2813)
 
 [CORS](/ja/docs/Web/HTTP/Guides/CORS) では、[プリフライトリクエスト](/ja/docs/Glossary/Preflight_request)を `OPTIONS` メソッドで送信すると、サーバーはリクエストを送信して受け付けられるかどうかを応答できるようにします。下記の例では、次の引数に対する許可を要求します。
 
-- プリフライトリクエストで送信される {{HTTPHeader("Access-Control-Request-Method")}} ヘッダーは、実際のリクエストを送信する際に、リクエストメソッドが {{HTTPMethod("POST")}} であることをサーバに知らせます。
+- プリフライトリクエストで送信される {{HTTPHeader("Access-Control-Request-Method")}} ヘッダーは、実際のリクエストを送信する際に、リクエストメソッドが {{HTTPMethod("POST")}} であることをサーバーに知らせます。
 - {{HTTPHeader("Access-Control-Request-Headers")}} ヘッダーは、実際のリクエスト送信時に `X-PINGOTHER` と `Content-Type` ヘッダーを持つことをサーバーに知らせます。
 
 ```

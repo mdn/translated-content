@@ -165,7 +165,7 @@ HTML のこの最初のブロックでは、異なるズーム値を持つ `sele
 </section>
 ```
 
-この 2 番目のブロックには、ブラウザが `zoom` をサポートしている場合には非表示となる **not supported** メッセージが追加されています。
+この 2 番目のブロックには、ブラウザーが `zoom` をサポートしている場合には非表示となる **not supported** メッセージが追加されています。
 
 ```html
 <p class="zoom-notice">CSS zoom is not supported</p>
@@ -217,7 +217,7 @@ html {
 }
 ```
 
-この最後の CSS ブロックでは、ブラウザが `zoom` をサポートしているかどうかをチェックし、サポートしている場合は **not supported** メッセージを `display: none;` に設定しています。
+この最後の CSS ブロックでは、ブラウザーが `zoom` をサポートしているかどうかをチェックし、サポートしている場合は **not supported** メッセージを `display: none;` に設定しています。
 
 ```css
 @supports (zoom: 1) {

@@ -472,7 +472,81 @@ slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 
 尝试移除 `grid-auto-flow: dense` 这一行，以查看内容重排后在布局中留下的缺口。
 
-{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}
+```html live-sample___autoplacement
+<ul class="wrapper">
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+</ul>
+```
+
+```css hidden live-sample___autoplacement
+body {
+  font: 1.2em sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  list-style: none;
+  margin: 1em auto;
+  padding: 0;
+  max-width: 800px;
+}
+.wrapper li {
+  border: 1px solid #ccc;
+}
+
+.wrapper li img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+```
+
+```css live-sample___autoplacement
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.wrapper li.landscape {
+  grid-column-end: span 2;
+}
+```
+
+{{EmbedLiveSample("autoplacement", "", "500px")}}
 
 自动定位还可以帮你布局有逻辑顺序的界面元素。下面的术语列表就是一个示例。为定义列表添加样式是一个有趣的挑战，即它的结构是扁平的，没有把成组的 `dt` 和 `dd` 元素包装起来。在示例中，我们使用自动定位来定位项目，另外还通过样式类把 `dt` 摆放在第 1 列，把 `dd` 摆放在第 2 列，以便让术语显示在一边，术语的定义显示在另一边，而不用管它们各有多少个。
 

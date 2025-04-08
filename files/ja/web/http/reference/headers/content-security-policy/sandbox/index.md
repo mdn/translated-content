@@ -42,7 +42,7 @@ Content-Security-Policy: sandbox <value>;
 - `allow-downloads-without-user-activation` {{experimental_inline}}
   - : ユーザーによる指示のないダウンロードを許可します。
 - `allow-forms`
-  - : ページがフォームを送信することを許可します。このキーワードを使用しない場合、フォームは通常通り表示されますが、フォームを送信しても入力の検証、ウェブサーバへのデータ送信、ダイアログの終了は行われません。
+  - : ページがフォームを送信することを許可します。このキーワードを使用しない場合、フォームは通常通り表示されますが、フォームを送信しても入力の検証、ウェブサーバーへのデータ送信、ダイアログの終了は行われません。
 - `allow-modals`
   - : ページが {{domxref("Window.alert()")}}、{{domxref("Window.confirm()")}}、{{domxref("Window.print()")}}、{{domxref("Window.prompt()")}} によってモーダルウィンドウを開けるようにします。一方、 {{HTMLElement("dialog")}} を開くことはこのキーワードと無関係に許可されます。また、ページが {{domxref("BeforeUnloadEvent")}} イベントを受信することもできるようにします。
 - `allow-orientation-lock`

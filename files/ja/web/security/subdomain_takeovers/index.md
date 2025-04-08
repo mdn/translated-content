@@ -2,7 +2,7 @@
 title: サブドメインテイクオーバー
 slug: Web/Security/Subdomain_takeovers
 l10n:
-  sourceCommit: dea173f1ffb3e6bef851f2e328cf7562f1ef78ce
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
@@ -53,5 +53,5 @@ l10n:
 
 ## 詳細はこちら
 
-- ['Deep Thoughts' on Subdomain Takeover Vulnerabilities](https://blog.rubidus.com/2017/02/03/deep-thoughts-on-subdomain-takeovers/)
+- ['Deep Thoughts' on Subdomain Takeover Vulnerabilities](https://claudijd.github.io/2017/02/03/deep-thoughts-on-subdomain-takeovers/)
 - [Subdomain Takeover: Basics](https://0xpatrik.com/subdomain-takeover-basics/)
