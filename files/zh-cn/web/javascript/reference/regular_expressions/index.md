@@ -67,7 +67,7 @@ const regex2 = new RegExp("ab+c", "g");
 - [前瞻断言：`(?=...)`、`(?!...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
   - : 断言当前位置是否被某个模式跟随。
 - [后瞻断言：`(?<=...)`、`(?<!..)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
-  - : 断言当前位置是否在某个模式之前。
+  - : 断言当前位置是否在某个模式之后。
 - [单词边界断言：`\b`、`\B`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
   - : 断言当前位置是单词边界。
 
