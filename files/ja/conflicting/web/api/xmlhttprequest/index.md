@@ -1,7 +1,8 @@
 ---
 title: "XMLHttpRequest: mozSystem プロパティ"
 short-title: mozSystem
-slug: Web/API/XMLHttpRequest/mozSystem
+slug: conflicting/Web/API/XMLHttpRequest
+original_slug: Web/API/XMLHttpRequest/mozSystem
 l10n:
   sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---

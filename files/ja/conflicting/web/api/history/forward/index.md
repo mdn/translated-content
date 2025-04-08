@@ -1,6 +1,7 @@
 ---
 title: window.forward
-slug: Web/API/Window/forward
+slug: conflicting/Web/API/History/forward
+original_slug: Web/API/Window/forward
 ---
 
 {{ApiRef}}{{Non-standard_header}} {{deprecated_header}}

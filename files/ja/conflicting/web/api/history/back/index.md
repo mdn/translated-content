@@ -1,6 +1,7 @@
 ---
 title: Window.back()
-slug: Web/API/Window/back
+slug: conflicting/Web/API/History/back
+original_slug: Web/API/Window/back
 ---
 
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
