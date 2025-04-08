@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and
 > [!NOTE]
 > 你可以在下面的互动编辑器中尝试解决方案。然而，下载代码并使用在线工具，如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 来完成任务可能会有所帮助。
 >
-> 如果你遇到了困难，那就向我们寻求帮助吧——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)部分。
+> 如果你遇到困難，請在[MDN 討論頻道](/zh-CN/docs/MDN/Community/Communication_channels)尋求幫助。
 
 ## 任务 1
 
@@ -57,10 +57,6 @@ h2 {
 
 {{EmbedLiveSample("backgrounds1", "", "200px")}}
 
-> [!CALLOUT]
->
-> [下载这项任务的初始代码](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds1-download.html)，在你自己的编辑器或在线编辑器中完成测试。
-
 ## 任务 2
 
 在这个任务中，我们希望你为一个装饰性的盒子添加背景图片、边框和其他一些样式：
@@ -106,21 +102,3 @@ h2 {
 ```
 
 {{EmbedLiveSample("backgrounds2", "", "220px")}}
-
-> [!CALLOUT]
->
-> [下载这项任务的初始代码](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds2-download.html)，在你自己的编辑器或在线编辑器中完成测试。
-
-## 评估或进一步帮助
-
-可以在互动编辑器中完成上面的练习。
-
-如果你期望对练习结果进行评估，或者遇到困难需要帮助，可以：
-
-1. 可借助 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) 等在线编程实用工具完成任务。在那里你可以自行编写代码，也可以使用上文中所给的初始代码。
-2. 在 [MDN 论坛学习区](https://discourse.mozilla.org/c/mdn/learn/)发帖寻求他人的评估和帮助。你发表的文章应包括：
-
-   - 一个描述性的标题，比如“Assessment wanted for backgrounds and borders skill test 1”。
-   - 讲清你已经做出的努力，以及需要我们做什么，比如你遇到了困难并需要帮助，或者期望得到评估。
-   - 一个链接指向你需要得到评估或帮助的实例，步骤 1 中三个在线编程工具之一均可。我们对希望得到帮助但由不提供代码的求助也很无奈。
-   - 一个链接指向 MDN 测试的原始页面，在那里我们可以找到你需要获得帮助的原始信息。

@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/CSS_layout/Position_skills
 > [!NOTE]
 > 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。
 >
-> 如果你遇到困难，请向我们寻求帮助 - 请参阅本页底部的 [Assessment or further help](#assessment_or_further_help) 部分
+> 如果你遇到困難，請在[MDN 討論頻道](/zh-CN/docs/MDN/Community/Communication_channels)尋求幫助。
 
 ## 定位练习一
 
@@ -68,10 +68,27 @@ body {
 
 {{EmbedLiveSample("position1", "", "400px")}}
 
-作为一个额外的挑战，你能改变目标元素显示在文本下面吗？
+<details>
+<summary>Click here to show the solution</summary>
 
-> [!NOTE]
-> 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html)在本地编辑器或在线编辑器中编辑
+This requires `position: relative` and `position: absolute` and understanding how they relate to each other in terms of relative positioning creating a new positioning context.
+A likely issue could be that you add `position: absolute` to the child without applying `position: relative` to the container. In that case, the target will end up being positioned according to the viewport.
+
+```css
+.container {
+  position: relative;
+}
+
+.target {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+```
+
+For the bonus question, you need to add a negative `z-index` to the target, for example `z-index: -2`.
+
+</details>
 
 ## 定位练习二
 
@@ -151,19 +168,15 @@ body {
 
 {{EmbedLiveSample("position2", "", "400px")}}
 
-> [!NOTE]
-> 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html)在本地编辑器或在线编辑器中编辑
+<details>
+<summary>Click here to show the solution</summary>
 
-## Assessment or further help
+We're testing your understanding of `position: fixed` with a slightly different example to the ones in the learning materials.
 
-You can practice these examples in the Interactive Editors mentioned above.
+```css
+.sidebar {
+  position: fixed;
+}
+```
 
-If you would like your work assessed, or are stuck and want to ask for help:
-
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
-
-   - A descriptive title such as "Assessment wanted for Position skill test 1".
-   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
+</details>

@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/CSS_layout/Grid_skills
 > [!NOTE]
 > 你可以在下面的交互式编辑器中试用解决方案，不过，下载代码并使用在线工具 (如 CodePen、jsFiddle 或 Glitch) 处理这些任务可能会更有帮助。
 >
-> 如果你遇到困难，请向我们寻求帮助 — 参阅本页底部的 [评估或进一步帮助](#assessment_or_further_help) 部分。
+> 如果你遇到困難，請在[MDN 討論頻道](/zh-CN/docs/MDN/Community/Communication_channels)尋求幫助。
 
 ## 网格布局 一
 
@@ -49,8 +49,20 @@ body {
 
 {{EmbedLiveSample("grid1", "", "200px")}}
 
-> [!NOTE]
-> 评估或进一步的工作目的，可以[下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html)在你自己的编辑器或使用线编辑器。
+<details>
+<summary>Click here to show the solution</summary>
+
+Create a grid using `display: grid` with three columns using `grid-template-columns` and a `gap` between the items:
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+```
+
+</details>
 
 ## 网格布局 二
 
@@ -105,12 +117,41 @@ body {
 
 {{EmbedLiveSample("grid2", "", "340px")}}
 
-附加问题：
+<details>
+<summary>Click here to show the solution</summary>
 
-- 你可以把第一个元素覆盖到第二个元素，而不通过改变 html 元素的顺序吗？
+It is possible to layer items by way of them occupying the same grid cells.
+One option is to use the shorthands below, however it would be correct to use the longhand `grid-row-start` for example.
 
-> [!NOTE]
-> 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html) 在你自己的编辑器或使用线编辑器。
+```css
+.item1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+}
+
+.item2 {
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
+}
+```
+
+For the bonus question, one way of achieving this would be to use `order`, which we've encountered in the flexbox tutorial.
+
+```css
+.item1 {
+  order: 1;
+}
+```
+
+Another valid solution is to use `z-index`:
+
+```css
+.item1 {
+  z-index: 1;
+}
+```
+
+</details>
 
 ## 网格布局 三
 
@@ -152,8 +193,40 @@ body {
 
 {{EmbedLiveSample("grid3", "", "200px")}}
 
-> [!NOTE]
-> 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html) 在你自己的编辑器或使用线编辑器。
+<details>
+<summary>Click here to show the solution</summary>
+
+Each part of the layout needs a name using the `grid-area` property and `grid-template-areas` to lay them out. Possible areas of confusion would be not realizing you should place a `.` to leave a cell empty, or that you should repeat the name to cause an element to span more than one track:
+
+```css
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "aa aa"
+    "bb cc"
+    ". dd";
+}
+
+.one {
+  grid-area: aa;
+}
+
+.two {
+  grid-area: bb;
+}
+
+.three {
+  grid-area: cc;
+}
+
+.four {
+  grid-area: dd;
+}
+```
+
+</details>
 
 ## 网格布局 四
 
@@ -255,20 +328,26 @@ body {
 
 {{EmbedLiveSample("grid4", "", "400px")}}
 
-> [!NOTE]
-> 评估或进一步的工作目的，可以 [下载此任务的源文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html) 在你自己的编辑器或使用线编辑器。
+<details>
+<summary>Click here to show the solution</summary>
 
-## 评估 或者 帮助
+The container will need to be a grid layout, as we have alignment in rows and columns - two-dimensional.
+The `<ul>` needs to be a flex container as tags (`<li>` elements) are not lined up in columns, only in rows and they are centered in the space with the alignment property `justify-content` set to `center`.
 
-你可以在上述的交互编辑器上练习。
+You may try to use flexbox on the container and restrict the cards with percentage values. You may also try to make the items into a grid layout in which case, note that the items are not aligned in two dimensions so flexbox isn't the best choice.
 
-如果你的作业需要评估，或者有困难想要帮助：
+```css
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
-1. 把你的作业放在一个在线可分享的编辑器上，比如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 或者 [Glitch](https://glitch.com/). 你可以自己重头开始写，或者使用上面章节提供的源文件。
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
-   发布一个评估的帖子 或者 帮助在[MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn)你的发布应该涵盖以下几点：
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+```
 
-   - A descriptive title such as "Assessment wanted for Grid layout 1 skill test".
-   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
+</details>
