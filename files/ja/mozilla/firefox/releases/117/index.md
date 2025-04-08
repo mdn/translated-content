@@ -63,7 +63,7 @@ l10n:
 
 ### Developer tools
 
-- ネットワークモニターでプロキシを経由した要求の情報を表示するようになりました。プロキシのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
+- ネットワークモニターでプロキシーを経由した要求の情報を表示するようになりました。プロキシーのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
 
 - [計測ツール](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) で選択した領域をキーボードショートカットでリサイズおよび移動できるようになりました。
   矢印キーを押すと選択した領域の移動、<kbd>Ctrl</kbd> + 矢印キー (Mac では <kbd>Cmd</kbd> + 矢印キー) を押すと選択した領域のリサイズになります。

@@ -41,7 +41,7 @@ p {
 - キーワード `hidden`
 - キーワード `until-found`
 
-hidden` 属性には、 _hidden_ 状態と _hidden until found_ 状態の2つの状態があります。
+`hidden` 属性には、 _hidden_ 状態と _hidden until found_ 状態の2つの状態があります。
 
 - 空文字列、またはキーワード `hidden` は、要素を _hidden_ 状態に設定します。さらに、無効な値を指定すると、その要素は _hidden_ 状態に設定されます。
 

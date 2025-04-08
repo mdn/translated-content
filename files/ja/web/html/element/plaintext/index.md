@@ -22,9 +22,9 @@ l10n:
 
 この要素は、全ての要素が持つ[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性を持ちません。
 
-## DOM インタフェース
+## DOM インターフェイス
 
-この要素は {{domxref('HTMLElement')}} インタフェースを提供します。
+この要素は {{domxref('HTMLElement')}} インターフェイスを提供します。
 
 <!-- ## Technical summary -->
 

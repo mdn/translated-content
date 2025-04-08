@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es conocer si has entendido nuestra clase sobre el articulo [Matematica basica en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math).
+El objetivo de esta prueba de habilidad es conocer si has entendido nuestra clase sobre el articulo [Matematica basica en JavaScript — números y operadores](/es/docs/Learn_web_development/Core/Scripting/Math).
 
 > [!NOTE]
 > Puedes probar soluciones en los editores interactivos a continuación, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.

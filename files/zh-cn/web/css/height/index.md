@@ -5,7 +5,45 @@ slug: Web/CSS/height
 
 {{CSSRef}}
 
-`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area)）的高度。{{EmbedInteractiveExample("pages/css/height.html")}}{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 属性会覆盖 {{Cssxref("height")}}。
+`height` CSS 属性指定了一个元素的高度。默认情况下，这个属性决定的是内容区（ [content area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)）的高度，但是，如果将 {{cssxref("box-sizing")}} 设置为 `border-box` , 这个属性决定的将是边框区域（[border area](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area)）的高度。
+
+{{InteractiveExample("CSS Demo: height")}}
+
+```css interactive-example-choice
+height: 150px;
+```
+
+```css interactive-example-choice
+height: 6em;
+```
+
+```css interactive-example-choice
+height: 75%;
+```
+
+```css interactive-example-choice
+height: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
+
+{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 属性会覆盖 {{Cssxref("height")}}。
 
 ## 语法
 

@@ -41,7 +41,7 @@ l10n:
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

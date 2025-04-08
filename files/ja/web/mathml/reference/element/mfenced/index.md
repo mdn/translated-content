@@ -70,6 +70,6 @@ l10n:
 
 `<mfenced>` はブラウザーに向けた仕様書にはどこにも定義されていませんが、 [MathML 4](https://w3c.github.io/mathml/#presm_mfenced) に説明が見られます。
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}

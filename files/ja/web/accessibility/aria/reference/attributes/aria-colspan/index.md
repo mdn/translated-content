@@ -140,10 +140,10 @@ HTML では、{{HTMLElement('th')}} 要素と {{HTMLElement('td')}} 要素が [`
 - `<integer>`
   - : セルがまたがる列の数を定義する、既定値である 1 以上の整数。この値は、セルが同じ行の次のセルと重なる値よりも小さくする必要があります。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaColSpan")}}
-  - : 各要素のインターフェースの一部である [`ariaColSpan`](/ja/docs/Web/API/Element/ariaColSpan) プロパティは、テーブル、グリッド、またはツリーグリッド内のセルまたはグリッドセルがまたがる列の数を定義する `ariaColSpan` 属性の値を反映します。
+  - : 各要素のインターフェイスの一部である [`ariaColSpan`](/ja/docs/Web/API/Element/ariaColSpan) プロパティは、テーブル、グリッド、またはツリーグリッド内のセルまたはグリッドセルがまたがる列の数を定義する `ariaColSpan` 属性の値を反映します。
 
 ## 関連付けられたロール
 

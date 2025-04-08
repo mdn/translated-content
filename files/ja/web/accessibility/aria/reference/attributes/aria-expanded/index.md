@@ -77,12 +77,12 @@ l10n:
 - `undefined` (既定値)
   - : 要素は、展開可能なグループ化要素を所有または制御しません。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaExpanded")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaExpanded`](/ja/docs/Web/API/Element/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaExpanded`](/ja/docs/Web/API/Element/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaExpanded")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaExpanded`](/ja/docs/Web/API/ElementInternals/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaExpanded`](/ja/docs/Web/API/ElementInternals/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
 
 ## 関連付けられたロール
 

@@ -903,8 +903,8 @@
 /ja/docs/DOM/window.arguments	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.atob	/ja/docs/Web/API/Window/atob
 /ja/docs/DOM/window.atob-redirect-1	/ja/docs/Web/API/Window/atob
-/ja/docs/DOM/window.back	/ja/docs/Web/API/Window/back
-/ja/docs/DOM/window.back-redirect-1	/ja/docs/Web/API/Window/back
+/ja/docs/DOM/window.back	/ja/docs/conflicting/Web/API/History/back
+/ja/docs/DOM/window.back-redirect-1	/ja/docs/conflicting/Web/API/History/back
 /ja/docs/DOM/window.blur	/ja/docs/Web/API/Window/blur
 /ja/docs/DOM/window.blur-redirect-1	/ja/docs/Web/API/Window/blur
 /ja/docs/DOM/window.btoa	/ja/docs/Web/API/Window/btoa
@@ -925,7 +925,7 @@
 /ja/docs/DOM/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/DOM/window.find	/ja/docs/Web/API/Window/find
 /ja/docs/DOM/window.focus	/ja/docs/Web/API/Window/focus
-/ja/docs/DOM/window.forward	/ja/docs/Web/API/Window/forward
+/ja/docs/DOM/window.forward	/ja/docs/conflicting/Web/API/History/forward
 /ja/docs/DOM/window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/DOM/window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/DOM/window.fullScreen	/ja/docs/Web/API/Window/fullScreen
@@ -1128,7 +1128,7 @@
 /ja/docs/DOM:window	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.alert	/ja/docs/Web/API/Window/alert
 /ja/docs/DOM:window.atob	/ja/docs/Web/API/Window/atob
-/ja/docs/DOM:window.back	/ja/docs/Web/API/Window/back
+/ja/docs/DOM:window.back	/ja/docs/conflicting/Web/API/History/back
 /ja/docs/DOM:window.blur	/ja/docs/Web/API/Window/blur
 /ja/docs/DOM:window.btoa	/ja/docs/Web/API/Window/btoa
 /ja/docs/DOM:window.captureEvents	/ja/docs/Web/API/Window/captureEvents
@@ -1145,7 +1145,7 @@
 /ja/docs/DOM:window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/DOM:window.find	/ja/docs/Web/API/Window/find
 /ja/docs/DOM:window.focus	/ja/docs/Web/API/Window/focus
-/ja/docs/DOM:window.forward	/ja/docs/Web/API/Window/forward
+/ja/docs/DOM:window.forward	/ja/docs/conflicting/Web/API/History/forward
 /ja/docs/DOM:window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/DOM:window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/DOM:window.fullScreen	/ja/docs/Web/API/Window/fullScreen
@@ -3502,11 +3502,13 @@
 /ja/docs/Web/API/Window/animationiteration_event	/ja/docs/Web/API/Element/animationiteration_event
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/Web/API/Window
+/ja/docs/Web/API/Window/back	/ja/docs/conflicting/Web/API/History/back
 /ja/docs/Web/API/Window/console	/ja/docs/conflicting/Web/API/console_60401d2da71e30c9a41a6920151c1b4910a6c5782043e95b996891763b305aee
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
+/ja/docs/Web/API/Window/forward	/ja/docs/conflicting/Web/API/History/forward
 /ja/docs/Web/API/Window/mozPaintCount	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/Window/afterprint_event
 /ja/docs/Web/API/Window/onappinstalled	/ja/docs/Web/API/Window/appinstalled_event
@@ -3578,6 +3580,10 @@
 /ja/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data	/ja/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
 /ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/ja/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 /ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/ja/docs/Web/API/XMLHttpRequest/channel	/ja/docs/conflicting/Web/API/XMLHttpRequest_09acd645e7861f7879a2b087341c15b9ace12d3c28dc521c066202ff5438c949
+/ja/docs/Web/API/XMLHttpRequest/mozAnon	/ja/docs/conflicting/Web/API/XMLHttpRequest_017ecd144496f18499abb77cdd9b4652432cc46cce4319f962f87539c0d171cb
+/ja/docs/Web/API/XMLHttpRequest/mozBackgroundRequest	/ja/docs/conflicting/Web/API/XMLHttpRequest_a5d9690c9e8f16f1cafb32f1d0b72f640774cdc587611d13d1a30ac253f8d602
+/ja/docs/Web/API/XMLHttpRequest/mozSystem	/ja/docs/conflicting/Web/API/XMLHttpRequest
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onabort	/ja/docs/Web/API/XMLHttpRequest/abort_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onerror	/ja/docs/Web/API/XMLHttpRequest/error_event
@@ -3735,7 +3741,7 @@
 /ja/docs/Web/API/window.alert	/ja/docs/Web/API/Window/alert
 /ja/docs/Web/API/window.arguments	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.atob	/ja/docs/Web/API/Window/atob
-/ja/docs/Web/API/window.back	/ja/docs/Web/API/Window/back
+/ja/docs/Web/API/window.back	/ja/docs/conflicting/Web/API/History/back
 /ja/docs/Web/API/window.blur	/ja/docs/Web/API/Window/blur
 /ja/docs/Web/API/window.btoa	/ja/docs/Web/API/Window/btoa
 /ja/docs/Web/API/window.cancelAnimationFrame	/ja/docs/Web/API/Window/cancelAnimationFrame
@@ -3753,7 +3759,7 @@
 /ja/docs/Web/API/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/window.find	/ja/docs/Web/API/Window/find
 /ja/docs/Web/API/window.focus	/ja/docs/Web/API/Window/focus
-/ja/docs/Web/API/window.forward	/ja/docs/Web/API/Window/forward
+/ja/docs/Web/API/window.forward	/ja/docs/conflicting/Web/API/History/forward
 /ja/docs/Web/API/window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/Web/API/window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/Web/API/window.fullScreen	/ja/docs/Web/API/Window/fullScreen

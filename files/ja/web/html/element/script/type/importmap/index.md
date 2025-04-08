@@ -9,7 +9,7 @@ l10n:
 
 **`importmap`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Element/script)の [`type`](/ja/docs/Web/HTML/Element/script/type) 属性に設定すると、要素の本体がインポートマップであることを示します。
 
-インポートマップは、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をインポートする際に、ブラウザがモジュール指定子を解決する方法を開発者が制御できるようにするための JSON オブジェクトです。これは、[`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)や [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)でモジュール指定子として使用されたテキストと、指定子を解決するときにテキストを置き換える対応する値との間の対応表を提供します。
+インポートマップは、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をインポートする際に、ブラウザーがモジュール指定子を解決する方法を開発者が制御できるようにするための JSON オブジェクトです。これは、[`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)や [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)でモジュール指定子として使用されたテキストと、指定子を解決するときにテキストを置き換える対応する値との間の対応表を提供します。
 JSON オブジェクトは、[JSON のインポートマップ表現](#json_のインポートマップ表現)に適合している必要があります。
 
 インポートマップは、静的インポートや動的インポートのモジュール指定子を解決するために使用されるため、マップ内で宣言された指定子を使用してモジュールをインポートする `<script>` 要素の前に宣言し、処理する必要があります。

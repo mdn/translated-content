@@ -73,7 +73,7 @@ Content-Length: 1024
 curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
 ```
 
-サーバーは {{HTTPStatus("206")}} `Partial Content` ステータスコードと {{HTTPHeader("Content-Type")}}`: multipart/byteranges; boundary=3d6b6a416f9b5` ヘッダを伴ってレスポンスを返し、そこでは指定した複数のバイト範囲に関するデータが後ろに続いていることがわかります。 各々のバイト範囲において対応する `Content-Type` と `Content-Range` ヘッダーフィールドが含まれており、それぞれのボディ部分を区切るための境界文字列が境界パラメーターによって指定されています。
+サーバーは {{HTTPStatus("206")}} `Partial Content` ステータスコードと {{HTTPHeader("Content-Type")}}`: multipart/byteranges; boundary=3d6b6a416f9b5` ヘッダーを伴ってレスポンスを返し、そこでは指定した複数のバイト範囲に関するデータが後ろに続いていることがわかります。 各々のバイト範囲において対応する `Content-Type` と `Content-Range` ヘッダーフィールドが含まれており、それぞれのボディ部分を区切るための境界文字列が境界パラメーターによって指定されています。
 
 ```
 HTTP/1.1 206 Partial Content
@@ -100,7 +100,7 @@ eta http-equiv="Content-type" content="text/html; c
 
 リソースのさらなる部分に対してリクエストを再開する際、最後にバイト範囲の断片を受け取ったときから、サーバー側で格納されているリソースが変更されていないことを保証する必要があります。
 
-{{HTTPHeader("If-Range")}} HTTP リクエストヘッダは範囲リクエストに対して条件付けを付与することができます。条件が満たされた場合、範囲リクエストが発行され、サーバーは適切なボディとともに {{HTTPStatus("206")}} `Partial Content` ステータスを返します。もし条件が満たされなかった場合、全てのリソースが {{HTTPStatus("200")}} `OK` ステータスとともに返されます。このヘッダは {{HTTPHeader("Last-Modified")}} validator あるいは {{HTTPHeader("ETag")}} を伴って用いられます。両方を同時に使うことはありません。
+{{HTTPHeader("If-Range")}} HTTP リクエストヘッダーは範囲リクエストに対して条件付けを付与することができます。条件が満たされた場合、範囲リクエストが発行され、サーバーは適切なボディとともに {{HTTPStatus("206")}} `Partial Content` ステータスを返します。もし条件が満たされなかった場合、全てのリソースが {{HTTPStatus("200")}} `OK` ステータスとともに返されます。このヘッダーは {{HTTPHeader("Last-Modified")}} validator あるいは {{HTTPHeader("ETag")}} を伴って用いられます。両方を同時に使うことはありません。
 
 ```
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT

@@ -1041,7 +1041,7 @@
       "e-h-h"
     ]
   },
-  "Glossary/Hash": {
+  "Glossary/Hash_function": {
     "modified": "2019-03-23T22:13:59.337Z",
     "contributors": [
       "RealRedFox"
@@ -21973,12 +21973,6 @@
       "Ivan961",
       "fedev",
       "Tortik217"
-    ]
-  },
-  "conflicting/Web/API/console": {
-    "modified": "2019-03-18T21:20:36.516Z",
-    "contributors": [
-      "AndreiSoroka"
     ]
   },
   "conflicting/Web/CSS/CSS_cascade/Value_processing": {
