@@ -6,11 +6,11 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**XPath** is a query language that can access sections and content in an {{glossary("XML")}} document.
+**XPath** - это язык запросов, который позволяет получить доступ к разделам и содержимому документа {{glossary(«XML»)}}.
 
-## See also
+## Смотрите также
 
-- [XPath documentation on MDN](/en-US/docs/Web/XML/XPath)
-- [XPath specification](https://www.w3.org/TR/xpath-30/)
-- [Official website](https://www.w3.org/TR/?tag=xml)
-- [XPath](https://en.wikipedia.org/wiki/XPath) on Wikipedia
++- [Документация по XPath на MDN](/ru/docs/Web/XML/XPath)
+- [Спецификация XPath](https://www.w3.org/TR/xpath-30/)
+- [Официальный сайт](https://www.w3.org/TR/?tag=xml)
+- [XPath](https://en.wikipedia.org/wiki/XPath) в Википедии
