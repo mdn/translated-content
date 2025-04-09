@@ -2187,6 +2187,7 @@
 /zh-CN/docs/Web/API/Window.top	/zh-CN/docs/Web/API/Window/top
 /zh-CN/docs/Web/API/Window/DOMContentLoaded_event	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/API/Window/Window.blur()	/zh-CN/docs/Web/API/Window/blur
+/zh-CN/docs/Web/API/Window/back	/zh-CN/docs/Web/API/History/back
 /zh-CN/docs/Web/API/Window/console	/zh-CN/docs/Web/API/console
 /zh-CN/docs/Web/API/Window/content	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
@@ -2243,6 +2244,10 @@
 /zh-CN/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 /zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest_in_IE6	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/channel	/zh-CN/docs/Web/API/XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/mozAnon	/zh-CN/docs/Web/API/XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/mozBackgroundRequest	/zh-CN/docs/Web/API/XMLHttpRequest
+/zh-CN/docs/Web/API/XMLHttpRequest/mozSystem	/zh-CN/docs/Web/API/XMLHttpRequest
 /zh-CN/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-CN/docs/Web/API/XMLHttpRequest/readystatechange_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onabort	/zh-CN/docs/Web/API/XMLHttpRequest/abort_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onerror	/zh-CN/docs/Web/API/XMLHttpRequest/error_event
