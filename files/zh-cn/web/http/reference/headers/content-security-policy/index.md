@@ -191,7 +191,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 ### '\<hash_algorithm>-<hash_value>'
 
-该值由标识散列算法的字符串、`-`和一个表示散列值的 {{glossary("Base64", "base64 编码")}}字符串组成。
+该值由标识散列算法的字符串、`-` 和一个表示散列值的 {{glossary("Base64", "base64 编码")}}字符串组成。
 
 - 散列算法标识符必须是 `sha256`、`sha384` 或 `sha512` 之一。
 - 散列值是使用以下散列函数之一计算的 `<script>` 或 `<style>` 资源的{{glossary("hash function", "散列")}}值的 base64 编码：SHA-256、SHA-384 或 SHA-512。

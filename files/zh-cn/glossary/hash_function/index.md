@@ -31,7 +31,7 @@ SHA-2 是 SHA-1 算法的继任者，后者不再被认为是安全的，不应�
 ## 参见
 
 - {{domxref("SubtleCrypto.digest()")}}
-- 维基百科上的[散列函数](https://zh.wikipedia.org/wiki/散列函数)
+- 维基百科上的[散列函数](https://zh.wikipedia.org/wiki/散列函數)
 - 维基百科上的[密码散列函数](https://zh.wikipedia.org/wiki/密碼雜湊函數)
 - 相关术语：
-  - {{Glossary("Symmetric-key cryptography", "对称密钥密码)}}
+  - {{Glossary("Symmetric-key cryptography", "对称密钥密码")}}
