@@ -47,7 +47,6 @@ jobs:
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          HUSKY: 0
 
       - name: Install all yarn packages for mdn/content
         working-directory: ${{ github.workspace }}/mdn/content
