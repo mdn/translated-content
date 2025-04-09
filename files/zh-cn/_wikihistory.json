@@ -42977,11 +42977,5 @@
     "contributors": [
       "Cyandev"
     ]
-  },
-  "conflicting/Web/API/History/back": {
-    "modified": "2019-03-23T22:12:59.387Z",
-    "contributors": [
-      "xilixinluo"
-    ]
   }
 }
