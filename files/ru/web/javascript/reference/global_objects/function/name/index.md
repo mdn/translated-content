@@ -23,6 +23,10 @@ console.log(object.func2.name);
 // Expected output: "func2"
 ```
 
+## Значение
+
+Строка.
+
 {{js_property_attributes(0,0,1)}}
 
 > [!NOTE]
