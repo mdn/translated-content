@@ -3410,8 +3410,9 @@
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/Screen/top	/ja/docs/Web/API/ScreenDetailed/top
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/Web/API/Window/scroll
+/ja/docs/Web/API/ServiceWorkerContainer/error_event	/ja/docs/conflicting/Web/API/ServiceWorker/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
-/ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
+/ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/conflicting/Web/API/ServiceWorker/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onactivate	/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event

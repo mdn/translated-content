@@ -18585,12 +18585,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/ServiceWorkerContainer/error_event": {
-    "modified": "2020-10-15T22:29:16.925Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/ServiceWorkerContainer/getRegistration": {
     "modified": "2020-10-15T22:29:13.888Z",
     "contributors": [
@@ -44193,6 +44187,12 @@
   },
   "conflicting/Web/API/HTMLMediaElement/error_event": {
     "modified": "2020-10-15T22:18:26.930Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/ServiceWorker/error_event": {
+    "modified": "2020-10-15T22:29:16.925Z",
     "contributors": [
       "Wind1808"
     ]
