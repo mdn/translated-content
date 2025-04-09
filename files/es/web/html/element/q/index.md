@@ -9,8 +9,6 @@ El **elemento HTML `<q>`** indica que el texto adjunto es una cita corta en lín
 
 {{ EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter") }}
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
-
 <table class="properties">
   <tbody>
     <tr>

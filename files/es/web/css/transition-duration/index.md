@@ -53,8 +53,6 @@ transition-property: margin-right, color;
 }
 ```
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un pull reques.
-
 Se puede especificar múltiples duraciones; cada duración va a ser aplicada a la propiedad correspondiente según lo especificado en la propiedad {{ cssxref("transition-property") }}, que actuará como una lista maestra. Si se especifican menos duraciones en la lista maestra, el agente de usuario repetirá la lista de duraciones. Si hay más duraciones, la lista simplemente se trunca al tamaño correcto. En ambos casos, la declaración CSS sigue siendo válida
 
 ## Sintaxis

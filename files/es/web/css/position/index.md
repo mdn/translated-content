@@ -101,8 +101,6 @@ section {
 }
 ```
 
-El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio de GitHub. Si quisiera contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos sus contribuciones como un pull request.
-
 ### Tipos de posicionamiento
 
 - Un **elemento posicionado** es un elemento cuyo valor [computado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d) de `position` es `relative`, `absolute`, `fixed`, o `sticky`. (En otras palabras, cualquiera excepto `static`).

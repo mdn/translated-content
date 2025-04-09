@@ -25,8 +25,6 @@ console.log(sum(1, 2, 3, 4));
 // Expected output: 10
 ```
 
-La fuente interactiva de este ejemplo es almacenado en un repositorio de GitHub. Si a ti te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona este repositorio <https://github.com/mdn/interactive-examples> y envíanos un pull-request.
-
 ## Sintaxis
 
 ```js

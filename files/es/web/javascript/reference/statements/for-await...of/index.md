@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Statements/for-await...of
 
 La **sentencia** **`for await...of`** crea un bucle iterando tanto sobre objetos iterables asincrónicos como sincrónicos, incluyendo: built-in {{jsxref("String")}}, {{jsxref("Array")}}, objetos `Array`-like (por ej., {{jsxref("Functions/arguments", "arguments")}} o {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, y async/sync iterables definidos por el usuario. Invoca un hook de iteración personalizada con sentencias a ser ejecutadas por el valor de cada propiedad diferente del objeto.
 
-El código fuente de este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos un pull request.
-
 ## Sintaxis
 
 ```

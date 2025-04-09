@@ -19,8 +19,6 @@ console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
 // Expected output: "istanbul"
 ```
 
-Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona `https://github.com/mdn/interactive-examples` y envíanos un pull request.
-
 ## Sintaxis
 
 ```

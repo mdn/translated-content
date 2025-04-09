@@ -40,8 +40,6 @@ dd {
 }
 ```
 
-El contenido para este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, por favor clona [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envía la petición de extración (pull request).
-
 <table class="properties">
   <tbody>
     <tr>

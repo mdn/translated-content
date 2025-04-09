@@ -58,8 +58,6 @@ float: inline-end;
 }
 ```
 
-La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si deseas contribuír a los ejemplos interactivos del proyecto, por favor clonar <https://github.com/mdn/interactive-examples> y enviarnos una solicitud de extracción -pull request-.
-
 Un elemento **flotante** es un elemento en el que el {{ Cssxref("computed value", "valor calculado") }} de `float` _no_ es igual a `none`.
 
 Como `float` implica el uso del layout de bloques, este modifica el valor calculado de los valores {{cssxref("display")}} , en algunos casos:

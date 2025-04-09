@@ -52,8 +52,6 @@ overflow-y: auto;
 }
 ```
 
-El código para este ejemplo interactivo está almacenado en un repositorio de GitHub. Si quieres contribuir con el proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíanos un pull request.
-
 ## Sintaxis
 
 ```css

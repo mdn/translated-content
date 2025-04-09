@@ -23,8 +23,6 @@ console.log(sum.apply(null, numbers));
 // Expected output: 6
 ```
 
-La fuente para este ejemplo interactivo está almacenada en el repositorio de GitHub. Si quieres contribuir al proyecto interactivo de ejemplos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de descarga (pull).
-
 ## Sintaxis
 
 Para llamadas de funciones:
