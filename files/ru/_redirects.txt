@@ -1612,7 +1612,6 @@
 /ru/docs/Словарь/origin	/ru/docs/Glossary/Origin
 /ru/docs/Словарь/privileged_code	/ru/docs/Glossary/Privileged_code
 /ru/docs/Словарь/property	/ru/docs/Glossary/Property
-/ru/docs/Словарь/safe	/ru/docs/Glossary/Safe
 /ru/docs/Словарь/time_to_first_byte	/ru/docs/Glossary/Time_to_first_byte
 /ru/docs/Словарь/undefined	/ru/docs/Glossary/Undefined
 /ru/docs/Словарь/Аргумент	/ru/docs/Glossary/Argument
