@@ -50,18 +50,14 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : {{domxref("XMLHttpRequestUpload")}}，代表上传进度。
 - {{domxref("XMLHttpRequest.withCredentials")}}
-  - : 一个{{domxref("Boolean", "布尔值")}}，用来指定跨域 `Access-Control` 请求是否应当带有授权信息，如 cookie 或授权 header 头。
+  - : 一个{{domxref("Boolean", "布尔值")}}，用来指定跨站 `Access-Control` 请求是否应当带有授权信息，如 cookie 或身份验证标头。
 
 ### 非标准属性
 
-- {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
-  - : 一个 `nsIChannel`，对象在执行请求时使用的通道。
-- {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
-  - : 一个布尔值，如果为真，请求将在没有 cookie 和身份验证 header 头的情况下发送。
-- {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
+- `XMLHttpRequest.mozAnon` {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : 一个布尔值，如果为真，请求将在没有 cookie 和身份验证标头的情况下发送。
+- `XMLHttpRequest.mozSystem` {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : 一个布尔值，如果为真，则在请求时不会强制执行同源策略。
-- {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
-  - : 一个布尔值，它指示对象是否是后台服务器端的请求。
 
 ### 事件处理器
 

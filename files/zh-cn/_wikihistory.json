@@ -42983,30 +42983,5 @@
     "contributors": [
       "xilixinluo"
     ]
-  },
-  "conflicting/Web/API/XMLHttpRequest": {
-    "modified": "2019-03-18T21:30:25.736Z",
-    "contributors": [
-      "ssdemajia"
-    ]
-  },
-  "conflicting/Web/API/XMLHttpRequest_0356d59c7395e41177494d76aad88d8a85563317fdfe52e26acf5c12a91c38c8": {
-    "modified": "2020-04-24T04:34:54.490Z",
-    "contributors": [
-      "Andew.D",
-      "tangzhe7"
-    ]
-  },
-  "conflicting/Web/API/XMLHttpRequest_09acd645e7861f7879a2b087341c15b9ace12d3c28dc521c066202ff5438c949": {
-    "modified": "2019-03-18T21:15:22.341Z",
-    "contributors": [
-      "Wallen_Han"
-    ]
-  },
-  "conflicting/Web/API/XMLHttpRequest_a5d9690c9e8f16f1cafb32f1d0b72f640774cdc587611d13d1a30ac253f8d602": {
-    "modified": "2019-03-18T21:22:39.629Z",
-    "contributors": [
-      "hilsion"
-    ]
   }
 }
