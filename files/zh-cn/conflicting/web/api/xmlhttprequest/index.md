@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.mozAnon
-slug: Web/API/XMLHttpRequest/mozAnon
+slug: conflicting/Web/API/XMLHttpRequest
+original_slug: Web/API/XMLHttpRequest/mozAnon
 ---
 
 {{APIRef('XMLHttpRequest')}}

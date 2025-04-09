@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.mozSystem
-slug: Web/API/XMLHttpRequest/mozSystem
+slug: conflicting/Web/API/XMLHttpRequest_0356d59c7395e41177494d76aad88d8a85563317fdfe52e26acf5c12a91c38c8
+original_slug: Web/API/XMLHttpRequest/mozSystem
 ---
 
 {{APIRef('XMLHttpRequest')}}

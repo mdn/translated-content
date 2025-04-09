@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.channel
-slug: Web/API/XMLHttpRequest/channel
+slug: conflicting/Web/API/XMLHttpRequest_09acd645e7861f7879a2b087341c15b9ace12d3c28dc521c066202ff5438c949
+original_slug: Web/API/XMLHttpRequest/channel
 ---
 
 {{APIRef('XMLHttpRequest')}}

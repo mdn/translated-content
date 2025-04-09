@@ -1,6 +1,7 @@
 ---
 title: XMLHttpRequest.mozBackgroundRequest
-slug: Web/API/XMLHttpRequest/mozBackgroundRequest
+slug: conflicting/Web/API/XMLHttpRequest_a5d9690c9e8f16f1cafb32f1d0b72f640774cdc587611d13d1a30ac253f8d602
+original_slug: Web/API/XMLHttpRequest/mozBackgroundRequest
 ---
 
 {{APIRef('XMLHttpRequest')}}
