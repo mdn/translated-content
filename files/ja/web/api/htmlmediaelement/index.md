@@ -2,7 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+  sourceCommit: 515d03ad8572b96e88916888156444626dcba193
 ---
 
 {{APIRef("HTML DOM")}}
@@ -30,11 +30,11 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
   - : `buffered` プロパティにアクセスした時点で、ブラウザーがバッファリングしているメディアソースの範囲を（もしあれば） {{domxref("TimeRanges")}} オブジェクトで返します。
 - {{domxref("HTMLMediaElement.controls")}}
   - : 論理値で、 HTML の [`controls`](/ja/docs/Web/HTML/Reference/Elements/video#controls) 属性を反映し、リソースを制御するユーザーインターフェイス項目を表示するかどうかを示します。
-- {{domxref("HTMLMediaElement.controlsList")}} {{ReadOnlyInline}}
+- {{domxref("HTMLMediaElement.controlsList")}}
   - : ユーザーエージェントが独自のコントロールのセットを表示するたびに、メディア要素に表示するコントロールをユーザーエージェントが選択するのに役立つ {{domxref("DOMTokenList")}} を返します。 `DOMTokenList`は、`nodownload`、`nofullscreen`、`noremoteplayback`の 3 つの値のうち 1 つ以上を取ります。
 - {{domxref("HTMLMediaElement.crossOrigin")}}
   - : 文字列で、このメディア要素の [CORS 設定](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を示します。
-- {{domxref("HTMLMediaElement.currentSrc")}}{{ReadOnlyInline}}
+- {{domxref("HTMLMediaElement.currentSrc")}} {{ReadOnlyInline}}
   - : 文字列で、選択されたメディアリソースの絶対 URL を返します。
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : 倍精度浮動小数点値で、現在の再生時刻を秒単位で示します。メディアの再生が開始されておらず、シークも行われていない場合、この値はメディアの初期再生時刻となります。この値を設定すると、メディアは新しい時刻にシークされます。この時間は、メディアのタイムラインに対して相対的に指定されます。
@@ -81,7 +81,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.src")}}
   - : 使用するメディアリソースの URL を記した HTML の [`src`](/ja/docs/Web/HTML/Reference/Elements/video#src) 属性を反映した文字列です。
 - {{domxref("HTMLMediaElement.srcObject")}}
-  - : 現在の `HTMLMediaElement` で再生する、または再生したメディアを表す {{domxref('MediaStream')}}、または割り当てられていない場合は `null` です。
+  - : この `HTMLMediaElement` に関連付けられたメディアのソースとなるオブジェクト、または割り当てられていない場合は `null` です。
 - {{domxref("HTMLMediaElement.textTracks")}} {{ReadOnlyInline}}
   - : {{domxref('TextTrackList')}} オブジェクトで、この要素に含まれる {{domxref("TextTrack")}} オブジェクトのリストを返します。
 - {{domxref("HTMLMediaElement.videoTracks")}} {{ReadOnlyInline}}
@@ -111,7 +111,7 @@ _このインターフェイスには祖先である {{domxref("HTMLElement")}},
 - {{domxref("HTMLMediaElement.captureStream()")}}
   - : メディアコンテンツのストリームをキャプチャして {{domxref("MediaStream")}} 返します。
 - {{domxref("HTMLMediaElement.canPlayType()")}}
-  - : MIME メディア種別を指定する文字列（潜在的には [`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)も含む）が与えられた場合、 `canPlayType()` は、メディアが再生可能であるべき場合には文字列 `probably` を、メディアが再生されるかどうかを決定するのに十分な情報がない場合には `maybe` を、メディアが再生できない場合には空文字列を返します。
+  - : MIME メディア種別を指定する文字列（潜在的には [`codecs` 引数](/ja/docs/Web/Media/Guides/Formats/codecs_parameter)も含む）が与えられた場合、 `canPlayType()` は、メディアが再生可能であるべき場合には文字列 `probably` を、メディアが再生されるかどうかを決定するのに十分な情報がない場合には `maybe` を、メディアが再生できない場合には空文字列を返します。
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : 低い精度で素早く指定時刻にシークします。
 - {{domxref("HTMLMediaElement.load()")}}
@@ -131,8 +131,8 @@ _このインターフェイスには祖先である {{domxref("HTMLElement")}},
 
 _これらのメソッドは廃止されているため、たとえブラウザーがまだ対応していても使わないでください。_
 
-- {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
-  - : \[説明を入力]
+- {{domxref("HTMLMediaElement.captureStream", "HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
+  - : Firefox の接頭辞が付いた {{domxref("HTMLMediaElement.captureStream()")}} です。詳細は[ブラウザーの互換性](/ja/docs/Web/API/HTMLMediaElement/captureStream#ブラウザーの互換性)を参照してください。
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : \[説明を入力]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -154,6 +154,8 @@ _親である {{domxref("HTMLElement")}} からイベントを継承していま
   - : duration プロパティが更新されたときに発行されます。
 - {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
   - : メディアが空になったときに発行されます。例えば、メディアがすでに読み込まれており（または部分的に読み込まれており）、再読み込みのために {{domxref("HTMLMediaElement.load()")}} メソッドが呼ばれた場合などです。
+- {{domxref("HTMLMediaElement.encrypted_event", 'encrypted')}}
+  - : 初期化データがメディア内にあり、メディアが暗号化されていることを示す場合に発生します。
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
   - : メディア（\<audio> または \<video>）の終端に到達したとき、またはそれ以降のデータがないために再生が停止したときに発行されます。
 - {{domxref("HTMLMediaElement.error_event", 'error')}}
@@ -174,8 +176,6 @@ _親である {{domxref("HTMLElement")}} からイベントを継承していま
   - : ブラウザーがリソースを読み込む際に、定期的に発行されます。
 - {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
   - : 再生速度が変更されたときに発行されます。
-- {{domxref("HTMLMediaElement.resize_event", 'resize ')}}
-  - : `videoWidth` および `videoHeight` プロパティの一方または両方が更新された直後に発行されます。
 - {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
   - : シーク動作が完了したときに発行されます。
 - {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
@@ -190,6 +190,8 @@ _親である {{domxref("HTMLElement")}} からイベントを継承していま
   - : 音量が変更されたときに発行されます。
 - {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
   - : 一時的なデータ不足で再生が停止したときに発行されます。
+- {{domxref("HTMLMediaElement.waitingforkey_event", 'waitingforkey')}}
+  - : キー待ち中に再生が最初にブロックされたときに発生します。
 
 ## 仕様書
 
@@ -211,4 +213,4 @@ _親である {{domxref("HTMLElement")}} からイベントを継承していま
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - 学習領域: [動画および音声コンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [メディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
-- [ウェブコンテンツにおけるメディア対応の問題の扱い](/ja/docs/Web/Media/Formats/Support_issues)
+- [ウェブコンテンツにおけるメディア対応の問題の扱い](/ja/docs/Web/Media/Guides/Formats/Support_issues)
