@@ -3,7 +3,9 @@ title: "<figcaption>: O elemento de legenda da figura"
 slug: Web/HTML/Element/figcaption
 ---
 
-{{HTMLSidebar}}O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.
+{{HTMLSidebar}}
+
+O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.
 
 {{InteractiveExample("HTML Demo: &lt;figcaption&gt;", "tabbed-shorter")}}
 

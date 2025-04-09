@@ -3,7 +3,9 @@ title: position
 slug: Web/CSS/position
 ---
 
-{{CSSRef}}A propriedade **`position`**, encontrada no [CSS](/pt-BR/docs/Web/CSS), define como um elemento pode ser posicionado (renderizado) no documento (página). Essa propriedade (**`position`**) pode ser acompanhada de outras, tais como, {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}}, que determinam como ficará a localização final do objeto, permitindo seu deslocamento, como será apresentado adiante.
+{{CSSRef}}
+
+A propriedade **`position`**, encontrada no [CSS](/pt-BR/docs/Web/CSS), define como um elemento pode ser posicionado (renderizado) no documento (página). Essa propriedade (**`position`**) pode ser acompanhada de outras, tais como, {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}}, que determinam como ficará a localização final do objeto, permitindo seu deslocamento, como será apresentado adiante.
 
 {{InteractiveExample("CSS Demo: position")}}
 
