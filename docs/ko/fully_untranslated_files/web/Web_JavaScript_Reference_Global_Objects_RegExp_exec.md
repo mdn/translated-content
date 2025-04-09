@@ -13,7 +13,19 @@ JavaScript {{jsxref("RegExp")}} 객체는 {{jsxref("RegExp.global", "global")}} 
 
 단순히 `true`/`false`가 필요한 경우 {{jsxref("RegExp.prototype.test()")}} 메서드 혹은 {{jsxref("String.prototype.search()")}}를 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+
+```js interactive-example
+const regex1 = RegExp("foo*", "g");
+const str1 = "table football, foosball";
+let array1;
+
+while ((array1 = regex1.exec(str1)) !== null) {
+  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+  // Expected output: "Found foo. Next starts at 9."
+  // Expected output: "Found foo. Next starts at 19."
+}
+```
 
 ## 구문
 
