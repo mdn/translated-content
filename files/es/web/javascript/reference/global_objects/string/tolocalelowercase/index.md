@@ -3,7 +3,9 @@ title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 
-{{JSRef}}El método **`toLocaleLowerCase()`** retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.
+{{JSRef}}
+
+El método **`toLocaleLowerCase()`** retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.
 
 {{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
 

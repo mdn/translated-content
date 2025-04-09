@@ -3,7 +3,9 @@ title: Sintaxis Spread
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 
-{{jsSidebar("Operators")}}**La sintaxis extendida o spread** **syntax** permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para [Array literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales_array)) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para [literales Tipo Objeto](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales)) son esperados.
+{{jsSidebar("Operators")}}
+
+**La sintaxis extendida o spread** **syntax** permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para [Array literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales_array)) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para [literales Tipo Objeto](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales)) son esperados.
 
 {{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
 
