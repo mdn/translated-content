@@ -24,8 +24,6 @@ console.log(rtf2.format(2, "day"));
 // Expected output: "pasado mañana"
 ```
 
-El código de este ejemplo interactivo está disponible en un repositorio GitHub. Si quieres contribuir a los ejemplos interactivos del proyecto, por favor, clona <https://github.com/mdn/interactive-examples> y manda una Pull Request.
-
 ## Constructor
 
 - {{jsxref("RelativeTimeFormat.RelativeTimeFormat()", "Intl.RelativeTimeFormat.RelativeTimeFormat()")}}
