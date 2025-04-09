@@ -8,9 +8,9 @@ slug: Learn_web_development/Core/Styling_basics/Tables_tasks
 此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)课程中学到的技巧的理解。
 
 > [!NOTE]
-> You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> 你可以在下面的交互式编辑器中尝试解决方案，但是下载代码并使用诸如[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) 之类的在线工具来完成任务可能会更加有所帮助。
 >
-> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+> 如果你遇到了困难，可以在我们的[讨论频道](/zh-CN/docs/MDN/Community/Communication_channels)寻求帮助。
 
 ## 任务
 
@@ -111,19 +111,58 @@ body {
 
 {{EmbedLiveSample("table", "", "400px")}}
 
-> [!NOTE]
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/tables/table-download.html) to work in your own editor or in an online editor.
+<details>
+<summary>Click here to show the solution</summary>
 
-## Assessment or further help
+The below is a sample of how the end result could be achieved, using similar techniques to the lesson. However there are a number of ways that would be perfectly correct, perhaps slightly more verbose.
 
-You can practice these examples in the Interactive Editors mentioned above.
+```css
+table {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  border-collapse: collapse;
+}
 
-If you would like your work assessed, or are stuck and want to ask for help:
+th,
+td {
+  vertical-align: top;
+  padding: 0.3em;
+}
 
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+tr :nth-child(2),
+tr :nth-child(3) {
+  text-align: right;
+}
 
-   - A descriptive title such as "Assessment wanted for tables skill test".
-   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
+tr :nth-child(1),
+tr :nth-child(4) {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+tfoot {
+  border-top: 1px solid #999;
+}
+
+tfoot tr :nth-child(1) {
+  text-align: right;
+}
+
+tfoot tr :nth-child(2) {
+  text-align: left;
+}
+```
+
+For the bonus question, you can make the table layout more predictable by adding {{cssxref("table-layout")}} with a value of [`fixed`](/zh-CN/docs/Web/CSS/table-layout#fixed) and an explicit `width`:
+
+```css
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+```
+
+</details>
