@@ -10,7 +10,6 @@ system:
           - .husky/**
           - .vscode/**
           - .*
-          - front-matter-config.json
 
 l10n-es:
   - changed-files:
