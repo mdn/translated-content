@@ -4133,7 +4133,7 @@
       "chameleonhead"
     ]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Object_basics": {
     "modified": "2020-11-22T07:44:16.812Z",
     "contributors": [
       "kobayashitomoya"
@@ -18314,12 +18314,6 @@
     "contributors": [
       "YujiSoftware",
       "piyo-ko"
-    ]
-  },
-  "Web/API/SVGEvent": {
-    "modified": "2019-03-23T22:09:31.930Z",
-    "contributors": [
-      "nakano348"
     ]
   },
   "Web/API/SVGFontElement": {
@@ -44108,6 +44102,12 @@
       "fscholz",
       "AshfaqHossain",
       "ethertank"
+    ]
+  },
+  "conflicting/Web/API/Event": {
+    "modified": "2019-03-23T22:09:31.930Z",
+    "contributors": [
+      "nakano348"
     ]
   },
   "conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98": {

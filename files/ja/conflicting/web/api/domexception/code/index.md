@@ -1,7 +1,8 @@
 ---
 title: "XPathException: code プロパティ"
 short-title: code
-slug: Web/API/XPathException/code
+slug: conflicting/Web/API/DOMException/code
+original_slug: Web/API/XPathException/code
 l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---

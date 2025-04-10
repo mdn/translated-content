@@ -1,7 +1,8 @@
 ---
 title: "KeyboardEvent: initKeyEvent() メソッド"
 short-title: initKeyEvent()
-slug: Web/API/KeyboardEvent/initKeyEvent
+slug: conflicting/Web/API/KeyboardEvent/KeyboardEvent
+original_slug: Web/API/KeyboardEvent/initKeyEvent
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---

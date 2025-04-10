@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: JSON"
-slug: Learn_web_development/Core/Scripting/Test_your_skills:_JSON
+slug: Learn_web_development/Core/Scripting/Test_your_skills/JSON
+original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_JSON
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
