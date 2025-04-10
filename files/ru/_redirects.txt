@@ -365,7 +365,7 @@
 /ru/docs/Learn/JavaScript/Building_blocks/Image_gallery	/ru/docs/Learn_web_development/Core/Scripting/Image_gallery
 /ru/docs/Learn/JavaScript/Building_blocks/Looping_code	/ru/docs/Learn_web_development/Core/Scripting/Loops
 /ru/docs/Learn/JavaScript/Building_blocks/Return_values	/ru/docs/Learn_web_development/Core/Scripting/Return_values
-/ru/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions	/ru/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions
+/ru/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions	/ru/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions
 /ru/docs/Learn/JavaScript/Building_blocks/conditionals	/ru/docs/Learn_web_development/Core/Scripting/Conditionals
 /ru/docs/Learn/JavaScript/Building_blocks/События	/ru/docs/Learn_web_development/Core/Scripting/Events
 /ru/docs/Learn/JavaScript/Client-side_web_APIs	/ru/docs/Learn_web_development/Extensions/Client-side_APIs
@@ -488,6 +488,7 @@
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 /ru/docs/Learn/Фронтенд_разработчик	https://developer.mozilla.org/en-US/curriculum/
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
+/ru/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions	/ru/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
 /ru/docs/MDN/At_ten	https://developer.mozilla.org/ru/about#our_journey
 /ru/docs/MDN/Community/Contributing/Getting_started	/ru/docs/MDN/Community/Getting_started
