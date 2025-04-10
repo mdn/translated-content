@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 你可以下载代码并放入在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)）中来尝试解决问题。如果出现了错误，会显示在页面中的结果面板上或者浏览器的 JavaScript 控制台中，来帮助你解决问题。
 >
-> 如果你遇到了困难，你可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 条件语句 1
 

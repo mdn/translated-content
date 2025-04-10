@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/CSS_layout/Grid_skills
 > [!NOTE]
 > 你可以在下面的交互式编辑器中试用解决方案，不过，下载代码并使用在线工具 (如 CodePen、jsFiddle 或 Glitch) 处理这些任务可能会更有帮助。
 >
-> 如果你遇到了困难，可以在我们的[讨论频道](/zh-CN/docs/MDN/Community/Communication_channels)寻求帮助。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 网格布局 一
 

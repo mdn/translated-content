@@ -1,27 +1,13 @@
 ---
-title: 笑话生成器
+title: 挑战：笑话生成器
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 
 本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>请读完本章所有小节的内容后再开始这个测验。</td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>
-        测试你对变量、数字、操作符、字符串和数组等 Javascript
-        基本概念的理解程度。
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 起点
 
@@ -191,9 +177,5 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 
 - [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 是 Javascript 的内建函数，可取得与传入小数最接近的整数。
 - 本示例中有三类字符串需要替换。可以多次重复 `replace()` 方法，也可使用正则表达式。例如：`var text = 'I am the biggest lover, I love my love';` 或 `text.replace(/love/g,'like');` 会将所有的“love”替换为“like”。记住，字符串本身是不可修改的！
-
-## 测验
-
-如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 [本节测验的讨论页](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 或者 [Mozilla 聊天室](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 频道取得帮助。要自己先尝试，作弊是不会有收获的！
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
