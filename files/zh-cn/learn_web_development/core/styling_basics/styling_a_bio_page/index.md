@@ -1,37 +1,13 @@
 ---
-title: 运用你的新知识
+title: 挑战：为传记页面添加样式
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 通过在前几节课程中学到的知识，你应该学会了用 CSS 组织一个简单的文本文件，并且在其中添加自己的 CSS 样式。本节中你将实现这一功能。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>
-        <p>
-          基本熟悉使用计算机，<a
-            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-            >基本工作环境的设置</a
-          >，基本的<a
-            href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
-            >文件处理知识</a
-          >，基本的 HTML 知识（在<a
-            href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
-            > HTML 概述</a
-          >中学习）和 CSS 基础（查看本模块其他内容）
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td><p>尝试使用一些 CSS 的新玩法并检验新的知识</p></td>
-    </tr>
-  </tbody>
-</table>
 
 ## 前提
 
@@ -125,21 +101,5 @@ a:hover {
 ```
 
 {{EmbedLiveSample("biog", "", "400px")}}
-
-## 测评或请求帮助
-
-如果你希望测试你的页面，或者你遇到困难想要求助，你可以：
-
-1. 将你的文件提交到可网络共享的编辑器，如 CodePen、jsFiddle 或 Glitch。
-2. 在 MDN 论坛（[MDN Discourse forum](https://discourse.mozilla.org/c/mdn)）发帖请求测评或帮助。发帖时添加“学习”的标签，这样我们能够更容易找到它。你的帖子应包括以下内容：
-
-- 一个描述性标题，例如“CSS 的初步尝试需要测试”。
-- 详细描述你希望我们做些什么——比如，你已经尝试过了，但是卡住了，需要帮助。
-- 你希望测试的例子的在网络编辑器上的链接。这是很好的做法，因为如果不让帮助你的看到你的程序，他们就很难帮助你解决程序的问题。
-- 你的网页的测评页面链接，这样我们就可以找到你所求助的问题。
-
-## 接下来是什么？
-
-恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn_web_development/Core/Styling_basics)中，我们将对一些关键区域进行深入的学习。
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
