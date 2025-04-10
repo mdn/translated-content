@@ -137,7 +137,27 @@ font-variant-numeric: unset;
 
 ### 设置序数形式
 
-{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-example.html", '100%', 600)}}
+```html live-sample___font-variant-numeric-example
+<p class="ordinal">1st, 2nd, 3rd, 4th, 5th</p>
+```
+
+```css live-sample___font-variant-numeric-example
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("https://mdn.github.io/shared-assets/fonts/SourceSansPro-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ordinal {
+  font-family: "Source Sans Pro";
+  font-size: 2rem;
+  font-variant-numeric: ordinal;
+}
+```
+
+{{EmbedLiveSample("font-variant-numeric-example")}}
 
 ## 规范
 

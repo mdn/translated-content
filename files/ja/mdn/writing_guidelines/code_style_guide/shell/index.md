@@ -1,12 +1,10 @@
 ---
-title: シェルプロンプトのサンプルコードを整形するためのガイドライン
+title: シェルプロンプトのサンプルコードの作成ガイドライン
+short-title: シェルスクリプトの例
 slug: MDN/Writing_guidelines/Code_style_guide/Shell
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
 l10n:
-  sourceCommit: 9e804ddae5a375983996218409b80f6bfd71eb82
+  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
-
-{{MDNSidebar}}
 
 以下は MDN Web Docs 用のシェルプロンプトのコード例の書き方に応じたガイドラインです。
 
@@ -28,7 +26,7 @@ cd content
 
 正しいインデント、ホワイトスペース、行の長さに関する意見は常に論争の的となってきました。このようなトピックに関するディスカッションは、コンテンツを作成したり維持したりすることの妨げになります。
 
-MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては [設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json) を参照し、 [Prettier のドキュメント](https://prettier.io/docs/en/index.html)を読んでください。
+MDN Web Docs では、コードスタイルの一貫性を保つために（そしてトピック外の議論を避けるために）、コード整形ツールとして [Prettier](https://prettier.io/) を使用しています。現在のルールについては[設定ファイル](https://github.com/mdn/content/blob/main/.prettierrc.json)を参照し、 [Prettier のドキュメント](https://prettier.io/docs/index.html)を読んでください。
 
 Prettier はすべてのコードを書式化し、スタイルの一貫性を保ちます。とはいえ、従わなければならない追加のルールがいくつかあります。
 

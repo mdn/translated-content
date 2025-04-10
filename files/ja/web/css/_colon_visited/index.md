@@ -47,7 +47,7 @@ a:visited {
 
 ## プライバシー上の制約
 
-プライバシー上の理由から、ブラウザ―はこの擬似クラスを使って適用できるスタイルに厳しい制限をかけています。使い方は以下の通りです。
+プライバシー上の理由から、ブラウザーはこの擬似クラスを使って適用できるスタイルに厳しい制限をかけています。使い方は以下の通りです。
 
 - 利用できる CSS プロパティは、 {{ cssxref("color") }}, {{ cssxref("background-color") }}, {{ cssxref("border-color") }}, {{ cssxref("border-bottom-color") }}, {{ cssxref("border-left-color") }}, {{ cssxref("border-right-color") }}, {{ cssxref("border-top-color") }}, {{ cssxref("column-rule-color") }}, {{ cssxref("outline-color") }}, {{ cssxref("text-decoration-color") }}, {{ cssxref("text-emphasis-color") }} です。
 - 利用できる SVG 属性は {{SVGAttr("fill")}} と {{SVGAttr("stroke")}} です。

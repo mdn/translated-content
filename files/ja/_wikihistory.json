@@ -4133,7 +4133,7 @@
       "chameleonhead"
     ]
   },
-  "Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics": {
+  "Learn_web_development/Core/Scripting/Test_your_skills/Object_basics": {
     "modified": "2020-11-22T07:44:16.812Z",
     "contributors": [
       "kobayashitomoya"
@@ -18316,12 +18316,6 @@
       "piyo-ko"
     ]
   },
-  "Web/API/SVGEvent": {
-    "modified": "2019-03-23T22:09:31.930Z",
-    "contributors": [
-      "nakano348"
-    ]
-  },
   "Web/API/SVGFontElement": {
     "modified": "2020-10-15T21:19:56.994Z",
     "contributors": [
@@ -18581,12 +18575,6 @@
   },
   "Web/API/ServiceWorkerContainer/controllerchange_event": {
     "modified": "2020-10-15T22:29:14.196Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/ServiceWorkerContainer/error_event": {
-    "modified": "2020-10-15T22:29:16.925Z",
     "contributors": [
       "Wind1808"
     ]
@@ -44116,6 +44104,12 @@
       "ethertank"
     ]
   },
+  "conflicting/Web/API/Event": {
+    "modified": "2019-03-23T22:09:31.930Z",
+    "contributors": [
+      "nakano348"
+    ]
+  },
   "conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98": {
     "modified": "2020-02-11T06:17:04.429Z",
     "contributors": [
@@ -44193,6 +44187,12 @@
   },
   "conflicting/Web/API/HTMLMediaElement/error_event": {
     "modified": "2020-10-15T22:18:26.930Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/ServiceWorker/error_event": {
+    "modified": "2020-10-15T22:29:16.925Z",
     "contributors": [
       "Wind1808"
     ]

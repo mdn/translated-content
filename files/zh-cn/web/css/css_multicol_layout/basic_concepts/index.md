@@ -36,7 +36,39 @@ Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所
 
 在以下示例中，我们使用 column-count 属性在 `.container` 元素上创建三列。 `.container` 元素的内容包括其子元素都会分裂成三列。
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
+```html live-sample___column-count
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-count
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+}
+```
+
+{{EmbedLiveSample("column-count", "", "280px")}}
 
 在上面的例子中内容被段落 p 标签的默认样式包裹。因此，每段都有一个间距。你可以看到这个间距引起第一行文本被推了下来。这是因为 multicol 容器创建了一个新的块格式化上下文（BFC），这意味着子元素的间距不会与父容器的间距互相重叠。
 
@@ -48,7 +80,39 @@ Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所
 
 在以下示例中，我们使用 column-width 属性值为 200 px。但最终为了适配容器，列的宽度却大于 200 像素，额外的空间被平均分配了。
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-width.html", '100%', 550)}}
+```html hidden live-sample___column-width
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-width
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 200px;
+}
+```
+
+{{EmbedLiveSample("column-width", "", "280px")}}
 
 ### 同时使用 `column-count` 和 `column-width`
 
@@ -58,7 +122,40 @@ Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所
 
 在下一个例子中，我们使用 column-width 的值为 200px，column-count 的值为 2。即使有超过两列的空间，我们也得到两个。如果没有足够的空间容纳两列 200px，我们得到一个。
 
-{{EmbedGHLiveSample("css-examples/multicol/basics/column-count-width.html", '100%', 550)}}
+```html hidden live-sample___column-count-width
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko. .
+  </p>
+</div>
+```
+
+```css live-sample___column-count-width
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 2;
+  column-width: 200px;
+}
+```
+
+{{EmbedLiveSample("column-count-width", "", "280px")}}
 
 ### `columns` 缩写
 

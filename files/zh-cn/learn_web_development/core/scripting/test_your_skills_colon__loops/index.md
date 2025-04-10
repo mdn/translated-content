@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 你可以下载代码并放入在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)）中来尝试解决问题。
 >
-> 如果你遇到了困难，你可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 实用的 DOM 操作
 
