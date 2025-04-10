@@ -2807,7 +2807,7 @@
 /zh-CN/docs/Web/HTML/Canvas/Canvas教程	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/HTML/Canvas/Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
-/zh-CN/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
+/zh-CN/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/zh-CN/docs/Web/HTML/Global_attributes/spellcheck
 /zh-CN/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/zh-CN/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming
 /zh-CN/docs/Web/HTML/Element/Input/datetime	/zh-CN/docs/Web/HTML/Element/input/datetime-local
 /zh-CN/docs/Web/HTML/Element/Input/月份	/zh-CN/docs/Web/HTML/Element/input/month

@@ -1,5 +1,5 @@
 ---
-title: 技能测试：图片和表格元素
+title: 挑战：图片和表格元素
 slug: Learn_web_development/Core/Styling_basics/Images_tasks
 ---
 
@@ -10,7 +10,7 @@ slug: Learn_web_development/Core/Styling_basics/Images_tasks
 > [!NOTE]
 > 你可以在下面的交互式编辑器中尝试解决方案，但是下载代码并使用诸如[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) 之类的在线工具来完成任务可能会更加有所帮助。
 >
-> 如果你遇到了困难，可以在我们的[讨论频道](/zh-CN/docs/MDN/Community/Communication_channels)寻求帮助。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 任务一
 
