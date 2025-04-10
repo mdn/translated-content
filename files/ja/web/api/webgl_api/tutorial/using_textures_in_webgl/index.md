@@ -249,8 +249,10 @@ const fsSource = `
 
 属性を変更し、ユニフォームを追加したので、それらの位置を調べていく必要があります。
 
+<!-- prettier-ignore-start -->
 > [!NOTE]
 > `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
+<!-- prettier-ignore-end -->
 
 ```js
 const programInfo = {
@@ -304,8 +306,10 @@ setTextureAttribute(gl, buffers, programInfo);
 
 次に、面にマッピングするテクスチャを指定するコードを追加します。
 
+<!-- prettier-ignore-start -->
 > [!NOTE]
 > `drawScene()` 関数の中で、 `gl.uniformMatrix4fv()` を 2 回呼び出した直後に、以下のコードを追加しましょう。
+<!-- prettier-ignore-end -->
 
 ```js
 // テクスチャユニット 0 に影響を与えたいことを WebGL に伝える
