@@ -3280,7 +3280,7 @@
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 /ja/docs/Web/API/InstallEvent/activeWorker	/ja/docs/Web/API/InstallEvent
-/ja/docs/Web/API/KeyboardEvent/initKeyEvent	/ja/docs/conflicting/Web/API/KeyboardEvent/KeyboardEvent
+/ja/docs/Web/API/KeyboardEvent/initKeyEvent	/ja/docs/Web/API/KeyboardEvent/KeyboardEvent
 /ja/docs/Web/API/LocalFileSystem	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/LocalFileSystemSync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/Location/password	/ja/docs/Web/API/Location
@@ -3413,7 +3413,7 @@
 /ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/ja/docs/Web/API/Performance_API/Resource_timing
 /ja/docs/Web/API/Response/error	/ja/docs/Web/API/Response/error_static
 /ja/docs/Web/API/Response/redirect	/ja/docs/Web/API/Response/redirect_static
-/ja/docs/Web/API/SVGEvent	/ja/docs/conflicting/Web/API/Event
+/ja/docs/Web/API/SVGEvent	/ja/docs/Web/API/Event
 /ja/docs/Web/API/SVGMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/SVGRect/The__X__property	/ja/docs/Web/API/SVGRect/x
 /ja/docs/Web/API/Screen/availLeft	/ja/docs/Web/API/ScreenDetailed/availLeft
@@ -3603,8 +3603,8 @@
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onload	/ja/docs/Web/API/XMLHttpRequest/load_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onloadstart	/ja/docs/Web/API/XMLHttpRequest/loadstart_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/ja/docs/Web/API/XMLHttpRequest/progress_event
-/ja/docs/Web/API/XPathException	/ja/docs/conflicting/Web/API/DOMException
-/ja/docs/Web/API/XPathException/code	/ja/docs/conflicting/Web/API/DOMException/code
+/ja/docs/Web/API/XPathException	/ja/docs/Web/API/DOMException
+/ja/docs/Web/API/XPathException/code	/ja/docs/Web/API/DOMException/code
 /ja/docs/Web/API/XRHandedness	/ja/docs/Web/API/XRInputSource/handedness
 /ja/docs/Web/API/XRReferenceSpaceEventInit	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
