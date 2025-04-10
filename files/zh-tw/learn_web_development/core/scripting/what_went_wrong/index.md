@@ -253,6 +253,6 @@ function checkGuess( {
 ## 參見
 
 - 還有許多類型的錯誤未列在此頁，我們正在編輯一份參考資料好詳細解釋了它們的含義——可參閱[JavaScript error reference](/zh-TW/docs/Web/JavaScript/Reference/Errors)。
-- 如果你在閱讀本章節遇到了某些程式錯誤而且不知道如何修正，你可以尋求援助！可以至[Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)發問，或者到[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn)頻道提問。告訴我們你遇到什麼錯誤，我們會盡力幫助你。若能附上你的程式碼會更有幫助。
+- 如果你在閱讀本章節遇到了某些程式錯誤而且不知道如何修正，你可以尋求援助！在[溝通頻道](/zh-CN/docs/MDN/Community/Communication_channels)上尋求協助。告訴我們你遇到什麼錯誤，我們會盡力幫助你。若能附上你的程式碼會更有幫助。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
