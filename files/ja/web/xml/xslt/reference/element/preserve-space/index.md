@@ -1,16 +1,13 @@
 ---
 title: <xsl:preserve-space>
 slug: Web/XML/XSLT/Reference/Element/preserve-space
-original_slug: Web/XSLT/Reference/Element/preserve-space
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
+`<xsl:preserve-space>` 要素は空白を保存する要素をソース文書内で定義します。複数の要素がある場合は、名前を空白文字で区切ります。空白を保持するのが既定の設定なので、この要素が必要になるのは `<xsl:strip-space>` 要素を打ち消すためだけです。
 
-`<xsl:preserve-space>` 要素は空白を保存する要素をソース文書内で定義します。複数の要素がある場合は、名前を空白文字で区切ります。空白を保持するのがデフォルト設定なので、この要素は `<xsl:strip-space>` 要素を打ち消すために使用する必要があります。
-
-### 構文
+## 構文
 
 ```xml
 <xsl:preserve-space elements=LIST-OF-ELEMENT-NAMES />
@@ -33,6 +30,6 @@ l10n:
 
 XSLT, section 3.4
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。
