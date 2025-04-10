@@ -2,7 +2,7 @@
 title: 102 Processing
 slug: Web/HTTP/Reference/Status/102
 l10n:
-  sourceCommit:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
