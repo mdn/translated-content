@@ -34,7 +34,7 @@ console.log(getRoot2());
 
 `Math.SQRT2` 是一个常量，它是 [`Math.sqrt(2)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt) 的性能更优等价写法。
 
-由于 `SQRT2` 是 `Math` 的静态属性，因此你应始终使用 `Math.SQRT2` 来访问它，而不是通过某个你创建的 `Math` 对象来访问（`Math` 并不是一个构造函数）。
+由于 `SQRT2` 是 `Math` 的静态属性，因此你应始终使用 `Math.SQRT2` 来访问它，而不是通过某个你创建的 `Math` 对象来访问（`Math` 不是构造函数）。
 
 ## 示例
 
