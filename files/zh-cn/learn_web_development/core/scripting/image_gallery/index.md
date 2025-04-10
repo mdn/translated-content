@@ -1,24 +1,13 @@
 ---
-title: 图片库
+title: 挑战：图片库
 slug: Learn_web_development/Core/Scripting/Image_gallery
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 我们已经学习了 JavaScript 基础的块结构，下面我们通过编写一个常见的基于 JavaScript 的图片库来测验一下你对于循环、函数、条件和事件的掌握情况。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>请读完本章其他所有小节的内容后再开始这个测验。</td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>测试你对 JavaScript 的循环、函数、条件语句和事件处理的掌握程度。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 起点
 
@@ -27,7 +16,7 @@ slug: Learn_web_development/Core/Scripting/Image_gallery
 另外，你还可以使用类似 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)）这些在线编辑器来完成测验。你可以将 HTML、CSS 和 JavaScript 粘贴到这几个在线编辑器中。如果你使用的在线编辑器没有单独的 JavaScript/CSS 面板，请将它们放入 HTML 页面内联的 `<script>`/`<style>` 元素中。
 
 > [!NOTE]
-> 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)。
+> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 项目简介
 
@@ -105,17 +94,5 @@ overlay.style.backgroundColor = xxx;
 ## 提示
 
 - 完全不需要修改 HTML 和 CSS 文件。
-
-## 评估或进一步帮助
-
-如果你希望对自己的工作成果进行打分评估，或者遇到了困难并希望寻求帮助：
-
-1. 将你完成的内容放到在线、可分享的编辑器，如：[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
-2. 在 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) 中发贴寻求打分评估或帮助。你的贴子需要包含：
-
-   - 一个描述的标题，如：“Assessment wanted for Image gallery”。
-   - 你尝试的详细过程，以及你希望我们能够做什么，例如：你遇到了困难，想要寻求帮助；或希望得到打分评估。
-   - 一个指向用于打分评估或寻求帮助的示例代码的链接（使用上文中提到的任意一种在线的、可分享的编辑器）。这是一种很好的形式——如果别人没法看到你的代码，他们很难对你提供代码上的帮助。
-   - 一个指向实际任务或评估页面的链接，以便我们找到你需要得到帮助的问题。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}

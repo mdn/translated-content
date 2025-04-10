@@ -47,7 +47,6 @@ jobs:
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          HUSKY: 0
 
       - name: Install all yarn packages for mdn/content
         working-directory: ${{ github.workspace }}/mdn/content
@@ -70,7 +69,7 @@ jobs:
           node ./scripts/check-url-locale.js --fix "files/${{ matrix.lang }}"
           ls -d 2>/dev/null "files/${{ matrix.lang }}" "docs/${{ matrix.lang }}" | xargs yarn autocorrect --fix
           yarn prettier -w "**/${{ matrix.lang }}/**/*.md"
-          cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json "${{ github.workspace }}/files/${{ matrix.lang }}"
+          cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/.front-matter-config.json "${{ github.workspace }}/files/${{ matrix.lang }}"
 
       - name: Create PR with only fixable issues
         if: success()
