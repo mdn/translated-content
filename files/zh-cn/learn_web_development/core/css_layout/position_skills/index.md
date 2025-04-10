@@ -8,9 +8,7 @@ slug: Learn_web_development/Core/CSS_layout/Position_skills
 此任务的目的是让你使用在我们的 position 课程中介绍的 CSS {{CSSxRef("position")}}属性以及对应值，你将通过两个小任务来复习刚才课程材料中介绍的不同元素。
 
 > [!NOTE]
-> 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。
->
-> 如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
+> 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 定位练习一
 
