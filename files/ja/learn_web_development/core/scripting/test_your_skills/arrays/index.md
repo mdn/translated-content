@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: 配列"
-slug: Learn_web_development/Core/Scripting/Test_your_skills:_Arrays
+slug: Learn_web_development/Core/Scripting/Test_your_skills/Arrays
+original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_Arrays
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
