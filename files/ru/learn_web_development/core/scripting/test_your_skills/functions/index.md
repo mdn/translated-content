@@ -1,7 +1,6 @@
 ---
 title: "Проверь свои навыки: Функции"
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Functions
-original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_Functions
 ---
 
 {{learnsidebar}}
