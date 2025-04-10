@@ -249,7 +249,8 @@ const fsSource = `
 
 属性を変更し、ユニフォームを追加したので、それらの位置を調べていく必要があります。
 
-> **メモ:** `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
+> [!NOTE]
+> `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
 
 ```js
 const programInfo = {
