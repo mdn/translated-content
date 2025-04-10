@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 
 La méthode **`groupToMap()`** permet de grouper les éléments du tableau appelant selon les valeurs renvoyées par la fonction de test passée en argument. L'objet [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) renvoyé utilise les valeurs uniques fournies par la fonction de test comme clés, et les valeurs correspondantes sont des tableaux avec les éléments du groupe correspondant.
 
-<!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
-
 Cette méthode est notamment utile lorsqu'on veut grouper des éléments associés avec un objet, notamment lorsque cet objet évolue avec le temps. Si cet objet ne varie, vous pouvez à la place utiliser une chaîne de caractères comme clé de regroupement et utiliser la méthode [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy).
 
 ## Syntaxe

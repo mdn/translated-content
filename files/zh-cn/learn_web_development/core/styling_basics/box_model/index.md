@@ -83,7 +83,46 @@ l10n:
 
 - 一个块级段落，内含两个 `<span>` 元素。这些元素通常是 `inline`，但是其中一个元素的类是 `block`，令其被设置为 `display: block`。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1100)}}
+```html live-sample___block
+<p>I am a paragraph. A short one.</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p>
+  I am another paragraph. Some of the <span class="block">words</span> have been
+  wrapped in a <span>span element</span>.
+</p>
+```
+
+```css live-sample___block
+body {
+  font-family: sans-serif;
+}
+p,
+ul {
+  border: 2px solid rebeccapurple;
+  padding: 0.2em;
+}
+
+.block,
+li {
+  border: 2px solid blue;
+  padding: 0.2em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.block {
+  display: block;
+}
+```
+
+{{EmbedLiveSample("block", "", "220px")}}
 
 在下一个示例中，我们可以看到 `inline` 元素是如何表现的。
 
@@ -93,7 +132,46 @@ l10n:
 
 **要在显示模式之间切换，可以将 `display: inline` 更改为 `display: block`，或将 `display: inline-flex` 更改为 `display: flex`。**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1100)}}
+```html live-sample___inline
+<p>
+  I am a paragraph. Some of the
+  <span>words</span> have been wrapped in a <span>span element</span>.
+</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p class="inline">I am a paragraph. A short one.</p>
+<p class="inline">I am another paragraph. Also a short one.</p>
+```
+
+```css live-sample___inline
+body {
+  font-family: sans-serif;
+}
+p,
+ul {
+  border: 2px solid rebeccapurple;
+}
+
+span,
+li {
+  border: 2px solid blue;
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+.inline {
+  display: inline;
+}
+```
+
+{{EmbedLiveSample("inline")}}
 
 目前需要记住的关键是更改 `display` 属性的值可以改变框的外部显示类型是区块还是行内。这将改变它在布局中与其他元素一起显示的方式。
 
@@ -191,7 +269,27 @@ html {
 
 **你能改变第二个盒子的大小（通过添加 CSS 到 `.alternate` 类中) 让它和第一个盒子宽高一样吗？**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1100)}}
+```html live-sample___box-models
+<div class="box">I use the standard box model.</div>
+<div class="box alternate">I use the alternate box model.</div>
+```
+
+```css live-sample___box-models
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 300px;
+  height: 150px;
+}
+
+.alternate {
+  box-sizing: border-box;
+}
+```
+
+{{EmbedLiveSample("box-models", "", "400px")}}
 
 > [!NOTE]
 > 在[这里](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model)查看该任务的解答。
@@ -221,7 +319,32 @@ html {
 
 **在下面的示例中，尝试更改外边距的值，来查看当前元素和其包含元素，在外边距设置为正时如何推开周边元素，以及设置为负时，是如何收缩空间的。**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 800)}}
+```html live-sample___margin
+<div class="container">
+  <div class="box">Change my margin.</div>
+</div>
+```
+
+```css live-sample___margin
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+}
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 10px;
+  height: 100px;
+  /* try changing the margin properties: */
+  margin-top: -40px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  margin-left: 4em;
+}
+```
+
+{{EmbedLiveSample("margin", "", "220px")}}
 
 #### 外边距折叠
 
@@ -235,7 +358,34 @@ html {
 
 **你可以通过将第 2 段的 `margin-top` 设置为 0 来测试它。两个段落之间的可见边距不会改变——它保留了第一个段落 `margin-bottom` 设置的 50 像素。如果将其设置为 -10px，你会发现总边距变成了 40px（从 50px 中减去该负值）。**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
+```html live-sample___margin-collapse
+<div class="container">
+  <p class="one">I am paragraph one.</p>
+  <p class="two">I am paragraph two.</p>
+</div>
+```
+
+```css live-sample___margin-collapse
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+}
+
+p {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 10px;
+}
+.one {
+  margin-bottom: 50px;
+}
+
+.two {
+  margin-top: 30px;
+}
+```
+
+{{EmbedLiveSample("margin-collapse", "", "280px")}}
 
 外边距何时折叠，何时不折叠，由许多规则决定。有关详细信息，请参阅[掌握外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。需要记住的主要一点是，外边距折叠是指在使用外边距创建空间时，如果没有获得预期的空间，就会发生外边距折叠。
 
@@ -277,7 +427,35 @@ html {
 
 在下面的示例中，我们使用了各种简写属性和普通属性来创建边框。请尝试使用不同的属性，以了解它们的工作原理。有关边框属性的 MDN 页面提供了有关不同可用边框样式的信息。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}}
+```html live-sample___border
+<div class="container">
+  <div class="box">Change my borders.</div>
+</div>
+```
+
+```css live-sample___border
+body {
+  font-family: sans-serif;
+}
+.container {
+  margin: 40px;
+  padding: 20px;
+  border-top: 5px dotted green;
+  border-right: 1px solid black;
+  border-bottom: 20px double rgb(23 45 145);
+}
+
+.box {
+  padding: 20px;
+  background-color: lightgray;
+  border: 1px solid #333333;
+  border-top-style: dotted;
+  border-right-width: 20px;
+  border-bottom-color: hotpink;
+}
+```
+
+{{EmbedLiveSample("border", "", "220px")}}
 
 ### 内边距
 
@@ -292,7 +470,33 @@ html {
 
 在下面的示例中，你可以更改类 `.box` 上的内边距值，从而看到文本开始的位置与盒子的关系发生了变化。你还可以更改类 `.container` 的内边距，在容器和盒子之间创建空间。你可以更改任何元素的内边距，在其边框和元素内部的任何内容之间创建空间。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 700)}}
+```html live-sample___padding
+<div class="container">
+  <div class="box">Change my padding.</div>
+</div>
+```
+
+```css live-sample___padding
+body {
+  font-family: sans-serif;
+}
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  padding-left: 4em;
+}
+
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+  padding: 20px;
+}
+```
+
+{{EmbedLiveSample("padding", "", "220px")}}
 
 ## 盒子模型和行内盒子
 
@@ -300,7 +504,32 @@ html {
 
 在下面的示例中，我们在一个段落中使用了 `<span>`，并对其应用了 `width`、`height`、`margin`、`border` 和 `padding`。可以看到，宽度和高度都被忽略了。上下外边距、内边距边框都得到了应用，但不会改变其他内容与行内盒子之间的关系。内边距和边框与段落中的其他文字重叠。左右内边距、外边距和边框会将其他内容从方框中推开。
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 700)}}
+```html live-sample___inline-box-model
+<p>
+  I am a paragraph and this is a <span>span</span> inside that paragraph. A span
+  is an inline element and so does not respect width and height.
+</p>
+```
+
+```css live-sample___inline-box-model
+body {
+  font-family: sans-serif;
+}
+p {
+  border: 2px solid rebeccapurple;
+  width: 200px;
+}
+span {
+  margin: 20px;
+  padding: 20px;
+  width: 80px;
+  height: 150px;
+  background-color: lightblue;
+  border: 2px solid blue;
+}
+```
+
+{{EmbedLiveSample("inline-box-model")}}
 
 ## 使用 display: inline-block
 
@@ -315,7 +544,34 @@ html {
 
 **在下一个示例中，我们将 `display: inline-block` 添加到 `<span>` 元素中。尝试将此更改为 `display: block` 或完全删除此行，以查看显示模型中的差异。**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
+```html live-sample___inline-block
+<p>
+  I am a paragraph and this is a <span>span</span> inside that paragraph. A span
+  is an inline element and so does not respect width and height.
+</p>
+```
+
+```css live-sample___inline-block
+body {
+  font-family: sans-serif;
+}
+p {
+  border: 2px solid rebeccapurple;
+  width: 300px;
+}
+
+span {
+  margin: 20px;
+  padding: 20px;
+  width: 80px;
+  height: 50px;
+  background-color: lightblue;
+  border: 2px solid blue;
+  display: inline-block;
+}
+```
+
+{{EmbedLiveSample("inline-block", "", "240px")}}
 
 当你想通过添加 `padding` 来扩大链接的点击范围时，这个功能就派上用场了。`<a>` 和 `<span>` 一样是一个行内元素；可以使用 `display: inline-block` 在其上设置内边距，使用户更容易点击链接。
 
@@ -323,7 +579,42 @@ html {
 
 **在带有 `.links-list a` 选择器的规则中添加 `display: inline-block`，你就会看到它是如何通过使其他元素考虑内边距来解决这个问题的。**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 700)}}
+```html live-sample___inline-block-nav
+<nav>
+  <ul class="links-list">
+    <li><a href="">Link one</a></li>
+    <li><a href="">Link two</a></li>
+    <li><a href="">Link three</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___inline-block-nav
+ul {
+  font-family: sans-serif;
+  display: flex;
+  list-style: none;
+  border: 1px solid #000;
+}
+
+li {
+  margin: 5px;
+}
+
+.links-list a {
+  background-color: rgb(179 57 81);
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+}
+
+.links-list a:hover {
+  background-color: rgb(66 28 40);
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("inline-block-nav")}}
 
 ## 技能测试！
 
