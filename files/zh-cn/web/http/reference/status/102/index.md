@@ -24,10 +24,10 @@ HTTP **`102 Processing`** [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#�
 
 ## 浏览器兼容性
 
-该功能已被弃用，浏览器会忽略此响应标头。
+该特性已被弃用，浏览器会忽略此响应状态码。
 
 ## 参见
 
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("100")}}
-- [rfc4918 '102 Processing' 移除说明](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)
+- [rfc4918 “102 Processing”移除说明](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)
