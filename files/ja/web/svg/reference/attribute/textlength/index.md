@@ -1,14 +1,11 @@
 ---
 title: textLength
 slug: Web/SVG/Reference/Attribute/textLength
-original_slug: Web/SVG/Attribute/textLength
 l10n:
-  sourceCommit: 01b8471b84e1d157cbddbb3ffaf560a86b082070
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`textLength`** 属性は、 SVGの {{SVGElement("text")}} 要素と {{SVGElement("tspan")}} 要素で利用でき、テキストが描かれる空間の幅を指定することができます。 {{glossary("User agent", "ユーザーエージェント")}}は、 {{SVGAttr("lengthAdjust")}} 属性で指定された方法を使用して、テキストがその長さよりも広がらないようにします。既定では、文字間の間隔のみが調整されますが、 `lengthAdjust` を変更すると、文字サイズも調整できます。
+**`textLength`** 属性は、 SVGの {{SVGElement("text")}} 要素と {{SVGElement("tspan")}} 要素で利用でき、テキストが描かれる空間の幅を指定することができます。 {{glossary("user agent", "ユーザーエージェント")}}は、 {{SVGAttr("lengthAdjust")}} 属性で指定された方法を使用して、テキストがその長さよりも広がらないようにします。既定では、文字間の間隔のみが調整されますが、 `lengthAdjust` を変更すると、文字サイズも調整できます。
 
 `textLength` を使用することで、ウェブフォントの読み込みに失敗した場合（または読み込まれていない場合）を含め、さまざまな条件に関わらず、 SVG テキストが同じ幅で表示されるように保証することができます。
 
@@ -153,7 +150,7 @@ widthSlider.addEventListener(
 widthSlider.dispatchEvent(new Event("input"));
 ```
 
-要素参照を取得した後、スライダーコントロールで {{domxref("EventTarget.addEventListener", "addEventListener()")}} を呼び出して {{domxref("EventTarget.addEventListener", "イベントリスナー", "", 1)}} を確立し、発生する {{domxref("Element/input_event", "input")}} イベントを受信できるようにします。これらのイベントは、ユーザーがスライダーの移動を停止していなくても、スライダーの値が変更されるたびに送信されるので、テキストの幅をレスポンスよく調整できます。
+要素参照を取得した後、スライダーコントロールで{{domxref("EventTarget.addEventListener", "イベントリスナー", "", 1)}}を {{domxref("EventTarget.addEventListener", "addEventListener()")}} を呼び出して確立し、発生する {{domxref("Element/input_event", "input")}} イベントを受信できるようにします。これらのイベントは、ユーザーがスライダーの移動を停止していなくても、スライダーの値が変更されるたびに送信されるので、テキストの幅をレスポンスよく調整できます。
 
 `"input"` イベントが発生すると、 `newValueSpecifiedUnits()` を呼び出して `textLength` の値をスライダーの新しい値に設定します。この際、 `SVGLength` インターフェイスの `SVG_LENGTHTYPE_PX` 単位型を使用して、値がピクセル単位で表されていることを示します。　`textLength` を掘り下げて、その `baseVal` プロパティを取得する必要があることに注意してください。 `textLength` は {{domxref("SVGLength")}} オブジェクトとして格納されているため、単純な数値として扱うことはできません。
 

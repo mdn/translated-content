@@ -54,7 +54,7 @@ slug: Web/Security
 - [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
   - : **同源策略**限制了一个{{Glossary("origin","源")}}中加载的文档或脚本与其他源中的资源交互的方式。这是一种用来隔离潜在恶意文档的关键安全机制。
 - [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)
-  - : **子资源完整性**（SRI）是一种安全功能，允许浏览器验证所获取的文件（比如，从一个{{Glossary("CDN","内容分发网络")}}中）没有遭受恶意修改。它的工作原理是允许你提供一个加密哈希值，目标文件必须匹配这个值。
+  - : **子资源完整性**（SRI）是一种安全功能，允许浏览器验证所获取的文件（比如，从一个{{Glossary("CDN","内容分发网络")}}中）没有遭受恶意修改。它的工作原理是允许你提供一个密码散列值，目标文件必须匹配这个值。
 - [HTTP Access-Control-Allow-Origin](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** 响应头表明响应是否可以与来自给定{{glossary("origin","来源")}}的请求代码共享。
 - [HTTP X-Content-Type-Options](/zh-CN/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)
