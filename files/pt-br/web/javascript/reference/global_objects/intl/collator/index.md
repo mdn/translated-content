@@ -24,8 +24,6 @@ console.log(
 // Expected output: Array ["a", "ä", "Z", "z"]
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Construtor
 
 - {{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}

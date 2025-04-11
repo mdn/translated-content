@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Statements/for
 
 A instrução `for` cria um loop que consiste em três expressões opcionais, dentro de parênteses e separadas por ponto e vírgula, seguidas por uma declaração ou uma sequência de declarações executadas em sequência.
 
-A fonte desse exemplo interativo está armazenada em um repositório do GitHub. Se você gostaria de contribuir com os projetos de exemplos interativos, por favor clone <https://github.com/mdn/interactive-examples> e nos envie um pull request (requisição para puxar).
-
 ## Sintaxe
 
 ```
