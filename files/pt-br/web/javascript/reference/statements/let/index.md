@@ -64,7 +64,7 @@ Em comparação a declaração [`var`](/pt-BR/docs/Web/JavaScript/Reference/Stat
 - Variáveis `let` só podem ser acessadas após sua declaração (consulte [zona morta temporal](#zona_morta_temporal_zmt)). Por esse motivo, declarações `let` são comumente referidas como [não-içadas](/pt-BR/docs/Glossary/Hoisting) (hoisting).
 - Variáveis `let` não criam propriedades na propriedade global [globalThis](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/globalThis) quando declaradas no nível superior de um script.
 - Variáveis `let` não podem ser [redeclaradas](#redeclarações) por qualquer outra declaração no mesmo escopo.
-- `let` inicia [_declarações_, não _instruções_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). Isso significa que não é possível utilizar `let` sozinho como corpo de um bloco (o que faz sentido já que não há nenhuma maneira de acessar a variável).
+- `let` inicia [_declarações_, não _instruções_](/pt-BR/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). Isso significa que não é possível utilizar `let` sozinho como corpo de um bloco (o que faz sentido já que não há nenhuma maneira de acessar a variável).
 
 ```js-nolint example-bad
 if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
