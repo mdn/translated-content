@@ -51,7 +51,7 @@ O escopo de uma variável declarada com `let` é aquele encapsulado por chaves q
 - Corpo de uma instrução [`try...catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch)
 - Corpo de [uma das instruções `for`](/pt-BR/docs/Web/JavaScript/Reference/Statements#iterações), se `let` estiver presente no cabeçalho da declaração
 - Corpo da função
-- [Bloco de inicialização estática](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- [Bloco de inicialização estática](/pt-BR/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
 Ou, se nenhum dos anteriores for aplicável:
 
