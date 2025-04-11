@@ -11,9 +11,10 @@ slug: Web/HTML/Reference/Elements/abbr
 
 ```html interactive-example
 <p>
-  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language).
-  Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer
-  separate. This is called "separation of concerns."
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
 </p>
 ```
 
@@ -24,15 +25,15 @@ abbr {
 }
 ```
 
-Статья _[Как помечать аббревиатуры и сделать их потянутыми](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting#%D0%90%D0%B1%D0%B1%D1%80%D0%B5%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D1%8B)_ поможет понять как использовать `<abbr>` и связанные элементы.
+Статья _[Как помечать аббревиатуры и сделать их потянутыми](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2*HTML/Advanced_text_formatting#%D0%90%D0%B1%D0%B1%D1%80%D0%B5%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D1%8B)* поможет понять как использовать `<abbr>` и связанные элементы.
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент), явный контент |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                            | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент)                                                                                              |
-| Пропуск тегов                                                    | Нет, открывающий и закрывающий теги обязательны.                                                                                                                              |
-| Допустимые родители                                              | Любые, поддерживающие [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент).                                                                       |
-| Допустимые ARIA-роли                                             | Любые                                                                                                                                                                         |
-| DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                    |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                      | [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент)                                                                                        |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                        |
+| Допустимые родители                                        | Любые, поддерживающие [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories/#Фразовый_контент).                                                                 |
+| Допустимые ARIA-роли                                       | Любые                                                                                                                                                                   |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                              |
 
 ## Атрибуты
 
