@@ -112,7 +112,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
     > Se considera un atributo heredado y se redefine como `allow="payment"`.
 
 - `csp` {{experimental_inline}}
-  - : Una [Politica de Seguridad del Contenido](/es/docs/Web/HTTP/CSP) aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.
+  - : Una [Politica de Seguridad del Contenido](/es/docs/Web/HTTP/Guides/CSP) aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.
 - `height`
   - : Indica la altura del frame en HTML5 en píxeles CSS, o en HTML4.01 en píxeles o como un porcentaje.
 - `importance` {{experimental_inline}}

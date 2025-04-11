@@ -34,8 +34,6 @@ time {
 }
 ```
 
-La fuente de este ejemplo interactivo está almacenada en un repositorio de GitHub. Si desea contribuir al projecto, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe su solicitud de extracción (pull request).
-
 <table class="properties">
   <tbody>
     <tr>

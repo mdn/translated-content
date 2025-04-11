@@ -41,8 +41,6 @@ dd {
 }
 ```
 
-La fuente para este ejemplo interactivo esta almacenado en un repositorio GitHub. Si desea contribuir al poryecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíe una petición de extracción (pull request).
-
 <table class="properties">
   <tbody>
     <tr>

@@ -1,12 +1,9 @@
 ---
 title: scale
 slug: Web/SVG/Reference/Attribute/scale
-original_slug: Web/SVG/Attribute/scale
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`scale`** 属性は、{{SVGElement("feDisplacementMap")}} フィルタープリミティブで使用する変倍率を定義します。この量は {{SVGElement("filter")}} 要素の {{SVGAttr("primitiveUnits")}} 属性で設定された座標系で表現されます。
 
@@ -43,9 +40,13 @@ svg {
     <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" />
   </filter>
 
-  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter);""/>
-  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter2);
-  transform: translateX(240px);""/>
+  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter);" />
+  <circle
+    cx="100"
+    cy="100"
+    r="80"
+    style="filter: url(#displacementFilter2);
+  transform: translateX(240px);" />
 </svg>
 ```
 
@@ -61,7 +62,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>None</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>

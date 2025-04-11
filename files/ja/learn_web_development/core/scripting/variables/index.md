@@ -428,7 +428,7 @@ _可能であれば `const` を使用し、必要ならば `let` を使用する
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 変数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 変数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables)を見てください。
 
 ## まとめ
 

@@ -6,8 +6,6 @@ original_slug: Web/HTML/Element/datalist
 
 El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElement("option")}} que representan los valores disponibles para otros controles.
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, copia <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
-
 <table class="properties">
   <tbody>
     <tr>
