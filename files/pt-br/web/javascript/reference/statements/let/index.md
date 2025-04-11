@@ -75,7 +75,7 @@ Note que `let` pode ser utilizado como identificador de uma declaração `var` o
 
 Diversas guias de estilo (incluindo a [MDN](/en-US/docs/MDN/Writing_guidelines/Code_style_guide/JavaScript#variable_declarations)) recomenda o uso de [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const) no lugar de `let` em qualquer ocasião onde a variável não é reatribuída dentro do seu escopo. Isso torna clara a intenção de que o tipo da variável (ou seu valor, no caso de um primitivo) nunca deve mudar. Outros podem preferir `let` para não primitivos que são mutados.
 
-A lista que segue a palavra-chave `let` é chamada de [_lista de vinculação_](/en-US/docs/Glossary/Binding) e é separada por vírgulas, sendo que as vírgulas _não são_ [operadores de vírgula](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_operator) e os sinais `=` _não são_ [operadores de atribuição](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Os inicializadores de variáveis posteriores podem se referir a variáveis anteriores na lista.
+A lista que segue a palavra-chave `let` é chamada de [_lista de vinculação_](/pt-BR/docs/Glossary/Binding) e é separada por vírgulas, sendo que as vírgulas _não são_ [operadores de vírgula](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_operator) e os sinais `=` _não são_ [operadores de atribuição](/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment). Os inicializadores de variáveis posteriores podem se referir a variáveis anteriores na lista.
 
 ### Zona morta temporal (ZMT)
 
