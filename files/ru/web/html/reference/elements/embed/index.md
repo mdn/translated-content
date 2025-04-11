@@ -1,7 +1,6 @@
 ---
 title: "<embed>: элемент для встраивания внешнего содержимого"
 slug: Web/HTML/Reference/Elements/embed
-original_slug: Web/HTML/Element/embed
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: "<dl>: Элемент списка описаний"
 slug: Web/HTML/Reference/Elements/dl
-original_slug: Web/HTML/Element/dl
 ---
 
 {{HTMLSidebar}}

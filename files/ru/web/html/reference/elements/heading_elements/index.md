@@ -1,7 +1,6 @@
 ---
 title: "<h1>–<h6>: заголовки разделов"
 slug: Web/HTML/Reference/Elements/Heading_Elements
-original_slug: Web/HTML/Element/Heading_Elements
 l10n:
   sourceCommit: 2e2264afa75514b2eedcbd20f0d29c2334f99672
 ---

@@ -1,7 +1,6 @@
 ---
 title: "<figcaption>: Элемент подписи иллюстрации"
 slug: Web/HTML/Reference/Elements/figcaption
-original_slug: Web/HTML/Element/figcaption
 ---
 
 {{HTMLSidebar}}

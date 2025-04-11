@@ -1,7 +1,6 @@
 ---
 title: "<div>: базовый блочный элемент"
 slug: Web/HTML/Reference/Elements/div
-original_slug: Web/HTML/Element/div
 ---
 
 {{HTMLSidebar}}

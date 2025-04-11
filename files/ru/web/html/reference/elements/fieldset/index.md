@@ -1,7 +1,6 @@
 ---
 title: "<fieldset>: The Field Set element"
 slug: Web/HTML/Reference/Elements/fieldset
-original_slug: Web/HTML/Element/fieldset
 ---
 
 {{HTMLSidebar}}

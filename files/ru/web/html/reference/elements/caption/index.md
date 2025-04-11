@@ -1,7 +1,6 @@
 ---
 title: "<caption>: The Table Caption element"
 slug: Web/HTML/Reference/Elements/caption
-original_slug: Web/HTML/Element/caption
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <cite>
 slug: Web/HTML/Reference/Elements/cite
-original_slug: Web/HTML/Element/cite
 ---
 
 {{HTMLSidebar}}

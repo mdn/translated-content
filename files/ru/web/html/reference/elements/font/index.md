@@ -1,7 +1,6 @@
 ---
 title: <font>
 slug: Web/HTML/Reference/Elements/font
-original_slug: Web/HTML/Element/font
 l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---

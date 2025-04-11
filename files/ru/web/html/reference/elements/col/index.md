@@ -1,7 +1,6 @@
 ---
 title: "<col>: элемент столбца таблицы"
 slug: Web/HTML/Reference/Elements/col
-original_slug: Web/HTML/Element/col
 l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---

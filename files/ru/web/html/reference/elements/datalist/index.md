@@ -1,7 +1,6 @@
 ---
 title: <datalist>
 slug: Web/HTML/Reference/Elements/datalist
-original_slug: Web/HTML/Element/datalist
 ---
 
 {{HTMLSidebar}}

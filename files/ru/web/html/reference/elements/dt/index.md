@@ -1,7 +1,6 @@
 ---
 title: "<dt>: Термин для определения"
 slug: Web/HTML/Reference/Elements/dt
-original_slug: Web/HTML/Element/dt
 ---
 
 {{HTMLSidebar}}

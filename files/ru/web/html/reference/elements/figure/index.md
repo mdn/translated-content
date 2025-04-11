@@ -1,7 +1,6 @@
 ---
 title: "<figure>: Элемент иллюстрации с необязательной подписью"
 slug: Web/HTML/Reference/Elements/figure
-original_slug: Web/HTML/Element/figure
 ---
 
 {{HTMLSidebar}}

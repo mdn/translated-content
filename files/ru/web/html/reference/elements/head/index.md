@@ -1,7 +1,6 @@
 ---
 title: "<head>: элемент метаданных документа"
 slug: Web/HTML/Reference/Elements/head
-original_slug: Web/HTML/Element/head
 l10n:
   sourceCommit: 2dc9e66061f63a06320f5c1c554a238e1b25c369
 ---

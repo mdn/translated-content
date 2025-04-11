@@ -1,7 +1,6 @@
 ---
 title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
-original_slug: Web/HTML/Element/dialog
 ---
 
 {{HTMLSidebar}}

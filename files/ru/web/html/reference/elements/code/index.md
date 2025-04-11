@@ -1,7 +1,6 @@
 ---
 title: "<code>: элемент отображения кода"
 slug: Web/HTML/Reference/Elements/code
-original_slug: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}

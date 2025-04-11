@@ -1,7 +1,6 @@
 ---
 title: "<dfn>: Элемент определения"
 slug: Web/HTML/Reference/Elements/dfn
-original_slug: Web/HTML/Element/dfn
 ---
 
 {{HTMLSidebar}}

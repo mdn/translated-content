@@ -1,7 +1,6 @@
 ---
 title: <footer>
 slug: Web/HTML/Reference/Elements/footer
-original_slug: Web/HTML/Element/footer
 ---
 
 {{HTMLSidebar}}

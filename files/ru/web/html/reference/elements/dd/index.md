@@ -1,7 +1,6 @@
 ---
 title: "<dd>: Элемент описания определения"
 slug: Web/HTML/Reference/Elements/dd
-original_slug: Web/HTML/Element/dd
 ---
 
 {{HTMLSidebar}}

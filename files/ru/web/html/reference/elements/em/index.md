@@ -1,7 +1,6 @@
 ---
 title: "<em>: Элемент акцентирования"
 slug: Web/HTML/Reference/Elements/em
-original_slug: Web/HTML/Element/em
 ---
 
 {{HTMLSidebar}}

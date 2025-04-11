@@ -1,7 +1,6 @@
 ---
 title: "<del>: The Deleted Text element"
 slug: Web/HTML/Reference/Elements/del
-original_slug: Web/HTML/Element/del
 ---
 
 {{HTMLSidebar}}
