@@ -1,7 +1,6 @@
 ---
 title: Категории контента
 slug: Web/HTML/Guides/Content_categories
-original_slug: Web/HTML/Content_categories
 ---
 
 {{HTMLSidebar}}

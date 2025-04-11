@@ -1,7 +1,6 @@
 ---
 title: Валидация ограничений
 slug: Web/HTML/Guides/Constraint_validation
-original_slug: Web/HTML/Constraint_validation
 ---
 
 {{HTMLSidebar}}

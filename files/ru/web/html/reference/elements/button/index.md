@@ -1,7 +1,6 @@
 ---
 title: <button> - элемент кнопки
 slug: Web/HTML/Reference/Elements/button
-original_slug: Web/HTML/Element/button
 ---
 
 {{HTMLSidebar}}

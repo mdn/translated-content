@@ -1,7 +1,6 @@
 ---
 title: Справочная информация по HTML атрибутам
 slug: Web/HTML/Reference/Attributes
-original_slug: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar("Attributes")}}

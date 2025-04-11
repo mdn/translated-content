@@ -1,7 +1,6 @@
 ---
 title: <b> - жирное выделение текста
 slug: Web/HTML/Reference/Elements/b
-original_slug: Web/HTML/Element/b
 ---
 
 {{HTMLSidebar}}

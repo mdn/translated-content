@@ -1,7 +1,6 @@
 ---
 title: <br> - элемент переноса строки
 slug: Web/HTML/Reference/Elements/br
-original_slug: Web/HTML/Element/br
 ---
 
 {{HTMLSidebar}}

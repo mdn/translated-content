@@ -1,7 +1,6 @@
 ---
 title: <aside>
 slug: Web/HTML/Reference/Elements/aside
-original_slug: Web/HTML/Element/aside
 ---
 
 {{HTMLSidebar}}

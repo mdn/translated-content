@@ -1,7 +1,6 @@
 ---
 title: <base>
 slug: Web/HTML/Reference/Elements/base
-original_slug: Web/HTML/Element/base
 l10n:
   sourceCommit: 1a48b6abdd27e168c78edcf04a7a9f6a8e0fdc15
 ---

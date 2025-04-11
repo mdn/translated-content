@@ -1,7 +1,6 @@
 ---
 title: <area>
 slug: Web/HTML/Reference/Elements/area
-original_slug: Web/HTML/Element/area
 ---
 
 {{HTMLSidebar}}

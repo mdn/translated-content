@@ -1,7 +1,6 @@
 ---
 title: <body>
 slug: Web/HTML/Reference/Elements/body
-original_slug: Web/HTML/Element/body
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Адаптивные изображения
 slug: Web/HTML/Guides/Responsive_images
-original_slug: Web/HTML/Responsive_images
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}

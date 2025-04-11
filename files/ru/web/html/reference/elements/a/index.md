@@ -1,7 +1,6 @@
 ---
 title: <a> - элемент ссылки
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
 ---
 
 {{HTMLSidebar}}

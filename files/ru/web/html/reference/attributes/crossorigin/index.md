@@ -1,7 +1,6 @@
 ---
 title: CORS settings attributes
 slug: Web/HTML/Reference/Attributes/crossorigin
-original_slug: Web/HTML/Attributes/crossorigin
 ---
 
 {{HTMLSidebar}}

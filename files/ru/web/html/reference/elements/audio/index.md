@@ -1,7 +1,6 @@
 ---
 title: <audio> - элемент добавления аудио на страницу
 slug: Web/HTML/Reference/Elements/audio
-original_slug: Web/HTML/Element/audio
 ---
 
 {{HTMLSidebar}}

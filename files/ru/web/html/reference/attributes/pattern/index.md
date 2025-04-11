@@ -1,7 +1,6 @@
 ---
 title: "HTML attribute: pattern"
 slug: Web/HTML/Reference/Attributes/pattern
-original_slug: Web/HTML/Attributes/pattern
 ---
 
 {{HTMLSidebar}}

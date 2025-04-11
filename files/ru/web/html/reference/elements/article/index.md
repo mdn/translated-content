@@ -1,7 +1,6 @@
 ---
 title: <article>
 slug: Web/HTML/Reference/Elements/article
-original_slug: Web/HTML/Element/article
 ---
 
 {{HTMLSidebar}}

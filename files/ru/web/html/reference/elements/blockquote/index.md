@@ -1,7 +1,6 @@
 ---
 title: <blockquote> - элемент цитаты
 slug: Web/HTML/Reference/Elements/blockquote
-original_slug: Web/HTML/Element/blockquote
 ---
 
 {{HTMLSidebar}}

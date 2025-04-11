@@ -1,7 +1,6 @@
 ---
 title: <address> - элемент для контактных адресов
 slug: Web/HTML/Reference/Elements/address
-original_slug: Web/HTML/Element/address
 ---
 
 {{HTMLSidebar}}

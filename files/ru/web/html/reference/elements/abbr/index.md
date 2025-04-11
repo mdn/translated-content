@@ -1,7 +1,6 @@
 ---
 title: "<abbr>: Элемент Аббревиатура"
 slug: Web/HTML/Reference/Elements/abbr
-original_slug: Web/HTML/Element/abbr
 ---
 
 {{HTMLSidebar}}

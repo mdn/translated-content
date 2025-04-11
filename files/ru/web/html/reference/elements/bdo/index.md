@@ -1,7 +1,6 @@
 ---
 title: "<bdo>: Элемент переопределения направления текста"
 slug: Web/HTML/Reference/Elements/bdo
-original_slug: Web/HTML/Element/bdo
 ---
 
 {{HTMLSidebar}}

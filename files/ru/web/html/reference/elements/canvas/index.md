@@ -1,7 +1,6 @@
 ---
 title: <canvas>
 slug: Web/HTML/Reference/Elements/canvas
-original_slug: Web/HTML/Element/canvas
 ---
 
 {{HTMLSidebar}}

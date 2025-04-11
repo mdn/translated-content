@@ -1,7 +1,6 @@
 ---
 title: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
 slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
-original_slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 
 {{HTMLSidebar}}

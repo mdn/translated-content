@@ -1,7 +1,6 @@
 ---
 title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
-original_slug: Web/HTML/Element/bdi
 ---
 
 {{HTMLSidebar}}
