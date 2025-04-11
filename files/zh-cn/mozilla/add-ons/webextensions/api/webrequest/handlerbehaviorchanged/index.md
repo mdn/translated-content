@@ -38,7 +38,7 @@ let flushingCache = browser.webRequest.handlerBehaviorChanged()
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当操作完成时该 promise 将不以任何参数兑现。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当操作完成时该 promise 将不带参数地兑现。
 
 ## 浏览器兼容性
 
