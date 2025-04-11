@@ -30,4 +30,4 @@ HTTP **`102 Processing`** [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#�
 
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("100")}}
-- [rfc4918 “102 Processing”移除说明](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)
+- [rfc4918“102 Processing”移除说明](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)
