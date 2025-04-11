@@ -34,7 +34,6 @@ Transfer-Encoding: chunked
 Transfer-Encoding: compress
 Transfer-Encoding: deflate
 Transfer-Encoding: gzip
-Transfer-Encoding: identity
 
 // Diversos valores podem ser listados, separados por vírgula
 Transfer-Encoding: gzip, chunked
@@ -51,8 +50,6 @@ Transfer-Encoding: gzip, chunked
   - : Usando a estrutura [zlib](http://en.wikipedia.org/wiki/Zlib) (definida na [RFC 1950](https://tools.ietf.org/html/rfc1950)), com o algoritmo de compressão [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) (definido em [RFC 1951](https://tools.ietf.org/html/rfc1952)).
 - `gzip`
   - : O formato usando a [codificação Lempel-Ziv](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77), com CRC 32-bit. Este é originalmente o formato do programa UNIX _gzip_. O padrão HTTP/1.1 também recomenda que os servidores que suportem esta codificação de conteúdo devem reconhecer `x-gzip` como um pseudônimo, para propósitos de compatibilidade.
-- `identity`
-  - : Indica a função de identidade (i.e. sem compressão, nem modificação). Este _token_, exceto se explicitamente especificado, é sempre considerado aceitável.
 
 ## Exemplos
 
