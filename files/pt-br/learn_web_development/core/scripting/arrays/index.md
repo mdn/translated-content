@@ -30,7 +30,7 @@ Arrays são geralmente descritas como "lista de objetos"; elas são basicamente 
 
 Se nós não tivessemos arrays, teríamos que armazenar cada item em uma variável separada, então chamar o código para mostrar e adicionar separadamente cada item. Isto seria muito mais longo de escrever, menos eficiente e mais suscetível a erros. Se nós temos 10 itens para adicionar na fatura, isto é ruim o bastante, mas e se fosse 100 itens ou 1000? Nós vamos retornar a este exemplo mais tarde neste artigo.
 
-Como no artigo anterior, vamos aprender o básico de arrays introduzindo com alguns exemplos dentro de um console JavaScript. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
+Como no artigo anterior, vamos aprender o básico de arrays introduzindo com alguns exemplos dentro de um console JavaScript. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) se preferir).
 
 ```html hidden
 <!doctype html>
@@ -159,7 +159,7 @@ Arrays são contruídas de colchetes, os quais contém uma lista de itens separa
 
 ### Acessando e modificando itens de uma array
 
-Você pode acessar itens individuais em uma array usando a notação de colchetes, da mesma forma que você [acessa as letras em uma string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+Você pode acessar itens individuais em uma array usando a notação de colchetes, da mesma forma que você [acessa as letras em uma string](/pt-BR/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Digite o seguinte no seu console:
 
@@ -328,10 +328,10 @@ Antes de tudo, para adicionar ou remover um item no final de uma array, nós pod
 Vamos retornar ao exemplo que descrevemos antes — imprimindo nomes de produtos e preços em uma fatura, então totalizando os preços e imprindindo eles ao final. No exemplo editável abaixo há comentários contendo números — cada um deles marcam um lugar onde você tem que acidionar algo ao código. Eles são como segue:
 
 1. Abaixo do comentário `// number 1` está um número de strings, cada uma contendo um nome de produto e preço separado por uma vírgula. Nós gostaríamos que você colocasse eles dentro de uma array e armazenasse eles na array chamada `products`.
-2. Na mesma linha o comentário `// number 2` está no começo de um laço for. Nesta linha nós temos `i<=0`, o qual é um teste condicional que faz o [laço for](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash#loops) parar imediatamente, porque está dizendo "pare quando `i` for menor ou igual a 0", e `i` começa em 0. Nós gostaríamos de substituir isto com um teste condicional que termina o laço quando o `i`for menor que o tamanho da array `products`.
-3. Logo abaixo do comentário `// number 3` nós queremos que você escreva uma linha de código que divide o item da array (`name:price`) em dois itens separados, um contendo somente o nome e outro só com o preço. Se você não tem certeza de como fazer isto, consulte o artigo [Métodos úteis em string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)para alguma ajuda, ou ainda melhor, veja a seção [Converting between strings and arrays](#converting_between_strings_and_arrays) neste artigo.
-4. Como parte da linha de código acima, você também quer converter o preço de string para número. Se você não se lembra como fazer isto, veja o [artigo primeiras strings](/pt-BR/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
-5. Há uma variável chamada `total` que é criada e atribuída o valor 0 no começo do código. Dentro do loop (abaixo `// number 4`) nós queremos que você escreva uma linha que adicione o preço atual ao total em cada iteração do laço, então ao final do código o preço total é impresso na fatura. Você pode precisar de um [operador aritiméticos](/pt-BR/docs/Learn/JavaScript/First_steps/Math#assignment_operators) para isto.
+2. Na mesma linha o comentário `// number 2` está no começo de um laço for. Nesta linha nós temos `i<=0`, o qual é um teste condicional que faz o [laço for](/pt-BR/docs/Learn_web_development/Core/Scripting/A_first_splash#loops) parar imediatamente, porque está dizendo "pare quando `i` for menor ou igual a 0", e `i` começa em 0. Nós gostaríamos de substituir isto com um teste condicional que termina o laço quando o `i`for menor que o tamanho da array `products`.
+3. Logo abaixo do comentário `// number 3` nós queremos que você escreva uma linha de código que divide o item da array (`name:price`) em dois itens separados, um contendo somente o nome e outro só com o preço. Se você não tem certeza de como fazer isto, consulte o artigo [Métodos úteis em string](/pt-BR/docs/Learn_web_development/Core/Scripting/Useful_string_methods)para alguma ajuda, ou ainda melhor, veja a seção [Converting between strings and arrays](#converting_between_strings_and_arrays) neste artigo.
+4. Como parte da linha de código acima, você também quer converter o preço de string para número. Se você não se lembra como fazer isto, veja o [artigo primeiras strings](/pt-BR/docs/Learn_web_development/Core/Scripting/Strings#numbers_versus_strings).
+5. Há uma variável chamada `total` que é criada e atribuída o valor 0 no começo do código. Dentro do loop (abaixo `// number 4`) nós queremos que você escreva uma linha que adicione o preço atual ao total em cada iteração do laço, então ao final do código o preço total é impresso na fatura. Você pode precisar de um [operador aritiméticos](/pt-BR/docs/Learn_web_development/Core/Scripting/Math#assignment_operators) para isto.
 6. Nós queremos que você mude a linha logo abaixo de `// number 5` para que a variável `itemText` seja igual a "nome do item atual - $preço do item atual", por exemplo "Shoes - $23.99" em cada caso, então a informação correta para cada item é impressa na fatura. Esta é uma simples concatenação de string, a qual deveria ser familiar para você.
 
 ```html hidden

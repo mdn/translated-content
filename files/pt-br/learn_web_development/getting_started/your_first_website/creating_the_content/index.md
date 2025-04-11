@@ -78,7 +78,7 @@ Ele contém dois atributos, mas não há tag `</img>` de fechamento, e não há 
 
 ### Anatomia de um documento HTML
 
-Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
+Isso resume o básico dos elementos HTML individuais, mas eles não são úteis por si só. Agora vamos ver como elementos individuais são combinados para formar uma página HTML inteira. Vamos visitar novamente os códigos que colocamos no exemplo de `index.html` (que vimos no artigo [Lidando com arquivos](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)):
 
 ```html
 <!doctype html>
@@ -149,7 +149,7 @@ Os elementos de cabeçalhos permitem especificar que certas partes do seu conte�
 Agora tente adicionar um título adequado à sua página HTML logo acima do elemento {{htmlelement("img")}}.
 
 > [!NOTE]
-> você verá que seu título de nível 1 tem um estilo implícito. Não use elementos de cabeçalho para deixar o texto maior ou em negrito, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular níveis.
+> você verá que seu título de nível 1 tem um estilo implícito. Não use elementos de cabeçalho para deixar o texto maior ou em negrito, pois eles são usados para [acessibilidade](/pt-BR/docs/Learn_web_development/Core/Accessibility/HTML#text_content) e [outros motivos, como SEO](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure). Tente criar uma sequência significativa de títulos em suas páginas, sem pular níveis.
 
 ### Parágrafo
 
@@ -159,7 +159,7 @@ Como explicado acima, os elementos {{htmlelement ("p")}} são para conter parág
 <p>Este é um parágrafo simples</p>
 ```
 
-Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
+Adicione seu texto de exemplo (você o obteve em [_Como será o seu site?_](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)) Em um ou alguns parágrafos, colocados diretamente abaixo do seu elemento {{htmlelement ("img")}}.
 
 ### Listas
 
@@ -234,6 +234,6 @@ Se você seguiu todas as instruções neste artigo, você deve terminar com uma 
 
 Se você ficar emperrado, pode sempre comparar seu trabalho com nosso [código de exemplo finalizado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) no Github.
 
-Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/Learn/HTML).
+Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

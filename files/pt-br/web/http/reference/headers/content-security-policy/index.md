@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy
 
 O cabeçalho de resposta HTTP **`Content-Security-Policy`** permite aos administradores do site, ter controle sobre os recursos que o agente de usuário é permitido carregar para uma certa página. Com algumas pequenas exceções, políticas majoritariamente envolvem especificar as origens do servidor e pontos de acessos dos _scripts_. Isso ajuda contra ataques de _scripting_ entre sites ({{Glossary("XSS")}}).
 
-Para mais informações, veja o artigo introdutório em [Política de Segurança de Conteúdo (_Content Security Policy_)(CSP)](/pt-BR/docs/Web/HTTP/CSP).
+Para mais informações, veja o artigo introdutório em [Política de Segurança de Conteúdo (_Content Security Policy_)(CSP)](/pt-BR/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">
   <tbody>
@@ -201,7 +201,7 @@ Veja as [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines
 ## Veja também
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Aprenda sobre: Content Security Policy](/pt-BR/docs/Web/HTTP/CSP)
+- [Aprenda sobre: Content Security Policy](/pt-BR/docs/Web/HTTP/Guides/CSP)
 - [Segurança de Conteúdo em Extensões Web](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adotando uma política estrita](https://csp.withgoogle.com/docs/strict-csp.html)
 - [Avaliador CSP](https://csp-evaluator.withgoogle.com/) - Avalie sua Política de Segurança de Conteúdo

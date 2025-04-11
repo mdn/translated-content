@@ -70,4 +70,4 @@ Server: Apache
 ## Veja também
 
 - {{HTTPHeader("Connection")}}
-- [Connection management in HTTP/1.x](/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Connection management in HTTP/1.x](/pt-BR/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)

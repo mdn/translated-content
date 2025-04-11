@@ -34,4 +34,4 @@ O caso de uso comum é retornar `204` como resultado de uma solicitação {{HTTP
 
 ## Veja também
 
-- [Métodos de requisições HTTP](/pt-BR/docs/Web/HTTP/Methods)
+- [Métodos de requisições HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods)

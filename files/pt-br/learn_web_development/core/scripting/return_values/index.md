@@ -176,7 +176,7 @@ Este exercício trouxe alguns pontos importantes além de ser um estudo sobre co
 
 Então, temos isso — funções são divertidas, muito úteis e, embora haja muito o que falar em relação à sua sintaxe e funcionalidade, bastante compreensíveis, dados os artigos certos para se estudar.
 
-Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente ou entre em [contato conosco](/pt-BR/docs/Learn#contact_us) para pedir ajuda.
+Se houver algo que você não entendeu, fique à vontade para ler o artigo novamente ou entre em [contato conosco](/pt-BR/docs/Learn_web_development#contact_us) para pedir ajuda.
 
 ## Veja também
 

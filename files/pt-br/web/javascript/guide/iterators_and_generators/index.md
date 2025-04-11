@@ -47,7 +47,7 @@ console.log(it.next().done); // true
 
 Um objeto é iterável **(iterable),** se ele define seu comportamento de iteração, como no caso de quais valores percorridos em um laço do tipo {{jsxref("Statements/for...of", "for..of")}}. Alguns tipos embutidos, como o {{jsxref("Array")}}, ou o {{jsxref("Map")}}, têm um comportamento iterável padrão, enquanto outros tipos (como o{{jsxref("Object")}}) não possuem.
 
-Para que um objeto seja **iterable**, o objeto precisa implementar o método **@@iterator**, significando que o objeto (ou um dos objetos na cadeia de prototipagem - [prototype chain](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) precisa ter uma propriedade com uma chave {{jsxref("Symbol.iterator")}}:
+Para que um objeto seja **iterable**, o objeto precisa implementar o método **@@iterator**, significando que o objeto (ou um dos objetos na cadeia de prototipagem - [prototype chain](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) precisa ter uma propriedade com uma chave {{jsxref("Symbol.iterator")}}:
 
 ### Iterables definidos pelo usuário
 

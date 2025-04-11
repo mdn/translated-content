@@ -10,17 +10,17 @@ Se você decidir usar JavaScript no lado do cliente para sites ou aplicativos, v
 
 ## Pré-requisitos
 
-Para tirar o máximo proveito deste módulo, é recomendável a leitura dos módulos anteriores de JavaScript da série ([Primeiros passos](/pt-BR/docs/Learn/JavaScript/First_steps), [Construindo blocos](/pt-BR/docs/Learn/JavaScript/Building_blocks), e [Objetos javaScript](/pt-BR/docs/Learn/JavaScript/Objects)). Esses módulos envolvem bastante uso de API simples, e não é facil escrever exemplos Javascript do lado do cliente sem eles. Aqui, subimos um nível, assumindo o conhecimento da linguagem core JavaScript e explorando as APIs comuns da Web com um pouco mais de detalhes.
+Para tirar o máximo proveito deste módulo, é recomendável a leitura dos módulos anteriores de JavaScript da série ([Primeiros passos](/pt-BR/docs/Learn_web_development/Core/Scripting), [Construindo blocos](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting), e [Objetos javaScript](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)). Esses módulos envolvem bastante uso de API simples, e não é facil escrever exemplos Javascript do lado do cliente sem eles. Aqui, subimos um nível, assumindo o conhecimento da linguagem core JavaScript e explorando as APIs comuns da Web com um pouco mais de detalhes.
 
-Conhecimento básico de [HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn/CSS) serão utéis.
+Conhecimento básico de [HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d) e [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) serão utéis.
 
 > **Nota:** **Notes** Se você estiver trabalhando de um dispositivo que não permita a criação de arquivos. Você pode tentar editar os arquivos em um editor online como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 
-- [Introdução a APIs para a web](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
+- [Introdução a APIs para a web](/pt-BR/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction)
   - : Primeiro, vamos começar com apis de alto nível — o que elas são, como elas funcionam, quando usar no seu código, como elas são estruturadas? Nós veremos diferentes tipos de classses principais e o que elas são, e quais são as possibilidades de uso.
-- [Manipulando documentos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [Manipulando documentos](/pt-BR/docs/Learn_web_development/Core/Scripting/DOM_scripting)
   - : Quando estiver codificando páginas da web ou aplicações, uma das coisas mais comuns que você irá fazer será manipular documentos da web de alguma forma. Normalmente isso é feito usando o Document Object Model (DOM), um conjunto de APIs para controlar o HTML e a informação sobre os estilos que usa fortemente o objeto {{domxref("Document")}}. Neste artigo vamos ver como usar o DOM em detalhes, juntamente com outras APIs interessantes que podem alterar seu ambiente de desenvolvimento de modos interessantes.
 - [Buscando dados do servidor](/pt-BR/docs/Web)
   - : Outra tarefa muito comum em websites modernos e aplicações é recuperar dados individuais de um servidor para atualizar partes de uma página sem ter que recarregar uma página inteira novamente. Este aparentemente pequeno detalhe tem tido um impacto enorme sobre o desempenho e comportamento de websites, desse modo neste artigo, vamos explicar esse conceito, e observar as tecnologias que tornam isso possível, tais como {{domxref("XMLHttpRequest")}} e o [Fetch API](/pt-BR/docs/Web/API/Fetch_API).
@@ -30,5 +30,5 @@ Conhecimento básico de [HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn
   - : The browser contains some very powerful graphics programming tools, from the Scalable Vector Graphics ([SVG](/pt-BR/docs/Web/SVG)) language, to APIs for drawing on HTML {{htmlelement("canvas")}} elements, (see [The Canvas API](/pt-BR/docs/Web/API/Canvas_API) and [WebGL](/pt-BR/docs/Web/API/WebGL_API)). Ths article provides an introduction to the Canvas API, and further resources to allow you to learn more.
 - [Video and audio APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
   - : HTML5 comes with elements for embedding rich media in documents — {{htmlelement("video")}} and {{htmlelement("audio")}} — which in turn come with their own APIs for controlling playback, seeking, etc. This article shows you how to do common tasks such as creating custom playback controls.
-- [Client-side storage](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [Client-side storage](/pt-BR/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)
   - : Modern web browsers feature a number of different technologies that allow you to store data related to web sites and retrieve it when necessary allowing you to persist data long term, save sites offline, and more. This article explains the very basics of how these work.

@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest
 
 {{APIRef("XMLHttpRequest API")}}
 
-`XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
+`XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests).
 
 `XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/pt-BR/HTTP) (incluindo file e ftp ).
 
@@ -529,7 +529,7 @@ Se os dados são um Document , ele é serializado antes de serem enviados. Ao en
 
 Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o [`setRequestHeader()`](</en/nsIXMLHttpRequest#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") método antes de chamar send().
 
-A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando[ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ou [Blobs](/pt-BR/docs/Web/API/Blob) em conjuncton com o send() método. No entanto, se você quiser enviar uma [stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) dados brutos, use o [`sendAsBinary()`](</pt-BR/docs/DOM/XMLHttpRequest#sendAsBinary()>) método em vez disso.
+A melhor maneira de enviar conteúdo binário (como em arquivos de upload) está usando[ArrayBuffers](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ou [Blobs](/pt-BR/docs/Web/API/Blob) em conjuncton com o send() método. No entanto, se você quiser enviar uma [stringifiable](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) dados brutos, use o [`sendAsBinary()`](</pt-BR/docs/Web/API/XMLHttpRequest#sendAsBinary()>) método em vez disso.
 
 ### setRequestHeader()
 
