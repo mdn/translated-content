@@ -1,16 +1,13 @@
 ---
 title: <xsl:value-of>
 slug: Web/XML/XSLT/Reference/Element/value-of
-original_slug: Web/XSLT/Reference/Element/value-of
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
+`<xsl:value-of>` 要素は XPath 式を評価し、それを文字列に変換し、その文字列を結果ツリーに書きます。
 
-`<xsl:value-of>` 要素は XPath 式を評価し、それを文字列に変換し、その文字列を result tree に書きます。
-
-### 構文
+## 構文
 
 ```xml
 <xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
@@ -34,6 +31,6 @@ l10n:
 
 XSLT, section 7.6.1.
 
-### Gecko のサポート
+## Gecko の対応
 
-上記以外はサポートされています。
+上記以外は対応しています。

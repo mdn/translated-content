@@ -1,12 +1,9 @@
 ---
 title: <xsl:include>
 slug: Web/XML/XSLT/Reference/Element/include
-original_slug: Web/XSLT/Reference/Element/include
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:include>` 要素はあるスタイルシートの内容を別のスタイルシートにマージします。`<xsl:import>` の場合とは異なり、インクルードされたスタイルシートの内容はインクルードするスタイルシートの内容とまったく同じです。
 
@@ -33,6 +30,6 @@ l10n:
 
 XSLT, section 2.6.1.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。
