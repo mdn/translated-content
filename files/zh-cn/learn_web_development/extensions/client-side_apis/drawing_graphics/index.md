@@ -820,7 +820,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
 你可以[到 Github 下载完成的代码](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)。
 
 > [!NOTE]
-> 在我们的 GitHub 仓库还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（[在线查看它](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
+> 在我们的 GitHub 仓库还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（[在线查看它](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
 
 ## 总结
 
