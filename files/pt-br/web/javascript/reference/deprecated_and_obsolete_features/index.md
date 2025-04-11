@@ -32,6 +32,7 @@ console.log("b");
 --> mais um comentário
 // Imprime "a" e "b"
 ```
+
 `<!--` e `-->` agem como `//`, ou seja, iniciam comentários de linha. `-->` só é válido no início de uma linha (para evitar ambiguidade com um decremento pós-fixo seguido por um operador maior que), enquanto `<!--` pode ocorrer em qualquer lugar da linha.
 
 ### Propriedades RegExp
