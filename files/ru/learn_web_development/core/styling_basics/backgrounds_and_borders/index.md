@@ -24,7 +24,8 @@ CSS-свойство {{cssxref ("background")}} является сокраще�
         105deg,
         rgba(255, 255, 255, 0.2) 39%,
         rgba(51, 56, 57, 1) 96%
-      ) center center / 400px 200px no-repeat,
+      )
+      center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;
 }
@@ -163,8 +164,8 @@ CSS-свойство {{cssxref ("background")}} является сокраще�
 Другие свойства `background- *` также могут иметь значения, разделённые запятыми, как и `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image1.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
