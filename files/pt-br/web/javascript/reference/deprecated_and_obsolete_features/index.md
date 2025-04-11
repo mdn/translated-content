@@ -205,7 +205,7 @@ Os métodos `toSource()` de arrays, números, strings, etc. e a função global 
 
 ### Gerador e Iterador legado
 
-As declarações de função de gerador legado e as expressões de função de gerador legado foram removidas. A sintaxe da função geradora legada reutiliza a palavra-chave `function`, que se torna automaticamente uma função geradora quando há uma ou mais expressões `yield` no corpo - isso agora é um erro de sintaxe. Em vez disso, use [instruções `function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*) e [expressões `function*`](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
+As declarações de função de gerador legado e as expressões de função de gerador legado foram removidas. A sintaxe da função geradora legada reutiliza a palavra-chave `function`, que se torna automaticamente uma função geradora quando há uma ou mais expressões `yield` no corpo - isso agora é um erro de sintaxe. Em vez disso, use [instruções `function*`](/pt-BR/docs/Web/JavaScript/Reference/Statements/function*) e [expressões `function*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/function*).
 
 As compreensões de matriz e as compreensões de gerador foram removidas.
 
