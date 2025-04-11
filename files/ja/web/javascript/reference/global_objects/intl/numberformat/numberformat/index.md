@@ -36,8 +36,6 @@ console.log(
 // Expected output: "1,23,000"
 ```
 
-<!-- このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
-
 ## 構文
 
 ```js
