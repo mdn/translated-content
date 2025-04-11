@@ -22,9 +22,7 @@ label {
 }
 ```
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)and send us a pull request.
-
-- _[Categorias de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido)_[Flujo de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido), [contenido de redacción](/es/docs/Web/HTML/Content_categories#Contenido_de_redacci%C3%B3n), contenido etiquetable, contenido palpable.
+- _[Categorias de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido)_[Flujo de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido), [contenido de redacción](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_de_redacci%C3%B3n), contenido etiquetable, contenido palpable.
 - _Contenido permitido_ [Contenido de redacción](/es/docs/Web/HTML/Content_categories#phrasing_content), pero no debe haber ningún elemento de progreso entre sus descendientes
 - _Etiquetas por omisión_ Ninguna, tanto la etiqueta inicial como la final son obligatorias.
 - _Elementos padres permitidos_ Cualquier elemento que acepte [contenido de redacción](/es/docs/Web/HTML/Content_categories#phrasing_content).
