@@ -2,7 +2,7 @@
 title: Flujos de trabajo y procesos
 slug: Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes
 l10n:
-  sourceCommit: e62e7004a66229b1b630fbe30ac809f50450896c
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
 {{LearnSidebar}}
