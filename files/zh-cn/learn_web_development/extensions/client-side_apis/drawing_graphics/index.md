@@ -2,7 +2,7 @@
 title: 绘制图形
 slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{LearnSidebar}}
@@ -77,7 +77,7 @@ l10n:
 
 让我们开始吧：创建画布，准备尝试绘制图形。
 
-1. 首先在本地创建一份 [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) 文件夹的复制。其中包含三个文件：
+1. 首先在本地创建一份 [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) 文件夹的拷贝。其中包含三个文件：
    - “index.html”
    - “script.js”
    - “style.css”
@@ -366,7 +366,7 @@ canvas.setAttribute("aria-label", "Canvas text");
    image.src = "firefox.png";
    ```
 
-   这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造函数创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与抓取现有 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
+   这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造函数创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与抓取现有 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
 
 3. 这次我们尝试用 `drawImage()` 函数来嵌入图片，应确保图片先载入完毕，否则运行会出错。可以通过 `load` 事件处理器来达成，该函数只在图片调用完毕后才会调用。在上文代码末尾添加以下内容：
 
