@@ -137,7 +137,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - **El atributo no está establecido (por defecto), una cadena vacía o un tipo MIME de JavaScript**
       - : Indica que el script es un "script clásico", que contiene código JavaScript.
         Se recomienda que los autores omitan el atributo si el script hace referencia a código JavaScript en lugar de especificar un tipo MIME.
-        Los tipos MIME de JavaScript están [listados en la especificación de tipos de medios IANA](/es/docs/Web/HTTP/MIME_types#textjavascript).
+        Los tipos MIME de JavaScript están [listados en la especificación de tipos de medios IANA](/es/docs/Web/HTTP/Guides/MIME_types#textjavascript).
     - [`importmap`](/es/docs/Web/HTML/Element/script/type/importmap)
       - : Este valor indica que el cuerpo del elemento contiene un mapa de importaciones.
         El mapa de importaciones es un objeto JSON que los desarrolladores pueden usar para controlar cómo el navegador resuelve los especificadores de módulos al importar [módulos de JavaScript](/es/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).

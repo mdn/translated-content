@@ -8,7 +8,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 En este artículo, aprenderemos sobre el concepto de imágenes adaptables — imágenes que funcionan bien en dispositivos con una amplia diferencia de tamaño de pantallas, resoluciones y otras tantas características — y observar qué herramientas proporciona HTML para ayudar a implementarlas. Esto ayuda a mejorar el rendimiento en diferentes dispositivos.
 
-Las imágenes adaptables son solo una parte del diseño web responsivo, un tema que aprenderás próximamente en nuestro tutorial de [CSS](/es/docs/Learn/CSS).
+Las imágenes adaptables son solo una parte del diseño web responsivo, un tema que aprenderás próximamente en nuestro tutorial de [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1).
 
 <table>
   <tbody>
@@ -161,7 +161,7 @@ Returning to our original [not-responsive.html](https://mdn.github.io/learning-a
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
-Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), The `<picture>` element is a wrapper containing several {{htmlelement("source")}} elements that provide several different sources for the browser to choose between, followed by the all-important {{htmlelement("img")}} element. The code in [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) looks like so:
+Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio), The `<picture>` element is a wrapper containing several {{htmlelement("source")}} elements that provide several different sources for the browser to choose between, followed by the all-important {{htmlelement("img")}} element. The code in [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) looks like so:
 
 ```html
 <picture>
@@ -224,9 +224,9 @@ For this active learning, we're expecting you to be brave and go it alone ... mo
 That's a wrap for responsive images — we hope you enjoyed playing with these new techniques. As a recap, there are two distinct problems we've been discussing here:
 
 - **Art direction**: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in close for a mobile layout. This can be solved using the {{htmlelement("picture")}} element.
-- **Resolution switching**: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. This can be solved using [vector graphics](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (SVG images), and the [`srcset`](/es/docs/Web/HTML/Element/img#srcset) and [`sizes`](/es/docs/Web/HTML/Element/img#sizes) attributes.
+- **Resolution switching**: The problem whereby you want to serve smaller image files to narrow screen devices, as they don't need huge images like desktop displays do — and also optionally that you want to serve different resolution images to high density/low density screens. This can be solved using [vector graphics](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (SVG images), and the [`srcset`](/es/docs/Web/HTML/Element/img#srcset) and [`sizes`](/es/docs/Web/HTML/Element/img#sizes) attributes.
 
-This also draws to a close the entire [Multimedia and embedding](/es/docs/Learn/HTML/Multimedia_and_embedding) module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun.
+This also draws to a close the entire [Multimedia and embedding](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) module! The only thing to do now before moving on is to try our multimedia assessment, and see how you get on. Have fun.
 
 ## Vea también
 
