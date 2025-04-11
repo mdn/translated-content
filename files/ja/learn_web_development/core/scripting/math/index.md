@@ -439,7 +439,7 @@ function updateBtn() {
 
 ## スキルテスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math) を見てください。
+この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math) を見てください。
 
 ## まとめ
 
