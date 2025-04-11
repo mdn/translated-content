@@ -1,16 +1,15 @@
 ---
 title: string
 slug: Web/XML/XPath/Reference/Functions/string
-original_slug: Web/XPath/Reference/Functions/string
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `string` 関数は与えられた引数を文字列に変換します。
 
-### 構文
+## 構文
 
-```
+```plain
 string( [object] )
 ```
 
@@ -23,7 +22,7 @@ string( [object] )
 
 文字列。
 
-### 注
+## 解説
 
 - オブジェクトがノード集合ならば、その集合内の最初のノードの文字列値が返されます。
 - 数値は次のように変換されます。
@@ -37,8 +36,10 @@ string( [object] )
   - 論理値の true は文字列の true に変換されます。
   - 論理値の false は文字列の false に変換されます。
 
-### 定義
+## 仕様書
 
-### Gecko での対応
+[XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-string)
+
+## Gecko の対応
 
 対応済み。
