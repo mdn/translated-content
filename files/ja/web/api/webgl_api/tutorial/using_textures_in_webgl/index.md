@@ -2,7 +2,7 @@
 title: WebGL でのテクスチャの使用
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 l10n:
-  sourceCommit: 5a651fade3a92110761d2fb613d0e4f6da47826e
+  sourceCommit: 3c13d9a0c239ed31ae861486393952bc03e0b5bd
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
@@ -108,7 +108,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 ```
 
-繰り返しますが、これらの引数を付加すると、 WebGL デバイスは自動的に（対応する最大サイズまでの）任意の解像度のテクスチャを受け入れます。上記の構成を行わないと、 WebGL は NPOT テクスチャのすべてのサンプルを、透明な黒 (`rgba(0,0,0,0)`) を返して失敗させる必要があります。
+繰り返しますが、これらの引数を付加すると、 WebGL デバイスは自動的に（対応する最大サイズまでの）任意の解像度のテクスチャを受け入れます。上記の構成を行わないと、 WebGL は NPOT テクスチャのすべてのサンプルを、透明な黒 (`rgb(0 0 0 / 0%)`) を返して失敗させる必要があります。
 
 画像を読み込むために、 `main()` 関数内に `loadTexture()` 関数の呼び出しを追加します。これは `initBuffers(gl)` 呼び出しの後に追加できます。
 
@@ -127,7 +127,7 @@ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
 > [!NOTE]
-> 最後に、 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードしましょう。
+> 最後に、[cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードしましょう。
 
 ## テクスチャを表面にマッピングする
 
@@ -222,7 +222,7 @@ const vsSource = `
   `;
 ```
 
-ここでの重要な変更は、頂点の色を取得する代わりに、テクスチャ座標を取得して頂点シェーダーに渡していることです。これにより、頂点に対応するテクスチャ内の位置を示します。
+ここでの重要な変更は、頂点の色を取得する代わりに、テクスチャ座標を取得してフラグメントシェーダーに渡していることです。これにより、頂点に対応するテクスチャ内の位置を示します。
 
 ### フラグメントシェーダー
 
@@ -236,21 +236,23 @@ const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
-    out vec4 fragColor;
 
     void main(void) {
-      fragColor = texture(uSampler, vTextureCoord);
+      gl_FragColor = texture2D(uSampler, vTextureCoord);
     }
   `;
 ```
 
-フラグメントの色に色の値を割り当てる代わりに、フラグメントの色を {{Glossary("texel")}} （つまり、テクスチャ内のピクセル）を取得することで、色と同様に頂点間で補間される `vTextureCoord` の値に基づいて計算するようにします。
+フラグメントの色に色の値を割り当てる代わりに、フラグメントの色を {{Glossary("Texel")}} （つまり、テクスチャ内のピクセル）を取得することで、色と同様に頂点間で補間される `vTextureCoord` の値に基づいて計算するようにします。
 
 ### 属性とユニフォームの位置
 
 属性を変更し、ユニフォームを追加したので、それらの位置を調べていく必要があります。
 
-> **メモ:** `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
+<!-- prettier-ignore-start -->
+> [!NOTE]
+> `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
+<!-- prettier-ignore-end -->
 
 ```js
 const programInfo = {
@@ -304,7 +306,10 @@ setTextureAttribute(gl, buffers, programInfo);
 
 次に、面にマッピングするテクスチャを指定するコードを追加します。
 
-> **メモ:** `drawScene()` 関数の中で、 `gl.uniformMatrix4fv()` を 2 回呼び出した直後に、以下のコードを追加しましょう。
+<!-- prettier-ignore-start -->
+> [!NOTE]
+> `drawScene()` 関数の中で、 `gl.uniformMatrix4fv()` を 2 回呼び出した直後に、以下のコードを追加しましょう。
+<!-- prettier-ignore-end -->
 
 ```js
 // テクスチャユニット 0 に影響を与えたいことを WebGL に伝える
@@ -321,13 +326,15 @@ WebGL は最低 8 つのテクスチャユニットを提供します。その�
 
 最後に、`drawScene()` 関数の引数として `texture` を追加します。
 
-> **メモ:** `drawScene()` 関数の宣言を更新し、新しい引数を追加しましょう。
+`drawScene()` 関数の宣言を更新し、新しい引数を追加しましょう。
 
 ```js-nolint
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+  // …
+}
 ```
 
-> **メモ:** `main()` 関数の `drawScene()` を呼び出す場所を更新しましょう。
+`main()` 関数の `drawScene()` を呼び出す場所を更新しましょう。
 
 ```js
 drawScene(gl, programInfo, buffers, texture, cubeRotation);
