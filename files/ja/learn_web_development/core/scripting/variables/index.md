@@ -248,7 +248,7 @@ myAge = 40;
 - 最後に、JavaScript の予約語 ( これは JavaScript の文法を構成する単語のことです) を変数名には付けないようにしましょう。`var`、`function`、`let`、`for` 等を変数名として使用することは出来ません。ブラウザーはそれを異なるように解釈し、結果としてエラーとなるでしょう。
 
 > [!NOTE]
-> 避けるべき予約語の一覧は[字句文法 — キーワード](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#keywords)にあります。
+> 避けるべき予約語の一覧は[字句文法 — キーワード](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#キーワード)にあります。
 
 良い名前の例：
 

@@ -88,7 +88,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - {{jsxref("TypedArray")}} コンストラクターで、新しい typed array を生成するため [iterable](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) を受け入れるようになりました ([Firefox バグ 1232266](https://bugzil.la/1232266))。
 - {{jsxref("TypedArray.from()")}}、{{jsxref("TypedArray.of()")}}、{{jsxref("TypedArray.prototype.filter()")}}、{{jsxref("TypedArray.prototype.map()")}}、{{jsxref("TypedArray.prototype.slice()")}}、{{jsxref("TypedArray.prototype.subarray()")}} が、値 `this` が有効な Typed Array のコンストラクターであることを要求するようになりました ([Firefox バグ 1122396](https://bugzil.la/1122396))。
 - 非標準の {{jsxref("ArrayBuffer.slice()")}} メソッド ({{jsxref("ArrayBuffer.prototype.slice()")}} ではありません) が非推奨になり、使用すると警告が発生します ([Firefox バグ 1316913](https://bugzil.la/1316913))。
-- [Unicode コードポイントエスケープ](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) が、識別子として使用可能になりました (例: "`let \u{61} = 123`"。[Firefox バグ 1314037](https://bugzil.la/1314037) をご覧ください)。
+- [Unicode コードポイントエスケープ](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_コードポイントエスケープ) が、識別子として使用可能になりました (例: "`let \u{61} = 123`"。[Firefox バグ 1314037](https://bugzil.la/1314037) をご覧ください)。
 - ES2015 に従って、`\u2e2f` および `ⸯ` を識別子として使用したときに例外が発生するようになりました。詳しくは [Firefox バグ 917436](https://bugzil.la/917436) および [Firefox バグ 1197230](https://bugzil.la/1197230) をご覧ください。
 
 ### WebAssembly
