@@ -48,7 +48,7 @@ As seguintes propriedades foram descontinuadas. Isso não afeta seu uso em [cade
   - : A última correspondência da sub cadeia de caracteres entre parênteses, se houver.
 - [`leftContext`, `` $` ``](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
   - : A sub cadeia de caracteres que precede a correspondência mais recente.
-- [`rightContext`, `$'`](/pt-B/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
+- [`rightContext`, `$'`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
   - : A sub cadeia de caracteres após a correspondência mais recente.
 
 > [!WARNING]
