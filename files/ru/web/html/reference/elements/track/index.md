@@ -1,7 +1,6 @@
 ---
 title: "<track>: Встраиваемая текстовая дорожка"
 slug: Web/HTML/Reference/Elements/track
-original_slug: Web/HTML/Element/track
 ---
 
 {{HTMLSidebar}}

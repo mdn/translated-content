@@ -1,7 +1,6 @@
 ---
 title: <video>
 slug: Web/HTML/Reference/Elements/video
-original_slug: Web/HTML/Element/video
 ---
 
 {{HTMLSidebar}}

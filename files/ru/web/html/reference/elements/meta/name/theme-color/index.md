@@ -1,7 +1,6 @@
 ---
 title: theme-color
 slug: Web/HTML/Reference/Elements/meta/name/theme-color
-original_slug: Web/HTML/Element/meta/name/theme-color
 l10n:
   sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---

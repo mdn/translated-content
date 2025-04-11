@@ -1,7 +1,6 @@
 ---
 title: <strong> - элемент выделения важного текста
 slug: Web/HTML/Reference/Elements/strong
-original_slug: Web/HTML/Element/strong
 ---
 
 {{HTMLSidebar}}

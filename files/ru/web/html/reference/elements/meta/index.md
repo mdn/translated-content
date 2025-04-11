@@ -1,7 +1,6 @@
 ---
 title: <meta> - элемент для описания метаданных
 slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
 ---
 
 {{HTMLSidebar}}

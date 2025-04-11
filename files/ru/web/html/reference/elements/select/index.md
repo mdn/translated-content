@@ -1,7 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Reference/Elements/select
-original_slug: Web/HTML/Element/select
 ---
 
 {{HTMLSidebar}}

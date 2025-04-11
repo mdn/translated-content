@@ -1,7 +1,6 @@
 ---
 title: "<summary>: The Disclosure Summary element"
 slug: Web/HTML/Reference/Elements/summary
-original_slug: Web/HTML/Element/summary
 ---
 
 {{HTMLSidebar}}

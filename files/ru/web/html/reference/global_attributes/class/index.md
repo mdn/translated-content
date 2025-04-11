@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/HTML/Reference/Global_attributes/class
-original_slug: Web/HTML/Global_attributes/class
 ---
 
 {{HTMLSidebar("Global_attributes")}}

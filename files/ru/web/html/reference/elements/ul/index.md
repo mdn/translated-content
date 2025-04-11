@@ -1,7 +1,6 @@
 ---
 title: <ul> - элемент «Неупорядоченный список»
 slug: Web/HTML/Reference/Elements/ul
-original_slug: Web/HTML/Element/ul
 ---
 
 {{HTMLSidebar}}

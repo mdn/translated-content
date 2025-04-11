@@ -1,7 +1,6 @@
 ---
 title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
-original_slug: Web/HTML/Element/wbr
 ---
 
 {{HTMLSidebar}}

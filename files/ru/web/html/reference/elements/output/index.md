@@ -1,7 +1,6 @@
 ---
 title: "<output>: Элемент вывода"
 slug: Web/HTML/Reference/Elements/output
-original_slug: Web/HTML/Element/output
 ---
 
 {{HTMLSidebar}}

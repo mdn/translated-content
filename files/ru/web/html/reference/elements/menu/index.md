@@ -1,7 +1,6 @@
 ---
 title: <menu>
 slug: Web/HTML/Reference/Elements/menu
-original_slug: Web/HTML/Element/menu
 ---
 
 {{HTMLSidebar}}

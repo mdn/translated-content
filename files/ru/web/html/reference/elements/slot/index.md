@@ -1,7 +1,6 @@
 ---
 title: <slot>
 slug: Web/HTML/Reference/Elements/slot
-original_slug: Web/HTML/Element/slot
 ---
 
 {{HTMLSidebar}}

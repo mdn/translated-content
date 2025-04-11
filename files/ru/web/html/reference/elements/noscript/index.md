@@ -1,7 +1,6 @@
 ---
 title: <noscript> - элемент, который поможет при отключенном JS
 slug: Web/HTML/Reference/Elements/noscript
-original_slug: Web/HTML/Element/noscript
 ---
 
 {{HTMLSidebar}}

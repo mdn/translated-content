@@ -1,7 +1,6 @@
 ---
 title: "<pre>: Предварительно отформатированный текстовый элемент"
 slug: Web/HTML/Reference/Elements/pre
-original_slug: Web/HTML/Element/pre
 ---
 
 {{HTMLSidebar}}

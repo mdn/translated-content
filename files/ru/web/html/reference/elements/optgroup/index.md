@@ -1,7 +1,6 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
-original_slug: Web/HTML/Element/optgroup
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: "<template>: элемент шаблона контента"
 slug: Web/HTML/Reference/Elements/template
-original_slug: Web/HTML/Element/template
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <meter>
 slug: Web/HTML/Reference/Elements/meter
-original_slug: Web/HTML/Element/meter
 ---
 
 {{HTMLSidebar}}

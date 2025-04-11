@@ -1,7 +1,6 @@
 ---
 title: "<p>: Элемент текстового абзаца"
 slug: Web/HTML/Reference/Elements/p
-original_slug: Web/HTML/Element/p
 ---
 
 {{HTMLSidebar}}

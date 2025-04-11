@@ -1,7 +1,6 @@
 ---
 title: "<title>: элемент заголовка документа"
 slug: Web/HTML/Reference/Elements/title
-original_slug: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}

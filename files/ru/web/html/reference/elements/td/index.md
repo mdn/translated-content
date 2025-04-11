@@ -1,7 +1,6 @@
 ---
 title: "<td>: элемент ячейки таблицы данных"
 slug: Web/HTML/Reference/Elements/td
-original_slug: Web/HTML/Element/td
 ---
 
 {{HTMLSidebar}}

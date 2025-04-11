@@ -1,7 +1,6 @@
 ---
 title: "<ol>: The Ordered List element"
 slug: Web/HTML/Reference/Elements/ol
-original_slug: Web/HTML/Element/ol
 ---
 
 {{HTMLSidebar}}

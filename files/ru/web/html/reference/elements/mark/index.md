@@ -1,7 +1,6 @@
 ---
 title: <mark>
 slug: Web/HTML/Reference/Elements/mark
-original_slug: Web/HTML/Element/mark
 ---
 
 {{HTMLSidebar}}

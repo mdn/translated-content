@@ -1,7 +1,6 @@
 ---
 title: <style> - элемент для указания стилей
 slug: Web/HTML/Reference/Elements/style
-original_slug: Web/HTML/Element/style
 l10n:
   sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
 ---

@@ -1,7 +1,6 @@
 ---
 title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
-original_slug: Web/HTML/Element/ruby
 ---
 
 {{HTMLSidebar}}

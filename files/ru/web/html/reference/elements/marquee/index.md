@@ -1,7 +1,6 @@
 ---
 title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
-original_slug: Web/HTML/Element/marquee
 ---
 
 {{HTMLSidebar}}

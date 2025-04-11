@@ -1,7 +1,6 @@
 ---
 title: <span>
 slug: Web/HTML/Reference/Elements/span
-original_slug: Web/HTML/Element/span
 ---
 
 {{HTMLSidebar}}

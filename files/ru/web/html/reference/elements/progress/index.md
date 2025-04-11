@@ -1,7 +1,6 @@
 ---
 title: "<progress>: Элемент индикатора выполнения"
 slug: Web/HTML/Reference/Elements/progress
-original_slug: Web/HTML/Element/progress
 ---
 
 {{HTMLSidebar}}

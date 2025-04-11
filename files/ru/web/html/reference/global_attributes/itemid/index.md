@@ -1,7 +1,6 @@
 ---
 title: itemid
 slug: Web/HTML/Reference/Global_attributes/itemid
-original_slug: Web/HTML/Global_attributes/itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}

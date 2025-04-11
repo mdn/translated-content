@@ -1,7 +1,6 @@
 ---
 title: <time>
 slug: Web/HTML/Reference/Elements/time
-original_slug: Web/HTML/Element/time
 ---
 
 {{HTMLSidebar}}

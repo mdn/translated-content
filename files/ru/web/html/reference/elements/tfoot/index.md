@@ -1,7 +1,6 @@
 ---
 title: <tfoot>
 slug: Web/HTML/Reference/Elements/tfoot
-original_slug: Web/HTML/Element/tfoot
 ---
 
 {{HTMLSidebar}}

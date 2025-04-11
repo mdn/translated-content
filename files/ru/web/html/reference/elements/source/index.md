@@ -1,7 +1,6 @@
 ---
 title: Элемент <source>
 slug: Web/HTML/Reference/Elements/source
-original_slug: Web/HTML/Element/source
 ---
 
 {{HTMLSidebar}}

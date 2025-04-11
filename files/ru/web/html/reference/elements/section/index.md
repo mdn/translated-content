@@ -1,7 +1,6 @@
 ---
 title: <section> - элемент секции
 slug: Web/HTML/Reference/Elements/section
-original_slug: Web/HTML/Element/section
 ---
 
 {{HTMLSidebar}}
