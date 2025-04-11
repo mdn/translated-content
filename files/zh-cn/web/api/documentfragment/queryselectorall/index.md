@@ -7,7 +7,9 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`DocumentFragment.querySelectorAll()`** 方法会返回一个 {{domxref("NodeList")}}，其中包含 {{domxref("DocumentFragment")}} 内所有匹配指定选择器组的元素（采用文档节点的深度优先前序遍历方式）。如果参数中指定的选择器无效，将抛出值为 `SYNTAX_ERR` 的 {{domxref("DOMException")}} 异常。
+**`DocumentFragment.querySelectorAll()`** 方法会返回一个 {{domxref("NodeList")}}，其中包含 {{domxref("DocumentFragment")}} 内所有匹配指定选择器组的元素（采用文档节点的深度优先的前序遍历方式）。
+
+如果参数中指定的选择器无效，将抛出值为 `SYNTAX_ERR` 的 {{domxref("DOMException")}} 异常。
 
 ## 语法
 
@@ -22,7 +24,7 @@ querySelectorAll(selectors)
 
 ### 返回值
 
-一个非实时的 {{domxref("NodeList")}}，包含与至少一个指定选择器匹配的每个 {{domxref("Element")}} 对象；若无匹配项，则返回一个空的 {{domxref("NodeList")}}。
+一个非动态的 {{domxref("NodeList")}}，包含匹配至少一个指定选择器的每个元素对应的 {{domxref("Element")}} 对象；若无匹配项，则返回一个空的 {{domxref("NodeList")}}。
 
 ## 示例
 
