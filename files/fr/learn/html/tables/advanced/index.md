@@ -248,25 +248,15 @@ Le balisage suivant montre un tableau simple imbriqué :
     <td>cell5</td>
     <td>cell6</td>
   </tr>
-</table>
+</table>https://github.com/mdn/translated-content/blob/main/files/fr/learn/html/tables/advanced/index.md
 ```
 
 Voici la sortie qui en résulte :
 
 | title1 | title2 | title3 |
 | ------ | ------ | ------ |
-
-| <table>
-
-  <tbody>
-    <tr>
-      <td>cell1</td>
-      <td>cell2</td>
-      <td>cell3</td>
-    </tr>
-  </tbody>
-</table> | cell2  | cell3  |
-| cell4                                                                                                                   | cell5  | cell6  |
+| <table><tbody><tr><td>cell1</td><td>cell2</td><td>cell3</td></tr></tbody></table> | cell2  | cell3  |
+| cell4 | cell5  | cell6  |
 
 ## Tableaux pour utilisateurs malvoyants
 
