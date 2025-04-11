@@ -24,7 +24,7 @@ l10n:
 
 ## カスタム要素の実装
 
-カスタム要素は、{{domxref("HTMLElement")}} を拡張する[クラス](/ja/docs/Web/JavaScript/Reference/Classes)（自立型要素の場合）またはカスタマイズするインターフェイス（カスタム組み込み要素の場合）として実装されます。
+カスタム要素は、{{domxref("HTMLElement")}} を拡張する[クラス](/ja/docs/Web/JavaScript/Reference/Classes)（自律型要素の場合）またはカスタマイズするインターフェイス（カスタム組み込み要素の場合）として実装されます。
 
 以下は、最小限のカスタム要素で、{{HTMLElement("p")}} 要素をカスタマイズする実装例です。
 
