@@ -171,7 +171,7 @@ backface-visibility: unset;
   backface-visibility: hidden;
 }
 
-/* コンテナ div、立方体 div、面の一般的な設定 */
+/* コンテナー div、立方体 div、面の一般的な設定 */
 .container {
   width: 150px;
   height: 150px;

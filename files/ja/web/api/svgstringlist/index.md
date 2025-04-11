@@ -280,6 +280,6 @@ slug: Web/API/SVGStringList
   </tbody>
 </table>
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}

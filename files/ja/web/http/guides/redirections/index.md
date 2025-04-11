@@ -144,7 +144,7 @@ HTML リダイレクトと同様にすべてのリソースでは動作できず
 
 ### Apache
 
-リダイレクトはサーバーの設定ファイルか、各ディレクトリの `.htaccess` で設定できます。
+リダイレクトはサーバーの設定ファイルか、各ディレクトリーの `.htaccess` で設定できます。
 
 [`mod_alias`](https://httpd.apache.org/docs/current/mod/mod_alias.html) モジュールには `Redirect` および `RedirectMatch` ディレクティブがあり、これらは既定で {{HTTPStatus("302")}} レスポンスを設定します。
 
@@ -155,7 +155,7 @@ HTML リダイレクトと同様にすべてのリソースでは動作できず
 </VirtualHost>
 ```
 
-URL `https://example.com/` は `https://www.example.com/` にリダイレクトされ、その下のファイルやディレクトリも同様です (`https://example.com/some-page` は `https://www.example.com/some-page` にリダイレクトされます)。
+URL `https://example.com/` は `https://www.example.com/` にリダイレクトされ、その下のファイルやディレクトリーも同様です (`https://example.com/some-page` は `https://www.example.com/some-page` にリダイレクトされます)。
 
 `RedirectMatch` も同じですが、対象の URL の集合を定義するために{{glossary("regular expression", "正規表現")}}を使用します。
 
@@ -187,7 +187,7 @@ server {
 }
 ```
 
-ディレクトリまたは特定のページにのみリダイレクトを適用するには、`rewrite` ディレクティブを使用します。
+ディレクトリーまたは特定のページにのみリダイレクトを適用するには、`rewrite` ディレクティブを使用します。
 
 ```plain
 rewrite ^/images/(.*)$ https://images.example.com/$1 redirect;

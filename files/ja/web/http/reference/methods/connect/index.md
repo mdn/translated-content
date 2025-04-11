@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Methods/CONNECT
 
 **HTTP の `CONNECT` メソッド**は、リクエストしたリソースを用いて双方向の通信を開始します。これはトンネリングを開始するときに使用されます。
 
-例えば、 `CONNECT` メソッドは {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) を使用したウェブサイトにアクセスする際に使用されます。クライアントは HTTP の{{Glossary("Proxy server", "プロキシサーバー")}}に希望する宛先への [TCP](/ja/docs/Glossary/TCP) コネクションをトンネリングするように依頼します。その場合、プロキシサーバーはクライアントに代わってコネクションの作成を継続します。一度コネクションがサーバーによって確立されると、{{Glossary("Proxy server", "プロキシサーバー")}}はクライアント宛て/クライアント発の TCP ストリームのプロキシーを継続します。
+例えば、 `CONNECT` メソッドは {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) を使用したウェブサイトにアクセスする際に使用されます。クライアントは HTTP の{{Glossary("Proxy server", "プロキシーサーバー")}}に希望する宛先への [TCP](/ja/docs/Glossary/TCP) コネクションをトンネリングするように依頼します。その場合、プロキシーサーバーはクライアントに代わってコネクションの作成を継続します。一度コネクションがサーバーによって確立されると、{{Glossary("Proxy server", "プロキシーサーバー")}}はクライアント宛て/クライアント発の TCP ストリームのプロキシーを継続します。
 
 `CONNECT` はホップバイホップ (hop-by-hop) のメソッドです。
 
@@ -51,7 +51,7 @@ CONNECT www.example.com:443 HTTP/1.1
 
 ## 例
 
-プロキシーサーバの中には、トンネルの作成に認証を必要とするものがあります。 {{HTTPHeader("Proxy-Authorization")}} ヘッダーも参照してください。
+プロキシーサーバーの中には、トンネルの作成に認証を必要とするものがあります。 {{HTTPHeader("Proxy-Authorization")}} ヘッダーも参照してください。
 
 ```
 CONNECT server.example.com:80 HTTP/1.1

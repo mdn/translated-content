@@ -70,7 +70,19 @@ CSS 中的 C 代表“层叠”。这是样式层叠在一起的方法。用户�
 
 在下面的例子中，有两个链接。第一个没有应用作者样式，所以只有用户代理样式被应用（以及你个人的用户样式，如果有的话）。第二个被作者样式设置了 [`text-decoration`](/zh-CN/docs/Web/CSS/text-decoration) 和 [`color`](/zh-CN/docs/Web/CSS/color)，即使作者样式表中的选择器具有 [`0-0-0`](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#选择器类型) 的优先级。作者样式“获胜”的原因是，当来自不同来源的样式发生冲突时，具有优先权的来源的规则被应用，而不管没有优先权的来源中的优先级如何。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
+```html live-sample___basic-cascade
+<p><a href="https://example.org">User agent styles</a></p>
+<p><a class="author" href="https://example.org">Author styles</a></p>
+```
+
+```css live-sample___basic-cascade
+:where(a.author) {
+  text-decoration: overline;
+  color: red;
+}
+```
+
+{{EmbedLiveSample("basic-cascade")}}
 
 在撰写本文时，用户代理样式表中“竞争”的选择器是 `a:any-link`，它具有 `0-1-1` 的优先级权重。虽然这大于作者样式表中 `0-0-0` 的选择器，但即使你当前的用户代理中的选择器不同，也没关系：作者和用户代理来源之间从不比较优先级权重。了解更多关于[如何计算优先级权重](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity#优先级是如何计算的？)。
 
@@ -219,7 +231,30 @@ body {
 
 在下面的交互式示例中，我们将样式分配给两个层，在此过程中创建并命名了它们。因为它们在首次使用时已经存在，所以在最后一行声明它们没有任何影响。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-order.html", '100%', 500)}}
+```html live-sample___layer-order
+<h1>Is this heading underlined?</h1>
+```
+
+```css live-sample___layer-order
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+
+/* this does nothing */
+@layer site, page;
+```
+
+{{EmbedLiveSample("layer-order")}}
 
 试着将最后一行 `@layer site, page;` 移到第一行。会发生什么？
 
@@ -227,7 +262,31 @@ body {
 
 如果你使用[媒体](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)或[特性](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)查询来定义层，且媒体不匹配或特征不被支持，则不会创建该层。下面的示例展示了改变设备或浏览器的尺寸可能会改变层的顺序。在这个示例中，我们只在更宽的浏览器中创建 `site` 层。然后我们按顺序为 `page` 和 `site` 层分配样式。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
+```html live-sample___media-order
+<h1>Is this heading underlined?</h1>
+```
+
+```css live-sample___media-order
+@media (min-width: 50em) {
+  @layer site;
+}
+
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+```
+
+{{EmbedLiveSample("media-order")}}
 
 在宽屏上，`site` 层在第一行被声明，这意味着 `site` 的优先权低于 `page`。否则在窄屏上，`site` 的优先权高于 `page`，因为它在后面被声明。如果不起作用，请将媒体查询中的 `50em` 改为 `10em` 或 `100em`。
 
@@ -346,7 +405,51 @@ body {
 
 过渡样式具有最高的优先权。当正在过渡普通属性值时，它优先于所有其他属性值声明，甚至是内联重要样式；但是只在过渡时。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
+```html live-sample___layer-precedence
+<div>
+  <h1 style="color: yellow; background-color: maroon !important;">
+    Inline styles
+  </h1>
+</div>
+```
+
+```css live-sample___layer-precedence
+@layer A, B;
+
+h1 {
+  font-family: sans-serif;
+  margin: 1em;
+  padding: 0.2em;
+  color: orange;
+  background-color: green;
+  text-decoration: overline pink !important;
+  box-shadow: 5px 5px lightgreen !important;
+}
+
+@layer A {
+  h1 {
+    color: grey;
+    background-color: black !important;
+    text-decoration: line-through grey;
+    box-shadow: -5px -5px lightblue !important;
+    font-style: normal;
+    font-weight: normal !important;
+  }
+}
+
+@layer B {
+  h1 {
+    color: aqua;
+    background: yellow !important;
+    text-decoration: underline aqua;
+    box-shadow: -5px 5px magenta !important;
+    font-style: italic;
+    font-weight: bold !important;
+  }
+}
+```
+
+{{EmbedLiveSample("layer-precedence")}}
 
 在这个例子中，有两个没有样式的内联层 `A` 和 `B`，一块不分层样式，以及两个具名层 `A` 和 `B` 中的样式块。
 

@@ -128,8 +128,8 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 - [`topSites.get()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/topSites/get) メソッドに、ユーザーが新しいタブを開いたときに表示するページの一覧を返すようにするための新しい引数を追加しました ([Firefox バグ 1568617](https://bugzil.la/1568617))。
 - [`privacy.network`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/network) プロパティの `WebRTCIPHandlingPolicy` サブプロパティで許可される値を、Chrome で見られる動作に合うよう修正しました ([Firefox バグ 1452713](https://bugzil.la/1452713)):
 
-  - 以前はプロキシが設定されていない場合に、`disable_non_proxied_udp` が WebRTC の使用を妨げていました。現在は、プロキシが設定されている場合は常にプロキシを使います。設定されていない場合は、プロキシを経由しない接続を許可するようになりました。
-  - `proxy_only` を、古い動作を提供するために使用できるようになりました。これは、プロキシを使用した TURN on TCP による ICE ネゴシエーションのみ許可する効果があります。これ以外の接続は許可されません。
+  - 以前はプロキシーが設定されていない場合に、`disable_non_proxied_udp` が WebRTC の使用を妨げていました。現在は、プロキシーが設定されている場合は常にプロキシーを使います。設定されていない場合は、プロキシーを経由しない接続を許可するようになりました。
+  - `proxy_only` を、古い動作を提供するために使用できるようになりました。これは、プロキシーを使用した TURN on TCP による ICE ネゴシエーションのみ許可する効果があります。これ以外の接続は許可されません。
 
 ### マニフェストの変更点
 

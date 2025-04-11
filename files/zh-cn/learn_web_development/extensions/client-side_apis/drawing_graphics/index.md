@@ -1,11 +1,13 @@
 ---
-title: 绘图
+title: 绘制图形
 slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
 l10n:
-  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 浏览器包含一些非常强大的图形编程工具，从可缩放矢量图形（Scalable Vector Graphics，简称 [SVG](/zh-CN/docs/Web/SVG)）语言到用于在 HTML {{htmlelement("canvas")}} 元素上绘制图形的 API（参见 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API)）。本文将介绍 canvas，并提供更多的学习资源。
 
@@ -14,21 +16,17 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        JavaScript 基础（见
-        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript 第一步</a
-        >、<a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
-          >创建 JavaScript 代码块</a
-        >、<a href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript 对象</a
-        >）、<a
-          href="/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
-          >客户端 API 基础知识</a
-        >。
+        熟悉 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a>，尤其是 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript 对象基础</a>和核心的 API 知识，如 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM 编程</a>和<a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests">网络请求</a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
+      <th scope="row">学习成果：</th>
       <td>
-        学习 JavaScript 在 <code>&#x3C;canvas></code> 元素中绘图的基础知识。
+        <ul>
+          <li>本课所涉及的 API 的概念和用例。</li>
+          <li><code>&lt;canvas&gt;</code> 的基本语法和使用，以及相关 API。</li>
+          <li>使用定时器和 <code>requestAnimationFrame()</code> 配置动画循环。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -36,11 +34,11 @@ l10n:
 
 ## Web 中的图形
 
-我们来讨论 HTML 的[多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块，早先的网页只有单调的文字，后来才引入了图像，起初是通过 {{htmlelement("img")}} 元素的方式，后来出现了类似于 {{cssxref("background-image")}} 的 CSS 属性和 [SVG](/zh-CN/docs/Web/SVG) 图像等方式。
+早先的网页只有单调的文字，后来才引入了图像——起初是通过 {{htmlelement("img")}} 元素的方式，后来出现了类似于 {{cssxref("background-image")}} 的 CSS 属性和 [SVG](/zh-CN/docs/Web/SVG) 图像等方式。
 
-然而，这还不够好。当你能够使用 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 让 SVG 矢量图（因为其由标记表示）动起来时，位图却依然没有相应的支持。同时 SVG 动画的可用工具也少得可怜。Web 仍然无法高效地创建动画、游戏、3D 场景，而其他需求则通常由底层语言（如 C++ 或 Java）来应对。
+然而，这还不够好。当你能够使用 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 让 SVG 矢量图动起来时（因为其由标记表示），位图却依然没有相应的支持。同时 SVG 动画的可用工具也少得可怜。Web 仍然无法高效地创建动画、游戏、3D 场景，而其他需求则通常由底层语言（如 C++ 或 Java）来应对。
 
-当浏览器于 2004 年开始支持 HTML 画布元素 {{htmlelement("canvas")}} 和相关的 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 时，形势开始改善。下面你会看到，canvas 提供了许多用于创建 2D 动画、游戏、数据可视化和其他应用类型的有用工具，特别是当捆绑了由 Web 平台提供的一些其他的 API 时。
+当浏览器于 2004 年开始支持 {{htmlelement("canvas")}} 元素和相关的 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 时，形势开始改善。下面你会看到，canvas 提供了许多用于创建 2D 动画、游戏、数据可视化和其他应用类型的有用工具，特别是当捆绑了由 Web 平台提供的一些其他的 API 时更是如此，但要使 canvas 无障碍会相当困难，甚至是不可能的。
 
 下面的例子显示的是一个基于 canvas 的简单的 2D 弹跳球动画，前面我们在[介绍 JavaScript 对象](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)模块中见到过。
 
@@ -79,7 +77,7 @@ l10n:
 
 让我们开始吧：创建画布，准备尝试绘制图形。
 
-1. 首先在本地拷贝一份 [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) 文件夹。包含三个文件：
+1. 首先在本地创建一份 [0_canvas_start](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start) 文件夹的拷贝。其中包含三个文件：
    - “index.html”
    - “script.js”
    - “style.css”
@@ -91,7 +89,7 @@ l10n:
    </canvas>
    ```
 
-   我们为 `<canvas>` 元素添加了一个 `class`，使得在网页中选择多个画布时会容易些。这里我们移除了 `width` 和 `height` 属性（你可以随时添上，但是我们会在下方用 JavaScript 把它们添加回来）。不明确指定宽高时，画布默认尺寸为 300 × 150 像素。
+   我们为 `<canvas>` 元素添加了一个 `class`，使得在网页中选择多个画布时会容易些。这里我们移除了 `width` 和 `height` 属性（你可以随时添上，但是我们会在下方用 JavaScript 把它们添加回来）。不明确指定宽高时，画布默认为 300 像素宽，150 像素高。
 
 3. 现在，打开“script.js”并添加以下 JavaScript 代码：
 
@@ -101,7 +99,7 @@ l10n:
    const height = (canvas.height = window.innerHeight);
    ```
 
-   这里我们用 `canvas` 常量来存储画布的引用。第二行中我们将 {{domxref("Window.innerWidth")}}（可视区域宽度）赋值给一个新常量 `width` 和画布的 `width` 属性。第三行中，我们将 {{domxref("Window.innerHeight")}}（可视区域高度）赋值给一个新常量 `height` 和画布的 `height` 属性。然后我们就得到了一个充满浏览器窗口的画布。
+   这里我们用 `canvas` 常量来存储画布的引用。在第二行中，我们将新常量 `width` 和 canvas 的 `width` 属性都设置为 {{domxref("Window.innerWidth")}}（即视口宽度）。在第三行中，我们将新常量 `height` 和 canvas 的 `height` 属性都设置为 {{domxref("Window.innerHeight")}}（即视口高度）。因此，现在我们的画布可以填满整个浏览器窗口的宽度和高度！
 
    你还可以看到我们使用了多个等号来进行链式赋值，这在 JavaScript 中是允许的，很适合为多个变量同时赋一个相同的值。我们想要使用 width/height 变量来更方便地访问画布的宽和高，因为它们是后面很有用的值（例如，你想在画布宽度的一半处绘制某个东西）。
 
@@ -130,7 +128,7 @@ ctx.fillStyle = "rgb(0, 0, 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
-这里我们使用画布的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 属性（和 CSS 属性[色值](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#颜色)一致）设置填充色，然后使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} 方法绘制一个覆盖整个区域的矩形（前两个参数是矩形左上顶点的坐标，后两个参数是矩形的长宽，现在你知道 `width` 和 `height` 的作用了吧）。
+这里我们使用画布的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 属性（和 CSS 属性[颜色值](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#颜色)一致）设置填充色，然后使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} 方法绘制一个覆盖整个区域的矩形（前两个参数是矩形左上顶点的坐标，后两个参数是矩形的长宽，现在你知道 `width` 和 `height` 的作用了吧）。
 
 好的，模板已经就位，我们要开始了。
 
@@ -155,7 +153,7 @@ ctx.fillRect(0, 0, width, height);
    ctx.fillRect(50, 50, 100, 150);
    ```
 
-   保存并刷新，画布上将出现一个红色的矩形。其左边和顶边与画布边缘距离均为 50 像素（由前两个参数指定），宽 100 像素、高 150 像素（由后两个参数指定）。
+   保存并刷新，画布上将出现一个红色的矩形。其左边和顶边与画布边缘距离均为 50 像素（由前两个参数指定），宽 100 像素、高 150 像素（由第三个和第四个参数指定）。
 
 3. 然后再添加一个绿色矩形。在 JavaScript 末尾添加以下行：
 
@@ -166,7 +164,7 @@ ctx.fillRect(0, 0, width, height);
 
    保存并刷新，新的矩形就会出现。这里引出了一个新问题：绘制矩形、线等操作按出现的顺序依次进行。就像粉刷墙面时，两层重叠时新层总会覆盖旧层。这一点是无法改变的，因此在绘制图形时一定要慎重考虑顺序问题。
 
-4. 你还可以通过指定半透明的颜色来绘制半透明的图形，比如使用 `rgba()`。“α 通道”定义了颜色的透明度。值越高透明度越高，底层的内容就越清晰。在代码中添加以下行：
+4. 你还可以通过指定半透明的颜色来绘制半透明的图形，比如使用 `rgba()`。“alpha 通道”定义了颜色的透明度。值越高透明度越高，底层的内容就越清晰。在代码中添加以下行：
 
    ```js
    ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
@@ -179,7 +177,7 @@ ctx.fillRect(0, 0, width, height);
 
 目前我们绘制的矩形都是填充颜色的，我们也可以绘制仅包含外部框线（图形设计中称为**描边**）的矩形。你可以使用 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} 属性来设置描边颜色，使用 {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect")}} 来绘制一个矩形的轮廓。
 
-1. 在上文的 JavaScript 代码的末尾添加以下行：
+1. 在前一个示例的 JavaScript 代码的末尾添加以下行：
 
    ```js
    ctx.strokeStyle = "rgb(255, 255, 255)";
@@ -223,7 +221,7 @@ ctx.moveTo(50, 50);
 ctx.fill();
 ```
 
-#### 画线
+#### 绘制线条
 
 我们来在画布上绘制一个等边三角形。
 
@@ -271,7 +269,7 @@ ctx.fill();
 5. 下一条线的终点坐标为绘制整个三角形的起点坐标。
 6. 最后，运行 `ctx.fill()` 来终止路径，并为图形填充颜色。
 
-#### 画圆
+#### 绘制圆
 
 下面来看可在画布中绘制圆的方法——{{domxref("CanvasRenderingContext2D.arc", "arc()")}}，通过连续的点来绘制整个圆或者弧（arc，即局部的圆）。
 
@@ -302,7 +300,7 @@ ctx.fill();
    模式基本一样，但有两点不同：
 
    - 将 `arc()` 的最后一个参数设置为 `true`，意味着弧将逆时针绘制，也就意味着即使起、止角度分别设置为 -45°、45°，我们还是得到了区域外的一条 270° 的弧。如果把 `true` 改为 `false` 重新运行，将得到 90° 的弧。
-   - 在调用 `fill()` 前，我们绘制了一条终点为圆心的直线。然后我们就渲染出一个惟妙惟肖的吃豆人模型。如果删除这条线（试试呗）再重新运行代码，你只能得到一个起止点间被砍掉一块的圆。这向我们展示了画布的另一个重要事项：如果要填充一个未完成（也就是没有首尾相接）的路径，浏览器将在起、止点件绘制一条直线，然后直接填充。
+   - 在调用 `fill()` 前，我们绘制了一条终点为圆心的直线。然后我们就渲染出一个惟妙惟肖的吃豆人模型。如果删除这条线（可以试试！）再重新运行代码，你只能得到一个起止点间被砍掉一块的圆。这向我们展示了画布的另一个重要事项：如果要填充一个未完成（也就是没有首尾相接）的路径，浏览器将在起、止点件绘制一条直线，然后直接填充。
 
 示例现在应该跟下图一致：
 
@@ -312,7 +310,7 @@ ctx.fill();
 > 完整代码可到 GitHub 下载：[3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths)。
 
 > [!NOTE]
-> 请访问我们的[用画布绘图](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)入门课程来学习更多高级的路径绘制特征，比如贝叶斯曲线。
+> 请访问我们的[用画布绘制图形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)入门课程来学习更多高级的路径绘制特征，比如贝叶斯曲线。
 
 ### 文本
 
@@ -359,7 +357,7 @@ canvas.setAttribute("aria-label", "Canvas text");
 
 1. 同上，再次拷贝画布模板（[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)）以绘制新的示例。
 
-   {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
+   通过使用 {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} 方法可将图片绘制在画布上。最简单的版本需要三个参数：需要渲染的图片、图片左上角的 X、Y 坐标。
 
 2. 首先将图片源嵌入画布中。将以下几行添加到 JavaScript 的底部：
 
@@ -368,7 +366,7 @@ canvas.setAttribute("aria-label", "Canvas text");
    image.src = "firefox.png";
    ```
 
-   这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造函数创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与非空 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
+   这里使用 {{domxref("HTMLImageElement.Image()", "Image()")}} 构造函数创建了一个新的 {{domxref("HTMLImageElement")}} 对象。返回对象的类型与抓取现有 {{htmlelement("img")}} 元素的引用是一致的。然后将它的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 属性设置为 Firefox 的图标。此时浏览器将开始载入这张图片。
 
 3. 这次我们尝试用 `drawImage()` 函数来嵌入图片，应确保图片先载入完毕，否则运行会出错。可以通过 `load` 事件处理器来达成，该函数只在图片调用完毕后才会调用。在上文代码末尾添加以下内容：
 
@@ -385,10 +383,10 @@ canvas.setAttribute("aria-label", "Canvas text");
    ```
 
    - 第一个参数不变，为图片引用。
-   - 参数 2、3 表示裁切部分左上顶点的坐标，参考原点为原图片本身左上角的坐标。原图片在该坐标左、上的部分均不会绘制出来。
-   - 参数 4、5 表示我们希望从加载的原始图像中裁切出的部分的宽和高。
-   - 参数 6、7 表示裁切部分左上顶点在画布中的位置坐标，参考原点为画布左上顶点。
-   - 参数 8、9 表示裁切部分在画布中绘制的宽和高。本例中绘制时与裁切时面积相同，但你也可以指定不同的值来调整其大小。
+   - 第二个和第三个参数表示裁切部分左上顶点的坐标，参考原点为原图片本身左上角的坐标。原图片在该坐标左、上的部分均不会绘制出来。
+   - 第四个和第五个参数表示我们希望从加载的原始图像中裁切出的部分的宽和高。
+   - 第六个和第七个参数表示裁切部分左上顶点在画布中的位置坐标，参考原点为画布左上顶点。
+   - 第八个和第九个表示裁切部分在画布中绘制的宽和高。本例中绘制时与裁切时面积相同，但你也可以指定不同的值来调整其大小。
 
 5. 当图片完全更新后，{{glossary("accessible description", "无障碍描述")}}也要跟着更新。
 
@@ -405,7 +403,7 @@ canvas.setAttribute("aria-label", "Canvas text");
 
 ## 循环和动画
 
-目前我们学习了关于 2D 画布一些非常基础的用法，但是不学习动画你就无法体会画布的强大。画布是提供可编程图形的。如果你的作品不需要改变，那么你就只能永远面对那些静态图片了。
+目前我们学习了关于 2D 画布一些非常基础的用法，但是不学习动画你就无法体会画布的强大。画布是提供可编程图形的。如果你不打算改变任何东西，那还不如直接使用静态图像，省得费事。
 
 ### 创建循环
 
@@ -414,7 +412,7 @@ canvas.setAttribute("aria-label", "Canvas text");
 我们来创建一个简单的示例。
 
 1. 继续拷贝一份画布模板（[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)）在代码编辑器中打开。
-2. 在 JavaScript 代码末尾添加以下一行。这将创建一个新方法——{{domxref("CanvasRenderingContext2D.translate", "translate()")}}，可用于移动画布的原点。
+2. 在 JavaScript 代码末尾添加以下一行。它包含一个新方法——{{domxref("CanvasRenderingContext2D.translate", "translate()")}}，可用于移动画布的原点。
 
    ```js
    ctx.translate(width / 2, height / 2);
@@ -477,8 +475,8 @@ canvas.setAttribute("aria-label", "Canvas text");
 现在，你可以尝试这个示例，可以加一些创新哦。比如：
 
 - 把三角形换成矩形、弧，甚至内嵌的图片。
-- 修改 `length` 和 `moveOffset` 的值。
-- 我们引入了 `rand()` 函数但是没有使用，你可以试着用它引入一些随机数。
+- 探索更多的 `length` 和 `moveOffset` 值。
+- 我们包含了 `rand()` 函数但是没有使用，你可以试着用它引入一些随机数。
 
 > [!NOTE]
 > 完整代码可到 GitHub 下载：[6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop)。
@@ -492,7 +490,7 @@ canvas.setAttribute("aria-label", "Canvas text");
 > [!NOTE]
 > 动画结束后在主代码中调用 `cancelAnimationFrame()` 是良好习惯，可以确保不再有等待运行的更新。
 
-浏览器自行处理诸如“使动画匀速运行”、“避免在不可见的内容浪费资源”等复杂细节问题。
+浏览器会自行处理诸如“使动画匀速运行”、“避免在不可见的内容浪费资源”等复杂细节问题。
 
 我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)或查看[源代码](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
 
@@ -517,17 +515,18 @@ loop();
 
 请注意每一帧我们都完全清空画布并重新渲染所有内容。（每帧创建一个新球（25 个封顶），然后绘制每个球，更新它们的位置，检查是否撞到了其他球。）向画布中绘制的新图形不能像 DOM 元素那样单独操作。你无法再画布中单独操作某一个球，因为只要绘制完毕了，它就是画布的一部分，而不是一个单独的球。你需要擦除再重画，可以将整帧擦除再重画整个画面，也可通过编程选择最小的部分进行擦除和重画。
 
-优化图形动画是另一个编程主题，需要好多奇技淫巧。这超出我们的讨论范围啦。
+优化图形动画是另一个编程主题，需要好多奇技淫巧。不过，这些技术已经超出了我们的示例需要！
 
 一般地，在画布上制作动画需要以下步骤：
 
 1. 清除画布内容（可用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 或 {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}）。
-2. （在需要时）用 {{domxref("CanvasRenderingContext2D.save", "save()")}} 保存状态。（在进行下一步前保存所更新的设置，一般在复杂环境中用到）
+2. （在需要时）用 {{domxref("CanvasRenderingContext2D.save", "save()")}} 保存状态——在进行下一步前保存所更新的设置，一般在复杂环境中用到。
 3. 绘制动画图形。
 4. 使用 {{domxref("CanvasRenderingContext2D.restore", "restore()")}} 恢复第 2 步中保存的状态。
 5. 调用 `requestAnimationFrame()` 准备下一帧动画。
 
-> **备注：**`save()` 和 `restore()` 这里暂不展开，可以访问[变形](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations)教程（及后续内容）来获取详细信息。
+> [!NOTE]
+> 这里暂不展开 `save()` 和 `restore()`，可以访问[变换](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations)教程（及后续内容）来获取详细信息。
 
 ### 一个简单的人物动画
 
@@ -549,7 +548,7 @@ loop();
    ctx.translate(width / 2, height / 2);
    ```
 
-4. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
+4. 创建一个新的 {{domxref("HTMLImageElement")}} 对象，把它的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 设置为所需图片，添加一个 `onload` 事件处理器，使 `draw()` 函数在图片载入后触发。
 
    ```js
    const image = new Image();
@@ -591,10 +590,10 @@ loop();
    如你所见：
 
    - `image` 指定需要嵌入的图片。
-   - 参数 2、3 指定切片左上顶点在原图的位置坐标，X 值为 `sprite`（精灵序列 0—5）乘 102，Y 值恒为 0。
-   - 参数 4、5 指定切片尺寸：102 × 148 像素。
-   - 参数 6、7 指定切片在画布绘制区域的坐上顶点坐标。X 坐标位置为 0 + `posX`，意味着我们可以通过修改 `posX` 的值来修改绘制的位置。
-   - 参数 8、9 指定图片在画布中的尺寸。这里需要图片保持原始尺寸，因此我们指定宽、高值为 102、148。
+   - 第二个和第三个参数指定切片左上顶点在原图的位置坐标，X 值为 `sprite`（精灵序列 0—5）乘 102，Y 值恒为 0。
+   - 第四个和第五个参数指定切片尺寸：102 × 148 像素。
+   - 第六个和第七个参数指定切片在画布绘制区域的坐上顶点坐标。X 坐标位置为 0 + `posX`，意味着我们可以通过修改 `posX` 的值来修改绘制的位置。
+   - 第八个和第九个参数指定图片在画布中的尺寸。这里需要图片保持原始尺寸，因此我们指定宽、高值为 102、148。
 
 9. 现在，我们在每帧绘制完毕（部分完毕）后修改 `sprite` 的值。在 `draw()` 函数底部添加以下内容：
 
@@ -704,11 +703,11 @@ draw();
 
 2D 内容告一段落，现在简单了解一下 3D 画布。3D 画布内容可通过的 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API 实现，尽管它和 2D canvas API 都可在 {{htmlelement("canvas")}} 元素上进行渲染，但两者是彼此独立的。
 
-WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，可直接与 [GPU](/zh-CN/docs/Glossary/GPU) 通信，基于此，编写纯 WebGL 代码与常规的 JavaScript 不尽相同，更像 C++ 那样的底层语言，更加复杂，但无比强大。
+WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，可直接与电脑的 [GPU](/zh-CN/docs/Glossary/GPU) 通信，基于此，编写纯 WebGL 代码与常规的 JavaScript 不尽相同，更像 C++ 那样的底层语言，更加复杂，但无比强大。
 
 ### 使用库
 
-由于 3D 绘图的复杂性，大多数人写代码时会使用第三方 JavaScript 库（比如 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)、[PlayCanvas](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 或 [Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)）。大多数库的原理都基本类似，提供创建基本的、自定义性状的功能、视图定位摄影和光效、表面纹理覆盖，等等。库负责 与 WebGL 通信，你只需完成更高阶工作。
+由于 3D 绘图的复杂性，大多数人写代码时会使用第三方 JavaScript 库（比如 [Three.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)、[PlayCanvas](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 或 [Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)）。大多数库的原理都基本类似，提供创建基本的、自定义性状的功能、视图定位摄影和光效、表面纹理覆盖，等等。库负责与 WebGL 通信，你只需完成更高阶工作。
 
 接触任何一个库都意味着要学一套全新的 API（这里是第三方的版本），但都比使用原生 WebGL 编程简单。
 
@@ -725,7 +724,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
    const scene = new THREE.Scene();
    ```
 
-   [`Scene()`](https://threejs.org/docs/index.html#Reference/Scenes/Scene) 构造函数创建一个新的场景，表示即将显示的整个 3D 世界。
+   [`Scene()`](https://threejs.org/docs/index.html#api/zh/scenes/Scene) 构造函数创建一个新的场景，表示即将显示的整个 3D 世界。
 
 5. 下一步，我们需要一部**摄影机**来看到整个场景。在 3D 绘图语境中，摄影机表示观察者在世界里的位置，可通过下面代码创建一部摄影机：
 
@@ -739,7 +738,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
    camera.position.z = 5;
    ```
 
-   [`PerspectiveCamera()`](https://threejs.org/docs/index.html#Reference/Cameras/PerspectiveCamera) 构造函数有四个参数：
+   [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/zh/cameras/PerspectiveCamera) 构造函数有四个参数：
 
    - 观察区域：镜头视角大小，用角度表示。
    - {{glossary("aspect ratio", "纵横比")}}：一般情况下，宽高比等于屏幕的宽比上屏幕的高。使用其他的值会使场景扭曲（也许正是你需要的，但一般都不是）。
@@ -748,7 +747,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
 
    将摄像机的位置设定为距 Z 轴 5 个距离单位的位置。与 CSS 类似，在屏幕之外你（观察者）的位置。
 
-6. 第三个重要参数是渲染器。我们用它来渲染给定的场景，通过给定的摄影机观察。现在我们使用 [`WebGLRenderer()`](https://threejs.org/docs/index.html#Reference/Renderers/WebGLRenderer) 构造函数创建一个渲染器供稍后使用。添加以下代码：
+6. 第三个重要成分是渲染器。我们用它来渲染给定的场景，通过给定的摄影机观察。现在我们使用 [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/zh/renderers/WebGLRenderer) 构造函数创建一个渲染器供稍后使用。添加以下代码：
 
    ```js
    const renderer = new THREE.WebGLRenderer();
@@ -814,18 +813,18 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
 
    这段代码很直观，每一帧我们都沿 X 轴 和 Y 轴将魔方轻微转动，然后按摄像机视角渲染场景，最后调用 `requestAnimationFrame()` 来准备下一帧。
 
-回顾一下最终效果：
+让我们再快速浏览一下成品的样子：
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
 你可以[到 Github 下载完成的代码](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube)。
 
 > [!NOTE]
-> 在我们的 GitHub 仓库还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（在线查看）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
+> 在我们的 GitHub 仓库还有另一个趣味 3D 魔方示例——[Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube)（[在线查看它](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)）。其中通过 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来从电脑摄像头获取一段视频，将其投影到魔方上作为纹理。
 
 ## 总结
 
-此刻你以经了解了一些 Canvas 和 WebGL 图形编程的基本理念和简单应用，你一定产生了不少创作灵感，玩得开心！
+至此，你应该对使用 Canvas 和 WebGL 进行图形编程的基础知识以及使用这些 API 的功能有了一定的了解，同时也知道了如何获取更多信息。玩得开心！
 
 ## 参见
 
@@ -838,7 +837,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL)（开放图形库）实现，
 
 ## 示例
 
-- [Violent theramin](https://github.com/mdn/violent-theremin)：用 Web 音频 API 创建声音，用画布显示漂亮的视觉效果以配合音乐。
-- [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic)：用画布为 Web 音频 API 产生的音效提供实时的视觉效果。
+- [Violent theramin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)：用 Web 音频 API 创建声音，用画布显示漂亮的视觉效果以配合音乐。
+- [Voice change-o-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic)：用画布为 Web 音频 API 产生的音效提供实时的视觉效果。
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}

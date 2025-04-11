@@ -53,7 +53,7 @@ moveTo(newParent, newName, successCallback, errorCallback)
 
 ## 例
 
-この例は、一時的なログファイルが 1 メガバイトを超えた場合に、より永続的な "log" ディレクトリ－に移動させる方法を示しています。
+この例は、一時的なログファイルが 1 メガバイトを超えた場合に、より永続的な "log" ディレクトリーに移動させる方法を示しています。
 
 ```js
 workingDirectory.getFile(

@@ -37,7 +37,7 @@ console.log(import.meta); // { url: "file:///home/user/my-module.js" }
 
 モジュールのベース URL を示す `url` プロパティを持つオブジェクトを返します。これは、外部スクリプトの場合はスクリプトを取得した URL、インラインスクリプトの場合はそれを含むドキュメントのベース URL です。
 
-これには、クエリパラメータまたはハッシュ（つまり、`?` または `#`）が含まれることに注意してください。
+これには、クエリーパラメータまたはハッシュ（つまり、`?` または `#`）が含まれることに注意してください。
 
 例えば、以下のような HTML で
 
@@ -64,15 +64,15 @@ import "./index2.mjs?someURLInfo=5";
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
-メモ: 後者の例のように Node.js はクエリパラメータ（またはハッシュ）を渡しますが、Node 14.1.0 以降、クエリパラメータを持つ URL を `node --experimental-modules index.mjs?someURLInfo=5` という形式で読み込むとエラーになることに注意してください（この文脈では URL ではなくファイルとして扱われます）。
+メモ: 後者の例のように Node.js はクエリーパラメータ（またはハッシュ）を渡しますが、Node 14.1.0 以降、クエリーパラメータを持つ URL を `node --experimental-modules index.mjs?someURLInfo=5` という形式で読み込むとエラーになることに注意してください（この文脈では URL ではなくファイルとして扱われます）。
 
-このようなファイル固有の引数の受け渡しは、アプリケーション全体の `location.href`（HTML ファイルパスの後にクエリ文字列やハッシュを追加したもの \[Node.js では `process.argv` を介して]）で使用されているものを補完する場合があります。
+このようなファイル固有の引数の受け渡しは、アプリケーション全体の `location.href`（HTML ファイルパスの後にクエリー文字列やハッシュを追加したもの \[Node.js では `process.argv` を介して]）で使用されているものを補完する場合があります。
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 

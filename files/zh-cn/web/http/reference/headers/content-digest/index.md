@@ -7,9 +7,9 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`Content-Digest`** {{Glossary("request header", "请求")}}和{{Glossary("response header", "响应标头")}}提供一个使用哈希算法计算的消息内容{{Glossary("digest", "摘要")}}。接收者可以使用 `Content-Digest` 来验证 HTTP 消息内容的完整性。
+HTTP **`Content-Digest`** {{Glossary("request header", "请求")}}和{{Glossary("response header", "响应标头")}}提供一个使用散列算法计算的消息内容{{Glossary("digest", "摘要")}}。接收者可以使用 `Content-Digest` 来验证 HTTP 消息内容的完整性。
 
-{{HTTPHeader("Want-Content-Digest")}} 字段允许发送者请求 `Content-Digest` 及其哈希算法偏好。内容摘要会根据 {{HTTPHeader("Content-Encoding")}} 和 {{HTTPHeader("Content-Range")}} 而有所不同，但不会受到 {{HTTPHeader("Transfer-Encoding")}} 的影响。
+{{HTTPHeader("Want-Content-Digest")}} 字段允许发送者请求 `Content-Digest` 及其散列算法偏好。内容摘要会根据 {{HTTPHeader("Content-Encoding")}} 和 {{HTTPHeader("Content-Range")}} 而有所不同，但不会受到 {{HTTPHeader("Transfer-Encoding")}} 的影响。
 
 在某些情况下，{{HTTPHeader("Repr-Digest")}} 可用于验证完整表示中的部分或多部分消息的完整性。例如，在[范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)中，如果仅请求的字节范围不同，则 `Repr-Digest` 将始终具有相同的值，而内容摘要则对于每个部分而有所不同。因此，当表示在发送单个消息时，`Content-Digest` 与 {{HTTPHeader("Repr-Digest")}} 相同。
 

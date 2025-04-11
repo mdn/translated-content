@@ -7,7 +7,7 @@ slug: Web/CSS/basic-shape
 
 Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des fonctions et est notamment utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} ou {{cssxref("offset-path")}}.
 
-{{InteractiveExample("CSS Demo: &amp;lt;basic-shape&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
 
 ```css interactive-example-choice
 clip-path: inset(22% 12% 15px 35px);

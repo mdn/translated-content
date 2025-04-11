@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Proxy-Authenticate
 
 {{HTTPSidebar}}
 
-HTTP **`Proxy-Authenticate`** レスポンスヘッダーは、{{Glossary("proxy server", "プロキシサーバー")}}の背後にあるリソースへのアクセスに使用される認証メソッドを定義します。プロキシサーバーへのリクエストを認証し、プロキシサーバーがリクエストをさらに送信できるようにします。
+HTTP **`Proxy-Authenticate`** レスポンスヘッダーは、{{Glossary("proxy server", "プロキシーサーバー")}}の背後にあるリソースへのアクセスに使用される認証メソッドを定義します。プロキシーサーバーへのリクエストを認証し、プロキシーサーバーがリクエストをさらに送信できるようにします。
 
 `Proxy-Authenticate` ヘッダーは、 {{HTTPStatus("407")}} `Proxy Authentication Required` とともに送信されます。
 
