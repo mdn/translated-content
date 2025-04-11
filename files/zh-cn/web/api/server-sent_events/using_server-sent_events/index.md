@@ -2,7 +2,7 @@
 title: 使用服务器发送事件
 slug: Web/API/Server-sent_events/Using_server-sent_events
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{DefaultAPISidebar("Server Sent Events")}}
@@ -31,7 +31,7 @@ const evtSource = new EventSource("//api.example.com/ssedemo.php", {
 
 ### 监听 `message` 事件
 
-如果服务器发送的消息中没有 [`event`](#event) 字段，则这些消息会被视为 `message` 事件。为了接收这些 message 事件，需要为 {{domxref("EventSource.message_event", "message")}} 事件附加一个事件处理程序。
+如果服务器发送的消息中没有 [`event`](#event) 字段，则这些消息会被视为 `message` 事件。为了接收这些 message 事件，需要为 {{domxref("EventSource.message_event", "message")}} 事件附加一个事件处理器。
 
 ```js
 evtSource.onmessage = (event) => {
@@ -62,7 +62,7 @@ evtSource.addEventListener("ping", (event) => {
 每当服务器发送一条 `event` 字段设置为 `ping` 的消息时，这段代码就会被调用，然后接着解析 `data` 字段中的 JSON 并输出这些信息。
 
 > [!WARNING]
-> 当**不通过 HTTP/2 使用时**，SSE（服务器发送事件）会受到最大连接数的限制，尤其是在打开多个选项卡时变得棘手，因为该限制是针对*每个浏览器*的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“不会解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（参见 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，同一时间内 *HTTP 最大连接数*由服务器和客户端之间协商（默认为 100）。
+> 当**不通过 HTTP/2 使用**时，SSE（服务器发送事件）会受到最大连接数的限制，尤其是在打开多个选项卡时变得棘手，因为该限制是针对*每个浏览器*的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“不会解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 `www.example1.com` 的 SSE 连接，并打开 6 个 `www.example2.com` 的 SSE 连接。（参见 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，同一时间内 *HTTP 最大连接数*由服务器和客户端之间协商（默认为 100）。
 
 ## 从服务器端发送事件
 
@@ -78,14 +78,14 @@ header("Cache-Control: no-cache");
 
 $counter = rand(1, 10);
 while (true) {
-  // Every second, send a "ping" event.
+  // 每一秒发送一个“ping”事件。
 
   echo "event: ping\n";
   $curDate = date(DATE_ISO8601);
   echo 'data: {"time": "' . $curDate . '"}';
   echo "\n\n";
 
-  // Send a simple message at random intervals.
+  // 随机间隔地发送简单消息。
 
   $counter--;
 
@@ -99,7 +99,7 @@ while (true) {
   }
   flush();
 
-  // Break the loop if the client aborted the connection (closed the page)
+  // 如果客户端中断连接（关闭了页面）则终止该循环。
 
   if (connection_aborted()) break;
 
@@ -141,7 +141,7 @@ evtSource.close();
 
 ### 字段
 
-每条收到的消息都是一行内下列部分字段的组合。
+每条收到的消息都是一行内下列部分字段的组合：
 
 - `event`
   - : 用于标识事件类型的字符串。如果指定了这个字符串，浏览器会将具有指定事件名称的事件分派给相应的监听器；网站源代码应该使用 `addEventListener()` 来监听指定的事件。如果一个消息没有指定事件名称，那么 `onmessage` 处理程序就会被调用。
@@ -159,7 +159,7 @@ evtSource.close();
 
 ### 示例
 
-#### 纯数据 message
+#### 纯数据消息
 
 下面的例子中发送了三条消息，第一条仅仅是个注释，因为它以冒号开头。正如之前提到的，如果消息可能不会定期发送，这可以作为保持连接的机制，非常有用。
 
@@ -174,9 +174,9 @@ data: another message
 data: with two lines
 ```
 
-#### 命名事件
+#### 具名事件
 
-下面的事件流中包含了一些命名事件。每个事件都有一个由 `event` 字段指定的事件名称和一个 `data` 字段，其值是一个适当的 JSON 字符串，包含客户端对该事件采取行动所需的数据。当然，`data` 字段可以包含任何字符串数据而并非一定要是 JSON。
+下面的事件流中包含了一些具名事件。每个事件都有一个由 `event` 字段指定的事件名称和一个 `data` 字段，其值是一个适当的 JSON 字符串，包含客户端对该事件采取行动所需的数据。当然，`data` 字段可以包含任何字符串数据而并非一定要是 JSON。
 
 ```bash
 event: userconnect
@@ -192,9 +192,9 @@ event: usermessage
 data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
 ```
 
-#### 混合两种事件
+#### 混合和匹配
 
-你并不一定非要使用未命名和命名事件：你可以在一个事件流中同时使用命名事件和未命名事件。
+你并不一定非要使用未命名和具有类型的事件：你可以在一个事件流中同时使用这两种事件。
 
 ```bash
 event: userconnect
