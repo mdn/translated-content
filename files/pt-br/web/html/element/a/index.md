@@ -60,7 +60,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 - `ping`
   - : Uma lista de URLs separadas por espaços. Quando o link é seguido, o brrowser enviará requisições {{HTTPMethod("POST")}} com o corpo `PING` para as URLs. Typically for tracking.
 - `referrerpolicy`{{Experimental_Inline}}
-  - : Quanto do [referrer](/pt-BR/docs/Web/HTTP/Headers/Referer) para ser enviado quando acessar o link. Acesse [`Referrer-Policy`](/pt-BR/docs/Web/HTTP/Headers/Referrer-Policy) para possíveis valores e seus efeitos.
+  - : Quanto do [referrer](/pt-BR/docs/Web/HTTP/Reference/Headers/Referer) para ser enviado quando acessar o link. Acesse [`Referrer-Policy`](/pt-BR/docs/Web/HTTP/Reference/Headers/Referrer-Policy) para possíveis valores e seus efeitos.
 - `rel`
   - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Attributes/rel).
 - `target`
@@ -257,7 +257,7 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 

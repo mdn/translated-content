@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basic
 
 {{learnsidebar}}
 
-O objetivo deste teste de habilidades é avaliar se você entendeu nosso artigo [Fundamentos do texto em HTML.](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+O objetivo deste teste de habilidades é avaliar se você entendeu nosso artigo [Fundamentos do texto em HTML.](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
 
 > [!NOTE]
 > Você pode testar suas soluções nos editores interativos abaixo, entretanto pode ser de ajuda fazer download do código e usar uma ferramenta online como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para trabalhar nas tarefas.

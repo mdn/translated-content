@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Errors/Cant_delete
 {{jsSidebar("Errors")}}
 
 A exceção do Javascript "property is non-configurable and can't be deleted" ocorre
-quando é feita a tentativa de deletar uma propriedade, mas a propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties).
+quando é feita a tentativa de deletar uma propriedade, mas a propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#properties).
 
 ## Mensagem
 
@@ -22,7 +22,7 @@ TypeError: Cannot delete property 'x' of #<Object> (Chrome)
 
 ## O que deu errado?
 
-Foi feita a tentativa de deletar uma propriedade, mas esta propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Data_structures#properties). O
+Foi feita a tentativa de deletar uma propriedade, mas esta propriedade [não é configurável](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#properties). O
 atributo `configurable` controla se a propriedade pode ser deletada do
 objeto e se seus atributos (Exceto `writable`) podem ser alterados.
 

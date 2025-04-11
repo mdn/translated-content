@@ -88,7 +88,7 @@ As técnicas abaixo descrevem cada função composta, bem como suas funções fi
 
 ### Funções de regiões ativa
 
-- [alert](/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [alert](/pt-BR/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
 - [log](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role)
 - marquee
 - [status](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role)

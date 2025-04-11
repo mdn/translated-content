@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-Neste segundo [Tutorial Express](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), mostrará como criar a estrutura do website que depois você poderá colocar _templates,_ chamadas de banco de dados ou rotas específicas.
+Neste segundo [Tutorial Express](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), mostrará como criar a estrutura do website que depois você poderá colocar _templates,_ chamadas de banco de dados ou rotas específicas.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -32,7 +32,7 @@ Neste segundo [Tutorial Express](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tu
 
 ## Visão Geral
 
-Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary"](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), para o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
+Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary"](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), para o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
 
 As seguintes sessões mostrará como chamar o "Application Generator", e prover uma pequena explicação sobre as diferentes opções de CSS. Também aprenderemos como a estrutura do site é definida. No final, será mostrado como podemos rodar o site para ver se funciona.
 
@@ -498,7 +498,7 @@ Create a new route in **/routes/users.js** that will display the text "_You're s
 
 ## Summary
 
-You have now created a skeleton website project for the [Local Library](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) and verified that it runs using _node_. Most importantly, you also understand how the project is structured, so you have a good idea where we need to make changes to add routes and views for our local library.
+You have now created a skeleton website project for the [Local Library](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) and verified that it runs using _node_. Most importantly, you also understand how the project is structured, so you have a good idea where we need to make changes to add routes and views for our local library.
 
 Next, we'll start modifying the skeleton so that it works as a library website.
 
