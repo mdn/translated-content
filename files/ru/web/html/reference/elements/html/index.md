@@ -1,7 +1,6 @@
 ---
 title: "<html>: корневой элемент HTML-документа"
 slug: Web/HTML/Reference/Elements/html
-original_slug: Web/HTML/Element/html
 l10n:
   sourceCommit: 816cc4d4a5a318a23222946b6981bb92b499aebb
 ---

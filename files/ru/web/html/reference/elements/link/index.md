@@ -1,7 +1,6 @@
 ---
 title: "<link>: Элемент - ссылка на внешний ресурс"
 slug: Web/HTML/Reference/Elements/link
-original_slug: Web/HTML/Element/link
 ---
 
 {{HTMLSidebar}}

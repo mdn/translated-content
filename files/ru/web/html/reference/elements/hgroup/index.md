@@ -1,7 +1,6 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
-original_slug: Web/HTML/Element/hgroup
 ---
 
 {{HTMLSidebar}}

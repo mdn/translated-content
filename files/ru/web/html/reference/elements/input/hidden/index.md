@@ -1,7 +1,6 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
-original_slug: Web/HTML/Element/input/hidden
 ---
 
 {{HTMLSidebar}}

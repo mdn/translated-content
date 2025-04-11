@@ -1,7 +1,6 @@
 ---
 title: <ins>
 slug: Web/HTML/Reference/Elements/ins
-original_slug: Web/HTML/Element/ins
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
-original_slug: Web/HTML/Element/input/datetime-local
 ---
 
 {{HTMLSidebar}}

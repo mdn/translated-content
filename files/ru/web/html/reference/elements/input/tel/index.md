@@ -1,7 +1,6 @@
 ---
 title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
-original_slug: Web/HTML/Element/input/tel
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <input>
 slug: Web/HTML/Reference/Elements/input
-original_slug: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}

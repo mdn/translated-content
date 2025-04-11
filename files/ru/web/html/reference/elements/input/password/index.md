@@ -1,7 +1,6 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
-original_slug: Web/HTML/Element/input/password
 ---
 
 {{HTMLSidebar}}

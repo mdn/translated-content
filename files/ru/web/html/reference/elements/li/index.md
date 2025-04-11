@@ -1,7 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Reference/Elements/li
-original_slug: Web/HTML/Element/li
 ---
 
 {{HTMLSidebar}}

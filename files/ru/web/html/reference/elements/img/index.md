@@ -1,7 +1,6 @@
 ---
 title: <img>
 slug: Web/HTML/Reference/Elements/img
-original_slug: Web/HTML/Element/img
 ---
 
 {{HTMLSidebar}}

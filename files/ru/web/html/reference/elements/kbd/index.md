@@ -1,7 +1,6 @@
 ---
 title: "<kbd>: Элемент ввода с клавиатуры"
 slug: Web/HTML/Reference/Elements/kbd
-original_slug: Web/HTML/Element/kbd
 ---
 
 {{HTMLSidebar}}

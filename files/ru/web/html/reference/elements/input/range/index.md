@@ -1,7 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
-original_slug: Web/HTML/Element/input/range
 ---
 
 {{HTMLSidebar("Input_types")}}

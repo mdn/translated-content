@@ -1,7 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
-original_slug: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
-original_slug: Web/HTML/Element/input/date
 ---
 
 {{HTMLSidebar}}

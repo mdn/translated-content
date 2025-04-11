@@ -1,7 +1,6 @@
 ---
 title: "<hr>: The Thematic Break (Horizontal Rule) element"
 slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
 ---
 
 {{HTMLSidebar}}

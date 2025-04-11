@@ -1,7 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Reference/Elements/main
-original_slug: Web/HTML/Element/main
 ---
 
 {{HTMLSidebar}}
