@@ -184,10 +184,10 @@ O método `valueOf()` não é mais especializado para `RegExp`. Ele usa [`Object
 
 - `Proxy.create` e `Proxy.createFunction` estão obsoletos. Em vez disso, use o construtor [`Proxy()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 - As seguintes _traps_ (do inglês "armadilha", métodos que interceptam operações em um objeto, permitindo um comportamento personalizado) estão obsoletas:
- - `hasOwn` ([bug 980565](https://bugzil.la/980565), Firefox 33).
- - `getEnumerablePropertyKeys` ([bug 783829](https://bugzil.la/783829), Firefox 37)
- - `getOwnPropertyNames` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
- - `keys` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
+- `hasOwn` ([bug 980565](https://bugzil.la/980565), Firefox 33).
+- `getEnumerablePropertyKeys` ([bug 783829](https://bugzil.la/783829), Firefox 37)
+- `getOwnPropertyNames` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
+- `keys` ([bug 1007334](https://bugzil.la/1007334), Firefox 33)
 
 ### _ParallelArray_ (Matriz paralela)
 
