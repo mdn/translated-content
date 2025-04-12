@@ -393,12 +393,12 @@ try {
 可以将 JavaScript 对象当作是键值对的集合。因此，它们类似于：
 
 - Python 中的字典。
-- Perl 和 Ruby 中的哈希。
-- C 和 C++ 中的哈希表。
+- Perl 和 Ruby 中的散列。
+- C 和 C++ 中的散列表。
 - Java 中的 HashMap。
 - PHP 中的关联数组。
 
-JavaScript 对象是哈希。与静态类型语言中的对象不同，JavaScript 中的对象没有固定的形状——可以随时添加、删除、重新排序、修改或动态查询属性。对象键总是[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)或 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)——即便是通常被认为是整数的数组索引，但在底层实际上是字符串。
+JavaScript 对象是散列。与静态类型语言中的对象不同，JavaScript 中的对象没有固定的形状——可以随时添加、删除、重新排序、修改或动态查询属性。对象键总是[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)或 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)——即便是通常被认为是整数的数组索引，但在底层实际上是字符串。
 
 通常使用字面量语法创建对象：
 
@@ -480,7 +480,7 @@ console.log(a.length); // 101
 console.log(a); // ['狗', '猫', '母鸡', empty × 97, '狐狸']
 ```
 
-上面的数组称作[_稀疏数组_](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，因为中间有空的槽，这会导致引擎将数组负优化为哈希表。确保数组是紧密排列的！
+上面的数组称作[_稀疏数组_](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，因为中间有空的槽，这会导致引擎将数组负优化为散列表。确保数组是紧密排列的！
 
 越界索引不会抛出异常。如果你查询的是不存在数组索引，你得到的返回值是 `undefined`：
 

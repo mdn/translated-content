@@ -44,32 +44,32 @@ HTML 要素は文書中で、`<` および `>` で囲まれた要素名で構成
 
 ## 高度なトピック
 
-- [CORS を利用した画像](/ja/docs/Web/HTML/CORS_enabled_image)
-  - : [`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性と {{glossary("CORS")}} ヘッダーを組み合わせることで、 {{HTMLElement("img")}} 要素で定義された画像を異なるドメインから読み出し、 それを {{HTMLElement("canvas")}} 要素の中で同じドメインから読み出したかのように扱うことができます。
-- [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)
+- [CORS を利用した画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)
+  - : [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性と {{glossary("CORS")}} ヘッダーを組み合わせることで、 {{HTMLElement("img")}} 要素で定義された画像を異なるドメインから読み出し、 それを {{HTMLElement("canvas")}} 要素の中で同じドメインから読み出したかのように扱うことができます。
+- [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : [CORS](/ja/docs/Web/HTTP/Guides/CORS) をサポートするいくつかの HTML 要素（{{HTMLElement("img")}} や {{HTMLElement("video")}} など）は `crossorigin` 属性（`crossOrigin` プロパティ）を持っており、要素が取得したデータに関する CORS リクエストを設定することができます。
-- [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)
-  - : HTML の {{htmlelement("head")}} 要素内において、 {{htmlelement("link")}} 要素で [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性に `preload` を指定することで、読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザーの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチリクエストを記述することができます。これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。この記事では `preload` がどのように動作するのかについての基本的なガイドを提供します。
+- [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)
+  - : HTML の {{htmlelement("head")}} 要素内において、 {{htmlelement("link")}} 要素で [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に `preload` を指定することで、読み込み後すぐにページに必要なリソース、つまりページ読み込みの過程の初期の、ブラウザーの主なレンダリング機構が起動する前に、先読みを始めたいものを指定する宣言的なフェッチリクエストを記述することができます。これにより、ページの最初のレンダリングがブロックされにくくなり、パフォーマンスが向上します。この記事では `preload` がどのように動作するのかについての基本的なガイドを提供します。
 
 ## リファレンス
 
 - [HTML リファレンス](/ja/docs/Web/HTML/Reference)
   - : HTML は**要素**の集まりで、それぞれの要素がいくつかの**属性**で修飾される場合があります。 HTML 文書は互いに**リンク**で接続されます。
-- [HTML 要素リファレンス](/ja/docs/Web/HTML/Element)
+- [HTML 要素リファレンス](/ja/docs/Web/HTML/Reference/Elements)
   - : すべての {{glossary("HTML")}} {{glossary("Element", "要素")}}の一覧を閲覧します。
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
   - : HTML の要素には**属性**があります。これは要素を調整したり、さまざまな方法で振る舞いを調整したりするための付加的な値です。
-- [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
-  - : グローバル属性は、*標準仕様で規定されていないものを含む*すべての [HTML 要素](/ja/docs/Web/HTML/Element)に指定できるものです。つまり、あらゆる標準外の要素も、それを使用することで文書が HTML5 に準拠しなくなるとしても、グローバル属性を受け入れなければならないということです。
+- [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+  - : グローバル属性は、*標準仕様で規定されていないものを含む*すべての [HTML 要素](/ja/docs/Web/HTML/Reference/Elements)に指定できるものです。つまり、あらゆる標準外の要素も、それを使用することで文書が HTML5 に準拠しなくなるとしても、グローバル属性を受け入れなければならないということです。
 - [インラインレベル要素](/ja/docs/Glossary/Inline-level_content)と[ブロックレベル要素](/ja/docs/Glossary/Block-level_content)
   - : 通常、 HTML の要素は「インラインレベル」要素または「ブロックレベル」要素のどちらかです。インラインレベル要素は、要素を定義するタグによって指定された範囲のみを占有します。ブロックレベル要素は親要素（コンテナー）の範囲全体を占有し、それによって「ブロックボックス」を作成します。
-- [HTML コメント](/ja/docs/Web/HTML/Comments)
+- [HTML コメント](/ja/docs/Web/HTML/Guides/Comments)
   - : HTML コメントは、マークアップに説明メモを追加したり、文書内の特定の部分をブラウザーが解釈しないようにしたりするために使用します。
 - [ウェブにおけるメディア種別と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
   - : {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素では、外部のソフトウェアの支援を必要とせずにコンテンツの中でネイティブに音声や動画を再生できます。
-- [HTML コンテンツカテゴリー](/ja/docs/Web/HTML/Content_categories)
+- [HTML コンテンツカテゴリー](/ja/docs/Web/HTML/Guides/Content_categories)
   - : HTML は数種類のコンテンツで構成されています。それぞれのコンテンツは特定のコンテキストで使用することができ、それ以外のコンテキストでは使用できません。同様に、それぞれのコンテキストには、格納することができる他のコンテンツカテゴリーと、その中で使用できる要素、または使用できない要素の集合があります。これは、これらのカテゴリーへのガイドです
-- [後方互換モードと標準準拠モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [後方互換モードと標準準拠モード](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
   - : 後方互換モードと標準準拠モードの歴史的な情報です。
 
 ## 関連トピック

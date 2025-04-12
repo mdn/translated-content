@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`accept`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性を反映し、一般にカンマで区切られた固有ファイル型指定子のリストで、[`<input>` の `file` 型](/ja/docs/Web/HTML/Element/input/file)に期待されるファイル型のヒントを提供します。この属性が明示的に設定されていない場合、`accept` 属性は空文字列になります。
+**`accept`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Reference/Elements/input#accept) 属性を反映し、一般にカンマで区切られた固有ファイル型指定子のリストで、[`<input>` の `file` 型](/ja/docs/Web/HTML/Reference/Elements/input/file)に期待されるファイル型のヒントを提供します。この属性が明示的に設定されていない場合、`accept` 属性は空文字列になります。
 
 ## 値
 
@@ -35,6 +35,6 @@ inputElement.accept = ".doc,.docx,.xml,application/msword"; // accept 値を設�
 - {{domxref("HTMLInputElement.type")}}
 - {{domxref("HTMLInputElement.multiple")}}
 - {{domxref("HTMLInputElement.capture")}}
-- [ファイル型指定子](/ja/docs/Web/HTML/Element/input/file#固有ファイル型指定子)
+- [ファイル型指定子](/ja/docs/Web/HTML/Reference/Elements/input/file#固有ファイル型指定子)
 - [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
 - [ファイル API](/ja/docs/Web/API/File_API)

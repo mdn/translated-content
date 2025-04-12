@@ -18,7 +18,7 @@ l10n:
 - **カスタム組み込み要素** (Customized built-in element) は、標準 HTML 要素、例えば {{domxref("HTMLImageElement")}} や {{domxref("HTMLParagraphElement")}} を継承します。これらの実装により、標準要素の特定のインスタンスの動作が拡張されます。
 
   > [!NOTE]
-  > カスタム組み込み要素の実装に関する注意事項については、[`is`](/ja/docs/Web/HTML/Global_attributes/is) 属性のリファレンスを参照してください。
+  > カスタム組み込み要素の実装に関する注意事項については、[`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) 属性のリファレンスを参照してください。
 
 - **自律型カスタム要素** (Autonomous custom element) は HTML 要素の基底クラスである {{domxref("HTMLElement")}} を継承します。一から動作を実装する必要があります。
 
@@ -122,7 +122,7 @@ customElements.define("popup-info", PopupInfo);
 
 カスタム要素を定義し登録すると、コードで使用できるようになります。
 
-カスタム組み込み要素を使用するには、組み込み要素を使用しますが、カスタム名を [`is`](/ja/docs/Web/HTML/Global_attributes/is) 属性の値として使用します。
+カスタム組み込み要素を使用するには、組み込み要素を使用しますが、カスタム名を [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) 属性の値として使用します。
 
 ```html
 <p is="word-count"></p>
@@ -430,7 +430,7 @@ class PopupInfo extends HTMLElement {
 - [ソースコードを参照](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
 
 > [!NOTE]
-> カスタム組み込み要素の実装に関する注意事項については、[`is`](/ja/docs/Web/HTML/Global_attributes/is) 属性のリファレンスを参照してください。
+> カスタム組み込み要素の実装に関する注意事項については、[`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) 属性のリファレンスを参照してください。
 
 まず始めに、これまでと同様の方法でクラス要素を定義します。
 
@@ -514,7 +514,7 @@ customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 
 通常のように `<ul>` を使用していますが、カスタム要素の名前が `is` 属性で指定されています。
 
-この場合、DOM が完全に解釈された後にカスタム要素を定義するスクリプトが実行されるように保証する必要があります。`connectedCallback()` は展開されたリストが DOM に追加されると同時に呼び出されますが、その時点では子要素はまだ追加されていないため、`querySelectorAll()` の呼び出しでは何も見つかりません。これを保証する一つの方法は、スクリプトを記載する行に [defer](/ja/docs/Web/HTML/Element/script#defer) 属性を追加することです。
+この場合、DOM が完全に解釈された後にカスタム要素を定義するスクリプトが実行されるように保証する必要があります。`connectedCallback()` は展開されたリストが DOM に追加されると同時に呼び出されますが、その時点では子要素はまだ追加されていないため、`querySelectorAll()` の呼び出しでは何も見つかりません。これを保証する一つの方法は、スクリプトを記載する行に [defer](/ja/docs/Web/HTML/Reference/Elements/script#defer) 属性を追加することです。
 
 ```html
 <script src="main.js" defer></script>

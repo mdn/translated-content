@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`dataset`** は {{DOMxRef("HTMLElement")}} インターフェイスの読み取り専用プロパティで、要素に設定されたすべての[カスタムデータ属性](/ja/docs/Web/HTML/Global_attributes/data-*) (`data-*`) への読み取り/書き込みアクセスを提供します。これは文字列のマップである ({{domxref("DOMStringMap")}}) で、それぞれの `data-*` 属性の項目です。
+**`dataset`** は {{DOMxRef("HTMLElement")}} インターフェイスの読み取り専用プロパティで、要素に設定されたすべての[カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) (`data-*`) への読み取り/書き込みアクセスを提供します。これは文字列のマップである ({{domxref("DOMStringMap")}}) で、それぞれの `data-*` 属性の項目です。
 
 > **メモ:** `dataset` プロパティ自体は読み取ることができますが、直接書き込むことはできません。
 > すべての書き込みは、個々の data 属性を表す `dataset` 内の個々のプロパティを表します。
@@ -104,6 +104,6 @@ if (el.dataset.someDataAttr === undefined) {
 
 ## 関連情報
 
-- HTML の [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) クラスのグローバル属性
+- HTML の [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) クラスのグローバル属性
 - [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} および {{DOMxRef("Element.setAttribute()")}}

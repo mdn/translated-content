@@ -32,7 +32,7 @@ That's why the circles have different x positions, but the same stroke value.
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-効果は、あたかもそのノードが非公開の DOM に配下を含めて複製され、 HTML5 の [template 要素](/ja/docs/Web/HTML/Element/template)のように、 `use` 要素がある場所に貼り付けられたかのように同じになります。
+効果は、あたかもそのノードが非公開の DOM に配下を含めて複製され、 HTML5 の [template 要素](/ja/docs/Web/HTML/Reference/Elements/template)のように、 `use` 要素がある場所に貼り付けられたかのように同じになります。
 
 `use` のほとんどの属性は、 `use` から*参照*される要素に既にある属性を上書き**しません**。 (これは CSS のスタイル属性がカスケードで「以前」に設定されたものを上書きする方法とは異なります)。 `use` 要素にある{{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("href")}} の各属性**のみ**が参照される要素に設定されているものを上書きします。ただし、参照される要素に設定されていない*他のすべての属性*は、 `use` 要素に適用**され得ます**。
 

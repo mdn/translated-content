@@ -40,7 +40,7 @@ _変更なし。_
 #### DOM
 
 - {{domxref("PerformanceEventTiming")}} をデフォルトで有効にしました ([Firefox バグ 1701029](https://bugzil.la/1701029))。
-- {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素の内容物を、デフォルトで {{domxref("Document.execCommand()")}} コマンドを使用して操作できるようになりました。[`contentEditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) などの冗長な回避策なしに、編集履歴の維持やほかのブラウザーとの同等性を提供します ([Firefox バグ 1220696](https://bugzil.la/1220696))。
+- {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素の内容物を、デフォルトで {{domxref("Document.execCommand()")}} コマンドを使用して操作できるようになりました。[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) などの冗長な回避策なしに、編集履歴の維持やほかのブラウザーとの同等性を提供します ([Firefox バグ 1220696](https://bugzil.la/1220696))。
 
 #### 廃止
 

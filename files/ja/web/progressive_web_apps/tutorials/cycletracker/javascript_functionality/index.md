@@ -45,7 +45,7 @@ HTML ファイルの最後の行では、 `app.js` の JavaScript ファイル�
 
 ## フォーム送信
 
-このページには、各月経周期の開始日と終了日を選択するための日付選択機能付きの {{HTMLelement("form")}} が含まれています。日付選択機能は {{HTMLElement("input")}} の {{HTMLElement("input/date", "date")}} 型で、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) はそれぞれ `start-date` と `end-date` です。
+このページには、各月経周期の開始日と終了日を選択するための日付選択機能付きの {{HTMLelement("form")}} が含まれています。日付選択機能は {{HTMLElement("input")}} の {{HTMLElement("input/date", "date")}} 型で、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) はそれぞれ `start-date` と `end-date` です。
 
 このフォームにはメソッドやアクションは存在しません。その代わり、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用してフォームにイベントリスナーを追加します。ユーザーがフォームを送信しようとした場合、フォームの送信を阻止し、新しい月経周期を格納し、これまでの周期とともにこれを表示し、その後フォームをクリアします。
 

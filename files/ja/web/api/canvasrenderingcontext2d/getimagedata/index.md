@@ -48,7 +48,7 @@ getImageData(sx, sy, sw, sh, settings)
   - : `sw` または `sh` のいずれかがゼロのとき投げられます。
 - `SecurityError` {{domxref("DOMException")}}
   - : キャンバスがドキュメント自身が読み込まれたオリジンとは異なるオリジンから読み込まれたピクセルを含むか、含む可能性があるとき投げられます。
-    このような場合に `SecurityError` {{domxref("DOMException")}} が投げられるのを回避するには、元画像がこのように使われるのを許可するように CORS を設定してください。[画像とキャンバスをオリジン間で利用できるようにする](/ja/docs/Web/HTML/CORS_enabled_image)を参照してください。
+    このような場合に `SecurityError` {{domxref("DOMException")}} が投げられるのを回避するには、元画像がこのように使われるのを許可するように CORS を設定してください。[画像とキャンバスをオリジン間で利用できるようにする](/ja/docs/Web/HTML/How_to/CORS_enabled_image)を参照してください。
 
 ## 例
 

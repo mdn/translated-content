@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLIFrameElement.src`** プロパティは文字列で、HTML の [`src`](/ja/docs/Web/HTML/Element/iframe#src) 属性を反映し、埋め込まれるコンテンツのアドレスを保持します。
+**`HTMLIFrameElement.src`** プロパティは文字列で、HTML の [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) 属性を反映し、埋め込まれるコンテンツのアドレスを保持します。
 
 プログラムによって `<iframe>` の src 属性が（例えば、{{domxref("Element.removeAttribute()")}} によって）除去されると、`about:blank` がフレームに読み込まれるという現象が発生します。
 

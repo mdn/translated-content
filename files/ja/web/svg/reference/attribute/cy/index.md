@@ -1,14 +1,11 @@
 ---
 title: cy
 slug: Web/SVG/Reference/Attribute/cy
-original_slug: Web/SVG/Attribute/cy
 l10n:
-  sourceCommit: fceea994be5c930065bb1f2b45bee9ac38de491c
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`cy`** 属性は中心の Y 座標を定義します。
+**`cy`** 属性は中心点の Y 座標を定義します。
 
 この属性は次の SVG 要素で使用できます。
 
@@ -46,7 +43,7 @@ svg {
 
 ## circle
 
-{{SVGElement('circle')}}に対して、`cy`は、図形の Y 軸の中心を定義します。
+{{SVGElement('circle')}} に対して、 `cy` は図形の中心の Y 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -69,7 +66,7 @@ svg {
 
 ## ellipse
 
-{{SVGElement('ellipse')}}に対して、`cy`は図形中心の Y 座標を定義します。
+{{SVGElement('ellipse')}} に対して、 `cy` は図形の中心の Y 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -92,7 +89,7 @@ svg {
 
 ## radialGradient
 
-{{SVGElement('radialGradient')}}に対して、`cy`は、放射状勾配の終端円の y-座標を定義します。
+{{SVGElement('radialGradient')}} に対して、 `cy` は、放射グラデーションの終端円の Y 座標を定義します。
 
 <table class="properties">
   <tbody>

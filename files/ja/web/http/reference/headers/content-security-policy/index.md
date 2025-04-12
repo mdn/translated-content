@@ -116,7 +116,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("base-uri")}}
   - : 文書の {{HTMLElement("base")}} 要素で使用される URL を制限します。
 - {{CSP("sandbox")}}
-  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性に類似した、リクエストされあtリソースに対してサンドボックスを有効にします。
+  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性に類似した、リクエストされあtリソースに対してサンドボックスを有効にします。
 
 ### ナビゲーションディレクティブ
 
@@ -210,7 +210,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ブラウザーが文書を受け取ると、 `<script>` および `<style>` 要素のコンテンツをハッシュ化し、その結果を CSP ディレクティブ内のハッシュと照合し、一致した場合のみリソースを読み込みます。
 
-要素が（例えば [`src`](/ja/docs/Web/HTML/Element/script#src) 属性を使用して）外部リソースを読み込んだ場合、その要素には [`integrity`](/ja/docs/Web/HTML/Element/script#integrity) 属性もなければなりません。
+要素が（例えば [`src`](/ja/docs/Web/HTML/Reference/Elements/script#src) 属性を使用して）外部リソースを読み込んだ場合、その要素には [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性もなければなりません。
 
 ディレクティブにハッシュと `unsafe-inline` がある場合、ブラウザーは `unsafe-inline` を無視します。
 
@@ -325,7 +325,7 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ### 'inline-speculation-rules'
 
-既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。 `'inline-speculation-rules'` は、ブラウザーが [`type`](/ja/docs/Web/HTML/Element/script/type) 属性が [`speculationrules`](/ja/docs/Web/HTML/Element/script/type/speculationrules) であるインライン `<script>` 要素を読み込むことを許可します。
+既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。 `'inline-speculation-rules'` は、ブラウザーが [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性が [`speculationrules`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) であるインライン `<script>` 要素を読み込むことを許可します。
 
 詳しくは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を参照してください。
 

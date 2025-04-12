@@ -20710,12 +20710,6 @@
       "khalid32"
     ]
   },
-  "Web/API/Window/back": {
-    "modified": "2019-03-23T22:12:59.387Z",
-    "contributors": [
-      "xilixinluo"
-    ]
-  },
   "Web/API/Window/beforeinstallprompt_event": {
     "modified": "2019-03-23T22:11:25.289Z",
     "contributors": [
@@ -21924,12 +21918,6 @@
       "shaodahong"
     ]
   },
-  "Web/API/XMLHttpRequest/channel": {
-    "modified": "2019-03-18T21:15:22.341Z",
-    "contributors": [
-      "Wallen_Han"
-    ]
-  },
   "Web/API/XMLHttpRequest/error_event": {
     "modified": "2020-10-15T22:19:47.705Z",
     "contributors": [
@@ -21973,25 +21961,6 @@
       "fscholz",
       "faremax",
       "Lxxyx"
-    ]
-  },
-  "Web/API/XMLHttpRequest/mozAnon": {
-    "modified": "2019-03-18T21:30:25.736Z",
-    "contributors": [
-      "ssdemajia"
-    ]
-  },
-  "Web/API/XMLHttpRequest/mozBackgroundRequest": {
-    "modified": "2019-03-18T21:22:39.629Z",
-    "contributors": [
-      "hilsion"
-    ]
-  },
-  "Web/API/XMLHttpRequest/mozSystem": {
-    "modified": "2020-04-24T04:34:54.490Z",
-    "contributors": [
-      "Andew.D",
-      "tangzhe7"
     ]
   },
   "Web/API/XMLHttpRequest/open": {

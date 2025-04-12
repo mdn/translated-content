@@ -59,7 +59,7 @@ l10n:
 
    この例では、アクセシブル名は "Yellow "です。
 
-2. `aria-labelledby` プロパティは、値としてスペース区切りの id 参照リストを取ります。これは、複数の要素を単一のアクセシブル名にまとめることができることを示しています。自分自身で要素を参照するために、要素自身の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を含めることができます。
+2. `aria-labelledby` プロパティは、値としてスペース区切りの id 参照リストを取ります。これは、複数の要素を単一のアクセシブル名にまとめることができることを示しています。自分自身で要素を参照するために、要素自身の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を含めることができます。
 
    ```html
    <h2 id="attr" class="article-title">13 ARIA attributes you need to know</h2>
@@ -75,7 +75,7 @@ l10n:
 
 4. `aria-labelledby` プロパティはその値の中で `id` が繰り返されると無視します。要素が複数の時点で参照された場合、最初の参照のみが処理されます。 `aria-labelledby="attr attr rm13 rm13">` は `aria-labelledby="attr rm13">` として扱われます。
 
-5. `aria-labelledby` プロパティの値は、表示されていない要素のコンテンツを含めることができます。支援技術のユーザーには、他のすべてのユーザーと同じコンテンツを提供すべきですが、HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性、CSS の [`display: none`](/ja/docs/Web/CSS/display) 属性、CSS の [`visibility: hidden`](/ja/docs/Web/CSS/visibility) 属性を持つ要素のコンテンツを計算された名前の文字列に含めることができます。
+5. `aria-labelledby` プロパティの値は、表示されていない要素のコンテンツを含めることができます。支援技術のユーザーには、他のすべてのユーザーと同じコンテンツを提供すべきですが、HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性、CSS の [`display: none`](/ja/docs/Web/CSS/display) 属性、CSS の [`visibility: hidden`](/ja/docs/Web/CSS/visibility) 属性を持つ要素のコンテンツを計算された名前の文字列に含めることができます。
 
 6. `aria-labelledby` プロパティは入力要素の値を取り込みます。値が `<input>` を参照している場合、あるフォームコントロールの現在の値が計算された名前文字列に含まれ、値が更新されると変更されます。
 

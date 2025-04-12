@@ -17,7 +17,7 @@ CSS セレクターは、選択した要素に一連の CSS ルールを適用�
 
 [要素型セレクター](/ja/docs/Web/CSS/Type_selectors)は、指定されたノード名を持つすべての要素を選択します。例えば `div` ですべての {{HTMLElement("div")}} 要素を選択し、 `input` ですべての {{HTMLElement("input")}} 要素に一致します。アスタリスク (`*`) で示される[全称セレクター](/ja/docs/Web/CSS/Universal_selectors)は、すべての要素を選択する特殊な種類のセレクターです。
 
-[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)は、指定された `class` 属性を持つ要素をすべて選択します。クラス名の接頭辞はピリオド (`.`) です。例えば、 `.index` は `class="index"` のついたすべての要素に一致します。 [ID セレクター](/ja/docs/Web/CSS/ID_selectors)は、 `id` 属性の値に基づいて要素を選択します。セレクターは `id` の接頭辞に「ナンバーサイン」 (U+0023, `#`) を付けたものです。例えば、 `#toc` は `id="toc"` のついた要素に一致します。 [`class`](/ja/docs/Web/HTML/Global_attributes/class) と [`id`](/ja/docs/Web/HTML/Global_attributes/id) はどちらもグローバル属性です。 1 つの文書の中で
+[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)は、指定された `class` 属性を持つ要素をすべて選択します。クラス名の接頭辞はピリオド (`.`) です。例えば、 `.index` は `class="index"` のついたすべての要素に一致します。 [ID セレクター](/ja/docs/Web/CSS/ID_selectors)は、 `id` 属性の値に基づいて要素を選択します。セレクターは `id` の接頭辞に「ナンバーサイン」 (U+0023, `#`) を付けたものです。例えば、 `#toc` は `id="toc"` のついた要素に一致します。 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) と [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) はどちらもグローバル属性です。 1 つの文書の中で
 ある `id` を持つ要素は 1 つだけであるべきですが、もし複数の要素が存在した場合、 ID セレクターはその `id` を持つすべての要素に一致します。
 
 要素型セレクターまたは全称セレクターと、クラスセレクターまたは id セレクターを組み合わせて[複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)を作成する場合、要素型セレクターや全称セレクターはクラスまたは id の前になければなりません。

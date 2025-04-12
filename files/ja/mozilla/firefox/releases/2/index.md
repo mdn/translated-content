@@ -29,7 +29,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
   - : クライアントサイドのセッション及び永続ストレージにより、ウェブアプリケーションは構造化されたデータをクライアントサイドに保存できるようになります。
 - [SVG in Firefox](/ja/docs/SVG_in_Firefox)
   - : Firefox 2 はスケーラブルベクタグラフィックス (SVG) のサポートを改善します。`<textPath>` 要素と以前にサポートされていなかったいくつかの属性を実装しました。
-- [HTML フォームのスペルチェックを制御する](/ja/docs/Web/HTML/Global_attributes/spellcheck)
+- [HTML フォームのスペルチェックを制御する](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)
   - : Firefox 2 ではテキストエリアとテキストフィールドでのインラインスペルチェックがサポートされます。この記事は個々のフォーム要素についてスペルチェックを有効、無効にする HTML の書きかたを説明します。
 
 ### XUL と拡張機能の開発者向け

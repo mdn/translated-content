@@ -25,8 +25,6 @@ console.log(str);
 // Expected output: "abc"
 ```
 
-El código fuente de este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si le gustaría contribuir al proyecto de ejemplos interactivos, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un pull request.
-
 ## Sintaxis
 
 ```
