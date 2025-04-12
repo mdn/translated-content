@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`sandbox`** ディレクティブは、 {{HTMLElement("iframe")}} の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性と同様に、要求されたリソースに対してサンドボックスを有効にします。これは、ポップアップの防止、プラグインやスクリプトの実行の防止、同一オリジンポリシーの強制などを含むページ操作の制限を適用します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`sandbox`** ディレクティブは、 {{HTMLElement("iframe")}} の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性と同様に、要求されたリソースに対してサンドボックスを有効にします。これは、ポップアップの防止、プラグインやスクリプトの実行の防止、同一オリジンポリシーの強制などを含むページ操作の制限を適用します。
 
 <table class="properties">
   <tbody>
@@ -38,7 +38,7 @@ Content-Security-Policy: sandbox <value>;
 `<value>` は省略可能で、以下の値の内の一つです。
 
 - `allow-downloads`
-  - : [download](/ja/docs/Web/HTML/Element/a#attr-download) 属性がついた {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素における、ファイルのダウンロードのための操作を通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
+  - : [download](/ja/docs/Web/HTML/Reference/Elements/a#attr-download) 属性がついた {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素における、ファイルのダウンロードのための操作を通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
 - `allow-downloads-without-user-activation` {{experimental_inline}}
   - : ユーザーによる指示のないダウンロードを許可します。
 - `allow-forms`
@@ -85,4 +85,4 @@ Content-Security-Policy: sandbox allow-scripts;
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性
+- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性

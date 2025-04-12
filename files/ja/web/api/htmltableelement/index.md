@@ -32,23 +32,23 @@ _親である {{DOMxRef("HTMLElement")}} から継承したプロパティがあ
 > 以下のプロパティは廃止されました。使用は避けてください。
 
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
-  - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/table#align) 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。
+  - : 文字列で、 [`align`](/ja/docs/Web/HTML/Reference/Elements/table#align) 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。
 - {{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}
-  - : 文字列で、セルの背景色が入ります。これは廃止された [`bgColor`](/ja/docs/Web/HTML/Element/table#bgcolor) 属性を反映します。
+  - : 文字列で、セルの背景色が入ります。これは廃止された [`bgColor`](/ja/docs/Web/HTML/Reference/Elements/table#bgcolor) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
-  - : 文字列で、表の境界の幅がピクセル数で入ります。これは廃止された [`border`](/ja/docs/Web/HTML/Element/table#border) 属性を反映します。
+  - : 文字列で、表の境界の幅がピクセル数で入ります。これは廃止された [`border`](/ja/docs/Web/HTML/Reference/Elements/table#border) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
-  - : 文字列で、セルの内容とセルの境界の間の水平・垂直空間の幅がピクセル数で入ります。これは廃止された [`cellpadding`](/ja/docs/Web/HTML/Element/table#cellpadding) 属性を反映します。
+  - : 文字列で、セルの内容とセルの境界の間の水平・垂直空間の幅がピクセル数で入ります。これは廃止された [`cellpadding`](/ja/docs/Web/HTML/Reference/Elements/table#cellpadding) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.cellSpacing")}} {{deprecated_inline}}
-  - : 文字列で、セル間の水平・垂直の距離がピクセル数で入ります。これは廃止された [`cellspacing`](/ja/docs/Web/HTML/Element/table#cellspacing) 属性を反映します。
+  - : 文字列で、セル間の水平・垂直の距離がピクセル数で入ります。これは廃止された [`cellspacing`](/ja/docs/Web/HTML/Reference/Elements/table#cellspacing) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.frame")}} {{deprecated_inline}}
-  - : 文字列で、表の外部境界の種類が入ります。これは廃止された [`frame`](/ja/docs/Web/HTML/Element/table#frame) 属性を反映し、 `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, `"border"` のうちの何れかを取ります。
+  - : 文字列で、表の外部境界の種類が入ります。これは廃止された [`frame`](/ja/docs/Web/HTML/Reference/Elements/table#frame) 属性を反映し、 `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, `"border"` のうちの何れかを取ります。
 - {{DOMxRef("HTMLTableElement.rules")}} {{deprecated_inline}}
-  - : 文字列で、表の内部の境界の種類が入ります。これは廃止された [`rules`](/ja/docs/Web/HTML/Element/table#rules) 属性を反映し、 `"none"`, `"groups"`, `"rows"`, `"cols"`, `"all"` のうちのいずれかを取ります。
+  - : 文字列で、表の内部の境界の種類が入ります。これは廃止された [`rules`](/ja/docs/Web/HTML/Reference/Elements/table#rules) 属性を反映し、 `"none"`, `"groups"`, `"rows"`, `"cols"`, `"all"` のうちのいずれかを取ります。
 - {{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}
-  - : 文字列で、目的の説明や表の構造が入ります。これは廃止された [`summary`](/ja/docs/Web/HTML/Element/table#summary) 属性を反映します。
+  - : 文字列で、目的の説明や表の構造が入ります。これは廃止された [`summary`](/ja/docs/Web/HTML/Reference/Elements/table#summary) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
-  - : 文字列で、表全体の推奨される幅を表すピクセル数またはパーセント値が入ります。これは廃止された [`width`](/ja/docs/Web/HTML/Element/table#width) 属性を反映します。
+  - : 文字列で、表全体の推奨される幅を表すピクセル数またはパーセント値が入ります。これは廃止された [`width`](/ja/docs/Web/HTML/Reference/Elements/table#width) 属性を反映します。
 
 ## インスタンスメソッド
 

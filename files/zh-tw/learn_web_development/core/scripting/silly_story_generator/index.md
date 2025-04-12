@@ -1,5 +1,5 @@
 ---
-title: 傻故事產生器
+title: 挑戰：傻故事產生器
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 ---
 
@@ -7,23 +7,7 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 
-在本次評估中，你被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。 祝玩的開心！
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">事先具備:</th>
-      <td>進行此測驗之前你應先完成此區塊的所有內容</td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
-      <td>
-        測試對於JavaScript基礎的理解程度, 例如 變數, 數字, 運算子, 字串
-        以及陣列.
-      </td>
-    </tr>
-  </tbody>
-</table>
+在本次評估中，你被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。祝玩的開心！
 
 ## 前置作業
 
@@ -103,9 +87,5 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 
 - [Math.round()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/round) is a built-in JavaScript method that simply rounds the result of a calculation to the nearest whole number.
 - There are three instances of strings that need to be replaced. You may repeat the `replace()` method multiple times, or you can use regular expressions. For instance, `var text = 'I am the biggest lover, I love my love'; text.replace(/love/g,'like');` will replace all instances of 'love' to 'like'. Remember, Strings are immutable!
-
-## 測驗一下
-
-如果你將這個測驗視為正規課程的一部分，建議將成果提供你的老師或指導者以利幫助你達到最好的學習效益。如果你是自學者，你可以輕鬆的透過右方網頁 [discussion thread for this exercise](https://discourse.mozilla.org/t/silly-story-generator-assessment/24686) 得到建議，或者在[Mozilla IRC](https://wiki.mozilla.org/IRC)上的 [#mdn](irc://irc.mozilla.org/mdn) IRC 頻道。提醒你：第一次嘗試這個測驗時，作弊可不會得到任何收穫喔！
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}

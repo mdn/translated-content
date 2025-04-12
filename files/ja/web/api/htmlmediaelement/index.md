@@ -21,7 +21,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
   - : {{domxref("AudioTrackList")}} で、この要素に含まれる {{domxref("AudioTrack")}} オブジェクトを列挙します。
 - {{domxref("HTMLMediaElement.autoplay")}}
 
-  - : 論理値で、 HTML の [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性の値を反映し、中断なしに再生できるだけの十分なデータが揃った時点で自動的に再生を始めるかどうかを示します。
+  - : 論理値で、 HTML の [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/video#autoplay) 属性の値を反映し、中断なしに再生できるだけの十分なデータが揃った時点で自動的に再生を始めるかどうかを示します。
 
     > [!NOTE]
     > ユーザーが期待していない、あるいは望んでいないときに自動的に音声を再生すると、ユーザーに不快な体験をさせることになるため、ほとんどの場合避けるべきですが、例外も存在します。詳しくは、[メディアとウェブオーディオ API のガイド](/ja/docs/Web/Media/Guides/Autoplay)を参照してください。ブラウザーは自動再生要求を無視する可能性があることを念頭に置き、コードが自動再生の動作に依存していないことを確認する必要があります。
@@ -29,17 +29,17 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.buffered")}} {{ReadOnlyInline}}
   - : `buffered` プロパティにアクセスした時点で、ブラウザーがバッファリングしているメディアソースの範囲を（もしあれば） {{domxref("TimeRanges")}} オブジェクトで返します。
 - {{domxref("HTMLMediaElement.controls")}}
-  - : 論理値で、 HTML の [`controls`](/ja/docs/Web/HTML/Element/video#controls) 属性を反映し、リソースを制御するユーザーインターフェイス項目を表示するかどうかを示します。
+  - : 論理値で、 HTML の [`controls`](/ja/docs/Web/HTML/Reference/Elements/video#controls) 属性を反映し、リソースを制御するユーザーインターフェイス項目を表示するかどうかを示します。
 - {{domxref("HTMLMediaElement.controlsList")}} {{ReadOnlyInline}}
   - : ユーザーエージェントが独自のコントロールのセットを表示するたびに、メディア要素に表示するコントロールをユーザーエージェントが選択するのに役立つ {{domxref("DOMTokenList")}} を返します。 `DOMTokenList`は、`nodownload`、`nofullscreen`、`noremoteplayback`の 3 つの値のうち 1 つ以上を取ります。
 - {{domxref("HTMLMediaElement.crossOrigin")}}
-  - : 文字列で、このメディア要素の [CORS 設定](/ja/docs/Web/HTML/Attributes/crossorigin)を示します。
+  - : 文字列で、このメディア要素の [CORS 設定](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を示します。
 - {{domxref("HTMLMediaElement.currentSrc")}}{{ReadOnlyInline}}
   - : 文字列で、選択されたメディアリソースの絶対 URL を返します。
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : 倍精度浮動小数点値で、現在の再生時刻を秒単位で示します。メディアの再生が開始されておらず、シークも行われていない場合、この値はメディアの初期再生時刻となります。この値を設定すると、メディアは新しい時刻にシークされます。この時間は、メディアのタイムラインに対して相対的に指定されます。
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : 論理値で、HTML の [`muted`](/ja/docs/Web/HTML/Element/video#muted) 属性を反映します。標準状態で音声がミュートされているか、いないかを示します。
+  - : 論理値で、HTML の [`muted`](/ja/docs/Web/HTML/Reference/Elements/video#muted) 属性を反映します。標準状態で音声がミュートされているか、いないかを示します。
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : `double` で、メディアの既定の再生速度を示します。
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
@@ -51,7 +51,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.error")}} {{ReadOnlyInline}}
   - : 直近のエラーに対応する {{domxref("MediaError")}} オブジェクトを返すか、エラーが発生していない場合は `null` を返します。
 - {{domxref("HTMLMediaElement.loop")}}
-  - : 論理型で、 HTML の [`loop`](/ja/docs/Web/HTML/Element/video#loop) 属性を反映し、末尾に達したときにメディア要素が再び再生を始めるかどうかを示します。
+  - : 論理型で、 HTML の [`loop`](/ja/docs/Web/HTML/Reference/Elements/video#loop) 属性を反映し、末尾に達したときにメディア要素が再び再生を始めるかどうかを示します。
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : {{domxref("MediaKeys")}} オブジェクトで、再生中にその要素がメディアデータを復号するために使用することができる一連のキーを返します。利用できるキーがない場合は `null` となります。
 - {{domxref("HTMLMediaElement.muted")}}
@@ -65,7 +65,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.played")}} {{ReadOnlyInline}}
   - : ブラウザーが再生したメディアソースの範囲を含む {{domxref('TimeRanges')}} オブジェクトを返します（もしあれば）。
 - {{domxref("HTMLMediaElement.preload")}}
-  - : HTML の [`preload`](/ja/docs/Web/HTML/Element/video#preload) 属性を反映した文字列で、どのデータを先読みすべきかを示します。取りうる値は `none`, `metadata`, `auto` です。
+  - : HTML の [`preload`](/ja/docs/Web/HTML/Reference/Elements/video#preload) 属性を反映した文字列で、どのデータを先読みすべきかを示します。取りうる値は `none`, `metadata`, `auto` です。
 - {{domxref("HTMLMediaElement.preservesPitch")}}
   - : 音のピッチを保持するかどうかを決定する論理値です。 `false` に設定すると、ピッチは音声の速度に合わせられます。
 - {{domxref("HTMLMediaElement.readyState")}} {{ReadOnlyInline}}
@@ -79,7 +79,7 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 出力する音声機器の固有の ID を文字列で返します。ユーザーエージェントの既定の音声機器を使用している場合は、空文字列を返します。
 - {{domxref("HTMLMediaElement.src")}}
-  - : 使用するメディアリソースの URL を記した HTML の [`src`](/ja/docs/Web/HTML/Element/video#src) 属性を反映した文字列です。
+  - : 使用するメディアリソースの URL を記した HTML の [`src`](/ja/docs/Web/HTML/Reference/Elements/video#src) 属性を反映した文字列です。
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : 現在の `HTMLMediaElement` で再生する、または再生したメディアを表す {{domxref('MediaStream')}}、または割り当てられていない場合は `null` です。
 - {{domxref("HTMLMediaElement.textTracks")}} {{ReadOnlyInline}}
@@ -115,7 +115,7 @@ _このインターフェイスには祖先である {{domxref("HTMLElement")}},
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : 低い精度で素早く指定時刻にシークします。
 - {{domxref("HTMLMediaElement.load()")}}
-  - : メディアを先頭にリセットし、 [`src`](/ja/docs/Web/HTML/Element/video#src) 属性または {{HTMLElement("source")}} 要素を使用して提供されたソースのうちから、最適なソースを選択します。
+  - : メディアを先頭にリセットし、 [`src`](/ja/docs/Web/HTML/Reference/Elements/video#src) 属性または {{HTMLElement("source")}} 要素を使用して提供されたソースのうちから、最適なソースを選択します。
 - {{domxref("HTMLMediaElement.pause()")}}
   - : 再生を一時停止します。
 - {{domxref("HTMLMediaElement.play()")}}

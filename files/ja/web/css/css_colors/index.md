@@ -17,7 +17,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-[カラーピッカー](/ja/docs/Web/HTML/Element/input/color)で色を選択し、[スライダー](/ja/docs/Web/HTML/Element/input/range)で不透明度を選択すると、RGB、HEX、HSL、HWB 値が更新されます。新しい色や不透明度の値を選ぶと、背景とスライダーの色はそれぞれ CSS プロパティの {{cssxref("background-color")}} と {{cssxref("accent-color")}} によって更新されます。
+[カラーピッカー](/ja/docs/Web/HTML/Reference/Elements/input/color)で色を選択し、[スライダー](/ja/docs/Web/HTML/Reference/Elements/input/range)で不透明度を選択すると、RGB、HEX、HSL、HWB 値が更新されます。新しい色や不透明度の値を選ぶと、背景とスライダーの色はそれぞれ CSS プロパティの {{cssxref("background-color")}} と {{cssxref("accent-color")}} によって更新されます。
 
 この色構文コンバーターのコードを見るには、 [GitHub でソースをご覧ください](https://github.com/mdn/css-examples/blob/main/modules/colors.html)。
 

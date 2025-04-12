@@ -192,7 +192,7 @@ HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Guides/Range_requests)�
 - {{HTTPHeader("Location")}}
   - : ページのリダイレクト先の URL を示します。
 - {{HTTPHeader("Refresh")}}
-  - : ブラウザーにページを再読み込みするか、別のページにリダイレクトするように指示します。 [`http-equiv="refresh"`](/ja/docs/Web/HTML/Element/meta#http-equiv) を持つ `meta` 要素と同じ値をとります。
+  - : ブラウザーにページを再読み込みするか、別のページにリダイレクトするように指示します。 [`http-equiv="refresh"`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) を持つ `meta` 要素と同じ値をとります。
 
 ## リクエストコンテキスト
 
@@ -345,7 +345,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)は一�
 サーバーは {{HTTPHeader("Accept-CH")}} を使用して、クライアントに関心があるクライアントヒントヘッダーを積極的にリクエストします。クライアントはリクエストされたヘッダーをその後のリクエストに記載することを選べます。
 
 - {{HTTPHeader("Accept-CH")}}
-  - : サーバーは Accept-CH ヘッダーフィールドや HTML `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性を使ってクライアントヒントに対応していることを告知できます。
+  - : サーバーは Accept-CH ヘッダーフィールドや HTML `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性を使ってクライアントヒントに対応していることを告知できます。
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
   - : サーバーは `Critical-CH` を {{HttpHeader("Accept-CH")}} とともに使用して、受け入れられるクライアントヒントも[重要なクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#critical_client_hints)であることを指定します。
 

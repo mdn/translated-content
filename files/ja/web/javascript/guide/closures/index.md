@@ -486,7 +486,7 @@ setupHelp();
 
 この例では `var` の代わりに `const` を使っているため、すべてのクロージャがブロックスコープの変数をバインドしており、つまり追加のクロージャは要求されません。
 
-他の方法として、以下のように `forEach()` を使用して配列 `helpText` を操作し、それぞれの [`<input>`](/ja/docs/Web/HTML/Element/input) にリスナーを割り当てることができます。
+他の方法として、以下のように `forEach()` を使用して配列 `helpText` を操作し、それぞれの [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) にリスナーを割り当てることができます。
 
 ```js
 function showHelp(help) {

@@ -122,7 +122,7 @@ jobs:
           FM_LINT_FAILED=false
           # absolute_paths is needed because front-matter linter is run from mdn/content directory
           absolute_paths=$(echo "${files_to_lint}" | xargs realpath -e | xargs)
-          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json ${absolute_paths} 2>&1) || FM_LINT_FAILED=true
+          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/.front-matter-config.json ${absolute_paths} 2>&1) || FM_LINT_FAILED=true
           echo "FM_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${FM_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"

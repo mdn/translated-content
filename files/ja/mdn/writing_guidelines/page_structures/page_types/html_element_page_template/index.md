@@ -30,11 +30,11 @@ l10n:
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。
 >     書式は `'<NameOfTheElement>: 要素の目的'` です。
->     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
+>     例えば、 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/HTML/Element/NameOfTheElement` のような形式になります。
->     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _slug_ は `Web/HTML/Element/video` となります。
+>     例えば、 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素の _slug_ は `Web/HTML/Element/video` となります。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -75,7 +75,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `attribute1` {{Deprecated_inline}} {{experimental_inline}}
   - : この属性がどのような働きをするか、ここに記述してください。属性ごとに 1 つずつ用語と定義を記述してください。属性が実験的/非推奨でない場合は、関連するマクロ呼び出しを除去してください。

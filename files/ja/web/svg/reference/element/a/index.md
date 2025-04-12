@@ -61,32 +61,32 @@ svg|a:active {
 {{EmbedLiveSample('Example', 100, 100)}}
 
 > [!WARNING]
-> この要素は [HTML の `<a>` 要素](/ja/docs/Web/HTML/Element/a)と同じタグ名なので、 `a` を CSS や {{domxref("Document.querySelector", "querySelector")}} で選択すると、誤った種類の要素に適用してしまう可能性があります。 [`@namespace` 規則](/ja/docs/Web/CSS/@namespace)で二つを区別してみてください。
+> この要素は [HTML の `<a>` 要素](/ja/docs/Web/HTML/Reference/Elements/a)と同じタグ名なので、 `a` を CSS や {{domxref("Document.querySelector", "querySelector")}} で選択すると、誤った種類の要素に適用してしまう可能性があります。 [`@namespace` 規則](/ja/docs/Web/CSS/@namespace)で二つを区別してみてください。
 
 ## 属性
 
-- [`download`](/ja/docs/Web/HTML/Element/a#download) {{experimental_inline}}
+- [`download`](/ja/docs/Web/HTML/Reference/Elements/a#download) {{experimental_inline}}
   - : 移動するのではなく {{Glossary("URL")}} をダウンロードするようブラウザーに指示しますので、ユーザーにローカルファイルとして保存するよう促します。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **no**
 - {{SVGAttr("href")}}
   - : ハイパーリンクが指す先の {{Glossary("URL")}} または URL フラグメントです。
     _値種別_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)** ; _既定値_: _none_; _アニメーション_: **yes**
-- [`hreflang`](/ja/docs/Web/HTML/Element/a#hreflang)
+- [`hreflang`](/ja/docs/Web/HTML/Reference/Elements/a#hreflang)
   - : ハイパーリンクが指す先の URL または URL フラグメントにおける人間の言語です。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **yes**
-- [`ping`](/ja/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
+- [`ping`](/ja/docs/Web/HTML/Reference/Elements/a#ping) {{experimental_inline}}
   - : 空白区切りの URL のリストで、ハイパーリンクをたどるとき、 {{HTTPMethod("POST")}} リクエストで本文が `PING` であるものがブラウザーから (バックグラウンドで) 送信されます。通常はトラッキングのために使用されます。同じ用途でもっと広く対応されている機能として、 {{domxref("Navigator.sendBeacon()")}} を参照してください。
     _値種別_: **[\<list-of-URLs>](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _既定値_: _none_; _アニメーション_: **no**
-- [`referrerpolicy`](/ja/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
+- [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/a#referrerpolicy) {{experimental_inline}}
   - : どの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)をアクセス先の {{Glossary("URL")}} に送信するかです。
     _値種別_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _既定値_: _none_; _アニメーション_: **no**
-- [`rel`](/ja/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
+- [`rel`](/ja/docs/Web/HTML/Reference/Elements/a#rel) {{experimental_inline}}
   - : 対象のオブジェクトとリンクしているオブジェクトの関係です。
-    _値種別_: **[\<list-of-Link-Types>](/ja/docs/Web/HTML/Attributes/rel)** ; _既定値_: _none_; _アニメーション_: **yes**
+    _値種別_: **[\<list-of-Link-Types>](/ja/docs/Web/HTML/Reference/Attributes/rel)** ; _既定値_: _none_; _アニメーション_: **yes**
 - {{SVGAttr("target")}}
   - : リンクされた {{Glossary("URL")}} の表示先です。
     _値種別_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _既定値_: `_self`; _アニメーション_: **yes**
-- [`type`](/ja/docs/Web/HTML/Element/a#type)
+- [`type`](/ja/docs/Web/HTML/Reference/Elements/a#type)
   - : リンク先の URL の {{Glossary("MIME type", "MIME タイプ")}}です。
     _値種別_: **\<string>** ; _既定値_: _none_; _アニメーション_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}

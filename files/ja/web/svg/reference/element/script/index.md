@@ -11,7 +11,7 @@ l10n:
 SVG の `script` 要素により、スクリプトを SVG 文書に追加することができます。
 
 > [!NOTE]
-> SVG の `script` 要素は HTML の {{HTMLElement('script')}} 要素と同等ですが、[`src`](/ja/docs/Web/HTML/Element/script#src) の代わりに {{SVGAttr('href')}} 属性を使用したり、ECMAScript モジュールには今のところ対応していないなど、いくつかの相違点があります（詳細は下記のブラウザーの互換性を参照してください）。
+> SVG の `script` 要素は HTML の {{HTMLElement('script')}} 要素と同等ですが、[`src`](/ja/docs/Web/HTML/Reference/Elements/script#src) の代わりに {{SVGAttr('href')}} 属性を使用したり、ECMAScript モジュールには今のところ対応していないなど、いくつかの相違点があります（詳細は下記のブラウザーの互換性を参照してください）。
 
 ## 例
 
@@ -54,8 +54,8 @@ SVG の `script` 要素により、スクリプトを SVG 文書に追加する�
 
 ## 属性
 
-- [`crossorigin`](/ja/docs/Web/HTML/Element/script#crossorigin)
-  - : この属性は、[CORS 設定](/ja/docs/Web/HTML/Attributes/crossorigin) を HTML の {{HTMLElement('script')}} 要素のように定義します。
+- [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/script#crossorigin)
+  - : この属性は、[CORS 設定](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を HTML の {{HTMLElement('script')}} 要素のように定義します。
     _値の型_: [**\<string>**](/ja/docs/Web/CSS/string); _既定値_: `?`; _アニメーション_: **可**
 - {{SVGAttr("href")}}
   - : 読み込むスクリプトの {{Glossary("URL")}} です。
@@ -81,4 +81,4 @@ SVG の `script` 要素により、スクリプトを SVG 文書に追加する�
 
 ## 関連情報
 
-- [HTML の `script` 要素](/ja/docs/Web/HTML/Element/script)
+- [HTML の `script` 要素](/ja/docs/Web/HTML/Reference/Elements/script)

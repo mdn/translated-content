@@ -1,5 +1,5 @@
 ---
-title: 影像圖庫
+title: 挑戰：影像圖庫
 slug: Learn_web_development/Core/Scripting/Image_gallery
 ---
 
@@ -8,19 +8,6 @@ slug: Learn_web_development/Core/Scripting/Image_gallery
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 現在我們已經看過了基本的 JavaScript 組建，我們將讓你做一個測試，從建立一個在很多網站上常見的事物 — JavaScript 基礎的影像圖庫，來測試你對迴圈、函數、條件式及事件的知識。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">先修課程：</th>
-      <td>在進行這個評量前，你應已閱讀、練習了本模組中所有的文章。</td>
-    </tr>
-    <tr>
-      <th scope="row">目的：</th>
-      <td>測試對JavaScript中迴圈、函數、條件式及事件的瞭解程度。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 從這裡開始
 
@@ -102,9 +89,5 @@ overlay.style.backgroundColor = xxx;
 ## 提醒與提示
 
 - 你完全不需要去編輯任何的 HTML 或 CSS。
-
-## 評量
-
-If you are following this assessment as part of an organized course, you should be able to give your work to your teacher/mentor for marking. If you are self-learning, then you can get the marking guide fairly easily by asking on the [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), or in the [#mdn](irc://irc.mozilla.org/mdn) IRC channel on [Mozilla IRC](https://wiki.mozilla.org/IRC). Try the exercise first — there is nothing to be gained by cheating!
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}

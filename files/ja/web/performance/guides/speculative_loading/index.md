@@ -37,7 +37,7 @@ l10n:
 
 ### `<link rel="preconnect">`
 
-[`<link rel="preconnect">`](/ja/docs/Web/HTML/Attributes/rel/preconnect) は、ユーザーが指定されたリソースのオリジンからのリソースを必要としている可能性が高く、そのため、ブラウザーがそのオリジンへの接続を先取りして開始することで、パフォーマンスを改善できる可能性が高いというヒントをブラウザーに提供します。対応しているブラウザーは、接続ハンドシェイク（DNS + TCP + TLSなど）の一部またはすべてを事前に実行します。
+[`<link rel="preconnect">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect) は、ユーザーが指定されたリソースのオリジンからのリソースを必要としている可能性が高く、そのため、ブラウザーがそのオリジンへの接続を先取りして開始することで、パフォーマンスを改善できる可能性が高いというヒントをブラウザーに提供します。対応しているブラウザーは、接続ハンドシェイク（DNS + TCP + TLSなど）の一部またはすべてを事前に実行します。
 
 例を示します。
 
@@ -57,7 +57,7 @@ Link: <https://example.com>; rel="preconnect"
 
 ### `<link rel="dns-prefetch">`
 
-[`<link rel="dns-prefetch">`](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch) は、ユーザーがターゲットリソースのオリジンにあるリソースを必要としている可能性が高く、したがってブラウザーがそのオリジンの DNS 解決を事前に実行することでユーザーの使い勝手が向上する可能性が高いというヒントをブラウザーに与えます。これは `<link rel="preconnect">` と似ていますが、 DNS の部分のみを扱う点が異なります。
+[`<link rel="dns-prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch) は、ユーザーがターゲットリソースのオリジンにあるリソースを必要としている可能性が高く、したがってブラウザーがそのオリジンの DNS 解決を事前に実行することでユーザーの使い勝手が向上する可能性が高いというヒントをブラウザーに与えます。これは `<link rel="preconnect">` と似ていますが、 DNS の部分のみを扱う点が異なります。
 
 繰り返しますが、ブラウザーの対応は広く普及しています。また、同一オリジンのリクエストでは、すでにコネクションが開いているので、何のメリットもありません。
 
@@ -72,7 +72,7 @@ Link: <https://example.com>; rel="preconnect"
 
 ### `<link rel="preload">`
 
-[`<link rel="preload">`](/ja/docs/Web/HTML/Attributes/rel/preload) は、ブラウザーがページの {{htmlelement("head")}} 内の {{htmlelement("link")}} 要素を見たときに、それらのリソースを早めにダウンロードし始めることができるように、**現在のページ**で優先度の高いリソースのヒントを提供します。
+[`<link rel="preload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) は、ブラウザーがページの {{htmlelement("head")}} 内の {{htmlelement("link")}} 要素を見たときに、それらのリソースを早めにダウンロードし始めることができるように、**現在のページ**で優先度の高いリソースのヒントを提供します。
 
 例を示します。
 
@@ -99,7 +99,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ### `<link rel="modulepreload">`
 
-[`<link rel="modulepreload">`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) は、 _現在のページ_ で優先度の高い JavaScript モジュールが何かというヒントをブラウザーに提供し、ダウンロードを早めに始めることができるようにします。
+[`<link rel="modulepreload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) は、 _現在のページ_ で優先度の高い JavaScript モジュールが何かというヒントをブラウザーに提供し、ダウンロードを早めに始めることができるようにします。
 
 例を示します。
 
@@ -115,7 +115,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ### `<link rel="prefetch">`
 
-[`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) は、ユーザーが将来ナビゲーションの際に対象リソースを必要とする可能性が高いというヒントをブラウザーに提供するもので、そのためブラウザーはリソースを先読みしてキャッシュすることで、操作性を向上させることができます。 `<link rel="prefetch">` は同じサイトのナビゲーションリソースや、同じサイトのページで使用するサブリソースに使用します。
+[`<link rel="prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch) は、ユーザーが将来ナビゲーションの際に対象リソースを必要とする可能性が高いというヒントをブラウザーに提供するもので、そのためブラウザーはリソースを先読みしてキャッシュすることで、操作性を向上させることができます。 `<link rel="prefetch">` は同じサイトのナビゲーションリソースや、同じサイトのページで使用するサブリソースに使用します。
 
 例を示します。
 
@@ -152,7 +152,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 > [!NOTE]
 > この技術は Chrome でしか利用できませんでしたが、非推奨になりました。代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を使用しましょう。
 
-[`<link rel="prerender">`](/ja/docs/Web/HTML/Attributes/rel/prerender) は、ユーザーが次のナビゲーションのために対象とするリソースを必要とするかもしれないというヒントをブラウザーに提供します。 `prerender` は同じサイト内での将来のナビゲーションのために使用され、複数ページアプリケーション (MPA) では意味がありますが、単一ページアプリケーション (SPA) では意味がありません。
+[`<link rel="prerender">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prerender) は、ユーザーが次のナビゲーションのために対象とするリソースを必要とするかもしれないというヒントをブラウザーに提供します。 `prerender` は同じサイト内での将来のナビゲーションのために使用され、複数ページアプリケーション (MPA) では意味がありますが、単一ページアプリケーション (SPA) では意味がありません。
 
 例を示します。
 
@@ -164,22 +164,22 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ### 投機ルール API
 
-[`<script type="speculationrules">`](/ja/docs/Web/HTML/Element/script/type/speculationrules) は、どのような文書が将来ブラウザーによって先読みされるか、または事前レンダリングされるべきかを決定する一連のルールを提供するために使用します。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の一部です。
+[`<script type="speculationrules">`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) は、どのような文書が将来ブラウザーによって先読みされるか、または事前レンダリングされるべきかを決定する一連のルールを提供するために使用します。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の一部です。
 
 ## どんな時にそれぞれの機能を使用するのか
 
 次の表は、上記で詳述した機能を要約したもので、それぞれを使用する場合のガイダンスを提供しています。
 
-| 投機的読み込み機能                                                             | 目的                                               | 使用する場面                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`<link rel="preconnect">`](/ja/docs/Web/HTML/Attributes/rel/preconnect)       | オリジン間接続の準備                               | 最も重要なオリジン間接続に使用して、接続時のパフォーマンスを改善します。                                                                                                                                                                                                                                                                                                                                                             |
-| [`<link rel="dns-prefetch">`](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch)   | オリジン間接続の準備                               | すべてのオリジン間接続に使用して、接続時のパフォーマンスをわずかに改善します。                                                                                                                                                                                                                                                                                                                                                       |
-| [`<link rel="preload">`](/ja/docs/Web/HTML/Attributes/rel/preload)             | 現在のページのサブリソースの事前読み込み           | 戦略的なパフォーマンス向上のために、現在のページで優先度の高いリソースをより速く読み込むために使用します。すべてを事前読み込みさせないでください。そうしないと効果が見えません。他にも興味深い使用法があります。 Smashing Magazine (2016) の [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) を参照してください。                                                             |
-| [`<link rel="modulepreload">`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) | 現在のページの JavaScript モジュールの事前読み込み | 戦略的なパフォーマンス向上のために優先度の高い JavaScript モジュールを事前読み込みさせるために使用します。                                                                                                                                                                                                                                                                                                                           |
-| [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch)           | HTTP キャッシュの事前投入                          | 同じサイトの将来のナビゲーションリソースや、それらのページで使用するサブリソースを先読みするために使用します。HTTP キャッシュを使用するため、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーによってブロックされる可能性があるなど、文書の先読みには多くの課題があります。対応している場合は、代わりに [投機ルールAPI](/ja/docs/Web/API/Speculation_Rules_API) を使用して文書の先読みを行ってください。 |
-| [`<link rel="prerender">`](/ja/docs/Web/HTML/Attributes/rel/prerender)         | 次のナビゲーションの準備                           | 非推奨です。使用しないことをお勧めします。対応している場合は、代わりに [投機ルールAPI](/ja/docs/Web/API/Speculation_Rules_API)の事前レンダリングを使用してください。                                                                                                                                                                                                                                                                 |
-| [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の先読み              | 次のナビゲーションの準備                           | 同じサイトやクロスサイトの将来のナビゲーション文書を先読みするために使用します。対応しているページが[先読みして安全](/ja/docs/Web/API/Speculation_Rules_API#安全でない先読み)であることを確認してください。サブリソースの先読みは処理しません。そのためには `<link rel="prefetch">` を使用する必要があります。                                                                                                                       |
-| [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の事前レンダリング    | 次のナビゲーションの準備                           | ほぼ瞬時にナビゲーションを行うために、同じオリジンの将来のナビゲーションリソースを先読みするために使用します。対応している優先度の高いページで使用してください。ページが[事前レンダリングして安全](/ja/docs/Web/API/Speculation_Rules_API#安全でない事前レンダリング)であることを確認してください。                                                                                                                                  |
+| 投機的読み込み機能                                                                       | 目的                                               | 使用する場面                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`<link rel="preconnect">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)       | オリジン間接続の準備                               | 最も重要なオリジン間接続に使用して、接続時のパフォーマンスを改善します。                                                                                                                                                                                                                                                                                                                                                             |
+| [`<link rel="dns-prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch)   | オリジン間接続の準備                               | すべてのオリジン間接続に使用して、接続時のパフォーマンスをわずかに改善します。                                                                                                                                                                                                                                                                                                                                                       |
+| [`<link rel="preload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)             | 現在のページのサブリソースの事前読み込み           | 戦略的なパフォーマンス向上のために、現在のページで優先度の高いリソースをより速く読み込むために使用します。すべてを事前読み込みさせないでください。そうしないと効果が見えません。他にも興味深い使用法があります。 Smashing Magazine (2016) の [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) を参照してください。                                                             |
+| [`<link rel="modulepreload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) | 現在のページの JavaScript モジュールの事前読み込み | 戦略的なパフォーマンス向上のために優先度の高い JavaScript モジュールを事前読み込みさせるために使用します。                                                                                                                                                                                                                                                                                                                           |
+| [`<link rel="prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch)           | HTTP キャッシュの事前投入                          | 同じサイトの将来のナビゲーションリソースや、それらのページで使用するサブリソースを先読みするために使用します。HTTP キャッシュを使用するため、 [Cache-Control](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control) ヘッダーによってブロックされる可能性があるなど、文書の先読みには多くの課題があります。対応している場合は、代わりに [投機ルールAPI](/ja/docs/Web/API/Speculation_Rules_API) を使用して文書の先読みを行ってください。 |
+| [`<link rel="prerender">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prerender)         | 次のナビゲーションの準備                           | 非推奨です。使用しないことをお勧めします。対応している場合は、代わりに [投機ルールAPI](/ja/docs/Web/API/Speculation_Rules_API)の事前レンダリングを使用してください。                                                                                                                                                                                                                                                                 |
+| [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の先読み                        | 次のナビゲーションの準備                           | 同じサイトやクロスサイトの将来のナビゲーション文書を先読みするために使用します。対応しているページが[先読みして安全](/ja/docs/Web/API/Speculation_Rules_API#安全でない先読み)であることを確認してください。サブリソースの先読みは処理しません。そのためには `<link rel="prefetch">` を使用する必要があります。                                                                                                                       |
+| [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の事前レンダリング              | 次のナビゲーションの準備                           | ほぼ瞬時にナビゲーションを行うために、同じオリジンの将来のナビゲーションリソースを先読みするために使用します。対応している優先度の高いページで使用してください。ページが[事前レンダリングして安全](/ja/docs/Web/API/Speculation_Rules_API#安全でない事前レンダリング)であることを確認してください。                                                                                                                                  |
 
 ## 関連情報
 

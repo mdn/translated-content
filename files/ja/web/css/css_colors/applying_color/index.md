@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) では、[HTML](/ja/docs/Web/HTML) [要素](/ja/docs/Web/HTML/Element)に色を追加し好みの見た目にする方法が多岐に渡ります。
+[CSS](/ja/docs/Web/CSS) では、[HTML](/ja/docs/Web/HTML) [要素](/ja/docs/Web/HTML/Reference/Elements)に色を追加し好みの見た目にする方法が多岐に渡ります。
 このガイドは、CSS を使用して HTML 要素に色を適用する方法を紹介する入門書です。このガイドには、[色を設定する CSS プロパティの一覧とその値](#色を設定できるプロパティ)、および[スタイルシート](#スタイルシートで色を値として指定)と[それ以外の方法](#色をつける他の方法)の両方で色を使用する方法を記載しています。
 
 > **メモ:** [色を賢く使用する](/ja/docs/Web/CSS/CSS_colors/Using_color_wisely)ことが重要です。常に適切な色を選択し、テキストと背景のコントラストを十分に確保して読みやすさを保証し、視覚能力が異なる人々のニーズを常に念頭に置いてください。
@@ -47,7 +47,7 @@ l10n:
 
 - {{cssxref("caret-color")}}
 
-  - : 要素の {{Glossary("caret", "キャレット")}} (テキスト入力カーソルとも表現されるもの) の描画に使用する色です。これは編集可能な要素でのみ有用であり、{{HTMLElement("input")}} や {{HTMLElement("textarea")}} または HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性が `true` に設定された要素に使用されます。
+  - : 要素の {{Glossary("caret", "キャレット")}} (テキスト入力カーソルとも表現されるもの) の描画に使用する色です。これは編集可能な要素でのみ有用であり、{{HTMLElement("input")}} や {{HTMLElement("textarea")}} または HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が `true` に設定された要素に使用されます。
 
 ### ボックス
 

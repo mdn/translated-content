@@ -12,7 +12,7 @@ l10n:
 
 ## 解説
 
-テキスト選択、画像、リンクは既定でドラッグ可能です。 HTML5 の [ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の一部であるグローバルな [`draggable="true"`](/ja/docs/Web/HTML/Global_attributes/draggable) 属性と [`dragstart` イベントハンドラー](/ja/docs/Web/API/HTMLElement/dragstart_event)を設定するには、任意の DOM ノードもドラッグ可能にすることができます。
+テキスト選択、画像、リンクは既定でドラッグ可能です。 HTML5 の [ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の一部であるグローバルな [`draggable="true"`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性と [`dragstart` イベントハンドラー](/ja/docs/Web/API/HTMLElement/dragstart_event)を設定するには、任意の DOM ノードもドラッグ可能にすることができます。
 
 `aria-grabbed` 属性は、ドラッグ＆ドロップ処理で要素が「つかまれた」状態かどうかを示すために `aria-grabbed="true"` が使用され、要素はつかまれる可能性があるが、現在はつかまれていない状態を示すために `aria-grabbed="false"` が使用されます。
 
@@ -45,7 +45,7 @@ l10n:
 ## 関連情報
 
 - [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-- [HTML の `draggable` グローバル属性](/ja/docs/Web/HTML/Global_attributes/draggable)
+- [HTML の `draggable` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/draggable)
 - HTML の[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}

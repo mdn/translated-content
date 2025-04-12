@@ -238,14 +238,10 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
 ### 已弃用的方法
 
-- {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 在窗口历史中后退一步。该方法已被废弃，应该使用 {{domxref("History.back", "history.back()")}} 代替。
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
   - : 注册窗口以捕获所有指定类型的事件。
 - {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 取消使用 `setImmediate()` 设置的重复执行任务。
-- {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 在窗口历史中前进一步。该方法已被废弃，应该使用 {{domxref("History.forward", "history.forward()")}} 代替。
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : 解除窗口对特定类型事件的捕获。
 - {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}

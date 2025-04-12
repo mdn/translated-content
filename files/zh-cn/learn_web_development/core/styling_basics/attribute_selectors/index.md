@@ -84,7 +84,34 @@ slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 - `li[class="a"]`匹配带有一个`a`类的选择器，不过不会选中一部分值为`a`而另一部分是另一个用空格隔开的值的类，它选中了第二项。
 - `li[class~="a"]`会匹配一个`a`类，不过也可以匹配一列用空格分开、包含`a`类的值，它选中了第二和第三项。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
+```html live-sample___attribute
+<h1>Attribute presence and value selectors</h1>
+<ul>
+  <li>Item 1</li>
+  <li class="a">Item 2</li>
+  <li class="a b">Item 3</li>
+  <li class="ab">Item 4</li>
+</ul>
+```
+
+```css live-sample___attribute
+body {
+  font-family: sans-serif;
+}
+li[class] {
+  font-size: 120%;
+}
+
+li[class="a"] {
+  background-color: yellow;
+}
+
+li[class~="a"] {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("attribute", "", "200px")}}
 
 ## 子字符串匹配选择器
 
@@ -102,7 +129,34 @@ slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 - `li[class$="a"]`匹配了任何值结尾为`a`的属性，于是匹配了第一和第三项。
 - `li[class*="a"]`匹配了任何值的字符串中出现了`a`的属性，于是匹配了所有项。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}
+```html live-sample___attribute-substring
+<h1>Attribute substring matching selectors</h1>
+<ul>
+  <li class="a">Item 1</li>
+  <li class="ab">Item 2</li>
+  <li class="bca">Item 3</li>
+  <li class="bcabc">Item 4</li>
+</ul>
+```
+
+```css live-sample___attribute-substring
+body {
+  font-family: sans-serif;
+}
+li[class^="a"] {
+  font-size: 120%;
+}
+
+li[class$="a"] {
+  background-color: yellow;
+}
+
+li[class*="a"] {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("attribute-substring", "", "200px")}}
 
 ## 大小写敏感
 

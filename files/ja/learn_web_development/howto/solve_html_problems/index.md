@@ -78,12 +78,12 @@ HTMLは文書構造を設定するだけです。表示に関する課題を解�
 
 ### 上級のテキスト意味づけ
 
-- [HTML の改行を制御する方法](/ja/docs/Web/HTML/Element/br)
+- [HTML の改行を制御する方法](/ja/docs/Web/HTML/Reference/Elements/br)
 - 変更をマークする方法 (追加および削除されたテキスト) - {{htmlelement("ins")}} と {{htmlelement("del")}} 要素を参照してください
 
 ### 上級の画像やマルチメディア
 
-- [レスポンシブ画像をウェブページに追加する方法](/ja/docs/Web/HTML/Responsive_images)
+- [レスポンシブ画像をウェブページに追加する方法](/ja/docs/Web/HTML/Guides/Responsive_images)
 - [ウェブページにベクター画像を追加する方法](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [画像にヒットマップを追加する方法](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
 

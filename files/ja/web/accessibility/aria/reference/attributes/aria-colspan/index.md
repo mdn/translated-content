@@ -14,7 +14,7 @@ l10n:
 
 {{HTMLElement('table')}} ネイティブ HTML に含まれていない [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) および [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) を対象としており、`aria-colspan` 属性の値は、[`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) や [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)、 [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role) の各セルにまたがる列の数を定義します。
 
-HTML では、{{HTMLElement('th')}} 要素と {{HTMLElement('td')}} 要素が [`colspan`](/ja/docs/Web/HTML/Element/td#attributes) 属性を持っています。セマンティック {{HTMLElement('table')}} を使用する場合は、設計どおりにネイティブ属性である `colspan` 属性を使用してください。この ARIA 属性は、ネイティブの表に含まれていないセルとグリッドセルを対象としており、{{HTMLElement('table')}} 内のセルで使用された場合、無視されます。
+HTML では、{{HTMLElement('th')}} 要素と {{HTMLElement('td')}} 要素が [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#attributes) 属性を持っています。セマンティック {{HTMLElement('table')}} を使用する場合は、設計どおりにネイティブ属性である `colspan` 属性を使用してください。この ARIA 属性は、ネイティブの表に含まれていないセルとグリッドセルを対象としており、{{HTMLElement('table')}} 内のセルで使用された場合、無視されます。
 
 > [!NOTE]
 > ARIA の使用に関する第一のルールは、「要素を再利用して ARIA のロールや状態、プロパティを**追加して**アクセシブルにする代わりに、必要なセマンティクスと動作がすでに組み込まれているネイティブ機能を使用できる場合は、そうする」というものです。可能な場合、セマンティックでない要素を ARIA のロールや属性と一緒に使う代わりに、`coslpan` 属性を使った {{HTMLElement('th')}} や {{HTMLElement('td')}} を含む {{HTMLElement('table')}} を用いてください。
@@ -162,7 +162,7 @@ HTML では、{{HTMLElement('th')}} 要素と {{HTMLElement('td')}} 要素が [`
 
 ## 関連情報
 
-- {{HTMLElement('th')}} と {{HTMLElement('td')}} の [`colspan`](/ja/docs/Web/HTML/Element/td#attributes) 属性
+- {{HTMLElement('th')}} と {{HTMLElement('td')}} の [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#attributes) 属性
 - [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性
 - [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性
 - [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) ロール
