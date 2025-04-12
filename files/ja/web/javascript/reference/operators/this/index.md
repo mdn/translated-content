@@ -259,7 +259,7 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 グローバル実行コンテキスト（関数やクラスの外部、グローバルスコープで定義された[ブロック](/ja/docs/Web/JavaScript/Reference/Statements/block)または[アロー関数](#アロー関数)の内部の場合もあり）では、スクリプトが動作する実行コンテキストによって `this` の値が決まります。 [コールバック](#コールバック)と同様に、`this` の値は実行環境（呼び出し側）によって決定されます。
 
-スクリプトの最上位レベルでは、`this` 値は厳格モードであるかどうかに関わらず、`globalThis` を参照します。これは一般的にグローバルオブジェクトと同じです。例えば、ソースが HTML の [`<script>`](/ja/docs/Web/HTML/Element/script) 要素内に置かれ、スクリプトとして実行された場合、`this === window` となります。
+スクリプトの最上位レベルでは、`this` 値は厳格モードであるかどうかに関わらず、`globalThis` を参照します。これは一般的にグローバルオブジェクトと同じです。例えば、ソースが HTML の [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素内に置かれ、スクリプトとして実行された場合、`this === window` となります。
 
 > **メモ:** `globalThis` は一般的にグローバルオブジェクトと同じ概念です(つまり、`globalThis` にプロパティを追加するとグローバル変数になります)。これはブラウザーとノードの場合です。しかし、ホストはグローバルオブジェクトとは関係のない値を `globalThis` に指定することができます。
 
@@ -456,7 +456,7 @@ for (const element of elements) {
 
 ### インラインイベントハンドラー内の this
 
-コードがインラインの[イベントハンドラー属性](/ja/docs/Web/HTML/Attributes#イベントハンドラー属性)から呼び出されたとき、その `this` にはリスナーが配置されている DOM 要素が設定されます。
+コードがインラインの[イベントハンドラー属性](/ja/docs/Web/HTML/Reference/Attributes#イベントハンドラー属性)から呼び出されたとき、その `this` にはリスナーが配置されている DOM 要素が設定されます。
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>

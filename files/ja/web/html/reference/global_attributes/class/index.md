@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`class`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は、要素のクラスを空白区切りで並べたリストで、大文字小文字を区別します。クラスは CSS の [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) や JavaScript の DOM メソッド {{domxref("document.getElementsByClassName")}} といった関数により、特定の要素を選択したり特定の要素にアクセスしたりすることを可能にします。
+**`class`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は、要素のクラスを空白区切りで並べたリストで、大文字小文字を区別します。クラスは CSS の [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) や JavaScript の DOM メソッド {{domxref("document.getElementsByClassName")}} といった関数により、特定の要素を選択したり特定の要素にアクセスしたりすることを可能にします。
 
 {{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
 
@@ -50,7 +50,7 @@ l10n:
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref('element.className')}}
 - {{domxref('element.classList')}}
 - [CSS 入門](/ja/docs/Learn_web_development/Core/Styling_basics)

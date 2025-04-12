@@ -19,7 +19,7 @@ l10n:
 
 ## 属性
 
-他のすべての HTML 要素と同様、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
+他のすべての HTML 要素と同様、この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。
 
 - `compact` {{Deprecated_Inline}}
   - : これは論理属性で、コンパクトなスタイルでディレクトリー一覧をレンダリングするようヒントを与えるものです。この属性の解釈はユーザーエージェントに委ねられ、また全てのブラウザーで動作するものでもありません。

@@ -33,7 +33,7 @@ li {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)も受け付けます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)も受け付けます。
 
 - `reversed`
   - : 論理属性で、リストの項目が逆順で指定されていることを指定します。項目は大きい方から小さい方へ番号付けされます。
@@ -49,7 +49,7 @@ li {
     - `I` は、大文字のローマ数字を示します
     - `1` は、数字を示します (既定値)
 
-    指定された種類は、異なる [`type`](/ja/docs/Web/HTML/Element/li#type) 属性が内部の {{HTMLElement("li")}} 要素で使用されない限り、リスト全体に使用されます。
+    指定された種類は、異なる [`type`](/ja/docs/Web/HTML/Reference/Elements/li#type) 属性が内部の {{HTMLElement("li")}} 要素で使用されない限り、リスト全体に使用されます。
 
     > [!NOTE]
     > （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。

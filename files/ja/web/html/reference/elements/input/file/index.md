@@ -34,7 +34,7 @@ label {
 
 ## 値
 
-ファイル入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、`value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
+ファイル入力欄の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、選択されたファイルへのパスを表す文字列が入ります。ファイルが選択されていない場合は、値は空文字列 (`""`) になります。ユーザーが複数のファイルを選択すると、`value` は選択されたファイルのリストのうち最初のファイルを表します。その他のファイルは [input 要素の `HTMLInputElement.files` プロパティ](/ja/docs/Web/API/File_API/Using_files_from_web_applications#選択されたファイルについての情報の取得)を使って得ることができます。
 
 > [!NOTE]
 > 文字列には[常に `C:\fakepath\` の接頭辞が付き](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)、ファイルの実際のパスにはなりません。疑わしいソフトウェアがユーザーのファイル構造を推測することを防止するためです。
@@ -45,7 +45,7 @@ label {
 
 ### accept
 
-[`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性の値は文字列で、ファイル入力欄が受け付けるファイル型を定義します。この文字列は **[固有ファイル型指定子](#固有ファイル型指定子)** をカンマで区切ったリストです。指定されたファイル型が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。
+[`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept) 属性の値は文字列で、ファイル入力欄が受け付けるファイル型を定義します。この文字列は **[固有ファイル型指定子](#固有ファイル型指定子)** をカンマで区切ったリストです。指定されたファイル型が複数の方法で識別されることがあるので、指定された形式のファイルが必要な場合は一連の型指定子を提供するといいでしょう。
 
 例えば、 Microsoft Word ファイルを識別する方法がいくつもあるので、 Word ファイルを受け付けるサイトは次のように `<input>` を使用することがあります。
 
@@ -58,13 +58,13 @@ label {
 
 ### capture
 
-[`capture`](/ja/docs/Web/HTML/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("User agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
+[`capture`](/ja/docs/Web/HTML/Reference/Attributes/capture) 属性は文字列で、 [`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept) 属性で入力が画像または映像データであると示した場合、これらのデータを取り込むためにどのカメラを使用するかを指定します。 `user` の値では、ユーザーの方を向いているカメラやマイクを使用します。 `environment` は外側を向いたカメラやマイクを使用します。この属性がない場合、{{Glossary("User agent", "ユーザーエージェント")}}は何をするかを自分で自由に決めます。要求された方向が有効ではない場合、ユーザーエージェントは推奨される既定のモードで代用します。
 
 > **メモ:** `capture` は以前は論理値であり、存在した場合、ファイル入力を要求する代わりに、カメラやマイクなどその端末のメディア取り込み機器を使用するように要求していました。
 
 ### multiple
 
-[`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 論理属性が指定されていると、ファイル入力欄はユーザーに複数のファイルを選択することを許します。
+[`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 論理属性が指定されていると、ファイル入力欄はユーザーに複数のファイルを選択することを許します。
 
 ## 標準外の属性
 
@@ -345,7 +345,7 @@ input.addEventListener("change", updateImageDisplay);
 - そうであるなら、次のことを行います。
 
   - ファイルの名前とファイルサイズを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルサイズを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
-  - {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
+  - {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
 
 - ファイル形式が無効である場合、リストのアイテム内にメッセージを表示して、ユーザーに別なファイル形式を選択する必要があることを伝えます。
 

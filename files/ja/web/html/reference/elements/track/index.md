@@ -85,7 +85,7 @@ video::cue {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `default`
   - : この属性は、別の track が適切であるとユーザーの設定が示さない限り有効にすべき track であることを表します。この属性はメディア要素ごとに 1 つの `track` 要素のみで使用できます。
@@ -120,7 +120,7 @@ video::cue {
 - `label`
   - : 使用可能なテキストトラックを一覧表示する際にブラウザーが使用する、ユーザーに見せるテキストトラックのタイトルです。
 - `src`
-  - : トラック（`.vtt` ファイル）のアドレスです。有効な URL であることが必要です。この属性は定義する必要があり、 URL の値は文書として — `track` 要素の親要素である {{HTMLElement("audio")}} または {{HTMLElement("video")}} が [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を持たない限り — 同じオリジンを持たなければなりません。
+  - : トラック（`.vtt` ファイル）のアドレスです。有効な URL であることが必要です。この属性は定義する必要があり、 URL の値は文書として — `track` 要素の親要素である {{HTMLElement("audio")}} または {{HTMLElement("video")}} が [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を持たない限り — 同じオリジンを持たなければなりません。
 - `srclang`
   - : テキストデータの言語です。有効な [BCP 47](https://r12a.github.io/app-subtags/) 言語タグであることが必要です。`kind` 属性に `subtitles` を設定した場合は、`srclang` 属性を定義しなければなりません。
 

@@ -8,9 +8,9 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope`** 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
+**`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope`** 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
 
-関連する属性である [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype) は、アイテムおよびそのプロパティのコンテキストを記述する語彙（[schema.org](https://schema.org/) など）の有効な URL を指定するために使用されます。以下のそれぞれの例では、 [schema.org](https://schema.org/) からの語彙を使用しています。
+関連する属性である [`itemtype`](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype) は、アイテムおよびそのプロパティのコンテキストを記述する語彙（[schema.org](https://schema.org/) など）の有効な URL を指定するために使用されます。以下のそれぞれの例では、 [schema.org](https://schema.org/) からの語彙を使用しています。
 
 あらゆる HTML 要素に `itemscope` 属性を設定することができます。 `itemscope` 要素が `itemtype` を持たない場合は、関連付けられた `itemref` を持つ必要があります。
 
@@ -18,7 +18,7 @@ l10n:
 
 ### itemscope の id 属性
 
-ある要素に `itemscope` 属性を指定すると、新しいアイテムが作成されます。アイテムは名前と値の組のグループから構成されます。 `itemscope` 属性と `itemtype` 属性を持つ要素では、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性も指定することができます。 `id` 属性を使用すると、新しいアイテムにグローバルな識別子を設定することができます。グローバルな識別子によって、そのアイテムはウェブ上のページで見られる他のアイテムに関連付けることができます。
+ある要素に `itemscope` 属性を指定すると、新しいアイテムが作成されます。アイテムは名前と値の組のグループから構成されます。 `itemscope` 属性と `itemtype` 属性を持つ要素では、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性も指定することができます。 `id` 属性を使用すると、新しいアイテムにグローバルな識別子を設定することができます。グローバルな識別子によって、そのアイテムはウェブ上のページで見られる他のアイテムに関連付けることができます。
 
 ## 例
 
@@ -277,10 +277,10 @@ l10n:
 
 ## 関連情報
 
-- [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- [他のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - マイクロデータに関連する他のグローバル属性:
 
-  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
-  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
-  - [`itemref`](/ja/docs/Web/HTML/Global_attributes/itemref)
-  - [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype)
+  - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
+  - [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop)
+  - [`itemref`](/ja/docs/Web/HTML/Reference/Global_attributes/itemref)
+  - [`itemtype`](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype)

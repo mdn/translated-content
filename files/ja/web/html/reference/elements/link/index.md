@@ -28,7 +28,7 @@ l10n:
 <link href="main.css" rel="stylesheet" />
 ```
 
-この単純な例では、`href` 属性内にスタイルシートへのパスを提供し、[`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性の値を `stylesheet` にしています。`rel` は "relationship" を意味し、おそらく `<link>` 要素の重要な機能の一つです。 — 値はこれを含んでいる文書にどのように関係するかを示します。
+この単純な例では、`href` 属性内にスタイルシートへのパスを提供し、[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性の値を `stylesheet` にしています。`rel` は "relationship" を意味し、おそらく `<link>` 要素の重要な機能の一つです。 — 値はこれを含んでいる文書にどのように関係するかを示します。
 
 他にも見かけるであろう他の一般的な種別はたくさんあります。例えば、サイトのファビコンへのリンクがあります。
 
@@ -69,7 +69,7 @@ l10n:
   crossorigin="anonymous" />
 ```
 
-`rel` が `preload` の値であることは、ブラウザーがこのリソースを先読みすることを指示しており (詳しくは [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload)を参照)、 `as` 属性がコンテンツが読み込まれるされる特定のクラスを示します。
+`rel` が `preload` の値であることは、ブラウザーがこのリソースを先読みすることを指示しており (詳しくは [`rel="preload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を参照)、 `as` 属性がコンテンツが読み込まれるされる特定のクラスを示します。
 `crossorigin` 属性はリソースが {{Glossary("CORS")}} リクエストによって読み込まれるかどうかを示します。
 
 その他の使い方のメモです。
@@ -82,11 +82,11 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `as`
 
-  - : この属性は、 [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload) を `<link>` 要素に設定した場合に必要となり、また [`rel="modulepreload"`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) を設定した場合はオプションですが、それ以外は使用すべきではありません。
+  - : この属性は、 [`rel="preload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を `<link>` 要素に設定した場合に必要となり、また [`rel="modulepreload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) を設定した場合はオプションですが、それ以外は使用すべきではありません。
     これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
 
     さらに、 `rel="preload"` はこれをリクエストの優先度付の信号として使用します。下記の表はこの属性に有効な値と、適用先の要素またはリソースの一覧です。
@@ -179,7 +179,7 @@ l10n:
 - `crossorigin`
 
   - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連リソースを取得する際に {{Glossary("CORS")}} を使用しなければならないかを示します。
-    [CORS が有効な画像](/ja/docs/Web/HTML/CORS_enabled_image)は、<em>汚染</em>されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます。
+    [CORS が有効な画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)は、<em>汚染</em>されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます。
 
     - `anonymous`
       - : オリジン間リクエスト (つまり、 HTTP の {{HTTPHeader("Origin")}} ヘッダーを持つリクエスト) が実行されます。ただし、信用情報は送信されません (Cookie、X.509 証明書、 HTTP ベーシック認証は利用されません)。
@@ -189,7 +189,7 @@ l10n:
         サーバーが元のサイトに信用情報を付与しない場合 (HTTP の {{HTTPHeader("Access-Control-Allow-Credentials")}} ヘッダーに関わらず)、画像が<em>汚染</em>され、その使用も制限されます。
 
     この属性が存在しない場合、リソースは {{Glossary("CORS")}} リクエストなしで (`Origin` HTTP ヘッダーを送信せずに) 取得され、汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワード **anonymous** が指定されたものとして扱われます。
-    それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin) を参照してください。
+    それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を参照してください。
 
 - `disabled`
 
@@ -214,7 +214,7 @@ l10n:
   - : この属性は、リンク先のリソースの言語を示します。
     これは単なる助言です。
     許容される値は {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定めています。
-    この属性は、[`href`](/ja/docs/Web/HTML/Element/a#href) 属性が提供されている場合にのみ使用します。
+    この属性は、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が提供されている場合にのみ使用します。
 - `imagesizes`
   - : `rel="preload"` および `as="image"` において、 `imagesizes` 属性は、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)です。
 - `imagesrcset`
@@ -240,7 +240,7 @@ l10n:
     - `unsafe-url` は、リファラーにオリジンとパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これはオリジンやパスの情報が TLS で保護されたリソースからセキュアでないオリジンへ漏えいしますので、安全ではありません。
 
 - `rel`
-  - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)のリストでなければなりません。
+  - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)のリストでなければなりません。
 - `sizes`
 
   - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
@@ -253,7 +253,7 @@ l10n:
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
 - `title`
-  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet) を定義します。
+  - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet) を定義します。
 - `type`
   - : この属性は、リンク先コンテンツの種類を定義します。この属性の値は **text/html** や **text/css** などの MIME タイプにします。
     この属性の一般的な使用法は、参照されるスタイルシートのタイプ（**text/css** など）の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、`type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
@@ -284,10 +284,10 @@ l10n:
 
   - : この属性の値は、[`href`](#href) 属性で定義したリンク先文書に対する、現在の文書の関係を示します。
     従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
-    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)は、[`rel`](#rel) 向けの値と似ています。
+    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)は、[`rel`](#rel) 向けの値と似ています。
 
     > [!NOTE]
-    > 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 
@@ -301,7 +301,7 @@ l10n:
 
 ### 代替スタイルシートの提供
 
-[代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)も提示できます。
+[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)も提示できます。
 
 ユーザーはメニューの **表示 > スタイルシート** で、使用するスタイルシートを選択できます。
 これは、ユーザーがページをさまざまなバージョンで閲覧する手段を提供します。
@@ -370,7 +370,7 @@ l10n:
 
 ### 先読みの例
 
-`<link rel="preload">` の例は、 [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)にいくつかあります。
+`<link rel="preload">` の例は、 [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)にいくつかあります。
 
 ### リソースが読み込まれるまで描画をブロック
 

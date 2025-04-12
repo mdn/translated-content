@@ -47,11 +47,11 @@ dd {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持っています。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持っています。
 
 ## 例
 
-例については、[`<dl>` 要素で提供されている例](/ja/docs/Web/HTML/Element/dl#例)を参照してください。
+例については、[`<dl>` 要素で提供されている例](/ja/docs/Web/HTML/Reference/Elements/dl#例)を参照してください。
 
 ## 技術的概要
 

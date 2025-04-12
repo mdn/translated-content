@@ -51,7 +51,7 @@ input:invalid {
 
 型によっては、`multiple` 属性が設定されている場合、フォームコントロールの外観が変わる場合があります。 file 入力型については、ブラウザーが提供するネイティブのメッセージが異なります。 Firefox では、ファイルが選択されていないとき、この属性が設定されていると「ファイルが選択されていません」、設定されていない場合は「ファイルが選択されていません」となります（訳注：英語では file と files の違いがありますが、日本語ではメッセージの違いはありません）。ほとんどのブラウザーでは、 {{HTMLElement("select")}} コントロールに `multiple` 属性が設定されていると、スクロールするリストボックスを表示するのに対し、設定されていない場合は単一行のドロップダウンを表示します。 {{HTMLElement("input/email", "email")}} 入力は同じ表示ですが、この属性が設定されていない場合は、カンマ区切りで複数のメールアドレスが設定されていると {{cssxref(':invalid')}} 擬似クラスに一致します。
 
-`multiple` が {{HTMLElement("input/email", "email")}} 入力型に設定されている場合、ユーザーは 0 個（[`required`](/ja/docs/Web/HTML/Attributes/required) がない場合）、1 個、またはそれ以上のカンマ区切りのメールアドレスを入れることができます。
+`multiple` が {{HTMLElement("input/email", "email")}} 入力型に設定されている場合、ユーザーは 0 個（[`required`](/ja/docs/Web/HTML/Reference/Attributes/required) がない場合）、1 個、またはそれ以上のカンマ区切りのメールアドレスを入れることができます。
 
 ```html
 <input type="email" multiple name="emails" id="emails" />
@@ -121,9 +121,9 @@ input:invalid {
 }
 ```
 
-`multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾の空白と先頭の空白はすべて削除されます。 [`required`](/ja/docs/Web/HTML/Attributes/required) 属性が存在する場合、少なくとも 1 つのメールアドレスが必要です。
+`multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾の空白と先頭の空白はすべて削除されます。 [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) 属性が存在する場合、少なくとも 1 つのメールアドレスが必要です。
 
-ブラウザーによっては、 `multiple` が存在する場合には、関連付けられた {{htmlelement('datalist')}} から配下のメールアドレスのために選択肢の [`list`](/ja/docs/Web/HTML/Element/input#list) を表示することがあります。他のブラウザーは対応していません。
+ブラウザーによっては、 `multiple` が存在する場合には、関連付けられた {{htmlelement('datalist')}} から配下のメールアドレスのために選択肢の [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) を表示することがあります。他のブラウザーは対応していません。
 
 {{EmbedLiveSample("email_input", 600, 80) }}
 
@@ -158,7 +158,7 @@ input:invalid {
 
 `multiple` が設定された `file` 入力欄と、設定されていない入力欄との外見の違いに注意してください。
 
-フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、マルチパートフォームデータを送信しているので、 post を使用する必要があります。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
+フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Reference/Elements/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、マルチパートフォームデータを送信しているので、 post を使用する必要があります。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
 
 ### select
 
@@ -229,4 +229,4 @@ select[multiple]:active {
 
 - {{htmlelement('input')}}
 - {{htmlelement('select')}}
-- [複数のメールアドレスの許可](/ja/docs/Web/HTML/Element/input/email#複数のメールアドレスの許可)
+- [複数のメールアドレスの許可](/ja/docs/Web/HTML/Reference/Elements/input/email#複数のメールアドレスの許可)

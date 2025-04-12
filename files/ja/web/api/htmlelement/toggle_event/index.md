@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`toggle`** は {{domxref("HTMLElement")}} インターフェイスのイベントで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) 属性がある要素）において、表示または非表示になった直後に発行されます。
+**`toggle`** は {{domxref("HTMLElement")}} インターフェイスのイベントで、{{domxref("Popover_API", "ポップオーバー", "", "nocode")}}要素（すなわち有効な [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性がある要素）において、表示または非表示になった直後に発行されます。
 
 - そのポップオーバー要素が非表示状態から表示状態に遷移した場合、`event.oldState` プロパティは `closed` に、`event.newState` プロパティは `open` にそれぞれ設定されます。
 - そのポップオーバー要素が表示状態から非表示状態に遷移した場合、 `event.oldState` は `open` に、 `event.newState` は `closed` になります。
@@ -74,6 +74,6 @@ popover.hidePopover();
 
 ## 関連情報
 
-- HTML の [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) グローバル属性
+- HTML の [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)
 - 関連イベント: [`beforetoggle`](/ja/docs/Web/API/HTMLElement/beforetoggle_event)

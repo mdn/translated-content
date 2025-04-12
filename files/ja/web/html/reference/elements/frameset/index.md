@@ -14,7 +14,7 @@ l10n:
 
 ## 属性
 
-他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
+他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。
 
 - `cols` {{Deprecated_Inline}}
   - : この属性は、フレームセット内の水平方向の領域の数と寸法を指定します。

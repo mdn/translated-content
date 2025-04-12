@@ -72,7 +72,7 @@ label {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `max`
   - : この属性は、`progress` 要素で示すタスクで必要とする総作業量を設定します。`max` 属性を指定する場合は、値を `0` より大きい有効な浮動小数点数値にしなければなりません。既定値は `1` です。

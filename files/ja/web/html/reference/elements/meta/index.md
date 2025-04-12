@@ -86,13 +86,13 @@ l10n:
 - [`name`](#name) 属性が設定されている場合、`<meta>` 要素は _文書レベルメタデータ_ を提供し、ページ全体に適用されます。
 - [`http-equiv`](#http-equiv) 属性が設定されている場合、 `<meta>` 要素は _プラグマディレクティブ_ であり、同様の名前の HTTP ヘッダーによって与えられるものと同等の情報を提供します。
 - [`charset`](#charset) 属性が設定されている場合、 `<meta>` 要素は _文字セット宣言_ であり、文書がどの文字エンコーディングでエンコードされているかを指定します。
-- [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性が設定されている場合、`<meta>` 要素は _ユーザー定義のメタデータ_ を提供します。
+- [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性が設定されている場合、`<meta>` 要素は _ユーザー定義のメタデータ_ を提供します。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **メモ:** [`name`](#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、[`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性は、`<meta>` 要素にすでに [`name`](#name), [`http-equiv`](#http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
+> **メモ:** [`name`](#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、[`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性は、`<meta>` 要素にすでに [`name`](#name), [`http-equiv`](#http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
 
 - `charset`
   - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。
@@ -137,7 +137,7 @@ l10n:
 
   - : `name` 属性と `content` 属性を一緒に使用すると、文書のメタデータを名前と値のペアで提供することができます。 `name` 属性はメタデータの名前、 `content` 属性がその値を指定します。
 
-    HTML 仕様書で定義されている標準的なメタデータ名のセットについては、[標準メタデータ名](/ja/docs/Web/HTML/Element/meta/name)を参照してください。
+    HTML 仕様書で定義されている標準的なメタデータ名のセットについては、[標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)を参照してください。
 
 ## 例
 
@@ -158,6 +158,6 @@ l10n:
 
 ## 関連情報
 
-- [標準メタデータ名](/ja/docs/Web/HTML/Element/meta/name)
+- [標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)
 - [学習: `<meta>`](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta要素)
-- [viewport メタタグ](/ja/docs/Web/HTML/Viewport_meta_tag)
+- [viewport メタタグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element)

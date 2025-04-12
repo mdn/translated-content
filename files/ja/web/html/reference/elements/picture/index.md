@@ -10,7 +10,7 @@ l10n:
 
 **`<picture>`** は [HTML](/ja/docs/Web/HTML) の要素で、0 個以上の {{HTMLElement("source")}} 要素と 1 つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。
 
-ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
+ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
 
 {{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
 
@@ -25,7 +25,7 @@ l10n:
 </picture>
 ```
 
-どの URL を読み込むかを選択するには、{{Glossary("user agent","ユーザーエージェント")}}はそれぞれの `<source>` 要素の [`srcset`](/ja/docs/Web/HTML/Element/source#srcset), [`media`](/ja/docs/Web/HTML/Element/source#media), [`type`](/ja/docs/Web/HTML/Element/source#type) 属性を調べて、現在のページのレイアウトや表示装置の能力に最も合う画像を検討します。
+どの URL を読み込むかを選択するには、{{Glossary("user agent","ユーザーエージェント")}}はそれぞれの `<source>` 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/ja/docs/Web/HTML/Reference/Elements/source#media), [`type`](/ja/docs/Web/HTML/Reference/Elements/source#type) 属性を調べて、現在のページのレイアウトや表示装置の能力に最も合う画像を検討します。
 
 `<img>` 要素は 2 つの役割を担います。
 
@@ -42,7 +42,7 @@ l10n:
 
 - 見る人の画面に最も適合する画像を読み込むことで、**通信帯域を節約しページの読み込みをより速くする**。
 
-DPI の高い（高解像度の）ディスプレイのために高解像度版の画像を提供する場合は、代わりに [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性を `<img>` に使用してください。これによってブラウザーはデータ節約モードでは低解像度版を選択することができ、 `media` 条件を明示的に書かなくてもよくなります。
+DPI の高い（高解像度の）ディスプレイのために高解像度版の画像を提供する場合は、代わりに [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性を `<img>` に使用してください。これによってブラウザーはデータ節約モードでは低解像度版を選択することができ、 `media` 条件を明示的に書かなくてもよくなります。
 
 <table class="properties">
   <tbody>
@@ -94,7 +94,7 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持ちます。
 
 ## 使用上のメモ
 
@@ -122,7 +122,7 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
 
 ### srcset 属性
 
-[`srcset`](/ja/docs/Web/HTML/Element/source#attr-srcset) 属性は、*寸法に基づいた*利用可能な画像のリストを提供するために使用します。
+[`srcset`](/ja/docs/Web/HTML/Reference/Elements/source#attr-srcset) 属性は、*寸法に基づいた*利用可能な画像のリストを提供するために使用します。
 
 これは画像記述子のカンマ区切りのリストで構成されます。それぞれの画像記述子は画像の URL と、次の*いずれか*で構成されます。
 

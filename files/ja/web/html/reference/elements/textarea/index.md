@@ -55,23 +55,23 @@ label {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize)
+- [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
 
   - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。
 
-- [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
 
   - : この属性は、コントロールの値をブラウザーが自動的に入力してよいかを示します。以下の値を指定できます。
 
     - `off`: ユーザーはフォームを使用するたびにフィールドへ値を明示的に入力しなければならないか、ドキュメントが独自の自動入力を提供します。ブラウザーは入力内容の自動入力を行いません。
     - `on`: ブラウザーはユーザーが以前入力した値を元に、値の自動入力を行うことができます。
-    - [`<token-list>`](/ja/docs/Web/HTML/Attributes/autocomplete#トークンリストのトークン): 自動入力の詳細トークンを順序付きで空白区切りした集合です。オプションでグループ名トークン、配送先または請求先を表すグループ化トークン、連絡先の種類を識別するためのトークンなどがその前に入ります。
+    - [`<token-list>`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#トークンリストのトークン): 自動入力の詳細トークンを順序付きで空白区切りした集合です。オプションでグループ名トークン、配送先または請求先を表すグループ化トークン、連絡先の種類を識別するためのトークンなどがその前に入ります。
 
-    `<textarea>` 要素に `autocomplete` 属性を指定していない場合、ブラウザーはその `<textarea>` 要素のフォームオーナーに設定された `autocomplete` の `on` または `off` の状態を継承します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、その入力フィールドの `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
+    `<textarea>` 要素に `autocomplete` 属性を指定していない場合、ブラウザーはその `<textarea>` 要素のフォームオーナーに設定された `autocomplete` の `on` または `off` の状態を継承します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、その入力フィールドの `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete) 属性をご覧ください。
 
-- [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect)
+- [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect)
 
   - : ユーザーがこの `textarea` を編集しているときに、テキストの自動スペルチェックと修正を有効にするかどうかを制御します。
     許可されている値は以下の通りです。
@@ -81,39 +81,39 @@ label {
     - `off`
       - : 自動スペルチェックと文字列置換を無効にする。
 
-- [`autofocus`](/ja/docs/Web/HTML/Global_attributes/autofocus)
+- [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus)
   - : この論理属性で、ページ読み込み時にフォームコントロールがフォーカスを持つべきであることを指定できます。文書内でこの属性を指定することができる要素は、フォーム関連要素のうちのひとつだけです。
 - `cols`
   - : 平均的な文字幅による、テキストコントロールの外見上の幅です。この属性を指定する場合は、正の整数を与えなければなりません。指定されなかった場合の既定値は `20` です。
-- [`dirname`](/ja/docs/Web/HTML/Attributes/dirname)
+- [`dirname`](/ja/docs/Web/HTML/Reference/Attributes/dirname)
 
   - : この属性は、要素の内容のテキストの書字方向を示すために使用します。
-    詳しくは、 [`dirname` 属性](/ja/docs/Web/HTML/Attributes/dirname)を参照してください。
+    詳しくは、 [`dirname` 属性](/ja/docs/Web/HTML/Reference/Attributes/dirname)を参照してください。
 
-- [`disabled`](/ja/docs/Web/HTML/Attributes/disabled)
+- [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
   - : この論理属性は、ユーザーがそのコントロールを利用できないことを示します。(もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{ HTMLElement("fieldset") }} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。)
 - `form`
   - : `<textarea>` 要素が関連づけられた form 要素 (フォームオーナー) です。属性値は、同じドキュメント内の form 要素の id としなければなりません。この属性を指定しない場合は、`<textarea>` 要素を form 要素の子要素として配置しなければなりません。この属性により、`<textarea>` 要素を form 要素の子孫としてだけではなく、同一文書のどこにでも配置できるようになりました。
-- [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength)
+- [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength)
   - : ユーザーが入力可能な文字 (UTF-16 コード単位) の最大数です。この属性を指定しない場合、ユーザーは無制限に文字を入力可能です。
-- [`minlength`](/ja/docs/Web/HTML/Attributes/minlength)
+- [`minlength`](/ja/docs/Web/HTML/Reference/Attributes/minlength)
   - : ユーザーが入力しなければならない最小文字数 (UTF-16 コード単位) です。
 - `name`
   - : コントロールの名前です。
-- [`placeholder`](/ja/docs/Web/HTML/Attributes/placeholder)
+- [`placeholder`](/ja/docs/Web/HTML/Reference/Attributes/placeholder)
 
   - : コントロールに何を入力できるかに関する、ユーザーへの助言です。プレースホルダーのテキスト内にあるキャリッジリターンやラインフィードは、ヒントを表示する際に改行として扱わなければなりません。
 
     > [!NOTE]
-    > プレースホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[`<input>` ラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
+    > プレースホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[`<input>` ラベル](/ja/docs/Web/HTML/Reference/Elements/input#ラベル)を参照してください。
 
-- [`readonly`](/ja/docs/Web/HTML/Attributes/readonly)
+- [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly)
   - : これは論理属性で、ユーザーがコントロールの値を変更できないことを示します。`disabled` 属性とは異なり、`readonly` 属性はユーザーがコントロールをクリックしたり選択することを妨げません。読み取り専用のコントロールの値は、フォームとともに送信可能です。
-- [`required`](/ja/docs/Web/HTML/Attributes/required)
+- [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
   - : この属性は、フォームを送信する前に値を入力しなければならないことを示します。
 - `rows`
   - : コントロールで見ることが可能なテキストの行数です。指定する場合は、正の整数でなければなりません。指定されなかった場合、既定値は 2 になります。
-- [`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck)
+- [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)
 
   - : `<textarea>` がブラウザーや OS に依存したスペルチェックを行うかどうかを指定します。以下の値が使用できます。
 
@@ -233,11 +233,11 @@ textarea {
 {{EmbedLiveSample('Example using "placeholder"')}}
 
 > [!NOTE]
-> プレースホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[ラベルとプレースホルダー](/ja/docs/Web/HTML/Element/input)を参照してください。
+> プレースホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[ラベルとプレースホルダー](/ja/docs/Web/HTML/Reference/Elements/input)を参照してください。
 
 ### 無効と読み取り専用
 
-この例では 2 つの `<textarea>` を示しています。一方は [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) であり、もう一方は [`disabled`](/ja/docs/Web/HTML/Attributes/disabled) です。
+この例では 2 つの `<textarea>` を示しています。一方は [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) であり、もう一方は [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) です。
 どちらも編集できませんが、 `readonly` の要素はフォーカスを設定することができ、値がフォームで送信されます。
 `disabled` の要素は送信されず、フォーカスも設定できません。
 

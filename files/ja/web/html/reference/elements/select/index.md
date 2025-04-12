@@ -41,7 +41,7 @@ select {
 
 上の例は、典型的な `<select>` の利用方法を示しています。アクセシビリティのために、 {{htmlelement("label")}} と結び付けられるように `id` 属性が与えられています。それぞれのメニューの選択肢は、 `<select>` の中の {{htmlelement("option")}} 要素で定義されます。
 
-それぞれの `<option>` 要素は、選択肢が選択されたときにサーバーに送信するデータの値を含む [`value`](/ja/docs/Web/HTML/Element/option#value) 属性を持ちます。 `value` 属性が含まれない場合、既定で要素の中に含まれるテキストの値が使用されます。 `<option>` 要素に [`selected`](/ja/docs/Web/HTML/Element/option#selected) 属性を付けることで、ページが最初に読み込まれたときに既定で選択状態にすることができます。
+それぞれの `<option>` 要素は、選択肢が選択されたときにサーバーに送信するデータの値を含む [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) 属性を持ちます。 `value` 属性が含まれない場合、既定で要素の中に含まれるテキストの値が使用されます。 `<option>` 要素に [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を付けることで、ページが最初に読み込まれたときに既定で選択状態にすることができます。
 
 `<select>` 要素は JavaScript では {{domxref("HTMLSelectElement")}} オブジェクトで表され、このオブジェクトの {{domxref("HTMLSelectElement.value", "value")}} プロパティは、選択された `<option>` の値を持っています。
 
@@ -53,27 +53,27 @@ select {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
 
-- [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
-  - : 文字列で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 [HTML の autocomplete 属性](/ja/docs/Web/HTML/Attributes/autocomplete)を参照してください。
+- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
+  - : 文字列で、{{Glossary("user agent", "ユーザーエージェント")}}の自動補完機能のヒントを提供します。値の完全なリストや自動補完の使い方の詳細は、 [HTML の autocomplete 属性](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)を参照してください。
 - `autofocus`
   - : 論理属性で、ページが読み込まれた時にこのフォームコントロールが入力フォーカスを持つべきであることを指定することができます。文書内で `autofocus` 属性を持つことができるフォーム要素は一つだけです。
-- [`disabled`](/ja/docs/Web/HTML/Attributes/disabled)
+- [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
   - : 論理属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。
 - `form`
 
-  - : `<select>` を関連付ける {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) でなければなりません。（この属性が設定されていない場合は、 `<select>` はその祖先である `<form>` が存在すればそれと関連付けられます。）
+  - : `<select>` を関連付ける {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければなりません。（この属性が設定されていない場合は、 `<select>` はその祖先である `<form>` が存在すればそれと関連付けられます。）
 
     この属性によって、 `<select>` 要素は、 `<form>` 要素の子孫に限らず、文書内のどこの `<form>` と結び付けることもできます。これは祖先の `<form>` を上書きすることもできます。
 
-- [`multiple`](/ja/docs/Web/HTML/Attributes/multiple)
+- [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
   - : 論理属性で、リストの複数の選択肢を選択することができることを示します。指定されていない場合は、一度に選択することができる選択肢は一つだけです。 `multiple` が指定されている場合、多くのブラウザーは単一行のドロップダウンの代わりに、スクロールするリストボックスを表示します。
 - `name`
   - : この属性は、コントロールの名前を指定するために使用します。
-- [`required`](/ja/docs/Web/HTML/Attributes/required)
+- [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
   - : 論理属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。
-- [`size`](/ja/docs/Web/HTML/Attributes/size)
+- [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
 
   - : コントロールがスクロールするリストボックスとして表示される場合（つまり、 `multiple` が指定されている場合）、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は `0` です。
 

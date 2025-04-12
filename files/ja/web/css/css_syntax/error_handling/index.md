@@ -129,7 +129,7 @@ p {
 ルール、宣言、関数、文字列、コメントが終了せずにスタイルシートが終了すると、パーサーは閉じていないものを自動的にすべて閉じます。
 
 > [!NOTE]
-> これは、外部スタイルシート、 HTML の {{HTMLElement("style")}} 要素内のセレクターブロック、[`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性内のインラインルールに当てはまります。
+> これは、外部スタイルシート、 HTML の {{HTMLElement("style")}} 要素内のセレクターブロック、[`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性内のインラインルールに当てはまります。
 
 最後のセミコロンからスタイルシートの終わりまでの内容が有効であれば、たとえ不完全であっても、 CSS は正常に構文解析されます。例えば、 {{htmlelement("style")}} を閉じる前に `@keyframe` 宣言を閉じなかった場合でも、アニメーションは有効になります。
 

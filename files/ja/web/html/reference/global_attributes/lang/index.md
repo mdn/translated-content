@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`lang`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素に言語を定義するのに役立ちます。 編集不可能な要素の場合は書かれている言語、または編集可能な要素の場合はユーザーが書くべき言語です。この属性は、{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}で定義されている形式で、単一の「言語タグ」を格納しています。
+**`lang`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に言語を定義するのに役立ちます。 編集不可能な要素の場合は書かれている言語、または編集可能な要素の場合はユーザーが書くべき言語です。この属性は、{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}で定義されている形式で、単一の「言語タグ」を格納しています。
 
 > **メモ:** `lang` の既定値は `unknown` であるため、この属性には常に適切な値を指定することが推奨されます。
 
@@ -38,7 +38,7 @@ p::before {
 
 属性値が空文字列 (`lang=""`) の場合、言語は _unknown_ に設定されます。言語タグが BCP47 に準拠していない場合は、_invalid_ に設定されます。
 
-**lang** 属性が設定されていても、[**xml:lang**](/ja/docs/Web/HTML/Global_attributes#attr-xml:lang) 属性が優先され、考慮されない場合があります。
+**lang** 属性が設定されていても、[**xml:lang**](/ja/docs/Web/HTML/Reference/Global_attributes#attr-xml:lang) 属性が優先され、考慮されない場合があります。
 
 CSS の {{cssxref(":lang")}} 擬似クラスでは、無効な 2 つの言語名は、その名前が異なれば異なるものになります。つまり、`:lang(es)` は `lang="es-ES"` と `lang="es-419"` の両方に一致しますが、 `:lang(xyzzy)` は `lang="xyzzy-Zorp!"` には一致しません。
 
@@ -164,6 +164,6 @@ WCAG 成功基準 3.1.2 は、異なる言語の**部分**があるページに�
 
 ## 関連情報
 
-- すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべての [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - [HTTP の `Content-Language` ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Content-Language)
-- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes/translate) 属性
+- HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) 属性

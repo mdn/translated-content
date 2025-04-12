@@ -1348,4 +1348,4 @@ HTML では、論理属性に許されている値の制約を定義していま
 
 ## 関連情報
 
-- [HTML 要素](/ja/docs/Web/HTML/Element)
+- [HTML 要素](/ja/docs/Web/HTML/Reference/Elements)

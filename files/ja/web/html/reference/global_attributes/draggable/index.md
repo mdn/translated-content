@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**draggable** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素がブラウザーの既定の動作と [HTML ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)のどちらの動作でドラッグできるかを示します。
+**draggable** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素がブラウザーの既定の動作と [HTML ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)のどちらの動作でドラッグできるかを示します。
 
 `draggable` 属性は、厳密には [HTML 名前空間](/ja/docs/Glossary/Namespace)に属する要素に適用することができ、これは [SVG](/ja/docs/Web/SVG) には適用できないことを意味します。
 名前空間宣言がどのようなもので、何をするのかについては、[名前空間の速修講座](/ja/docs/Web/SVG/Guides/Namespaces_crash_course)を参照してください。
@@ -33,4 +33,4 @@ l10n:
 
 ## 関連情報
 
-- すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
+- すべての [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)。

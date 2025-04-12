@@ -26,7 +26,7 @@ l10n:
 
 ## サブリソース完全性の使い方
 
-サブリソース完全性の機能は、ブラウザーが取得するリソース (ファイル) のハッシュ値を base64 エンコードし、その値を {{HTMLElement("script")}} 要素や、 [`rel="stylesheet"`](/ja/docs/Web/HTML/Attributes/rel#stylesheet)、[`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload)、[`rel="modulepreload"`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) のついた {{HTMLElement("link")}} 要素の `integrity` 属性に指定することによって使用します。
+サブリソース完全性の機能は、ブラウザーが取得するリソース (ファイル) のハッシュ値を base64 エンコードし、その値を {{HTMLElement("script")}} 要素や、 [`rel="stylesheet"`](/ja/docs/Web/HTML/Reference/Attributes/rel#stylesheet)、[`rel="preload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)、[`rel="modulepreload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) のついた {{HTMLElement("link")}} 要素の `integrity` 属性に指定することによって使用します。
 
 `integrity` 属性の値は、ハッシュアルゴリズムを示す接頭辞 (現在利用できる接頭辞は `sha256`, `sha384`, `sha512` です) と、 base64 でエンコードされたハッシュ値をダッシュで繋いだ文字列です。
 
@@ -113,7 +113,7 @@ Access-Control-Allow-Origin: *
   crossorigin="anonymous"></script>
 ```
 
-> **メモ:** `crossorigin` 属性については [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+> **メモ:** `crossorigin` 属性については [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 ## サブリソース完全性のブラウザーでの扱い
 

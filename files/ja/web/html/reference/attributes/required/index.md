@@ -23,7 +23,7 @@ l10n:
 
 ### 属性の相互作用
 
-読み取り専用フィールドは値を変更することができないので、 `required` は [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) 属性が指定されている入力欄には影響を与えません。
+読み取り専用フィールドは値を変更することができないので、 `required` は [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) 属性が指定されている入力欄には影響を与えません。
 
 ### ユーザビリティ
 

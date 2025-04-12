@@ -14,11 +14,11 @@ original_slug: Web/Accessibility/ARIA/Roles/search_role
 
 ## 説明
 
-検索 (`search`) ロールは、文書やアプリケーションの検索機能を構成するために組み合わされたすべての要素を囲むコンテナー要素に追加できる[ランドマーク](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)で、これには子孫要素として [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) が含まれます。文書に複数の検索が含まれている場合、それぞれに固有のラベルを持つべきです。ただし、同じ検索が繰り返される場合は同じラベルを使用します。 [`search` 型の `<input>` 要素](/ja/docs/Web/HTML/Element/input/search) がありますが、これ自体は検索ランドマークを定義するものではありません。検索ランドマークを定義するには、[`<search>`](/ja/docs/Web/HTML/Element/search) 要素を使用してください。
+検索 (`search`) ロールは、文書やアプリケーションの検索機能を構成するために組み合わされたすべての要素を囲むコンテナー要素に追加できる[ランドマーク](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)で、これには子孫要素として [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) が含まれます。文書に複数の検索が含まれている場合、それぞれに固有のラベルを持つべきです。ただし、同じ検索が繰り返される場合は同じラベルを使用します。 [`search` 型の `<input>` 要素](/ja/docs/Web/HTML/Reference/Elements/input/search) がありますが、これ自体は検索ランドマークを定義するものではありません。検索ランドマークを定義するには、[`<search>`](/ja/docs/Web/HTML/Reference/Elements/search) 要素を使用してください。
 
 ## 例
 
-[`<form>`](/ja/docs/Web/HTML/Element/form) 要素が検索フォームの場合、[`form`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/form_role) ロールの代わりに `search` ロールを使用してください。
+[`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素が検索フォームの場合、[`form`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/form_role) ロールの代わりに `search` ロールを使用してください。
 
 ```html
 <form id="search" role="search">
@@ -36,7 +36,7 @@ original_slug: Web/Accessibility/ARIA/Roles/search_role
 
 ### 好ましい HTML
 
-[`<form>` 要素](/ja/docs/Web/HTML/Element/form)を検索ロール (`role="search"`) の宣言と共に使用することで、最大限のサポートが提供されます。
+[`<form>` 要素](/ja/docs/Web/HTML/Reference/Elements/form)を検索ロール (`role="search"`) の宣言と共に使用することで、最大限のサポートが提供されます。
 
 ### ランドマークのラベル付け
 
@@ -96,9 +96,9 @@ TBD
 
 ## 関連情報
 
-- [\<form>: フォーム要素](/ja/docs/Web/HTML/Element/form)
-- [\<input type="search">](/ja/docs/Web/HTML/Element/input/search)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [\<form>: フォーム要素](/ja/docs/Web/HTML/Reference/Elements/form)
+- [\<input type="search">](/ja/docs/Web/HTML/Reference/Elements/input/search)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

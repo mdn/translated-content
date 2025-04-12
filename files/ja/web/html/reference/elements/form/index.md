@@ -52,13 +52,13 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `accept` {{deprecated_inline}}
 
   - : サーバーが受け付ける[コンテンツ型](/ja/docs/Web/SVG/Guides/Content_type)のカンマ区切りリストです。
 
-    > **メモ:** **この属性は非推奨であり、使用すべきではありません。** 代わりに `<input type=file>` 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性を使用してください。
+    > **メモ:** **この属性は非推奨であり、使用すべきではありません。** 代わりに `<input type=file>` 要素の [`accept`](/ja/docs/Web/HTML/Reference/Elements/input#accept) 属性を使用してください。
 
 - `accept-charset`
 
@@ -67,9 +67,9 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
 - `autocapitalize`
 
-  - : 入力されたテキストを自動的に大文字にするかどうか、また、その場合はどのような方法で大文字にするかを制御します。 詳細については、 [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) グローバル属性のページをご覧ください。
+  - : 入力されたテキストを自動的に大文字にするかどうか、また、その場合はどのような方法で大文字にするかを制御します。 詳細については、 [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) グローバル属性のページをご覧ください。
 
-- [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
 
   - : input 要素が既定で、ブラウザーによる値の入力補完を受けるかを示します。フォーム要素の `autocomplete` 属性は、 `<form>` のものより優先します。指定可能な値は次の通りです。
 
@@ -80,15 +80,15 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 
   - : フォームの名前。この値は空文字列であってはならず、また、フォームコレクションに含まれる `form` 要素がある場合は、その中で一意でなければなりません。
 
-- [`rel`](/ja/docs/Web/HTML/Attributes/rel)
-  - : 注釈や、このフォームが作成するリンク種別を制御します。注釈には [`external`](/ja/docs/Web/HTML/Attributes/rel#external)、[`nofollow`](/ja/docs/Web/HTML/Attributes/rel#nofollow)、[`opener`](/ja/docs/Web/HTML/Attributes/rel#opener)、[`noopener`](/ja/docs/Web/HTML/Attributes/rel#noopener)、[`noreferrer`](/ja/docs/Web/HTML/Attributes/rel#noreferrer) があります。リンク種別には [`help`](/ja/docs/Web/HTML/Attributes/rel#help)、[`prev`](/ja/docs/Web/HTML/Attributes/rel#prev)、[`next`](/ja/docs/Web/HTML/Attributes/rel#next)、[`search`](/ja/docs/Web/HTML/Attributes/rel#search)、[`license`](/ja/docs/Web/HTML/Attributes/rel#license) があります。[`rel`](/ja/docs/Web/HTML/Attributes/rel) の値はこれらの列挙値の空白区切りの値です。
+- [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
+  - : 注釈や、このフォームが作成するリンク種別を制御します。注釈には [`external`](/ja/docs/Web/HTML/Reference/Attributes/rel#external)、[`nofollow`](/ja/docs/Web/HTML/Reference/Attributes/rel#nofollow)、[`opener`](/ja/docs/Web/HTML/Reference/Attributes/rel#opener)、[`noopener`](/ja/docs/Web/HTML/Reference/Attributes/rel#noopener)、[`noreferrer`](/ja/docs/Web/HTML/Reference/Attributes/rel#noreferrer) があります。リンク種別には [`help`](/ja/docs/Web/HTML/Reference/Attributes/rel#help)、[`prev`](/ja/docs/Web/HTML/Reference/Attributes/rel#prev)、[`next`](/ja/docs/Web/HTML/Reference/Attributes/rel#next)、[`search`](/ja/docs/Web/HTML/Reference/Attributes/rel#search)、[`license`](/ja/docs/Web/HTML/Reference/Attributes/rel#license) があります。[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) の値はこれらの列挙値の空白区切りの値です。
 
 ### フォーム送信のための属性
 
 以下の属性は、フォーム送信中の動作を制御します。
 
 - `action`
-  - : フォーム経由で送信された情報を処理するプログラムの URL。この値は {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) の [`formaction`](/ja/docs/Web/HTML/Element/button#formaction) 属性によって上書きすることが可能です。この属性は `method="dialog"` が設定されている場合は無視されます。
+  - : フォーム経由で送信された情報を処理するプログラムの URL。この値は {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) の [`formaction`](/ja/docs/Web/HTML/Reference/Elements/button#formaction) 属性によって上書きすることが可能です。この属性は `method="dialog"` が設定されている場合は無視されます。
 - `enctype`
 
   - : `method` 属性の値が `post` であるとき、この属性はフォームをサーバーに送信する際に使用する、コンテンツの [MIME タイプ](https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%BF%E3%82%A4%E3%83%97)を示します。以下の値が指定可能です。
@@ -97,7 +97,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     - `multipart/form-data`: フォームが {{HTMLElement("input")}} の `type=file` を含む場合に使用してください。
     - `text/plain`: デバッグ用に有用です。
 
-    この値は、{{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) の [`formenctype`](/ja/docs/Web/HTML/Element/button#formenctype) 属性によって上書きすることが可能です。
+    この値は、{{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) の [`formenctype`](/ja/docs/Web/HTML/Reference/Elements/button#formenctype) 属性によって上書きすることが可能です。
 
 - `method`
 
@@ -107,10 +107,10 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     - `get`: {{HTTPMethod("GET")}} メソッドです。フォームのデータは `action` 属性の URL に `?` で区切って追加されます。このメソッドはフォームに[副作用がない](/ja/docs/Glossary/Idempotent)場合に使用してください。
     - `dialog`: フォームが {{HTMLElement("dialog")}} 要素の中にある場合に使用し、送信の操作を行うと、ダイアログが閉じて `submit` イベントを発行しますが、データを送信したりフォームをクリアしたりはしません。
 
-    この値は、 {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) の [`formmethod`](/ja/docs/Web/HTML/Element/button#formmethod) 属性によって上書きすることが可能です。
+    この値は、 {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) の [`formmethod`](/ja/docs/Web/HTML/Reference/Elements/button#formmethod) 属性によって上書きすることが可能です。
 
 - `novalidate`
-  - : フォームを送信するときに検証しないことを示す論理値です。この属性を指定していない（つまり検証される）場合は、既定の設定を {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) の [`formnovalidate`](/ja/docs/Web/HTML/Element/button#formnovalidate) 属性で上書きすることが可能です。
+  - : フォームを送信するときに検証しないことを示す論理値です。この属性を指定していない（つまり検証される）場合は、既定の設定を {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) の [`formnovalidate`](/ja/docs/Web/HTML/Reference/Elements/button#formnovalidate) 属性で上書きすることが可能です。
 - `target`
 
   - : フォームを送信した後に受け取ったレスポンスの表示先を示す名前またはキーワードです。これは _閲覧コンテキスト_（タブ、ウィンドウ、インラインフレームなど）の名前またはキーワードです。以下のキーワードは特別な意味を持ちます。
@@ -121,7 +121,7 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
     - `_top`: 最上位の閲覧コンテキスト（すなわち、現在の閲覧コンテキストの祖先に当たり、親がないもの）に読み込みます。親がない場合は、`_self` と同じ動作をします。
     - `_unfencedTop`: 埋め込みの[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内でフォームからレスポンスを読み込み、最上位のフレームに表示します（つまり、他の予約済み出力先とは異なり、フェンスフレームのルートを越えて移動します）。フェンスフレーム内でのみ利用できます。
 
-    この値は、 {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) の [`formtarget`](/ja/docs/Web/HTML/Element/button#formtarget) 属性によって上書きすることが可能です。
+    この値は、 {{HTMLElement("button")}}、[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)、[`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) の [`formtarget`](/ja/docs/Web/HTML/Reference/Elements/button#formtarget) 属性によって上書きすることが可能です。
 
 ## 例
 

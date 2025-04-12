@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-**`autocorrect`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、[列挙型](/ja/docs/Glossary/Enumerated)属性であり、編集可能なテキストの綴りや句読点の誤りを自動修正するかどうかを制御します。
+**`autocorrect`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、[列挙型](/ja/docs/Glossary/Enumerated)属性であり、編集可能なテキストの綴りや句読点の誤りを自動修正するかどうかを制御します。
 
 どの単語が自動修正されるかを含め、特定の自動修正の動作はユーザーエージェントと基盤となる端末で指定されたサービスに依存します。
 例えば、 macOS ではユーザーエージェントが[登録済みの置き換えテキストや句読点](https://support.apple.com/ja-jp/guide/mac-help/mh35735/mac)に頼っている場合があります。
@@ -16,9 +16,9 @@ l10n:
 
 自動修正は編集可能なテキスト要素に関連しています。
 
-- {{htmlelement("input")}} 要素、ただし [`password`](/ja/docs/Web/HTML/Element/input/password)、[`email`](/ja/docs/Web/HTML/Element/input/email)、[`url`](/ja/docs/Web/HTML/Element/input/url) は自動修正に対応していません。
+- {{htmlelement("input")}} 要素、ただし [`password`](/ja/docs/Web/HTML/Reference/Elements/input/password)、[`email`](/ja/docs/Web/HTML/Reference/Elements/input/email)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url) は自動修正に対応していません。
 - {{htmlelement("textarea")}} 要素。
-- 任意の要素に [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性が設定されているもの。
+- 任意の要素に [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が設定されているもの。
 
 編集可能な要素には既定では自動修正機能が有効になっていますが、 {{htmlelement("form")}} 要素内では、既定値がフォームから継承されることがあります。
 属性を明示的に設定するには、既定値を上書きします。
@@ -35,7 +35,7 @@ l10n:
 
   - : 編集可能なテキストの自動修正を無効にします。
 
-{{htmlelement("input")}} 要素型のうち、自動修正に対応していないものは、常に `off` の状態になります。[`password`](/ja/docs/Web/HTML/Element/input/password)、[`email`](/ja/docs/Web/HTML/Element/input/email)、[`url`](/ja/docs/Web/HTML/Element/input/url) です。
+{{htmlelement("input")}} 要素型のうち、自動修正に対応していないものは、常に `off` の状態になります。[`password`](/ja/docs/Web/HTML/Reference/Elements/input/password)、[`email`](/ja/docs/Web/HTML/Reference/Elements/input/email)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url) です。
 
 編集可能なその他の要素については、上記以外の値を設定しても、常に `on` として扱われます。
 `<form>` 内に含まれていない要素の既定値は `on` です。
@@ -74,7 +74,7 @@ l10n:
 
 #### HTML
 
-HTML マークアップは、{{htmlelement("button")}}、「名前」の {{htmlelement("input")}} 要素（[`type="text"`](/ja/docs/Web/HTML/Element/input/text)）、「経歴」の {{htmlelement("textarea")}} 要素、および 2 つの {{htmlelement("label")}} 要素を定義しています。
+HTML マークアップは、{{htmlelement("button")}}、「名前」の {{htmlelement("input")}} 要素（[`type="text"`](/ja/docs/Web/HTML/Reference/Elements/input/text)）、「経歴」の {{htmlelement("textarea")}} 要素、および 2 つの {{htmlelement("label")}} 要素を定義しています。
 
 "username" の要素には `autocorrect="off"` が設定されています。名前の自動修正は煩わしいからです。
 bio には `autocorrect` の値が指定されていません。つまり、有効になっているということです（`off` 以外の任意の要素を設定することもできます）。

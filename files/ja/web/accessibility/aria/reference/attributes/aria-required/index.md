@@ -9,7 +9,7 @@ l10n:
 
 ## 解説
 
-セマンティック HTML {{htmlelement("input")}}、{{htmlelement("select")}}、または {{htmlelement("textarea")}} に値が必要な場合は、[`required`](/ja/docs/Web/HTML/Element/input#required) 属性を適用する必要があります。 HTML の `required` 属性は、必要なフォームコントロールに有効な値がない限りフォームの送信を無効にしますが、支援技術を使用してナビゲートするユーザーが、どのセマンティックフォームコントロールに有効なコンテンツが必要であるかを理解できるようにもします。
+セマンティック HTML {{htmlelement("input")}}、{{htmlelement("select")}}、または {{htmlelement("textarea")}} に値が必要な場合は、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を適用する必要があります。 HTML の `required` 属性は、必要なフォームコントロールに有効な値がない限りフォームの送信を無効にしますが、支援技術を使用してナビゲートするユーザーが、どのセマンティックフォームコントロールに有効なコンテンツが必要であるかを理解できるようにもします。
 
 [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) が [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role) の {{HTMLElement('div')}} など、非セマンティック要素を使用してフォームコントロールを作成する場合、フォームを送信するには要素にユーザー入力が必要であることを支援技術に示すために、`aria-required` 属性を `true` の値で含める必要があります。`aria-required` 属性は HTML フォーム要素で使用できます。これは ARIA ロールが割り当てられている要素に限定されません。
 
@@ -92,7 +92,7 @@ CSS の {{CSSXRef(':required')}} および {{CSSXRef(':optional')}} 疑似クラ
 
 ## 関連情報
 
-- HTML [`required`](/ja/docs/Web/HTML/Element/input#required) 属性
+- HTML [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性
 - [`:optional` 擬似クラス](/ja/docs/Web/CSS/:optional)
 - [`:required` 擬似クラス](/ja/docs/Web/CSS/:required)
 - [`aria-invalid` 属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)

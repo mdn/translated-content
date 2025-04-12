@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`writingsuggestions`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、{{glossary("enumerated", "列挙型")}}属性であり、ブラウザーが指定した入力補完を要素のスコープで有効にするかどうかを示します。
+**`writingsuggestions`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、{{glossary("enumerated", "列挙型")}}属性であり、ブラウザーが指定した入力補完を要素のスコープで有効にするかどうかを示します。
 
 一部のブラウザーでは、ユーザーが編集可能なフィールドに入力する際に、入力のヒントを表示します。 通常、入力のヒントは、ユーザーの文を完成させるために、テキストカーソルの後に配置されるグレー表示のテキストとして現れます。この機能はユーザーに役立つ場合もありますが、開発者によっては、サイト固有の入力のヒントを表示する場合など、入力のヒントをオフにしたい場合もあるでしょう。
 
@@ -42,9 +42,9 @@ l10n:
 
 ## 関連情報
 
-- [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性
-- [`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck) 属性
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性
+- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性
+- [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) 属性
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("datalist")}} および [`list`](/ja/docs/Web/HTML/Element/input#list) 属性
+- {{HTMLElement("datalist")}} および [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性

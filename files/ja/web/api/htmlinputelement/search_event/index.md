@@ -10,7 +10,7 @@ l10n:
 
 **`search`** イベントは、 {{HTMLElement("input")}} 要素の `type="search"` にて検索が開始されたときに発生します。
 
-検索を開始する方法はいくつかあり、例えば、 {{HTMLElement("input")}} にフォーカスがある時に <kbd>Enter</kbd> を押したり、[`incremental`](/ja/docs/Web/HTML/Element/input#attr-incremental) 属性が存在すれば、最も新しいキー入力から UA 定義のタイムアウト時間が経過してから検索が開始されます（新しくキー入力をするとタイムアウトがリセットされるので、イベントが繰り返して発生します）。
+検索を開始する方法はいくつかあり、例えば、 {{HTMLElement("input")}} にフォーカスがある時に <kbd>Enter</kbd> を押したり、[`incremental`](/ja/docs/Web/HTML/Reference/Elements/input#attr-incremental) 属性が存在すれば、最も新しいキー入力から UA 定義のタイムアウト時間が経過してから検索が開始されます（新しくキー入力をするとタイムアウトがリセットされるので、イベントが繰り返して発生します）。
 
 現在 UA が `<input type="search">` を実装している方法では、フィールド内をクリアするために追加のコントロールを置きます。このコントロールを使用しても `search` イベントが発生します。この場合、 {{HTMLElement("input")}} 要素の `value` は空文字列になります。
 

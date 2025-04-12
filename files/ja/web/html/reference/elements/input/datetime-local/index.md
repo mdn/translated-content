@@ -42,9 +42,9 @@ label {
 
 ## 値
 
-入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時文字列](/ja/docs/Web/HTML/Date_and_time_formats#ローカル日時文字列)で説明されています。
+入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時文字列](/ja/docs/Web/HTML/Guides/Date_and_time_formats#ローカル日時文字列)で説明されています。
 
-次のように、 [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に日付と時刻を入れることで、入力欄の既定値を設定することができます。
+次のように、 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に日付と時刻を入れることで、入力欄の既定値を設定することができます。
 
 ```html
 <label for="party">パーティーを予約する日時を入力してください。</label>
@@ -75,19 +75,19 @@ dateControl.value = "2017-06-01T08:30";
 
 ### max
 
-受け付ける最新の日時です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDTHH:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
+受け付ける最新の日時です。要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDTHH:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ日付を指定する必要があります。
 
 ### min
 
-受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDTHH:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
+受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDTHH:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ日付を指定する必要があります。
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -104,13 +104,13 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ### 入力欄の大きさの制御
 
-`<input type="datetime-local">` は、 [`size`](/ja/docs/Web/HTML/Element/input#size) のようなコントロールの大きさに関する属性には対応していません。大きさを変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
+`<input type="datetime-local">` は、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) のようなコントロールの大きさに関する属性には対応していません。大きさを変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
 
 ### タイムゾーンの設定
 
 `datetime-local` 入力型はコントロールのタイムゾーンやロケールを設定する方法がありません。これは `datetime` 入力型では利用できましたが、この入力型は廃止され、仕様書から削除されました。削除された主な理由はブラウザーの互換性がなく、ユーザーインターフェイスや使い勝手が決まっていなかったからです。単に日付と時刻を設定するコントロールを用意して、別なコントロールで地域を設定したほうが簡単です。
 
-例えば、ユーザーがログインしている場所によって地域を設定するようなシステムを開発する場合、タイムゾーンを [`hidden`](/ja/docs/Web/HTML/Element/input/hidden) 入力型で次のように提供することができます。
+例えば、ユーザーがログインしている場所によって地域を設定するようなシステムを開発する場合、タイムゾーンを [`hidden`](/ja/docs/Web/HTML/Reference/Elements/input/hidden) 入力型で次のように提供することができます。
 
 ```html
 <input type="hidden" id="timezone" name="timezone" value="-08:00" />
@@ -134,7 +134,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 既定では、 `<input type="datetime-local">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも入力欄を空のままにしたり、 (`text` 型にフォールバックするブラウザーにおいて) 無効な日付 (例えば 4 月 32 日など) を入力したりすることが可能です。
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日時の最大値と最小値の設定)を参照)、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して日時の入力を必須にしたりすることができます。その結果、ブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
+[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日時の最大値と最小値の設定)を参照)、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使用して日時の入力を必須にしたりすることができます。その結果、ブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
 
 例を見てみましょう。ここで日付の最小値と最大値を設定し、入力欄を必須にしました。
 
@@ -211,7 +211,7 @@ input:valid + span::after {
 
 ### 日時の最大値および最小値の設定
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用することで、ユーザーが選べる日時を制限することができます。次の例では、日時の最小値を `2025-06-01T08:30`、最大値を `2025-06-30T16:30` に設定しています。
+[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用することで、ユーザーが選べる日時を制限することができます。次の例では、日時の最小値を `2025-06-01T08:30`、最大値を `2025-06-30T16:30` に設定しています。
 
 ```html
 <form>
@@ -233,7 +233,7 @@ input:valid + span::after {
 
 有効な範囲には `min` と `max` の値の間のすべての時刻が含まれます。時刻は範囲内の最初の日と最後の日でのみ制約されます。
 
-> **メモ:** [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して、時刻が増加するたびにジャンプする日数を変えることができるはずです（例えば、土曜日だけを選択可能にしたい場合など）。しかし、これは執筆時の実装では効果的に動作していないようです。
+> **メモ:** [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して、時刻が増加するたびにジャンプする日数を変えることができるはずです（例えば、土曜日だけを選択可能にしたい場合など）。しかし、これは執筆時の実装では効果的に動作していないようです。
 
 ## 技術的概要
 
@@ -299,6 +299,6 @@ input:valid + span::after {
 ## 関連情報
 
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する {{domxref("HTMLInputElement")}} インターフェイス
-- [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date) および [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time)
-- [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)
+- [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date) および [`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time)
+- [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Guides/Date_and_time_formats)
 - [日付と時刻の選択のチュートリアル](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日付と時刻ピッカー)

@@ -27,7 +27,7 @@ SVG 効果を CSS スタイルで適用するには、まず最初に 適用す�
 </style>
 ```
 
-上の例では、すべての段落が、 [ID](/ja/docs/Web/SVG/Reference/Element/mask) に `my-mask` を持つ [SVG の `<mask>`](/ja/docs/Web/HTML/Global_attributes/id) によってマスクされます。
+上の例では、すべての段落が、 [ID](/ja/docs/Web/SVG/Reference/Element/mask) に `my-mask` を持つ [SVG の `<mask>`](/ja/docs/Web/HTML/Reference/Global_attributes/id) によってマスクされます。
 
 ### 例: マスキング
 

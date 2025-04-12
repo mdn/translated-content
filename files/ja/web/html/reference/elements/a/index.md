@@ -32,7 +32,7 @@ li {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `attributionsrc` {{experimental_inline}}
 
@@ -94,7 +94,7 @@ li {
     - メディアファイルの一部を示すメディアフラグメント
 
 - `hreflang`
-  - : リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 [`lang` グローバル属性](/ja/docs/Web/HTML/Global_attributes/lang)と同じです。
+  - : リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 [`lang` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)と同じです。
 - `ping`
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
@@ -110,7 +110,7 @@ li {
     - `strict-origin-when-cross-origin` (default): 同一オリジンへのリクエストを行う際には URL 全体が送信され、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) はオリジンのみが送信されますが、安全性が下がる移動先 (HTTPS→HTTP) には送信されません。
     - `unsafe-url`: リファラーにはオリジン*および*パスが含まれます（ただし[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含まれません）。**この値は安全ではありません**。オリジンとパスを TLS で保護されたリソースから安全ではないオリジンに漏洩させるからです。
 
-- [`rel`](/ja/docs/Web/HTML/Attributes/rel)
+- [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
   - : リンク先の URL との関係を示す、空白で区切られたリンク種別のリストです。
 - `target`
 
@@ -122,7 +122,7 @@ li {
     - `_top`: 最上位の閲覧コンテキスト（現在のコンテキストの祖先である "最上位" のコンテキスト）です。親の閲覧コンテキストがない場合は、 `_self` と同じ動作をします。
     - `_unfencedTop`: 埋め込まれた[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)が最上位のフレームを移動できるようにします (つまり、他の予約された移動先とは異なり、フェンスフレームのルートを越えて移動します)。これがフェンスフレームのコンテキスト外で使用されてもナビゲーションは成功しますが、予約語のようには動作しないことに注意してください。
 
-    > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
+    > **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作は [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) が設定されたかのように動作し、 `window.opener` を設定しません。
 
 - `type`
   - : リンク先 URL の {{Glossary("MIME type", "MIME タイプ")}}の形式を表すヒントです。組み込まれている機能はありません。
@@ -143,7 +143,7 @@ li {
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
     > [!NOTE]
-    > 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を使用してください。
+    > 代わりにグローバル属性の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を使用してください。
 
 - `rev` {{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
@@ -218,7 +218,7 @@ li {
 <a href="2017-annual-report.ppt">2017 年次レポート (PowerPoint)</a>
 ```
 
-リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Element/img#alt)を確実に入れてください。
+リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Reference/Elements/img#alt)を確実に入れてください。
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
@@ -459,7 +459,7 @@ document
 
 `<a>` 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については [`Referer` ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)を参照してください。
 
-`target="_blank"` を [`rel="noreferrer"`](/ja/docs/Web/HTML/Attributes/rel/noreferrer) や [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) なしで使用すると、ウェブサイトが {{domxref("window.opener")}} API 搾取攻撃を受けやすくなりますが、新しい版のブラウザーでは `target="_blank"` を設定すると、`rel="noopener"` と同じ保護が提供されます。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+`target="_blank"` を [`rel="noreferrer"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noreferrer) や [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) なしで使用すると、ウェブサイトが {{domxref("window.opener")}} API 搾取攻撃を受けやすくなりますが、新しい版のブラウザーでは `target="_blank"` を設定すると、`rel="noopener"` と同じ保護が提供されます。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 技術的概要
 

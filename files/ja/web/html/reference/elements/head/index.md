@@ -8,13 +8,13 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<head>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に関する機械可読な情報（{{glossary("metadata", "メタデータ")}}）、たとえば[題名](/ja/docs/Web/HTML/Element/title)、[スクリプト](/ja/docs/Web/HTML/Element/script)、[スタイルシート](/ja/docs/Web/HTML/Element/style)などを含みます。
+**`<head>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に関する機械可読な情報（{{glossary("metadata", "メタデータ")}}）、たとえば[題名](/ja/docs/Web/HTML/Reference/Elements/title)、[スクリプト](/ja/docs/Web/HTML/Reference/Elements/script)、[スタイルシート](/ja/docs/Web/HTML/Reference/Elements/style)などを含みます。
 
 > **メモ:** `<head>` は主に人間が読むためのものではなく、機械処理のための情報を保持するためのものです。人間が読むための情報、例えば最上位の見出しや著者の掲載のためのものは、 {{HTMLElement("header")}} 要素を参照してください。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `profile` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 1 つ以上のメタデータプロファイルの {{glossary("URI")}} で、{{Glossary("whitespace", "ホワイトスペース")}}区切りです。

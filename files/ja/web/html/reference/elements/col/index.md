@@ -76,7 +76,7 @@ td {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `span`
   - : この属性は正の整数で、 `<col>` 要素がまたがる列の数を示します。存在しない場合、既定値は `1` です。
@@ -94,13 +94,13 @@ td {
     - `right` : 内容物をセルの右側に揃えます。
     - `justify`: 内容物がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
 
-    この属性が設定されていない場合、その値は `<col>` 要素が属する {{HTMLElement("colgroup")}} 要素の [`align`](/ja/docs/Web/HTML/Element/colgroup#align) 属性から継承します。それも存在しない場合は、`left` 値であるものとします。
+    この属性が設定されていない場合、その値は `<col>` 要素が属する {{HTMLElement("colgroup")}} 要素の [`align`](/ja/docs/Web/HTML/Reference/Elements/colgroup#align) 属性から継承します。それも存在しない場合は、`left` 値であるものとします。
 
     > **メモ:** `left`、`center`、`right`、`justify` の値と同じ効果を実現するために、{{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしないでください。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
     >
-    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用していない場合は、CSS の `td:nth-child(an+b)` セレクターを使用してください。`a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用していない場合は、CSS の `td:nth-child(an+b)` セレクターを使用してください。`a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
     >
-    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用している場合は、`[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用している場合は、`[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - `bgcolor` {{Deprecated_inline}}
 
@@ -123,9 +123,9 @@ td {
 
     > **メモ:** {{cssxref("vertical-align")}} プロパティを `<col>` 要素を指定したセレクターに設定しようとしないでください。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
     >
-    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用していない場合は、 CSS の `td:nth-child(an+b)` セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用することができます。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用していない場合は、 CSS の `td:nth-child(an+b)` セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用することができます。
     >
-    > 表で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
+    > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - `width` {{deprecated_inline}}
   - : この属性は、現在の列グループ内の各列に既定の幅を指定します。標準的なピクセル値やパーセント値に加えて、この属性は特別な書式である `0*` も使用できます。これはグループ内の各列の幅を、列の内容物を保持するのに必要最小限の幅にします。`5*` のような幅の相対値も使用できます。

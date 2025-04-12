@@ -14,12 +14,12 @@ l10n:
 
 ## 属性
 
-他のすべての HTML 要素と同様に、この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+他のすべての HTML 要素と同様に、この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `src` {{Deprecated_Inline}}
   - : この属性は、フレームに表示する文書を指定します。
 - `name` {{Deprecated_Inline}}
-  - : この属性は、フレームに名前をつけます。名前がなければ、すべてのリンクは自身が存在するフレーム – 直近の親フレームで開きます。詳しくは [`target`](/ja/docs/Web/HTML/Element/a#target) 属性を参照してください。
+  - : この属性は、フレームに名前をつけます。名前がなければ、すべてのリンクは自身が存在するフレーム – 直近の親フレームで開きます。詳しくは [`target`](/ja/docs/Web/HTML/Reference/Elements/a#target) 属性を参照してください。
 - `noresize` {{Deprecated_Inline}}
   - : この属性は、ユーザによるフレームのリサイズを抑止します。
 - `scrolling` {{Deprecated_Inline}}

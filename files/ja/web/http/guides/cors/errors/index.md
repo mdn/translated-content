@@ -57,6 +57,6 @@ Firefox のコンソールは、 CORS のためにリクエストが失敗した
 - 用語集: {{Glossary("CORS")}}
 - [CORS 入門](/ja/docs/Web/HTTP/Guides/CORS)
 - [サーバー側 CORS 設定](/ja/docs/Web/HTTP/Guides/CORS)
-- [CORS 有効化の画像](/ja/docs/Web/HTML/CORS_enabled_image)
-- [CORS の設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)
+- [CORS 有効化の画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)
+- [CORS の設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
 - <https://www.test-cors.org> – CORS リクエストの試験ページ

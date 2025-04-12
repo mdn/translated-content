@@ -12,7 +12,7 @@ l10n:
 
 設定されている場合、このシャドウルートは、{{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} メソッドを `options.serializableShadowRoots` 引数に `true` を指定して呼び出すことでシリアライズできます。
 
-シャドウルートの serializable プロパティは、シャドウルートが作成された際に指定されます。`<template>` 要素に [`shadowrootserializable`](/ja/docs/Web/HTML/Element/template#shadowrootserializable) 属性を（許可された [`shadowrootmode`](/ja/docs/Web/HTML/Element/template#shadowrootmode) 値とともに）追加することで宣言的に指定するか、[`options.serializable`](/ja/docs/Web/API/Element/attachShadow#serializable) 引数を `true` に設定して [`Element.attachShadow()`](/ja/docs/Web/API/Element/attachShadow) を使用します。
+シャドウルートの serializable プロパティは、シャドウルートが作成された際に指定されます。`<template>` 要素に [`shadowrootserializable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) 属性を（許可された [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 値とともに）追加することで宣言的に指定するか、[`options.serializable`](/ja/docs/Web/API/Element/attachShadow#serializable) 引数を `true` に設定して [`Element.attachShadow()`](/ja/docs/Web/API/Element/attachShadow) を使用します。
 
 ## 値
 

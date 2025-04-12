@@ -75,6 +75,6 @@ label {
 
 ## 関連情報
 
-- [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength)
-- [`minlength`](/ja/docs/Web/HTML/Attributes/minlength)
-- [`pattern`](/ja/docs/Web/HTML/Attributes/pattern)
+- [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength)
+- [`minlength`](/ja/docs/Web/HTML/Reference/Attributes/minlength)
+- [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern)

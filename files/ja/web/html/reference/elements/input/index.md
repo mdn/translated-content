@@ -324,7 +324,7 @@ label {
 
 この節では、すべての属性に簡単な説明を書いた一覧表を示します。その後で、それぞれの属性がどの入力型に関連付けられているか、より詳細に説明された一覧を示します。ほとんど、またはすべての入力型に共通する属性については、以下でより詳細に定義します。特定の入力型に固有の属性、またはすべての入力型に共通するが、特定の入力型で使用されたときに特別な動作をする属性は、それぞれの型のページで示します。
 
-`<input>` 要素の属性には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)が含まれ、さらに次のものがあります。
+`<input>` 要素の属性には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)が含まれ、さらに次のものがあります。
 
 | 属性                                          | 型                                                                  | 説明                                                                           |
 | --------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -367,7 +367,7 @@ label {
 
 ### 個々の属性
 
-- [`accept`](/ja/docs/Web/HTML/Attributes/accept)
+- [`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept)
 
   - : `file` 入力型に対してのみ有効です。`accept` 属性は `file` アップロードコントロールの中でどのファイル形式が選択可能であるかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
 
@@ -377,15 +377,15 @@ label {
 
 - `autocapitalize`
 
-  - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。詳しい情報はグローバル属性 [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) のページを参照してください。
+  - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。詳しい情報はグローバル属性 [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) のページを参照してください。
 
-- [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
 
-  - : （論理属性では**ありません**!） [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、`email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete#values) を参照してください。
+  - : （論理属性では**ありません**!） [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、`email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#values) を参照してください。
 
     `autocomplete` 属性は `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, `password` で有効です。この属性は数値またはテキストデータを返さない入力型では効果がなく、`checkbox`, `radio`, `file` とすべてのボタン型を除いたすべての入力型で有効になります。
 
-    詳しい情報については [`autocomplete` 属性](/ja/docs/Web/HTML/Attributes/autocomplete)を参照してください。パスワードセキュリティに関する情報や、`autocomplete` が `hidden` に対して他の入力型とどう異なるのかについての情報があります。
+    詳しい情報については [`autocomplete` 属性](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)を参照してください。パスワードセキュリティに関する情報や、`autocomplete` が `hidden` に対して他の入力型とどう異なるのかについての情報があります。
 
 - `autofocus`
 
@@ -402,7 +402,7 @@ label {
 
     `autofocus` 属性を適用する際には、アクセシビリティを慎重に検討してください。フォームコントロールにフォーカスを自動的に設定すると、読み込み時にページのスクロールが発生します。フォーカスを与えると、一部のタッチ端末では動的なキーボードを表示させることにもなります。スクリーンリーダーはフォーカスを受けているフォームコントロールのラベルをアナウンスする一方、ラベルよりも前は何もアナウンスしませんし、小さな端末を使用している視力のあるユーザーは、同様に先行するコンテンツによって作成された文脈を見逃してしまいます。
 
-- [`capture`](/ja/docs/Web/HTML/Attributes/capture)
+- [`capture`](/ja/docs/Web/HTML/Reference/Attributes/capture)
   - : HTML Media Capture 仕様書で導入され、`file` 入力型に対してのみ有効です。`capture` 属性は、どのメディア (マイク、ビデオ、カメラ) を使用して新しいファイルをキャプチャし、対応するシナリオで `file` アップロードコントロールを使用してアップロードするかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
 - `checked`
 
@@ -413,7 +413,7 @@ label {
     >
     > 例えば、`name` が `fruit` で、`value` が `cherry` であるチェックボックスがチェックされていると、送信されるフォームデータには `fruit=cherry` が含まれます。チェックボックスがチェックされていない場合、フォームデータには全く含まれません。チェックボックスやラジオボタンの既定の `value` は `on` です。
 
-- [`dirname`](/ja/docs/Web/HTML/Attributes/dirname)
+- [`dirname`](/ja/docs/Web/HTML/Reference/Attributes/dirname)
 
   - : `hidden`, `text`, `search`, `url`, `tel`, `email` 入力型について有効で、`dirname` 属性によって要素の書字方向を送信することができます。これが含まれていると、フォームコントロールは 2 組の名前と値を送信します。1 組目は [`name`](#name) と [`value`](#value) であり、2 組目は名前が `dirname` 属性の値で、値に `ltr` または `rtl` がブラウザーによって設定されます。
 
@@ -429,9 +429,9 @@ label {
     ```
 
     上記のフォームが送信されると、入力欄は `name` / `value` の組である `fruit=cherry` と、`dirname` / 書字方向の組である `fruit-dir=ltr` が送信されます。
-    詳しくは、 [`dirname` attribute](/ja/docs/Web/HTML/Attributes/dirname) を参照してください。
+    詳しくは、 [`dirname` attribute](/ja/docs/Web/HTML/Reference/Attributes/dirname) を参照してください。
 
-- [`disabled`](/ja/docs/Web/HTML/Attributes/disabled)
+- [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
 
   - : 論理属性で、存在する場合、ユーザーが入力欄を操作できないことを示します。無効な入力欄は、ふつうより薄い色や、その他のフィールドが使用できないことを示す形で表示されます。
 
@@ -473,37 +473,37 @@ label {
 
     仕様書によれば、`list` 属性は `hidden`, `password`, `checkbox`, `radio`, `file` それにボタン型では対応していません。
 
-    ブラウザーによっては、独自のカラーパレットが提案されたり、範囲に沿ったチェックマークが表示されたり、{{HTMLElement("select")}} のように開くものの、リストにない値を入力できるようになったりすることもあります。他の入力型については[ブラウザーの互換性一覧表](/ja/docs/Web/HTML/Element/datalist#browser_compatibility)を参照してください。
+    ブラウザーによっては、独自のカラーパレットが提案されたり、範囲に沿ったチェックマークが表示されたり、{{HTMLElement("select")}} のように開くものの、リストにない値を入力できるようになったりすることもあります。他の入力型については[ブラウザーの互換性一覧表](/ja/docs/Web/HTML/Reference/Elements/datalist#browser_compatibility)を参照してください。
 
     {{htmlelement('datalist')}} 要素を参照してください。
 
-- [`max`](/ja/docs/Web/HTML/Attributes/max)
+- [`max`](/ja/docs/Web/HTML/Reference/Attributes/max)
 
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最大値を定義します。要素に入力された [`value`](#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。`max` 属性の値が数値でない場合は、要素に最大値は設定されません。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最大値を定義します。要素に入力された [`value`](#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。`max` 属性の値が数値でない場合は、要素に最大値は設定されません。
 
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後10時から午前4時までの自国の範囲を指定することができます。
 
-- [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength)
+- [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength)
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最大文字列長（UTF-16 コード単位で計測）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
-- [`min`](/ja/docs/Web/HTML/Attributes/min)
+- [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
 
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。`min` 属性の値が数値でない場合は、要素に最小値は設定されません。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。`min` 属性の値が数値でない場合は、要素に最小値は設定されません。
 
     この値は `max` 属性の値以下である必要があります。`min` 属性が存在するものの、指定されていなかったり無効であったりした場合は、`min` の値は適用されません。`min` 属性が有効であり、値が空ではなく `min` 属性で許可された最小値よりも小さかった場合、制約の検証によりフォームの送信が行われません。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後 10 時から午前 4 時までの自国の範囲を指定することができます。
 
-- [`minlength`](/ja/docs/Web/HTML/Attributes/minlength)
+- [`minlength`](/ja/docs/Web/HTML/Reference/Attributes/minlength)
 
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字列長 (UTF-16 コード単位で計測) を定義します。これは負数ではなく、`maxlength` で指定された値以下の整数値でなければなりません。`minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
 
-    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
-- [`multiple`](/ja/docs/Web/HTML/Attributes/multiple)
+- [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
 
   - : 論理属性の `multiple` は、設定されている場合、email 入力欄ではユーザーがウィジェット内でカンマ区切りで複数のメールアドレスを入力できること、また `file` 入力欄では複数のファイルを選択することができることを意味します。{{HTMLElement("input/email", "email")}} および {{HTMLElement("input/file", "file")}} 入力型を参照してください。
 
@@ -540,20 +540,20 @@ label {
     > [!WARNING]
     > フォームの組み込みプロパティに対応する `name` をフォーム要素に与えないようにしてください。そうすると、対応する入力欄に参照するとき、定義済みのプロパティやメソッドを上書きしてしまうからです。
 
-- [`pattern`](/ja/docs/Web/HTML/Attributes/pattern)
+- [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern)
 
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過したとみなされる正規表現をコンパイルするのに使われます。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されている通りです。パターンのテキストの周囲にスラッシュを指定しないでください。正規表現がコンパイルするときには、次のようになります。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を通過したとみなされる正規表現をコンパイルするのに使われます。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されている通りです。パターンのテキストの周囲にスラッシュを指定しないでください。正規表現がコンパイルするときには、次のようになります。
 
     1. パターンは暗黙的に `^(?:` と `)$` で囲まれ、入力値全体と一致することが要求されます。すなわち、 `^(?:<パターン>)$` となります。
     2. `'v'` フラグを指定すると、パターンは {{Glossary("ASCII")}} ではなく、Unicode コードポイントの並びとして扱われます。
 
-    `pattern` 属性が存在するが指定されていない、または不正な場合は、正規表現は適用されず、この属性は完全に無視されます。 pattern 属性が有効で、空ではない値がパターンと一致しない場合、制約検証によりフォームの送信が阻止されます。 [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) が存在する場合は、コンパイルされた正規表現がカンマで区切られた各値と照合されます。
+    `pattern` 属性が存在するが指定されていない、または不正な場合は、正規表現は適用されず、この属性は完全に無視されます。 pattern 属性が有効で、空ではない値がパターンと一致しない場合、制約検証によりフォームの送信が阻止されます。 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) が存在する場合は、コンパイルされた正規表現がカンマで区切られた各値と照合されます。
 
     > **メモ:** `pattern` 属性を使用する場合は、期待される書式をユーザーに知らせる説明文を近くに配置してください。また、パターンに一致させるための要件が何であるかを説明するために、[`title`](#title) 属性を含めることもできます。 アクセシビリティを確保するには、視覚的な説明が必要です。ほとんどのブラウザーはこのタイトルをツールチップとして表示します。ツールチップは改善手段です。
 
 詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
-- [`placeholder`](/ja/docs/Web/HTML/Attributes/placeholder)
+- [`placeholder`](/ja/docs/Web/HTML/Reference/Attributes/placeholder)
 
   - : `text`, `search`, `url`, `tel`, `email`, `password`, `number` で有効です。`placeholder` 属性は、フィールドでどのような情報が期待されているかについて、ユーザーに簡単なヒントを与える文字列です。説明やプロンプトではなく、期待されるデータのタイプのヒントとなる単語や短いフレーズである必要があります。テキストには、改行を含めては*いけません*。例えば、ユーザーの名前を入力するフィールドで、そのラベルが "First Name" の場合、適切なプレースホルダーは "e.g. Mustafa" となります。
 
@@ -574,19 +574,19 @@ label {
     - `"toggle"`
       - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合、表示させます。ポップオーバーが表示されている場合、非表示になります。`popovertargetaction` が省略された場合は、`"toggle"` が制御ボタンで実行される既定のアクションです。
 
-- [`readonly`](/ja/docs/Web/HTML/Attributes/readonly)
+- [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly)
 
   - : 論理属性で、存在すれば、ユーザーが入力欄の値を編集できないことを示します。`readonly` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password` の各入力型が対応しています。
 
-    詳しくは [HTML 属性: `readonly`](/ja/docs/Web/HTML/Attributes/readonly) を参照してください。
+    詳しくは [HTML 属性: `readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) を参照してください。
 
-- [`required`](/ja/docs/Web/HTML/Attributes/required)
+- [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
 
   - : `required` は論理属性であり、所有するフォームが送信される前に、ユーザーが入力欄の値を指定しなければならないことを示します。`required` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, `file` の各入力型で対応しています。
 
-    詳しくは[クライアント側の検証](#クライアント側の検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Attributes/required) を参照してください。
+    詳しくは[クライアント側の検証](#クライアント側の検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Reference/Attributes/required) を参照してください。
 
-- [`size`](/ja/docs/Web/HTML/Attributes/size)
+- [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
 
   - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、CSS の [`width`](/ja/docs/Web/CSS/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。`password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセルとなります。CSS の `width` は `size` 属性よりも優先されます。
 
@@ -594,14 +594,14 @@ label {
 
   - : `image` 入力ボタンにのみ有効で、`src` は、グラフィカルな送信ボタンを表現するために表示する画像ファイルの URL を指定する文字列です。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
-- [`step`](/ja/docs/Web/HTML/Attributes/step)
+- [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
 
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。
 
     明示的に指定しない場合は次のようになります。
 
     - `step` の既定値は、`number` と `range` の場合は 1 です。
-    - 日付や時刻の入力型では、型ごとにふさわしい `step` の既定値があります。[`date`](/ja/docs/Web/HTML/Element/input/date#step)、[`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local#step)、[`month`](/ja/docs/Web/HTML/Element/input/month#step)、[`time`](/ja/docs/Web/HTML/Element/input/time#step)、[`week`](/ja/docs/Web/HTML/Element/input/week#step) の個別のページを参照してください。
+    - 日付や時刻の入力型では、型ごとにふさわしい `step` の既定値があります。[`date`](/ja/docs/Web/HTML/Reference/Elements/input/date#step)、[`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local#step)、[`month`](/ja/docs/Web/HTML/Reference/Elements/input/month#step)、[`time`](/ja/docs/Web/HTML/Reference/Elements/input/time#step)、[`week`](/ja/docs/Web/HTML/Reference/Elements/input/week#step) の個別のページを参照してください。
 
     値は、正の整数または浮動小数点実数、または特殊な値 `any` のいずれかでなければなりません。これは、刻みが考慮されず、あらゆる値が許容されることを意味します（[`min`](#min) や [`max`](#max) などの他の制約がない場合）。
 
@@ -943,7 +943,7 @@ input.custom {
 
 {{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、既定では推奨されるサイズが設定されています）。このプロパティを使用すると、既定の動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
 
-このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Element/input/text)、[`url`](/ja/docs/Web/HTML/Element/input/url)、[`file`](/ja/docs/Web/HTML/Element/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
+このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Reference/Elements/input/text)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
 
 ### object-position と object-fit
 
@@ -968,7 +968,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 #### 関連付けられたラベル
 
-`<input>` 要素と `<label>` 要素を意味的に連携させると、スクリーンリーダーなどの支援技術に役立ちます。`<label>` の [`for`](/ja/docs/Web/HTML/Element/label#for) 属性を使って連携させることで、ラベルと入力欄を結び付け、画面リーダーがユーザーに入力欄についてより正確に説明できるようになります。
+`<input>` 要素と `<label>` 要素を意味的に連携させると、スクリーンリーダーなどの支援技術に役立ちます。`<label>` の [`for`](/ja/docs/Web/HTML/Reference/Elements/label#for) 属性を使って連携させることで、ラベルと入力欄を結び付け、画面リーダーがユーザーに入力欄についてより正確に説明できるようになります。
 
 `<input>` 要素にプレーンテキストが隣接しているだけでは十分ではありません。ユーザビリティとアクセシビリティのためには、暗黙的または明示的な {{HTMLElement("label")}} を含めることが必要です。
 
@@ -1393,7 +1393,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 
 ## 関連情報
 
-- [フォームの制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [フォームの制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [初めての HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)
 - [HTML フォームを構成する方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [ネイティブのフォームウィジェット](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)

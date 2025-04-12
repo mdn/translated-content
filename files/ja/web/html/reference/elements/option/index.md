@@ -41,14 +41,14 @@ select {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `disabled`
   - : この論理属性を設定すると、選択肢が選択不能になります。多くのブラウザーはそのようなコントロールをグレーアウトで表示し、マウスクリックやフォーカスなど、いかなるイベントも受け付けなくなります。この属性を設定していなくても、祖先に無効状態の {{HTMLElement("optgroup")}} 要素がある場合は無効化されます。
 - `label`
   - : この属性は、選択肢の意味を示すラベル文字列です。`label` 属性を定義していない場合は、要素の文字列コンテンツが要素の値になります。
 - `selected`
-  - : この論理属性を設定すると、その選択肢が初期状態で選択されます。この `<option>` 要素の祖先の {{HTMLElement("select")}} 要素に [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) が設定されていない場合、{{HTMLElement("select")}} 要素内で `selected` 属性が設定できる `<option>` 要素は 1 つだけです。
+  - : この論理属性を設定すると、その選択肢が初期状態で選択されます。この `<option>` 要素の祖先の {{HTMLElement("select")}} 要素に [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) が設定されていない場合、{{HTMLElement("select")}} 要素内で `selected` 属性が設定できる `<option>` 要素は 1 つだけです。
 - `value`
   - : この属性の内容は、フォームで送信する値を表します。値を送信するには、選択肢を選択しなければなりません。この属性を省略すると、option 要素の中の文字列が値となります。
 

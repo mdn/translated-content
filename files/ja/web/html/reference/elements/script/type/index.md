@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`type`** は [`<script>`](/ja/docs/Web/HTML/Element/script) 要素の属性で、その要素で表されるスクリプトの種類（クラシックスクリプト、JavaScript モジュール、インポートマップ、データブロック）を示します。
+**`type`** は [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素の属性で、その要素で表されるスクリプトの種類（クラシックスクリプト、JavaScript モジュール、インポートマップ、データブロック）を示します。
 
 ## 値
 
@@ -23,7 +23,7 @@ l10n:
     スクリプトコンテンツの処理は延期されます。
     `charset` および `defer` 属性の影響を受けません。
     `module` の利用についての情報は、 [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をご覧ください。クラシックスクリプトとは異なり、モジュールスクリプトはオリジンをまたいで読み取る場合、CORS プロトコルを使用する必要があります。
-- [`importmap`](/ja/docs/Web/HTML/Element/script/type/importmap)
+- [`importmap`](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)
   - : この値は、要素の本体にインポートマップが格納されていることを示します。
     インポートマップ JSON オブジェクトで、開発者が [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)をインポートする際に、ブラウザーがモジュール指定子を解決する方法を制御するために使用できます。
 - **その他の値**

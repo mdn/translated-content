@@ -26,7 +26,7 @@ Reason: CORS header 'Access-Control-Allow-Origin' missing
 Access-Control-Allow-Origin: https://example.com
 ```
 
-`*` ワイルドカードを使用することで、あらゆるサイトにアクセスを許可するようサイトを構成することもできます。これは公開 API にのみ使用してください。非公開の API には `*` を使用するべきではなく、代わりに具体的なドメインやドメインの一覧を設定してください。加えて、ワイルドカードは [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が `anonymous` に設定されたリクエストにのみ動作し、リクエストでは Cookie のような資格情報の送信を抑制します。
+`*` ワイルドカードを使用することで、あらゆるサイトにアクセスを許可するようサイトを構成することもできます。これは公開 API にのみ使用してください。非公開の API には `*` を使用するべきではなく、代わりに具体的なドメインやドメインの一覧を設定してください。加えて、ワイルドカードは [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性が `anonymous` に設定されたリクエストにのみ動作し、リクエストでは Cookie のような資格情報の送信を抑制します。
 
 ```http
 Access-Control-Allow-Origin: *

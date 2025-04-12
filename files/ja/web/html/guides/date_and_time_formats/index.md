@@ -10,15 +10,15 @@ l10n:
 
 一部の HTML 要素は日付や時刻の値を使用します。この記事ではこれらの値を指定する文字列の形式について説明しています。
 
-このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、[`datetime`](/ja/docs/Web/HTML/Element/ins#datetime) 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。
+このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、[`datetime`](/ja/docs/Web/HTML/Reference/Elements/ins#datetime) 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。
 
-`<input>` については、 [`type`](/ja/docs/Web/HTML/Element/input#type) の値のうち日付や時刻を表す文字列を含む [`value`](/ja/docs/Web/HTML/Global_attributes#value) を返すものは次の通りです。
+`<input>` については、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) の値のうち日付や時刻を表す文字列を含む [`value`](/ja/docs/Web/HTML/Reference/Global_attributes#value) を返すものは次の通りです。
 
-- [`date`](/ja/docs/Web/HTML/Element/input/date)
-- [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local)
-- [`month`](/ja/docs/Web/HTML/Element/input/month)
-- [`time`](/ja/docs/Web/HTML/Element/input/time)
-- [`week`](/ja/docs/Web/HTML/Element/input/week)
+- [`date`](/ja/docs/Web/HTML/Reference/Elements/input/date)
+- [`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`month`](/ja/docs/Web/HTML/Reference/Elements/input/month)
+- [`time`](/ja/docs/Web/HTML/Reference/Elements/input/time)
+- [`week`](/ja/docs/Web/HTML/Reference/Elements/input/week)
 
 ## 例
 
@@ -288,9 +288,9 @@ HTML の日付の目的上、年は常に 4 桁以上の長さになります。
 
 ## ローカル日時文字列
 
-有効な [`datetime-local`](/ja/docs/Web/HTML/Element/input/datetime-local) 文字列は、`date` 文字列と `time` 文字列を文字 "`T`" または空白文字で区切って結合したものです。 文字列にはタイムゾーンの情報は含まれず、日付と時刻はユーザーのローカルタイムゾーンにあると推定されます。
+有効な [`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) 文字列は、`date` 文字列と `time` 文字列を文字 "`T`" または空白文字で区切って結合したものです。 文字列にはタイムゾーンの情報は含まれず、日付と時刻はユーザーのローカルタイムゾーンにあると推定されます。
 
-`datetime-local` 入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) を設定すると、文字列が**正規化**されます。正規化された `datetime` 文字列は常に文字 "`T`" を使用して日付と時刻を区切り、時刻の部分はできるだけ短くなるようにします。これは、秒成分の値が`:00`の場合、秒成分を省くことで実現されます。
+`datetime-local` 入力欄の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) を設定すると、文字列が**正規化**されます。正規化された `datetime` 文字列は常に文字 "`T`" を使用して日付と時刻を区切り、時刻の部分はできるだけ短くなるようにします。これは、秒成分の値が`:00`の場合、秒成分を省くことで実現されます。
 
 <table class="standard-table">
   <caption>

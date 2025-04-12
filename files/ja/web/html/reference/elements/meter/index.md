@@ -29,7 +29,7 @@ label {
 
 ## 属性
 
-他のすべての要素と同様に、この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+他のすべての要素と同様に、この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `value`
 
@@ -37,9 +37,9 @@ label {
 
     > **メモ:** `value` 属性の値が `0` を下限、`1` を上限とするものでない限り、`min` 属性および `max` 属性で `value` 属性の下限および上限を定義しなくてはなりません。
 
-- [`min`](/ja/docs/Web/HTML/Attributes/min)
+- [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
   - : 範囲全体の下限。 `max` 属性により上限が設定されている場合は、それより小さい値でなくてはなりません。未設定の場合、下限値は `0` となります。
-- [`max`](/ja/docs/Web/HTML/Attributes/max)
+- [`max`](/ja/docs/Web/HTML/Reference/Attributes/max)
   - : 範囲全体の上限。 `min` 属性により下限が設定されている場合は、それより大きい値でなくてはなりません。未設定の場合、上限値は `1` となります。
 - `low`
   - : 「低」とされる範囲全体の上限値。属性値は、`min` 属性の値より大きく、かつ `high` 属性および `max` 属性の値より小さいものでなくてはなりません (※これらが定義されている場合)。`low` が未定義、もしくはその値が `min` 属性の値より小さい場合、`low` の値は最小値と同じです。
@@ -48,7 +48,7 @@ label {
 - `optimum`
   - : 最適な数値の範囲を表します。`min` 属性と `max` 属性によって定義される範囲内の値でなくてはなりません。 `low` 属性と `high` 属性が指定されている場合、この属性の値を含む範囲が最適な数値の範囲とみなされます。例えば、値が `min` 属性と `low` 属性の間のいずれかであった場合、「低」の範囲が最適な数値となります。ブラウザーは optimum の値以下であるかどうかでメーターのバーの色を変更することがあります。
 - `form`
-  - : この省略可能な属性は、この `<meter>` 要素のオーナーとなる {{HTMLElement("form")}} を明示的に設定するために使用されます。省略された場合は、`<meter>` は祖先の `<form>` 要素、または存在すれば祖先の他の要素 ({{HTMLElement("fieldset")}} など) の `form` 属性で関連付けられたフォームに関連付けられます。指定する場合、値は同じツリーにある `<form>` の [`id`](/ja/docs/Web/HTML/Global_attributes/id) でなければなりません。
+  - : この省略可能な属性は、この `<meter>` 要素のオーナーとなる {{HTMLElement("form")}} を明示的に設定するために使用されます。省略された場合は、`<meter>` は祖先の `<form>` 要素、または存在すれば祖先の他の要素 ({{HTMLElement("fieldset")}} など) の `form` 属性で関連付けられたフォームに関連付けられます。指定する場合、値は同じツリーにある `<form>` の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければなりません。
 
 ## 例
 

@@ -46,7 +46,7 @@ pre {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 - `cols` {{non-standard_inline}} {{deprecated_inline}}
   - : 1 行あたりの*望ましい*文字数を示します。これは [`width`](#width) の標準外の別名です。同様の効果を得るには、CSS の {{Cssxref("width")}} を使用してください。

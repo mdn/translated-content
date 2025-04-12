@@ -12,11 +12,11 @@ l10n:
 
 HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モーダルダイアログボックスのどちらを作成する時にも使用します。 モーダルダイアログボックスは、ページの他の部分との操作を中断し、非モーダルダイアログボックスは、ページの他の部分との操作を許可します。
 
-`<dialog>` 要素を表示するには、JavaScript を使用して下さい。モーダルダイアログを表示するには {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} メソッドを、非モーダルダイアログを表示するには {{domxref("HTMLDialogElement.show()", ".show()")}} メソッドを使用して下さい。ダイアログボックスは {{domxref("HTMLDialogElement.close()", ".close()")}} メソッドを使用するか、または `<dialog>` 要素内に含まれる `<form>` フォームを送信する際に [`dialog`](/ja/docs/Web/HTML/Element/form#method) メソッドを使用して閉じることができます。モーダルダイアログは、<kbd>Esc</kbd> キーを押すことでも閉じることができます。
+`<dialog>` 要素を表示するには、JavaScript を使用して下さい。モーダルダイアログを表示するには {{domxref("HTMLDialogElement.showModal()", ".showModal()")}} メソッドを、非モーダルダイアログを表示するには {{domxref("HTMLDialogElement.show()", ".show()")}} メソッドを使用して下さい。ダイアログボックスは {{domxref("HTMLDialogElement.close()", ".close()")}} メソッドを使用するか、または `<dialog>` 要素内に含まれる `<form>` フォームを送信する際に [`dialog`](/ja/docs/Web/HTML/Reference/Elements/form#method) メソッドを使用して閉じることができます。モーダルダイアログは、<kbd>Esc</kbd> キーを押すことでも閉じることができます。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 > **警告:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。詳しく[使用上の注意](#使用上の注意)を参照してください。
 
@@ -30,14 +30,14 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 
 ## 使用上の注意
 
-- HTML の {{HTMLElement("form")}} 要素は、属性 method=「dialog」 を保有している場合、またはフォームを送信するボタンに [`formmethod="dialog"`](/ja/docs/Web/HTML/Element/input#formmethod) が設定されている場合に、ダイアログボックスを閉じることができます。 `<dialog>` 内の `<form>` が `dialog` メソッドで確定されると、ダイアログボックスが閉じられ、そのフォームコントロールの状態が保存されますが、送信はされません。また、 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} プロパティは、押されたボタンの値に設定されます。
+- HTML の {{HTMLElement("form")}} 要素は、属性 method=「dialog」 を保有している場合、またはフォームを送信するボタンに [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input#formmethod) が設定されている場合に、ダイアログボックスを閉じることができます。 `<dialog>` 内の `<form>` が `dialog` メソッドで確定されると、ダイアログボックスが閉じられ、そのフォームコントロールの状態が保存されますが、送信はされません。また、 {{domxref("HTMLDialogElement.returnValue", "returnValue")}} プロパティは、押されたボタンの値に設定されます。
 - CSS の {{cssxref('::backdrop')}} 擬似要素は、モーダルダイアログの背景をスタイル設定するために使用することができます。これは、{{domxref("HTMLDialogElement.showModal()")}} メソッドを使用してダイアログを表示した際に、`<dialog>` 要素の背後に表示されます。例えば、この擬似要素を使用して、モーダルダイアログの背後の無効なコンテンツをぼかしたり、暗くしたり、といった方法で分かりにくくすることができます。
-- [`autofocus`](/ja/docs/Web/HTML/Global_attributes/autofocus) 属性を、モーダルダイアログが開いた直後にユーザーが操作することが想定される要素に追加すべきです。他に即座の操作が想定される要素がない場合は、`autofocus` をダイアログ内の［閉じる］ボタンに追加するか、ユーザーがクリック/アクティブにして閉じることが想定される場合はダイアログ自体に追加することをお勧めします。
+- [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性を、モーダルダイアログが開いた直後にユーザーが操作することが想定される要素に追加すべきです。他に即座の操作が想定される要素がない場合は、`autofocus` をダイアログ内の［閉じる］ボタンに追加するか、ユーザーがクリック/アクティブにして閉じることが想定される場合はダイアログ自体に追加することをお勧めします。
 - `<dialog>` 要素に `tabindex` プロパティを追加しないでください。この要素は操作対象ではなく、フォーカスを受け取らないからです。ダイアログの内容は（ダイアログに含まれない閉じるボタンを含め）、フォーカスを受け取ることができ、操作対象となります。
 
 ## アクセシビリティ
 
-ダイアログを実装する際には、ユーザーのフォーカスを設定する場所として最も適切な場所を検討することが重要です。{{domxref("HTMLDialogElement.showModal()")}} を用いて `<dialog>` を開いたとき、フォーカスは内部で最初のフォーカス可能な要素に設定されます。[`autofocus`](/ja/docs/Web/HTML/Global_attributes/autofocus) 属性を使用して初期フォーカスの配置を明確に示すと、特定のダイアログに対して最適な初期フォーカスの配置とみなされる要素に初期フォーカスが設定するのに役立ちます。ダイアログの初期フォーカスがどこに設定されるか常にわからない場合、特にダイアログのコンテンツが呼び出されたときに動的に描画される場合、必要であれば `<dialog>` 要素そのものにフォーカスを当てることが、初期フォーカスの配置として最適と判断されるかもしれません。
+ダイアログを実装する際には、ユーザーのフォーカスを設定する場所として最も適切な場所を検討することが重要です。{{domxref("HTMLDialogElement.showModal()")}} を用いて `<dialog>` を開いたとき、フォーカスは内部で最初のフォーカス可能な要素に設定されます。[`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性を使用して初期フォーカスの配置を明確に示すと、特定のダイアログに対して最適な初期フォーカスの配置とみなされる要素に初期フォーカスが設定するのに役立ちます。ダイアログの初期フォーカスがどこに設定されるか常にわからない場合、特にダイアログのコンテンツが呼び出されたときに動的に描画される場合、必要であれば `<dialog>` 要素そのものにフォーカスを当てることが、初期フォーカスの配置として最適と判断されるかもしれません。
 
 ユーザーがダイアログを閉じることができる機構を確実に用意してください。すべてのユーザーが確実にダイアログを閉じることができるようにする最も確実な方法は、閉じるための明確なボタンを記載することです。例えば、確認、キャンセル、閉じるなどのボタンが適切です。
 
@@ -45,7 +45,7 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 
 ダイアログは他の要素を使用して作成することができますが、ネイティブの `<dialog>` 要素は、同様の目的で他の要素を使用する場合は再現しなければならないユーザビリティとアクセシビリティ機能を提供します。独自のダイアログ実装を作成する場合は、すべての期待される既定の動作に対応しており、適切なラベル付けの推奨事項に従うことを保証してください。
 
-`<dialog>` 要素は、ARIA の [role="dialog"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<dialog>` 要素が `showModal()` メソッドで呼び出された場合、暗黙のうちに [aria-modal="true"](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) となり、一方 `<dialog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<dialog>` の既定の `display` を変更した場合は `[aria-modal="false"]` として表示されます。モーダルダイアログを実装する際には、`<dialog>` とそのコンテンツ以外は [`inert`](/ja/docs/Web/HTML/Global_attributes/inert) 属性を使って不活性化する必要があります。`<dialog>` を `HTMLDialogElement.showModal()` メソッドで使用した場合、この動作はブラウザーが提供します。
+`<dialog>` 要素は、ARIA の [role="dialog"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<dialog>` 要素が `showModal()` メソッドで呼び出された場合、暗黙のうちに [aria-modal="true"](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) となり、一方 `<dialog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<dialog>` の既定の `display` を変更した場合は `[aria-modal="false"]` として表示されます。モーダルダイアログを実装する際には、`<dialog>` とそのコンテンツ以外は [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性を使って不活性化する必要があります。`<dialog>` を `HTMLDialogElement.showModal()` メソッドで使用した場合、この動作はブラウザーが提供します。
 
 ## 例
 
@@ -75,7 +75,7 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 
 この例では、[グラデーション](/ja/docs/Web/CSS/gradient)の背景を持つモーダルダイアログを示しています。`.showModal()` メソッドは、［ダイアログを表示］ボタンが押された際に、モーダルダイアログを開くためのものです。ダイアログは、<kbd>Esc</kbd> キーを押すか、ダイアログ内の［閉じる］ボタンが押された際に `close()` メソッドを使用することで閉じることができます。
 
-ダイアログが開くと、既定では、ブラウザーはダイアログ内でフォーカス可能な最初の要素にフォーカスを当てます。この例では、 [`autofocus`](/ja/docs/Web/HTML/Global_attributes/autofocus) 属性が［閉じる］ボタンに適用されており、このボタンにダイアログが開いたときにフォーカスが当たります。これは、ダイアログが開いた直後にユーザーが対話すると想定される要素だからです。
+ダイアログが開くと、既定では、ブラウザーはダイアログ内でフォーカス可能な最初の要素にフォーカスを当てます。この例では、 [`autofocus`](/ja/docs/Web/HTML/Reference/Global_attributes/autofocus) 属性が［閉じる］ボタンに適用されており、このボタンにダイアログが開いたときにフォーカスが当たります。これは、ダイアログが開いた直後にユーザーが対話すると想定される要素だからです。
 
 #### HTML
 
@@ -207,7 +207,7 @@ confirmBtn.addEventListener("click", (event) => {
 - {{domxref("HTMLDialogElement.close()")}} メソッドを呼び出すことによって（[モーダルの例](#モーダルダイアログの作成)にあるように）。
   この例では、［キャンセル］ボタンはダイアログフォームメソッドを介してダイアログを閉じ、［確認］ボタンは {{domxref("HTMLDialogElement.close()")}} メソッドを介してダイアログを閉じます。
 
-［キャンセル］ボタンには [`formmethod="dialog"`](/ja/docs/Web/HTML/Element/input/submit#formmethod) が含まれており、 {{HTMLElement("form")}} の既定の {{HTTPMethod("GET")}} メソッド ([`method`](/ja/docs/Web/HTML/Element/form#method)) を上書きします。フォームのメソッドが [`dialog`](#usage_notes) の場合、フォームの状態は送信されずに保存され、ダイアログは閉じられます。
+［キャンセル］ボタンには [`formmethod="dialog"`](/ja/docs/Web/HTML/Reference/Elements/input/submit#formmethod) が含まれており、 {{HTMLElement("form")}} の既定の {{HTTPMethod("GET")}} メソッド ([`method`](/ja/docs/Web/HTML/Reference/Elements/form#method)) を上書きします。フォームのメソッドが [`dialog`](#usage_notes) の場合、フォームの状態は送信されずに保存され、ダイアログは閉じられます。
 
 `action` がない場合、既定の {{HTTPMethod("GET")}} メソッドでフォームを送信すると、ページの再読み込みが発生します。JavaScript を使用して、送信を阻止し、ダイアログを閉じるために、それぞれ {{domxref("event.preventDefault()")}} と {{domxref("HTMLDialogElement.close()")}} メソッドを使用しています。
 
@@ -215,7 +215,7 @@ confirmBtn.addEventListener("click", (event) => {
 
 ### 必須フォーム入力付きのダイアログを閉じる
 
-ダイアログ内のフォームに必須入力項目がある場合、ユーザーエージェントは、必須入力項目に値が入力されるまで、ダイアログを閉じることができません。このようなダイアログを閉じるには、［閉じる］ボタンに [`formnovalidate`](/ja/docs/Web/HTML/Element/input#formnovalidate) 属性を使用するか、［閉じる］ボタンがクリックされたときにダイアログオブジェクトの `close()` メソッドを呼び出すかしてください。
+ダイアログ内のフォームに必須入力項目がある場合、ユーザーエージェントは、必須入力項目に値が入力されるまで、ダイアログを閉じることができません。このようなダイアログを閉じるには、［閉じる］ボタンに [`formnovalidate`](/ja/docs/Web/HTML/Reference/Elements/input#formnovalidate) 属性を使用するか、［閉じる］ボタンがクリックされたときにダイアログオブジェクトの `close()` メソッドを呼び出すかしてください。
 
 ```html
 <dialog id="dialog">
@@ -570,6 +570,6 @@ closeBtn.addEventListener("click", () => {
 - {{domxref("HTMLDialogElement/close_event", "close")}} イベント
 - {{domxref("HTMLElement/cancel_event", "cancel")}} イベント
 - {{domxref("HTMLDialogElement/open", "open")}} プロパティ（`HTMLDialogElement` インターフェイス）
-- [`inert`](/ja/docs/Web/HTML/Global_attributes/inert) グローバル属性（HTML 要素）
+- [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) グローバル属性（HTML 要素）
 - CSS の {{CSSXref("::backdrop")}} 擬似要素
 - [ウェブフォーム](/ja/docs/Learn_web_development/Extensions/Forms)（学習領域）

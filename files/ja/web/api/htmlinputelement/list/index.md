@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`list`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、この要素の [`list`](/ja/docs/Web/HTML/Element/input#list) 属性が指し示す {{domxref("HTMLDataListElement")}} を返します。`list` 属性が定義されていない場合、または `list` 属性の値が同じツリー内のどの `<datalist>` にも関連付けられていない場合は、`null` が返されます。
+**`list`** は {{domxref("HTMLInputElement")}} インターフェイスの読み取り専用プロパティで、この要素の [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性が指し示す {{domxref("HTMLDataListElement")}} を返します。`list` 属性が定義されていない場合、または `list` 属性の値が同じツリー内のどの `<datalist>` にも関連付けられていない場合は、`null` が返されます。
 
 > [!NOTE]
 > これは読み取り専用のプロパティです。 `<datalist>` を要素に関連付けるには、{{domxref("Element.setAttribute", "setAttribute()")}} を使用して `list` 属性の値を設定します。

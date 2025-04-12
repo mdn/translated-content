@@ -44,7 +44,7 @@ label {
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Element/form#autocomplete)を使用します。所有元フォームとは、要素の [`form`](/ja/docs/Web/HTML/Element/input#form) 属性で指定された `id` に一致する `<form>` （存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete)を使用します。所有元フォームとは、要素の [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性で指定された `id` に一致する `<form>` （存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
 
 > [!NOTE]
 > 自動入力を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
@@ -346,4 +346,4 @@ TN99 8ZZ
 - {{htmlelement("textarea")}} 要素
 - {{htmlelement("form")}} 要素
 - [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)

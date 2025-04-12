@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`dir`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素のテキストの書字方向を示します。
+**`dir`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素のテキストの書字方向を示します。
 
 {{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
 
@@ -66,5 +66,5 @@ l10n:
 
 ## 関連情報
 
-- すべて[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべて[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.dir")}} は、この属性を反映します。

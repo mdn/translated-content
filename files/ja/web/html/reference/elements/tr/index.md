@@ -78,13 +78,13 @@ caption {
 }
 ```
 
-セルをどのように列に収める（または列にまたがる）かを制御できるようにするため、`<th>` および `<td>` で [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性も使用できます。
+セルをどのように列に収める（または列にまたがる）かを制御できるようにするため、`<th>` および `<td>` で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性をサポートします。これはセルの幅をいくつの列にするかを指定でき、既定値は 1 です。同様に、セルが複数の行にまたがることを示す [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#rowspan) 属性も使用できます。
 
 表を作成するとき、正しい表にするために少し経験が必要かもしれません。以下にいくつか[例](#例)がありますが、さらに多くの例や詳しいチュートリアルは、[ウェブ開発を学ぶ](/ja/docs/Learn_web_development)領域の [HTML 表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)シリーズをご覧ください。表形式のデータを正しいレイアウトに整形するため、 table 要素やその属性の使い方を学ぶことができます。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。使用を避けるべき[非推奨の属性](#非推奨の属性)もいくつかありますが、古いコードを読む際は知っている必要があるでしょう。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。使用を避けるべき[非推奨の属性](#非推奨の属性)もいくつかありますが、古いコードを読む際は知っている必要があるでしょう。
 
 ### 非推奨の属性
 

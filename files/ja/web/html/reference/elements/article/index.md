@@ -125,14 +125,14 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
-- それぞれの `<article>` は、子要素として見出し（[`<h1>` - `<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素）を含むなどの方法で識別できるようにするべきです。
+- それぞれの `<article>` は、子要素として見出し（[`<h1>` - `<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素）を含むなどの方法で識別できるようにするべきです。
 - `<article>` 要素を入れ子にした場合、内側の要素は外側の要素に関する記事を表します。例えばブログ投稿へのコメントは、ブログ投稿を表す `<article>` 内へ入れ子にした `<article>` 要素にできます。
 - `<article>` 要素の著者情報は {{HTMLElement("address")}} 要素で提供できますが、入れ子にされた `<article>` 要素には適用されません。
-- `<article>` 要素の発行日時は、 {{HTMLElement("time")}} 要素の [`datetime`](/ja/docs/Web/HTML/Element/time#datetime) 属性で示すことができます。
+- `<article>` 要素の発行日時は、 {{HTMLElement("time")}} 要素の [`datetime`](/ja/docs/Web/HTML/Reference/Elements/time#datetime) 属性で示すことができます。
 
 ## 例
 
@@ -195,4 +195,4 @@ l10n:
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
