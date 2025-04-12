@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 15495ec2cf79a6677a523629925ee269343d4bf0
 ---
 
-`textbox` ロールは、自由形式テキストの入力ができる要素を識別するために使用されます。 可能であれば、このロールを使用するのではなく、単一行入力の場合は {{HTMLElement("input")}} 要素の [`type="text"`](/ja/docs/Web/HTML/Element/input/text) を、複数行入力の場合は {{HTMLElement("textarea")}} 要素を使用してください。
+`textbox` ロールは、自由形式テキストの入力ができる要素を識別するために使用されます。 可能であれば、このロールを使用するのではなく、単一行入力の場合は {{HTMLElement("input")}} 要素の [`type="text"`](/ja/docs/Web/HTML/Reference/Elements/input/text) を、複数行入力の場合は {{HTMLElement("textarea")}} 要素を使用してください。
 
 ## 解説
 

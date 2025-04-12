@@ -16,9 +16,9 @@ l10n:
 
 スピンボタンは多くの場合、現在の値を表示するテキストフィールド、増加ボタン、減少ボタンの 3 つの部品を保有しています。増加と減少の機能は矢印キーでキーボードアクセスするため、通常テキストフィールドだけがフォーカス可能な部品です。通常、テキストフィールドではユーザーが値を直接編集することもできます。
 
-[`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を含めてスピンボタンのフォーカスを有効にすることに加えて、キーボードとポインター端末に対応しなければなりません。キーボードユーザーのために、矢印キーのような方向キーに対応する必要があります。ポインティングデバイスのために、増加ボタンと減少ボタンがクリックされたときに値を変更することに対応していなければなりません。下記の[キーボード操作](#キーボード操作)を参照してください。
+[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を含めてスピンボタンのフォーカスを有効にすることに加えて、キーボードとポインター端末に対応しなければなりません。キーボードユーザーのために、矢印キーのような方向キーに対応する必要があります。ポインティングデバイスのために、増加ボタンと減少ボタンがクリックされたときに値を変更することに対応していなければなりません。下記の[キーボード操作](#キーボード操作)を参照してください。
 
-> **メモ:** `spinbutton` ロールを使用するよりも、 [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) 要素や、その他の日付や時刻の入力要素など、 `role="spinbutton"` の意味を暗黙に含むものを使用することを推奨します。ユーザーエージェントはこれらの入力要素に対して、既定された増加、減少、範囲制限機能を提供するスタイル化されたウィジェットを提供します。意味づけのない要素を使用する場合、ネイティブの意味づけ要素のすべての機能を ARIA 属性、JavaScript、CSS で再作成する必要があります。
+> **メモ:** `spinbutton` ロールを使用するよりも、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) 要素や、その他の日付や時刻の入力要素など、 `role="spinbutton"` の意味を暗黙に含むものを使用することを推奨します。ユーザーエージェントはこれらの入力要素に対して、既定された増加、減少、範囲制限機能を提供するスタイル化されたウィジェットを提供します。意味づけのない要素を使用する場合、ネイティブの意味づけ要素のすべての機能を ARIA 属性、JavaScript、CSS で再作成する必要があります。
 
 ### ARIA range ウィジェットのオプション
 
@@ -28,7 +28,7 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 [`meter`](/ja/docs/Web/Accessibility/ARIA/Roles/meter_role) ロールは、 HTML の {{HTMLElement('meter')}} 要素に似ており、読み取り専用のゲージです。コンピューターのバッテリーインジケータや自動車のガソリンゲージのように、既知の範囲内の何かの量を示します。
 
-`slider` ロールは HTML の `input` の `range` 型の [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range) に似ており、読み書き可能な範囲入力です。スライダーによって、ユーザーはあらかじめ定義された最小値と最大値の間の値を選択することができます。ユーザーは、水平または垂直のスライダーに沿ってスライダーのつまみを移動することで値を選択します。
+`slider` ロールは HTML の `input` の `range` 型の [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) に似ており、読み書き可能な範囲入力です。スライダーによって、ユーザーはあらかじめ定義された最小値と最大値の間の値を選択することができます。ユーザーは、水平または垂直のスライダーに沿ってスライダーのつまみを移動することで値を選択します。
 
 これら 3 つの範囲はすべて同じ ARIA の状態とプロパティを持ちますが、 `spinbutton` ロールは唯一の読み書き可能な範囲です。それはユーザーが操作することで値が変わる唯一のものです。そのため、フォーカスを受け取ることができなければなりません。さらに、キーボード操作、マウスクリック、タッチ操作に対応していなければなりません。
 
@@ -44,7 +44,7 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `spinbutton` と `meter` では必須であり、 `progressbar` ではオプションです。
 
-`spinbutton` では、 [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) のような意味づけ HTML 要素を使用していない限り、値が更新された場合、 `aria-valuenow` の値もプログラムで更新する必要があります。
+`spinbutton` では、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) のような意味づけ HTML 要素を使用していない限り、値が更新された場合、 `aria-valuenow` の値もプログラムで更新する必要があります。
 
 オプションの [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性は、 `aria-valuenow` の数値がスピンボタンの意図する値を反映していない場合に記載します。オプションの最小値、最大値、現在の値は数値でなければなりません。これらの数値が表す値が数値でない場合、 `aria-valuetext` 属性に数値を定義する文字列を設定sるう必要があります。例えば、 T シャツのサイズのスピンボタンを使用する場合、 `aria-valuenow` 属性が増加するにつれて、 `XX-Small` から `XX-Large` にシフトする必要があります。
 
@@ -52,7 +52,7 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 アクセシブル名は**必須**です。スピンボタンの役割が HTML の {{HTMLElement('input')}} 要素に適用されている場合、アクセシブル名は関連する {{HTMLElement('label')}} から決まります。それ以外の場合は、表示するラベルが存在する場合は [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) を、表示するラベルが存在しない場合は [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を使用してください。
 
-スピンボタンを作成するために HTML の {{HTMLElement('input')}} 要素を使用しない場合、スピンボタンをフォーカス可能にするために [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を記載してください。 `spinbutton` の役割はユーザーと対話するため、フォーカスを受け取ることが要求されます。フォーカスはスピンボタンの入力に置くべきで、スピンボタンの値を増加したり減少したりする関連ボタンには置かないでください。
+スピンボタンを作成するために HTML の {{HTMLElement('input')}} 要素を使用しない場合、スピンボタンをフォーカス可能にするために [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を記載してください。 `spinbutton` の役割はユーザーと対話するため、フォーカスを受け取ることが要求されます。フォーカスはスピンボタンの入力に置くべきで、スピンボタンの値を増加したり減少したりする関連ボタンには置かないでください。
 
 ### 子孫はボタンまたはテキストに制限
 
@@ -141,7 +141,7 @@ HTML の `<input type="number">` は暗黙的に `spinbutton` の `role` を持�
 
 ### 意味づけ HTML の推奨
 
-`spinbutton` の役割ではなく、ネイティブの {{HTMLElement("input")}} 要素である `number` 型の [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) を使用することをお勧めします。
+`spinbutton` の役割ではなく、ネイティブの {{HTMLElement("input")}} 要素である `number` 型の [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) を使用することをお勧めします。
 
 ## 仕様書
 
@@ -149,9 +149,9 @@ HTML の `<input type="number">` は暗黙的に `spinbutton` の `role` を持�
 
 ## 関連情報
 
-- [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number)
-- [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date)
-- [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time)
+- [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number)
+- [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date)
+- [`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time)
 - その他の範囲ウィジェット:
   - [`meter`](/ja/docs/Web/Accessibility/ARIA/Roles/meter_role)
   - [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)

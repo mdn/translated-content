@@ -287,14 +287,14 @@ function draw(img) {
 
 > [!NOTE]
 > CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。
-> [セキュリティと汚染されたキャンバス](/ja/docs/Web/HTML/CORS_enabled_image#セキュリティと汚染されたキャンバス)を参照してください。
+> [セキュリティと汚染されたキャンバス](/ja/docs/Web/HTML/How_to/CORS_enabled_image#セキュリティと汚染されたキャンバス)を参照してください。
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
   - : 既定の設定。PNG 画像を作成します。
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : JPG 画像を作成します。オプションで、品質を 0 から 1 の範囲で指定できます。1 は最高品質、0 はほとんど見分けがつかなくなりますがファイルサイズを小さくできます。
 
-キャンバスから生成したデータ URL は、例えば任意の {{HTMLElement("img")}} のソースとして使用したり、ディスクに保存するために [download 属性](/ja/docs/Web/HTML/Element/a#download)を持つハイパーリンクに投入したりすることができます。
+キャンバスから生成したデータ URL は、例えば任意の {{HTMLElement("img")}} のソースとして使用したり、ディスクに保存するために [download 属性](/ja/docs/Web/HTML/Reference/Elements/a#download)を持つハイパーリンクに投入したりすることができます。
 
 また、キャンバスから {{domxref("Blob")}} を生成することもできます。
 

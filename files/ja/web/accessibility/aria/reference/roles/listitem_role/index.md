@@ -84,9 +84,9 @@ TBD
 
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-- [HTML `<li>` 要素](/ja/docs/Web/HTML/Element/li)
-- [HTML `<ul>` 要素](/ja/docs/Web/HTML/Element/ul)
-- [HTML `<ol>` 要素](/ja/docs/Web/HTML/Element/ol)
+- [HTML `<li>` 要素](/ja/docs/Web/HTML/Reference/Elements/li)
+- [HTML `<ul>` 要素](/ja/docs/Web/HTML/Reference/Elements/ul)
+- [HTML `<ol>` 要素](/ja/docs/Web/HTML/Reference/Elements/ol)
 - [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA: group ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 

@@ -25,8 +25,6 @@ console.log(iterator1.next().value);
 // Expected output: "forty two"
 ```
 
-El código fuente de este ejemplo interactivo lo puedes encontrar en el repositorio de Github. Si quieres contribuir con más ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una pull request.
-
 ## Sintaxis
 
 ```

@@ -15,7 +15,7 @@ l10n:
 
 ## 説明
 
-検索 (`search`) ロールは、文書やアプリケーションの検索機能を構成するために組み合わされたすべての要素を囲むコンテナー要素に追加できる[ランドマーク](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#3._ランドマークロール)で、これには子孫要素として [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) が含まれます。文書に複数の検索が含まれている場合、それぞれに固有のラベルを持つべきです。ただし、同じ検索が繰り返される場合は同じラベルを使用します。 [`<input>` 要素の `search` 型](/ja/docs/Web/HTML/Element/input/search)がありますが、これ自体は検索ランドマークを定義するものではありません。検索ランドマークを定義するには、{{HTMLElement('search')}} 要素を使用してください。
+検索 (`search`) ロールは、文書やアプリケーションの検索機能を構成するために組み合わされたすべての要素を囲むコンテナー要素に追加できる[ランドマーク](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#3._ランドマークロール)で、これには子孫要素として [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) が含まれます。文書に複数の検索が含まれている場合、それぞれに固有のラベルを持つべきです。ただし、同じ検索が繰り返される場合は同じラベルを使用します。 [`<input>` 要素の `search` 型](/ja/docs/Web/HTML/Reference/Elements/input/search)がありますが、これ自体は検索ランドマークを定義するものではありません。検索ランドマークを定義するには、{{HTML/ReferenceElements('search')}} 要素を使用してください。
 
 ## 例
 
@@ -89,6 +89,6 @@ l10n:
 
 - {{HTMLElement('form')}} 要素
 - {{HTMLElement('input')}} 要素
-- {{HTMLElement('search')}} 要素
-- [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- {{HTML/ReferenceElements('search')}} 要素
+- [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)

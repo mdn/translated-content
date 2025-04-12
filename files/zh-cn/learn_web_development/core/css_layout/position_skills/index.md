@@ -1,5 +1,5 @@
 ---
-title: "Test your skills: position"
+title: 技能测试：定位
 slug: Learn_web_development/Core/CSS_layout/Position_skills
 ---
 
@@ -8,9 +8,7 @@ slug: Learn_web_development/Core/CSS_layout/Position_skills
 此任务的目的是让你使用在我们的 position 课程中介绍的 CSS {{CSSxRef("position")}}属性以及对应值，你将通过两个小任务来复习刚才课程材料中介绍的不同元素。
 
 > [!NOTE]
-> 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。
->
-> 如果你遇到困难，请向我们寻求帮助 - 请参阅本页底部的 [Assessment or further help](#assessment_or_further_help) 部分
+> 你可以在下面的交互式编辑器中尝试解决方案，下载代码并使用在线工具（如 CodePen、jsFiddle 或 Glitch）处理任务可能会有帮助。如果你遇到了困难，可以通过[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 定位练习一
 
@@ -20,12 +18,75 @@ slug: Learn_web_development/Core/CSS_layout/Position_skills
 
 尝试更改下面的代码示例，重新完成的上述任务：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/position/position1.html", '100%', 1000)}}
+```html live-sample___position1
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <div class="target">Target</div>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
 
-作为一个额外的挑战，你能改变目标元素显示在文本下面吗？
+```css hidden live-sample___position1
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 
-> [!NOTE]
-> 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position1-download.html)在本地编辑器或在线编辑器中编辑
+.container {
+  padding: 0.5em;
+  border: 5px solid #ccc;
+}
+
+.target {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: #663398;
+  padding: 1em;
+  color: white;
+}
+```
+
+```css live-sample___position1
+.container {
+}
+
+.target {
+}
+```
+
+{{EmbedLiveSample("position1", "", "400px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+This requires `position: relative` and `position: absolute` and understanding how they relate to each other in terms of relative positioning creating a new positioning context.
+A likely issue could be that you add `position: absolute` to the child without applying `position: relative` to the container. In that case, the target will end up being positioned according to the viewport.
+
+```css
+.container {
+  position: relative;
+}
+
+.target {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+```
+
+For the bonus question, you need to add a negative `z-index` to the target, for example `z-index: -2`.
+
+</details>
 
 ## 定位练习二
 
@@ -35,21 +96,85 @@ slug: Learn_web_development/Core/CSS_layout/Position_skills
 
 尝试更改下面的代码示例，重新完成的上述任务：
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1000)}}
+```html live-sample___position2
+<div class="container">
+  <div class="sidebar">
+    <p>
+      This is the sidebar. It should remain in position as the content scrolls.
+    </p>
+  </div>
+  <div class="content">
+    <p>
+      Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+      onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    </p>
+    <p>
+      Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+      tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+      Dandelion cucumber earthnut pea peanut soko zucchini.
+    </p>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
+  </div>
+</div>
+```
 
-> [!NOTE]
-> 为了评估和进一步编辑，[下载源代码](https://github.com/mdn/css-examples/blob/master/learn/tasks/position/position2-download.html)在本地编辑器或在线编辑器中编辑
+```css hidden live-sample___position2
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 
-## Assessment or further help
+.container {
+  height: 400px;
+  padding: 0.5em;
+  border: 5px solid #ccc;
+  overflow: auto;
+}
 
-You can practice these examples in the Interactive Editors mentioned above.
+.sidebar {
+  color: white;
+  background-color: #663398;
+  padding: 1em;
+  float: left;
+  width: 150px;
+}
 
-If you would like your work assessed, or are stuck and want to ask for help:
+.content {
+  padding: 1em;
+  margin-left: 160px;
+}
+```
 
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+```css live-sample___position2
+.container {
+}
 
-   - A descriptive title such as "Assessment wanted for Position skill test 1".
-   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
+.sidebar {
+}
+```
+
+{{EmbedLiveSample("position2", "", "400px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+We're testing your understanding of `position: fixed` with a slightly different example to the ones in the learning materials.
+
+```css
+.sidebar {
+  position: fixed;
+}
+```
+
+</details>

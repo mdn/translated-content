@@ -19,7 +19,7 @@ Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされまし�
 ### HTML
 
 - ラベル付け可能なフォームコントロールに `labels` プロパティを実装しました。例えば {{domxref("HTMLInputElement.labels")}} です ([Firefox バグ 556743](https://bugzil.la/556743))。
-- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Attributes/rel/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
+- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
 
 ### CSS
 

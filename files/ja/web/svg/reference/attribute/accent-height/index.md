@@ -1,12 +1,11 @@
 ---
 title: accent-height
 slug: Web/SVG/Reference/Attribute/accent-height
-original_slug: Web/SVG/Attribute/accent-height
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`accent-height`** 属性は原点からアクセント文字の上端までの距離を定義します。これはフォント座標系で測られる距離です。
 

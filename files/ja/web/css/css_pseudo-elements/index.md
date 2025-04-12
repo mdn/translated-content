@@ -91,7 +91,7 @@ l10n:
   - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
   - [全称セレクター](/ja/docs/Web/CSS/Universal_selectors)
 
-- [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性（`<input>` 要素）
+- [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性（`<input>` 要素）
 - [`:placeholder-shown`](/ja/docs/Web/CSS/:placeholder-shown) セレクター
 
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)

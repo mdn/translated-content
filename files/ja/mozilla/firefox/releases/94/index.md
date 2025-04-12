@@ -29,7 +29,7 @@ l10n:
 
 #### DOM
 
-- 開発者が [`HTMLElement.enterkeyhint`](/ja/docs/Web/API/HTMLElement/enterKeyHint) または [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) グローバル属性を使用して、仮想キーボードで使用する Enter キーのラベルやアイコンのヒントを与えられるようになりました ([Firefox バグ 1648332](https://bugzil.la/1648332))。
+- 開発者が [`HTMLElement.enterkeyhint`](/ja/docs/Web/API/HTMLElement/enterKeyHint) または [`enterkeyhint`](/ja/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) グローバル属性を使用して、仮想キーボードで使用する Enter キーのラベルやアイコンのヒントを与えられるようになりました ([Firefox バグ 1648332](https://bugzil.la/1648332))。
 - {{domxref("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}} 静的メソッドをサポートしました。JavaScript モジュールやクラシックスクリプトのような、特定の種類のスクリプトをブラウザーがサポートしているかを確認するための、シンプルかつ統一された手段を提供をします ([Firefox バグ 1729239](https://bugzil.la/1729239))。
 - {{domxref("ShadowRoot.delegatesFocus")}} プロパティをサポートしました。[shadow DOM を追加したとき](/ja/docs/Web/API/Element/attachShadow) に `delegatesFocus` プロパティが設定されていたかをコードで確認できます ([Firefox バグ 1413836](https://bugzil.la/1413836))。
 

@@ -76,7 +76,7 @@ visibility: unset;
 - `visible`
   - : 要素のボックスが可視になります。
 - `hidden`
-  - : 要素のボックスは不可視になります (描画されません) が、レイアウトには通常通り影響します。子孫要素は `visibility` が `visible` に設定されていれば可視になります。([タブ順](/ja/docs/Web/HTML/Global_attributes/tabindex)で操作された時などに) 要素はフォーカスを受け取ることができません。
+  - : 要素のボックスは不可視になります (描画されません) が、レイアウトには通常通り影響します。子孫要素は `visibility` が `visible` に設定されていれば可視になります。([タブ順](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)で操作された時などに) 要素はフォーカスを受け取ることができません。
 - `collapse`
 
   - : &#x20;

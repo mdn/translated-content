@@ -46,7 +46,41 @@ slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 - 一个包含了一张小于 200 像素的图像，它比盒子小，并且不会自动拉伸来充满盒子。
 - 另一张图像大于 200 像素，溢出了盒子。
 
-{{EmbedGHLiveSample("css-examples/learn/images/size.html", '100%', 1000)}}
+```html live-sample___size
+<div class="wrapper">
+  <div class="box">
+    <img
+      alt="star"
+      src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+  </div>
+  <div class="box">
+    <img
+      alt="balloons"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+</div>
+```
+
+```css live-sample___size
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrapper > * {
+  margin: 20px;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 200px;
+}
+
+img {
+}
+```
+
+{{EmbedLiveSample("size", "", "250px")}}
 
 那么该如何处理溢出问题呢？
 
@@ -60,7 +94,54 @@ slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 
 下面的示例中我们使用了值 `cover` 来缩小图像，同时维持了图像的原始比例。这样图像就可以充满盒子。但由于比例保持不变，图像多余的一部分将会被盒子裁切掉。
 
-{{EmbedGHLiveSample("css-examples/learn/images/object-fit.html", '100%', 1000)}}
+```html live-sample___object-fit
+<div class="wrapper">
+  <div class="box">
+    <img
+      alt="balloons"
+      class="cover"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+  <div class="box">
+    <img
+      alt="balloons"
+      class="contain"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+</div>
+```
+
+```css live-sample___object-fit
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrapper > * {
+  margin: 20px;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 200px;
+  height: 200px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+```
+
+{{EmbedLiveSample("object-fit", "", "250px")}}
 
 如果我们使用值 `contain`，图像就会被缩放到足以完整地放到盒子里面的大小。如果它和盒子的比例不同，将会出现“开天窗”的结果。
 
@@ -72,7 +153,32 @@ slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 
 你可以在下面的示例中看到这一现象。该示例有一个两列两行的网格容器，里面有四个物件。所有的 `<div>` 元素有自己的背景色，被拉伸到充满了行和列。但是，图像并没有被拉伸。
 
-{{EmbedGHLiveSample("css-examples/learn/images/layout.html", '100%', 1000)}}
+```html live-sample___layout
+<div class="wrapper">
+  <img
+    alt="star"
+    src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
+
+```css live-sample___layout
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  gap: 20px;
+}
+
+.wrapper > div {
+  background-color: rebeccapurple;
+  border-radius: 0.5em;
+}
+```
+
+{{EmbedLiveSample("layout", "", "220px")}}
 
 如果你是按序阅读这些课程的，那么你可能还没有看到布局的部分。不过没关系，只要记住替换元素在成为网格或者弹性布局的一部分时，有不同的默认行为就好了。这一默认行为很有必要，因为它避免了替换元素被布局拉伸成奇怪的样子。
 
@@ -101,7 +207,57 @@ HTML5 还包含了允许 Web 开发者指定必填区域的特性，甚至还能
 
 在下面的示例中，我们已经将一些文本输入元素用 CSS 样式化了。可以看到，边框、内外边距之类的东西都如期生效了。现在，我们使用属性选择器来指向不同的输入类型，尝试通过改变边框、添加输入区域背景色、改变字体和内边距的方式来改变表单的外观。
 
-{{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
+```html live-sample___form
+<form>
+  <div><label for="name">Name</label> <input id="name" type="text" /></div>
+  <div><label for="email">Email</label> <input id="email" type="email" /></div>
+
+  <div class="buttons"><input type="submit" value="Submit" /></div>
+</form>
+```
+
+```css hidden live-sample___form
+body {
+  font-family: sans-serif;
+}
+form > div {
+  display: flex;
+}
+
+label {
+  width: 10em;
+}
+
+.buttons {
+  justify-content: center;
+}
+```
+
+```css live-sample___form
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #000;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  width: 80%;
+}
+
+input[type="submit"] {
+  border: 3px solid #333;
+  background-color: #999;
+  border-radius: 5px;
+  padding: 10px 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #333;
+}
+```
+
+{{EmbedLiveSample("form")}}
 
 > [!WARNING]
 > 你应该谨慎改变表单样式，确保用户仍然能轻松辨认表单元素。原则上，你可以创建一个没有边框和背景的，几乎无法与周围的内容区分开来的输入表单，但这会使辨认和填写变得非常困难。

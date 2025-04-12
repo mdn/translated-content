@@ -210,9 +210,9 @@ TBD
 
 ## 関連情報
 
-- [HTML `<select>` 要素](/ja/docs/Web/HTML/Element/select)
-- [HTML `<label>` 要素](/ja/docs/Web/HTML/Element/label)
-- [HTML `<option>` 要素](/ja/docs/Web/HTML/Element/option)
+- [HTML `<select>` 要素](/ja/docs/Web/HTML/Reference/Elements/select)
+- [HTML `<label>` 要素](/ja/docs/Web/HTML/Reference/Elements/label)
+- [HTML `<option>` 要素](/ja/docs/Web/HTML/Reference/Elements/option)
 - [ARIA: `combobox` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 - [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)

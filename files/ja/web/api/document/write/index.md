@@ -74,7 +74,7 @@ write(markup)
 
 > **メモ:** `document.write()` および {{domxref("document.writeln")}} は、 XHTML 文書では動作しません（エラーコンソールに "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] エラーが表示されます）。これは、 .xhtml の拡張子を持つローカルファイルを開いたり、何らかの文書が `application/xhtml+xml` の {{Glossary("MIME type", "MIME タイプ")}}で提供されたときに発生します。詳細は [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite) で確認することができます。
 
-> **メモ:** `document.write` は [deferred](/ja/docs/Web/HTML/Element/script#attr-defer) または [asynchronous](/ja/docs/Web/HTML/Element/script#attr-async) のスクリプト内では無視され、エラーコンソールに "A call to `document.write()` from an asynchronously-loaded external script was ignored" などのメッセージが表示されます。
+> **メモ:** `document.write` は [deferred](/ja/docs/Web/HTML/Reference/Elements/script#attr-defer) または [asynchronous](/ja/docs/Web/HTML/Reference/Elements/script#attr-async) のスクリプト内では無視され、エラーコンソールに "A call to `document.write()` from an asynchronously-loaded external script was ignored" などのメッセージが表示されます。
 
 > [!NOTE]
 > Edge のみ、`document.write()` を {{HTMLElement("iframe")}} 内で複数回呼び出すと、 SCRIPT70: Permission denied エラーが発生します。

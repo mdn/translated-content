@@ -152,7 +152,7 @@ p {
 
 ### url() と SVG の brightness フィルターを用いた brightness の適用
 
-SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、その後、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) で参照することができます。 `<filter>` 要素の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。
+SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、その後、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` 要素の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。
 
 例えば、適用したコンテンツを 25% （つまり、元の明るさの 75%）暗くするフィルターを作成するには、 `slope` 属性を `0.75` に設定します。次に、 `id` でフィルターを参照します。
 

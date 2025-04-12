@@ -22,11 +22,11 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.anchorElement")}} {{ReadOnlyInline}}&nbsp;{{non-standard_inline}} {{experimental_inline}}
   - : 要素のアンカー要素への参照を返すか、アンカー要素がない場合は `null` を返します。
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性の宣言を表します。
+  - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性の宣言を表します。
 - {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
   - : ユーザー入力に対する要素の大文字小文字の動作を表す文字列。有効な値は `none`、`off`、`on`、`characters`、`words`、`sentences`　です。
 - {{domxref("HTMLElement.autofocus")}}
-  - : 論理値で、HTML の [`autofocus`](/ja/docs/Web/HTML/Element/select#autofocus) グローバル属性を反映し、ページが読み込まれたとき、または {{htmlelement("dialog")}} 要素やポップオーバー属性が設定されている要素内の要素に指定した場合、ダイアログやポップオーバーが表示されたときに、コントロールにフォーカスを当てるかどうかを示します。
+  - : 論理値で、HTML の [`autofocus`](/ja/docs/Web/HTML/Reference/Elements/select#autofocus) グローバル属性を反映し、ページが読み込まれたとき、または {{htmlelement("dialog")}} 要素やポップオーバー属性が設定されている要素内の要素に指定した場合、ダイアログやポップオーバーが表示されたときに、コントロールにフォーカスを当てるかどうかを示します。
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
@@ -40,7 +40,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : 文字列で、仮想キーボードの Enter キーに表示するアクションラベル（またはアイコン）を定義します。
 - {{DOMxRef("HTMLElement.hidden")}}
-  - : 文字列または論理値で、この要素の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性の値を反映します。
+  - : 文字列または論理値で、この要素の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性の値を反映します。
 - {{DOMxRef("HTMLElement.inert")}}
   - : 論理値で、ユーザー操作イベント、ページ内テキスト検索（「ページ内を検索」）、テキストの選択において、ユーザーエージェントが指定したノードがないかのように動作するかどうかを示します。
 - {{DOMxRef("HTMLElement.innerText")}}
@@ -48,7 +48,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
     ゲッターとしては、カーソルで要素の内容を選択しクリップボードにコピーした際のテキストに近いものを取得することができます。
     セッターとしては、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
 - {{DOMxRef("HTMLElement.inputMode")}}
-  - : 文字列で、この要素の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性の値を反映します。
+  - : 文字列で、この要素の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性の値を反映します。
 - {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
   - : 論理値で、要素のコンテンツが編集可能か否かを示します。
 - {{DOMxRef("HTMLElement.lang")}}
@@ -70,11 +70,11 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
     ゲッターとしては {{DOMxRef("HTMLElement.innerText")}} と同じです（要素とその子孫の表示されるテキストの内容を表します）。
     セッターとしては、選択されたノードとその内容を指定された値で置き換え、改行を {{HTMLElement("br")}} 要素に変換します。
 - {{domxref("HTMLElement.popover")}}
-  - : JavaScript から要素のポップオーバー状態を取得・設定し（`"auto"`または`"manual"`）、機能検出のために使用することもできます。グローバル HTML 属性 [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) の値を反映します。
+  - : JavaScript から要素のポップオーバー状態を取得・設定し（`"auto"`または`"manual"`）、機能検出のために使用することもできます。グローバル HTML 属性 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) の値を反映します。
 - {{DOMxRef("HTMLElement.spellcheck")}}
-  - : 論理値で、[スペルチェック](/ja/docs/Web/HTML/Global_attributes/spellcheck) のヒントを制御します。これはすべての HTML 要素で利用できますが、すべての要素に効果があるとは限りません。
+  - : 論理値で、[スペルチェック](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) のヒントを制御します。これはすべての HTML 要素で利用できますが、すべての要素に効果があるとは限りません。
 - {{DOMxRef("HTMLElement.style")}}
-  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性の宣言を表します。
+  - : {{DOMxRef("CSSStyleDeclaration")}} で、この要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性の宣言を表します。
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : `long` 値で、タブ順内の要素の位置を表します。
 - {{DOMxRef("HTMLElement.title")}}
@@ -82,7 +82,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
 - {{DOMxRef("HTMLElement.translate")}}
   - : 論理値で、翻訳を行うかどうかを表します。
 - {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
-  - : 文字列で、タブレットやモバイル端末、その他ハードウェアキーボードが利用できない端末において、要素のコンテンツが編集可能な場合（例えば、{{htmlelement("input")}} 要素や {{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性が設定されている要素）、画面に表示される仮想キーボードの動作を示します。
+  - : 文字列で、タブレットやモバイル端末、その他ハードウェアキーボードが利用できない端末において、要素のコンテンツが編集可能な場合（例えば、{{htmlelement("input")}} 要素や {{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が設定されている要素）、画面に表示される仮想キーボードの動作を示します。
 
 ## インスタンスメソッド
 

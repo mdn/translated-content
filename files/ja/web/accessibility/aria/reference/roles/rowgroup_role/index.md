@@ -30,7 +30,7 @@ original_slug: Web/Accessibility/ARIA/Roles/rowgroup_role
 
 ## 説明
 
-行グループ (`rowgroup`) は、所有する行の要素間の関係を確立し、HTML の表ヘッダー ([`<thead>`](/ja/docs/Web/HTML/Element/thead))、表フッター ([`<tfoot>`](/ja/docs/Web/HTML/Element/tfoot)) 、および表本体 ([`<tbody>`](/ja/docs/Web/HTML/Element/tbody)) の要素と構造的に同等です。 ただし、異なる種類の行グループ間には区別がありません。 それらの要素は、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)) やグリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) のロールを持つ要素に含まれているか、またはそれらの要素によって所有されている必要があります。 可能な限り、ネイティブな HTML の [`<thead>`](/ja/docs/Web/HTML/Element/thead)、[`<tfoot>`](/ja/docs/Web/HTML/Element/tfoot)、[`<tbody>`](/ja/docs/Web/HTML/Element/tbody) の要素を使用することを強く推奨します。
+行グループ (`rowgroup`) は、所有する行の要素間の関係を確立し、HTML の表ヘッダー ([`<thead>`](/ja/docs/Web/HTML/Reference/Elements/thead))、表フッター ([`<tfoot>`](/ja/docs/Web/HTML/Reference/Elements/tfoot)) 、および表本体 ([`<tbody>`](/ja/docs/Web/HTML/Reference/Elements/tbody)) の要素と構造的に同等です。 ただし、異なる種類の行グループ間には区別がありません。 それらの要素は、表 ([`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)) やグリッド ([`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)) のロールを持つ要素に含まれているか、またはそれらの要素によって所有されている必要があります。 可能な限り、ネイティブな HTML の [`<thead>`](/ja/docs/Web/HTML/Reference/Elements/thead)、[`<tfoot>`](/ja/docs/Web/HTML/Reference/Elements/tfoot)、[`<tbody>`](/ja/docs/Web/HTML/Reference/Elements/tbody) の要素を使用することを強く推奨します。
 
 ARIA の表ヘッダー、表フッター、表本体を作成するには、行グループロール (`role="rowgroup"`) を要素に追加します。 その行グループは、1 つ以上の行のグループを含むグリッド、表、またはツリーグリッド内にネストするべきです。 各行には子のセルが含まれています。 これらのセルには、列や行のヘッダー、プレーンなセルやグリッドセルとさまざまな種類のセルがあります。
 
@@ -42,9 +42,9 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 #### コンテキストロール
 
 - [role="table"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-  - : グリッドとツリーグリッドと並んで、行を見つけることができる 3 つのコンテキストの 1 つです。 ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Element/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。
+  - : グリッドとツリーグリッドと並んで、行を見つけることができる 3 つのコンテキストの 1 つです。 ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Reference/Elements/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。
 - [role="grid"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-  - : 表とツリーグリッドと並んで、行を見つけることができる 3 つのコンテキストの 1 つです。 ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Element/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。
+  - : 表とツリーグリッドと並んで、行を見つけることができる 3 つのコンテキストの 1 つです。 ネイティブな HTML の [`<table>`](/ja/docs/Web/HTML/Reference/Elements/table) 要素と同様に、行と列に配置されたデータを含むインタラクティブでない表構造の一部として行を識別します。
 - [role="treegrid"](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role)
   - : グリッドに似ていますが、ツリー (`tree`) と同じ方法で展開と折りたたみができる行があります (訳注: [W3C のツリーグリッドによるメール受信ボックスの例](https://www.w3.org/TR/wai-aria-practices-1.1/examples/treegrid/treegrid-1.html)では、行単位でのインタラクションも可能となっています) 。
 
@@ -148,9 +148,9 @@ ARIA の表ヘッダー、表フッター、表本体を作成するには、行
 
 ## 関連情報
 
-- [HTML の表](/ja/docs/Web/HTML/Element/table)
-- [HTML の表本体](/ja/docs/Web/HTML/Element/tbody)
-- [HTML の表フッター](/ja/docs/Web/HTML/Element/tfoot)
-- [HTML の表ヘッダー](/ja/docs/Web/HTML/Element/thead)
+- [HTML の表](/ja/docs/Web/HTML/Reference/Elements/table)
+- [HTML の表本体](/ja/docs/Web/HTML/Reference/Elements/tbody)
+- [HTML の表フッター](/ja/docs/Web/HTML/Reference/Elements/tfoot)
+- [HTML の表ヘッダー](/ja/docs/Web/HTML/Reference/Elements/thead)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

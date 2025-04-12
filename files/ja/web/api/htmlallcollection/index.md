@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
-**`HTMLAllCollection`** インターフェイスは文書のすべての要素の集合を表します。（配列風の）インデックスと要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) によってアクセスします。これは {{domxref("document.all")}} プロパティで返されます。
+**`HTMLAllCollection`** インターフェイスは文書のすべての要素の集合を表します。（配列風の）インデックスと要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) によってアクセスします。これは {{domxref("document.all")}} プロパティで返されます。
 
 `HTMLAllCollection` は {{domxref("HTMLCollection")}} と非常によく似た形をしていますが、多くの微妙な動作の違いがあります。例えば、`HTMLAllCollection` は関数として呼び出すことができ、その `item()` メソッドは要素の `id` または `name` 属性を表す文字列で名付けることができます。
 
@@ -21,7 +21,7 @@ l10n:
 - {{domxref("HTMLAllCollection.item()")}}
   - : コレクション内の指定したオフセットに位置する要素、または `id` 属性または `name` 属性に指定した値を持つ要素を返します。要素が見つからない場合は `null` を返します。
 - {{domxref("HTMLAllCollection.namedItem()")}}
-  - : 指定された文字列名と [`id`](/ja/docs/Web/HTML/Global_attributes/id) または `name` 属性が一致する、集合内の最初の[要素](/ja/docs/Web/API/Element)、または一致する要素がない場合は `null` を返します。
+  - : 指定された文字列名と [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) または `name` 属性が一致する、集合内の最初の[要素](/ja/docs/Web/API/Element)、または一致する要素がない場合は `null` を返します。
 
 ## JavaScript での使用法
 

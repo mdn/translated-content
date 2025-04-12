@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`cols`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、複数行テキストコントロールの見える幅を、平均的な文字幅における文字数で表す正の整数です。これは `<textarea>` 要素の [`cols`](/ja/docs/Web/HTML/Element/textarea#cols) 属性を反映します。
+**`cols`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、複数行テキストコントロールの見える幅を、平均的な文字幅における文字数で表す正の整数です。これは `<textarea>` 要素の [`cols`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols) 属性を反映します。
 
 ## 値
 

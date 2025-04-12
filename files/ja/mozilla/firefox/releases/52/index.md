@@ -24,7 +24,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 ### HTML
 
-- `rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Attributes/rel) を実装しました ([Firefox バグ 1222516](https://bugzil.la/1222516))。
+- `rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Reference/Attributes/rel) を実装しました ([Firefox バグ 1222516](https://bugzil.la/1222516))。
 
 ### CSS
 
@@ -107,7 +107,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - [Drag and drop API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の {{domxref("DataTransfer.types")}} プロパティが、{{domxref("DOMStringList")}} ではなく文字列の凍結された配列を返すようになりました ([Firefox バグ 1298243](https://bugzil.la/1298243))。
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました ([Firefox バグ 1264769](https://bugzil.la/1264769)。
 - [通知 API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
-- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Attributes/rel) の機能を反映します。
+- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Reference/Attributes/rel) の機能を反映します。
 - [Web Components API](/ja/docs/Web/API/Web_components) の {{domxref("CustomElementRegistry.get()")}} メソッドを実装しました ([Firefox バグ 1275838](https://bugzil.la/1275838))。
 - [Pointer Event](/ja/docs/Web/API/Pointer_events) の {{domxref("PointerEvent.width","width")}} および {{domxref("PointerEvent.height","height")}} プロパティのデフォルト値が 1 になりました ([Firefox バグ 1304315](https://bugzil.la/1304315))。
 - [最新の仕様書](https://wicg.github.io/entries-api/) における変更点を含むように、[File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) を更新しました (詳しくは [Firefox バグ 1284987](https://bugzil.la/1284987) をご覧ください)。
@@ -166,7 +166,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 ### セキュリティ
 
-- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Element/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。詳しくは [安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords) をご覧ください。
+- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。詳しくは [安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords) をご覧ください。
 - SHA-1 SSL 証明書のサポートを廃止しました。SHA-1 証明書を使用する安全なページに移動すると、[Untrusted Connection](https://support.mozilla.org/t5/Documents-Archive/quot-This-Connection-is-Untrusted-quot-error-message-appears/ta-p/589) エラーが発生します ([Firefox バグ 1330043](https://bugzil.la/1330043))。
 
 ## プラグイン
