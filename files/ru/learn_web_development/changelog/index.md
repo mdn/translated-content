@@ -1,8 +1,6 @@
 ---
 title: История изменений
 slug: Learn_web_development/Changelog
-page-type: landingpage
-sidebar: learnsidebar
 ---
 
 ## Декабрь 2024
