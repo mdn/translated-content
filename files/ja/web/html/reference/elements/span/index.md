@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<span>`** は [HTML](/ja/docs/Web/HTML) の要素で、記述コンテンツの汎用的なインラインコンテナーであり、何かを表すものではありません。スタイル付けのため（[`class`](/ja/docs/Web/HTML/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性を使用して）、または [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベルの要素](/ja/docs/Glossary/Block-level_content)であるのに対し、 `<span>` は[インラインレベルの要素](/ja/docs/Glossary/Inline-level_content)です。
+**`<span>`** は [HTML](/ja/docs/Web/HTML) の要素で、記述コンテンツの汎用的なインラインコンテナーであり、何かを表すものではありません。スタイル付けのため（[`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を使用して）、または [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) のような属性値を共有したりするために要素をグループ化する用途で使用することができます。他に適切な意味的要素がない時にのみ使用してください。 `<span>` は {{HTMLElement("div")}} 要素ととても似ていますが、 {{HTMLElement("div")}} が[ブロックレベルの要素](/ja/docs/Glossary/Block-level_content)であるのに対し、 `<span>` は[インラインレベルの要素](/ja/docs/Glossary/Inline-level_content)です。
 
 {{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
 
@@ -33,7 +33,7 @@ span.ingredient {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 例
 

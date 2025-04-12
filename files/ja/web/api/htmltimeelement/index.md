@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLTimeElement.dateTime")}}
-  - : 文字列で、HTML の [`datetime`](/ja/docs/Web/HTML/Element/time#datetime) 属性を反映し、機械可読な形式の日付と時刻の値を保持します。
+  - : 文字列で、HTML の [`datetime`](/ja/docs/Web/HTML/Reference/Elements/time#datetime) 属性を反映し、機械可読な形式の日付と時刻の値を保持します。
 
 ## メソッド
 

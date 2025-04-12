@@ -54,7 +54,7 @@ original_slug: Web/Accessibility/ARIA/Roles/region_role
 
 控えめに使用してください！ [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書のより大きな全体的なセクションを識別するために、控えめに使用することを意図しています。 あまりにも多くのランドマークロールを使用すると、スクリーンリーダーで「ノイズ」が発生し、ページ全体のレイアウトを理解することが難しくなります。
 
-他の関連[コンテンツセクショニング要素](/ja/docs/Web/HTML/Element#content_sectioning)または[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)が当てはまらない場合にのみ、リージョン (`region`) ロールを使用してください。 ページ上に複数のリージョンが存在する場合は、そのページの全体構造を再検討する価値があります。
+他の関連[コンテンツセクショニング要素](/ja/docs/Web/HTML/Reference/Elements#content_sectioning)または[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)が当てはまらない場合にのみ、リージョン (`region`) ロールを使用してください。 ページ上に複数のリージョンが存在する場合は、そのページの全体構造を再検討する価値があります。
 
 ## ベストプラクティス
 
@@ -110,7 +110,7 @@ TBD
 
 - {{htmlelement("section")}}: 汎用セクション要素
 - [region (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#region)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

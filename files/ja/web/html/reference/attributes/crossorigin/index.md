@@ -52,7 +52,7 @@ l10n:
   </tbody>
 </table>
 
-> **メモ:** `crossorigin` 属性は、 Chromium ベースのブラウザーでは [`rel="icon"`](/ja/docs/Web/HTML/Attributes/rel#icon) では対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
+> **メモ:** `crossorigin` 属性は、 Chromium ベースのブラウザーでは [`rel="icon"`](/ja/docs/Web/HTML/Reference/Attributes/rel#icon) では対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
 ### 例: `<script>` 要素の `crossorigin`
 
@@ -83,6 +83,6 @@ l10n:
 ## 関連情報
 
 - [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTML 属性: `rel`](/ja/docs/Web/HTML/Attributes/rel)
+- [HTML 属性: `rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
 
 {{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}

@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`speculationrules`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Element/script/type)の [`type`](/ja/docs/Web/HTML/Element/script) 属性に設定すると、要素の本体に投機ルールが入っていることを示します。
+**`speculationrules`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Reference/Elements/script/type)の [`type`](/ja/docs/Web/HTML/Reference/Elements/script) 属性に設定すると、要素の本体に投機ルールが入っていることを示します。
 
 投機ルールは JSON 構造の形式をとり、どのリソースがブラウザーによって先読みまたは先行描画されるべきかを決定します。これは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) の一部です。
 

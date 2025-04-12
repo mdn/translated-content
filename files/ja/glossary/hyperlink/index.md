@@ -21,5 +21,5 @@ slug: Glossary/Hyperlink
 
 ### これについて学習する
 
-- [MDN の `<a>`](/ja/docs/Web/HTML/Element/a)
-- [MDN の `<link>`](/ja/docs/Web/HTML/Element/link)
+- [MDN の `<a>`](/ja/docs/Web/HTML/Reference/Elements/a)
+- [MDN の `<link>`](/ja/docs/Web/HTML/Reference/Elements/link)

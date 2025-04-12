@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-**`attributionSrc`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{htmlelement("script")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Element/script#attributionsrc) 属性をプログラムで取得・設定し、その属性値を反映します。`attributionsrc` はブラウザーにスクリプトリソースリクエストと一緒に {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。
+**`attributionSrc`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、{{htmlelement("script")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Reference/Elements/script#attributionsrc) 属性をプログラムで取得・設定し、その属性値を反映します。`attributionsrc` はブラウザーにスクリプトリソースリクエストと一緒に {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。
 
 サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信するトリガーとして用いられ、それぞれ JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。どのレスポンスヘッダーを送り返すべきかは、登録を行った `Attribution-Reporting-Eligible` ヘッダーの値に依存します。
 

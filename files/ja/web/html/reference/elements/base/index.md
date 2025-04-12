@@ -53,7 +53,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 > [!WARNING]
 > 以下の属性のいずれかが指定されている場合、この要素は URL の属性値を持つ他の要素、例えば {{HTMLElement("link")}} の `href` 属性などの前に置く**必要があります**。

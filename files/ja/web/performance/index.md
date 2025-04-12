@@ -111,14 +111,14 @@ MDN の[ウェブパフォーマンスの学習領域](/ja/docs/Learn_web_develo
 
 HTML
 
-- [`<picture>` 要素](/ja/docs/Web/HTML/Element/picture)
-- [`<video>` 要素](/ja/docs/Web/HTML/Element/video)
-- [`<source>` 要素](/ja/docs/Web/HTML/Element/source)
-- [`<img> srcset` 属性](/ja/docs/Web/HTML/Element/img#attributes)
+- [`<picture>` 要素](/ja/docs/Web/HTML/Reference/Elements/picture)
+- [`<video>` 要素](/ja/docs/Web/HTML/Reference/Elements/video)
+- [`<source>` 要素](/ja/docs/Web/HTML/Reference/Elements/source)
+- [`<img> srcset` 属性](/ja/docs/Web/HTML/Reference/Elements/img#attributes)
 
-  - [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
+  - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 
-- [`rel="preload"` によるコンテンツの事前読み込み](/ja/docs/Web/HTML/Attributes/rel/preload)
+- [`rel="preload"` によるコンテンツの事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)
 - <https://w3c.github.io/preload/>
 
 CSS

@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
-**`anchor`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、位置指定要素とアンカー要素を関連付けるために使用されます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) の値です。その後、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)を使用して要素の位置指定を行うことができます。
+**`anchor`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、位置指定要素とアンカー要素を関連付けるために使用されます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) の値です。その後、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)を使用して要素の位置指定を行うことができます。
 
 > [!NOTE]
 > それ以外に、CSS を使用して、位置指定要素をアンカー要素に関連付けることもできます。 {{cssxref("anchor-name")}} および {{cssxref("position-anchor")}} プロパティを使用します。 同じ要素に対してどちらのアンカー技術も使用されている場合、 CSS 技術が HTML 技術よりも優先されます。

@@ -39,7 +39,7 @@ cite {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持ちます。
 
 ## 使用上の注意
 
@@ -73,7 +73,7 @@ cite {
 - 記述された、または口頭の声明
 - その他
 
-{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性を使用してください。
+{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性を使用してください。
 
 通常、ブラウザーは既定で `<cite>` にイタリック体を適用します。これを防ぐには、CSS の {{cssxref("font-style")}} プロパティを `<cite>` 要素に適用してください。
 
@@ -160,4 +160,4 @@ cite {
 ## 関連情報
 
 - {{HTMLElement("blockquote")}} 要素は長い引用に使用します。
-- {{HTMLElement("q")}} 要素と [`cite`](/ja/docs/Web/HTML/Element/q#cite) 属性はインラインの引用に使用します。
+- {{HTMLElement("q")}} 要素と [`cite`](/ja/docs/Web/HTML/Reference/Elements/q#cite) 属性はインラインの引用に使用します。

@@ -32,14 +32,14 @@ label {
 }
 ```
 
-`<datalist>` 要素をコントロールに結びつけるには、[`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性で固有の識別子を与え、同じ識別子を値とした [`list`](/ja/docs/Web/HTML/Element/input#list) 属性を {{HTMLElement("input")}} 要素に追加します。
+`<datalist>` 要素をコントロールに結びつけるには、[`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性で固有の識別子を与え、同じ識別子を値とした [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性を {{HTMLElement("input")}} 要素に追加します。
 この動作は、特定の種類の {{HTMLElement("input")}} だけが対応しており、また、ブラウザーの種類によっても異なる場合があります。
 
 > **メモ:** `<option>` 要素は内部コンテンツとして、また `value` 属性と `label` 属性に値を格納することができます。ドロップダウンメニューでどちらが表示されるかはブラウザーに依存しますが、クリックされたときに制御フィールドに入力されるコンテンツは常に `value` 属性に由来します。
 
 ## 属性
 
-この要素には、すべての要素が持つ[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
+この要素には、すべての要素が持つ[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性はありません。
 
 ## 例
 
@@ -196,5 +196,5 @@ label {
 
 ## 関連情報
 
-- {{HTMLElement("input")}} 要素、特に [`list`](/ja/docs/Web/HTML/Element/input#list) 属性
+- {{HTMLElement("input")}} 要素、特に [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性
 - {{HTMLElement("option")}} 要素

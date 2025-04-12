@@ -21,7 +21,7 @@ l10n:
 
 ## 属性
 
-この要素は、全ての要素が持つ[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性を持ちません。
+この要素は、全ての要素が持つ[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性を持ちません。
 
 ## DOM インターフェイス
 

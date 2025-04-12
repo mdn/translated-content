@@ -50,6 +50,6 @@ l10n:
 
 ## 関連情報
 
-- HTML [`title`](/ja/docs/Web/HTML/Global_attributes/title)
+- HTML [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title)
 - CSS [`:placeholder-shown`](/ja/docs/Web/CSS/:placeholder-shown) 擬似クラスセレクター
 - CSS [`::placeholder`](/ja/docs/Web/CSS/::placeholder) 擬似要素セレクター

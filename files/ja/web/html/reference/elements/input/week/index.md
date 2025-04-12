@@ -38,15 +38,15 @@ label {
 }
 ```
 
-コントロールのユーザーインターフェイスは、ブラウザーによって様々です。現時点ではブラウザー間の対応は限定的で、 Chrome/Opera と Microsoft Edge のみが対応しています。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
+コントロールのユーザーインターフェイスは、ブラウザーによって様々です。現時点ではブラウザー間の対応は限定的で、 Chrome/Opera と Microsoft Edge のみが対応しています。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text) に格下げされます。
 
 ![「2017 年第 01 週」と書かれた入力欄。 2017 の背景は、フォーカスリングと同じ青色です。入力欄には、×やクリア、上下の小さな矢印がついたスピナー、大きな下矢印の 3 つのアイコンがあります。 2017 年 1 月に設定された入力の下には、カレンダーがポップアップで表示されている。カレンダーの最初の列は週番号が 1、2、3、4、5、6 と並んでいる。その右側に一か月分のカレンダーがある。第 1 週と 1 月 2 日～ 8 日がある行はハイライトされています。月と同じ行に、次の月と前の月を右と左に移動するボタンがあります。](week-control-chrome.png)
 
 ## 値
 
-文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、[週文字列](/ja/docs/Web/HTML/Date_and_time_formats#週文字列)で説明しています。
+文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、[週文字列](/ja/docs/Web/HTML/Guides/Date_and_time_formats#週文字列)で説明しています。
 
-次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に値を入れることで、既定値を設定することができます。
+次のように [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に値を入れることで、既定値を設定することができます。
 
 ```html
 <label for="week">どの週に始めたいですか。</label>
@@ -70,13 +70,13 @@ weekControl.value = "2017-W45";
 
 ### max
 
-受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
+受け付ける（時間的に）最も遅い年と週番号で、上記の[値](#値)の節で説明した文字列書式です。要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `max` 属性の値が妥当な週の文字列ではない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ年と週を指定する必要があります。
 
 ### min
 
-受け付ける最も早い年と週です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さいと、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。属性の値が妥当な週の文字列ではない場合、要素は最小値を持ちません。
+受け付ける最も早い年と週です。要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれより小さいと、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。属性の値が妥当な週の文字列ではない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ年と週を指定する必要があります。
 
@@ -89,7 +89,7 @@ weekControl.value = "2017-W45";
 
 ### step
 
-`step` 属性は、値が遵守しなければならない粒度を指定する数値、または下記で記述する特別な値 `any` です。ステップの基準となる値（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Element/input#value)、それ以外の場合は適切な既定値）と同じ値のみが有効となります。
+`step` 属性は、値が遵守しなければならない粒度を指定する数値、または下記で記述する特別な値 `any` です。ステップの基準となる値（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、それ以外の場合は適切な既定値）と同じ値のみが有効となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -121,11 +121,11 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 
 ### 入力欄の寸法の制御
 
-`<input type="week">` は [`size`](/ja/docs/Web/HTML/Element/input#size) のような寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
+`<input type="week">` は [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) のような寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
 
 ### step 属性の使用
 
-[`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して、週の番号が増加または減少するときに飛ばす番号を変更することができるはずですが、対応しているブラウザーでも何も動作していないようです。
+[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して、週の番号が増加または減少するときに飛ばす番号を変更することができるはずですが、対応しているブラウザーでも何も動作していないようです。
 
 ## 検証
 
@@ -133,7 +133,7 @@ week 入力欄は一見すると便利に見えます。簡単に週を選択す
 
 ### 週の最大値と最小値の設定
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択することができる有効な週を制限することができます。以下の例では、最小値を `2017 年第 1 週` に、最大値を `2017 年第 52 週` に設定しています。
+[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用して、ユーザーが選択することができる有効な週を制限することができます。以下の例では、最小値を `2017 年第 1 週` に、最大値を `2017 年第 52 週` に設定しています。
 
 ```html
 <form>
@@ -178,7 +178,7 @@ input:valid + span::after {
 
 ### 週の値を必須にする
 
-加えて、[`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、週の入力を必須にすることができます。結果として、対応しているブラウザーでは週の入力欄が空欄の場合にエラーを表示します。
+加えて、[`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使用して、週の入力を必須にすることができます。結果として、対応しているブラウザーでは週の入力欄が空欄の場合にエラーを表示します。
 
 例を見てみましょう。週の最小値と最大値を設定し、かつフィールドを必須に設定しています。
 
@@ -413,5 +413,5 @@ function populateWeeks() {
 ## 関連情報
 
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する {{domxref("HTMLInputElement")}} インターフェイス
-- [HTML で使用される日付と時刻の書式](/ja/docs/Web/HTML/Date_and_time_formats)
-- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time), [`<input type="month">`](/ja/docs/Web/HTML/Element/input/month)
+- [HTML で使用される日付と時刻の書式](/ja/docs/Web/HTML/Guides/Date_and_time_formats)
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local), [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time), [`<input type="month">`](/ja/docs/Web/HTML/Reference/Elements/input/month)

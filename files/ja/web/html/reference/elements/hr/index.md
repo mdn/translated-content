@@ -43,7 +43,7 @@ hr::after {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `align` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 区切り線の配置を指定します。初期値は `left` です。

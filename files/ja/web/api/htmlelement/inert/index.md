@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} の **`inert`** プロパティは、この要素の [`inert`](/ja/docs/Web/HTML/Global_attributes/inert) 属性の値を反映します。論理値で、存在する場合は、フォーカスイベントや支援技術からのイベントを含む、要素に対するユーザーの入力イベントをブラウザーが「無視」するようにします。ブラウザーは、要素でのページ検索やテキスト選択も無視することができます。これは、モーダルのような UI を構築する際に、モーダルが表示されているときにフォーカスをモーダル内に「閉じ込める」場合に便利です。
+{{domxref("HTMLElement")}} の **`inert`** プロパティは、この要素の [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性の値を反映します。論理値で、存在する場合は、フォーカスイベントや支援技術からのイベントを含む、要素に対するユーザーの入力イベントをブラウザーが「無視」するようにします。ブラウザーは、要素でのページ検索やテキスト選択も無視することができます。これは、モーダルのような UI を構築する際に、モーダルが表示されているときにフォーカスをモーダル内に「閉じ込める」場合に便利です。
 
 > [!NOTE]
 > 対話要素や重要なコンテンツを `inert` 属性を持つ要素内に入れ子にしてはいけません。不活性コンテンツとその子孫は、すべてのユーザーにとってフォーカスも知覚もできないからです。
@@ -57,7 +57,7 @@ l10n:
 
 ## 関連情報
 
-- [グローバル属性: `inert`](/ja/docs/Web/HTML/Global_attributes/inert)
+- [グローバル属性: `inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert)
 - {{HTMLElement("dialog")}}
 - [inert のポリフィル](https://github.com/WICG/inert)
 - {{domxref("HTMLInputElement.disabled", "disabled")}}

@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`title`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素に関するアドバイザリー情報を表すテキストを含みます。
+**`title`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に関するアドバイザリー情報を表すテキストを含みます。
 
 {{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
 
@@ -36,9 +36,9 @@ iframe {
 
 `title` 属性の主な用途は、 {{HTMLElement("iframe")}} 要素の支援技術のためのラベル付けです。
 
-`title` 属性は、[データ表](/ja/docs/Web/HTML/Element/table)内のコントロールのラベル付けに使用することもできます。
+`title` 属性は、[データ表](/ja/docs/Web/HTML/Reference/Elements/table)内のコントロールのラベル付けに使用することもできます。
 
-`title` 属性は、[`<link rel="stylesheet">`](/ja/docs/Web/HTML/Element/link) に追加すると、代替のスタイルシートを作成することができます。代替スタイルシートを `<link rel="alternate">` で定義する場合、この属性は必須であり、空でない文字列を設定する必要があります。
+`title` 属性は、[`<link rel="stylesheet">`](/ja/docs/Web/HTML/Reference/Elements/link) に追加すると、代替のスタイルシートを作成することができます。代替スタイルシートを `<link rel="alternate">` で定義する場合、この属性は必須であり、空でない文字列を設定する必要があります。
 
 {{htmlelement('abbr')}} の開始タグに `title` を記述する場合は、略語や頭字語の完全な展開形である必要があります。可能であれば、`title` を使用するのではなく、略語や頭字語を最初に使用する際に、 `<abbr>` を使用して略語をマークアップし、プレーンテキストで略語の展開形を提供してください。こうすることで、すべてのユーザーがその略語や頭字語が、どのような名前や用語を短縮しているのかを知ることができ、同時にユーザーエージェントには、コンテンツをどのように告知すればよいかのヒントを提供することができます。
 
@@ -111,5 +111,5 @@ multiline title"
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)。
 - {{domxref("HTMLElement.title")}} は、この属性を反映します。

@@ -38,7 +38,7 @@ label {
 
 ## 値
 
-入力欄に入力された数字の値を表す数値です。 [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に数値を設定することで、次のように入力欄の既定値を設定することができます。
+入力欄に入力された数字の値を表す数値です。 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に数値を設定することで、次のように入力欄の既定値を設定することができます。
 
 ```html
 <input id="number" type="number" value="42" />
@@ -52,17 +52,17 @@ label {
 
 ### `list`
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち、この [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち、この [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### `max`
 
-この入力欄が受け付ける最大値です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が数値でない場合、要素は最大値を持ちません。
+この入力欄が受け付ける最大値です。要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `max` 属性の値が数値でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性の値より大きいか、等しくしなければなりません。
 
 ### `min`
 
-この入力欄が受け付ける最小値です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さい場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が数値でない場合、要素は最小値を持ちません。
+この入力欄が受け付ける最小値です。要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれより小さい場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `min` 属性の値が数値でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性の値より小さいか、等しくしなければなりません。
 
@@ -73,7 +73,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
 > [!NOTE]
-> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Reference/Elements/input#ラベル)を参照してください。
 
 ### `readonly`
 
@@ -84,7 +84,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `step`
 
-`step` 属性は値が従わなければならない粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が従わなければならない粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -95,7 +95,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ## number 入力欄の使用
 
-`number` 入力型は、増減する数値にのみ、特にスピンボタンによる増減が使い勝手として有益な場合に使用すべきです。 `number` 入力型は、多くの国の郵便番号やクレジットカード番号のような、数字だけで構成されているが、厳密には数値ではない値には適していません。数値以外の入力には、 [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel) や他の {{HTMLElement('input')}} 型で [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性をつけるなど、別の入力型を使うことを検討してみてください。
+`number` 入力型は、増減する数値にのみ、特にスピンボタンによる増減が使い勝手として有益な場合に使用すべきです。 `number` 入力型は、多くの国の郵便番号やクレジットカード番号のような、数字だけで構成されているが、厳密には数値ではない値には適していません。数値以外の入力には、 [`<input type="tel">`](/ja/docs/Web/HTML/Reference/Elements/input/tel) や他の {{HTMLElement('input')}} 型で [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性をつけるなど、別の入力型を使うことを検討してみてください。
 
 ```html
 <input type="text" inputmode="numeric" pattern="\d*" />
@@ -122,7 +122,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 {{EmbedLiveSample('A_basic_number_input', 600, 40)}}
 
-数値入力は空の場合と単一の数値が入力された場合に妥当とみなされますが、それ以下は無効とみなされます。 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性が使用された場合は、入力欄が空の場合に妥当とみなされなくなります。
+数値入力は空の場合と単一の数値が入力された場合に妥当とみなされますが、それ以下は無効とみなされます。 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が使用された場合は、入力欄が空の場合に妥当とみなされなくなります。
 
 > **メモ:** [有効な浮動小数点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（つまり、 [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) でも [Infinity](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) でもないもの）であれば、どのような数値でも受け入れられます。
 
@@ -140,7 +140,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 刻み幅の制御
 
-既定で、数値を増減させるための増減ボタンは、 1 刻みで値を増減させます。 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を設定することで、刻みの量を指定する数値の値を変更できます。上記の例は10の倍数を指定すると言っていますので、 `step` の値を `10` にすることが妥当でしょう。
+既定で、数値を増減させるための増減ボタンは、 1 刻みで値を増減させます。 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を設定することで、刻みの量を指定する数値の値を変更できます。上記の例は10の倍数を指定すると言っていますので、 `step` の値を `10` にすることが妥当でしょう。
 
 ```html
 <input type="number" placeholder="10 の倍数" step="10" />
@@ -152,7 +152,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 最小値と最大値の指定
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、入力欄が保持できる最小値と最大値を指定することができます。例えば、最小値を `0` に、最大値を `100` に設定する例をご紹介しましょう。
+[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用して、入力欄が保持できる最小値と最大値を指定することができます。例えば、最小値を `0` に、最大値を `100` に設定する例をご紹介しましょう。
 
 ```html
 <input type="number" placeholder="10 の倍数" step="10" min="0" max="100" />
@@ -178,9 +178,9 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 入力欄の寸法の制御
 
-{{HTMLElement("input")}} 要素で type が `number` の場合、 [`size`](/ja/docs/Web/HTML/Element/input#size) のような寸法を決める属性には対応していません。入力欄の寸法を変更するには [CSS](/ja/docs/Web/CSS) に頼る必要があります。
+{{HTMLElement("input")}} 要素で type が `number` の場合、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) のような寸法を決める属性には対応していません。入力欄の寸法を変更するには [CSS](/ja/docs/Web/CSS) に頼る必要があります。
 
-例えば、入力欄の幅を数字 3 桁の入力に必要なだけの幅に調整するには、 HTML に [`id`](/ja/docs/Web/HTML/Global_attributes/id) を設定し、これから入力欄を短くしたときに文字列が表示できなくならないように、プレイスホルダーを短縮します。
+例えば、入力欄の幅を数字 3 桁の入力に必要なだけの幅に調整するには、 HTML に [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を設定し、これから入力欄を短くしたときに文字列が表示できなくならないように、プレイスホルダーを短縮します。
 
 ```html
 <input
@@ -206,7 +206,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### サジェスト値の提供
 
-[`list`](/ja/docs/Web/HTML/Element/input#list) 属性に、サジェスト値あたり一つの {{HTMLElement("option")}} 要素を含んだ {{HTMLElement("datalist")}} の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を値として入れることにより、ユーザーの選択することができる既定の選択肢のリストを提供することができます。それぞれの `option` の `value` は、数値入力ボックスのサジェスト値に関係します。
+[`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性に、サジェスト値あたり一つの {{HTMLElement("option")}} 要素を含んだ {{HTMLElement("datalist")}} の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を値として入れることにより、ユーザーの選択することができる既定の選択肢のリストを提供することができます。それぞれの `option` の `value` は、数値入力ボックスのサジェスト値に関係します。
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
@@ -228,9 +228,9 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 すでに `number` 入力欄における幾つかの検証機能については言及しましたが、ここで確認してみましょう。
 
 - `<input type="number">` 要素は、数値（または `required` が指定されていない場合は空欄）ではない入力を自動的に違反とします。
-- [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用すると、空欄の入力を違反とします。 (つまり、入力欄は埋める*必要があります*。)
-- [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用すると、妥当な値を特定の刻みの値 (例えば、10の倍数) に制約することができます。
-- [`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用すると、妥当な値の下限と上限を設けることができます。
+- [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使用すると、空欄の入力を違反とします。 (つまり、入力欄は埋める*必要があります*。)
+- [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用すると、妥当な値を特定の刻みの値 (例えば、10の倍数) に制約することができます。
+- [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用すると、妥当な値の下限と上限を設けることができます。
 
 次の例は上記の機能のすべてを例示しており、また幾らか CSS を用いて、 `input` の値によって、妥当または違反のアイコンを表示するようにします。
 
@@ -278,7 +278,7 @@ input:valid + span::after {
 
 ここで、 {{cssxref(":invalid")}} および {{cssxref(":valid")}} 擬似クラスを用いて、隣の {{htmlelement("span")}} 要素の生成コンテンツとして無効または妥当の適切なアイコンを表示し、妥当性の視覚的なインジケーターにすることができます。
 
-別な `<span>` 要素に入れたのは自由度を高めるためです。ブラウザーによっては一部の種類のフォーム入力欄において、あまり効果的に生成コンテンツを表示できないことがあります（[`<input type="date">` の検証](/ja/docs/Web/HTML/Element/input/date#validation)の節の例を読んでください）。
+別な `<span>` 要素に入れたのは自由度を高めるためです。ブラウザーによっては一部の種類のフォーム入力欄において、あまり効果的に生成コンテンツを表示できないことがあります（[`<input type="date">` の検証](/ja/docs/Web/HTML/Reference/Elements/input/date#validation)の節の例を読んでください）。
 
 > [!WARNING]
 > HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するサーバースクリプトの代用には*なりません*。
@@ -289,19 +289,19 @@ input:valid + span::after {
 
 ### パターンによる値検証
 
-`<input type="number">` 要素は [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用して、入力された値が特定の正規表現パタ ー ンを満たすようにすることに対応していません。
+`<input type="number">` 要素は [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性を使用して、入力された値が特定の正規表現パタ ー ンを満たすようにすることに対応していません。
 
-これは、 number 入力欄は数値以外の何が入力されても妥当にはならないからであり、上記で説明したとおり、 [`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を用いて妥当な数値の最大値および最小値を制約することができます。
+これは、 number 入力欄は数値以外の何が入力されても妥当にはならないからであり、上記で説明したとおり、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を用いて妥当な数値の最大値および最小値を制約することができます。
 
 ## アクセシビリティの考慮
 
-`<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう考えてください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
+`<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう考えてください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
 
-また、 [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を使用して、ユーザーがよりすばやく、エラーの可能性を低くしてフォームを記入できるようにすることも検討してください。例えば、郵便番号のフィールドで自動補完を有効にするには、 `autocomplete="postal-code"` と設定してください。
+また、 [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性を使用して、ユーザーがよりすばやく、エラーの可能性を低くしてフォームを記入できるようにすることも検討してください。例えば、郵便番号のフィールドで自動補完を有効にするには、 `autocomplete="postal-code"` と設定してください。
 
 ## 例
 
-すでに既定では増分が `1` であるという事実を扱いましたので、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して実数を入力できるようにすることができます。もう少し詳しく見てみましょう。
+すでに既定では増分が `1` であるという事実を扱いましたので、 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して実数を入力できるようにすることができます。もう少し詳しく見てみましょう。
 
 以下の例は、ユーザーの身長を入力するフォームです。既定では慎重をメートル単位で受け付けますが、関連するボタンをクリックすることでフォームがフィートとインチを受け付けるように変更することができます。メートル単位の身長の入力欄は小数第 2 位まで受け付けます。
 
@@ -488,5 +488,5 @@ switchBtn.addEventListener("click", () => {
 
 - [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel)
+- [`<input type="tel">`](/ja/docs/Web/HTML/Reference/Elements/input/tel)
 - [Article: Why Gov.UK changed the input type for numbers](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)

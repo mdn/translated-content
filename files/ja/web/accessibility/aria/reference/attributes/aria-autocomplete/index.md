@@ -57,7 +57,7 @@ l10n:
 - [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role) ロール
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) ロール
 - [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role) ロール
-- {{HTMLElement('datalist')}} 要素と [`<input> list` 属性](/ja/docs/Web/HTML/Element/input#list)
+- {{HTMLElement('datalist')}} 要素と [`<input> list` 属性](/ja/docs/Web/HTML/Reference/Elements/input#list)
 - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性
 - [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性
 - [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性

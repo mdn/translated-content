@@ -212,7 +212,7 @@ btn.addEventListener("click", () => {
 
 #### HTML
 
-この HTML では、 {{htmlelement("div")}} 要素に [popover](/ja/docs/Web/HTML/Global_attributes/popover) 属性を用いてポップオーバーとして宣言し、 {{htmlelement("button")}} 要素に [popovertarget](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を用いてポップオーバーの表示コントロールとして指定しています。
+この HTML では、 {{htmlelement("div")}} 要素に [popover](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を用いてポップオーバーとして宣言し、 {{htmlelement("button")}} 要素に [popovertarget](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を用いてポップオーバーの表示コントロールとして指定しています。
 
 ```html-nolint
 <button popovertarget="mypopover">ポップオーバーを表示</button>
@@ -303,7 +303,7 @@ html {
 > [!NOTE]
 > ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
 
-> **メモ:** {{htmlelement("dialog")}} 要素とその背景の表示・非表示を遷移させる例は、 `<dialog>` リファレンスページの[ダイアログ要素の遷移](/ja/docs/Web/HTML/Element/dialog#transitioning_dialog_elements)で探すことができます。
+> **メモ:** {{htmlelement("dialog")}} 要素とその背景の表示・非表示を遷移させる例は、 `<dialog>` リファレンスページの[ダイアログ要素の遷移](/ja/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements)で探すことができます。
 
 ### DOM に追加・除去される要素のトランジション
 

@@ -70,7 +70,7 @@ original_slug: Web/Accessibility/ARIA/Roles/grid_role
   - : ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、`aria-readonly` を `true` に設定するべきです。 デフォルト値は `false` です。
 
 > [!NOTE]
-> 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Element/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
+> 多くのユースケースでは、HTML の表 ([`table`](/ja/docs/Web/HTML/Reference/Elements/table)) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。
 
 ### キーボードインタラクション
 
@@ -596,7 +596,7 @@ TBD
 - [ARIA: gridcell ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
 - [ARIA: rowheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role)
 - [ARIA: columnheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)
-- [HTML の表要素](/ja/docs/Web/HTML/Element/table)
+- [HTML の表要素](/ja/docs/Web/HTML/Reference/Elements/table)
 - aria-level
 - aria-multiselectable
 - aria-readonly

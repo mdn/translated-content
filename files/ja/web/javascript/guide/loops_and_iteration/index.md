@@ -56,7 +56,7 @@ for (初期化式; 条件式; 加算式)
 
 ### 例
 
-例えば下記の例には `for` 文があり、スクロールリスト（複数選択が可能な [`<select>`](/ja/docs/Web/HTML/Element/select) 要素）で選択されたオプションの数値をカウントしています。
+例えば下記の例には `for` 文があり、スクロールリスト（複数選択が可能な [`<select>`](/ja/docs/Web/HTML/Reference/Elements/select) 要素）で選択されたオプションの数値をカウントしています。
 
 #### HTML
 

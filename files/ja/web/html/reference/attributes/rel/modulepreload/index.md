@@ -8,21 +8,21 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`modulepreload`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性に指定すると、[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)とその依存関係を先取りして取得し、後で実行するために文書のモジュールマップに保存するための宣言的な方法を提供します。
+**`modulepreload`** キーワードを {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定すると、[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)とその依存関係を先取りして取得し、後で実行するために文書のモジュールマップに保存するための宣言的な方法を提供します。
 
 事前読み込みされたモジュールとその依存関係を早期にダウンロードすることができ、全体のダウンロードと処理時間を大幅に縮小することができます。
 これは、各モジュールが処理され、依存関係が発見されたときに、ページがモジュールを並列に取得することを可能にするからです。
 しかし、すべてを事前読み込みさせることはできないことに注意してください。
 事前読み込みされたものは、使い勝手に悪影響を与えるかもしれない他の処理とのバランスを取る必要があります。
 
-`rel="modulepreload"` を持つリンクは [`rel="preload"`](/ja/docs/Web/HTML/Attributes/rel/preload) を持つリンクと似ています。
+`rel="modulepreload"` を持つリンクは [`rel="preload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を持つリンクと似ています。
 主な違いは、 `preload` はファイルをダウンロードしてキャッシュに格納するだけですが、 `modulepreload` はモジュールを取得し、解釈してコンパイルし、その結果をモジュールマップに格納して実行できるようにします。
 
-`modulepreload` を使用する場合、フェッチリクエストモードは常に [`cors`](/ja/docs/Web/API/Request/mode#cors) であり、 [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) プロパティを使用してリクエストの資格情報モードを決定します。
-`crossorigin` が [`anonymous`](/ja/docs/Web/HTML/Attributes/crossorigin#anonymous) または [`""`](/ja/docs/Web/HTML/Attributes/crossorigin#sect1) (既定) に設定されていた場合、資格情報モードは [`same-origin`](/ja/docs/Web/API/Request/credentials#same-origin) となり、Cookie や認証のようなユーザー資格情報は `same-origin` のリクエストに対してのみ送信されます。
-`crossorigin` が [`use-credentials`](/ja/docs/Web/HTML/Attributes/crossorigin#use-credentials) に設定されている場合、資格情報モードは [`include`](/ja/docs/Web/API/Request/credentials#include) となり、オリジン内・オリジン間の両方のリクエストに対してユーザー資格情報が送信されます。
+`modulepreload` を使用する場合、フェッチリクエストモードは常に [`cors`](/ja/docs/Web/API/Request/mode#cors) であり、 [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) プロパティを使用してリクエストの資格情報モードを決定します。
+`crossorigin` が [`anonymous`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#anonymous) または [`""`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#sect1) (既定) に設定されていた場合、資格情報モードは [`same-origin`](/ja/docs/Web/API/Request/credentials#same-origin) となり、Cookie や認証のようなユーザー資格情報は `same-origin` のリクエストに対してのみ送信されます。
+`crossorigin` が [`use-credentials`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#use-credentials) に設定されている場合、資格情報モードは [`include`](/ja/docs/Web/API/Request/credentials#include) となり、オリジン内・オリジン間の両方のリクエストに対してユーザー資格情報が送信されます。
 
-[`as`](/ja/docs/Web/HTML/Element/link#as) 属性は `rel="modulepreload"` のリンクではオプションで、 `"script"` が既定です。
+[`as`](/ja/docs/Web/HTML/Reference/Elements/link#as) 属性は `rel="modulepreload"` のリンクではオプションで、 `"script"` が既定です。
 `"script"` または `"audioworklet"`、`"paintworklet"`、`"serviceworker"`、`"sharedworker"`、`"worker"` などのスクリプトに似た出力先に設定することができます。
 他の出力先が使用された場合、 "error" という名前の [`Event`](/ja/docs/Web/API/Event/Event) が要素に発生します。
 

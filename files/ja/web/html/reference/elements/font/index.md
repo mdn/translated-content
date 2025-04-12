@@ -15,7 +15,7 @@ l10n:
 
 ## 属性
 
-他のすべての HTML 要素と同様に、この要素は [グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
+他のすべての HTML 要素と同様に、この要素は [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。
 
 - `color` {{Deprecated_Inline}}
   - : 色名または #RRGGBB 形式のカラーコードでテキストの色を指定します。

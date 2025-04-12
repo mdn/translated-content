@@ -98,7 +98,7 @@ dd {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 例
 
@@ -197,7 +197,7 @@ dt::after {
 
 ### 名前と値のグループを `div` 要素で包む
 
-[WHATWG](/ja/docs/Glossary/WHATWG) HTML では、{{HTMLElement("dl")}} 要素内でそれそれの名前と値のグループを、{{HTMLElement("div")}} 要素でまとめることができます。これは[マイクロデータ](/ja/docs/Web/HTML/Microdata)を使用するとき、グループ全体に[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を適用するとき、あるいはスタイルを設定するために役立ちます。
+[WHATWG](/ja/docs/Glossary/WHATWG) HTML では、{{HTMLElement("dl")}} 要素内でそれそれの名前と値のグループを、{{HTMLElement("div")}} 要素でまとめることができます。これは[マイクロデータ](/ja/docs/Web/HTML/Guides/Microdata)を使用するとき、グループ全体に[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を適用するとき、あるいはスタイルを設定するために役立ちます。
 
 ```html
 <dl>

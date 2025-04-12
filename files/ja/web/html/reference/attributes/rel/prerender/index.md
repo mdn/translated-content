@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
-**`prerender`** は {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性の値で、ユーザーが次のナビゲーションで対象のリソースを必要とするかもしれないので、ブラウザーはリソースを先取りして取得・処理し、例えばサブリソースを取得したり、バックグラウンドで画面外で何らかのレンダリングを実行すれば、おそらくユーザー体験を改善できる、というヒントになるものです。
+**`prerender`** は {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性の値で、ユーザーが次のナビゲーションで対象のリソースを必要とするかもしれないので、ブラウザーはリソースを先取りして取得・処理し、例えばサブリソースを取得したり、バックグラウンドで画面外で何らかのレンダリングを実行すれば、おそらくユーザー体験を改善できる、というヒントになるものです。
 
 この機能は[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) に置き換えられました。
 

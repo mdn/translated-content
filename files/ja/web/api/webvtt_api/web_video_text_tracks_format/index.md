@@ -141,7 +141,7 @@ WEBVTT
 
 キューのタイミングは、キューがいつ表示されるかを示します。タイムスタンプで表される開始時刻と終了時刻があります。終了時刻は開始時刻より後でなければならず、開始時刻は前のすべての開始時刻より後でなければなりません。キューは、タイミングが重複するかもしれません。
 
-WebVTT ファイルをチャプターに使用している場合（{{HTMLElement("track")}} の [`kind`](/ja/docs/Web/HTML/Element/track#kind) は `chapters` です）、ファイルは重複するタイミングを持つことはできません。
+WebVTT ファイルをチャプターに使用している場合（{{HTMLElement("track")}} の [`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) は `chapters` です）、ファイルは重複するタイミングを持つことはできません。
 
 各キューのタイミングには次の 5 つの要素があります。
 
@@ -289,7 +289,7 @@ WebVTT ファイルをチャプターに使用している場合（{{HTMLElement
 ### キュー本体テキストタグ
 
 キュー内のテキストのマークアップやスタイル設定には、`<b>` などの多数のタグを使用することができます。
-ただし、WebVTT ファイルが {{HTMLElement("track")}} 要素の中で使われていて、その属性 [`kind`](/ja/docs/Web/HTML/Element/track#kind) が `chapters` である場合は、タグを使うことができません。
+ただし、WebVTT ファイルが {{HTMLElement("track")}} 要素の中で使われていて、その属性 [`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) が `chapters` である場合は、タグを使うことができません。
 
 - タイムスタンプタグ
 

@@ -70,7 +70,7 @@ HTML ファイルを作成し、見出しにメタデータを含め、ユーザ
 <!doctype html>
 ```
 
-ルート {{HTMLelement("html")}} タグは、ページの第一言語を定義する [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性とともに、すべてのコンテンツを囲みます。
+ルート {{HTMLelement("html")}} タグは、ページの第一言語を定義する [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性とともに、すべてのコンテンツを囲みます。
 
 ```html
 <!doctype html>
@@ -83,7 +83,7 @@ HTML ファイルを作成し、見出しにメタデータを含め、ユーザ
 
 {{HTMLelement("head")}} コンテナー内には、ウェブアプリケーションに関する読み取り可能な情報が含まれていますが、ブラウザーのタブの見出しとして表示される `<title>` を除いて、読者には表示されません。
 
-`<head>` には、すべての[メタデータ](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/Glossary/Character_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewport](/ja/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} タグを、常に記載する必要があります。
+`<head>` には、すべての[メタデータ](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)が記載されています。 `<head>` の最初の 2 つの情報として、[文字エンコード方式](/ja/docs/Glossary/Character_encoding)を定義する文字セット定義と、ビューポートの幅でページがレンダリングされるように確保し、とても小さな画面へ読み込まれた際に縮小されないようにする [viewport](/ja/docs/Web/HTML/Guides/Viewport_meta_element) {{HTMLelement("meta")}} タグを、常に記載する必要があります。
 
 ```html
 <head>
@@ -108,7 +108,7 @@ HTML ファイルを作成し、見出しにメタデータを含め、ユーザ
 <link rel="stylesheet" href="style.css" />
 ```
 
-HTML の `<link>` 要素は、現在の文書と外部リソースの関係を指定するために使用されます。 [`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性には、 25 以上の定義済みの値があり、仕様にはない値も数多くあります。最も一般的な値である `rel="stylesheet"` は、外部リソースをスタイルシートとしてインポートします。
+HTML の `<link>` 要素は、現在の文書と外部リソースの関係を指定するために使用されます。 [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性には、 25 以上の定義済みの値があり、仕様にはない値も数多くあります。最も一般的な値である `rel="stylesheet"` は、外部リソースをスタイルシートとしてインポートします。
 
 `<link>` 要素と `rel` 属性については、[マニフェストファイルへのリンク](/ja/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app)を加える時にのちの節で説明します。
 
@@ -116,7 +116,7 @@ HTML の `<link>` 要素は、現在の文書と外部リソースの関係を�
 
 {{HTMLelement("body")}} 要素には、ユーザーがインターネット上のサイトを訪問した際に表示したいコンテンツがすべて含まれています。
 
-`<body>` 内に、レベル 1 の見出しとして、 [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) と {{HTMLelement("form")}} を使用してアプリの名前を記載しています。
+`<body>` 内に、レベル 1 の見出しとして、 [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) と {{HTMLelement("form")}} を使用してアプリの名前を記載しています。
 
 ```html
 <body>
@@ -137,9 +137,9 @@ HTML の `<link>` 要素は、現在の文書と外部リソースの関係を�
 </form>
 ```
 
-日付選択ツールは、 {{HTMLElement("input")}} 要素の {{HTMLElement("input/date", "date")}} 型です。 [`required`](/ja/docs/Web/HTML/Attributes/required) 属性が付いており、ユーザーが誤って不完全なフォームを送信してしまうことを防ぎ、ユーザーによるエラーを削減します。
+日付選択ツールは、 {{HTMLElement("input")}} 要素の {{HTMLElement("input/date", "date")}} 型です。 [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) 属性が付いており、ユーザーが誤って不完全なフォームを送信してしまうことを防ぎ、ユーザーによるエラーを削減します。
 
-`<label>` をあるフォームコントロールに関連付けるには、各 `<input>` に [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性を設定し、関連付けられた {{HTMLelement("label")}} の `for` 属性と一致させます。関連付けられたラベルは、各 `<input>` に{{glossary("Accessible name", "アクセシブル名")}}を提供します。
+`<label>` をあるフォームコントロールに関連付けるには、各 `<input>` に [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を設定し、関連付けられた {{HTMLelement("label")}} の `for` 属性と一致させます。関連付けられたラベルは、各 `<input>` に{{glossary("Accessible name", "アクセシブル名")}}を提供します。
 
 ```html
 <label for="start-date">Start date</label>
@@ -195,7 +195,7 @@ HTML の `<link>` 要素は、現在の文書と外部リソースの関係を�
 
 ### JavaScript のリンク
 
-`</body>` が閉じられる前に、まだ作成されていない JavaScript の `app.js` ファイルへのリンクを挿入します。 [`defer`](/ja/docs/Web/HTML/Element/script#defer) 属性を挿入することで、このスクリプトの読み込みを遅延させ、この JavaScript が文書の HTML が解析された後に実行されることを保証するようにします。
+`</body>` が閉じられる前に、まだ作成されていない JavaScript の `app.js` ファイルへのリンクを挿入します。 [`defer`](/ja/docs/Web/HTML/Reference/Elements/script#defer) 属性を挿入することで、このスクリプトの読み込みを遅延させ、この JavaScript が文書の HTML が解析された後に実行されることを保証するようにします。
 
 ```html
 <script src="app.js" defer></script>

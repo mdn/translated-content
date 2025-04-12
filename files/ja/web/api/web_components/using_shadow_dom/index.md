@@ -67,13 +67,13 @@ _シャドウ_ DOM により、通常の DOM ツリーの要素の下に隠れ�
 
 ### 属性の継承
 
-シャドウツリーと {{ HTMLElement("slot") }} 要素は、シャドウホストから [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性を継承しています。
+シャドウツリーと {{ HTMLElement("slot") }} 要素は、シャドウホストから [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性を継承しています。
 
 ## シャドウ DOM の作成
 
 ### JavaScript で命令的に
 
-次のページには、2つの要素が含まれています。{{htmlelement("div")}} 要素で [`id`](/ja/docs/Web/HTML/Global_attributes/id) が `"host"` であるものと、テキストを格納する {{htmlelement("span")}} 要素です。
+次のページには、2つの要素が含まれています。{{htmlelement("div")}} 要素で [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が `"host"` であるものと、テキストを格納する {{htmlelement("span")}} 要素です。
 
 ```html
 <div id="host"></div>

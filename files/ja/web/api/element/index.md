@@ -42,7 +42,7 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 - {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : 要素の実効ズームサイズを示す数値。要素がレンダリングされない場合は 1.0 です。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
-  - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を反映した文字列です。
+  - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を反映した文字列です。
 - {{domxref("Element.firstElementChild")}} {{ReadOnlyInline}}
   - : この要素の最初の子要素を返します。
 - {{DOMxRef("Element.id")}}
@@ -300,7 +300,7 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{domxref("Element/beforeinput_event", "beforeinput")}}
   - : 入力要素の値が変更されようとすると発行されます。
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
-  - : [見つかるまでの間は非表示](/ja/docs/Web/HTML/Global_attributes/hidden)状態にある要素で、ユーザーが「ページ内検索」機能やフラグメントナビゲーションによってコンテンツを見つけたため、ブラウザーがそのコンテンツを公開しようとしているときに発行されます。
+  - : [見つかるまでの間は非表示](/ja/docs/Web/HTML/Reference/Global_attributes/hidden)状態にある要素で、ユーザーが「ページ内検索」機能やフラグメントナビゲーションによってコンテンツを見つけたため、ブラウザーがそのコンテンツを公開しようとしているときに発行されます。
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
   - : スクリプトが実行されそうになったときに発行されます。
 - {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}

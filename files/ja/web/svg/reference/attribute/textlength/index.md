@@ -64,7 +64,7 @@ svg {
 
 ## インタラクティブサンプル
 
-この例では、 {{HTMLElement("input")}} 要素の [`"range"`](/ja/docs/Web/HTML/Element/input/range) 型を使用して、テキストの大きさを変えることができます。
+この例では、 {{HTMLElement("input")}} 要素の [`"range"`](/ja/docs/Web/HTML/Reference/Elements/input/range) 型を使用して、テキストの大きさを変えることができます。
 
 ### CSS
 

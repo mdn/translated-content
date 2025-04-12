@@ -53,7 +53,7 @@ h4 {
 
 ## 属性
 
-見出し要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+見出し要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
@@ -63,10 +63,10 @@ h4 {
 
 ### 1 つのページに複数の `<h1>` 要素を使用しない
 
-1 つのページに複数の `<h1>` 要素を使用することは HTML 標準では認められていますが（[入れ子](#入れ子)でない限り）、これはよい習慣とはみなされません。1 つのページには、ページの内容を説明する 1 つの `<h1>` 要素（文書の [`<title> 要素`](/ja/docs/Web/HTML/Element/title)と同様）を置くのが一般的です。
+1 つのページに複数の `<h1>` 要素を使用することは HTML 標準では認められていますが（[入れ子](#入れ子)でない限り）、これはよい習慣とはみなされません。1 つのページには、ページの内容を説明する 1 つの `<h1>` 要素（文書の [`<title> 要素`](/ja/docs/Web/HTML/Reference/Elements/title)と同様）を置くのが一般的です。
 
 > [!NOTE]
-> 入れ子になった[コンテンツ区分要素](/ja/docs/Web/HTML/Element#コンテンツ区分)の中で複数の `<h1>` 要素を入れ子にすることは、HTML 標準の古いバージョンでは認められていました。しかし、これはよい習慣とはみなされず、現在は非適合となっています。詳しくは、[There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html) をご覧ください。
+> 入れ子になった[コンテンツ区分要素](/ja/docs/Web/HTML/Reference/Elements#コンテンツ区分)の中で複数の `<h1>` 要素を入れ子にすることは、HTML 標準の古いバージョンでは認められていました。しかし、これはよい習慣とはみなされず、現在は非適合となっています。詳しくは、[There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html) をご覧ください。
 
 1 ページに 1 つの `<h1>` を使用し、レベルをスキップせずに[見出しを入れ子](#入れ子)にすることを推奨します。
 
@@ -173,9 +173,9 @@ h4 {
 
 ### 区分コンテンツのラベル付け
 
-スクリーンリーダー利用者のための他のナビゲーションテクニックとして、[区分コンテンツ](/ja/docs/Web/HTML/Element#コンテンツ区分)の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
+スクリーンリーダー利用者のための他のナビゲーションテクニックとして、[区分コンテンツ](/ja/docs/Web/HTML/Reference/Elements#コンテンツ区分)の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
 
-区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) および [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに 2 つ以上の区分要素がある場合に有用です。
+区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) および [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに 2 つ以上の区分要素がある場合に有用です。
 
 #### 例
 

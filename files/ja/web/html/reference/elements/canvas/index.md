@@ -76,7 +76,7 @@ l10n:
 
 ## 属性
 
-他のすべての HTML 要素と同様に、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
+他のすべての HTML 要素と同様に、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
 
 - `height`
   - : CSS ピクセルで示した座標空間の高さ。既定では 150 ピクセルに設定されています。

@@ -86,7 +86,7 @@ data:hover::after {
 
 ## 属性
 
-この要素の属性には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素の属性には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `value`
   - : この属性は要素の内容を機械可読な形式で指定します。

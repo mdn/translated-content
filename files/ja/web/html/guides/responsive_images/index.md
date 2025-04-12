@@ -37,7 +37,7 @@ l10n:
 この種の問題は、ウェブが最初に登場したとき、90 年代前半から中期の頃には存在しませんでした。 — ウェブをブラウズする唯一の端末はデスクトップとラップトップであったため、ブラウザーの技術者や仕様書の著者は解決策を実装することを考えませんでした。「レスポンシブ画像技術」は、上記のような問題を解決するために最近になって実装され、ブラウザーに様々な画像ファイル、どれも表示するものは同じですが、ピクセル数が異なる様々な画像（解像度の切り替え）、異なる領域の取り方が異なる様々な画像（アートディレクション）を含めることができます。
 
 > [!NOTE]
-> この記事で説明している新機能 — [`srcset`](/ja/docs/Web/HTML/Element/img#srcset)/[`sizes`](/ja/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — は、現行のデスクトップおよびモバイルブラウザーのすべてが対応しています。
+> この記事で説明している新機能 — [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset)/[`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes)/{{htmlelement("picture")}} — は、現行のデスクトップおよびモバイルブラウザーのすべてが対応しています。
 
 ## レスポンシブ画像の作り方
 
@@ -51,7 +51,7 @@ l10n:
 <img src="elva-fairy-800w.jpg" alt="妖精の衣装を着たエルバ" />
 ```
 
-しかし、複数の追加のソース画像と、ブラウザーが正しいものを選択する助けになるヒントを提供することができる、 2 つの属性 — [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 及び [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) — を使用することができます。 この例は、 GitHub の [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) で見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)も参照してください)。
+しかし、複数の追加のソース画像と、ブラウザーが正しいものを選択する助けになるヒントを提供することができる、 2 つの属性 — [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 及び [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) — を使用することができます。 この例は、 GitHub の [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) で見ることができます([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)も参照してください)。
 
 ```html
 <img
@@ -92,7 +92,7 @@ l10n:
 >
 > どの画像が読み込まれたかを確認するには、 Firefox の開発者ツールの[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)タブや、Chrome の開発者ツールの[ネットワーク](https://developer.chrome.com/docs/devtools/network/)パネルを使用することができます。Chrome では、既にダウンロードされた画像を拾わないように、[キャッシュを無効](https://stackoverflow.com/a/7000899/13725861)にすることができます。
 
-これらの機能に対応していない古いブラウザーはこれらを無視し、 [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で参照されている画像を通常の方法で読み込みます。
+これらの機能に対応していない古いブラウザーはこれらを無視し、 [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) 属性で参照されている画像を通常の方法で読み込みます。
 
 > [!NOTE]
 > 文書の {{htmlelement("head")}} には、 `<meta name="viewport" content="width=device-width">` という行があります。 これは、モバイルブラウザーがウェブページを読み込むために実際のビューポート幅を使用するように強制します。（一部のモバイルブラウザーでは、ビューポート幅について嘘をつき、大きなビューポート幅でページを読み込み、読み込んだページを縮小するため、レスポンシブ画像やデザインにはあまり役に立ちません。 これについては、今後のモジュールで詳しく説明します。）
@@ -173,7 +173,7 @@ img {
 レスポンシブ画像の解説は以上です。新しいテクニックを楽しんでいただけたでしょうか。おさらいとして、ここで学んできた、2 つの異なる問題を振り返りましょう。
 
 - **アートディレクション**: 異なるレイアウトでトリミングされた画像を提供したいという問題 — 例えば、デスクトップレイアウトではシーン全体を表す横長の画像を、モバイルレイアウトでは中心の被写体にズームインした縦長の画像にする画像などです。これは、 {{htmlelement("picture")}} 要素を使用して解決できます。
-- **解像度切り替え**: 狭い画面の端末では、デスクトップ画面のような巨大な画像を必要としないため、小さな画像ファイルを配信したいという問題 — 必要に応じて異なる解像度の画像を高密度や低密度の画面に表示したい場合もあります。 これは、[ベクターグラフィックス](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 画像）と [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) と [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を使用して解決できます。
+- **解像度切り替え**: 狭い画面の端末では、デスクトップ画面のような巨大な画像を必要としないため、小さな画像ファイルを配信したいという問題 — 必要に応じて異なる解像度の画像を高密度や低密度の画面に表示したい場合もあります。 これは、[ベクターグラフィックス](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 画像）と [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) と [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性を使用して解決できます。
 
 ## 関連情報
 

@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`contenteditable`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、ユーザーによる要素の編集が可能かを示す列挙型属性です。可能である場合、ブラウザーは要素のウィジェットを編集可能なものに変更します。
+**`contenteditable`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、ユーザーによる要素の編集が可能かを示す列挙型属性です。可能である場合、ブラウザーは要素のウィジェットを編集可能なものに変更します。
 
 {{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
 
@@ -63,7 +63,7 @@ blockquote p::after {
 
 {{Glossary("caret", "キャレット")}}の挿入文字列を描画するのに使用される色は、 {{cssxref("caret-color")}} プロパティで設定できます。
 
-`contentitable` 属性を使用して編集可能になった要素、つまりインタラクティブになった要素は、フォーカスを当てることができます。また、キーボードの連続したナビゲーションに参加することができます。しかし、`contenteditable` 属性を持つ要素が他の `contenteditable` 要素の中に入れ子になっている場合、既定値ではタブ操作の順番に追加されません。`tabindex` 値 ([`tabindex="0"`](/ja/docs/Web/HTML/Global_attributes/tabindex)) を指定することにより、ネストした `contenteditable` 要素をキーボードナビゲーションシーケンスに追加することができるようになります。
+`contentitable` 属性を使用して編集可能になった要素、つまりインタラクティブになった要素は、フォーカスを当てることができます。また、キーボードの連続したナビゲーションに参加することができます。しかし、`contenteditable` 属性を持つ要素が他の `contenteditable` 要素の中に入れ子になっている場合、既定値ではタブ操作の順番に追加されません。`tabindex` 値 ([`tabindex="0"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)) を指定することにより、ネストした `contenteditable` 要素をキーボードナビゲーションシーケンスに追加することができるようになります。
 
 ## 仕様書
 
@@ -75,7 +75,7 @@ blockquote p::after {
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} および {{domxref("HTMLElement.isContentEditable")}}
 - CSS の {{cssxref("caret-color")}} プロパティ
 - [HTMLElement の `input` イベント](/ja/docs/Web/API/Element/input_event)

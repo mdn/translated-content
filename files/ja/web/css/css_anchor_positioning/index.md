@@ -49,7 +49,7 @@ l10n:
 
 ### HTML 属性
 
-- [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
+- [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) {{non-standard_inline}}
 
 ### インターフェイス
 

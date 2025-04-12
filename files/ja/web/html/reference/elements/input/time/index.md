@@ -38,7 +38,7 @@ label {
 
 ### value 属性の設定
 
-`<input>` 要素が作成されたときに、次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に時刻を指定することで、既定値を設定することができます。
+`<input>` 要素が作成されたときに、次のように [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性に時刻を指定することで、既定値を設定することができます。
 
 ```html
 <label for="appointment-time">予約時刻を選んでください。</label>
@@ -62,7 +62,7 @@ timeControl.value = "15:30";
 
 ### 時刻値の書式
 
-`time` 入力欄の `value` は、常に先頭にゼロを含む 24 時制で `HH:mm` の書式であり、ユーザーのロケール（またはユーザーエージェント）に基づいて選択される入力書式とは関係ありません。時刻が秒を含む場合（[step 属性の使用](#step_属性の使用)を参照）は、書式は常に `HH:mm:ss` です。この入力型で使用される時刻の値の形式について詳しくは、[時刻文字列](/ja/docs/Web/HTML/Date_and_time_formats#時刻文字列)をご覧ください。
+`time` 入力欄の `value` は、常に先頭にゼロを含む 24 時制で `HH:mm` の書式であり、ユーザーのロケール（またはユーザーエージェント）に基づいて選択される入力書式とは関係ありません。時刻が秒を含む場合（[step 属性の使用](#step_属性の使用)を参照）は、書式は常に `HH:mm:ss` です。この入力型で使用される時刻の値の形式について詳しくは、[時刻文字列](/ja/docs/Web/HTML/Guides/Date_and_time_formats#時刻文字列)をご覧ください。
 
 この例では、時刻を入力すると time 入力欄の値が、どのように変化するかを見ることができます。
 
@@ -107,7 +107,7 @@ startTime.addEventListener(
 
 ### list
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### max
 
@@ -126,7 +126,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### step
 
-`step` 属性は、値が遵守しなければならない粒度を指定する数値、または下記で記述する特別な値 `any` です。ステップの基準となる値（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Element/input#value)、それ以外の場合は適切な既定値）と同じ値のみが有効となります。
+`step` 属性は、値が遵守しなければならない粒度を指定する数値、または下記で記述する特別な値 `any` です。ステップの基準となる値（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、それ以外の場合は適切な既定値）と同じ値のみが有効となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -154,13 +154,13 @@ _現時点で、 `time` 入力欄で `step` に `any` の値が何を意味す�
 
 ### 入力欄の寸法の制御
 
-`<input type="time">` は、 [`size`](/ja/docs/Web/HTML/Element/input#size) のようなコントロールの寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
+`<input type="time">` は、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) のようなコントロールの寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
 
 ### step 属性の使用
 
-[`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して、時刻を上下させるときに加減する時間の大きさを変更することができます（例えば、小さな矢印ウィジェットをクリックしたときに 10 分単位で時刻が動くように）。
+[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を使用して、時刻を上下させるときに加減する時間の大きさを変更することができます（例えば、小さな矢印ウィジェットをクリックしたときに 10 分単位で時刻が動くように）。
 
-増加する秒数を定義する整数値を指定します。既定値は 60 秒です。既定では、ほとんどのユーザーエージェントの時刻 UI は時分を表示しますが、秒は表示しません。 UI に秒数を追加するには、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性に `60` で割り切れない数値を指定するか、 `min` 値または `max` 値によって秒数を指定します。
+増加する秒数を定義する整数値を指定します。既定値は 60 秒です。既定では、ほとんどのユーザーエージェントの時刻 UI は時分を表示しますが、秒は表示しません。 UI に秒数を追加するには、 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性に `60` で割り切れない数値を指定するか、 `min` 値または `max` 値によって秒数を指定します。
 
 ```html
 <form>
@@ -179,7 +179,7 @@ _現時点で、 `time` 入力欄で `step` に `any` の値が何を意味す�
 
 ### 時刻の最大値と最小値の設定
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択できる時刻を制限することができます。次の例では、時刻の最小値を `12:00` に、時刻の最大値を `18:00` に設定しています。
+[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を使用して、ユーザーが選択できる時刻を制限することができます。次の例では、時刻の最小値を `12:00` に、時刻の最大値を `18:00` に設定しています。
 
 ```html
 <form>
@@ -233,7 +233,7 @@ input:valid + span::after {
 
 #### 最小値と最大値が真夜中をまたぐようにする
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) 属性に [`max`](/ja/docs/Web/HTML/Element/input#max) 属性よりも大きな値を設定することで、有効な時間帯を、午前0時をまたぐようにすることができます。この機能は他の入力型では対応していません。
+[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) 属性に [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性よりも大きな値を設定することで、有効な時間帯を、午前0時をまたぐようにすることができます。この機能は他の入力型では対応していません。
 
 ```js
 const input = document.createElement("input");
@@ -251,7 +251,7 @@ if (input.validity.valid && input.type === "time") {
 
 ### 時刻を必須にする
 
-加えて、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、時刻の入力を必須にすることができます。ブラウザーは設定範囲外または空欄の time 入力欄を送信しようとすると、エラーを表示します。
+加えて、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使用して、時刻の入力を必須にすることができます。ブラウザーは設定範囲外または空欄の time 入力欄を送信しようとすると、エラーを表示します。
 
 例を見てみましょう。時刻の最小値と最大値を設定し、かつ入力欄を必須に設定しています。
 
@@ -395,8 +395,8 @@ input:valid + span::after {
 
 ## 関連情報
 
-- [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date)
-- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date), [`<input type="week">`](/ja/docs/Web/HTML/Element/input/week), [`<input type="month">`](/ja/docs/Web/HTML/Element/input/month)
+- [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date)
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local), [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date), [`<input type="week">`](/ja/docs/Web/HTML/Reference/Elements/input/week), [`<input type="month">`](/ja/docs/Web/HTML/Reference/Elements/input/month)
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する {{domxref("HTMLInputElement")}} インターフェイス
-- [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)
+- [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Guides/Date_and_time_formats)
 - [日付と時刻の選択のチュートリアル](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日付と時刻ピッカー)

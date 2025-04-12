@@ -37,7 +37,7 @@ a[href^="tel"]::before {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
@@ -157,4 +157,4 @@ a[href^="tel"]::before {
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}}
-- [HTML 文書のセクションとアウトライン](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML 文書のセクションとアウトライン](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)

@@ -8,9 +8,9 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-[グローバル属性](/ja/docs/Web/HTML/Global_attributes) の **`itemtype`** は、データ構造の中で `itemprop` （アイテムのプロパティ）を定義するのに使われる語彙の URL を指定します。
+[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) の **`itemtype`** は、データ構造の中で `itemprop` （アイテムのプロパティ）を定義するのに使われる語彙の URL を指定します。
 
-[`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) は `itemtype` が有効になるデータ構造の語彙の対象範囲を設定するために使用します。
+[`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope) は `itemtype` が有効になるデータ構造の語彙の対象範囲を設定するために使用します。
 
 Google などの主要な検索エンジンは、構造化データのために [schema.org](https://schema.org/) の語彙に対応しています。この語彙は標準の型名とプロパティ名の組み合わせを定義しています。例えば、 `MusicEvent` はコンサートを示し、 [`startDate`](https://schema.org/startDate) および [`location`](https://schema.org/location) プロパティでコンサートの主要な詳細を示します。この場合、 [`MusicEvent`](https://schema.org/MusicEvent) の URL を `itemtype` に使用し、 `startDate` や `location` は [`MusicEvent`](https://schema.org/MusicEvent) が定義する `itemprop` となります。
 
@@ -201,10 +201,10 @@ Google などの主要な検索エンジンは、構造化データのために 
 
 ## 関連情報
 
-- [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- [他のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - マイクロデータに関連する他のグローバル属性:
 
-  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
-  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
-  - [`itemref`](/ja/docs/Web/HTML/Global_attributes/itemref)
-  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
+  - [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop)
+  - [`itemref`](/ja/docs/Web/HTML/Reference/Global_attributes/itemref)
+  - [`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope)

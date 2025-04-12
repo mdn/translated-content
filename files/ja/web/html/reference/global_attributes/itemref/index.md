@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-[`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。
+[`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。
 
 `itemref` は文書内のどこかにある追加のプロパティがある要素の ID （`itemid` ではない）のリストを提供します。
 
@@ -60,10 +60,10 @@ l10n:
 
 ## 関連情報
 
-- [他のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- [他のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - マイクロデータに関連する他のグローバル属性:
 
-  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
-  - [`itemprop`](/ja/docs/Web/HTML/Global_attributes/itemprop)
-  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)
-  - [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype)
+  - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
+  - [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop)
+  - [`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope)
+  - [`itemtype`](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype)

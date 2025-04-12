@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`style`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を指定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。
+**`style`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を指定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。
 
 {{InteractiveExample("HTML Demo: style", "tabbed-shorter")}}
 
@@ -22,7 +22,7 @@ l10n:
 ```
 
 > [!NOTE]
-> この属性は、意味的な情報を伝えるために使用してはいけません。すべてのスタイルが削除されたとしても、ページは依然として意味的にが正しくあるべきです。特に、無関係な情報を隠すために使用しないようにしてください。これには [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性を使用してください。
+> この属性は、意味的な情報を伝えるために使用してはいけません。すべてのスタイルが削除されたとしても、ページは依然として意味的にが正しくあるべきです。特に、無関係な情報を隠すために使用しないようにしてください。これには [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性を使用してください。
 
 ## 仕様書
 
@@ -34,4 +34,4 @@ l10n:
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)

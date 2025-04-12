@@ -32,7 +32,7 @@ figure {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `autoplay`
 
@@ -51,16 +51,16 @@ figure {
 
     取ることができる値は `nodownload`、`nofullscreen`、`noremoteplayback` です。
 
-- [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin)
+- [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
 
-  - : この列挙型の属性は、関連する音声ファイルを取得する際に CORS を使用するかを示します。[CORS が有効なリソース](/ja/docs/Web/HTML/CORS_enabled_image) は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます:
+  - : この列挙型の属性は、関連する音声ファイルを取得する際に CORS を使用するかを示します。[CORS が有効なリソース](/ja/docs/Web/HTML/How_to/CORS_enabled_image) は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます:
 
     - `anonymous`
       - : 資格情報を伴わずにオリジン間リクエストを実行します。すなわち、 Cookie や X.509 証明書がない `Origin:` HTTP ヘッダーを送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに信用情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、画像が*汚染*され、その使用も制限されます。
     - `use-credentials`
       - : 資格情報を伴ってオリジン間リクエストを実行します。すなわち、Cookie や X.509 証明書を伴う `Origin:` HTTP ヘッダーを送信する、あるいは HTTP ベーシック認証を行います。サーバーが元のサイトに信用情報を付与しない場合 (`Access-Control-Allow-Credentials:` HTTP ヘッダーに関わらず)、画像が*汚染*され、その使用も制限されます。
 
-    この属性が存在しない場合、リソースは CORS リクエストなしで (すなわち、 `Origin:` HTTP ヘッダーなしで) 取得され、 {{HTMLElement('canvas')}} 要素での汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに **anonymous** が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+    この属性が存在しない場合、リソースは CORS リクエストなしで (すなわち、 `Origin:` HTTP ヘッダーなしで) 取得され、 {{HTMLElement('canvas')}} 要素での汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに **anonymous** が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 - `disableremoteplayback`
 

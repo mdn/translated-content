@@ -55,7 +55,7 @@ l10n:
 
 ### value ありのボタン
 
-`<input type="button">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、ボタンのラベルとして使われる文字列を設定します。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
+`<input type="button">` 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、ボタンのラベルとして使われる文字列を設定します。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
 
 ```html
 <input type="button" value="クリックしてね" />
@@ -75,7 +75,7 @@ l10n:
 
 ## ボタンの使用
 
-`<input type="button">` 要素には既定の動作がありません（親戚である `<input type="submit">` や [`<input type="reset">`](/ja/docs/Web/HTML/Element/input/reset) は、それぞれフォームの送信とリセットに使用されます）。ボタンに何かをさせる場合は、処理を行うための JavaScript コードを書く必要があります。
+`<input type="button">` 要素には既定の動作がありません（親戚である `<input type="submit">` や [`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset) は、それぞれフォームの送信とリセットに使用されます）。ボタンに何かをさせる場合は、処理を行うための JavaScript コードを書く必要があります。
 
 ### 基本的なボタン
 
@@ -111,9 +111,9 @@ function updateButton() {
 
 ### ボタンへのショートカットキーの追加
 
-ショートカットキーは、アクセスキーやキーボードショートカットとも呼ばれますが、ユーザーがキーボード上のキーまたはキーの組み合わせを使用してボタンを操作できるものです。ボタンにショートカットキーを追加するには、どの {{HTMLElement("input")}} でも同じですが、 [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性を使用します。
+ショートカットキーは、アクセスキーやキーボードショートカットとも呼ばれますが、ユーザーがキーボード上のキーまたはキーの組み合わせを使用してボタンを操作できるものです。ボタンにショートカットキーを追加するには、どの {{HTMLElement("input")}} でも同じですが、 [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) グローバル属性を使用します。
 
-この例では、 <kbd>s</kbd> がアクセスキーとして指定されています (ブラウザーと OS の組み合わせによっては、 <kbd>s</kbd> と特定の修飾キーの組み合わせが必要です。その一覧については [accesskey](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください)。
+この例では、 <kbd>s</kbd> がアクセスキーとして指定されています (ブラウザーと OS の組み合わせによっては、 <kbd>s</kbd> と特定の修飾キーの組み合わせが必要です。その一覧については [accesskey](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) を参照してください)。
 
 ```html
 <form>
@@ -146,7 +146,7 @@ function updateButton() {
 
 ### ボタンの無効化と有効化
 
-ボタンを無効にするには、次のように [`disabled`](/ja/docs/Web/HTML/Attributes/disabled) グローバル属性を指定するだけです。
+ボタンを無効にするには、次のように [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) グローバル属性を指定するだけです。
 
 ```html
 <input type="button" value="Disable me" disabled />
@@ -209,7 +209,7 @@ function disableButton() {
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
 > [!NOTE]
-> Firefox は他のブラウザーと異なり、ページが再読み込みされた後でも `<input>` 要素の `disabled` 状態を維持します。回避するには、 `<input>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を `off` に設定します。（詳しくは [Firefox バグ 654072](https://bugzil.la/654072) を参照してください。）
+> Firefox は他のブラウザーと異なり、ページが再読み込みされた後でも `<input>` 要素の `disabled` 状態を維持します。回避するには、 `<input>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を `off` に設定します。（詳しくは [Firefox バグ 654072](https://bugzil.la/654072) を参照してください。）
 
 ## 検証
 

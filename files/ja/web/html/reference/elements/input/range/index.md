@@ -54,14 +54,14 @@ input {
 
 利用可能なパターン検証はありません。しかし、以下の形で自動検証が行われます。
 
-- [`value`](/ja/docs/Web/HTML/Element/input#value) が何かに設定されており、妥当な浮動小数点数に変換できない場合、入力が不正な入力になるので検証に失敗します。
-- 値は [`min`](/ja/docs/Web/HTML/Element/input#min) より小さくはなりません。この既定値は 0 です。
-- 値は [`max`](/ja/docs/Web/HTML/Element/input#max) より大きくはなりません。この既定値は 100 です。
-- 値は [`step`](/ja/docs/Web/HTML/Element/input#step) の倍数になります。この既定値は 1 です。
+- [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が何かに設定されており、妥当な浮動小数点数に変換できない場合、入力が不正な入力になるので検証に失敗します。
+- 値は [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) より小さくはなりません。この既定値は 0 です。
+- 値は [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) より大きくはなりません。この既定値は 100 です。
+- 値は [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) の倍数になります。この既定値は 1 です。
 
 ### 値
 
-[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、選択された数値を文字列で格納します。値は空文字列 (`""`) になることはありません。既定値は指定した最小値と最大値の中間の値です。ただし、最大値が最小値より小さい場合は、`min` 属性の値が既定値に設定されます。既定値を決定するアルゴリズムは次の通りです。
+[`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、選択された数値を文字列で格納します。値は空文字列 (`""`) になることはありません。既定値は指定した最小値と最大値の中間の値です。ただし、最大値が最小値より小さい場合は、`min` 属性の値が既定値に設定されます。既定値を決定するアルゴリズムは次の通りです。
 
 ```js
 defaultValue =
@@ -81,35 +81,35 @@ defaultValue =
 
 ### list
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち、この [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち、この [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 対応しているブラウザーで、範囲のオプションがどのように表示されるかの例としては、以下の[目盛りの追加](#目盛りの追加)を参照してください。
 
 ### max
 
-この入力欄が受け付ける最大値です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 [`max`](/ja/docs/Web/HTML/Attributes/max) 属性の値が数値でない場合、要素は最大値を持ちません。
+この入力欄が受け付ける最大値です。要素に入力された [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性の値が数値でない場合、要素は最大値を持ちません。
 
-この値は [`min`](/ja/docs/Web/HTML/Attributes/min) 属性の値より大きいか、等しくしなければなりません。HTML の [`max`](/ja/docs/Web/HTML/Attributes/max) 属性を参照してください。
+この値は [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) 属性の値より大きいか、等しくしなければなりません。HTML の [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性を参照してください。
 
 ### min
 
-許可されている値の範囲の最小値です。要素の [`value`](/ja/docs/Web/HTML/Element/input#value) がこれより小さい場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が数値でない場合、要素は最小値を持ちません。
+許可されている値の範囲の最小値です。要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) がこれより小さい場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。 `min` 属性の値が数値でない場合、要素は最小値を持ちません。
 
-この値は [`max`](/ja/docs/Web/HTML/Attributes/max) 属性の値以下でなければなりません。 HTML の [`min`](/ja/docs/Web/HTML/Attributes/min) 属性を参照してください。
+この値は [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性の値以下でなければなりません。 HTML の [`min`](/ja/docs/Web/HTML/Reference/Attributes/min) 属性を参照してください。
 
 > [!NOTE]
 > もし `min` と `max` の値が等しかったり、`max` の値が `min` の値より低かったりすると、ユーザーはその範囲を操作することができなくなります。
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値です。指定した刻み間隔（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Element/input#value)、それ以外の場合は適切な既定値）に一致する値のみが有効となります。
+`step` 属性は値が吸着する粒度を指定する数値です。指定した刻み間隔（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)、それ以外の場合は適切な既定値）に一致する値のみが有効となります。
 
 `step` 属性には文字列値 `any` を設定することもできます。この `step` 値は、刻み間隔を意味せず、指定した範囲内で任意の値が許されることを意味します（他にも [`min`](#min) や [`max`](#max) のような制約がある場合は除きます）。対応しているブラウザーでこのように動作するのかについては、[step を `any` に設定](#step_を_any_に設定)の例を参照してください。
 
 > [!NOTE]
 > ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
-`range` 入力欄の既定の刻み値は 1 であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。例えば、 `min` に -10 を、 `value` に 1.5 を設定した場合、 `step` が 1 の場合は正の方向に 1.5, 2.5, 3.5,… など、負の方向に -0.5, -1.5, -2.5,… などのみが許可されます。 [HTML の `step` 属性](/ja/docs/Web/HTML/Attributes/step)を参照してください。</p>
+`range` 入力欄の既定の刻み値は 1 であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。例えば、 `min` に -10 を、 `value` に 1.5 を設定した場合、 `step` が 1 の場合は正の方向に 1.5, 2.5, 3.5,… など、負の方向に -0.5, -1.5, -2.5,… などのみが許可されます。 [HTML の `step` 属性](/ja/docs/Web/HTML/Reference/Attributes/step)を参照してください。</p>
 
 ## 標準外の属性
 
@@ -132,7 +132,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 ### 最小値と最大値の指定
 
-既定では、最小値は 0 で最大値は 100 です。これが望むものでないのであれば、 [`min`](/ja/docs/Web/HTML/Element/input#min) や [`max`](/ja/docs/Web/HTML/Element/input#max) 属性の値を変更することで、簡単に範囲を変更することができます。浮動小数点値にすることもできます。
+既定では、最小値は 0 で最大値は 100 です。これが望むものでないのであれば、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) や [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性の値を変更することで、簡単に範囲を変更することができます。浮動小数点値にすることもできます。
 
 例えば、ユーザーに -10 から 10 までの値を尋ねるのであれば、次のようにすることができます。
 
@@ -144,7 +144,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 ### 値の粒度の設定
 
-既定では、粒度は 1 であり、値は常に整数であることを意味します。粒度は、[`step`](/ja/docs/Web/HTML/Element/input#step) 属性を変更することで制御することができます。例えば、 5 から 10 の中間値が必要であれば、`step` の値を 0.5 に設定してください。
+既定では、粒度は 1 であり、値は常に整数であることを意味します。粒度は、[`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性を変更することで制御することができます。例えば、 5 から 10 の中間値が必要であれば、`step` の値を 0.5 に設定してください。
 
 #### step 属性の設定
 
@@ -156,7 +156,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 #### step を `any` に設定
 
-小数点以下が何桁になろうと、どんな値でも受け入れたい場合は、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性に `any` という値を指定することができます。
+小数点以下が何桁になろうと、どんな値でも受け入れたい場合は、 [`step`](/ja/docs/Web/HTML/Reference/Elements/input#step) 属性に `any` という値を指定することができます。
 
 ##### HTML
 
@@ -184,7 +184,7 @@ input.addEventListener("input", (event) => {
 
 ### 目盛の追加
 
-範囲コントロールに目盛を追加するには、`list` 属性を記載して、それにコントロール上の一連の目盛を定義する {{HTMLElement("datalist")}} 要素の `id` を指定します。各点は {{HTMLElement("option")}} 要素を使用して表現され、その [`value`](/ja/docs/Web/HTML/Element/option#value) には、マークを描画すべき範囲の値が設定されます。
+範囲コントロールに目盛を追加するには、`list` 属性を記載して、それにコントロール上の一連の目盛を定義する {{HTMLElement("datalist")}} 要素の `id` を指定します。各点は {{HTMLElement("option")}} 要素を使用して表現され、その [`value`](/ja/docs/Web/HTML/Reference/Elements/option#value) には、マークを描画すべき範囲の値が設定されます。
 
 #### HTML
 
@@ -377,7 +377,7 @@ CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertica
 
 - [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} およびそれに基づく {{domxref("HTMLInputElement")}} インターフェイス
-- [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number)
 - {{domxref('ValidityState.rangeOverflow')}} および {{domxref('ValidityState.rangeUnderflow')}}
 - [ConstantSourceNode による複数の引数の制御](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

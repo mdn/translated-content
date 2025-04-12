@@ -54,9 +54,9 @@ l10n:
 - 画像には、ホットスポットの始まりと終わりを明示する必要があります。
 - ホットスポットは、どのビューポートサイズでも快適にタップするのに十分な大きさでなければなりません。 どれくらいの大きさか？ [72 × 72 CSS ピクセルは良好な最小値](https://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/)（英語）で、タッチターゲット間の間隔に余裕もあります。 [50languages.com](https://www.goethe-verlag.com/book2/) の世界地図（執筆時点）は、問題を完全に示しています。 アルバニアやエストニアよりもロシアや北米をタップする方がはるかに簡単です。
 
-[常に同じ方法](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブページに画像を置くにはどうするのか)で画像を挿入します（{{htmlelement("img")}} 要素と [`img`](/ja/docs/Web/HTML/Element/img#alt) テキストを使用します）。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な [`area`](/ja/docs/Web/HTML/Element/area#alt) テキストを指定すると `alt=""` と書くことができます。
+[常に同じ方法](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブページに画像を置くにはどうするのか)で画像を挿入します（{{htmlelement("img")}} 要素と [`img`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストを使用します）。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な [`area`](/ja/docs/Web/HTML/Reference/Elements/area#alt) テキストを指定すると `alt=""` と書くことができます。
 
-特殊な [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
+特殊な [`usemap`](/ja/docs/Web/HTML/Reference/Elements/img#usemap) 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
 
 ```html
 <img src="image-map.png" alt="" usemap="#example-map-1" />
@@ -64,7 +64,7 @@ l10n:
 
 ### ステップ 2: ホットスポットを有効にする
 
-このステップでは、すべてのコードを {{htmlelement('map')}} 要素内に配置します。 `<map>` には、上の `usemap` 属性で使用したのと同じマップ名の [`name`](/ja/docs/Web/HTML/Element/map#name) 属性だけが必要です。
+このステップでは、すべてのコードを {{htmlelement('map')}} 要素内に配置します。 `<map>` には、上の `usemap` 属性で使用したのと同じマップ名の [`name`](/ja/docs/Web/HTML/Reference/Elements/map#name) 属性だけが必要です。
 
 ```html
 <map name="example-map-1"> </map>
@@ -74,9 +74,9 @@ l10n:
 
 `<area>` 要素は{{glossary("void element", "空要素")}}ですが、次の 4 つの属性が必要です。
 
-- [`shape`](/ja/docs/Web/HTML/Element/area#shape)
+- [`shape`](/ja/docs/Web/HTML/Reference/Elements/area#shape)
 
-  [`coords`](/ja/docs/Web/HTML/Element/area#coords)
+  [`coords`](/ja/docs/Web/HTML/Reference/Elements/area#coords)
 
   - : `shape` は、`circle`（円）、`rect`（四角形）、`poly`（ポリゴン）、`default`（デフォルト）の 4 つの値のいずれかをとります。 （`default` の `<area>` は画像全体から、あなたが定義した他のホットスポットを除いたものです。） 選択した `shape` によって、`coords` で指定する必要がある座標情報が決まります。
 
@@ -88,9 +88,9 @@ l10n:
 
     重なり合っている場合、ソースでの順序で選ばれます。
 
-- [`href`](/ja/docs/Web/HTML/Element/area#href)
+- [`href`](/ja/docs/Web/HTML/Reference/Elements/area#href)
   - : リンク先のリソースの URL。 現在の領域をどこにもリンクさせたくない場合は、この属性を空白のままにしておくことができます（空白の円を描いている場合など）。
-- [`alt`](/ja/docs/Web/HTML/Element/area#alt)
+- [`alt`](/ja/docs/Web/HTML/Reference/Elements/area#alt)
 
   - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `alt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#明確なリンク語を使う)を参照してください。
 

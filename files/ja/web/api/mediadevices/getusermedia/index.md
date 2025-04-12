@@ -129,9 +129,9 @@ Permissions-Policy: microphone=(self "https://developer.mozilla.org")
 
 `getUserMedia()` は、予期せず使用された場合やセキュリティが慎重に管理されていない場合には、明らかにセキュリティ上の問題があるため、保護されたコンテキストでのみ使用することができます。次に `getUserMedia()` を呼び出そうとするような、安全でない方法で文書を読み込む方法はいくつもあります。以下は `getUserMedia()` を呼び出すことが許されない状況の例です。
 
-- サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
+- サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
 - オリジンを持たない `data://` や `blob://` の URL を使って読み込まれた文書（例えば、これらの URL のいずれかがユーザーによってアドレスバー入力された場合）は、 `getUserMedia()` を呼び出すことができません。 JavaScript のコードから読み込まれたこれらの種類の URL は、スクリプトの権限を継承します。
-- その他、 [`srcdoc`](/ja/docs/Web/HTML/Element/iframe#srcdoc) 属性でフレームの内容を指定している場合など、オリジンが存在しない場合。
+- その他、 [`srcdoc`](/ja/docs/Web/HTML/Reference/Elements/iframe#srcdoc) 属性でフレームの内容を指定している場合など、オリジンが存在しない場合。
 
 ## 例
 

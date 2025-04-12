@@ -46,14 +46,14 @@ p {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `media`
   - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)であり、省略した場合の既定値は `all` です。
 - `nonce`
   - : [style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
 - `title`
-  - : この属性は[代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)のセットを指定します。
+  - : この属性は[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)のセットを指定します。
 - `blocking` {{Experimental_Inline}}
   - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。[`@import`](/ja/docs/Web/CSS/@import) でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で [`background-image`](/ja/docs/Web/CSS/background-image) やフォントはそうとはみなされません。
     - `render`: 画面へのコンテンツの描画がブロックされます。
@@ -224,4 +224,4 @@ p {
 ## 関連情報
 
 - 文書に外部スタイルシートを適用することができる {{HTMLElement("link")}} 要素
-- [代替スタイルシート](/ja/docs/Web/HTML/Attributes/rel/alternate_stylesheet)
+- [代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)

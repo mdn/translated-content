@@ -20,7 +20,7 @@ l10n:
 
 ### HTML
 
-- [`<link rel="preload">`](/ja/docs/Web/HTML/Attributes/rel/preload) を有効化しました ([Firefox バグ 1626997](https://bugzil.la/1626997))。
+- [`<link rel="preload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を有効化しました ([Firefox バグ 1626997](https://bugzil.la/1626997))。
 
 #### 廃止
 

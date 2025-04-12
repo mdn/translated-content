@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `shadowrootmode`
 
@@ -357,7 +357,7 @@ container.appendChild(secondClone);
 
 ## 関連情報
 
-- [`part`](/ja/docs/Web/HTML/Global_attributes/part) および [`exportparts`](/ja/docs/Web/HTML/Global_attributes/exportparts) 属性
+- [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) および [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性
 - {{HTMLElement("slot")}} 要素
 - {{CSSXref(":host")}}、{{CSSXref(":host_function", ":host()")}}、{{CSSXref(":host-context", ":host-context()")}} 擬似クラス
 - {{CSSXref("::part")}}、{{CSSXref("::slotted")}} 擬似要素

@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`enterkeyhint`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、属性であり、仮想キーボードの \[Enter] キーにどのようなアクションラベル（またはアイコン）を表示するかを定義する[列挙型](/ja/docs/Glossary/Enumerated)属性です。
+**`enterkeyhint`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、属性であり、仮想キーボードの \[Enter] キーにどのようなアクションラベル（またはアイコン）を表示するかを定義する[列挙型](/ja/docs/Glossary/Enumerated)属性です。
 
 {{InteractiveExample("HTML Demo: enterkeyhint", "tabbed-shorter")}}
 
@@ -20,10 +20,10 @@ l10n:
 
 ## 解説
 
-[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)（[`<textarea>`](/ja/docs/Web/HTML/Element/textarea) や [`<input>`](/ja/docs/Web/HTML/Element/input) 要素など）や [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) を使用している要素は、
-[`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性を指定して、どのような仮想キーボードを使用するかを制御することができます。さらに使い勝手を向上させるために、 \[Enter] キーをどのようにラベル付けするか （またはどのアイコンを表示するか） を示す `enterkeyhint` 属性を指定することで、\[Enter] キーを特別にカスタマイズすることができます。\[Enter] キーは通常、ユーザーが次に何をすべきかを表します。よくある操作としては、テキストの送信、改行の挿入、検索などがあります。
+[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)（[`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) や [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素など）や [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) を使用している要素は、
+[`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性を指定して、どのような仮想キーボードを使用するかを制御することができます。さらに使い勝手を向上させるために、 \[Enter] キーをどのようにラベル付けするか （またはどのアイコンを表示するか） を示す `enterkeyhint` 属性を指定することで、\[Enter] キーを特別にカスタマイズすることができます。\[Enter] キーは通常、ユーザーが次に何をすべきかを表します。よくある操作としては、テキストの送信、改行の挿入、検索などがあります。
 
-もし `enterkeyhint` 属性が指定されなければ、ユーザーエージェントは [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode), [`type`](/ja/docs/Web/HTML/Element/input#input_types), [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性から文脈に合った情報を得て、適した \[Enter] キーのラベル（またはアイコン）を表示するかもしれません。
+もし `enterkeyhint` 属性が指定されなければ、ユーザーエージェントは [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode), [`type`](/ja/docs/Web/HTML/Reference/Elements/input#input_types), [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性から文脈に合った情報を得て、適した \[Enter] キーのラベル（またはアイコン）を表示するかもしれません。
 
 ### 値
 
@@ -97,7 +97,7 @@ l10n:
 ## 関連情報
 
 - [`HTMLElement.enterKeyHint`](/ja/docs/Web/API/HTMLElement/enterKeyHint) プロパティはこの属性を反映します
-- [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) グローバル属性
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) グローバル属性
-- [`type`](/ja/docs/Web/HTML/Element/input#input_types) および
-  [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性（[`<input>`](/ja/docs/Web/HTML/Element/input) 要素）
+- [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) グローバル属性
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性
+- [`type`](/ja/docs/Web/HTML/Reference/Elements/input#input_types) および
+  [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性（[`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素）

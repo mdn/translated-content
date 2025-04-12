@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemprop`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、アイテムにプロパティを追加するために使用します。すべての HTML 要素に `itemprop` 属性を設定することができ、 `itemprop` は名前と値の組み合わせで構成されます。名前と値の組み合わせは**プロパティ**と呼ばれ、 1 つまたは複数のプロパティで**アイテム**を構成します。プロパティ値は文字列又は URL のどちらかで、 {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, {{HTMLElement("video")}} など、広範にわたる要素と関連付けすることができます。
+**`itemprop`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、アイテムにプロパティを追加するために使用します。すべての HTML 要素に `itemprop` 属性を設定することができ、 `itemprop` は名前と値の組み合わせで構成されます。名前と値の組み合わせは**プロパティ**と呼ばれ、 1 つまたは複数のプロパティで**アイテム**を構成します。プロパティ値は文字列又は URL のどちらかで、 {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, {{HTMLElement("video")}} など、広範にわたる要素と関連付けすることができます。
 
 ## 例
 
@@ -68,7 +68,7 @@ l10n:
 
 ## プロパティ
 
-プロパティは、文字列か URL のどちらかの形で値を持ちます。文字列の値が URL である場合、 {{HTMLElement("a")}} 要素とその [`href`](/ja/docs/Web/HTML/Element/a#href) 属性、 {{HTMLElement("img")}} 要素とその [`src`](/ja/docs/Web/HTML/Element/img#src) 属性、または外部リソースにリンクしたり埋め込んだりするその他の要素を用いて表現されます。
+プロパティは、文字列か URL のどちらかの形で値を持ちます。文字列の値が URL である場合、 {{HTMLElement("a")}} 要素とその [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性、 {{HTMLElement("img")}} 要素とその [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) 属性、または外部リソースにリンクしたり埋め込んだりするその他の要素を用いて表現されます。
 
 ### 文字列の値を持つ 3 つのプロパティ
 
@@ -303,7 +303,7 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 
 - 要素が `audio`, `embed`, `iframe`, `img`, `source`, `track`, `video` 要素である場合
 
-  - 値は、属性が設定される時に要素のノード文書（[マイクロデータ DOM API](/ja/docs/Web/HTML/Microdata) の一部）に関連する要素の src 属性の解析する値に由来する結果の URL 文字列である
+  - 値は、属性が設定される時に要素のノード文書（[マイクロデータ DOM API](/ja/docs/Web/HTML/Guides/Microdata) の一部）に関連する要素の src 属性の解析する値に由来する結果の URL 文字列である
 
 - 要素が `a`, `area`, `link` 要素である場合
 
@@ -438,10 +438,10 @@ ID が人間にとって読みやすくない場合、 ID の代わりに製品�
 
 ## 関連情報
 
-- [それ以外のグローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- [それ以外のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - その他のマイクロデータに関するグローバル属性:
 
-  - [`itemid`](/ja/docs/Web/HTML/Global_attributes/itemid)
-  - [`itemref`](/ja/docs/Web/HTML/Global_attributes/itemref)
-  - [`itemscope`](/ja/docs/Web/HTML/Global_attributes/itemscope)
-  - [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype)
+  - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
+  - [`itemref`](/ja/docs/Web/HTML/Reference/Global_attributes/itemref)
+  - [`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope)
+  - [`itemtype`](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype)

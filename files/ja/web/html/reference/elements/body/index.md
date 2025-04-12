@@ -77,7 +77,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `alink` {{deprecated_inline}}
   - : ハイパーリンクの選択時の文字色です。**この属性を使用しないでください。代わりに CSS の {{cssxref("color")}} プロパティを {{cssxref(":active")}} 擬似クラスで使用してください。**

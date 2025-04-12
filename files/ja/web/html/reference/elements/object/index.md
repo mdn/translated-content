@@ -22,7 +22,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `archive` {{deprecated_inline}}
   - : オブジェクトのリソースの URI 群を、半角スペースで区切って指定します。
@@ -49,7 +49,7 @@ l10n:
 - `type`
   - : **data** 属性によって指定されたリソースの [コンテンツ型](/ja/docs/Glossary/MIME_type)。**data** 属性と **type** 属性のうち、少なくとも 1 つは定義しておく必要があります。
 - `usemap`
-  - : {{HTMLElement("map")}} 要素を参照するハッシュ名。 '#' の後に map 要素の [`name`](/ja/docs/Web/HTML/Element/map#name) 属性を繋げた文字列を属性値として記述します。
+  - : {{HTMLElement("map")}} 要素を参照するハッシュ名。 '#' の後に map 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/map#name) 属性を繋げた文字列を属性値として記述します。
 - `width`
   - : 表示されるリソースの幅を [CSS ピクセル数](https://drafts.csswg.org/css-values/#px) で指定。（絶対的な値に限ります。[パーセンテージは不可](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)）
 

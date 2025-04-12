@@ -40,7 +40,7 @@ p {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
 
 ### 非推奨の属性
 

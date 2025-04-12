@@ -191,7 +191,7 @@ LaTeXに慣れない場合は、 [ASCIIMath](https://asciimath.org/#syntax) や 
 </html>
 ```
 
-そのページは [`script`](/ja/docs/Web/HTML/Element/script) タグを持っていません。代わりに、 [Node.js](https://nodejs.org/) と [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) を使用すると、以下のコマンド行で変換が実行されます。
+そのページは [`script`](/ja/docs/Web/HTML/Reference/Elements/script) タグを持っていません。代わりに、 [Node.js](https://nodejs.org/) と [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line) を使用すると、以下のコマンド行で変換が実行されます。
 
 ```bash
 cat input.html | node TeXZilla.js streamfilter > output.html

@@ -67,7 +67,7 @@ viewport は機能と値のペアをカンマで区切ったリストです。�
 <meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
-他にも利用できる[属性](/ja/docs/Web/HTML/Element/meta#属性)として `minimum-scale`, `maximum-scale`, `user-scalable` があります。これらのプロパティは、初期の拡大縮小や横幅に影響を与え、また、ズームレベルの変更を制限します。
+他にも利用できる[属性](/ja/docs/Web/HTML/Reference/Elements/meta#属性)として `minimum-scale`, `maximum-scale`, `user-scalable` があります。これらのプロパティは、初期の拡大縮小や横幅に影響を与え、また、ズームレベルの変更を制限します。
 
 ## 対話型 UI ウィジェットの影響
 

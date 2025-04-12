@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<footer>`** は [HTML](/ja/docs/Web/HTML) の要素で、直近の[区分コンテンツ](/ja/docs/Web/HTML/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/HTML/Element/Heading_Elements#区分コンテンツのラベル付け)要素のフッターを表します。フッターには通常、そのセクションの著者に関する情報、関連文書へのリンク、著作権情報等を含めます。
+**`<footer>`** は [HTML](/ja/docs/Web/HTML) の要素で、直近の[区分コンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#区分コンテンツのラベル付け)要素のフッターを表します。フッターには通常、そのセクションの著者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
 {{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
 
@@ -44,13 +44,13 @@ footer {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 使用上のメモ
 
 - セクションの著者や編集者の連絡先情報は、多くの場合 `<footer>` 要素内に {{HTMLElement("address")}} 要素として配置します。
 - 区分コンテンツや区分化ルート要素の最も近い祖先が本体要素の場合、フッターはページ全体に適用されます。
-- `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Web/HTML/Element/Heading_Elements)を生成することはありません。
+- `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)を生成することはありません。
 
 ## 例
 
@@ -162,5 +162,5 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}}
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA: Contentinfo ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)

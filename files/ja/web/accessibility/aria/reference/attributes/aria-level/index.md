@@ -63,4 +63,4 @@ DOM の祖先がレベルを正確に表している場合、ユーザーエー�
 
 ## 関連情報
 
-- [`<h1>` から `<h6>`: HTML 見出し要素](/ja/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, {{htmlelement("Heading_Elements", "h6")}})
+- [`<h1>` から `<h6>`: HTML 見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, {{htmlelement("Heading_Elements", "h6")}})

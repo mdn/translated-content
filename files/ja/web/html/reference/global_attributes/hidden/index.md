@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`hidden`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は {{Glossary("enumerated", "列挙型")}}属性であり、ブラウザーがその要素の中身を表示すべきではないことを示します。例えば、
+**`hidden`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は {{Glossary("enumerated", "列挙型")}}属性であり、ブラウザーがその要素の中身を表示すべきではないことを示します。例えば、
 要素がまだ、あるいはもはや*関連性*がないことを示す論理型属性です。例えば、ログイン処理が完了するまで使用できないページの要素を非表示にするために使用することができます。
 
 {{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
@@ -185,6 +185,6 @@ document.querySelector("#reset").addEventListener("click", () => {
 ## 関連情報
 
 - {{DOMxRef("HTMLElement.hidden")}}
-- すべての [グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
+- すべての [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)。
 - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性
 - [`beforematch`](/ja/docs/Web/API/Element/beforematch_event) イベント

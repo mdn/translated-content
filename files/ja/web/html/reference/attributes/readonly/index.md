@@ -50,9 +50,9 @@ textarea:read-only {
 
 ### 属性の相互作用
 
-[`disabled`](/ja/docs/Web/HTML/Attributes/disabled) と `readonly` の違いは、読み取り専用 (readonly) のコントロールは機能し、フォーカスを設定することもできるのに対し、無効な (disabled) コントロールはフォーカスを受け取ることができず、フォームで送信されず、一般に有効化されるまでコントロールとしては機能しません。
+[`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) と `readonly` の違いは、読み取り専用 (readonly) のコントロールは機能し、フォーカスを設定することもできるのに対し、無効な (disabled) コントロールはフォーカスを受け取ることができず、フォームで送信されず、一般に有効化されるまでコントロールとしては機能しません。
 
-読み取り専用のフィールドはユーザーの操作で値を変更することはできないので、 [`required`](/ja/docs/Web/HTML/Attributes/required) は `readonly` 属性が一緒に指定されている入力欄では効果がありません。
+読み取り専用のフィールドはユーザーの操作で値を変更することはできないので、 [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) は `readonly` 属性が一緒に指定されている入力欄では効果がありません。
 
 readonly が付いた値を動的に変更できる唯一の方法は、スクリプトを通して行うことです。
 

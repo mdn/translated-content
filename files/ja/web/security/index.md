@@ -159,7 +159,7 @@ CSP を使用すると、例えば、特定の信頼された元から読み込�
 次の機能はクリックジャッキング対策として役立ちます。
 
 - [HTTP X-Frame-Options](/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーがページを [`<frame>`](/ja/docs/Web/HTML/Element/frame)、[`<iframe>`](/ja/docs/Web/HTML/Element/iframe)、[`<embed>`](/ja/docs/Web/HTML/Element/embed)、[`<object>`](/ja/docs/Web/HTML/Element/object) でレンダリングすることを許可するかどうかを指定することができます。 サイトは、このヘッダーを使用して、コンテンツが他のサイトに埋め込まれないように確保することで、クリックジャッキング攻撃を避けることができます。
+  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーがページを [`<frame>`](/ja/docs/Web/HTML/Reference/Elements/frame)、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe)、[`<embed>`](/ja/docs/Web/HTML/Reference/Elements/embed)、[`<object>`](/ja/docs/Web/HTML/Reference/Elements/object) でレンダリングすることを許可するかどうかを指定することができます。 サイトは、このヘッダーを使用して、コンテンツが他のサイトに埋め込まれないように確保することで、クリックジャッキング攻撃を避けることができます。
 - [CSP: frame-ancestors](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} を使用してページを埋め込むことができる有効な親を指定します。
 

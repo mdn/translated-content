@@ -8,9 +8,9 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-**`popover`** は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、要素をポップオーバー要素として示すために使われます。
+**`popover`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、要素をポップオーバー要素として示すために使われます。
 
-ポップオーバー要素は、呼び出し／制御要素（すなわち `<button>` または `<input type="button">` に [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性が付いたもの）、または {{domxref("HTMLElement.showPopover()")}} の呼び出しによって開かれるまで、`display: none` で非表示になっています。
+ポップオーバー要素は、呼び出し／制御要素（すなわち `<button>` または `<input type="button">` に [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性が付いたもの）、または {{domxref("HTMLElement.showPopover()")}} の呼び出しによって開かれるまで、`display: none` で非表示になっています。
 
 開かれると、ポップオーバー要素は、{{glossary("top layer", "最上位レイヤー")}}内の他のすべての要素の上に現れ、親要素の {{cssxref('position')}} や {{cssxref('overflow')}} のスタイル付けの影響を受けません。
 

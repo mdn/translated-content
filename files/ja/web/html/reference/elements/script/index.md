@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `async`
 
@@ -62,8 +62,8 @@ l10n:
   - : この属性は、スクリプトを取得する際に特定の操作をブロックすべきであることを明示的に示します。ブロックされる操作は、下記に掲載されているブロックトークンの空白区切りリストでなければなりません。
     - `render`: 画面へのコンテンツのレンダリングのブロックします。
 
-- [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin)
-  - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックに通らないスクリプトに対して、 {{domxref('Window.error_event', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)をご覧ください。
+- [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
+  - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックに通らないスクリプトに対して、 {{domxref('Window.error_event', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)をご覧ください。
 - `defer`
 
   - : この論理属性は、スクリプトを文書の解析完了後かつ {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前に実行することをブラウザーに示します。
@@ -121,7 +121,7 @@ l10n:
 
 - `src`
   - : この属性は外部スクリプトの URI を指定します。文書に直接スクリプトを埋め込む代わりに使用することができます。
-- [`type`](/ja/docs/Web/HTML/Element/script/type)
+- [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type)
 
   - : この属性は、表現されるスクリプトの種類を示します。
     この属性の値は、以下のいずれかになります。
@@ -130,7 +130,7 @@ l10n:
       - : スクリプトが「クラシックスクリプト」であること、JavaScript コードを保持していることを示します。
         このスクリプトが JavaScript コードを参照している場合、MIME タイプを指定するのではなく、この属性を省略することを推奨します。
         JavaScript の MIME タイプは [IANA media types specification に掲載されています](/ja/docs/Web/HTTP/Guides/MIME_types#textjavascript)。
-    - [`importmap`](/ja/docs/Web/HTML/Element/script/type/importmap)
+    - [`importmap`](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)
       - : この値は、要素の本体にインポートマップが格納されていることを示します。
         インポートマップ JSON オブジェクトで、開発者が [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules#インポートマップを使用したモジュールのインポート)をインポートする際に、ブラウザーがモジュール指定子を解決する方法を制御するために使用できます。
     - `module`
@@ -139,7 +139,7 @@ l10n:
         `charset` および `defer` 属性の影響を受けません。
         `module` の利用についての情報は、 [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)をご覧ください。
         クラシックスクリプトとは異なり、モジュールスクリプトはオリジンをまたいで読み取る場合、CORS プロトコルを使用する必要があります。
-    - [`speculationrules`](/ja/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+    - [`speculationrules`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
       - : この値は、この要素の本体が投機ルールであることを示します。投機ルールは JSON オブジェクトの形で提供され、ブラウザーがどのリソースを事前取得または事前レンダリングすべきかを決定します。これは、{{domxref("Speculation Rules API", "投機ルール API", "", "nocode")}} の一部です。
     - **その他の値**
       - : このタグで埋め込んだコンテンツを、ブラウザーによって処理されないデータブロックとして扱います。

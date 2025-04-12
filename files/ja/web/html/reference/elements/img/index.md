@@ -34,7 +34,7 @@ l10n:
 
 - セキュリティとプライバシーのための[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 制御。 [`crossorigin`](#crossorigin) および [`referrerpolicy`](#referrerpolicy) を参照してください。
 - [`width`](#width) と [`height`](#height) の両方を使用して画像の固有の寸法を設定すると、画像を読み込む前に場所を確保し、コンテンツのレイアウトが移動することを防ぐことができます。
-- [`sizes`](#sizes) および [`srcset`](#srcset) を使用したレスポンシブ画像のヒント ({{htmlelement("picture")}} 要素と[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)のチュートリアルもご覧ください)。
+- [`sizes`](#sizes) および [`srcset`](#srcset) を使用したレスポンシブ画像のヒント ({{htmlelement("picture")}} 要素と[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)のチュートリアルもご覧ください)。
 
 ## 対応している画像形式
 
@@ -69,7 +69,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - [`alt`](/ja/docs/Web/API/HTMLImageElement/alt#usage_notes)
 
@@ -117,9 +117,9 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     > [!NOTE]
     > 複数の URL を指定すると、同じ機能に複数の帰属元を登録することができます。例えば、成功を測定しようとしている異なるキャンペーンがあり、異なるデータについて異なるレポートを生成する必要がある場合などです。
 
-- [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin)
+- [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
 
-  - : 画像を取得する際に {{glossary("CORS")}} を使用しなければならないかどうかを示します。 CORS リクエストから返された[CORS が有効な画像](/ja/docs/Web/HTML/CORS_enabled_image)は、 {{HTMLElement("canvas")}} 要素で「[汚染](/ja/docs/Web/HTML/CORS_enabled_image#セキュリティと汚染されたキャンバス)」されることなく再利用することができます。
+  - : 画像を取得する際に {{glossary("CORS")}} を使用しなければならないかどうかを示します。 CORS リクエストから返された[CORS が有効な画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)は、 {{HTMLElement("canvas")}} 要素で「[汚染](/ja/docs/Web/HTML/How_to/CORS_enabled_image#セキュリティと汚染されたキャンバス)」されることなく再利用することができます。
 
     `crossorigin` 属性が指定されて*いない*場合は、 ({{httpheader("Origin")}} リクエストヘッダーがない) CORS 以外のリクエストが送信され、ブラウザーは画像が汚染されたものとしてマークし、その画像データへのアクセスを制限して、 {{HTMLElement("canvas")}} 要素での使用を防ぎます。
 
@@ -132,7 +132,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     - `use-credentials`
       - : CORS リクエストは、資格情報 (つまり、Cookie、X.509 証明書、 `Authorization` リクエストヘッダー) が含まれた状態で送信されます。サーバーが元のサイトとの資格情報の共有を選択する (`Access-Control-Allow-Credentials: true` レスポンスヘッダーを送り返す) ことをしなかった場合、ブラウザーは画像を汚染されたものとしてマークし、その画像データへのアクセスを制限します。
 
-    この属性の値が無効である場合は、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。詳しくは[CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+    この属性の値が無効である場合は、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。詳しくは[CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 - `decoding`
 
@@ -151,9 +151,9 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     - `auto`
       - : デコードモードの優先順位はありません。ブラウザーがユーザーにとって最適なものを決定します。これは既定値です。
 
-- [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming)
+- [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming)
 
-  - : {{domxref("PerformanceElementTiming")}} API による監視のために画像をマークします。指定された値は、監視される画像要素の識別子になります。[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性のページも参照してください。
+  - : {{domxref("PerformanceElementTiming")}} API による監視のために画像をマークします。指定された値は、監視される画像要素の識別子になります。[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性のページも参照してください。
 
 - `fetchpriority`
 
@@ -181,7 +181,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   - : 論理属性で、この画像が[サーバーサイドマップ](https://en.wikipedia.org/wiki/Image_map#Server-side)の一部であるかを示します。そうである場合は、クリック位置の正確な座標をサーバーに送信します。
 
     > [!NOTE]
-    > この属性は `<img>` 要素が、有効な [`href`](/ja/docs/Web/HTML/Element/a#href) 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
+    > この属性は `<img>` 要素が、有効な [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
 
 - `loading`
 
@@ -241,13 +241,13 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
     `srcset` 属性が幅の記述子を使用した場合、 `sizes` 属性も指定しなければなりません。そうでなければ、 `srcset` 自体が無視されます。
 
-    ユーザーエージェントには、利用可能なソースからひとつを選択する裁量があります。これは、ユーザー設定や{{glossary("bandwidth", "帯域幅")}}の条件などに基づいて選択を適合させるような、かなりの裁量が与えられています。例としては[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)のチュートリアルをご覧ください。
+    ユーザーエージェントには、利用可能なソースからひとつを選択する裁量があります。これは、ユーザー設定や{{glossary("bandwidth", "帯域幅")}}の条件などに基づいて選択を適合させるような、かなりの裁量が与えられています。例としては[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)のチュートリアルをご覧ください。
 
 - `width`
   - : 画像固有の幅をピクセル値で指定します。単位のない整数でなければなりません。
 - `usemap`
 
-  - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Element/map)の部分的な {{glossary("URL")}} ('`#`' で始まる) です。
+  - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Reference/Elements/map)の部分的な {{glossary("URL")}} ('`#`' で始まる) です。
 
     > [!NOTE]
     > この属性は、`<img>` 要素が {{htmlelement("a")}} または {{HTMLElement("button")}} 要素の子孫である場合に使用することはできません。
@@ -275,13 +275,13 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
   - : 画像の左右に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 - `longdesc` {{deprecated_inline}}
 
-  - : 画像の詳細な説明へのリンクです。有効な値は、 {{glossary("URL")}} または要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) です。
+  - : 画像の詳細な説明へのリンクです。有効な値は、 {{glossary("URL")}} または要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) です。
 
     > [!NOTE]
     > この属性は、最新の {{glossary("W3C")}} のバージョンである [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc) でも言及されていますが、 {{glossary("WHATWG")}} の [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) では完全に削除されています。将来が不確実なので、代わりに、[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) または[`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details) のような {{glossary("WAI")}}-{{glossary("ARIA")}} の代替手段を使用してください。
 
 - `name` {{deprecated_inline}}
-  - : 要素の名前です。代わりに [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性を使用してください。
+  - : 要素の名前です。代わりに [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を使用してください。
 - `vspace` {{deprecated_inline}}
   - : 画像の上下に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 
@@ -335,9 +335,9 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ### title 属性
 
-[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
+[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を `alt` 属性の代わりに利用することはできません。加えて、 `alt` 属性の値を同じ画像の `title` 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。
 
-`title` 属性は、画像の `alt` の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 [`figure`](/ja/docs/Web/HTML/Element/figure) および [`figcaption`](/ja/docs/Web/HTML/Element/figcaption) 要素と組み合わせて使用してください。
+`title` 属性は、画像の `alt` の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 [`figure`](/ja/docs/Web/HTML/Reference/Elements/figure) および [`figcaption`](/ja/docs/Web/HTML/Reference/Elements/figcaption) 要素と組み合わせて使用してください。
 
 `title` 属性の値は、よくツールチップとして、画像の上でカーソルを停止させた後で間もなく表示されます。これはユーザーに追加の情報を提供する*ことができます*が、ユーザーが必ず見ると仮定してはいけません。ユーザーはキーボードやタッチパネルしか持っていないかもしれません。ユーザーが見ることが特に重要または有益である情報があるのであれば、上記の `title` を使用するのではなく、何らかの方法で行内に表示するべきです。
 
@@ -528,4 +528,4 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - この要素の {{domxref("HTMLImageElement")}} インターフェイス
 - [HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [画像のファイル形式のガイド](/ja/docs/Web/Media/Guides/Formats/Image_types)
-- [レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)
+- [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)

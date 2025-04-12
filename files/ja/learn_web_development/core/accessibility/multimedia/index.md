@@ -308,7 +308,7 @@ This is the second.
 HTML のメディア再生と共に表示させるためには、次のことをする必要があります。
 
 - .vtt ファイルとしてアクセス可能な場所に保存します。
-- {{htmlelement("track")}} 要素で .vtt へのリンクを設定します。 `<track>` は `<audio>` か `<video>` の間に設置する必要がありますが、すべての `<source>` 要素の後でなければいけません。 [`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使い、キューが字幕、キャプション、音声解説のどれなのかを指定します。さらに、 [`srclang`](/ja/docs/Web/HTML/Element/track#srclang) を使って、字幕でどの言語が使用されているのかを伝えます。
+- {{htmlelement("track")}} 要素で .vtt へのリンクを設定します。 `<track>` は `<audio>` か `<video>` の間に設置する必要がありますが、すべての `<source>` 要素の後でなければいけません。 [`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) 属性を使い、キューが字幕、キャプション、音声解説のどれなのかを指定します。さらに、 [`srclang`](/ja/docs/Web/HTML/Reference/Elements/track#srclang) を使って、字幕でどの言語が使用されているのかを伝えます。
 
 例を見てみましょう。
 

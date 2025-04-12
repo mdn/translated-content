@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-`<input type="submit">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。ボタンはその他の真の値を持ちません。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
+`<input type="submit">` 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。ボタンはその他の真の値を持ちません。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
 
 ### value 属性の設定
 
@@ -38,9 +38,9 @@ l10n:
 
 ### formaction
 
-文字列で、データの送信先の URL を示します。これはこの {{HTMLElement("input")}} が属する {{HTMLElement("form")}} 要素の [`action`](/ja/docs/Web/HTML/Element/form#action) 属性より優先します。
+文字列で、データの送信先の URL を示します。これはこの {{HTMLElement("input")}} が属する {{HTMLElement("form")}} 要素の [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性より優先します。
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ### formenctype
 
@@ -49,36 +49,36 @@ l10n:
 - `application/x-www-form-urlencoded`
   - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
 - `multipart/form-data`
-  - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) が `file` ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
+  - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が `file` ([`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
   - : プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。
 
-`formenctype` 属性が指定された場合、所属するフォームの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性を上書きします。
+`formenctype` 属性が指定された場合、所属するフォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性を上書きします。
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ### formmethod
 
-文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Element/form#method) を上書きします。許可されている値は次の通りです。
+文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) を上書きします。許可されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("GET")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("GET")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
 - `post`
-  - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) で指定された URL に HTTP の {{HTTPMethod("POST")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
+  - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) で指定された URL に HTTP の {{HTTPMethod("POST")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
 - `dialog`
   - : このメソッドは、入力欄が関連付けられたダイアログを閉じるだけで、フォームのデータをまったく送信しない場合ことを表すために使用します。
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ### formnovalidate
 
-論理属性で、存在する場合は、サーバーに送信する前にフォームの検証を行わないことを指定します。これは、自分自身で形成するフォームの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性の値より優先されます。
+論理属性で、存在する場合は、サーバーに送信する前にフォームの検証を行わないことを指定します。これは、自分自身で形成するフォームの [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性の値より優先されます。
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ### formtarget
 
-フォームを送信した後に受け取ったレスポンスを表示する場所を示す名前またはキーワードを指定する文字列です。この文字列は、**閲覧コンテキスト**（つまり、タブ、ウィンドウ、または {{HTMLElement("iframe")}}）の名前である必要があります。ここで指定された値は、この入力を所有している {{HTMLElement("form")}} の [`target`](/ja/docs/Web/HTML/Element/form#target) 属性で指定された対象を上書きします。
+フォームを送信した後に受け取ったレスポンスを表示する場所を示す名前またはキーワードを指定する文字列です。この文字列は、**閲覧コンテキスト**（つまり、タブ、ウィンドウ、または {{HTMLElement("iframe")}}）の名前である必要があります。ここで指定された値は、この入力を所有している {{HTMLElement("form")}} の [`target`](/ja/docs/Web/HTML/Reference/Elements/form#target) 属性で指定された対象を上書きします。
 
 タブ、ウィンドウ、インラインフレームなどの実際の名前の他に、使用できる特別なキーワードがいくつかあります。
 
@@ -91,11 +91,11 @@ l10n:
 - `_top`
   - : レスポンスを最上位の閲覧コンテキストに読み込みます。これは、現在のコンテキストの最上位の祖先である閲覧コンテキストです。現在のコンテキストが最上位のコンテキストである場合、これは `_self` と同じように動作します。
 
-この属性は [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
+この属性は [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ## submit ボタンの使用
 
-`<input type="submit">` ボタンはフォームを送信するために使用されます。もしカスタムボタンを作成し、JavaScript で動作をカスタマイズしたい場合は、[`<input type="button">`](/ja/docs/Web/HTML/Element/input/button) か、より好ましくは {{htmlelement("button")}} 要素を使用しなければいけません。
+`<input type="submit">` ボタンはフォームを送信するために使用されます。もしカスタムボタンを作成し、JavaScript で動作をカスタマイズしたい場合は、[`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button) か、より好ましくは {{htmlelement("button")}} 要素を使用しなければいけません。
 
 もしフォームのボタンを作成するのに `<button>` 要素を使用するのであれば、次のことに注意してください。`<button>` が {{HTMLElement("form")}} の中にある場合、そのボタンは "submit" ボタンとして扱われます。ですから、どのボタンが送信ボタンであるかを明示的に指定する習慣をつけるとよいでしょう。
 
@@ -125,9 +125,9 @@ l10n:
 
 ### 送信ボタンへのキーボードショートカットの追加
 
-キーボードショートカットは、アクセスキーやキーボード相当物とも呼ばれ、ユーザーがキーボードのキーまたはキーの組み合わせを使ってボタンを発生させることができます。送信ボタンにキーボードショートカットを追加するには、それが意味をなす他の {{HTMLElement("input")}} と同じように、[`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性を使用してください。
+キーボードショートカットは、アクセスキーやキーボード相当物とも呼ばれ、ユーザーがキーボードのキーまたはキーの組み合わせを使ってボタンを発生させることができます。送信ボタンにキーボードショートカットを追加するには、それが意味をなす他の {{HTMLElement("input")}} と同じように、[`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) グローバル属性を使用してください。
 
-この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピューター上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください。
+この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピューター上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) を参照してください。
 
 以下は、前回の例に <kbd>s</kbd> アクセスキーを追加した例です。
 
@@ -147,11 +147,11 @@ l10n:
 
 {{EmbedLiveSample("Adding_a_keyboard_shortcut_to_a_submit_button", 650, 100)}}
 
-上の例の問題点は、ユーザーがアクセスキーが何であるかを知らないということです。 特に、競合を避けるために変更する修飾子は通常標準的でないため、このようなことが起こります。サイトを構築する際には、サイトのデザインを邪魔しないような方法でこの情報を提供するようにしてください（例えば、サイトのアクセスキーが何であるかについての情報を指し示す、簡単にアクセスできるリンクを提供する）。ボタンにツールチップを追加する（[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を使用する）こともできますが、アクセシビリティの観点からは完全な解決策とは言えません。
+上の例の問題点は、ユーザーがアクセスキーが何であるかを知らないということです。 特に、競合を避けるために変更する修飾子は通常標準的でないため、このようなことが起こります。サイトを構築する際には、サイトのデザインを邪魔しないような方法でこの情報を提供するようにしてください（例えば、サイトのアクセスキーが何であるかについての情報を指し示す、簡単にアクセスできるリンクを提供する）。ボタンにツールチップを追加する（[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を使用する）こともできますが、アクセシビリティの観点からは完全な解決策とは言えません。
 
 ### 送信ボタンの無効化と有効化
 
-送信ボタンを無効にするには、 [`disabled`](/ja/docs/Web/HTML/Attributes/disabled) 属性を、次のように指定してください。
+送信ボタンを無効にするには、 [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性を、次のように指定してください。
 
 ```html
 <input type="submit" value="送信" disabled />
@@ -160,7 +160,7 @@ l10n:
 実行時に `disabled` を `true` または `false` に設定することで、ボタンを有効にしたり無効にしたりすることができます。JavaScript では、 `btn.disabled = true` または `btn.disabled = false` のようになります。
 
 > [!NOTE]
-> ボタンの有効化や無効化についてのさらなる考えは、 [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button#ボタンの無効化と有効化) ページを参照してください。
+> ボタンの有効化や無効化についてのさらなる考えは、 [`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button#ボタンの無効化と有効化) ページを参照してください。
 
 ## 検証
 

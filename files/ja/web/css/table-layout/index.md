@@ -159,4 +159,4 @@ td {
 
 ## 関連情報
 
-- [`<table>`](/ja/docs/Web/HTML/Element/table)
+- [`<table>`](/ja/docs/Web/HTML/Reference/Elements/table)

@@ -44,7 +44,7 @@ label {
 
 ## 値
 
-{{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、自動的に URL の構文として検証される文字列が入ります。より具体的に言うと、検証を通る値の書式は下記の 2 通りがあります。
+{{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、自動的に URL の構文として検証される文字列が入ります。より具体的に言うと、検証を通る値の書式は下記の 2 通りがあります。
 
 1. 空文字列 ("")。ユーザーが値を入力しないか、または値が削除されたことを示します。
 2. 単一の整形式の絶対 URL。これがあるからといって、その URL アドレスが存在するということには必ずしもなりません。しかし、少なくとも整形式で書式化されています。 `urlscheme://rest-of-url` に一致する項目は、入力された `urlscheme` が存在しなくても有効である可能性があります。
@@ -53,34 +53,34 @@ label {
 
 ## 追加の属性
 
-[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `url` 型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `url` 型の入力欄は次の属性にも対応しています。
 
 > [!NOTE]
-> グローバル属性の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) を URL 入力に追加することはできますが、格納される状態は常に `off` になります。
+> グローバル属性の [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) を URL 入力に追加することはできますが、格納される状態は常に `off` になります。
 
 ### list
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### maxlength
 
 ユーザーが `url` 入力欄に入力することができる（UTF-16 コード単位での）文字列長の最大値です。 `0` 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、この `url` 入力欄には文字列長の最大値が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドの URL の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+フィールドの URL の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### minlength
 
 ユーザーが `url` 入力欄に入力することができる（UTF-16 コード単位での）文字列長の最小値です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、この `url` 入力欄には文字列長の最小値が設定されません。
 
-入力欄の URL の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+入力欄の URL の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細と例については[パターン検証](#パターン検証)の節を参照してください。
 
@@ -91,14 +91,14 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
 > [!NOTE]
-> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Reference/Elements/input#ラベル)を参照してください。
 
 ### readonly
 
-[`readonly`](/ja/docs/Web/HTML/Attributes/readonly) は論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
+[`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) は論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
 > [!NOTE]
-> 読み取り専用フィールドは値を持てないため、 [`required`](/ja/docs/Web/HTML/Attributes/required) は `readonly` 属性も指定されている入力欄には効果がありません。
+> 読み取り専用フィールドは値を持てないため、 [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### size
 
@@ -108,7 +108,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### spellcheck
 
-[`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck) はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
+[`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
 
 - `false`
   - : この要素でスペルチェックを無効にします。
@@ -140,7 +140,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 {{ EmbedLiveSample('A_basic_URL_input', 600, 40) }}
 
-有効と見なされるのは空欄のときと、有効な書式の URL アドレスが 1 つだけ入力されたときであり、それ以外のときは無効とみなされることに注意してください。 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を追加すると、適切な書式の URL のみが許可されるようになり、空の場合は入力が有効であるとは見なされなくなります。
+有効と見なされるのは空欄のときと、有効な書式の URL アドレスが 1 つだけ入力されたときであり、それ以外のときは無効とみなされることに注意してください。 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を追加すると、適切な書式の URL のみが許可されるようになり、空の場合は入力が有効であるとは見なされなくなります。
 
 ここでは何も不思議なことは起こりません。サーバーに送信されると、上記の入力のデータは、例えば `myURL=http%3A%2F%2Fwww.example.com` のように表現されます。文字が必要に応じてエスケープされていることに注意してください。
 
@@ -166,7 +166,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 #### 物理的な入力欄の寸法
 
-入力ボックスの物理的な大きさは、 [`size`](/ja/docs/Web/HTML/Element/input#size) 属性で制御することが可能です。この属性により、入力ボックスが一度に表示できる文字数を指定することができます。この例では、例えば `url` のエディットボックスの幅は 30 文字です。
+入力ボックスの物理的な大きさは、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性で制御することが可能です。この属性により、入力ボックスが一度に表示できる文字数を指定することができます。この例では、例えば `url` のエディットボックスの幅は 30 文字です。
 
 ```html
 <input id="myURL" name="myURL" type="url" size="30" />
@@ -176,7 +176,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 #### 要素の値の長さ
 
-`size` は、入力される URL の長さの制限とは別のものです。入力される URL の長さの最小値は [`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性で指定でき、同様に、入力される URL の長さの最大値は [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) 属性で設定することができます。もし `maxlength` が `size` を超えている場合は、入力ボックスの内容が操作されたときに、現在の選択部分や挿入部分を表示するために、必要に応じてスクロールします。
+`size` は、入力される URL の長さの制限とは別のものです。入力される URL の長さの最小値は [`minlength`](/ja/docs/Web/HTML/Reference/Elements/input#minlength) 属性で指定でき、同様に、入力される URL の長さの最大値は [`maxlength`](/ja/docs/Web/HTML/Reference/Elements/input#maxlength) 属性で設定することができます。もし `maxlength` が `size` を超えている場合は、入力ボックスの内容が操作されたときに、現在の選択部分や挿入部分を表示するために、必要に応じてスクロールします。
 
 以下の例では、幅 30 文字の URL 入力ボックスを生成し、入力内容が 10 文字以上 80 文字以下であることを要求しています。
 
@@ -199,7 +199,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 #### value 属性を言使用した単一の既定値の提供
 
-他と同様に、 `url` 入力欄に [`value`](/ja/docs/Web/HTML/Element/input#value) 属性を設定することで既定値を指定することができます。
+他と同様に、 `url` 入力欄に [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を設定することで既定値を指定することができます。
 
 ```html
 <input id="myURL" name="myURL" type="url" value="http://www.example.com" />
@@ -209,7 +209,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 #### 提案値の提供
 
-さらに一歩進んで、既定の選択肢のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Element/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる URL をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は URL 入力ボックスの対応する提案値となっています。
+さらに一歩進んで、既定の選択肢のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる URL をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は URL 入力ボックスの対応する提案値となっています。
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -229,7 +229,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 #### 提案値のラベルの使用
 
-[`label`](/ja/docs/Web/HTML/Element/option#label) 属性を 1 つまたはすべての `<option>` 要素に設定することで、テキストのラベルを提供することができます。ブラウザーによっては、ラベルのみを表示するものもあれば、ラベルと URL の両方を表示するものもあります。
+[`label`](/ja/docs/Web/HTML/Reference/Elements/option#label) 属性を 1 つまたはすべての `<option>` 要素に設定することで、テキストのラベルを提供することができます。ブラウザーによっては、ラベルのみを表示するものもあれば、ラベルと URL の両方を表示するものもあります。
 
 ```html
 <input id="myURL" name="myURL" type="url" list="defaultURLs" />
@@ -260,7 +260,7 @@ URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Stan
 
 ### URL を必須にする
 
-前述のように、フォームを送信する前に URL の入力を必須にする (フィールドを空白にできない) には、入力に [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を含めるだけでよいのです。
+前述のように、フォームを送信する前に URL の入力を必須にする (フィールドを空白にできない) には、入力に [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を含めるだけでよいのです。
 
 ```html
 <form>
@@ -275,11 +275,11 @@ URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Stan
 
 ### パターンによる検証
 
-入力された URL を、単なる「URL に見える文字列」よりも制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("Regular expression", "正規表現")}}を値として取ります。
+入力された URL を、単なる「URL に見える文字列」よりも制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("Regular expression", "正規表現")}}を値として取ります。
 
 例えば、 Myco, Inc. の従業員向けに、あるページに問題があった場合に IT 部門に問い合わせるためのサポートページを作るとします。この単純化したフォームでは、ユーザーは問題のあるページの URL と、何が問題なのかを説明するメッセージを入力する必要があります。しかし、入力された URL が Myco のドメインにある場合にのみ、 URL の検証に成功するようにしたいのです。
 
-`url` 型の入力は、標準の URL バリデーション*および*指定された [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) の両方に対して検証されるので、正規表現によって実装することができます。では、その方法を見てみましょう。
+`url` 型の入力は、標準の URL バリデーション*および*指定された [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) の両方に対して検証されるので、正規表現によって実装することができます。では、その方法を見てみましょう。
 
 ```css hidden
 div {
@@ -334,13 +334,13 @@ input:valid + span::after {
 
 {{EmbedLiveSample("Pattern_validation", 700, 150)}}
 
-まず、 [`required`](/ja/docs/Web/HTML/Element/input#required)t/input#required)t/input#required) 属性が指定されており、有効なメールアドレスの入力が必須になっています。
+まず、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required)t/input#required)t/input#required) 属性が指定されており、有効なメールアドレスの入力が必須になっています。
 
 次に、 `url` 入力欄の `pattern` を `".*\.myco\..*"` に設定しました。この正規表現は、文字列が任意の数の文字の後に、ドット、 "myco" 、ドット、そして任意の数の文字が続くことを要求します。ブラウザーは標準的な URL フィルターおよび指定されたテキストに対する独自のパターンの両方を実行するため、「これが有効な URL であり、かつ Myco ドメインであることを確認する」という検証を行うことになります。
 
 これは完全ではありませんが、この基本的なデモの要件では十分です。
 
-[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を `pattern` と併用することをお勧めします。その場合、 `title` でパターンを説明する必要があります。つまり、他の情報ではなく、データがどのような形式を取るべきかを説明してください。これは、 `title` が検証エラーメッセージの一部として表示されたり、読み上げられたりする可能性があるからです。例えば、ブラウザーが「入力された値がフィールドに指定された書式と異なります。」というメッセージの後に、あなたが指定した `title` を表示するかもしれません。もし `title` が "URL" のようなものであれば、結果は「入力された値がフィールドに指定された書式と異なります。 URL」というメッセージになり、あまり良いものではなくなります。
+[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性を `pattern` と併用することをお勧めします。その場合、 `title` でパターンを説明する必要があります。つまり、他の情報ではなく、データがどのような形式を取るべきかを説明してください。これは、 `title` が検証エラーメッセージの一部として表示されたり、読み上げられたりする可能性があるからです。例えば、ブラウザーが「入力された値がフィールドに指定された書式と異なります。」というメッセージの後に、あなたが指定した `title` を表示するかもしれません。もし `title` が "URL" のようなものであれば、結果は「入力された値がフィールドに指定された書式と異なります。 URL」というメッセージになり、あまり良いものではなくなります。
 
 そのため、「URL は myco ドメインのものを入力してください」という文字列を指定しています。こうすることで、エラーメッセージ全体が「入力された値がフィールドに指定された書式と異なります。URL は myco ドメインのものを入力してください。」のようになります。
 
@@ -422,5 +422,5 @@ input:valid + span::after {
 
 - [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel)
-- [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)
+- [`<input type="tel">`](/ja/docs/Web/HTML/Reference/Elements/input/tel)
+- [`<input type="email">`](/ja/docs/Web/HTML/Reference/Elements/input/email)
