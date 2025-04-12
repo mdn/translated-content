@@ -13,8 +13,8 @@ l10n:
 
 ### HTML
 
-- [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) グローバル属性は、編集可能なテキスト要素 (多くのテキスト型 {{htmlelement("input")}} 要素、{{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を設定した要素) のオートコレクトを許可します。具体的なオートコレクトの動作は、ユーザーエージェントや OS に依存します ([Firefox bug 1927977](https://bugzil.la/1927977))。
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素は編集可能ですがリッチテキストフォーマットは無効であり、貼り付けられたテキストの書式が自動的に削除されることを示します ([Firefox bug 1922724](https://bugzil.la/1922724))。
+- [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) グローバル属性は、編集可能なテキスト要素 (多くのテキスト型 {{htmlelement("input")}} 要素、{{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を設定した要素) のオートコレクトを許可します。具体的なオートコレクトの動作は、ユーザーエージェントや OS に依存します ([Firefox bug 1927977](https://bugzil.la/1927977))。
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素は編集可能ですがリッチテキストフォーマットは無効であり、貼り付けられたテキストの書式が自動的に削除されることを示します ([Firefox bug 1922724](https://bugzil.la/1922724))。
 
 ### CSS
 

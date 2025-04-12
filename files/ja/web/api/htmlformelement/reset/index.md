@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLFormElement.reset()`** メソッドは、フォーム要素の既定値を復元します。このメソッドはフォームの [`<input type="reset">`](/ja/docs/Web/HTML/Element/input/reset) コントロールをクリックするのと同じことを行います。
+**`HTMLFormElement.reset()`** メソッドは、フォーム要素の既定値を復元します。このメソッドはフォームの [`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset) コントロールをクリックするのと同じことを行います。
 
 もしあるフォームコントロール（リセットボタンなど）が _reset_ という形の名前か ID を持っていると、フォームの reset メソッドを隠してしまいます。これは `disabled` のような、入力の他の属性をリセットするものではありません。
 

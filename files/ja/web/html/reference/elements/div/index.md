@@ -40,11 +40,11 @@ l10n:
 }
 ```
 
-「純粋」なコンテナーとして、`<div>` 要素は本質的には何も表しません。その代わり、 [`class`](/ja/docs/Web/HTML/Global_attributes/class) や [`id`](/ja/docs/Web/HTML/Global_attributes/id) を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を（[`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性を使用して）示したりするために使用します。
+「純粋」なコンテナーとして、`<div>` 要素は本質的には何も表しません。その代わり、 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) や [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を（[`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性を使用して）示したりするために使用します。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 > **メモ:** `align` 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や [CSS フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用して `<div>` 要素をページの中央に配置したりしてください。
 
@@ -74,7 +74,7 @@ l10n:
 
 ### スタイル付けを行う例
 
-この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に [`class`](/ja/docs/Web/HTML/Global_attributes/class) 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
+この例では CSS を用いて `<div>` にスタイルを適用することで、影付きのボックスを作成します。なお、 `<div>` 要素に [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性を使用して、 `"shadowbox"` という名前のスタイルを要素に適用します。
 
 #### HTML
 

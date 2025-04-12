@@ -17,7 +17,7 @@ l10n:
 
 ## 属性
 
-この要素には、全ての要素に共通の[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には、全ての要素に共通の[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## DOM インターフェイス
 

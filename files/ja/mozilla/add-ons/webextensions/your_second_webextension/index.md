@@ -161,7 +161,7 @@ HTML ファイルは次のようになります。
 </html>
 ```
 
-`"popup-content"` という ID の [`<div>`](/ja/docs/Web/HTML/Element/div) 要素があって、動物の選択をするボタンとリセットボタン入っています。`"error-content"` という ID の `<div>` 要素と `"hidden"` クラスもあります。それはポップアップの初期化に問題がある場合に使います。
+`"popup-content"` という ID の [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) 要素があって、動物の選択をするボタンとリセットボタン入っています。`"error-content"` という ID の `<div>` 要素と `"hidden"` クラスもあります。それはポップアップの初期化に問題がある場合に使います。
 
 通常のウェブページと同じように CSS と JS ファイルを読み込んでいることに注意してください。
 
@@ -387,7 +387,7 @@ browser.tabs
 
 その次に、始まる場所は 40 行で、ここでコンテンツスクリプトはポップアップからのメッセージを待ち受けし、その手段は [`browser.runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API です。上で見たように、ポップアップスクリプトは 2 種類の異なるメッセージを送ります: "beastify" と "reset"
 
-- メッセージが "beastify" なら、動物画像を指す URL が含まれるはずです。以前の "beastify" 呼び出しで追加された動物をすべて削除して、[`<img>`](/ja/docs/Web/HTML/Element/img) 要素を作成、追加して、その `src` 属性に動物の URL をセットします。
+- メッセージが "beastify" なら、動物画像を指す URL が含まれるはずです。以前の "beastify" 呼び出しで追加された動物をすべて削除して、[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を作成、追加して、その `src` 属性に動物の URL をセットします。
 - メッセージが "reset" なら、ただ追加された動物をすべて削除します。
 
 ### 動物

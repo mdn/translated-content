@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<math>`** は最上位の [MathML](/ja/docs/Web/MathML) 要素で、一つの数式を記述するのに使われます。これは[フローコンテンツ](/ja/docs/Web/HTML/Content_categories#フローコンテンツ)が許可されている HTML コンテンツに置くことができます。
+**`<math>`** は最上位の [MathML](/ja/docs/Web/MathML) 要素で、一つの数式を記述するのに使われます。これは[フローコンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ)が許可されている HTML コンテンツに置くことができます。
 
 > [!NOTE]
 > MathML の数式をウェブページに適切に統合するためのヒントについては [MathML の記述ページ](/ja/docs/Web/MathML/Guides/Authoring#using_mathml)を、その他のデモについては [例](/ja/docs/Web/MathML/Guides)ページを参照してください。

@@ -129,12 +129,12 @@ l10n:
 特定の条件が満たされている場合のみ、このカテゴリーに属する要素がいくつか存在します。
 
 - {{HTMLElement("area")}}: {{HTMLElement("map")}} 要素の子孫の場合
-- {{HTMLElement("link")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
-- {{HTMLElement("meta")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
+- {{HTMLElement("link")}}: [itemprop](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性がある場合
+- {{HTMLElement("meta")}}: [itemprop](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性がある場合
 
 ### 区分コンテンツ
 
-区分コンテンツ (sectioning content) はフローコンテンツのサブセットであり、[現在のアウトライン内のセクション](/ja/docs/Web/HTML/Element/Heading_Elements)を作成し、これが {{HTMLElement("header")}} と {{HTMLElement("footer")}} 要素の範囲を定義します。
+区分コンテンツ (sectioning content) はフローコンテンツのサブセットであり、[現在のアウトライン内のセクション](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)を作成し、これが {{HTMLElement("header")}} と {{HTMLElement("footer")}} 要素の範囲を定義します。
 
 区分要素は次の通りです。
 
@@ -217,9 +217,9 @@ l10n:
 - {{HTMLElement("area")}}: {{HTMLElement("map")}} 要素の子孫である場合
 - {{HTMLElement("del")}}: 記述コンテンツだけを含む場合
 - {{HTMLElement("ins")}}: 記述コンテンツだけを含む場合
-- {{HTMLElement("link")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
+- {{HTMLElement("link")}}: [itemprop](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性がある場合
 - {{HTMLElement("map")}}: 記述コンテンツだけを含む場合
-- {{HTMLElement("meta")}}: [itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) 属性がある場合
+- {{HTMLElement("meta")}}: [itemprop](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性がある場合
 
 ### 埋め込みコンテンツ
 
@@ -254,12 +254,12 @@ l10n:
 
 要素によっては、特定の条件下にある場合にのみこのカテゴリーに所属します。
 
-- {{HTMLElement("a")}} に [`href`](/ja/docs/Web/HTML/Element/a#href) 属性がある場合
-- {{HTMLElement("audio")}} に [`controls`](/ja/docs/Web/HTML/Element/audio#controls) 属性がある場合
-- {{HTMLElement("img")}} に [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性がある場合
-- {{HTMLElement("input")}} に [`type`](/ja/docs/Web/HTML/Element/input#type) 属性が hidden 状態ではない場合
-- {{HTMLElement("object")}} に [`usemap`](/ja/docs/Web/HTML/Element/object#usemap) 属性がある場合
-- {{HTMLElement("video")}} に [`controls`](/ja/docs/Web/HTML/Element/video#controls) 属性がある場合
+- {{HTMLElement("a")}} に [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性がある場合
+- {{HTMLElement("audio")}} に [`controls`](/ja/docs/Web/HTML/Reference/Elements/audio#controls) 属性がある場合
+- {{HTMLElement("img")}} に [`usemap`](/ja/docs/Web/HTML/Reference/Elements/img#usemap) 属性がある場合
+- {{HTMLElement("input")}} に [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性が hidden 状態ではない場合
+- {{HTMLElement("object")}} に [`usemap`](/ja/docs/Web/HTML/Reference/Elements/object#usemap) 属性がある場合
+- {{HTMLElement("video")}} に [`controls`](/ja/docs/Web/HTML/Reference/Elements/video#controls) 属性がある場合
 
 ### 知覚可能コンテンツ
 
@@ -331,9 +331,9 @@ l10n:
 
 要素によっては、特定の条件を満たした場合のみこのカテゴリーに属します。
 
-- {{HTMLElement("audio")}}: [`controls`](/ja/docs/Web/HTML/Element/audio#controls) 属性が存在する場合
+- {{HTMLElement("audio")}}: [`controls`](/ja/docs/Web/HTML/Reference/Elements/audio#controls) 属性が存在する場合
 - {{HTMLElement("dl")}}: この要素の子に 1 つ以上の名前と値のグループを含む場合
-- {{HTMLElement("input")}}: [type](/ja/docs/Web/HTML/Element/input#type) 属性が hidden の状態ではない場合
+- {{HTMLElement("input")}}: [type](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性が hidden の状態ではない場合
 - {{HTMLElement("ol")}}: 子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
 - {{HTMLElement("ul")}}: 子要素に 1 つ以上の {{HTMLElement("li")}} 要素を含む場合
 

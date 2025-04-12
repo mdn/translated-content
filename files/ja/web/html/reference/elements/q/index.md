@@ -30,7 +30,7 @@ q {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
 
 - `cite`
   - : この属性の値は、引用した情報の引用元となる文書やメッセージの URL です。この属性は、引用文のコンテキストや参照先を説明する情報を指すためのものです。

@@ -104,7 +104,7 @@ p {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 > **メモ:** `<p>` の `align` 属性は廃止済みであり、使用するべきではありません。
 

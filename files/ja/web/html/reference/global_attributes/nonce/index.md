@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`nonce`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、
+**`nonce`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、
 これは暗号化ノンス ("number used once") を定義するコンテンツ属性で、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP) が指定された要素に対してフェッチの実行を許可するかどうかを決定するために使用することができます。
 
 ## 解説

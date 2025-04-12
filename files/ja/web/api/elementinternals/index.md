@@ -22,7 +22,7 @@ l10n:
 - {{domxref("ElementInternals.states")}} {{ReadOnlyInline}}
   - : この要素に関連付けられた {{domxref("CustomStateSet")}} を返します。
 - {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
-  - : 論理値で、要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)の候補である送信可能要素である場合に true を返します。
+  - : 論理値で、要素が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)の候補である送信可能要素である場合に true を返します。
 - {{domxref("ElementInternals.validity")}} {{ReadOnlyInline}}
   - : このオブジェクトは、制約検証に関して、その要素が取りうるさまざまな有効性の状態を表します。
 - {{domxref("ElementInternals.validationMessage")}} {{ReadOnlyInline}}
@@ -127,9 +127,9 @@ l10n:
 - {{domxref("ElementInternals.setValidity()")}}
   - : 要素の有効性を設定します。
 - {{domxref("ElementInternals.checkValidity()")}}
-  - : 要素が、[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかをチェックします。
+  - : 要素が、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)ルールを満たしているかどうかをチェックします。
 - {{domxref("ElementInternals.reportValidity()")}}
-  - : 要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかをチェックし、ユーザーエージェントに検証メッセージを送信します。
+  - : 要素が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)ルールを満たしているかどうかをチェックし、ユーザーエージェントに検証メッセージを送信します。
 
 ## 例
 

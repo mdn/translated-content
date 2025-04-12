@@ -41,7 +41,7 @@ label {
 
 ## 値
 
-[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
+[`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
 
 ```js
 let theText = myTextInput.value;
@@ -51,31 +51,31 @@ let theText = myTextInput.value;
 
 ## 追加の属性
 
-[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `text` 型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `text` 型の入力欄は次の属性にも対応しています。
 
 ### `list`
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### `maxlength`
 
 ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドのテキスト値の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+フィールドのテキスト値の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `minlength`
 
 ユーザーが `text` 入力欄に入力することができる (UTF-16 コード単位での) 最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、 `text` 入力欄には最小文字数が設定されません。
 
-入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
+入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
 ### `pattern`
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細や例については[パターンの指定](#パターンの指定)を参照してください。
 
@@ -86,7 +86,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
 > [!NOTE]
-> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のアクセシビリティの考慮](/ja/docs/Web/HTML/Element/input#アクセシビリティ)を参照してください。
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のアクセシビリティの考慮](/ja/docs/Web/HTML/Reference/Elements/input#アクセシビリティ)を参照してください。
 
 ### `readonly`
 
@@ -103,7 +103,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `spellcheck`
 
-[`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck) はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
+[`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
 
 - `false`
   - : この要素でスペルチェックを無効にします。
@@ -118,7 +118,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ## テキスト入力欄の使用
 
-`text` 型の `<input>` 要素は、基本的な単一行の入力欄を作成します。どこでも、ユーザーに単一行の値を入力させたい場所で、もっと具体的な入力型が値の中にない場合 (例えば、[日付](/ja/docs/Web/HTML/Element/input/datetime-local)、 [URL](/ja/docs/Web/HTML/Element/input/url)、[メールアドレス](/ja/docs/Web/HTML/Element/input/email)、[検索語](/ja/docs/Web/HTML/Element/input/search)など、もっと良い選択肢が利用できるもの) に使用します。
+`text` 型の `<input>` 要素は、基本的な単一行の入力欄を作成します。どこでも、ユーザーに単一行の値を入力させたい場所で、もっと具体的な入力型が値の中にない場合 (例えば、[日付](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)、 [URL](/ja/docs/Web/HTML/Reference/Elements/input/url)、[メールアドレス](/ja/docs/Web/HTML/Reference/Elements/input/email)、[検索語](/ja/docs/Web/HTML/Reference/Elements/input/search)など、もっと良い選択肢が利用できるもの) に使用します。
 
 ### 基本的な例
 
@@ -138,11 +138,11 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 {{EmbedLiveSample("Basic_example", 600, 80)}}
 
-送信されると、サーバーに送信される名前と値の組のデータは `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。 [`name`](/ja/docs/Web/HTML/Element/input#name) 属性を {{HTMLElement("input")}} 要素に付け忘れてはいけません。さもないと、テキスト入力欄の値が送信されるデータに含まれなくなります。
+送信されると、サーバーに送信される名前と値の組のデータは `name=Chris` になります（送信前に入力値として "Chris" が入力された場合）。 [`name`](/ja/docs/Web/HTML/Reference/Elements/input#name) 属性を {{HTMLElement("input")}} 要素に付け忘れてはいけません。さもないと、テキスト入力欄の値が送信されるデータに含まれなくなります。
 
 ### プレイスホルダーの設定
 
-[`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
+[`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
 
 ```html-nolint
 <form>
@@ -168,7 +168,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 物理的な入力要素の寸法
 
-入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Element/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
+入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
 
 ```html
 <form>
@@ -227,7 +227,7 @@ input:valid + span::after {
 
 ### 入力を必須にする
 
-入力を行わないとフォームの送信が許可されないようにするための簡単な方法として、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使うことができます。
+入力を行わないとフォームの送信が許可されないようにするための簡単な方法として、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使うことができます。
 
 ```html
 <form>
@@ -270,7 +270,7 @@ input:valid + span::after {
 
 ### 入力値の長さ
 
-[`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性を使用して入力された値の最小の長さ (文字数) を指定することができます。同様に、 [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) を使用して入力された値の最大長を文字数で設定します。
+[`minlength`](/ja/docs/Web/HTML/Reference/Elements/input#minlength) 属性を使用して入力された値の最小の長さ (文字数) を指定することができます。同様に、 [`maxlength`](/ja/docs/Web/HTML/Reference/Elements/input#maxlength) を使用して入力された値の最大長を文字数で設定します。
 
 以下の例では、入力値が4～8文字の長さであることが求められます。
 
@@ -325,7 +325,7 @@ input:valid + span::after {
 
 ### パターンの指定
 
-[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#正規表現での検証)をご覧ください）。
+[`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#正規表現での検証)をご覧ください）。
 
 以下の例では、 4～8 文字の値で、英小文字のみが含まれているという要件の制約を与えます。
 
@@ -453,5 +453,5 @@ input:valid + span::after {
 
 - [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} およびそれに基づく {{domxref("HTMLInputElement")}} インターフェイス
-- [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
 - {{HTMLElement("textarea")}}: 複数行のテキスト入力欄

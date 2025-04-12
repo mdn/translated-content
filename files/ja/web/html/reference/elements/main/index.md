@@ -36,7 +36,7 @@ header {
 }
 ```
 
-文書には [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
+文書には [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
 
 <table class="properties">
   <tbody>
@@ -98,7 +98,7 @@ header {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
@@ -149,7 +149,7 @@ header {
 
 スキップナビゲーションは、"skipnav" とも呼ばれますが、支援技術のユーザーが繰り返されるコンテンツ (メインナビゲーション、情報バナー、等) の大きなセクションをすばやく飛ばすことができる技法です。これによって、ユーザーがページのメインコンテンツをより早くアクセスすることができます。
 
-[`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性を追加することで、 `<main>` 要素がスキップナビゲーションリンクのターゲットになることができます。
+[`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を追加することで、 `<main>` 要素がスキップナビゲーションリンクのターゲットになることができます。
 
 ```html
 <body>
@@ -167,7 +167,7 @@ header {
 
 ### リーダーモード
 
-ブラウザーのリーダーモードでは、コンテンツをリーダーに特化したビューに変換するときに、[見出し](/ja/docs/Web/HTML/Element/Heading_Elements)や[コンテンツ区分要素](/ja/docs/Web/HTML/Element#content_sectioning)と同様に `<main>` 要素の存在を探します。
+ブラウザーのリーダーモードでは、コンテンツをリーダーに特化したビューに変換するときに、[見出し](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)や[コンテンツ区分要素](/ja/docs/Web/HTML/Reference/Elements#content_sectioning)と同様に `<main>` 要素の存在を探します。
 
 - [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 

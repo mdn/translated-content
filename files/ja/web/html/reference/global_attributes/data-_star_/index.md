@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`data-*`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[HTML](/ja/docs/Web/HTML) と、スクリプトによる [DOM](/ja/docs/Web/API/Document_Object_Model) 表現との間で、固有の情報を交換できるようにします。
+**`data-*`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[HTML](/ja/docs/Web/HTML) と、スクリプトによる [DOM](/ja/docs/Web/API/Document_Object_Model) 表現との間で、固有の情報を交換できるようにします。
 
 {{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
 
@@ -71,7 +71,7 @@ li:hover:after {
 
 ### 使用方法
 
-`data-*` 属性を追加すると通常の HTML 要素でも、より複雑で強力なプログラムオブジェクトになります。例えばゲームで宇宙船の "[スプライト](<https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88_(%E6%98%A0%E5%83%8F%E6%8A%80%E8%A1%93)>)_"_ を、単純な {{HTMLElement("img")}} 要素に [`class`](/ja/docs/Web/HTML/Global_attributes/class) 属性といくつかの `data-*` 属性を設定したもので表すことができるでしょう。
+`data-*` 属性を追加すると通常の HTML 要素でも、より複雑で強力なプログラムオブジェクトになります。例えばゲームで宇宙船の "[スプライト](<https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%97%E3%83%A9%E3%82%A4%E3%83%88_(%E6%98%A0%E5%83%8F%E6%8A%80%E8%A1%93)>)_"_ を、単純な {{HTMLElement("img")}} 要素に [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性といくつかの `data-*` 属性を設定したもので表すことができるでしょう。
 
 ```html
 <img
@@ -98,6 +98,6 @@ li:hover:after {
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - これらの値を読み書きできる {{domxref("HTMLElement.dataset")}} プロパティ
 - [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

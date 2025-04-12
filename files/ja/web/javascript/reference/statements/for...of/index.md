@@ -177,7 +177,7 @@ foo(1, 2, 3);
 
 ### NodeList に対する反復処理
 
-次の例では `read` クラスを、[`<article>`](/ja/docs/Web/HTML/Element/article) 要素の直接の子孫である段落に対して追加します。DOM の [`NodeList`](/ja/docs/Web/API/NodeList) コレクションを反復処理すること実現します。
+次の例では `read` クラスを、[`<article>`](/ja/docs/Web/HTML/Reference/Elements/article) 要素の直接の子孫である段落に対して追加します。DOM の [`NodeList`](/ja/docs/Web/API/NodeList) コレクションを反復処理すること実現します。
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");

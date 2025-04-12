@@ -10,7 +10,7 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`connect-src`** ディレクティブは、スクリプトインターフェイスを使用して読み込むことができる URL を制限します。以下の API が制限の対象となります。
 
-- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Element/a#ping) 属性
+- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Reference/Elements/a#ping) 属性
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
@@ -98,7 +98,7 @@ Content-Security-Policy: connect-src https://example.com/
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Element/a#ping)ement/a#ping) 属性
+- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Reference/Elements/a#ping)ement/a#ping) 属性
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}

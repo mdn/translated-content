@@ -101,7 +101,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 ### パスワード表示のトグル切り替え
 
-HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HTML/Element/input/password)) に「目」のアイコンが入り、パスワードのテキストを表示したり隠したりすることができるようになります ([Firefox バグ 502258](https://bugzil.la/502258))。
+HTML のパスワード入力要素 ([`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password)) に「目」のアイコンが入り、パスワードのテキストを表示したり隠したりすることができるようになります ([Firefox バグ 502258](https://bugzil.la/502258))。
 
 <table>
   <thead>

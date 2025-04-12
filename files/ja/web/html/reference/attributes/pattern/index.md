@@ -46,7 +46,7 @@ input:invalid {
 
 `pattern` 属性は {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} の入力型の属性です。
 
-`pattern` 属性は、[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過させるために、入力の [`value`](/ja/docs/Web/HTML/Element/input#value) が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、[正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されているものと同じものです。
+`pattern` 属性は、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を通過させるために、入力の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、[正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されているものと同じものです。
 
 パターンの正規表現は [`'v'` フラグ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)でコンパイルされます。これは正規表現を [unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)にし、文字クラスの解釈方法も変更します。これにより、文字クラスの設定には交差と減算の処理が可能になり、 `]` と `\` に加え、続く文字がリテラル文字 `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|` である場合は、 `\` バックスラッシュを使用してエスケープする必要があります。 2023 年半ば以前は、代わりに `'u'` フラグが指定されていました。古いコードを更新する場合は、[この文書に違いの概要がまとめられています](https://github.com/tc39/proposal-regexp-v-flag#how-is-the-v-flag-different-from-the-u-flag)。
 
@@ -64,7 +64,7 @@ pattern 属性に対応している入力型の中には、特に {{HTMLElement(
 
 ### ユーザビリティとアクセシビリティの考慮
 
-コントロールに `pattern` 属性がある場合、 [`title`](/ja/docs/Web/HTML/Element/input#title) 属性が使われていれば、そのパターンを説明しなければなりません。テキストコンテンツを視覚的な表示するために `title` 属性に頼ることは、多くのユーザーエージェントがアクセス可能な方法で属性を公開しないので、一般的には推奨されません。ブラウザーによっては、タイトルを持つ要素の上にポインターを置いたときにツールチップを表示しますが、キーボードのみのユーザーやタッチのみのユーザーは除外されてしまいます。これが、どのようにコントロールに記入すれば要件に合うかをユーザーに知らせる情報を含める必要がある理由の一つです。
+コントロールに `pattern` 属性がある場合、 [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性が使われていれば、そのパターンを説明しなければなりません。テキストコンテンツを視覚的な表示するために `title` 属性に頼ることは、多くのユーザーエージェントがアクセス可能な方法で属性を公開しないので、一般的には推奨されません。ブラウザーによっては、タイトルを持つ要素の上にポインターを置いたときにツールチップを表示しますが、キーボードのみのユーザーやタッチのみのユーザーは除外されてしまいます。これが、どのようにコントロールに記入すれば要件に合うかをユーザーに知らせる情報を含める必要がある理由の一つです。
 
 多くのユーザーエージェントは `title` 属性をアクセシビリティのある方法で公開していないため、テキストコンテンツの視覚的な表示のためだけに `title`属性を頼ることは推奨されません。ブラウザーによっては、タイトルのある要素にカーソルを合わせるとツールチップを表示させるものもありますが、キーボードのみのユーザーやタッチのみのユーザーを除外することになります。これは、要求に一致するように制御する方法をユーザーに知らせる情報を記載しなければならないいくつかの理由の一つです。
 
@@ -117,11 +117,11 @@ input:invalid {
 
 {{EmbedLiveSample("Matching_a_phone_number", 300, 80)}}
 
-代わりに [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) と [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) 属性を用いた場合、 {{domxref('validityState.tooLong')}} または {{domxref('validityState.tooShort')}} が true になります。
+代わりに [`minlength`](/ja/docs/Web/HTML/Reference/Attributes/minlength) と [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength) 属性を用いた場合、 {{domxref('validityState.tooLong')}} または {{domxref('validityState.tooShort')}} が true になります。
 
 ### パターンの指定
 
-[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます（正規表現を使用して入力を検証する簡単な集中講座は、[正規表現での検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#正規表現での検証)を参照してください）。
+[`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます（正規表現を使用して入力を検証する簡単な集中講座は、[正規表現での検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#正規表現での検証)を参照してください）。
 
 以下の例では、値を 4-8 文字に制限し、小文字のみを含むことを要求しています。
 
@@ -188,6 +188,6 @@ This renders like so:
 
 ## 関連情報
 
-- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [フォーム: データフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)

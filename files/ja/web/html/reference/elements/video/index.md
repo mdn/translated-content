@@ -32,7 +32,7 @@ l10n:
 
 ## 属性
 
-他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)に対応しています。
+他のすべての HTML 要素と同様に、この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に対応しています。
 
 - `autoplay`
 
@@ -53,16 +53,16 @@ l10n:
 
     [`disablepictureinpicture`](#disablepictureinpicture) 属性を使用すると、ピクチャインピクチャモード（およびコントロール）を無効にすることができます。
 
-- [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin)
+- [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
 
-  - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連画像を取得する際に CORS を使用するかどうかを示します。 [CORS が有効なリソース](/ja/docs/Web/HTML/CORS_enabled_image)は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用することができます。許可される値は次の通りです。
+  - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連画像を取得する際に CORS を使用するかどうかを示します。 [CORS が有効なリソース](/ja/docs/Web/HTML/How_to/CORS_enabled_image)は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用することができます。許可される値は次の通りです。
 
     - `anonymous`
       - : 資格情報なしでオリジン間リクエストを実行します。すなわち、 `Origin:` HTTP ヘッダーを送信する際に、 Cookie や X.509 証明書を送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに資格情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、リソースが*汚染*され、その使用が制限されます。
     - `use-credentials`
       - : 資格情報を使用してオリジン間リクエストを実行します。すなわち、 `Origin:` HTTP ヘッダーを送信する際に Cookie や資格情報を送信したり、 HTTP ベーシック認証を行ったりします。サーバーが元のサイトに（`Access-Control-Allow-Credentials:` HTTP ヘッダーを通して）資格情報を与えない場合、リソースが*汚染*され、その使用が制限されます。
 
-    この属性が存在しない場合、リソースは CORS なしのリクエストで（すなわち `Origin:` HTTP ヘッダーを送信せずに）取得され、 {{HTMLElement('canvas')}} 要素における汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+    この属性が存在しない場合、リソースは CORS なしのリクエストで（すなわち `Origin:` HTTP ヘッダーを送信せずに）取得され、 {{HTMLElement('canvas')}} 要素における汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 - `disablepictureinpicture`
   - : ブラウザーにピクチャインピクチャのコンテキストメニューを表示させないようにしたり、場合によっては自動的にピクチャインピクチャを要求しないようにします。

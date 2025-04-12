@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`translate`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素の*翻訳可能な属性*の値や {{domxref("Text")}} 子ノードを、ページをローカライズする際に翻訳するべきか、あるいは変更せずにおくかを指定します。
+**`translate`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素の*翻訳可能な属性*の値や {{domxref("Text")}} 子ノードを、ページをローカライズする際に翻訳するべきか、あるいは変更せずにおくかを指定します。
 
 以下の値を使用することができます。
 
@@ -37,7 +37,7 @@ l10n:
 
 ## 関連情報
 
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)。
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)。
 - {{domxref("HTMLElement.translate")}} プロパティは、この属性を反映します。
 - [Using HTML's translate attribute](https://www.w3.org/International/questions/qa-translate-flag).
-- HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性
+- HTML の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性

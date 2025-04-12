@@ -19,7 +19,7 @@ original_slug: Web/Accessibility/ARIA/Roles/main_role
 
 メイン (`main`) ロールは、文書のメインコンテンツを識別する、ナビゲーションに関する[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)です。 ランドマークは、支援技術によって、文書の大きなセクションをすばやく識別してナビゲートするために使用できます。 ページのセクションを分類およびラベル付けすることにより、レイアウトを通じて視覚的に伝えられる構造情報をプログラムで表現することができます。 スクリーンリーダーは、ランドマークロールを使用して、ページの重要なセクションへのキーボードナビゲーションを提供します。 ランドマークロールを介してナビゲートする場合、メインロールは「メインコンテンツへスキップする (Skip to main content) 」リンクの代わりになります。 メイン (`main`) ランドマークロールは、文書ごとに 1 つだけあるべきです。
 
-[`<main>` 要素](/ja/docs/Web/HTML/Element/main)は、メイン (`main`) ロールを持ちます。 開発者は、ARIA を使用するよりも、正しい意味論の HTML 要素を使用することを常に好むべきです。
+[`<main>` 要素](/ja/docs/Web/HTML/Reference/Elements/main)は、メイン (`main`) ロールを持ちます。 開発者は、ARIA を使用するよりも、正しい意味論の HTML 要素を使用することを常に好むべきです。
 
 文書 (`document`) とアプリケーション (`application`) は DOM 内でネストすることができます。 これにより、DOM の子孫として複数のメイン要素を持つことになる可能性があります。 このような場合には、メインとその祖先である文書やアプリケーションとの関係を識別するために `aria-owns` を含めます (訳注: aria-owns は、DOM 階層で親子関係に無い要素において、親に指定することで子でない要素を子として組み込むためのものであり、文書やアプリケーションとメインが DOM 階層で親子関係にあれば必要ありません) 。
 
@@ -44,7 +44,7 @@ original_slug: Web/Accessibility/ARIA/Roles/main_role
 
 メイン (`main`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書ごとに 1 回のみ使用するべきです。
 
-JavaScript によってトリガーされたときにページコンテンツを更新するなどで、文書に 2 つのメイン (`main`) ロールが含まれている場合、[`hidden` 属性](/ja/docs/Web/HTML/Global_attributes/hidden)をトグルするなどの手法によって、アクティブでないメイン (`main`) ロールの存在を支援技術から取り除くべきです。
+JavaScript によってトリガーされたときにページコンテンツを更新するなどで、文書に 2 つのメイン (`main`) ロールが含まれている場合、[`hidden` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/hidden)をトグルするなどの手法によって、アクティブでないメイン (`main`) ロールの存在を支援技術から取り除くべきです。
 
 ```html
 <main>
@@ -62,13 +62,13 @@ JavaScript によってトリガーされたときにページコンテンツを
 
 ### 好ましい HTML
 
-[`<main>` 要素](/ja/docs/Web/HTML/Element/main)を使用すると自動的にセクションがメイン (`main`) ロールを持つことを伝えます。 可能な限り、`<main>` 要素を代わりに使用することをお勧めします。
+[`<main>` 要素](/ja/docs/Web/HTML/Reference/Elements/main)を使用すると自動的にセクションがメイン (`main`) ロールを持つことを伝えます。 可能な限り、`<main>` 要素を代わりに使用することをお勧めします。
 
 ### スキップナビゲーション
 
 スキップナビゲーション (スキップナビ (skipnav) とも呼ばれる) は、支援技術のユーザーが繰り返されるコンテンツの大きなセクション (メインナビゲーション、情報バナーなど) をすばやくバイパスできるようにする手法です。 これにより、ユーザーはページのメインコンテンツにすばやくアクセスできます。 (訳注: このページでも、ページが表示されたらすぐ Tab キーを押すことで、ページ上部にリンクが表示されるようになっています。)
 
-`role="main"` という宣言を持つ要素に [`id` 属性](/ja/docs/Web/HTML/Global_attributes/id)を追加すると、それをスキップナビゲーションリンクのターゲットにすることができます。
+`role="main"` という宣言を持つ要素に [`id` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/id)を追加すると、それをスキップナビゲーションリンクのターゲットにすることができます。
 
 ```html
 <body>
@@ -100,9 +100,9 @@ TBD
 
 ## 関連情報
 
-- [\<main>: メイン要素](/ja/docs/Web/HTML/Element/main)
+- [\<main>: メイン要素](/ja/docs/Web/HTML/Reference/Elements/main)
 - [main (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#main)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

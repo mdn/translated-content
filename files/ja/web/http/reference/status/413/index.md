@@ -24,7 +24,7 @@ HTTP の **`413 Content Too Large`** は[クライアントエラーレスポン
 
 ### ファイルのアップロード制限を超えた場合
 
-次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
+次の例は、クライアントが [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file) 要素で画像を使用して、 `method="post"` でフォームを送信する可能性があることを示しています。
 
 ```http
 POST /upload HTTP/1.1

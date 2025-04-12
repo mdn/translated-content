@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字（キーボードから生成できるアクセント付き文字やその他の文字を含む）から成ります。
+**`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字（キーボードから生成できるアクセント付き文字やその他の文字を含む）から成ります。
 
 {{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
 
@@ -114,5 +114,5 @@ b {
 
 - {{domxref("HTMLElement.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
-- すべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - [`aria-keyshortcuts`](https://www.w3.org/TR/wai-aria-1.1/#aria-keyshortcuts)

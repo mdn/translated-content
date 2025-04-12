@@ -27,9 +27,9 @@ dfn {
 
 ## 属性
 
-この要素の属性は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を含みます。
+この要素の属性は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を含みます。
 
-[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性は後述のとおり、通常と異なる特別な意味合いを持ちます。
+[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性は後述のとおり、通常と異なる特別な意味合いを持ちます。
 
 ## 使用上のメモ
 
@@ -39,7 +39,7 @@ dfn {
 
 定義される用語は、以下の規則に従います。
 
-1. `<dfn>` 要素に [`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性がある場合、 `title` 属性の値が定義される用語とみなされます。その要素の中の文字列もその用語でなければなりませんが、略語（おそらく {{HTMLElement("abbr")}} を使用）や、用語のその他の形でも構いません。
+1. `<dfn>` 要素に [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性がある場合、 `title` 属性の値が定義される用語とみなされます。その要素の中の文字列もその用語でなければなりませんが、略語（おそらく {{HTMLElement("abbr")}} を使用）や、用語のその他の形でも構いません。
 2. `<dfn>` が単一の子要素を持ち、自分自身には何も文字列がなく、かつその子要素が `title` 属性を持つ {{HTMLElement("abbr")}} 要素である場合は、 `<abbr>` 要素の `title` の値が定義する用語です。
 3. それ以外では、 `<dfn>` 要素の文字列コンテンツが定義される用語です。これは[以下の最初の例](#基本的な用語の識別)で示します。
 
@@ -48,7 +48,7 @@ dfn {
 
 ### `<dfn>` 要素へのリンク
 
-`<dfn>` 要素に [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性をつけた場合は、 {{HTMLElement("a")}} 要素を使用してそこにリンクすることができます。用語の使用時にはそのようなリンクを使用して、用語のリンクをクリックすることで読者が用語の定義にすばやく移動できるようにしてください。
+`<dfn>` 要素に [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性をつけた場合は、 {{HTMLElement("a")}} 要素を使用してそこにリンクすることができます。用語の使用時にはそのようなリンクを使用して、用語のリンクをクリックすることで読者が用語の定義にすばやく移動できるようにしてください。
 
 これは以下の[定義へのリンク](#定義へのリンク)の例で示します。
 
@@ -103,7 +103,7 @@ dfn {
 </p>
 ```
 
-ここで [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の `"definition-dfn"` の値をリンク先として使用して、定義を見ることができます。その後で、 `<a>` の [`href`](/ja/docs/Web/HTML/Element/a#href) 属性を `"#definition-dfn"` に設定して、定義に戻るリンクを設定します。
+ここで [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の `"definition-dfn"` の値をリンク先として使用して、定義を見ることができます。その後で、 `<a>` の [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性を `"#definition-dfn"` に設定して、定義に戻るリンクを設定します。
 
 #### 結果
 

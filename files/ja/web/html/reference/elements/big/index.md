@@ -15,7 +15,7 @@ l10n:
 
 ## 属性
 
-この要素は、すべての要素で共通の[グローバル属性](/ja/docs/Web/HTML/Global_attributes)以外の属性はありません。
+この要素は、すべての要素で共通の[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)以外の属性はありません。
 
 ## 例
 

@@ -61,11 +61,11 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- [`for`](/ja/docs/Web/HTML/Attributes/for)
+- [`for`](/ja/docs/Web/HTML/Reference/Attributes/for)
 
-  - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Global_attributes/id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/HTML/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
+  - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/HTML/Guides/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
 
     > [!NOTE]
     > プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
@@ -109,9 +109,9 @@ l10n:
 
 ### 見出し
 
-`<label>` の中に[見出し要素](/ja/docs/Web/HTML/Element/Heading_Elements)を配置すると、数多くの種類の支援技術を妨げることになります。見出しは一般的に[ナビゲーションエイド](/ja/docs/Web/HTML/Element/Heading_Elements#ナビゲーション)として使用されるためです。ラベルの文字列を視覚的に調整する必要がある場合は、代わりに `<label>` 要素に CSS クラスを適用してください。
+`<label>` の中に[見出し要素](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)を配置すると、数多くの種類の支援技術を妨げることになります。見出しは一般的に[ナビゲーションエイド](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#ナビゲーション)として使用されるためです。ラベルの文字列を視覚的に調整する必要がある場合は、代わりに `<label>` 要素に CSS クラスを適用してください。
 
-[フォーム](/ja/docs/Web/HTML/Element/form)、またはフォームのセクションにタイトルが必要な場合は、 {{HTMLElement("legend")}} を {{HTMLElement("fieldset")}} の中に配置して使用してください。
+[フォーム](/ja/docs/Web/HTML/Reference/Elements/form)、またはフォームのセクションにタイトルが必要な場合は、 {{HTMLElement("legend")}} を {{HTMLElement("fieldset")}} の中に配置して使用してください。
 
 **悪い例:**
 

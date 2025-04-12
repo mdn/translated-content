@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<hgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と、1 つ以上の [`<p>`](/ja/docs/Web/HTML/Element/p) 要素をグループ化します。
+**`<hgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、見出しとそれに関連する内容を表します。これは 1 つの [`<h1>–<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素と、1 つ以上の [`<p>`](/ja/docs/Web/HTML/Reference/Elements/p) 要素をグループ化します。
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
 
@@ -44,7 +44,7 @@ hgroup p {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 使用上の注意
 
@@ -144,4 +144,4 @@ hgroup p {
 ## 関連情報
 
 - 他のセクション関連要素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [HTML5 文書のセクションとアウトライン](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML5 文書のセクションとアウトライン](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)

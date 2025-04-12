@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/meta/name
 
 {{HTMLSidebar}}
 
-{{htmlelement("meta")}} 要素を使用すると、文書のメタデータを名前と値の組み合わせで提供することができます。 [`name`](/ja/docs/Web/HTML/Element/meta#name) 属性でメタデータ名を指定し、 [`content`](/ja/docs/Web/HTML/Element/meta#content) 属性で値を指定します。
+{{htmlelement("meta")}} 要素を使用すると、文書のメタデータを名前と値の組み合わせで提供することができます。 [`name`](/ja/docs/Web/HTML/Reference/Elements/meta#name) 属性でメタデータ名を指定し、 [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content) 属性で値を指定します。
 
 ### HTML 仕様書で定義されている標準メタデータ名
 
@@ -39,12 +39,12 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
   >
   > - 相反する複数のポリシーが定義されている場合は、 `no-referrer` ポリシーが適用されます。
 
-- [`theme-color`](/ja/docs/Web/HTML/Element/meta/name/theme-color): ユーザーエージェントがページの表示や周辺のユーザーインターフェイスをカスタマイズするために使用すべき推奨色を示します。 `content` 属性には、有効な CSS の {{cssxref("&lt;color&gt;")}} が含まれます。
+- [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color): ユーザーエージェントがページの表示や周辺のユーザーインターフェイスをカスタマイズするために使用すべき推奨色を示します。 `content` 属性には、有効な CSS の {{cssxref("&lt;color&gt;")}} が含まれます。
 - `color-scheme`: 文書と互換性のある 1 つ以上の複数のカラースキームを指定します。
 
   ブラウザーは、この情報をユーザーのブラウザーや端末の設定と合わせて使用し、背景や前景、フォームコントロールやスクロールバーなど、あらゆるものに使用する色を決定します。 `<meta name="color-scheme">` の主な用途は、ライトモードとダークモードの互換性と優先順位を示すことです。
 
-  `color-scheme` の [`content`](/ja/docs/Web/HTML/Element/meta#content) プロパティは次のうちの一つになります。
+  `color-scheme` の [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content) プロパティは次のうちの一つになります。
 
   - `normal`
     - : この文書は配色を意識していないので、既定のカラーパレットを使って描画する必要があります。

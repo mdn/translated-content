@@ -65,9 +65,9 @@ l10n:
 
 ## 関連情報
 
-- [HTML フォーム要素リファレンス](/ja/docs/Web/HTML/Element#forms)
-- [HTML \<input> 型リファレンス](/ja/docs/Web/HTML/Element/input)
-- [HTML 属性リファレンス](/ja/docs/Web/HTML/Attributes)
+- [HTML フォーム要素リファレンス](/ja/docs/Web/HTML/Reference/Elements#forms)
+- [HTML \<input> 型リファレンス](/ja/docs/Web/HTML/Reference/Elements/input)
+- [HTML 属性リファレンス](/ja/docs/Web/HTML/Reference/Attributes)
 - [ユーザー入力とコントロール](/ja/docs/Learn_web_development/Extensions/Forms/User_input_methods)
 
 {{NextMenu("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions")}}

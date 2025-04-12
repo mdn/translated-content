@@ -100,7 +100,7 @@ tfoot td {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 ### 非推奨の属性
 
@@ -163,7 +163,7 @@ tfoot td {
 
 1. ソースコードの表は、上から下に向かってソースコード順に、行ボックスで埋められます。それぞれの行ボックスは、セルの 1 行分を占めます。
 2. 行グループボックスは、1 つ以上の行ボックスを占めます。
-3. 列ボックスはソース順に隣り合って配置されます。[`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性の値に応じて、列は左から右、または右から左に向けて配置されます。列ボックスは表のセルの 1 つ以上の列を占めます。
+3. 列ボックスはソース順に隣り合って配置されます。[`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性の値に応じて、列は左から右、または右から左に向けて配置されます。列ボックスは表のセルの 1 つ以上の列を占めます。
 4. 列グループボックスは、1 つ以上の列ボックスを占めます。
 5. セルボックスは、複数の行と列にまたがる場合があります。ユーザーエージェントは、利用できる行と列の数に合わせてセルをトリミングします。
 
@@ -190,7 +190,7 @@ tfoot td {
 
 ### 行と列のスコープ
 
-[`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性を見出しセル（{{HTMLElement("th")}} 要素）につけることは、文脈が単純な場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、見出しにスコープを設定すると使い勝手が向上することがあります。複雑な表では、 [`scope`](/ja/docs/Web/HTML/Element/th#scope) を指定することで、セルと見出しの関係に関する必要な情報を提供することができます。
+[`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) 属性を見出しセル（{{HTMLElement("th")}} 要素）につけることは、文脈が単純な場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、見出しにスコープを設定すると使い勝手が向上することがあります。複雑な表では、 [`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) を指定することで、セルと見出しの関係に関する必要な情報を提供することができます。
 
 - [MDN 視覚障碍者向けの表](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#視覚障碍者向けの表)
 - [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
@@ -199,11 +199,11 @@ tfoot td {
 
 ### 複雑な表
 
-スクリーンリーダーのような支援技術は、見出しのセルを厳密に水平または垂直方向に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) と [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性がある場合のことです。
+スクリーンリーダーのような支援技術は、見出しのセルを厳密に水平または垂直方向に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) と [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#rowspan) 属性がある場合のことです。
 
-できれば、テーブルの内容を表現するための別な方法、例えばより小さい表の集合に分解するなどで、 [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) と [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性に依存する必要がないようにすることを考慮してください。これは支援技術を使用している人が表の内容を理解しやすくするのに加えて、表のレイアウトの関連を理解することが難しい認識障碍を持った人にも利益になります。
+できれば、テーブルの内容を表現するための別な方法、例えばより小さい表の集合に分解するなどで、 [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) と [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#rowspan) 属性に依存する必要がないようにすることを考慮してください。これは支援技術を使用している人が表の内容を理解しやすくするのに加えて、表のレイアウトの関連を理解することが難しい認識障碍を持った人にも利益になります。
 
-表を分割することができないのであれば、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) および [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性の組み合わせを用いて、表のセルとそのセルに関連した見出し（{{HTMLElement("th")}} 要素）をプログラム的に結び付けてください。
+表を分割することができないのであれば、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) および [`headers`](/ja/docs/Web/HTML/Reference/Elements/td#headers) 属性の組み合わせを用いて、表のセルとそのセルに関連した見出し（{{HTMLElement("th")}} 要素）をプログラム的に結び付けてください。
 
 - [MDN 視覚障碍者向けの表](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#視覚障碍者向けの表)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
@@ -314,7 +314,7 @@ td {
 
 #### HTML
 
-これは、 [`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性を {{HTMLElement("th")}} 要素に導入し、`col`（列）または `row`（行）の対応する値を設定することで実現できます。
+これは、 [`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) 属性を {{HTMLElement("th")}} 要素に導入し、`col`（列）または `row`（行）の対応する値を設定することで実現できます。
 
 ```html
 <table>
@@ -348,7 +348,7 @@ td {
 CSS と視覚的な結果の変更はありません。この適応により、スクリーンリーダーなどの支援技術に見出しがどのセルと相対しているかを特定するのに役立つ貴重な文脈情報が指定されます。
 
 > [!NOTE]
-> 表の構造がさらに複雑な場合は、[`headers`](/ja/docs/Web/HTML/Element/th#headers) 属性を {{HTMLElement("th")}} および {{HTMLElement("td")}} 要素で（追加で）使用することで、アクセシビリティが向上し、支援技術がセル間の関係を識別するのに役立つ場合があります。[複雑な表](#複雑な表)を参照してください。
+> 表の構造がさらに複雑な場合は、[`headers`](/ja/docs/Web/HTML/Reference/Elements/th#headers) 属性を {{HTMLElement("th")}} および {{HTMLElement("td")}} 要素で（追加で）使用することで、アクセシビリティが向上し、支援技術がセル間の関係を識別するのに役立つ場合があります。[複雑な表](#複雑な表)を参照してください。
 
 ### 表の節グループを明示的に指定
 
@@ -401,7 +401,7 @@ CSS と視覚的な結果の変更はありません。この適応により、�
 
 これまでに作成した表を基に、新たに「会員有効期限」の列を本文のそれぞれの行に {{HTMLElement("td")}} で追加します。また、新しい行（{{HTMLElement("tr")}} 要素）をヘッダー節（{{HTMLElement("thead")}} 要素）内に追加し、「会員資格期間」の列見出しを「入会日」と「退会日」の列に追加します。
 
-2 つ目のヘッダー行を作成するには、[`colspan`](/ja/docs/Web/HTML/Element/th#colspan) 属性と [`rowspan`](/ja/docs/Web/HTML/Element/th#rowspan) 属性を {{HTMLElement("th")}} 要素に追加して、見出しセルを正しい列と行の数に割り当てます。
+2 つ目のヘッダー行を作成するには、[`colspan`](/ja/docs/Web/HTML/Reference/Elements/th#colspan) 属性と [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/th#rowspan) 属性を {{HTMLElement("th")}} 要素に追加して、見出しセルを正しい列と行の数に割り当てます。
 
 ```html
 <table>
@@ -460,8 +460,8 @@ td {
 
 ヘッダー節はこれで 2 行になります。1 行目の見出し（{{HTMLElement("th")}} 要素）は「名前」、「ID」、「会員資格期間」、「残高」となり、2 行目の副見出しは「入会」と「退会」となります。これは、次の手順で実行します。
 
-- 最初の行の「名前」「ID」「残高」の見出しは、 [`rowspan`](/ja/docs/Web/HTML/Element/th#rowspan) 属性によって両方の見出し行にまたがっており、それぞれが 2 行分の高さになります。
-- 1 行目の「会員資格期間」の見出しセルは、 [`colspan`](/ja/docs/Web/HTML/Element/th#colspan) 属性によって 2 つの列にまたがっているため、 2 列分の幅になっています。
+- 最初の行の「名前」「ID」「残高」の見出しは、 [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/th#rowspan) 属性によって両方の見出し行にまたがっており、それぞれが 2 行分の高さになります。
+- 1 行目の「会員資格期間」の見出しセルは、 [`colspan`](/ja/docs/Web/HTML/Reference/Elements/th#colspan) 属性によって 2 つの列にまたがっているため、 2 列分の幅になっています。
 - 2 行目には、「入会日」と「退会日」という 2 つの見出しセルのみが含まれています。他にも 3 つの列がありますが、これらは 2 行にまたがる 1 行目のセルと統合されているためです。この 2 つの見出しセルは、「会員資格期間」の見出しの下に正しく配置されています。
 
 ### 表のキャプションと列の集計

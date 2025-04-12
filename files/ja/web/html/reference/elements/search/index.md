@@ -12,7 +12,7 @@ l10n:
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
+この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみを持ちます。
 
 ## 使用上の注意
 

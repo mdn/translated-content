@@ -9,11 +9,11 @@ l10n:
 {{APIRef("DOM")}}
 
 **`document.title`** プロパティは、現在の文書の題名を取得または設定します。
-存在する場合、[`<title>`](/ja/docs/Web/HTML/Element/title) の値が既定値です。
+存在する場合、[`<title>`](/ja/docs/Web/HTML/Reference/Elements/title) の値が既定値です。
 
 ## 値
 
-文字列で、この文書の題名が入ります。題名が `document.title` に設定することで上書きされている場合は、その値が入ります。そうでなければ、 [`<title>`](/ja/docs/Web/HTML/Element/title) 要素に指定された題名が入ります。
+文字列で、この文書の題名が入ります。題名が `document.title` に設定することで上書きされている場合は、その値が入ります。そうでなければ、 [`<title>`](/ja/docs/Web/HTML/Reference/Elements/title) 要素に指定された題名が入ります。
 
 ```js
 document.title = newTitle;

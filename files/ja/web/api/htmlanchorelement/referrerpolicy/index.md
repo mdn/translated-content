@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLAnchorElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("a")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Element/a#referrerpolicy) 属性を反映します。
+**`HTMLAnchorElement.referrerPolicy`** プロパティは、リソースの取得時に送信されるリファラーを定義する {{HTMLElement("a")}} 要素の HTML [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/a#referrerpolicy) 属性を反映します。
 
 ## 値
 

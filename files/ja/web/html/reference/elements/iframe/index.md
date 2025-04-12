@@ -36,7 +36,7 @@ iframe {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `allow`
 
@@ -118,7 +118,7 @@ iframe {
   - : `<iframe>` に埋め込まれたコンテンツに適用される制限を制御します。フレーム内のコンテンツに追加の制約を適用します。この属性の値は、空にするとすべての制約を適用し、空白区切りのトークンにすると特定の制約を外します。
 
     - `allow-downloads`
-      - : [download](/ja/docs/Web/HTML/Element/a#download) 属性を持つ {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を通して、またファイルのダウンロードにつながるナビゲーションを通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
+      - : [download](/ja/docs/Web/HTML/Reference/Elements/a#download) 属性を持つ {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を通して、またファイルのダウンロードにつながるナビゲーションを通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
     - `allow-forms`
       - : ページがフォームを送信することを許可します。このキーワードを使用しない場合、フォームは通常通り表示されますが、フォームを送信しても入力の検証、ウェブサーバーへのデータ送信、ダイアログの終了が行われません。
     - `allow-modals`
@@ -216,7 +216,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## アクセシビリティ
 
-読み上げソフトのような支援技術を利用して操作している人は、 `<iframe>` 上の [`title` 属性](/ja/docs/Web/HTML/Global_attributes/title)を使用して内容をラベル付けします。 title の値で埋め込みコンテンツを正確に説明してください。
+読み上げソフトのような支援技術を利用して操作している人は、 `<iframe>` 上の [`title` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/title)を使用して内容をラベル付けします。 title の値で埋め込みコンテンツを正確に説明してください。
 
 ```html
 <iframe

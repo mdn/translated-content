@@ -226,8 +226,8 @@ panel.ontouchend = stopMove;
 
 特に、モバイルに関して対処する必要がある最も一般的な問題は次のとおりです。
 
-- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
-- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Web/HTML/Responsive_images)を使用してこれを扱えます。
+- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)、[ビューポート](/ja/docs/Web/HTML/Guides/Viewport_meta_element)、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
+- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Web/HTML/Guides/Responsive_images)を使用してこれを扱えます。
 - 高解像度について考える。多くのモバイル端末は高解像度の画面を持っているため、ディスプレイがくっきりと鮮明に見えるようにするために、より高解像度の画像が必要です。ここでも、レスポンシブ画像テクニックを使用して、必要に応じて画像を提供できます。さらに、SVG ベクター画像フォーマットを使用して多くの画像要件を満たすことができます。これは今日のブラウザー間で十分にサポートされています。SVG はファイルサイズが小さく、表示されているサイズに関係なく鮮明に保たれます（詳細は[ウェブにベクターグラフィックスを追加する](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)を参照）。
 
 > [!NOTE]
@@ -239,7 +239,7 @@ panel.ontouchend = stopMove;
 
 #### ズームを無効にしない
 
-[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして、{{htmlelement("head")}} で端末の幅にあわせるにはこうします:
+[ビューポート](/ja/docs/Web/HTML/Guides/Viewport_meta_element)を使用すると、ズームを無効にすることができます。常にリサイズ可能にして、{{htmlelement("head")}} で端末の幅にあわせるにはこうします:
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />

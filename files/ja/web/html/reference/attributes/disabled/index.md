@@ -58,13 +58,13 @@ label {
 
 この論理属性は、ユーザーがボタンを操作することを防ぎます。この属性が設定されていない場合でも、例えば {{htmlelement('fieldset')}} のような包含要素からボタンを無効にすることができます。 `disabled` 属性が設定された包含要素が存在しない場合、ボタンは有効になります。
 
-Firefox は他のブラウザーとは異なり、ページを再読み込みしても {{htmlelement('button')}} の動的な無効状態を維持します。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を使用します。
+Firefox は他のブラウザーとは異なり、ページを再読み込みしても {{htmlelement('button')}} の動的な無効状態を維持します。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性を使用します。
 
 ### 属性の操作
 
-`disabled` と [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) の違いは、コントロールは読み取り専用 (read-only) になっても機能し、フォーカスを受けることができますが、無効なコントロールはフォーカスを受けることができず、フォームと共に送信されず、一般的には有効になるまでコントロールとして機能しないということです。
+`disabled` と [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) の違いは、コントロールは読み取り専用 (read-only) になっても機能し、フォーカスを受けることができますが、無効なコントロールはフォーカスを受けることができず、フォームと共に送信されず、一般的には有効になるまでコントロールとして機能しないということです。
 
-無効にされたフィールドはその値を変更することができないので、 [`required`](/ja/docs/Web/HTML/Attributes/required) は `disabled` 属性も指定されている入力に対しては効果がありません。さらに、要素が変更不可になるので、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) のような他のほとんどの属性も、コントロールが有効になるまで効果がありません。
+無効にされたフィールドはその値を変更することができないので、 [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) は `disabled` 属性も指定されている入力に対しては効果がありません。さらに、要素が変更不可になるので、[`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) のような他のほとんどの属性も、コントロールが有効になるまで効果がありません。
 
 > **メモ:** `disabled` 属性が指定されている入力フィールドでは、 `required` 属性は許可されません。
 

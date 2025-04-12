@@ -63,11 +63,11 @@ header > time {
 
 ### 歴史的な使用法
 
-`<header>` 要素は、もともと HTML の初期に見出しのために存在していました。これは [the very first website](http://info.cern.ch/) に見られます。ある時点で見出しは [`<h1>` ～ `<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) となり、`<header>` が自由に別なロールを担うことができるようになりました。
+`<header>` 要素は、もともと HTML の初期に見出しのために存在していました。これは [the very first website](http://info.cern.ch/) に見られます。ある時点で見出しは [`<h1>` ～ `<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) となり、`<header>` が自由に別なロールを担うことができるようになりました。
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
 
 ## 例
 

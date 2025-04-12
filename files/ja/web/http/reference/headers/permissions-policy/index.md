@@ -86,7 +86,7 @@ Permissions-Policy: <directive> <allowlist>
 - {{httpheader('Permissions-Policy/encrypted-media', 'encrypted-media')}}
   - : 現在の文書が [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API) API (EME) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("Navigator.requestMediaKeySystemAccess()")}} から返却された {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。
 - {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}}
-  - : 表示されないフレーム内 (例えば iframe が [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) または `display: none` の場合) でタスクを実行するかどうかを制御します。
+  - : 表示されないフレーム内 (例えば iframe が [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) または `display: none` の場合) でタスクを実行するかどうかを制御します。
 - {{httpheader('Permissions-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}}
 
   - : ビューポートの見える範囲外にあるフレーム内のタスクを実行するかどうかを制御します。

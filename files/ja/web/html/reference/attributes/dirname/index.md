@@ -104,6 +104,6 @@ https://www.example.com/submit?user=LTR+Username&user-direction=rtl&comment=LTR+
 
 ## 関連情報
 
-- [`dir` 属性](/ja/docs/Web/HTML/Global_attributes/dir)
+- [`dir` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/dir)
 - {{htmlelement("input")}}
 - {{htmlelement("textarea")}}

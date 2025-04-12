@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`tel`** 型は、ユーザーに電話番号を入力または編集させるために使用します。 [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) や [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url) とは異なり、送信前に値が特定の書式であると自動的には検証されません。電話番号の書式は世界中で様々だからです。
+{{HTMLElement("input")}} 要素の **`tel`** 型は、ユーザーに電話番号を入力または編集させるために使用します。 [`<input type="email">`](/ja/docs/Web/HTML/Reference/Elements/input/email) や [`<input type="url">`](/ja/docs/Web/HTML/Reference/Elements/input/url) とは異なり、送信前に値が特定の書式であると自動的には検証されません。電話番号の書式は世界中で様々だからです。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
 
@@ -46,35 +46,35 @@ label {
 
 ## 値
 
-{{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、電話番号を表す文字列、または空文字列 (`""`) の文字列が入ります。
+{{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性には、電話番号を表す文字列、または空文字列 (`""`) の文字列が入ります。
 
 ## 追加の属性
 
-[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、電話番号型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、電話番号型の入力欄は次の属性にも対応しています。
 
 ### list
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### maxlength
 
 ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最大文字列長です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
+フィールドに入力された長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
 
 ### minlength
 
 ユーザーが電話番号欄に入力することができる（UTF-16 コード単位での）最小文字列長です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、電話番号欄には最小長が設定されません。
 
-入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
+入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、電話番号欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗します。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは {{Glossary("ASCII")}} ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細と例については後述の[パターン検証](#パターン検証)を参照してください。
 
@@ -85,7 +85,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
 > [!NOTE]
-> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#labels)を参照してください。
+> 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Reference/Elements/input#labels)を参照してください。
 
 ### readonly
 
@@ -145,7 +145,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 #### 物理的な入力欄の寸法
 
-入力ボックスの物理的な大きさは、 [`size`](/ja/docs/Web/HTML/Element/input#size) 属性で制御することが可能です。この属性により、入力ボックスが一度に表示できる文字数を指定することができます。この例では、例えば `tel` のエディットボックスの幅は 20 文字です。
+入力ボックスの物理的な大きさは、 [`size`](/ja/docs/Web/HTML/Reference/Elements/input#size) 属性で制御することが可能です。この属性により、入力ボックスが一度に表示できる文字数を指定することができます。この例では、例えば `tel` のエディットボックスの幅は 20 文字です。
 
 ```html
 <input id="telNo" name="telNo" type="tel" size="20" />
@@ -155,7 +155,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 #### 要素の値の長さ
 
-`size` は、入力される電話番号の長さの制限とは別のものです。入力される電話番号の長さの最小値は [`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性で指定でき、同様に、入力される電話番号の長さの最大値は [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) 属性で設定することができます。
+`size` は、入力される電話番号の長さの制限とは別のものです。入力される電話番号の長さの最小値は [`minlength`](/ja/docs/Web/HTML/Reference/Elements/input#minlength) 属性で指定でき、同様に、入力される電話番号の長さの最大値は [`maxlength`](/ja/docs/Web/HTML/Reference/Elements/input#maxlength) 属性で設定することができます。
 
 以下の例では、幅 20 文字の電話番号入力ボックスを生成し、入力内容は 9 文字以上、 14 文字以下であることを要求しています。
 
@@ -178,7 +178,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 #### value 属性を言使用した単一の既定値の提供
 
-他と同様に、 `tel` 入力欄に [`value`](/ja/docs/Web/HTML/Element/input#value) 属性を設定することで既定値を指定することができます。
+他と同様に、 `tel` 入力欄に [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を設定することで既定値を指定することができます。
 
 ```html
 <input id="telNo" name="telNo" type="tel" value="333-4444-4444" />
@@ -188,7 +188,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 #### 提案値の提供
 
-さらに一歩進んで、電話番号の既定値のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Element/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる電話番号をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は電話番号入力ボックスの対応する提案値となっています。
+さらに一歩進んで、電話番号の既定値のリストを用意し、そこからユーザーが選択できるようにすることも可能です。これには [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性を使用します。これはユーザーをこれらの選択肢に限定しませんが、よく使われる電話番号をより迅速に選択できるようにします。これは [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) へのヒントも提供します。 `list` 属性は {{HTMLElement("datalist")}} 要素の ID を指定し、この要素は 1 つの提案値につき 1 つの {{HTMLElement("option")}} 要素を含んでおり、それぞれの `option` の `value` は電話番号入力ボックスの対応する提案値となっています。
 
 ```html
 <label for="telNo">電話番号: </label>
@@ -219,7 +219,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 電話番号を必須にする
 
-空の入力を無効として、サーバーに送信されないようにするには、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用します。例えば、このような HTML を使ってみましょう。
+空の入力を無効として、サーバーに送信されないようにするには、 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を使用します。例えば、このような HTML を使ってみましょう。
 
 ```html
 <form>
@@ -271,7 +271,7 @@ input:valid + span::after {
 
 ### パターンによる値検証
 
-入力された数値をさらに制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern)属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("Regular expression", "正規表現")}}を値として取ります。
+入力された数値をさらに制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern)属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("Regular expression", "正規表現")}}を値として取ります。
 
 この例では、前と同じ CSS を使用しますが、 HTML は次のように変更します。
 
@@ -332,7 +332,7 @@ input:valid + span::after {
 
 この例では、ユーザーにどの国にいるかを選択させる {{htmlelement("select")}} 要素と、電話番号の各部分を入力させる一連の `<input type="tel">` 要素を表示します。複数の `tel` 入力欄を使ってはいけないという理由はありません。
 
-それぞれの入力欄には [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性があり、スクリーンリーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
+それぞれの入力欄には [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性があり、スクリーンリーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
 
 ```html
 <form>
@@ -544,5 +544,5 @@ input:valid + span::after {
 
 - [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-  - [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text)
-  - [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)
+  - [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text)
+  - [`<input type="email">`](/ja/docs/Web/HTML/Reference/Elements/input/email)

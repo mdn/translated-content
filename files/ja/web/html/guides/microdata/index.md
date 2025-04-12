@@ -43,15 +43,15 @@ Google、Microsoft、Yahoo! のような主要な検索エンジンの管理者�
 
 ## グローバル属性
 
-[itemid](/ja/docs/Web/HTML/Global_attributes/itemid) – 一意の、アイテムのグローバル識別子。
+[itemid](/ja/docs/Web/HTML/Reference/Global_attributes/itemid) – 一意の、アイテムのグローバル識別子。
 
-[itemprop](/ja/docs/Web/HTML/Global_attributes/itemprop) – アイテムにプロパティを追加するために用います。すべての HTML 要素は、 itemprop が名前と値のペアから構成する、 itemprop 属性を指定することができます。
+[itemprop](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) – アイテムにプロパティを追加するために用います。すべての HTML 要素は、 itemprop が名前と値のペアから構成する、 itemprop 属性を指定することができます。
 
-[itemref](/ja/docs/Web/HTML/Global_attributes/itemref) – `itemscope` 属性をもつ要素の子孫でないプロパティは、itemref を用いてアイテムと関連付けることができます。 itemref は、要素の id (`itemid` ではなく) のリストに文書の他の場所で追加のプロパティを提供します。
+[itemref](/ja/docs/Web/HTML/Reference/Global_attributes/itemref) – `itemscope` 属性をもつ要素の子孫でないプロパティは、itemref を用いてアイテムと関連付けることができます。 itemref は、要素の id (`itemid` ではなく) のリストに文書の他の場所で追加のプロパティを提供します。
 
-[itemscope](/ja/docs/Web/HTML/Global_attributes/itemscope) – itemscope は、ブロックに含まれる HTML が特定のアイテムであることを記述するために [itemtype](/ja/docs/Web/HTML/Global_attributes/itemtype) と共に (通常) 動作します。 itemscope はアイテムを作成し、アイテムに関連付けられる itemtype の範囲を定義します。 itemtype は、アイテムとアイテムのプロパティのコンテキストを説明する [schema.org](https://schema.org/) のような) 語彙の妥当なURLとなります。
+[itemscope](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope) – itemscope は、ブロックに含まれる HTML が特定のアイテムであることを記述するために [itemtype](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype) と共に (通常) 動作します。 itemscope はアイテムを作成し、アイテムに関連付けられる itemtype の範囲を定義します。 itemtype は、アイテムとアイテムのプロパティのコンテキストを説明する [schema.org](https://schema.org/) のような) 語彙の妥当なURLとなります。
 
-[itemtype](/ja/docs/Web/HTML/Global_attributes/itemtype) – データ構造で itemprop の語彙 (アイテムのプロパティ) を定義するために使用される語彙の URL を指定します。[itemscope](/ja/docs/Web/HTML/Global_attributes/itemscope) – は、 itemtype によって設定される語彙がアクティブとなるデータ構造の範囲を設定するために使用されます。
+[itemtype](/ja/docs/Web/HTML/Reference/Global_attributes/itemtype) – データ構造で itemprop の語彙 (アイテムのプロパティ) を定義するために使用される語彙の URL を指定します。[itemscope](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope) – は、 itemtype によって設定される語彙がアクティブとなるデータ構造の範囲を設定するために使用されます。
 
 ## 例
 
@@ -153,6 +153,6 @@ Firefox 16 で対応しました。 Firefox 49 で削除されました。
 
 ### 関連情報
 
-- [グローバル属性](/ja/docs/Web/HTML/Global_attributes)
+- [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 
 {{QuickLinksWithSubpages("/ja/docs/Web/HTML")}}

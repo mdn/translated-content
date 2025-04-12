@@ -26,7 +26,7 @@ l10n:
 
 ## 属性
 
-この要素はすべての[グローバル属性](/ja/docs/Web/HTML/Global_attributes)をサポートし、加えて下記の属性を使うことができます。
+この要素はすべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)をサポートし、加えて下記の属性を使うことができます。
 
 - `type`
 

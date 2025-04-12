@@ -59,7 +59,7 @@ img {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `alt`
   - : 画像を表示しないブラウザーが代わりに表示するテキスト文字列です。
@@ -82,7 +82,7 @@ img {
 
 - `download`
   - : この属性がある場合は、作者はハイパーリンクをリソースのダウンロードに使用すると考えていることを示します。
-    [`download`](/ja/docs/Web/HTML/Element/a#download) 属性の詳しい説明は {{HTMLElement("a")}} をご覧ください。
+    [`download`](/ja/docs/Web/HTML/Reference/Elements/a#download) 属性の詳しい説明は {{HTMLElement("a")}} をご覧ください。
 - `href`
   - : この領域のハイパーリンクの宛先です。
     この値は有効な URL です。
@@ -126,7 +126,7 @@ img {
 
     この属性は [`href`](#href) 属性が存在する場合にのみ使用してください。
 
-    > **メモ:** `target="_blank"` を `<area>` 要素に設定すると、暗黙に `rel` に [`rel="noopener"`](/ja/docs/Web/HTML/Attributes/rel/noopener) を設定し、`window.opener` が設定されていないのと同じように動作します。対応状況は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+    > **メモ:** `target="_blank"` を `<area>` 要素に設定すると、暗黙に `rel` に [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) を設定し、`window.opener` が設定されていないのと同じように動作します。対応状況は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ### 非推奨の属性
 

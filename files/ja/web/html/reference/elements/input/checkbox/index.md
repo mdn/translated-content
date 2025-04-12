@@ -41,7 +41,7 @@ input {
 }
 ```
 
-> **メモ:** [ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)はチェックボックスと似ていますが、重要な違いがあります。[同じ名前のラジオボタン](/ja/docs/Web/HTML/Element/input/radio#ラジオグループの定義)はグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
+> **メモ:** [ラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio)はチェックボックスと似ていますが、重要な違いがあります。[同じ名前のラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio#ラジオグループの定義)はグループ化されており、同時に 1 つしか選択できないのに対し、チェックボックスは単一の値をオンにしたりオフにしたり切り替えることができます。複数のコントロールがある場所では、ラジオボタンはその中で一つしか選択できませんが、チェックボックスは複数の値が選択できます。
 
 ## 値
 
@@ -72,14 +72,14 @@ input {
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 型で[共通する属性](/ja/docs/Web/HTML/Element/input#属性)に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
+すべての {{HTMLElement("input")}} 型で[共通する属性](/ja/docs/Web/HTML/Reference/Elements/input#属性)に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
 
 - `checked`
 
   - : [論理](/ja/docs/Glossary/Boolean/HTML)属性で、チェックボックスが既定で（ページが読み込まれたときに）チェックされているかどうかを示します。チェックボックスが現在チェックされているかどうかを示すものでは*ありません*。チェックボックスの状態が変化した場合、このコンテンツ属性は変化を反映しません。（{{domxref("HTMLInputElement")}} の `checked` IDL 属性のみが更新されます。）
     > [!NOTE]
     > 他の入力コントロールとは異なり、チェックボックスの値は現在 `checked` の状態にある場合のみ、送信データに含まれます。その場合、チェックボックスの `value` 属性の値、または `value` が設定されていない場合は `on` が入力欄の値として報告されます。
-    > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を使用してください。
+    > 他のブラウザーとは異なり、 Firefox は既定でページ読み込みを通して `<input>` の[チェック状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性を使用してください。
 
 - `value`
 
@@ -199,7 +199,7 @@ function updateDisplay() {
 
 ## 検証
 
-チェックボックスは[検証](/ja/docs/Web/HTML/Constraint_validation)（すべての {{HTMLElement("input")}} に対して行われる）に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに [`required`](/ja/docs/Web/HTML/Element/input#required) 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
+チェックボックスは[検証](/ja/docs/Web/HTML/Guides/Constraint_validation)（すべての {{HTMLElement("input")}} に対して行われる）に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
 
 ## 例
 

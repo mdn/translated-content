@@ -117,12 +117,12 @@ p {
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `cite`
   - : 会議の議事録やトラブルシューティングシステムのチケットといった、追加についての説明を記したリソースへの URI を示します。
 - `datetime`
-  - : この属性は変更が行われた日時を示し、有効な日付または日時の文字列でなければなりません。値が日付または日時の文字列として解釈できなかった場合は、要素にタイムスタンプが関連付けられなくなります。時刻がない日付の書式については、[妥当な日付文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)を参照してください。日付と時刻の両方を含む場合の文字列の書式については、[妥当な日時文字列の書式](/ja/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)を参照してください。
+  - : この属性は変更が行われた日時を示し、有効な日付または日時の文字列でなければなりません。値が日付または日時の文字列として解釈できなかった場合は、要素にタイムスタンプが関連付けられなくなります。時刻がない日付の書式については、[妥当な日付文字列の書式](/ja/docs/Web/HTML/Guides/Date_and_time_formats#date_strings)を参照してください。日付と時刻の両方を含む場合の文字列の書式については、[妥当な日時文字列の書式](/ja/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings)を参照してください。
 
 ## 例
 

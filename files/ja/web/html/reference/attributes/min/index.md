@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`min`** 属性は、その属性を含む入力欄に対して許容できる有効な最小値を定義します。要素の値 ([`value`](/ja/docs/Web/HTML/Element/input#value)) がこれより小さい場合、その要素は[制約検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)に失敗します。この値は、`max` 属性の値以下でなければなりません。
+**`min`** 属性は、その属性を含む入力欄に対して許容できる有効な最小値を定義します。要素の値 ([`value`](/ja/docs/Web/HTML/Reference/Elements/input#value)) がこれより小さい場合、その要素は[制約検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)に失敗します。この値は、`max` 属性の値以下でなければなりません。
 
 入力欄の種類によっては既定の最小値があるものもあります。入力欄に既定の最小値がなく、 `min` に有効な数値に変換できない値が指定された場合（あるいは最小値が設定されなかった場合）、その入力には最小値が設定されません。
 
@@ -78,9 +78,9 @@ l10n:
 > [!NOTE]
 > ユーザーが入力したデータが設定された最大値を満たしていない場合、制約検証では無効とみなされ、 {{cssxref(':invalid')}} や {{cssxref(':out-of-range')}} の擬似クラスに一致するようになります。
 
-詳しくは [クライアント側検証](/ja/docs/Web/HTML/Constraint_validation)と {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} を参照してください。
+詳しくは [クライアント側検証](/ja/docs/Web/HTML/Guides/Constraint_validation)と {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} を参照してください。
 
-{{htmlelement('meter')}} 要素における `min` 属性は、測定範囲の上限の数値を定義します。これは、指定されている場合、最大値 ([`max`](/ja/docs/Web/HTML/Attributes/max) 属性) よりも小さくなければなりません。どちらの場合も、省略された場合、値は既定で 1 となります。
+{{htmlelement('meter')}} 要素における `min` 属性は、測定範囲の上限の数値を定義します。これは、指定されている場合、最大値 ([`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性) よりも小さくなければなりません。どちらの場合も、省略された場合、値は既定で 1 となります。
 
 <table class="no-markdown">
   <caption>
@@ -145,10 +145,10 @@ input:invalid {
 
 ## 関連情報
 
-- [`step`](/ja/docs/Web/HTML/Attributes/step)
-- [`max`](/ja/docs/Web/HTML/Attributes/max)
+- [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
+- [`max`](/ja/docs/Web/HTML/Reference/Attributes/max)
 - その他の meter 属性: [`low`](/ja/docs/Web/HTML/Attributes/low), [`high`](/ja/docs/Web/HTML/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Attributes/optimum)
-- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
 - {{cssxref(':out-of-range')}}

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`referrerPolicy`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、この {{HTMLElement("script")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/script#referrerpolicy) を反映します。これは、スクリプトとそれがインポートするスクリプトを取得するときにリファラーをどのように設定するかを定義します。
+**`referrerPolicy`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、この {{HTMLElement("script")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Reference/Elements/script#referrerpolicy) を反映します。これは、スクリプトとそれがインポートするスクリプトを取得するときにリファラーをどのように設定するかを定義します。
 
 ## 値
 
