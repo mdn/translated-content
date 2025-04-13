@@ -420,7 +420,7 @@ article {
 
 ## 技能测试！
 
-你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见[技能测试：响应式 Web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/rwd_skills)。
+你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见[技能测试：响应式 Web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design)。
 
 ## 小结
 

@@ -300,7 +300,7 @@ caption {
 
 ## 技能测试！
 
-我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？在继续学习之前，你可以通过一些进一步的测试来验证自己是否掌握了这些信息——参见[技能测试：表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks)。
+我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？在继续学习之前，你可以通过一些进一步的测试来验证自己是否掌握了这些信息——参见[技能测试：表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables)。
 
 ## 总结
 

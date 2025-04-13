@@ -546,7 +546,7 @@ p#addSpecificity {
 
 ## 技能测试！
 
-你已经阅读到了本文的末尾，但你记住最重要的内容了吗？在进一步学习之前，你可以寻找一些深入的测验来验证你是否掌握了这些信息，参见[技能测试：层叠](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks)。
+你已经阅读到了本文的末尾，但你记住最重要的内容了吗？在进一步学习之前，你可以寻找一些深入的测验来验证你是否掌握了这些信息，参见[技能测试：层叠](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade)。
 
 ## 总结
 

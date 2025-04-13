@@ -336,7 +336,7 @@ textarea {
 
 ## 技能测试
 
-我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images)
 
 ## 小结
 
