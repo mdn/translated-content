@@ -42969,13 +42969,5 @@
     "contributors": [
       "Isildur46"
     ]
-  },
-  "conflicting/Web/API/KeyboardEvent/KeyboardEvent": {
-    "modified": "2019-03-18T21:15:27.272Z",
-    "contributors": [
-      "bingxl",
-      "ply",
-      "Wonder233"
-    ]
   }
 }
