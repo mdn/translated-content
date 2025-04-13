@@ -1,7 +1,6 @@
 ---
 title: <hr>
 slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
 ---
 
 {{HTMLSidebar}}

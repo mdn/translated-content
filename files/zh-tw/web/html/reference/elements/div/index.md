@@ -1,7 +1,6 @@
 ---
 title: <div>：內容分區元素
 slug: Web/HTML/Reference/Elements/div
-original_slug: Web/HTML/Element/div
 ---
 
 {{HTMLSidebar}}

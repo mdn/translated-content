@@ -1,7 +1,6 @@
 ---
 title: <ul>：無序清單元素
 slug: Web/HTML/Reference/Elements/ul
-original_slug: Web/HTML/Element/ul
 ---
 
 {{HTMLSidebar}}

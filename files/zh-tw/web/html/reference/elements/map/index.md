@@ -1,7 +1,6 @@
 ---
 title: <map>：圖像映射元素
 slug: Web/HTML/Reference/Elements/map
-original_slug: Web/HTML/Element/map
 ---
 
 {{HTMLSidebar}}

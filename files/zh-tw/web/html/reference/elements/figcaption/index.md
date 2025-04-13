@@ -1,7 +1,6 @@
 ---
 title: <figcaption>：圖例說明元素
 slug: Web/HTML/Reference/Elements/figcaption
-original_slug: Web/HTML/Element/figcaption
 ---
 
 {{HTMLSidebar}}

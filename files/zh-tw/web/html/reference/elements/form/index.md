@@ -1,7 +1,6 @@
 ---
 title: <form>：表單元素
 slug: Web/HTML/Reference/Elements/form
-original_slug: Web/HTML/Element/form
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <b>：引起注意元素
 slug: Web/HTML/Reference/Elements/b
-original_slug: Web/HTML/Element/b
 ---
 
 {{HTMLSidebar}}

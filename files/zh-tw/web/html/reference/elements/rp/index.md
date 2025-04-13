@@ -1,7 +1,6 @@
 ---
 title: <rp>：Ruby 回退括號元素
 slug: Web/HTML/Reference/Elements/rp
-original_slug: Web/HTML/Element/rp
 ---
 
 {{HTMLSidebar}}

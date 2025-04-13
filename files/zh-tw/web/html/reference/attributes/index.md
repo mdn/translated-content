@@ -1,7 +1,6 @@
 ---
 title: HTML 屬性參考
 slug: Web/HTML/Reference/Attributes
-original_slug: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar("Attributes")}}

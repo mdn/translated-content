@@ -1,7 +1,6 @@
 ---
 title: <bdi>：雙向獨立文本元素
 slug: Web/HTML/Reference/Elements/bdi
-original_slug: Web/HTML/Element/bdi
 ---
 
 {{HTMLSidebar}}

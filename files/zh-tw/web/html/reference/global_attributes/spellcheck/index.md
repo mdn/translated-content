@@ -1,7 +1,6 @@
 ---
 title: 控制 HTML 表單中的拼字檢查功能
 slug: Web/HTML/Reference/Global_attributes/spellcheck
-original_slug: Web/HTML/Global_attributes/spellcheck
 ---
 
 {{HTMLSidebar("Global_attributes")}}

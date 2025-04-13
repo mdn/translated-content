@@ -1,7 +1,6 @@
 ---
 title: <search>：通用搜尋元素
 slug: Web/HTML/Reference/Elements/search
-original_slug: Web/HTML/Element/search
 ---
 
 {{HTMLSidebar}}

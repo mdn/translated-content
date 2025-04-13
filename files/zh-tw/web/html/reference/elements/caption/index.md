@@ -1,7 +1,6 @@
 ---
 title: <caption>：表格標題元素
 slug: Web/HTML/Reference/Elements/caption
-original_slug: Web/HTML/Element/caption
 ---
 
 {{HTMLSidebar}}

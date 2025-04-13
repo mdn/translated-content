@@ -1,7 +1,6 @@
 ---
 title: <html>：HTML 文件/根元素
 slug: Web/HTML/Reference/Elements/html
-original_slug: Web/HTML/Element/html
 ---
 
 {{HTMLSidebar}}

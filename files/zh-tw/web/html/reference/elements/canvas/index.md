@@ -1,7 +1,6 @@
 ---
 title: <canvas>：繪圖畫布元素
 slug: Web/HTML/Reference/Elements/canvas
-original_slug: Web/HTML/Element/canvas
 ---
 
 {{HTMLSidebar}}

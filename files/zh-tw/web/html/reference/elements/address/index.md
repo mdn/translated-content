@@ -1,7 +1,6 @@
 ---
 title: <address>：聯絡地址元素
 slug: Web/HTML/Reference/Elements/address
-original_slug: Web/HTML/Element/address
 ---
 
 {{HTMLSidebar}}

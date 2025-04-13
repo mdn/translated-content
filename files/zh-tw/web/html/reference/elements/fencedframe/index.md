@@ -1,7 +1,6 @@
 ---
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Reference/Elements/fencedframe
-original_slug: Web/HTML/Element/fencedframe
 l10n:
   sourceCommit: 8964db8251cf2825fa81270309a45a475184aab1
 ---

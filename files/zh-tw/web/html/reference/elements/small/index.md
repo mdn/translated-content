@@ -1,7 +1,6 @@
 ---
 title: <small>：備註元素
 slug: Web/HTML/Reference/Elements/small
-original_slug: Web/HTML/Element/small
 ---
 
 {{HTMLSidebar}}

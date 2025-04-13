@@ -1,7 +1,6 @@
 ---
 title: <p>：段落元素
 slug: Web/HTML/Reference/Elements/p
-original_slug: Web/HTML/Element/p
 ---
 
 {{HTMLSidebar}}

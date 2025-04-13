@@ -1,7 +1,6 @@
 ---
 title: <samp>：樣本輸出元素
 slug: Web/HTML/Reference/Elements/samp
-original_slug: Web/HTML/Element/samp
 ---
 
 {{HTMLSidebar}}

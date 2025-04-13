@@ -1,7 +1,6 @@
 ---
 title: <frame>：框架元素
 slug: Web/HTML/Reference/Elements/frame
-original_slug: Web/HTML/Element/frame
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}

@@ -1,7 +1,6 @@
 ---
 title: <var>：變數元素
 slug: Web/HTML/Reference/Elements/var
-original_slug: Web/HTML/Element/var
 ---
 
 {{HTMLSidebar}}

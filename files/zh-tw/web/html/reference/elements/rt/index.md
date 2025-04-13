@@ -1,7 +1,6 @@
 ---
 title: <rt>：Ruby 文本元素
 slug: Web/HTML/Reference/Elements/rt
-original_slug: Web/HTML/Element/rt
 ---
 
 {{HTMLSidebar}}

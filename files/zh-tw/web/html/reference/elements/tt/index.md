@@ -1,7 +1,6 @@
 ---
 title: <tt>：電報文字元素
 slug: Web/HTML/Reference/Elements/tt
-original_slug: Web/HTML/Element/tt
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

@@ -1,7 +1,6 @@
 ---
 title: <span>：內容區塊元素
 slug: Web/HTML/Reference/Elements/span
-original_slug: Web/HTML/Element/span
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <i>：斜體文字元素
 slug: Web/HTML/Reference/Elements/i
-original_slug: Web/HTML/Element/i
 ---
 
 {{HTMLSidebar}}

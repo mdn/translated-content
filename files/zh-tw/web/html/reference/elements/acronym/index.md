@@ -1,7 +1,6 @@
 ---
 title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
-original_slug: Web/HTML/Element/acronym
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

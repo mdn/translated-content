@@ -1,7 +1,6 @@
 ---
 title: <area>：圖像地圖區域元素
 slug: Web/HTML/Reference/Elements/area
-original_slug: Web/HTML/Element/area
 ---
 
 {{HTMLSidebar}}

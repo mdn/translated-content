@@ -1,7 +1,6 @@
 ---
 title: <progress>：進度指示元素
 slug: Web/HTML/Reference/Elements/progress
-original_slug: Web/HTML/Element/progress
 ---
 
 {{HTMLSidebar}}

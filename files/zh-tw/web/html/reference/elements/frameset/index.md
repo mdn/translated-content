@@ -1,7 +1,6 @@
 ---
 title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
-original_slug: Web/HTML/Element/frameset
 ---
 
 {{HTMLSidebar}}{{Deprecated_header}}

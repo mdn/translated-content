@@ -1,7 +1,6 @@
 ---
 title: <script>
 slug: Web/HTML/Reference/Elements/script
-original_slug: Web/HTML/Element/script
 ---
 
 {{HTMLSidebar}}

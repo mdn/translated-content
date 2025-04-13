@@ -1,7 +1,6 @@
 ---
 title: <fieldset>：欄集元素
 slug: Web/HTML/Reference/Elements/fieldset
-original_slug: Web/HTML/Element/fieldset
 ---
 
 {{HTMLSidebar}}

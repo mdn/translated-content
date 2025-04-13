@@ -1,7 +1,6 @@
 ---
 title: <dfn>：定義元素
 slug: Web/HTML/Reference/Elements/dfn
-original_slug: Web/HTML/Element/dfn
 ---
 
 {{HTMLSidebar}}

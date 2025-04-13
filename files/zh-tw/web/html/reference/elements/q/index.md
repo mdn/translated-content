@@ -1,7 +1,6 @@
 ---
 title: <q>
 slug: Web/HTML/Reference/Elements/q
-original_slug: Web/HTML/Element/q
 ---
 
 {{HTMLSidebar}}

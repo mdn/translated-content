@@ -1,7 +1,6 @@
 ---
 title: <ins>：插入文字元素
 slug: Web/HTML/Reference/Elements/ins
-original_slug: Web/HTML/Element/ins
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <col>：表格欄元素
 slug: Web/HTML/Reference/Elements/col
-original_slug: Web/HTML/Element/col
 ---
 
 {{HTMLSidebar}}

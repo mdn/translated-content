@@ -1,7 +1,6 @@
 ---
 title: <big>：更大文字元素
 slug: Web/HTML/Reference/Elements/big
-original_slug: Web/HTML/Element/big
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

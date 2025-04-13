@@ -1,7 +1,6 @@
 ---
 title: <marquee>：捲動元素（已過時）
 slug: Web/HTML/Reference/Elements/marquee
-original_slug: Web/HTML/Element/marquee
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}

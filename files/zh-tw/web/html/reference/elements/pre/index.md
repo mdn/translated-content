@@ -1,7 +1,6 @@
 ---
 title: <pre>：預格式化文本元素
 slug: Web/HTML/Reference/Elements/pre
-original_slug: Web/HTML/Element/pre
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <blockquote>：引用塊元素
 slug: Web/HTML/Reference/Elements/blockquote
-original_slug: Web/HTML/Element/blockquote
 ---
 
 {{HTMLSidebar}}

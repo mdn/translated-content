@@ -1,7 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Reference/Elements/template
-original_slug: Web/HTML/Element/template
 ---
 
 {{HTMLSidebar}}

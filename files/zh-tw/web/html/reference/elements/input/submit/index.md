@@ -1,7 +1,6 @@
 ---
 title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
-original_slug: Web/HTML/Element/input/submit
 ---
 
 {{HTMLSidebar}}

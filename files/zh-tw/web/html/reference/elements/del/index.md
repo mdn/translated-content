@@ -1,7 +1,6 @@
 ---
 title: <del>：刪除的文字元素
 slug: Web/HTML/Reference/Elements/del
-original_slug: Web/HTML/Element/del
 ---
 
 {{HTMLSidebar}}

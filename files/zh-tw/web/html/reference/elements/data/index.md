@@ -1,7 +1,6 @@
 ---
 title: <data>：資料元素
 slug: Web/HTML/Reference/Elements/data
-original_slug: Web/HTML/Element/data
 ---
 
 {{HTMLSidebar}}

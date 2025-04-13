@@ -1,7 +1,6 @@
 ---
 title: <base>：文件基礎 URL 元素
 slug: Web/HTML/Reference/Elements/base
-original_slug: Web/HTML/Element/base
 ---
 
 {{HTMLSidebar}}

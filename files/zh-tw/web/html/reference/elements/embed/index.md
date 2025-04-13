@@ -1,7 +1,6 @@
 ---
 title: <embed>：嵌入外部內容元素
 slug: Web/HTML/Reference/Elements/embed
-original_slug: Web/HTML/Element/embed
 ---
 
 {{HTMLSidebar}}

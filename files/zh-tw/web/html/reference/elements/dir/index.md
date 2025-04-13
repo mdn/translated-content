@@ -1,7 +1,6 @@
 ---
 title: <dir>：目錄元素
 slug: Web/HTML/Reference/Elements/dir
-original_slug: Web/HTML/Element/dir
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}

@@ -1,7 +1,6 @@
 ---
 title: <audio>：嵌入音訊元素
 slug: Web/HTML/Reference/Elements/audio
-original_slug: Web/HTML/Element/audio
 ---
 
 {{HTMLSidebar}}

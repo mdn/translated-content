@@ -1,7 +1,6 @@
 ---
 title: <aside>：側邊欄元素
 slug: Web/HTML/Reference/Elements/aside
-original_slug: Web/HTML/Element/aside
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <body>：文件主體元素
 slug: Web/HTML/Reference/Elements/body
-original_slug: Web/HTML/Element/body
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <code>：行內程式碼元素
 slug: Web/HTML/Reference/Elements/code
-original_slug: Web/HTML/Element/code
 ---
 
 {{HTMLSidebar}}

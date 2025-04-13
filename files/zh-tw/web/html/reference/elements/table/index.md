@@ -1,7 +1,6 @@
 ---
 title: <table>（表格元素）
 slug: Web/HTML/Reference/Elements/table
-original_slug: Web/HTML/Element/table
 ---
 
 {{HTMLSidebar}}

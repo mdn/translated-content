@@ -1,7 +1,6 @@
 ---
 title: <a>：超連結元素
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
 ---
 
 {{HTMLSidebar}}

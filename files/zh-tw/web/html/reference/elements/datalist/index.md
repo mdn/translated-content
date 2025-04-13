@@ -1,7 +1,6 @@
 ---
 title: <datalist>：HTML 資料清單元素
 slug: Web/HTML/Reference/Elements/datalist
-original_slug: Web/HTML/Element/datalist
 ---
 
 {{HTMLSidebar}}

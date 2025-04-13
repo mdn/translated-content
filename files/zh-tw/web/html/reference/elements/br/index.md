@@ -1,7 +1,6 @@
 ---
 title: <br>：換行元素
 slug: Web/HTML/Reference/Elements/br
-original_slug: Web/HTML/Element/br
 ---
 
 {{HTMLSidebar}}

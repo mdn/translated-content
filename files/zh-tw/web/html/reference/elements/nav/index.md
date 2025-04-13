@@ -1,7 +1,6 @@
 ---
 title: <nav>
 slug: Web/HTML/Reference/Elements/nav
-original_slug: Web/HTML/Element/nav
 ---
 
 {{HTMLSidebar}}

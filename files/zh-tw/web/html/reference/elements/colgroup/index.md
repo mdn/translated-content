@@ -1,7 +1,6 @@
 ---
 title: <colgroup>：表格欄群組元素
 slug: Web/HTML/Reference/Elements/colgroup
-original_slug: Web/HTML/Element/colgroup
 ---
 
 {{HTMLSidebar}}

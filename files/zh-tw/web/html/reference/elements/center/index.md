@@ -1,7 +1,6 @@
 ---
 title: <center>：中央對齊文字元素
 slug: Web/HTML/Reference/Elements/center
-original_slug: Web/HTML/Element/center
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

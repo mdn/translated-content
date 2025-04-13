@@ -1,7 +1,6 @@
 ---
 title: <article>：文章內容元素
 slug: Web/HTML/Reference/Elements/article
-original_slug: Web/HTML/Element/article
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: title
 slug: Web/HTML/Reference/Global_attributes/title
-original_slug: Web/HTML/Global_attributes/title
 l10n:
   sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---

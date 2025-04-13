@@ -1,7 +1,6 @@
 ---
 title: <abbr>：縮寫元素
 slug: Web/HTML/Reference/Elements/abbr
-original_slug: Web/HTML/Element/abbr
 ---
 
 {{HTMLSidebar}}

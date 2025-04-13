@@ -1,7 +1,6 @@
 ---
 title: <bdo>：雙向文字覆蓋元素
 slug: Web/HTML/Reference/Elements/bdo
-original_slug: Web/HTML/Element/bdo
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: 標準後設資料名稱
 slug: Web/HTML/Reference/Elements/meta/name
-original_slug: Web/HTML/Element/meta/name
 l10n:
   sourceCommit: b8ed1dc2ae2ff1b6f44f389ac9756fed78b03f0e
 ---

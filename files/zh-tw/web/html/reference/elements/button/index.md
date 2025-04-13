@@ -1,7 +1,6 @@
 ---
 title: <button>：按鈕元素
 slug: Web/HTML/Reference/Elements/button
-original_slug: Web/HTML/Element/button
 ---
 
 {{HTMLSidebar}}

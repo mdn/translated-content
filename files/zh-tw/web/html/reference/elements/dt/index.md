@@ -1,7 +1,6 @@
 ---
 title: <dt>：定義術語元素
 slug: Web/HTML/Reference/Elements/dt
-original_slug: Web/HTML/Element/dt
 ---
 
 {{HTMLSidebar}}

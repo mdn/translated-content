@@ -1,7 +1,6 @@
 ---
 title: <noscript>
 slug: Web/HTML/Reference/Elements/noscript
-original_slug: Web/HTML/Element/noscript
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <wbr>：換行機會元素
 slug: Web/HTML/Reference/Elements/wbr
-original_slug: Web/HTML/Element/wbr
 ---
 
 {{HTMLSidebar}}

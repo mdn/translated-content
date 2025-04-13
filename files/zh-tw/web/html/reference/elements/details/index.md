@@ -1,7 +1,6 @@
 ---
 title: <details>：揭露細節元素
 slug: Web/HTML/Reference/Elements/details
-original_slug: Web/HTML/Element/details
 ---
 
 {{HTMLSidebar}}

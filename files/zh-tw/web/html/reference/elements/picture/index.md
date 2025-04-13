@@ -1,7 +1,6 @@
 ---
 title: "<picture>: The Picture element"
 slug: Web/HTML/Reference/Elements/picture
-original_slug: Web/HTML/Element/picture
 ---
 
 {{HTMLSidebar}}

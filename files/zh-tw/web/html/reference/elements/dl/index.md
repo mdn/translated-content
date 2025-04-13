@@ -1,7 +1,6 @@
 ---
 title: <dl>：描述清單元素
 slug: Web/HTML/Reference/Elements/dl
-original_slug: Web/HTML/Element/dl
 ---
 
 {{HTMLSidebar}}

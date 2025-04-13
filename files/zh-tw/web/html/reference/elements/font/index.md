@@ -1,7 +1,6 @@
 ---
 title: <font>
 slug: Web/HTML/Reference/Elements/font
-original_slug: Web/HTML/Element/font
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}

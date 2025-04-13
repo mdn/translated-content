@@ -1,7 +1,6 @@
 ---
 title: <em>：強調元素
 slug: Web/HTML/Reference/Elements/em
-original_slug: Web/HTML/Element/em
 ---
 
 {{HTMLSidebar}}

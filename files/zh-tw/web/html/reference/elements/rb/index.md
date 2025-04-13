@@ -1,7 +1,6 @@
 ---
 title: <rb>：Ruby 基本元素
 slug: Web/HTML/Reference/Elements/rb
-original_slug: Web/HTML/Element/rb
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

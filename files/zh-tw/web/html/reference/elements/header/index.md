@@ -1,7 +1,6 @@
 ---
 title: <header>：頁首元素
 slug: Web/HTML/Reference/Elements/header
-original_slug: Web/HTML/Element/header
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <figure>：具有非必填說明元素的圖片
 slug: Web/HTML/Reference/Elements/figure
-original_slug: Web/HTML/Element/figure
 ---
 
 {{HTMLSidebar}}

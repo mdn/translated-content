@@ -1,7 +1,6 @@
 ---
 title: <dd>：描述詳細資料元素
 slug: Web/HTML/Reference/Elements/dd
-original_slug: Web/HTML/Element/dd
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <h1>–<h6>：HTML 章節標題元素
 slug: Web/HTML/Reference/Elements/Heading_Elements
-original_slug: Web/HTML/Element/Heading_Elements
 ---
 
 {{HTMLSidebar}}

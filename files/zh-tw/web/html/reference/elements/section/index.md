@@ -1,7 +1,6 @@
 ---
 title: <section>：通用區段元素
 slug: Web/HTML/Reference/Elements/section
-original_slug: Web/HTML/Element/section
 ---
 
 {{HTMLSidebar}}
