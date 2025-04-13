@@ -17,7 +17,7 @@ HTTP の **`Permissions-Policy`** ヘッダーは、自身のフレームおよ�
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>
