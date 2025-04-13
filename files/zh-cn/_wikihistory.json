@@ -42963,11 +42963,5 @@
     "contributors": [
       "Cyandev"
     ]
-  },
-  "conflicting/Web/API/Event": {
-    "modified": "2019-10-28T02:13:30.632Z",
-    "contributors": [
-      "Isildur46"
-    ]
   }
 }

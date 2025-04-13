@@ -62,7 +62,6 @@ l10n:
 - {{domxref("RTCPeerConnectionIceEvent")}}
 - {{domxref("StorageEvent")}}
 - {{domxref("SubmitEvent")}}
-- {{domxref("SVGEvent")}} {{Deprecated_Inline}}
 - {{domxref("TimeEvent")}}
 - {{domxref("TouchEvent")}}
 - {{domxref("TrackEvent")}}

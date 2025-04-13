@@ -2075,7 +2075,7 @@
 /zh-CN/docs/Web/API/Response/error	/zh-CN/docs/Web/API/Response/error_static
 /zh-CN/docs/Web/API/Response/redirect	/zh-CN/docs/Web/API/Response/redirect_static
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
-/zh-CN/docs/Web/API/SVGEvent	/zh-CN/docs/conflicting/Web/API/Event
+/zh-CN/docs/Web/API/SVGEvent	/zh-CN/docs/Web/API/Event
 /zh-CN/docs/Web/API/SVGMatrix	/zh-CN/docs/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
 /zh-CN/docs/Web/API/Screen.availHeight	/zh-CN/docs/Web/API/Screen/availHeight
