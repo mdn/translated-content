@@ -12,9 +12,9 @@ l10n:
 歴史的には、ウェブの主要な機能の1つは常に、異なる文書間のリンクを指定して提供する能力でした。これがウェブをウェブたらしめているのです。
 
 - 次のように、文書の URL にリンクすることで、その文書の先頭にリンクすることができます。
-  - [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a](/ja/docs/Web/HTML/Element/a)
+  - [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a](/ja/docs/Web/HTML/Reference/Elements/a)
 - 次のように、文書の URL にその節の _文書フラグメント_ (ID) を加えたものにリンクすることで、文書の特定の節にリンクすることができます。
-  - [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#ブラウザーの互換性](/ja/docs/Web/HTML/Element/a#ブラウザーの互換性)
+  - [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#ブラウザーの互換性](/ja/docs/Web/HTML/Reference/Elements/a#ブラウザーの互換性)
 
 特定の文書フラグメントにリンクする場合の課題は、リンク先のページの作者が _実際に_ リンクするためのアンカーを配置する必要があることです。上の 2 つ目の例は、{{htmlelement("Heading_Elements", "h2")}} 要素の ID が `ブラウザーの互換性` であるものにリンクしています。
 
@@ -75,20 +75,20 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ### textStart による単純なテキストフラグメント
 
 - [https://example.com#:~:text=for](https://example.com#:~:text=for) は、文書中の `for` という最初のテキストにスクロールし強調表示します。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=自然](/ja/docs/Web/HTML/Element/a#:~:text=自然) は、文書中の `自然` という最初のテキストにスクロールし強調表示します。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた%20URL](/ja/docs/Web/HTML/Element/a#:~:text=リンクされた%20URL) は、文書中の `リンクされた URL` という最初のテキストにスクロールし強調表示します。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=自然](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=自然) は、文書中の `自然` という最初のテキストにスクロールし強調表示します。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた%20URL](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた%20URL) は、文書中の `リンクされた URL` という最初のテキストにスクロールし強調表示します。
 
 ### textStart と textEnd
 
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=自然言語,ヒント](/ja/docs/Web/HTML/Element/a#:~:text=自然言語,ヒント) は、文書中の `自然言語` で始まり `ヒント` で終わる最初のテキストにスクロールし強調表示します。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた%20URL,値を定義](/ja/docs/Web/HTML/Element/a#:~:text=リンクされた%20URL,値を定義) は、文書中の `リンクされた URL` で始まり `値を定義` で終わる最初のテキストにスクロールし強調表示します。なお、この例ではテキストの強調表示が複数のブロックレベル要素をまたがって行われます。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=自然言語,ヒント](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=自然言語,ヒント) は、文書中の `自然言語` で始まり `ヒント` で終わる最初のテキストにスクロールし強調表示します。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた%20URL,値を定義](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた%20URL,値を定義) は、文書中の `リンクされた URL` で始まり `値を定義` で終わる最初のテキストにスクロールし強調表示します。なお、この例ではテキストの強調表示が複数のブロックレベル要素をまたがって行われます。
 
 ### prefix- や -suffix の例
 
 - [https://example.com#:~:text=asking-,for](https://example.com#:~:text=asking-,for) は、文書中の `for` というテキストのうち 2 番目に出現するテキストにスクロールし強調表示します。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=送信される-,リファラー](/ja/docs/Web/HTML/Element/a#:~:text=送信される-,リファラー) は、`送信される` というテキストが直前にある `リファラー` というテキストのうち最初のものにスクロールし強調表示します。これは文書中ので 2 番目の `リファラー` という文字列です。接頭辞がない場合は、最初のものが強調表示されます。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先の%20URL,-を表示](/ja/docs/Web/HTML/Element/a#:~:text=リンク先の%20URL,-を表示) は、`リンク先の URL` というテキストの直後に `を表示` というテキストがある最初のものにスクロールし強調表示します。これは文書中ので 4 番目の `リンク先の URL` という文字列です。接尾辞がない場合は、最初のものが強調表示されます。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,referer,ヘッダー,-は](/ja/docs/Web/HTML/Element/a#:~:text=downgrade:-,referer,ヘッダー,-は) は、`Referrer ヘッダー` というテキストのうち、直前に `downgrade:` というテキストがあり、直後に `は` というテキストがあるものにスクロールし強調表示します。この例は、接頭辞/接尾辞を使用して、リンクしたい具体的なテキストインスタンスを絞り込む、より複雑な例を示しています。例えば接頭辞を削除して、何が一致するか試してみてください。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=送信される-,リファラー](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=送信される-,リファラー) は、`送信される` というテキストが直前にある `リファラー` というテキストのうち最初のものにスクロールし強調表示します。これは文書中ので 2 番目の `リファラー` という文字列です。接頭辞がない場合は、最初のものが強調表示されます。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先の%20URL,-を表示](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先の%20URL,-を表示) は、`リンク先の URL` というテキストの直後に `を表示` というテキストがある最初のものにスクロールし強調表示します。これは文書中ので 4 番目の `リンク先の URL` という文字列です。接尾辞がない場合は、最初のものが強調表示されます。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,referer,ヘッダー,-は](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,referer,ヘッダー,-は) は、`Referrer ヘッダー` というテキストのうち、直前に `downgrade:` というテキストがあり、直後に `は` というテキストがあるものにスクロールし強調表示します。この例は、接頭辞/接尾辞を使用して、リンクしたい具体的なテキストインスタンスを絞り込む、より複雑な例を示しています。例えば接頭辞を削除して、何が一致するか試してみてください。
 
 ### 複数のテキストフラグメントが付いた URL
 
