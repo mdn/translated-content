@@ -92,4 +92,4 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 - [webassembly.org](https://webassembly.org/)
 - [Mozilla Hacks 博客上关于 WebAssembly 的文章](https://hacks.mozilla.org/category/webassembly/)
 - [W3C WebAssembly 社区组](https://www.w3.org/community/webassembly/)
-- [用 Emscripten 将 C 库编译为 Wasm](https://web.dev/articles/emscripting-a-c-library)
+- [用 Emscripten 将 C 库编译为 Wasm](https://web.developers.google.cn/articles/emscripting-a-c-library)
