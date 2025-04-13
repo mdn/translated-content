@@ -1,7 +1,6 @@
 ---
 title: <thead>
 slug: Web/HTML/Reference/Elements/thead
-original_slug: Web/HTML/Element/thead
 ---
 
 [HTML](/zh-CN/docs/Web/HTML) 的 **`<thead>`** 元素定义了一组定义表格的列头的行。
@@ -104,7 +103,7 @@ td {
 
 ## 属性
 
-This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attributes).
+This element includes the [global attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{Deprecated_Inline}}
 
@@ -131,7 +130,7 @@ This element includes the [global attributes](/zh-CN/docs/Web/HTML/Global_attrib
 
 - `char` {{Deprecated_Inline}}
 
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Element/tr#align) is not set to `char`, this attribute is ignored.
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/zh-CN/docs/Web/HTML/Reference/Elements/tr#align) is not set to `char`, this attribute is ignored.
 
     > [!NOTE]
     > Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](#char), in CSS3, you can use the character set using the [`char`](#char) attribute as the value of the {{ cssxref("text-align") }} property.

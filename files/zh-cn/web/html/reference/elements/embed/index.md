@@ -1,7 +1,6 @@
 ---
 title: <embed>：外部内容嵌入元素
 slug: Web/HTML/Reference/Elements/embed
-original_slug: Web/HTML/Element/embed
 ---
 
 **HTML `<embed>` 元素**将外部内容嵌入文档中的指定位置。此内容由外部应用程序或其他交互式内容源（如浏览器插件）提供。
@@ -42,7 +41,7 @@ original_slug: Web/HTML/Element/embed
 
 ## 属性
 
-这个元素的属性包括 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素的属性包括 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `height`
   - : 资源显示的高度，in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))

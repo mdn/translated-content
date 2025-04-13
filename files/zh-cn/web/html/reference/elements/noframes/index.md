@@ -1,7 +1,6 @@
 ---
 title: <noframes>
 slug: Web/HTML/Reference/Elements/noframes
-original_slug: Web/HTML/Element/noframes
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

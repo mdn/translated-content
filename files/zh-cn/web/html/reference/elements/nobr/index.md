@@ -1,7 +1,6 @@
 ---
 title: <nobr>
 slug: Web/HTML/Reference/Elements/nobr
-original_slug: Web/HTML/Element/nobr
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

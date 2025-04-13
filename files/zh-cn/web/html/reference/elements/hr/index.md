@@ -1,7 +1,6 @@
 ---
 title: <hr>：主题分割（水平分割线）元素
 slug: Web/HTML/Reference/Elements/hr
-original_slug: Web/HTML/Element/hr
 ---
 
 {{HTMLSidebar}}
@@ -41,7 +40,7 @@ hr::after {
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `align` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 设置页面上分割线的对齐方式。如果没有指定任何值，默认值为 `left`。

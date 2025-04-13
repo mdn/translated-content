@@ -1,7 +1,6 @@
 ---
 title: <output>
 slug: Web/HTML/Reference/Elements/output
-original_slug: Web/HTML/Element/output
 ---
 
 {{HTMLSidebar}}
@@ -39,7 +38,7 @@ original_slug: Web/HTML/Element/output
 
 ## 属性
 
-这个标签具有 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个标签具有 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `for`
   - : 其他影响计算结果的标签的 ID，可以多个。

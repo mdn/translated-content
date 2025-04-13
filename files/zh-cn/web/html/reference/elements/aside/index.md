@@ -1,7 +1,6 @@
 ---
 title: <aside>
 slug: Web/HTML/Reference/Elements/aside
-original_slug: Web/HTML/Element/aside
 ---
 
 **HTML `<aside>` 元素**表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。
@@ -73,7 +72,7 @@ aside > p {
 
 ## 属性
 
-此元素只有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素只有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 

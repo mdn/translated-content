@@ -122,7 +122,7 @@ l10n:
 
 ### 宽度和高度
 
-你可以用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 属性来指定你的图片的宽度和高度。它们的值是不带单位的整数，以像素为单位表示图像的宽度和高度。
+你可以用 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/img#height) 属性来指定你的图片的宽度和高度。它们的值是不带单位的整数，以像素为单位表示图像的宽度和高度。
 
 你可以用多种方式了解你的图片的宽度和高度，例如在 Mac 上，你可以用 <kbd>Cmd</kbd> + <kbd>I</kbd> 来得到显示的图片文件的信息。回到我们的例子，你可以这样做：
 
@@ -449,7 +449,7 @@ Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许�
 {{htmlelement("figcaption")}} 元素告诉浏览器和辅助技术工具，这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 
 > [!NOTE]
-> 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
+> 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
 
 figure 里不一定要是图片，只要是这样的独立内容单元即可：
 

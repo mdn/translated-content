@@ -1,7 +1,6 @@
 ---
 title: <caption>
 slug: Web/HTML/Reference/Elements/caption
-original_slug: Web/HTML/Element/caption
 ---
 
 ## 简介
@@ -35,7 +34,7 @@ original_slug: Web/HTML/Element/caption
 
 ## 特性
 
-本元素包含了所有 [全局特性](/zh-CN/docs/Web/HTML/Global_attributes)。
+本元素包含了所有 [全局特性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `align` {{Deprecated_inline}}
 

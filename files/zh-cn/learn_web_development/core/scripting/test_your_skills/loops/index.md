@@ -1,7 +1,6 @@
 ---
 title: 技能测试：循环
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Loops
-original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_Loops
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
@@ -23,7 +22,7 @@ l10n:
 
 ## 循环 1
 
-在第一个循环任务中，我们希望你创建一个简单的循环，遍历给定的 `myArray` 中的所有元素，将它们放在列表项（即 [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 元素）中，将列表项添加到给定的 `list` 中，最后打印到屏幕上。
+在第一个循环任务中，我们希望你创建一个简单的循环，遍历给定的 `myArray` 中的所有元素，将它们放在列表项（即 [`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li) 元素）中，将列表项添加到给定的 `list` 中，最后打印到屏幕上。
 
 > [!CALLOUT]
 >

@@ -1,7 +1,6 @@
 ---
 title: <rt>
 slug: Web/HTML/Reference/Elements/rt
-original_slug: Web/HTML/Element/rt
 ---
 
 **HTML Ruby 文本 (`<rt>`) 元素**包含字符的发音，字符在 ruby 注解中出现，它用于描述东亚字符的发音。这个元素始终在 {{ HTMLElement("ruby") }} 元素中使用。
@@ -9,12 +8,12 @@ original_slug: Web/HTML/Element/rt
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td>无</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -37,7 +36,7 @@ original_slug: Web/HTML/Element/rt
 
 ## 属性
 
-该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 

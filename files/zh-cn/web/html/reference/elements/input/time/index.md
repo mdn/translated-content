@@ -1,14 +1,13 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
-original_slug: Web/HTML/Element/input/time
 ---
 
 {{HTMLSidebar("Input_types")}}
 
 类型为 **`time`** 的 {{htmlelement("input")}} 元素，旨在让用户轻松输入时间（小时和分钟，以及可选的秒）。
 
-控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)。
+控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text)。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
 
@@ -76,7 +75,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
   <tr>
    <td><strong>支持的常用属性</strong></td>
    <td>
-     <a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a>
+     <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
    </td>
   </tr>
   <tr>
@@ -104,7 +103,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
 
 ### 设置 value 属性
 
-你可以通过在创建 `<input>` 元素时在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个合法的时间来设置默认值，比如：
+你可以通过在创建 `<input>` 元素时在 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性包含一个合法的时间来设置默认值，比如：
 
 ```html
 <label for="appt-time">选择约定的时间：</label>
@@ -124,7 +123,7 @@ timeControl.value = "15:30";
 
 ### 时间格式
 
-`time` 输入框无论输入何种格式的值（这可能由用户的区域设置，或用户代理决定），其 `value` 值总是带有前导零的 24 小时制时间：`hh:mm`。如果输入的时间包含秒数（参见[使用 step 属性](#使用_step_属性)），则格式总是为 `hh:mm:ss`。你可以在[时间字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#时间字符串)中了解到更多有关时间值的格式。
+`time` 输入框无论输入何种格式的值（这可能由用户的区域设置，或用户代理决定），其 `value` 值总是带有前导零的 24 小时制时间：`hh:mm`。如果输入的时间包含秒数（参见[使用 step 属性](#使用_step_属性)），则格式总是为 `hh:mm:ss`。你可以在[时间字符串](/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#时间字符串)中了解到更多有关时间值的格式。
 
 在此示例中，你可以通过输入时间并查看之后如何更改来查看时间输入的值。
 
@@ -168,7 +167,7 @@ startTime.addEventListener(
 
 ### list
 
-列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### max
 
@@ -187,7 +186,7 @@ startTime.addEventListener(
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
@@ -215,11 +214,11 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 ### 控制输入框大小
 
-`<input type="time">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性，因为时间字符串的长度总是相同的。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="time">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Reference/Elements/input#size) 的表单大小属性，因为时间字符串的长度总是相同的。你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ### 使用 step 属性
 
-你可以使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性来更改每次递增或递减的时间数（例如，点击箭头控件时时间值会以 10 分钟为单位变动）。
+你可以使用 [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性来更改每次递增或递减的时间数（例如，点击箭头控件时时间值会以 10 分钟为单位变动）。
 
 > [!NOTE]
 > 此属性在不同浏览器之间有一些怪异的行为，并不可靠。
@@ -250,7 +249,7 @@ _目前，尚不清楚当与 `time` 输入一起使用时，`any` 的值对 `ste
 
 ### 设置最大和最小时间
 
-你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可以选择的有效时间。在以下示例中，我们设置了可供选择的最小值 `12:00` 和最大值 `18:00`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性来限制用户可以选择的有效时间。在以下示例中，我们设置了可供选择的最小值 `12:00` 和最大值 `18:00`：
 
 ```html
 <form>
@@ -298,7 +297,7 @@ input:valid + span::after {
 
 #### 使最小值和最大值跨越午夜
 
-如果设置的 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性，有效时间范围将环绕午夜，产生一个跨越午夜的有效时间范围。这个功能不被任何其他 input 类型所支持。虽然这个功能[在 HTML 规范中](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)，但它还没有被普遍支持。基于 Chrome 的浏览器从 82 版开始支持该功能，Firefox 在 76 版中加入了该功能。Safari 从 14.1 版开始不支持这个功能。要做好出现这种情况的准备。
+如果设置的 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 属性大于 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性，有效时间范围将环绕午夜，产生一个跨越午夜的有效时间范围。这个功能不被任何其他 input 类型所支持。虽然这个功能[在 HTML 规范中](https://html.spec.whatwg.org/multipage/input.html#has-a-reversed-range)，但它还没有被普遍支持。基于 Chrome 的浏览器从 82 版开始支持该功能，Firefox 在 76 版中加入了该功能。Safari 从 14.1 版开始不支持这个功能。要做好出现这种情况的准备。
 
 ```js
 const input = document.createElement("input");
@@ -316,7 +315,7 @@ if (input.validity.valid && input.type === "time") {
 
 ### 使时间成为必需值
 
-此外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性来强制填写时间。因此，如果你试图提交一个超出设定范围的时间，或一个空的时间字段，支持的浏览器将显示一个错误。
+此外，你可以使用 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性来强制填写时间。因此，如果你试图提交一个超出设定范围的时间，或一个空的时间字段，支持的浏览器将显示一个错误。
 
 让我们看一个例子；在这里，我们设置了最小和最大的时间，也使这个字段成为必需的：
 
@@ -364,7 +363,7 @@ if (input.validity.valid && input.type === "time") {
 - `3 o'clock in the afternoon`
 - 等等
 
-一个办法是在你的 `time` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。即使 `time` 输入不使用它，`text` 输入回退也会使用。例如，试着在一个不支持时间输入的浏览器中查看下面的演示：
+一个办法是在你的 `time` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性。即使 `time` 输入不使用它，`text` 输入回退也会使用。例如，试着在一个不支持时间输入的浏览器中查看下面的演示：
 
 ```html
 <form>
@@ -568,7 +567,7 @@ minuteSelect.onchange = setMinutesToZero;
 ## 参见
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
-- [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
+- [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats)
 - [日期时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日期和时间选择器)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/date)、[`<input type="week">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/month)
 - [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

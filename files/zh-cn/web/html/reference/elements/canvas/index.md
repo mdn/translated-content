@@ -1,7 +1,6 @@
 ---
 title: <canvas>
 slug: Web/HTML/Reference/Elements/canvas
-original_slug: Web/HTML/Element/canvas
 ---
 
 `<canvas>` 元素可被用来通过 JavaScript（[Canvas](/zh-CN/docs/Web/API/Canvas_API) API 或 [WebGL](/zh-CN/docs/Web/API/WebGL_API) API）绘制图形及图形动画。
@@ -10,7 +9,7 @@ original_slug: Web/HTML/Element/canvas
 
 ## 属性
 
-本元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+本元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `height`
   - : 该元素占用空间的高度，以 CSS 像素（px）表示，默认为 150。

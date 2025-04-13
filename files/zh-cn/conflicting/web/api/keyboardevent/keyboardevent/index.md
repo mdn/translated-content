@@ -1,7 +1,6 @@
 ---
 title: KeyboardEvent.initKeyEvent()
 slug: conflicting/Web/API/KeyboardEvent/KeyboardEvent
-original_slug: Web/API/KeyboardEvent/initKeyEvent
 ---
 
 {{APIRef("UI Events")}}

@@ -1,7 +1,6 @@
 ---
 title: <dir>：目录元素
 slug: Web/HTML/Reference/Elements/dir
-original_slug: Web/HTML/Element/dir
 l10n:
   sourceCommit: 1f1418448e3b7f1d987b16db886008e5c5cc7fa1
 ---
@@ -19,7 +18,7 @@ l10n:
 
 ## 属性
 
-跟其他 HTML 元素一样，此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+跟其他 HTML 元素一样，此元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `compact` {{Deprecated_Inline}}
   - : 此布尔属性提示列表应以紧凑样式渲染。对该属性的解释取决于用户代理，且并不适用于所有浏览器。

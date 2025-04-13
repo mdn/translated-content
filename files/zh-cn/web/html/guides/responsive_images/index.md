@@ -1,7 +1,6 @@
 ---
 title: 响应式图片
 slug: Web/HTML/Guides/Responsive_images
-original_slug: Web/HTML/Responsive_images
 l10n:
   sourceCommit: dee5effadcb82cf2de9b50c128f7a050919ed523
 ---
@@ -22,7 +21,7 @@ l10n:
     <tr>
       <th scope="row">目标：</th>
       <td>
-        学习使用 <a href="/zh-CN/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> 以及 {{htmlelement("picture")}} 元素等特性来实现网页中的响应式图片。
+        学习使用 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset"><code>srcset</code></a> 以及 {{htmlelement("picture")}} 元素等特性来实现网页中的响应式图片。
       </td>
     </tr>
   </tbody>
@@ -55,7 +54,7 @@ l10n:
 web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至中期，人们仅仅可以通过笔记本电脑和台式机来浏览 web 页面，所以浏览器开发者和规范制定者甚至没有想到要实现这种解决方式（响应式开发）。最近应用的*响应式图片技术*，通过为浏览器提供多个图像文件来解决上述问题，比如使用相同显示效果的图片但包含多个不同的分辨率（_分辨率切换_），或者使用不同的图片以适应不同的空间分配（_美术设计_）。
 
 > [!NOTE]
-> 在本文中讨论的新特性——[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)/[`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}}——都已经为新版本的现代浏览器和移动浏览器所支持。
+> 在本文中讨论的新特性——[`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset)/[`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes)/{{htmlelement("picture")}}——都已经为新版本的现代浏览器和移动浏览器所支持。
 
 ## 如何创建响应式图片？
 
@@ -69,7 +68,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-然而我们可以使用两个属性——[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)——来提供额外的资源图像和提示，帮助浏览器选择最合适的资源。你可以从 Github 上的 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中查看示例（也可以查看它的[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)）：
+然而我们可以使用两个属性——[`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes)——来提供额外的资源图像和提示，帮助浏览器选择最合适的资源。你可以从 Github 上的 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中查看示例（也可以查看它的[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)）：
 
 ```html
 <img
@@ -119,7 +118,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 >
 > 要查看加载了哪些图像，你可以使用 Firefox 开发者工具的[网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)标签或 Chrome 开发者工具的[网络](https://developer.chrome.google.cn/docs/devtools/network)面板。对于 Chrome 浏览器，你可能还需要[禁用缓存](https://stackoverflow.com/a/7000899/13725861)，以防止它选取已下载的图片。
 
-不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性引用的图像文件。
+不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 属性引用的图像文件。
 
 > [!NOTE]
 > 在上面链接的示例的 {{htmlelement("head")}} 中，有一行代码 `<meta name="viewport" content="width=device-width">`：这行代码会强制让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度，用比真实视口更大的宽度加载网页，然后再缩小加载的页面，这样的做法会使得响应式图片或其他响应式设计失效）。
@@ -203,7 +202,7 @@ img {
 响应式图像的介绍到此结束——希望你享受学习新技术的过程。总结一下，我们讨论了两个不同的问题：
 
 - **美术设计**：当你想为不同布局提供不同剪裁的图片——比如在桌面布局上显示完整的、横向图片，而在手机布局上显示一张剪裁过的、突出重点的纵向图片，可以用 {{htmlelement("picture")}} 元素来实现。
-- **分辨率切换**：当你想要为窄屏提供更小的图片时（因为小屏幕不需要像桌面端显示那么大的图片）；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 图片）或者 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 以及 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性来实现。
+- **分辨率切换**：当你想要为窄屏提供更小的图片时（因为小屏幕不需要像桌面端显示那么大的图片）；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 图片）或者 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 以及 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes) 属性来实现。
 
 此时整个[多媒体与嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)，看看你学得怎样。希望你玩得开心！
 

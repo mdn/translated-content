@@ -1,7 +1,6 @@
 ---
 title: <a>：锚元素
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +29,7 @@ li {
 
 ## 属性
 
-该元素的属性包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素的属性包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `download`
 
@@ -65,7 +64,7 @@ li {
     - 如果 web 浏览器不能支持其他 URL 协议，网站可以使用 [`registerProtocolHandler()`](/zh-CN/docs/Web/API/Navigator/registerProtocolHandler)
 
 - `hreflang`
-  - : 该属性用于指定所链接到的文档的人类语言。其仅提供建议，并没有内置的功能。其允许的值与[全局的 `lang` 属性](/zh-CN/docs/Web/HTML/Global_attributes/lang)一致。
+  - : 该属性用于指定所链接到的文档的人类语言。其仅提供建议，并没有内置的功能。其允许的值与[全局的 `lang` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang)一致。
 - `ping`
   - : 包含一个以空格分隔的 URL 列表，当跟随超链接时，浏览器会发送带有正文 `PING` 的 {{HTTPMethod("POST")}} 请求。通常用于跟踪。
 - `referrerpolicy`
@@ -93,7 +92,7 @@ li {
     - `_top`：最顶级的浏览上下文（当前浏览上下文中最“高”的祖先）。如果没有祖先，行为与 `_self` 相同。
 
       > [!NOTE]
-      > 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
+      > 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
 
 - `type`
   - : 该属性指定在一个 {{Glossary("MIME type","MIME 类型")}}链接目标的形式的媒体类型。没有内置的功能。
@@ -114,7 +113,7 @@ li {
   - : 在定义一个可能的目标位置时曾经是必需的。在 HTML 4.01 规范中，`<a>` 元素可以同时使用 `id` 和 `name`，只要它们有相同的值。
 
     > [!NOTE]
-    > 使用全局属性 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 来代替。
+    > 使用全局属性 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 来代替。
 
 - `rev` {{Deprecated_Inline}}
   - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而被废弃。
@@ -283,7 +282,7 @@ document
 
 `<a>` 元素会对用户的安全和隐私产生影响。请参阅 [`Referer` 标头：隐私和安全问题](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)了解情况。
 
-使用 `target="_blank"` 而不使用 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 会使网站容易受到 {{domxref("window.opener")}} 的 API 攻击。不过请注意，在较新的浏览器版本中，设置 `target="_blank"` 隐式地提供了与设置 `rel="noopener"` 同样的保护。详情见[浏览器兼容性](#浏览器兼容性)。
+使用 `target="_blank"` 而不使用 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noopener) 会使网站容易受到 {{domxref("window.opener")}} 的 API 攻击。不过请注意，在较新的浏览器版本中，设置 `target="_blank"` 隐式地提供了与设置 `rel="noopener"` 同样的保护。详情见[浏览器兼容性](#浏览器兼容性)。
 
 ## 无障碍
 
@@ -349,7 +348,7 @@ document
 <a href="2017-annual-report.ppt"> 2017 年度报告（PowerPoint） </a>
 ```
 
-如果使用图标标志链接行为，确保其具有[_替代文本_](/zh-CN/docs/Web/HTML/Element/img#alt)：
+如果使用图标标志链接行为，确保其具有[_替代文本_](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt)：
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
@@ -437,19 +436,19 @@ document
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、
         <a
-          href="/zh-CN/docs/Web/HTML/Content_categories#交互内容"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#交互内容"
           >交互内容</a
         >、可感知内容
       </td>
@@ -458,16 +457,16 @@ document
       <th scope="row">允许的内容</th>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#透明内容模型"
           >透明的</a
         >，但是后代不可以为<a
-          href="/zh-CN/docs/Web/HTML/Content_categories#交互内容"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#交互内容"
           >交互内容</a
         >或
-        <a href="/zh-CN/docs/Web/HTML/Element/a"
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/a"
           >a</a
         > 元素，且后代不可以指定 <a
-          href="/zh-CN/docs/Web/HTML/Global_attributes/tabindex"
+          href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex"
           >tabindex</a
         > 属性
       </td>
@@ -479,9 +478,9 @@ document
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >的元素，或任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        >的元素，或任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >但不是另外一个 <code>&#x3C;a></code> 元素的元素。
       </td>

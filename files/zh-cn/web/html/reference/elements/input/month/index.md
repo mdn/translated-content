@@ -1,7 +1,6 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
-original_slug: Web/HTML/Element/input/month
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +29,7 @@ label {
 }
 ```
 
-通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，在桌面浏览器中只有 Chrome/Opera 和 Edge 支持；在移动端被大部分现代浏览器所支持。在不支持的浏览器中，这个控件会被优雅的降级到 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)，不过对输入的文字会有自动的验证，保证它按照预期进行格式化。
+通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，在桌面浏览器中只有 Chrome/Opera 和 Edge 支持；在移动端被大部分现代浏览器所支持。在不支持的浏览器中，这个控件会被优雅的降级到 [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text)，不过对输入的文字会有自动的验证，保证它按照预期进行格式化。
 
 对于那些使用不支持 `month` 控制器的浏览器用户，以下的截图呈现了 Chrome 和 Opera 的月份控制器。单击右侧的向下箭头会显示日期选择器，以便选择年份和月份。
 
@@ -54,7 +53,7 @@ Edge 的 `month` 控制器看起来像这样的：
   </tr>
   <tr>
    <td><strong>支持的共有属性</strong></td>
-   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -73,11 +72,11 @@ Edge 的 `month` 控制器看起来像这样的：
 
 ## 值
 
-一个以 YYYY-MM 形式（4 个或更多位数的年，接一个连字符 `-`，再接一个两位数月份）表示月份和年份的字符串。月份字符串的格式在[月份字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#月份字符串)中有描述。
+一个以 YYYY-MM 形式（4 个或更多位数的年，接一个连字符 `-`，再接一个两位数月份）表示月份和年份的字符串。月份字符串的格式在[月份字符串](/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#月份字符串)中有描述。
 
 ### 设置默认值
 
-你可以通过在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中包含月份和年份来设置该输入控件的默认值，像这样：
+你可以通过在 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性中包含月份和年份来设置该输入控件的默认值，像这样：
 
 ```html
 <label for="bday-month">你在哪个月出生？</label>
@@ -112,17 +111,17 @@ monthControl.value = "2001-06";
 
 ### list
 
-列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+列表属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### max
 
-使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最大年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 超过了这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `max` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最大值。
 
 该值必须晚于或等于 `min` 属性所指定的年份—月份对。
 
 ### min
 
-使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
+使用在[值](#值)章节中讨论的字符串格式指定的所接受的最小年份和月份。如果输入到该元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 小于这个，则该元素无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `min` 属性的值不是格式为 `yyyy-MM` 的有效字符串，则该元素没有最小值。
 
 该值必须早于或等于 `max` 属性所指定的年份—月份对。
 
@@ -135,7 +134,7 @@ monthControl.value = "2001-06";
 
 ### step
 
-`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
+`step` 属性指定了值必须满足的粒度，或者是下文描述的特殊值 `any`。值必须满足基础的步进值，才有效。如果指定了 [`min`](#min) 属性，则由 `min` 属性决定，否则，使用 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性的值，如果上述两个值都不存在，则提供适当的默认值。
 
 字符串值 `any` 意味着不使用步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#max) 之外）。
 
@@ -165,7 +164,7 @@ monthControl.value = "2001-06";
 
 ### 设置最大和最小日期
 
-你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户选择日期的范围。在下列的例子中我们指定最小月份 `1900-01` 和最大月份 `2013-12`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性来限制用户选择日期的范围。在下列的例子中我们指定最小月份 `1900-01` 和最大月份 `2013-12`：
 
 ```html
 <form>
@@ -188,13 +187,13 @@ monthControl.value = "2001-06";
 
 ### 控制输入大小
 
-`<input type="month">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 的表单大小属性，你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
+`<input type="month">` 不支持诸如 [`size`](/zh-CN/docs/Web/HTML/Reference/Elements/input#size) 的表单大小属性，你必须依靠 [CSS](/zh-CN/docs/Web/CSS) 来确定大小。
 
 ## 验证
 
 默认情况下，`<input type="month">` 不会对输入的值应用任何验证，用户界面实现会屏蔽所有非日期值的输入，尽管这很有用，但是仍然无法完全依赖于该值的合法性。你仍然可以不填入任何值而提交，或输入不合法的日期值（如 4 月 32 日）。
 
-为了避免这种情况，你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 来限制可用的日期（参见[设置最大和最小日期](#设置最大和最小日期)），并使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性令日期必填。在支持的浏览器中，当你尝试提交超出范围的日期，或空日期值时，会显示错误信息。
+为了避免这种情况，你可以使用 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 来限制可用的日期（参见[设置最大和最小日期](#设置最大和最小日期)），并使用 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性令日期必填。在支持的浏览器中，当你尝试提交超出范围的日期，或空日期值时，会显示错误信息。
 
 我们来看一个例子，这里我们设定了最小和最大的日期，并令该字段必填：
 
@@ -274,7 +273,7 @@ input:valid + span::after {
 - `Month yyyy` (July 2022)
 - 等等
 
-一个办法是在你的 `month` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。即使 `month` 输入不使用它，text 输入回退也会使用。例如，试着在一个不支持 month 输入的浏览器中查看下面的演示：
+一个办法是在你的 `month` 输入上添加 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性。即使 `month` 输入不使用它，text 输入回退也会使用。例如，试着在一个不支持 month 输入的浏览器中查看下面的演示：
 
 ```html
 <form>
@@ -476,7 +475,7 @@ function populateYears() {
 ## 参见
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
-- [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
+- [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats)
 - [日期时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#date_and_time_picker)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 和 [`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time) 和 [`<input type="week">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week)
 - [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

@@ -1,7 +1,6 @@
 ---
 title: <address>：联系人地址元素
 slug: Web/HTML/Reference/Elements/address
-original_slug: Web/HTML/Element/address
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
@@ -37,7 +36,7 @@ a[href^="tel"]::before {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -73,12 +72,12 @@ a[href^="tel"]::before {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、可感知内容。
       </td>
@@ -86,7 +85,7 @@ a[href^="tel"]::before {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >，但不允许嵌套 <code>&#x3C;address></code> 元素，不允许包含标题内容（{{HTMLElement("hgroup")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}）、章节内容({{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("section")}}、{{HTMLElement("nav")}}）以及 {{HTMLElement("header")}} 或 {{HTMLElement("footer")}} 元素。
       </td>
@@ -98,7 +97,7 @@ a[href^="tel"]::before {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素，但始终排除 <code>&#x3C;address></code> 元素（按照逻辑对称性原则，如果 <code>&#x3C;address></code> 标签作为父级，不能有嵌套的 <code>&#x3C;address></code> 元素，那么相同的 <code>&#x3C;address></code> 内容也不能有 <code>&#x3C;address></code> 标签作为其父级）。
       </td>
@@ -137,4 +136,4 @@ a[href^="tel"]::before {
 ## 参见
 
 - 与章节相关的其他元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("footer")}}、{{HTMLElement("section")}}、{{HTMLElement("header")}}；
-- [HTML 文档的章节和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)。
+- [HTML 文档的章节和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)。

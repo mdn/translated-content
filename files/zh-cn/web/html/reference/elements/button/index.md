@@ -1,7 +1,6 @@
 ---
 title: <button>
 slug: Web/HTML/Reference/Elements/button
-original_slug: Web/HTML/Element/button
 ---
 
 {{HTMLSidebar}}
@@ -39,7 +38,7 @@ original_slug: Web/HTML/Element/button
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 - `autofocus`
   - : 一个布尔属性，用于指定当页面加载时按钮必须有输入焦点，除非用户重写，例如通过不同控件键入。只有一个表单关联元素可以指定该属性。
@@ -50,27 +49,27 @@ original_slug: Web/HTML/Element/button
 - `form`
   - : 表示 button 元素关联的 form 元素（它的表单拥有者）。此属性值必须为同一文档中的一个{{HTMLElement("form")}}元素的**id**属性。如果此属性未指定，\<button>元素必须是 form 元素的后代。利用此属性，你可以将\<button>元素放置在文档内的任何位置，而不仅仅是作为他们 form 元素的后代。
 - `formaction`
-  - : 表示程序处理 button 提交信息的 URI。如果指定了，将重写 button 表单拥有者的[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性。
+  - : 表示程序处理 button 提交信息的 URI。如果指定了，将重写 button 表单拥有者的[`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action)属性。
 - `formenctype`
 
   - : 如果 button 是 submit 类型，此属性值指定提交表单到服务器的内容类型。可选值：
 
     - `application/x-www-form-urlencoded`: 未指定时的默认值。
-    - `multipart/form-data`: 如果使用[`type`](/zh-CN/docs/Web/HTML/Element/input#type)属性的{{HTMLElement("input")}}元素设置文件，使用此值。
-    - `text/plain`如果指定此属性，它将重写 button 的表单拥有者的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype)属性。
+    - `multipart/form-data`: 如果使用[`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type)属性的{{HTMLElement("input")}}元素设置文件，使用此值。
+    - `text/plain`如果指定此属性，它将重写 button 的表单拥有者的[`enctype`](/zh-CN/docs/Web/HTML/Reference/Elements/form#enctype)属性。
 
 - `formmethod`
 
   - : 如果 button 是 submit 类型，此属性指定浏览器提交表单使用的 HTTP 方法。可选值：
 
     - `post`：来自表单的数据被包含在表单内容中，被发送到服务器。
-    - `get`：来自表单的数据以'?'作为分隔符被附加到 form 的**URI**属性中，得到的 URI 被发送到服务器。当表单没有副作用，且仅包含 ASCII 字符时使用这种方法。如果指定了，此属性会重写 button 拥有者的[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性。
+    - `get`：来自表单的数据以'?'作为分隔符被附加到 form 的**URI**属性中，得到的 URI 被发送到服务器。当表单没有副作用，且仅包含 ASCII 字符时使用这种方法。如果指定了，此属性会重写 button 拥有者的[`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#method)属性。
 
 - `formnovalidate`
-  - : 如果 button 是 submit 类型，此布尔属性指定当表单被提交时不需要验证。如果指定了，它会重写 button 拥有者的[`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate)属性。
+  - : 如果 button 是 submit 类型，此布尔属性指定当表单被提交时不需要验证。如果指定了，它会重写 button 拥有者的[`novalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/form#novalidate)属性。
 - `formtarget`
 
-  - : 如果 button 是 submit 类型，此属性指定一个名称或关键字，表示接收提交的表单后在哪里显示响应。这是一个浏览上下文（例如 tab，window 或内联框架）的名称或关键字。如果指定了，它会重写 button 拥有者的[`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。关键字如下：
+  - : 如果 button 是 submit 类型，此属性指定一个名称或关键字，表示接收提交的表单后在哪里显示响应。这是一个浏览上下文（例如 tab，window 或内联框架）的名称或关键字。如果指定了，它会重写 button 拥有者的[`target`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target) 属性。关键字如下：
 
     - `_self`: 在同一个浏览上下文中加载响应作为当前的。未指定时此值为默认值。
     - `_blank`: 在一个新的不知名浏览上下文中加载响应。

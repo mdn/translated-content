@@ -1,7 +1,6 @@
 ---
 title: <track>：嵌入文本轨元素
 slug: Web/HTML/Reference/Elements/track
-original_slug: Web/HTML/Element/track
 l10n:
   sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
@@ -42,7 +41,7 @@ video::cue {
 
 ## 属性
 
-此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `default`
   - : 此属性表示应启用该轨道，除非用户的偏好表明另一个轨道更合适。每个媒体元素只能在一个 `track` 元素上使用此属性。
@@ -72,7 +71,7 @@ video::cue {
 - `label`
   - : 用户可读的文本轨标题，浏览器在列出可用文本轨时使用。
 - `src`
-  - : 轨道（`.vtt` 文件）的地址。必须是一个有效的 URL。必须指定此属性，并且其 URL 值必须与文档具有相同的来源——除非 `track` 元素的父元素 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 有 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性。
+  - : 轨道（`.vtt` 文件）的地址。必须是一个有效的 URL。必须指定此属性，并且其 URL 值必须与文档具有相同的来源——除非 `track` 元素的父元素 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 有 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin) 属性。
 - `srclang`
   - : 轨道文本数据的语言。它必须是一个有效的 [BCP 47](https://r12a.github.io/app-subtags/) 语言标签。如果 `kind` 属性设置为 `subtitles`，则必须定义 `srclang`。
 
@@ -130,7 +129,7 @@ textTrackElem.addEventListener("cuechange", (event) => {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
       </th>
       <td>无</td>
     </tr>

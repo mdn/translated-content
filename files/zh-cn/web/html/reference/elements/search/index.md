@@ -1,7 +1,6 @@
 ---
 title: <search>：通用搜索元素
 slug: Web/HTML/Reference/Elements/search
-original_slug: Web/HTML/Element/search
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
@@ -12,7 +11,7 @@ l10n:
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -118,16 +117,16 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>。
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>。
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>。
       </td>
     </tr>
     <tr>

@@ -1,7 +1,6 @@
 ---
 title: <p>：段落元素
 slug: Web/HTML/Reference/Elements/p
-original_slug: Web/HTML/Element/p
 l10n:
   sourceCommit: 736fa0e485243ef1f07395811a9bf397c6509316
 ---
@@ -36,7 +35,7 @@ p {
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 > **备注：** `<p>` 标签的 `align` 属性已被弃用，请不要使用。
 
@@ -134,12 +133,12 @@ p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、可感知内容。
       </td>
@@ -147,7 +146,7 @@ p {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -161,7 +160,7 @@ p {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>

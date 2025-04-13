@@ -1,7 +1,6 @@
 ---
 title: HTML 属性参考
 slug: Web/HTML/Reference/Attributes
-original_slug: Web/HTML/Attributes
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -21,7 +20,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
   <tbody>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/accept">accept</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/accept">accept</a></code>
       </td>
       <td>
         {{ HTMLElement("form") }}、{{ HTMLElement("input") }}
@@ -30,23 +29,23 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>字符集，必须为 <code>"UTF-8"</code>（如果提供）。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey">accesskey</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>用于激活或聚焦元素的键盘快捷键。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/form#action">action</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -64,7 +63,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/iframe#allow">allow</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>指定 iframe 的特性策略。</td>
@@ -80,17 +79,17 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/script#async">async</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/script#async">async</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>异步执行该脚本。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/autocapitalize">autocapitalize</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/autocapitalize">autocapitalize</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>
         设置用户输入时是否自动大写。
@@ -98,7 +97,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete">autocomplete</a></code>
       </td>
       <td>
         {{ HTMLElement("form") }}、{{ HTMLElement("input") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }}
@@ -183,7 +182,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/capture">capture</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/capture">capture</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>
@@ -192,7 +191,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/meta#charset">charset</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset">charset</a></code>
       </td>
       <td>
         {{ HTMLElement("meta") }}
@@ -201,7 +200,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/input#checked">checked</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#checked">checked</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}
@@ -219,10 +218,10 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/class">class</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/class">class</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>通常和 CSS 配合使用，使用常用属性来为元素添加样式。</td>
     </tr>
@@ -245,7 +244,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/textarea#cols">cols</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/textarea#cols">cols</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>定义一个 textarea 中包含多少列。</td>
@@ -263,7 +262,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/meta#content">content</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/meta#content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -273,10 +272,10 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable">contenteditable</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>指示该元素的内容是否可以被编辑。</td>
     </tr>
@@ -293,7 +292,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/area#coords">coords</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/area#coords">coords</a></code>
       </td>
       <td>{{ HTMLElement("area") }}</td>
       <td>
@@ -302,7 +301,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin">crossorigin</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }}、{{ HTMLElement("img") }}、{{ HTMLElement("link") }}、{{ HTMLElement("script") }}、{{ HTMLElement("video") }}
@@ -321,17 +320,17 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/object#data">data</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#data">data</a></code>
       </td>
       <td>{{ HTMLElement("object") }}</td>
       <td>指定资源的 URL。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/data-*">data-*</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*">data-*</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>允许你对一个 HTML 元素附加自定义的属性。</td>
     </tr>
@@ -346,14 +345,14 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/img#decoding">decoding</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/img#decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>指示解码图像的首选方法。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/track#default">default</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/track#default">default</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>
@@ -362,7 +361,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/script#defer">defer</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/script#defer">defer</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>
@@ -371,10 +370,10 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/dir">dir</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir">dir</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>
         定义文本的方向。允许的值有 ltr（从左到右）或 rtl（从右到左）。
@@ -382,7 +381,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/dirname">dirname</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/dirname">dirname</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("textarea") }}
@@ -391,7 +390,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/disabled">disabled</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/disabled">disabled</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }}、{{ HTMLElement("fieldset") }}、{{ HTMLElement("input") }}、{{ HTMLElement("optgroup") }}、{{ HTMLElement("option") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }}
@@ -409,16 +408,16 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/draggable">draggable</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/draggable">draggable</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>定义元素是否可以被拖拽。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/form#enctype">enctype</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#enctype">enctype</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -432,7 +431,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         <a href="https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a>
@@ -443,7 +442,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/for">for</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>
         {{ HTMLElement("label") }}、{{ HTMLElement("output") }}
@@ -479,7 +478,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
       </td>
       <td>
         如果按钮/输入是{{Glossary("submit button", "提交按钮")}}（例如，<code>type="submit"</code>），该属性用于设置表单提交时要使用的编码类型。如果指定了该属性，则会覆盖按钮所属的
-        <a href="/zh-CN/docs/Web/HTML/Element/form">form</a> 的 <code>enctype</code> 属性。
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form">form</a> 的 <code>enctype</code> 属性。
       </td>
     </tr>
     <tr>
@@ -492,7 +491,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
       <td>
         如果按钮/输入是{{Glossary("submit button", "提交按钮")}}（例如，<code>type="submit"</code>），该属性用于设置表单提交时要使用的提交方法（<code>GET</code>、<code>POST</code>
         等）。如果指定了该属性，则会覆盖按钮所属的
-        <a href="/zh-CN/docs/Web/HTML/Element/form">form</a> 的 <code>method</code> 属性。
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form">form</a> 的 <code>method</code> 属性。
       </td>
     </tr>
     <tr>
@@ -504,7 +503,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
       </td>
       <td>
         如果按钮/输入是{{Glossary("submit button", "提交按钮")}}（例如，<code>type="submit"</code>），该布尔属性用于指示在提交表单时不进行验证。如果指定了该属性，则会覆盖按钮所属的
-        <a href="/zh-CN/docs/Web/HTML/Element/form">form</a> 的 <code>novalidate</code> 属性。
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form">form</a> 的 <code>novalidate</code> 属性。
       </td>
     </tr>
     <tr>
@@ -516,7 +515,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
       </td>
       <td>
         如果按钮/输入是{{Glossary("submit button", "提交按钮")}}（例如，<code>type="submit"</code>），该属性用于指定提交表单后接收到的响应在哪个浏览上下文（例如，标签页、窗口或内联框架）中显示。如果指定了该属性，则会覆盖按钮所属的
-        <a href="/zh-CN/docs/Web/HTML/Element/form">form</a> 的 <code>target</code> 属性。
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/form">form</a> 的 <code>target</code> 属性。
       </td>
     </tr>
     <tr>
@@ -551,10 +550,10 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/hidden">hidden</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/hidden">hidden</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>
         阻止对给定元素的渲染，同时保持子元素（例如脚本元素）处于激活状态。
@@ -562,7 +561,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/meter#high">high</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/meter#high">high</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>指示高值区间的下限值。</td>
@@ -587,17 +586,17 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/meta#http-equiv">http-equiv</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/meta#http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>定义编译程序指令（pragma directive）。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/id">id</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/id">id</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>
         通常与 CSS 一起使用，以为特定元素添加样式。此属性的值必须是唯一的。
@@ -617,7 +616,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/img#intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -627,11 +626,11 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes/inputmode"><code>inputmode</code></a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/inputmode"><code>inputmode</code></a>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         提供一个提示，指示用户在编辑元素或其内容时可能输入的数据类型。该属性可用于表单控件（例如
@@ -641,23 +640,23 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/img#ismap">ismap</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/img#ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>指示图像是服务器端图像映射（image map）的一部分。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/track#kind">kind</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>指定文本字幕的类型。</td>
@@ -673,16 +672,16 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/lang">lang</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang">lang</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>定义元素中使用的语言。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/script#language">language</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/script#language">language</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("script") }}</td>
@@ -699,7 +698,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/input#list">list</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>指示建议用户输入的预定义选项列表。</td>
@@ -717,14 +716,14 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/meter#low">low</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/meter#low">low</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>指示低值区间的上限值。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/max">max</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("meter") }}、{{ HTMLElement("progress") }}
@@ -733,7 +732,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength">maxlength</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("textarea") }}
@@ -742,7 +741,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/minlength">minlength</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/minlength">minlength</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("textarea") }}
@@ -762,7 +761,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/form#method">method</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -773,7 +772,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/min">min</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("meter") }}
@@ -782,7 +781,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/multiple">multiple</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/multiple">multiple</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("select") }}
@@ -816,7 +815,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/form#novalidate">novalidate</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/form#novalidate">novalidate</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -838,14 +837,14 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/meter#optimum">optimum</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum">optimum</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>指示最佳数值。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/pattern">pattern</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>
@@ -854,7 +853,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/a#ping">ping</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/a#ping">ping</a></code>
       </td>
       <td>{{ HTMLElement("a") }}、{{ HTMLElement("area") }}</td>
       <td>
@@ -864,7 +863,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/placeholder">placeholder</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/placeholder">placeholder</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("textarea") }}
@@ -873,7 +872,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/video#playsinline">playsinline</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#playsinline">playsinline</a></code>
       </td>
       <td>
         {{ HTMLElement("video") }}
@@ -882,7 +881,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/video#poster">poster</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#poster">poster</a></code>
       </td>
       <td>{{ HTMLElement("video") }}</td>
       <td>
@@ -902,7 +901,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/readonly">readonly</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/readonly">readonly</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("textarea") }}
@@ -920,7 +919,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/rel">rel</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/rel">rel</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}、{{ HTMLElement("area") }}、{{ HTMLElement("link") }}
@@ -931,7 +930,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/required">required</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/required">required</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("select") }}、{{ HTMLElement("textarea") }}
@@ -940,7 +939,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/ol#reversed">reversed</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed">reversed</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>
@@ -951,12 +950,12 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
       <td>
         <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles">role</a></code>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a></td>
       <td>定义元素的显式角色，供辅助技术使用。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/textarea#rows">rows</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/textarea#rows">rows</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>定义文本区域的行数。</td>
@@ -972,7 +971,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -981,7 +980,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/th#scope">scope</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/th#scope">scope</a></code>
       </td>
       <td>{{ HTMLElement("th") }}</td>
       <td>
@@ -990,7 +989,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/style#scoped">scoped</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/style#scoped">scoped</a></code>
         {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("style") }}</td>
@@ -998,7 +997,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/option#selected">selected</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/option#selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
       <td>定义页面加载时将被选中的值。</td>
@@ -1012,7 +1011,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/size">size</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/size">size</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}、{{ HTMLElement("select") }}
@@ -1033,10 +1032,10 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/slot">slot</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/slot">slot</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>为影子 DOM（shadow DOM）影子树中的插槽分配一个元素。</td>
     </tr>
@@ -1051,10 +1050,10 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/spellcheck">spellcheck</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>指示是否允许对元素进行拼写检查。</td>
     </tr>
@@ -1069,14 +1068,14 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/iframe#srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/track#srclang">srclang</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/track#srclang">srclang</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td></td>
@@ -1092,30 +1091,30 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/ol#start">start</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/ol#start">start</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>定义除 1 以外的第一个数字。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/step">step</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/style">style</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/style">style</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>定义将覆盖先前设置的 CSS 样式。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/table#summary">summary</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/table#summary">summary</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("table") }}</td>
@@ -1123,10 +1122,10 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex">tabindex</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>
         使用指定的聚焦（tab）顺序覆盖浏览器的默认聚焦顺序。
@@ -1147,19 +1146,19 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/title">title</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/title">title</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>在鼠标悬停在元素上时显示的提示文本。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/translate">translate</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/translate">translate</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes">全局属性</a>
       </td>
       <td>
         指定当页面本地化时，元素的属性值和其<a
@@ -1218,7 +1217,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Element/textarea#wrap">wrap</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/textarea#wrap">wrap</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>指示文本是否应该换行。</td>
@@ -1272,4 +1271,4 @@ HTML 定义了布尔属性允许的取值：如果属性存在，其值必须是
 
 ## 参见
 
-- [HTML 元素](/zh-CN/docs/Web/HTML/Element)
+- [HTML 元素](/zh-CN/docs/Web/HTML/Reference/Elements)

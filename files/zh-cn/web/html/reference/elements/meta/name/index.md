@@ -1,12 +1,11 @@
 ---
 title: 标准元数据名称
 slug: Web/HTML/Reference/Elements/meta/name
-original_slug: Web/HTML/Element/meta/name
 ---
 
 {{HTMLSidebar}}
 
-The {{htmlelement("meta")}} 元素可用于提供 名称 - 值 对形式的文档元数据，[`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性为元数据条目提供名称，而 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 属性提供值。
+The {{htmlelement("meta")}} 元素可用于提供 名称 - 值 对形式的文档元数据，[`name`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#name) 属性为元数据条目提供名称，而 [`content`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#content) 属性提供值。
 
 ### HTML 规范中定义的标准元数据名称
 
@@ -37,7 +36,7 @@ HTML 规范定义了以下标准元数据名称：
   > [!NOTE]
   > 动态插入 `<meta name="referrer">`（使用 {{domxref("Document.write", "document.write()")}} 方法或者 {{domxref("Node.appendChild", "appendChild()")}} 等方法）会使 referrer 行为变得不可预测。如果定义了互相冲突的策略，则会转而使用 `no-referrer` 策略。
 
-- [`theme-color`](/zh-CN/docs/Web/HTML/Element/meta/name/theme-color)：表示当前页面的建议颜色，在自定义当前页面从或页面周围的用户界面的显示时，用户代理应当使用此颜色。`content` 属性应当包含一个有效的 CSS {{cssxref("&lt;color&gt;")}} 值。
+- [`theme-color`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name/theme-color)：表示当前页面的建议颜色，在自定义当前页面从或页面周围的用户界面的显示时，用户代理应当使用此颜色。`content` 属性应当包含一个有效的 CSS {{cssxref("&lt;color&gt;")}} 值。
 
 ### 其他规范中定义的标准元数据名称
 
@@ -47,7 +46,7 @@ CSS 颜色调整规范（CSS Color Adjustment specification）定义了以下元
 
   浏览器将优先采用此元数据的值，然后再使用用户的浏览器或设备设置，来确定页面上的各种默认颜色和元素外观，例如背景色、前景色、窗体控件和滚动条。`<meta name="color-scheme">` 的主要用途是指示当前页面与浅色模式和深色模式的兼容性，以及选用这两种模式时的优先顺序。
 
-  `color-scheme` 的 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 属性的值应当为以下值中的一个：
+  `color-scheme` 的 [`content`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#content) 属性的值应当为以下值中的一个：
 
   - `normal`
     - : 该文档未指定（unaware of）配色方案，应当仅使用默认配色进行渲染。

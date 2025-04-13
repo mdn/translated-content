@@ -1,7 +1,6 @@
 ---
 title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
-original_slug: Web/HTML/Element/input/radio
 ---
 
 {{HTMLSidebar}}
@@ -50,7 +49,7 @@ input {
 
 ![旧时收音机上的按钮。](old-radio.jpg)
 
-> **备注：** [复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
+> **备注：** [复选框](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)类似于单选按钮，但是有个重要的区别——单选按钮为选择集合中的其中一项而设计，然而复选框允许决定单个值的选定情况。当多个控件存在时，单选按钮允许选择其中的一个，而多选按钮允许选择其中多个。
 
 ## 值
 
@@ -58,7 +57,7 @@ input {
 
 ### 定义一个单选按钮组
 
-一个单选按钮组由具有相同 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的单选按钮组成。一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。
+一个单选按钮组由具有相同 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name) 属性的单选按钮组成。一旦单选按钮组被建立，选择那按钮组的任何单选按钮将会自动取消同组当前选择的任何按钮。
 
 你可以在一个页面上创建多个单选按钮组，只要每一组拥有唯一的 `name` 属性即可。
 
@@ -87,7 +86,7 @@ input {
 </form>
 ```
 
-你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact`，并且都含有在单选按钮组中唯一的 `value` 属性。每一个单选按钮也有一个给 {{HTMLElement("label")}} 元素的 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 属性使用的 {{domxref("Element.id", "id")}}，将标签（label）和单选按钮关联。
+你可以在这里看到三个单选按钮，每个按钮的 `name` 属性都设置为 `contact`，并且都含有在单选按钮组中唯一的 `value` 属性。每一个单选按钮也有一个给 {{HTMLElement("label")}} 元素的 [`for`](/zh-CN/docs/Web/HTML/Reference/Elements/label#for) 属性使用的 {{domxref("Element.id", "id")}}，将标签（label）和单选按钮关联。
 
 你可以在这里查看这个例子：
 
@@ -159,7 +158,7 @@ form.addEventListener(
 
   - : 一个布尔值属性，如果出现，代表这个单选按钮是组中被选中的那个。
 
-    不像其他浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性来控制这个特性。
+    不像其他浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性来控制这个特性。
 
 - `value`
 
@@ -308,7 +307,7 @@ button:active {
 }
 ```
 
-这里最值得注意的是 {{cssxref("appearance")}} 属性的使用（为了支持某些浏览器，需要加前缀）。默认情况下，单选按钮（和[复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)）的样式使用了操作系统对这些控件的本地样式。通过指定 `appearance: none`，你可以完全删除本地样式，并为它们创建自己的样式。这里我们使用了 {{cssxref("border")}} 和 {{cssxref("border-radius")}}，以及 {{cssxref("transition")}} 来创建一个漂亮的带动画单选。请注意 {{cssxref(":checked")}} 伪类是如何用来指定单选按钮被选中时的外观样式的。
+这里最值得注意的是 {{cssxref("appearance")}} 属性的使用（为了支持某些浏览器，需要加前缀）。默认情况下，单选按钮（和[复选框](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)）的样式使用了操作系统对这些控件的本地样式。通过指定 `appearance: none`，你可以完全删除本地样式，并为它们创建自己的样式。这里我们使用了 {{cssxref("border")}} 和 {{cssxref("border-radius")}}，以及 {{cssxref("transition")}} 来创建一个漂亮的带动画单选。请注意 {{cssxref(":checked")}} 伪类是如何用来指定单选按钮被选中时的外观样式的。
 
 > [!NOTE]
 > 如果你想使用 {{cssxref("appearance")}} 属性，你需要小心测试。即使大多数流行浏览器都支持它，它的实现变化很广。在老式浏览器中，即使是关键字 `none`，不同浏览器之间差异也很大，有些浏览器根本不支持。在新的浏览器中，差别就会小得多。
@@ -337,7 +336,7 @@ button:active {
         <code><a href="#attr-checked">checked</a></code
         >、<code><a href="#attr-value">value</a></code> 和
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Attributes/required">required</a></code
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/required">required</a></code
         >
       </td>
     </tr>

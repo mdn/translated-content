@@ -1,7 +1,6 @@
 ---
 title: <object>
 slug: Web/HTML/Reference/Elements/object
-original_slug: Web/HTML/Element/object
 ---
 
 {{HTMLSidebar}}
@@ -18,15 +17,15 @@ original_slug: Web/HTML/Element/object
   height="200"></object>
 ```
 
-- _[内容分类](/zh-CN/docs/Web/HTML/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content); [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content); [embedded content](/zh-CN/docs/Web/HTML/Content_categories#embedded_content), palpable content; if the element has a **usemap** attribute, [interactive content](/zh-CN/docs/Web/HTML/Content_categories#interactive_content); [listed](/zh-CN/docs/Web/HTML/Content_categories#form_listed), [submittable](/zh-CN/docs/Web/HTML/Content_categories#form_submittable) [form-associated](/zh-CN/docs/Web/HTML/Content_categories#form-associated_content) element.
-- _允许内容_ zero or more {{HTMLElement("param")}} elements, then [Transparent content](/zh-CN/docs/Web/HTML/Content_categories#transparent_content_models).
+- _[内容分类](/zh-CN/docs/Web/HTML/Guides/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content); [phrasing content](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content); [embedded content](/zh-CN/docs/Web/HTML/Guides/Content_categories#embedded_content), palpable content; if the element has a **usemap** attribute, [interactive content](/zh-CN/docs/Web/HTML/Guides/Content_categories#interactive_content); [listed](/zh-CN/docs/Web/HTML/Guides/Content_categories#form_listed), [submittable](/zh-CN/docs/Web/HTML/Guides/Content_categories#form_submittable) [form-associated](/zh-CN/docs/Web/HTML/Guides/Content_categories#form-associated_content) element.
+- _允许内容_ zero or more {{HTMLElement("param")}} elements, then [Transparent content](/zh-CN/docs/Web/HTML/Guides/Content_categories#transparent_content_models).
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
-- _允许的父级元素_ Any element that accepts [embedded content](/zh-CN/docs/Web/HTML/Content_categories#embedded_content).
+- _允许的父级元素_ Any element that accepts [embedded content](/zh-CN/docs/Web/HTML/Guides/Content_categories#embedded_content).
 - _DOM 接口_ {{domxref("HTMLObjectElement")}}
 
 ## 属性
 
-元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `archive` {{Deprecated_Inline}}
   - : 用来指名对象资源列表的以空格分隔的 URI 列表。
@@ -55,7 +54,7 @@ original_slug: Web/HTML/Element/object
 - `type`
   - : **data** 指定的资源的 MIME 类型，需要为 **data** 和 **type** 中至少一个设置值。
 - `usemap`
-  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为‘#’加 map 元素 [`name`](/zh-CN/docs/Web/HTML/Element/map#name) 元素的值。
+  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为‘#’加 map 元素 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/map#name) 元素的值。
 - `width`
   - : 资源显示的宽度，单位是 CSS 像素。
 

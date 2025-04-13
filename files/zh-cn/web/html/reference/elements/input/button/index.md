@@ -1,7 +1,6 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
-original_slug: Web/HTML/Element/input/button
 ---
 
 {{HTMLSidebar}}
@@ -53,7 +52,7 @@ original_slug: Web/HTML/Element/input/button
 
 ### 含有值的按钮
 
-`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Element/input#%e5%80%bc) 属性包含用作按钮标签的字符串。
+`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#%e5%80%bc) 属性包含用作按钮标签的字符串。
 
 ```html
 <input type="button" value="点我" />
@@ -73,7 +72,7 @@ original_slug: Web/HTML/Element/input/button
 
 ## 使用按钮
 
-`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
+`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
 
 ### 简单的按钮
 
@@ -109,9 +108,9 @@ function updateButton() {
 
 ### 为按钮添加键盘快捷方式
 
-键盘快捷键可以让用户使用键盘上的某个键或组合键来触发一个按钮。要为一个按钮添加键盘快捷键——就像对任何 {{HTMLElement("input")}} 都有意义的那样——你可以使用 [`accesskey`](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) 全局属性。
+键盘快捷键可以让用户使用键盘上的某个键或组合键来触发一个按钮。要为一个按钮添加键盘快捷键——就像对任何 {{HTMLElement("input")}} 都有意义的那样——你可以使用 [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey) 全局属性。
 
-在这个例子中，<kbd>s</kbd> 被指定成为访问键，你需要按住浏览器或操作系统所指定的组合键加上 <kbd>s</kbd> 键来触发按钮，参见 [accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) 以获取一些有用的列表。
+在这个例子中，<kbd>s</kbd> 被指定成为访问键，你需要按住浏览器或操作系统所指定的组合键加上 <kbd>s</kbd> 键来触发按钮，参见 [accesskey](/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey) 以获取一些有用的列表。
 
 ```html
 <form>
@@ -142,7 +141,7 @@ function updateButton() {
 
 ### 禁用和启用按钮
 
-要禁用按钮，在其上指定 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled) 全局属性，就像这样：
+要禁用按钮，在其上指定 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 全局属性，就像这样：
 
 ```html
 <input type="button" value="禁用我" disabled />
@@ -205,7 +204,7 @@ function disableButton() {
 {{EmbedLiveSample("继承禁用状态", 650, 100)}}
 
 > [!NOTE]
-> Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete) 属性来控制这个特性。
+> Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/button#autocomplete) 属性来控制这个特性。
 
 ## 验证
 
@@ -350,8 +349,8 @@ draw();
     <tr>
       <td><strong>支持的通用属性</strong></td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Element/input#类型"><code>type</code></a> 和
-        <a href="/zh-CN/docs/Web/HTML/Element/input#值"><code>value</code></a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#类型"><code>type</code></a> 和
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#值"><code>value</code></a>
       </td>
     </tr>
     <tr>

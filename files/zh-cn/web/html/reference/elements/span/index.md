@@ -1,14 +1,13 @@
 ---
 title: <span>：内容跨越元素
 slug: Web/HTML/Reference/Elements/span
-original_slug: Web/HTML/Element/span
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
-**`<span>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个通用的行级容器，本身不具备特殊含义。它可被用于对元素进行编组，以便于添加样式（通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性），或共享属性值（例如 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）。该元素仅应在无其他合适语义元素时使用。`<span>` 与 {{HTMLElement("div")}} 元素非常相似，但是 {{HTMLElement("div")}} 是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，而 `<span>` 是一个[行级元素](/zh-CN/docs/Glossary/Inline-level_content)。
+**`<span>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个通用的行级容器，本身不具备特殊含义。它可被用于对元素进行编组，以便于添加样式（通过使用 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性），或共享属性值（例如 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性）。该元素仅应在无其他合适语义元素时使用。`<span>` 与 {{HTMLElement("div")}} 元素非常相似，但是 {{HTMLElement("div")}} 是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，而 `<span>` 是一个[行级元素](/zh-CN/docs/Glossary/Inline-level_content)。
 
 {{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
 
@@ -33,7 +32,7 @@ span.ingredient {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 
@@ -79,12 +78,12 @@ li span {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >。
       </td>
@@ -92,7 +91,7 @@ li span {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -104,9 +103,9 @@ li span {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>

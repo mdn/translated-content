@@ -1,7 +1,6 @@
 ---
 title: 怪异模式和标准模式
 slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
-original_slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 
 {{HTMLSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: <dt>：描述性术语元素
 slug: Web/HTML/Reference/Elements/dt
-original_slug: Web/HTML/Element/dt
 l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
@@ -47,11 +46,11 @@ dd {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 
-有关示例，请参阅[为 `<dl>` 元素提供的示例](/zh-CN/docs/Web/HTML/Element/dl#示例)。
+有关示例，请参阅[为 `<dl>` 元素提供的示例](/zh-CN/docs/Web/HTML/Reference/Elements/dl#示例)。
 
 ## 技术概要
 
@@ -59,7 +58,7 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -68,7 +67,7 @@ dd {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、但不包括任何 {{HTMLElement("header")}}、{{HTMLElement("footer")}}、分段内容或标题内容的后代元素。
       </td>

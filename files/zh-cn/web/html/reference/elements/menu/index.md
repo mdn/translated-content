@@ -1,7 +1,6 @@
 ---
 title: <menu>：菜单元素
 slug: Web/HTML/Reference/Elements/menu
-original_slug: Web/HTML/Element/menu
 l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
@@ -40,7 +39,7 @@ menu {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -105,17 +104,17 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
         <p>
-          <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
             >流式内容</a
           >。如果元素的子元素包含至少一个
           {{HTMLElement("li")}} 元素：<a
-            href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容"
+            href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
             >可感知内容</a
           >。
         </p>
@@ -136,7 +135,7 @@ button {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>

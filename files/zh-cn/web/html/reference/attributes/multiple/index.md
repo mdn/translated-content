@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：multiple
 slug: Web/HTML/Reference/Attributes/multiple
-original_slug: Web/HTML/Attributes/multiple
 l10n:
   sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
 ---
@@ -50,7 +49,7 @@ input:invalid {
 
 根据类型的不同，如果设置了 `multiple` 属性，表单控件可能会有不同的外观。对于文件输入类型，浏览器提供的本地信息也不同。在 Firefox 中，当属性存在时，文件输入会显示“未选择文件”，而当属性不存在时，则会显示“未选择文件”。大多数浏览器都会在设置了 `multiple` 属性的情况下为 {{HTMLElement("select")}} 控件显示滚动列表框，而在省略该属性时则显示单行下拉菜单。无论是否包含 `multiple` 属性，{{HTMLElement("input/email", "email")}} 输入的显示效果都是一样的，但如果不包含该属性，则在包含一个以上逗号分隔的电子邮件地址时会匹配 {{cssxref(':invalid')}} 伪类。
 
-当 {{HTMLElement("input/email", "email")}} 输入类型设置了 `multiple` 时，用户可以输入零个（如果没有设置 [`required`](/zh-CN/docs/Web/HTML/Attributes/required) 属性）、一个或多个逗号分隔的电子邮件地址。
+当 {{HTMLElement("input/email", "email")}} 输入类型设置了 `multiple` 时，用户可以输入零个（如果没有设置 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 属性）、一个或多个逗号分隔的电子邮件地址。
 
 ```html
 <input type="email" multiple name="emails" id="emails" />
@@ -120,9 +119,9 @@ input:invalid {
 }
 ```
 
-当且仅当指定了 `multiple` 属性时，值可以是以逗号分隔的邮件地址列表，其中每个地址的前导和后随空白字符都会被删除。如果 [`required`](/zh-CN/docs/Web/HTML/Attributes/required) 属性存在，至少需要一个邮件地址。
+当且仅当指定了 `multiple` 属性时，值可以是以逗号分隔的邮件地址列表，其中每个地址的前导和后随空白字符都会被删除。如果 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 属性存在，至少需要一个邮件地址。
 
-当 `multiple` 属性存在时，某些浏览器支持为后续电子邮件地址显示相关的 {{htmlelement('datalist')}} 中选项的 [`list`](/zh-CN/docs/Web/HTML/Element/input#list)，而其他浏览器不支持。
+当 `multiple` 属性存在时，某些浏览器支持为后续电子邮件地址显示相关的 {{htmlelement('datalist')}} 中选项的 [`list`](/zh-CN/docs/Web/HTML/Reference/Elements/input#list)，而其他浏览器不支持。
 
 {{EmbedLiveSample("email 输入", 600, 80)}}
 
@@ -155,7 +154,7 @@ input:invalid {
 
 请注意设置了 `multiple` 的示例与未设置 `file` 的其他输入在外观上的区别。
 
-提交表单时，如果我们使用 [`method="get"`](/zh-CN/docs/Web/HTML/Element/form)，每个选定文件的名称都会以 `?uploads=img1.jpg&uploads=img2.svg` 的形式添加到 URL 参数中。但是，由于我们提交的是多部分表单数据，因此必须使用 post。更多信息请参阅 {{htmlelement('form')}} 元素和[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)。
+提交表单时，如果我们使用 [`method="get"`](/zh-CN/docs/Web/HTML/Reference/Elements/form)，每个选定文件的名称都会以 `?uploads=img1.jpg&uploads=img2.svg` 的形式添加到 URL 参数中。但是，由于我们提交的是多部分表单数据，因此必须使用 post。更多信息请参阅 {{htmlelement('form')}} 元素和[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)。
 
 ### select 元素
 
@@ -226,4 +225,4 @@ select[multiple]:active {
 
 - {{htmlelement('input')}}
 - {{htmlelement('select')}}
-- [允许多个电子邮件地址](/zh-CN/docs/Web/HTML/Element/input/email#允许多个电子邮件地址)
+- [允许多个电子邮件地址](/zh-CN/docs/Web/HTML/Reference/Elements/input/email#允许多个电子邮件地址)

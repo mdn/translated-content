@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：capture
 slug: Web/HTML/Reference/Attributes/capture
-original_slug: Web/HTML/Attributes/capture
 l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---

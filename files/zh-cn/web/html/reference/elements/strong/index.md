@@ -1,7 +1,6 @@
 ---
 title: <strong>
 slug: Web/HTML/Reference/Elements/strong
-original_slug: Web/HTML/Element/strong
 ---
 
 ## 总结
@@ -37,7 +36,7 @@ Strong 元素 (`<strong>`) 表示文本十分重要，一般用粗体显示。
 
 ## 属性
 
-只具有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+只具有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 ## DOM 接口
 
@@ -76,7 +75,7 @@ When doing x it is imperative to do y before proceeding.
 
 ## 同样参见
 
-- [HTML bold element](/zh-CN/docs/Web/HTML/Element/b)
-- [HTML em element](/zh-CN/docs/Web/HTML/Element/em)
+- [HTML bold element](/zh-CN/docs/Web/HTML/Reference/Elements/b)
+- [HTML em element](/zh-CN/docs/Web/HTML/Reference/Elements/em)
 
 {{HTMLSidebar}}

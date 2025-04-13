@@ -1,14 +1,13 @@
 ---
 title: spellcheck
 slug: Web/HTML/Reference/Global_attributes/spellcheck
-original_slug: Web/HTML/Global_attributes/spellcheck
 l10n:
   sourceCommit: d49a9ceb7a22f48dd27a6742a098a915c2243ddc
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`spellcheck`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，定义是否可以检查元素的拼写错误。
+**`spellcheck`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，定义是否可以检查元素的拼写错误。
 
 > [!NOTE]
 > 此属性仅仅是浏览器的一个提示：浏览器并不会强制去检查拼写错误。通常不检查不可编辑元素的拼写错误，即使 `spellcheck` 属性设置为 `true`，并且浏览器支持拼写检查。
@@ -48,4 +47,4 @@ This exampull will nut be checkd fur spellung when you try to edit it.</textarea
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)

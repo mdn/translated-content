@@ -1,7 +1,6 @@
 ---
 title: <h1>–<h6>：HTML 区域标题元素
 slug: Web/HTML/Reference/Elements/Heading_Elements
-original_slug: Web/HTML/Element/Heading_Elements
 ---
 
 **HTML `<h1>`–`<h6>` 标题 (Heading) 元素**呈现了六个不同的级别的标题，`<h1>` 级别最高，而 `<h6>` 级别最低。
@@ -50,12 +49,12 @@ h4 {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
    <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）">流式内容</a>，标题内容，可触知的内容。</td>
   </tr>
   <tr>
    <th scope="row">允许内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -78,7 +77,7 @@ h4 {
 
 ## 属性
 
-该元素包含所有[全局特性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含所有[全局特性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 > [!NOTE]
 > align 属性已废弃；不要继续使用它。
@@ -196,9 +195,9 @@ h4 {
 
 ### 标注章节内容
 
-屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-CN/docs/Web/HTML/Element#内容分区)的列表，并使用其确定页面布局
+屏幕阅读软件用户的另一种常用导航技术是生成[内容分区](/zh-CN/docs/Web/HTML/Reference/Elements#内容分区)的列表，并使用其确定页面布局
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) and [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) and [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### 示例
 

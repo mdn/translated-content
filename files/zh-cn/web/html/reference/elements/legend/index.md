@@ -1,7 +1,6 @@
 ---
 title: <legend>：字段集标题元素
 slug: Web/HTML/Reference/Elements/legend
-original_slug: Web/HTML/Element/legend
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
@@ -41,7 +40,7 @@ input {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 
@@ -53,7 +52,7 @@ input {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -62,9 +61,9 @@ input {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >和<a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">标题</a>（h1–h6 元素）。
+        >和<a href="/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements">标题</a>（h1–h6 元素）。
       </td>
     </tr>
     <tr>

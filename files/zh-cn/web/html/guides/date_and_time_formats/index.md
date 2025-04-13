@@ -1,22 +1,21 @@
 ---
 title: HTML 中使用的日期与时间格式
 slug: Web/HTML/Guides/Date_and_time_formats
-original_slug: Web/HTML/Date_and_time_formats
 ---
 
 {{HTMLSidebar}}
 
 特定的 HTML 元素会使用日期和（或）时间值，指定这些值的字符串格式将在本篇文章中描述。
 
-使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 [`datetime`](/zh-CN/docs/Web/HTML/Element/ins#datetime) 属性指定了插入或删除内容的日期或日期和时间。
+使用这些格式的元素包含一些令用户选择或指定日期、时间或日期和时间的 {{HTMLElement("input")}} 和 {{HTMLElement("ins")}}、{{HTMLElement("del")}} 元素，它们的 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/ins#datetime) 属性指定了插入或删除内容的日期或日期和时间。
 
-对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值为：
+对于 `<input>` 元素来说，能够返回包含代表日期或日期和时间的字符串 [`value`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#value) 的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 的值为：
 
-- [`date`](/zh-CN/docs/Web/HTML/Element/input/date)
-- [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
-- [`month`](/zh-CN/docs/Web/HTML/Element/input/month)
-- [`time`](/zh-CN/docs/Web/HTML/Element/input/time)
-- [`week`](/zh-CN/docs/Web/HTML/Element/input/week)
+- [`date`](/zh-CN/docs/Web/HTML/Reference/Elements/input/date)
+- [`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`month`](/zh-CN/docs/Web/HTML/Reference/Elements/input/month)
+- [`time`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time)
+- [`week`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week)
 
 ## 示例
 
@@ -37,7 +36,7 @@ original_slug: Web/HTML/Date_and_time_formats
       <td><code>2005-06-07</code></td>
       <td>2005 年 6 月 7 日</td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Date_and_time_formats#日期字符串"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#日期字符串"
           >[详情]</a
         >
       </td>
@@ -46,7 +45,7 @@ original_slug: Web/HTML/Date_and_time_formats
       <td><code>08:45</code></td>
       <td>上午 8 时 45 分</td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Date_and_time_formats#时间字符串"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#时间字符串"
           >[详情]</a
         >
       </td>
@@ -55,7 +54,7 @@ original_slug: Web/HTML/Date_and_time_formats
       <td><code>08:45:25</code></td>
       <td>上午 8 时 45 分 25 秒</td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Date_and_time_formats#时间字符串"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#时间字符串"
           >[详情]</a
         >
       </td>
@@ -65,7 +64,7 @@ original_slug: Web/HTML/Date_and_time_formats
       <td>33 年 8 月 4 日，上午 3 时 40 分</td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Date_and_time_formats#本地日期时间字符串"
+          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#本地日期时间字符串"
           >[详情]</a
         >
       </td>
@@ -75,7 +74,7 @@ original_slug: Web/HTML/Date_and_time_formats
       <td>1977 年 4 月 1 日，下午 2 时 00 分 30 秒</td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Date_and_time_formats#本地日期时间字符串"
+          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#本地日期时间字符串"
           >[详情]</a
         >
       </td>
@@ -85,7 +84,7 @@ original_slug: Web/HTML/Date_and_time_formats
       <td>1901 年 1 月 1 日的半夜（UTC 时间）</td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Date_and_time_formats#全局日期时间字符串"
+          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#全局日期时间字符串"
           >[详情]</a
         >
       </td>
@@ -97,7 +96,7 @@ original_slug: Web/HTML/Date_and_time_formats
       </td>
       <td>
         <a
-          href="/zh-CN/docs/Web/HTML/Date_and_time_formats#全局日期时间字符串"
+          href="/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#全局日期时间字符串"
           >[详情]</a
         >
       </td>
@@ -286,9 +285,9 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 
 ## 本地日期时间字符串
 
-一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
+一个有效的 [`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local) 字符串由一个 `date` 字符串和一个 `time` 字符串连接起来，中间用字母“`T`”或空格分开。字符串中不包含时区的信息；日期和时间被认为是用户的本地时区。
 
-当你设置 `datetime-local` 输入的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
+当你设置 `datetime-local` 输入的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 时，该字符串被**规范化**为标准形式。标准化的 `datetime` 字符串总是使用字母“`T`”来分隔日期和时间，并且字符串的时间部分尽可能地短。如果秒的值是 `:00`，则不使用秒的成分。
 
 <table class="standard-table">
   <caption>

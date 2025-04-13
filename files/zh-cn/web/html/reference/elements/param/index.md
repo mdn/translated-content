@@ -1,7 +1,6 @@
 ---
 title: <param>：对象形式参数元素
 slug: Web/HTML/Reference/Elements/param
-original_slug: Web/HTML/Element/param
 l10n:
   sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
@@ -11,11 +10,11 @@ l10n:
 **`<param>`** [HTML](/zh-CN/docs/Web/HTML) 元素为 {{HTMLElement("object")}} 元素定义形式参数。
 
 > [!NOTE]
-> 使用带有 [`data`](/zh-CN/docs/Web/HTML/Element/object#data) 属性的 {{HTMLElement("object")}} 元素来设置外部资源的 URL。
+> 使用带有 [`data`](/zh-CN/docs/Web/HTML/Reference/Elements/object#data) 属性的 {{HTMLElement("object")}} 元素来设置外部资源的 URL。
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `name` {{deprecated_inline}}
   - : 形式参数名称。
@@ -37,7 +36,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -54,7 +53,7 @@ l10n:
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        在任何<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        在任何<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >之前的 {{HTMLElement("object")}} 元素。
       </td>

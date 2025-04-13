@@ -1,7 +1,6 @@
 ---
 title: <header>：标题元素
 slug: Web/HTML/Reference/Elements/header
-original_slug: Web/HTML/Element/header
 l10n:
   sourceCommit: 6336af7a3880c350919e5b29f83b938fb1594362
 ---
@@ -63,11 +62,11 @@ header > time {
 
 ### 历史用法
 
-`<header>` 元素最初在 HTML 的早期用于标题。在[第一个网站](https://info.cern.ch/)中可以看到。在某个时间点，标题变成了 [`<h1>` 至 `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements)，使 `<header>` 可以自由地扮演一个不一样的角色。
+`<header>` 元素最初在 HTML 的早期用于标题。在[第一个网站](https://info.cern.ch/)中可以看到。在某个时间点，标题变成了 [`<h1>` 至 `<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)，使 `<header>` 可以自由地扮演一个不一样的角色。
 
 ## 属性
 
-此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 无障碍
 
@@ -115,14 +114,14 @@ header > time {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
         >。
       </td>
@@ -130,7 +129,7 @@ header > time {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >，但没有 <code>&#x3C;header></code> 或 {{HTMLElement("footer")}} 后代。
       </td>
@@ -142,7 +141,7 @@ header > time {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content"
           >流式内容</a
         >的元素。请注意，<code>&#x3C;header></code> 元素不得是 {{HTMLElement("address")}}、{{HTMLElement("footer")}} 或另一个 <code>&lt;header&gt;</code> 元素的后代。
       </td>
@@ -151,11 +150,11 @@ header > time {
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
         如果是
-        <code><a href="/zh-CN/docs/Web/HTML/Element/article">article</a></code
-        >、<code><a href="/zh-CN/docs/Web/HTML/Element/aside">aside</a></code
-        >、<code><a href="/zh-CN/docs/Web/HTML/Element/main">main</a></code
-        >、<code><a href="/zh-CN/docs/Web/HTML/Element/nav">nav</a></code> 或是
-        <code><a href="/zh-CN/docs/Web/HTML/Element/section">section</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/article">article</a></code
+        >、<code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/aside">aside</a></code
+        >、<code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/main">main</a></code
+        >、<code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/nav">nav</a></code> 或是
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/section">section</a></code>
         元素的后代，或者是带有
         <code
           >role=<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"

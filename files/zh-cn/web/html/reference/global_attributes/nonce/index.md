@@ -1,14 +1,13 @@
 ---
 title: nonce
 slug: Web/HTML/Reference/Global_attributes/nonce
-original_slug: Web/HTML/Global_attributes/nonce
 l10n:
   sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`nonce`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是定义了密码学 nonce（“只使用一次的数字”）的内容属性，[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)可以使用它来确定是否允许对给定元素进行获取。
+**`nonce`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是定义了密码学 nonce（“只使用一次的数字”）的内容属性，[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)可以使用它来确定是否允许对给定元素进行获取。
 
 ## 描述
 

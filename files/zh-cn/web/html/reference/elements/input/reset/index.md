@@ -1,7 +1,6 @@
 ---
 title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
-original_slug: Web/HTML/Element/input/reset
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -54,7 +53,7 @@ input[type="submit"] {
 ```
 
 > [!NOTE]
-> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Element/input/submit)按钮时）。
+> 你应该尽量避免在表单中包含重置按钮。它们很少具有实用性，事实上更有可能使用户因误点而感到沮丧（通常是在尝试单击[提交](/zh-CN/docs/Web/HTML/Reference/Elements/input/submit)按钮时）。
 
 <table class="properties">
  <tbody>
@@ -68,7 +67,7 @@ input[type="submit"] {
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>
-   <td><a href="/zh-CN/docs/Web/HTML/Element/input#type"><code>type</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Element/input#value"><code>value</code></a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> 和 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a></td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -87,7 +86,7 @@ input[type="submit"] {
 
 ## 值
 
-`<input type="reset">` 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个用做按钮标签的字符串，诸如 `reset` 之类的按钮没有其他值。
+`<input type="reset">` 元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性包含一个用做按钮标签的字符串，诸如 `reset` 之类的按钮没有其他值。
 
 ### 设置 value 属性
 
@@ -109,7 +108,7 @@ input[type="submit"] {
 
 ## 使用重置按钮
 
-`<input type="reset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 JavaScript 自定义行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
+`<input type="reset">` 按钮用于重置表单。如果要创建自定义按钮，并使用 JavaScript 自定义行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/button)，或者最好使用 `{{htmlelement("button")}}` 元素。
 
 ### 一个简单的重置按钮
 
@@ -135,9 +134,9 @@ input[type="submit"] {
 
 ### 添加重置键盘快捷键
 
-像对 {{HTMLElement("input")}} 元素所做的那样，向重置按钮添加一个快捷键是非常有意义的，且可以通过 [`accesskey`](/zh-CN/docs/Web/HTML/Global_attributes#accesskey) 全局属性来实现。
+像对 {{HTMLElement("input")}} 元素所做的那样，向重置按钮添加一个快捷键是非常有意义的，且可以通过 [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#accesskey) 全局属性来实现。
 
-在这个例子中， <kbd>r</kbd> 被指定为访问键（需要按下 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合；关于这些命令的详细列表请参见 [`accesskey`](/zh-CN/docs/Web/HTML/Global_attributes#accesskey)）。
+在这个例子中， <kbd>r</kbd> 被指定为访问键（需要按下 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合；关于这些命令的详细列表请参见 [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#accesskey)）。
 
 ```html
 <form>
@@ -153,11 +152,11 @@ input[type="submit"] {
 
 {{EmbedLiveSample("添加重置键盘快捷键", 650, 100)}}
 
-上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性），尽管这并不是出于无障碍目的的完善的解决方案。
+上面的示例的问题在于，用户无法知道访问键是什么！事实上，是因为修饰符通常是非标准的，以避免与系统和软件快捷键冲突。在构建网站时，请确保以不干扰网站设计的方式提供此信息（例如，通过提供易于访问的链接来指向有关网站访问键的信息）。向按钮添加提示（也可以使用 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#title) 属性），尽管这并不是出于无障碍目的的完善的解决方案。
 
 ### 禁用和启用重置按钮
 
-要禁用重置按钮，只需在其上指定 [`disabled`](/zh-CN/docs/Web/HTML/Global_attributes#disabled) 全局属性，如下所示：
+要禁用重置按钮，只需在其上指定 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#disabled) 全局属性，如下所示：
 
 ```html
 <input type="reset" value="Disabled" disabled />
@@ -166,7 +165,7 @@ input[type="submit"] {
 你可以在运行时通过简单地将 `disable` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，使用 `btn.disabled = true` 或 `btn.disabled = false`。
 
 > [!NOTE]
-> 有关启用和禁用按钮的更多概念，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#启用与禁用按钮) 页面。
+> 有关启用和禁用按钮的更多概念，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/button#启用与禁用按钮) 页面。
 
 ## 验证
 

@@ -1,12 +1,11 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
-original_slug: Web/HTML/Element/input/search
 ---
 
 {{HTMLSidebar}}
 
-**`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
+**`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
 
@@ -43,7 +42,7 @@ label {
   </tr>
   <tr>
    <td><strong>支持的通用属性</strong></td>
-   <td><a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#size"><code>size</code></a>。</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>。</td>
   </tr>
   <tr>
    <td><strong>IDL 属性</strong></td>
@@ -62,7 +61,7 @@ label {
 
 ## 值
 
-[`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含一个代表搜索字段中含有值的字符串。你可以使用 JavaScript 的 {{domxref("HTMLInputElement.value")}} 属性获取该值。
+[`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性包含一个代表搜索字段中含有值的字符串。你可以使用 JavaScript 的 {{domxref("HTMLInputElement.value")}} 属性获取该值。
 
 ```js
 searchTerms = mySearch.value;
@@ -76,28 +75,28 @@ searchTerms = mySearch.value;
 
 ### list
 
-list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}，用来提供输入建议。{{HTMLElement("datalist")}} 提供了一个预定义的值列表，向用户建议这个输入。列表中任何与 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 不兼容的值都不包括在建议选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
 ### maxlength
 
 用户可以在搜索字段中输入的最大字符数（UTF-16 代码单元）。必须为 0 或更高的整数。如果未指定 `maxlength` 或指定了无效值，则搜索字段没有最大长度。此值还必须大于或等于 `minlength` 的值。
 
-如果输入到字段中的文本的长度大于 `maxlength` UTF-16 代码单元的长度，则输入无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
+如果输入到字段中的文本的长度大于 `maxlength` UTF-16 代码单元的长度，则输入无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。
 
 ### minlength
 
 用户可以在搜索字段中输入的最小字符数（UTF-16 代码单元）。该值必须是小于或等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效值，则搜索输入没有最小长度。
 
-如果在字段中输入的文本的长度小于 `minlength` UTF-16 代码单元的长度，则搜索字段将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
+如果在字段中输入的文本的长度小于 `minlength` UTF-16 代码单元的长度，则搜索字段将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
 > [!NOTE]
-> 使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
+> 使用 [`title`](/zh-CN/docs/Web/HTML/Reference/Elements/input#title) 属性指定大多数浏览器将显示为文本的工具提示，以说明与模式匹配的要求。你还应该在附近添加其他说明性文字。
 
 请参照[指定模式](#指定模式)更多内容和例子。
 
@@ -108,7 +107,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 如果控件的内容具有方向（{{Glossary("LTR")}} 或 {{Glossary("RTL")}}），但需要以相反的方向显示占位符，则可以使用 Unicode 双向算法来格式化字符，从而覆盖原有占位符的方向；请参见[如何针对双向文本使用 Unicode 控制符](https://www.w3.org/International/questions/qa-bidi-unicode-controls)获取更多信息。
 
 > [!NOTE]
-> 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#标签)以获取更多信息。
+> 尽可能避免使用 `placeholder` 属性。它在语义上没有其他解释表单的方式有用，并且可能导致内容出现意外的问题。请参见 [`<input>` 标签](/zh-CN/docs/Web/HTML/Reference/Elements/input#标签)以获取更多信息。
 
 ### readonly
 
@@ -163,7 +162,7 @@ Safari 扩展，`autocorrect` 属性是一个字符串，它指示在用户编�
 
 Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键将采取何种操作。
 
-此属性已经废弃：请使用全局属性 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Global_attributes#enterkeyhint) 作为替代。
+此属性已经废弃：请使用全局属性 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#enterkeyhint) 作为替代。
 
 ### results
 
@@ -193,7 +192,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 `q` 是搜索输入中最常用的 `name` 值，尽管不是强制性的。提交后，发送到服务器的键值对数据将为 `q=searchterm`。
 
 > [!NOTE]
-> 一定要记住为你的 input 设置 [`name`](/zh-CN/docs/Web/HTML/Element/input#name)，否则不会提交任何内容。
+> 一定要记住为你的 input 设置 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name)，否则不会提交任何内容。
 
 ### 搜索类型和文本类型之间的差异
 
@@ -207,7 +206,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 ### 设置占位符
 
-可以在搜索输入中提供一个有用的占位符，使用 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性来提示要做什么。看下面的示例：
+可以在搜索输入中提供一个有用的占位符，使用 [`placeholder`](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder) 属性来提示要做什么。看下面的示例：
 
 ```html
 <form>
@@ -258,7 +257,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 ### 输入框元素物理大小
 
-可以使用 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 属性来控制输入框的尺寸。使用它，可以指定输入框一次可以显示的字符数。例如，在此示例中，搜索框为 30 个字符宽：
+可以使用 [`size`](/zh-CN/docs/Web/HTML/Reference/Elements/input#size) 属性来控制输入框的尺寸。使用它，可以指定输入框一次可以显示的字符数。例如，在此示例中，搜索框为 30 个字符宽：
 
 ```html
 <form>
@@ -307,7 +306,7 @@ input:valid ~ span::after {
 
 ### 让输入框必填
 
-你可以使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性令输入一个值成为允许提交表单前的必要条件：
+你可以使用 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性令输入一个值成为允许提交表单前的必要条件：
 
 ```html
 <form>
@@ -354,7 +353,7 @@ input:valid ~ span::after {
 
 ### 输入值长度
 
-你可以使用 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 属性为输入的值指定最小长度（以字符为单位）；同样，使用 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 设置输入值的最大长度。
+你可以使用 [`minlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#minlength) 属性为输入的值指定最小长度（以字符为单位）；同样，使用 [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#maxlength) 设置输入值的最大长度。
 
 下面的示例要求输入的值的长度为 4–8 个字符。
 
@@ -403,7 +402,7 @@ input:valid ~ span::after {
 
 ### 指定模式
 
-你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定一个正则表达式，输入值必须遵循该正则表达式才能被视为有效（请参照[使用正则表达式进行验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)）。
+你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性指定一个正则表达式，输入值必须遵循该正则表达式才能被视为有效（请参照[使用正则表达式进行验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)）。
 
 让我们看一个例子。假设我们想提供一个产品 ID 搜索表格，这些 ID 都是由两个字母和四个数字组成的代码。以下示例对此进行了介绍：
 
@@ -463,5 +462,5 @@ input:valid ~ span::after {
 
 - [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 及其所基于的接口 {{domxref("HTMLInputElement")}}
-- [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
+- [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text)
 - [CSS 属性的兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

@@ -1,7 +1,6 @@
 ---
 title: <center>：居中文本元素
 slug: Web/HTML/Reference/Elements/center
-original_slug: Web/HTML/Element/center
 l10n:
   sourceCommit: 6f886b9147b7f62bacfa1e740a3ea288168a58aa
 ---

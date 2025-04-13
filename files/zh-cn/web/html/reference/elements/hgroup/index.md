@@ -1,12 +1,11 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
-original_slug: Web/HTML/Element/hgroup
 ---
 
 {{HTMLSidebar}}
 
-**`<hgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素与一个或多个 [`<p>`](/zh-CN/docs/Web/HTML/Element/p) 元素组合在一起。
+**`<hgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素与一个或多个 [`<p>`](/zh-CN/docs/Web/HTML/Reference/Elements/p) 元素组合在一起。
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
 
@@ -42,7 +41,7 @@ hgroup p {
 
 ## 属性
 
-这个元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -141,4 +140,4 @@ hgroup p {
 ## 参见
 
 - 与本章节相关的其他元素：{{HTMLElement("body")}}、{{HTMLElement("article")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("nav")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}；
-- [HTML 文档的章节和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)。
+- [HTML 文档的章节和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)。

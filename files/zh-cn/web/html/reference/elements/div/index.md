@@ -1,7 +1,6 @@
 ---
 title: <div>：内容划分元素
 slug: Web/HTML/Reference/Elements/div
-original_slug: Web/HTML/Element/div
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
@@ -40,11 +39,11 @@ l10n:
 }
 ```
 
-作为一个“纯粹的”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
+作为一个“纯粹的”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性）等等。
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 > [!NOTE]
 > 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
@@ -69,7 +68,7 @@ l10n:
 
 ### 一个样式化示例
 
-此示例通过使用 CSS 将样式应用于 `<div>` 来创建一个阴影盒子。注意在 `<div>` 上使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 属性将名为 `"shadowbox"` 的样式应用于元素中。
+此示例通过使用 CSS 将样式应用于 `<div>` 来创建一个阴影盒子。注意在 `<div>` 上使用 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#class) 属性将名为 `"shadowbox"` 的样式应用于元素中。
 
 #### HTML
 
@@ -105,20 +104,20 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#f流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#f流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容">可感知内容</a>。
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容">可感知内容</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >。<br />或者（在 {{glossary("WHATWG")}} HTML 中）：如果父级是 {{HTMLElement("dl")}} 元素：一个或多个 {{HTMLElement("dt")}} 元素，后面跟一个或多个 {{HTMLElement("dd")}} 元素，可选择与 {{HTMLElement("script")}} 和 {{HTMLElement("template")}} 元素混合使用。
       </td>
@@ -130,7 +129,7 @@ l10n:
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。<br />或者（在 WHATWG HTML 中）：{{HTMLElement("dl")}} 元素。
       </td>

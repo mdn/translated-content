@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
-original_slug: Web/HTML/Attributes/placeholder
 l10n:
   sourceCommit: 32f666e453bdb8c93d305075453b6e304cae94de
 ---
@@ -50,6 +49,6 @@ l10n:
 
 ## 参见
 
-- HTML [`title`](/zh-CN/docs/Web/HTML/Global_attributes/title)
+- HTML [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title)
 - CSS [`:placeholder-shown`](/zh-CN/docs/Web/CSS/:placeholder-shown) 伪类选择器
 - CSS [`::placeholder`](/zh-CN/docs/Web/CSS/::placeholder) 伪元素选择器

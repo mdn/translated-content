@@ -1,7 +1,6 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
-original_slug: Web/HTML/Element/optgroup
 ---
 
 {{HTMLSidebar}}
@@ -71,7 +70,7 @@ label {
 
 ## 属性
 
-这个元素包含 [global attributes](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素包含 [global attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `disabled`
   - : 如果设置了这个布尔值，则不能选择这个选项组中的任何选项。通常浏览器会置灰这样的控件，它不接受任何浏览器事件，如鼠标点击或者焦点相关的事件。

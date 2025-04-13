@@ -1,7 +1,6 @@
 ---
 title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
-original_slug: Web/HTML/Element/ruby
 ---
 
 {{HTMLSidebar}}
@@ -11,12 +10,12 @@ original_slug: Web/HTML/Element/ruby
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容范畴</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流式内容</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容范畴</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流式内容</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语内容</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -35,7 +34,7 @@ original_slug: Web/HTML/Element/ruby
 
 ## 属性
 
-本元素支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+本元素支持 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 

@@ -1,7 +1,6 @@
 ---
 title: <meta>：元数据元素
 slug: Web/HTML/Reference/Elements/meta
-original_slug: Web/HTML/Element/meta
 ---
 
 {{HTMLSidebar}}
@@ -19,7 +18,7 @@ original_slug: Web/HTML/Element/meta
       <td>
         <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#元数据内容"
           >元数据内容</a
-        >。如果 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> 属性存在：<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        >。如果 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop"><code>itemprop</code></a> 属性存在：<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
           >流式内容</a
         >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#分段内容"
           >分段内容</a>
@@ -42,7 +41,7 @@ original_slug: Web/HTML/Element/meta
           <li>
             <code>&#x3C;meta charset></code>、<code
             >&#x3C;meta http-equiv></code>：{{HTMLElement("head")}} 元素。如果
-            <a href="/zh-CN/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> 不是编码声明，它也可以放在
+            <a href="/zh-CN/docs/Web/HTML/Reference/Elements/meta#http-equiv"><code>http-equiv</code></a> 不是编码声明，它也可以放在
             {{HTMLElement("noscript")}} 元素中，它本身在一个
             <code>&#x3C;head></code> 元素内部。
           </li>
@@ -87,11 +86,11 @@ original_slug: Web/HTML/Element/meta
 - 如果设置了 [`name`](#name) 属性，`<meta>` 元素提供的是文档级别（_document-level_）的元数据，应用于整个页面。
 - 如果设置了 [`http-equiv`](#http-equiv) 属性，`<meta>` 元素则是编译指令，提供的信息与类似命名的 HTTP 头部相同。
 - 如果设置了 [`charset`](#charset) 属性，`<meta>` 元素是一个字符集声明，告诉文档使用哪种字符编码。
-- 如果设置了 [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop) 属性，`<meta>` 元素提供用户定义的元数据。
+- 如果设置了 [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemprop) 属性，`<meta>` 元素提供用户定义的元数据。
 
 ## 属性
 
-此元素包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 > **备注：** [`name`](#name) 属性在 `<meta>` 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](#name)、[`http-equiv`](#http-equiv) 或者 [`charset`](#charset) 三者中任何一个属性时，[`itemprop`](#itemprop) 属性不能被使用。
 
@@ -134,7 +133,7 @@ original_slug: Web/HTML/Element/meta
 
 - `name`
   - : `name` 和 `content` 属性可以一起使用，以名 - 值对的方式给文档提供元数据，其中 name 作为元数据的名称，content 作为元数据的值。
-    在[标准元数据名称](/zh-CN/docs/Web/HTML/Element/meta/name)中查看 HTML 规范等规范中定义的标准元数据名称。
+    在[标准元数据名称](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name)中查看 HTML 规范等规范中定义的标准元数据名称。
 
 ## 示例
 
@@ -155,6 +154,6 @@ original_slug: Web/HTML/Element/meta
 
 ## 参见
 
-- [标准元数据名称](/zh-CN/docs/Web/HTML/Element/meta/name)
+- [标准元数据名称](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name)
 - [学习：`<meta>`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#元数据：meta_元素)
-- [viewport 元标签](/zh-CN/docs/Web/HTML/Viewport_meta_tag)
+- [viewport 元标签](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)

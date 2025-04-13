@@ -1,7 +1,6 @@
 ---
 title: <link>：外部资源链接元素
 slug: Web/HTML/Reference/Elements/link
-original_slug: Web/HTML/Element/link
 l10n:
   sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
 ---
@@ -27,7 +26,7 @@ l10n:
 <link href="main.css" rel="stylesheet" />
 ```
 
-在这个简单的示例中，使用了 `href` 属性设置外部资源的路径，并设置 [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性的值为 `stylesheet`。`rel` 表示“关系”，它可能是 `<link>` 元素其中一个关键的特性——属性值表示 `<link>` 项的链接方式与包含它的文档之间的关系。
+在这个简单的示例中，使用了 `href` 属性设置外部资源的路径，并设置 [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 属性的值为 `stylesheet`。`rel` 表示“关系”，它可能是 `<link>` 元素其中一个关键的特性——属性值表示 `<link>` 项的链接方式与包含它的文档之间的关系。
 
 这里有一些你经常遇到的其他类型。例如，这里是一个网站图标的链接：
 
@@ -68,7 +67,7 @@ l10n:
   crossorigin="anonymous" />
 ```
 
-将 `rel` 设定为 `preload`，表示浏览器应该预加载该资源（參见 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 以获得详细信息）。`as` 属性表示获取特定的内容类。`crossorigin` 属性表示该资源是否应该使用一个 {{Glossary("CORS")}} 请求来获取。
+将 `rel` 设定为 `preload`，表示浏览器应该预加载该资源（參见 [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 以获得详细信息）。`as` 属性表示获取特定的内容类。`crossorigin` 属性表示该资源是否应该使用一个 {{Glossary("CORS")}} 请求来获取。
 
 其他使用说明：
 
@@ -80,11 +79,11 @@ l10n:
 
 ## 属性
 
-这个元素包含使用[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素包含使用[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `as`
 
-  - : 当在 `<link>` 元素上设置了 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 时，该属性为必填属性；当设置了 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)时，该属性为可选属性，否则不应使用。它指定了 `<link>` 正在加载的内容类型，这对于匹配请求、应用正确的[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)和设置正确的 {{HTTPHeader("Accept")}} 请求标头都是必要的。此外，`rel="preload"` 将其用作请求优先级的信号。下表列出了该属性的有效值及其适用的元素或资源。
+  - : 当在 `<link>` 元素上设置了 [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 时，该属性为必填属性；当设置了 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload)时，该属性为可选属性，否则不应使用。它指定了 `<link>` 正在加载的内容类型，这对于匹配请求、应用正确的[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)和设置正确的 {{HTTPHeader("Accept")}} 请求标头都是必要的。此外，`rel="preload"` 将其用作请求优先级的信号。下表列出了该属性的有效值及其适用的元素或资源。
 
     <table class="standard-table">
       <thead>
@@ -113,7 +112,7 @@ l10n:
             <div class="notecard note">
               <p>
                 <strong>备注：</strong>此值需要
-                <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
+                <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
               </p>
             </div>
           </td>
@@ -125,7 +124,7 @@ l10n:
             <div class="notecard note">
               <p>
                 <strong>备注：</strong>此值需要
-                <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
+                <code>&#x3C;link></code> 包含跨源属性，参见<a href="/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload#启用_cors_的获取请求">启用 CORS 的获取请求</a>。
               </p>
             </div>
           </td>
@@ -173,16 +172,16 @@ l10n:
   - : 该属性明确表示在获取外部资源时应阻止某些操作。它只能在 `rel` 属性包含 `expect` 或 `stylesheet` 关键字时才能使用。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
     - `render`：屏幕上的内容渲染被阻止。
 
-- [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
+- [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)
 
-  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性表示在获取资源时是否必须使用 {{Glossary("CORS")}}。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会受到*污染*。允许的值如下：
+  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性表示在获取资源时是否必须使用 {{Glossary("CORS")}}。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会受到*污染*。允许的值如下：
 
     - `anonymous`
       - : 会发起一个跨源请求（即包含 `Origin` HTTP 标头），但不会发送任何认证信息（即不发送 cookie、X.509 证书和 HTTP 基本认证信息）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被污染并限制使用。
     - `use-credentials`
       - : 会发起一个带有认证信息（进行 cookie、X.509 证书和/或 HTTP 基本认证）的跨域请求（即包含 `Origin` HTTP 标头）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被*污染*并限制使用。
 
-    当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous** 枚举关键字。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
+    当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous** 枚举关键字。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)获取更多信息。
 
 - `disabled`
 
@@ -204,11 +203,11 @@ l10n:
 - `href`
   - : 此属性指定被链接资源的 {{glossary("URL")}}。URL 可以是绝对的，也可以是相对的。
 - `hreflang`
-  - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 {{RFC(5646, "语言识别标签（又称 BCP 47）")}}。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性时才应设置该属性。
+  - : 此属性指明了被链接资源的语言。其意义仅供参考。可取的值参见 {{RFC(5646, "语言识别标签（又称 BCP 47）")}}。仅当设置了 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 属性时才应设置该属性。
 - `imagesizes`
-  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesizes` 属性具有与 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
+  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesizes` 属性具有与 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `imagesrcset`
-  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性具有与 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
+  - : 仅适用于 `rel="preload"` 和 `as="image"`，`imagesrcset` 属性具有与 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性类似的语法和语义，表示要预载 `img` 元素使用的适当资源，其 `srcset` 和 `sizes` 属性具有相应的值。
 - `integrity`
   - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码散列值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
@@ -225,8 +224,8 @@ l10n:
     - `origin-when-cross-origin` 这意味着导航到其他来源将仅限于协议、主机和端口，而在同一源上导航将包括 referrer 的路径。
     - `unsafe-url` 意味着 referrer 网址将包含源和路径（但不包括片段、密码或用户名）。这种情况是不安全的，因为它可能会将源和路径从受 TLS 保护的资源泄漏到不安全的源。
 
-- [`rel`](/zh-CN/docs/Web/HTML/Attributes/rel)
-  - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Attributes/rel)的用空格分隔的列表。
+- [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
+  - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)的用空格分隔的列表。
 - `sizes`
 
   - : 这个属性定义了包含相应资源的可视化媒体中的图标的大小。只有在 [`rel`](#rel) 包含 `icon` 或诸如 Apple 的 `apple-touch-icon` 等非标准类型的值时，它才可以存在。它可能具有如下值：
@@ -238,7 +237,7 @@ l10n:
     > 大多数的图标格式只能存储一个图标。因此绝大多数使用 [`sizes`](#sizes) 时只包含一个值。微软的 ICO 格式和苹果的 ICNS 格式可以在一个文件中存储多个图标尺寸。ICO 具有更好的浏览器支持，因此如果需要跨浏览器支持，应使用这种格式。
 
 - `title`
-  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)。
+  - : `title` 属性在 `<link>` 元素上有特殊的语义。当用于 `<link rel="stylesheet">` 时，它定义了一个[默认样式表或备用样式表](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)。
 - `type`
   - : 这个属性被用于定义链接的内容的类型。这个属性的值应该是类似于 **text/html**、**text/css** 这样的 MIME 类型。该属性的通常用法是定义被引用的样式表类型（如 **text/css**），但由于 CSS 是网络上使用的唯一样式表语言，因此不仅可以省略 `type` 属性，而且现在已成为推荐做法。它还用于 `rel="preload"` 链接类型，以确保浏览器只下载其支持的文件类型。
 
@@ -258,10 +257,10 @@ l10n:
 
 - `rev` {{Deprecated_Inline}}
 
-  - : 此属性的值显示了 [`href`](#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[链接类型值](/zh-CN/docs/Web/HTML/Attributes/rel)类似于 [`rel`](#rel) 的可能值。
+  - : 此属性的值显示了 [`href`](#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[链接类型值](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)类似于 [`rel`](#rel) 的可能值。
 
     > [!NOTE]
-    > 你应该使用 [`rel`](#rel) 属性来代替 `rev`，并使用相反的[链接类型值](/zh-CN/docs/Web/HTML/Attributes/rel)。例如，要为 `made` 建立反向链接，应指定 `author`。此外，该属性并不代表“修订（revision）”，因此不得与版本号一起使用，尽管许多网站都会这样滥用该属性。
+    > 你应该使用 [`rel`](#rel) 属性来代替 `rev`，并使用相反的[链接类型值](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)。例如，要为 `made` 建立反向链接，应指定 `author`。此外，该属性并不代表“修订（revision）”，因此不得与版本号一起使用，尽管许多网站都会这样滥用该属性。
 
 ## 示例
 
@@ -275,7 +274,7 @@ l10n:
 
 ### 提供替代样式表
 
-你也可以指定[替代外部样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)。
+你也可以指定[替代外部样式表](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)。
 
 用户可以从**查看 > 页面样式**菜单中选择要使用的样式表。这样，用户就可以看到一个页面的多个版本。
 
@@ -355,7 +354,7 @@ l10n:
 
 ### 预加载示例
 
-你可以在[使用 `rel="preload"` 预加载内容](/zh-CN/docs/Web/HTML/Attributes/rel/preload)找到很多 `<link rel="preload">` 的详细示例。
+你可以在[使用 `rel="preload"` 预加载内容](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload)找到很多 `<link rel="preload">` 的详细示例。
 
 ### 在获取资源前阻止渲染
 
@@ -371,10 +370,10 @@ l10n:
   <tbody>
     <tr>
       <th>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容类型</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类型</a>
       </th>
       <td>
-        元数据内容。如果使用了 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> 属性，则为<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>和<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>。
+        元数据内容。如果使用了 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a> 属性，则为<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>和<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。
       </td>
     </tr>
     <tr>
@@ -388,8 +387,8 @@ l10n:
     <tr>
       <th>允许的父元素</th>
       <td>
-        任何可以接受元数据的元素。如果使用了 <a href="/zh-CN/docs/Web/HTML/Global_attributes/itemprop">itemprop</a>
-        属性，则其父元素可以是任何可接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。
+        任何可以接受元数据的元素。如果使用了 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a>
+        属性，则其父元素可以是任何可接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的元素。
       </td>
     </tr>
     <tr>

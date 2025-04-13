@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：disabled
 slug: Web/HTML/Reference/Attributes/disabled
-original_slug: Web/HTML/Attributes/disabled
 ---
 
 {{HTMLSidebar}}
@@ -57,13 +56,13 @@ label {
 
 这个布尔属性可以防止用户与按钮进行交互。如果没有设置这个属性，按钮仍然可以从一个包含元素中被禁用，例如 {{htmlelement('fieldset')}}；如果没有设置 `disabled` 属性的包含元素，那么按钮就是启用的。
 
-与其他浏览器不同的是，Firefox 会在不同的页面加载中持续保持 {{htmlelement('button')}} 的动态禁用状态。使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性来控制这个特性。
+与其他浏览器不同的是，Firefox 会在不同的页面加载中持续保持 {{htmlelement('button')}} 的动态禁用状态。使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性来控制这个特性。
 
 ### 属性交互
 
-`disabled` 和 [`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly) 之间的区别是，只读控件仍然可以发挥作用，仍然可以聚焦，而禁用控件不能接受聚焦，也不随表单提交，通常在启用之前不能作为控件发挥作用。
+`disabled` 和 [`readonly`](/zh-CN/docs/Web/HTML/Reference/Attributes/readonly) 之间的区别是，只读控件仍然可以发挥作用，仍然可以聚焦，而禁用控件不能接受聚焦，也不随表单提交，通常在启用之前不能作为控件发挥作用。
 
-因为不能改变一个禁用字段的值，所以 [`required`](/zh-CN/docs/Web/HTML/Attributes/required) 对同时指定 `disabled` 属性的输入没有任何影响。此外，由于元素变得不可改变，大多数其他属性，如 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern)，在控件被启用之前没有任何作用。
+因为不能改变一个禁用字段的值，所以 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 对同时指定 `disabled` 属性的输入没有任何影响。此外，由于元素变得不可改变，大多数其他属性，如 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Attributes/pattern)，在控件被启用之前没有任何作用。
 
 > **备注：** `required` 属性不可在含有 `disabled` 属性的 input 元素上使用。
 

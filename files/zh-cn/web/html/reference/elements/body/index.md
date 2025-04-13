@@ -1,7 +1,6 @@
 ---
 title: <body>：文档主体元素
 slug: Web/HTML/Reference/Elements/body
-original_slug: Web/HTML/Element/body
 l10n:
   sourceCommit: 8fbec5312b62d720f6ff6936024a09c859f2f0f1
 ---
@@ -12,7 +11,7 @@ l10n:
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)、事件属性和弃用属性：
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)、事件属性和弃用属性：
 
 ### 事件属性
 
@@ -118,7 +117,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -129,7 +128,7 @@ l10n:
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >。
       </td>

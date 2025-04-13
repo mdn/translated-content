@@ -1,14 +1,13 @@
 ---
 title: <col>：表格列元素
 slug: Web/HTML/Reference/Elements/col
-original_slug: Web/HTML/Element/col
 l10n:
   sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
 {{HTMLSidebar}}
 
-**`<col>`** [HTML](/zh-CN/docs/Web/HTML) 元素在其父 {{HTMLElement("colgroup")}} 元素所代表的列组中定义一列或多列。`<col>` 元素只有作为没有定义 [`span`](/zh-CN/docs/Web/HTML/Element/colgroup#span) 属性的 {{HTMLElement("colgroup")}} 元素的子元素才有效。
+**`<col>`** [HTML](/zh-CN/docs/Web/HTML) 元素在其父 {{HTMLElement("colgroup")}} 元素所代表的列组中定义一列或多列。`<col>` 元素只有作为没有定义 [`span`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#span) 属性的 {{HTMLElement("colgroup")}} 元素的子元素才有效。
 
 {{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
 
@@ -74,7 +73,7 @@ td {
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `span`
   - : 指定 `<col>` 元素跨越的连续列数。该值必须是大于 0 的正整数。如果不存在，其默认值为 `1`。
@@ -85,14 +84,14 @@ td {
 
 - `align` {{deprecated_inline}}
 
-  - : 指定每列单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`align`](/zh-CN/docs/Web/HTML/Element/colgroup#align)。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
+  - : 指定每列单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`align`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#align)。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
     > [!NOTE]
     > 在 `<col>` 元素上设置 `text-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
     >
-    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { text-align: right; }` 来右对齐第二列单元格。
+    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { text-align: right; }` 来右对齐第二列单元格。
     >
-    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
+    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `bgcolor` {{deprecated_inline}}
 
@@ -100,7 +99,7 @@ td {
 
 - `char` {{deprecated_inline}}
 
-  - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但仍将覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`char`](/zh-CN/docs/Web/HTML/Element/colgroup#char)。
+  - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但仍将覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`char`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#char)。
 
 - `charoff` {{deprecated_inline}}
 
@@ -108,18 +107,18 @@ td {
 
 - `valign` {{deprecated_inline}}
 
-  - : 指定每列单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`valign`](/zh-CN/docs/Web/HTML/Element/colgroup#valign)。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
+  - : 指定每列单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素指定的 [`valign`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#valign)。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
     > [!NOTE]
     > 在 `<col>` 元素上设置 `vertical-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
     >
-    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { vertical-align: middle; }` 将第二列单元格垂直居中。
+    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { vertical-align: middle; }` 将第二列单元格垂直居中。
     >
-    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
+    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `width` {{Deprecated_Inline}}
 
-  - : 指定每一列的默认宽度。除标准像素值和百分比值外，该属性还可以使用特殊形式 `0*`，这意味着每列的宽度应为容纳该列内容所需的最小宽度。也可以使用相对宽度，如 `5*`。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-CN/docs/Web/HTML/Element/colgroup#width)。请使用 {{cssxref("width")}} CSS 属性代替，因为该属性已被弃用。
+  - : 指定每一列的默认宽度。除标准像素值和百分比值外，该属性还可以使用特殊形式 `0*`，这意味着每列的宽度应为容纳该列内容所需的最小宽度。也可以使用相对宽度，如 `5*`。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#width)。请使用 {{cssxref("width")}} CSS 属性代替，因为该属性已被弃用。
 
 ## 使用说明
 
@@ -233,7 +232,7 @@ table {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -250,7 +249,7 @@ table {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        只能是 {{HTMLElement("colgroup")}}，但可以隐式定义，因为其起始标记不是强制性的。{{HTMLElement("colgroup")}} 不可以包含 <a href="/zh-CN/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性。
+        只能是 {{HTMLElement("colgroup")}}，但可以隐式定义，因为其起始标记不是强制性的。{{HTMLElement("colgroup")}} 不可以包含 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/colgroup#span"><code>span</code></a> 属性。
       </td>
     </tr>
     <tr>

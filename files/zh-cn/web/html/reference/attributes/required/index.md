@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：required
 slug: Web/HTML/Reference/Attributes/required
-original_slug: Web/HTML/Attributes/required
 l10n:
   sourceCommit: c66d3e5e446bf5ebfcef528c4a766bea6a08c879
 ---
@@ -23,7 +22,7 @@ l10n:
 
 ### 属性交互
 
-由于只读字段不能更改，因此 `required` 对同时指定了 [`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly) 属性的输入没有任何影响。
+由于只读字段不能更改，因此 `required` 对同时指定了 [`readonly`](/zh-CN/docs/Web/HTML/Reference/Attributes/readonly) 属性的输入没有任何影响。
 
 ### 可用性
 

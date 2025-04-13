@@ -1,7 +1,6 @@
 ---
 title: 替代样式表
 slug: Web/HTML/Reference/Attributes/rel/alternate_stylesheet
-original_slug: Web/HTML/Attributes/rel/alternate_stylesheet
 ---
 
 {{CSSRef}}

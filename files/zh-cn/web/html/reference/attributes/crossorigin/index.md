@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
-original_slug: Web/HTML/Attributes/crossorigin
 ---
 
 {{HTMLSidebar}}
@@ -32,7 +31,7 @@ original_slug: Web/HTML/Attributes/crossorigin
     <tr>
       <td><code>img</code>、<code>audio</code>、<code>video</code></td>
       <td>
-        当资源被放置在 {{HTMLElement("canvas")}} 中时，元素会标记为<a href="/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas"><em>被污染的</em></a>。
+        当资源被放置在 {{HTMLElement("canvas")}} 中时，元素会标记为<a href="/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image#安全性和“被污染”的_canvas"><em>被污染的</em></a>。
       </td>
     </tr>
     <tr>
@@ -82,6 +81,6 @@ original_slug: Web/HTML/Attributes/crossorigin
 ## 参见
 
 - [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [HTML 属性：`rel`](/zh-CN/docs/Web/HTML/Attributes/rel)
+- [HTML 属性：`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/HTML/")}}

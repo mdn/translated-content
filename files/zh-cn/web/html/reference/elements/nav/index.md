@@ -1,7 +1,6 @@
 ---
 title: <nav>
 slug: Web/HTML/Reference/Elements/nav
-original_slug: Web/HTML/Element/nav
 ---
 
 {{HTMLSidebar}}
@@ -81,7 +80,7 @@ nav {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 ## _使用说明_
 

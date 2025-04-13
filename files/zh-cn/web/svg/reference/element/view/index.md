@@ -5,7 +5,7 @@ l10n:
   sourceCommit: eb2d8ffb82c8a6fa4e55aad2835215ffada25897
 ---
 
-**`<view>`** [SVG](/zh-CN/docs/Web/SVG) 元素定义了 SVG 文档的特定视图。可以通过将 `<view>` 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 作为 URL 的目标片段来显示特定的视图。
+**`<view>`** [SVG](/zh-CN/docs/Web/SVG) 元素定义了 SVG 文档的特定视图。可以通过将 `<view>` 元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 作为 URL 的目标片段来显示特定的视图。
 
 ## 使用上下文
 

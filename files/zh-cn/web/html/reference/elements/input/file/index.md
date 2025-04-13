@@ -1,7 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
-original_slug: Web/HTML/Element/input/file
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -42,7 +41,7 @@ label {
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
-   <td><a href="/zh-CN/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a></td>
   </tr>
   <tr>
    <td>
@@ -71,7 +70,7 @@ label {
 
 ## 值
 
-文件 input 的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含了一个字符串，表示已选择文件的路径。如果用户没有选择任何文件，则该值为空字符串（`""`）。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 [input 的 `HTMLInputElement.files` 属性](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#获取被选择文件的信息)标识其他文件。
+文件 input 的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性包含了一个字符串，表示已选择文件的路径。如果用户没有选择任何文件，则该值为空字符串（`""`）。如果用户选择了多个文件，则 `value` 表示他们选择的文件列表中的第一个文件。可以使用 [input 的 `HTMLInputElement.files` 属性](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#获取被选择文件的信息)标识其他文件。
 
 > [!NOTE]
 > 为了阻止恶意软件猜测文件路径，该值的字符串表示[总是以 `C:\fakepath\` 为前缀的文件名](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly)，而并不是文件的真实路径。
@@ -82,7 +81,7 @@ label {
 
 ### accept
 
-[`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的[**唯一文件类型说明符**](#唯一文件类型说明符)列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
+[`accept`](/zh-CN/docs/Web/HTML/Reference/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的[**唯一文件类型说明符**](#唯一文件类型说明符)列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
 
 例如，可以通过多种方式识别 Microsoft Word 文件，因此接受 Word 文件的网站可能使用像这样的 `<input>`：
 
@@ -95,13 +94,13 @@ label {
 
 ### capture
 
-[`capture`](/zh-CN/docs/Web/HTML/Attributes/capture) 属性是一个字符串，如果 [`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性指出了 input 是图片或者视频类型，则它指定了使用哪个摄像头去获取这些数据。值 `user` 表示应该使用前置摄像头和（或）麦克风。值 `environment` 表示应该使用后置摄像头和（或）麦克风。如果缺少此属性，则{{Glossary("user agent","用户代理")}}可以自由决定做什么。如果请求的前置模式不可用，则用户代理可能退回到其首选的默认模式。
+[`capture`](/zh-CN/docs/Web/HTML/Reference/Attributes/capture) 属性是一个字符串，如果 [`accept`](/zh-CN/docs/Web/HTML/Reference/Attributes/accept) 属性指出了 input 是图片或者视频类型，则它指定了使用哪个摄像头去获取这些数据。值 `user` 表示应该使用前置摄像头和（或）麦克风。值 `environment` 表示应该使用后置摄像头和（或）麦克风。如果缺少此属性，则{{Glossary("user agent","用户代理")}}可以自由决定做什么。如果请求的前置模式不可用，则用户代理可能退回到其首选的默认模式。
 
 > **备注：** `capture` 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。
 
 ### multiple
 
-当指定布尔类型属性 [`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple) 时，文件 input 允许用户选择多个文件。
+当指定布尔类型属性 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Attributes/multiple) 时，文件 input 允许用户选择多个文件。
 
 ## 非标准属性
 
@@ -364,7 +363,7 @@ input.addEventListener("change", updateImageDisplay);
 - 如果是，我们：
 
   - 将其名称和文件大小输出到预览区 `<div>` 的一个列表项中（从 `file.name` 和 `file.size` 获取这些信息）。定制的 `returnFileSize()` 函数返回一个用 bytes/KB/MB 表示的可读性良好的文件大小（默认情况下，浏览器以绝对字节数报告大小）。
-  - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 设置为缩略图。
+  - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 设置为缩略图。
 
 - 如果文件类型无效，则在列表项中显示一条消息，告诉用户需要选择一个其他的文件类型。
 

@@ -1,7 +1,6 @@
 ---
 title: <template>：内容模板元素
 slug: Web/HTML/Reference/Elements/template
-original_slug: Web/HTML/Element/template
 ---
 
 {{HTMLSidebar}}
@@ -13,8 +12,8 @@ original_slug: Web/HTML/Element/template
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, script-supporting element</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Metadata_content">Metadata content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, script-supporting element</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
@@ -41,7 +40,7 @@ original_slug: Web/HTML/Element/template
 
 ## 属性
 
-此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 但， {{domxref("HTMLTemplateElement")}} 有个属性： {{domxref("HTMLTemplateElement.content", "content")}} , 这个属性是只读的{{domxref("DocumentFragment")}} 包含了模板所表示的 DOM 树。
 

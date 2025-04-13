@@ -1,7 +1,6 @@
 ---
 title: <fencedframe>：围栏框架元素
 slug: Web/HTML/Reference/Elements/fencedframe
-original_slug: Web/HTML/Element/fencedframe
 l10n:
   sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
@@ -19,7 +18,7 @@ l10n:
 
 ## 属性
 
-元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow` {{experimental_inline}}
 
@@ -67,7 +66,7 @@ l10n:
 
 ## 无障碍
 
-使用辅助技术（如，屏幕阅读器）导航的用户可以使用 `<fencedframe>` 上的 [`title` 属性](/zh-CN/docs/Web/HTML/Global_attributes/title)为其内容添加标签。标题的值应简洁地描述嵌入的内容：
+使用辅助技术（如，屏幕阅读器）导航的用户可以使用 `<fencedframe>` 上的 [`title` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title)为其内容添加标签。标题的值应简洁地描述嵌入的内容：
 
 ```html
 <fencedframe
@@ -107,11 +106,11 @@ frame.config = frameConfig;
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a
-          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a
         >、嵌入内容、交互内容、可感知内容
       </td>
     </tr>

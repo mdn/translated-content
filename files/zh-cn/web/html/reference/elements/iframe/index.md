@@ -1,7 +1,6 @@
 ---
 title: <iframe>：内嵌框架元素
 slug: Web/HTML/Reference/Elements/iframe
-original_slug: Web/HTML/Element/iframe
 l10n:
   sourceCommit: f98675af9d0a80f33d7875c48cfdb41f71ed1de9
 ---
@@ -36,7 +35,7 @@ iframe {
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow`
 
@@ -110,7 +109,7 @@ iframe {
   - : 控制应用于嵌入在 `<iframe>` 中的内容的限制。该属性的值可以为空以应用所有限制，也可以为空格分隔的标记以解除特定的限制：
 
     - `allow-downloads`
-      - : 允许通过带有 [download](/zh-CN/docs/Web/HTML/Element/a#download) 属性的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素或者通过导航来下载文件，无论是用户通过点击链接触发，还是在用户没有交互的情况下通过 JS 代码触发。
+      - : 允许通过带有 [download](/zh-CN/docs/Web/HTML/Reference/Elements/a#download) 属性的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素或者通过导航来下载文件，无论是用户通过点击链接触发，还是在用户没有交互的情况下通过 JS 代码触发。
     - `allow-forms`
       - : 允许页面提交表单。如果没有使用该关键字，表单会正常显示，但是无法校验输入内容、发送数据到 Web 服务器或是关闭对话框。
     - `allow-modals`
@@ -210,7 +209,7 @@ iframe {
 
 ## 无障碍
 
-使用 `iframe` 的 [`title` 属性](/zh-CN/docs/Web/HTML/Global_attributes/title)来标识框架的主要内容，这样可以极大方便使用辅助技术（例如屏幕阅读器）浏览网页的人。框架的标题应该清楚地描述框架的内容，例如：
+使用 `iframe` 的 [`title` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title)来标识框架的主要内容，这样可以极大方便使用辅助技术（例如屏幕阅读器）浏览网页的人。框架的标题应该清楚地描述框架的内容，例如：
 
 ```html
 <iframe
@@ -287,14 +286,14 @@ iframe {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、嵌入内容、交互内容、可感知内容。
       </td>

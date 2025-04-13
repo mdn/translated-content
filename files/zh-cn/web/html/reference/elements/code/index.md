@@ -1,7 +1,6 @@
 ---
 title: <code>：行内代码元素
 slug: Web/HTML/Reference/Elements/code
-original_slug: Web/HTML/Element/code
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
@@ -30,7 +29,7 @@ code {
 
 ## 属性
 
-此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 
@@ -60,14 +59,14 @@ code {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、可感知内容。
       </td>
@@ -75,7 +74,7 @@ code {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -87,7 +86,7 @@ code {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>

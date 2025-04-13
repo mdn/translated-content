@@ -1,12 +1,11 @@
 ---
 title: <picture>：picture 元素
 slug: Web/HTML/Reference/Elements/picture
-original_slug: Web/HTML/Element/picture
 ---
 
 {{HTMLSidebar}}
 
-**HTML `<picture>` 元素**通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 `<source>` 元素，如果没有匹配的，就选择 `<img>` 元素的 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性中的 URL。然后，所选图像呈现在\<img>元素占据的空间中。
+**HTML `<picture>` 元素**通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子 `<source>` 元素，如果没有匹配的，就选择 `<img>` 元素的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 属性中的 URL。然后，所选图像呈现在\<img>元素占据的空间中。
 
 {{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
 
@@ -21,7 +20,7 @@ original_slug: Web/HTML/Element/picture
 </picture>
 ```
 
-要决定加载哪个 URL，{{Glossary("user agent")}} 检查每个 `<source>` 的 [`srcset`](/zh-CN/docs/Web/HTML/Element/source#srcset)、[`media`](/zh-CN/docs/Web/HTML/Element/source#media) 和 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，来选择最匹配页面当前布局、显示设备特征等的兼容图像。
+要决定加载哪个 URL，{{Glossary("user agent")}} 检查每个 `<source>` 的 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/source#srcset)、[`media`](/zh-CN/docs/Web/HTML/Reference/Elements/source#media) 和 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/source#type) 属性，来选择最匹配页面当前布局、显示设备特征等的兼容图像。
 
 `<img>` 元素有两个目的：
 
@@ -38,13 +37,13 @@ original_slug: Web/HTML/Element/picture
 
 - 通过加载最适合观看者显示的图像来**节省带宽和提高页面加载速度**。
 
-如果要为高 DPI（Retina）显示提供更高像素密度的图像版本，请在 `<img>` 元素上使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要你编写明确的 `media` 条件。
+如果要为高 DPI（Retina）显示提供更高像素密度的图像版本，请在 `<img>` 元素上使用 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset)。这使得浏览器可以在节约流量模式下选择低像素密度版本，且不需要你编写明确的 `media` 条件。
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流内容</a>，表述内容，嵌入内容。</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流内容</a>，表述内容，嵌入内容。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -71,7 +70,7 @@ original_slug: Web/HTML/Element/picture
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 

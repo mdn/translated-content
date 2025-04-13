@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：step
 slug: Web/HTML/Reference/Attributes/step
-original_slug: Web/HTML/Attributes/step
 l10n:
   sourceCommit: 067a40e4ed27ea6e1f3b8bbfec15cd9dc3078f4c
 ---
@@ -10,7 +9,7 @@ l10n:
 
 **`step`** 属性是值必须遵循的粒度数值，或关键字 `any`。此属性对数值输入类型有效，包括 {{HTMLElement("input/date", "date")}}、{{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/time", "time")}}、{{HTMLElement("input/datetime-local", "datetime-local")}}、{{HTMLElement("input/number", "number")}} 和 {{HTMLElement("input/range", "range")}} 类型。
 
-`step` 设置了点击上下旋转按钮、在范围上左右移动滑块以及验证不同日期类型时的*步进间隔*。如果没有明确指定，`number` 和 `range` 的 `step` 默认为 1，日期/时间输入类型的 `step` 默认为 1 个单位类型（分、周、月、日）。值必须是正数（整数或浮点数）或特殊值 `any`，这意味着不隐含步进，允许任何值（除其他限制外，如 [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 和 [`max`](/zh-CN/docs/Web/HTML/Attributes/max)）。
+`step` 设置了点击上下旋转按钮、在范围上左右移动滑块以及验证不同日期类型时的*步进间隔*。如果没有明确指定，`number` 和 `range` 的 `step` 默认为 1，日期/时间输入类型的 `step` 默认为 1 个单位类型（分、周、月、日）。值必须是正数（整数或浮点数）或特殊值 `any`，这意味着不隐含步进，允许任何值（除其他限制外，如 [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max)）。
 
 `number` 输入类型的默认步进值为 1，只允许输入整数，*除非*步进基数不是整数。`time` 的默认步进值为 60 秒，值 900 等同于 15 分钟。
 
@@ -75,7 +74,7 @@ l10n:
   </tbody>
 </table>
 
-如果未明确设置 `any`，则 `number`、日期/时间输入类型和 `range` 输入类型的有效值等于步进的基础值（[`min`](/zh-CN/docs/Web/HTML/Attributes/min) 值）和步进值的增量，如果指定了 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 值，则增量最大为 `max`。以下示例的结果是对任何 10 或更大的偶整数都有效：
+如果未明确设置 `any`，则 `number`、日期/时间输入类型和 `range` 输入类型的有效值等于步进的基础值（[`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min) 值）和步进值的增量，如果指定了 [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max) 值，则增量最大为 `max`。以下示例的结果是对任何 10 或更大的偶整数都有效：
 
 ```html
 <input type="number" min="10" step="2" />
@@ -113,7 +112,7 @@ input:invalid {
 > [!NOTE]
 > 当用户输入的数据不符合步进配置时，该值在约束验证中被视为无效，并将匹配 {{cssxref(":invalid")}} 和 {{cssxref(":out-of-range")}} 伪类。
 
-参见[客户端验证](/zh-CN/docs/Web/HTML/Constraint_validation)和 {{domxref("ValidityState.stepMismatch", "stepMismatch")}} 以了解更多信息。
+参见[客户端验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)和 {{domxref("ValidityState.stepMismatch", "stepMismatch")}} 以了解更多信息。
 
 ## 无障碍考虑
 
@@ -129,9 +128,9 @@ input:invalid {
 
 ## 参见
 
-- [`max`](/zh-CN/docs/Web/HTML/Attributes/max)
-- [`min`](/zh-CN/docs/Web/HTML/Attributes/min)
-- [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max)
+- [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min)
+- [约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)
 - [表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}

@@ -1,7 +1,6 @@
 ---
 title: <script>：脚本元素
 slug: Web/HTML/Reference/Elements/script
-original_slug: Web/HTML/Element/script
 ---
 
 {{HTMLSidebar}}
@@ -12,10 +11,10 @@ original_slug: Web/HTML/Element/script
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容">元数据内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>。
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容">元数据内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。
       </td>
     </tr>
     <tr>
@@ -28,7 +27,7 @@ original_slug: Web/HTML/Element/script
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
-      <td>任何可以接受<a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容">元数据内容</a>，或者<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
+      <td>任何可以接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容">元数据内容</a>，或者<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的元素。</td>
     </tr>
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
@@ -47,7 +46,7 @@ original_slug: Web/HTML/Element/script
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `async`
 
@@ -62,7 +61,7 @@ original_slug: Web/HTML/Element/script
     关于浏览器支持，请参见[浏览器兼容性](#浏览器兼容性)章节。另可参见 [asm.js 的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)文章。
 
 - `crossorigin`
-  - : 正常的 `script` 元素将最小的信息传递给 {{domxref('Window.error_event', 'window.onerror')}}，用于那些没有通过标准 {{Glossary("CORS")}} 检查的脚本。要允许对静态媒体使用独立域名的网站进行错误记录，请使用此属性。参见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)，以获得对其有效参数的更多描述性解释。
+  - : 正常的 `script` 元素将最小的信息传递给 {{domxref('Window.error_event', 'window.onerror')}}，用于那些没有通过标准 {{Glossary("CORS")}} 检查的脚本。要允许对静态媒体使用独立域名的网站进行错误记录，请使用此属性。参见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)，以获得对其有效参数的更多描述性解释。
 - `defer`
 
   - : 这个布尔属性的设置是为了向浏览器表明，该脚本是要在文档被解析后，但在触发 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件之前执行的。
@@ -112,14 +111,14 @@ original_slug: Web/HTML/Element/script
 
 - `src`
   - : 这个属性定义引用外部脚本的 URI，这可以用来代替直接在文档中嵌入脚本。
-- [**`type`**](/zh-CN/docs/Web/HTML/Element/script/type)
+- [**`type`**](/zh-CN/docs/Web/HTML/Reference/Elements/script/type)
 
   - : 该属性表示所代表的脚本类型。该属性的值可能为以下类型：
     - **属性未设置（默认），一个空字符串，或一个 JavaScript MIME 类型**
       - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript)中。
     - `module`
       - : 此值导致代码被视为 JavaScript 模块。其中的代码内容会延后处理。`charset` 和 `defer` 属性不会生效。对于使用 `module` 的更多信息，请参见 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与传统代码不同的是，模块代码需要使用 CORS 协议来跨源获取。
-    - [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)
+    - [`importmap`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap)
       - : 此值代表元素体内包含导入映射（importmap）表。导入映射表是一个 JSON 对象，开发者可以用它来控制浏览器在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)时如何解析模块标识符。
     - **任何其他值**
       - : 所嵌入的内容被视为一个数据块，不会被浏览器处理。开发人员必须使用有效的 MIME 类型，但不是 JavaScript MIME 类型来表示数据块。所有其他属性，包括 `src` 均会被忽略。

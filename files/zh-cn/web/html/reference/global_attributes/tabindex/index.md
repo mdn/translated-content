@@ -1,12 +1,11 @@
 ---
 title: tabindex
 slug: Web/HTML/Reference/Global_attributes/tabindex
-original_slug: Web/HTML/Global_attributes/tabindex
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-**tabindex** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指示其元素是否可以聚焦，以及它是否/在何处参与顺序键盘导航（通常使用<kbd>Tab</kbd>键，因此得名）。
+**tabindex** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 指示其元素是否可以聚焦，以及它是否/在何处参与顺序键盘导航（通常使用<kbd>Tab</kbd>键，因此得名）。
 
 {{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
 
@@ -63,6 +62,6 @@ div:focus {
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 - 反映这个属性的 {{domxref("HTMLElement.tabIndex")}}
 - tabindex 的无障碍问题：请见 [不要使用大于 0 的 Tabindex | Adrian Roselli](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)。

@@ -1,12 +1,11 @@
 ---
 title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
-original_slug: Web/HTML/Global_attributes/dir
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)**dir**是一个指示元素中文本方向的枚举属性。它的取值如下：
+[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)**dir**是一个指示元素中文本方向的枚举属性。它的取值如下：
 
 - ltr，指从*左*到*右*，用于那种从左向右书写的语言（比如英语）；
 - rtl，指从*右*到*左*，用于那种从右向左书写的语言（比如阿拉伯语）；
@@ -30,5 +29,5 @@ original_slug: Web/HTML/Global_attributes/dir
 
 ## See also
 
-- 全部[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+- 全部[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 - 对应这个属性的{{domxref("HTMLElement.dir")}}。

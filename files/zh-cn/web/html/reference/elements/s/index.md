@@ -1,7 +1,6 @@
 ---
 title: <s>
 slug: Web/HTML/Reference/Elements/s
-original_slug: Web/HTML/Element/s
 ---
 
 {{HTMLSidebar}}
@@ -39,7 +38,7 @@ original_slug: Web/HTML/Element/s
 
 ## 属性
 
-这个元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+这个元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 
 > [!NOTE]
 > 直到 Gecko1.9.2（包含），Firefox 为这个元素实现了 `HTMLSpanElement` 接口。

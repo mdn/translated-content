@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：readonly
 slug: Web/HTML/Reference/Attributes/readonly
-original_slug: Web/HTML/Attributes/readonly
 l10n:
   sourceCommit: b1699bac6bc35d0958734ff5e982f5f35974f448
 ---
@@ -50,9 +49,9 @@ textarea:read-only {
 
 ### 属性交互
 
-[`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled) 与 `readonly` 的区别在于，只读控件仍可发挥作用，仍可被聚焦，而禁用控件不能接收聚焦，不能随表单提交，一般在启用前不能作为控件发挥作用。
+[`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 与 `readonly` 的区别在于，只读控件仍可发挥作用，仍可被聚焦，而禁用控件不能接收聚焦，不能随表单提交，一般在启用前不能作为控件发挥作用。
 
-由于只读字段不能通过用户交互改变其值，因此 [`required`](/zh-CN/docs/Web/HTML/Attributes/required) 对同时指定了 `readonly` 属性的输入没有任何影响。
+由于只读字段不能通过用户交互改变其值，因此 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 对同时指定了 `readonly` 属性的输入没有任何影响。
 
 动态修改只读属性值的唯一方法是通过脚本。
 

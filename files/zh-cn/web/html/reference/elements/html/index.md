@@ -1,7 +1,6 @@
 ---
 title: <html>：HTML 文档/根元素
 slug: Web/HTML/Reference/Elements/html
-original_slug: Web/HTML/Element/html
 l10n:
   sourceCommit: bf671984cfef2f7c6419571d834a146c5424ac10
 ---
@@ -12,7 +11,7 @@ l10n:
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `version` {{deprecated_inline}}
   - : 指定用于组织当前文档的 HTML {{glossary("Doctype", "文档类型定义")}}的版本。这个属性已不再需要，因为这与文档类型声明中的版本信息重复。
@@ -35,7 +34,7 @@ l10n:
 
 ## 无障碍考虑
 
-虽然 HTML 并不要求作者指定 `<html>` 元素的开始和结束标记，但作者必须这样做，因为这将允许他们为网页指定 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)。根据 {{RFC(5646, "识别语言的标签（也称为 BCP 47）")}}，在 `<html>` 元素上提供一个带有有效语言标记的 `lang` 属性，将有助于屏幕阅读技术确定要宣告的适当语言。标识语言标签应描述页面大部分内容所使用的语言。如果没有它，屏幕阅读器通常会默认使用操作系统设置的语言，这可能会导致发音错误。
+虽然 HTML 并不要求作者指定 `<html>` 元素的开始和结束标记，但作者必须这样做，因为这将允许他们为网页指定 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang)。根据 {{RFC(5646, "识别语言的标签（也称为 BCP 47）")}}，在 `<html>` 元素上提供一个带有有效语言标记的 `lang` 属性，将有助于屏幕阅读技术确定要宣告的适当语言。标识语言标签应描述页面大部分内容所使用的语言。如果没有它，屏幕阅读器通常会默认使用操作系统设置的语言，这可能会导致发音错误。
 
 在 `<html>` 元素中包含一个有效的 `lang` 声明，还可以确保页面的 {{HTMLElement("head")}} 中包含的重要元数据（如页面的 {{HTMLElement("title")}}）也会被正确地宣告。
 
@@ -47,7 +46,7 @@ l10n:
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+      <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
       <td>无</td>
     </tr>
     <tr>

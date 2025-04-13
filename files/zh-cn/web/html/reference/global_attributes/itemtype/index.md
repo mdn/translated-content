@@ -1,12 +1,11 @@
 ---
 title: itemtype
 slug: Web/HTML/Reference/Global_attributes/itemtype
-original_slug: Web/HTML/Global_attributes/itemtype
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemtype`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指定了词汇的 URL，它将会用于定义数据结构中的 `itemprop`（条目属性）。[`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope) 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。
+**`itemtype`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 指定了词汇的 URL，它将会用于定义数据结构中的 `itemprop`（条目属性）。[`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemscope) 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。
 
 Google 和其他主流搜索引擎支持 [schema.org](https://schema.org/) 结构化数据词汇。这个词汇定义了一组标准的类型名称和属性名称。例如，[`MusicEvent`](https://schema.org/MusicEvent) 表示音乐会的名称，[`startDate`](https://schema.org/startDate) 和 [`location`](https://schema.org/location) 属性指定了音乐会的关键信息。这里，[`MusicEvent`](https://schema.org/MusicEvent) 应该是用于 `itemtype` 的 URL，而 `startDate` 和 `location` 作为 [`MusicEvent`](https://schema.org/MusicEvent) 所定义的 `itemprop`。
 
@@ -218,11 +217,11 @@ Google 和其他主流搜索引擎支持 [schema.org](https://schema.org/) 结�
 
 ## 参见
 
-- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 - 其他 microdata 相关的全局属性
 
-  - [`itemid`](/zh-CN/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemref`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemscope)
+  - [`itemtype`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemtype)

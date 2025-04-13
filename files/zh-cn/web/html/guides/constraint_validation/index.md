@@ -1,7 +1,6 @@
 ---
 title: 约束验证
 slug: Web/HTML/Guides/Constraint_validation
-original_slug: Web/HTML/Constraint_validation
 ---
 
 {{HTMLSidebar}}
@@ -17,19 +16,19 @@ original_slug: Web/HTML/Constraint_validation
 
 在 HTML 中，有两种方式声明基本的约束：
 
-- 给 {{ HTMLElement("input") }} 元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性选择最合适的语义化的值，比如，选择 `email` 类型将会自动创建一个约束，用于检查输入的值是否是一个有效的电子邮件地址。
+- 给 {{ HTMLElement("input") }} 元素的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性选择最合适的语义化的值，比如，选择 `email` 类型将会自动创建一个约束，用于检查输入的值是否是一个有效的电子邮件地址。
 - 设置验证相关的属性值，允许用一种简单的方式来描述基本的约束，而不必要使用 JavaScript。
 
 ### 语义的 input 类型
 
-[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性中的固有约束有：
+[`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性中的固有约束有：
 
-| Input 类型                                                         | 约束描述                                                                                                                                          | 相关违约                                                                    |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [`<input type="URL">`](/zh-CN/docs/Web/HTML/Element/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) 地址。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
-| [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。                          | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+| Input 类型                                                                    | 约束描述                                                                                                                                          | 相关违约                                                                    |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [`<input type="URL">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/url)     | 值必须为 [URL 现行标准](https://url.spec.whatwg.org/)定义的绝对 [URL](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) 地址。 | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
+| [`<input type="email">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/email) | 该值必须是一个语法上有效的电子邮件地址，其格式一般为 `username@hostname.tld`，但也可以是本地的，如 `username@hostname`。                          | **[TypeMismatch](/zh-CN/docs/Web/API/ValidityState/typeMismatch)** 约束违反 |
 
-对于这两种输入类型，如果设置了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性，可以设置几个值，作为一个逗号分隔的列表。如果其中任何一个不满足这里描述的条件，就会触发 **TypeMismatch** 约束的违反。
+对于这两种输入类型，如果设置了 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/input#multiple) 属性，可以设置几个值，作为一个逗号分隔的列表。如果其中任何一个不满足这里描述的条件，就会触发 **TypeMismatch** 约束的违反。
 
 请注意，大多数 input 类型没有内在的约束，因为有些类型被禁止在约束验证中使用，或者有一个净化算法将不正确的值转化为正确的默认值。
 
@@ -51,7 +50,7 @@ original_slug: Web/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Attributes/pattern">pattern</a></code
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code
         >
       </td>
       <td>
@@ -72,7 +71,7 @@ original_slug: Web/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/min">min</a></code>
       </td>
       <td><code>range</code>、<code>number</code></td>
       <td>一个有效的数字</td>
@@ -100,7 +99,7 @@ original_slug: Web/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/max">max</a></code>
       </td>
       <td><code>range</code>、<code>number</code></td>
       <td>一个有效的数字</td>
@@ -129,7 +128,7 @@ original_slug: Web/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Attributes/required">required</a></code
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/required">required</a></code
         >
       </td>
       <td>
@@ -152,7 +151,7 @@ original_slug: Web/HTML/Constraint_validation
     </tr>
     <tr>
       <td rowspan="5">
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/step">step</a></code>
       </td>
       <td><code>date</code></td>
       <td>一个代表天数的整数</td>
@@ -191,7 +190,7 @@ original_slug: Web/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Attributes/minlength"
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/minlength"
             >minlength</a
           ></code
         >
@@ -217,7 +216,7 @@ original_slug: Web/HTML/Constraint_validation
     <tr>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/HTML/Attributes/maxlength"
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength"
             >maxlength</a
           ></code
         >
@@ -255,7 +254,7 @@ original_slug: Web/HTML/Constraint_validation
 
 > [!NOTE]
 >
-> - 如果 {{ HTMLElement("form") }} 元素上设置了 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性，则不发生约束验证交互。
+> - 如果 {{ HTMLElement("form") }} 元素上设置了 [`novalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/form#novalidate) 属性，则不发生约束验证交互。
 > - 在 [`HTMLFormElement`](/zh-CN/docs/Web/API/HTMLFormElement) 接口上调用 `submit()` 方法并不触发约束条件验证。换句话说，即使表单数据不满足约束条件，该方法也会将其发送到服务器。在提交按钮上调用 `click()` 方法来代替。
 
 ## 使用约束验证 API 进行复杂的约束
@@ -399,7 +398,7 @@ window.onload = () => {
 
 #### :required、:optional CSS 伪类
 
-{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许开发者编写选择器，以匹配有 [`required`](/zh-CN/docs/Web/HTML/Global_attributes#required) 属性或没有该属性的表单元素。
+{{cssxref(':required')}} 和 {{cssxref(':optional')}} [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)允许开发者编写选择器，以匹配有 [`required`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#required) 属性或没有该属性的表单元素。
 
 #### :placeholder-shown CSS 伪类
 

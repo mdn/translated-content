@@ -1,7 +1,6 @@
 ---
 title: <source>：媒体或图像资源元素
 slug: Web/HTML/Reference/Elements/source
-original_slug: Web/HTML/Element/source
 l10n:
   sourceCommit: 8681d028e10726949abc28367156318d4e09c145
 ---
@@ -28,7 +27,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -47,7 +46,7 @@ l10n:
       <td>
         <div>
           一个媒体元素（{{HTMLElement("audio")}} 或
-          {{HTMLElement("video")}}）且必须放置在<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          {{HTMLElement("video")}}）且必须放置在<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
             >流式内容</a
           >或 {{HTMLElement("track")}} 元素之前。
         </div>
@@ -77,7 +76,7 @@ l10n:
 
 ## 属性
 
-此元素支持所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)，此外，还支持以下属性：
+此元素支持所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)，此外，还支持以下属性：
 
 - `type`
 

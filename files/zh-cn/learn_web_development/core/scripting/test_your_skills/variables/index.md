@@ -1,7 +1,6 @@
 ---
 title: 技能测试：变量
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
-original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_variables
 ---
 
 {{learnsidebar}}

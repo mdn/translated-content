@@ -1,7 +1,6 @@
 ---
 title: <cite>
 slug: Web/HTML/Reference/Elements/cite
-original_slug: Web/HTML/Element/cite
 ---
 
 {{HTMLSidebar}}
@@ -64,7 +63,7 @@ cite {
 
 ## 属性
 
-这个元素仅包含了 所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+这个元素仅包含了 所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > 适用场合可能包括一本书，一张纸，一篇散文，一首诗，一个分数，一首歌，一部电影，一个电视节目，一个游戏，一个雕塑，一幅画，戏剧制作，一个剧本，一个歌剧，一种音乐，一个展览，一个法律案件报告，一个计算机程序，一个网站，一个网页，博客或评论，论坛帖子或评论，鸣叫，或者书面或口头陈述，等等。
@@ -107,7 +106,7 @@ cite {
 
 值得注意的是，W3C 标准允许在 `<cite>` 元素中包含引用内容的作者信息。然而 WHATWG 规范不允许在 `<cite>` 元素中出现人名。
 
-要标明{{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}}之中内容的引用来源，可以使用元素的[`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite)属性。
+要标明{{HTMLElement("blockquote")}} 或 {{HTMLElement("q")}}之中内容的引用来源，可以使用元素的[`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/blockquote#cite)属性。
 
 通常，浏览器默认使用斜体来展示`<cite>`元素中的内容。可以通过指定`<cite>`元素的{{cssxref("font-style")}}样式来覆盖这种默认行为。
 

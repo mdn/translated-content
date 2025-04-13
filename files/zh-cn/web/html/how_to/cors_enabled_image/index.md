@@ -1,14 +1,13 @@
 ---
 title: 允许图片和 canvas 跨源使用
 slug: Web/HTML/How_to/CORS_enabled_image
-original_slug: Web/HTML/CORS_enabled_image
 ---
 
 {{HTMLSidebar}}
 
-HTML 规范为图片提供了 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#crossorigin) 属性，结合合适的 {{Glossary("CORS")}} 响应标头，就可以实现在 {{HTMLElement("canvas")}} 中使用外部域加载的 {{ HTMLElement("img") }} 元素，就像在当前源加载一样。
+HTML 规范为图片提供了 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性，结合合适的 {{Glossary("CORS")}} 响应标头，就可以实现在 {{HTMLElement("canvas")}} 中使用外部域加载的 {{ HTMLElement("img") }} 元素，就像在当前源加载一样。
 
-查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)来了解更多 `crossorigin` 属性的用法。
+查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)来了解更多 `crossorigin` 属性的用法。
 
 ## 安全性和“被污染”的 canvas
 
@@ -54,7 +53,7 @@ HTML 规范为图片提供了 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#c
 
 以上配置完毕后，服务器就可以跨源获取图片了。现在我们可以开始编写将图片保存在[本地存储](/zh-CN/docs/Web/API/Web_Storage_API)中的代码了，就像这些图片在你自己域名之下一样。
 
-关键在于在 {{domxref("HTMLImageElement")}} 上设置 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} 的 [`crossorigin`](/zh-CN/docs/Web/HTML/Global_attributes#crossorigin) 属性，这引导浏览器在下载图像数据时使用跨源访问。
+关键在于在 {{domxref("HTMLImageElement")}} 上设置 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}} 的 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#crossorigin) 属性，这引导浏览器在下载图像数据时使用跨源访问。
 
 #### 开始下载图片
 

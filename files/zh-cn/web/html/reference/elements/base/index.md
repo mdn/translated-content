@@ -1,7 +1,6 @@
 ---
 title: <base>：文档根 URL 元素
 slug: Web/HTML/Reference/Elements/base
-original_slug: Web/HTML/Element/base
 ---
 
 {{HTMLSidebar}}
@@ -13,7 +12,7 @@ original_slug: Web/HTML/Element/base
 <table class="properties">
  <tbody>
   <tr>
-   <th><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
+   <th><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
    <td>元数据内容。</td>
   </tr>
   <tr>
@@ -41,7 +40,7 @@ original_slug: Web/HTML/Element/base
 
 ## 属性
 
-该标签包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该标签包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 如果指定了以下任一属性，这个元素**必须**在其他任何属性是 URL 的元素之前。例如：{{HTMLElement("link")}} 的 `href` 属性。
 

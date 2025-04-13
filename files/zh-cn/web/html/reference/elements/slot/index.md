@@ -1,7 +1,6 @@
 ---
 title: <slot>：Web 组件插槽元素
 slug: Web/HTML/Reference/Elements/slot
-original_slug: Web/HTML/Element/slot
 l10n:
   sourceCommit: f47d71927e4dc46f3aabde0a56c7f940da988d9f
 ---
@@ -12,7 +11,7 @@ l10n:
 
 ## 属性
 
-此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `name`
 
@@ -75,14 +74,14 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -90,7 +89,7 @@ l10n:
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#透明内容模型"
           >透明内容</a
         >
       </td>
@@ -106,7 +105,7 @@ l10n:
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>
@@ -141,7 +140,7 @@ l10n:
 ## 参见
 
 - HTML {{HTMLElement("template")}} 元素
-- HTML [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) 属性
+- HTML [`slot`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/slot) 属性
 - CSS {{CSSXref("::slotted")}} 伪元素
 - CSS {{cssxref(":has-slotted")}} 伪类
 - [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块

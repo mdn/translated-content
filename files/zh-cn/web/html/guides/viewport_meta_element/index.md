@@ -1,7 +1,6 @@
 ---
 title: viewport meta 标记
 slug: Web/HTML/Guides/Viewport_meta_element
-original_slug: Web/HTML/Viewport_meta_tag
 ---
 
 {{HTMLSidebar}}
@@ -66,7 +65,7 @@ original_slug: Web/HTML/Viewport_meta_tag
 <meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
-其他可用的[属性](/zh-CN/docs/Web/HTML/Element/meta#属性)有 `minimum-scale`、`maximum-scale` 和 `user-scalable`。这些属性会影响初始比例和宽度，以及限制缩放级别的变化。
+其他可用的[属性](/zh-CN/docs/Web/HTML/Reference/Elements/meta#属性)有 `minimum-scale`、`maximum-scale` 和 `user-scalable`。这些属性会影响初始比例和宽度，以及限制缩放级别的变化。
 
 ## 交互式 UI 组件效果
 

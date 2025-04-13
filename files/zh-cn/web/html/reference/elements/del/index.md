@@ -1,7 +1,6 @@
 ---
 title: <del>
 slug: Web/HTML/Reference/Elements/del
-original_slug: Web/HTML/Element/del
 ---
 
 HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。比如可以在需要显示修改记录或者源代码差异的情况使用这个标签。{{HTMLElement("ins")}}标签的作用恰恰于此相反：表示文档中添加的内容。
@@ -39,7 +38,7 @@ HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。�
 
 ## 属性
 
-这个标签包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个标签包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `cite`
   - : 提供一个 URI，其中的资源解释作出修改的原因（比如：根据某次会议讨论）。

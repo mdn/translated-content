@@ -1,7 +1,6 @@
 ---
 title: <style>：样式信息元素
 slug: Web/HTML/Reference/Elements/style
-original_slug: Web/HTML/Element/style
 l10n:
   sourceCommit: 176953b8260e0dd4328a7e788e8179accbafb8e1
 ---
@@ -46,7 +45,7 @@ p {
 
 ## 属性
 
-该元素包含所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `blocking`
   - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/background-image) 和字体则不被视为关键子资源。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
@@ -56,7 +55,7 @@ p {
 - `nonce`
   - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src) 中使用内联样式的密码学 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
 - `title`
-  - : 该属性指定[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)集。
+  - : 该属性指定[替代样式表](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)集。
 
 ### 已弃用的属性
 
@@ -161,12 +160,12 @@ p {
   <tbody>
     <tr>
       <th>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容"
           >元数据内容</a
         >。
       </td>
@@ -184,7 +183,7 @@ p {
     <tr>
       <th>允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容"
           >元数据内容</a
         >的元素。
       </td>
@@ -219,4 +218,4 @@ p {
 ## 参见
 
 - {{HTMLElement("link")}} 元素允许我们在文档中应用外部样式表。
-- [替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet)
+- [替代样式表](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)

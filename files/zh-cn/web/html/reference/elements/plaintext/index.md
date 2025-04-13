@@ -1,7 +1,6 @@
 ---
 title: <plaintext>
 slug: Web/HTML/Reference/Elements/plaintext
-original_slug: Web/HTML/Element/plaintext
 ---
 
 {{deprecated_header}}
@@ -20,7 +19,7 @@ _HTML 纯文本元素_ (`<plaintext>`) 将起始标签后面的任何东西渲�
 
 ## 属性
 
-除了 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 之外，这个元素没有其他属性。
+除了 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 之外，这个元素没有其他属性。
 
 ## DOM 接口
 

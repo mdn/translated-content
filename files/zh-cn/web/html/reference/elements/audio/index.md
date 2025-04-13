@@ -1,7 +1,6 @@
 ---
 title: <audio>
 slug: Web/HTML/Reference/Elements/audio
-original_slug: Web/HTML/Element/audio
 ---
 
 {{HTMLSidebar}}
@@ -30,7 +29,7 @@ figure {
 
 ## 属性
 
-该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autoplay`
 
@@ -42,11 +41,11 @@ figure {
 - `controls`
   - : 如果声明了该属性，浏览器将提供一个包含声音，播放进度，播放暂停的控制面板，让用户可以控制音频的播放。
 - `crossorigin`
-  - : 枚举属性 展示音频资源是否可以通过 CORS 加载。[支持 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以被 {{HTMLElement("canvas")}} 元素复用而不污染。可选值如下：
+  - : 枚举属性 展示音频资源是否可以通过 CORS 加载。[支持 CORS 的资源](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)可以被 {{HTMLElement("canvas")}} 元素复用而不污染。可选值如下：
     - `anonymous`
       - : 在发送跨域请求时不携带验证信息。换句话说，浏览器在发送`Origin:` HTTP 请求首部时将不携带 cookie、X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 `Access-Control-Allow-Origin:` 响应首部），那么图片就被认为是污染的，它就会被限制使用。
     - `use-credentials`
-      - : 在发送跨域请求时携带验证信息。换句话说，在发送`Origin:` HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置`Access-Control-Allow-Credentials:` 响应首部）那么图片就被认为是污染的，它就会被限制使用。在未指定时，资源将不通过 CORS 请求来获取（也就是不发送 `Origin:`请求首部），以保护 {{HTMLElement('canvas')}} 元素中未污染的内容。如果验证失败，它会表现的好像 **anonymous** 选项是选中的。查看 [CORS settings attributes](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 来获取更多信息。
+      - : 在发送跨域请求时携带验证信息。换句话说，在发送`Origin:` HTTP 请求首部时将携带 cookie、安全令牌、并且执行 HTTP 基本认证。如果服务器没有给予源站信任（通过设置`Access-Control-Allow-Credentials:` 响应首部）那么图片就被认为是污染的，它就会被限制使用。在未指定时，资源将不通过 CORS 请求来获取（也就是不发送 `Origin:`请求首部），以保护 {{HTMLElement('canvas')}} 元素中未污染的内容。如果验证失败，它会表现的好像 **anonymous** 选项是选中的。查看 [CORS settings attributes](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin) 来获取更多信息。
 - `currentTime`
   - : 读取 `currentTime` 属性将返回一个双精度浮点值，用以标明以秒为单位的当前音频的播放位置。如果音频的元数据暂时无法访问——这意味着你无法的知道媒体的开始或持续时间。这时，`currentTime` 相对应的，能够被用于改变重播的时间。否则，设置 `currentTime` 将设置当前的播放位置，并且会自动搜寻到媒体的那个位置，如果媒体目前已经被加载的话。如果音频是以流的形式加载的，并且数据超出了媒体的缓冲区（buffer），{{Glossary("user agent")}} 可能无法获取资源的某些部分。另一些音频的时间轴可能并非从 0 秒开始，所以设置 `currentTime` 到一个开始时间之前的时间可能会失败。举个例子，如果音频媒体的时间轴从 12 小时开始，把 `currentTime` 设置到 3600 将会尝试把当前播放位置设置到媒体的开始位置之前，从而导致错误。{{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} 方法能够用于确定媒体时间轴的开始位置。
 - `disableRemotePlayback` {{experimental_inline}}
@@ -260,15 +259,15 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 <table class="properties">
   <tbody>
     <tr>
-     <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-     <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、短语内容、嵌入内容。如果它有
-       <a href="/zh-CN/docs/Web/HTML/Element/audio#controls"><code>controls</code></a> 属性：交互内容和可感知内容。
+     <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+     <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、短语内容、嵌入内容。如果它有
+       <a href="/zh-CN/docs/Web/HTML/Reference/Elements/audio#controls"><code>controls</code></a> 属性：交互内容和可感知内容。
      </td>
     </tr>
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <p>如果元素拥有 <a href="/zh-CN/docs/Web/HTML/Element/audio#src"><code>src</code></a> 属性：允许的内容为 0 个或更多 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容<br>
+        <p>如果元素拥有 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/audio#src"><code>src</code></a> 属性：允许的内容为 0 个或更多 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容<br>
         否则：允许的内容为零个或多个 {{HTMLElement("source")}} 元素，跟随着 0 个或多个 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容。</p>
       </td>
     </tr>

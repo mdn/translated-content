@@ -1,7 +1,6 @@
 ---
 title: <em>：强调元素
 slug: Web/HTML/Reference/Elements/em
-original_slug: Web/HTML/Element/em
 ---
 
 {{HTMLSidebar}}
@@ -26,7 +25,7 @@ em {
 
 ## 属性
 
-此元素只包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素只包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -64,15 +63,15 @@ em {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容类别</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、<a
-          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >和可感知内容。
       </td>
@@ -80,7 +79,7 @@ em {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -93,7 +92,7 @@ em {
       <th scope="row">允许的父元素</th>
       <td>
         任何接受<a
-          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>

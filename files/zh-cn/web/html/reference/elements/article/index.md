@@ -1,7 +1,6 @@
 ---
 title: <article>
 slug: Web/HTML/Reference/Elements/article
-original_slug: Web/HTML/Element/article
 ---
 
 {{HTMLSidebar}}
@@ -58,14 +57,14 @@ original_slug: Web/HTML/Element/article
 
 ## 属性
 
-此元素只具有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素只具有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
-- 每个 `<article>`，通常包括标题（[`<h1>`—`<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素）作为 `<article>` 元素的子元素。
+- 每个 `<article>`，通常包括标题（[`<h1>`—`<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素）作为 `<article>` 元素的子元素。
 - 当 `<article>` 元素嵌套使用时，则该元素代表与外层元素有关的文章。例如，代表博客评论的 `<article>` 元素可嵌套在代表博客文章的 `<article>` 元素中。
 - `<article>` 元素的作者信息可通过 {{HTMLElement("address")}} 元素提供，但是不适用于嵌套的 `<article>` 元素。
-- 可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-CN/docs/Web/HTML/Element/time#datetime) 属性来描述 `<article>` 元素的发布日期和时间。
+- 可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/time#datetime) 属性来描述 `<article>` 元素的发布日期和时间。
 
 ## 示例
 
@@ -115,17 +114,17 @@ original_slug: Web/HTML/Element/article
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、<a
-          href="/zh-CN/docs/Web/HTML/Content_categories#分段内容"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#分段内容"
           >分段内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >
       </td>
@@ -133,7 +132,7 @@ original_slug: Web/HTML/Element/article
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >。
       </td>
@@ -145,7 +144,7 @@ original_slug: Web/HTML/Element/article
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        所有接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        所有接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。注意<code>&lt;article&gt;</code>元素不能成为 {{HTMLElement("address")}} 元素的子元素。
       </td>
@@ -198,4 +197,4 @@ original_slug: Web/HTML/Element/article
 ## 参见
 
 - 其他分段相关元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [使用 HTML 分段和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)
+- [使用 HTML 分段和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)

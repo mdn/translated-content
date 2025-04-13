@@ -1,7 +1,6 @@
 ---
 title: <tbody>：表格主体元素
 slug: Web/HTML/Reference/Elements/tbody
-original_slug: Web/HTML/Element/tbody
 ---
 
 {{HTMLSidebar}}
@@ -126,7 +125,7 @@ td {
 
 ## 属性
 
-该元素包含所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ### 废弃的属性
 
@@ -327,7 +326,7 @@ thead > tr > th {
 </table>
 ```
 
-注意，每个专业都放在了分开的 `<tbody>` 块之下，其中的第一列包含了一个带有 [`colspan`](/zh-CN/docs/Web/HTML/Element/th#colspan) 属性的 {{HTMLElement("th")}} 元素，横跨了整个表格的宽度。该标题列出了包含在 `<tbody>` 中的专业名称。
+注意，每个专业都放在了分开的 `<tbody>` 块之下，其中的第一列包含了一个带有 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/th#colspan) 属性的 {{HTMLElement("th")}} 元素，横跨了整个表格的宽度。该标题列出了包含在 `<tbody>` 中的专业名称。
 
 在每个专业的 `<tbody>` 下的剩余行包含两个单元格：第一个是学生的 ID，第二个是它们的名字。
 

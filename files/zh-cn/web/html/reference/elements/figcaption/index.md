@@ -1,7 +1,6 @@
 ---
 title: <figcaption>：图像标题元素
 slug: Web/HTML/Reference/Elements/figcaption
-original_slug: Web/HTML/Element/figcaption
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
@@ -47,7 +46,7 @@ figcaption {
 
 ## 属性
 
-该元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 
@@ -59,7 +58,7 @@ figcaption {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -68,7 +67,7 @@ figcaption {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >。
       </td>

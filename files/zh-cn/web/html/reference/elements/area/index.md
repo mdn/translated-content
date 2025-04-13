@@ -1,14 +1,13 @@
 ---
 title: <area>
 slug: Web/HTML/Reference/Elements/area
-original_slug: Web/HTML/Element/area
 ---
 
 ## 简要
 
 _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个超链接。\<area>元素仅在\<map>元素内部使用。_
 
-- _[内容分类](/zh-CN/docs/Web/HTML/Content_categories)_ [流内容](/zh-CN/docs/Web/HTML/Content_categories#flow_content), [短语内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content).
+- _[内容分类](/zh-CN/docs/Web/HTML/Guides/Content_categories)_ [流内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content), [短语内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - *允许的内容*它是一个空的元素不允许嵌套任何子元素或者文本。
 - *标签省略*只能允许有开始标签不允许有结束标签。
 - _允许的父元素_ \<area>元素必须拥有一个\<map>元素祖先元素，但不一定是直接的父元素。
@@ -25,7 +24,7 @@ _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个�
 - `coords`
   - : 给热点区域设定具体的坐标值。这个值的数值和意义取决于这个值所描述的**形状**属性。对于矩形或长方形，这个 **coords** 值为两个 X,Y 对：左上、右下。对于圆形，这个值是 `x,y,r`，这里的 `x,y` 是一对确定圆的中心的坐标而 `r` 则表示的是半径值。对于多边和多边形，这个值是用 x,y 对表示的多边形的每一个点：`x1,y1,x2,y2,x3,y3` 等等。HTML4 里，值可能是像素数量或者百分比，区别是不是有 % 出现; HTML5 里，只可能是像素的数量。
 - `download`
-  - : 这个属性如果存在的话，表明作者想把超链接用于下载一个资源。请查看{{HTMLElement("a")}} 获得关于 [`download`](/zh-CN/docs/Web/HTML/Element/a#download)属性的完整描述。
+  - : 这个属性如果存在的话，表明作者想把超链接用于下载一个资源。请查看{{HTMLElement("a")}} 获得关于 [`download`](/zh-CN/docs/Web/HTML/Reference/Elements/a#download)属性的完整描述。
 - `href`
   - : area 的超链接，值为一个 URL. HTML4 里，这个值不管是不是有值都要明确指定出来。HTML5 里则不需要。
 - `hreflang`

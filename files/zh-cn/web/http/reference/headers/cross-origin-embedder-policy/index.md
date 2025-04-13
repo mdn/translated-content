@@ -23,7 +23,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp
   - : 这是默认值。允许文档获取跨源资源，而无需通过 CORS 协议或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头。
 - `require-corp`
   - : 文档只能从相同的源加载资源，或显式标记为可从另一个源加载的资源。
-    如果跨源资源支持 CORS，则 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头必须使用它来加载资源，而不会被 COEP 阻止。
+    如果跨源资源支持 CORS，则 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin) 属性或 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 头必须使用它来加载资源，而不会被 COEP 阻止。
 
 ## 示例
 
@@ -54,7 +54,7 @@ if (crossOriginIsolated) {
 
 ### 避免 CORS 阻塞 COEP
 
-If you enable COEP using `require-corp` and have a cross origin resource that needs to be loaded, it needs to support [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) attribute for this image from a third-party site:
+If you enable COEP using `require-corp` and have a cross origin resource that needs to be loaded, it needs to support [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin) attribute for this image from a third-party site:
 
 ```html
 <img src="https://thirdparty.com/img.png" crossorigin />

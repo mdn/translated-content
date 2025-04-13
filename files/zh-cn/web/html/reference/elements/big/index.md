@@ -1,7 +1,6 @@
 ---
 title: <big>：较大的文本元素
 slug: Web/HTML/Reference/Elements/big
-original_slug: Web/HTML/Element/big
 l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
@@ -15,7 +14,7 @@ l10n:
 
 ## 属性
 
-这个元素除了[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)之外，没有其他的属性。
+这个元素除了[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)之外，没有其他的属性。
 
 ## 示例
 

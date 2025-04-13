@@ -1,12 +1,11 @@
 ---
 title: itemref
 slug: Web/HTML/Reference/Global_attributes/itemref
-original_slug: Web/HTML/Global_attributes/itemref
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemref`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 不具有 `itemscope` 属性的元素的后代，才可以与具有 **`itemref`** 的元素关联。`itemref` 提供了元素 id（并不是 `itemid`）的列表，并具有文档其他地方的额外属性。
+**`itemref`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) 不具有 `itemscope` 属性的元素的后代，才可以与具有 **`itemref`** 的元素关联。`itemref` 提供了元素 id（并不是 `itemid`）的列表，并具有文档其他地方的额外属性。
 
 `itemref` 属性只能在指定了 `itemscope` 的元素上指定。
 
@@ -94,11 +93,11 @@ original_slug: Web/HTML/Global_attributes/itemref
 
 ## 参阅
 
-- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [其他不同的全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 - 其他 microdata 相关的全局属性
 
-  - [`itemid`](/zh-CN/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/zh-CN/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemref`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemscope)
+  - [`itemtype`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemtype)

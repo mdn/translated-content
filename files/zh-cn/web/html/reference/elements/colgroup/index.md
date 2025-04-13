@@ -1,7 +1,6 @@
 ---
 title: <colgroup>：表格列组元素
 slug: Web/HTML/Reference/Elements/colgroup
-original_slug: Web/HTML/Element/colgroup
 l10n:
   sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
@@ -74,7 +73,7 @@ td {
 
 ## 属性
 
-此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `span`
 
@@ -89,14 +88,14 @@ td {
 
 - `align` {{deprecated_inline}}
 
-  - : 指定每个列组单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align) 属性覆盖该值。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
+  - : 指定每个列组单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`align`](/zh-CN/docs/Web/HTML/Reference/Elements/col#align) 属性覆盖该值。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
     > [!NOTE]
     > 在 `<colgroup>` 元素上设置 `text-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
     >
-    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则在每列使用 `td:nth-of-type(an+b)` CSS 选择器，其中 `a` 为表格中列的总数，`b` 为列在表格中的序号位置，例如 `td:nth-of-type(7n+2) { text-align: right; }` 可右对齐第二列单元格。
+    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则在每列使用 `td:nth-of-type(an+b)` CSS 选择器，其中 `a` 为表格中列的总数，`b` 为列在表格中的序号位置，例如 `td:nth-of-type(7n+2) { text-align: right; }` 可右对齐第二列单元格。
     >
-    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
+    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `bgcolor` {{deprecated_inline}}
 
@@ -104,7 +103,7 @@ td {
 
 - `char` {{deprecated_inline}}
 
-  - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但它仍将作为默认值用于属于该列组的 {{HTMLElement("col")}} 元素的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align)。
+  - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但它仍将作为默认值用于属于该列组的 {{HTMLElement("col")}} 元素的 [`align`](/zh-CN/docs/Web/HTML/Reference/Elements/col#align)。
 
 - `charoff` {{deprecated_inline}}
 
@@ -112,18 +111,18 @@ td {
 
 - `valign` {{deprecated_inline}}
 
-  - : 指定每个列组单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`valign`](/zh-CN/docs/Web/HTML/Element/col#valign) 属性覆盖此值。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
+  - : 指定每个列组单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`valign`](/zh-CN/docs/Web/HTML/Reference/Elements/col#valign) 属性覆盖此值。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
     > [!NOTE]
     > 在 `<colgroup>` 元素上设置 `vertical-align` 没有任何作用，因为 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的后代，因此它们不能从该元素继承。
     >
-    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请在每列使用 [`td:nth-of-type()`](/zh-CN/docs/Web/CSS/:nth-of-type) CSS 选择器，例如，`td:nth-of-type(2) { vertical-align: middle; }` 使第二列单元格垂直居中。
+    > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，请在每列使用 [`td:nth-of-type()`](/zh-CN/docs/Web/CSS/:nth-of-type) CSS 选择器，例如，`td:nth-of-type(2) { vertical-align: middle; }` 使第二列单元格垂直居中。
     >
-    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
+    > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `width` {{deprecated_inline}}
 
-  - : 该属性为当前列组中的每一列指定默认宽度。除标准像素值和百分比值外，该属性还可以使用特殊形式 `0*`，这意味着组中每一列的宽度应为容纳该列内容所需的最小宽度。也可以使用相对宽度，如 `0.5*`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`width`](/zh-CN/docs/Web/HTML/Element/col#width) 属性覆盖此值。请使用 {{cssxref("width")}} CSS 属性代替，因为该属性已被弃用。
+  - : 该属性为当前列组中的每一列指定默认宽度。除标准像素值和百分比值外，该属性还可以使用特殊形式 `0*`，这意味着组中每一列的宽度应为容纳该列内容所需的最小宽度。也可以使用相对宽度，如 `0.5*`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/col#width) 属性覆盖此值。请使用 {{cssxref("width")}} CSS 属性代替，因为该属性已被弃用。
 
 ## 使用说明
 
@@ -230,7 +229,7 @@ table {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>

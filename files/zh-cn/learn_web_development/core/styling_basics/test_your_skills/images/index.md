@@ -1,7 +1,6 @@
 ---
 title: 挑战：图片和表格元素
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Images
-original_slug: Learn_web_development/Core/Styling_basics/Images_tasks
 ---
 
 {{LearnSidebar}}

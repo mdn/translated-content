@@ -277,7 +277,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 
 ## 为文档设定主语言
 
-最后，值得一提的是可以（而且有必要）为站点设定语言，这个可以通过添加 [lang 属性](/zh-CN/docs/Web/HTML/Global_attributes/lang)到 HTML 开始的标签中来实现（就像 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) 那样），如下所示：
+最后，值得一提的是可以（而且有必要）为站点设定语言，这个可以通过添加 [lang 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang)到 HTML 开始的标签中来实现（就像 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) 那样），如下所示：
 
 ```html
 <html lang="zh-CN">

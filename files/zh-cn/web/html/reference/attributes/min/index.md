@@ -1,14 +1,13 @@
 ---
 title: HTML 属性：min
 slug: Web/HTML/Reference/Attributes/min
-original_slug: Web/HTML/Attributes/min
 l10n:
   sourceCommit: 77e46a5b43f828fcc6bd30facddc6fc4bfe84f9b
 ---
 
 {{HTMLSidebar}}
 
-**`min`** 属性定义了可接受和有效的输入最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。此值必须小于等于 `max` 属性的值。
+**`min`** 属性定义了可接受和有效的输入最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 小于此值，则该元素将无法通过[验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。此值必须小于等于 `max` 属性的值。
 
 某些输入类型具有默认的最小值。如果输入项没有默认的最小值，且 `min` 指定的值无法转换为有效的数字（或未设置最小值），则输入没有最小值。
 
@@ -71,9 +70,9 @@ l10n:
 > [!NOTE]
 > 当用户输入的数据不符合设置的 min 值时，该值在约束验证中被视为无效，并会匹配 {{cssxref(':invalid')}} 和 {{cssxref(':out-of-range')}} 伪类。
 
-参阅[客户端验证](/zh-CN/docs/Web/HTML/Constraint_validation)和 {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} 获取更多信息。
+参阅[客户端验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)和 {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} 获取更多信息。
 
-对于 {{htmlelement('meter')}} 元素，`min` 属性定义了测量范围的最小数值边界。若指定，则该值必须小于最大值（[`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性）。在两种情况下，如果省略，则默认值为 1。
+对于 {{htmlelement('meter')}} 元素，`min` 属性定义了测量范围的最小数值边界。若指定，则该值必须小于最大值（[`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max) 属性）。在两种情况下，如果省略，则默认值为 1。
 
 <table class="no-markdown">
   <caption>
@@ -135,10 +134,10 @@ input:invalid {
 
 ## 参见
 
-- [`step`](/zh-CN/docs/Web/HTML/Attributes/step)
-- [`max`](/zh-CN/docs/Web/HTML/Attributes/max)
+- [`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step)
+- [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max)
 - 其他 meter 属性：[`low`](/zh-CN/docs/Web/HTML/Attributes/low)、[`high`](/zh-CN/docs/Web/HTML/Attributes/high)、[`optimum`](/zh-CN/docs/Web/HTML/Attributes/optimum)
-- [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)
 - [表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
 - {{cssxref(':out-of-range')}}

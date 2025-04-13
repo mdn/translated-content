@@ -1,7 +1,6 @@
 ---
 title: <sup>：上标元素
 slug: Web/HTML/Reference/Elements/sup
-original_slug: Web/HTML/Element/sup
 l10n:
   sourceCommit: 77a67438592286ded44a82bfe6b8a64e8cdf44a9
 ---
@@ -32,7 +31,7 @@ p {
 
 ## 属性
 
-该元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -96,15 +95,15 @@ p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、<a
-          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、可感知内容。
       </td>
@@ -112,7 +111,7 @@ p {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -125,7 +124,7 @@ p {
       <th scope="row">允许的父元素</th>
       <td>
         任何接受<a
-          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>

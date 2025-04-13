@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：for
 slug: Web/HTML/Reference/Attributes/for
-original_slug: Web/HTML/Attributes/for
 l10n:
   sourceCommit: a9ee909247680532544008dbc65a9f033fce4b39
 ---

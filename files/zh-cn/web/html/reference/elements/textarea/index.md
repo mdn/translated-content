@@ -1,7 +1,6 @@
 ---
 title: <textarea>：文本区域元素
 slug: Web/HTML/Reference/Elements/textarea
-original_slug: Web/HTML/Element/textarea
 l10n:
   sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
 ---
@@ -53,11 +52,11 @@ label {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autocapitalize`
 
-  - : 控制输入文本是否自动大写。有关更多信息，请参阅 [`autocapitalize`](/zh-CN/docs/Web/HTML/Global_attributes/autocapitalize) 全局属性页面。
+  - : 控制输入文本是否自动大写。有关更多信息，请参阅 [`autocapitalize`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autocapitalize) 全局属性页面。
 
 - `autocomplete`
 
@@ -66,7 +65,7 @@ label {
     - `off`：每次使用时，用户都必须明确为此字段输入值，或者文档提供自己的自动完成方法；浏览器不会自动完成条目。
     - `on`：浏览器可以根据用户在以前使用过程中输入的值自动完成该值。
 
-    如果 `<textarea>` 元素上未指定 `autocomplete` 属性，那么浏览器将使用 `<textarea>` 元素表单所有者的 `autocomplete` 属性值。表单所有者要么是此 `<textarea>` 元素所属的 {{HTMLElement("form")}} 元素，要么是通过 `form` 属性指定其 `id` 的表单元素。有关更多信息，请参阅 {{HTMLElement("form")}} 中的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/form#autocomplete) 属性。
+    如果 `<textarea>` 元素上未指定 `autocomplete` 属性，那么浏览器将使用 `<textarea>` 元素表单所有者的 `autocomplete` 属性值。表单所有者要么是此 `<textarea>` 元素所属的 {{HTMLElement("form")}} 元素，要么是通过 `form` 属性指定其 `id` 的表单元素。有关更多信息，请参阅 {{HTMLElement("form")}} 中的 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/form#autocomplete) 属性。
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -83,7 +82,7 @@ label {
   - : 文本控件的可见宽度，以平均字符宽度为单位。若已指定，其值必须为正整数。若未指定，默认值为 `20`。
 - `dirname`
 
-  - : 此属性用于指示元素内容的文本方向性，类似于 `<input>` 元素的 [`dirname`](/zh-CN/docs/Web/HTML/Element/input#dirname) 属性。有关更多信息，请参见 [`dirname` 属性](/zh-CN/docs/Web/HTML/Attributes/dirname)。
+  - : 此属性用于指示元素内容的文本方向性，类似于 `<input>` 元素的 [`dirname`](/zh-CN/docs/Web/HTML/Reference/Elements/input#dirname) 属性。有关更多信息，请参见 [`dirname` 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/dirname)。
 
 - `disabled`
   - : 此布尔属性表示用户无法与控件交互。如果未指定此属性，控件将从其包含元素（如 {{ HTMLElement("fieldset") }}）继承设置；如果在设置 `disabled` 属性时没有包含元素，则控件处于启用状态。
@@ -100,7 +99,7 @@ label {
   - : 对用户关于可在该控件中输入内容的提示。在占位符文本内部的回车或换行符在渲染提示时必须被视为换行处理。
 
     > [!NOTE]
-    > 占位符仅应用于显示应输入到表单中的数据类型示例；它们*不能*替代与输入字段关联的正确 {{HTMLElement("label")}} 元素。有关详细说明，请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#labels)。
+    > 占位符仅应用于显示应输入到表单中的数据类型示例；它们*不能*替代与输入字段关联的正确 {{HTMLElement("label")}} 元素。有关详细说明，请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Reference/Elements/input#labels)。
 
 - `readonly`
   - : 此布尔属性表示用户无法修改该控件的值。与 `disabled` 属性不同，`readonly` 属性不会阻止用户点击或选择该控件。只读控件的值仍随表单一起提交。
@@ -228,11 +227,11 @@ textarea {
 {{EmbedLiveSample('使用“占位符”示例')}}
 
 > [!NOTE]
-> 占位符仅用于显示应输入表单的数据类型；它们不能替代与输入相关的正确 {{HTMLElement("label")}} 元素。请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#labels)了解完整说明。
+> 占位符仅用于显示应输入表单的数据类型；它们不能替代与输入相关的正确 {{HTMLElement("label")}} 元素。请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Reference/Elements/input#labels)了解完整说明。
 
 ### 禁用和只读文本区
 
-此示例展示了两个 `<textarea>`——一个是 [`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly)，另一个是 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled)。你不能编辑任一元素的内容，但 `readonly` 元素可获得焦点且其值会被提交到表单。`disabled` 元素的值不会被提交且无法获得焦点。
+此示例展示了两个 `<textarea>`——一个是 [`readonly`](/zh-CN/docs/Web/HTML/Reference/Attributes/readonly)，另一个是 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled)。你不能编辑任一元素的内容，但 `readonly` 元素可获得焦点且其值会被提交到表单。`disabled` 元素的值不会被提交且无法获得焦点。
 
 ```html
 <textarea name="textarea" rows="5" cols="30" readonly>
@@ -261,26 +260,26 @@ textarea {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#交互内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#交互内容"
           >交互内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#可列举的元素（listed）"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可列举的元素（listed）"
           >可列举</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#可标记的元素（labelable）"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可标记的元素（labelable）"
           >可标记</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#可重置的元素（resettable）"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可重置的元素（resettable）"
           >可重置</a
-        >和<a href="/zh-CN/docs/Web/HTML/Content_categories#可提交的元素（submittable）"
+        >和<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可提交的元素（submittable）"
           >可提交</a
-        >的<a href="/zh-CN/docs/Web/HTML/Content_categories#表单相关内容"
+        >的<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#表单相关内容"
           >表单相关内容</a
         >元素。
       </td>
@@ -296,7 +295,7 @@ textarea {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>

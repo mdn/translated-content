@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：dirname
 slug: Web/HTML/Reference/Attributes/dirname
-original_slug: Web/HTML/Attributes/dirname
 l10n:
   sourceCommit: 067a40e4ed27ea6e1f3b8bbfec15cd9dc3078f4c
 ---
@@ -98,6 +97,6 @@ https://www.example.com/submit?user=LTR+Username&user-direction=rtl&comment=LTR+
 
 ## 参见
 
-- [`dir` 属性](/zh-CN/docs/Web/HTML/Global_attributes/dir)
+- [`dir` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir)
 - {{htmlelement("input")}}
 - {{htmlelement("textarea")}}

@@ -1,7 +1,6 @@
 ---
 title: 微数据
 slug: Web/HTML/Guides/Microdata
-original_slug: Web/HTML/Microdata
 ---
 
 {{HTMLSidebar}}
@@ -47,15 +46,15 @@ original_slug: Web/HTML/Microdata
 
 ## 全局属性
 
-[`itemid`](/zh-CN/docs/Web/HTML/Global_attributes/itemid)——元素的唯一全局标识符。
+[`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemid)——元素的唯一全局标识符。
 
-[`itemprop`](/zh-CN/docs/Web/HTML/Global_attributes/itemprop)——用于向元素添加属性。每个 HTML 元素都可以指定一个 `itemprop` 属性，其中 `itemprop` 由一个名称和值对组成。
+[`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop)——用于向元素添加属性。每个 HTML 元素都可以指定一个 `itemprop` 属性，其中 `itemprop` 由一个名称和值对组成。
 
-[`itemref`](/zh-CN/docs/Web/HTML/Global_attributes/itemref)——不具有 `itemscope` 属性的元素的后代的属性可以使用 **itemref** 与元素相关联。`itemref` 提供了元素 id 列表（而不是一些 `itemid`）以及文档中其他位置的其他属性。
+[`itemref`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemref)——不具有 `itemscope` 属性的元素的后代的属性可以使用 **itemref** 与元素相关联。`itemref` 提供了元素 id 列表（而不是一些 `itemid`）以及文档中其他位置的其他属性。
 
-[`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes/itemscope)——`itemscope`（通常）与 [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes/itemtype) 一起使用，以指定块中包含的 HTML 是一个特定元素。`itemscope` 创建 _`Item`_ 并定义与之关联的 itemtype 的范围。`itemtype` 是描述项及其属性上下文的词汇表（例如 [schema.org](https://schema.org/)）的有效 URL。
+[`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemscope)——`itemscope`（通常）与 [`itemtype`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemtype) 一起使用，以指定块中包含的 HTML 是一个特定元素。`itemscope` 创建 _`Item`_ 并定义与之关联的 itemtype 的范围。`itemtype` 是描述项及其属性上下文的词汇表（例如 [schema.org](https://schema.org/)）的有效 URL。
 
-[`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)——指定将用于在数据结构中定义 `itemprop`（元素属性）的词汇表的 URL。[`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) 用于设置数据结构中按 `itemtype` 设置的词汇表的有效范围。
+[`itemtype`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemtype)——指定将用于在数据结构中定义 `itemprop`（元素属性）的词汇表的 URL。[`itemscope`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemscope) 用于设置数据结构中按 `itemtype` 设置的词汇表的有效范围。
 
 ## 示例
 
@@ -157,4 +156,4 @@ original_slug: Web/HTML/Microdata
 
 ## 参见
 
-- [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)

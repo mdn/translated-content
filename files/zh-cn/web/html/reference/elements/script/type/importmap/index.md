@@ -1,14 +1,13 @@
 ---
 title: <script type="importmap">
 slug: Web/HTML/Reference/Elements/script/type/importmap
-original_slug: Web/HTML/Element/script/type/importmap
 l10n:
   sourceCommit: 85ee57ef02a1cc0d104d3db2c81a4a45cb71011b
 ---
 
 {{HTMLSidebar}}
 
-[`<script>` 元素](/zh-CN/docs/Web/HTML/Element/script)的 [`type`](/zh-CN/docs/Web/HTML/Element/script/type) 属性的 **`importmap`** 值表示元素的主体包含一个导入映射。
+[`<script>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/script)的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type) 属性的 **`importmap`** 值表示元素的主体包含一个导入映射。
 
 导入映射（import map）是一个 JSON 对象，其允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中用作模块标识符的文本，其会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。
 
@@ -179,6 +178,6 @@ import { name as squareName, draw } from "shapes/circle.js";
 ## 参见
 
 - [JavaScript 模块 > 使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#使用导入映射导入模块)
-- [HTML `<script>` 元素的 `type` 属性](/zh-CN/docs/Web/HTML/Element/script#type)
+- [HTML `<script>` 元素的 `type` 属性](/zh-CN/docs/Web/HTML/Reference/Elements/script#type)
 - [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)

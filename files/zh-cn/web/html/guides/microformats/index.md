@@ -1,7 +1,6 @@
 ---
 title: 微格式
 slug: Web/HTML/Guides/Microformats
-original_slug: Web/HTML/microformats
 l10n:
   sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
@@ -472,7 +471,7 @@ l10n:
 
 ## 参见
 
-- [类属性](/zh-CN/docs/Web/HTML/Global_attributes/class)
+- [类属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class)
 - 维基百科上的[微格式](https://zh.wikipedia.org/wiki/微格式)
 - [微格式官网](https://microformats.org/)
 - 微格式官网中的[搜索引擎支持](https://microformats.org/wiki/search_engines)

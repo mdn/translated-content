@@ -1,12 +1,11 @@
 ---
 title: contenteditable
 slug: Web/HTML/Reference/Global_attributes/contenteditable
-original_slug: Web/HTML/Global_attributes/contenteditable
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-[全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **`contenteditable`** 是一个枚举属性，表示元素是否可被用户编辑。如果可以，浏览器会修改元素的组件以允许编辑。
+[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **`contenteditable`** 是一个枚举属性，表示元素是否可被用户编辑。如果可以，浏览器会修改元素的组件以允许编辑。
 
 {{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
 
@@ -71,7 +70,7 @@ blockquote p::after {
 
 ## 参见
 
-- 所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- 所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} 和 {{domxref("HTMLElement.isContentEditable")}}
 - CSS {{cssxref("caret-color")}} 属性
 - [Element `input` 事件](/zh-CN/docs/Web/API/Element/input_event)

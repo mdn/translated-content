@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：size
 slug: Web/HTML/Reference/Attributes/size
-original_slug: Web/HTML/Attributes/size
 l10n:
   sourceCommit: a78cecea4f3b1a7f35564a547052e163911ac491
 ---
@@ -75,6 +74,6 @@ label {
 
 ## 参见
 
-- [`maxlength`](/zh-CN/docs/Web/HTML/Attributes/maxlength)
-- [`minlength`](/zh-CN/docs/Web/HTML/Attributes/minlength)
-- [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern)
+- [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength)
+- [`minlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/minlength)
+- [`pattern`](/zh-CN/docs/Web/HTML/Reference/Attributes/pattern)

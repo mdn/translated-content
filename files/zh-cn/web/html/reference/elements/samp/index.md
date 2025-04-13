@@ -1,7 +1,6 @@
 ---
 title: <samp>
 slug: Web/HTML/Reference/Elements/samp
-original_slug: Web/HTML/Element/samp
 ---
 
 {{HTMLSidebar}}
@@ -35,7 +34,7 @@ original_slug: Web/HTML/Element/samp
 
 ## 属性
 
-该元素只包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素只包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## DOM 接口
 
@@ -64,4 +63,4 @@ Regular text. `This is sample text.` Regular text.
 
 ## 参见
 
-- [HTML Code Element](/zh-CN/docs/Web/HTML/Element/code)
+- [HTML Code Element](/zh-CN/docs/Web/HTML/Reference/Elements/code)

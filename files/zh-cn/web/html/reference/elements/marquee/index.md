@@ -1,7 +1,6 @@
 ---
 title: <marquee>：跑马灯元素
 slug: Web/HTML/Reference/Elements/marquee
-original_slug: Web/HTML/Element/marquee
 l10n:
   sourceCommit: cbfc561e5e577975a51acceadbd7d2fec9b8e45e
 ---

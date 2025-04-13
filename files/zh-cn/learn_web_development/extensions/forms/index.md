@@ -65,7 +65,7 @@ l10n:
 
 ## 参见
 
-- [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#表单)
-- [HTML \<input> 类型参考](/zh-CN/docs/Web/HTML/Element/input)
-- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
+- [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Reference/Elements#表单)
+- [HTML \<input> 类型参考](/zh-CN/docs/Web/HTML/Reference/Elements/input)
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Reference/Attributes)
 - [用户输入方式和控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/User_input_methods)

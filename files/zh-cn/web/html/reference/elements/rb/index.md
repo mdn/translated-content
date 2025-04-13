@@ -1,7 +1,6 @@
 ---
 title: "<rb>: The Ruby Base element"
 slug: Web/HTML/Reference/Elements/rb
-original_slug: Web/HTML/Element/rb
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
@@ -11,7 +10,7 @@ original_slug: Web/HTML/Element/rb
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容范畴</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容范畴</a></th>
    <td>无</td>
   </tr>
   <tr>
@@ -39,7 +38,7 @@ original_slug: Web/HTML/Element/rb
 
 ## 属性
 
-这个元素仅仅支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素仅仅支持 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 

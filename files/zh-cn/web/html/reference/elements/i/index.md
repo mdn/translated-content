@@ -1,7 +1,6 @@
 ---
 title: <i>：术语文本元素
 slug: Web/HTML/Reference/Elements/i
-original_slug: Web/HTML/Element/i
 ---
 
 {{HTMLSidebar}}
@@ -10,15 +9,15 @@ original_slug: Web/HTML/Element/i
 
 **HTML 元素 `<i>`** 用于表现因某些原因需要区分普通文本的一系列文本。例如技术术语、外文短语或是小说中人物的思想活动等，它的内容通常以斜体显示。
 
-- _[Content catergories](/zh-CN/docs/Web/HTML/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content), palpable content.
-- _允许量_ [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content).
+- _[Content catergories](/zh-CN/docs/Web/HTML/Guides/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content), [phrasing content](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content), palpable content.
+- _允许量_ [phrasing content](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
-- _Permitted parent elements_ Any element that accepts [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content).
+- _Permitted parent elements_ Any element that accepts [phrasing content](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.
 
 ## 属性
 
-该元素只包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素只包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 

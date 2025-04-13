@@ -1,7 +1,6 @@
 ---
 title: <time>：（日期）时间元素
 slug: Web/HTML/Reference/Elements/time
-original_slug: Web/HTML/Element/time
 l10n:
   sourceCommit: 835c199410845eed61aaf8439cb2e9719e7e9f98
 ---
@@ -38,7 +37,7 @@ time {
 
 ## 属性
 
-与所有其他 HTML 元素类似，此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+与所有其他 HTML 元素类似，此元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `datetime`
   - : 该属性表示此元素的时间和/或日期，并且属性值必须符合下文所描述的格式。
@@ -208,14 +207,14 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、可感知内容。
       </td>
@@ -223,7 +222,7 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -235,7 +234,7 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>

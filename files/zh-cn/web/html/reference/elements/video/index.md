@@ -1,7 +1,6 @@
 ---
 title: <video>：视频嵌入元素
 slug: Web/HTML/Reference/Elements/video
-original_slug: Web/HTML/Element/video
 l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
@@ -32,7 +31,7 @@ l10n:
 
 ## 属性
 
-类似于所有其他 HTML 元素，此元素也支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+类似于所有其他 HTML 元素，此元素也支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autoplay`
 
@@ -57,7 +56,7 @@ l10n:
 
 - `crossorigin`
 
-  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指明是否使用 CORS 来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image)可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
+  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指明是否使用 CORS 来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
 
     - `anonymous`
       - : 在发送跨源请求时不携带凭据（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将不会携带 cookie、X.509 证书，也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 标头），资源会被*污染*，并且它的使用会受到限制。
@@ -65,7 +64,7 @@ l10n:
 
       - : 在发送跨源请求时携带凭据信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将会携带 cookie、证书，或执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 标头），图像会被*污染*，并且它的使用会受到限制。
 
-      不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求标头），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定无效值，会被当作指定了枚举关键字 `anonymous` 一样使用。查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
+      不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求标头），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定无效值，会被当作指定了枚举关键字 `anonymous` 一样使用。查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)获取更多信息。
 
 - `disablepictureinpicture`
   - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。
@@ -478,12 +477,12 @@ AddType video/webm .webm
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、短语内容、嵌入内容。如果它有 <a href="#controls"><code>controls</code></a> 属性：交互内容和可感知内容。
       </td>

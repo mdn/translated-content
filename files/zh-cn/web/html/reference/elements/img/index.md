@@ -1,7 +1,6 @@
 ---
 title: <img>：图像嵌入元素
 slug: Web/HTML/Reference/Elements/img
-original_slug: Web/HTML/Element/img
 ---
 
 {{HTMLSidebar}}
@@ -32,7 +31,7 @@ original_slug: Web/HTML/Element/img
 
 - [Referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
 - 使用 [`width`](#width) 和 [`height`](#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
-- 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程）。
+- 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)教程）。
 
 ## 支持的图像格式
 
@@ -56,7 +55,7 @@ Web 最常用的图像格式是：
 
 ## 图像加载错误
 
-如果在加载或渲染图像时发生错误，且设置了至少一个 [`onerror`](/zh-CN/docs/Web/HTML/Global_attributes#onerror) 事件处理器来处理 {{domxref("Element/error_event", "error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
+如果在加载或渲染图像时发生错误，且设置了至少一个 [`onerror`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#onerror) 事件处理器来处理 {{domxref("Element/error_event", "error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
 
 - `src` 属性的属性值为空（`""`）或者 `null`。
 - `src` 属性的 {{glossary("URL")}} 和用户正在浏览的页面的 URL 完全相同。
@@ -66,7 +65,7 @@ Web 最常用的图像格式是：
 
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `alt`
 
@@ -87,7 +86,7 @@ Web 最常用的图像格式是：
 
 - `crossorigin`
 
-  - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
+  - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
 
     如果*未指定* `crossorigin` 属性，则会发送不启用 CORS 的请求（不会携带 {{httpheader("Origin")}} 请求标头），且浏览器会将图像标记为“被污染”并拒绝对图像数据的访问，阻止其在 {{HTMLElement("canvas")}} 元素中的使用。
 
@@ -100,7 +99,7 @@ Web 最常用的图像格式是：
     - `use-credentials`
       - : 发送携带凭据的跨源请求（比如 cookie、X.509 证书和 `Authorization` 请求标头）。如果服务器不选择与源站共享凭据（通过返回 `Access-Control-Allow-Credentials: true` 响应标头） ，则浏览器会将图像标记为被污染且限制对其图像数据的访问。
 
-    如果属性是无效值，浏览器默认将其当做 `anonymous` 关键字。更多信息，请查看 [CORS 属性设置](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
+    如果属性是无效值，浏览器默认将其当做 `anonymous` 关键字。更多信息，请查看 [CORS 属性设置](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)。
 
 - `decoding`
 
@@ -136,7 +135,7 @@ Web 最常用的图像格式是：
   - : 这个布尔属性表示图像是否是[服务器端图像映射](https://en.wikipedia.org/wiki/Image_map#Server-side)的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
 
     > [!NOTE]
-    > 只有在 `<img>` 元素是一个拥有有效 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
+    > 只有在 `<img>` 元素是一个拥有有效 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
 
 - `loading`
 
@@ -190,13 +189,13 @@ Web 最常用的图像格式是：
 
     在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。
 
-    用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程。
+    用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)教程。
 
 - `width`
   - : 图像的宽度，以像素为单位。必须是没有单位的整数。
 - `usemap`
 
-  - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/Web/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
+  - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/Web/HTML/Reference/Elements/map)的部分 URL（以 `#` 开始的部分）。
 
     > [!NOTE]
     > 如果 `<img>` 元素是 {{htmlelement("a")}} 或 {{HTMLElement("button")}} 元素的后代元素则不能使用这个属性。
@@ -224,13 +223,13 @@ Web 最常用的图像格式是：
   - : 插入到图像的左侧和右侧的空白像素的值。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 - `longdesc` {{Deprecated_Inline}}
 
-  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。
+  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id)。
 
     > [!NOTE]
     > 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
 
 - `name` {{Deprecated_Inline}}
-  - : 元素的名字。使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性代替此废弃属性。
+  - : 元素的名字。使用 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性代替此废弃属性。
 - `vspace` {{Deprecated_Inline}}
   - : 插入到图像的上方和下方的空白像素的数组。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 
@@ -335,9 +334,9 @@ Web 最常用的图像格式是：
 
 ### title 属性
 
-[`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性不是 `alt` 属性可接受的替代品。并且，避免将 `alt` 属性的值直接复制到同一幅图片的`title` 属性上。这样可能会让一些屏幕阅读器把同一段描述读两遍，造成一定程度上的困扰。
+[`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#title) 属性不是 `alt` 属性可接受的替代品。并且，避免将 `alt` 属性的值直接复制到同一幅图片的`title` 属性上。这样可能会让一些屏幕阅读器把同一段描述读两遍，造成一定程度上的困扰。
 
-`title` 属性也不该被用作一幅图片在 `alt` 之外的补充说明信息。如果一幅图片需要小标题，使用 [`figure`](/zh-CN/docs/Web/HTML/Element/figure) 或 [`figcaption`](/zh-CN/docs/Web/HTML/Element/figcaption) 元素。
+`title` 属性也不该被用作一幅图片在 `alt` 之外的补充说明信息。如果一幅图片需要小标题，使用 [`figure`](/zh-CN/docs/Web/HTML/Reference/Elements/figure) 或 [`figcaption`](/zh-CN/docs/Web/HTML/Reference/Elements/figcaption) 元素。
 
 `title` 元素的值一般作为提示条（tooltip）呈现给用户，在光标于图片上停下后显示出来。尽管这*确实*能给用户提供更多的信息，你不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 `title`。
 
@@ -476,6 +475,6 @@ Web 最常用的图像格式是：
 
 - [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)
-- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
+- [响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)
 - {{HTMLElement("picture")}}、{{HTMLElement("object")}} 和 {{HTMLElement("embed")}} 元素
 - 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。

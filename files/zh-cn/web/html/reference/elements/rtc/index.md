@@ -1,7 +1,6 @@
 ---
 title: <rtc>
 slug: Web/HTML/Reference/Elements/rtc
-original_slug: Web/HTML/Element/rtc
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
@@ -11,12 +10,12 @@ original_slug: Web/HTML/Element/rtc
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td>无</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a> 或者 {{HTMLElement("rt")}} 元素</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">短语内容</a> 或者 {{HTMLElement("rt")}} 元素</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -39,7 +38,7 @@ original_slug: Web/HTML/Element/rtc
 
 ## 属性
 
-该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+该元素仅仅包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 
 ## 示例
 

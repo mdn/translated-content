@@ -1,7 +1,6 @@
 ---
 title: <br>
 slug: Web/HTML/Reference/Elements/br
-original_slug: Web/HTML/Element/br
 l10n:
   sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
@@ -40,7 +39,7 @@ p {
 
 ## 属性
 
-此元素的属性包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素的属性包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ### 已弃用的属性
 
@@ -83,7 +82,7 @@ USA
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>。</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -95,7 +94,7 @@ USA
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任意可容纳<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
+   <td>任意可容纳<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的元素。</td>
   </tr>
   <tr>
       <th scope="row">隐含的 ARIA 角色</th>

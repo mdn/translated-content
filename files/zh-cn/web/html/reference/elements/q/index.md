@@ -1,7 +1,6 @@
 ---
 title: <q>
 slug: Web/HTML/Reference/Elements/q
-original_slug: Web/HTML/Element/q
 ---
 
 {{HTMLSidebar}}
@@ -38,7 +37,7 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 
 ## 属性
 
-\<q>标签拥有 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+\<q>标签拥有 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : 这个属性的值是 URL，意在指出被引用的文本的源文档或者源信息。这个属性重在解释这个引用的参考或者是上下文。

@@ -1,7 +1,6 @@
 ---
 title: <map>：图像映射元素
 slug: Web/HTML/Reference/Elements/map
-original_slug: Web/HTML/Element/map
 l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
@@ -47,10 +46,10 @@ img {
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `name`
-  - : `name` 属性给予该映射引用的名称，这个属性必须存在，值不得为空并且不能带空格。`name` 属性的值不得与同文档中其他 `<map>` 元素的该属性值相同，如果还指定了 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性，则两个属性的值必须相同。
+  - : `name` 属性给予该映射引用的名称，这个属性必须存在，值不得为空并且不能带空格。`name` 属性的值不得与同文档中其他 `<map>` 元素的该属性值相同，如果还指定了 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性，则两个属性的值必须相同。
 
 ## 示例
 
@@ -91,12 +90,12 @@ img {
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
-      <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>、可感知内容。</td>
+      <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容类别</a></th>
+      <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>、可感知内容。</td>
     </tr>
     <tr>
       <th scope="row">允许的内容</th>
-      <td>任何<a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型">透明</a>元素。</td>
+      <td>任何<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#透明内容模型">透明</a>元素。</td>
     </tr>
     <tr>
       <th scope="row">标签省略</th>
@@ -104,7 +103,7 @@ img {
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
-      <td>任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
+      <td>任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的元素。</td>
     </tr>
     <tr>
        <th scope="row">隐式 ARIA 角色</th>

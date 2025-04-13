@@ -1,7 +1,6 @@
 ---
 title: <blockquote>：块级引用元素
 slug: Web/HTML/Reference/Elements/blockquote
-original_slug: Web/HTML/Element/blockquote
 ---
 
 {{HTMLSidebar}}
@@ -74,7 +73,7 @@ blockquote + p {
 
 ## 属性
 
-此元素的属性包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素的属性包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `cite`
   - : 是一个标注引用的信息的来源文档或者相关信息的 URL。通常用来描述能够解释引文的上下文或者引用的信息。

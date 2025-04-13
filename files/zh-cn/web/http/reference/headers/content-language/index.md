@@ -9,7 +9,7 @@ l10n:
 
 HTTP **`Content-Language`** {{Glossary("representation header", "表示标头")}}用来说明访问者希望采用的语言，这样的话用户就可以根据自己偏好的语言来定制不同的内容。
 
-举个例子，`Content-Language: de-DE` 说明这份文件是为说德语的人提供的。这个文件可能是用英文写的，而非德语——它可能是为说德语的人开设的英语教程的一部分。要说明文档是用什么语言**写**的，应该用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性。
+举个例子，`Content-Language: de-DE` 说明这份文件是为说德语的人提供的。这个文件可能是用英文写的，而非德语——它可能是为说德语的人开设的英语教程的一部分。要说明文档是用什么语言**写**的，应该用 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang) 属性。
 
 如果没有指明 `Content-Language`，那么默认地，文件内容是提供给所有语言的访问者使用的。多个语言标签也是合法的。同样地，`Content-Language` 标头还适用于不同媒体类型的文件，而不单单局限于文本型文档。
 
@@ -62,7 +62,7 @@ Content-Language: de-DE, en-CA
 
 ### 声明文档的书写语言
 
-全局的 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性使用在 HTML 元素去表达 [HTML](/zh-CN/docs/Web/HTML) 文档整体或者部分的语言。
+全局的 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang) 属性使用在 HTML 元素去表达 [HTML](/zh-CN/docs/Web/HTML) 文档整体或者部分的语言。
 
 ```html
 <html lang="de">
@@ -96,4 +96,4 @@ Content-Language: de, en
 
 - {{HTTPHeader("Accept-Language")}}
 - [HTTP 标头、meta 元素和语言信息](https://www.w3.org/International/questions/qa-http-and-lang.en)
-- [HTML `lang` 属性](/zh-CN/docs/Web/HTML/Global_attributes/lang)
+- [HTML `lang` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang)

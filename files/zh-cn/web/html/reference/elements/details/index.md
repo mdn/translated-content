@@ -1,7 +1,6 @@
 ---
 title: <details>：详细信息展现元素
 slug: Web/HTML/Reference/Elements/details
-original_slug: Web/HTML/Element/details
 ---
 
 {{HTMLSidebar}}
@@ -54,7 +53,7 @@ details[open] summary {
 
 ## 属性
 
-此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `open`
 
@@ -230,12 +229,12 @@ details > p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >、分段内容、交互内容、可感知内容
       </td>
@@ -243,7 +242,7 @@ details > p {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        一个紧跟<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        一个紧跟<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的 {{HTMLElement("summary")}} 元素
       </td>
@@ -255,7 +254,7 @@ details > p {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>

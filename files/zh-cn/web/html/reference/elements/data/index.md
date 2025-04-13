@@ -1,7 +1,6 @@
 ---
 title: <data>
 slug: Web/HTML/Reference/Elements/data
-original_slug: Web/HTML/Element/data
 ---
 
 {{HTMLSidebar}}
@@ -29,12 +28,12 @@ data:hover::after {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -42,7 +41,7 @@ data:hover::after {
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -53,7 +52,7 @@ data:hover::after {
 
 ## 属性
 
-该元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `value`
   - : 该属性指定元素内容所对应的数据，或者说“机器可读的翻译”。

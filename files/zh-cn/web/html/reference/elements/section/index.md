@@ -1,7 +1,6 @@
 ---
 title: <section>
 slug: Web/HTML/Reference/Elements/section
-original_slug: Web/HTML/Element/section
 ---
 
 {{HTMLSidebar}}
@@ -89,7 +88,7 @@ h2 {
 
 ## 属性
 
-此元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -185,6 +184,6 @@ h2 {
 ## 参见
 
 - 相关元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("h1")}}、{{HTMLElement("h2")}}、{{HTMLElement("h3")}}、{{HTMLElement("h4")}}、{{HTMLElement("h5")}}、{{HTMLElement("h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Element/Heading_Elements)
+- [Using HTML sections and outlines](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA: Region role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Region_role)
 - [Why You Should Choose HTML5 article Over section](https://www.smashingmagazine.com/2020/01/html5-article-section/),by Bruce Lawson

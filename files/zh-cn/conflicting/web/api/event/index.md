@@ -1,7 +1,6 @@
 ---
 title: SVGEvent
 slug: conflicting/Web/API/Event
-original_slug: Web/API/SVGEvent
 ---
 
 {{APIRef("SVG")}}

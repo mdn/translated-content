@@ -1,7 +1,6 @@
 ---
 title: <figure>：可附标题内容元素
 slug: Web/HTML/Reference/Elements/figure
-original_slug: Web/HTML/Element/figure
 ---
 
 {{HTMLSidebar}}
@@ -46,7 +45,7 @@ figcaption {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td>
      <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容">流式内容</a>、
      <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容">可感知内容</a>
@@ -77,7 +76,7 @@ figcaption {
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
        <td>
-         无子 <a href="/zh-CN/docs/Web/HTML/Element/figcaption">figcaption</a> 元素：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>，否则没有允许的角色
+         无子 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/figcaption">figcaption</a> 元素：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>，否则没有允许的角色
       </td>
   </tr>
   <tr>
@@ -89,7 +88,7 @@ figcaption {
 
 ## 属性
 
-此元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 

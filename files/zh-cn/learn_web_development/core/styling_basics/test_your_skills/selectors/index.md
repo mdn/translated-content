@@ -1,7 +1,6 @@
 ---
 title: 技能测试：选择器
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
-original_slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
 l10n:
   sourceCommit: 782d88782968782657abad748e20770229c6aab6
 ---

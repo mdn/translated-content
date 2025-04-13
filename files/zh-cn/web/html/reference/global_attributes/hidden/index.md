@@ -1,12 +1,11 @@
 ---
 title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
-original_slug: Web/HTML/Global_attributes/hidden
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-[全局属性](/zh-CN/docs/Web/HTML/Global_attributes) `hidden` 是一个布尔属性，表示一个元素尚未或者不再相关。例如，它可以被用来隐藏一个页面元素直到登录完毕。如果一个元素设置了这个属性，它就不会被显示。
+[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) `hidden` 是一个布尔属性，表示一个元素尚未或者不再相关。例如，它可以被用来隐藏一个页面元素直到登录完毕。如果一个元素设置了这个属性，它就不会被显示。
 
 `hidden`属性不能用于隐藏那些可以在其他板块中合理显示的内容。例如，用`hidden`属性去隐藏一个选项卡对话框种的面板是不正确的，因为选项卡界面只不过是溢出显示的一种——一个可以等量于一个只显示所有 form 表单控件的拥有滚动条的大页面。类似地，用 `hidden` 属性在某个特定板块中隐藏一部分内容也是不正确的，——如果某些内容被标记为隐藏，它将从所有版块中隐藏，包括例如屏幕阅读器。
 
@@ -31,5 +30,5 @@ original_slug: Web/HTML/Global_attributes/hidden
 
 ## 参见
 
-- 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+- 所有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 - [aria-hidden](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)属性

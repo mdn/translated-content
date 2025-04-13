@@ -1,7 +1,6 @@
 ---
 title: <meter>：HTML 标量元素
 slug: Web/HTML/Reference/Elements/meter
-original_slug: Web/HTML/Element/meter
 l10n:
   sourceCommit: 9c09b183a5ce844a75c2f22e909d03f71ca329fc
 ---
@@ -29,7 +28,7 @@ label {
 
 ## 属性
 
-此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `value`
 
@@ -38,9 +37,9 @@ label {
     > [!NOTE]
     > 除非 `value` 属性介于 `0` 和 `1` 之间（包括 0 和 1），否则 `min` 和 `max` 属性应定义范围，以便 `value` 属性的值在该范围内。
 
-- [`min`](/zh-CN/docs/Web/HTML/Attributes/min)
+- [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min)
   - : 测量范围的下限。如果指定，该值必须小于最大值（`max` 属性）。如果未指定，则最小值为 `0`。
-- [`max`](/zh-CN/docs/Web/HTML/Attributes/max)
+- [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max)
   - : 测量范围的上限。如果指定，该值必须大于最小值（`min` 属性）。如果未指定，则最大值为 `1`。
 - `low`
   - : 测量范围低档部分的数值上限。该值必须大于最小值（`min` 属性），如果指定了高档值和最大值（分别为 `high` 属性和 `max` 属性），也必须小于高档值和最大值。如果未指定或小于最小值，`low` 值等于最小值。
@@ -49,7 +48,7 @@ label {
 - `optimum`
   - : 该属性表示最佳数值。必须在 `min` 属性和 `max` 属性定义的范围内。当与 `low` 属性和 `high` 属性一起使用时，它表示范围内哪个位置更合适。例如，如果值介于 `min` 属性和 `low` 属性之间，则认为首选低档范围的。浏览器可能会根据值是否小于或等于最佳值来为仪表条附着不同的颜色。
 - `form`
-  - : 此可选属性用于显式设置 `<meter>` 元素的 {{HTMLElement("form")}} 所有者。如果省略，则 `<meter>` 元素将与其 `<form>` 父元素关联，或者与另一个父元素（例如 {{HTMLElement("fieldset")}}）上的 `form` 属性所设置的表单相关联（如果有的话）。如果包含，则该值必须是同一文档树中的 `<form>` 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)。
+  - : 此可选属性用于显式设置 `<meter>` 元素的 {{HTMLElement("form")}} 所有者。如果省略，则 `<meter>` 元素将与其 `<form>` 父元素关联，或者与另一个父元素（例如 {{HTMLElement("fieldset")}}）上的 `form` 属性所设置的表单相关联（如果有的话）。如果包含，则该值必须是同一文档树中的 `<form>` 元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)。
 
 ## 示例
 
@@ -89,14 +88,14 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、可标记内容、可感知内容。
       </td>
@@ -104,7 +103,7 @@ label {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >，但它的后代元素中不能有 <code>&#x3C;meter></code> 元素。
       </td>
@@ -116,7 +115,7 @@ label {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>

@@ -1,7 +1,6 @@
 ---
 title: <kbd>
 slug: Web/HTML/Reference/Elements/kbd
-original_slug: Web/HTML/Element/kbd
 ---
 
 ## 摘要
@@ -35,7 +34,7 @@ HTML 键盘输入元素 (**\<kbd>**) 用于表示用户输入，它将产生一�
 
 ## 属性
 
-该元素仅支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+该元素仅支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 ## 示例
 

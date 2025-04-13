@@ -1,7 +1,6 @@
 ---
 title: <tr>：表格行元素
 slug: Web/HTML/Reference/Elements/tr
-original_slug: Web/HTML/Element/tr
 l10n:
   sourceCommit: fffabdeeb9a069e40a070dadeedc93298b2aca7e
 ---
@@ -80,7 +79,7 @@ caption {
 
 ## 属性
 
-此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ### 已废弃的属性
 
@@ -121,7 +120,7 @@ caption {
 
 #### HTML
 
-四个 `<tr>` 元素用于创建四个表格行。每行包含三个单元格——一个标题单元格（{{HTMLElement("th")}}）和两个数据单元格（{{HTMLElement("td")}}）——形成三列。在每个标题单元格上设置的 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性指定了它们与哪些单元格相关，在本示例中就是与 `row`（行）中的所有数据单元格相关。
+四个 `<tr>` 元素用于创建四个表格行。每行包含三个单元格——一个标题单元格（{{HTMLElement("th")}}）和两个数据单元格（{{HTMLElement("td")}}）——形成三列。在每个标题单元格上设置的 [`scope`](/zh-CN/docs/Web/HTML/Reference/Elements/th#scope) 属性指定了它们与哪些单元格相关，在本示例中就是与 `row`（行）中的所有数据单元格相关。
 
 ```html
 <table>
@@ -188,7 +187,7 @@ td {
 
 #### HTML
 
-我们添加了额外的表格行（`<tr>`）作为第一行，其中的列标题单元格（{{HTMLElement("th")}}）为每列提供了一个标题。我们将这一行放在 {{HTMLElement("thead")}} 分组元素中，以表示这是表格的表头。[`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性被添加到该页眉行中的每个表头单元格（`<th>`）中，以明确指定每个表头单元格与其所在列中的所有单元格相关，即使这些单元格位于 {{HTMLElement("tbody")}} 中。
+我们添加了额外的表格行（`<tr>`）作为第一行，其中的列标题单元格（{{HTMLElement("th")}}）为每列提供了一个标题。我们将这一行放在 {{HTMLElement("thead")}} 分组元素中，以表示这是表格的表头。[`scope`](/zh-CN/docs/Web/HTML/Reference/Elements/th#scope) 属性被添加到该页眉行中的每个表头单元格（`<th>`）中，以明确指定每个表头单元格与其所在列中的所有单元格相关，即使这些单元格位于 {{HTMLElement("tbody")}} 中。
 
 ```html
 <table>
@@ -417,7 +416,7 @@ th {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>

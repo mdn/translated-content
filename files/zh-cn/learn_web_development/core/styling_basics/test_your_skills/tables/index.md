@@ -1,7 +1,6 @@
 ---
 title: 挑战：表格
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
-original_slug: Learn_web_development/Core/Styling_basics/Tables_tasks
 ---
 
 {{LearnSidebar}}

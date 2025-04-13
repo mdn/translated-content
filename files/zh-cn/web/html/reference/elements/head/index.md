@@ -1,20 +1,19 @@
 ---
 title: <head>：文档元数据（头部）元素
 slug: Web/HTML/Reference/Elements/head
-original_slug: Web/HTML/Element/head
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<head>`** 元素包含机器可读的文档相关信息（{{glossary("metadata", "元数据")}}），如文档的[标题](/zh-CN/docs/Web/HTML/Element/title)、[脚本](/zh-CN/docs/Web/HTML/Element/script)和[样式表](/zh-CN/docs/Web/HTML/Element/style)。
+[HTML](/zh-CN/docs/Web/HTML) **`<head>`** 元素包含机器可读的文档相关信息（{{glossary("metadata", "元数据")}}），如文档的[标题](/zh-CN/docs/Web/HTML/Reference/Elements/title)、[脚本](/zh-CN/docs/Web/HTML/Reference/Elements/script)和[样式表](/zh-CN/docs/Web/HTML/Reference/Elements/style)。
 
 > **备注：** `<head>` 主要保存供机器处理的信息，而非人类可读信息。对于人类可见的信息，如顶级标题和列出的作者，请参见 {{HTMLElement("header")}} 元素。
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `profile` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 由{{Glossary("whitespace", "空白字符")}}分隔的一个或多个元数据配置文件的 {{glossary("URI")}}。
@@ -38,7 +37,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
@@ -48,7 +47,7 @@ l10n:
       <th scope="row">允许的内容</th>
       <td>
         <p>
-          如果文档是 {{HTMLElement("iframe")}} <a href="/zh-CN/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a> 文档，或者标题信息可从更高级别的协议（如 HTML 电子邮件中的主题行）中获得，则允许包含零个或多个元数据内容元素。
+          如果文档是 {{HTMLElement("iframe")}} <a href="/zh-CN/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><code>srcdoc</code></a> 文档，或者标题信息可从更高级别的协议（如 HTML 电子邮件中的主题行）中获得，则允许包含零个或多个元数据内容元素。
         </p>
         <p>
           否则，可包含一个或多个元数据内容元素，其中 {{HTMLElement("title")}} 元素恰好有一个。

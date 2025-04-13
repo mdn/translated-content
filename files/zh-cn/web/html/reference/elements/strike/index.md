@@ -1,7 +1,6 @@
 ---
 title: <strike>
 slug: Web/HTML/Reference/Elements/strike
-original_slug: Web/HTML/Element/strike
 l10n:
   sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
@@ -15,7 +14,7 @@ l10n:
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 示例
 

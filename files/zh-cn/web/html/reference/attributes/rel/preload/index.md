@@ -1,12 +1,11 @@
 ---
 title: 链接类型：preload
 slug: Web/HTML/Reference/Attributes/rel/preload
-original_slug: Web/HTML/Attributes/rel/preload
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Element/link#rel) 属性的 `preload` 值允许你在 HTML 的 {{htmlelement("head")}} 中声明获取请求，指定页面很快就需要的资源，这些资源是你希望在页面生命周期的早期就开始加载的，早于浏览器的主要渲染机制启动。这可以确保它们更早可用，并且不太可能阻塞页面的渲染，从而提高性能。尽管名称中包含“load”一词，但它并不加载和执行脚本，而只是安排脚本以更高的优先级进行下载和缓存。
+{{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性的 `preload` 值允许你在 HTML 的 {{htmlelement("head")}} 中声明获取请求，指定页面很快就需要的资源，这些资源是你希望在页面生命周期的早期就开始加载的，早于浏览器的主要渲染机制启动。这可以确保它们更早可用，并且不太可能阻塞页面的渲染，从而提高性能。尽管名称中包含“load”一词，但它并不加载和执行脚本，而只是安排脚本以更高的优先级进行下载和缓存。
 
 ## 基础知识
 
@@ -18,8 +17,8 @@ original_slug: Web/HTML/Attributes/rel/preload
 
 然而，在这里，我们将使用值为 `preload` 的 `rel` 属性，这会将 `<link>` 标签转变成任何我们想要的资源的预加载器。你还需要指定：
 
-- [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性中的资源路径。
-- [`as`](/zh-CN/docs/Web/HTML/Element/link#as) 属性中的资源类型。
+- [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/link#href) 属性中的资源路径。
+- [`as`](/zh-CN/docs/Web/HTML/Reference/Elements/link#as) 属性中的资源类型。
 
 一个简单的示例可能如下所示（查看我们的 [JS 和 CSS 示例源码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css)，以及[在线演示](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)）
 
@@ -80,7 +79,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 
 ## 包括 MIME 类型
 
-`<link>` 元素可以接受一个 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性，其中包含元素指向的资源的 MIME 类型。这在预加载资源时特别有用——浏览器将使用 `type` 属性的值来确定是否支持该资源，如果不支持，则会忽略它，仅在支持时才会下载它。
+`<link>` 元素可以接受一个 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/link#type) 属性，其中包含元素指向的资源的 MIME 类型。这在预加载资源时特别有用——浏览器将使用 `type` 属性的值来确定是否支持该资源，如果不支持，则会忽略它，仅在支持时才会下载它。
 
 你可以在我们的视频示例中看到这个示例（查看[完整的源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video)，以及[在线版本](https://mdn.github.io/html-examples/link-rel-preload/video/)），以下是其中一部分代码片段。这展示了一般情况下预加载背后的核心行为。
 
@@ -113,7 +112,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 
 ## 启用 CORS 的获取请求
 
-在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
+在预加载启用 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 的资源（例如 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 或[字体](/zh-CN/docs/Web/CSS/@font-face)）时，需要特别注意在你的 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素上设置 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性。该属性需要设置为与资源的 CORS 和凭据模式相匹配，即使获取请求不跨域也需要设置。
 
 如上所述，其中一个适用的有趣情况是字体文件。由于各种原因，这些文件必须使用匿名模式的 CORS 进行获取（参见[字体获取要求](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)）。
 
@@ -148,7 +147,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 
 ## 包括 media
 
-`<link>` 元素的一个很好的特性是它们能够接受 [`media`](/zh-CN/docs/Web/HTML/Element/link#media) 属性。这些属性可以接受[媒体类型](/zh-CN/docs/Web/CSS/@media#media_types)或完整的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，让你可以进行响应式的预加载！
+`<link>` 元素的一个很好的特性是它们能够接受 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。这些属性可以接受[媒体类型](/zh-CN/docs/Web/CSS/@media#media_types)或完整的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，让你可以进行响应式的预加载！
 
 让我们来看一个例子（在 GitHub 上查看，包括[源代码](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)和[在线示例](https://mdn.github.io/html-examples/link-rel-preload/media/)）：
 
@@ -197,7 +196,7 @@ original_slug: Web/HTML/Attributes/rel/preload
 ## 脚本和预加载
 
 > [!NOTE]
-> 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
+> 如果你正在使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，请使用 [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload)。
 
 关于这些预加载的另一个好处是，你可以使用脚本来执行它们。例如，这里我们创建一个 {{domxref("HTMLLinkElement")}} 实例，然后将其附加到 DOM 中：
 

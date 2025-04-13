@@ -1,7 +1,6 @@
 ---
 title: <dfn>
 slug: Web/HTML/Reference/Elements/dfn
-original_slug: Web/HTML/Element/dfn
 ---
 
 ## 摘要
@@ -13,7 +12,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 > - 被定义术语的值由下列规则确定：
 >
 >   1. 如果 `<dfn>` 元素有一个 **`title`** 属性，那么该术语的值就是该属性的值。
->   2. 否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 [`title`](/zh-CN/docs/Web/HTML/Element/abbr#title) 属性，那么该术语的值就是该属性的值。
+>   2. 否则，如果它仅包含一个 {{HTMLElement("abbr")}} 元素，该元素拥有 [`title`](/zh-CN/docs/Web/HTML/Reference/Elements/abbr#title) 属性，那么该术语的值就是该属性的值。
 >   3. 否则，`<dfn>` 元素的文本内容就是该术语的值。
 
 <table class="properties">
@@ -43,7 +42,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ## 属性
 
-该元素包括 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包括 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 在 HTML5 中，**`title`** 属性拥有特殊含义，见上文。
 

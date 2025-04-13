@@ -1,7 +1,6 @@
 ---
 title: <table>：表格元素
 slug: Web/HTML/Reference/Elements/table
-original_slug: Web/HTML/Element/table
 ---
 
 {{HTMLSidebar}}
@@ -100,12 +99,12 @@ tfoot td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >
       </td>
@@ -162,7 +161,7 @@ tfoot td {
 
 ## 属性
 
-此元素包含所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ### 弃用的属性
 
@@ -354,7 +353,7 @@ td {
 
 #### 对表格的行进行排序
 
-没有原生的方法对 HTML 表格的行（[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)元素）进行排序。但是通过使用 [`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)、[`Node. removeChild()`](/zh-CN/docs/Web/API/Node/removeChild) 和 [`Node.appendChild()`](/zh-CN/docs/Web/API/Node/appendChild)，你可以实现你自己的 `sort()` 函数来对 `<tr>` 元素的[`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection) 进行排序。
+没有原生的方法对 HTML 表格的行（[`<tr>`](/zh-CN/docs/Web/HTML/Reference/Elements/tr)元素）进行排序。但是通过使用 [`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)、[`Node. removeChild()`](/zh-CN/docs/Web/API/Node/removeChild) 和 [`Node.appendChild()`](/zh-CN/docs/Web/API/Node/appendChild)，你可以实现你自己的 `sort()` 函数来对 `<tr>` 元素的[`HTMLCollection`](/zh-CN/docs/Web/API/HTMLCollection) 进行排序。
 
 在下面的示例中，你可以看到具体如何这样做。我们把这个自定义方法附加到 \<tbody> 元素上，这样它就会按照数值增加的顺序对表格单元格进行排序，并更新显示内容以适应需要。
 
@@ -700,7 +699,7 @@ tr:last-child td {
 
 ### 确定行和列的范围
 
-头部元素的 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性在简单情况下是多余的，因为范围是推断出来的。然而，一些辅助技术可能无法做出正确的推断，所以指定头的范围可能会改善用户体验。在复杂的表格中，可以指定范围以提供与标题相关的单元格的必要信息。
+头部元素的 [`scope`](/zh-CN/docs/Web/HTML/Reference/Elements/th#scope) 属性在简单情况下是多余的，因为范围是推断出来的。然而，一些辅助技术可能无法做出正确的推断，所以指定头的范围可能会改善用户体验。在复杂的表格中，可以指定范围以提供与标题相关的单元格的必要信息。
 
 #### 示例
 
@@ -741,11 +740,11 @@ tr:last-child td {
 
 ### 复杂表格
 
-诸如屏幕阅读器等辅助技术可能难以解析那些复杂到标题单元不能以严格的水平或垂直方式关联的表格。这通常由 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 和 [`rowspan`](/zh-CN/docs/Web/HTML/Element/td#rowspan) 属性的存在表示。
+诸如屏幕阅读器等辅助技术可能难以解析那些复杂到标题单元不能以严格的水平或垂直方式关联的表格。这通常由 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 和 [`rowspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#rowspan) 属性的存在表示。
 
 理想情况下，考虑用其他方式来展示表格的内容，包括将其分解成一系列较小的、相关的表格，而不必依赖 `colspan` 和 `rowspan` 属性。除了帮助使用辅助技术的人理解表的内容外，这也可能有利于有认知障碍的人，这些人可能难以理解表的布局所描述的关联。
 
-如果表格不能被拆开，使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 和 [`headers`](/zh-CN/docs/Web/HTML/Element/td#headers) 属性的组合，以编程方式将每个表格单元与该单元所关联的标题相关联。
+如果表格不能被拆开，使用 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 和 [`headers`](/zh-CN/docs/Web/HTML/Reference/Elements/td#headers) 属性的组合，以编程方式将每个表格单元与该单元所关联的标题相关联。
 
 - [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#对于视力受损的用户的表格)
 - [有多级头部的表格 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)

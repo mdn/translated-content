@@ -1,7 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Reference/Elements/main
-original_slug: Web/HTML/Element/main
 ---
 
 {{HTMLSidebar}}
@@ -34,15 +33,15 @@ header {
 }
 ```
 
-- _[内容](/zh-CN/docs/Web/HTML/Content_categories)类别_[Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content), palpable content.
-- _允许内容_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content).
+- _[内容](/zh-CN/docs/Web/HTML/Guides/Content_categories)类别_[Flow content](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content), palpable content.
+- _允许内容_ [Flow content](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content).
 - *标签省略*无; 开始与结束都是强制性。
 - *被允许的父级元素*任何支持流内容但可能不是继承元素的 元素{{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("footer")}}, {{HTMLElement("header")}}, 或{{HTMLElement("nav")}}
 - _DOM 接口_ {{domxref("HTMLElement")}}
 
 ## 属性
 
-此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用说明
 
@@ -89,7 +88,7 @@ header {
 
 直达内容（skipnav），是一种辅助功能技术，使其用户可以快速跳过大段的重复内容（如主导航栏、信息横幅等）。这允许用户更快地访问到页面的主要内容。
 
-向 `<main>` 元素添加 [`id` 属性](/zh-CN/docs/Web/HTML/Global_attributes/id)后，该元素可成为直达内容链接的目标。
+向 `<main>` 元素添加 [`id` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)后，该元素可成为直达内容链接的目标。
 
 ```plain
 <body>
@@ -107,7 +106,7 @@ header {
 
 ### 阅读器模式
 
-浏览器的阅读器模式会寻找文档中的`main` 元素，以及 [标题元素](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 和 [内容分区元素](/zh-CN/docs/Web/HTML/Element#content_sectioning) 以便将内容转换至阅读器视图。
+浏览器的阅读器模式会寻找文档中的`main` 元素，以及 [标题元素](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 和 [内容分区元素](/zh-CN/docs/Web/HTML/Reference/Elements#content_sectioning) 以便将内容转换至阅读器视图。
 
 - [为 Safari 阅读器模式以及其他阅读器应用构建网站](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 

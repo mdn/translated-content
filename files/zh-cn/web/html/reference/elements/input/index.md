@@ -1,7 +1,6 @@
 ---
 title: <input>：输入（表单输入）元素
 slug: Web/HTML/Reference/Elements/input
-original_slug: Web/HTML/Element/input
 ---
 
 {{HTMLSidebar}}
@@ -287,7 +286,7 @@ label {
 
 下面的表格列出了所有属性，每个属性都有简短的描述。表格后的列表更详细地描述了各个属性及它们与哪些 input 类型相关。与大部分或者全部 input 类型都相关的属性会讲述更多细节。一些针对特定 input 类型的属性，或者所有 input 类型都有，但在特定的 input 类型上有特定表现的属性，会在相应的类型页面中说明。这个元素包含全局属性，一些针对 `<input>` 元素有额外意义的全局属性也会特别说明。
 
-`<input>` 元素包含的属性包含[全局的 HTML 属性](/zh-CN/docs/Web/HTML/Global_attributes)和以下这些额外属性：
+`<input>` 元素包含的属性包含[全局的 HTML 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)和以下这些额外属性：
 
 | 属性                                | 类型                                                                 | 描述                                                                       |
 | ----------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -335,13 +334,13 @@ label {
 
   - : 仅对 `image` 类型有效。`alt` 属性提供了图片的替代文字，在图片的 [`src`](#src) 属性缺失或对应资源加载失败时，会显示该属性的值。参见 {{HTMLElement("input/image", "image")}} 输入类型以了解更多信息。
 
-- [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete)
+- [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)
 
-  - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性将一个空格分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。请参阅 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete#值) 以了解允许的值。
+  - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性将一个空格分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。请参阅 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete#值) 以了解允许的值。
 
     `autocomplete` 属性对 `hidden`、`text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`、`color` 和 `password` 类型的输入有效。该属性对于那些不返回数值或文本数据的输入控件没有效果，对除了 `checkbox`、`radio`、`file` 和任何按钮类型的所有输入类型均有效。
 
-    查看 [HTML autocomplete 属性](/zh-CN/docs/Web/HTML/Attributes/autocomplete)以了解额外信息，包括密码安全和对于 `hidden` 来说，`autocomplete` 的方式与其他输入类型略有不同。
+    查看 [HTML autocomplete 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)以了解额外信息，包括密码安全和对于 `hidden` 来说，`autocomplete` 的方式与其他输入类型略有不同。
 
 - `autofocus`
 
@@ -431,13 +430,13 @@ label {
 
     根据规范，`hidden`、`password`、`checkbox`、`radio`、`file` 或任何按钮类型不支持 `list` 属性。
 
-    根据浏览器的不同，用户可能会看到一个建议的自定义调色板、沿着一个范围的跳动标记、甚至是一个像选择一样打开但允许非列表值的输入。查看[浏览器兼容性表](/zh-CN/docs/Web/HTML/Element/datalist#浏览器兼容性)，了解其他输入类型。
+    根据浏览器的不同，用户可能会看到一个建议的自定义调色板、沿着一个范围的跳动标记、甚至是一个像选择一样打开但允许非列表值的输入。查看[浏览器兼容性表](/zh-CN/docs/Web/HTML/Reference/Elements/datalist#浏览器兼容性)，了解其他输入类型。
 
     参见 {{htmlelement('datalist')}} 元素。
 
 - `max`
 
-  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最大值。如果输入到元素中的 [`value`](#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最大值。如果输入到元素中的 [`value`](#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
     有一种特殊情况：如果数据类型是周期性的（如日期或时间），`max` 的值可能低于 `min` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
@@ -445,11 +444,11 @@ label {
 
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效的值，则该字段将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-    如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
+    如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `min`
 
-  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 指定的值不是数字，则输入没有最小值。
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `min` 指定的值不是数字，则输入没有最小值。
 
     该值必须小于或等于 `max` 属性的值。如果 `min` 属性存在但没有指定或无效，则不应用 `min` 值。如果 `min` 属性有效，并且非空值小于 `min` 属性所允许的最小值，约束验证将阻止表单提交。参见[客户端验证](#客户端验证)一节以获取更多信息。
 
@@ -459,7 +458,7 @@ label {
 
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则该字段将没有最小值。
 
-    如果输入字段的文本长度小于 `minlength` UTF-16 代码单元的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
+    如果输入字段的文本长度小于 `minlength` UTF-16 代码单元的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `multiple`
 
@@ -499,7 +498,7 @@ label {
 
 - `pattern`
 
-  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
     如果 `pattern` 属性存在，但是未指定模式或无效，则不应用任何正则表达式，并且将完全忽略此属性。如果模式属性是有效的，并且该非空值与模式不匹配，约束验证将阻止表单提交。
 
@@ -517,13 +516,13 @@ label {
 
   - : 一个布尔属性，如果存在，则表示该字段不能由用户编辑。`readonly` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `password` 输入类型。
 
-    参见 [HTML 属性：`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly) 以了解更多信息。
+    参见 [HTML 属性：`readonly`](/zh-CN/docs/Web/HTML/Reference/Attributes/readonly) 以了解更多信息。
 
 - `required`
 
   - : `required` 是一个布尔属性，如果存在，则表示用户必须在提交表单之前指定一个非空值。`required` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`password`、`checkbox`、`radio` 和 `file` 输入类型。
 
-    参见[客户端验证](#客户端验证)和 [HTML 属性：`required`](/zh-CN/docs/Web/HTML/Attributes/required)以了解更多信息。
+    参见[客户端验证](#客户端验证)和 [HTML 属性：`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)以了解更多信息。
 
 - `size`
 
@@ -535,12 +534,12 @@ label {
 
 - `step`
 
-  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效。[`step`](/zh-CN/docs/Web/HTML/Attributes/step) 属性指定了值必须满足的粒度。
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效。[`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step) 属性指定了值必须满足的粒度。
 
     如果没有明确包含它：
 
     - `step` 对于类型为 `number` 和 `range` 的默认值为 1。
-    - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Element/input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Element/input/week#step)。
+    - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Reference/Elements/input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Reference/Elements/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week#step)。
 
     值必须为一个正数（整数或小数）或特殊值 `any`（意味着不指定任何步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外））。
 
@@ -602,7 +601,7 @@ label {
       <td><code>mozactionhint</code></td>
       <td>
         <p>当用户在编辑字段时按下键盘的 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键时，所需要进行的动作的字符串表示，这用于决定虚拟键盘上那个键的合适的标签。</p>
-        <p><strong>已弃用，请使用 <a href="/zh-CN/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> 替代。</strong></p>
+        <p><strong>已弃用，请使用 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> 替代。</strong></p>
       </td>
     </tr>
     <tr>
@@ -899,7 +898,7 @@ input.custom {
 
 #### 关联标签
 
-`<input>` 和 `<label>` 元素的语义配对对于屏幕阅读器等辅助技术是很有用的。通过使用 `<label>` 的 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 属性对它们进行配对，可以将标签与输入结合起来，让屏幕阅读器更精确地描述输入。
+`<input>` 和 `<label>` 元素的语义配对对于屏幕阅读器等辅助技术是很有用的。通过使用 `<label>` 的 [`for`](/zh-CN/docs/Web/HTML/Reference/Elements/label#for) 属性对它们进行配对，可以将标签与输入结合起来，让屏幕阅读器更精确地描述输入。
 
 仅仅在 `<input>` 元素旁边有纯文本是不够的。相反，可用性和无障碍性要求包含隐式或显式 {{HTMLElement("label")}}：
 
@@ -1125,15 +1124,15 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、列表元素、可提交元素、可重设元素、表单相关元素<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
+        >、列表元素、可提交元素、可重设元素、表单相关元素<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >短语内容</a
         >。如果 <code
-          ><a href="/zh-CN/docs/Web/HTML/Element/input#attr-type">type</a></code
+          ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#attr-type">type</a></code
         > 不是 <code>hidden</code> 的，则也是可标签元素、可感知内容。
       </td>
     </tr>
@@ -1150,7 +1149,7 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>
@@ -1262,7 +1261,7 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
 
 ## 参见
 
-- [表单约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [表单约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)
 - [你的第一个表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)
 - [如何构建 Web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)

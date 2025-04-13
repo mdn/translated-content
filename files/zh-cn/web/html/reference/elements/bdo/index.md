@@ -1,7 +1,6 @@
 ---
 title: <bdo>：双向文本覆盖元素
 slug: Web/HTML/Reference/Elements/bdo
-original_slug: Web/HTML/Element/bdo
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
@@ -42,7 +41,7 @@ bdo {
 
 ## 属性
 
-元素属性包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+元素属性包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `dir`
 
@@ -73,14 +72,14 @@ HTML 4 规范未指定此元素的事件。它们是在 XHTML 中添加的。这
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、可感知内容。
       </td>
@@ -88,7 +87,7 @@ HTML 4 规范未指定此元素的事件。它们是在 XHTML 中添加的。这
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
@@ -100,7 +99,7 @@ HTML 4 规范未指定此元素的事件。它们是在 XHTML 中添加的。这
     <tr>
       <th scope="row">允许的父级元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>

@@ -5,7 +5,7 @@ slug: Web/CSS/::file-selector-button
 
 {{CSSRef}}
 
-**`::file-selector-button`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 [`type="file"`](/zh-CN/docs/Web/HTML/Element/input/file) 的 {{HTMLElement("input") }} 的按钮。
+**`::file-selector-button`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 [`type="file"`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file) 的 {{HTMLElement("input") }} 的按钮。
 
 {{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
 
@@ -141,4 +141,4 @@ input[type="file"]::file-selector-button:hover {
 
 - [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
 - [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)
+- [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)

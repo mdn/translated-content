@@ -1,7 +1,6 @@
 ---
 title: HTML 属性：elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
-original_slug: Web/HTML/Attributes/elementtiming
 l10n:
   sourceCommit: b138fb464010633f2d80093211465195cd2d4a28
 ---

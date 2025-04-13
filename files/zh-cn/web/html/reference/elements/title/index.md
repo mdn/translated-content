@@ -1,7 +1,6 @@
 ---
 title: <title>
 slug: Web/HTML/Reference/Elements/title
-original_slug: Web/HTML/Element/title
 ---
 
 {{HTMLSidebar}}
@@ -15,8 +14,8 @@ original_slug: Web/HTML/Element/title
 <table class="properties">
  <tbody>
   <tr>
-   <th><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Metadata_content">元数据内容。</a></td>
+   <th><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Metadata_content">元数据内容。</a></td>
   </tr>
   <tr>
    <th>允许内容</th>
@@ -43,7 +42,7 @@ original_slug: Web/HTML/Element/title
 
 ## 属性
 
-这个元素只拥有[全局属性。](/zh-CN/docs/Web/HTML/Global_attributes)
+这个元素只拥有[全局属性。](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 
 ## 使用说明
 

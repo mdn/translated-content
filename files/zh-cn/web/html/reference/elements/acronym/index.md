@@ -1,7 +1,6 @@
 ---
 title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
-original_slug: Web/HTML/Element/acronym
 l10n:
   sourceCommit: 93cdfac022b2a46b2b1297e4d0cda4ebb0eca147
 ---
@@ -15,7 +14,7 @@ l10n:
 
 ## 属性
 
-该元素仅具有所有元素所共有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素仅具有所有元素所共有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## DOM 接口
 

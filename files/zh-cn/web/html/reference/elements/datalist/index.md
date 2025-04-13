@@ -1,7 +1,6 @@
 ---
 title: <datalist>：HTML 数据列表元素
 slug: Web/HTML/Reference/Elements/datalist
-original_slug: Web/HTML/Element/datalist
 ---
 
 {{HTMLSidebar}}
@@ -30,16 +29,16 @@ label {
 }
 ```
 
-- _[内容范畴](/zh-CN/docs/Web/HTML/Content_categories)_[流内容](/zh-CN/docs/Web/HTML/Content_categories#flow_content)，[段落内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content)。
-- *允许内容*要么 [段落内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
+- _[内容范畴](/zh-CN/docs/Web/HTML/Guides/Content_categories)_[流内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content)，[段落内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content)。
+- *允许内容*要么 [段落内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
 - _标签省略_：不允许，开始标签和结束标签都不能省略。
-- *允许父级元素*任何接受[段落内容](/zh-CN/docs/Web/HTML/Content_categories#phrasing_content)的元素。
+- *允许父级元素*任何接受[段落内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content)的元素。
 - \_Permitted ARIA roles_None
 - _DOM 接口_{{domxref("HTMLDataListElement")}}
 
 ## 属性
 
-该元素除了公用的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)之外，没有其他属性。
+该元素除了公用的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)之外，没有其他属性。
 
 ## 示例
 
@@ -70,5 +69,5 @@ label {
 
 ## 参见
 
-- {{ HTMLElement("input") }} 元素，它更特殊的 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性;
+- {{ HTMLElement("input") }} 元素，它更特殊的 [`list`](/zh-CN/docs/Web/HTML/Reference/Elements/input#list) 属性;
 - {{ HTMLElement("option") }}元素。

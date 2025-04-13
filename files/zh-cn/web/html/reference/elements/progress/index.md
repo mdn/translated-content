@@ -1,7 +1,6 @@
 ---
 title: <progress>：进度指示元素
 slug: Web/HTML/Reference/Elements/progress
-original_slug: Web/HTML/Element/progress
 ---
 
 {{HTMLSidebar}}
@@ -40,7 +39,7 @@ label {
           >流式内容</a
         >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
           >短语内容</a
-        >、可关联标签内容、<a href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容"
+        >、可关联标签内容、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
         >。
       </td>

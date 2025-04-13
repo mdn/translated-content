@@ -1,7 +1,6 @@
 ---
 title: <ol>
 slug: Web/HTML/Reference/Elements/ol
-original_slug: Web/HTML/Element/ol
 ---
 
 {{HTMLSidebar}}
@@ -64,7 +63,7 @@ li {
 
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `reversed`
   - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
@@ -83,7 +82,7 @@ li {
     - `A` 表示大写英文字母编号
     - `i` 表示小写罗马数字编号
     - `I` 表示大写罗马数字编号
-    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 [`type`](/zh-CN/docs/Web/HTML/Element/li#type) 属性。
+    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/li#type) 属性。
 
     > [!NOTE]
     > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。

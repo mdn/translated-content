@@ -1,7 +1,6 @@
 ---
 title: <tfoot>
 slug: Web/HTML/Reference/Elements/tfoot
-original_slug: Web/HTML/Element/tfoot
 ---
 
 {{HTMLSidebar}}
@@ -40,7 +39,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 ## 属性
 
-此元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+此元素包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{Deprecated_inline}}
 
@@ -50,7 +49,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
     - `center`，单元格内容居中对齐
     - `right`，单元格内容右对齐
     - `justify`，插入空白调整单元格中的文本内容（译者注：即两端对齐）
-    - `char`，将文本内容与一个具有最小偏移量的特定字符对齐，字符和偏移量分别由[`char`](/zh-CN/docs/Web/HTML/Element/tbody#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Element/tbody#charoff) 属性定义。若此值未设置，则假定为 `left`。
+    - `char`，将文本内容与一个具有最小偏移量的特定字符对齐，字符和偏移量分别由[`char`](/zh-CN/docs/Web/HTML/Reference/Elements/tbody#char) 和 [`charoff`](/zh-CN/docs/Web/HTML/Reference/Elements/tbody#charoff) 属性定义。若此值未设置，则假定为 `left`。
 
     > [!NOTE]
     > 此属性在最新标准中已被废弃（不支持），所以请勿使用。

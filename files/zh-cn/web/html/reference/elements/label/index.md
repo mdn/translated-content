@@ -1,7 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Reference/Elements/label
-original_slug: Web/HTML/Element/label
 ---
 
 {{HTMLSidebar}}
@@ -54,11 +53,11 @@ original_slug: Web/HTML/Element/label
 
 ## 属性
 
-该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `for`
 
-  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](/zh-CN/docs/Web/HTML/Content_categories#可标记的元素（labelable）) 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
+  - : 即和 `<label>` 元素在同一文档中的 [可关联标签的元素](/zh-CN/docs/Web/HTML/Guides/Content_categories#可标记的元素（labelable）) 的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id)。文档中第一个 `id` 值与 `<label>` 元素 `for` 属性值相同的元素，如果可关联标签（labelable），则为*已关联标签的控件*，其标签就是这个 `<label>` 元素。如果这个元素不可关联标签，则 `for` 属性没有效果。如果文档中还有其他元素的 `id` 值也和 `for` 属性相同，`for` 属性对这些元素也没有影响。
 
     > **备注：** `<label>` 元素可同时有一个 `for` 属性和一个子代控件元素，只是 `for` 属性需要指向这个控件元素。
 
@@ -116,9 +115,9 @@ original_slug: Web/HTML/Element/label
 
 ### 标题
 
-在一个 `<label>` 元素内部放置标题元素（[heading elements](/zh-CN/docs/Web/HTML/Element/Heading_Elements)）会干扰许多辅助技术，原因是标题通常被用于辅助导航（[a navigation aid](/zh-CN/docs/Web/HTML/Element/Heading_Elements#navigation)）。若标签内的文本需要做视觉上的调整，应该使用适用于 `<label>` 元素的 CSS 类。
+在一个 `<label>` 元素内部放置标题元素（[heading elements](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)）会干扰许多辅助技术，原因是标题通常被用于辅助导航（[a navigation aid](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements#navigation)）。若标签内的文本需要做视觉上的调整，应该使用适用于 `<label>` 元素的 CSS 类。
 
-若一个 [表单](/zh-CN/docs/Web/HTML/Element/form)，或表单中的一部分需要一个标题，应使用 {{HTMLElement("legend")}} 元素置于 {{HTMLElement("fieldset")}} 元素中。
+若一个 [表单](/zh-CN/docs/Web/HTML/Reference/Elements/form)，或表单中的一部分需要一个标题，应使用 {{HTMLElement("legend")}} 元素置于 {{HTMLElement("fieldset")}} 元素中。
 
 #### Don't
 
@@ -147,12 +146,12 @@ original_slug: Web/HTML/Element/label
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">Content categories</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Interactive_content">interactive content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Form-associated_content">form-associated element</a>, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No labelable elements other than the labeled control are allowed.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No labelable elements other than the labeled control are allowed.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -160,7 +159,7 @@ original_slug: Web/HTML/Element/label
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>

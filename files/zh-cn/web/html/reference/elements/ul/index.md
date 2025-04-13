@@ -1,7 +1,6 @@
 ---
 title: <ul>：无序列表元素
 slug: Web/HTML/Reference/Elements/ul
-original_slug: Web/HTML/Element/ul
 l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
@@ -37,7 +36,7 @@ li li {
 
 ## 属性
 
-此元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `compact` {{Deprecated_inline}}
 

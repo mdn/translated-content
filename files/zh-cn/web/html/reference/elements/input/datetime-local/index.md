@@ -1,7 +1,6 @@
 ---
 title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
-original_slug: Web/HTML/Element/input/datetime-local
 ---
 
 {{HTMLSidebar("Input_types")}}
@@ -36,7 +35,7 @@ label {
 }
 ```
 
-此控件的 UI 因浏览器而异。在不支持的浏览器中，其会优雅地降级为简单的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 控件。
+此控件的 UI 因浏览器而异。在不支持的浏览器中，其会优雅地降级为简单的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 控件。
 
 该控件旨在表示*本地日期和时间*，不一定是*用户的本地日期和时间*。换句话说，其实现应该允许年、月、日、小时、分钟的任何有效的组合——即使某些组合在用户的本地时区是无效的（例如，夏令时的转换时差）。一部分手机浏览器（特别是 iOS 上的）目前没有正确地实现这一点。
 
@@ -62,8 +61,8 @@ label {
     <tr>
       <td><strong>支持的通用属性</strong></td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
-        和 <a href="/zh-CN/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>
+        和 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -87,9 +86,9 @@ label {
 
 ## 取值
 
-一个输入到控件上的表示日期的字符串。[本地日期时间字符串](/zh-CN/docs/Web/HTML/Date_and_time_formats#本地日期时间字符串)中描述了关于此类型的输入控件使用的日期和的输入格式。
+一个输入到控件上的表示日期的字符串。[本地日期时间字符串](/zh-CN/docs/Web/HTML/Guides/Date_and_time_formats#本地日期时间字符串)中描述了关于此类型的输入控件使用的日期和的输入格式。
 
-你可以将一个包含日期和时间的值放在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中以为控件设置一个默认值，像这样：
+你可以将一个包含日期和时间的值放在 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性中以为控件设置一个默认值，像这样：
 
 ```html
 <label for="party">输入预订宴会的日期和时间：</label>
@@ -122,19 +121,19 @@ JavaScript 的 {{jsxref("Date")}} 提供了几种用于将数值类型的日期�
 
 ### max
 
-接受的最晚日期和时间的值。如果 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 的值晚于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `max` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最大值。
+接受的最晚日期和时间的值。如果 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 的值晚于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `max` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最大值。
 
 该属性指定的值必须晚于或等于 `min` 属性的值。
 
 ### min
 
-接受的最早日期和时间的值。如果早于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。如果 `min` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最小值。
+接受的最早日期和时间的值。如果早于这一时间戳，则该元素不会通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `min` 属性的值不是遵循 `YYYY-MM-DDThh:mm` 格式的有效字符串，则该元素没有最小值。
 
 该属性指定的值必须早于或等于 `max` 属性的值。
 
 ### step
 
-`step` 属性是一个数字，用于指定值调整的步长；或使用特殊值 `any`。该属性的描述如下：仅能使用基础的调整步长（若 [`min`](#min) 已指定，则从其开始；否则使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)；若两者均未提供，则为某一适当的默认值）。
+`step` 属性是一个数字，用于指定值调整的步长；或使用特殊值 `any`。该属性的描述如下：仅能使用基础的调整步长（若 [`min`](#min) 已指定，则从其开始；否则使用 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value)；若两者均未提供，则为某一适当的默认值）。
 
 字符串值 `any` 表示没有步长约束，任何的值均可使用（除了其他的约束，如：[`min`](#min) 和 [`max`](#max)）。
 
@@ -166,7 +165,7 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 
 ### 设定日期时间的最大值和最小值
 
-你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性来限制用户可选择的日期/时间。在下面的例子中我们设定最小的日期时间 `2017-06-01T08:30` 和最大的日期时间 `2017-06-30T16:30`：
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性来限制用户可选择的日期/时间。在下面的例子中我们设定最小的日期时间 `2017-06-01T08:30` 和最大的日期时间 `2017-06-30T16:30`：
 
 ```html
 <form>
@@ -188,17 +187,17 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 - 视你所使用的浏览器，你或许会发现时间选择控件中特定值以外的时间可能不可选（如 Edge），或是无效（参见[校验](#校验)）但仍可选（如 Chrome）
 
 > [!NOTE]
-> 你可以使用 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性设置不同值来控制日期每次增减的天数（例如，或许你希望只有星期六可选）。但是，截止到本文档编写之时，好像还没有浏览器实现此功能。
+> 你可以使用 [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性设置不同值来控制日期每次增减的天数（例如，或许你希望只有星期六可选）。但是，截止到本文档编写之时，好像还没有浏览器实现此功能。
 
 ### 控制输入框大小
 
-`<input type="datetime-local">` 并不支持如 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 这样的表单大小属性。你可使用 [CSS](/zh-CN/docs/Web/CSS) 来控制大小。
+`<input type="datetime-local">` 并不支持如 [`size`](/zh-CN/docs/Web/HTML/Reference/Elements/input#size) 这样的表单大小属性。你可使用 [CSS](/zh-CN/docs/Web/CSS) 来控制大小。
 
 ### 设置时区
 
-`datetime-local` 控件并没有地方可以设置日期/时间的时区和/或区域属性。在 [`datetime`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 输入类型上提供过此功能，但这个类型现在已被废弃，也已从标准中移除。这项被移除的主要原因是缺少浏览器的支持，以及出于用户交互/用户体验方法的考量。相比之下，仅使用一个（或多个）控件来设置日期/时间，然后单独在另一控件处理时区，这样更容易一些。
+`datetime-local` 控件并没有地方可以设置日期/时间的时区和/或区域属性。在 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local) 输入类型上提供过此功能，但这个类型现在已被废弃，也已从标准中移除。这项被移除的主要原因是缺少浏览器的支持，以及出于用户交互/用户体验方法的考量。相比之下，仅使用一个（或多个）控件来设置日期/时间，然后单独在另一控件处理时区，这样更容易一些。
 
-例如，如果你在开发一套系统，某位用户可能已经登录进来，并且已经设置了时区，你可以把时区放在一个 [`hidden`](/zh-CN/docs/Web/HTML/Element/input/hidden) 输入控件里。例如：
+例如，如果你在开发一套系统，某位用户可能已经登录进来，并且已经设置了时区，你可以把时区放在一个 [`hidden`](/zh-CN/docs/Web/HTML/Reference/Elements/input/hidden) 输入控件里。例如：
 
 ```html
 <input type="hidden" id="timezone" name="timezone" value="-08:00" />
@@ -222,7 +221,7 @@ Date/time 输入控件乍看非常实用；它们提供了方便的用户接口�
 
 默认情况下 `<input type="datetime-local">` 不对输入内容进行验证。用户交互（UI）的实现通常不允许你输入不是日期/时间的值——这非常有用。但用户也仍会在不填写任何值的情况下提交数据，或者输入一个不无效的日期/时间（如：4 月 32 日）。
 
-你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 及 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 来限制可选择的日期（参见[设定日期时间的最大值和最小值](#设定日期时间的最大值和最小值)），并且使用 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性使日期/时间为强制的输入项。这样做的结果是，可以使相应的浏览器在你输入一个超出范围的日期或不输入时显示一个错误信息。
+你可以使用 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 及 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 来限制可选择的日期（参见[设定日期时间的最大值和最小值](#设定日期时间的最大值和最小值)），并且使用 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性使日期/时间为强制的输入项。这样做的结果是，可以使相应的浏览器在你输入一个超出范围的日期或不输入时显示一个错误信息。
 
 让我们来看个例子，这里我们设置日期/时间的最小值和最大值，并且设置该项为必填：
 
@@ -295,7 +294,7 @@ input:valid + span:after {
 - `MM-DD-YYYY HH:mm`（24 小时制）
 - 等等
 
-一个变通的方法是放一个 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性在 `datetime-local` 输入元素里。虽然 `datetime-local` 输入控件本身不使用这个属性，但降级显示的文本输入框将会用到。例如，在不支持的浏览器上试一下这个例子：
+一个变通的方法是放一个 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性在 `datetime-local` 输入元素里。虽然 `datetime-local` 输入控件本身不使用这个属性，但降级显示的文本输入框将会用到。例如，在不支持的浏览器上试一下这个例子：
 
 ```html
 <form>
@@ -642,5 +641,5 @@ daySelect.onchange = () => {
 ## 参见
 
 - 通用 {{HTMLElement("input")}} 元素以及操作它的接口 {{domxref("HTMLInputElement")}}
-- [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date) 和 [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time)
+- [`<input type="date">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/date) 和 [`<input type="time">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time)
 - [日期和时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#date_and_time_picker)

@@ -1,7 +1,6 @@
 ---
 title: <summary>：摘要展现元素
 slug: Web/HTML/Reference/Elements/summary
-original_slug: Web/HTML/Element/summary
 ---
 
 {{HTMLSidebar}}
@@ -45,7 +44,7 @@ details[open] summary {
 
 ## 属性
 
-本元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
+本元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意
 
@@ -140,9 +139,9 @@ details[open] summary {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >，或<a href="/zh-CN/docs/Web/HTML/Content_categories#标题内容"
+        >，或<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#标题内容"
           >标题内容</a
         >元素之一
       </td>

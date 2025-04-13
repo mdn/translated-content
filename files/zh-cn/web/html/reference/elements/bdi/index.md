@@ -1,7 +1,6 @@
 ---
 title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
-original_slug: Web/HTML/Element/bdi
 ---
 
 {{HTMLSidebar}}
@@ -65,7 +64,7 @@ bdi {
 
 ## 属性
 
-如同其他 HTML 元素一样，它包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)，但是有一些语义上的细微差别：**dir**属性不继承父元素。如果没有设置，默认值即为 auto，以便浏览器根据元素内容决定元素内容的方向。
+如同其他 HTML 元素一样，它包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)，但是有一些语义上的细微差别：**dir**属性不继承父元素。如果没有设置，默认值即为 auto，以便浏览器根据元素内容决定元素内容的方向。
 
 ## 示例
 
