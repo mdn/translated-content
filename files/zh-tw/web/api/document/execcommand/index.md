@@ -5,7 +5,7 @@ slug: Web/API/Document/execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-當 HTML 文件（document）被切換到 [`designMode`](/zh-TW/docs/Web/API/Document/designMode) 時，它的 `document` 物件就會對外暴露 **`execCommand`** 方法作為操控目前可編輯區域的指令，譬如 [form inputs](/zh-TW/docs/Web/HTML/Element/input) 或 [`contentEditable`](/zh-TW/docs/Web/HTML/Global_attributes/contenteditable) 元素。
+當 HTML 文件（document）被切換到 [`designMode`](/zh-TW/docs/Web/API/Document/designMode) 時，它的 `document` 物件就會對外暴露 **`execCommand`** 方法作為操控目前可編輯區域的指令，譬如 [form inputs](/zh-TW/docs/Web/HTML/Reference/Elements/input) 或 [`contentEditable`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/contenteditable) 元素。
 
 多數的指令會作用在文件的[選取](/zh-TW/docs/Web/API/Selection) （粗體、斜體等），而其他則像是插入新的元素（新增一個連結）或是影響一整列的文字（縮排）。當使用 `contentEditable` 時， `execCommand()` 會作用在目前活躍的可編輯元素上。
 
@@ -50,7 +50,7 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `decreaseFontSize`
   - : 在選取區域或插入點的前後加入一個 {{HTMLElement("small")}} 標籤（ Internet Explorer 不支援）
 - `defaultParagraphSeparator`
-  - : 變更可編輯文字區域於新增段落時的段落分隔器。更多細節請查閱 [產生 markup 的區別](/zh-TW/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation)。
+  - : 變更可編輯文字區域於新增段落時的段落分隔器。更多細節請查閱 [產生 markup 的區別](/zh-TW/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation)。
 - `delete`
   - : 刪除目前選取的區域。
 - `enableAbsolutePositionEditor`
@@ -86,11 +86,11 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `insertImage`
   - : 在插入點插入一個圖片（會刪除選取內容）。需要一個 URL 字串作為圖片的 `src` 引數值。這個需求跟 `createLink` 的字串是一樣的。
 - `insertOrderedList`
-  - : 在選取區域或插入點建立一個[有序的清單](/zh-TW/docs/Web/HTML/Element/ol)。
+  - : 在選取區域或插入點建立一個[有序的清單](/zh-TW/docs/Web/HTML/Reference/Elements/ol)。
 - `insertUnorderedList`
-  - : 在選取區域或插入點建立一個[無序的清單](/zh-TW/docs/Web/HTML/Element/ul)。
+  - : 在選取區域或插入點建立一個[無序的清單](/zh-TW/docs/Web/HTML/Reference/Elements/ul)。
 - `insertParagraph`
-  - : 在選取區域或目前列的前後插入[段落](/zh-TW/docs/Web/HTML/Element/p)（Internet Explorer 會在插入點插入段落並刪除選取的內容）。
+  - : 在選取區域或目前列的前後插入[段落](/zh-TW/docs/Web/HTML/Reference/Elements/p)（Internet Explorer 會在插入點插入段落並刪除選取的內容）。
 - `insertText`
   - : 在插入點處插入給予的純文字（選取內容將被刪除）。
 - `italic`
@@ -116,15 +116,15 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `strikeThrough`
   - : 切換選取區域或插入點的刪除線開關。
 - `subscript`
-  - : 切換選取區域或插入點的 [subscript](/zh-TW/docs/Web/HTML/Element/sub) 開關。
+  - : 切換選取區域或插入點的 [subscript](/zh-TW/docs/Web/HTML/Reference/Elements/sub) 開關。
 - `superscript`
-  - : 切換選取區域或插入點的 [superscript](/zh-TW/docs/Web/HTML/Element/sup) 開關。
+  - : 切換選取區域或插入點的 [superscript](/zh-TW/docs/Web/HTML/Reference/Elements/sup) 開關。
 - `underline`
-  - : 切換選取區域或插入點的[底線](/zh-TW/docs/Web/HTML/Element/u)開關。
+  - : 切換選取區域或插入點的[底線](/zh-TW/docs/Web/HTML/Reference/Elements/u)開關。
 - `undo`
   - : 取消上一個執行的指令。
 - `unlink`
-  - : 從選取的超連結刪除[錨點元素](/zh-TW/docs/Web/HTML/Element/a)。
+  - : 從選取的超連結刪除[錨點元素](/zh-TW/docs/Web/HTML/Reference/Elements/a)。
 - `useCSS` {{Deprecated_inline}}
   - : 針對產生的 markup 使用 HTML 標籤或 CSS。此指令需要一個布林值 true/false 作為引數值。注意：這個引述在邏輯上是反向的（舉例：使用 `false` 會使用 CSS ，反之使用 `true` 則使用 HTML 且 Internet Explorer 不支援。這個指令已經被棄用並由 `styleWithCSS` 取而代之。
 - `styleWithCSS`

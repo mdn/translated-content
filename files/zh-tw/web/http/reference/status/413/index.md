@@ -21,7 +21,7 @@ HTTP **`413 Content Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Re
 
 ### 超過檔案上傳限制
 
-以下範例展示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Element/input/file) 元素包含影像檔案並透過 `method="post"` 送出表單時，用戶端可能發送的請求：
+以下範例展示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/file) 元素包含影像檔案並透過 `method="post"` 送出表單時，用戶端可能發送的請求：
 
 ```http
 POST /upload HTTP/1.1

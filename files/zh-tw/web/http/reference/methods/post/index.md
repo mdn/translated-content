@@ -11,7 +11,7 @@ l10n:
 
 {{HTTPMethod("PUT")}} 和 `POST` 之間的區別在於 `PUT` 是幂等的：調用一次或多次連續調用具有相同效果（即沒有*副*作用），而連續相同的 `POST` 可能會產生額外的效果，例如多次提交訂單。
 
-`POST` 請求通常通過 [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)發送，並導致服務器上的更改。在這種情況下，通過將適當的字串放入 {{HTMLElement("form")}} 元素的 [`enctype`](/zh-TW/docs/Web/HTML/Element/form#enctype) 屬性或 {{HTMLElement("input") }} 或 {{HTMLElement("button")}} 元素的 [`formenctype`](/zh-TW/docs/Web/HTML/Element/input#formenctype) 屬性來選擇內容類型：
+`POST` 請求通常通過 [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)發送，並導致服務器上的更改。在這種情況下，通過將適當的字串放入 {{HTMLElement("form")}} 元素的 [`enctype`](/zh-TW/docs/Web/HTML/Reference/Elements/form#enctype) 屬性或 {{HTMLElement("input") }} 或 {{HTMLElement("button")}} 元素的 [`formenctype`](/zh-TW/docs/Web/HTML/Reference/Elements/input#formenctype) 屬性來選擇內容類型：
 
 - `application/x-www-form-urlencoded`：鍵和值以 `'&'` 分隔的鍵值元組形式進行編碼，鍵和值之間有 `'='`。鍵和值中的非字母數字符號均已 [URL 編碼](https://en.wikipedia.org/wiki/URL_encoding)：這就是為什麼此類型不適用於二進制數據（請改用 `multipart/form-data`）。
 - `multipart/form-data`：每個值都作為一個數據塊（"主體部分"）發送，由用戶代理定義的分隔符（"邊界"）分隔每個部分。鍵在每個部分的 `Content-Disposition` 標頭中給出。
