@@ -41,7 +41,7 @@ Content-Security-Policy: fenced-frame-src <source> <source>;
 ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
 
 - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source) の値 `"https:"`
-- [`<scheme-source>`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source) の値 `"https:"`
+- [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source) の値 `"https:"`
 - 文字列 `"*"`
 
 ## 例
