@@ -619,7 +619,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## 要約
 
