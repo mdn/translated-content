@@ -1,9 +1,8 @@
 ---
 title: "CSP: upgrade-insecure-requests"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests
-original_slug: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

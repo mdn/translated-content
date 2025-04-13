@@ -1,18 +1,16 @@
 ---
 title: "CSP: object-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/object-src
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディレクティブは、 {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の妥当なソースを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディレクティブは、 {{HTMLElement("object")}} や {{HTMLElement("embed")}} 要素の有効なソースを指定します。
 
-{{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素の許可される種類を設定するには、 {{CSP("plugin-types")}} ディレクティブを使用してください。
-
-> **メモ:** `object-src` で制御される要素は、おそらく偶然にも古い HTML 要素と見なされており、新しい標準機能が搭載されていません（`<iframe>` の `sandbox` や `allow` などのセキュリティ属性など）。したがって、このフェッチディレクティブで制限することを[推奨します](https://csp.withgoogle.com/docs/strict-csp.html) （例えば、可能であれば明示的に `object-src 'none'` を設定するなど）。
+> [!NOTE]
+> `object-src` で制御される要素は、おそらく偶然にも古い HTML 要素と見なされており、新しい標準機能が搭載されていません（`<iframe>` の `sandbox` や `allow` などのセキュリティ属性など）。したがって、このフェッチディレクティブで制限することを[推奨します](https://csp.withgoogle.com/docs/strict-csp.html) （例えば、可能であれば明示的に `object-src 'none'` を設定するなど）。
 
 <table class="properties">
   <tbody>
@@ -35,18 +33,22 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディ�
 
 ## 構文
 
-`object-src` ポリシーには、 1 つまたは複数のソースが許可されています。
-
 ```http
-Content-Security-Policy: object-src <source>;
-Content-Security-Policy: object-src <source> <source>;
+Content-Security-Policy: object-src 'none';
+Content-Security-Policy: object-src <source-expression-list>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 
@@ -58,12 +60,11 @@ Content-Security-Policy: object-src <source> <source>;
 Content-Security-Policy: object-src https://example.com/
 ```
 
-以下の {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}} の各要素はブロックされ、読み込まれません。
+以下の {{HTMLElement("object")}} や {{HTMLElement("embed")}} 要素はブロックされ、読み込まれません。
 
 ```html
 <embed src="https://not-example.com/flash"></embed>
 <object data="https://not-example.com/plugin"></object>
-<applet archive="https://not-example.com/java"></applet>
 ```
 
 ## 仕様書
@@ -77,5 +78,4 @@ Content-Security-Policy: object-src https://example.com/
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("object")}}, {{HTMLElement("embed")}}, {{HTMLElement("applet")}}
-- {{CSP("plugin-types")}}
+- {{HTMLElement("object")}} および {{HTMLElement("embed")}}
