@@ -515,7 +515,7 @@ readableStream
 
 > **メモ:** {{domxref("FetchEvent.respondWith()")}} を使用してストリームを消費するためには、キューに入ったストリームコンテンツは {{jsxref("Uint8Array")}} 型でなければなりません。例えば、 {{domxref("TextEncoder")}} を使用してエンコードされます。
 
-カスタムストリームのコンストラクターには、{{domxref("setInterval()")}} 呼び出しを使用して 1 秒ごとにランダムな文字列を生成する `start()` メソッドがあります。 次に、{{domxref("ReadableStreamDefaultController.enqueue()")}} を使用してストリームに入れます。 ボタンが押されると、インターバルがキャンセルされ、 `readStream()` と呼ばれる関数が呼び出されて、データをストリームから再度読み取ります。 また、チャンクをストリームのキューへ入れることを止めたため、ストリームを閉じます。
+カスタムストリームのコンストラクターには、{{domxref("Window.setInterval", "setInterval()")}} 呼び出しを使用して 1 秒ごとにランダムな文字列を生成する `start()` メソッドがあります。 次に、{{domxref("ReadableStreamDefaultController.enqueue()")}} を使用してストリームに入れます。 ボタンが押されると、インターバルがキャンセルされ、 `readStream()` と呼ばれる関数が呼び出されて、データをストリームから再度読み取ります。 また、チャンクをストリームのキューへ入れることを止めたため、ストリームを閉じます。
 
 ```js
 let interval;
