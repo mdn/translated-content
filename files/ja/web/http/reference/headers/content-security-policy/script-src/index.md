@@ -167,9 +167,9 @@ Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDL
 - {{jsxref("Function", "Function()")}}
 - メソッドの文字列リテラルを `setTimeout("alert(\"Hello World!\");", 500);` のように渡した場合
 
-  - {{domxref("setTimeout()")}}
-  - {{domxref("setInterval()")}}
-  - {{domxref("window.setImmediate")}}
+  - {{domxref("Window.setTimeout", "setTimeout()")}}
+  - {{domxref("Window.setInterval", "setInterval()")}}
+  - {{domxref("Window.setImmediate", "setImmediate()")}}
 
 - `window.execScript()` {{non-standard_inline}} (IE < 11 のみ)
 

@@ -66,7 +66,7 @@ drawLives();
 
 ## requestAnimationFrame()で描画を改善する
 
-ではゲーム機構に直結しない部分、描画に関わる部分にとりかかりましょう。 {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} は今は {{domxref("setInterval()")}} で実装している固定フレームレートよりもより良くブラウザーがゲームを描画できるようにします。
+ではゲーム機構に直結しない部分、描画に関わる部分にとりかかりましょう。 {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} は今は {{domxref("Window.setInterval", "setInterval()")}} で実装している固定フレームレートよりもより良くブラウザーがゲームを描画できるようにします。
 
 ```js
 const interval = setInterval(draw, 10);
