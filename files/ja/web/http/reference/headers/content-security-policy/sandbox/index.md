@@ -65,8 +65,7 @@ Content-Security-Policy: sandbox <value>;
 - `allow-top-navigation-to-custom-protocols`
   - : ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` または `allow-top-navigation` キーワードでも有効になる。
 
-> [!NOTE]
-> `allow-top-navigation` および関連する値は、埋め込み文書（子 iframe など）に対してのみ意味を持ちます。 独立した文書の場合、最上位の閲覧コンテキストは文書自体であるため、これらの値が示す効果はありません。
+> **メモ:** `allow-top-navigation` および関連する値は、埋め込み文書（子 iframe など）に対してのみ意味を持ちます。 独立した文書の場合、最上位の閲覧コンテキストは文書自体であるため、これらの値が示す効果はありません。
 
 ## 例
 
