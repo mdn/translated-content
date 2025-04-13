@@ -1,14 +1,9 @@
 ---
 title: 参考文献
 slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
-original_slug: Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
 l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
-
-[« XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
 ## 印刷物
 
@@ -51,13 +46,13 @@ l10n:
 
 ### ウェブサイト
 
-- **World Wide Web Consortium**
+- **World Wide Web Consortium** （すべて英語）
 
   - **W3C ホームページ**: <https://www.w3.org>
   - **メインの XSL ページ**: <https://www.w3.org/Style/XSL/>
-  - **XSLT specifications overview**: <https://www.w3.org/TR/xslt/>
-  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
-  - **XPath specifications overview**: <https://www.w3.org/TR/xpath/>
+  - **XSLT 仕様書の概要**: <https://www.w3.org/TR/xslt/>
+  - **公式なスタイル (CSS および XSLT) の議論のアーカイブ**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
+  - **XPath 仕様書の概要**: <https://www.w3.org/TR/xpath/>
 
     - World Wide Web Consortium は、多くがデファクトスタンダードとなる多くのウェブベースの技術のための勧告を公表する機関です。
 

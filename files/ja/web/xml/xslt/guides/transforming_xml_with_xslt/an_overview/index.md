@@ -1,16 +1,11 @@
 ---
 title: 概要
 slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
-original_slug: Web/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
 l10n:
-  sourceCommit: b74462b088bf7ee06f27038728a7f6ea39630ca3
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-[« XSLT による XML の変換](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
-
-eXtensible Stylesheet Language/Transform は非常に強力な言語であり、この記事の全体的な議論はこの記事の範囲をはるかに超えていますが、基本的な概念の簡単な説明は Netscape の機能の説明の理解に役立ちます。
+eXtensible Stylesheet Language/Transform はとても強力な言語であり、この記事の全体的な議論はこの記事の範囲をはるかに超えていますが、基本的な概念の簡単な説明は Netscape の機能の説明の理解に役立ちます。
 
 - XSLT スタイルシートは XML 文書です。
   - : 独自の特殊な構文を持つ CSS と異なり、XSLT スタイルシートは XML 文書であり、整形式を含むすべての XML 規則に準拠しなければなりません。したがって、変換のモデルは 1 つの XML 文書を使用して別の XML 文書を変換することです。
@@ -41,7 +36,7 @@ eXtensible Stylesheet Language/Transform は非常に強力な言語であり、
 - テンプレートマッチングの潜在的な競合は、一連のカスケード優先ルールを使用して解決されます。
   - : 一般的に、より具体的なテンプレートルールはあまり具体的でないテンプレートルールよりも優先され、他のものは同等であるため、文書の後に表示されるテンプレートルールが先に表示されたものよりも優先されます。
 - スタイルシートは、処理命令を介して XML 文書に添付することができます。
-  - : 特定の XML 文書を処理するためにどの XSLT スタイルシートを使用すべきかを示す最も簡単な方法は、XML 文書自体に処理命令を含めることです。 たとえば、スタイルシートが inventory.xsl と呼ばれ、XML 文書と同じディレクトリーにある場合、XML 文書の処理命令は次のようになります。
+  - : 特定の XML 文書を処理するためにどの XSLT スタイルシートを使用すべきかを示すには、XML 文書自体に処理命令を含めることです。 たとえば、スタイルシートが inventory.xsl と呼ばれ、XML 文書と同じディレクトリーにある場合、XML 文書の処理命令は次のようになります。
 - `<?xml-stylesheet type="text/xml" href="inventory.xsl"?>`
   - : これは XML 文書のプロローグセクションに配置する必要があります。
 
