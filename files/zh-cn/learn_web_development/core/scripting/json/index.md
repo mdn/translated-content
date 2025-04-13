@@ -328,7 +328,7 @@ myString;
 
 ## 技能测试！
 
-你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息——请参阅[技能测试：JSON](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON)。
+你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息——请参阅[技能测试：JSON](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON)。
 
 ## 总结
 
