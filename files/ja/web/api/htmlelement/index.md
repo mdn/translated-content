@@ -2,7 +2,7 @@
 title: HTMLElement
 slug: Web/API/HTMLElement
 l10n:
-  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
+  sourceCommit: 20cff31570e35c6da44ddd84158fcebd9f4f42d9
 ---
 
 {{APIRef("HTML DOM")}}
@@ -23,10 +23,13 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
   - : 要素のアンカー要素への参照を返すか、アンカー要素がない場合は `null` を返します。
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : {{DOMxRef("StylePropertyMap")}} で、その要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性の宣言を表します。
-- {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
+- {{domxref("HTMLElement.autocapitalize")}}
   - : ユーザー入力に対する要素の大文字小文字の動作を表す文字列。有効な値は `none`、`off`、`on`、`characters`、`words`、`sentences`　です。
 - {{domxref("HTMLElement.autofocus")}}
   - : 論理値で、HTML の [`autofocus`](/ja/docs/Web/HTML/Reference/Elements/select#autofocus) グローバル属性を反映し、ページが読み込まれたとき、または {{htmlelement("dialog")}} 要素やポップオーバー属性が設定されている要素内の要素に指定した場合、ダイアログやポップオーバーが表示されたときに、コントロールにフォーカスを当てるかどうかを示します。
+- {{domxref("HTMLElement.autocorrect")}}
+  - : ユーザーが入力したテキストを自動的に修正すべきかどうかを表します。
+    これは HTML の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) グローバル属性を反映します。
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
@@ -70,7 +73,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
     ゲッターとしては {{DOMxRef("HTMLElement.innerText")}} と同じです（要素とその子孫の表示されるテキストの内容を表します）。
     セッターとしては、選択されたノードとその内容を指定された値で置き換え、改行を {{HTMLElement("br")}} 要素に変換します。
 - {{domxref("HTMLElement.popover")}}
-  - : JavaScript から要素のポップオーバー状態を取得・設定し（`"auto"`または`"manual"`）、機能検出のために使用することもできます。グローバル HTML 属性 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) の値を反映します。
+  - : JavaScript から要素のポップオーバー状態を取得・設定し（`"auto"`、`"hint"`、`"manual"` のいずれか）、機能検出のために使用することもできます。グローバル HTML 属性 [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) の値を反映します。
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : 論理値で、[スペルチェック](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck) のヒントを制御します。これはすべての HTML 要素で利用できますが、すべての要素に効果があるとは限りません。
 - {{DOMxRef("HTMLElement.style")}}
@@ -83,6 +86,8 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
   - : 論理値で、翻訳を行うかどうかを表します。
 - {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
   - : 文字列で、タブレットやモバイル端末、その他ハードウェアキーボードが利用できない端末において、要素のコンテンツが編集可能な場合（例えば、{{htmlelement("input")}} 要素や {{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が設定されている要素）、画面に表示される仮想キーボードの動作を示します。
+- {{DOMxRef("HTMLElement.writingSuggestions")}}
+  - : 文字列で、ブラウザーが提供する文章作成の提案をこの要素のスコープで有効にすべきかどうかを示します。
 
 ## インスタンスメソッド
 
@@ -109,8 +114,6 @@ _親である {{DOMxRef("Element")}} から継承したメソッドもありま�
 
 _親である {{DOMxRef("Element")}} から継承したイベントもあります。_
 
-- {{DOMxRef("HTMLElement/cancel_event", "cancel")}}
-  - : {{HTMLElement("input")}} および {{HTMLElement("dialog")}} 要素で、ユーザーが現在開いているダイアログを <kbd>Esc</kbd> キーで閉じてキャンセルしたときに発行されます。
 - {{DOMxRef("HTMLElement/change_event", "change")}}
   - : {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} のいずれかの要素の `value` が変更され、ユーザーが確定したときに発行されます。{{domxref("Element/input_event", "input")}} イベントとは異なり、`change` イベントは要素の `value` が変更されるたびに発行されるわけではありません。
 - {{DOMxRef("HTMLElement/error_event", "error")}}
@@ -144,12 +147,12 @@ _親である {{DOMxRef("Element")}} から継承したイベントもありま�
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
   - : このイベントは、要素またはテキスト選択が有効なドロップ対象にドロップされたときに発行されます。
 
-### ポップオーバーイベント
+### トグルイベント
 
 - {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
-  - : 要素がポップオーバー要素である場合、非表示または表示される前に発行されます。
+  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)または {{htmlelement("dialog")}} である場合、非表示または表示される前に発行されます。
 - {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
-  - : 要素がポップオーバー要素の時、非表示または表示された直後に発行されます。
+  - : この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)、{{htmlelement("dialog")}}、{{htmlelement("details")}} のいずれかである場合、非表示または表示された直後に発行されます。
 
 ## 仕様書
 
