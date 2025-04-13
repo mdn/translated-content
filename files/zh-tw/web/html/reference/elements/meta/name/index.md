@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-{{htmlelement("meta")}} 元素可用於以名稱—值對的形式提供文件的後設資料，其中 [`name`](/zh-TW/docs/Web/HTML/Element/meta#name) 屬性用於指定後設資料的名稱，[`content`](/zh-TW/docs/Web/HTML/Element/meta#content) 屬性則用於指定其值。
+{{htmlelement("meta")}} 元素可用於以名稱—值對的形式提供文件的後設資料，其中 [`name`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#name) 屬性用於指定後設資料的名稱，[`content`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#content) 屬性則用於指定其值。
 
 ### HTML 規範中定義的標準後設資料名稱
 
@@ -84,12 +84,12 @@ HTML 規範定義了以下標準後設資料名稱：
   > - 動態插入 `<meta name="referrer">`（通過 {{domxref("Document.write", "document.write()")}} 或 {{domxref("Node.appendChild", "appendChild()")}}）會使 Referrer 行為不可預測。
   > - 當定義了多個衝突的策略時，將應用 `no-referrer` 策略。
 
-- [`theme-color`](/zh-TW/docs/Web/HTML/Element/meta/name/theme-color)：指示用戶代理應使用的建議顏色來自訂頁面或周圍使用者界面的顯示。`content` 屬性包含有效的 CSS {{cssxref("&lt;color&gt;")}}。`media` 屬性可以包含有效的媒體查詢列表，以設定主題顏色適用的媒體。
+- [`theme-color`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/theme-color)：指示用戶代理應使用的建議顏色來自訂頁面或周圍使用者界面的顯示。`content` 屬性包含有效的 CSS {{cssxref("&lt;color&gt;")}}。`media` 屬性可以包含有效的媒體查詢列表，以設定主題顏色適用的媒體。
 - <a id="color-scheme" href="#color-scheme">`color-scheme`</a>：指定文件可相容的一種或多種顏色方案。
 
   瀏覽器將根據用戶的瀏覽器或設備設定，與此訊息結合決定從背景到前景、表單控件到滾動條的顏色。`<meta name="color-scheme">` 的主要用途是指示文件對淺色與深色模式的相容性及偏好順序。
 
-  `color-scheme` 的 [`content`](/zh-TW/docs/Web/HTML/Element/meta#content) 屬性值可能是以下之一：
+  `color-scheme` 的 [`content`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#content) 屬性值可能是以下之一：
 
   - `normal`
     - : 文件未考慮顏色方案，應使用預設調色板進行渲染。
@@ -221,5 +221,5 @@ CSS Device Adaptation 規範定義了以下的後設資料名稱：
 
 ## 參見
 
-- [Viewport `<meta>` 標籤](/zh-TW/docs/Web/HTML/Viewport_meta_tag)
+- [Viewport `<meta>` 標籤](/zh-TW/docs/Web/HTML/Guides/Viewport_meta_element)
 - [後設資料：`<meta>` 元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_meta_元素)

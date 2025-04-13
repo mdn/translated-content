@@ -23,7 +23,7 @@ original_slug: Web/HTML/Element/picture
 </picture>
 ```
 
-為了決定載入哪一個 URL，{{Glossary("user agent")}} 會檢視每一個 `<source>` 的 [`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset)、[`media`](/zh-TW/docs/Web/HTML/Element/source#media) 以及 [`type`](/zh-TW/docs/Web/HTML/Element/source#type) 屬性，以選出最適合當前版面以及顯示裝置支援度的圖片。
+為了決定載入哪一個 URL，{{Glossary("user agent")}} 會檢視每一個 `<source>` 的 [`srcset`](/zh-TW/docs/Web/HTML/Reference/Elements/source#srcset)、[`media`](/zh-TW/docs/Web/HTML/Reference/Elements/source#media) 以及 [`type`](/zh-TW/docs/Web/HTML/Reference/Elements/source#type) 屬性，以選出最適合當前版面以及顯示裝置支援度的圖片。
 
 `<img>` 有兩個作用：
 
@@ -36,20 +36,20 @@ original_slug: Web/HTML/Element/picture
 - **提供替代的圖片格式：**以應對某些特定格式不被支援的情況
 - **節省頻寬並加速頁面載入速度：**透過針對觀看者的裝置載入最適當的圖片做到這點
 
-如果是要為高 DPI （Retina）螢幕提供圖片的高解析度版本時，可改在使用 `<img>` 上使用 [`srcset`](/zh-TW/docs/Web/HTML/Element/img#srcset) 屬性。這會讓瀏覽器在 data-saving 模式選擇低解析度的版本，這樣你就不用特地指定 `media` 條件。
+如果是要為高 DPI （Retina）螢幕提供圖片的高解析度版本時，可改在使用 `<img>` 上使用 [`srcset`](/zh-TW/docs/Web/HTML/Reference/Elements/img#srcset) 屬性。這會讓瀏覽器在 data-saving 模式選擇低解析度的版本，這樣你就不用特地指定 `media` 條件。
 
-| [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#flow_content), phrasing content, embedded content                                                |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                             | Zero or more {{HTMLElement("source")}} elements, followed by one {{HTMLElement("img")}} element, optionally intermixed with script-supporting elements. |
-| 標籤省略                                                      | 不允許，開始和結束標籤都是必須的。                                                                                                                      |
-| Permitted parents                                             | Any element that allows embedded content.                                                                                                               |
-| Implicit ARIA role                                            | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                     |
-| Permitted ARIA roles                                          | No `role` permitted                                                                                                                                     |
-| DOM interface                                                 | {{domxref("HTMLPictureElement")}}                                                                                                                       |
+| [Content categories](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content), phrasing content, embedded content                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                    | Zero or more {{HTMLElement("source")}} elements, followed by one {{HTMLElement("img")}} element, optionally intermixed with script-supporting elements. |
+| 標籤省略                                                             | 不允許，開始和結束標籤都是必須的。                                                                                                                      |
+| Permitted parents                                                    | Any element that allows embedded content.                                                                                                               |
+| Implicit ARIA role                                                   | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                     |
+| Permitted ARIA roles                                                 | No `role` permitted                                                                                                                                     |
+| DOM interface                                                        | {{domxref("HTMLPictureElement")}}                                                                                                                       |
 
 ## 屬性
 
-此元素只包含 [global attributes](/zh-TW/docs/Web/HTML/Global_attributes).
+此元素只包含 [global attributes](/zh-TW/docs/Web/HTML/Reference/Global_attributes).
 
 ## 用法筆記
 
@@ -77,7 +77,7 @@ original_slug: Web/HTML/Element/picture
 
 ### srcset 屬性
 
-[`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset) 屬性用來提供根據大小區分的可能圖片清單。
+[`srcset`](/zh-TW/docs/Web/HTML/Reference/Elements/source#srcset) 屬性用來提供根據大小區分的可能圖片清單。
 
 它是由逗號分隔的圖片描述句清單組成的。每一個圖片描述句是由該圖片的 URL 以及以下描述組成（擇一）：
 

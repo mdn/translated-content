@@ -277,7 +277,7 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 </style>
 ```
 
-我們現在對 [`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素套用了一些樣式。對於其它元件中的 `<h1>` 元素們將會有什麼影響呢？
+我們現在對 [`<h1>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素套用了一些樣式。對於其它元件中的 `<h1>` 元素們將會有什麼影響呢？
 
 在 Svelte 中，CSS 在元件 `<style>` 區塊中且被侷限於該元件範圍之內。這是透過對所選的元素加上一個類別來實現，而這個類別則會是基於元件樣式的雜湊值。
 

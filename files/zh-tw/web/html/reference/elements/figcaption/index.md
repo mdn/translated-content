@@ -45,7 +45,7 @@ figcaption {
 
 ## 屬性
 
-該元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+該元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 
@@ -57,7 +57,7 @@ figcaption {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
@@ -66,7 +66,7 @@ figcaption {
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。
       </td>

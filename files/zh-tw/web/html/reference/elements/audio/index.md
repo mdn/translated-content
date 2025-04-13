@@ -30,7 +30,7 @@ figure {
 
 ## 屬性
 
-此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autoplay`
 
@@ -51,14 +51,14 @@ figure {
 
 - `crossorigin`
 
-  - : 此[列舉](/zh-TW/docs/Glossary/Enumerated)屬性指示是否使用 CORS 來獲取相關音訊文件。[啟用 CORS 的資源](/zh-TW/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重複使用而不會被*汙染*。允許的值有：
+  - : 此[列舉](/zh-TW/docs/Glossary/Enumerated)屬性指示是否使用 CORS 來獲取相關音訊文件。[啟用 CORS 的資源](/zh-TW/docs/Web/HTML/How_to/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重複使用而不會被*汙染*。允許的值有：
 
     - `anonymous`
       - : 發送沒有憑據的跨源請求。換句話說，它發送了沒有 cookie、X.509 憑證或執行 HTTP 基本身份驗證的 `Origin:` HTTP 標頭。如果伺服器沒有向源站提供憑證（通過不設置 `Access-Control-Allow-Origin:` HTTP 標頭），資源將是*汙染*的，並限制其使用。
     - `use-credentials`
       - : 使用憑證發送跨源請求。換句話說，它使用帶有 cookie、憑證或執行 HTTP 基本身份驗證的 `Origin:` HTTP 標頭。如果伺服器沒有向源站提供憑證（通過 `Access-Control-Allow-Credentials:` HTTP 標頭），資源將是*汙染*的，並限制其使用。
 
-    當未指定時，該資源將不使用 CORS 請求進行提取（即不發送 `Origin:` HTTP 標頭），從而防止其在 {{HTMLElement('canvas')}} 元素中的非汙染使用。如果無效，則處理為使用列舉關鍵字 **anonymous**。有關其他信息，請參見 [CORS 設置屬性](/zh-TW/docs/Web/HTML/Attributes/crossorigin)。
+    當未指定時，該資源將不使用 CORS 請求進行提取（即不發送 `Origin:` HTTP 標頭），從而防止其在 {{HTMLElement('canvas')}} 元素中的非汙染使用。如果無效，則處理為使用列舉關鍵字 **anonymous**。有關其他信息，請參見 [CORS 設置屬性](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin)。
 
 - `disableremoteplayback`
 
@@ -395,12 +395,12 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >、段落型內容、嵌入型內容。如果有
       <a href="#controls"><code>controls</code></a> 屬性：互動型內容和捫及內容。

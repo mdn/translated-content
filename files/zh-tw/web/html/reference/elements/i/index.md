@@ -32,7 +32,7 @@ i {
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
@@ -40,7 +40,7 @@ i {
 
   - 替代語氣或情感
   - 分類設計（如屬名和種名「_Homo sapiens_」）
-  - 來自其他語言的成語（例如「_et cetera_」）；這些應該包含 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性以標識語言
+  - 來自其他語言的成語（例如「_et cetera_」）；這些應該包含 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#lang) 屬性以標識語言
   - 專業術語
   - 轉寫
   - 思想（例如 「她想知道，_這個作者到底在說什麼？_」）
@@ -76,14 +76,14 @@ i {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >、可感知內容。
       </td>
@@ -91,7 +91,7 @@ i {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -103,7 +103,7 @@ i {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>

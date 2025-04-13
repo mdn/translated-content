@@ -13,7 +13,7 @@ original_slug: Web/HTML/Element/frameset
 
 ## 屬性
 
-與所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+與所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `cols` {{Deprecated_Inline}}
   - : 此屬性指定頁框集中水平空間的數量和大小。

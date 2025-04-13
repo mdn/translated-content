@@ -51,7 +51,7 @@ original_slug: Web/HTML/Element/button
 
 ## 屬性
 
-此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autofocus`
   - : 此布林屬性指定頁面加載時按鈕應該具有輸入[焦點](/zh-TW/docs/Web/API/HTMLElement/focus)。**文件中只能有一個元素擁有此屬性。**
@@ -66,16 +66,16 @@ original_slug: Web/HTML/Element/button
     此屬性允許你將 `<button>` 元素與文件中的任何地方的 `<form>` 關聯，而不僅僅是在 `<form>` 內部。它還可以覆蓋祖 `<form>` 元素。
 
 - `formaction`
-  - : 處理按鈕提交的信息的 URL。覆蓋按鈕的表單所有者的 [`action`](/zh-TW/docs/Web/HTML/Element/form#action) 屬性。如果沒有表單所有者則不起作用。
+  - : 處理按鈕提交的信息的 URL。覆蓋按鈕的表單所有者的 [`action`](/zh-TW/docs/Web/HTML/Reference/Elements/form#action) 屬性。如果沒有表單所有者則不起作用。
 - `formenctype`
 
   - : 如果按鈕是提交按鈕（它在 `<form>` 內部且沒有 `type="button"`），則指定要提交的表單數據的編碼方式。可能的值有：
 
     - `application/x-www-form-urlencoded`：如果未使用此屬性，則為默認值。
-    - `multipart/form-data`：用於提交其 [`type`](/zh-TW/docs/Web/HTML/Element/input#type) 屬性設置為 `file` 的 {{HTMLElement("input")}} 元素。
+    - `multipart/form-data`：用於提交其 [`type`](/zh-TW/docs/Web/HTML/Reference/Elements/input#type) 屬性設置為 `file` 的 {{HTMLElement("input")}} 元素。
     - `text/plain`：作為調試輔助工具使用；不應該用於實際表單提交。
 
-    如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`enctype`](/zh-TW/docs/Web/HTML/Element/form#enctype) 屬性。
+    如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`enctype`](/zh-TW/docs/Web/HTML/Reference/Elements/form#enctype) 屬性。
 
 - `formmethod`
 
@@ -83,19 +83,19 @@ original_slug: Web/HTML/Element/button
 
     - `post`：當將數據提交到服務器時，表單的數據將包含在 HTTP 請求的主體中。在表單包含不應該是公開的信息（例如登錄憑證）時使用。
     - `get`：將表單數據附加到表單的 `action` URL 中，使用 `?` 作為分隔符，並將生成的 URL 發送到服務器。當表單[沒有副作用](/zh-TW/docs/Glossary/Idempotent)時使用，例如搜索表單。
-    - `dialog`：此方法用於指示按鈕關聯的 [dialog](/zh-TW/docs/Web/HTML/Element/dialog) 應該關閉，並且根本不傳輸表單數據。
+    - `dialog`：此方法用於指示按鈕關聯的 [dialog](/zh-TW/docs/Web/HTML/Reference/Elements/dialog) 應該關閉，並且根本不傳輸表單數據。
 
-    如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`method`](/zh-TW/docs/Web/HTML/Element/form#method) 屬性。
+    如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`method`](/zh-TW/docs/Web/HTML/Reference/Elements/form#method) 屬性。
 
 - `formnovalidate`
 
-  - : 如果按鈕是提交按鈕，此布林屬性指定提交表單時不應[驗證](/zh-TW/docs/Learn_web_development/Extensions/Forms/Form_validation)表單。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`novalidate`](/zh-TW/docs/Web/HTML/Element/form#novalidate) 屬性。
+  - : 如果按鈕是提交按鈕，此布林屬性指定提交表單時不應[驗證](/zh-TW/docs/Learn_web_development/Extensions/Forms/Form_validation)表單。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`novalidate`](/zh-TW/docs/Web/HTML/Reference/Elements/form#novalidate) 屬性。
 
-    此屬性也適用於 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 和 [`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 元素。
+    此屬性也適用於 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 和 [`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 元素。
 
 - `formtarget`
 
-  - : 如果按鈕是提交按鈕，則此屬性是作者定義的名稱或標準化的、下劃線前綴的關鍵字，指示提交表單後要在哪裡顯示來自提交的回應。這是一個*瀏覽上下文*（一個分頁、窗口或 {{HTMLElement("iframe")}}）的 `name` 或關鍵字。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`target`](/zh-TW/docs/Web/HTML/Element/form#target) 屬性。以下關鍵字具有特殊含義：
+  - : 如果按鈕是提交按鈕，則此屬性是作者定義的名稱或標準化的、下劃線前綴的關鍵字，指示提交表單後要在哪裡顯示來自提交的回應。這是一個*瀏覽上下文*（一個分頁、窗口或 {{HTMLElement("iframe")}}）的 `name` 或關鍵字。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`target`](/zh-TW/docs/Web/HTML/Reference/Elements/form#target) 屬性。以下關鍵字具有特殊含義：
 
     - `_self`：將回應加載到與當前瀏覽上下文相同的地方。如果未指定此屬性，則為默認值。
     - `_blank`：將回應加載到新的未命名瀏覽上下文中——通常是一個新的分頁或窗口，具體取決於用戶的瀏覽器設置。
@@ -126,7 +126,7 @@ original_slug: Web/HTML/Element/button
   - : 按鈕的默認行為。可能的值為：
 
     - `submit`：按鈕將表單數據提交到服務器。如果按鈕與 `<form>` 關聯且未指定此屬性，或者屬性為空或無效值，則此為默認值。
-    - `reset`：按鈕將所有控件重置為它們的初始值，類似於 [\<input type="reset">](/zh-TW/docs/Web/HTML/Element/input/reset)。（此行為可能會使用戶感到不滿。）
+    - `reset`：按鈕將所有控件重置為它們的初始值，類似於 [\<input type="reset">](/zh-TW/docs/Web/HTML/Reference/Elements/input/reset)。（此行為可能會使用戶感到不滿。）
     - `button`：按鈕沒有默認行為，默認情況下按下時不執行任何操作。它可以讓客戶端腳本監聽元素的事件，當事件發生時觸發行為。
 
 - `value`
@@ -223,27 +223,27 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#互動型內容"
           >互動型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#form_listed"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#form_listed"
           >listed</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#labelable"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#labelable"
           >labelable</a
-        > 和 <a href="/zh-TW/docs/Web/HTML/Content_categories#submittable"
+        > 和 <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#submittable"
           >submittable</a
         > <a
-          href="/zh-TW/docs/Web/HTML/Content_categories#表單相關內容"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#表單相關內容"
           >表單相關內容</a
-        >元素、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >元素、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>
@@ -251,10 +251,10 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >，但不能包含<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#互動型內容"
           >互動型內容</a
         >。
       </td>
@@ -266,7 +266,7 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>

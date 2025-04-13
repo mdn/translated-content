@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/footer
 
 {{HTMLSidebar}}
 
-**`<footer>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示其最近的[章節型內容](/zh-TW/docs/Web/HTML/Content_categories#章節型內容)或[章節根](/zh-TW/docs/Web/HTML/Element/Heading_Elements#章節根)元素的頁尾。`<footer>` 通常包含有關該章節作者的信息、版權數據或與相關文檔的鏈接。
+**`<footer>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示其最近的[章節型內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#章節型內容)或[章節根](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements#章節根)元素的頁尾。`<footer>` 通常包含有關該章節作者的信息、版權數據或與相關文檔的鏈接。
 
 {{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
 
@@ -42,13 +42,13 @@ footer {
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
 - 將有關作者的信息置於可以包含在 `<footer>` 元素中的 {{HTMLElement("address")}} 元素中。
 - 當最近的祖先章節型內容或章節根元素是 body 元素時，頁尾應用於整個頁面。
-- `<footer>` 元素不是章節型，因此在[大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)中不引入新的節。
+- `<footer>` 元素不是章節型，因此在[大綱](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)中不引入新的節。
 
 ## 範例
 
@@ -92,16 +92,16 @@ footer {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、捫及內容。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>、捫及內容。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>，但不得包含 <code>&#x3C;footer></code> 或 {{HTMLElement("header")}} 的後代元素。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>，但不得包含 <code>&#x3C;footer></code> 或 {{HTMLElement("header")}} 的後代元素。
       </td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@ footer {
       <th scope="row">允許的父元素</th>
       <td>
         任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a> 的元素。請注意，<code>&#x3C;footer></code> 元素不得是
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a> 的元素。請注意，<code>&#x3C;footer></code> 元素不得是
         {{HTMLElement("address")}}、{{HTMLElement("header")}}
         或另一個 <code>&#x3C;footer></code> 元素的後代。
       </td>
@@ -121,11 +121,11 @@ footer {
       <th scope="row">隱含 ARIA 角色</th>
       <td>
         <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>，或者如果是
-        <a href="/zh-TW/docs/Web/HTML/Element/article">article</a
-        >、<a href="/zh-TW/docs/Web/HTML/Element/aside">aside</a
-        >、<a href="/zh-TW/docs/Web/HTML/Element/main">main</a
-        >、<a href="/zh-TW/docs/Web/HTML/Element/nav">nav</a
-        > 或 <a href="/zh-TW/docs/Web/HTML/Element/section">section</a
+        <a href="/zh-TW/docs/Web/HTML/Reference/Elements/article">article</a
+        >、<a href="/zh-TW/docs/Web/HTML/Reference/Elements/aside">aside</a
+        >、<a href="/zh-TW/docs/Web/HTML/Reference/Elements/main">main</a
+        >、<a href="/zh-TW/docs/Web/HTML/Reference/Elements/nav">nav</a
+        > 或 <a href="/zh-TW/docs/Web/HTML/Reference/Elements/section">section</a
         > 元素的後代，或具有 <code>role=<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Article_Role">article<a></code>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a
         >、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a
         >、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a
@@ -157,5 +157,5 @@ footer {
 ## 參見
 
 - 其他與節相關的元素: {{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("section")}}、{{HTMLElement("address")}}；
-- [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
+- [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA：Contentinfo 角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)

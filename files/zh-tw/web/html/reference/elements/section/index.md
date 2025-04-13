@@ -38,7 +38,7 @@ h2 {
 
 ## 屬性
 
-此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
@@ -119,16 +119,16 @@ h2 {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類別</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類別</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#章節型內容">章節型內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容">捫及內容</a>。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#章節型內容">章節型內容</a>、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容">捫及內容</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>。
       </td>
     </tr>
     <tr>
@@ -138,7 +138,7 @@ h2 {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>的元素。請注意，<code>&#x3C;section></code> 元素不得是 {{HTMLElement("address")}} 元素的後代。
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>的元素。請注意，<code>&#x3C;section></code> 元素不得是 {{HTMLElement("address")}} 元素的後代。
       </td>
     </tr>
     <tr>
@@ -179,6 +179,6 @@ h2 {
 ## 參見
 
 - 其他與區段相關的元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_lements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
+- [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA: Region 角色](/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role)
 - [為什麼應該選擇 HTML5 article 而不是 section](https://www.smashingmagazine.com/2020/01/html5-article-section/)，作者：Bruce Lawson

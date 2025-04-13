@@ -43,12 +43,12 @@ input {
 
 ## 屬性
 
-此元素包括[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素包括[全局屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `disabled`
   - : 如果設置了這個布爾屬性，則所有位於 `<fieldset>` 下的表單控件都會被禁用，這意味著它們是不可編輯的，並且不會隨著 {{htmlelement("form")}} 一起提交。它們將不會接收任何瀏覽事件，比如鼠標點擊或焦點相關事件。默認情況下，瀏覽器會將此類控件顯示為灰色。請注意，位於 {{HTMLElement("legend")}} 元素內的表單元素將不會被禁用。
 - `form`
-  - : 這個屬性接受一個 {{HTMLElement("form")}} 元素的 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性的值，你希望 `<fieldset>` 成為該表單的一部分，即使它不在表單內。請注意，這種用法很混亂——如果你希望 `<fieldset>` 內的 {{HTMLElement("input")}} 元素與表單關聯，則需要直接在這些元素上使用 `form` 屬性。你可以使用 JavaScript 來檢查哪些元素與表單關聯，使用 {{domxref("HTMLFormElement.elements")}}。
+  - : 這個屬性接受一個 {{HTMLElement("form")}} 元素的 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性的值，你希望 `<fieldset>` 成為該表單的一部分，即使它不在表單內。請注意，這種用法很混亂——如果你希望 `<fieldset>` 內的 {{HTMLElement("input")}} 元素與表單關聯，則需要直接在這些元素上使用 `form` 屬性。你可以使用 JavaScript 來檢查哪些元素與表單關聯，使用 {{domxref("HTMLFormElement.elements")}}。
 - `name`
 
   - : 與該組關聯的名稱。
@@ -117,19 +117,19 @@ input {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Element/Heading_Elements#sectioning_root"
+        >、<a href="/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements#sectioning_root"
           >章節根</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#form_listed"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#form_listed"
           >listed</a
         >、<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#表單相關內容類型"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#表單相關內容類型"
           >表單相關內容類型</a
         >的元素、捫及內容。
       </td>
@@ -147,7 +147,7 @@ input {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>

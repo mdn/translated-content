@@ -93,7 +93,7 @@ tr:nth-child(odd) td {
 
 ## 屬性
 
-此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ### 廢棄的屬性
 
@@ -188,7 +188,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
@@ -197,7 +197,7 @@ td {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。
       </td>

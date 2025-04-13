@@ -43,7 +43,7 @@ dd {
 
 ## 屬性
 
-此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 
@@ -142,7 +142,7 @@ dt::after {
 
 ### 將名稱-值組包裝在 `div` 元素中
 
-[WHATWG](/zh-TW/docs/Glossary/WHATWG) HTML 允許將每個名稱-值組包裝在 {{HTMLElement("dl")}} 元素中的 {{HTMLElement("div")}} 元素中。這在使用[微數據](/zh-TW/docs/Web/HTML/Microdata)或當[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)適用於整個組時或用於樣式目的時很有用。
+[WHATWG](/zh-TW/docs/Glossary/WHATWG) HTML 允許將每個名稱-值組包裝在 {{HTMLElement("dl")}} 元素中的 {{HTMLElement("div")}} 元素中。這在使用[微數據](/zh-TW/docs/Web/HTML/Guides/Microdata)或當[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)適用於整個組時或用於樣式目的時很有用。
 
 ```html
 <dl>
@@ -189,12 +189,12 @@ dt::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >，如果 <code>&#x3C;dl></code> 元素的子項目包含一個名稱-值組，則為捫及內容。
       </td>
@@ -214,7 +214,7 @@ dt::after {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>

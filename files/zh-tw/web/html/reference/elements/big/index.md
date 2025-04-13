@@ -13,7 +13,7 @@ original_slug: Web/HTML/Element/big
 
 ## 屬性
 
-這個元素除了[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)之外，沒有其他屬性，這些屬性對所有元素都通用。
+這個元素除了[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)之外，沒有其他屬性，這些屬性對所有元素都通用。
 
 ## 範例
 

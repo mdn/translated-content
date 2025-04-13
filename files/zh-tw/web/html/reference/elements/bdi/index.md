@@ -57,7 +57,7 @@ EMBEDDED-TEXT - 1st place
 1 - EMBEDDED-TEXTst place
 ```
 
-如果你事先知道 `EMBEDDED-TEXT`（嵌入文本）的方向性，則可以通過將 `EMBEDDED-TEXT`（嵌入文本）包裹在具有已知方向性的 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性設置的 {{HTMLElement("span")}} 中來解決此問題。但是如果你不知道方向性——例如，因為 `EMBEDDED-TEXT`（嵌入文本）是從數據庫讀取的或由用戶輸入的——你應該使用 `<bdi>` 來防止 `EMBEDDED-TEXT`（嵌入文本）的方向性影響其周圍。
+如果你事先知道 `EMBEDDED-TEXT`（嵌入文本）的方向性，則可以通過將 `EMBEDDED-TEXT`（嵌入文本）包裹在具有已知方向性的 [`dir`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#dir) 屬性設置的 {{HTMLElement("span")}} 中來解決此問題。但是如果你不知道方向性——例如，因為 `EMBEDDED-TEXT`（嵌入文本）是從數據庫讀取的或由用戶輸入的——你應該使用 `<bdi>` 來防止 `EMBEDDED-TEXT`（嵌入文本）的方向性影響其周圍。
 
 儘管可以通過在 {{HTMLElement("span")}} 或其他文本格式化元素上使用 CSS 規則{{cssxref("unicode-bidi")}}`: isolate` 來實現相同的視覺效果，但 HTML 作者不應該使用這種方法，因為它不是語義化的，並且瀏覽器允許忽略 CSS 樣式。
 
@@ -65,7 +65,7 @@ EMBEDDED-TEXT - 1st place
 
 ## 屬性
 
-與所有其他 HTML 元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)，只是 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性的行為與正常情況不同：它的默認值為 `auto`，這意味著其值永遠不會從父元素繼承。這意味著除非你為 `dir` 指定了 `rtl` 或 `ltr` 的值，否則{{Glossary("user agent", "使用者代理")}}將根據 `<bdi>` 的內容確定要使用的正確方向性。
+與所有其他 HTML 元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)，只是 [`dir`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#dir) 屬性的行為與正常情況不同：它的默認值為 `auto`，這意味著其值永遠不會從父元素繼承。這意味著除非你為 `dir` 指定了 `rtl` 或 `ltr` 的值，否則{{Glossary("user agent", "使用者代理")}}將根據 `<bdi>` 的內容確定要使用的正確方向性。
 
 ## 範例
 
@@ -144,14 +144,14 @@ body {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >、可感知內容。
       </td>
@@ -159,7 +159,7 @@ body {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -171,7 +171,7 @@ body {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         > 的元素。
       </td>

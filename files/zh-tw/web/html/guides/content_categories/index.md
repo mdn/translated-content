@@ -112,13 +112,13 @@ original_slug: Web/HTML/Content_categories
 在滿足特定條件下，某些元素也屬這個類型：
 
 - {{HTMLElement("area")}}，如果它是 {{HTMLElement("map")}} 元素的後代。
-- {{HTMLElement("link")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Global_attributes/itemprop) 屬性存在。
-- {{HTMLElement("meta")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Global_attributes/itemprop) 屬性存在。
+- {{HTMLElement("link")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Reference/Global_attributes/itemprop) 屬性存在。
+- {{HTMLElement("meta")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Reference/Global_attributes/itemprop) 屬性存在。
 - {{HTMLElement("style")}}，如果 `scoped` {{deprecated_inline}} 屬性存在。
 
 ### 章節型內容
 
-屬於章節型內容（Sectioning content）模型的元素會[在該大綱裡面創立章節](/zh-TW/docs/Web/HTML/Element/Heading_Elements)，這個章節會定義 {{HTMLElement("header")}}、{{HTMLElement("footer")}}，還有[標題型內容](#標題型內容)的範圍。
+屬於章節型內容（Sectioning content）模型的元素會[在該大綱裡面創立章節](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)，這個章節會定義 {{HTMLElement("header")}}、{{HTMLElement("footer")}}，還有[標題型內容](#標題型內容)的範圍。
 
 屬於這個類型的元素有{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} 還有 {{HTMLElement("section")}}。
 
@@ -194,9 +194,9 @@ original_slug: Web/HTML/Content_categories
 - {{HTMLElement("area")}}，如果它是 {{HTMLElement("map")}} 元素的後代。
 - {{HTMLElement("del")}}，如果它只包含段落型內容。
 - {{HTMLElement("ins")}}，如果它只包含段落型內容。
-- {{HTMLElement("link")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Global_attributes/itemprop) 屬性存在。
+- {{HTMLElement("link")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Reference/Global_attributes/itemprop) 屬性存在。
 - {{HTMLElement("map")}}，如果它只包含段落型內容。
-- {{HTMLElement("meta")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Global_attributes/itemprop) 屬性存在。
+- {{HTMLElement("meta")}}，如果 [itemprop](/zh-TW/docs/Web/HTML/Reference/Global_attributes/itemprop) 屬性存在。
 
 ### 嵌入型內容
 
@@ -227,12 +227,12 @@ original_slug: Web/HTML/Content_categories
 
 在滿足特定條件下，某些元素也屬這個類型：
 
-- {{HTMLElement("a")}}，如果 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性存在。
-- {{HTMLElement("audio")}}，如果 [`controls`](/zh-TW/docs/Web/HTML/Element/audio#controls) 屬性存在。
-- {{HTMLElement("img")}}，如果 [`usemap`](/zh-TW/docs/Web/HTML/Element/img#usemap) 屬性存在。
-- {{HTMLElement("input")}}，如果 [`type`](/zh-TW/docs/Web/HTML/Element/input#type) 屬性不是隱藏狀態。
-- {{HTMLElement("object")}}，如果 [`usemap`](/zh-TW/docs/Web/HTML/Element/object#usemap) 屬性存在。
-- {{HTMLElement("video")}}，如果 [`controls`](/zh-TW/docs/Web/HTML/Element/video#controls) 屬性存在。
+- {{HTMLElement("a")}}，如果 [`href`](/zh-TW/docs/Web/HTML/Reference/Elements/a#href) 屬性存在。
+- {{HTMLElement("audio")}}，如果 [`controls`](/zh-TW/docs/Web/HTML/Reference/Elements/audio#controls) 屬性存在。
+- {{HTMLElement("img")}}，如果 [`usemap`](/zh-TW/docs/Web/HTML/Reference/Elements/img#usemap) 屬性存在。
+- {{HTMLElement("input")}}，如果 [`type`](/zh-TW/docs/Web/HTML/Reference/Elements/input#type) 屬性不是隱藏狀態。
+- {{HTMLElement("object")}}，如果 [`usemap`](/zh-TW/docs/Web/HTML/Reference/Elements/object#usemap) 屬性存在。
+- {{HTMLElement("video")}}，如果 [`controls`](/zh-TW/docs/Web/HTML/Reference/Elements/video#controls) 屬性存在。
 
 ### 捫及內容
 

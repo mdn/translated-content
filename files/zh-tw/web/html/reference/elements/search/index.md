@@ -10,7 +10,7 @@ original_slug: Web/HTML/Element/search
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
@@ -116,16 +116,16 @@ original_slug: Web/HTML/Element/search
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容">捫及內容</a>。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容">捫及內容</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>。
       </td>
     </tr>
     <tr>

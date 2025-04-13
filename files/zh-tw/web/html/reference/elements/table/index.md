@@ -148,7 +148,7 @@ tfoot td {
 
 ## 屬性
 
-這個元件包含了 [全域屬性（global attributes）](/zh-TW/docs/Web/HTML/Global_attributes)。
+這個元件包含了 [全域屬性（global attributes）](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ### 棄用屬性
 
@@ -323,7 +323,7 @@ td {
 
 ### Scope 行列
 
-雖然在 HTML5 裡面 [`scope`](/zh-TW/docs/Web/HTML/Element/td#scope) 屬性已經過時，但很多螢幕閱讀器會利用這屬性，複製不使用屏幕閱讀器的人的視覺關聯，以便推斷可能的視覺位置。
+雖然在 HTML5 裡面 [`scope`](/zh-TW/docs/Web/HTML/Reference/Elements/td#scope) 屬性已經過時，但很多螢幕閱讀器會利用這屬性，複製不使用屏幕閱讀器的人的視覺關聯，以便推斷可能的視覺位置。
 
 #### 示例
 
@@ -364,7 +364,7 @@ td {
 
 ### 複雜的表格
 
-針對單格複雜到無法歸類於直向或橫向的表格，諸如螢幕閱讀器之類的輔助技術，可能就無法解析。在這種情況下，通常就需要 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 與 [`rowspan`](/zh-TW/docs/Web/HTML/Element/td#rowspan) 屬性。
+針對單格複雜到無法歸類於直向或橫向的表格，諸如螢幕閱讀器之類的輔助技術，可能就無法解析。在這種情況下，通常就需要 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 與 [`rowspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#rowspan) 屬性。
 
 理想情況下，可以考慮使用其他方式來呈現表格的內容，例如把表格切分到不必依賴 `colspan` 和 `rowspan` 屬性。除了幫助使用輔助技術的人了解表格的內容之外，這樣也會使認知障礙者受益，因為他們可能難以理解表格佈局描述的關聯。
 

@@ -20,16 +20,16 @@ ruby {
 }
 ```
 
-| [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)、[段落型內容](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)、捫及內容 |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 允許內容                                            | [段落型內容](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)                                                                           |
-| 標籤省略                                            | 不允許，開始和結束標籤都是必須的。                                                                                                               |
-| 允許父元素                                          | Any element that accepts [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)                                            |
-| DOM 介面                                            | {{domxref("HTMLElement")}}                                                                                                                       |
+| [內容類型](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)、[段落型內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content)、捫及內容 |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 允許內容                                                   | [段落型內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content)                                                                                  |
+| 標籤省略                                                   | 不允許，開始和結束標籤都是必須的。                                                                                                                             |
+| 允許父元素                                                 | Any element that accepts [phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content)                                                   |
+| DOM 介面                                                   | {{domxref("HTMLElement")}}                                                                                                                                     |
 
 ## 屬性
 
-這個元素只支援[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+這個元素只支援[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 

@@ -10,7 +10,7 @@ original_slug: Web/HTML/Element/html
 
 ## 屬性
 
-此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `version` {{deprecated_inline}}
   - : 指定了管理當前文件的 HTML {{glossary("Doctype", "文件類型定義")}}的版本。這個屬性是不必要的，因為它與文件類型聲明中的版本訊息是多餘的。
@@ -33,7 +33,7 @@ original_slug: Web/HTML/Element/html
 
 ## 無障礙議題
 
-雖然 HTML 不要求作者指定 `<html>` 元素的開始和結束標籤，但作者這樣做是很重要的，因為這樣可以允許他們為網頁指定 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang)。在 `<html>` 元素上提供一個具有有效語言標籤的 `lang` 屬性，根據 {{RFC(5646, "語言識別標籤（或稱 BCP 47）")}}，將有助於螢幕閱讀技術確定正確的語言來宣佈。語言識別標籤應該描述頁面內容的大多數使用的語言。如果沒有，螢幕閱讀器通常會默認使用操作系統設置的語言，這可能導致發音錯誤。
+雖然 HTML 不要求作者指定 `<html>` 元素的開始和結束標籤，但作者這樣做是很重要的，因為這樣可以允許他們為網頁指定 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#lang)。在 `<html>` 元素上提供一個具有有效語言標籤的 `lang` 屬性，根據 {{RFC(5646, "語言識別標籤（或稱 BCP 47）")}}，將有助於螢幕閱讀技術確定正確的語言來宣佈。語言識別標籤應該描述頁面內容的大多數使用的語言。如果沒有，螢幕閱讀器通常會默認使用操作系統設置的語言，這可能導致發音錯誤。
 
 在 `<html>` 元素上包含有效的 `lang` 声明也確保了頁面的 {{HTMLElement("head")}} 中包含的重要元數據，例如頁面的 {{HTMLElement("title")}}，也被正確宣告。
 
@@ -46,7 +46,7 @@ original_slug: Web/HTML/Element/html
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>

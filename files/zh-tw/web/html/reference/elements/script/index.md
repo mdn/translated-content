@@ -8,17 +8,17 @@ original_slug: Web/HTML/Element/script
 
 **HTML `<script>` 元素**能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。`<script>` 元素也能執行其他語言，例如 [WebGL](/zh-TW/docs/Web/API/WebGL_API) 的 GLSL shader 程式語言。
 
-| [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content). |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 允許的內容                                          | 動態腳本如 `text/javascript`.                                                                                                                                                                                           |
-| 標籤省略                                            | 不允許，開始和結束標籤都是必須的。                                                                                                                                                                                      |
-| 允許的父元素                                        | 任何可接受 [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#metadata_content)或 [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content) 的元素。                                               |
-| 允許的 ARIA role                                    | None                                                                                                                                                                                                                    |
-| DOM 介面                                            | {{domxref("HTMLScriptElement")}}                                                                                                                                                                                        |
+| [內容類型](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content). |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 允許的內容                                                 | 動態腳本如 `text/javascript`.                                                                                                                                                                                                                |
+| 標籤省略                                                   | 不允許，開始和結束標籤都是必須的。                                                                                                                                                                                                           |
+| 允許的父元素                                               | 任何可接受 [元資料內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#metadata_content)或 [phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content) 的元素。                                                      |
+| 允許的 ARIA role                                           | None                                                                                                                                                                                                                                         |
+| DOM 介面                                                   | {{domxref("HTMLScriptElement")}}                                                                                                                                                                                                             |
 
 ## 屬性
 
-此元素包含了[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素包含了[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `async`
 
@@ -36,7 +36,7 @@ original_slug: Web/HTML/Element/script
     請參見[相容性註解](#相容性註解)的瀏覽器支援備註。另請參見 [Async scripts for asm.js](/zh-TW/docs/Games/Techniques/Async_scripts)。
 
 - `crossorigin`
-  - : 針對沒有通過標準 [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS) 的一般 `script` 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 [CORS settings attributes](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 以以取得對其有效參數的，更具描述性的解釋。
+  - : 針對沒有通過標準 [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS) 的一般 `script` 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 [CORS settings attributes](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin) 以以取得對其有效參數的，更具描述性的解釋。
 - `defer`
 
   - : 設置此 Boolean attribute 是為了指示瀏覽器，腳本應在 document 解析後，但在觸發 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event) 之前被執行。具有 `defer` 屬性的腳本將阻止觸發 `DOMContentLoaded` 事件，直到腳本 load 完成並且 finished evaluating。

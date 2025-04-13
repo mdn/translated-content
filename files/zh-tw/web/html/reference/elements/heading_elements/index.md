@@ -51,7 +51,7 @@ h4 {
 
 ## 屬性
 
-這些元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+這些元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
@@ -61,10 +61,10 @@ h4 {
 
 ### 避免在一頁上使用多個 `<h1>` 元素
 
-雖然 HTML 標準允許在一個頁面上使用多個 `<h1>` 元素（只要它們不是[嵌套](#嵌套)的），但這不被認為是最佳實踐。一個頁面通常應該只有一個 `<h1>` 元素，用於描述頁面的內容（類似於文件的 [`<title> 元素`](/zh-TW/docs/Web/HTML/Element/title)）。
+雖然 HTML 標準允許在一個頁面上使用多個 `<h1>` 元素（只要它們不是[嵌套](#嵌套)的），但這不被認為是最佳實踐。一個頁面通常應該只有一個 `<h1>` 元素，用於描述頁面的內容（類似於文件的 [`<title> 元素`](/zh-TW/docs/Web/HTML/Reference/Elements/title)）。
 
 > [!NOTE]
-> 在舊版 HTML 標準中允許將多個 `<h1>` 元素嵌套在嵌套的[章節元素](/zh-TW/docs/Web/HTML/Element#content_sectioning)中。然而，這從未被視為最佳實踐，現在已不符合規範。詳情請參見 [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html)。
+> 在舊版 HTML 標準中允許將多個 `<h1>` 元素嵌套在嵌套的[章節元素](/zh-TW/docs/Web/HTML/Reference/Elements#content_sectioning)中。然而，這從未被視為最佳實踐，現在已不符合規範。詳情請參見 [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html)。
 
 請優先使用每頁僅有一個 `<h1>`，並且[嵌套標題](#嵌套)而不跳級。
 
@@ -171,7 +171,7 @@ h4 {
 
 ### 標記章節內容
 
-另一種螢幕閱讀軟體用戶常見的導航技術是生成[章節內容](/zh-TW/docs/Web/HTML/Element#content_sectioning)的列表並用它來確定頁面的佈局。
+另一種螢幕閱讀軟體用戶常見的導航技術是生成[章節內容](/zh-TW/docs/Web/HTML/Reference/Elements#content_sectioning)的列表並用它來確定頁面的佈局。
 
 可以使用 `aria-labelledby` 和 `id` 屬性的組合為章節內容進行標記，標籤簡要描述章節內容的目的。此技術適用於同一頁面上有多個章節元素的情況。
 
@@ -208,16 +208,16 @@ h4 {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#標題型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#標題型內容"
           >標題型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>
@@ -225,7 +225,7 @@ h4 {
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -237,7 +237,7 @@ h4 {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>

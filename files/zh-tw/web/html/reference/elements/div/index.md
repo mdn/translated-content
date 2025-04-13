@@ -38,11 +38,11 @@ original_slug: Web/HTML/Element/div
 }
 ```
 
-作為「純粹」的容器，`<div>` 元素本身並不具有代表性。相反，它用於將內容分組，以便可以輕鬆地使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性進行樣式化，標記文件的某一部分為使用不同語言編寫（使用 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang) 屬性），等等。
+作為「純粹」的容器，`<div>` 元素本身並不具有代表性。相反，它用於將內容分組，以便可以輕鬆地使用 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性進行樣式化，標記文件的某一部分為使用不同語言編寫（使用 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#lang) 屬性），等等。
 
 ## 屬性
 
-此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 > **備註：** `align` 屬性已廢棄；請不要再使用。取而代之應該使用 CSS 屬性或技術，例如 [CSS Grid](/zh-TW/docs/Web/CSS/CSS_grid_layout) 或 [CSS Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 來對頁面上的 `<div>` 元素進行對齊和定位。
 
@@ -68,7 +68,7 @@ original_slug: Web/HTML/Element/div
 
 ### 帶樣式的範例
 
-此範例通過使用 CSS 對 `<div>` 應用樣式來創建一個陰影框。請注意，在 `<div>` 上使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 屬性來將名為 `"shadowbox"` 的樣式應用於該元素。
+此範例通過使用 CSS 對 `<div>` 應用樣式來創建一個陰影框。請注意，在 `<div>` 上使用 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#class) 屬性來將名為 `"shadowbox"` 的樣式應用於該元素。
 
 #### HTML
 
@@ -104,20 +104,20 @@ original_slug: Web/HTML/Element/div
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容">捫及內容</a>。
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容">捫及內容</a>。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。<br />或（在 {{glossary("WHATWG")}} HTML 中）：如果父元素是
         {{HTMLElement("dl")}} 元素：一個或多個
@@ -134,7 +134,7 @@ original_slug: Web/HTML/Element/div
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >的元素。<br />或（在 {{glossary("WHATWG")}} HTML 中）：
         {{HTMLElement("dl")}} 元素。

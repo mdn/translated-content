@@ -19,7 +19,7 @@ l10n:
 
 ## 屬性
 
-該元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+該元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow` {{experimental_inline}}
 
@@ -67,7 +67,7 @@ l10n:
 
 ## 無障礙
 
-使用輔助技術，如螢幕閱讀器的人，可以使用 `<fencedframe>` 的 [`title` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/title)來標記其內容。標題的值應該簡要描述嵌入的內容：
+使用輔助技術，如螢幕閱讀器的人，可以使用 `<fencedframe>` 的 [`title` 屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes/title)來標記其內容。標題的值應該簡要描述嵌入的內容：
 
 ```html
 <fencedframe
@@ -107,20 +107,20 @@ frame.config = frameConfig;
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#嵌入型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#嵌入型內容"
           >嵌入型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#互動型內容"
           >互動型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>

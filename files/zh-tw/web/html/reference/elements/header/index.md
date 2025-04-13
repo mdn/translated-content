@@ -61,11 +61,11 @@ header > time {
 
 ### 歷史用法
 
-`<header>` 元素最初存在於 HTML 標題的開始處。它在[第一個網站](http://info.cern.ch/)中可見。在某個時候，標題變成了 [`<h1>` 到 `<h6>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements)，允許 `<header>` 自由填補不同的角色。
+`<header>` 元素最初存在於 HTML 標題的開始處。它在[第一個網站](http://info.cern.ch/)中可見。在某個時候，標題變成了 [`<h1>` 到 `<h6>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)，允許 `<header>` 自由填補不同的角色。
 
 ## 屬性
 
-此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 
@@ -114,16 +114,16 @@ header > time {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#palpable_content">捫及內容</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#palpable_content">捫及內容</a>
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>，但不包含 <code>&#x3C;header></code> 或 {{HTMLElement("footer")}} 的後代。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>，但不包含 <code>&#x3C;header></code> 或 {{HTMLElement("footer")}} 的後代。
       </td>
     </tr>
     <tr>
@@ -133,13 +133,13 @@ header > time {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>的元素。請注意，<code>&#x3C;header></code> 元素不得是 {{HTMLElement("address")}}、{{HTMLElement("footer")}} 或另一個 {{HTMLElement("header")}} 元素的後代。
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>的元素。請注意，<code>&#x3C;header></code> 元素不得是 {{HTMLElement("address")}}、{{HTMLElement("footer")}} 或另一個 {{HTMLElement("header")}} 元素的後代。
       </td>
     </tr>
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role">banner</a>，或如果是 <code><a href="/zh-TW/docs/Web/HTML/Element/article">article</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/aside">aside</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/main">main</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Element/nav">nav</a></code> 或 <code><a href="/zh-TW/docs/Web/HTML/Element/section">section</a></code> 元素的後代，或具有 <code>role=<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role">complementary</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/main_role">main</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role">navigation</a></code> 或 <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code> 的元素，則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>。
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role">banner</a>，或如果是 <code><a href="/zh-TW/docs/Web/HTML/Reference/Elements/article">article</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Reference/Elements/aside">aside</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Reference/Elements/main">main</a></code>、<code><a href="/zh-TW/docs/Web/HTML/Reference/Elements/nav">nav</a></code> 或 <code><a href="/zh-TW/docs/Web/HTML/Reference/Elements/section">section</a></code> 元素的後代，或具有 <code>role=<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role">complementary</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/main_role">main</a></code>、<code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role">navigation</a></code> 或 <code><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code> 的元素，則為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>。
       </td>
     </tr>
     <tr>

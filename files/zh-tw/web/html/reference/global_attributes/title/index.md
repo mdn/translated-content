@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes) **`title`** 包含表示與其所屬元素相關的建議資訊的文字。
+[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes) **`title`** 包含表示與其所屬元素相關的建議資訊的文字。
 
 {{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
 
@@ -36,9 +36,9 @@ iframe {
 
 `title` 屬性的主要用途是為輔助技術標記 {{HTMLElement("iframe")}} 元素。
 
-`title` 屬性也可以用於標記[資料表](/zh-TW/docs/Web/HTML/Element/table)中的元素。
+`title` 屬性也可以用於標記[資料表](/zh-TW/docs/Web/HTML/Reference/Elements/table)中的元素。
 
-當 `title` 屬性添加到 [`<link rel="stylesheet">`](/zh-TW/docs/Web/HTML/Element/link) 時，會創建一個備用樣式表。當使用 `<link rel="alternate">` 定義備用樣式表時，此屬性是必需的，並且必須設置為非空字符串。
+當 `title` 屬性添加到 [`<link rel="stylesheet">`](/zh-TW/docs/Web/HTML/Reference/Elements/link) 時，會創建一個備用樣式表。當使用 `<link rel="alternate">` 定義備用樣式表時，此屬性是必需的，並且必須設置為非空字符串。
 
 如果在 {{htmlelement('abbr')}} 開啟標籤中包含 `title` 屬性，則其值必須是縮寫或首字母縮略詞的完整擴展。建議盡可能在第一次使用縮寫或首字母縮略詞時，使用 `<abbr>` 標記縮寫，並在純文本中提供其完整擴展，而不是使用 `title` 屬性。這讓所有用戶都知道縮寫或首字母縮略詞代表的名稱或術語，同時也為用戶代理提供了如何朗讀內容的提示。
 
@@ -123,5 +123,5 @@ output.textContent = span.title;
 
 ## 參見
 
-- 所有[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+- 所有[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 - {{domxref("HTMLElement.title")}} 反映这个属性的。

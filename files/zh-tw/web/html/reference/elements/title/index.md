@@ -16,12 +16,12 @@ original_slug: Web/HTML/Element/title
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#metadata_content"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >後設資料內容</a
         >。
       </td>
@@ -65,7 +65,7 @@ original_slug: Web/HTML/Element/title
 
 ## 屬性
 
-這個元件屬性含有[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+這個元件屬性含有[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用筆記
 

@@ -12,7 +12,7 @@ original_slug: Web/HTML/Element/base
 
 ## 屬性
 
-此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 > **警告：** `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
 
@@ -63,7 +63,7 @@ original_slug: Web/HTML/Element/base
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
       </th>
       <td>元數據內容。</td>
     </tr>

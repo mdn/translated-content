@@ -35,7 +35,7 @@ a[href^="tel"]::before {
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
@@ -73,12 +73,12 @@ a[href^="tel"]::before {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >、捫及內容。
       </td>
@@ -86,7 +86,7 @@ a[href^="tel"]::before {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >，但不能包含嵌套的 <code>&#x3C;address></code> 元素，不能包含標題型內容（如 {{HTMLElement("hgroup")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}），不能包含章節型內容（{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("section")}}、{{HTMLElement("nav")}}），也不能包含 {{HTMLElement("header")}} 或 {{HTMLElement("footer")}} 元素。
       </td>
@@ -98,7 +98,7 @@ a[href^="tel"]::before {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >，但始終排除 <code>&#x3C;address></code> 元素（根據對稱的邏輯原則，如果 <code>&#x3C;address></code> 標籤作為父元素，則不能包含嵌套的 <code>&#x3C;address></code> 元素；同樣地， <code>&#x3C;address></code> 元素的內容不能包含 <code>&#x3C;address></code> 標籤作為其父元素）。
       </td>
@@ -137,4 +137,4 @@ a[href^="tel"]::before {
 ## 參見
 
 - 其他與區段相關的元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("footer")}}、{{HTMLElement("section")}}、{{HTMLElement("header")}}；
-- [HTML 文件的章節與大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)。
+- [HTML 文件的章節與大綱](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)。

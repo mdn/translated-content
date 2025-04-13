@@ -8,17 +8,17 @@ original_slug: Web/HTML/Element/nav
 
 **HTML \<nav> 元素**代表一個網頁中提供導航欄連結的區域，不管是當前網頁或者其他網頁，還是這個連結最終抵達的只是當前網頁的某個區塊，或者會抵達其他網頁，常見的導航欄範例有菜單、內容的表單，以及頁面本身。
 
-| [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)、[sectioning content](/zh-TW/docs/Web/HTML/Content_categories#sectioning_content)、palpable content. |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 允許內容                                                      | [流內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)。                                                                                                    |
-| 標籤省略                                                      | 不允許，開始和結束標籤都是必須的。                                                                                                                                  |
-| Permitted parents                                             | Any element that accepts [flow content](/zh-TW/docs/Web/HTML/Content_categories#flow_content).                                                                      |
-| Permitted ARIA roles                                          | None                                                                                                                                                                |
-| DOM interface                                                 | {{domxref("HTMLElement")}}                                                                                                                                          |
+| [Content categories](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)、[sectioning content](/zh-TW/docs/Web/HTML/Guides/Content_categories#sectioning_content)、palpable content. |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 允許內容                                                             | [流內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)。                                                                                                           |
+| 標籤省略                                                             | 不允許，開始和結束標籤都是必須的。                                                                                                                                                |
+| Permitted parents                                                    | Any element that accepts [flow content](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content).                                                                             |
+| Permitted ARIA roles                                                 | None                                                                                                                                                                              |
+| DOM interface                                                        | {{domxref("HTMLElement")}}                                                                                                                                                        |
 
 ## 屬性
 
-此元素只有[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素只有[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用筆記
 

@@ -30,7 +30,7 @@ original_slug: Web/HTML/Element/wbr
 
 ## 屬性
 
-此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 注意事項
 
@@ -58,14 +58,14 @@ original_slug: Web/HTML/Element/wbr
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -83,7 +83,7 @@ original_slug: Web/HTML/Element/wbr
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>

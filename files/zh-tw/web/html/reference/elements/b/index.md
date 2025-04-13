@@ -27,14 +27,14 @@ b {
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
 - 在需要突出關鍵字的情況下使用 `<b>`，例如摘要中的關鍵字、評論中的產品名稱或其他通常以粗體顯示的文字範圍（但不包括任何特殊重要性）。
 - 不要將 `<b>` 元素與 {{HTMLElement("strong")}}、{{HTMLElement("em")}} 或 {{HTMLElement("mark")}} 元素混淆。{{HTMLElement("strong")}} 元素代表某種*重要性*的文字，{{HTMLElement("em")}} 強調文字，{{HTMLElement("mark")}} 元素代表某種*相關性*的文字。`<b>` 元素不傳達此類特殊語義信息；只有在其他元素都不適合時才使用它。
 - 同樣，不要使用 `<b>` 元素標記標題。對於這種目的，請使用 {{HTMLElement("Heading_Elements", "h1")}} 到 {{HTMLElement("Heading_Elements", "h6")}} 標籤。此外，樣式表可以改變這些元素的預設樣式，因此它們不一定會以粗體顯示。
-- 在 `<b>` 元素上使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 屬性是一個良好的做法，以便根據需要傳達額外的語義信息（例如 `<b class="lead">` 用於段落的第一句話）。如果你的樣式需求發生變化，這樣可以更容易地管理 `<b>` 的多種用例，而無需更改 HTML 中的所有用例。
+- 在 `<b>` 元素上使用 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#class) 屬性是一個良好的做法，以便根據需要傳達額外的語義信息（例如 `<b class="lead">` 用於段落的第一句話）。如果你的樣式需求發生變化，這樣可以更容易地管理 `<b>` 的多種用例，而無需更改 HTML 中的所有用例。
 - 從歷史上看，`<b>` 元素的目的是使文字加粗。自 HTML4 以來，樣式信息已被廢棄，因此 `<b>` 元素的含義已經改變。
 - 如果使用 `<b>` 元素沒有語義目的，你應該改用 CSS {{cssxref("font-weight")}} 屬性並設置值為 `"bold"`，以使文字加粗。
 
@@ -59,15 +59,15 @@ Keywords are displayed with the default style of the
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >、
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >、捫及內容。
       </td>
@@ -75,7 +75,7 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -87,7 +87,7 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>

@@ -30,13 +30,13 @@ label {
 }
 ```
 
-要將 `<datalist>` 元素綁定到控制項，我們在 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 屬性中給予它一個唯一標識符，然後在具有相同標識符值的 {{HTMLElement("input")}} 元素中添加 [`list`](/zh-TW/docs/Web/HTML/Element/input#list) 屬性。只有某些類型的 {{HTMLElement("input")}} 支援此行為，並且在不同的瀏覽器中可能也會有所不同。
+要將 `<datalist>` 元素綁定到控制項，我們在 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 屬性中給予它一個唯一標識符，然後在具有相同標識符值的 {{HTMLElement("input")}} 元素中添加 [`list`](/zh-TW/docs/Web/HTML/Reference/Elements/input#list) 屬性。只有某些類型的 {{HTMLElement("input")}} 支援此行為，並且在不同的瀏覽器中可能也會有所不同。
 
 > **備註：** `<option>` 元素可以將值存儲為內部內容和 `value` 和 `label` 屬性。在下拉選單中哪一個將可見取決於瀏覽器，但單擊時，輸入到控制欄中的內容始終來自 `value` 屬性。
 
 ## 屬性
 
-此元素除了[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)外，沒有其他屬性，這些屬性是所有元素共用的。
+此元素除了[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)外，沒有其他屬性，這些屬性是所有元素共用的。
 
 ## 範例
 
@@ -138,14 +138,14 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -153,7 +153,7 @@ label {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >，或是零個或多個 {{HTMLElement("option")}} 元素。
       </td>
@@ -165,7 +165,7 @@ label {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>
@@ -201,5 +201,5 @@ label {
 
 ## 參見
 
-- {{HTMLElement("input")}} 元素，特別是其 [`list`](/zh-TW/docs/Web/HTML/Element/input#list) 屬性；
+- {{HTMLElement("input")}} 元素，特別是其 [`list`](/zh-TW/docs/Web/HTML/Reference/Elements/input#list) 屬性；
 - {{HTMLElement("option")}} 元素。

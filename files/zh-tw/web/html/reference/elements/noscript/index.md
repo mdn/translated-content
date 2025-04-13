@@ -12,18 +12,18 @@ original_slug: Web/HTML/Element/noscript
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#metadata_content"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#metadata_content"
           >後設資料內容</a
         >,
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content"
           >流內容</a
         >,
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >段落型內容</a
         >。
       </td>
@@ -38,7 +38,7 @@ original_slug: Web/HTML/Element/noscript
         {{HTMLElement("meta")}} 元素，它們的順序可以是任意的。<br />當腳本被禁用時，並且該元素不是
         {{HTMLElement("head")}} 元素的後代時：可以包括任何
         <a
-          href="/zh-TW/docs/Web/HTML/Content_categories#transparent_content_model"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#transparent_content_model"
           >透明內容</a
         >，但不得包含 <code>&#x3C;noscript></code> 元素在其後代中。<br />否則：可以包括流內容或段落型內
       </td>
@@ -50,7 +50,7 @@ original_slug: Web/HTML/Element/noscript
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        如果不存在祖元素 <code>&#x3C;noscript></code>，或者在 {{HTMLElement("head")}} 元素中（但僅適用於 HTML 文件），同樣如果不存在 <code>&#x3C;noscript></code> 祖元素，則接受任何<a href="/zh-TW/docs/Web/HTML/Content_categories#phrasing_content"
+        如果不存在祖元素 <code>&#x3C;noscript></code>，或者在 {{HTMLElement("head")}} 元素中（但僅適用於 HTML 文件），同樣如果不存在 <code>&#x3C;noscript></code> 祖元素，則接受任何<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content"
           >段落型內容</a
         >的元素。
       </td>
@@ -76,7 +76,7 @@ original_slug: Web/HTML/Element/noscript
 
 ## 屬性
 
-這個元素屬性含有[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+這個元素屬性含有[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 

@@ -17,7 +17,7 @@ original_slug: Web/HTML/Element/dir
 
 ## 屬性
 
-像所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+像所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `compact` {{Deprecated_Inline}}
   - : 這個布林屬性提示列表應以緊湊樣式呈現。此屬性的解釋取決於使用者代理，並且它不適用於所有瀏覽器。

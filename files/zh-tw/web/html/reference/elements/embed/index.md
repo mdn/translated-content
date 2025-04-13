@@ -25,7 +25,7 @@ original_slug: Web/HTML/Element/embed
 
 ## 屬性
 
-該元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+該元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `height`
   - : 資源的顯示高度，單位為 [CSS 像素](https://drafts.csswg.org/css-values/#px)。這必須是一個絕對值；不允許百分比。
@@ -53,7 +53,7 @@ original_slug: Web/HTML/Element/embed
 
 ## 無障礙議題
 
-在 `embed` 元素上使用 [`title` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/title) 來標記其內容，以便使用輔助技術（如螢幕閱讀器）導航的人能夠理解其內容。標題的值應該簡要描述嵌入內容。如果沒有標題，他們可能無法確定其嵌入內容是什麼。這種上下文轉換可能令人困惑且耗時，特別是如果 `embed` 元素包含像視頻或音頻這樣的互動內容。
+在 `embed` 元素上使用 [`title` 屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes/title) 來標記其內容，以便使用輔助技術（如螢幕閱讀器）導航的人能夠理解其內容。標題的值應該簡要描述嵌入內容。如果沒有標題，他們可能無法確定其嵌入內容是什麼。這種上下文轉換可能令人困惑且耗時，特別是如果 `embed` 元素包含像視頻或音頻這樣的互動內容。
 
 ## 技術摘要
 
@@ -61,20 +61,20 @@ original_slug: Web/HTML/Element/embed
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#嵌入型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#嵌入型內容"
           >嵌入型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#互動型內容"
           >互動型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>

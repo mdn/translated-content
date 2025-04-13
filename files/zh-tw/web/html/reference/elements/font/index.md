@@ -13,7 +13,7 @@ original_slug: Web/HTML/Element/font
 
 ## 屬性
 
-與所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+與所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `color` {{Deprecated_Inline}}
   - : 此屬性使用命名顏色或以十六進制 #RRGGBB 格式指定的顏色設置文字顏色。

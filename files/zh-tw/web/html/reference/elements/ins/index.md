@@ -60,12 +60,12 @@ p {
 
 ## 屬性
 
-此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `cite`
   - : 此屬性定義解釋變更的資源的 URI，例如連結到會議記錄或故障排除系統中的票證。
 - `datetime`
-  - : 此屬性指示變更的時間和日期，必須是帶有可選時間字串的有效日期。如果值無法解析為帶有可選時間字串的日期，該元素將沒有相關的時間戳記。有關不帶時間的字串的格式，請參閱[有效日期字串的格式](/zh-TW/docs/Web/HTML/Date_and_time_formats#date_strings)。如果字串包含日期和時間，其格式則在[有效本地日期和時間字串的格式](/zh-TW/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)中有所描述。
+  - : 此屬性指示變更的時間和日期，必須是帶有可選時間字串的有效日期。如果值無法解析為帶有可選時間字串的日期，該元素將沒有相關的時間戳記。有關不帶時間的字串的格式，請參閱[有效日期字串的格式](/zh-TW/docs/Web/HTML/Guides/Date_and_time_formats#date_strings)。如果字串包含日期和時間，其格式則在[有效本地日期和時間字串的格式](/zh-TW/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings)中有所描述。
 
 ## 範例
 
@@ -113,14 +113,14 @@ ins::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。
       </td>
@@ -129,7 +129,7 @@ ins::after {
       <th scope="row">允許的內容</th>
       <td>
         <a
-          href="/zh-TW/docs/Web/HTML/Content_categories#透明內容模型"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#透明內容模型"
           >透明內容</a
         >。
       </td>
@@ -142,7 +142,7 @@ ins::after {
       <th scope="row">允許的父元素</th>
       <td>
         任何接受<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>

@@ -40,12 +40,12 @@ blockquote {
 
 ## 屬性
 
-此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `cite`
   - : 解釋更改的資源的 URI（例如會議記錄）。
 - `datetime`
-  - : 此屬性表示更改的時間和日期，必須是有效的日期字串，帶有可選時間。如果值無法解析為帶有可選時間字符串的日期，則元素將沒有相關的時間戳。關於沒有時間的字串的格式，請參見[日期字串](/zh-TW/docs/Web/HTML/Date_and_time_formats#日期字串)。如果字串包含日期和時間，則其格式在[本地日期和時間字串](/zh-TW/docs/Web/HTML/Date_and_time_formats#本地日期和時間字串)中有所介紹。
+  - : 此屬性表示更改的時間和日期，必須是有效的日期字串，帶有可選時間。如果值無法解析為帶有可選時間字符串的日期，則元素將沒有相關的時間戳。關於沒有時間的字串的格式，請參見[日期字串](/zh-TW/docs/Web/HTML/Guides/Date_and_time_formats#日期字串)。如果字串包含日期和時間，則其格式在[本地日期和時間字串](/zh-TW/docs/Web/HTML/Guides/Date_and_time_formats#本地日期和時間字串)中有所介紹。
 
 ## 範例
 
@@ -94,14 +94,14 @@ del::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。
       </td>
@@ -110,7 +110,7 @@ del::after {
       <th scope="row">允許的內容</th>
       <td>
         <a
-          href="/zh-TW/docs/Web/HTML/Content_categories#透明內容模型"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#透明內容模型"
           >透明內容模型</a
         >。
       </td>
@@ -122,7 +122,7 @@ del::after {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>

@@ -17,7 +17,7 @@ original_slug: Web/HTML/Element/xmp
 
 ## 屬性
 
-此元素除了[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)外，沒有其他屬性，這些屬性對所有元素都是通用的。
+此元素除了[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)外，沒有其他屬性，這些屬性對所有元素都是通用的。
 
 ## DOM 介面
 

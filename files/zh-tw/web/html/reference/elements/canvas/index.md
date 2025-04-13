@@ -10,7 +10,7 @@ original_slug: Web/HTML/Element/canvas
 
 ## 屬性
 
-此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `height`
   - : 以 CSS 像素為單位的座標空間高度。默認值為 150。
@@ -94,18 +94,18 @@ ctx.fillRect(10, 10, 100, 100);
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#嵌入型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#嵌入型內容"
           >嵌入型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>
@@ -114,9 +114,9 @@ ctx.fillRect(10, 10, 100, 100);
       <th scope="row">允許的內容</th>
       <td>
         透明，但不包含<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#互動型內容"
           >互動型內容</a
-        >的後代，除了 {{HTMLElement("a")}} 元素、{{HTMLElement("button")}} 元素和 <a href="/zh-TW/docs/Web/HTML/Element/input#type"><code>type</code></a> 屬性為 <code>checkbox</code>、<code>radio</code> 或 <code>button</code> 的
+        >的後代，除了 {{HTMLElement("a")}} 元素、{{HTMLElement("button")}} 元素和 <a href="/zh-TW/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> 屬性為 <code>checkbox</code>、<code>radio</code> 或 <code>button</code> 的
         {{HTMLElement("input")}} 元素。
       </td>
     </tr>
@@ -127,7 +127,7 @@ ctx.fillRect(10, 10, 100, 100);
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>

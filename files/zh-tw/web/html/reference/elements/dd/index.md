@@ -43,11 +43,11 @@ dd {
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 
-有關範例，請參見[提供給 `<dl>` 元素的範例](/zh-TW/docs/Web/HTML/Element/dl#examples)。
+有關範例，請參見[提供給 `<dl>` 元素的範例](/zh-TW/docs/Web/HTML/Reference/Elements/dl#examples)。
 
 ## 技術摘要
 
@@ -55,7 +55,7 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
@@ -64,7 +64,7 @@ dd {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。
       </td>

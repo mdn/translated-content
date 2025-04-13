@@ -10,7 +10,7 @@ original_slug: Web/HTML/Element/rb
 
 ## 屬性
 
-該元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+該元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
@@ -58,7 +58,7 @@ original_slug: Web/HTML/Element/rb
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容分類</a
         >
       </th>

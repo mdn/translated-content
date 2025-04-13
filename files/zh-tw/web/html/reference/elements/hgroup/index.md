@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/hgroup
 
 {{HTMLSidebar}}
 
-**`<hgroup>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個標題及相關內容。它將一個單獨的 [`<h1>–<h6>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素與一個或多個 [`<p>`](/zh-TW/docs/Web/HTML/Element/p) 元素分組。
+**`<hgroup>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個標題及相關內容。它將一個單獨的 [`<h1>–<h6>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素與一個或多個 [`<p>`](/zh-TW/docs/Web/HTML/Reference/Elements/p) 元素分組。
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
 
@@ -42,7 +42,7 @@ hgroup p {
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
@@ -84,16 +84,16 @@ hgroup p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#標題型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#標題型內容"
           >標題型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>
@@ -112,7 +112,7 @@ hgroup p {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>
@@ -149,4 +149,4 @@ hgroup p {
 ## 參見
 
 - 其他與節點相關的元素：{{HTMLElement("body")}}、{{HTMLElement("article")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("nav")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [HTML文件的節點和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
+- [HTML文件的節點和大綱](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)

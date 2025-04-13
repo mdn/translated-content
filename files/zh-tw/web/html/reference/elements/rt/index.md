@@ -26,7 +26,7 @@ ruby {
 
 ## 屬性
 
-該元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+該元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 
@@ -54,7 +54,7 @@ body {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容分類</a
         >
       </th>
@@ -63,7 +63,7 @@ body {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>

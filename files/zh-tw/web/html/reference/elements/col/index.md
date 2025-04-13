@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/col
 
 {{HTMLSidebar}}
 
-**`<col>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於定義由其父元素 {{HTMLElement("colgroup")}} 表示的欄組中的一個或多個欄。`<col>` 元素僅在未定義 [`span`](/zh-TW/docs/Web/HTML/Element/colgroup#span) 屬性的 {{HTMLElement("colgroup")}} 元素的情況下作為其子元素有效。
+**`<col>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於定義由其父元素 {{HTMLElement("colgroup")}} 表示的欄組中的一個或多個欄。`<col>` 元素僅在未定義 [`span`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#span) 屬性的 {{HTMLElement("colgroup")}} 元素的情況下作為其子元素有效。
 
 {{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
 
@@ -72,7 +72,7 @@ td {
 
 ## 屬性
 
-此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `span`
   - : 指定 `<col>` 元素橫跨的連續欄數。該值必須是大於零的正整數。如果未指定，則其默認值為 `1`。
@@ -83,35 +83,35 @@ td {
 
 - `align` {{deprecated_inline}}
 
-  - : 指定每個欄單元格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支持時，`char` 值將文本內容對齊到 [`char`](#char) 屬性中定義的字符，並在 [`charoff`](#charoff) 屬性定義的偏移量上進行對齊。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`align`](/zh-TW/docs/Web/HTML/Element/colgroup#align)。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
+  - : 指定每個欄單元格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支持時，`char` 值將文本內容對齊到 [`char`](#char) 屬性中定義的字符，並在 [`charoff`](#charoff) 屬性定義的偏移量上進行對齊。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`align`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#align)。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
 
     > [!NOTE]
     > 在 `<col>` 元素上設置 `text-align` 不起作用，因為 `<col>` 沒有後代元素，因此沒有元素繼承自它。
     >
-    > 如果表格未使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以使用 `td:nth-of-type(an+b)` CSS 選擇器。將 `a` 設置為零，將 `b` 設置為表格中欄的位置，例如 `td:nth-of-type(2) { text-align: right; }` 可以使第二欄單元格右對齊。
+    > 如果表格未使用 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，則可以使用 `td:nth-of-type(an+b)` CSS 選擇器。將 `a` 設置為零，將 `b` 設置為表格中欄的位置，例如 `td:nth-of-type(2) { text-align: right; }` 可以使第二欄單元格右對齊。
     >
-    > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
+    > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
 
 - `bgcolor` {{deprecated_inline}}
   - : 定義每個欄單元格的背景顏色。該值是一個 HTML 顏色，可以是一個以『`#`』為前綴的 [6 位十六進制 RGB 代碼](/zh-TW/docs/Web/CSS/hex-color)，或者是一個 [顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
 - `char` {{deprecated_inline}}
-  - : 指定每個欄單元格的內容對齊到一個字符的方式。當將 [`align`](#align) 未設置為 `char` 時，此屬性將被忽略，但仍將覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`char`](/zh-TW/docs/Web/HTML/Element/colgroup#char)。
+  - : 指定每個欄單元格的內容對齊到一個字符的方式。當將 [`align`](#align) 未設置為 `char` 時，此屬性將被忽略，但仍將覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`char`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#char)。
 - `charoff` {{deprecated_inline}}
   - : 指定欄單元格內容從由 [`char`](#char) 屬性指定的對齊字符的偏移量的字符數。
 - `valign` {{deprecated_inline}}
 
-  - : 指定每個欄單元格的垂直對齊方式。可能的{{Glossary("enumerated", "列舉")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`valign`](/zh-TW/docs/Web/HTML/Element/colgroup#valign)。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
+  - : 指定每個欄單元格的垂直對齊方式。可能的{{Glossary("enumerated", "列舉")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`valign`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#valign)。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
 
     > [!NOTE]
     > 在 `<col>` 元素上設置 `vertical-align` 不起作用，因為 `<col>` 沒有後代元素，因此沒有元素繼承自它。
     >
-    > 如果表格未使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以使用 `td:nth-of-type(an+b)` CSS 選擇器。將 `a` 設置為零，將 `b` 設置為表格中欄的位置，例如 `td:nth-of-type(2) { vertical-align: middle; }` 可以使第二欄單元格垂直居中。
+    > 如果表格未使用 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，則可以使用 `td:nth-of-type(an+b)` CSS 選擇器。將 `a` 設置為零，將 `b` 設置為表格中欄的位置，例如 `td:nth-of-type(2) { vertical-align: middle; }` 可以使第二欄單元格垂直居中。
     >
-    > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
+    > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
 
 - `width` {{deprecated_inline}}
 
-  - : 為每個欄指定默認寬度。除了標準像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨度的欄的寬度應該是足以容納欄內容的最小寬度。也可以使用相對寬度，如 `5*`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-TW/docs/Web/HTML/Element/colgroup#width)。請改用 {{cssxref("width")}} CSS 屬性，因為此屬性已棄用。
+  - : 為每個欄指定默認寬度。除了標準像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨度的欄的寬度應該是足以容納欄內容的最小寬度。也可以使用相對寬度，如 `5*`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#width)。請改用 {{cssxref("width")}} CSS 屬性，因為此屬性已棄用。
 
 ## 使用注意事項
 
@@ -225,7 +225,7 @@ table {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
@@ -242,7 +242,7 @@ table {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        只能是 {{HTMLElement("colgroup")}}，雖然它可以被隱式定義，因為其開始標籤並不是必需的。{{HTMLElement("colgroup")}} 不得有 <a href="/zh-TW/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 屬性。
+        只能是 {{HTMLElement("colgroup")}}，雖然它可以被隱式定義，因為其開始標籤並不是必需的。{{HTMLElement("colgroup")}} 不得有 <a href="/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#span"><code>span</code></a> 屬性。
       </td>
     </tr>
     <tr>

@@ -12,12 +12,12 @@ original_slug: Web/HTML/Element/frame
 
 ## 屬性
 
-與所有其他 HTML 元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+與所有其他 HTML 元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `src` {{Deprecated_Inline}}
   - : 此屬性指定將由框架顯示的文件。
 - `name` {{Deprecated_Inline}}
-  - : 此屬性用於標記框架。如果不標記，則每個連結都將在其所在的框架中打開——最接近的父框架。有關更多信息，請參見 [`target`](/zh-TW/docs/Web/HTML/Element/a#target) 屬性。
+  - : 此屬性用於標記框架。如果不標記，則每個連結都將在其所在的框架中打開——最接近的父框架。有關更多信息，請參見 [`target`](/zh-TW/docs/Web/HTML/Reference/Elements/a#target) 屬性。
 - `noresize` {{Deprecated_Inline}}
   - : 此屬性防止用戶調整框架的大小。
 - `scrolling` {{Deprecated_Inline}}

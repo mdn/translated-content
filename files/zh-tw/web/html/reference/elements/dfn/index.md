@@ -25,9 +25,9 @@ dfn {
 
 ## 屬性
 
-該元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+該元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
-[`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) 屬性具有特殊意義，如下所述。
+[`title`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#title) 屬性具有特殊意義，如下所述。
 
 ## 使用注意事項
 
@@ -37,7 +37,7 @@ dfn {
 
 遵循以下規則識別要定義的術語：
 
-1. 如果 `<dfn>` 元素有 [`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) 屬性，則 `title` 屬性的值被視為要定義的術語。元素仍然必須包含文本，但該文本可以是縮寫（可能使用 {{HTMLElement("abbr")}}）或術語的其他形式。
+1. 如果 `<dfn>` 元素有 [`title`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#title) 屬性，則 `title` 屬性的值被視為要定義的術語。元素仍然必須包含文本，但該文本可以是縮寫（可能使用 {{HTMLElement("abbr")}}）或術語的其他形式。
 2. 如果 `<dfn>` 包含單個子元素並且自身沒有任何文本內容，且子元素是具有自己的 `title` 屬性的 {{HTMLElement("abbr")}} 元素，那麼 `<abbr>` 元素的 `title` 的確切值就是要定義的術語。
 3. 否則， `<dfn>` 元素的文本內容就是要定義的術語。這在下面的[第一個範例](#基本識別術語)中顯示。
 
@@ -46,7 +46,7 @@ dfn {
 
 ### 連結到 `<dfn>` 元素
 
-如果在 `<dfn>` 元素上包含 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，則可以使用 {{HTMLElement("a")}} 元素連結到它。這些鏈接應該是術語的使用，意在讓讀者如果尚不了解術語，就可以通過點擊術語的連結快速導航到術語的定義。
+如果在 `<dfn>` 元素上包含 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性，則可以使用 {{HTMLElement("a")}} 元素連結到它。這些鏈接應該是術語的使用，意在讓讀者如果尚不了解術語，就可以通過點擊術語的連結快速導航到術語的定義。
 
 這在下面的[連結到定義](#連結到定義)範例中顯示。
 
@@ -101,7 +101,7 @@ dfn {
 </p>
 ```
 
-這裡我們看到了定義，現在具有一個 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，`"definition-dfn"`，可以用作連結的目標。稍後，使用 `<a>` 元素創建了一個連結，將 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性設置為 `"#definition-dfn"` 以設置回到定義的連結。
+這裡我們看到了定義，現在具有一個 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性，`"definition-dfn"`，可以用作連結的目標。稍後，使用 `<a>` 元素創建了一個連結，將 [`href`](/zh-TW/docs/Web/HTML/Reference/Elements/a#href) 屬性設置為 `"#definition-dfn"` 以設置回到定義的連結。
 
 #### 結果
 
@@ -139,16 +139,16 @@ dfn {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容">段落型內容</a>、捫及內容。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容">段落型內容</a>、捫及內容。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容">段落型內容</a>，但不能有任何 {{HTMLElement("dfn")}} 元素作為後代。
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容">段落型內容</a>，但不能有任何 {{HTMLElement("dfn")}} 元素作為後代。
       </td>
     </tr>
     <tr>
@@ -158,7 +158,7 @@ dfn {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容">段落型內容</a>的元素。
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容">段落型內容</a>的元素。
       </td>
     </tr>
     <tr>

@@ -45,7 +45,7 @@ blockquote + p {
 
 ## 屬性
 
-此元素的屬性包括[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全局屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `cite`
   - : 一個 URL，指定了信息引用的源文檔或消息。此屬性旨在指向解釋引文的上下文或引文參考的信息。
@@ -80,12 +80,12 @@ blockquote + p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >、章節根、捫及內容 。
       </td>
@@ -93,7 +93,7 @@ blockquote + p {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。
       </td>
@@ -106,7 +106,7 @@ blockquote + p {
       <th scope="row">允許的父元素</th>
       <td>
         任何接受<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>

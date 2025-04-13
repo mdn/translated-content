@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/span
 
 {{HTMLSidebar}}
 
-**`<span>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個通用的行級容器，用於包裹詞組內容，本身並不代表任何特定含義。它可用於為樣式目的（使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性）對元素進行分組，或因它們共享屬性值（如 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang)）而使用。僅在沒有其他語義元素適用時應使用 `<span>`。`<span>` 非常類似於 {{HTMLElement("div")}} 元素，但 {{HTMLElement("div")}} 是一個[塊級元素](/zh-TW/docs/Glossary/Block-level_content)，而 `<span>` 是一個[行級元素](/zh-TW/docs/Glossary/Inline-level_content)。
+**`<span>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個通用的行級容器，用於包裹詞組內容，本身並不代表任何特定含義。它可用於為樣式目的（使用 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#id) 屬性）對元素進行分組，或因它們共享屬性值（如 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#lang)）而使用。僅在沒有其他語義元素適用時應使用 `<span>`。`<span>` 非常類似於 {{HTMLElement("div")}} 元素，但 {{HTMLElement("div")}} 是一個[塊級元素](/zh-TW/docs/Glossary/Block-level_content)，而 `<span>` 是一個[行級元素](/zh-TW/docs/Glossary/Inline-level_content)。
 
 {{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
 
@@ -31,7 +31,7 @@ span.ingredient {
 
 ## 屬性
 
-此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 範例
 
@@ -77,14 +77,14 @@ li span {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -92,7 +92,7 @@ li span {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -104,9 +104,9 @@ li span {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
-        >的元素，或任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        >的元素，或任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>

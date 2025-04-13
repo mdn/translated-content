@@ -60,17 +60,17 @@ original_slug: Web/HTML/Element/article
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >、<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#章節型內容"
+          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#章節型內容"
           >章節型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
           >捫及內容</a
         >
       </td>
@@ -78,7 +78,7 @@ original_slug: Web/HTML/Element/article
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         >。
       </td>
@@ -90,7 +90,7 @@ original_slug: Web/HTML/Element/article
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
         > 的元素。請注意，<code>&#x3C;article></code> 元素不得是
         {{HTMLElement("address")}} 元素的子孫。
@@ -121,14 +121,14 @@ original_slug: Web/HTML/Element/article
 
 ## 屬性
 
-此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 ## 使用注意事項
 
-- 每個 `<article>` 應該被識別，通常通過在 `<article>` 元素的子元素中包含標題（[`<h1>` - `<h6>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素）。
+- 每個 `<article>` 應該被識別，通常通過在 `<article>` 元素的子元素中包含標題（[`<h1>` - `<h6>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素）。
 - 當嵌套 `<article>` 元素時，內部元素代表與外部元素相關的文章。例如，部落格文章的評論可以是嵌套在表示部落格文章的 `<article>` 中的 `<article>` 元素。
 - `<article>` 元素的作者信息可以通過 {{HTMLElement("address")}} 元素提供，但不適用於嵌套的 `<article>` 元素。
-- `<article>` 元素的發佈日期和時間可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-TW/docs/Web/HTML/Element/time#datetime) 屬性來描述。
+- `<article>` 元素的發佈日期和時間可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-TW/docs/Web/HTML/Reference/Elements/time#datetime) 屬性來描述。
 
 ## 範例
 
@@ -189,4 +189,4 @@ original_slug: Web/HTML/Element/article
 ## 參見
 
 - 其他與節相關的元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("section")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_lements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [使用 HTML 節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
+- [使用 HTML 節和大綱](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements)

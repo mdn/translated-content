@@ -13,7 +13,7 @@ original_slug: Web/HTML/Element/acronym
 
 ## 屬性
 
-此元素僅具有[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)，這些屬性對所有元素都是共通的。
+此元素僅具有[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)，這些屬性對所有元素都是共通的。
 
 ## DOM 介面
 

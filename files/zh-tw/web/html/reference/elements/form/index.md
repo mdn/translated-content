@@ -50,13 +50,13 @@ label {
 
 ## 屬性
 
-該元素包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+該元素包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `accept` {{deprecated_inline}}
 
   - : 伺服器接受的逗號分隔的[內容類型](/zh-TW/docs/Web/SVG/Guides/Content_type)。
 
-    > **備註：** **此屬性已被廢棄，不應再使用**。請改用 `<input type=file>` 元素上的 [`accept`](/zh-TW/docs/Web/HTML/Element/input#accept) 屬性。
+    > **備註：** **此屬性已被廢棄，不應再使用**。請改用 `<input type=file>` 元素上的 [`accept`](/zh-TW/docs/Web/HTML/Reference/Elements/input#accept) 屬性。
 
 - `accept-charset`
 
@@ -64,7 +64,7 @@ label {
 
 - `autocapitalize`
 
-  - : 控制輸入文本是否自動大寫，以及如何自動大寫。有關更多信息，請參見 [`autocapitalize`](/zh-TW/docs/Web/HTML/Global_attributes/autocapitalize) 全域屬性頁面。
+  - : 控制輸入文本是否自動大寫，以及如何自動大寫。有關更多信息，請參見 [`autocapitalize`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/autocapitalize) 全域屬性頁面。
 
 - `autocomplete`
 
@@ -78,14 +78,14 @@ label {
   - : 表單的名稱。該值不能為空字符串，且必須在其所在的表單集合中唯一（如果有的話）。
 
 - `rel`
-  - : 控制註釋和表單創建的連接類型。註釋包括 [`external`](/zh-TW/docs/Web/HTML/Attributes/rel#external)、[`nofollow`](/zh-TW/docs/Web/HTML/Attributes/rel#nofollow)、[`opener`](/zh-TW/docs/Web/HTML/Attributes/rel#opener)、[`noopener`](/zh-TW/docs/Web/HTML/Attributes/rel#noopener) 和 [`noreferrer`](/zh-TW/docs/Web/HTML/Attributes/rel#noreferrer)。連接類型包括 [`help`](/zh-TW/docs/Web/HTML/Attributes/rel#help)、[`prev`](/zh-TW/docs/Web/HTML/Attributes/rel#prev)、[`next`](/zh-TW/docs/Web/HTML/Attributes/rel#next)、[`search`](/zh-TW/docs/Web/HTML/Attributes/rel#search) 和 [`license`](/zh-TW/docs/Web/HTML/Attributes/rel#license)。[`rel`](/zh-TW/docs/Web/HTML/Attributes/rel) 的值是這些枚舉值的空格分隔列表。
+  - : 控制註釋和表單創建的連接類型。註釋包括 [`external`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#external)、[`nofollow`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#nofollow)、[`opener`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#opener)、[`noopener`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#noopener) 和 [`noreferrer`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#noreferrer)。連接類型包括 [`help`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#help)、[`prev`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#prev)、[`next`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#next)、[`search`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#search) 和 [`license`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel#license)。[`rel`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel) 的值是這些枚舉值的空格分隔列表。
 
 ### 提交表單的屬性
 
 以下屬性控制表單提交時的行為。
 
 - `action`
-  - : 處理表單提交的 URL。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 元素上的 [`formaction`](/zh-TW/docs/Web/HTML/Element/button#formaction) 屬性覆蓋。當設置 `method="dialog"` 時，將忽略此屬性。
+  - : 處理表單提交的 URL。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formaction`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formaction) 屬性覆蓋。當設置 `method="dialog"` 時，將忽略此屬性。
 - `enctype`
 
   - : 如果 `method` 屬性的值為 `post`，則 `enctype` 是表單提交的 [MIME 類型](https://zh.wikipedia.org/wiki/互联网媒体类型)。可能的值：
@@ -94,7 +94,7 @@ label {
     - `multipart/form-data`：如果表單包含帶有 `type=file` 的 {{HTMLElement("input")}} 元素，請使用此值。
     - `text/plain`：用於調試目的。
 
-    這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 元素上的 [`formenctype`](/zh-TW/docs/Web/HTML/Element/button#formenctype) 屬性覆蓋。
+    這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formenctype`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formenctype) 屬性覆蓋。
 
 - `method`
 
@@ -105,10 +105,10 @@ label {
     - `get`（默認值）：{{HTTPMethod("GET")}}；表單數據附加到 `action` URL 上，使用 `?` 分隔符。當表單[沒有副作用](/zh-TW/docs/Glossary/Idempotent)時使用此方法。
     - `dialog`：當表單位於 {{HTMLElement("dialog")}} 內部時，關閉對話框並導致提交時觸發 `submit` 事件，而不提交數據或清除表單。
 
-    這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 元素上的 [`formmethod`](/zh-TW/docs/Web/HTML/Element/button#formmethod) 屬性覆蓋。
+    這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formmethod`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formmethod) 屬性覆蓋。
 
 - `novalidate`
-  - : 此布林屬性表示提交表單時不應該驗證表單。如果未設置此屬性（因此表單**_被_**驗證），則可以被屬於表單的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 元素上的 [`formnovalidate`](/zh-TW/docs/Web/HTML/Element/button#formnovalidate) 屬性覆蓋。
+  - : 此布林屬性表示提交表單時不應該驗證表單。如果未設置此屬性（因此表單**_被_**驗證），則可以被屬於表單的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formnovalidate`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formnovalidate) 屬性覆蓋。
 - `target`
 
   - : 提交表單後在哪裡顯示響應。它是一個用於*瀏覽上下文*的名稱/關鍵字（例如，標籤、窗口或 iframe）。以下關鍵字具有特殊含義：
@@ -119,7 +119,7 @@ label {
     - `_top`：加載到頂級瀏覽上下文（即，當前上下文的祖先，並且沒有父級）。如果沒有父級，則與 `_self` 的行為相同。
     - `_unfencedTop`：將表單中的響應加載到嵌入式[圍欄頁框](/zh-TW/docs/Web/API/Fenced_frame_API)的頂級框架（即穿越圍欄頁框的根，與其他保留目的地不同）。僅在圍欄頁框內可用。
 
-    這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 元素上的 [`formtarget`](/zh-TW/docs/Web/HTML/Element/button#formtarget) 屬性覆蓋。
+    這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formtarget`](/zh-TW/docs/Web/HTML/Reference/Elements/button#formtarget) 屬性覆蓋。
 
 ## 範例
 
@@ -162,16 +162,16 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容">捫及內容</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容">捫及內容</a>
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>，但不包含 <code>&#x3C;form></code> 元素
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>，但不包含 <code>&#x3C;form></code> 元素
       </td>
     </tr>
     <tr>
@@ -181,7 +181,7 @@ label {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>的元素
+        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容">流內容</a>的元素
       </td>
     </tr>
     <tr>

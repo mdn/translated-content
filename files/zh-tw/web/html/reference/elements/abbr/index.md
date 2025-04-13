@@ -10,7 +10,7 @@ original_slug: Web/HTML/Element/abbr
 
 在包含縮寫或縮略語時，首次使用時需提供該術語的全稱，並使用 `<abbr>` 標記縮寫。這有助於告知使用者縮寫或縮略語的含義。
 
-可選的 [`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) 屬性可在未提供完整展開時提供縮寫或縮略語的展開。這可為用戶代理提供如何宣布/顯示內容的提示，同時告知所有使用者該縮寫的含義。若存在，`title` 必須包含該完整描述，不能包含其他內容。
+可選的 [`title`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#title) 屬性可在未提供完整展開時提供縮寫或縮略語的展開。這可為用戶代理提供如何宣布/顯示內容的提示，同時告知所有使用者該縮寫的含義。若存在，`title` 必須包含該完整描述，不能包含其他內容。
 
 {{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
 
@@ -32,7 +32,7 @@ abbr {
 
 ## 屬性
 
-該元素僅支援[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。當與 `<abbr>` 元素一起使用時，[`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) 屬性具有特定的語義意義；必須包含縮寫的完整人類可讀描述或展開。該文本通常會在將滑鼠游標懸停在元素上時，由瀏覽器呈現為工具提示。
+該元素僅支援[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。當與 `<abbr>` 元素一起使用時，[`title`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#title) 屬性具有特定的語義意義；必須包含縮寫的完整人類可讀描述或展開。該文本通常會在將滑鼠游標懸停在元素上時，由瀏覽器呈現為工具提示。
 
 你使用的每個 `<abbr>` 元素都是獨立的；為其中一個提供 `title` 不會自動將相同的展開文本附加到其他具有相同內容文本的元素上。
 
@@ -42,7 +42,7 @@ abbr {
 
 並不要求所有縮寫都必須使用 `<abbr>` 進行標記。但是，有幾種情況可以使用：
 
-- 當使用縮寫且要在文檔內容流之外提供展開或定義時，使用具有適當 [`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) 的 `<abbr>`。
+- 當使用縮寫且要在文檔內容流之外提供展開或定義時，使用具有適當 [`title`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#title) 的 `<abbr>`。
 - 要定義讀者可能不熟悉的縮寫時，使用 `<abbr>` 並內置文字提供定義。僅在內嵌展開或定義不可用時才包含 `title` 屬性。
 - 當需要語義地注意縮寫在文本中的存在時，`<abbr>` 元素很有用。這可用於樣式設計或腳本目的。
 - 你可以將 `<abbr>` 與 {{HTMLElement("dfn")}} 一起使用，為縮寫或縮略語建立定義。參見下面的範例[定義縮寫](#定義縮寫)。
@@ -97,7 +97,7 @@ abbr {
 
 ### 提供展開
 
-添加 [`title`](/zh-TW/docs/Web/HTML/Global_attributes#title) 屬性可讓你為縮寫或縮略語提供展開或定義。
+添加 [`title`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#title) 屬性可讓你為縮寫或縮略語提供展開或定義。
 
 #### HTML
 
@@ -159,14 +159,14 @@ abbr {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >、捫及內容
       </td>
@@ -174,7 +174,7 @@ abbr {
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
           >段落型內容</a
         >
       </td>
@@ -186,7 +186,7 @@ abbr {
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        接受任何<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容">段落型內容</a
+        接受任何<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容">段落型內容</a
         >
       </td>
     </tr>

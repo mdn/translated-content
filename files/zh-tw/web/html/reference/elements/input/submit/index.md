@@ -8,16 +8,16 @@ original_slug: Web/HTML/Element/input/submit
 
 {{HTMLElement("input")}} 元素的 **`"submit"`** 類型會被視為提交按鈕（submit button）——點選的話就能把表單提交到伺服器。
 
-| **[值](#值)**      | 用作按鈕 label 的 {{domxref("DOMString")}}                                                               |
-| ------------------ | -------------------------------------------------------------------------------------------------------- |
-| **事件**           | [`click`](/zh-TW/docs/Web/API/Element/click_event)                                                       |
-| **常見的支援屬性** | [`type`](/zh-TW/docs/Web/HTML/Element/input#type) 與 [`value`](/zh-TW/docs/Web/HTML/Element/input#value) |
-| **IDL 屬性**       | `value`                                                                                                  |
-| **方法**           | 無                                                                                                       |
+| **[值](#值)**      | 用作按鈕 label 的 {{domxref("DOMString")}}                                                                                     |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| **事件**           | [`click`](/zh-TW/docs/Web/API/Element/click_event)                                                                             |
+| **常見的支援屬性** | [`type`](/zh-TW/docs/Web/HTML/Reference/Elements/input#type) 與 [`value`](/zh-TW/docs/Web/HTML/Reference/Elements/input#value) |
+| **IDL 屬性**       | `value`                                                                                                                        |
+| **方法**           | 無                                                                                                                             |
 
 ## 值
 
-`<input type="submit">` 元素的 [`value`](/zh-TW/docs/Web/HTML/Element/input#value) 屬性會包含用作按鈕 label 的 {{domxref("DOMString")}}。
+`<input type="submit">` 元素的 [`value`](/zh-TW/docs/Web/HTML/Reference/Elements/input#value) 屬性會包含用作按鈕 label 的 {{domxref("DOMString")}}。
 
 ```html hidden
 <input type="submit" value="Submit to me" />
@@ -37,7 +37,7 @@ original_slug: Web/HTML/Element/input/submit
 
 ## 使用提交按鈕
 
-`<input type="submit">` 按鈕用於提交表單。如果想自訂按鈕、並透過 JavaScript 自訂其行為，你應該用 [`<input type="button">`](/zh-TW/docs/Web/HTML/Element/input/button)、或更好的，{{htmlelement("button")}} 元素。
+`<input type="submit">` 按鈕用於提交表單。如果想自訂按鈕、並透過 JavaScript 自訂其行為，你應該用 [`<input type="button">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/button)、或更好的，{{htmlelement("button")}} 元素。
 
 請記住，如果表單內只有一個按鈕元素（例如 `<button>My button</button>`）的話，瀏覽器會自動把它視為提交按鈕。你要在其他按鈕之外，明確宣告一個提交按鈕。
 
@@ -67,9 +67,9 @@ original_slug: Web/HTML/Element/input/submit
 
 ### 增加提交的快捷鍵
 
-鍵盤快捷鍵，又稱熱鍵，能讓用戶透過鍵盤按鍵或組合觸發按鈕事件。要給提交按鈕添加鍵盤快捷鍵——如同 {{HTMLElement("input")}} 那樣——你需要使用全域屬性 [`accesskey`](/zh-TW/docs/Web/HTML/Global_attributes#accesskey)。
+鍵盤快捷鍵，又稱熱鍵，能讓用戶透過鍵盤按鍵或組合觸發按鈕事件。要給提交按鈕添加鍵盤快捷鍵——如同 {{HTMLElement("input")}} 那樣——你需要使用全域屬性 [`accesskey`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#accesskey)。
 
-下例之中，<kbd>s</kbd> 被指定為快捷鍵（you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [`accesskey`](/zh-TW/docs/Web/HTML/Global_attributes#accesskey) for a useful list of those）。
+下例之中，<kbd>s</kbd> 被指定為快捷鍵（you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [`accesskey`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#accesskey) for a useful list of those）。
 
 ```html
 <form>
@@ -90,7 +90,7 @@ original_slug: Web/HTML/Element/input/submit
 
 ### 禁用與啟用提交按鈕
 
-要禁用提交按鈕，就如同下例般指定全域屬性 [`disabled`](/zh-TW/docs/Web/HTML/Global_attributes#disabled)：
+要禁用提交按鈕，就如同下例般指定全域屬性 [`disabled`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#disabled)：
 
 ```html hidden
 <input type="submit" value="Disabled" disabled />
@@ -99,10 +99,10 @@ original_slug: Web/HTML/Element/input/submit
 你可以在 run time 時藉由設定 `disabled` 的 `true` or `false` 來禁用或啟用提交按鈕。在 JavaScript 就看起來像 `btn.disabled = true`。
 
 > [!NOTE]
-> 請參見 [`<input type="button">`](/zh-TW/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 頁面以取得關於禁用/啟用提交按鈕的詳細資訊。
+> 請參見 [`<input type="button">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/button#Disabling_and_enabling_a_button) 頁面以取得關於禁用/啟用提交按鈕的詳細資訊。
 
 > [!NOTE]
-> Firefox 不若其他瀏覽器，它預設上會在 {{HTMLElement("button")}} 跨網頁加載時[保持動態禁用狀態](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。請用 [`autocomplete`](/zh-TW/docs/Web/HTML/Element/button#autocomplete) 屬性控制這個功能。
+> Firefox 不若其他瀏覽器，它預設上會在 {{HTMLElement("button")}} 跨網頁加載時[保持動態禁用狀態](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。請用 [`autocomplete`](/zh-TW/docs/Web/HTML/Reference/Elements/button#autocomplete) 屬性控制這個功能。
 
 ## 驗證
 
