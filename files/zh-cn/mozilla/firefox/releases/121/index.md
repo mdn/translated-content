@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `<iframe>` 现已支持[懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)，这允许开发者提示特定的 `<iframe>` 仅在可见时才进行加载。这可以减少页面加载时需要获取的资源（某些 `<iframe>` 可能根本不需要获取）以加快初始加载的时间。提示可以通过 `<iframe>` 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性或 JavaScript 中的 {{domxref("HTMLIFrameElement.loading")}} 属性提供。（[Firefox bug 1622090](https://bugzil.la/1622090)）。
+- `<iframe>` 现已支持[懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)，这允许开发者提示特定的 `<iframe>` 仅在可见时才进行加载。这可以减少页面加载时需要获取的资源（某些 `<iframe>` 可能根本不需要获取）以加快初始加载的时间。提示可以通过 `<iframe>` 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#loading) 属性或 JavaScript 中的 {{domxref("HTMLIFrameElement.loading")}} 属性提供。（[Firefox bug 1622090](https://bugzil.la/1622090)）。
 
 ### CSS
 

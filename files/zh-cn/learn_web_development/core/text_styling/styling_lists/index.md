@@ -258,7 +258,7 @@ ul {
 
 ### start
 
-[`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性允许你从 1 以外的数字开始计数。以下示例：
+[`start`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#start) 属性允许你从 1 以外的数字开始计数。以下示例：
 
 ```html
 <ol start="4">
@@ -277,7 +277,7 @@ ul {
 
 ### reversed
 
-[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将使列表反向计数。以下示例：
+[`reversed`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed) 属性将使列表反向计数。以下示例：
 
 ```html
 <ol start="4" reversed>
@@ -299,7 +299,7 @@ ul {
 
 ### value
 
-[`value`](/zh-CN/docs/Web/HTML/Element/ol#value) 属性允许设置列表项指定数值，以下示例：
+[`value`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#value) 属性允许设置列表项指定数值，以下示例：
 
 ```html
 <ol>

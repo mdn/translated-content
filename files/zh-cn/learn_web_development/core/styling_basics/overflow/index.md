@@ -220,7 +220,7 @@ CSS 中有所谓[**区块格式化上下文**（Block Formatting Context，BFC�
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——见[技能测试：溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks)。
+你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——见[技能测试：溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow)。
 
 ## 小结
 

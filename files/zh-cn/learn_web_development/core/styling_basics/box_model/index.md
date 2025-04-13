@@ -618,7 +618,7 @@ li {
 
 ## 技能测试！
 
-本文已经结束，你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试来验证你是否保留了这些信息——请参阅[技能测试：盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks)。
+本文已经结束，你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试来验证你是否保留了这些信息——请参阅[技能测试：盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model)。
 
 ## 总结
 

@@ -11,7 +11,7 @@ l10n:
 
 `aria-colspan` 主要用于不包含在原生 HTML {{HTMLElement('table')}} 中的 [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) 和 [`gridcell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)，该属性值定义了一个单元格在 ARIA [`table`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)、[`grid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role) 或 [`treegrid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) 中跨越的列数。
 
-在 HTML 中，{{HTMLElement('th')}} 和 {{HTMLElement('td')}} 元素具有 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#attributes) 属性。当使用语义化的 {{HTMLElement('table')}} 时，按设计使用原生的 `colspan` 属性即可。此 ARIA 属性用于不包含在原生表格中的单元格和网格单元格，如果用于 {{HTMLElement('table')}} 中的单元格，将被忽略。
+在 HTML 中，{{HTMLElement('th')}} 和 {{HTMLElement('td')}} 元素具有 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#attributes) 属性。当使用语义化的 {{HTMLElement('table')}} 时，按设计使用原生的 `colspan` 属性即可。此 ARIA 属性用于不包含在原生表格中的单元格和网格单元格，如果用于 {{HTMLElement('table')}} 中的单元格，将被忽略。
 
 > [!NOTE]
 > 使用 ARIA 的首要规则是，如果可以使用具有所需语义和行为的原生特性，而不是重新定义元素并**添加** ARIA 角色、状态或属性使其变得无障碍，那么就这样做。尽可能使用 HTML {{HTMLelement('table')}} 元素（包括 {{HTMLelement('td')}} 和 {{HTMLelement('th')}} 以及 `colspan` 属性），而不是带有 ARIA 角色和属性的非语义元素。
@@ -159,7 +159,7 @@ l10n:
 
 ## 参见
 
-- {{HTMLElement('th')}} 和 {{HTMLElement('td')}} [`colspan`](/zh-CN/docs/Web/HTML/Element/td#attributes) 属性
+- {{HTMLElement('th')}} 和 {{HTMLElement('td')}} [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#attributes) 属性
 - [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) 属性
 - [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) 属性
 - [`cell`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) 角色

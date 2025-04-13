@@ -343,7 +343,7 @@ img {
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes)。
 
 ## 总结
 

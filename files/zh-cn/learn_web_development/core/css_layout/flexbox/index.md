@@ -341,7 +341,7 @@ button {
 
 ## 技能测试
 
-我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills)来验证你是否掌握了这些知识。
+我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox)来验证你是否掌握了这些知识。
 
 ## 总结
 

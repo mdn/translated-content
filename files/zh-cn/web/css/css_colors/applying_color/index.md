@@ -9,7 +9,7 @@ l10n:
 
 本文主要介绍 HTML 中使用 CSS 颜色的各种方法。
 
-色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element)添加颜色，以创建所需的外观。
+色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Reference/Elements)添加颜色，以创建所需的外观。
 
 我们将会谈及添加颜色所需要的大部分内容，包括[一系列可以着色的元素与相关的 CSS 属性](#可设置颜色的内容)，[如何描述颜色](#如何描述颜色)，以及[在样式表与脚本中使用颜色的方法](#使用颜色)。同时我们还会了解如何[让用户选择颜色](#让用户选择颜色)。
 
@@ -36,7 +36,7 @@ l10n:
 - {{cssxref("text-emphasis-color")}}
   - : 绘制文本中每个字符旁边的强调符号时使用的颜色。主要用于绘制东亚语言的文本。
 - {{cssxref("caret-color")}}
-  - : 在元素中绘制{{Glossary("caret", "光标")}}时使用的颜色（有时也称为文本输入光标）。这仅对可编辑的元素有用，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 或设置了 HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性的元素。
+  - : 在元素中绘制{{Glossary("caret", "光标")}}时使用的颜色（有时也称为文本输入光标）。这仅对可编辑的元素有用，如 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 或设置了 HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) 属性的元素。
 
 ### 盒
 
@@ -488,7 +488,7 @@ Oklab 是一种色彩空间，它使用与 CIELAB 相同的模型类型，但在
 
 ## 让用户选择颜色
 
-在许多情况下，网站可能需要让用户选择一种颜色。也许你有一个可定制的用户界面，或者你正在实现一个绘图应用程序。也许你有可编辑的文本，需要让用户选择文本颜色。或者，你的应用程序可以让用户为文件夹或项目指定颜色。虽然从历史上看，有必要实现自己的[颜色选择器](https://en.wikipedia.org/wiki/Color_picker)，但 HTML 现在支持浏览器通过 {{HTMLElement("input")}} 元素，使用 `"color"` 作为其 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值，提供一个开箱即用的颜色选择器。
+在许多情况下，网站可能需要让用户选择一种颜色。也许你有一个可定制的用户界面，或者你正在实现一个绘图应用程序。也许你有可编辑的文本，需要让用户选择文本颜色。或者，你的应用程序可以让用户为文件夹或项目指定颜色。虽然从历史上看，有必要实现自己的[颜色选择器](https://en.wikipedia.org/wiki/Color_picker)，但 HTML 现在支持浏览器通过 {{HTMLElement("input")}} 元素，使用 `"color"` 作为其 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性的值，提供一个开箱即用的颜色选择器。
 
 `<input>` 元素仅使用上述[十六进制字符串表示法](#十六进制字符串表示法)表示一种颜色。
 
@@ -533,7 +533,7 @@ CSS 为盒子设定了大小，并为外观设定了一些基本样式。此外�
 
 #### JavaScript
 
-此处的脚本负责更新边框的起始颜色，使其与颜色选择器的值相匹配。然后添加两个事件处理程序，以处理来自 [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color) 元素的输入。
+此处的脚本负责更新边框的起始颜色，使其与颜色选择器的值相匹配。然后添加两个事件处理程序，以处理来自 [`<input type="color">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/color) 元素的输入。
 
 ```js
 const colorPicker = document.getElementById("colorPicker");

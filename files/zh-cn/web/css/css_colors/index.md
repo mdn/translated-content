@@ -17,7 +17,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-通过[颜色选择器](/zh-CN/docs/Web/HTML/Element/input/color)选择颜色，并通过[滑块](/zh-CN/docs/Web/HTML/Element/input/range)选择透明度以更新 RGB、HEX、HSL 和 HWB 值。当选择新的颜色或不透明度值时，背景颜色和滑块会分别通过 CSS 属性 {{cssxref("background-color")}} 和 {{cssxref("accent-color")}} 进行更新。
+通过[颜色选择器](/zh-CN/docs/Web/HTML/Reference/Elements/input/color)选择颜色，并通过[滑块](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)选择透明度以更新 RGB、HEX、HSL 和 HWB 值。当选择新的颜色或不透明度值时，背景颜色和滑块会分别通过 CSS 属性 {{cssxref("background-color")}} 和 {{cssxref("accent-color")}} 进行更新。
 
 要查看此颜色语法转换器的代码，请[在 GitHub 上查看源代码](https://github.com/mdn/css-examples/blob/main/modules/colors.html)。
 

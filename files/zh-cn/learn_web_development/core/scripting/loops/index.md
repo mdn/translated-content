@@ -701,7 +701,7 @@ do {
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops)。
+你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops)。
 
 ## 结论
 

@@ -395,7 +395,7 @@ body {
 
 接下来是在层外声明的任何样式。`C.css` 中的样式没有导入到层中，并将覆盖任何来自 `firstLayer` 和 `secondLayer` 的冲突样式。在层外声明的普通样式总是比层内的普通样式具有更高的优先权。
 
-内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Global_attributes/style)声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
+内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style)声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
 
 动画样式比所有普通样式都具有更高的优先权，包括内联普通样式。
 
@@ -513,7 +513,7 @@ h1 {
 
 ## 技能测试！
 
-你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks#任务_2)。
+你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#任务_2)。
 
 ## 总结
 
