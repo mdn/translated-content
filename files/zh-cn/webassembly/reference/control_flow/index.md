@@ -2,15 +2,15 @@
 title: WebAssembly 控制流指令
 slug: WebAssembly/Reference/Control_flow
 l10n:
-  sourceCommit: 46853a1dd8f08bd65f177f1f073cb2aa9bb1dd55
+  sourceCommit: 70653a2f5e8969901bad84504a6b36ecdcdd4e51
 ---
 
 WebAssembly 控制流指令。
 
 - [`block`](/zh-CN/docs/WebAssembly/Reference/Control_flow/block)
-  - : Creates a label that can later be branched out of with a [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br).
+  - : 创建一个块标签，后面可以用 [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br) 跳出该块。
 - [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br)
-  - : Branches to a loop or block.
+  - : 跳出/跳到循环标签、块标签或 if 标签。
 - [`call`](/zh-CN/docs/WebAssembly/Reference/Control_flow/call)
   - : 调用一个函数。
 - [`drop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/Drop)
@@ -20,12 +20,12 @@ WebAssembly 控制流指令。
 - [`if...else`](/zh-CN/docs/WebAssembly/Reference/Control_flow/if...else)
   - : 如果栈上的最后一项为真（非零），则执行一条语句。
 - [`loop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/loop)
-  - : Creates a label that can later be branched to with a [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br).
+  - : 创建一个循环标签，后面可以用 [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br) 跳到该循环。
 - [`nop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/nop)
   - : 什么也不做。
 - [`return`](/zh-CN/docs/WebAssembly/Reference/Control_flow/return)
   - : 从函数返回。
 - [`select`](/zh-CN/docs/WebAssembly/Reference/Control_flow/Select)
-  - : Selects one of its first two operands based on a boolean condition.
+  - : 基于布尔条件选择它的头两个操作数的其中之一。
 - [`unreachable`](/zh-CN/docs/WebAssembly/Reference/Control_flow/unreachable)
   - : 表示不可到达的代码点。
