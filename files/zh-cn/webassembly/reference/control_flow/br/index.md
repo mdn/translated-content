@@ -53,7 +53,6 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ## 语法
 
 ```wat
-;; label the loop so that it can be branched to
 ;; 对循环打标签，使其可以被跳转
 (loop $my_loop
 
