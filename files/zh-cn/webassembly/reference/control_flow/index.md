@@ -14,7 +14,7 @@ WebAssembly 控制流指令。
 - [`call`](/zh-CN/docs/WebAssembly/Reference/Control_flow/call)
   - : 调用一个函数。
 - [`drop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/Drop)
-  - : 从栈中弹出一个值，并抛弃它。
+  - : 从栈中弹出一个值，并丢弃它。
 - [`end`](/zh-CN/docs/WebAssembly/Reference/Control_flow/end)
   - : 可以用于终止 `block`、`loop`、`if` 或 `else`。
 - [`if...else`](/zh-CN/docs/WebAssembly/Reference/Control_flow/if...else)
