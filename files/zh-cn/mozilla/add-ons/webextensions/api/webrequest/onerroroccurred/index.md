@@ -2,7 +2,7 @@
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
 {{AddonSidebar}}
@@ -68,7 +68,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 - `ip`
   - : `string`。请求的目标服务器的 IP 地址，可能是 IPv6 字面量。
 - `method`
-  - : `string`。标准 HTTP 方法，例如 “GET”或“POST”。
+  - : `string`。标准 HTTP 方法，例如“GET”或“POST”。
 - `originUrl`
 
   - : `string`。触发请求的资源的 URL。例如，若用户点击了“https\://example.com”页面中的链接，则结果请求的 `originUrl` 为“https\://example.com”。
