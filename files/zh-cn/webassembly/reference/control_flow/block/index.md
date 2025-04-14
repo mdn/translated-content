@@ -1,6 +1,8 @@
 ---
 title: 块
 slug: WebAssembly/Reference/Control_flow/block
+l10n:
+  sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
 ---
 
 **`block`** 语句创建一个标签，后面可以用 `br` 跳出该块。
