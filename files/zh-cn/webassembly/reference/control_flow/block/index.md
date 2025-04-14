@@ -58,7 +58,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
 );
 ```
 
-## Syntax
+## 语法
 
 ```wat
 ;; 对块打标签，使其可以被跳转。
