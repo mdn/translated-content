@@ -64,8 +64,8 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 )
 ```
 
-| 指令 | 二进制操作码 |
-| ----------- | ------------- |
-| `br`        | `0x0c`        |
-| `br_if`     | `0x0d`        |
-| `br_table`  | `0x0e`        |
+| 指令       | 二进制操作码 |
+| ---------- | ------------ |
+| `br`       | `0x0c`       |
+| `br_if`    | `0x0d`       |
+| `br_table` | `0x0e`       |
