@@ -1,13 +1,41 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
+l10n:
+  sourceCommit: 8b02826c79b090b5af0d68ae1ef39f932a66a7f1
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
 **`class`** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)是一個以 [ASCII 空白字元](/zh-TW/docs/Glossary/Whitespace#in_html)分隔的元素類別列表。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
+
+```html interactive-example
+<p>Narrator: This is the beginning of the play.</p>
+
+<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+
+<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+
+<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+```
+
+```css interactive-example
+.note {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.editorial {
+  background: rgb(255, 0, 0, 0.25);
+  padding: 10px;
+}
+
+.editorial:before {
+  content: "Editor: ";
+}
+```
 
 ## 描述
 
