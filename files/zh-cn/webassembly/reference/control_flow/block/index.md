@@ -75,6 +75,6 @@ await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
 )
 ```
 
-| 指令 | 二进制操作码 |
-| ----------- | ------------- |
-| `block`     | `0x02`        |
+| 指令    | 二进制操作码 |
+| ------- | ------------ |
+| `block` | `0x02`       |
