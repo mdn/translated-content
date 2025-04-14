@@ -84,12 +84,12 @@ console.log(result);
 call $greet
 ```
 
-| 指令            | 二进制操作码 |
-| ---------------------- | ------------- |
-| `call`                 | `0x10`        |
-| `call_indirect`        | `0x11`        |
-| `return_call`          | `0x12`        |
-| `return_call_indirect` | `0x13`        |
+| 指令                   | 二进制操作码 |
+| ---------------------- | ------------ |
+| `call`                 | `0x10`       |
+| `call_indirect`        | `0x11`       |
+| `return_call`          | `0x12`       |
+| `return_call_indirect` | `0x13`       |
 
 ## 参见
 
