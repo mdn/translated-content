@@ -13,7 +13,7 @@ l10n:
 
 对于 HTML 文档，你也可以通过设置 {{domxref("Element.innerHTML")}} 和 {{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为由 HTML 构建的新 DOM 树。
 
-请注意，{{domxref("XMLHttpRequest")}} 可以直接从一个可通过 URL 访问的资源中解析 XML 和 HTML，并将  `Document` 返回到其 {{domxref("XMLHttpRequest.response", "response")}} 属性中。
+请注意，{{domxref("XMLHttpRequest")}} 可以直接从一个可通过 URL 访问的资源中解析 XML 和 HTML，并将 `Document` 返回到其 {{domxref("XMLHttpRequest.response", "response")}} 属性中。
 
 > [!NOTE]
 > 请注意，如果在一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)（例如 `<p>`）内部嵌套了另一个块级元素，并且该嵌套元素在闭合的 `</p>` 标签之前被解析，那么元素将会被自动闭合。
