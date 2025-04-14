@@ -13,10 +13,10 @@ l10n:
 
 对于 HTML 文档，你也可以通过设置 {{domxref("Element.innerHTML")}} 和 {{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为由 HTML 构建的新 DOM 树。
 
-请注意，{{domxref("XMLHttpRequest")}} 可以直接从一个可通过 URL 访问的资源中解析 XML 和 HTML，并将 {{domxref("XMLHttpRequest.response", "response")}} 返回到其 `Document` 属性中。
+请注意，{{domxref("XMLHttpRequest")}} 可以直接从一个可通过 URL 访问的资源中解析 XML 和 HTML，并将  `Document` 返回到其 {{domxref("XMLHttpRequest.response", "response")}} 属性中。
 
 > [!NOTE]
-> 请注意，如果一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)（例如 `<p>`）内部嵌套了另一个块级元素，则该块级元素会被自动闭合，并且在解析时会先解析嵌套元素，而在闭合 `</p>` 标签之前就已完成解析。
+> 请注意，如果在一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)（例如 `<p>`）内部嵌套了另一个块级元素，并且该嵌套元素在闭合的 `</p>` 标签之前被解析，那么元素将会被自动闭合。
 
 ## 构造函数
 
@@ -45,4 +45,4 @@ l10n:
 - [解析或序列化 XML](/zh-CN/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
-- {{jsxref("JSON.parse()")}}——与 {{jsxref("JSON")}} 文档对应的方法。
+- {{jsxref("JSON.parse()")}}——{{jsxref("JSON")}} 文档的对应方法。
