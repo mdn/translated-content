@@ -1,6 +1,8 @@
 ---
 title: История изменений
 slug: Learn_web_development/Changelog
+l10n:
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
 ## Декабрь 2024
