@@ -183,7 +183,7 @@ if 语句在输入值非数字时显示错误信息。条件判断使用 isNaN(n
 
 如有疑问，可随时重读本文或[联系我们](/zh-CN/docs/Learn_web_development#联系我们)寻求帮助。
 
-## 延伸阅读
+## 参见
 
 - [Functions in-depth](/zh-CN/docs/Web/JavaScript/Reference/Functions) — 涵盖高阶函数知识的详细指南。
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 常见模式是将函数作为参数传入另一函数并在内部调用。此内容虽稍超当前范围，但值得后续学习。
