@@ -103,7 +103,7 @@ The features include:
 ## 例
 
 - [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
-- 数多くのポリシーの使用例については [Feature Policy Demos](https://feature-policy-demos.appspot.com/) をご覧ください。
+- 数多くのポリシーの使用例については [Feature Policy Demos](https://Permissions-Policy-demos.appspot.com/) をご覧ください。
 
 ## 仕様書
 
