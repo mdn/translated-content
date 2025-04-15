@@ -115,7 +115,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 - {{CSP("base-uri")}}
   - : 限制在 DOM 中 {{HTMLElement("base")}} 元素可以使用的 URL。
 - {{CSP("sandbox")}}
-  - : 类似 {{HTMLElement("iframe")}} [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 属性，为请求的资源启用沙盒。
+  - : 类似 {{HTMLElement("iframe")}} [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性，为请求的资源启用沙盒。
 
 ### 导航指令
 
@@ -204,7 +204,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 当浏览器接收文档时，它会对所有 `<script>` 和 `<style>` 元素的内容进行散列计算，将结果与 CSP 指令中的任何散列值进行比较，仅在匹配时加载资源。
 
-如果元素加载外部资源（例如，通过 [`src`](/zh-CN/docs/Web/HTML/Element/script#src) 属性），则元素还必须设置 [`integrity`](/zh-CN/docs/Web/HTML/Element/script#integrity) 属性。
+如果元素加载外部资源（例如，通过 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/script#src) 属性），则元素还必须设置 [`integrity`](/zh-CN/docs/Web/HTML/Reference/Elements/script#integrity) 属性。
 
 如果指令中同时包含散列和 `unsafe-inline`，浏览器会忽略 `unsafe-inline`。
 
@@ -319,7 +319,7 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ### 'inline-speculation-rules'
 
-默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则不允许执行内联 JavaScript。`'inline-speculation-rules'` 允许浏览器加载 [`type`](/zh-CN/docs/Web/HTML/Element/script/type) 属性为 [`speculationrules`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) 的内联 `<script>` 元素。
+默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则不允许执行内联 JavaScript。`'inline-speculation-rules'` 允许浏览器加载 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type) 属性为 [`speculationrules`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/speculationrules) 的内联 `<script>` 元素。
 
 有关更多信息，请参阅[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API)。
 

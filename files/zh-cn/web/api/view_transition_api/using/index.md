@@ -481,9 +481,9 @@ window.addEventListener("pagereveal", async (e) => {
 2. 加载并运行关键脚本。
 3. 对用户页面的初始视图可见的 HTML 已解析，因此它可以一致地呈现。
 
-默认情况下，样式是被渲染阻塞的，并且脚本可以通过使用 [`blocking="render"`](/zh-CN/docs/Web/HTML/Element/script#blocking) 属性来被渲染阻塞。
+默认情况下，样式是被渲染阻塞的，并且脚本可以通过使用 [`blocking="render"`](/zh-CN/docs/Web/HTML/Reference/Elements/script#blocking) 属性来被渲染阻塞。
 
-要确保初始 HTML 已解析并在过渡动画运行之前始终一致地呈现，你可以使用 [`<link rel="expect">`](/zh-CN/docs/Web/HTML/Attributes/rel#expect)。在此元素中，你将包括以下属性：
+要确保初始 HTML 已解析并在过渡动画运行之前始终一致地呈现，你可以使用 [`<link rel="expect">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#expect)。在此元素中，你将包括以下属性：
 
 - `rel="expect"` 表示你想用这个 `<link>` 元素在页面上渲染一些 HTML。
 - `href="#element-id"` 来表示你想要渲染的块的元素的 ID。
@@ -517,7 +517,7 @@ window.addEventListener("pagereveal", async (e) => {
 
 结果是，在解析潜在内容 `<div>` 之前，文档渲染会被阻止，从而确保视图过渡的一致性。
 
-你还可以在 `<link rel="expect">` 元素上指定 [`media`](/zh-CN/docs/Web/HTML/Element/link#media) 属性。例如，在窄屏幕设备上加载页面时，你可能希望阻止在比在宽屏设备上加载页面时少的内容上呈现。这是有道理的——在移动设备上，页面首次加载时可见的内容比在桌面上要少。
+你还可以在 `<link rel="expect">` 元素上指定 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性。例如，在窄屏幕设备上加载页面时，你可能希望阻止在比在宽屏设备上加载页面时少的内容上呈现。这是有道理的——在移动设备上，页面首次加载时可见的内容比在桌面上要少。
 
 这可以通过以下 HTML 来实现：
 

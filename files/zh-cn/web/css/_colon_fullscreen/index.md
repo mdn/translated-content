@@ -73,4 +73,4 @@ CSS 中实现这一功能的关键在于两条规则。第一条规则用于在�
 - {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API：{{ domxref("Element.requestFullscreen()") }}、{{ domxref("Document.exitFullscreen()") }} 和 {{ domxref("Document.fullscreenElement") }}
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性

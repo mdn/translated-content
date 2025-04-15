@@ -26,7 +26,7 @@ HTTP **`408 Request Timeout`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Refe
 
 ### 表單提交的超時
 
-以下範例顯示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Element/input/file) 元素使用圖片並且表單以 `method="post"` 提交時，用戶端可能發送的內容：
+以下範例顯示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/file) 元素使用圖片並且表單以 `method="post"` 提交時，用戶端可能發送的內容：
 
 ```http
 POST /upload HTTP/1.1

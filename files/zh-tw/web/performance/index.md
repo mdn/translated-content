@@ -150,14 +150,14 @@ MDN 網路性能學習領域包含現代的、最新的教程，涵蓋性能要�
 
 HTML
 
-- [The `<picture>` Element](/zh-TW/docs/Web/HTML/Element/picture)
-- [The `<video>` Element](/zh-TW/docs/Web/HTML/Element/video)
-- [The `<source>` Element](/zh-TW/docs/Web/HTML/Element/source)
-- [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Element/img#Attributes)
+- [The `<picture>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/picture)
+- [The `<video>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/video)
+- [The `<source>` Element](/zh-TW/docs/Web/HTML/Reference/Elements/source)
+- [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Reference/Elements/img#Attributes)
 
-  - [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images)
+  - [Responsive images](/zh-TW/docs/Web/HTML/Guides/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
+- [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
 
 CSS
 

@@ -59,7 +59,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看
 
 ### 确定什么是可拖拽的
 
-让一个元素被拖拽需要添加 [`draggable`](/zh-CN/docs/Web/HTML/Global_attributes#draggable) 属性，再加上全局事件处理函数{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}，如下面的示例代码所示：
+让一个元素被拖拽需要添加 [`draggable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#draggable) 属性，再加上全局事件处理函数{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}，如下面的示例代码所示：
 
 ```html
 <script>
@@ -79,7 +79,7 @@ Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。请查看
 <p id="p1" draggable="true">This element is draggable.</p>
 ```
 
-查看更多 [draggable 属性](/zh-CN/docs/Web/HTML/Global_attributes/draggable) 和 [拖拽操作指南](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)。
+查看更多 [draggable 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/draggable) 和 [拖拽操作指南](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)。
 
 ### 定义拖拽数据
 

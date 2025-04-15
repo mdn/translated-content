@@ -38,7 +38,7 @@ slug: Web/HTTP/Guides/Permissions_Policy
 权限策略提供两种指定策略的方法：
 
 - {{httpheader("Permissions-Policy")}} HTTP 标头，控制收到的响应和页面内任何嵌入的内容（包括 {{htmlelement("iframe")}}）。
-- {{htmlelement("iframe")}} 的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#attributes) 属性，控制在特定 {{htmlelement("iframe")}} 中使用的特性。
+- {{htmlelement("iframe")}} 的 [`allow`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#attributes) 属性，控制在特定 {{htmlelement("iframe")}} 中使用的特性。
 
 这些是独立的，但又是相关的——详见[嵌入式内容的继承策略](#嵌入式内容的继承策略)。
 

@@ -89,7 +89,7 @@ const state = [
 ];
 ```
 
-我們如何對用戶顯示工作？我們想將每個工作，都表示為一個列表項目：結構為無序列表元素 [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) 內，含有一定數量的 [`<li>`](/zh-TW/docs/Web/HTML/Element/li) 元素。怎麼做呢？看起來就像這樣：
+我們如何對用戶顯示工作？我們想將每個工作，都表示為一個列表項目：結構為無序列表元素 [`<ul>`](/zh-TW/docs/Web/HTML/Reference/Elements/ul) 內，含有一定數量的 [`<li>`](/zh-TW/docs/Web/HTML/Reference/Elements/li) 元素。怎麼做呢？看起來就像這樣：
 
 ```js
 function buildTodoItemEl(id, name) {

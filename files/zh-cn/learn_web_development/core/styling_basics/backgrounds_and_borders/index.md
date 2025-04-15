@@ -540,7 +540,7 @@ h2 {
 
 ## 技能测试！
 
-你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[技能测试：背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders)。
+你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[技能测试：背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders)。
 
 ## 总结
 
