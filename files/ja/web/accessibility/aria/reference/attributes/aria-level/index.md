@@ -32,9 +32,9 @@ DOM の祖先がレベルを正確に表している場合、ユーザーエー�
 
 ### `treegrid` ロール内の場合
 
-[`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role) の場合、 `aria-level` はロール [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) を持つ要素に対応しており、ロール [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) を持つ要素には対応していません。行はグリッドの垂直方向の葉ノードとして動作します。グリッドセルは各行の水平方向の葉ノードです。 `aria-level` は行内のセルには対応していません。したがって、ツリーグリッドでは、 `aria-level` 属性は `row` ロールを持つ要素に適用されます。
+[`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) の場合、 `aria-level` はロール [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) を持つ要素に対応しており、ロール [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) を持つ要素には対応していません。行はグリッドの垂直方向の葉ノードとして動作します。グリッドセルは各行の水平方向の葉ノードです。 `aria-level` は行内のセルには対応していません。したがって、ツリーグリッドでは、 `aria-level` 属性は `row` ロールを持つ要素に適用されます。
 
-利用できるノードの完全なセットが、ユーザーがツリー内でフォーカスを移動したり、ツリーをスクロールしたりする動的な読み込みのために DOM に存在しない場合、各ノードには `aria-level`, [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) が含まれています。
+利用できるノードの完全なセットが、ユーザーがツリー内でフォーカスを移動したり、ツリーをスクロールしたりする動的な読み込みのために DOM に存在しない場合、各ノードには `aria-level`, [`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize), [`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) が含まれています。
 
 ## 値
 
@@ -52,8 +52,8 @@ DOM の祖先がレベルを正確に表している場合、ユーザーエー�
 
 以下のロール内で使用されます。
 
-- [`associationlistitemkey`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`comment`](/ja/docs/Web/Accessibility/ARIA/Roles/comment_role)
+- [`associationlistitemkey`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`comment`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role)
 - [`heading`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role)
 - [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 

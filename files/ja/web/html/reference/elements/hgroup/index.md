@@ -116,7 +116,7 @@ hgroup p {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
             >group</a
           ></code
         >

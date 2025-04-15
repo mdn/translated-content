@@ -192,18 +192,18 @@ li {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role">list</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role">group</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role">menu</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role">tablist</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role">tree</a></code>
       </td>
     </tr>
     <tr>
