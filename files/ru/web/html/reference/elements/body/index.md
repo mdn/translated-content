@@ -73,7 +73,7 @@ slug: Web/HTML/Reference/Elements/body
 
 ## Атрибуты
 
-К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `alink`
   - : Цвет текста гиперссылок, когда они выделены. _Этот метод не согласован, вместо него используйте CSS-свойство {{cssxref("color")}} вместе с псевдоклассом {{cssxref(":active")}}._

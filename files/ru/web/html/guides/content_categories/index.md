@@ -35,13 +35,13 @@ slug: Web/HTML/Guides/Content_categories
 Несколько других элементов, которые тоже принадлежат к этому типу, но требуют определённых условий:
 
 - {{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
-- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
-- {{HTMLElement("style")}}, при наличии атрибута [`scoped`](/ru/docs/Web/HTML/Element/style#scoped)
+- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Reference/Global_attributes#itemprop)
+- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Reference/Global_attributes#itemprop)
+- {{HTMLElement("style")}}, при наличии атрибута [`scoped`](/ru/docs/Web/HTML/Reference/Elements/style#scoped)
 
 ### Секционный контент
 
-Секционный контент является подмножеством основного потока, он создаёт [разделы документа](/ru/docs/Web/HTML/Element/Heading_Elements) определяя области элементов {{HTMLElement("header")}}, {{HTMLElement("footer")}} и [заголовочного контента](#заголовочный_контент).
+Секционный контент является подмножеством основного потока, он создаёт [разделы документа](/ru/docs/Web/HTML/Reference/Elements/Heading_Elements) определяя области элементов {{HTMLElement("header")}}, {{HTMLElement("footer")}} и [заголовочного контента](#заголовочный_контент).
 
 Элементы этой категории это: {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} и {{HTMLElement("section")}}.
 
@@ -66,9 +66,9 @@ slug: Web/HTML/Guides/Content_categories
 - {{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, если содержит в себе только фразовый контент
 - {{HTMLElement("ins")}}, если содержит в себе только фразовый контент
-- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
+- {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Reference/Global_attributes#itemprop)
 - {{HTMLElement("map")}}, если содержит в себе только фразовый контент
-- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
+- {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/Web/HTML/Reference/Global_attributes#itemprop)
 
 ### Встроенный контент
 
@@ -79,12 +79,12 @@ slug: Web/HTML/Guides/Content_categories
 К интерактивному контенту относятся элементы, которые специально разработаны для взаимодействия с пользователем. В данную категорию входят {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
 Некоторые элементы считаются интерактивным контентом только при соблюдении определённых условий:
 
-- {{HTMLElement("audio")}}, если указан атрибут [`controls`](/ru/docs/Web/HTML/Element/audio#controls)
-- {{HTMLElement("img")}}, если указан атрибут [`usemap`](/ru/docs/Web/HTML/Element/img#usemap)
-- {{HTMLElement("input")}}, если атрибут [`type`](/ru/docs/Web/HTML/Element/input#type) не скрыт
-- {{HTMLElement("menu")}}, если атрибут [`type`](/ru/docs/Web/HTML/Element/menu#type) имеет значение `toolbar`
+- {{HTMLElement("audio")}}, если указан атрибут [`controls`](/ru/docs/Web/HTML/Reference/Elements/audio#controls)
+- {{HTMLElement("img")}}, если указан атрибут [`usemap`](/ru/docs/Web/HTML/Reference/Elements/img#usemap)
+- {{HTMLElement("input")}}, если атрибут [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type) не скрыт
+- {{HTMLElement("menu")}}, если атрибут [`type`](/ru/docs/Web/HTML/Reference/Elements/menu#type) имеет значение `toolbar`
 - {{HTMLElement("object")}}, если указан атрибут [`usemap`](/ru/docs/Web/HTML/Element/object#usemap)
-- {{HTMLElement("video")}}, если указан атрибут [`controls`](/ru/docs/Web/HTML/Element/video#controls)
+- {{HTMLElement("video")}}, если указан атрибут [`controls`](/ru/docs/Web/HTML/Reference/Elements/video#controls)
 
 ### Явный контент
 

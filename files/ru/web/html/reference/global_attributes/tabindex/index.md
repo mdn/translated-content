@@ -28,6 +28,6 @@ slug: Web/HTML/Reference/Global_attributes/tabindex
 
 ## Смотрите также
 
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 - {{domxref("HTMLElement.tabindex")}} отражает этот атрибут.
 - Проблемы доступности (юзабилити): смотри [Don't Use Tabindex Greater than 0 | Adrian Roselli](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html).
