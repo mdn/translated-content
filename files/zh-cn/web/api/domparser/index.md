@@ -16,7 +16,7 @@ l10n:
 请注意，{{domxref("XMLHttpRequest")}} 可以直接从一个可通过 URL 访问的资源中解析 XML 和 HTML，并将 `Document` 返回到其 {{domxref("XMLHttpRequest.response", "response")}} 属性中。
 
 > [!NOTE]
-> 请注意，如果在一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)（例如 `<p>`）内部嵌套了另一个块级元素，并且该嵌套元素在闭合的 `</p>` 标签之前被解析，那么元素将会被自动闭合。
+> 请注意，如果在一个[块级元素](/zh-CN/docs/Glossary/Block-level_content)（例如 `<p>`）内部嵌套了另一个块级元素，因而该嵌套元素在闭合的 `</p>` 标签之前被解析，那么元素将会被自动闭合。
 
 ## 构造函数
 
