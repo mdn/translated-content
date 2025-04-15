@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Elements/hgroup
 
 {{HTMLSidebar}}
 
-HTML-элемент **`<hgroup>`** представляет заголовок и связанное с ним содержимое. Он группирует одиночные элементы [`<h1>–<h6>`](/ru/docs/Web/HTML/Element/Heading_Elements) в один или несколько [`<p>`](/ru/docs/Web/HTML/Element/p).
+HTML-элемент **`<hgroup>`** представляет заголовок и связанное с ним содержимое. Он группирует одиночные элементы [`<h1>–<h6>`](/ru/docs/Web/HTML/Reference/Elements/Heading_Elements) в один или несколько [`<p>`](/ru/docs/Web/HTML/Reference/Elements/p).
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
 
@@ -41,15 +41,15 @@ hgroup p {
 
 ## Атрибуты
 
-Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 ## Техническая сводка
 
-| Категория информации      | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), heading content, palpable content.                                                        |
+| Категория информации      | [Flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), heading content, palpable content.                                                 |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Permitted content         | One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}. |
 | Tag omission              |                                                                                                                                                              |
-| Permitted parent elements | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                                                  |
+| Permitted parent elements | Any element that accepts [flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content).                                                           |
 | DOM interface             | {{domxref("HTMLElement")}}                                                                                                                                   |
 
 ## Примеры

@@ -14,16 +14,16 @@ slug: Web/HTML/Reference/Elements/bdi
 > [!NOTE]
 > Хотя тот же эффект может быть достигнут применением CSS правила {{cssxref("unicode-bidi")}}`: isolate` к элементу {{HTMLElement("span")}} или другому элементу форматирования текста, семантическое значение передаётся только с помощью элемента `<bdi>`. Тем более, что браузеры могут игнорировать стили. В этом случае, текст будет отображён корректно при использовании HTML-элемента, и некорректно при использовании только CSS стилей.
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
-| Permitted parent elements                                  | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
-| DOM interface                                              | {{domxref("HTMLElement")}}                                                                                                                                      |
+| [Content categories](/ru/docs/Web/HTML/Guides/Content_categories) | [Flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content), palpable content. |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                 | [Phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                                             |
+| Tag omission                                                      | Нет, открывающий и закрывающий теги обязательны.                                                                                                                              |
+| Permitted parent elements                                         | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                    |
+| DOM interface                                                     | {{domxref("HTMLElement")}}                                                                                                                                                    |
 
 ## Attributes
 
-Like all other HTML elements, this element has the [global attributes](/ru/docs/Web/HTML/Global_attributes), with a slight semantic difference: the **dir** attribute is not inherited. If not set, its default value is the `auto` which let the browser decide the direction based on the element's content.
+Like all other HTML elements, this element has the [global attributes](/ru/docs/Web/HTML/Reference/Global_attributes), with a slight semantic difference: the **dir** attribute is not inherited. If not set, its default value is the `auto` which let the browser decide the direction based on the element's content.
 
 ## Example
 
