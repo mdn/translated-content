@@ -22,6 +22,6 @@ l10n:
 ## See also
 
 - Glossary terms:
-  - {{Glossary("Throttle")}}
-  - {{Glossary("Rate limit")}}
+  - {{Glossary("Throttle", "스로틀")}}
+  - {{Glossary("Rate limit", "속도 제한")}}
 - [Debouncing and Throttling Explained Through Examples](https://css-tricks.com/debouncing-throttling-explained-examples/) on CSS-Tricks (April 6, 2016)
