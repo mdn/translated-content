@@ -51,14 +51,14 @@ slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 
 ### Добавление отзывчивых изображений к ссылкам с доп. информацией
 
-Внутри {{htmlelement("div")}} с классом `further-info` вы найдёте четыре элемента {{htmlelement("a")}} — каждый из которых ссылается на интересную страницу, связанную с Mozilla. Для завершения этой секции вам необходимо поместить элемент {{htmlelement("img")}} внутрь каждого элемента {{htmlelement("a")}} дополнив подходящими атрибутами [`src`](/ru/docs/Web/HTML/Element/img#src), [`alt`](/ru/docs/Web/HTML/Element/img#alt), [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Element/img#sizes).
+Внутри {{htmlelement("div")}} с классом `further-info` вы найдёте четыре элемента {{htmlelement("a")}} — каждый из которых ссылается на интересную страницу, связанную с Mozilla. Для завершения этой секции вам необходимо поместить элемент {{htmlelement("img")}} внутрь каждого элемента {{htmlelement("a")}} дополнив подходящими атрибутами [`src`](/ru/docs/Web/HTML/Reference/Elements/img#src), [`alt`](/ru/docs/Web/HTML/Reference/Elements/img#alt), [`srcset`](/ru/docs/Web/HTML/Reference/Elements/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Reference/Elements/img#sizes).
 
 В каждом случае (кроме одного - какой из них по сути отзывчивый?) мы хотим, чтобы браузер использовал изображение шириной 120px , когда экран меньше или равен 480px, либо шириной 400px в других случаях.
 
 Убедитесь, что вы использовали изображения, соответствующие ссылкам.
 
 > [!NOTE]
-> Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/ru/docs/Web/HTML/Responsive_images#useful_developer_tools).
+> Для проверки правильности работы `srcset`/`sizes` , вам нужно загрузить ваш сайт на сервер (используйте [Github pages](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) - простое и бесплатное решение). Затем вы сможете проверить правильность их работы используя инструменты разработчика в браузере, как описано в [Responsive images: useful developer tools](/ru/docs/Web/HTML/Guides/Responsive_images#useful_developer_tools).
 
 ### Искусственно изменённая красная панда
 

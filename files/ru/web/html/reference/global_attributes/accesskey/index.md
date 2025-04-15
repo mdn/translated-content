@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Global_attributes/accesskey
 
 {{HTMLSidebar("Global_attributes")}}
 
-[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **accesskey** даёт возможность быстро перейти к элементу с помощью комбинации клавиш. Значение атрибута состоит из одного печатного символа (в том числе спец. символы, акценты и другие, которые можно написать с клавиатуры).
+[Глобальный атрибут](/ru/docs/Web/HTML/Reference/Global_attributes) **accesskey** даёт возможность быстро перейти к элементу с помощью комбинации клавиш. Значение атрибута состоит из одного печатного символа (в том числе спец. символы, акценты и другие, которые можно написать с клавиатуры).
 
 {{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
 
@@ -122,4 +122,4 @@ b {
 
 - {{domxref("Element.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes) .
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes) .

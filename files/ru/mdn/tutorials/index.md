@@ -13,7 +13,7 @@ slug: MDN/Tutorials
   - : Что такое HTML, что он делает, его краткая история, и что представляет собой структура HTML документа. В последующих статьях мы подробнее рассмотрим отдельные части HTML.
 - [Базовая структура веб-страницы](https://reference.sitepoint.com/html/page-structure) (SitePoint)
   - : Узнайте как HTML элементы сочетаются в общую картину.
-- [MDN HTML Element Reference](/ru/docs/Web/HTML/Element)
+- [MDN HTML Element Reference](/ru/docs/Web/HTML/Reference/Elements)
   - : Комплексный справочник для HTML элементов, и, как различные браузеры поддерживают их.
 - [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges) (Wikiversity)
   - : Используйте эти задачки, чтобы отточить свои HTML навыки (для примера, "Какой элемент нужно использовать - \<h2> или \<STRONG>?"), фокусируясь на смысле разметки.

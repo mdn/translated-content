@@ -41,17 +41,17 @@ details[open] summary {
 }
 ```
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), sectioning root, interactive content, palpable content. |
-| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).      |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                           |
-| Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                |
-| Permitted ARIA roles                                       | None                                                                                                                       |
-| DOM interface                                              | {{domxref("HTMLDetailsElement")}}                                                                                          |
+| [Content categories](/ru/docs/Web/HTML/Guides/Content_categories) | [Flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), sectioning root, interactive content, palpable content. |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                 | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content).      |
+| Tag omission                                                      | Нет, открывающий и закрывающий теги обязательны.                                                                                  |
+| Permitted parents                                                 | Any element that accepts [flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content).                                |
+| Permitted ARIA roles                                              | None                                                                                                                              |
+| DOM interface                                                     | {{domxref("HTMLDetailsElement")}}                                                                                                 |
 
 ## Атрибуты
 
-Элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Элемент поддерживает только [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `open`
   - : Данный логический атрибут указывает, будет ли дополнительная информация отображаться пользователю при загрузке страницы. По умолчанию установлено значение false, поэтому дополнительная информация будет скрыта.
