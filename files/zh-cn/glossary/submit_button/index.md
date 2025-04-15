@@ -19,11 +19,11 @@ l10n:
 
 提交按钮可以通过各种属性重写表单的提交行为：
 
-- `{{HtmlElement("button#formaction", "formaction")}}`：覆盖表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
-- `{{HtmlElement("button#formenctype", "formenctype")}}`：覆盖表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性。
-- `{{HtmlElement("button#formmethod", "formmethod")}}`：覆盖表单的 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) 属性。
-- `{{HtmlElement("button#formnovalidate", "formnovalidate")}}`：覆盖表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性。
-- `{{HtmlElement("button#formtarget", "formtarget")}}`：覆盖表单的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。
+- `{{HtmlElement("button#formaction", "formaction")}}`：覆盖表单的 [`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action) 属性。
+- `{{HtmlElement("button#formenctype", "formenctype")}}`：覆盖表单的 [`enctype`](/zh-CN/docs/Web/HTML/Reference/Elements/form#enctype) 属性。
+- `{{HtmlElement("button#formmethod", "formmethod")}}`：覆盖表单的 [`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#method) 属性。
+- `{{HtmlElement("button#formnovalidate", "formnovalidate")}}`：覆盖表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/form#novalidate) 属性。
+- `{{HtmlElement("button#formtarget", "formtarget")}}`：覆盖表单的 [`target`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target) 属性。
 
 ## 表单数据条目
 

@@ -84,7 +84,7 @@ slug: Learn_web_development/Extensions/Performance/JavaScript
 </head>
 ```
 
-这个方法可以正常工作，但会阻塞渲染。更好的策略是使用 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 来为关键 JavaScript 创建一个预加载器：
+这个方法可以正常工作，但会阻塞渲染。更好的策略是使用 [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 来为关键 JavaScript 创建一个预加载器：
 
 ```html
 <head>

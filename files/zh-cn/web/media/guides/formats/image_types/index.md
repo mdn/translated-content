@@ -39,7 +39,7 @@ slug: Web/Media/Guides/Formats/Image_types
       <td><code>.avif</code></td>
       <td>
         <p>
-          由于其性能高，且无需版税，是图像和动画图像的理想选择。与 PNG 或 JPEG 相比，它的压缩效果更好，支持更高的色深、动画帧、透明度等。请注意，在使用 AVIF 时，应包含浏览器支持更好的回退格式（也就是说，要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> 元素）。<br />
+          由于其性能高，且无需版税，是图像和动画图像的理想选择。与 PNG 或 JPEG 相比，它的压缩效果更好，支持更高的色深、动画帧、透明度等。请注意，在使用 AVIF 时，应包含浏览器支持更好的回退格式（也就是说，要使用 <code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/picture">&#x3C;picture></a></code> 元素）。<br />
           <strong>以下浏览器支持</strong>：Chrome、Firefox、Opera、Safari。
         </p>
       </td>
@@ -276,7 +276,7 @@ AV1 是一种编码格式，最初设计用于在互联网上传输视频。该�
 
 AVIF 不支持渐进式渲染，因此文件必须完全下载后才能显示。这通常对真实世界的用户体验影响不大，因为 AVIF 文件比同等的 JPEG 或 PNG 文件小得多，因此下载和显示的速度也快得多。文件大小越大，影响就越大，因此应考虑使用支持渐进式渲染的格式。
 
-Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退。
+Chrome、Opera、Safari 和 Firefox 支持 AVIF（Firefox 支持静态图像，但不支持动画），但 Edge 和 IE 不支持。由于支持尚不全面（而且没有什么历史深度），应使用 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/picture)（或其他方法）提供 [WebP](#webp_图像)、[JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退。
 
 <table class="standard-table">
   <tbody>
@@ -559,7 +559,7 @@ ICO（Microsoft Windows 图标）文件格式是微软为 Windows 系统的桌�
 一个 ICO 文件可以包含多个图标，文件开头有一个目录，列出每个图标的详细信息。目录之后是图标的数据。每个图标的数据既可以是不带文件头的 [BMP](#bmp（位图文件）) 图像，也可以是完整的 [PNG](#png（便携式网络图形）) 图像（包括文件头）。如果使用 ICO 文件，则应使用 BMP 格式，因为直到 Windows Vista 才添加了对 ICO 文件内的 PNG 的支持，而且这种支持可能并不完善。
 
 > [!WARNING]
-> ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Element/link#提供用于不同用法上下文的图标)所述，它们作为网站图标的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
+> ICO 文件*不应*用于网页内容。此外，如[为不同的使用环境提供图标](/zh-CN/docs/Web/HTML/Reference/Elements/link#提供用于不同用法上下文的图标)所述，它们作为网站图标的使用已经减少，转而使用 PNG 文件和 {{HTMLElement("link")}} 元素。
 
 <table class="standard-table">
   <tbody>
@@ -1172,7 +1172,7 @@ WebP 支持通过基于 VP8 视频编解码器的预测编码进行有损压缩�
 
 WebP 还支持动画：在有损 WebP 文件中，图像数据由 VP8 比特流表示，其中可能包含多个帧。无损 WebP 包含描述动画的 `ANIM` 块和表示动画序列一帧的 `ANMF` 块。支持循环播放。
 
-WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Element/picture)。
+WebP 目前已在主要网络浏览器的最新版本中获得广泛支持，但还没有深入的历史支持。需要提供 [JPEG](#jpeg（联合图像专家小组图像）) 或 [PNG](#png（便携式网络图形）) 格式的回退，例如 [`<picture>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/picture)。
 
 <table class="standard-table">
   <tbody>

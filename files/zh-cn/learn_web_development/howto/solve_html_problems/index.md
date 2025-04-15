@@ -76,12 +76,12 @@ HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary(
 
 ### 高级文本语义
 
-- [如何控制 HTML 换行](/zh-CN/docs/Web/HTML/Element/br)
+- [如何控制 HTML 换行](/zh-CN/docs/Web/HTML/Reference/Elements/br)
 - 如何标记内容的更改（文字的增加或删除）——参见 {{htmlelement("ins")}} 与 {{htmlelement("del")}} 元素。
 
 ### 高级图像 & 多媒体
 
-- [如何为网页添加响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
+- [如何为网页添加响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)
 - [如何为网页添加矢量图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [如何在图像上添加 hit map](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
 

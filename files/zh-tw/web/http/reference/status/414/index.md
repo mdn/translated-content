@@ -27,7 +27,7 @@ HTTP **`414 URI Too Long`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Referen
 
 ### 使用 GET 進行表單提交
 
-在以下範例中，HTML [`<form>` 方法](/zh-TW/docs/Web/HTML/Element/form#方法)錯誤地使用了 `get` 而非 `post`。大量表單資料會附加到表單的 `action` 屬性所指定的 URL，並作為 GET 請求傳送：
+在以下範例中，HTML [`<form>` 方法](/zh-TW/docs/Web/HTML/Reference/Elements/form#方法)錯誤地使用了 `get` 而非 `post`。大量表單資料會附加到表單的 `action` 屬性所指定的 URL，並作為 GET 請求傳送：
 
 ```http
 GET /search?feedback=it+was+the+best+of+times+it+was+the+worst+of+times… HTTP/1.1

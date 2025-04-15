@@ -12,9 +12,9 @@ slug: Web/API/HTMLBaseElement
 _继承了其父级 {{domxref("HTMLElement")}} 的所有属性。_
 
 - {{domxref("HTMLBaseElement.href")}}
-  - : 映射自 {{domxref("DOMString")}} HTML [`href`](/zh-CN/docs/Web/HTML/Element/base#href) 特性，包含了当前文档中所有相对 URL 地址的基准 URL。
+  - : 映射自 {{domxref("DOMString")}} HTML [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/base#href) 特性，包含了当前文档中所有相对 URL 地址的基准 URL。
 - {{domxref("HTMLBaseElement.target")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`target`](/zh-CN/docs/Web/HTML/Element/base#target) HTML attribute, containing a default target browsing context or frame for elements that do not have a target reference specified.
+  - : Is a {{domxref("DOMString")}} that reflects the [`target`](/zh-CN/docs/Web/HTML/Reference/Elements/base#target) HTML attribute, containing a default target browsing context or frame for elements that do not have a target reference specified.
 
 ## 方法
 

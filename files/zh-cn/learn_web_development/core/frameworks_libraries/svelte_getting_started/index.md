@@ -282,7 +282,7 @@ Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}
 </style>
 ```
 
-我们现在对 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素应用了一些样式。这对其它组件中的 `<h1>` 元素们将会有什么影响呢？
+我们现在对 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素应用了一些样式。这对其它组件中的 `<h1>` 元素们将会有什么影响呢？
 
 在 Svelte 中，组件 `<style>` 区块中的 CSS 会被局限于该组件范围之内。这是通过对所选的元素加上一个类来实现，而这个类名则会是基于组件样式的散列值。
 

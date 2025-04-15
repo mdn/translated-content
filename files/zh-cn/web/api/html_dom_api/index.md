@@ -39,7 +39,7 @@ HTML 标准添加到 `Document` 中的内容包括：
 
 - 在加载页面时，支持访问 {{Glossary("HTTP")}} 标头提供的各种信息，例如文档加载的{{DOMxRef("Document/location", "位置", "", "1")}}、{{DOMxRef("Document/cookie", "cookie", "", "1")}}、{{DOMxRef("Document/lastModified", "修改日期", "", "1")}}、{{DOMxRef("Document/referrer", "引用站点", "", "1")}}等。
 - 可以访问文档 {{HTMLElement("head")}} 块和 {{DOMxRef("Document/body", "body", "", "1")}} 中元素的列表，以及包含在文档中的{{DOMxRef("Document/images", "图像", "", "1")}}、{{DOMxRef("Document/links", "链接", "", "1")}}、{{DOMxRef("Document/scripts", "脚本", "", "1")}}等列表。
-- 支持通过检查{{DOMxRef("Document/hasFocus", "焦点", "", "1")}}和对[可编辑内容](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)执行命令来与用户交互。
+- 支持通过检查{{DOMxRef("Document/hasFocus", "焦点", "", "1")}}和对[可编辑内容](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)执行命令来与用户交互。
 - HTML 标准定义的文档事件处理器，允许访问{{DOMxRef("MouseEvent", "鼠标", "", "1")}}和{{DOMxRef("KeyboardEvent", "键盘", "", "1")}}事件、{{DOMxRef("HTML_Drag_and_Drop_API", "拖放", "", "1")}}、{{DOMxRef("HTMLMediaElement", "媒体控制", "", "1")}}等。
 - 可以传递到元素和文档的事件处理器；目前仅包括{{DOMxRef("HTMLElement/copy_event", "复制", "", "1")}}、{{DOMxRef("HTMLElement/cut_event", "剪切", "", "1")}}和{{DOMxRef("HTMLElement/paste_event", "粘贴", "", "1")}}操作。
 
@@ -361,8 +361,8 @@ nameField.addEventListener("input", (event) => {
 
 ### 参考
 
-- [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
-- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
+- [HTML 元素参考](/zh-CN/docs/Web/HTML/Reference/Elements)
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Reference/Attributes)
 - {{DOMxRef("Document_Object_Model", "文档对象模型（DOM）", "", "1")}}参考
 
 ### 指南

@@ -32,8 +32,8 @@ There are a number of WebVR demos available at the [MozVR team repo](https://git
 
 ![](vrpositionsensor-demo.png)
 
-This is a simple 2.5D demo showing a Firefox logo seen on a left and right eye view, rendered on [HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas). When you view the demo with a VR HMD and click the canvas, the demo will go fullscreen, and you'll be able to approach the Firefox logo. It will move realistically as you move your head towards and away from it, up and down and side to side, and rotate your head in any direction.
-这是一个简单的 2.5D 的示例，在左右眼两个区域，以[HTML5 Canvas](/zh-CN/docs/Web/HTML/Element/canvas)的方式，同时渲染了 Firefox 的 LOGO。当你使用 VR 头显来观看这个示例时，点击画面，这个 DEMO 就会切换到全屏形式，可以尝试靠近 Firefox 图标。将会非常真实地同步你的头部运动后应该看到的内容，包括可以上下移动、左右移动、转动你的头部看想看的方向。
+This is a simple 2.5D demo showing a Firefox logo seen on a left and right eye view, rendered on [HTML5 Canvas](/zh-CN/docs/Web/HTML/Reference/Elements/canvas). When you view the demo with a VR HMD and click the canvas, the demo will go fullscreen, and you'll be able to approach the Firefox logo. It will move realistically as you move your head towards and away from it, up and down and side to side, and rotate your head in any direction.
+这是一个简单的 2.5D 的示例，在左右眼两个区域，以[HTML5 Canvas](/zh-CN/docs/Web/HTML/Reference/Elements/canvas)的方式，同时渲染了 Firefox 的 LOGO。当你使用 VR 头显来观看这个示例时，点击画面，这个 DEMO 就会切换到全屏形式，可以尝试靠近 Firefox 图标。将会非常真实地同步你的头部运动后应该看到的内容，包括可以上下移动、左右移动、转动你的头部看想看的方向。
 
 The demo was deliberately kept simple so that you can easily see what is going on with the WebVR code. The API is simple enough that you can easily apply WebVR-controlled movement to any app you like, from simple DOM-based interfaces to complex WebGL scenes.
 这个示例程序特意做成足够地简单，以便于你可以更容易地了解 WebVR 代码的工作过程。从代码中你可以看到，这些 API 足够的简单，你可以轻松地将这些 WebVR 控制移动和转动的能力，移植到新的应用功能中，比如一个简单的使用 WebGL 来显示的基于 DOM 接口的应用。

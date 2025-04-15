@@ -45,6 +45,6 @@ parg.dir = "rtl";
 ## 参见
 
 - {{domxref("document.dir")}}
-- HTML [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 全局属性
+- HTML [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir) 全局属性
 - CSS 属性 {{cssxref("direction")}}
 - CSS 伪类 {{cssxref(":dir")}}
