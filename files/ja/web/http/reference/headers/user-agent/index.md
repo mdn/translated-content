@@ -1,9 +1,8 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Reference/Headers/User-Agent
-original_slug: Web/HTTP/Headers/User-Agent
 l10n:
-  sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
