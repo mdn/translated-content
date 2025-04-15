@@ -13,22 +13,22 @@ l10n:
 
 ## 类型
 
-该参数值是一个对象。其包含以下属性：
+该类型的值是一个对象。其包含以下属性：
 
 - `fingerprint`
 
   - : `Object`。包含下列属性的对象：
 
     - `sha1`
-      - : `String`。证书 DER 编码的 SHA-1 哈希值。
+      - : `String`。证书 DER 编码的 SHA-1 散列值。
     - `sha256`
-      - : `String`。证书 DER 编码的 SHA-256 哈希值。
+      - : `String`。证书 DER 编码的 SHA-256 散列值。
 
 - `isBuiltInRoot`
   - : `Boolean`。当证书是在浏览器中安装的信任根证书之一时为 `true`，否则为 `false`。
 - `issuer`
 
-  - : `String`。颁发此证书的组织名称，表示为一个专有名称，并格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
+  - : `String`。颁发此证书的组织名称，以专有名称形式表示并格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
 
     例如“CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US”。
 
@@ -38,7 +38,7 @@ l10n:
   - : `String`。证书的[序列号](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2).
 - `subject`
 
-  - : `String`。签发给该证书的组织名称，表示为一个专有名称，并格式化为逗号分隔的相专有名称的列表，其中各项的形式都是 "type=value"。
+  - : `String`。颁发此证书的组织名称，以专有名称形式表示并格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
 
     例如“CN=\*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US”。
 
@@ -47,7 +47,7 @@ l10n:
   - : `Object`。包含下列属性的对象：
 
     - `sha256`
-      - : `String`。DER 编码的[公钥信息](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.7)的 SHA-256 哈希值的 Base64 编码。
+      - : `String`。DER 编码的[公钥信息](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.7)的 SHA-256 散列值的 Base64 编码。
 
 - `validity`
 
