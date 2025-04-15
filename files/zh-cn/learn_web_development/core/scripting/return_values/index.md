@@ -43,8 +43,9 @@ console.log(newString);
 ```
 
 我们对 `myText` 字符串调用 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数，并接收两个参数：
-- 要查找的字符串(`"字符串"`)
-- 用于替换的字符串(`"香肠"`)
+
+- 要查找的字符串（`"字符串"`）。
+- 用于替换的字符串（`"香肠"`）。
 
 当这个函数完成（完成运行）后，它返回一个值，这个值是一个新的字符串，它具有替换的功能。在上面的代码中，我们保存这个返回值，以作为`newString`变量的内容。
 
