@@ -2,7 +2,7 @@
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 l10n:
-  sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
+  sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
@@ -120,9 +120,9 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
   - : `object`。与请求相关的跟踪类型（如果请求由 [Firefox 跟踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)分类）。包含以下属性的对象：
 
     - `firstParty`
-      - : `strings` 的数组（`array`）。请求的第一方的分类标志。
+      - : `string` 的数组（`array`）。请求的第一方的分类标志。
     - `thirdParty`
-      - : `strings` 的数组（`array`）。请求或其窗口层次结构的第三方的分类标志。
+      - : `string` 的数组（`array`）。请求或其窗口层次结构的第三方的分类标志。
 
     分类标志包括：
 
