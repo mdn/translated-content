@@ -1,7 +1,6 @@
 ---
 title: "Проверьте ваши навыки: Каскад"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
-original_slug: Learn_web_development/Core/Styling_basics/Cascade_tasks
 ---
 
 {{LearnSidebar}}
